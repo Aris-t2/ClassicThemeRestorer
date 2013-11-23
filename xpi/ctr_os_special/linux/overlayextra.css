@@ -1,0 +1,64 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul),
+			   url(chrome://global/content/customizeToolbar.xul) {
+
+	#ctr_bookmarks-menu-toolbar-button > .toolbarbutton-icon,
+	#ctr_bookmarks-button > .toolbarbutton-icon{
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks_linux.png");
+	}
+	#ctr_history-button > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/history_linux.png");
+	}
+	#ctr_back-button > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/back_linux.png");
+	}
+	#ctr_forward-button > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/forward_linux.png");
+	}
+	#ctr_stop-button > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/stop_linux.png");
+	}
+	#ctr_reload-button > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/reload_linux.png");
+	}
+	
+	#ctr_bookmarks-menu-toolbar-button:-moz-lwtheme-brighttext > .toolbarbutton-icon,
+	#ctr_bookmarks-button:-moz-lwtheme-brighttext > .toolbarbutton-icon{
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks-inv.png");
+	}
+	#ctr_history-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/history-inv.png");
+	}
+	#ctr_back-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/back-inv.png");
+	}
+	#ctr_forward-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/forward-inv.png");
+	}
+	#ctr_stop-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/stop-inv.png");
+	}
+	#ctr_reload-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/reload-inv.png");
+	}
+	
+	#TabsToolbar #ctr_appbutton{
+	  -moz-appearance: none !important;
+	}
+	
+	#TabsToolbar #ctr_appbutton #ctr_appbuttonPopup{
+	  margin-top:-3px;
+	}
+
+}
+
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+	#ctr_appbutton_list2{
+	  visibility: visible !important;
+	}
+	.ctr_windowsonly,
+	#ctr_appbutton_list1{
+	  visibility: collapse !important;
+	}
+}

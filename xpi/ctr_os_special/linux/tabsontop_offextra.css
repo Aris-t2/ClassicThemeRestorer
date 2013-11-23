@@ -1,0 +1,31 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	#navigator-toolbox > #TabsToolbar,
+	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
+		background: #d5d1cf !important;
+	}
+	#main-window[sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]){
+		margin-top: -16px !important;
+	}
+	#TabsToolbar{
+		margin-bottom: -1px !important;
+	}
+	#ctr_appbutton,
+	#TabsToolbar #ctr_appbutton{
+		margin-bottom:1px !important;
+		border-radius: 2.5px 2.5px 0 0 !important;
+	}
+	.tabbrowser-tabs{
+		margin-top:-1px !important;
+		margin-bottom:1px !important;
+	}
+	#ctr_appbutton{
+		margin-top:0px !important;
+		margin-bottom:0px !important;
+	}
+	#TabsToolbar #ctr_appbuttonPopup{
+		margin-top:0px !important;
+	}
+}

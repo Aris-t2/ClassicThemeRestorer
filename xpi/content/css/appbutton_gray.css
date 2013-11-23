@@ -1,0 +1,62 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul),
+			   url(chrome://global/content/customizeToolbar.xul) {
+
+	#ctr_appbutton2:not(:hover):not(:active):not([open]){
+	  background-image: linear-gradient(lightgray, gray 95%) !important;
+	  border-color: hsla(210,59%,13%,.9) !important;
+	  box-shadow: 0 1px 0 hsla(210,48%,90%,.15) inset,
+				  0 0 2px 1px hsla(211,65%,85%,.15) inset !important;
+	}
+	#TabsToolbar #ctr_appbutton{
+	  background: linear-gradient(lightgray, gray 95%) !important;
+	  border-color: hsla(210,59%,13%,.9) !important;
+	  box-shadow: 0 1px 0 hsla(210,48%,90%,.15) inset,
+				  0 0 2px 1px hsla(211,65%,85%,.15) inset !important;
+	}
+	#TabsToolbar #ctr_appbutton:hover:not(:active):not([open]),
+	#ctr_appbutton2:hover:not(:active):not([open]){
+	  background-image: radial-gradient(farthest-side at center bottom, hsla(210,48%,90%,.5) 10%, hsla(210,48%,90%,0) 70%),
+						radial-gradient(farthest-side at center bottom, hsla(211,70%,83%,.5), hsla(211,70%,83%,0)),
+						linear-gradient(lightgray, gray 95%) !important;
+	  border-color: hsla(210,59%,13%,.9) !important;
+	  box-shadow: 0 1px 0 hsla(210,48%,90%,.15) inset,
+				  0 0 2px 1px hsla(210,48%,90%,.4) inset,
+				  0 -1px 0 hsla(210,48%,90%,.2) inset !important;
+	}
+
+	#TabsToolbar #ctr_appbutton:hover:active,
+	#TabsToolbar #ctr_appbutton[open],
+	#ctr_appbutton2:hover:active,
+	#ctr_appbutton2[open] {
+	  background-image: linear-gradient(lightgray, gray 95%) !important;
+	  box-shadow: 0 2px 3px rgba(0,0,0,.4) inset,
+				  0 1px 1px rgba(0,0,0,.2) inset !important;
+	}
+
+	#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctr_appbutton,
+	#main-window[privatebrowsingmode=temporary] #ctr_appbutton2{
+	  background-image: linear-gradient(rgb(153,38,211), rgb(105,19,163) 95%) !important;
+	  border-color: rgba(43,8,65,.9) !important;
+	}
+
+	#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctr_appbutton:hover:not(:active):not([open]),
+	#main-window[privatebrowsingmode=temporary] #ctr_appbutton2:hover:not(:active):not([open]){
+	  background-image: radial-gradient(farthest-side at center bottom, rgba(240,193,255,.5) 10%, rgba(240,193,255,0) 70%),
+						radial-gradient(farthest-side at center bottom, rgb(192,81,247), rgba(236,172,255,0)),
+						linear-gradient(rgb(144,20,207), rgb(95,0,158) 95%) !important;
+	  border-color: rgba(43,8,65,.9) !important;
+	  box-shadow: 0 1px 0 rgba(255,255,255,.1) inset,
+				  0 0 2px 1px rgba(240,193,255,.7) inset,
+				  0 -1px 0 rgba(240,193,255,.5) inset !important;
+	}
+
+	#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctr_appbutton:hover:active,
+	#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctr_appbutton[open],
+	#main-window[privatebrowsingmode=temporary] #ctr_appbutton2:hover:active,
+	#main-window[privatebrowsingmode=temporary]  #ctr_appbutton2[open] {
+	  background-image: linear-gradient(rgb(144,20,207), rgb(95,0,158) 95%) !important;
+	}
+
+}

@@ -1,0 +1,22 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+	
+	/* for Windows Aero Theme (AeroBasic/AeroGlass - Vista/7/8) */
+	@media all and (-moz-windows-theme:aero) {
+		
+		#PersonalToolbar:not([customizing]) {
+		  background-image: linear-gradient(to bottom,#eaf2fb,#dbeaf9,#dbeaf9) !important;
+		}
+	}
+	
+	/* for Windows Classic Theme on WinVista/7/8 */
+	@media not all and (-moz-windows-theme:aero) {
+   	
+		#PersonalToolbar:not([customizing]) {
+		  background-image: linear-gradient(to bottom,#e6e3df,#d4d0c8,#d4d0c8) !important;
+		}
+
+    }
+	
+}

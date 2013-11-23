@@ -1,0 +1,102 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton{
+		margin-left:-2px !important;
+	}
+
+	.tab-background-middle[selected=true],
+	.tab-background-start[selected=true]::before,
+	.tab-background-end[selected=true]::before,
+	.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]){
+		background:none !important;
+	}
+	
+	.tab-background-start[selected=true]:-moz-locale-dir(ltr)::after,
+	.tab-background-end[selected=true]:-moz-locale-dir(rtl)::after,
+	.tab-background-start[selected=true]:-moz-locale-dir(rtl)::after,
+	.tab-background-end[selected=true]:-moz-locale-dir(ltr)::after{
+	  content:none !important;
+	}
+
+	#TabsToolbar:not(:-moz-lwtheme)::before {
+	  box-shadow: none !important;
+	}
+
+	#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
+	.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
+	#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
+		background-image: none !important;
+	}
+
+    .tabs-newtab-button {
+    	margin-left: -20px !important;
+    	background: url("chrome://classic_theme_restorer/content/images/atab.png") 3px 0px no-repeat !important;
+    }
+    .tabs-newtab-button:hover {
+    	background: url("chrome://classic_theme_restorer/content/images/atab_hov.png") 3px 0px no-repeat !important;
+    }
+    
+    /*.tabbrowser-tab[selected="true"] {
+      margin-bottom: -1px !important;
+    }*/
+    
+    .tab-content {
+      border: solid transparent;
+      border-width: 2px 28px;
+      -moz-margin-start: -20px;
+      -moz-margin-end: 0px;
+    }
+    
+    .tab-close-button {
+      pointer-events: auto;
+      margin-right: -16px !important;
+    }
+    
+    .tabbrowser-tab:not([pinned]) .tab-icon-image,
+    .tabbrowser-tab:not([pinned]) .tab-throbber {
+      pointer-events: auto;
+      margin-left: -16px !important;
+    }
+    .tabbrowser-tab[pinned] .tab-icon-image,
+    .tabbrowser-tab[pinned] .tab-throbber {
+      pointer-events: auto;
+      margin-left: -16px !important;
+      margin-right: -16px !important;
+    }
+
+    .tabbrowser-tab[pinned] .tab-text {
+    	visibility: collapse !important;
+    }
+
+    .tabbrowser-tab > .tab-stack > .tab-content {
+      -moz-border-image: url("chrome://classic_theme_restorer/content/images/atab.png") 2 28 fill repeat stretch !important;
+      border-style:solid;
+    }
+    
+    .tabbrowser-tab:hover > .tab-stack > .tab-content:not([selected="true"]) {
+      -moz-border-image: url("chrome://classic_theme_restorer/content/images/atab_hov.png") 2 28 fill repeat stretch !important;
+      border-style:solid;
+    }
+    
+    .tabbrowser-tab > .tab-stack > .tab-content[selected="true"] {
+      -moz-border-image: url("chrome://classic_theme_restorer/content/images/atab_act.png") 2 28 fill repeat stretch !important;
+      border-style:solid;
+    }
+    
+    #tabbrowser-tabs::after {
+      content: '';
+      display: block;
+      background-image:
+        url(chrome://classic_theme_restorer/content/images/atab.png),
+        url(chrome://classic_theme_restorer/content/images/atab_act.png),
+        url(chrome://classic_theme_restorer/content/images/atab_hov.png);
+    }
+    
+    .tabbrowser-tab[pinned][titlechanged] > .tab-stack > .tab-content {
+      -moz-border-image: url("chrome://classic_theme_restorer/content/images/atab.png") 2 28 repeat stretch !important;
+    }
+    .tabbrowser-tab[pinned][titlechanged]:hover > .tab-stack > .tab-content:not([selected="true"]) {
+      -moz-border-image: url("chrome://classic_theme_restorer/content/images/atab_hov.png") 2 28 repeat stretch !important;
+    }
+}

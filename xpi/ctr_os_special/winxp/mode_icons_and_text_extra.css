@@ -1,0 +1,18 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+    #navigator-toolbox #nav-bar .toolbarbutton-text{
+	  padding: 0px !important;
+	}
+	#navigator-toolbox #nav-bar toolbarbutton{
+	  margin-top: 1px !important;
+	  padding: 0px !important;
+	}
+	#navigator-toolbox #nav-bar #urlbar-container{
+	  margin-left: 4px !important;
+	}
+	#navigator-toolbox #nav-bar  #bookmarks-menu-button .toolbarbutton-text{
+	  font-size: 12px !important;
+	}
+}

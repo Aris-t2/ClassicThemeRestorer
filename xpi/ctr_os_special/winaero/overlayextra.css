@@ -1,0 +1,141 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul),
+			   url(chrome://global/content/customizeToolbar.xul) {
+
+	#ctr_bookmarks-menu-toolbar-button > .toolbarbutton-icon,
+	#ctr_bookmarks-button > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks.png");
+	}
+	#ctr_bookmarks-menu-toolbar-button:-moz-lwtheme-brighttext > .toolbarbutton-icon,
+	#ctr_bookmarks-button:-moz-lwtheme-brighttext > .toolbarbutton-icon{
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks-inv.png");
+	}
+	#ctr_history-button > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/history.png");
+	}
+	#ctr_history-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/history-inv.png");
+	}
+	#ctr_back-button > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/back.png");
+	}
+	#ctr_back-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/back-inv.png");
+	}
+	#ctr_forward-button > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/forward.png");
+	}
+	#ctr_forward-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/forward-inv.png");
+	}
+	#ctr_stop-button > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/stop.png");
+	}
+	#ctr_stop-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/stop-inv.png");
+	}
+	#ctr_reload-button > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/reload.png");
+	}
+	#ctr_reload-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/reload-inv.png");
+	}
+
+	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton{
+		margin-top:-16px;
+		margin-bottom:22px;
+		border-radius: 0 0 4px 4px;
+	}
+	
+	#nav-bar :-moz-any(#ctr_bookmarks-button,#ctr_history-button,#ctr_back-button,#ctr_forward-button,#ctr_stop-button,#ctr_reload-button) > .toolbarbutton-icon{
+	  padding: 2px 6px 2px 6px !important;
+	}
+	
+	#nav-bar #ctr_bookmarks-menu-toolbar-button  > .toolbarbutton-icon{
+	  padding-top: 2px !important;
+	  padding-bottom: 2px !important;
+	}
+
+	/* style appmenu */
+	#ctr_appbuttonPopup{
+		-moz-appearance:none;
+		box-shadow:none;
+		border:1px solid #a0a0a0;
+	}
+
+	#appmenuPrimaryPane{
+		-moz-appearance:none;
+		background:white;
+		box-shadow:none;
+		border:0;
+		padding: 2px;
+		-moz-border-end: none;
+	}
+	
+	#appmenuSecondaryPane {
+	  background-color: #f1f5fb;
+	  box-shadow: 1px 0 2px rgb(204,214,234) inset;
+	  -moz-padding-start: 3px;
+	  -moz-padding-end: 2px;
+	  padding-top: 2px;
+	  padding-bottom: 2px;
+	  font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
+	}
+	
+	#appmenuSecondaryPane:-moz-locale-dir(rtl) {
+	  box-shadow: -1px 0 2px rgb(204,214,234) inset;
+	}
+
+	#appmenuPrimaryPane menuseparator {
+	  -moz-appearance: none;
+	  margin-top: 3px;
+	  margin-bottom: 3px;
+	  margin-right:3px;
+	  -moz-margin-start: 30px;
+	  padding: 0;
+	  border-top: 1px solid #d6e5f5;
+	  border-bottom: none;
+	}
+
+	#appmenuPrimaryPane #menu_newTabmenupopup,
+	#appmenuPrimaryPane #menu_newEditmenupopup,
+	#appmenuPrimaryPane #menu_newPrintmenupopup,
+	#appmenuPrimaryPane #newmenuWebDeveloperPopup {
+		-moz-appearance:none;
+		background:white;
+		box-shadow:none;
+		border:1px solid #a0a0a0;
+	}
+	
+	#appmenuSecondaryPane #newbookmarksMenuPopup,
+	#appmenuSecondaryPane #newHistorymenuPopup,
+	#appmenuSecondaryPane #menu_newHelpPopup,
+	#appmenuSecondaryPane #menu_newPreferencesmenuPopup{
+		-moz-appearance:none;
+		background:#f1f5fb;
+		box-shadow:none;
+		border:1px solid #a0a0a0;
+	}
+	
+	#appmenu-edit-label,
+	#appmenu-edit-label:hover{
+	  -moz-appearance: none !important;
+	}
+	
+	
+	@media all and (-moz-windows-classic) {
+		#appmenu-edit-label{
+		  margin-left: 2px !important;
+		}	
+	}
+}
+
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+	#ctr_appbutton_list1{
+	  visibility: visible !important;
+	}
+	#ctr_appbutton_list2{
+	  visibility: collapse !important;
+	}
+}

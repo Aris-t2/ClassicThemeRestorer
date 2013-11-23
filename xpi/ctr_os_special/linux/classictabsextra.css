@@ -1,0 +1,20 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+	
+	.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme){
+	  background-image: linear-gradient(to top,#e2dfdd,#eae8e4,#f5f5f2) !important;
+	}
+	
+	.tabs-newtab-button:not(:-moz-lwtheme),
+	.tabbrowser-tab:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
+	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #afaba5,#c0bdb6,#c9c6c0) !important;
+	  color:black !important;
+	}
+	
+	.tabs-newtab-button:hover:not(:-moz-lwtheme),
+	.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {
+	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#cbc7c1,#d5d2cc,#e1ded8) !important;
+	  color:black !important;
+	}
+}

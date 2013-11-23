@@ -1,0 +1,42 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+	
+	/* for Windows Aero Theme (AeroBasic/AeroGlass - Vista/7/8) */
+	@media all and (-moz-windows-theme:aero) {
+		.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {
+		  background-image: linear-gradient(to top,#eaf2fb,#eef5fc,#feffff) !important;
+		}
+
+		.tabs-newtab-button:not(:-moz-lwtheme),
+		.tabbrowser-tab:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
+		  background-image: linear-gradient(to top, #868d94 0px, transparent 1px),linear-gradient(to top,#b4c0cc,#c8d4e1,#d1deec) !important;
+		}
+
+		.tabs-newtab-button:hover:not(:-moz-lwtheme),
+		.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {
+		  background-image: linear-gradient(to top, #868d94 0px, transparent 1px),linear-gradient(to top,#d0dce8,#dce7f3,#e5effa) !important;
+		}
+	}
+	
+	/* for Windows Classic Theme on WinVista/7/8 */
+	@media not all and (-moz-windows-theme:aero) {
+   	
+		.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {
+		  background-image: linear-gradient(to top,#e6e3df,#eae8e4,#f5f5f2) !important;
+		}
+
+		.tabs-newtab-button:not(:-moz-lwtheme),
+		.tabbrowser-tab:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
+		  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #afaba5,#c0bdb6,#c9c6c0) !important;
+		  color:black !important;
+		}
+
+		.tabs-newtab-button:hover:not(:-moz-lwtheme),
+		.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {
+		  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#cbc7c1,#d5d2cc,#e1ded8) !important;
+		  color:black !important;
+		}
+    }
+	
+}

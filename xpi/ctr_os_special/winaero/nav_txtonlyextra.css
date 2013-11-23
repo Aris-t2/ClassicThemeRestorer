@@ -1,0 +1,19 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+	
+	#navigator-toolbox #nav-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]):hover .toolbarbutton-text {
+	  border: 1px solid;
+	  background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.1));
+	  border-color: hsla(210,54%,20%,.15) hsla(210,54%,20%,.2) hsla(210,54%,20%,.25) !important;
+	  box-shadow: 0 1px hsla(0,0%,100%,.3) inset,
+				  0 1px hsla(210,54%,20%,.03),
+				  0 0 2px hsla(210,54%,20%,.1);
+	}
+	#navigator-toolbox .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
+	  padding: 2px 3px 3px 3px !important;
+	}
+	#navigator-toolbox #nav-bar  #bookmarks-menu-button .toolbarbutton-text{
+	  font-size: 12px !important;
+	}
+}

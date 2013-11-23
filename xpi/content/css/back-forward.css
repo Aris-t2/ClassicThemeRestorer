@@ -1,0 +1,34 @@
+@import url(chrome://ctr_os_special/skin/back-forwardextra.css);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul),
+			   url(chrome://global/content/customizeToolbar.xul) {
+	#ctr_back-forward-button{
+	  visibility: visible !important;
+	}
+	#customization-palette #ctr_back-forward-button{
+		background:url("chrome://classic_theme_restorer/content/images/back-forward.png") center no-repeat !important;
+	}
+
+	#urlbar-container #back-button,
+	#urlbar-container #forward-button{
+	  visibility: collapse !important;
+	}
+	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper {
+	  clip-path: none !important;
+	}
+
+	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
+	  margin-left: 0px !important;
+	  transition: none !important;
+	  transition-property:  none !important;
+	  transition-delay: 0s !important;
+	}
+    #urlbar{
+      border-left:1px solid #b4c1cf !important;
+    }
+    #urlbar[focused="true"]{
+      border-left:1px solid #72c0fe !important;
+    }
+
+}
