@@ -1,7 +1,16 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul){
+
+	.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
+	  /*-moz-padding-end: 0px !important;*/
+	  -moz-padding-start: 0px !important;
+	}
 	
+	.tabs-newtab-button{
+	  margin-right:-15px !important;
+	}
+
 	.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme){
 	  background-image: linear-gradient(to top,#e2dfdd,#eae8e4,#f5f5f2) !important;
 	}

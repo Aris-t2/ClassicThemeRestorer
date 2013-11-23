@@ -129,6 +129,26 @@
 		  margin-left: 2px !important;
 		}	
 	}
+	
+	/* ctr addonbar */
+	#ctr_addon-bar toolbarbutton {
+	  -moz-appearance: none !important;
+	  margin: 0px 3px !important;
+	}
+	#ctr_addon-bar toolbarbutton .toolbarbutton-icon {
+	  margin: -3px -4px !important;
+	  max-width: 18px;
+	  max-height: 18px;
+	}
+	#ctr_addon-bar .toolbarbutton-menubutton-dropmarker {
+	  padding: 0px !important;
+	  margin-left: -3px !important;
+	  margin-right: -1px !important;
+	}
+	#ctr_addon-bar toolbarbutton[type="menu"] dropmarker{
+	  margin-left: 3px !important;
+	  margin-right: -4px !important;	
+	}
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {

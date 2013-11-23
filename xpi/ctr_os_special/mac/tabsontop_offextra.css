@@ -2,12 +2,12 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	#navigator-toolbox > #TabsToolbar,
-	#TabsToolbar{
+	#navigator-toolbox > #TabsToolbar:not(:-moz-lwtheme),
+	#TabsToolbar:not(:-moz-lwtheme){
 		background: #d2d2d2 !important;
 	}
 	#titlebar{
-		padding-bottom:10px !important;
+		padding-bottom:22px !important;
 	}
 	#main-window:not([tabsintitlebar])[sizemode="normal"]  #TabsToolbar,
 	#main-window[tabsintitlebar][sizemode="normal"]  #TabsToolbar{

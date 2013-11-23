@@ -11,6 +11,9 @@ init: function() {
 	if (this.prefs.getCharPref("tabs")!="tabs_default"){
 		this.loadUnloadCSS(this.prefs.getCharPref("tabs"),true);
 	}
+	if (this.prefs.getCharPref("tabwidth")!="tabwidth_default"){
+		this.loadUnloadCSS(this.prefs.getCharPref("tabwidth"),true);
+	}
 	if (this.prefs.getCharPref("findbar")!="findbar_default"){
 		this.loadUnloadCSS(this.prefs.getCharPref("findbar"),true);
 	}
@@ -27,9 +30,13 @@ init: function() {
 	if (this.prefs.getBoolPref("tabsotoff"))		{ this.loadUnloadCSS("tabsotoff",true); }
 	if (this.prefs.getBoolPref("smallnavbut"))		{ this.loadUnloadCSS("smallnavbut",true); }
 	if (this.prefs.getBoolPref("hidenavbar"))		{ this.loadUnloadCSS("hidenavbar",true); }
+	if (this.prefs.getBoolPref("hiderelstop"))		{ this.loadUnloadCSS("hiderelstop",true); }
 	if (this.prefs.getBoolPref("addonbar"))			{ this.loadUnloadCSS("addonbar",true); }
 	if (this.prefs.getBoolPref("extrabar"))			{ this.loadUnloadCSS("extrabar",true); }
 	if (this.prefs.getBoolPref("backforward"))		{ this.loadUnloadCSS("backforward",true); }
+	
+	if (this.prefs.getBoolPref("combrelstop"))		{ this.loadUnloadCSS("combrelstop",true); }
+	if (this.prefs.getBoolPref("paneluibtweak"))	{ this.loadUnloadCSS("paneluibtweak",true); }
 
 },
 
@@ -40,6 +47,9 @@ loadUnloadCSS: function(which,enable) {
 	
 		case "tabs_squared": 		manageCSS("tabs_squared.css");  		break;
 		case "tabs_curvedall": 		manageCSS("tabs_curvedall.css");  		break;
+
+		case "tabwidth_150": 		manageCSS("tabwidth_150.css");  		break;
+		case "tabwidth_250": 		manageCSS("tabwidth_250.css");  		break;
 		
 		case "tabsotoff": 			manageCSS("tabsontop_off.css");  		break;
 		
@@ -69,6 +79,7 @@ loadUnloadCSS: function(which,enable) {
 		case "findbar_bottom": 		manageCSS("findbar_bottom.css");  		break;
 		
 		case "hidenavbar": 			manageCSS("hidenavbar.css");  			break;
+		case "hiderelstop": 		manageCSS("hiderelstop.css");  			break;
 		case "addonbar": 			manageCSS("addonbar.css");  			break;
 		case "extrabar": 			manageCSS("extrabar.css");  			break;
 		
@@ -102,6 +113,9 @@ loadUnloadCSS: function(which,enable) {
 		case "appbuttonc_gray":		manageCSS("appbutton_gray.css");		break;
 		
 		case "backforward": 		manageCSS("back-forward.css");			break;
+		
+		case "combrelstop": 		manageCSS("combrelstop.css");			break;
+		case "paneluibtweak": 		manageCSS("paneluibutton_tweak.css");	break;
 	
 	}
 	

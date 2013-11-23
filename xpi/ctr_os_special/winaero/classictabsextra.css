@@ -1,7 +1,40 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul){
+
+	/* Tab close button */
+	.tab-close-button {
+	  -moz-appearance: none !important;
+	  -moz-image-region: rect(0, 64px, 16px, 48px) !important;
+	  border: none !important;
+	  padding: 0px !important;
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png") !important;
+	}
+
+	.tab-close-button:hover,
+	.tab-close-button:hover[selected="true"] {
+	  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
+	}
+
+	.tab-close-button:hover:active,
+	.tab-close-button:hover:active[selected="true"] {
+	  -moz-image-region: rect(0, 48px, 16px, 32px) !important;
+	}
+
+	.tab-close-button[selected="true"] {
+	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
+	}
+
+	/**/
+	.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
+	  /*-moz-padding-end: 0px !important;*/
+	  -moz-padding-start: 0px !important;
+	}
 	
+	.tabs-newtab-button{
+	  margin-right:-15px !important;
+	}
+
 	/* for Windows Aero Theme (AeroBasic/AeroGlass - Vista/7/8) */
 	@media all and (-moz-windows-theme:aero) {
 		.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {

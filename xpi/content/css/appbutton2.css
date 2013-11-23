@@ -20,6 +20,7 @@
 	  -moz-appearance:none !important;
 	  background-clip: padding-box !important;
 	  border-radius: 0 0 4px 4px;
+	  width: 95px !important;
 	  color: white !important;
 	  text-shadow: 0 0 1px rgba(0,0,0,.7),
 				   0 1px 1.5px rgba(0,0,0,.5) !important;
@@ -62,7 +63,7 @@
 	
 	#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="maximized"] #toolbar-menubar ~ #TabsToolbar,
 	#main-window[tabsintitlebar][sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
-	  margin-left: 94px;
+	  margin-left: 96px;
 	}
 	
     #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
@@ -90,10 +91,16 @@
 				margin-bottom:-24px !important;
 			}
 			
-			#ctr_appbutton2{
+			#main-window[sizemode="normal"] #ctr_appbutton2{
 				margin-top:1px !important;
 				margin: 1px 0 2px 1px !important;
 			}
+			
+			#main-window[sizemode="maximized"] #ctr_appbutton2{
+				margin-top:0px !important;
+				margin: 0px 0 2px 1px !important;
+			}
+			
 			#main-window[sizemode="normal"] > #titlebar:-moz-lwtheme #ctr_appbutton2{
 				margin-top:1px !important;
 				margin: -1px 0 2px 1px !important;
@@ -114,20 +121,20 @@
 			}
 			
 			#main-window:not([tabsintitlebar]) #ctr_appbutton2{
-				margin-top:1px !important;
-				margin: 1px 0 2px 1px !important;
+				margin-top:-1px !important;
+				margin: -1px 0 2px 1px !important;
 			}
 			#main-window[tabsintitlebar][sizemode="normal"]  #ctr_appbutton2{
 				margin-top:0px !important;
 				margin: 0px 0 10px 1px !important;
 			}
 			#main-window[tabsintitlebar][sizemode="maximized"]  #ctr_appbutton2{
-				margin-top:1px !important;
-				margin: 1px 0 2px 1px !important;
+				margin-top:-1px !important;
+				margin: -2px 0 2px 1px !important;
 			}
 			#main-window[sizemode="normal"] > #titlebar:-moz-lwtheme #ctr_appbutton2{
 				margin-top:1px !important;
-				margin: -1px 0 2px 1px !important;
+				margin: -1px 0 8px 1px !important;
 			}
 			
 			#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"] #toolbar-menubar ~ #TabsToolbar,
@@ -165,8 +172,8 @@
 			}
 		
 		#main-window[tabsintitlebar][sizemode="maximized"]   #ctr_appbutton2{
-			margin-top:0px !important;
-			margin: 0px 0 2px 1px !important;
+			margin-top:-1px !important;
+			margin: -1px 0 8px 1px !important;
 		}
 	}
 	
@@ -184,8 +191,8 @@
 			}
 		
 		#main-window[tabsintitlebar][sizemode="maximized"]   #ctr_appbutton2{
-			margin-top:0px !important;
-			margin: 0px 0 2px 1px !important;
+			margin-top:-1px !important;
+			margin: -1px 0 8px 1px !important;
 		}
 	}
 	
@@ -203,8 +210,8 @@
 			}
 		
 		#main-window[tabsintitlebar][sizemode="maximized"]   #ctr_appbutton2{
-			margin-top:0px !important;
-			margin: 0px 0 2px 1px !important;
+			margin-top:-1px !important;
+			margin: -1px 0 8px 1px !important;
 		}
 	}
 	
@@ -222,8 +229,8 @@
 			}
 		
 		#main-window[tabsintitlebar][sizemode="maximized"]   #ctr_appbutton2{
-			margin-top:0px !important;
-			margin: 0px 0 2px 1px !important;
+			margin-top:-1px !important;
+			margin: -1px 0 8px 1px !important;
 		}
 	}
 	
@@ -241,8 +248,8 @@
 			}
 		
 		#main-window[tabsintitlebar][sizemode="maximized"]   #ctr_appbutton2{
-			margin-top:0px !important;
-			margin: 0px 0 2px 1px !important;
+			margin-top:-1px !important;
+			margin: -1px 0 8px 1px !important;
 		}
 	}
 

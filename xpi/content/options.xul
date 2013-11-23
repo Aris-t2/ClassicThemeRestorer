@@ -19,9 +19,11 @@
 	
 		<preference id="ctr_tabs"			name="extensions.classicthemerestorer.tabs" 		type="string"	instantApply="true"/>
 		<preference id="ctr_tabsotoff"		name="extensions.classicthemerestorer.tabsotoff"	type="bool"		instantApply="true"/>
+		<preference id="ctr_tabwidth"		name="extensions.classicthemerestorer.tabwidth"		type="string"	instantApply="true"/>
 		<preference id="ctr_smallnavbut"	name="extensions.classicthemerestorer.smallnavbut"	type="bool"		instantApply="true"/>
 		<preference id="ctr_findbar"		name="extensions.classicthemerestorer.findbar"		type="string"	instantApply="true"/>
 		<preference id="ctr_hidenavbar"		name="extensions.classicthemerestorer.hidenavbar"	type="bool"		instantApply="true"/>
+		<preference id="ctr_hiderelstop"	name="extensions.classicthemerestorer.hiderelstop"	type="bool"		instantApply="true"/>
 		<preference id="ctr_add-onbar"		name="extensions.classicthemerestorer.addonbar"		type="bool"		instantApply="true"/>
 		<preference id="ctr_extrabar"		name="extensions.classicthemerestorer.extrabar"		type="bool"		instantApply="true"/>
 		<preference id="ctr_nav_txt_ico"	name="extensions.classicthemerestorer.nav_txt_ico" 	type="string"	instantApply="true"/>
@@ -29,94 +31,142 @@
 		<preference id="ctr_appbutton"		name="extensions.classicthemerestorer.appbutton" 	type="string"	instantApply="true"/>
 		<preference id="ctr_appbuttonc"		name="extensions.classicthemerestorer.appbuttonc" 	type="string"	instantApply="true"/>
 		<preference id="ctr_backforward"	name="extensions.classicthemerestorer.backforward"	type="bool"		instantApply="true"/>
+		
+		<preference id="ctr_combrelstop"	name="extensions.classicthemerestorer.combrelstop"	type="bool"		instantApply="true"/>
+		<preference id="ctr_paneluibtweak"	name="extensions.classicthemerestorer.paneluibtweak" type="bool"	instantApply="true"/>
 	
 	</preferences>
-	
-	<hbox>
-		<vbox>
-		  <groupbox>
-			<caption  label="Tabs" class="ctb_topic"/>
-			<menulist preference="ctr_tabs">
-				<menupopup>
-					<menuitem value="tabs_default"	 label="&Ctr_tabs0;" oncommand="classicthemerestorerjs.settings.prefChangeString('tabs', 'tabs_default');"/>
-					<menuitem value="tabs_squared"	 label="&Ctr_tabs1;" oncommand="classicthemerestorerjs.settings.prefChangeString('tabs', 'tabs_squared');"/>
-					<menuitem value="tabs_curvedall" label="&Ctr_tabs2;" oncommand="classicthemerestorerjs.settings.prefChangeString('tabs', 'tabs_curvedall');" id="tabs_curvedall"/>
-				</menupopup>
-			</menulist>
-			<checkbox label="&Ctr_tabsotoff;"	preference="ctr_tabsotoff"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('tabsotoff',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('tabsotoff',false);}"/>
-			<checkbox label="Tabs in titlebar"	preference="ctr_tabsintitlebar"/>
-		  </groupbox>
-		  
-		  <groupbox>
-			<caption  label="&Ctr_appbutton;" class="ctb_topic"/>
-			<menulist preference="ctr_appbutton" id="ctr_appbutton_list1">
-				<menupopup>
-					<menuitem value="appbutton_off"	label="&Ctr_appbutton0;" oncommand="classicthemerestorerjs.settings.prefChangeString('appbutton', 'appbutton_off');"/>
-					<menuitem value="appbutton_v1"	label="&Ctr_appbutton1;" oncommand="classicthemerestorerjs.settings.prefChangeString('appbutton', 'appbutton_v1');"/>
-					<menuitem value="appbutton_v2"	label="&Ctr_appbutton2;" oncommand="classicthemerestorerjs.settings.prefChangeString('appbutton', 'appbutton_v2');"/>
-					<label value=" "/>
-					<label value="&Ctr_appbuttonI2;" class="ctb_font1"/>
-				</menupopup>
-			</menulist>
-			<menulist preference="ctr_appbutton" id="ctr_appbutton_list2">
-				<menupopup>
-					<menuitem value="appbutton_off"	label="&Ctr_appbutton0;" oncommand="classicthemerestorerjs.settings.prefChangeString('appbutton', 'appbutton_off');"/>
-					<menuitem value="appbutton_v1"	label="&Ctr_appbutton1;" oncommand="classicthemerestorerjs.settings.prefChangeString('appbutton', 'appbutton_v1');"/>
-				</menupopup>
-			</menulist>
-			<menulist preference="ctr_appbuttonc">
-				<menupopup>
-					<menuitem value="appbuttonc_orange"	 label="&Ctr_appbuttonc_o;"	 oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_orange');"/>
-					<menuitem value="appbuttonc_aurora"	 label="&Ctr_appbuttonc_a;"	 oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_aurora');"/>
-					<menuitem value="appbuttonc_nightly" label="&Ctr_appbuttonc_n;"	 oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_nightly');"/>
-					<menuitem value="appbuttonc_transp"  label="&Ctr_appbuttonc_t;"  oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_transp');"/>
-					<menuitem value="appbuttonc_palemo"  label="&Ctr_appbuttonc_p;"  oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_palemo');"/>
-					<menuitem value="appbuttonc_red"	 label="&Ctr_appbuttonc_r;"  oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_red');"/>
-					<menuitem value="appbuttonc_green"	 label="&Ctr_appbuttonc_g;"  oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_green');"/>
-					<menuitem value="appbuttonc_gray"	 label="&Ctr_appbuttonc_gr;" oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_gray');"/>
-					<label value=" "/>
-					<label value="&Ctr_appbuttonI1;" class="ctb_font1"/>
-				</menupopup>
-			</menulist>
-		  </groupbox>
- 
-		  <label value="* 'Classic Toolbar Buttons' *" href="https://addons.mozilla.org/addon/cstbb/versions/" class="text-link ctr_windowsonly"/>		  
 
-		</vbox>
+	<tabbox>
+		<tabs>
+			<tab label="&Ctr_main;"/>
+			<tab label="&Ctr_experim;"/>
+		</tabs>
+
+	  <tabpanels>
+
+		<tabpanel>
 
 		<vbox>
-		  
-		  <groupbox>
-			<caption  label="&Ctr_ui;" class="ctb_topic"/>
-			<checkbox label="&Ctr_smallnavbut;"	preference="ctr_smallnavbut" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('smallnavbut',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('smallnavbut',false);}" class="ctr_windowsonly"/>
-			<checkbox label="&Ctr_hidenavbar;"	preference="ctr_hidenavbar"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('hidenavbar',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('hidenavbar',false);}"/>
-			<checkbox label="&Ctr_addonbar;"	preference="ctr_add-onbar"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('addonbar',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('addonbar',false);}"/>
-			<checkbox label="&Ctr_extrabar;"	preference="ctr_extrabar"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('extrabar',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('extrabar',false);}"/>
-			<checkbox label="&Ctr_backforward;"	preference="ctr_backforward" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('backforward',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('backforward',false);}"/>
-			
-			<menulist preference="ctr_findbar">
-				<menupopup>
-					<menuitem value="findbar_default" label="&Ctr_findbar_def;" oncommand="classicthemerestorerjs.settings.prefChangeString('findbar', 'findbar_default');"/>
-					<menuitem value="findbar_top"	  label="&Ctr_findbar_top;" oncommand="classicthemerestorerjs.settings.prefChangeString('findbar', 'findbar_top');"/>
-					<menuitem value="findbar_bottom"  label="&Ctr_findbar_bot;" oncommand="classicthemerestorerjs.settings.prefChangeString('findbar', 'findbar_bottom');"/>
-				</menupopup>
-			</menulist>
-			
-			<menulist preference="ctr_nav_txt_ico">
-				<menupopup>
-					<menuitem value="icons"		label="&Ctr_nav_txt_ico0;" oncommand="classicthemerestorerjs.settings.prefChangeString('nav_txt_ico', 'icons');"/>
-					<menuitem value="iconstxt"	label="&Ctr_nav_txt_ico1;" oncommand="classicthemerestorerjs.settings.prefChangeString('nav_txt_ico', 'iconstxt');"/>
-					<menuitem value="txtonly"	label="&Ctr_nav_txt_ico2;" oncommand="classicthemerestorerjs.settings.prefChangeString('nav_txt_ico', 'txtonly');"/>
-				</menupopup>
-			</menulist>
+		  <hbox>
+			<vbox flex="1">
+			  <groupbox flex="1">
+				<caption  label="&Ctr_tabs;" class="ctb_topic"/>
+				<menulist preference="ctr_tabs">
+					<menupopup>
+						<menuitem value="tabs_default"	 label="&Ctr_tabs0;" oncommand="classicthemerestorerjs.settings.prefChangeString('tabs', 'tabs_default');"/>
+						<menuitem value="tabs_squared"	 label="&Ctr_tabs1;" oncommand="classicthemerestorerjs.settings.prefChangeString('tabs', 'tabs_squared');"/>
+						<menuitem value="tabs_curvedall" label="&Ctr_tabs2;" oncommand="classicthemerestorerjs.settings.prefChangeString('tabs', 'tabs_curvedall');" id="tabs_curvedall"/>
+					</menupopup>
+				</menulist>
+				<checkbox label="&Ctr_tabsotoff;"		preference="ctr_tabsotoff"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('tabsotoff',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('tabsotoff',false);}"/>
+				<checkbox label="&Ctr_tabsintitlebar;"	preference="ctr_tabsintitlebar"/>
+				<menulist preference="ctr_tabwidth">
+					<menupopup>
+						<menuitem value="tabwidth_default"	label="&Ctr_tabwidth0;" oncommand="classicthemerestorerjs.settings.prefChangeString('tabwidth', 'tabwidth_default');"/>
+						<menuitem value="tabwidth_150"	 	label="&Ctr_tabwidth1;" oncommand="classicthemerestorerjs.settings.prefChangeString('tabwidth', 'tabwidth_150');"/>
+						<menuitem value="tabwidth_250" 		label="&Ctr_tabwidth2;" oncommand="classicthemerestorerjs.settings.prefChangeString('tabwidth', 'tabwidth_250');"/>
+					</menupopup>
+				</menulist>
+			  </groupbox>
+			  
+			  <groupbox flex="1">
+				<caption  label="&Ctr_appbutton;" class="ctb_topic"/>
+				<menulist preference="ctr_appbutton" id="ctr_appbutton_list1">
+					<menupopup>
+						<menuitem value="appbutton_off"	label="&Ctr_appbutton0;" oncommand="classicthemerestorerjs.settings.prefChangeString('appbutton', 'appbutton_off');"/>
+						<menuitem value="appbutton_v1"	label="&Ctr_appbutton1;" oncommand="classicthemerestorerjs.settings.prefChangeString('appbutton', 'appbutton_v1');"/>
+						<menuitem value="appbutton_v2"	label="&Ctr_appbutton2;" oncommand="classicthemerestorerjs.settings.prefChangeString('appbutton', 'appbutton_v2');"/>
+						<label value=" "/>
+						<label value="&Ctr_appbuttonI2;" class="ctb_font1"/>
+					</menupopup>
+				</menulist>
+				<menulist preference="ctr_appbutton" id="ctr_appbutton_list2">
+					<menupopup>
+						<menuitem value="appbutton_off"	label="&Ctr_appbutton0;" oncommand="classicthemerestorerjs.settings.prefChangeString('appbutton', 'appbutton_off');"/>
+						<menuitem value="appbutton_v1"	label="&Ctr_appbutton1;" oncommand="classicthemerestorerjs.settings.prefChangeString('appbutton', 'appbutton_v1');"/>
+					</menupopup>
+				</menulist>
+				<menulist preference="ctr_appbuttonc">
+					<menupopup>
+						<menuitem value="appbuttonc_orange"	 label="&Ctr_appbuttonc_o;"	 oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_orange');"/>
+						<menuitem value="appbuttonc_aurora"	 label="&Ctr_appbuttonc_a;"	 oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_aurora');"/>
+						<menuitem value="appbuttonc_nightly" label="&Ctr_appbuttonc_n;"	 oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_nightly');"/>
+						<menuitem value="appbuttonc_transp"  label="&Ctr_appbuttonc_t;"  oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_transp');"/>
+						<menuitem value="appbuttonc_palemo"  label="&Ctr_appbuttonc_p;"  oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_palemo');"/>
+						<menuitem value="appbuttonc_red"	 label="&Ctr_appbuttonc_r;"  oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_red');"/>
+						<menuitem value="appbuttonc_green"	 label="&Ctr_appbuttonc_g;"  oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_green');"/>
+						<menuitem value="appbuttonc_gray"	 label="&Ctr_appbuttonc_gr;" oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_gray');"/>
+						<label value=" "/>
+						<label value="&Ctr_appbuttonI1;" class="ctb_font1"/>
+					</menupopup>
+				</menulist>
+			  </groupbox>
 
-		  </groupbox>
+			</vbox>
 
+			<vbox flex="1">
+			  
+			  <groupbox flex="1">
+				<caption  label="&Ctr_ui;" class="ctb_topic"/>
+				<checkbox label="&Ctr_smallnavbut;"	preference="ctr_smallnavbut" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('smallnavbut',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('smallnavbut',false);}" class="ctr_windowsonly"/>
+				<checkbox label="&Ctr_hidenavbar;"	preference="ctr_hidenavbar"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('hidenavbar',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('hidenavbar',false);}"/>
+				<checkbox label="&Ctr_hiderelstop;"	preference="ctr_hiderelstop" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('hiderelstop',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('hiderelstop',false);}"/>
+				<checkbox label="&Ctr_addonbar;"	preference="ctr_add-onbar"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('addonbar',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('addonbar',false);}"/>
+				<checkbox label="&Ctr_extrabar;"	preference="ctr_extrabar"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('extrabar',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('extrabar',false);}"/>
+				<checkbox label="&Ctr_backforward;"	preference="ctr_backforward" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('backforward',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('backforward',false);}"/>
+				
+				<menulist preference="ctr_findbar">
+					<menupopup>
+						<menuitem value="findbar_default" label="&Ctr_findbar_def;" oncommand="classicthemerestorerjs.settings.prefChangeString('findbar', 'findbar_default');"/>
+						<menuitem value="findbar_top"	  label="&Ctr_findbar_top;" oncommand="classicthemerestorerjs.settings.prefChangeString('findbar', 'findbar_top');"/>
+						<menuitem value="findbar_bottom"  label="&Ctr_findbar_bot;" oncommand="classicthemerestorerjs.settings.prefChangeString('findbar', 'findbar_bottom');"/>
+					</menupopup>
+				</menulist>
+				
+				<menulist preference="ctr_nav_txt_ico">
+					<menupopup>
+						<menuitem value="icons"		label="&Ctr_nav_txt_ico0;" oncommand="classicthemerestorerjs.settings.prefChangeString('nav_txt_ico', 'icons');"/>
+						<menuitem value="iconstxt"	label="&Ctr_nav_txt_ico1;" oncommand="classicthemerestorerjs.settings.prefChangeString('nav_txt_ico', 'iconstxt');"/>
+						<menuitem value="txtonly"	label="&Ctr_nav_txt_ico2;" oncommand="classicthemerestorerjs.settings.prefChangeString('nav_txt_ico', 'txtonly');"/>
+					</menupopup>
+				</menulist>
+
+			  </groupbox>
+
+			</vbox>
+		  </hbox>
+		
 		  <label value="&Ctr_moreinfo1;" class="ctb_topic"/>
-		  <label value="&Ctr_moreinfo2;" class="ctb_topic"/>
-
+		
 		</vbox>
-	</hbox>
+		
+		</tabpanel>
+		<tabpanel>
+
+		<vbox flex="1">
+		  <groupbox>
+			<caption label="&Ctr_experimental;" class="ctb_topic"/>
+			<checkbox label="&Ctr_combrelstop;"	preference="ctr_combrelstop"/>
+			<textbox class="plain" style="background-color: transparent !important;" multiline="true" readonly="true" value="&Ctr_combrelstopt;"/>
+			
+			<checkbox label="&Ctr_paneluibtweak;" preference="ctr_paneluibtweak" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',false);}"/>
+			<textbox class="plain" style="background-color: transparent !important;" multiline="true" readonly="true" value="&Ctr_paneluibtweakt;"/>
+		  </groupbox>
+		</vbox>
+
+		</tabpanel>
+
+	  </tabpanels>
+	</tabbox>
+
+  <hbox align="center" flex="1">
+	<label value="Support" href="http://forums.mozillazine.org/viewtopic.php?t=2773133" class="text-link"/>
+	<spacer flex="1" />
+	<label value="Classic Toolbar Buttons" href="https://addons.mozilla.org/addon/cstbb/versions/" class="text-link ctr_windowsonly"/>
+	<spacer flex="1" />
+	<button dlgtype="accept"/>
+  </hbox> 
 
   </prefpane>
 		

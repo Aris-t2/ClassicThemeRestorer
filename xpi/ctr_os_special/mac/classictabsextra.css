@@ -1,20 +1,25 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul){
+
+	.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
+	  -moz-padding-end: 0px !important;
+	  -moz-padding-start: 0px !important;
+	}
 	
 	.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme){
-	  background-image: linear-gradient(to top,#eaeaea,#eae8e4,#f5f5f2) !important;
+	  background-image: linear-gradient(to top,#eaeaea,#e2e2e2,#ededed,#fcfcfc) !important;
 	}
 	
 	.tabs-newtab-button:not(:-moz-lwtheme),
 	.tabbrowser-tab:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
-	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #afaba5,#c0bdb6,#c9c6c0) !important;
+	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #a1a1a1,#c0c0c0,#cccccc,#d4d4d4) !important;
 	  color:black !important;
 	}
 	
 	.tabs-newtab-button:hover:not(:-moz-lwtheme),
 	.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {
-	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#cbc7c1,#d5d2cc,#e1ded8) !important;
+	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#b3b3b3,#cfcfcf,#dedede,#e5e5e5) !important;
 	  color:black !important;
 	}
 	

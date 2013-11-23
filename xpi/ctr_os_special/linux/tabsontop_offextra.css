@@ -2,8 +2,8 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	#navigator-toolbox > #TabsToolbar,
-	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
+	#navigator-toolbox > #TabsToolbar:not(:-moz-lwtheme),
+	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:not(:-moz-lwtheme){
 		background: #d5d1cf !important;
 	}
 	#main-window[sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]){

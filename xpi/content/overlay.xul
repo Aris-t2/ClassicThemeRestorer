@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="chrome://classic_theme_restorer/content/overlay.css" type="text/css"?>
 
-<!--### most code taken from default browser.xul (Fx25+) ###-->
+<!--### most code taken from default browser.xul (Fx28+) ###-->
 
 <!--### use default dtd locale files for duplicated default item labels ###-->
 <!DOCTYPE overlay [
@@ -26,37 +26,49 @@
 	<script type="application/x-javascript" src="overlay.js"/>
 	<script type="application/x-javascript" src="options.js"/>
 
+	<!--### create a new add-ons bar ###-->
 	<vbox id="browser-bottombox">
 		<toolbar id="ctr_addon-bar" customizable="true"
 				 class="toolbar-primary chromeclass-toolbar"
 				 mode="icons"
+				 iconsize="small"
 				 toolboxid="navigator-toolbox"
-				 insertafter="PersonalToolbar">
+				 insertafter="PersonalToolbar"
+				 context="toolbar-context-menu"
+				 lockiconsize="true">
 		  <toolbaritem id="ctr_flexible_space_ab"
 					flex="1"
+					class="ctr_flexspaces"
 					title="&Ctr_flexspace;"
 					customizableui-areatype="toolbar"
 					removable="true"/>
 		</toolbar>
 	</vbox>
 	
+	<!--### create a new toolbar ###-->
 	<toolbox id="navigator-toolbox">
 		<toolbar id="ctr_extra-bar" customizable="true"
 				 class="toolbar-primary chromeclass-toolbar"
 				 mode="icons"
+				 iconsize="small"
 				 toolboxid="navigator-toolbox"
-				 insertafter="PersonalToolbar">
+				 insertafter="PersonalToolbar"
+				 context="toolbar-context-menu">
 		  <toolbaritem id="ctr_flexible_space_eb"
 					flex="1"
+					class="ctr_flexspaces"
 					title="&Ctr_flexspace;"
 					customizableui-areatype="toolbar"
 					removable="true"/>
 		</toolbar>
 	</toolbox>
 
-	<!--### moveable urlbar ###-->
+	<!--### moveable urlbar & buttons ###-->
 	<toolbaritem id="urlbar-container" style="min-width:130px !important;" removable="true"/>
-
+	<toolbarbutton id="alltabs-button" removable="true"/>
+	<toolbarbutton id="webrtc-status-button" removable="true"/>
+	<toolbarbutton id="social-share-button" removable="true"/>
+	<toolbaritem id="social-toolbar-item" removable="true"/>
 
 	<hbox id="titlebar-content">
 
@@ -65,7 +77,7 @@
 					 ordinal="0"
                      removable="true"
                      type="menu"
-                     label="         Firefox         ">
+                     label="&brandShortName;">
 		
 		<!--### rebuild menu using availalbe code from default browser.xul ###-->
 		<menupopup id="ctr_appbuttonPopup">
@@ -410,7 +422,6 @@
 			<menuitem id="menu_openAddons"
                       label="&addons.label;"
 					  class="menuitem-iconic"
-					  key="key_openAddons"
                       command="Tools:Addons"/>
 			<hbox>
 				<menuitem id="menu_preferences"
@@ -846,7 +857,6 @@
 			<menuitem id="menu_openAddons"
                       label="&addons.label;"
 					  class="menuitem-iconic"
-					  key="key_openAddons"
                       command="Tools:Addons"/>
 			<hbox>
 				<menuitem id="menu_preferences"
@@ -1047,9 +1057,25 @@
                          context="backForwardMenu"/>
       </toolbaritem>
 	  
+	<toolbarbutton id="ctr_back-forward-dropmarker" type="menu" 
+			disabled="false"
+			label="&backCmd.label; &forwardCmd.label;"
+			class="toolbarbutton-1 chromeclass-toolbar-additional tabs-alltabs-button"
+			onbroadcast="if (this.disabled) this.disabled =
+			document.getElementById('Browser:Back').hasAttribute('disabled') &amp;&amp;
+			document.getElementById('Browser:Forward').hasAttribute('disabled');">
+		<menupopup context=""
+				position="after_start"
+				onpopupshowing="return FillHistoryMenu(event.target);"
+				oncommand="gotoHistoryIndex(event); event.stopPropagation();"
+				onclick="checkForMiddleClick(this, event);"/>
+			<observes element="Browser:Back" attribute="disabled"/>
+			<observes element="Browser:Forward" attribute="disabled"/>
+	</toolbarbutton>
+	  
       <toolbarbutton id="ctr_reload-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
                      label="&reloadCmd.label;" removable="true"
-                     command="Browser:Reload"
+                     command="Browser:ReloadOrDuplicate"
                      onclick="checkForMiddleClick(this, event);"
                      tooltiptext="&reloadButton.tooltip;"/>
 
@@ -1057,66 +1083,108 @@
                      label="&stopCmd.label;" removable="true"
                      command="Browser:Stop"
                      tooltiptext="&stopButton.tooltip;"/>
-
+					 
       <toolbaritem id="ctr_flexible_space1"
                    flex="1"
+				   class="ctr_flexspaces"
                    title="&Ctr_flexspace;"
                    customizableui-areatype="toolbar"
                    removable="true"/>
       
 	  <toolbaritem id="ctr_flexible_space2"
                    flex="1"
+				   class="ctr_flexspaces"
                    title="&Ctr_flexspace;"
                    customizableui-areatype="toolbar"
                    removable="true"/>
       
 	  <toolbaritem id="ctr_flexible_space3"
                    flex="1"
+				   class="ctr_flexspaces"
                    title="&Ctr_flexspace;"
                    customizableui-areatype="toolbar"
                    removable="true"/>
 
 	  <toolbaritem id="ctr_flexible_space4"
                    flex="1"
+				   class="ctr_flexspaces"
                    title="&Ctr_flexspace;"
                    customizableui-areatype="toolbar"
                    removable="true"/>
       
 	  <toolbaritem id="ctr_flexible_space5"
-                   flex="1"
+                   class="ctr_flexspaces"
+				   flex="1"
                    title="&Ctr_flexspace;"
                    customizableui-areatype="toolbar"
                    removable="true"/>
 				   
       <toolbaritem id="ctr_space1"
-                   flex="1"
+                   class="ctr_spaces"
                    title="&Ctr_space;"
                    customizableui-areatype="toolbar"
                    removable="true"/>
       
 	  <toolbaritem id="ctr_space2"
-                   flex="1"
+                   class="ctr_spaces"
                    title="&Ctr_space;"
                    customizableui-areatype="toolbar"
                    removable="true"/>
       
 	  <toolbaritem id="ctr_space3"
-                   flex="1"
+                   class="ctr_spaces"
                    title="&Ctr_space;"
                    customizableui-areatype="toolbar"
                    removable="true"/>
 
 	  <toolbaritem id="ctr_space4"
-                   flex="1"
+                   class="ctr_spaces"
                    title="&Ctr_space;"
                    customizableui-areatype="toolbar"
                    removable="true"/>
       
 	  <toolbaritem id="ctr_space5"
-                   flex="1"
+                   class="ctr_spaces"
                    title="&Ctr_space;"
                    customizableui-areatype="toolbar"
                    removable="true"/>
+				   
+	  <toolbaritem id="ctr_seperator1"
+                   class="ctr_seperators"
+                   title="&Ctr_separator;"
+                   customizableui-areatype="toolbar"
+                   removable="true"/>
+				   
+	  <toolbaritem id="ctr_seperator2"
+                   class="ctr_seperators"
+                   title="&Ctr_separator;"
+                   customizableui-areatype="toolbar"
+                   removable="true"/>
+
+	  <toolbaritem id="ctr_seperator3"
+                   class="ctr_seperators"
+                   title="&Ctr_separator;"
+                   customizableui-areatype="toolbar"
+                   removable="true"/>
+				   
+	  <toolbaritem id="ctr_seperator4"
+				   class="ctr_seperators"
+                   title="&Ctr_separator;"
+                   customizableui-areatype="toolbar"
+                   removable="true"/>
+				   
+	  <toolbaritem id="ctr_seperator5"
+                   class="ctr_seperators"
+                   title="&Ctr_separator;"
+                   customizableui-areatype="toolbar"
+                   removable="true"/>
+
+	  <toolbaritem id="ctr_reload-stop-button" class="chromeclass-toolbar-additional"
+                   removable="true"
+                   title="&reloadCmd.label; &stopCmd.label;">				   
+
+	  </toolbaritem>
+
 	</toolbarpalette>
 
 </overlay> 

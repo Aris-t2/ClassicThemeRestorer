@@ -2,41 +2,8 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	@media all and (-moz-windows-classic) {
-
-		#navigator-toolbox > #TabsToolbar,
-		#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
-			background: #d6d3ce !important;
-		}
+	#navigator-toolbox > #TabsToolbar:not(:-moz-lwtheme),
+	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:not(:-moz-lwtheme){
+	  background: -moz-Dialog !important;
 	}
-	
-	@media not all and (-moz-windows-classic) {
-   	
-		#navigator-toolbox > #TabsToolbar,
-		#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
-			background: #efebde !important;
-		}
-    }
-
-	@media all and (-moz-windows-theme: luna-silver){
-		#navigator-toolbox > #TabsToolbar,
-		#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
-			background: #e0dfe3 !important;
-		}	
-	}
-	
-	@media all and (-moz-windows-theme: royale){
-		#navigator-toolbox > #TabsToolbar,
-		#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
-			background: #ebe9ed !important;
-		}	
-	}
-	
-	@media all and (-moz-windows-theme: zune){
-		#navigator-toolbox > #TabsToolbar,
-		#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
-			background: #e2e2e2 !important;
-		}	
-	}	
-
 }

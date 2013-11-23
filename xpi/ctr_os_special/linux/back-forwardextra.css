@@ -17,5 +17,18 @@
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > *{
 	  transition: none !important;
 	}
+	
+	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr) {
+	  margin-left: -6px !important;
+	  transition: none !important;
+	  transition-property:  none !important;
+	  transition-delay: 0s !important;
+	}
+
+	#wrapper-urlbar-container, #urlbar-container,#urlbar-wrapper,#urlbar{
+	  transition: none !important;
+	  transition-property:  none !important;
+	  transition-delay: 0s !important;
+	}
 
 }

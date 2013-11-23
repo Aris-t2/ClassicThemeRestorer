@@ -2,8 +2,7 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 	
-	#ctr_addon-bar {
+	#main-window:not([inFullscreen]) #ctr_addon-bar {
 	  visibility: visible !important;
 	}
-
 }

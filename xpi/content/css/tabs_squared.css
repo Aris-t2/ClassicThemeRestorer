@@ -22,7 +22,7 @@
 	}
 
 	.tabs-newtab-button {
-	  -moz-margin-end: 0px !important;
+	  /*-moz-margin-end: 0px !important;*/
 	  -moz-margin-start: 0px !important;
 	  clip-path:none !important;
 	  width: 28px !important;
@@ -53,11 +53,6 @@
 	  padding-right: 2px !important;
 	}
 
-	.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
-	  -moz-padding-end: 0px !important;
-	  -moz-padding-start: 0px !important;
-	}
-	
 	.tabbrowser-tab,
 	.tabs-newtab-button{
 	  -moz-appearance: none !important;
@@ -123,8 +118,5 @@
 	#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
 		background-image: none !important;
 	}
-	
-	/*#main-window[tabsintitlebar][sizemode="normal"] #TabsToolbar .titlebar-placeholder{
-	  visibility:collapse !important;
-	}*/
+
 }

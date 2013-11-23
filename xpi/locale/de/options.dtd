@@ -1,16 +1,25 @@
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
+<!ENTITY Ctr_main			"Grundeinstellungen">
+<!ENTITY Ctr_experim		"Experimentelle Einstellungen">
+
 <!ENTITY Ctr_ui				"Oberfläche">
 
+<!ENTITY Ctr_tabs			"Tabs">
 <!ENTITY Ctr_tabs0			"Gerundete Tabs (Australis)">
 <!ENTITY Ctr_tabs1			"Quadratische Tabs (klassisch)">
-<!ENTITY Ctr_tabs2			"Gerundete Tabs (expirimentell)">
+<!ENTITY Ctr_tabs2			"Gerundete Tabs (experimentell)">
 <!ENTITY Ctr_tabsotoff		"Tabs nicht oben">
+<!ENTITY Ctr_tabsintitlebar "Tabs auf Titelleiste">
+<!ENTITY Ctr_tabwidth0		"Maximalbreite: 180px (standard)">
+<!ENTITY Ctr_tabwidth1		"Maximalbreite: 150px">
+<!ENTITY Ctr_tabwidth2		"Maximalbreite: 250px (klassisch)">
 <!ENTITY Ctr_smallnavbut	"Kleine Buttons">
 <!ENTITY Ctr_findbar_def	"Suchleiste (Standardposition)">
 <!ENTITY Ctr_findbar_bot	"Suchleiste unten">
 <!ENTITY Ctr_findbar_top	"Suchleiste oben">
 <!ENTITY Ctr_hidenavbar		"Navigationsleiste verstecken">
+<!ENTITY Ctr_hiderelstop	"Akt./Stop verstecken (Adressleiste)">
 <!ENTITY Ctr_addonbar		"Addonleiste">
 <!ENTITY Ctr_extrabar		"Extraleiste">
 
@@ -34,9 +43,15 @@
 <!ENTITY Ctr_appbuttonI2	"Neustart empfohlen">
 
 <!ENTITY Ctr_buttons		"Buttons">
-<!ENTITY Ctr_backforward	"Verschiebarer Vor-Zurück Button">
+<!ENTITY Ctr_backforward	"Verschiebbarer Vor-Zurück Button">
 <!ENTITY Ctr_flexspace		"Flexibler Zwischenraum">
 <!ENTITY Ctr_space			"Zwischenraum">
+<!ENTITY Ctr_separator		"Separator">
 
-<!ENTITY Ctr_moreinfo1 		"Buttons müssen über 'Anpassen'">
-<!ENTITY Ctr_moreinfo2 		"auf Leisten verschoben werden.">
+<!ENTITY Ctr_moreinfo1 		"Buttons müssen über 'Anpassen' auf Leisten verschoben werden.">
+
+<!ENTITY Ctr_experimental 	"Experimentelle Einstellungen">
+<!ENTITY Ctr_combrelstop 	"'Aktualisieren' und 'Stop' kombinieren (Firefox neustarten!)">
+<!ENTITY Ctr_combrelstopt 	"Funktioniert nur, falls 'Aktualisieren' und 'Stop' nebeneinander vor der Adressleiste platziert werden!">
+<!ENTITY Ctr_paneluibtweak 	"PanelUI Button wie Anwendungsbutton darstellen (auf der Tableiste)">
+<!ENTITY Ctr_paneluibtweakt "Platziere den PanelUI Button auf der Tableiste um diese Änderung zu sehen! Die Optionen 'Anwendungsbutton auf Leisten/Titelleiste' müssen deaktiviert werden!">
