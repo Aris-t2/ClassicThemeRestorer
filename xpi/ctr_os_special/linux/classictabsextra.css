@@ -26,4 +26,9 @@
 	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#cbc7c1,#d5d2cc,#e1ded8) !important;
 	  color:black !important;
 	}
+	
+	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:hover):not(:-moz-lwtheme){
+	  background-size: 95% 100% !important;
+	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #afaba5,#c0bdb6,#c9c6c0) !important;
+	}
 }

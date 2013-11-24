@@ -52,6 +52,11 @@
 		  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#cbc7c1,#d5d2cc,#e1ded8) !important;
 		  color:black !important;
 		}
+		
+		.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:hover):not(:-moz-lwtheme){
+		  background-size: 95% 100% !important;
+		  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #afaba5,#c0bdb6,#c9c6c0) !important;
+		}
 	}
 	
 	/* for Windows Luna Blue and Olive Theme */
@@ -72,6 +77,11 @@
 		  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#cbc7c1,#d5d2cc,#e1ded8) !important;
 		  color:black !important;
 		}
+		
+		.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:hover):not(:-moz-lwtheme){
+		  background-size: 95% 100% !important;
+		  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #afaba5,#c0bdb6,#c9c6c0) !important;
+		}
     }
 	
 	@media all and (-moz-windows-theme: luna-silver){
@@ -89,6 +99,11 @@
 		.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {
 		  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#d4d3d7,#dfdee1,#e8e8ea) !important;
 		  color:black !important;
+		}
+		
+		.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:hover):not(:-moz-lwtheme){
+		  background-size: 95% 100% !important;
+		  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #b8b7bb,#cccbce,#d5d4d8) !important;
 		}
 	}
 	
@@ -108,6 +123,11 @@
 		  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#dddbdf,#e8e7ea,#f5f4f5) !important;
 		  color:black !important;
 		}
+		
+		.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:hover):not(:-moz-lwtheme){
+		  background-size: 95% 100% !important;
+		  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #c1bfc3,#d5d3d7,#dfdde1) !important;
+		}
 	}
 	
 	@media all and (-moz-windows-theme: zune){
@@ -125,6 +145,11 @@
 		.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {
 		  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#d6d6d6,#e1e1e1,#f0f0f0) !important;
 		  color:black !important;
+		}
+		
+		.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:hover):not(:-moz-lwtheme){
+		  background-size: 95% 100% !important;
+		  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #bababa,#cecece,#d7d7d7) !important;
 		}
 	}
 }

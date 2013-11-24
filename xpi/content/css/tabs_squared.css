@@ -112,6 +112,16 @@
 	  background-image: linear-gradient(hsla(0,0%,100%,.4), hsla(0,0%,75%,.4) 80%),
 						radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,1) 3%, rgba(186,221,251,.75) 40%, rgba(127,179,255,.5) 80%, rgba(127,179,255,.25)) !important;
 	}
+	
+	.tabbrowser-tab[pinned]{
+	  min-width: 32px !important;
+	  width: 32px !important;
+	  max-width: 32px !important;
+	}
+
+	.tabbrowser-tab[pinned] image{
+	  margin-left:2px !important;
+	}
 
 	#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
 	.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,

@@ -34,7 +34,7 @@
 	.tabs-newtab-button{
 	  margin-right:-15px !important;
 	}
-
+	
 	/* for Windows Aero Theme (AeroBasic/AeroGlass - Vista/7/8) */
 	@media all and (-moz-windows-theme:aero) {
 		.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {
@@ -49,6 +49,11 @@
 		.tabs-newtab-button:hover:not(:-moz-lwtheme),
 		.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {
 		  background-image: linear-gradient(to top, #868d94 0px, transparent 1px),linear-gradient(to top,#d0dce8,#dce7f3,#e5effa) !important;
+		}
+		
+		.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:hover):not(:-moz-lwtheme){
+		  background-size: 95% 100% !important;
+		  background-image: linear-gradient(to top, #868d94 0px, transparent 1px),linear-gradient(to top,#b4c0cc,#c8d4e1,#d1deec) !important;
 		}
 	}
 	
@@ -69,6 +74,10 @@
 		.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {
 		  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#cbc7c1,#d5d2cc,#e1ded8) !important;
 		  color:black !important;
+		}
+		.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:hover):not(:-moz-lwtheme){
+		  background-size: 95% 100% !important;
+		  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #afaba5,#c0bdb6,#c9c6c0) !important;
 		}
     }
 	

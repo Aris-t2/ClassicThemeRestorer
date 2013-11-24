@@ -90,9 +90,15 @@
     }
     
     .tabbrowser-tab[pinned][titlechanged] > .tab-stack > .tab-content {
-      -moz-border-image: url("chrome://classic_theme_restorer/content/images/atab.png") 2 28 repeat stretch !important;
+      -moz-border-image: url("chrome://classic_theme_restorer/content/images/atab_at.png") 2 28 repeat stretch !important;
+	  background-size: 95% 100% !important;
+	  background-image: linear-gradient(to top, #868d94 0px, transparent -1px),linear-gradient(to top,#b4c0cc,#c8d4e1,#d1deec) !important;
+	  background-position: 0px 0px !important;
     }
     .tabbrowser-tab[pinned][titlechanged]:hover > .tab-stack > .tab-content:not([selected="true"]) {
       -moz-border-image: url("chrome://classic_theme_restorer/content/images/atab_hov.png") 2 28 repeat stretch !important;
+	  background-size: 95% 100% !important;
+	  background-image: linear-gradient(to top, #868d94 0px, transparent -1px),linear-gradient(to top,#d0dce8,#dce7f3,#e5effa) !important;
+	  background-position: 0px 0px !important;
     }
 }
