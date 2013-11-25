@@ -5,7 +5,6 @@ pref("extensions.classicthemerestorer.tabwidth",'tabwidth_default');
 pref("extensions.classicthemerestorer.smallnavbut",false);
 pref("extensions.classicthemerestorer.findbar","findbar_default");
 pref("extensions.classicthemerestorer.hidenavbar",false);
-pref("extensions.classicthemerestorer.hiderelstop",false);
 pref("extensions.classicthemerestorer.addonbar",false);
 pref("extensions.classicthemerestorer.extrabar",false);
 pref("extensions.classicthemerestorer.nav_txt_ico","icons");

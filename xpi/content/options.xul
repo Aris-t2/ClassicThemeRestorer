@@ -23,7 +23,6 @@
 		<preference id="ctr_smallnavbut"	name="extensions.classicthemerestorer.smallnavbut"	type="bool"		instantApply="true"/>
 		<preference id="ctr_findbar"		name="extensions.classicthemerestorer.findbar"		type="string"	instantApply="true"/>
 		<preference id="ctr_hidenavbar"		name="extensions.classicthemerestorer.hidenavbar"	type="bool"		instantApply="true"/>
-		<preference id="ctr_hiderelstop"	name="extensions.classicthemerestorer.hiderelstop"	type="bool"		instantApply="true"/>
 		<preference id="ctr_add-onbar"		name="extensions.classicthemerestorer.addonbar"		type="bool"		instantApply="true"/>
 		<preference id="ctr_extrabar"		name="extensions.classicthemerestorer.extrabar"		type="bool"		instantApply="true"/>
 		<preference id="ctr_nav_txt_ico"	name="extensions.classicthemerestorer.nav_txt_ico" 	type="string"	instantApply="true"/>
@@ -111,7 +110,6 @@
 				<caption  label="&Ctr_ui;" class="ctb_topic"/>
 				<checkbox label="&Ctr_smallnavbut;"	preference="ctr_smallnavbut" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('smallnavbut',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('smallnavbut',false);}" class="ctr_windowsonly"/>
 				<checkbox label="&Ctr_hidenavbar;"	preference="ctr_hidenavbar"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('hidenavbar',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('hidenavbar',false);}"/>
-				<checkbox label="&Ctr_hiderelstop;"	preference="ctr_hiderelstop" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('hiderelstop',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('hiderelstop',false);}"/>
 				<checkbox label="&Ctr_addonbar;"	preference="ctr_add-onbar"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('addonbar',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('addonbar',false);}"/>
 				<checkbox label="&Ctr_extrabar;"	preference="ctr_extrabar"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('extrabar',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('extrabar',false);}"/>
 				<checkbox label="&Ctr_backforward;"	preference="ctr_backforward" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('backforward',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('backforward',false);}"/>
@@ -147,7 +145,7 @@
 		<vbox flex="1">
 		  <groupbox>
 			<caption label="&Ctr_experimental;" class="ctb_topic"/>
-			<checkbox label="&Ctr_combrelstop;"	preference="ctr_combrelstop"/>
+			<checkbox label="&Ctr_combrelstop;"	preference="ctr_combrelstop" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('combrelstop',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('combrelstop',false);}"/>
 			<textbox class="plain" style="background-color: transparent !important;" multiline="true" readonly="true" value="&Ctr_combrelstopt;"/>
 			
 			<checkbox label="&Ctr_paneluibtweak;" preference="ctr_paneluibtweak" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',false);}"/>

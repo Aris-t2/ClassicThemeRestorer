@@ -1,5 +1,9 @@
 Components.utils.import("chrome://classic_theme_restorer/content/addonbar.jsm");
 
+Components.utils.import("resource://gre/modules/XPCOMUtils.jsm");
+Components.utils.import("resource://gre/modules/NotificationDB.jsm");
+Components.utils.import("resource:///modules/RecentWindow.jsm");
+
 if (typeof classicthemerestorer == "undefined") {var classicthemerestorer = {};};
 if (!classicthemerestorer.buttoninsert) {classicthemerestorer.buttoninsert = {};};
 
@@ -70,88 +74,3 @@ classicthemerestorer.buttoninsert = {
 };
 
 classicthemerestorer.buttoninsert.init();
-
-// make sure nothing happens if corresponding option is disabled
-if (Components.classes["@mozilla.org/preferences-service;1"]
-	.getService(Components.interfaces.nsIPrefService)
-		.getBranch("extensions.classicthemerestorer.")
-			.getBoolPref("combrelstop")==true) {
-
-	/* overlays default CombinedStopReload in browser.js */
-	/* that-fore it has to be 'global' */
-	var CombinedStopReload = {
-	  init: function () {
-
-		if (this._initialized)
-		  return;
-		let reload = document.getElementById("ctr_reload-button");
-		let stop = document.getElementById("ctr_stop-button");
-		if (!stop || !reload || reload.nextSibling != stop)
-		  return;
-		this._initialized = true;
-		if (XULBrowserWindow.stopCommand.getAttribute("disabled") != "true")
-		  reload.setAttribute("displaystop", "true");
-		stop.addEventListener("click", this, false);
-		this.reload = reload;
-		this.stop = stop;
-	  },
-
-	  uninit: function () {
-		if (!this._initialized)
-		  return;
-
-		this._cancelTransition();
-		this._initialized = false;
-		this.stop.removeEventListener("click", this, false);
-		this.reload = null;
-		this.stop = null;
-	  },
-
-	  handleEvent: function (event) {
-		if (event.button == 0 &&
-			!this.stop.disabled)
-		  this._stopClicked = true;
-	  },
-
-	  switchToStop: function () {
-		if (!this._initialized)
-		  return;
-
-		this._cancelTransition();
-		this.reload.setAttribute("displaystop", "true");
-	  },
-
-	  switchToReload: function (aDelay) {
-		if (!this._initialized)
-		  return;
-
-		this.reload.removeAttribute("displaystop");
-
-		if (!aDelay || this._stopClicked) {
-		  this._stopClicked = false;
-		  this._cancelTransition();
-		  this.reload.disabled = XULBrowserWindow.reloadCommand
-												 .getAttribute("disabled") == "true";
-		  return;
-		}
-
-		if (this._timer)
-		  return;
-
-		this.reload.disabled = true;
-		this._timer = setTimeout(function (self) {
-		  self._timer = 0;
-		  self.reload.disabled = XULBrowserWindow.reloadCommand
-												 .getAttribute("disabled") == "true";
-		}, 650, this);
-	  },
-
-	  _cancelTransition: function () {
-		if (this._timer) {
-		  clearTimeout(this._timer);
-		  this._timer = 0;
-		}
-	  }
-	};
-
-}

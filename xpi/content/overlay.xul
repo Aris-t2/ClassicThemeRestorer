@@ -1057,7 +1057,7 @@
                          context="backForwardMenu"/>
       </toolbaritem>
 	  
-	<toolbarbutton id="ctr_back-forward-dropmarker" type="menu" 
+	  <toolbarbutton id="ctr_back-forward-dropmarker" type="menu" 
 			disabled="false"
 			label="&backCmd.label; &forwardCmd.label;"
 			class="toolbarbutton-1 chromeclass-toolbar-additional tabs-alltabs-button"
@@ -1071,7 +1071,7 @@
 				onclick="checkForMiddleClick(this, event);"/>
 			<observes element="Browser:Back" attribute="disabled"/>
 			<observes element="Browser:Forward" attribute="disabled"/>
-	</toolbarbutton>
+	  </toolbarbutton>
 	  
       <toolbarbutton id="ctr_reload-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
                      label="&reloadCmd.label;" removable="true"
@@ -1083,6 +1083,21 @@
                      label="&stopCmd.label;" removable="true"
                      command="Browser:Stop"
                      tooltiptext="&stopButton.tooltip;"/>
+
+	  <!-- creates a combined reload stop button, by duplication the default one from urlbar -->
+	  <toolbaritem id="ctr_comb_stopreload-button" class="chromeclass-toolbar-additional"
+                   context="backForwardMenu" removable="true"
+                   title="&reloadCmd.label; &stopCmd.label; (combo)">
+		  <toolbarbutton id="urlbar-reload-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+						 label="&reloadCmd.label;"
+						 command="Browser:ReloadOrDuplicate"
+						 onclick="checkForMiddleClick(this, event);"
+						 tooltiptext="&reloadButton.tooltip;"/>
+		  <toolbarbutton id="urlbar-stop-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+						 label="&stopCmd.label;"
+						 command="Browser:Stop"
+						 tooltiptext="&stopButton.tooltip;"/>
+	  </toolbaritem>
 					 
       <toolbaritem id="ctr_flexible_space1"
                    flex="1"
@@ -1184,7 +1199,7 @@
                    title="&reloadCmd.label; &stopCmd.label;">				   
 
 	  </toolbaritem>
-
+	  
 	</toolbarpalette>
 
 </overlay> 

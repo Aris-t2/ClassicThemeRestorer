@@ -3,10 +3,10 @@ if (!classicthemerestorerjs.settings) {classicthemerestorerjs.settings = {};};
 
 classicthemerestorerjs.settings = {
 
-prefs: Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.classicthemerestorer."),
+  prefs: Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.classicthemerestorer."),
 
-/* init css on startup, if corresponding settings are enabled */
-init: function() {
+  /* init css on startup, if corresponding settings are enabled */
+  init: function() {
 
 	if (this.prefs.getCharPref("tabs")!="tabs_default"){
 		this.loadUnloadCSS(this.prefs.getCharPref("tabs"),true);
@@ -30,7 +30,6 @@ init: function() {
 	if (this.prefs.getBoolPref("tabsotoff"))		{ this.loadUnloadCSS("tabsotoff",true); }
 	if (this.prefs.getBoolPref("smallnavbut"))		{ this.loadUnloadCSS("smallnavbut",true); }
 	if (this.prefs.getBoolPref("hidenavbar"))		{ this.loadUnloadCSS("hidenavbar",true); }
-	if (this.prefs.getBoolPref("hiderelstop"))		{ this.loadUnloadCSS("hiderelstop",true); }
 	if (this.prefs.getBoolPref("addonbar"))			{ this.loadUnloadCSS("addonbar",true); }
 	if (this.prefs.getBoolPref("extrabar"))			{ this.loadUnloadCSS("extrabar",true); }
 	if (this.prefs.getBoolPref("backforward"))		{ this.loadUnloadCSS("backforward",true); }
@@ -38,10 +37,10 @@ init: function() {
 	if (this.prefs.getBoolPref("combrelstop"))		{ this.loadUnloadCSS("combrelstop",true); }
 	if (this.prefs.getBoolPref("paneluibtweak"))	{ this.loadUnloadCSS("paneluibtweak",true); }
 
-},
+  },
 
-/* enable/disable css sheets*/
-loadUnloadCSS: function(which,enable) {
+  /* enable/disable css sheets*/
+  loadUnloadCSS: function(which,enable) {
 	
 	switch (which) {
 	
@@ -79,7 +78,6 @@ loadUnloadCSS: function(which,enable) {
 		case "findbar_bottom": 		manageCSS("findbar_bottom.css");  		break;
 		
 		case "hidenavbar": 			manageCSS("hidenavbar.css");  			break;
-		case "hiderelstop": 		manageCSS("hiderelstop.css");  			break;
 		case "addonbar": 			manageCSS("addonbar.css");  			break;
 		case "extrabar": 			manageCSS("extrabar.css");  			break;
 		
@@ -137,13 +135,13 @@ loadUnloadCSS: function(which,enable) {
 			}
 		}catch(e){}
 	}
-},
+  },
 
-prefChangeString: function(which,value){
+  prefChangeString: function(which,value){
 	
 	this.loadUnloadCSS(this.prefs.getCharPref(which),false);
 	this.loadUnloadCSS(value,true);
-}
+  }
 
 }
 

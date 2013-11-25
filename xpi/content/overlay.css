@@ -220,20 +220,22 @@
 
 	#ctr_appbutton,
 	#ctr_appbutton2,
-	#ctr_back-forward-button{
+	#ctr_back-forward-button,
+	#ctr_comb_stopreload-button{
 	  visibility: collapse;
 	}
 	
 	#PanelUI-button {
 	  visibility: collapse !important;
 	}
-	
+
 	#customization-palette #ctr_panelui-button{
 	  background:url("chrome://classic_theme_restorer/content/images/panelui.png") center no-repeat !important;
 	}
 
 	#customization-palette #ctr_appbutton,
-	#customization-palette #ctr_back-forward-button{
+	#customization-palette #ctr_back-forward-button,
+	#customization-palette #ctr_comb_stopreload-button{
 		visibility: visible !important;
 		background:url("chrome://classic_theme_restorer/content/images/enableoption.png") center no-repeat;
 		border:none !important;
@@ -245,6 +247,7 @@
 	#customization-palette #ctr_history-button image,
 	#customization-palette #ctr_panelui-button image,
 	#customization-palette #ctr_back-forward-button image,
+	#customization-palette #ctr_comb_stopreload-button image,
 	#customization-palette #ctr_stop-button image,
 	#customization-palette #ctr_reload-button image{
 		background:none !important;
@@ -254,7 +257,7 @@
 	#customization-palette #ctr_panelui-button{
 		width: 82px !important;
 	}
-	
+
 	/* buttons */
 	#customization-palette #ctr_bookmarks-menu-toolbar-button,
 	#customization-palette #ctr_bookmarks-button{
