@@ -26,9 +26,9 @@
 			margin-top:28px !important;
 		}
 		
-		#main-window:not([tabsintitlebar])[sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #nav-bar{
+		/*#main-window:not([tabsintitlebar])[sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #nav-bar{
 			margin-top:16px !important;
-		}
+		}*/
 		
 		#main-window[tabsintitlebar][sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #nav-bar{
 			margin-top:28px !important;
@@ -45,9 +45,9 @@
 			margin-top:22px !important;
 		}
 		
-		#main-window:not([tabsintitlebar])[sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #nav-bar{
+		/*#main-window:not([tabsintitlebar])[sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #nav-bar{
 			margin-top:16px !important;
-		}
+		}*/
 		
 		#main-window[tabsintitlebar][sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #nav-bar{
 			margin-top:22px !important;

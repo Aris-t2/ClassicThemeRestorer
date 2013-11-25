@@ -16,10 +16,10 @@
 		background:url("chrome://classic_theme_restorer/content/images/reloadstop.png") center no-repeat !important;
 	}
 	
-	#nav-bar #ctr_comb_stopreload-button #urlbar-reload-button:not([disabled]),
-	#nav-bar #ctr_comb_stopreload-button #urlbar-reload-button:not([disabled]),
-	#nav-bar #ctr_comb_stopreload-button #urlbar-stop-button:not([disabled]),
-	#nav-bar #ctr_comb_stopreload-button #urlbar-stop-button:hover:active {
+	#ctr_comb_stopreload-button #urlbar-reload-button:not([disabled]),
+	#ctr_comb_stopreload-button #urlbar-reload-button:not([disabled]),
+	#ctr_comb_stopreload-button #urlbar-stop-button:not([disabled]),
+	#ctr_comb_stopreload-button #urlbar-stop-button:hover:active {
 	  background-image: none !important;
 	}
 }
