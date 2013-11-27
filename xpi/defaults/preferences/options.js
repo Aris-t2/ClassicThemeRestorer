@@ -11,6 +11,7 @@ pref("extensions.classicthemerestorer.nav_txt_ico","icons");
 pref("extensions.classicthemerestorer.appbutton",'appbutton_v1');
 pref("extensions.classicthemerestorer.appbuttonc",'appbuttonc_orange');
 pref("extensions.classicthemerestorer.backforward",false);
+pref("extensions.classicthemerestorer.bfurlbarfix",false);
 
 pref("extensions.classicthemerestorer.firstrun",true);
 

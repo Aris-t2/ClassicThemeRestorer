@@ -36,6 +36,7 @@ classicthemerestorerjs.settings = {
 	
 	if (this.prefs.getBoolPref("combrelstop"))		{ this.loadUnloadCSS("combrelstop",true); }
 	if (this.prefs.getBoolPref("paneluibtweak"))	{ this.loadUnloadCSS("paneluibtweak",true); }
+	if (this.prefs.getBoolPref("bfurlbarfix"))		{ this.loadUnloadCSS("bfurlbarfix",true); }
 
   },
 
@@ -114,6 +115,7 @@ classicthemerestorerjs.settings = {
 		
 		case "combrelstop": 		manageCSS("combrelstop.css");			break;
 		case "paneluibtweak": 		manageCSS("paneluibutton_tweak.css");	break;
+		case "bfurlbarfix": 		manageCSS("bf_urlbarfix.css");			break;
 	
 	}
 	

@@ -12,8 +12,17 @@
 	#ctr_comb_stopreload-button{
 	  visibility: visible !important;
 	}
+	
+	#customization-palette #ctr_comb_stopreload-button #urlbar-reload-button image,
+	#customization-palette #ctr_comb_stopreload-button #urlbar-stop-button image,
+	#customization-palette #urlbar-reload-button image,
+	#customization-palette #urlbar-stop-button image{
+		background:none !important;
+		list-style-image:none !important;
+	}
+	
 	#customization-palette #ctr_comb_stopreload-button{
-		background:url("chrome://classic_theme_restorer/content/images/reloadstop.png") center no-repeat !important;
+	  background:url("chrome://classic_theme_restorer/content/images/reloadstop.png") center no-repeat !important;
 	}
 	
 	#ctr_comb_stopreload-button #urlbar-reload-button:not([disabled]),

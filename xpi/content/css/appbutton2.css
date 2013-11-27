@@ -11,10 +11,6 @@
 	  visibility: visible !important;
 	}
 
-	#main-window[tabsintitlebar][sizemode="normal"] #TabsToolbar .titlebar-placeholder{
-	  visibility:collapse !important;
-	}
-
 	/* style appbutton*/
 	#ctr_appbutton2{
 	  -moz-appearance:none !important;
@@ -75,8 +71,8 @@
 	  visibility:collapse !important;
 	}
 
-	/* restore hidden titlebar and move it behind tabs toolbar, if 
-	   tabsintitlebar setting is false */
+	/* restore hidden titlebar and move it behind tabs toolbar for 
+	   'tabsintitlebar=false' */
 
 	@media all and (-moz-windows-theme:aero) {
 
@@ -110,6 +106,11 @@
 			#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
 			  margin-top: 20px !important;
 			}
+			
+			#main-window[tabsintitlebar][sizemode="normal"] #TabsToolbar .titlebar-placeholder{
+			  visibility:collapse !important;
+			}
+			
 		}
 		
 		@media not all and (-moz-windows-compositor) {
@@ -155,7 +156,7 @@
 
 		#ctr_appbutton2{
 			margin-top:0px !important;
-			margin: 0px 0 2px 0px !important;
+			margin: 0px 0 16px 0px !important;
 		}
 	}
 	

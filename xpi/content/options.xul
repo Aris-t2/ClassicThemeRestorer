@@ -33,6 +33,7 @@
 		
 		<preference id="ctr_combrelstop"	name="extensions.classicthemerestorer.combrelstop"	type="bool"		instantApply="true"/>
 		<preference id="ctr_paneluibtweak"	name="extensions.classicthemerestorer.paneluibtweak" type="bool"	instantApply="true"/>
+		<preference id="ctr_bfurlbarfix"	name="extensions.classicthemerestorer.bfurlbarfix"	type="bool"		instantApply="true"/>
 	
 	</preferences>
 
@@ -150,6 +151,9 @@
 			
 			<checkbox label="&Ctr_paneluibtweak;" preference="ctr_paneluibtweak" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',false);}"/>
 			<textbox class="plain" style="background-color: transparent !important;" multiline="true" readonly="true" value="&Ctr_paneluibtweakt;"/>
+			
+			<checkbox label="&Ctr_bfurlbarfix;" preference="ctr_bfurlbarfix" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('bfurlbarfix',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('bfurlbarfix',false);}"/>
+			<textbox class="plain" style="background-color: transparent !important;" multiline="true" readonly="true" value="&Ctr_bfurlbarfixt;"/>
 		  </groupbox>
 		</vbox>
 

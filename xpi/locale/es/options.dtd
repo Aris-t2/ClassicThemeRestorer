@@ -54,3 +54,5 @@
 <!ENTITY Ctr_combrelstopt 	"Only works when combined button is placed before urlbar like this [...][reload-stop][...][urlbar][...]. The reload-stop button on urlbar gets hidden.">
 <!ENTITY Ctr_paneluibtweak 	"Appbutton appearance for panel ui button (on tabs toolbar)">
 <!ENTITY Ctr_paneluibtweakt "Move PanelUI button on tabs toolbar and disable 'appbutton on titlebar/toolbar' options!">
+<!ENTITY Ctr_bfurlbarfix 	"Force urlbars left border-radius to 2.5px">
+<!ENTITY Ctr_bfurlbarfixt	"Needs to stay disabled for custom css code being able to change left border-radius. Otherwise this is needed for 'movable back-forward button option' to change urlbars left border to match right border radius.">

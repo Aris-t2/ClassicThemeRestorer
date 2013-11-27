@@ -6,9 +6,9 @@
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:not(:-moz-lwtheme){
 		background: #d5d1cf !important;
 	}
-	#main-window[sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]){
+	/*#main-window[sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]){
 		margin-top: -16px !important;
-	}
+	}*/
 	#TabsToolbar{
 		margin-bottom: -1px !important;
 	}

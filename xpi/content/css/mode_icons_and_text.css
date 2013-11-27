@@ -49,7 +49,15 @@
                   0 0 2px hsla(210,54%,20%,.1) !important;
 	}
 	
-	/* make custom back-forward visible and hide back-forward on urlbar item */
+	#ctr_addon-bar .toolbarbutton-menubutton-button{
+	 min-width:60px !important;
+	}
+
+	#ctr_addon-bar toolbarbutton[type=menu] {
+	  padding:8px !important;
+	}
+	
+	/* make custom back-forward visible and hide urlbars back-forward item */
 	#ctr_back-forward-button {
 	  visibility: visible !important;
 	}	

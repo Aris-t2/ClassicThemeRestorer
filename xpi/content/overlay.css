@@ -9,7 +9,7 @@
 	  min-width: 200px !important;
 	}
 
-	/* spaces, flexible spaces, seperators*/
+	/* spaces, flexible spaces, separators */
 	*[customizing] .ctr_flexspaces{
 	  min-width:32px;
 	  width:32px;
@@ -29,7 +29,7 @@
 	  background: url("chrome://classic_theme_restorer/content/images/space1.png") center no-repeat;
 	}
 
-	.ctr_seperators{
+	.ctr_separators{
 	  min-width:5px;
 	  width:5px;
 	  background: url("chrome://classic_theme_restorer/content/images/seperator.png") center no-repeat;
@@ -37,21 +37,21 @@
 
 	/*ctr_back-forward-dropmarker */
 	#ctr_back-forward-dropmarker {
-	  list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow.png") !important;
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/toolbarbutton-dropdown-arrow.png");
 	}
 
 	#ctr_back-forward-dropmarker:-moz-lwtheme-brighttext {
-	  list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png") !important;
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/toolbarbutton-dropdown-arrow-inverted.png");
 	}
 	#ctr_back-forward-dropmarker > .toolbarbutton-icon {
-	  padding: 2px 0px !important;
+	  padding: 0px !important;
 	}
 	#ctr_back-forward-dropmarker dropmarker {
-	  visibility:collapse !important;
+	  visibility: collapse !important;
 	}
 
 	#ctr_back-forward-button ~ #ctr_back-forward-dropmarker{
-	  margin-left:-6px !important;
+	  margin-left: -6px !important;
 	}
 	#customization-palette #ctr_back-forward-dropmarker image{
 		background:url("chrome://browser/skin/toolbarbutton-dropdown-arrow.png") center center no-repeat !important;
@@ -249,12 +249,19 @@
 	#customization-palette #ctr_back-forward-button image,
 	#customization-palette #ctr_comb_stopreload-button image,
 	#customization-palette #ctr_stop-button image,
-	#customization-palette #ctr_reload-button image{
+	#customization-palette #ctr_reload-button image,
+	#customization-palette #ctr_comb_stopreload-button #urlbar-reload-button image,
+	#customization-palette #ctr_comb_stopreload-button #urlbar-stop-button image,
+	#customization-palette #urlbar-reload-button image,
+	#customization-palette #urlbar-stop-button image,
+	#customization-palette #ctr_comb_stopreload-button image,
+	#customization-palette #ctr_back-forward-dropmarker image{
 		background:none !important;
 		list-style-image:none !important;
 	}
 
-	#customization-palette #ctr_panelui-button{
+	#customization-palette #ctr_panelui-button,
+	#customization-palette #ctr_comb_stopreload-button{
 		width: 82px !important;
 	}
 
@@ -271,6 +278,9 @@
 	}
 	#customization-palette #ctr_stop-button{
 	  background:url("chrome://classic_theme_restorer/content/images/stop.png") center no-repeat;
+	}
+	#customization-palette #ctr_back-forward-dropmarker {
+	  background:url("chrome://classic_theme_restorer/content/images/toolbarbutton-dropdown-arrow.png") center no-repeat;
 	}
 
 	/*Adblock+ Australis/UX*/
