@@ -88,9 +88,19 @@
 	#ctr_bookmarks-menu-toolbar-button.toolbarbutton-1 {
 	  -moz-box-orient: horizontal !important;
 	}
-
+	
+	/* appbutton on toolbars */
 	#ctr_appbutton > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton.png");
+	}
+	
+	#nav-bar #ctr_appbutton{
+	  margin-left: -3px;
+	  margin-right: -3px;
+	}
+	
+	.customization-target > #ctr_appbutton > .toolbarbutton-icon {
+	  padding-right:7px !important;
 	}
 
 	* #ctr_appbutton dropmarker,
@@ -104,10 +114,6 @@
 	  visibility:collapse !important;
 	}
 	
-	.customization-target > #ctr_appbutton > .toolbarbutton-icon {
-	  padding-right:7px !important;
-	}
-
 	#ctr_appbuttonPopup #menu_newPrivateWindow{
 		list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_private.png");
 	}
@@ -204,7 +210,8 @@
 	}
 	
 	#nav-bar #ctr_appbutton #ctr_appbuttonPopup{
-		margin-top:-6px;
+		margin-top:-10px;
+		margin-left:5px;
 	}
 	
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton:hover:active,
@@ -221,10 +228,11 @@
 	#ctr_appbutton,
 	#ctr_appbutton2,
 	#ctr_back-forward-button,
-	#ctr_comb_stopreload-button{
+	#ctr_comb_stopreload-button,
+	#main-window:not([customizing]) #ctr_window-controls{
 	  visibility: collapse;
 	}
-	
+
 	#PanelUI-button {
 	  visibility: collapse !important;
 	}
@@ -235,7 +243,8 @@
 
 	#customization-palette #ctr_appbutton,
 	#customization-palette #ctr_back-forward-button,
-	#customization-palette #ctr_comb_stopreload-button{
+	#customization-palette #ctr_comb_stopreload-button,
+	#customization-palette #ctr_window-controls{
 		visibility: visible !important;
 		background:url("chrome://classic_theme_restorer/content/images/enableoption.png") center no-repeat;
 		border:none !important;
@@ -258,6 +267,16 @@
 	#customization-palette #ctr_back-forward-dropmarker image{
 		background:none !important;
 		list-style-image:none !important;
+	}
+
+	#customization-palette #ctr_window-controls #minimize-button,
+	#customization-palette #ctr_window-controls #restore-button,
+	#customization-palette #ctr_window-controls #close-button{
+	  background:none !important;
+	  list-style-image:none !important;
+	  min-width:0px !important;
+	  width:0px !important;
+	  max-width:0px !important;
 	}
 
 	#customization-palette #ctr_panelui-button,

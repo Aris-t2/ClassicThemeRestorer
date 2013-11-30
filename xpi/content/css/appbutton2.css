@@ -146,7 +146,7 @@
 		
 	}
 
-	@media all and (-moz-windows-classic) {
+	/*@media all and (-moz-windows-classic) {
 		#main-window:not([tabsintitlebar])[sizemode="normal"] #titlebar,
 		#main-window:not([tabsintitlebar])[sizemode="maximized"] #titlebar{
 			display: block !important;
@@ -158,7 +158,7 @@
 			margin-top:0px !important;
 			margin: 0px 0 16px 0px !important;
 		}
-	}
+	}*/
 	
 	@media all and (-moz-windows-theme: luna-blue){
 		#main-window:not([tabsintitlebar])[sizemode="normal"] #titlebar,

@@ -33,6 +33,9 @@ classicthemerestorerjs.settings = {
 	if (this.prefs.getBoolPref("addonbar"))			{ this.loadUnloadCSS("addonbar",true); }
 	if (this.prefs.getBoolPref("extrabar"))			{ this.loadUnloadCSS("extrabar",true); }
 	if (this.prefs.getBoolPref("backforward"))		{ this.loadUnloadCSS("backforward",true); }
+	if (this.prefs.getBoolPref("wincontrols"))		{ this.loadUnloadCSS("wincontrols",true); }
+
+	if (this.prefs.getBoolPref("alttbappb"))		{ this.loadUnloadCSS("alttbappb",true); }
 	
 	if (this.prefs.getBoolPref("combrelstop"))		{ this.loadUnloadCSS("combrelstop",true); }
 	if (this.prefs.getBoolPref("paneluibtweak"))	{ this.loadUnloadCSS("paneluibtweak",true); }
@@ -112,8 +115,39 @@ classicthemerestorerjs.settings = {
 		case "appbuttonc_gray":		manageCSS("appbutton_gray.css");		break;
 		
 		case "backforward": 		manageCSS("back-forward.css");			break;
+		case "wincontrols": 		manageCSS("windowcontrols.css");		break;
 		
-		case "combrelstop": 		manageCSS("combrelstop.css");			break;
+		case "alttbappb": 			manageCSS("alt_appbutton_icons.css");	break;
+		
+		case "combrelstop":
+			
+			manageCSS("combrelstop.css");
+			manageCSS("combrelstopextra.css");
+			manageCSS("combrelstopextra2.css");
+			
+			// If 'Classic Toolbar Buttons' add-on is used to style nav-bar button icons,
+			// CTRs combined reload/stop button option should not enable own reload/stop icons.
+			// 'Classic Toolbar Buttons' add-on has to style combined reload/stop button icons.
+			try{
+				if(enable==true && Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService)
+						.getBranch("extensions.cstbb-extension.").getCharPref("navbicons")!="ico_default"){
+					
+					enable=false; // to disable following sheet
+					manageCSS("combrelstopextra.css");
+					enable=true;
+				}
+
+				if(enable==true && Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService)
+						.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off"){
+					
+					enable=false; // to disable following sheet
+					manageCSS("combrelstopextra2.css");
+					enable=true;
+				}
+			} catch(e){}
+			
+		break;
+		
 		case "paneluibtweak": 		manageCSS("paneluibutton_tweak.css");	break;
 		case "bfurlbarfix": 		manageCSS("bf_urlbarfix.css");			break;
 	

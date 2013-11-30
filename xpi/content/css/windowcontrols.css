@@ -1,0 +1,30 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul),
+			   url(chrome://global/content/customizeToolbar.xul) {
+
+   #main-window[inFullscreen] #autohide-context {
+	  visibility:collapse !important;
+	}
+
+	#main-window:not([inFullscreen]):not([customizing]) #ctr_window-controls,
+	#main-window[inFullscreen] #window-controls {
+	  visibility:collapse !important;
+	}
+
+	#main-window[inFullscreen]  #ctr_window-controls {
+	  visibility: visible !important;
+	}
+	
+	#customization-palette #ctr_window-controls{
+	  visibility: visible !important;
+	  background:url("chrome://classic_theme_restorer/content/images/windowControls.png") center no-repeat !important;
+	  border:none !important;
+	  min-width:100px !important;
+	}
+	
+	#nav-bar #ctr_window-controls{
+	  -moz-box-align: start !important;
+	}
+
+}

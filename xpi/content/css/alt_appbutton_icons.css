@@ -1,0 +1,13 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	
+	toolbar:not(#TabsToolbar) #ctr_appbutton > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-dark.png") !important;
+	}
+
+	toolbar:not(#TabsToolbar) #ctr_appbutton:-moz-lwtheme-brighttext > .toolbarbutton-icon,
+	#TabsToolbar #ctr_appbutton > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-inv.png") !important;
+	}
+}

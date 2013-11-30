@@ -240,7 +240,12 @@
 	#PanelUI-button #PanelUI-menu-button image{
 		padding:0px !important;
 	}
-	
+
+	#nav-bar #ctr_appbutton > .toolbarbutton-icon {
+	 padding:0px !important;
+	 margin:0px !important;
+	}
+
 	/*add-ons*/
 	#nav-bar #zoompage-style-s,
 	#nav-bar #zoompage-style-t{

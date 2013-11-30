@@ -71,7 +71,6 @@
 	<toolbaritem id="social-toolbar-item" removable="true"/>
 
 	<hbox id="titlebar-content">
-
 	  <!--### place own appbutton on titlebar (Windows only) ###-->
 	  <toolbarbutton id="ctr_appbutton2"
 					 ordinal="0"
@@ -1086,7 +1085,7 @@
 
 	  <!-- creates a combined reload stop button, by duplication the default one from urlbar -->
 	  <toolbaritem id="ctr_comb_stopreload-button" class="chromeclass-toolbar-additional"
-                   context="backForwardMenu" removable="true"
+                   removable="true"
                    title="&reloadCmd.label; &stopCmd.label; (combo)">
 		  <toolbarbutton id="urlbar-reload-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
 						 label="&reloadCmd.label;"
@@ -1225,6 +1224,21 @@
                    title="&reloadCmd.label; &stopCmd.label;">				   
 
 	  </toolbaritem>
+	  
+	  <toolbaritem id="ctr_window-controls" class="chromeclass-toolbar-additional"
+                   removable="true" title="window controls">
+        <toolbarbutton id="minimize-button"
+                       tooltiptext="&fullScreenMinimize.tooltip;"
+                       oncommand="window.minimize();"/>
+
+        <toolbarbutton id="restore-button"
+                       tooltiptext="&fullScreenRestore.tooltip;"
+                       oncommand="BrowserFullScreen();"/>
+
+        <toolbarbutton id="close-button"
+                       tooltiptext="&fullScreenClose.tooltip;"
+                       oncommand="BrowserTryToCloseWindow();"/>
+      </toolbaritem>
 	  
 	</toolbarpalette>
 

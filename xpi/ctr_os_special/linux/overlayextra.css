@@ -51,6 +51,11 @@
 	  margin-top:-3px;
 	}
 	
+	/* some Linux versions hide icons */
+	#ctr_appbuttonPopup .menu-iconic-left {
+        visibility: visible !important;
+	}
+	
 	/* ctr addonbar */
 	#ctr_addon-bar toolbarbutton {
 	  -moz-appearance: none !important;

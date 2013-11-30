@@ -3,7 +3,7 @@
 @-moz-document url(chrome://browser/content/browser.xul){
 
 	@media not all and (-moz-windows-classic) {
-		#navigator-toolbox > #TabsToolbar:not(:-moz-lwtheme),
+		#TabsToolbar:not(:-moz-lwtheme),
 		#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:not(:-moz-lwtheme){
 			background: #dbeaf9 !important;
 		}
@@ -11,18 +11,45 @@
 	
 	@media all and (-moz-windows-classic) {
 
-		#navigator-toolbox > #TabsToolbar:not(:-moz-lwtheme),
+		#TabsToolbar:not(:-moz-lwtheme),
 		#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:not(:-moz-lwtheme){
 			background: -moz-Dialog !important;
 		}
 	}
 	
     #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
-        margin-left:0px !important;
+        margin-left: 0px !important;
     }
     #main-window:not([tabsintitlebar]) #TabsToolbar{
         border-left:1px solid #95adb8 !important;
         border-right:1px solid #95adb8 !important;
     }
+	
+	#titlebar{
+		min-height: 60px !important;
+		height: 60px !important;
+		max-height: 60px !important;
+	}
+
+	@media all and (-moz-windows-compositor){
+		#main-window[tabsintitlebar][sizemode="normal"] #titlebar{
+			min-height: 50px !important;
+			height: 50px !important;
+			max-height: 50px !important;
+		}
+	#main-window[tabsintitlebar][sizemode="maximized"] #titlebar{
+			min-height: 56px !important;
+			height: 56px !important;
+			max-height: 56px !important;
+		}
+	}
+
+	@media all and (-moz-windows-classic) {
+		#titlebar{
+			min-height: 50px !important;
+			height: 50px !important;
+			max-height: 50px !important;
+		}
+	}
 
 }

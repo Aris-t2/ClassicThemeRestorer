@@ -29,8 +29,8 @@ classicthemerestorer.buttoninsert = {
 			.getBranch("extensions.classicthemerestorer.")
 				.getBoolPref("firstrun")==true)
 	{
-		// insert custom appmenu buton, custom back-forward button and
-		// custom panelui button at nav-bars end on first run
+		// insert custom appmenu button, custom back-forward button, custom
+		// panel ui button and custom wincontrols on first run in nav-bar
 		try{
 			var nbar = document.getElementById("nav-bar");
 			var target = document.getElementById("urlbar-container");
@@ -44,6 +44,7 @@ classicthemerestorer.buttoninsert = {
 			nbar.insertItem("ctr_appbutton", elem, null, false);
 			nbar.insertItem("ctr_back-forward-button", elem, null, false);
 			nbar.insertItem("ctr_panelui-button", elem, null, false);
+			nbar.insertItem("ctr_window-controls", elem, null, false);
 			document.persist("nav-bar", "currentset");
 			
 			var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;

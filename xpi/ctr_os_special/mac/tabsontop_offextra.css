@@ -2,23 +2,28 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	#navigator-toolbox > #TabsToolbar:not(:-moz-lwtheme),
 	#TabsToolbar:not(:-moz-lwtheme){
 		background: #d2d2d2 !important;
 	}
 	#titlebar{
-		padding-bottom:22px !important;
+		padding-bottom: 22px !important;
 	}
 	#main-window:not([tabsintitlebar])[sizemode="normal"]  #TabsToolbar,
 	#main-window[tabsintitlebar][sizemode="normal"]  #TabsToolbar{
 		margin-left: 0px !important;
 	}
 	.tabbrowser-tabs{
-		margin-top:-1px !important;
-		margin-bottom:1px !important;
+		margin-top: -1px !important;
+		margin-bottom: 1px !important;
 	}
 	#ctr_appbutton{
-		margin-top:0px !important;
-		margin-bottom:0px !important;
+		margin-top: 0px !important;
+		margin-bottom: 0px !important;
+	}
+	
+	#titlebar{
+		min-height: 60px !important;
+		height: 60px !important;
+		max-height: 60px !important;
 	}
 }

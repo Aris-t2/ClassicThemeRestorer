@@ -30,9 +30,12 @@
 		<preference id="ctr_appbutton"		name="extensions.classicthemerestorer.appbutton" 	type="string"	instantApply="true"/>
 		<preference id="ctr_appbuttonc"		name="extensions.classicthemerestorer.appbuttonc" 	type="string"	instantApply="true"/>
 		<preference id="ctr_backforward"	name="extensions.classicthemerestorer.backforward"	type="bool"		instantApply="true"/>
-		
-		<preference id="ctr_combrelstop"	name="extensions.classicthemerestorer.combrelstop"	type="bool"		instantApply="true"/>
+		<preference id="ctr_wincontrols"	name="extensions.classicthemerestorer.wincontrols"	type="bool"		instantApply="true"/>
+
+		<preference id="ctr_alttbappb"		name="extensions.classicthemerestorer.alttbappb" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_paneluibtweak"	name="extensions.classicthemerestorer.paneluibtweak" type="bool"	instantApply="true"/>
+
+		<preference id="ctr_combrelstop"	name="extensions.classicthemerestorer.combrelstop"	type="bool"		instantApply="true"/>
 		<preference id="ctr_bfurlbarfix"	name="extensions.classicthemerestorer.bfurlbarfix"	type="bool"		instantApply="true"/>
 	
 	</preferences>
@@ -40,6 +43,7 @@
 	<tabbox>
 		<tabs>
 			<tab label="&Ctr_main;"/>
+			<tab label="&Ctr_special;"/>
 			<tab label="&Ctr_experim;"/>
 		</tabs>
 
@@ -114,6 +118,7 @@
 				<checkbox label="&Ctr_addonbar;"	preference="ctr_add-onbar"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('addonbar',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('addonbar',false);}"/>
 				<checkbox label="&Ctr_extrabar;"	preference="ctr_extrabar"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('extrabar',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('extrabar',false);}"/>
 				<checkbox label="&Ctr_backforward;"	preference="ctr_backforward" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('backforward',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('backforward',false);}"/>
+				<checkbox label="&Ctr_wincontrols;"	preference="ctr_wincontrols" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('wincontrols',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('wincontrols',false);}"/>
 				
 				<menulist preference="ctr_findbar">
 					<menupopup>
@@ -145,12 +150,23 @@
 
 		<vbox flex="1">
 		  <groupbox>
-			<caption label="&Ctr_experimental;" class="ctb_topic"/>
-			<checkbox label="&Ctr_combrelstop;"	preference="ctr_combrelstop" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('combrelstop',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('combrelstop',false);}"/>
-			<textbox class="plain" style="background-color: transparent !important;" multiline="true" readonly="true" value="&Ctr_combrelstopt;"/>
+			<caption label="&Ctr_specialtw;" class="ctb_topic"/>
+			<checkbox label="&Ctr_alttbappb;" preference="ctr_alttbappb" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('alttbappb',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('alttbappb',false);}"/>
 			
 			<checkbox label="&Ctr_paneluibtweak;" preference="ctr_paneluibtweak" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',false);}"/>
 			<textbox class="plain" style="background-color: transparent !important;" multiline="true" readonly="true" value="&Ctr_paneluibtweakt;"/>
+			
+		  </groupbox>
+		</vbox>
+
+		</tabpanel>
+		<tabpanel>
+
+		<vbox flex="1">
+		  <groupbox>
+			<caption label="&Ctr_experimental;" class="ctb_topic"/>
+			<checkbox label="&Ctr_combrelstop;"	preference="ctr_combrelstop" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('combrelstop',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('combrelstop',false);}"/>
+			<textbox class="plain" style="background-color: transparent !important;" multiline="true" readonly="true" value="&Ctr_combrelstopt;"/>
 			
 			<checkbox label="&Ctr_bfurlbarfix;" preference="ctr_bfurlbarfix" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('bfurlbarfix',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('bfurlbarfix',false);}"/>
 			<textbox class="plain" style="background-color: transparent !important;" multiline="true" readonly="true" value="&Ctr_bfurlbarfixt;"/>

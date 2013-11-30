@@ -2,15 +2,11 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	#navigator-toolbox > #TabsToolbar:not(:-moz-lwtheme),
-	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:not(:-moz-lwtheme){
-		background: #d5d1cf !important;
+	#TabsToolbar:not(:-moz-lwtheme){
+		-moz-appearance: none !important;
 	}
-	/*#main-window[sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]){
-		margin-top: -16px !important;
-	}*/
 	#TabsToolbar{
-		margin-bottom: -1px !important;
+		margin-bottom: -2px !important;
 	}
 	#ctr_appbutton,
 	#TabsToolbar #ctr_appbutton{
@@ -27,5 +23,10 @@
 	}
 	#TabsToolbar #ctr_appbuttonPopup{
 		margin-top:0px !important;
+	}
+	
+	.tabbrowser-tab:not([selected="true"]):not(:hover):not(:-moz-lwtheme),
+	.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme)	{
+	  color: black !important;
 	}
 }

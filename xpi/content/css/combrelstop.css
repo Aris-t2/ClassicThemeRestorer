@@ -1,5 +1,3 @@
-@import url(chrome://ctr_os_special/skin/combreloadextra.css);
-
 @-moz-document url(chrome://browser/content/browser.xul),
 			   url(chrome://global/content/customizeToolbar.xul) {
 	
@@ -24,11 +22,5 @@
 	#customization-palette #ctr_comb_stopreload-button{
 	  background:url("chrome://classic_theme_restorer/content/images/reloadstop.png") center no-repeat !important;
 	}
-	
-	#ctr_comb_stopreload-button #urlbar-reload-button:not([disabled]),
-	#ctr_comb_stopreload-button #urlbar-reload-button:not([disabled]),
-	#ctr_comb_stopreload-button #urlbar-stop-button:not([disabled]),
-	#ctr_comb_stopreload-button #urlbar-stop-button:hover:active {
-	  background-image: none !important;
-	}
+
 }
