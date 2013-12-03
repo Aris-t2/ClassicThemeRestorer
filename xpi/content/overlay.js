@@ -1,4 +1,4 @@
-Components.utils.import("chrome://classic_theme_restorer/content/addonbar.jsm");
+Components.utils.import("chrome://classic_theme_restorer/content/ctr_toolbars.jsm");
 
 if (typeof classicthemerestorer == "undefined") {var classicthemerestorer = {};};
 if (!classicthemerestorer.buttoninsert) {classicthemerestorer.buttoninsert = {};};

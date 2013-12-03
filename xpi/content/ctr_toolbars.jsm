@@ -6,6 +6,7 @@ CustomizableUI.registerArea("ctr_addon-bar", {
   legacy: true,
   defaultPlacements: ["ctr_flexible_space_ab"]
 });
+
 CustomizableUI.registerArea("ctr_extra-bar", {
   type: CustomizableUI.TYPE_TOOLBAR,
   legacy: true,

@@ -82,7 +82,7 @@
 						<menuitem value="appbutton_v1"	label="&Ctr_appbutton1;" oncommand="classicthemerestorerjs.settings.prefChangeString('appbutton', 'appbutton_v1');"/>
 						<menuitem value="appbutton_v2"	label="&Ctr_appbutton2;" oncommand="classicthemerestorerjs.settings.prefChangeString('appbutton', 'appbutton_v2');"/>
 						<label value=" "/>
-						<label value="&Ctr_appbuttonI2;" class="ctb_font1"/>
+						<label value="&Ctr_appbuttonI1;" class="ctb_font1"/>
 					</menupopup>
 				</menulist>
 				<menulist preference="ctr_appbutton" id="ctr_appbutton_list2">
@@ -102,7 +102,8 @@
 						<menuitem value="appbuttonc_green"	 label="&Ctr_appbuttonc_g;"  oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_green');"/>
 						<menuitem value="appbuttonc_gray"	 label="&Ctr_appbuttonc_gr;" oncommand="classicthemerestorerjs.settings.prefChangeString('appbuttonc', 'appbuttonc_gray');"/>
 						<label value=" "/>
-						<label value="&Ctr_appbuttonI1;" class="ctb_font1"/>
+						<label value="&Ctr_appbuttonI2;" class="ctb_font1"/>
+						<label value="&Ctr_appbuttonI3;" class="ctb_font1"/>
 					</menupopup>
 				</menulist>
 			  </groupbox>
