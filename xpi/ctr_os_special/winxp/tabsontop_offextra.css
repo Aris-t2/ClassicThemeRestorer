@@ -7,15 +7,28 @@
 	  background: -moz-Dialog !important;
 	}
 	
-	#titlebar{
-		min-height: 60px !important;
-		height: 60px !important;
-		max-height: 60px !important;
+	#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{
+	  margin-top: 4px !important;
+	  margin-bottom: 4px !important;
 	}
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+	  margin-top: 27px !important;
+	}
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+	  margin-top: 27px !important;
+	}
+
 	@media all and (-moz-windows-classic) {	
-		#toolbar-menubar{
-			margin-top: -8px !important;
-			margin-bottom: -6px !important;
+		#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{
+		  margin-top: 3px !important;
+		  margin-bottom: 3px !important;
+		}
+
+		#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+		  margin-top: 23px !important;
+		}
+		#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+		  margin-top: 23px !important;
 		}
 	}
 }

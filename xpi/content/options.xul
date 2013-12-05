@@ -32,6 +32,7 @@
 		<preference id="ctr_backforward"	name="extensions.classicthemerestorer.backforward"	type="bool"		instantApply="true"/>
 		<preference id="ctr_wincontrols"	name="extensions.classicthemerestorer.wincontrols"	type="bool"		instantApply="true"/>
 
+		<preference id="ctr_notabfog"		name="extensions.classicthemerestorer.notabfog" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_alttbappb"		name="extensions.classicthemerestorer.alttbappb" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_paneluibtweak"	name="extensions.classicthemerestorer.paneluibtweak" type="bool"	instantApply="true"/>
 
@@ -152,6 +153,7 @@
 		<vbox flex="1">
 		  <groupbox>
 			<caption label="&Ctr_specialtw;" class="ctb_topic"/>
+			<checkbox label="&Ctr_notabfog;" preference="ctr_notabfog" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('notabfog',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('notabfog',false);}"/>
 			<checkbox label="&Ctr_alttbappb;" preference="ctr_alttbappb" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('alttbappb',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('alttbappb',false);}"/>
 			
 			<checkbox label="&Ctr_paneluibtweak;" preference="ctr_paneluibtweak" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',false);}"/>

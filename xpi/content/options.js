@@ -35,10 +35,11 @@ classicthemerestorerjs.settings = {
 	if (this.prefs.getBoolPref("backforward"))		{ this.loadUnloadCSS("backforward",true); }
 	if (this.prefs.getBoolPref("wincontrols"))		{ this.loadUnloadCSS("wincontrols",true); }
 
+	if (this.prefs.getBoolPref("notabfog"))			{ this.loadUnloadCSS("notabfog",true); }
 	if (this.prefs.getBoolPref("alttbappb"))		{ this.loadUnloadCSS("alttbappb",true); }
+	if (this.prefs.getBoolPref("paneluibtweak"))	{ this.loadUnloadCSS("paneluibtweak",true); }
 	
 	if (this.prefs.getBoolPref("combrelstop"))		{ this.loadUnloadCSS("combrelstop",true); }
-	if (this.prefs.getBoolPref("paneluibtweak"))	{ this.loadUnloadCSS("paneluibtweak",true); }
 	if (this.prefs.getBoolPref("bfurlbarfix"))		{ this.loadUnloadCSS("bfurlbarfix",true); }
 
   },
@@ -117,7 +118,9 @@ classicthemerestorerjs.settings = {
 		case "backforward": 		manageCSS("back-forward.css");			break;
 		case "wincontrols": 		manageCSS("windowcontrols.css");		break;
 		
+		case "notabfog": 			manageCSS("notabfog.css");				break;
 		case "alttbappb": 			manageCSS("alt_appbutton_icons.css");	break;
+		case "paneluibtweak": 		manageCSS("paneluibutton_tweak.css");	break;
 		
 		case "combrelstop":
 			
@@ -148,7 +151,6 @@ classicthemerestorerjs.settings = {
 			
 		break;
 		
-		case "paneluibtweak": 		manageCSS("paneluibutton_tweak.css");	break;
 		case "bfurlbarfix": 		manageCSS("bf_urlbarfix.css");			break;
 	
 	}

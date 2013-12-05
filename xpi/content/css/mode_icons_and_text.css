@@ -8,7 +8,7 @@
 	#nav-bar .toolbarbutton-menubutton-dropmarker > image,
 	#nav-bar .toolbarbutton-menubutton-button .toolbarbutton-icon,
 	#nav-bar toolbarbutton[type="menu-button"] > .toolbarbutton-icon,
-	#nav-bar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#ctr_back-button):not(#ctr_forward-button):-moz-any(:hover ,[checked],[open],[type="menu-button"]) > .toolbarbutton-icon,
+	#nav-bar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#ctr_back-button):not(#ctr_forward-button):-moz-any(:hover,[checked],[open],[type="menu-button"]) > .toolbarbutton-icon,
 	#nav-bar .toolbarbutton-1[type="menu-button"] > .toolbarbutton-menubutton-dropmarker::before,
 	#nav-bar .toolbarbutton-1 > .toolbarbutton-icon,
 	#nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
@@ -24,23 +24,28 @@
 	}
 	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
 	  display: -moz-box !important;
+
 	}
 	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
 	  -moz-box-orient: vertical !important;
+
 	}
-	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]):not(#ctr_appbutton) {
-	  min-width:60px !important;
+	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
+	  min-width: 60px !important;
 	}
-	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1[type="menu"] dropmarker{
-	   visibility:collapse !important;
+	:-moz-any(#toolbar-menubar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1[type="menu"] dropmarker{
+	   visibility: collapse !important;
 	}
-	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
+	:-moz-any(#toolbar-menubar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
       padding: 0px !important;
     }
+
     :-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) {
        border: 1px solid transparent !important;
     }
-	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]):hover {
+	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]):hover,
+	#ctr_comb_stopreload-button #urlbar-reload-button:not([disabled]):hover,
+	#ctr_comb_stopreload-button #urlbar-stop-button:not([disabled]):hover {
 	  border: 1px solid !important;
       background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.1)) !important;
       border-color: hsla(210,54%,20%,.15) hsla(210,54%,20%,.2) hsla(210,54%,20%,.25) !important;
@@ -56,7 +61,11 @@
 	#ctr_addon-bar toolbarbutton[type=menu] {
 	  padding:8px !important;
 	}
-	
+
+	#bookmarks-menu-button .toolbarbutton-text{
+	  font-size: 100% !important;
+	}
+
 	/* make custom back-forward visible and hide urlbars back-forward item */
 	#ctr_back-forward-button {
 	  visibility: visible !important;
@@ -71,7 +80,7 @@
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
 	  margin-left: 0px !important;
 	  transition: none !important;
-	  transition-property:  none !important;
+	  transition-property: none !important;
 	  transition-delay: 0s !important;
 	}
     #urlbar {

@@ -12,11 +12,13 @@ pref("extensions.classicthemerestorer.appbutton",'appbutton_v1');
 pref("extensions.classicthemerestorer.appbuttonc",'appbuttonc_orange');
 pref("extensions.classicthemerestorer.backforward",false);
 pref("extensions.classicthemerestorer.wincontrols",false);
-pref("extensions.classicthemerestorer.bfurlbarfix",false);
 
+pref("extensions.classicthemerestorer.notabfog",false);
 pref("extensions.classicthemerestorer.alttbappb",false);
+pref("extensions.classicthemerestorer.paneluibtweak",false);
 
 pref("extensions.classicthemerestorer.combrelstop",false);
-pref("extensions.classicthemerestorer.paneluibtweak",false);
+pref("extensions.classicthemerestorer.bfurlbarfix",false);
+
 
 pref("extensions.classicthemerestorer.firstrun",true);

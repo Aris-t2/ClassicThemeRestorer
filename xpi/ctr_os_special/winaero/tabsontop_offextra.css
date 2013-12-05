@@ -24,31 +24,46 @@
         border-left:1px solid #95adb8 !important;
         border-right:1px solid #95adb8 !important;
     }
-	
-	#titlebar{
-		min-height: 60px !important;
-		height: 60px !important;
-		max-height: 60px !important;
+
+	#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{
+	  margin-top: 3px !important;
+	  margin-bottom: 3px !important;
 	}
 
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+	  margin-top: 26px !important;
+	}
+
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+	  margin-top: 23px !important;
+	}
+	
 	@media all and (-moz-windows-compositor){
-		#main-window[tabsintitlebar][sizemode="normal"] #titlebar{
-			min-height: 50px !important;
-			height: 50px !important;
-			max-height: 50px !important;
+		
+		#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{
+		  margin-top: 3px !important;
+		  margin-bottom: 3px !important;
 		}
-	#main-window[tabsintitlebar][sizemode="maximized"] #titlebar{
-			min-height: 56px !important;
-			height: 56px !important;
-			max-height: 56px !important;
+
+		#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+		  margin-top: 23px !important;
+		}
+		#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+		  margin-top: 23px !important;
 		}
 	}
 
 	@media all and (-moz-windows-classic) {
-		#titlebar{
-			min-height: 50px !important;
-			height: 50px !important;
-			max-height: 50px !important;
+		#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{
+		  margin-top: 3px !important;
+		  margin-bottom: 3px !important;
+		}
+
+		#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+		  margin-top: 25px !important;
+		}
+		#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+		  margin-top: 25px !important;
 		}
 	}
 

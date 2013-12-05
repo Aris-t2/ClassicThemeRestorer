@@ -2,14 +2,14 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton{
-		margin-left:-2px !important;
+	  margin-left:-2px !important;
 	}
 
 	.tab-background-middle[selected=true],
 	.tab-background-start[selected=true]::before,
 	.tab-background-end[selected=true]::before,
 	.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]){
-		background:none !important;
+	  background:none !important;
 	}
 	
 	.tab-background-start[selected=true]:-moz-locale-dir(ltr)::after,
@@ -26,29 +26,34 @@
 	#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
 	.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
 	#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
-		background-image: none !important;
+	  background-image: none !important;
 	}
 
     .tabs-newtab-button {
-    	margin-left: -20px !important;
-    	background: url("chrome://classic_theme_restorer/content/images/atab.png") 3px 0px no-repeat !important;
+      margin-left: -20px !important;
+      background: url("chrome://classic_theme_restorer/content/images/atab.png") 3px 0px no-repeat !important;
     }
     .tabs-newtab-button:hover {
-    	background: url("chrome://classic_theme_restorer/content/images/atab_hov.png") 3px 0px no-repeat !important;
+      background: url("chrome://classic_theme_restorer/content/images/atab_hov.png") 3px 0px no-repeat !important;
     }
 
     .tab-content {
       border: solid transparent;
       border-width: 2px 28px;
       -moz-margin-start: -20px;
-      -moz-margin-end: 0px;
+      -moz-margin-end: -10px;
     }
     
     .tab-close-button {
       pointer-events: auto;
       margin-right: -16px !important;
     }
-    
+
+    .tabbrowser-tab .tab-text {
+      margin-left: -4px !important;
+	  margin-right: -6px !important;
+    }
+
     .tabbrowser-tab:not([pinned]) .tab-icon-image,
     .tabbrowser-tab:not([pinned]) .tab-throbber {
       pointer-events: auto;
@@ -62,7 +67,7 @@
     }
 
     .tabbrowser-tab[pinned] .tab-text {
-    	visibility: collapse !important;
+      visibility: collapse !important;
     }
 
     .tabbrowser-tab > .tab-stack > .tab-content {
@@ -101,4 +106,27 @@
 	  background-image: linear-gradient(to top, #868d94 0px, transparent -1px),linear-gradient(to top,#d0dce8,#dce7f3,#e5effa) !important;
 	  background-position: 0px 0px !important;
     }
+	
+	/* Tab close button */
+	.tab-close-button {
+	  -moz-appearance: none !important;
+	  -moz-image-region: rect(0, 64px, 16px, 48px) !important;
+	  border: none !important;
+	  padding: 0px !important;
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png") !important;
+	}
+
+	.tab-close-button:hover,
+	.tab-close-button:hover[selected="true"] {
+	  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
+	}
+
+	.tab-close-button:hover:active,
+	.tab-close-button:hover:active[selected="true"] {
+	  -moz-image-region: rect(0, 48px, 16px, 32px) !important;
+	}
+
+	.tab-close-button[selected="true"] {
+	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
+	}
 }

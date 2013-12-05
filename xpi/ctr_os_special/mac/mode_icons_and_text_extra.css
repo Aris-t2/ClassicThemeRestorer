@@ -2,23 +2,40 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-    #navigator-toolbox .toolbarbutton-icon,
-	#navigator-toolbox .toolbarbutton-text,
-    #ctr_addon-bar .toolbarbutton-icon,
-	#ctr_addon-bar .toolbarbutton-text{
+	#nav-bar .toolbarbutton-1:not([type="menu-button"]) .toolbarbutton-icon {
+	  min-width: 18px !important;
+	  height: 18px !important;
+	  padding: 0 !important;
+	  margin: 0 !important;
+	}
+	#nav-bar .toolbarbutton-1[type="menu-button"] .toolbarbutton-icon {
+	  min-width: 18px !important;
+	  height: 18px !important;
+	  padding: 0 !important;
+	  margin: 0 !important;
+	}
+
+	#nav-bar .toolbarbutton-1 .toolbarbutton-text {
+	  padding: 4px 0 0 0 !important;
+	  margin: 0px !important;
+	}
+	
+	#nav-bar .toolbarbutton-1 dropmarker {
 	  padding: 0px !important;
 	  margin: 0px !important;
 	}
-	#navigator-toolbox #nav-bar toolbarbutton{
-	  margin-top: 1px !important;
-	  padding: 0px !important;
+
+	#nav-bar .toolbarbutton-1 {
+	  margin:1px !important;
 	}
+	
 	#navigator-toolbox #nav-bar #urlbar-container{
 	  margin-left: 4px !important;
 	}
 	#navigator-toolbox #nav-bar #urlbar{
 	  border-radius: 3px !important;
 	}
+	
 	#ctr_extra-bar {
 	  padding-bottom: 3px !important;
 	}
