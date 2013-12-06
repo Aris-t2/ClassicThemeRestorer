@@ -25,8 +25,17 @@
 
 	<script type="application/x-javascript" src="overlay.js"/>
 	<script type="application/x-javascript" src="options.js"/>
-
-	<!--### create a new add-ons bar ###-->
+  
+  
+	<commandset id="mainCommandSet">
+	   <command id="Browser:ToggleCtrAddonBar" oncommand="classicthemerestorer.ctr.toggleCtrAddonBar();"/>
+	</commandset>
+	
+	<keyset id="mainKeyset">
+	  <key id="key_toggleCtrAddonBar" command="Browser:ToggleCtrAddonBar" key="/" modifiers="accel"/>
+	</keyset>
+  
+	<!--### create new add-ons bar ###-->
 	<vbox id="browser-bottombox">
 		<toolbar id="ctr_addon-bar" customizable="true"
 				 class="toolbar-primary chromeclass-toolbar"
@@ -35,7 +44,10 @@
 				 toolboxid="navigator-toolbox"
 				 insertafter="PersonalToolbar"
 				 context="toolbar-context-menu"
-				 lockiconsize="true">
+				 toolbarname="&Ctr_addonbar;"
+				 lockiconsize="true"
+				 accesskey="A"
+				 key="key_toggleCtrAddonBar">
 		  <toolbaritem id="ctr_flexible_space_ab"
 					flex="1"
 					class="ctr_flexspaces"
@@ -47,13 +59,19 @@
 	
 	<!--### create a new toolbar ###-->
 	<toolbox id="navigator-toolbox">
+		<toolbar toolbarname="&navbarCmd.label;"
+				 id="nav-bar"
+				 accesskey="N"/>
+		
 		<toolbar id="ctr_extra-bar" customizable="true"
 				 class="toolbar-primary chromeclass-toolbar"
 				 mode="icons"
 				 iconsize="small"
-				 toolboxid="navigator-toolbox"
-				 insertafter="PersonalToolbar"
-				 context="toolbar-context-menu">
+				 context="toolbar-context-menu"
+				 toolbarname="&Ctr_extrabar;"
+				 collapsed="true"
+				 lockiconsize="true"
+				 accesskey="D">
 		  <toolbaritem id="ctr_flexible_space_eb"
 					flex="1"
 					class="ctr_flexspaces"
@@ -78,7 +96,7 @@
                      type="menu"
                      label="&brandShortName;">
 		
-		<!--### rebuild menu using availalbe code from default browser.xul ###-->
+		<!--### rebuild appmenu using available items and code from default browser.xul ###-->
 		<menupopup id="ctr_appbuttonPopup">
 		<hbox>
 		  <vbox id="appmenuPrimaryPane">
@@ -236,8 +254,6 @@
                   <menuitem id="menu_devAppMgr"
                             observes="devtoolsMenuBroadcaster_DevAppMgr"
                             accesskey="&devAppMgrMenu.accesskey;"/>
-                  <menuitem id="menu_chromeDebugger"
-                            observes="devtoolsMenuBroadcaster_ChromeDebugger"/>
                   <menuitem id="menu_browserConsole"
                             observes="devtoolsMenuBroadcaster_BrowserConsole"
                             accesskey="&browserConsoleCmd.accesskey;"/>
@@ -502,11 +518,10 @@
 	</hbox>
 
 	
-	<!--### add own buttons to customizing area ###-->
+	<!--### add custom buttons to customizing area ###-->
 	<toolbarpalette id="BrowserToolbarPalette">
-
 		
-		<!--### another version of the appbutton to be used on navigation-, tabs- and personal toolbar (Windows, Linux, MacOSX) ###-->
+		<!--### another appbutton to be used on toolbars (Windows, Linux, MacOSX) ###-->
 		<toolbarbutton id="ctr_appbutton"
                      class="toolbarbutton-1"
                      persist="class"
@@ -664,15 +679,13 @@
                   <menuitem id="menu_devToolbox"
                             observes="devtoolsMenuBroadcaster_DevToolbox"
                             accesskey="&devToolboxMenuItem.accesskey;"/>
-                  <menuseparator id="menu_devtools_separator"/>
+                  <menuseparator/>
                   <menuitem id="menu_devToolbar"
                             observes="devtoolsMenuBroadcaster_DevToolbar"
                             accesskey="&devToolbarMenu.accesskey;"/>
                   <menuitem id="menu_devAppMgr"
                             observes="devtoolsMenuBroadcaster_DevAppMgr"
                             accesskey="&devAppMgrMenu.accesskey;"/>
-                  <menuitem id="menu_chromeDebugger"
-                            observes="devtoolsMenuBroadcaster_ChromeDebugger"/>
                   <menuitem id="menu_browserConsole"
                             observes="devtoolsMenuBroadcaster_BrowserConsole"
                             accesskey="&browserConsoleCmd.accesskey;"/>
@@ -690,7 +703,7 @@
                             accesskey="&errorConsoleCmd.accesskey;"/>
                   <menuitem id="menu_devtools_connect"
                             observes="devtoolsMenuBroadcaster_connect"/>
-                  <menuseparator id="devToolsEndSeparator"/>
+                  <menuseparator/>
                   <menuitem id="getMoreDevtools"
                             observes="devtoolsMenuBroadcaster_GetMoreTools"
                             accesskey="&getMoreDevtoolsCmd.accesskey;"/>
@@ -1012,7 +1025,7 @@
       </toolbarbutton>
 	  
       
-	  <!--### add own bookmarks sidebar button to browsers customizing area ###-->
+	  <!--### creates a bookmarks sidebar button ###-->
 	  <toolbarbutton id="ctr_bookmarks-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
                      observes="viewBookmarksSidebar"
                      tooltiptext="&bookmarksMenuButton.label;"
@@ -1021,13 +1034,13 @@
                      ondragenter="bookmarksButtonObserver.onDragOver(event)"
                      ondragexit="bookmarksButtonObserver.onDragExit(event)"/>
 					 
-      <!--### add own history sidebar button to browsers customizing area ###-->
+      <!--### creates a history sidebar button ###-->
 	  <toolbarbutton id="ctr_history-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
                      observes="viewHistorySidebar" label="&historyButton.label;"
                      tooltiptext="&historyButton.label;"/>
 					 
 					 
-	  <!--### add a duplicated PanelUI button to browsers customizing area ###-->
+	  <!--### creates a duplicated PanelUI button ###-->
 	  <toolbaritem id="ctr_panelui-button"
                    class="chromeclass-toolbar-additional"
                    removable="true"
@@ -1038,6 +1051,8 @@
                        tooltiptext="&appmenu.title;"/>
       </toolbaritem>
 
+	  
+	  <!--### creates a custom movable back-forward button ###-->
 	  <toolbaritem id="ctr_back-forward-button" class="chromeclass-toolbar-additional"
                    context="backForwardMenu" removable="true"
                    forwarddisabled="false"
@@ -1056,6 +1071,8 @@
                          context="backForwardMenu"/>
       </toolbaritem>
 	  
+	  
+	  <!--### creates a custom back-forward history dropmarker ###-->
 	  <toolbarbutton id="ctr_back-forward-dropmarker" type="menu" 
 			disabled="false"
 			label="&backCmd.label; &forwardCmd.label;"
@@ -1072,18 +1089,22 @@
 			<observes element="Browser:Forward" attribute="disabled"/>
 	  </toolbarbutton>
 	  
-      <toolbarbutton id="ctr_reload-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+      
+	  <!--### creates a custom movable reload button ###-->
+	  <toolbarbutton id="ctr_reload-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
                      label="&reloadCmd.label;" removable="true"
                      command="Browser:ReloadOrDuplicate"
                      onclick="checkForMiddleClick(this, event);"
                      tooltiptext="&reloadButton.tooltip;"/>
 
-      <toolbarbutton id="ctr_stop-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+      <!--### creates a custom movable stop button ###-->
+	  <toolbarbutton id="ctr_stop-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
                      label="&stopCmd.label;" removable="true"
                      command="Browser:Stop"
                      tooltiptext="&stopButton.tooltip;"/>
 
-	  <!-- creates a combined reload stop button, by duplication the default one from urlbar -->
+	  
+	  <!-- creates a combined reload-stop button by duplicating urlbars default reload/stop button -->
 	  <toolbaritem id="ctr_comb_stopreload-button" class="chromeclass-toolbar-additional"
                    removable="true"
                    title="&reloadCmd.label; &stopCmd.label; (combo)">
@@ -1097,8 +1118,27 @@
 						 command="Browser:Stop"
 						 tooltiptext="&stopButton.tooltip;"/>
 	  </toolbaritem>
-					 
-      <toolbaritem id="ctr_flexible_space1"
+
+	  
+	  <!-- duplicates fullscreen window controls -->
+	  <toolbaritem id="ctr_window-controls" class="chromeclass-toolbar-additional"
+                   removable="true" title="window controls">
+        <toolbarbutton id="minimize-button"
+                       tooltiptext="&fullScreenMinimize.tooltip;"
+                       oncommand="window.minimize();"/>
+
+        <toolbarbutton id="restore-button"
+                       tooltiptext="&fullScreenRestore.tooltip;"
+                       oncommand="BrowserFullScreen();"/>
+
+        <toolbarbutton id="close-button"
+                       tooltiptext="&fullScreenClose.tooltip;"
+                       oncommand="BrowserTryToCloseWindow();"/>
+      </toolbaritem>
+	  
+     
+	  <!-- creates flexible space items -->
+	  <toolbaritem id="ctr_flexible_space1"
                    flex="1"
 				   class="ctr_flexspaces"
                    title="&Ctr_flexspace;"
@@ -1147,7 +1187,8 @@
                    customizableui-areatype="toolbar"
                    removable="true"/>
 				   
-      <toolbaritem id="ctr_space1"
+      <!-- creates space items -->
+	  <toolbaritem id="ctr_space1"
                    class="ctr_spaces"
                    title="&Ctr_space;"
                    customizableui-areatype="toolbar"
@@ -1189,6 +1230,7 @@
                    customizableui-areatype="toolbar"
                    removable="true"/>
 				   
+	  <!-- creates separator items -->
 	  <toolbaritem id="ctr_separator1"
                    class="ctr_separators"
                    title="&Ctr_separator;"
@@ -1218,28 +1260,7 @@
                    title="&Ctr_separator;"
                    customizableui-areatype="toolbar"
                    removable="true"/>
-
-	  <toolbaritem id="ctr_reload-stop-button" class="chromeclass-toolbar-additional"
-                   removable="true"
-                   title="&reloadCmd.label; &stopCmd.label;">				   
-
-	  </toolbaritem>
-	  
-	  <toolbaritem id="ctr_window-controls" class="chromeclass-toolbar-additional"
-                   removable="true" title="window controls">
-        <toolbarbutton id="minimize-button"
-                       tooltiptext="&fullScreenMinimize.tooltip;"
-                       oncommand="window.minimize();"/>
-
-        <toolbarbutton id="restore-button"
-                       tooltiptext="&fullScreenRestore.tooltip;"
-                       oncommand="BrowserFullScreen();"/>
-
-        <toolbarbutton id="close-button"
-                       tooltiptext="&fullScreenClose.tooltip;"
-                       oncommand="BrowserTryToCloseWindow();"/>
-      </toolbaritem>
-	  
+  
 	</toolbarpalette>
 
 </overlay> 

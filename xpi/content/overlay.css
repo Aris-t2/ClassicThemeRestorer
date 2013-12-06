@@ -21,6 +21,10 @@
 	  width:15px;
 	}
 	
+	.ctrprefs{
+	  margin-left:26px !important;
+	}
+	
 	*:not([customizing]) .ctr_spaces{
 	  background: url("chrome://classic_theme_restorer/content/images/space2.png") center no-repeat;
 	}
@@ -61,7 +65,7 @@
 	/* ctr addonbar */
 	#ctr_extra-bar,
 	#ctr_addon-bar:not([customizing]) {
-	  visibility: collapse;
+	  /*visibility: collapse;*/
 	}
 	#ctr_addon-bar {
 	  -moz-appearance: none !important;

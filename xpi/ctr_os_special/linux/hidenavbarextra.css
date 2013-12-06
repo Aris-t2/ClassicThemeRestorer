@@ -1,8 +1,0 @@
-@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
-
-@-moz-document url(chrome://browser/content/browser.xul){
-	
-	#PersonalToolbar:not([customizing]):not(:-moz-lwtheme) {
-	  background-image: linear-gradient(to bottom,#e2dfdd,#d5d1cf,#d5d1cf) !important;
-	}
-}

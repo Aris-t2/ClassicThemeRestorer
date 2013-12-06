@@ -29,21 +29,20 @@ classicthemerestorerjs.settings = {
 
 	if (this.prefs.getBoolPref("tabsotoff"))		{ this.loadUnloadCSS("tabsotoff",true); }
 	if (this.prefs.getBoolPref("smallnavbut"))		{ this.loadUnloadCSS("smallnavbut",true); }
-	if (this.prefs.getBoolPref("hidenavbar"))		{ this.loadUnloadCSS("hidenavbar",true); }
-	if (this.prefs.getBoolPref("addonbar"))			{ this.loadUnloadCSS("addonbar",true); }
-	if (this.prefs.getBoolPref("extrabar"))			{ this.loadUnloadCSS("extrabar",true); }
 	if (this.prefs.getBoolPref("backforward"))		{ this.loadUnloadCSS("backforward",true); }
 	if (this.prefs.getBoolPref("wincontrols"))		{ this.loadUnloadCSS("wincontrols",true); }
 
 	if (this.prefs.getBoolPref("notabfog"))			{ this.loadUnloadCSS("notabfog",true); }
+	if (this.prefs.getBoolPref("tabmokcolor"))		{ this.loadUnloadCSS("tabmokcolor",true); }
 	if (this.prefs.getBoolPref("alttbappb"))		{ this.loadUnloadCSS("alttbappb",true); }
 	if (this.prefs.getBoolPref("paneluibtweak"))	{ this.loadUnloadCSS("paneluibtweak",true); }
 	
 	if (this.prefs.getBoolPref("combrelstop"))		{ this.loadUnloadCSS("combrelstop",true); }
 	if (this.prefs.getBoolPref("bfurlbarfix"))		{ this.loadUnloadCSS("bfurlbarfix",true); }
 
-  },
 
+  },
+  
   /* enable/disable css sheets*/
   loadUnloadCSS: function(which,enable) {
 	
@@ -81,11 +80,7 @@ classicthemerestorerjs.settings = {
 		
 		case "findbar_top": 		manageCSS("findbar_top.css");  			break;
 		case "findbar_bottom": 		manageCSS("findbar_bottom.css");  		break;
-		
-		case "hidenavbar": 			manageCSS("hidenavbar.css");  			break;
-		case "addonbar": 			manageCSS("addonbar.css");  			break;
-		case "extrabar": 			manageCSS("extrabar.css");  			break;
-		
+
 		case "appbutton_v1":		manageCSS("appbutton.css");				break;
 		case "appbutton_v2":		manageCSS("appbutton2.css");			break;
 		
@@ -119,6 +114,7 @@ classicthemerestorerjs.settings = {
 		case "wincontrols": 		manageCSS("windowcontrols.css");		break;
 		
 		case "notabfog": 			manageCSS("notabfog.css");				break;
+		case "tabmokcolor": 		manageCSS("tabmokcolor.css");			break;
 		case "alttbappb": 			manageCSS("alt_appbutton_icons.css");	break;
 		case "paneluibtweak": 		manageCSS("paneluibutton_tweak.css");	break;
 		

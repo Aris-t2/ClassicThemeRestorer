@@ -22,9 +22,6 @@
 		<preference id="ctr_tabwidth"		name="extensions.classicthemerestorer.tabwidth"		type="string"	instantApply="true"/>
 		<preference id="ctr_smallnavbut"	name="extensions.classicthemerestorer.smallnavbut"	type="bool"		instantApply="true"/>
 		<preference id="ctr_findbar"		name="extensions.classicthemerestorer.findbar"		type="string"	instantApply="true"/>
-		<preference id="ctr_hidenavbar"		name="extensions.classicthemerestorer.hidenavbar"	type="bool"		instantApply="true"/>
-		<preference id="ctr_add-onbar"		name="extensions.classicthemerestorer.addonbar"		type="bool"		instantApply="true"/>
-		<preference id="ctr_extrabar"		name="extensions.classicthemerestorer.extrabar"		type="bool"		instantApply="true"/>
 		<preference id="ctr_nav_txt_ico"	name="extensions.classicthemerestorer.nav_txt_ico" 	type="string"	instantApply="true"/>
 		<preference id="ctr_tabsintitlebar"	name="browser.tabs.drawInTitlebar"					type="bool"		instantApply="true"/>
 		<preference id="ctr_appbutton"		name="extensions.classicthemerestorer.appbutton" 	type="string"	instantApply="true"/>
@@ -33,6 +30,7 @@
 		<preference id="ctr_wincontrols"	name="extensions.classicthemerestorer.wincontrols"	type="bool"		instantApply="true"/>
 
 		<preference id="ctr_notabfog"		name="extensions.classicthemerestorer.notabfog" 	type="bool"		instantApply="true"/>
+		<preference id="ctr_tabmokcolor"	name="extensions.classicthemerestorer.tabmokcolor" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_alttbappb"		name="extensions.classicthemerestorer.alttbappb" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_paneluibtweak"	name="extensions.classicthemerestorer.paneluibtweak" type="bool"	instantApply="true"/>
 
@@ -46,8 +44,9 @@
 			<tab label="&Ctr_main;"/>
 			<tab label="&Ctr_special;"/>
 			<tab label="&Ctr_experim;"/>
+			<label value="&lt;&lt; Support Forum &gt;&gt;" href="http://forums.mozillazine.org/viewtopic.php?t=2773133" class="text-link" id="ctr_support"/>
 		</tabs>
-
+			
 	  <tabpanels>
 
 		<tabpanel>
@@ -116,9 +115,6 @@
 			  <groupbox flex="1">
 				<caption  label="&Ctr_ui;" class="ctb_topic"/>
 				<checkbox label="&Ctr_smallnavbut;"	preference="ctr_smallnavbut" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('smallnavbut',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('smallnavbut',false);}" class="ctr_windowsonly"/>
-				<checkbox label="&Ctr_hidenavbar;"	preference="ctr_hidenavbar"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('hidenavbar',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('hidenavbar',false);}"/>
-				<checkbox label="&Ctr_addonbar;"	preference="ctr_add-onbar"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('addonbar',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('addonbar',false);}"/>
-				<checkbox label="&Ctr_extrabar;"	preference="ctr_extrabar"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('extrabar',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('extrabar',false);}"/>
 				<checkbox label="&Ctr_backforward;"	preference="ctr_backforward" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('backforward',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('backforward',false);}"/>
 				<checkbox label="&Ctr_wincontrols;"	preference="ctr_wincontrols" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('wincontrols',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('wincontrols',false);}"/>
 				
@@ -142,9 +138,7 @@
 
 			</vbox>
 		  </hbox>
-		
-		  <label value="&Ctr_moreinfo1;" class="ctb_topic"/>
-		
+	
 		</vbox>
 		
 		</tabpanel>
@@ -152,13 +146,15 @@
 
 		<vbox flex="1">
 		  <groupbox>
-			<caption label="&Ctr_specialtw;" class="ctb_topic"/>
+			<caption label="&Ctr_specialtw; - &Ctr_tabs0;" class="ctb_topic"/>
 			<checkbox label="&Ctr_notabfog;" preference="ctr_notabfog" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('notabfog',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('notabfog',false);}"/>
+			<checkbox label="&Ctr_tabmokcolor;" preference="ctr_tabmokcolor" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('tabmokcolor',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('tabmokcolor',false);}"/>
+		  </groupbox>
+		  <groupbox>
+			<caption label="&Ctr_specialtw; - &Ctr_appbutton;" class="ctb_topic"/>
 			<checkbox label="&Ctr_alttbappb;" preference="ctr_alttbappb" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('alttbappb',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('alttbappb',false);}"/>
-			
 			<checkbox label="&Ctr_paneluibtweak;" preference="ctr_paneluibtweak" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',false);}"/>
 			<textbox class="plain" style="background-color: transparent !important;" multiline="true" readonly="true" value="&Ctr_paneluibtweakt;"/>
-			
 		  </groupbox>
 		</vbox>
 
@@ -171,6 +167,8 @@
 			<checkbox label="&Ctr_combrelstop;"	preference="ctr_combrelstop" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('combrelstop',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('combrelstop',false);}"/>
 			<textbox class="plain" style="background-color: transparent !important;" multiline="true" readonly="true" value="&Ctr_combrelstopt;"/>
 			
+			<label value=" "/>
+			
 			<checkbox label="&Ctr_bfurlbarfix;" preference="ctr_bfurlbarfix" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('bfurlbarfix',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('bfurlbarfix',false);}"/>
 			<textbox class="plain" style="background-color: transparent !important;" multiline="true" readonly="true" value="&Ctr_bfurlbarfixt;"/>
 		  </groupbox>
@@ -182,8 +180,6 @@
 	</tabbox>
 
   <hbox align="center" flex="1">
-	<label value="Support" href="http://forums.mozillazine.org/viewtopic.php?t=2773133" class="text-link"/>
-	<spacer flex="1" />
 	<label value="Classic Toolbar Buttons" href="https://addons.mozilla.org/addon/cstbb/versions/" class="text-link ctr_windowsonly"/>
 	<spacer flex="1" />
 	<button dlgtype="accept"/>

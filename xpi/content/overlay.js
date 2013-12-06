@@ -1,11 +1,11 @@
 Components.utils.import("chrome://classic_theme_restorer/content/ctr_toolbars.jsm");
 
 if (typeof classicthemerestorer == "undefined") {var classicthemerestorer = {};};
-if (!classicthemerestorer.buttoninsert) {classicthemerestorer.buttoninsert = {};};
+if (!classicthemerestorer.ctr) {classicthemerestorer.ctr = {};};
 
 if (!classicthemerestorer.relstop) {classicthemerestorer.relstop = {};};
 
-classicthemerestorer.buttoninsert = {
+classicthemerestorer.ctr = {
 
   init: function() {
 
@@ -66,7 +66,15 @@ classicthemerestorer.buttoninsert = {
 					.setBoolPref("firstrun",false);
 	}
 
+  },
+  
+  toggleCtrAddonBar: function() {
+    
+	let ctrAddonBar = document.getElementById("ctr_addon-bar");
+    setToolbarVisibility(ctrAddonBar, ctrAddonBar.collapsed);
+  
   }
+  
 };
 
-classicthemerestorer.buttoninsert.init();
+classicthemerestorer.ctr.init();
