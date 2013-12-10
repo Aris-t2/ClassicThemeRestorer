@@ -201,7 +201,21 @@
 	  border-top-right-radius: 0px !important;
 	  border-bottom-right-radius: 0px !important;
 	}
-	
+
+	#main-window[sizemode="maximized"] #nav-bar > #nav-bar-customization-target #back-button:-moz-locale-dir(ltr){
+	  margin-left: 0px !important;
+	}
+	#main-window[sizemode="maximized"] #nav-bar > #nav-bar-customization-target #back-button:-moz-locale-dir(rtl){
+	  margin-right: 0px !important;
+	}
+
+	#main-window[sizemode="maximized"] #nav-bar  #ctr_back-forward-button:-moz-locale-dir(ltr){
+	  margin-left: -2px !important;
+	}
+	#main-window[sizemode="maximized"] #nav-bar  #ctr_back-forward-button:-moz-locale-dir(rtl){
+	  margin-right: -2px !important;
+	}
+
 	:-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"],#nav-bar:not([currentset])) > #nav-bar > #unified-back-forward-button > #back-button{
 	  border-top-left-radius:2.5px !important;
 	  border-bottom-left-radius:2.5px !important;

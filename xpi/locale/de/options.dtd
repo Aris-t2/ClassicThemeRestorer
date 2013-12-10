@@ -1,8 +1,9 @@
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
-<!ENTITY Ctr_main			"Grundeinstellungen">
-<!ENTITY Ctr_special		"Extra">
-<!ENTITY Ctr_experim		"Experimentell">
+<!ENTITY Ctr_main_t			"Grundeinstellungen">
+<!ENTITY Ctr_fixes_t		"Korrekturen">
+<!ENTITY Ctr_special_t		"Extra">
+<!ENTITY Ctr_experim_t		"Experimentell">
 
 <!ENTITY Ctr_ui				"Oberfläche">
 
@@ -50,16 +51,19 @@
 <!ENTITY Ctr_space			"Zwischenraum">
 <!ENTITY Ctr_separator		"Trennlinie">
 
+<!ENTITY Ctr_fixes			"Korrekturen">
+<!ENTITY Ctr_tnotlfix 		"Dunkle Textfarbe für nicht-aktive Tabs">
+<!ENTITY Ctr_tnotlfixt		"Einige Linux Versionen können Text unleserlich darstellen, wenn die 'Tabs unten' Einstellung gewählt ist.">
+<!ENTITY Ctr_bfurlbarfix 	"2.5px Adressleisten-Randradius auf der linken Seite">
+<!ENTITY Ctr_bfurlbarfixt	"Der verschiebbare Vor-Zurück Button benötigt diese Option, falls kein anderer Css-Code zur Änderung des Randradius verwendet wird.">
+
 <!ENTITY Ctr_specialtw		"Spezial Einstellungen">
 <!ENTITY Ctr_notabfog		"Tableistenhintergrund deaktivieren (Windows AeroGlass)">
 <!ENTITY Ctr_tabmokcolor	"Weißer Tabtext und weiße Tabbuttons (Neu, Schließen, Gruppen, Listen)">
-<!ENTITY Ctr_tabmokcolor	"Enable white color for tab text and tab buttons (close, new, group, all)">
 <!ENTITY Ctr_alttbappb		"Alternative Symbole für die Option 'Anwendungsbutton auf Leisten'">
 <!ENTITY Ctr_paneluibtweak 	"PanelUI Button wie Anwendungsbutton darstellen (auf der Tableiste)">
-<!ENTITY Ctr_paneluibtweakt "Platziere den PanelUI Button auf der Tableiste um diese Änderung zu sehen! Die Optionen 'Anwendungsbutton auf Leisten/Titelleiste' müssen deaktiviert werden!">
+<!ENTITY Ctr_closeabarbut	"Entferne Schließen Button von der Addonleiste">
 
 <!ENTITY Ctr_experimental 	"Experimentelle Einstellungen">
 <!ENTITY Ctr_combrelstop 	"Kombinierter 'Aktualisieren'-'Stop' Button (Firefox neustarten!)">
-<!ENTITY Ctr_combrelstopt 	"Funktioniert nur, falls 'Aktualisieren'-'Stop' Button vor der Adressleiste platziert wird ([...][Aktualisieren-Stop][...][Adressleiste][...])! Die Buttons Aktualisieren und Stop auf der Adressleiste werden deaktiviert!">
-<!ENTITY Ctr_bfurlbarfix 	"2.5px Adressleisten-Randradius auf der linken Seite">
-<!ENTITY Ctr_bfurlbarfixt	"Der verschiebbare Vor-Zurück Button benötigt diese Option, falls kein anderer Css-Code zur Änderung des Randradius verwendet wird.">
+<!ENTITY Ctr_combrelstopt 	"Funktioniert nur, falls der von den anderen 'Aktualisieren' und 'Stop' Buttons unabhängige kombinierte 'Aktualisieren'-'Stop' Button vor der Adressleiste platziert wird ([...][Aktualisieren-Stop][...][Adressleiste][...])! Die Buttons 'Aktualisieren' und 'Stop' auf der Adressleiste werden deaktiviert!">

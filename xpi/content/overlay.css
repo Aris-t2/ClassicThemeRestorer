@@ -1,5 +1,4 @@
 @import url(chrome://ctr_os_special/skin/overlayextra.css);
-@import url(chrome://ctr_os_special/skin/overlayextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul),
@@ -63,10 +62,6 @@
 	}
 
 	/* ctr addonbar */
-	#ctr_extra-bar,
-	#ctr_addon-bar:not([customizing]) {
-	  /*visibility: collapse;*/
-	}
 	#ctr_addon-bar {
 	  -moz-appearance: none !important;
 	  border: 0px !important;
@@ -79,6 +74,31 @@
       box-shadow: 0 1px hsla(0,0%,100%,.3) inset,
                   0 1px hsla(210,54%,20%,.03),
                   0 0 2px hsla(210,54%,20%,.1) !important;
+	}
+	
+	/* addon-bar close button */
+	#ctr_addonbar-close	{
+	  -moz-appearance: none !important;
+	  -moz-image-region: rect(0, 64px, 16px, 48px);
+	  /*border:0 !important;*/
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png");
+	}
+
+	#ctr_addonbar-close:hover,
+	#ctr_addonbar-close:hover[selected="true"] {
+	  -moz-image-region: rect(0, 32px, 16px, 16px);
+	  background: none !important;
+	  background-image: linear-gradient(hsla(0,0%,100%,.0), hsla(0,0%,100%,.0)) !important;
+	  box-shadow: none !important;
+	}
+
+	#ctr_addonbar-close:hover:active,
+	#ctr_addonbar-close:hover:active[selected="true"] {
+	  -moz-image-region: rect(0, 48px, 16px, 32px);
+	}
+
+	#ctr_addonbar-close[selected="true"] {
+	  -moz-image-region: rect(0, 16px, 16px, 0);
 	}
 
 	/* custom bookmarks-menu-toolbar-button */

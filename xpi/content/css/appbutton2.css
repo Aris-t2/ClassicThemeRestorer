@@ -146,19 +146,32 @@
 		
 	}
 
-	/*@media all and (-moz-windows-classic) {
+	@media all and (-moz-windows-classic) {
+	  @media  not all and (-moz-os-version: windows-xp){
+		#main-window:not([tabsintitlebar])[sizemode="normal"] #titlebar,
+		#main-window:not([tabsintitlebar])[sizemode="maximized"] #titlebar{
+			display: block !important;
+			margin-bottom:-34px !important;
+			-moz-appearance:none !important;
+		}
+		#main-window:not([tabsintitlebar]) #ctr_appbutton2{
+			margin-top:0px !important;
+			margin: 0px 0 16px 0px !important;
+		}
+	  }
+	  @media  all and (-moz-os-version: windows-xp){
 		#main-window:not([tabsintitlebar])[sizemode="normal"] #titlebar,
 		#main-window:not([tabsintitlebar])[sizemode="maximized"] #titlebar{
 			display: block !important;
 			margin-bottom:-18px !important;
 			-moz-appearance:none !important;
 		}
-
 		#ctr_appbutton2{
 			margin-top:0px !important;
-			margin: 0px 0 16px 0px !important;
+			margin: 0px 0 2px 0px !important;
 		}
-	}*/
+	  }
+	}
 	
 	@media all and (-moz-windows-theme: luna-blue){
 		#main-window:not([tabsintitlebar])[sizemode="normal"] #titlebar,

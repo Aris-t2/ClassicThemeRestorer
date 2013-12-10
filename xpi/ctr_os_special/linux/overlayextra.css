@@ -73,11 +73,16 @@
 
 }
 
+.ctr_maconly,
+.ctr_windowsonly{
+  visibility: collapse !important;
+}
+
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
 	#ctr_appbutton_list2{
 	  visibility: visible !important;
 	}
-	.ctr_windowsonly,
+	#ctr_tabs_in_titlebar,
 	#ctr_appbutton_list1{
 	  visibility: collapse !important;
 	}

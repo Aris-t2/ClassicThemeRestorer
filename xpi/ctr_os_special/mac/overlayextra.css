@@ -91,19 +91,18 @@
 	  -moz-margin-start: 0px !important;
 	}
 	
+	/* ctr addonbar */
 	#ctr_addon-bar:not(:-moz-lwtheme),
 	#ctr_addon-bar:not(:-moz-lwtheme)[customizing] {
 	  background:linear-gradient(to bottom,#d2d2d2,#d9d9d9,#e9e9e9);
 	}
 	
-	/* ctr addonbar */
 	#ctr_addon-bar toolbarbutton {
 	  -moz-appearance: none !important;
 	  margin: 0px 3px !important;
 	  padding:0px !important;
 	}
 	#ctr_addon-bar toolbarbutton .toolbarbutton-icon {
-	  /*margin: 2px -4px !important;*/
 	  max-width: 18px;
 	  max-height: 18px;
 	}
@@ -112,17 +111,19 @@
 	  margin-left: 1px !important;
 	  margin-right: 1px !important;
 	}
-	#ctr_addon-bar toolbarbutton[type="menu"] dropmarker{
-	  /*margin-left: 3px !important;
-	  margin-right: -4px !important;	*/
-	}
+
+}
+
+.ctr_linuxonly,
+.ctr_windowsonly{
+  visibility: collapse !important;
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
 	#ctr_appbutton_list2{
 	  visibility: visible !important;
 	}
-	.ctr_windowsonly,
+	#ctr_wincontrols,
 	#ctr_appbutton_list1{
 	  visibility: collapse !important;
 	}

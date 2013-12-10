@@ -5,8 +5,6 @@
 
 <!--### use default dtd locale files for duplicated default item labels ###-->
 <!DOCTYPE overlay [
-	<!ENTITY % mainwindowDTD SYSTEM "chrome://browser/locale/browser.dtd">
-		%mainwindowDTD;
 	<!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd">
 		%brandDTD;
 	<!ENTITY % browserDTD SYSTEM "chrome://browser/locale/browser.dtd">
@@ -47,7 +45,10 @@
 				 toolbarname="&Ctr_addonbar;"
 				 lockiconsize="true"
 				 accesskey="A"
-				 key="key_toggleCtrAddonBar">
+				 key="key_toggleCtrAddonBar"
+				 defaultset="ctr_addonbar-close,ctr_flexible_space_ab">
+		  <toolbarbutton id="ctr_addonbar-close" removable="false"
+				    oncommand="classicthemerestorer.ctr.toggleCtrAddonBar();"/>
 		  <toolbaritem id="ctr_flexible_space_ab"
 					flex="1"
 					class="ctr_flexspaces"
@@ -59,9 +60,6 @@
 	
 	<!--### create a new toolbar ###-->
 	<toolbox id="navigator-toolbox">
-		<toolbar toolbarname="&navbarCmd.label;"
-				 id="nav-bar"
-				 accesskey="N"/>
 		
 		<toolbar id="ctr_extra-bar" customizable="true"
 				 class="toolbar-primary chromeclass-toolbar"
@@ -727,9 +725,19 @@
 					  observes="sync-setup-state"
 					  oncommand="gSyncUI.openSetup()"/>
 			<menuitem id="appmenu-quit"
-					  class="menuitem-iconic"
+					  class="menuitem-iconic ctr_windowsonly"
 					  label="&quitApplicationCmdWin.label;"
 					  accesskey="&quitApplicationCmdWin.accesskey;"
+					  command="cmd_quitApplication"/>
+			<menuitem id="appmenu-quit"
+					  class="menuitem-iconic ctr_linuxonly"
+					  label="&quitApplicationCmd.label;"
+					  accesskey="&quitApplicationCmd.accesskey;"
+					  command="cmd_quitApplication"/>
+			<menuitem id="appmenu-quit"
+					  class="menuitem-iconic ctr_maconly"
+					  label="&quitApplicationCmdMac.label;"
+					  accesskey="&quitApplicationCmd.accesskey;"
 					  command="cmd_quitApplication"/>
 
 		  </vbox>
@@ -873,6 +881,11 @@
 			<hbox>
 				<menuitem id="menu_preferences"
 						  label="&preferencesCmd2.label;"
+						  class="ctr_windowsonly"
+						  oncommand="openPreferences();"/>
+				<menuitem id="menu_preferences"
+						  label="&preferencesCmdUnix.label;"
+						  class="ctr_nonwindows"
 						  oncommand="openPreferences();"/>
 				<spacer flex="1"/>
 				<menu id="menu_newPreferencesmenu"
@@ -881,7 +894,13 @@
 				  <menupopup id="menu_newPreferencesmenuPopup">					  
 					  <menuitem id="menu_preferences"
 								label="&preferencesCmd2.label;"
+								class="ctr_windowsonly"
 								accesskey="&preferencesCmd2.accesskey;"
+								oncommand="openPreferences();"/>
+					  <menuitem id="menu_preferences"
+								label="&preferencesCmdUnix.label;"
+								class="ctr_nonwindows"
+								accesskey="&preferencesCmdUnix.accesskey;"
 								oncommand="openPreferences();"/>
 					  <menuseparator/>
 					  <menuitem command="cmd_CustomizeToolbars"

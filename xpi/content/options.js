@@ -29,17 +29,20 @@ classicthemerestorerjs.settings = {
 
 	if (this.prefs.getBoolPref("tabsotoff"))		{ this.loadUnloadCSS("tabsotoff",true); }
 	if (this.prefs.getBoolPref("smallnavbut"))		{ this.loadUnloadCSS("smallnavbut",true); }
+	if (this.prefs.getBoolPref("hidenavbar"))		{ this.loadUnloadCSS("hidenavbar",true); }
 	if (this.prefs.getBoolPref("backforward"))		{ this.loadUnloadCSS("backforward",true); }
 	if (this.prefs.getBoolPref("wincontrols"))		{ this.loadUnloadCSS("wincontrols",true); }
 
+	if (this.prefs.getBoolPref("tnotlfix"))			{ this.loadUnloadCSS("tnotlfix",true); }
+	if (this.prefs.getBoolPref("bfurlbarfix"))		{ this.loadUnloadCSS("bfurlbarfix",true); }
+	
 	if (this.prefs.getBoolPref("notabfog"))			{ this.loadUnloadCSS("notabfog",true); }
 	if (this.prefs.getBoolPref("tabmokcolor"))		{ this.loadUnloadCSS("tabmokcolor",true); }
 	if (this.prefs.getBoolPref("alttbappb"))		{ this.loadUnloadCSS("alttbappb",true); }
 	if (this.prefs.getBoolPref("paneluibtweak"))	{ this.loadUnloadCSS("paneluibtweak",true); }
+	if (this.prefs.getBoolPref("closeabarbut"))		{ this.loadUnloadCSS("closeabarbut",true); }
 	
 	if (this.prefs.getBoolPref("combrelstop"))		{ this.loadUnloadCSS("combrelstop",true); }
-	if (this.prefs.getBoolPref("bfurlbarfix"))		{ this.loadUnloadCSS("bfurlbarfix",true); }
-
 
   },
   
@@ -48,24 +51,65 @@ classicthemerestorerjs.settings = {
 	
 	switch (which) {
 	
-		case "tabs_squared": 		manageCSS("tabs_squared.css");  		break;
+		case "tabs_squared":
+		
+			manageCSS("tabs_squared.css");
+		
+			
+			var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;
+
+			// different appearance for 'tabs not on top' on MacOSX
+			if (osString=="Darwin"){
+		
+				// enable 'tabs not on top' sheets already here to prevent glitches
+				if (enable==true && this.prefs.getBoolPref("tabsotoff")==true){
+					manageCSS("tabsontop_off.css");
+					manageCSS("tabs_squared-r-osx.css");
+				}
+				
+				if(enable==false){
+					manageCSS("tabs_squared-r-osx.css");
+				}
+			}
+		
+		break;
+		
 		case "tabs_curvedall": 		manageCSS("tabs_curvedall.css");  		break;
 
 		case "tabwidth_150": 		manageCSS("tabwidth_150.css");  		break;
 		case "tabwidth_250": 		manageCSS("tabwidth_250.css");  		break;
 		
-		case "tabsotoff": 			manageCSS("tabsontop_off.css");  		break;
+		case "tabsotoff":
+		
+			manageCSS("tabsontop_off.css");
+		
+			var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;
+
+			// different appearance for 'tabs not on top' on MacOSX
+			if (osString=="Darwin"){
+			
+				if (enable==true && this.prefs.getCharPref("tabs")!="tabs_default"){
+					manageCSS("tabs_squared-r-osx.css");
+				}
+				
+				if(enable==false){
+					manageCSS("tabs_squared-r-osx.css");
+				}
+			}
+		
+		break;
 		
 		case "smallnavbut":
 			
-			// no small button mode, if 'icons + text' is used
+			// no small button mode when 'icons + text' mode is used
 			if (enable==true && this.prefs.getCharPref("nav_txt_ico")=="iconstxt"){
 				enable=false;
 			}
 			
 			// If 'Classic Toolbar Buttons' add-on is used to style nav-bar buttons,
 			// CTRs small button option should not be enabled -> prevents glitches.
-			// 'Classic Toolbar Buttons' add-on has an own 'small button option'.
+			// 'Classic Toolbar Buttons' add-on has an own 'small button option',
+			// which is not compatible to CTRs option.
 			try{
 				if(Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService)
 						.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off"){
@@ -84,7 +128,7 @@ classicthemerestorerjs.settings = {
 		case "appbutton_v1":		manageCSS("appbutton.css");				break;
 		case "appbutton_v2":		manageCSS("appbutton2.css");			break;
 		
-		// no 'small button' mode, if 'icons + text' is used
+		// no 'small button' mode, if 'icons + text' mode is used
 		case "iconstxt":
 			if(enable==true && this.prefs.getBoolPref("smallnavbut")==true){
 				enable=false;
@@ -110,13 +154,18 @@ classicthemerestorerjs.settings = {
 		case "appbuttonc_green":	manageCSS("appbutton_green.css");		break;
 		case "appbuttonc_gray":		manageCSS("appbutton_gray.css");		break;
 		
+		case "hidenavbar": 			manageCSS("hidenavbar.css");  			break;
 		case "backforward": 		manageCSS("back-forward.css");			break;
 		case "wincontrols": 		manageCSS("windowcontrols.css");		break;
+		
+		case "tnotlfix": 			manageCSS("tabsontop_off_lfix.css");	break;
+		case "bfurlbarfix": 		manageCSS("bf_urlbarfix.css");			break;
 		
 		case "notabfog": 			manageCSS("notabfog.css");				break;
 		case "tabmokcolor": 		manageCSS("tabmokcolor.css");			break;
 		case "alttbappb": 			manageCSS("alt_appbutton_icons.css");	break;
 		case "paneluibtweak": 		manageCSS("paneluibutton_tweak.css");	break;
+		case "closeabarbut": 		manageCSS("closeabarbut.css");			break;
 		
 		case "combrelstop":
 			
@@ -146,8 +195,6 @@ classicthemerestorerjs.settings = {
 			} catch(e){}
 			
 		break;
-		
-		case "bfurlbarfix": 		manageCSS("bf_urlbarfix.css");			break;
 	
 	}
 	

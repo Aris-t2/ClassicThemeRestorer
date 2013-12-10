@@ -64,56 +64,65 @@
 		box-shadow:none;
 		border:1px solid #a0a0a0;
 	}
-
-	#appmenuPrimaryPane{
-		-moz-appearance:none;
-		background:white;
-		box-shadow:none;
-		border:0;
-	}
-	#appmenuSecondaryPane{
-		-moz-appearance:none;
-		background:#f1f5fb;
-		box-shadow:none;
-		border:0;
-		border-left:1px solid #d6e5f5;
-	}
 	
-	#appmenuPrimaryPane menuseparator {
-	  -moz-appearance: none;
-	  margin-top: 3px;
-	  margin-bottom: 3px;
-	  margin-right:3px;
-	  -moz-margin-start: 30px;
-	  padding: 0;
-	  border-top: 1px solid #d6e5f5;
-	  border-bottom: none;
-	}
+	@media not all and (-moz-windows-classic) {
+		#appmenuPrimaryPane{
+			-moz-appearance:none;
+			background:white;
+			box-shadow:none;
+			border:0;
+		}
+		#appmenuSecondaryPane{
+			-moz-appearance:none;
+			background:#f1f5fb;
+			box-shadow:none;
+			border:0;
+			border-left:1px solid #d6e5f5;
+		}
+		
+		#appmenuPrimaryPane menuseparator {
+		  -moz-appearance: none;
+		  margin-top: 3px;
+		  margin-bottom: 3px;
+		  margin-right:3px;
+		  -moz-margin-start: 30px;
+		  padding: 0;
+		  border-top: 1px solid #d6e5f5;
+		  border-bottom: none;
+		}
 
-	#appmenuPrimaryPane #menu_newTabmenupopup,
-	#appmenuPrimaryPane #menu_newEditmenupopup,
-	#appmenuPrimaryPane #menu_newPrintmenupopup,
-	#appmenuPrimaryPane #newmenuWebDeveloperPopup {
-		-moz-appearance:none;
-		background:white;
-		box-shadow:none;
-		border:1px solid #a0a0a0;
-	}
-	
-	#appmenuSecondaryPane #newbookmarksMenuPopup,
-	#appmenuSecondaryPane #newHistorymenuPopup,
-	#appmenuSecondaryPane #menu_newHelpPopup,
-	#appmenuSecondaryPane #menu_newPreferencesmenuPopup{
-		-moz-appearance:none;
-		background:#f1f5fb;
-		box-shadow:none;
-		border:1px solid #a0a0a0;
+		#appmenuPrimaryPane #menu_newTabmenupopup,
+		#appmenuPrimaryPane #menu_newEditmenupopup,
+		#appmenuPrimaryPane #menu_newPrintmenupopup,
+		#appmenuPrimaryPane #newmenuWebDeveloperPopup {
+			-moz-appearance:none;
+			background:white;
+			box-shadow:none;
+			border:1px solid #a0a0a0;
+		}
+		
+		#appmenuSecondaryPane #newbookmarksMenuPopup,
+		#appmenuSecondaryPane #newHistorymenuPopup,
+		#appmenuSecondaryPane #menu_newHelpPopup,
+		#appmenuSecondaryPane #menu_newPreferencesmenuPopup{
+			-moz-appearance:none;
+			background:#f1f5fb;
+			box-shadow:none;
+			border:1px solid #a0a0a0;
+		}
 	}
 	
 	#appmenu-edit-label,
 	#appmenu-edit-label:hover{
 	  -moz-appearance: none !important;
 	  margin-left: 2px !important;
+	}
+	
+	@media all and (-moz-windows-classic) {
+	
+		#appmenuSecondaryPane{
+		  border-left: 1px solid !important;
+		}
 	}
 	
 	/* ctr addonbar */
@@ -131,6 +140,12 @@
 	  margin-left: -3px !important;
 	}
 
+}
+
+.ctr_nonwindows,
+.ctr_linuxonly,
+.ctr_maconly{
+  visibility: collapse !important;
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
