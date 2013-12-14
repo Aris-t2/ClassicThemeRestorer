@@ -22,5 +22,21 @@ pref("extensions.classicthemerestorer.closeabarbut",false);
 
 pref("extensions.classicthemerestorer.combrelstop",false);
 
+pref("extensions.classicthemerestorer.customsqtab",false);
+
+pref("extensions.classicthemerestorer.ctab1",'#00ff00');
+pref("extensions.classicthemerestorer.ctab2",'#007700');
+pref("extensions.classicthemerestorer.ctabhov1",'#ffffbb');
+pref("extensions.classicthemerestorer.ctabhov2",'#ffff00');
+pref("extensions.classicthemerestorer.ctabact1",'#ff8800');
+pref("extensions.classicthemerestorer.ctabact2",'#ff0000');
+pref("extensions.classicthemerestorer.cntab1",'#00ff00');
+pref("extensions.classicthemerestorer.cntab2",'#007700');
+pref("extensions.classicthemerestorer.cntabhov1",'#ffffbb');
+pref("extensions.classicthemerestorer.cntabhov2",'#ffff00');
+
+pref("extensions.classicthemerestorer.ctabt",'#000000');
+pref("extensions.classicthemerestorer.ctabhovt",'#000000');
+pref("extensions.classicthemerestorer.ctabactt",'#000000');
 
 pref("extensions.classicthemerestorer.firstrun",true);

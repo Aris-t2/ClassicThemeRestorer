@@ -4,6 +4,8 @@ if (!classicthemerestorerjs.settings) {classicthemerestorerjs.settings = {};};
 classicthemerestorerjs.settings = {
 
   prefs: Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.classicthemerestorer."),
+  
+  ctabsheet: Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
 
   /* init css on startup, if corresponding settings are enabled */
   init: function() {
@@ -43,6 +45,8 @@ classicthemerestorerjs.settings = {
 	if (this.prefs.getBoolPref("closeabarbut"))		{ this.loadUnloadCSS("closeabarbut",true); }
 	
 	if (this.prefs.getBoolPref("combrelstop"))		{ this.loadUnloadCSS("combrelstop",true); }
+	
+	if (this.prefs.getBoolPref("customsqtab"))		{ this.loadUnloadCSS("customsqtab",true); }
 
   },
   
@@ -51,6 +55,13 @@ classicthemerestorerjs.settings = {
 	
 	switch (which) {
 	
+		case "tabs_default":
+			if (this.prefs.getBoolPref("customsqtab")){
+				this.loadUnloadCSS('customsqtab',false);
+				this.prefs.setBoolPref('customsqtab',false);
+			}
+		break;
+		
 		case "tabs_squared":
 		
 			manageCSS("tabs_squared.css");
@@ -67,14 +78,28 @@ classicthemerestorerjs.settings = {
 					manageCSS("tabs_squared-r-osx.css");
 				}
 				
+				if (enable==true && this.prefs.getBoolPref("tabsotoff")==false){
+					manageCSS("tabs_squared-osx.css");
+				}
+				
 				if(enable==false){
 					manageCSS("tabs_squared-r-osx.css");
+					manageCSS("tabs_squared-osx.css");
 				}
 			}
 		
 		break;
 		
-		case "tabs_curvedall": 		manageCSS("tabs_curvedall.css");  		break;
+		case "tabs_curvedall":
+			
+			if (this.prefs.getBoolPref("customsqtab")){
+				this.loadUnloadCSS('customsqtab',false);
+				this.prefs.setBoolPref('customsqtab',false);
+			}
+
+			manageCSS("tabs_curvedall.css");
+			
+		break;
 
 		case "tabwidth_150": 		manageCSS("tabwidth_150.css");  		break;
 		case "tabwidth_250": 		manageCSS("tabwidth_250.css");  		break;
@@ -195,10 +220,49 @@ classicthemerestorerjs.settings = {
 			} catch(e){}
 			
 		break;
+		
+		case "customsqtab":
+
+			removeOldSheet(this.ctabsheet);
+			
+			if(enable==true){
+				
+				if (this.prefs.getCharPref('tabs')!='tabs_squared') {
+					this.prefChangeString('tabs', 'tabs_squared');
+					this.prefs.setCharPref('tabs','tabs_squared');
+				}
+				
+				const ios = Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService);
+				
+				this.ctabsheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {\
+					  background-image: linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
+					  color: '+this.prefs.getCharPref('ctabactt')+' !important;\
+					}\
+					.tabbrowser-tab:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {\
+					  background-image: linear-gradient('+this.prefs.getCharPref('ctab1')+','+this.prefs.getCharPref('ctab2')+') !important;\
+					  color: '+this.prefs.getCharPref('ctabt')+' !important;\
+					}\
+					.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {\
+					  background-image: linear-gradient('+this.prefs.getCharPref('ctabhov1')+','+this.prefs.getCharPref('ctabhov2')+') !important;\
+					  color: '+this.prefs.getCharPref('ctabhovt')+' !important;\
+					}\
+					.tabs-newtab-button:not(:-moz-lwtheme) {\
+					  background-image: linear-gradient('+this.prefs.getCharPref('cntab1')+','+this.prefs.getCharPref('cntab2')+') !important;\
+					}\
+					.tabs-newtab-button:hover:not(:-moz-lwtheme) {\
+					  background-image: linear-gradient('+this.prefs.getCharPref('cntabhov1')+','+this.prefs.getCharPref('cntabhov2')+') !important;\
+					}\
+				'), null, null);
+
+				applyNewSheet(this.ctabsheet);
+			}
+
+		break;
 	
 	}
 	
-	// Apply or remove the style sheets
+	// Apply or remove the style sheet files
 	function manageCSS(file) {
 
 		const sss = Components.classes["@mozilla.org/content/style-sheet-service;1"].getService(Components.interfaces.nsIStyleSheetService);
@@ -216,12 +280,38 @@ classicthemerestorerjs.settings = {
 			}
 		}catch(e){}
 	}
+	
+	//remove style sheet
+	function removeOldSheet(sheet){
+
+	  const sss = Components.classes["@mozilla.org/content/style-sheet-service;1"].getService(Components.interfaces.nsIStyleSheetService);
+
+		if (sss.sheetRegistered(sheet,sss.AGENT_SHEET)) sss.unregisterSheet(sheet,sss.AGENT_SHEET);
+	}
+
+	// apply style sheet
+	function applyNewSheet(sheet){
+
+	  const sss = Components.classes["@mozilla.org/content/style-sheet-service;1"].getService(Components.interfaces.nsIStyleSheetService);
+
+		if (!sss.sheetRegistered(sheet,sss.AGENT_SHEET)) sss.loadAndRegisterSheet(sheet,sss.AGENT_SHEET);
+	}
   },
 
   prefChangeString: function(which,value){
 	
 	this.loadUnloadCSS(this.prefs.getCharPref(which),false);
 	this.loadUnloadCSS(value,true);
+  },
+  
+  colorChange:function(value,which){
+
+	this.prefs.setCharPref(which,value);
+	
+	if (this.prefs.getBoolPref("customsqtab")){
+		this.loadUnloadCSS("customsqtab",true);
+	}
+	
   }
 
 }

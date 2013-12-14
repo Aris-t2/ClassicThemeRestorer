@@ -56,6 +56,10 @@
         visibility: visible !important;
 	}
 	
+	#nav-bar #ctr_appbutton #ctr_appbuttonPopup{
+		margin-top:0px !important;
+	}
+	
 	/* ctr addonbar */
 	#ctr_addon-bar toolbarbutton {
 	  -moz-appearance: none !important;

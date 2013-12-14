@@ -80,7 +80,6 @@
 	#ctr_addonbar-close	{
 	  -moz-appearance: none !important;
 	  -moz-image-region: rect(0, 64px, 16px, 48px);
-	  /*border:0 !important;*/
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png");
 	}
 
@@ -342,10 +341,12 @@
 
 /* style settings for this add-ons options window */
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+	#ctr_sqtabcolorstab,
 	#ctr_appbutton_list1,
 	#ctr_appbutton_list2{
 		visibility: collapse;
 	}
+	.ctr_tabcolorlabel,
 	.ctb_font1{
 		font-weight:bold;
 		font-style:italic;

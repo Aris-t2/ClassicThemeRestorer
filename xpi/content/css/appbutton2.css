@@ -63,12 +63,16 @@
 	}
 	
     #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
-        margin-left:98px !important;
+        padding-left:98px !important;
     }
 	
 	#main-window:not([tabsintitlebar]) #titlebar-buttonbox-container{
 	  -moz-appearance: none !important;
 	  visibility:collapse !important;
+	}
+	
+	window[chromehidden~="toolbar"] #titlebar:-moz-lwtheme #ctr_appbutton2{
+	  visibility: collapse !important;
 	}
 
 	/* restore hidden titlebar and move it behind tabs toolbar for 

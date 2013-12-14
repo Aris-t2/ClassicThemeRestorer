@@ -40,12 +40,29 @@
 		<preference id="ctr_closeabarbut"	name="extensions.classicthemerestorer.closeabarbut" type="bool"		instantApply="true"/>
 
 		<preference id="ctr_combrelstop"	name="extensions.classicthemerestorer.combrelstop"	type="bool"		instantApply="true"/>
-	
+		
+		<preference id="ctr_customsqtab"	name="extensions.classicthemerestorer.customsqtab"	type="bool"		instantApply="true"/>
+		<preference id="ctr_ctab1"			name="extensions.classicthemerestorer.ctab1"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctab2"			name="extensions.classicthemerestorer.ctab2"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabhov1"		name="extensions.classicthemerestorer.ctabhov1"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabhov2"		name="extensions.classicthemerestorer.ctabhov2"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabact1"		name="extensions.classicthemerestorer.ctabact1"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabact2"		name="extensions.classicthemerestorer.ctabact2"		type="string"	instantApply="true"/>
+		<preference id="ctr_cntab1"			name="extensions.classicthemerestorer.cntab1"		type="string"	instantApply="true"/>
+		<preference id="ctr_cntab2"			name="extensions.classicthemerestorer.cntab2"		type="string"	instantApply="true"/>
+		<preference id="ctr_cntabhov1"		name="extensions.classicthemerestorer.cntabhov1"	type="string"	instantApply="true"/>
+		<preference id="ctr_cntabhov2"		name="extensions.classicthemerestorer.cntabhov2"	type="string"	instantApply="true"/>
+		
+		<preference id="ctr_ctabt"			name="extensions.classicthemerestorer.ctabt"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabhovt"		name="extensions.classicthemerestorer.ctabhovt"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabactt"		name="extensions.classicthemerestorer.ctabactt"		type="string"	instantApply="true"/>
+		
 	</preferences>
 
 	<tabbox>
 		<tabs>
 			<tab label="&Ctr_main_t;"/>
+			<tab label="&Ctr_tabcolors_t;" id="ctr_sqtabcolorstab"/>
 			<tab label="&Ctr_fixes_t;"/>
 			<tab label="&Ctr_special_t;"/>
 			<tab label="&Ctr_experim_t;"/>
@@ -76,6 +93,7 @@
 						<menuitem value="tabwidth_250" 		label="&Ctr_tabwidth2;" oncommand="classicthemerestorerjs.settings.prefChangeString('tabwidth', 'tabwidth_250');"/>
 					</menupopup>
 				</menulist>
+
 			  </groupbox>
 			  
 			  <groupbox flex="1">
@@ -146,6 +164,65 @@
 	
 		</vbox>
 		
+		</tabpanel>
+		
+		<tabpanel>
+			<vbox flex="1">
+			  <groupbox flex="1">
+				<caption  label="&Ctr_tabs1;" class="ctb_topic"/>
+				  <checkbox label="&Ctr_customsqtab;" preference="ctr_customsqtab" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('customsqtab',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('customsqtab',false);}"/>
+				  <spacer flex="1" />
+				  <hbox>
+					<label value="&Ctr_tabnor;" class="ctr_tabcolorlabel"/>
+					<spacer flex="1" />
+					<colorpicker preference="ctr_ctabt" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabt')"/>
+					<label value="&Ctr_textc;"/>
+					<colorpicker preference="ctr_ctab1" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctab1')"/>
+					<label value="&Ctr_topc;"/>
+					<colorpicker preference="ctr_ctab2" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctab2')"/>
+					<label value="&Ctr_bottomc;"/>
+				  </hbox>
+				  <hbox>
+					<label value="&Ctr_tabhov;" class="ctr_tabcolorlabel"/>
+					<spacer flex="1" />
+					<colorpicker preference="ctr_ctabhovt" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhovt')"/>
+					<label value="&Ctr_textc;"/>
+					<colorpicker preference="ctr_ctabhov1"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhov1')"/>
+					<label value="&Ctr_topc;"/>
+					<colorpicker preference="ctr_ctabhov2"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhov2')"/>
+					<label value="&Ctr_bottomc;"/>
+				  </hbox>
+				  <hbox>
+					<label value="&Ctr_tabact;" class="ctr_tabcolorlabel"/>
+					<spacer flex="1" />
+					<colorpicker preference="ctr_ctabactt" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabactt')"/>
+					<label value="&Ctr_textc;"/>
+					<colorpicker preference="ctr_ctabact1"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabact1')"/>
+					<label value="&Ctr_topc;"/>
+					<colorpicker preference="ctr_ctabact2"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabact2')"/>
+					<label value="&Ctr_bottomc;"/>
+				  </hbox>
+				  <spacer flex="1" />
+				  <hbox>
+					<label value="&Ctr_ntabnor;" class="ctr_tabcolorlabel"/>
+					<spacer flex="1" />
+					<colorpicker preference="ctr_cntab1"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'cntab1')"/>
+					<label value="&Ctr_topc;"/>
+					<colorpicker preference="ctr_cntab2"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'cntab2')"/>
+					<label value="&Ctr_bottomc;"/>
+				  </hbox>
+				  <hbox>
+					<label value="&Ctr_ntabhov;" class="ctr_tabcolorlabel"/>
+					<spacer flex="1" />
+					<colorpicker preference="ctr_cntabhov1"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'cntabhov1')"/>
+					<label value="&Ctr_topc;"/>
+					<colorpicker preference="ctr_cntabhov2"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'cntabhov2')"/>
+					<label value="&Ctr_bottomc;"/>
+				  </hbox>
+
+			  </groupbox>
+			</vbox>
+				
 		</tabpanel>
 		
 		<tabpanel>

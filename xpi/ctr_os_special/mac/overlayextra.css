@@ -90,7 +90,11 @@
 	  -moz-padding-start:20px !important;
 	  -moz-margin-start: 0px !important;
 	}
-	
+
+	#nav-bar #ctr_appbutton #ctr_appbuttonPopup{
+		margin-top:0px !important;
+	}
+
 	/* ctr addonbar */
 	#ctr_addon-bar:not(:-moz-lwtheme),
 	#ctr_addon-bar:not(:-moz-lwtheme)[customizing] {

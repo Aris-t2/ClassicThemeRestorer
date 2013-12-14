@@ -52,11 +52,16 @@
 	  padding-right: 2px !important;
 	}
 
+	.tabs-newtab-button{
+	  background: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px), linear-gradient(transparent, hsla(0,0%,45%,.1) 1px, hsla(0,0%,32%,.2) 80%, hsla(0,0%,0%,.2)),
+				  linear-gradient(-moz-dialog, -moz-dialog) !important;
+	}
+
 	.tabbrowser-tab,
 	.tabs-newtab-button{
 	  -moz-appearance: none !important;
 	  background: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px), linear-gradient(transparent, hsla(0,0%,45%,.1) 1px, hsla(0,0%,32%,.2) 80%, hsla(0,0%,0%,.2)),
-				  linear-gradient(-moz-dialog, -moz-dialog) !important;
+				  linear-gradient(-moz-dialog, -moz-dialog);
 	  background-origin: border-box !important;
 	  background-position: 1px 2px !important;
 	  background-size: calc(100% - 2px) calc(100% - 3px) !important;
@@ -81,7 +86,13 @@
 
 	.tabbrowser-tab[selected="true"]:-moz-lwtheme {
 	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.5) 50%) !important;
-	  background-size: calc(100% - 1px) calc(100% - 4px) !important;
+	  background-size: calc(100% - 1px) calc(100% - 3px) !important;
+	}
+
+	@media all and (-moz-windows-glass) {
+		.tabbrowser-tab[selected="true"]:-moz-lwtheme {
+		  background-size: calc(100% - 1px) calc(100% - 4px) !important;
+		}
 	}
 
 	.tabbrowser-tab:-moz-lwtheme-brighttext:not([selected="true"]),
@@ -137,4 +148,10 @@
 		background-image: none !important;
 	}
 
+}
+
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+	#ctr_sqtabcolorstab{
+		visibility: visible !important;
+	}
 }
