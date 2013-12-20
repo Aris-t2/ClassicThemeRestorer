@@ -14,10 +14,11 @@ pref("extensions.classicthemerestorer.wincontrols",false);
 pref("extensions.classicthemerestorer.tnotlfix",false);
 pref("extensions.classicthemerestorer.bfurlbarfix",false);
 
-pref("extensions.classicthemerestorer.notabfog",false);
-pref("extensions.classicthemerestorer.tabmokcolor",false);
 pref("extensions.classicthemerestorer.alttbappb",false);
 pref("extensions.classicthemerestorer.paneluibtweak",false);
+pref("extensions.classicthemerestorer.appbuttxt",false);
+pref("extensions.classicthemerestorer.notabfog",false);
+pref("extensions.classicthemerestorer.tabmokcolor",false);
 pref("extensions.classicthemerestorer.closeabarbut",false);
 
 pref("extensions.classicthemerestorer.combrelstop",false);
@@ -35,8 +36,14 @@ pref("extensions.classicthemerestorer.cntab2",'#007700');
 pref("extensions.classicthemerestorer.cntabhov1",'#ffffbb');
 pref("extensions.classicthemerestorer.cntabhov2",'#ffff00');
 
+pref("extensions.classicthemerestorer.tabtextc",false);
 pref("extensions.classicthemerestorer.ctabt",'#000000');
 pref("extensions.classicthemerestorer.ctabhovt",'#000000');
 pref("extensions.classicthemerestorer.ctabactt",'#000000');
+
+pref("extensions.classicthemerestorer.tabtextsh",false);
+pref("extensions.classicthemerestorer.ctabtsh",'#ffffff');
+pref("extensions.classicthemerestorer.ctabhovtsh",'#ffffff');
+pref("extensions.classicthemerestorer.ctabacttsh",'#ffffff');
 
 pref("extensions.classicthemerestorer.firstrun",true);

@@ -33,10 +33,11 @@
 		<preference id="ctr_tnotlfix"		name="extensions.classicthemerestorer.tnotlfix"		type="bool"		instantApply="true"/>
 		<preference id="ctr_bfurlbarfix"	name="extensions.classicthemerestorer.bfurlbarfix"	type="bool"		instantApply="true"/>
 
-		<preference id="ctr_notabfog"		name="extensions.classicthemerestorer.notabfog" 	type="bool"		instantApply="true"/>
-		<preference id="ctr_tabmokcolor"	name="extensions.classicthemerestorer.tabmokcolor" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_alttbappb"		name="extensions.classicthemerestorer.alttbappb" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_paneluibtweak"	name="extensions.classicthemerestorer.paneluibtweak" type="bool"	instantApply="true"/>
+		<preference id="ctr_appbuttxt"		name="extensions.classicthemerestorer.appbuttxt" 	type="bool"		instantApply="true"/>
+		<preference id="ctr_notabfog"		name="extensions.classicthemerestorer.notabfog" 	type="bool"		instantApply="true"/>
+		<preference id="ctr_tabmokcolor"	name="extensions.classicthemerestorer.tabmokcolor" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_closeabarbut"	name="extensions.classicthemerestorer.closeabarbut" type="bool"		instantApply="true"/>
 
 		<preference id="ctr_combrelstop"	name="extensions.classicthemerestorer.combrelstop"	type="bool"		instantApply="true"/>
@@ -53,9 +54,15 @@
 		<preference id="ctr_cntabhov1"		name="extensions.classicthemerestorer.cntabhov1"	type="string"	instantApply="true"/>
 		<preference id="ctr_cntabhov2"		name="extensions.classicthemerestorer.cntabhov2"	type="string"	instantApply="true"/>
 		
+		<preference id="ctr_tabtextc"		name="extensions.classicthemerestorer.tabtextc"		type="bool"		instantApply="true"/>
 		<preference id="ctr_ctabt"			name="extensions.classicthemerestorer.ctabt"		type="string"	instantApply="true"/>
 		<preference id="ctr_ctabhovt"		name="extensions.classicthemerestorer.ctabhovt"		type="string"	instantApply="true"/>
 		<preference id="ctr_ctabactt"		name="extensions.classicthemerestorer.ctabactt"		type="string"	instantApply="true"/>
+		
+		<preference id="ctr_tabtextsh"		name="extensions.classicthemerestorer.tabtextsh"	type="bool"		instantApply="true"/>
+		<preference id="ctr_ctabtsh"		name="extensions.classicthemerestorer.ctabtsh"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabhovtsh"		name="extensions.classicthemerestorer.ctabhovtsh"	type="string"	instantApply="true"/>
+		<preference id="ctr_ctabacttsh"		name="extensions.classicthemerestorer.ctabacttsh"	type="string"	instantApply="true"/>
 		
 	</preferences>
 
@@ -63,6 +70,7 @@
 		<tabs>
 			<tab label="&Ctr_main_t;"/>
 			<tab label="&Ctr_tabcolors_t;" id="ctr_sqtabcolorstab"/>
+			<tab label="&Ctr_tabtext_t;"/>
 			<tab label="&Ctr_fixes_t;"/>
 			<tab label="&Ctr_special_t;"/>
 			<tab label="&Ctr_experim_t;"/>
@@ -79,9 +87,10 @@
 				<caption  label="&Ctr_tabs;" class="ctb_topic"/>
 				<menulist preference="ctr_tabs">
 					<menupopup>
-						<menuitem value="tabs_default"	 label="&Ctr_tabs0;" oncommand="classicthemerestorerjs.settings.prefChangeString('tabs', 'tabs_default');"/>
-						<menuitem value="tabs_squared"	 label="&Ctr_tabs1;" oncommand="classicthemerestorerjs.settings.prefChangeString('tabs', 'tabs_squared');"/>
-						<menuitem value="tabs_curvedall" label="&Ctr_tabs2;" oncommand="classicthemerestorerjs.settings.prefChangeString('tabs', 'tabs_curvedall');" id="tabs_curvedall"/>
+						<menuitem value="tabs_default"	 label="&Ctr_tabs0;"  oncommand="classicthemerestorerjs.settings.prefChangeString('tabs', 'tabs_default');"/>
+						<menuitem value="tabs_squared"	 label="&Ctr_tabs1;"  oncommand="classicthemerestorerjs.settings.prefChangeString('tabs', 'tabs_squared');"/>
+						<menuitem value="tabs_squared2"	 label="&Ctr_tabs1m;" oncommand="classicthemerestorerjs.settings.prefChangeString('tabs', 'tabs_squared2');"/>
+						<menuitem value="tabs_curvedall" label="&Ctr_tabs2;"  oncommand="classicthemerestorerjs.settings.prefChangeString('tabs', 'tabs_curvedall');" id="tabs_curvedall"/>
 					</menupopup>
 				</menulist>
 				<checkbox label="&Ctr_tabsotoff;"		preference="ctr_tabsotoff"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('tabsotoff',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('tabsotoff',false);}"/>
@@ -167,16 +176,15 @@
 		</tabpanel>
 		
 		<tabpanel>
+
 			<vbox flex="1">
 			  <groupbox flex="1">
-				<caption  label="&Ctr_tabs1;" class="ctb_topic"/>
+				  <caption  label="&Ctr_tabs1;" class="ctb_topic"/>
 				  <checkbox label="&Ctr_customsqtab;" preference="ctr_customsqtab" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('customsqtab',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('customsqtab',false);}"/>
-				  <spacer flex="1" />
+				  <label value=" "/>
 				  <hbox>
 					<label value="&Ctr_tabnor;" class="ctr_tabcolorlabel"/>
 					<spacer flex="1" />
-					<colorpicker preference="ctr_ctabt" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabt')"/>
-					<label value="&Ctr_textc;"/>
 					<colorpicker preference="ctr_ctab1" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctab1')"/>
 					<label value="&Ctr_topc;"/>
 					<colorpicker preference="ctr_ctab2" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctab2')"/>
@@ -185,8 +193,6 @@
 				  <hbox>
 					<label value="&Ctr_tabhov;" class="ctr_tabcolorlabel"/>
 					<spacer flex="1" />
-					<colorpicker preference="ctr_ctabhovt" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhovt')"/>
-					<label value="&Ctr_textc;"/>
 					<colorpicker preference="ctr_ctabhov1"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhov1')"/>
 					<label value="&Ctr_topc;"/>
 					<colorpicker preference="ctr_ctabhov2"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhov2')"/>
@@ -195,14 +201,12 @@
 				  <hbox>
 					<label value="&Ctr_tabact;" class="ctr_tabcolorlabel"/>
 					<spacer flex="1" />
-					<colorpicker preference="ctr_ctabactt" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabactt')"/>
-					<label value="&Ctr_textc;"/>
 					<colorpicker preference="ctr_ctabact1"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabact1')"/>
 					<label value="&Ctr_topc;"/>
 					<colorpicker preference="ctr_ctabact2"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabact2')"/>
 					<label value="&Ctr_bottomc;"/>
 				  </hbox>
-				  <spacer flex="1" />
+				  <label value=" "/>
 				  <hbox>
 					<label value="&Ctr_ntabnor;" class="ctr_tabcolorlabel"/>
 					<spacer flex="1" />
@@ -222,7 +226,46 @@
 
 			  </groupbox>
 			</vbox>
-				
+
+		</tabpanel>
+		
+		<tabpanel>
+		
+			<vbox flex="1">
+			  <groupbox flex="1">
+				  <caption  label="&Ctr_tabtext;" class="ctb_topic"/>
+				  <hbox>
+					<checkbox label="&Ctr_ctext;" preference="ctr_tabtextc" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('tabtextc',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('tabtextc',false);}"/>
+					<checkbox label="&Ctr_ctextsh;" preference="ctr_tabtextsh" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('tabtextsh',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('tabtextsh',false);}"/>
+				  </hbox>
+				  <label value=" "/>
+			    <hbox>
+					<label value="&Ctr_tabnor;" class="ctr_tabcolorlabel"/>
+					<spacer flex="1" />
+					<colorpicker preference="ctr_ctabt" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabt')"/>
+					<label value="&Ctr_textc;"/>
+					<colorpicker preference="ctr_ctabtsh"		type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabtsh')"/>
+					<label value="&Ctr_textsh;"/>
+				</hbox>
+			    <hbox>
+					<label value="&Ctr_tabhov;" class="ctr_tabcolorlabel"/>
+					<spacer flex="1" />
+					<colorpicker preference="ctr_ctabhovt" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhovt')"/>
+					<label value="&Ctr_textc;"/>
+					<colorpicker preference="ctr_ctabhovtsh" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhovtsh')"/>
+					<label value="&Ctr_textsh;"/>
+				</hbox>
+			    <hbox>
+					<label value="&Ctr_tabact;" class="ctr_tabcolorlabel"/>
+					<spacer flex="1" />
+					<colorpicker preference="ctr_ctabactt" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabactt')"/>
+					<label value="&Ctr_textc;"/>
+					<colorpicker preference="ctr_ctabacttsh" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabacttsh')"/>
+					<label value="&Ctr_textsh;"/>
+				</hbox>
+			  </groupbox>
+			</vbox>
+	
 		</tabpanel>
 		
 		<tabpanel>
@@ -230,10 +273,10 @@
 		<vbox flex="1">
 		  <groupbox>
 			<caption label="&Ctr_fixes;" class="ctb_topic"/>
-			<checkbox label="&Ctr_tnotlfix;" preference="ctr_tnotlfix" class="ctr_linuxonly" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('tnotlfix',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('tnotlfix',false);}"/>
-			<textbox class="plain ctr_linuxonly" style="background-color: transparent !important;" multiline="true" readonly="true" value="&Ctr_tnotlfixt;"/>
+			<checkbox label="&Ctr_tnotlfix;" preference="ctr_tnotlfix" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('tnotlfix',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('tnotlfix',false);}"/>
+			<textbox class="plain" style="background-color: transparent !important;" multiline="true" readonly="true" value="&Ctr_tnotlfixt;"/>
 			
-			<label value=" " class="ctr_linuxonly"/>
+			<label value=" "/>
 			
 			<checkbox label="&Ctr_bfurlbarfix;" preference="ctr_bfurlbarfix" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('bfurlbarfix',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('bfurlbarfix',false);}"/>
 			<textbox class="plain" style="background-color: transparent !important;" multiline="true" readonly="true" value="&Ctr_bfurlbarfixt;" height="80px" />
@@ -245,18 +288,16 @@
 		<tabpanel>
 
 		<vbox flex="1">
-		  <groupbox class="ctr_windowsonly">
-			<caption label="&Ctr_specialtw; - &Ctr_tabs0;" class="ctb_topic"/>
-			<checkbox label="&Ctr_notabfog;" preference="ctr_notabfog" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('notabfog',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('notabfog',false);}"/>
-			<checkbox label="&Ctr_tabmokcolor;" preference="ctr_tabmokcolor" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('tabmokcolor',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('tabmokcolor',false);}"/>
-		  </groupbox>
 		  <groupbox>
 			<caption label="&Ctr_specialtw; - &Ctr_appbutton;" class="ctb_topic"/>
 			<checkbox label="&Ctr_alttbappb;" preference="ctr_alttbappb" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('alttbappb',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('alttbappb',false);}"/>
 			<checkbox label="&Ctr_paneluibtweak;" preference="ctr_paneluibtweak" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',false);}"/>
+			<checkbox label="&Ctr_appbuttxt;" preference="ctr_appbuttxt" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('appbuttxt',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('appbuttxt',false);}"/>
 		  </groupbox>
 		  <groupbox>
 			<caption label="&Ctr_specialtw;" class="ctb_topic"/>
+			<checkbox label="&Ctr_notabfog;" preference="ctr_notabfog" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('notabfog',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('notabfog',false);}" class="ctr_windowsonly"/>
+			<checkbox label="&Ctr_tabmokcolor;" preference="ctr_tabmokcolor" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('tabmokcolor',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('tabmokcolor',false);}"/>
 			<checkbox label="&Ctr_closeabarbut;" preference="ctr_closeabarbut" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('closeabarbut',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('closeabarbut',false);}"/>
 		  </groupbox>
 		</vbox>

@@ -2,6 +2,7 @@
 
 <!ENTITY Ctr_main_t			"Main">
 <!ENTITY Ctr_tabcolors_t	"Tab colors">
+<!ENTITY Ctr_tabtext_t		"Tab text">
 <!ENTITY Ctr_fixes_t		"Fixes">
 <!ENTITY Ctr_special_t		"Special">
 <!ENTITY Ctr_experim_t		"Experimental">
@@ -11,9 +12,10 @@
 <!ENTITY Ctr_tabs			"Tabs">
 <!ENTITY Ctr_tabs0			"Curved tabs (Australis)">
 <!ENTITY Ctr_tabs1			"Squared tabs (classic)">
+<!ENTITY Ctr_tabs1m			"Squared tabs (australized)">
 <!ENTITY Ctr_tabs2			"Curved tabs (experimental)">
 <!ENTITY Ctr_tabsotoff		"Tabs not on top">
-<!ENTITY Ctr_tabsintitlebar "Tabs in titlebar (about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Tabs in titlebar (about:config)">
 <!ENTITY Ctr_tabwidth0		"Max-width: 180px (default)">
 <!ENTITY Ctr_tabwidth1		"Max-width: 150px">
 <!ENTITY Ctr_tabwidth2		"Max-width: 250px (classic)">
@@ -53,28 +55,34 @@
 <!ENTITY Ctr_separator		"Separator">
 
 <!ENTITY Ctr_customsqtab	"Custom colors for squared tabs">
-<!ENTITY Ctr_topc			"top color">
-<!ENTITY Ctr_bottomc		"bottom color">
-<!ENTITY Ctr_textc			"text color">
 <!ENTITY Ctr_tabnor			"Tab (default)">
 <!ENTITY Ctr_tabhov			"Tab (hover)">
 <!ENTITY Ctr_tabact			"Tab (active)">
 <!ENTITY Ctr_ntabnor		"New tab (default)">
 <!ENTITY Ctr_ntabhov		"New tab (hover)">
 
+<!ENTITY Ctr_tabtext		"Tab text and shadow colors">
+<!ENTITY Ctr_ctext			"Custom text colors">
+<!ENTITY Ctr_ctextsh		"Custom text shadow colors">
+<!ENTITY Ctr_topc			"top color">
+<!ENTITY Ctr_bottomc		"bottom color">
+<!ENTITY Ctr_textc			"text color">
+<!ENTITY Ctr_textsh			"text shadow color">
+
 <!ENTITY Ctr_fixes			"Fixes">
 <!ENTITY Ctr_tnotlfix 		"Black text color on non-active tabs">
-<!ENTITY Ctr_tnotlfixt		"Some Linux versions display wrong tab text colors, if tabs are not on top. This solves the problem.">
-<!ENTITY Ctr_bfurlbarfix 	"Force urlbars left border-radius to 2.5px">
+<!ENTITY Ctr_tnotlfixt		"Some Linux versions and some Windows themes may display wrong tab text colors, if tabs are not on top.">
+<!ENTITY Ctr_bfurlbarfix	"Force urlbars left border-radius to 2.5px">
 <!ENTITY Ctr_bfurlbarfixt	"Needs to stay disabled for custom css code being able to change left border-radius. Otherwise this is needed for 'movable back-forward button option' to change urlbars left border to match right border radius.">
 
 <!ENTITY Ctr_specialtw		"Special tweaks">
+<!ENTITY Ctr_alttbappb		"Alternative icons for 'appbutton on toolbar' option">
+<!ENTITY Ctr_paneluibtweak	"Appbutton appearance for panel ui button (on tabs toolbar)">
+<!ENTITY Ctr_appbuttxt		"'Firefox' text for 'appbutton on tabs toolbar'">
 <!ENTITY Ctr_notabfog		"Remove tab toolbars background fog (Windows AeroGlass)">
 <!ENTITY Ctr_tabmokcolor	"White color for tab text and tab buttons (close, new, groups, list all)">
-<!ENTITY Ctr_alttbappb		"Alternative icons for 'appbutton on toolbar' option">
-<!ENTITY Ctr_paneluibtweak 	"Appbutton appearance for panel ui button (on tabs toolbar)">
 <!ENTITY Ctr_closeabarbut	"Hide add-on bars close button">
 
-<!ENTITY Ctr_experimental 	"Experimental tweaks">
-<!ENTITY Ctr_combrelstop 	"Combined reload-stop button [Fx restart needed!]">
-<!ENTITY Ctr_combrelstopt 	"This button is independent from the also available 'stop' and 'reload' buttons and only works correctly when placed before urlbar like this [...][reload-stop][...][urlbar][...]. Using this setting the reload and stop buttons on urlbar get hidden.">
+<!ENTITY Ctr_experimental	"Experimental tweaks">
+<!ENTITY Ctr_combrelstop	"Combined reload-stop button [Fx restart needed!]">
+<!ENTITY Ctr_combrelstopt	"This button is independent from the also available 'stop' and 'reload' buttons and only works correctly when placed before urlbar like this [...][reload-stop][...][urlbar][...]. Using this setting the reload and stop buttons on urlbar get hidden.">

@@ -31,11 +31,11 @@
 	.tabs-newtab-button,
 	.tabbrowser-tab{
 		margin-bottom: -2px !important;
-		height: 30px;
+		height: 28px;
 	}
 
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton{
-		margin-top: 1px !important; 
+		margin-top: 2px !important; 
 		margin-bottom: 0px !important;
 		border-radius: 2.5px 2.5px 0 0 !important;
 	}
@@ -50,14 +50,6 @@
 	
     #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
         margin-left: 0px !important;
-    }
-	
-	#main-window:not([tabsintitlebar]) #ctr_appbutton2{
-	  /*margin-bottom: -22px !important;*/
-	}
-
-    #main-window:not([tabsintitlebar]) #toolbar-menubar{
-        /*margin-left: 0px !important;*/
     }
 
 }

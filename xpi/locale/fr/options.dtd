@@ -1,19 +1,21 @@
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
-<!ENTITY Ctr_main_t			"Main">
-<!ENTITY Ctr_tabcolors_t	"Tab colors">
-<!ENTITY Ctr_fixes_t		"Fixes">
-<!ENTITY Ctr_special_t		"Special">
-<!ENTITY Ctr_experim_t		"Experimental">
+<!ENTITY Ctr_main_t			"Principal">
+<!ENTITY Ctr_tabcolors_t	"Couleur des onglets">
+<!ENTITY Ctr_tabtext_t		"Texte des onglets">
+<!ENTITY Ctr_fixes_t		"Réglages">
+<!ENTITY Ctr_special_t		"Spéciaux">
+<!ENTITY Ctr_experim_t		"Expérimental">
 
 <!ENTITY Ctr_ui				"Interface générale">
 
 <!ENTITY Ctr_tabs			"Onglets">
 <!ENTITY Ctr_tabs0			"Onglets arrondis (Australis)">
 <!ENTITY Ctr_tabs1			"Onglets à angle droit (classique)">
+<!ENTITY Ctr_tabs1m			"Onglets à angle droit (australized)">
 <!ENTITY Ctr_tabs2			"Onglets arrondis (expérimental)">
 <!ENTITY Ctr_tabsotoff		"Onglets position basse">
-<!ENTITY Ctr_tabsintitlebar "Onglets dans la barre de titre">
+<!ENTITY Ctr_tabsintitlebar	"Onglets dans la barre de titre">
 <!ENTITY Ctr_tabwidth0		"Largeur maximale: 180px (defaut)">
 <!ENTITY Ctr_tabwidth1		"Largeur maximale: 150px">
 <!ENTITY Ctr_tabwidth2		"Largeur maximale: 250px (classique)">
@@ -52,29 +54,35 @@
 <!ENTITY Ctr_space			"Espace">
 <!ENTITY Ctr_separator		"Separator">
 
-<!ENTITY Ctr_customsqtab	"Custom colors for squared tabs">
-<!ENTITY Ctr_topc			"top">
-<!ENTITY Ctr_bottomc		"bottom">
-<!ENTITY Ctr_textc			"text">
-<!ENTITY Ctr_tabnor			"Tab (default)">
-<!ENTITY Ctr_tabhov			"Tab (hover)">
-<!ENTITY Ctr_tabact			"Tab (active)">
-<!ENTITY Ctr_ntabnor		"New tab (default)">
-<!ENTITY Ctr_ntabhov		"New tab (hover)">
+<!ENTITY Ctr_customsqtab	"Couleurs personnalisées pour les onglets à angles droits">
+<!ENTITY Ctr_tabnor			"Onglet (par défaut)">
+<!ENTITY Ctr_tabhov			"Onglet (au survol)">
+<!ENTITY Ctr_tabact			"Onglet (actif)">
+<!ENTITY Ctr_ntabnor		"Nouvel onglet (par défaut)">
+<!ENTITY Ctr_ntabhov		"Nouvel onglet (au survol)">
 
-<!ENTITY Ctr_fixes			"Fixes">
-<!ENTITY Ctr_tnotlfix 		"Black text color on non-active tabs">
-<!ENTITY Ctr_tnotlfixt		"Some Linux versions display wrong tab text colors, if tabs are not on top. This solves the problem.">
-<!ENTITY Ctr_bfurlbarfix 	"Force urlbars left border-radius to 2.5px">
-<!ENTITY Ctr_bfurlbarfixt	"Needs to stay disabled for custom css code being able to change left border-radius. Otherwise this is needed for 'movable back-forward button option' to change urlbars left border to match right border radius.">
+<!ENTITY Ctr_tabtext		"Texte des onglets et couleur de l'ombre">
+<!ENTITY Ctr_ctext			"Couleurs de texte sur mesure">
+<!ENTITY Ctr_ctextsh		"Couleurs de l'ombre sur mesure">
+<!ENTITY Ctr_topc			"en haut">
+<!ENTITY Ctr_bottomc		"en bas">
+<!ENTITY Ctr_textc			"texte">
+<!ENTITY Ctr_textsh			"couleur de l'ombre">
 
-<!ENTITY Ctr_specialtw		"Special tweaks">
-<!ENTITY Ctr_notabfog		"Remove tab toolbars background fog (Windows AeroGlass)">
-<!ENTITY Ctr_tabmokcolor	"White color for tab text and tab buttons (close, new, groups, list all)">
-<!ENTITY Ctr_alttbappb		"Alternative icons for 'appbutton on toolbar' option">
-<!ENTITY Ctr_paneluibtweak 	"Appbutton appearance for panel ui button (on tabs toolbar)">
-<!ENTITY Ctr_closeabarbut	"Hide add-on bars close button">
+<!ENTITY Ctr_fixes			"Réglages">
+<!ENTITY Ctr_tnotlfix 		"Texte en noir sur les onglets inactifs">
+<!ENTITY Ctr_tnotlfixt		"Certaines versions de Linux et certains thèmes pour Windows peuvent afficher de mauvaises couleurs pour le texte des onglets, si ceux-ci ne sont pas en haut.">
+<!ENTITY Ctr_bfurlbarfix 	"Forcer la barre d'adresse à avoir un left border-radius de 2.5px">
+<!ENTITY Ctr_bfurlbarfixt	"Doit demeurer désactivé pour que le code CSS personnalisé puisse modifier la propriété left border-radius. Sinon c'est nécessaire pour que l'option « Bouton avancer/reculer déplaçable » modifie les bordures gauches des barres d'adresse en fonction du right border radius.">
 
-<!ENTITY Ctr_experimental 	"Experimental tweaks">
-<!ENTITY Ctr_combrelstop 	"Combined reload-stop button [Fx restart needed!]">
-<!ENTITY Ctr_combrelstopt 	"This button is independent from the also available 'stop' and 'reload' buttons and only works correctly when placed before urlbar like this [...][reload-stop][...][urlbar][...]. Using this setting the reload and stop buttons on urlbar get hidden.">
+<!ENTITY Ctr_specialtw		"Modifications spéciales">
+<!ENTITY Ctr_alttbappb		"Icônes alternatives pour l'option « bouton d'application sur la barre d'onglets »">
+<!ENTITY Ctr_paneluibtweak 	"Apparence du bouton d'application pour le panneau d'interface (sur la barre des onglets)">
+<!ENTITY Ctr_appbuttxt		"'Firefox' text for 'appbutton on tabs toolbar'">
+<!ENTITY Ctr_notabfog		"Supprimer l'effet de flou en arrière-plan sur les barres d'onglets (Windows AeroGlass)">
+<!ENTITY Ctr_tabmokcolor	"Texte des onglets et des boutons de couleur blanche (fermer, nouveau, groupes, tout lister)">
+<!ENTITY Ctr_closeabarbut	"Masquer le bouton de fermeture de la barre des modules">
+
+<!ENTITY Ctr_experimental 	"Modifications expérimentales">
+<!ENTITY Ctr_combrelstop 	"Bouton stop-actualiser [redémarrage de Firefox nécessaire !]">
+<!ENTITY Ctr_combrelstopt 	"Ce bouton est indépendant des autres boutons 'stop' et 'actualiser' disponibles et ne fonctionnera correctement que s'il est placé sur la barre d'adresse de cette façon [...][actualiser-stop][...][barre d'adresse][...]. En utilisant cette disposition les boutons stop et actualiser sont masqués.">

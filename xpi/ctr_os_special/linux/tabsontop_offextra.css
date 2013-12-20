@@ -17,12 +17,17 @@
 		margin-top:-1px !important;
 		margin-bottom:1px !important;
 	}
-	#ctr_appbutton{
+	#TabsToolbar #ctr_appbutton{
 		margin-top:0px !important;
-		margin-bottom:0px !important;
+		margin-bottom:1px !important;
 	}
 	#TabsToolbar #ctr_appbuttonPopup{
 		margin-top:0px !important;
+	}
+	
+	.tabs-newtab-button,
+	.tabbrowser-tab{
+		height: 30px !important;
 	}
 	
 }
