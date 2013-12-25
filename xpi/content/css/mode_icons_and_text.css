@@ -31,7 +31,7 @@
 
 	}
 	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
-	  min-width: 60px !important;
+	  min-width: 57px !important;
 	}
 	:-moz-any(#toolbar-menubar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1[type="menu"] dropmarker{
 	   visibility: collapse !important;
@@ -89,5 +89,31 @@
     #urlbar[focused="true"] {
       border-left:1px solid #72c0fe !important;
     }
+	
+	#ctr_addon-bar #zoom-reset-button{
+	  padding-top:8px !important;
+	}
+	
+	/* support for star button in urlbar */
+	#nav-bar #urlbar-container #bookmarks-menu-button .toolbarbutton-text {
+	  display: none !important;
+	visibility: collapse !important;
+	}
+	#nav-bar #urlbar-container #bookmarks-menu-button {
+	  -moz-box-orient: horizontal !important;
+	}
+	#nav-bar #urlbar-container #bookmarks-menu-button {
+	  min-width: inherit !important;
+	}
+	#nav-bar #urlbar-container #bookmarks-menu-button:hover{
+	  border: 1px solid transparent !important;
+      background-image: linear-gradient(hsla(0,0%,100%,.0), hsla(0,0%,100%,.0)) !important;
+      border-color: hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) !important;
+      box-shadow: none !important;
+	  padding:0 !important;
+	}
+	#nav-bar #urlbar-container #bookmarks-menu-button .toolbarbutton-icon {
+	  margin: -8px -4px !important;
+	}
     
 }

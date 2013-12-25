@@ -26,7 +26,7 @@
 	}
 
 	#nav-bar .toolbarbutton-1 {
-	  margin:1px !important;
+	  margin: 1px 0 !important;
 	}
 	
 	#navigator-toolbox #nav-bar #urlbar-container{
@@ -35,7 +35,12 @@
 	#navigator-toolbox #nav-bar #urlbar{
 	  border-radius: 3px !important;
 	}
-	
+
+	#ctr_addon-bar toolbarbutton {
+	  max-height: 38px !important;
+	  margin-top: 0px !important;
+	}
+
 	#ctr_extra-bar {
 	  padding-bottom: 3px !important;
 	}

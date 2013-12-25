@@ -1,16 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + *:-moz-locale-dir(ltr) {
-	  padding-left: 2px !important;
-	  transition: none !important;
-	}
-
-	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + *:-moz-locale-dir(rtl) {
-	  padding-right: 2px !important;
-	  transition: none !important;
-	}
-	
 	#nav-bar .toolbarbutton-menubutton-button > .toolbarbutton-icon,
 	#nav-bar .toolbarbutton-1:not([type="menu"]) > .toolbarbutton-icon{
 		padding:0px !important;
@@ -29,9 +19,9 @@
 		margin-left:-1px !important;
 	}
     
-	#bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
-	  padding-top: 0px !important;
-	  padding-bottom: 0px !important;
+	#bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker {
+	  margin-top: 3px !important;
+	  margin-bottom: 3px !important;
 	}
 
 	#nav-bar #back-button:not(:hover) > .toolbarbutton-icon,
@@ -61,17 +51,6 @@
 
 	#nav-bar *{
 	  clip-path: none !important;
-	}
-	
-	window:not([chromehidden~="toolbar"]) #urlbar-container > #urlbar,
-	:-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"],#nav-bar:not([currentset])) > #nav-bar > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar {
-	  margin-left: 0px !important;
-	}
-	
-	window:not([chromehidden~="toolbar"]) #ctr_back-forward-button > #forward-button,
-	window:not([chromehidden~="toolbar"]) #urlbar-container > #forward-button{
-	  -moz-margin-start: 10px !important;
-	  -moz-margin-end: 6px !important;
 	}
 	
 	:-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"],#nav-bar:not([currentset])) > #nav-bar > #unified-back-forward-button + #urlbar-container > #urlbar {
@@ -238,13 +217,6 @@
       clip-path: none !important;
     }
     
-    window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
-      margin-left: 0px !important;
-      transition: none !important;
-      transition-property:  none !important;
-      transition-delay: 0s !important;
-    }
-
     #urlbar{
       border-left:1px solid #b4c1cf !important;
     }
@@ -369,9 +341,5 @@
 	#urlbar-container #back-button:not([cui-areatype="menu-panel"]) {
 	  -moz-image-region: rect(0, 54px, 18px, 36px) !important;
 	}
-	
-	#urlbar-container #forward-button[disabled]{
-		visibility:visible !important;
-		opacity: 1.0 !important;
-	}
+
 }

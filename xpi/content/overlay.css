@@ -64,10 +64,11 @@
 	/* ctr addonbar */
 	#ctr_addon-bar {
 	  -moz-appearance: none !important;
+	  -moz-box-ordinal-group:99999 !important;
 	  border: 0px !important;
 	  border-top: 1px solid #bac7d4 !important;
 	}
-
+	
 	#ctr_addon-bar toolbarbutton:hover {
       background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.1)) !important;
       border-color: hsla(210,54%,20%,.15) hsla(210,54%,20%,.2) hsla(210,54%,20%,.25) !important;

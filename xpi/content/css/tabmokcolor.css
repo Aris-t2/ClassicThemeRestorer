@@ -44,7 +44,8 @@
   }
   
 	/* Tab close button */
-	.tab-close-button {
+	.tab-close-button,
+	.tabs-closebutton	{
 	  -moz-appearance: none !important;
 	  -moz-image-region: rect(0, 64px, 16px, 48px) !important;
 	  border: none !important;
@@ -61,12 +62,14 @@
 	}
 
 	.tab-close-button:hover,
-	.tab-close-button:hover[selected="true"] {
+	.tab-close-button:hover[selected="true"],
+	.tabs-closebutton:hover	{
 	  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
 	}
 
 	.tab-close-button:hover:active,
-	.tab-close-button:hover:active[selected="true"] {
+	.tab-close-button:hover:active[selected="true"],
+	.tabs-closebutton:hover:active {
 	  -moz-image-region: rect(0, 48px, 16px, 32px) !important;
 	}
 

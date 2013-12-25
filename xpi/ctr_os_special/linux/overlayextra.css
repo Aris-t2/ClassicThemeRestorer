@@ -61,18 +61,9 @@
 	}
 	
 	/* ctr addonbar */
-	#ctr_addon-bar toolbarbutton {
-	  -moz-appearance: none !important;
-	  margin: 0px 3px !important;
-	  padding:0px !important;
-	}
-	#ctr_addon-bar toolbarbutton .toolbarbutton-icon {
-	  max-width: 18px;
-	  max-height: 18px;
-	}
-	#ctr_addon-bar .toolbarbutton-menubutton-dropmarker {
-	  padding: 0px !important;
-	  margin-left: -3px !important;
+	#ctr_addon-bar{
+		padding: 0 !important;
+		margin-bottom: -1px !important;
 	}
 
 }

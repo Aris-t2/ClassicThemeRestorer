@@ -22,7 +22,7 @@
 	}
 
 	#nav-bar .toolbarbutton-1 {
-	  margin:1px !important;
+	  margin: 1px 0 !important;
 	}
 
 	#navigator-toolbox #nav-bar #urlbar-container{
@@ -39,6 +39,11 @@
 	#bookmarks-menu-button:not([cui-areatype="menu-panel"]) > .toolbarbutton-menubutton-dropmarker{
 	  padding-top: 4px !important;
 	  padding-bottom: 3px !important;
+	}
+	
+	#ctr_addon-bar toolbarbutton {
+	  max-height: 38px !important;
+	  margin-top: 0px !important;
 	}
 
 }

@@ -1,37 +1,39 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + *:-moz-locale-dir(ltr) {
-	  padding-left: 2px !important;
-	  transition: none !important;
-	}
-
-	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + *:-moz-locale-dir(rtl) {
-	  padding-right: 2px !important;
-	  transition: none !important;
-	}
-	
 	#nav-bar .toolbarbutton-menubutton-button > .toolbarbutton-icon,
 	#nav-bar .toolbarbutton-1:not([type="menu"]) > .toolbarbutton-icon{
 		padding:0px !important;
 	}
-	
+
 	#nav-bar #back-button > .toolbarbutton-icon,
 	#nav-bar #forward-button > .toolbarbutton-icon{
 		padding:1px !important;
 	}
-	
+
+	#nav-bar #back-button:not(:-moz-lwtheme){
+		background:none !important;
+		padding: 0 !important;
+		height: 0 !important;
+	}
+	#nav-bar #forward-button:not(:-moz-lwtheme){
+		background:none !important;
+		padding: 0 !important;
+		height: 0 !important;
+		border: 0 !important;
+	}	
+
 	#nav-bar .toolbarbutton-menubutton-dropmarker > image{
-		padding-left:0px !important;
-		padding-right:0px !important;
-		padding-top:0px !important;
-		padding-bottom:0px !important;
-		margin-left:-1px !important;
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+		padding-top: 0px !important;
+		padding-bottom: 0px !important;
+		margin-left: -1px !important;
 	}
     
-	#bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
-	  padding-top: 0px !important;
-	  padding-bottom: 0px !important;
+	#bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker {
+	  margin-top: 3px !important;
+	  margin-bottom: 3px !important;
 	}
 
 	#nav-bar #back-button:not(:hover) > .toolbarbutton-icon,
@@ -61,17 +63,6 @@
 
 	#nav-bar *{
 	  clip-path: none !important;
-	}
-	
-	window:not([chromehidden~="toolbar"]) #urlbar-container > #urlbar,
-	:-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"],#nav-bar:not([currentset])) > #nav-bar > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar {
-	  margin-left: 0px !important;
-	}
-	
-	window:not([chromehidden~="toolbar"]) #ctr_back-forward-button > #forward-button,
-	window:not([chromehidden~="toolbar"]) #urlbar-container > #forward-button{
-	  -moz-margin-start: 10px !important;
-	  -moz-margin-end: 6px !important;
 	}
 	
 	:-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"],#nav-bar:not([currentset])) > #nav-bar > #unified-back-forward-button + #urlbar-container > #urlbar {
@@ -109,6 +100,13 @@
 		border-radius: 2.5px;
 		border: 1px solid transparent;
 	}
+	
+	#navigator-toolbox #nav-bar .toolbarbutton-1 {
+		margin: 0 0 !important;
+	}
+	#navigator-toolbox #nav-bar #forward-button {
+		margin-right: 2px !important;
+	}
 
 	#navigator-toolbox #nav-bar .toolbarbutton-1[type="menu-button"] {
 		-moz-appearance: none !important;
@@ -118,10 +116,6 @@
 		box-shadow: none !important;
 	}
 	
-	#navigator-toolbox #nav-bar .toolbarbutton-1 {
-		margin: 1px 1px !important;
-	}
-
 	#navigator-toolbox #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
 		-moz-border-start-style: none !important;
 	}
@@ -238,13 +232,6 @@
       clip-path: none !important;
     }
     
-    window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
-      margin-left: 0px !important;
-      transition: none !important;
-      transition-property:  none !important;
-      transition-delay: 0s !important;
-    }
-
     #urlbar{
       border-left:1px solid #b4c1cf !important;
     }
@@ -369,9 +356,5 @@
 	#urlbar-container #back-button:not([cui-areatype="menu-panel"]) {
 	  -moz-image-region: rect(0, 54px, 18px, 36px) !important;
 	}
-	
-	#urlbar-container #forward-button[disabled]{
-		visibility:visible !important;
-		opacity: 1.0 !important;
-	}
+
 }

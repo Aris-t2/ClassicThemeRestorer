@@ -145,7 +145,7 @@
 			  
 			  <groupbox flex="1">
 				<caption  label="&Ctr_ui;" class="ctb_topic"/>
-				<checkbox label="&Ctr_smallnavbut;"	preference="ctr_smallnavbut" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('smallnavbut',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('smallnavbut',false);}" class="ctr_windowsonly"/>
+				<checkbox label="&Ctr_smallnavbut;"	preference="ctr_smallnavbut" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('smallnavbut',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('smallnavbut',false);}"/>
 				<checkbox label="&Ctr_hidenavbar;"	preference="ctr_hidenavbar"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('hidenavbar',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('hidenavbar',false);}"/>
 				<checkbox label="&Ctr_backforward;"	preference="ctr_backforward" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('backforward',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('backforward',false);}"/>
 				<checkbox label="&Ctr_wincontrols;"	preference="ctr_wincontrols" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('wincontrols',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('wincontrols',false);}" id="ctr_wincontrols"/>
