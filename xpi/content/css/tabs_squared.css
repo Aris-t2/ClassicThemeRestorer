@@ -112,14 +112,16 @@
 	}
 	
 	.tabs-newtab-button:-moz-lwtheme,
-	.tabbrowser-tab:-moz-lwtheme {
+	.tabbrowser-tab:-moz-lwtheme,
+	.tabbrowser-tab[pinned]:-moz-lwtheme{
 	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.5) 50%) !important;
 	  background-size: calc(100% - 1px) calc(100% - 3px) !important;
 	}
 
 	@media all and (-moz-windows-glass) {
-	.tabs-newtab-button:-moz-lwtheme,		
-	.tabbrowser-tab:-moz-lwtheme {
+		.tabs-newtab-button:-moz-lwtheme,		
+		.tabbrowser-tab:-moz-lwtheme,
+		.tabbrowser-tab[pinned]:-moz-lwtheme {
 		  background-size: calc(100% - 1px) calc(100% - 4px) !important;
 		}
 	}
@@ -165,10 +167,12 @@
 	  min-width: 32px !important;
 	  width: 32px !important;
 	  max-width: 32px !important;
+	  background-position: 0px 2px !important;
+	  background-size: calc(100% - 0px) calc(100% - 1px) !important;
 	}
 
 	.tabbrowser-tab[pinned] image{
-	  margin-left:2px !important;
+	  margin-left:0px !important;
 	}
 
 	#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
@@ -190,6 +194,6 @@
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
 	#ctr_sqtabcolorstab{
-		visibility: visible !important;
+	  visibility: visible !important;
 	}
 }

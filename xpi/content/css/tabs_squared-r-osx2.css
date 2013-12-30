@@ -174,7 +174,8 @@
 	}
 
 	.tabs-newtab-button:-moz-lwtheme,
-	.tabbrowser-tab:not([selected="true"]):-moz-lwtheme {
+	.tabbrowser-tab:not([selected="true"]):-moz-lwtheme,
+	.tabbrowser-tab:not([selected="true"])[pinned]:-moz-lwtheme {
 		background:none !important;
 	}
 
@@ -190,10 +191,12 @@
 	  min-width: 32px !important;
 	  width: 32px !important;
 	  max-width: 32px !important;
+	  background-position: 0px 2px !important;
+	  background-size: calc(100% - 0px) calc(100% - 1px) !important;
 	}
 
 	.tabbrowser-tab[pinned] image{
-	  margin-left:2px !important;
+	  margin-left:0px !important;
 	}
 
 	#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
@@ -229,8 +232,15 @@
 	  margin-right:3px !important;
 	}
 }
+
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
 	#ctr_sqtabcolorstab{
-		visibility: collapse !important;
+	  visibility: visible !important;
+	}
+	#tabcolorbox,
+	#tabhovcolorbox,
+	#ntabcolorbox,
+	#ntabhovcolorbox{
+	  visibility: collapse !important;
 	}
 }

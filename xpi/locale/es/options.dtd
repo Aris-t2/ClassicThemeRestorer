@@ -4,19 +4,19 @@
 <!ENTITY Ctr_extrabar		"Barra de herramientas adicional">
 <!ENTITY Ctr_flexspace		"Espacio flexible">
 <!ENTITY Ctr_space			"Espacio">
-<!ENTITY Ctr_separator		"Separator">
+<!ENTITY Ctr_separator		"Separador">
 
-<!ENTITY Ctr_main_t			"Main">
-<!ENTITY Ctr_tabcolors_t	"Tab colors">
-<!ENTITY Ctr_tabtext_t		"Tab text">
-<!ENTITY Ctr_fixes_t		"Fixes">
-<!ENTITY Ctr_special_t		"Special">
+<!ENTITY Ctr_main_t			"Pricipal">
+<!ENTITY Ctr_tabcolors_t	"Colores de pestaña">
+<!ENTITY Ctr_tabtext_t		"Texto de pestaña">
+<!ENTITY Ctr_fixes_t		"Arreglos">
+<!ENTITY Ctr_special_t		"Especial">
 <!ENTITY Ctr_experim_t		"Experimental">
 
 <!ENTITY Ctr_tabs			"Pestañas">
 <!ENTITY Ctr_tabs0			"Pestañas curvadas (Australis)">
 <!ENTITY Ctr_tabs1			"Pestañas cuadradas (clásico)">
-<!ENTITY Ctr_tabs1m			"Pestañas cuadradas (australized)">
+<!ENTITY Ctr_tabs1m			"Pestañas cuadradas (australizado)">
 <!ENTITY Ctr_tabs2			"Pestañas curvadas (experimental)">
 <!ENTITY Ctr_tabsotoff		"Pestañas no arriba">
 <!ENTITY Ctr_tabsintitlebar	"Pestañas en la barra de título">
@@ -37,51 +37,52 @@
 <!ENTITY Ctr_appbuttonc_g	"Color de botón verde">
 <!ENTITY Ctr_appbuttonc_gr	"Color de botón gris">
 <!ENTITY Ctr_appbuttonI1	"se recomienda reiniciar">
-<!ENTITY Ctr_appbuttonI2	"sólo sobre barra de herramientas ">
-<!ENTITY Ctr_appbuttonI3	"de título-/pestañas!">
+<!ENTITY Ctr_appbuttonI2	"Sólo coloreado sobre la barra de">
+<!ENTITY Ctr_appbuttonI3	"herramientasy la barra de pestañas!">
 
 <!ENTITY Ctr_ui				"Interfaz de usuario general">
 <!ENTITY Ctr_smallnavbut	"Botones pequeños (barra de navegación)">
 <!ENTITY Ctr_hidenavbar		"Ocultar barra de navegación">
 <!ENTITY Ctr_buttons		"Botones de barra de herramientas">
 <!ENTITY Ctr_backforward	"Botón atrás-adelante movible">
-<!ENTITY Ctr_wincontrols	"Movable fullscreen window controls">
-<!ENTITY Ctr_findbar_def	"Barra de búsqueda, (posición por defecto)">
+<!ENTITY Ctr_wincontrols	"Controles de ventana de pantalla completa movibles">
+<!ENTITY Ctr_findbar_def	"Barra de búsqueda (posición por defecto)">
 <!ENTITY Ctr_findbar_top	"Barra de búsqueda arriba">
 <!ENTITY Ctr_findbar_bot	"Barra de búsqueda abajo">
 <!ENTITY Ctr_nav_txt_ico0	"Mostrar sólo iconos">
 <!ENTITY Ctr_nav_txt_ico1	"Mostrar iconos y texto">
 <!ENTITY Ctr_nav_txt_ico2	"Mostrar sólo texto">
 
-<!ENTITY Ctr_customsqtab	"Custom colors for squared tabs">
-<!ENTITY Ctr_tabnor			"Tab (default)">
-<!ENTITY Ctr_tabhov			"Tab (hover)">
-<!ENTITY Ctr_tabact			"Tab (active)">
-<!ENTITY Ctr_ntabnor		"New tab (default)">
-<!ENTITY Ctr_ntabhov		"New tab (hover)">
+<!ENTITY Ctr_customsqtab0	"Pestañas cuadradas">
+<!ENTITY Ctr_customsqtab1	"Colores personalizados para pestañas cuadradas">
+<!ENTITY Ctr_tabnor			"Pestaña (por defecto)">
+<!ENTITY Ctr_tabhov			"Pestaña (subyacente)">
+<!ENTITY Ctr_tabact			"Pestaña (activa)">
+<!ENTITY Ctr_ntabnor		"Nueva pestaña (por defecto)">
+<!ENTITY Ctr_ntabhov		"Nueva pestaña (subyacente)">
 
-<!ENTITY Ctr_tabtext		"Tab text and shadow colors">
-<!ENTITY Ctr_ctext			"Custom text colors">
-<!ENTITY Ctr_ctextsh		"Custom text shadow colors">
-<!ENTITY Ctr_topc			"top color">
-<!ENTITY Ctr_bottomc		"bottom color">
-<!ENTITY Ctr_textc			"text color">
-<!ENTITY Ctr_textsh			"text shadow color">
+<!ENTITY Ctr_tabtext		"Colores del texto y de la sombra del texto de pestañas">
+<!ENTITY Ctr_ctext			"Colores personalizados del texto">
+<!ENTITY Ctr_ctextsh		"Colores personalizados de la sombra del texto">
+<!ENTITY Ctr_topc			"color de arriba">
+<!ENTITY Ctr_bottomc		"color de abajo">
+<!ENTITY Ctr_textc			"color del texto">
+<!ENTITY Ctr_textsh			"color de la sombra del texto">
 
-<!ENTITY Ctr_fixes			"Fixes">
-<!ENTITY Ctr_tnotlfix 		"Black text color on non-active tabs">
-<!ENTITY Ctr_tnotlfixt		"Some Linux versions and some Windows themes may display wrong tab text colors, if tabs are not on top.">
-<!ENTITY Ctr_bfurlbarfix 	"Force urlbars left border-radius to 2.5px">
-<!ENTITY Ctr_bfurlbarfixt	"Needs to stay disabled for custom css code being able to change left border-radius. Otherwise this is needed for 'movable back-forward button option' to change urlbars left border to match right border radius.">
+<!ENTITY Ctr_fixes			"Arreglos">
+<!ENTITY Ctr_tnotlfix 		"Color de texto negro para pestañas no-activas">
+<!ENTITY Ctr_tnotlfixt		"Algunas versiones de Linux y algunos temas de personalización de Windows pueden mostrar colores de texto de pestaña equivocados, si las pestañas no están en la parte superior.">
+<!ENTITY Ctr_bfurlbarfix 	"Forzar radio del borde izquierdo de la barra de URL a 2.5px">
+<!ENTITY Ctr_bfurlbarfixt	"Es preciso que permanezca deshabilitada para que u ncódigo CSS personalizado pueda cambiar el radio del borde (border-radius) izquierdo. Fuera de ese uso, esta configuración es necesaria para que la opción 'botón atrás-adelante movible' cambie el borde izquierdo de la barra de URL para coincida con el radio del borde derecho del botón.">
 
-<!ENTITY Ctr_specialtw		"Special tweaks">
-<!ENTITY Ctr_alttbappb		"Alternative icons for 'appbutton on toolbar' option">
-<!ENTITY Ctr_paneluibtweak 	"Appbutton appearance for panel ui button (on tabs toolbar)">
-<!ENTITY Ctr_appbuttxt		"'Firefox' text for 'appbutton on tabs toolbar'">
-<!ENTITY Ctr_notabfog		"Remove tab toolbars background fog (Windows AeroGlass)">
-<!ENTITY Ctr_tabmokcolor	"White color for tab text and tab buttons (close, new, groups, list all)">
-<!ENTITY Ctr_closeabarbut	"Hide add-on bars close button">
+<!ENTITY Ctr_specialtw		"Ajustes especiales">
+<!ENTITY Ctr_alttbappb		"Iconos alternativos para la opción 'botón de la aplicación en la barra de herramientas'">
+<!ENTITY Ctr_paneluibtweak	"Apariencia del botón de la aplicación para el botón del panel UI (en la barra de pestañas)">
+<!ENTITY Ctr_appbuttxt		"Texto 'Firefox' para 'botón de la aplicación en la barra de pestañas'">
+<!ENTITY Ctr_notabfog		"Eliminar niebla de fondo de la barra de pestañas (Windows AeroGlass)">
+<!ENTITY Ctr_tabmokcolor	"Color blanco para texto y botones (cerrar, nuevo, grupos, listar todas) de pestañas">
+<!ENTITY Ctr_closeabarbut	"Ocultar botón cerrar de la barra de complementos">
 
-<!ENTITY Ctr_experimental 	"Experimental tweaks">
-<!ENTITY Ctr_combrelstop 	"Combined reload-stop button [Fx restart needed!]">
-<!ENTITY Ctr_combrelstopt 	"This button is independent from the also available 'stop' and 'reload' buttons and only works correctly when placed before urlbar like this [...][reload-stop][...][urlbar][...]. Using this setting the reload and stop buttons on urlbar get hidden.">
+<!ENTITY Ctr_experimental	"Ajustes experimentales">
+<!ENTITY Ctr_combrelstop	"Botón combinado recargar-parar [¡requiere reiniciar Fx!]">
+<!ENTITY Ctr_combrelstopt	"Este botón es independiente de los botones 'parar' y 'recargar', también disponibles, y sólo funciona correctamente cuando se ubica antes de la barra de URL tal que [...][reload-stop][...][urlbar][...]. Al usar esta configuración los botones recargar y parar se ocultan.">

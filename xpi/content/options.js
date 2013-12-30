@@ -62,17 +62,10 @@ classicthemerestorerjs.settings = {
 	
 	switch (which) {
 	
-		case "tabs_default":
-			if (this.prefs.getBoolPref("customsqtab")){
-				this.loadUnloadCSS('customsqtab',false);
-				this.prefs.setBoolPref('customsqtab',false);
-			}
-		break;
-		
 		case "tabs_squared":
 
 			manageCSS("tabs_squared.css");
-			
+		
 			var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;
 
 			// different appearance for 'tabs not on top' on MacOSX
@@ -98,13 +91,8 @@ classicthemerestorerjs.settings = {
 		
 		case "tabs_squared2":
 
-			if (this.prefs.getBoolPref("customsqtab")){
-				this.loadUnloadCSS('customsqtab',false);
-				this.prefs.setBoolPref('customsqtab',false);
-			}
-		
 			manageCSS("tabs_squared2.css");
-			
+		
 			var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;
 
 			// different appearance for 'tabs not on top' on MacOSX
@@ -130,11 +118,6 @@ classicthemerestorerjs.settings = {
 		
 		case "tabs_curvedall":
 			
-			if (this.prefs.getBoolPref("customsqtab")){
-				this.loadUnloadCSS('customsqtab',false);
-				this.prefs.setBoolPref('customsqtab',false);
-			}
-
 			manageCSS("tabs_curvedall.css");
 			
 		break;
@@ -276,28 +259,42 @@ classicthemerestorerjs.settings = {
 			
 			if(enable==true){
 				
-				if (this.prefs.getCharPref('tabs')!='tabs_squared') {
+				/*if (this.prefs.getCharPref('tabs')!='tabs_squared' && this.prefs.getCharPref('tabs')!='tabs_squared2') {
 					this.prefChangeString('tabs', 'tabs_squared');
 					this.prefs.setCharPref('tabs','tabs_squared');
+				}*/
+				
+				if (this.prefs.getCharPref('tabs')=='tabs_squared') {
+				
+					this.ctabsheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+						.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
+						}\
+						.tabbrowser-tab:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('ctab1')+','+this.prefs.getCharPref('ctab2')+') !important;\
+						}\
+						.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('ctabhov1')+','+this.prefs.getCharPref('ctabhov2')+') !important;\
+						}\
+						.tabs-newtab-button:not(:-moz-lwtheme) {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('cntab1')+','+this.prefs.getCharPref('cntab2')+') !important;\
+						}\
+						.tabs-newtab-button:hover:not(:-moz-lwtheme) {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('cntabhov1')+','+this.prefs.getCharPref('cntabhov2')+') !important;\
+						}\
+					'), null, null);
+				
 				}
 				
-				this.ctabsheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {\
-					  background-image: linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
-					}\
-					.tabbrowser-tab:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {\
-					  background-image: linear-gradient('+this.prefs.getCharPref('ctab1')+','+this.prefs.getCharPref('ctab2')+') !important;\
-					}\
-					.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {\
-					  background-image: linear-gradient('+this.prefs.getCharPref('ctabhov1')+','+this.prefs.getCharPref('ctabhov2')+') !important;\
-					}\
-					.tabs-newtab-button:not(:-moz-lwtheme) {\
-					  background-image: linear-gradient('+this.prefs.getCharPref('cntab1')+','+this.prefs.getCharPref('cntab2')+') !important;\
-					}\
-					.tabs-newtab-button:hover:not(:-moz-lwtheme) {\
-					  background-image: linear-gradient('+this.prefs.getCharPref('cntabhov1')+','+this.prefs.getCharPref('cntabhov2')+') !important;\
-					}\
-				'), null, null);
+				else if (this.prefs.getCharPref('tabs')=='tabs_squared2') {
+				
+					this.ctabsheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+						.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
+						}\
+					'), null, null);
+				
+				}
 
 				applyNewSheet(this.ctabsheet);
 			}
@@ -396,6 +393,12 @@ classicthemerestorerjs.settings = {
 	
 	this.loadUnloadCSS(this.prefs.getCharPref(which),false);
 	this.loadUnloadCSS(value,true);
+	
+	// make sure custom tab colors get disabled on tab change
+	if (which=="tabs"){
+		this.loadUnloadCSS('customsqtab',false);
+		this.prefs.setBoolPref('customsqtab',false);
+	}
   },
   
   colorChange: function(value,which){

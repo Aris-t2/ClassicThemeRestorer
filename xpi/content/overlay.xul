@@ -412,7 +412,7 @@
 						  disabled="true">
 					  <menupopup id="historyUndoPopup"
 								 placespopup="true"
-								 onpopupshowing="document.getElementById('history-menu')._placesView.populateUndoSubmenu();"/>
+								 onpopupshowing="document.getElementById('menu_newHistorymenu')._placesView.populateUndoSubmenu();"/>
 					</menu>
 					<menu id="historyUndoWindowMenu"
 						  class="recentlyClosedWindowsMenu"
@@ -420,7 +420,7 @@
 						  disabled="true">
 					  <menupopup id="historyUndoWindowPopup"
 								 placespopup="true"
-								 onpopupshowing="document.getElementById('history-menu')._placesView.populateUndoWindowSubmenu();"/>
+								 onpopupshowing="document.getElementById('menu_newHistorymenu')._placesView.populateUndoWindowSubmenu();"/>
 					</menu>
 					<menuseparator id="startHistorySeparator"
 								   class="hide-if-empty-places-result"/>
@@ -819,7 +819,7 @@
 						  label="&historyMenu.label;"
 						  command="Browser:ShowAllHistory"/>
 				<spacer flex="1"/>
-				<menu id="menu_newHistorymenu"
+				<menu id="menu_newHistorymenu2"
 					  label=""
 					  class="menu-iconic">
 				  <menupopup id="newHistorymenuPopup"
@@ -854,7 +854,7 @@
 						  disabled="true">
 					  <menupopup id="historyUndoPopup"
 								 placespopup="true"
-								 onpopupshowing="document.getElementById('history-menu')._placesView.populateUndoSubmenu();"/>
+								 onpopupshowing="document.getElementById('menu_newHistorymenu2')._placesView.populateUndoSubmenu();"/>
 					</menu>
 					<menu id="historyUndoWindowMenu"
 						  class="recentlyClosedWindowsMenu"
@@ -862,7 +862,7 @@
 						  disabled="true">
 					  <menupopup id="historyUndoWindowPopup"
 								 placespopup="true"
-								 onpopupshowing="document.getElementById('history-menu')._placesView.populateUndoWindowSubmenu();"/>
+								 onpopupshowing="document.getElementById('menu_newHistorymenu2')._placesView.populateUndoWindowSubmenu();"/>
 					</menu>
 					<menuseparator id="startHistorySeparator"
 								   class="hide-if-empty-places-result"/>

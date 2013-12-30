@@ -356,5 +356,20 @@
 	#urlbar-container #back-button:not([cui-areatype="menu-panel"]) {
 	  -moz-image-region: rect(0, 54px, 18px, 36px) !important;
 	}
+	
+	/* star button in urlbar support  */
+	#navigator-toolbox #nav-bar #urlbar-container #bookmarks-menu-button > .toolbarbutton-menubutton-button {
+		-moz-appearance: none !important;
+		padding: 0px 0px !important;
+		background: none !important;
+		border: 0px solid !important;
+		margin: -8px 0 !important;
+		box-shadow: none !important;
+	}
 
+	#navigator-toolbox #nav-bar #urlbar-container  #bookmarks-menu-button > .toolbarbutton-menubutton-button:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]):hover > .toolbarbutton-icon {
+      background-image: linear-gradient(hsla(0,0%,100%,.0), hsla(0,0%,100%,.0)) !important;
+      border-color: hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) !important;
+      box-shadow: none !important;
+	}
 }

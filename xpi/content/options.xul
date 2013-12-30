@@ -179,10 +179,10 @@
 
 			<vbox flex="1">
 			  <groupbox flex="1">
-				  <caption  label="&Ctr_tabs1;" class="ctb_topic"/>
-				  <checkbox label="&Ctr_customsqtab;" preference="ctr_customsqtab" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('customsqtab',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('customsqtab',false);}"/>
+				  <caption  label="&Ctr_customsqtab0;" class="ctb_topic"/>
+				  <checkbox label="&Ctr_customsqtab1;" preference="ctr_customsqtab" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('customsqtab',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('customsqtab',false);}"/>
 				  <label value=" "/>
-				  <hbox>
+				  <hbox id="tabcolorbox">
 					<label value="&Ctr_tabnor;" class="ctr_tabcolorlabel"/>
 					<spacer flex="1" />
 					<colorpicker preference="ctr_ctab1" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctab1')"/>
@@ -190,7 +190,7 @@
 					<colorpicker preference="ctr_ctab2" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctab2')"/>
 					<label value="&Ctr_bottomc;"/>
 				  </hbox>
-				  <hbox>
+				  <hbox id="tabhovcolorbox">
 					<label value="&Ctr_tabhov;" class="ctr_tabcolorlabel"/>
 					<spacer flex="1" />
 					<colorpicker preference="ctr_ctabhov1"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhov1')"/>
@@ -198,7 +198,7 @@
 					<colorpicker preference="ctr_ctabhov2"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhov2')"/>
 					<label value="&Ctr_bottomc;"/>
 				  </hbox>
-				  <hbox>
+				  <hbox id="tabactcolorbox">
 					<label value="&Ctr_tabact;" class="ctr_tabcolorlabel"/>
 					<spacer flex="1" />
 					<colorpicker preference="ctr_ctabact1"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabact1')"/>
@@ -207,7 +207,7 @@
 					<label value="&Ctr_bottomc;"/>
 				  </hbox>
 				  <label value=" "/>
-				  <hbox>
+				  <hbox id="ntabcolorbox">
 					<label value="&Ctr_ntabnor;" class="ctr_tabcolorlabel"/>
 					<spacer flex="1" />
 					<colorpicker preference="ctr_cntab1"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'cntab1')"/>
@@ -215,7 +215,7 @@
 					<colorpicker preference="ctr_cntab2"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'cntab2')"/>
 					<label value="&Ctr_bottomc;"/>
 				  </hbox>
-				  <hbox>
+				  <hbox id="ntabhovcolorbox">
 					<label value="&Ctr_ntabhov;" class="ctr_tabcolorlabel"/>
 					<spacer flex="1" />
 					<colorpicker preference="ctr_cntabhov1"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'cntabhov1')"/>
