@@ -1,0 +1,64 @@
+@import url(chrome://ctr_os_special/skin/curvedtabsextra.css);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	.tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]),
+	.tabs-newtab-button:not(:-moz-lwtheme) {
+	  background-position: left bottom, 30px bottom, right bottom;
+	  background-repeat: no-repeat;
+	  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;
+	}
+
+	.tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]){
+	  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start.png),
+						url(chrome://browser/skin/tabbrowser/tab-background-middle.png),
+						url(chrome://browser/skin/tabbrowser/tab-background-end.png) !important;
+	}
+
+	.tabs-newtab-button:not(:-moz-lwtheme){
+	  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),
+						url(chrome://browser/skin/tabbrowser/tab-active-middle.png),
+						url(chrome://browser/skin/tabbrowser/tab-stroke-end.png) !important;
+	}
+
+	.tabs-newtab-button:not(:-moz-lwtheme):hover{
+	  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start.png),
+						url(chrome://browser/skin/tabbrowser/tab-background-middle.png),
+						url(chrome://browser/skin/tabbrowser/tab-background-end.png) !important;
+	}
+	
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-stack .tab-background-middle	{
+	  margin-top:2px !important;
+	}
+	
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start{
+	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;
+	}
+	
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end,
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end	{
+	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;
+	}
+
+	#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
+	.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
+	#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
+	  background-image: none !important;
+	}
+
+}
+
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+	#tabcolorbox,
+	#tabhovcolorbox,
+	#ctr_ccap_t_curved{
+	  visibility: visible !important;
+	}
+	
+	#ctr_ccap_t_default{
+	  visibility: collapse !important;
+	}
+}

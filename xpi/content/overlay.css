@@ -254,7 +254,6 @@
 	#ctr_appbutton,
 	#ctr_appbutton2,
 	#ctr_back-forward-button,
-	#ctr_comb_stopreload-button,
 	#main-window:not([customizing]) #ctr_window-controls{
 	  visibility: collapse;
 	}
@@ -269,7 +268,6 @@
 
 	#customization-palette #ctr_appbutton,
 	#customization-palette #ctr_back-forward-button,
-	#customization-palette #ctr_comb_stopreload-button,
 	#customization-palette #ctr_window-controls{
 		visibility: visible !important;
 		background:url("chrome://classic_theme_restorer/content/images/enableoption.png") center no-repeat;
@@ -282,14 +280,10 @@
 	#customization-palette #ctr_history-button image,
 	#customization-palette #ctr_panelui-button image,
 	#customization-palette #ctr_back-forward-button image,
-	#customization-palette #ctr_comb_stopreload-button image,
 	#customization-palette #ctr_stop-button image,
 	#customization-palette #ctr_reload-button image,
-	#customization-palette #ctr_comb_stopreload-button #urlbar-reload-button image,
-	#customization-palette #ctr_comb_stopreload-button #urlbar-stop-button image,
 	#customization-palette #urlbar-reload-button image,
 	#customization-palette #urlbar-stop-button image,
-	#customization-palette #ctr_comb_stopreload-button image,
 	#customization-palette #ctr_back-forward-dropmarker image{
 		background:none !important;
 		list-style-image:none !important;
@@ -305,8 +299,7 @@
 	  max-width:0px !important;
 	}
 
-	#customization-palette #ctr_panelui-button,
-	#customization-palette #ctr_comb_stopreload-button{
+	#customization-palette #ctr_panelui-button{
 		width: 82px !important;
 	}
 
@@ -344,7 +337,7 @@
 
 /* style settings for this add-ons options window */
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
-	#ctr_sqtabcolorstab,
+	#ctr_combrelstopinfo,
 	#ctr_appbutton_list1,
 	#ctr_appbutton_list2{
 		visibility: collapse;
@@ -354,14 +347,27 @@
 		font-weight:bold;
 		font-style:italic;
 	}
+	.ctr_tabcolorlabel2{
+		font-style:italic;
+	}
 	.ctb_topic{
 		font-weight:bold;
 	}
 	
+	#tabcolorbox,
+	#tabhovcolorbox,
+	#ntabcolorbox,
+	#ntabhovcolorbox,
+	#ctr_ccap_t_squared,
+	#ctr_ccap_t_squared2,
+	#ctr_ccap_t_curved{
+	  visibility: collapse;
+	}
+	
 	@media not all and (-moz-windows-theme:aero) {
-		#tabs_curvedall{
-		  visibility: collapse;
-		}
+	  #tabs_curvedall{
+		visibility: collapse;
+	  }
 	}
 
 }

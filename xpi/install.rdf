@@ -5,7 +5,7 @@
 	<Description rdf:about="urn:mozilla:install-manifest">
 		<em:id>ClassicThemeRestorer@ArisT2Noia4dev</em:id>
 		<em:name>Classic Theme Restorer</em:name>
-		<em:version>1.0.6</em:version>
+		<em:version>1.0.8</em:version>
 		<em:type>2</em:type>
 
 		<em:optionsURL>chrome://classic_theme_restorer/content/options.xul</em:optionsURL>
@@ -14,7 +14,7 @@
 			<Description>
 				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
 				<em:minVersion>29.0a1</em:minVersion>
-				<em:maxVersion>29.0</em:maxVersion>
+				<em:maxVersion>30.0</em:maxVersion>
 			</Description>
 		</em:targetApplication>
 
@@ -25,7 +25,7 @@
 		<em:localized>
 			<Description>
 				<em:locale>de</em:locale>
-				<em:description>Die Erweiterung 'Classic Theme Restorer' stellt bekannte Elemente wie Firefox Menüschaltfläche, quadratische Tabs, Addonleiste, kleine Buttonansicht und einige Buttons wieder her. Über das 'Anpassenmenü' lassen sich Buttons auf die bevorzugten Leisten verschieben.</em:description>
+				<em:description>Die Erweiterung 'Classic Theme Restorer' stellt bekannte Elemente wie die Firefox Menüschaltfläche, quadratische Tabs, Addonleiste, kleine Buttonansicht und einige weitere Buttons wieder her. Über das 'Anpassen'-Menü lassen sich Buttons auf die bevorzugten Leisten verschieben.</em:description>
 				<em:translator>Aris (de)</em:translator>
 			</Description>
 		</em:localized>
@@ -35,6 +35,14 @@
 				<em:locale>es</em:locale>
 				<em:description>La extensión Classic Theme Restorer restaura menú y botón de la aplicación clásicos, barra de herramientas de complementos, vista de iconos pequeños, botón de menú de marcadores, botones de barras laterales de marcadores e historial, botones pequeños de barra de navegación y pestañas cuadradas, en la interfaz de usuario Australis de Firefox. Use el menú 'Personalizar' para mover botones a su barra de herramientas preferida.</em:description>
 				<em:translator>strel (es)</em:translator>
+			</Description>
+		</em:localized>
+		
+		<em:localized>
+			<Description>
+				<em:locale>fr</em:locale>
+				<em:description>Le 'Classic Theme Restorer' add-on restaure appmenu classique, barre d'outils add-ons, bouton de menu des signets, signets bouton de la barre latérale, bouton de barre latérale d'historique, de petits boutons nav-bar et carré onglets sur Firefox Australis UI. Utilisez le menu "Personnaliser" pour déplacer les boutons de votre barre d'outils pratique.</em:description>
+				<em:translator>goofy (fr)</em:translator>
 			</Description>
 		</em:localized>
 		

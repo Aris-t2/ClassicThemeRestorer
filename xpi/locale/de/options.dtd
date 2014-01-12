@@ -6,18 +6,20 @@
 <!ENTITY Ctr_space			"Zwischenraum">
 <!ENTITY Ctr_separator		"Trennlinie">
 
+<!ENTITY Ctr_combrelstoptt	"[Stop][Aktualisieren] &gt;&gt; [Stop-Aktualisieren]">
+
 <!ENTITY Ctr_main_t			"Grundeinstellungen">
 <!ENTITY Ctr_tabcolors_t	"Tabfarben">
 <!ENTITY Ctr_tabtext_t		"Tab Text">
 <!ENTITY Ctr_fixes_t		"Korrekturen">
 <!ENTITY Ctr_special_t		"Extra">
-<!ENTITY Ctr_experim_t		"Experimentell">
 
 <!ENTITY Ctr_tabs			"Tabs">
-<!ENTITY Ctr_tabs0			"Gerundete Tabs (Australis)">
+<!ENTITY Ctr_tabs0			"Gerundete Tabs (Australis standard)">
 <!ENTITY Ctr_tabs1			"Quadratische Tabs (klassisch)">
 <!ENTITY Ctr_tabs1m			"Quadratische Tabs (australisiert)">
-<!ENTITY Ctr_tabs2			"Gerundete Tabs (experimentell)">
+<!ENTITY Ctr_tabs2			"Gerundete Tabs (alternativ)">
+<!ENTITY Ctr_tabs3			"Gerundete Tabs (alternativ Aero)">
 <!ENTITY Ctr_tabsotoff		"Tabs 'unten'">
 <!ENTITY Ctr_tabsintitlebar	"Tabs auf Titelleiste (about:config)">
 <!ENTITY Ctr_tabwidth0		"Maximalbreite: 180px (standard)">
@@ -46,6 +48,8 @@
 <!ENTITY Ctr_buttons		"Buttons">
 <!ENTITY Ctr_backforward	"Vor-Zurück Button verschiebbar">
 <!ENTITY Ctr_wincontrols	"Vollbild-Min/Max/Schl. verschiebbar">
+<!ENTITY Ctr_hideurelstop	"Adressleiste ohne Stop &amp; Aktualisieren">
+<!ENTITY Ctr_combrelstop	"Kombiniere Stop &amp; Aktualisieren">
 <!ENTITY Ctr_findbar_def	"Suchleiste (Standardposition)">
 <!ENTITY Ctr_findbar_top	"Suchleiste oben">
 <!ENTITY Ctr_findbar_bot	"Suchleiste unten">
@@ -53,8 +57,8 @@
 <!ENTITY Ctr_nav_txt_ico1	"Zeige Symbole und Text">
 <!ENTITY Ctr_nav_txt_ico2	"Zeige nur Text">
 
-<!ENTITY Ctr_customsqtab0	"Quadratische Tabs">
-<!ENTITY Ctr_customsqtab1	"Eigene Farbeinstellungen für quadratische Tabs">
+<!ENTITY Ctr_customsqtab0	"Tabs">
+<!ENTITY Ctr_customsqtab1	"Eigene Farbeinstellungen">
 <!ENTITY Ctr_tabnor			"Tab (standard)">
 <!ENTITY Ctr_tabhov			"Tab (hover)">
 <!ENTITY Ctr_tabact			"Tab (aktiv)">
@@ -82,7 +86,3 @@
 <!ENTITY Ctr_notabfog		"Tableistenhintergrund deaktivieren (Windows AeroGlass)">
 <!ENTITY Ctr_tabmokcolor	"Weißer Tabtext und weiße Tabbuttons (Neu, Schließen, Gruppen, Listen)">
 <!ENTITY Ctr_closeabarbut	"Entferne Schließen Button von der Addonleiste">
-
-<!ENTITY Ctr_experimental	"Experimentelle Einstellungen">
-<!ENTITY Ctr_combrelstop	"Kombinierter 'Aktualisieren'-'Stop' Button (Firefox neustarten!)">
-<!ENTITY Ctr_combrelstopt	"Funktioniert nur, falls der von den anderen 'Aktualisieren' und 'Stop' Buttons unabhängige kombinierte 'Aktualisieren'-'Stop' Button vor der Adressleiste platziert wird ([...][Aktualisieren-Stop][...][Adressleiste][...])! Die Buttons 'Aktualisieren' und 'Stop' auf der Adressleiste werden deaktiviert!">

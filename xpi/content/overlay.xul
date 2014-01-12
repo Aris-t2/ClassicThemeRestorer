@@ -1121,24 +1121,7 @@
                      label="&stopCmd.label;" removable="true"
                      command="Browser:Stop"
                      tooltiptext="&stopButton.tooltip;"/>
-
-	  
-	  <!-- creates a combined reload-stop button by duplicating urlbars default reload/stop button -->
-	  <toolbaritem id="ctr_comb_stopreload-button" class="chromeclass-toolbar-additional"
-                   removable="true"
-                   title="&reloadCmd.label; &stopCmd.label; (combo)">
-		  <toolbarbutton id="urlbar-reload-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
-						 label="&reloadCmd.label;"
-						 command="Browser:ReloadOrDuplicate"
-						 onclick="checkForMiddleClick(this, event);"
-						 tooltiptext="&reloadButton.tooltip;"/>
-		  <toolbarbutton id="urlbar-stop-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
-						 label="&stopCmd.label;"
-						 command="Browser:Stop"
-						 tooltiptext="&stopButton.tooltip;"/>
-	  </toolbaritem>
-
-	  
+  
 	  <!-- duplicates fullscreen window controls -->
 	  <toolbaritem id="ctr_window-controls" class="chromeclass-toolbar-additional"
                    removable="true" title="window controls">

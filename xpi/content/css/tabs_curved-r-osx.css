@@ -1,0 +1,94 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	.tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]){
+	  background-position: left bottom, 30px bottom, right bottom;
+	  background-repeat: no-repeat;
+	  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;
+	}
+
+	.tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]){
+	  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start.png),
+						url(chrome://browser/skin/tabbrowser/tab-background-middle.png),
+						url(chrome://browser/skin/tabbrowser/tab-background-end.png) !important;
+	}
+
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-stack .tab-background-middle	{
+	  margin-top:2px !important;
+	}
+	
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start{
+	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;
+	}
+	
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end,
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end	{
+	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;
+	}
+
+	#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
+	.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
+	#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
+	  background-image: none !important;
+	}
+
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end {
+	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #949494,#9f9f9f,#a9a9a9);
+	}
+	
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-stack .tab-background-middle,
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start,
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end {
+	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#adadad,#b8b8b8);
+	}
+
+	.tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+	.tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {
+	  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient(to top,#d3d3d3,#d3d3d3,#cdcdcd) !important;
+	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;
+	}
+	.tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+	.tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {
+	  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(to top,#d3d3d3,#d3d3d3,#cdcdcd) !important;
+	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;
+	}
+	.tab-background-middle[selected=true] {
+	  background-clip: padding-box, padding-box, content-box !important;
+	  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png), linear-gradient(to top,#d3d3d3,#d3d3d3,#cdcdcd), none !important;
+	}
+	
+	.tabbrowser-tab[selected=true]{
+	  margin-top:-1px !important;
+	}
+
+	#TabsToolbar:not(:-moz-lwtheme){
+	  background: linear-gradient(to top,#5e5e5e 1px,#898989,#939393,#989898,#a1a1a1 1px) !important;
+	  border-top: 1px solid #8b8b8b !important;
+	}
+	
+	.tabs-newtab-button{
+	  margin-left: -14px !important;
+	}
+
+	.tabbrowser-tab,
+	.tabbrowser-tab .tab-content {
+	  transform: scale(-1, -1) !important;
+	}
+}
+
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+	#tabcolorbox,
+	#tabhovcolorbox,
+	#ctr_ccap_t_curved{
+	  visibility: visible !important;
+	}
+	
+	#ctr_ccap_t_default{
+	  visibility: collapse !important;
+	}
+}

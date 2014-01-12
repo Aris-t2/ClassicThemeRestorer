@@ -1,0 +1,9 @@
+@-moz-document url(chrome://browser/content/browser.xul){
+	
+	/* hide urlbars stop/reload buttons */
+	#urlbar-container #urlbar-reload-button,
+	#urlbar-container #urlbar-stop-button{
+	  visibility: collapse !important;
+	}
+
+}

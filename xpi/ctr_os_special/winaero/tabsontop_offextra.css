@@ -18,13 +18,20 @@
 	}
 	
     #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
-        margin-left: 0px !important;
-    }
-    #main-window:not([tabsintitlebar]) #TabsToolbar{
-        border-left:1px solid #95adb8 !important;
-        border-right:1px solid #95adb8 !important;
+      margin-left: 0px !important;
     }
 
+    #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
+      padding-left: 2px !important;
+    }
+
+	@media all and (-moz-windows-glass) {	
+		#TabsToolbar{
+			border-left:1px solid #95adb8 !important;
+			border-right:1px solid #95adb8 !important;
+		}
+	}
+	
 	#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{
 	  margin-top: 3px !important;
 	  margin-bottom: 3px !important;

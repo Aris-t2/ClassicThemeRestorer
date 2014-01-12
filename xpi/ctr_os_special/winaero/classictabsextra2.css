@@ -36,7 +36,7 @@
 	/* for Windows Aero Theme (AeroBasic/AeroGlass - Vista/7/8) */
 	@media all and (-moz-windows-theme:aero) {
 		.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {
-		  background-image: linear-gradient(to top,#eaf2fb,#eef5fc,#feffff);
+		  background-image: linear-gradient(to top,#eaf2fb,#eef5fc,#fbfdff);
 		}
 		.tabbrowser-tab:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
 		  background-image: linear-gradient(transparent,transparent) !important;

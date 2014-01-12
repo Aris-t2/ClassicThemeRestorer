@@ -235,7 +235,15 @@
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
-	#ctr_sqtabcolorstab{
+	#tabcolorbox,
+	#tabhovcolorbox,
+	#ntabcolorbox,
+	#ntabhovcolorbox,
+	#ctr_ccap_t_squared{
 	  visibility: visible !important;
+	}
+	
+	#ctr_ccap_t_default{
+	  visibility: collapse !important;
 	}
 }

@@ -6,18 +6,20 @@
 <!ENTITY Ctr_space			"Espace">
 <!ENTITY Ctr_separator		"Separator">
 
+<!ENTITY Ctr_combrelstoptt	"[stop][actualiser] &gt;&gt; [stop-actualiser]">
+
 <!ENTITY Ctr_main_t			"Principal">
 <!ENTITY Ctr_tabcolors_t	"Couleur des onglets">
 <!ENTITY Ctr_tabtext_t		"Texte des onglets">
 <!ENTITY Ctr_fixes_t		"Réglages">
 <!ENTITY Ctr_special_t		"Spéciaux">
-<!ENTITY Ctr_experim_t		"Expérimental">
 
 <!ENTITY Ctr_tabs			"Onglets">
 <!ENTITY Ctr_tabs0			"Onglets arrondis (Australis)">
 <!ENTITY Ctr_tabs1			"Onglets à angle droit (classique)">
 <!ENTITY Ctr_tabs1m			"Onglets à angle droit (australized)">
-<!ENTITY Ctr_tabs2			"Onglets arrondis (expérimental)">
+<!ENTITY Ctr_tabs2			"Onglets arrondis (alternative)">
+<!ENTITY Ctr_tabs3			"Onglets arrondis (alternative Aero)">
 <!ENTITY Ctr_tabsotoff		"Onglets position basse">
 <!ENTITY Ctr_tabsintitlebar	"Onglets dans la barre de titre">
 <!ENTITY Ctr_tabwidth0		"Largeur maximale: 180px (defaut)">
@@ -45,7 +47,9 @@
 <!ENTITY Ctr_hidenavbar		"Masquer la barre de navigation">
 <!ENTITY Ctr_buttons		"Boutons de la barre d'outils">
 <!ENTITY Ctr_backforward	"Bouton avancer/reculer déplaçable">
-<!ENTITY Ctr_wincontrols	"Movable fullscreen window controls">
+<!ENTITY Ctr_wincontrols	"Coins déplaçables pour la fenêtre en plein écran">
+<!ENTITY Ctr_hideurelstop	"Masquer 'stop-actualiser' sur la barre d'adresse">
+<!ENTITY Ctr_combrelstop 	"Bouton stop-actualiser">
 <!ENTITY Ctr_findbar_def	"Barre de recherche (position par défaut)">
 <!ENTITY Ctr_findbar_top	"Barre de recherche en haut">
 <!ENTITY Ctr_findbar_bot	"Barre de recherche en bas">
@@ -53,8 +57,8 @@
 <!ENTITY Ctr_nav_txt_ico1	"Afficher icônes et textes">
 <!ENTITY Ctr_nav_txt_ico2	"Afficher seulement les textes">
 
-<!ENTITY Ctr_customsqtab0	"nglets à angle droit">
-<!ENTITY Ctr_customsqtab1	"Couleurs personnalisées pour les onglets à angles droits">
+<!ENTITY Ctr_customsqtab0	"Onglets">
+<!ENTITY Ctr_customsqtab1	"Couleurs personnalisées">
 <!ENTITY Ctr_tabnor			"Onglet (par défaut)">
 <!ENTITY Ctr_tabhov			"Onglet (au survol)">
 <!ENTITY Ctr_tabact			"Onglet (actif)">
@@ -78,11 +82,7 @@
 <!ENTITY Ctr_specialtw		"Modifications spéciales">
 <!ENTITY Ctr_alttbappb		"Icônes alternatives pour l'option « bouton d'application sur la barre d'onglets »">
 <!ENTITY Ctr_paneluibtweak 	"Apparence du bouton d'application pour le panneau d'interface (sur la barre des onglets)">
-<!ENTITY Ctr_appbuttxt		"'Firefox' text for 'appbutton on tabs toolbar'">
+<!ENTITY Ctr_appbuttxt		"Texte 'Firefox' pour 'bouton sur la barre d'outils'">
 <!ENTITY Ctr_notabfog		"Supprimer l'effet de flou en arrière-plan sur les barres d'onglets (Windows AeroGlass)">
 <!ENTITY Ctr_tabmokcolor	"Texte des onglets et des boutons de couleur blanche (fermer, nouveau, groupes, tout lister)">
 <!ENTITY Ctr_closeabarbut	"Masquer le bouton de fermeture de la barre des modules">
-
-<!ENTITY Ctr_experimental 	"Modifications expérimentales">
-<!ENTITY Ctr_combrelstop 	"Bouton stop-actualiser [redémarrage de Firefox nécessaire !]">
-<!ENTITY Ctr_combrelstopt 	"Ce bouton est indépendant des autres boutons 'stop' et 'actualiser' disponibles et ne fonctionnera correctement que s'il est placé sur la barre d'adresse de cette façon [...][actualiser-stop][...][barre d'adresse][...]. En utilisant cette disposition les boutons stop et actualiser sont masqués.">

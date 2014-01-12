@@ -130,3 +130,9 @@
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	}
 }
+
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+	#ctr_sqtabcolorstab{
+	  visibility: collapse !important;
+	}
+}

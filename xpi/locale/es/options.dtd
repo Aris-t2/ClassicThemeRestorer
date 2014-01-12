@@ -6,18 +6,20 @@
 <!ENTITY Ctr_space			"Espacio">
 <!ENTITY Ctr_separator		"Separador">
 
+<!ENTITY Ctr_combrelstoptt	"[parar][recargar] &gt;&gt; [parar-recargar]">
+
 <!ENTITY Ctr_main_t			"Pricipal">
 <!ENTITY Ctr_tabcolors_t	"Colores de pestaña">
 <!ENTITY Ctr_tabtext_t		"Texto de pestaña">
 <!ENTITY Ctr_fixes_t		"Arreglos">
 <!ENTITY Ctr_special_t		"Especial">
-<!ENTITY Ctr_experim_t		"Experimental">
 
 <!ENTITY Ctr_tabs			"Pestañas">
 <!ENTITY Ctr_tabs0			"Pestañas curvadas (Australis)">
 <!ENTITY Ctr_tabs1			"Pestañas cuadradas (clásico)">
 <!ENTITY Ctr_tabs1m			"Pestañas cuadradas (australizado)">
-<!ENTITY Ctr_tabs2			"Pestañas curvadas (experimental)">
+<!ENTITY Ctr_tabs2			"Pestañas curvadas (alternativa)">
+<!ENTITY Ctr_tabs3			"Pestañas curvadas (alternativa Aero)">
 <!ENTITY Ctr_tabsotoff		"Pestañas no arriba">
 <!ENTITY Ctr_tabsintitlebar	"Pestañas en la barra de título">
 <!ENTITY Ctr_tabwidth0		"Ancho-máximo: 180px (por defecto)">
@@ -45,7 +47,9 @@
 <!ENTITY Ctr_hidenavbar		"Ocultar barra de navegación">
 <!ENTITY Ctr_buttons		"Botones de barra de herramientas">
 <!ENTITY Ctr_backforward	"Botón atrás-adelante movible">
-<!ENTITY Ctr_wincontrols	"Controles de ventana de pantalla completa movibles">
+<!ENTITY Ctr_wincontrols	"Contr. de ventana de pantalla compl. movibles">
+<!ENTITY Ctr_hideurelstop	"Ocultar botón parar-recargar urlbar">
+<!ENTITY Ctr_combrelstop	"Botón combinado parar-recargar">
 <!ENTITY Ctr_findbar_def	"Barra de búsqueda (posición por defecto)">
 <!ENTITY Ctr_findbar_top	"Barra de búsqueda arriba">
 <!ENTITY Ctr_findbar_bot	"Barra de búsqueda abajo">
@@ -53,8 +57,8 @@
 <!ENTITY Ctr_nav_txt_ico1	"Mostrar iconos y texto">
 <!ENTITY Ctr_nav_txt_ico2	"Mostrar sólo texto">
 
-<!ENTITY Ctr_customsqtab0	"Pestañas cuadradas">
-<!ENTITY Ctr_customsqtab1	"Colores personalizados para pestañas cuadradas">
+<!ENTITY Ctr_customsqtab0	"Pestañas">
+<!ENTITY Ctr_customsqtab1	"Colores personalizados">
 <!ENTITY Ctr_tabnor			"Pestaña (por defecto)">
 <!ENTITY Ctr_tabhov			"Pestaña (subyacente)">
 <!ENTITY Ctr_tabact			"Pestaña (activa)">
@@ -82,7 +86,3 @@
 <!ENTITY Ctr_notabfog		"Eliminar niebla de fondo de la barra de pestañas (Windows AeroGlass)">
 <!ENTITY Ctr_tabmokcolor	"Color blanco para texto y botones (cerrar, nuevo, grupos, listar todas) de pestañas">
 <!ENTITY Ctr_closeabarbut	"Ocultar botón cerrar de la barra de complementos">
-
-<!ENTITY Ctr_experimental	"Ajustes experimentales">
-<!ENTITY Ctr_combrelstop	"Botón combinado recargar-parar [¡requiere reiniciar Fx!]">
-<!ENTITY Ctr_combrelstopt	"Este botón es independiente de los botones 'parar' y 'recargar', también disponibles, y sólo funciona correctamente cuando se ubica antes de la barra de URL tal que [...][reload-stop][...][urlbar][...]. Al usar esta configuración los botones recargar y parar se ocultan.">

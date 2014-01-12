@@ -6,18 +6,20 @@
 <!ENTITY Ctr_space			"Space">
 <!ENTITY Ctr_separator		"Separator">
 
+<!ENTITY Ctr_combrelstoptt	"[stop][reload] &gt;&gt; [stop-reload]">
+
 <!ENTITY Ctr_main_t			"Main">
 <!ENTITY Ctr_tabcolors_t	"Tab colors">
 <!ENTITY Ctr_tabtext_t		"Tab text">
 <!ENTITY Ctr_fixes_t		"Fixes">
 <!ENTITY Ctr_special_t		"Special">
-<!ENTITY Ctr_experim_t		"Experimental">
 
 <!ENTITY Ctr_tabs			"Tabs">
-<!ENTITY Ctr_tabs0			"Curved tabs (Australis)">
+<!ENTITY Ctr_tabs0			"Curved tabs (Australis default)">
 <!ENTITY Ctr_tabs1			"Squared tabs (classic)">
 <!ENTITY Ctr_tabs1m			"Squared tabs (australized)">
-<!ENTITY Ctr_tabs2			"Curved tabs (experimental)">
+<!ENTITY Ctr_tabs2			"Curved tabs (alternative)">
+<!ENTITY Ctr_tabs3			"Curved tabs (alternative Aero)">
 <!ENTITY Ctr_tabsotoff		"Tabs not on top">
 <!ENTITY Ctr_tabsintitlebar	"Tabs in titlebar (about:config)">
 <!ENTITY Ctr_tabwidth0		"Max-width: 180px (default)">
@@ -46,6 +48,8 @@
 <!ENTITY Ctr_buttons		"Toolbar buttons">
 <!ENTITY Ctr_backforward	"Movable back-forward button">
 <!ENTITY Ctr_wincontrols	"Movable fullscreen window controls">
+<!ENTITY Ctr_hideurelstop	"Hide urlbars stop &amp; reload buttons">
+<!ENTITY Ctr_combrelstop	"Combine stop &amp; reload buttons">
 <!ENTITY Ctr_findbar_def	"Findbar (default position)">
 <!ENTITY Ctr_findbar_top	"Findbar on top">
 <!ENTITY Ctr_findbar_bot	"Findbar at the bottom">
@@ -53,8 +57,8 @@
 <!ENTITY Ctr_nav_txt_ico1	"Show icons and text">
 <!ENTITY Ctr_nav_txt_ico2	"Show text only">
 
-<!ENTITY Ctr_customsqtab0	"Squared tabs">
-<!ENTITY Ctr_customsqtab1	"Custom colors for squared tabs">
+<!ENTITY Ctr_customsqtab0	"Tabs">
+<!ENTITY Ctr_customsqtab1	"Custom colors">
 <!ENTITY Ctr_tabnor			"Tab (default)">
 <!ENTITY Ctr_tabhov			"Tab (hover)">
 <!ENTITY Ctr_tabact			"Tab (active)">
@@ -82,7 +86,3 @@
 <!ENTITY Ctr_notabfog		"Remove tab toolbars background fog (Windows AeroGlass)">
 <!ENTITY Ctr_tabmokcolor	"White color for tab text and tab buttons (close, new, groups, list all)">
 <!ENTITY Ctr_closeabarbut	"Hide add-on bars close button">
-
-<!ENTITY Ctr_experimental	"Experimental tweaks">
-<!ENTITY Ctr_combrelstop	"Combined reload-stop button [Fx restart needed!]">
-<!ENTITY Ctr_combrelstopt	"This button is independent from the also available 'stop' and 'reload' buttons and only works correctly when placed before urlbar like this [...][reload-stop][...][urlbar][...]. Using this setting the reload and stop buttons on urlbar get hidden.">
