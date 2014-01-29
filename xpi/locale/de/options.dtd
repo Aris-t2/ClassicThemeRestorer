@@ -6,11 +6,20 @@
 <!ENTITY Ctr_space			"Zwischenraum">
 <!ENTITY Ctr_separator		"Trennlinie">
 
+<!ENTITY Ctr_cuibuttons		"Buttons">
+<!ENTITY Ctr_cuibutnormal	"Normal">
+<!ENTITY Ctr_cuibutsmall	"Klein">
+<!ENTITY Ctr_cuimode		"Modus">
+<!ENTITY Ctr_cuiico			"Symbole">
+<!ENTITY Ctr_cuiicotxt		"Symbole + Text">
+<!ENTITY Ctr_cuitxt			"Text">
+
 <!ENTITY Ctr_combrelstoptt	"[Stop][Aktualisieren] &gt;&gt; [Stop-Aktualisieren]">
+<!ENTITY Ctr_starbuttont1	"[Adressleiste][Favoriten Button]">
+<!ENTITY Ctr_starbuttont2	"[Favoriten-Button in der Adressleiste]">
 
 <!ENTITY Ctr_main_t			"Grundeinstellungen">
-<!ENTITY Ctr_tabcolors_t	"Tabfarben">
-<!ENTITY Ctr_tabtext_t		"Tab Text">
+<!ENTITY Ctr_tabcolors_t	"Eigene Farben">
 <!ENTITY Ctr_fixes_t		"Korrekturen">
 <!ENTITY Ctr_special_t		"Extra">
 
@@ -41,6 +50,8 @@
 <!ENTITY Ctr_appbuttonI1	"Neustart empfohlen">
 <!ENTITY Ctr_appbuttonI2	"Farbe nur auf der Titelleiste">
 <!ENTITY Ctr_appbuttonI3	"und der Tabsleiste sichtbar!">
+<!ENTITY Ctr_alttbappb		"Alternative Symbole (auf Leisten)">
+<!ENTITY Ctr_appbuttxt		"'Firefox' Text (auf Tableiste)">
 
 <!ENTITY Ctr_ui				"Oberfläche">
 <!ENTITY Ctr_smallnavbut	"Kleine Buttons (Navigationsleiste)">
@@ -48,30 +59,30 @@
 <!ENTITY Ctr_buttons		"Buttons">
 <!ENTITY Ctr_backforward	"Vor-Zurück Button verschiebbar">
 <!ENTITY Ctr_wincontrols	"Vollbild-Min/Max/Schl. verschiebbar">
+<!ENTITY Ctr_starinurl		"Favoriten-Button in der Adressleiste">
 <!ENTITY Ctr_hideurelstop	"Adressleiste ohne Stop &amp; Aktualisieren">
 <!ENTITY Ctr_combrelstop	"Kombiniere Stop &amp; Aktualisieren">
 <!ENTITY Ctr_findbar_def	"Suchleiste (Standardposition)">
 <!ENTITY Ctr_findbar_top	"Suchleiste oben">
 <!ENTITY Ctr_findbar_bot	"Suchleiste unten">
-<!ENTITY Ctr_nav_txt_ico0	"Zeige Symbole">
-<!ENTITY Ctr_nav_txt_ico1	"Zeige Symbole und Text">
-<!ENTITY Ctr_nav_txt_ico2	"Zeige nur Text">
+<!ENTITY Ctr_nav_txt_ico0	"Zeige Symbole (standard)">
+<!ENTITY Ctr_nav_txt_ico1	"Zeige große Symbole">
+<!ENTITY Ctr_nav_txt_ico2	"Zeige Symbole und Text">
+<!ENTITY Ctr_nav_txt_ico3	"Zeige nur Text">
 
-<!ENTITY Ctr_customsqtab0	"Tabs">
-<!ENTITY Ctr_customsqtab1	"Eigene Farbeinstellungen">
+<!ENTITY Ctr_customsqtab0	"Eigene Tabfarben">
+<!ENTITY Ctr_customsqtab1	"Hintergrund">
+<!ENTITY Ctr_ctext			"Text">
+<!ENTITY Ctr_ctextsh		"Textschatten">
 <!ENTITY Ctr_tabnor			"Tab (standard)">
 <!ENTITY Ctr_tabhov			"Tab (hover)">
 <!ENTITY Ctr_tabact			"Tab (aktiv)">
 <!ENTITY Ctr_ntabnor		"Neuer Tab (standard)">
 <!ENTITY Ctr_ntabhov		"Neuer Tab (hover)">
-
-<!ENTITY Ctr_tabtext		"Tab Text- und Schattenfarben">
-<!ENTITY Ctr_ctext			"Eigene Textfarben">
-<!ENTITY Ctr_ctextsh		"Eigene Textschattenfarben">
-<!ENTITY Ctr_topc			"Obere Farbe">
-<!ENTITY Ctr_bottomc		"Untere Farbe">
-<!ENTITY Ctr_textc			"Textfarbe">
-<!ENTITY Ctr_textsh			"Textschattenfarbe">
+<!ENTITY Ctr_topc			"Oben">
+<!ENTITY Ctr_bottomc		"Unten">
+<!ENTITY Ctr_textc			"Text">
+<!ENTITY Ctr_textsh			"Textschatten">
 
 <!ENTITY Ctr_fixes			"Korrekturen">
 <!ENTITY Ctr_tnotlfix 		"Dunkle Textfarbe für nicht-aktive Tabs">
@@ -80,9 +91,8 @@
 <!ENTITY Ctr_bfurlbarfixt	"Der verschiebbare Vor-Zurück Button benötigt diese Option, falls kein anderer Css-Code zur Änderung des Randradius verwendet wird.">
 
 <!ENTITY Ctr_specialtw		"Spezial Einstellungen">
-<!ENTITY Ctr_alttbappb		"Alternative Symbole für die Option 'Anwendungsbutton auf Leisten'">
 <!ENTITY Ctr_paneluibtweak	"PanelUI Button wie Anwendungsbutton darstellen (auf der Tableiste)">
-<!ENTITY Ctr_appbuttxt		"'Firefox' Text für den 'Anwendungsbutton auf der Tableiste'">
 <!ENTITY Ctr_notabfog		"Tableistenhintergrund deaktivieren (Windows AeroGlass)">
 <!ENTITY Ctr_tabmokcolor	"Weißer Tabtext und weiße Tabbuttons (Neu, Schließen, Gruppen, Listen)">
 <!ENTITY Ctr_closeabarbut	"Entferne Schließen Button von der Addonleiste">
+<!ENTITY Ctr_cuibotbuttons	"Einstellungs-Buttons im 'Anpassen'-Modus">

@@ -6,11 +6,20 @@
 <!ENTITY Ctr_space			"Espacio">
 <!ENTITY Ctr_separator		"Separador">
 
+<!ENTITY Ctr_cuibuttons		"Botones">
+<!ENTITY Ctr_cuibutnormal	"normal">
+<!ENTITY Ctr_cuibutsmall	"pequeño">
+<!ENTITY Ctr_cuimode		"Modo">
+<!ENTITY Ctr_cuiico			"iconos">
+<!ENTITY Ctr_cuiicotxt		"iconos y texto">
+<!ENTITY Ctr_cuitxt			"texto">
+
 <!ENTITY Ctr_combrelstoptt	"[parar][recargar] &gt;&gt; [parar-recargar]">
+<!ENTITY Ctr_starbuttont1	"[urlbar][botón de favoritos]">
+<!ENTITY Ctr_starbuttont2	"[botón de favoritos en urlbar]">
 
 <!ENTITY Ctr_main_t			"Pricipal">
-<!ENTITY Ctr_tabcolors_t	"Colores de pestaña">
-<!ENTITY Ctr_tabtext_t		"Texto de pestaña">
+<!ENTITY Ctr_tabcolors_t	"Colores personalizables">
 <!ENTITY Ctr_fixes_t		"Arreglos">
 <!ENTITY Ctr_special_t		"Especial">
 
@@ -41,6 +50,8 @@
 <!ENTITY Ctr_appbuttonI1	"se recomienda reiniciar">
 <!ENTITY Ctr_appbuttonI2	"Sólo coloreado sobre la barra de">
 <!ENTITY Ctr_appbuttonI3	"herramientasy la barra de pestañas!">
+<!ENTITY Ctr_alttbappb		"Iconos alternativos (la barra de herramientas)">
+<!ENTITY Ctr_appbuttxt		"Texto 'Firefox' (la barra de pestañas)">
 
 <!ENTITY Ctr_ui				"Interfaz de usuario general">
 <!ENTITY Ctr_smallnavbut	"Botones pequeños (barra de navegación)">
@@ -48,30 +59,30 @@
 <!ENTITY Ctr_buttons		"Botones de barra de herramientas">
 <!ENTITY Ctr_backforward	"Botón atrás-adelante movible">
 <!ENTITY Ctr_wincontrols	"Contr. de ventana de pantalla compl. movibles">
+<!ENTITY Ctr_starinurl		"Botón de favoritos en urlbar">
 <!ENTITY Ctr_hideurelstop	"Ocultar botón parar-recargar urlbar">
 <!ENTITY Ctr_combrelstop	"Botón combinado parar-recargar">
 <!ENTITY Ctr_findbar_def	"Barra de búsqueda (posición por defecto)">
 <!ENTITY Ctr_findbar_top	"Barra de búsqueda arriba">
 <!ENTITY Ctr_findbar_bot	"Barra de búsqueda abajo">
 <!ENTITY Ctr_nav_txt_ico0	"Mostrar sólo iconos">
-<!ENTITY Ctr_nav_txt_ico1	"Mostrar iconos y texto">
-<!ENTITY Ctr_nav_txt_ico2	"Mostrar sólo texto">
+<!ENTITY Ctr_nav_txt_ico1	"Mostrar iconos grandes">
+<!ENTITY Ctr_nav_txt_ico2	"Mostrar iconos y texto">
+<!ENTITY Ctr_nav_txt_ico3	"Mostrar sólo texto">
 
-<!ENTITY Ctr_customsqtab0	"Pestañas">
-<!ENTITY Ctr_customsqtab1	"Colores personalizados">
+<!ENTITY Ctr_customsqtab0	"Colores de pestaña">
+<!ENTITY Ctr_customsqtab1	"Fondo">
+<!ENTITY Ctr_ctext			"Texto">
+<!ENTITY Ctr_ctextsh		"Sombra del texto">
 <!ENTITY Ctr_tabnor			"Pestaña (por defecto)">
 <!ENTITY Ctr_tabhov			"Pestaña (subyacente)">
 <!ENTITY Ctr_tabact			"Pestaña (activa)">
 <!ENTITY Ctr_ntabnor		"Nueva pestaña (por defecto)">
 <!ENTITY Ctr_ntabhov		"Nueva pestaña (subyacente)">
-
-<!ENTITY Ctr_tabtext		"Colores del texto y de la sombra del texto de pestañas">
-<!ENTITY Ctr_ctext			"Colores personalizados del texto">
-<!ENTITY Ctr_ctextsh		"Colores personalizados de la sombra del texto">
-<!ENTITY Ctr_topc			"color de arriba">
-<!ENTITY Ctr_bottomc		"color de abajo">
-<!ENTITY Ctr_textc			"color del texto">
-<!ENTITY Ctr_textsh			"color de la sombra del texto">
+<!ENTITY Ctr_topc			"arriba">
+<!ENTITY Ctr_bottomc		"abajo">
+<!ENTITY Ctr_textc			"texto">
+<!ENTITY Ctr_textsh			"sombra del texto">
 
 <!ENTITY Ctr_fixes			"Arreglos">
 <!ENTITY Ctr_tnotlfix 		"Color de texto negro para pestañas no-activas">
@@ -80,9 +91,8 @@
 <!ENTITY Ctr_bfurlbarfixt	"Es preciso que permanezca deshabilitada para que u ncódigo CSS personalizado pueda cambiar el radio del borde (border-radius) izquierdo. Fuera de ese uso, esta configuración es necesaria para que la opción 'botón atrás-adelante movible' cambie el borde izquierdo de la barra de URL para coincida con el radio del borde derecho del botón.">
 
 <!ENTITY Ctr_specialtw		"Ajustes especiales">
-<!ENTITY Ctr_alttbappb		"Iconos alternativos para la opción 'botón de la aplicación en la barra de herramientas'">
 <!ENTITY Ctr_paneluibtweak	"Apariencia del botón de la aplicación para el botón del panel UI (en la barra de pestañas)">
-<!ENTITY Ctr_appbuttxt		"Texto 'Firefox' para 'botón de la aplicación en la barra de pestañas'">
 <!ENTITY Ctr_notabfog		"Eliminar niebla de fondo de la barra de pestañas (Windows AeroGlass)">
 <!ENTITY Ctr_tabmokcolor	"Color blanco para texto y botones (cerrar, nuevo, grupos, listar todas) de pestañas">
 <!ENTITY Ctr_closeabarbut	"Ocultar botón cerrar de la barra de complementos">
+<!ENTITY Ctr_cuibotbuttons	"Los botones de opción en el modo de 'personalizar ui'">

@@ -6,11 +6,20 @@
 <!ENTITY Ctr_space			"Space">
 <!ENTITY Ctr_separator		"Separator">
 
+<!ENTITY Ctr_cuibuttons		"Buttons">
+<!ENTITY Ctr_cuibutnormal	"Normal">
+<!ENTITY Ctr_cuibutsmall	"Small">
+<!ENTITY Ctr_cuimode		"Mode">
+<!ENTITY Ctr_cuiico			"Icons">
+<!ENTITY Ctr_cuiicotxt		"Icons + Text">
+<!ENTITY Ctr_cuitxt			"Text">
+
 <!ENTITY Ctr_combrelstoptt	"[stop][reload] &gt;&gt; [stop-reload]">
+<!ENTITY Ctr_starbuttont1	"[urlbar][bookmarks button]">
+<!ENTITY Ctr_starbuttont2	"[star-button in urlbar]">
 
 <!ENTITY Ctr_main_t			"Main">
-<!ENTITY Ctr_tabcolors_t	"Tab colors">
-<!ENTITY Ctr_tabtext_t		"Tab text">
+<!ENTITY Ctr_tabcolors_t	"Custom colors">
 <!ENTITY Ctr_fixes_t		"Fixes">
 <!ENTITY Ctr_special_t		"Special">
 
@@ -41,6 +50,8 @@
 <!ENTITY Ctr_appbuttonI1	"restart recommended">
 <!ENTITY Ctr_appbuttonI2	"Only colored on titlebar">
 <!ENTITY Ctr_appbuttonI3	"and tabs toolbar!">
+<!ENTITY Ctr_alttbappb		"Alternative icons (if on toolbar)">
+<!ENTITY Ctr_appbuttxt		"'Firefox' label (if on tabs toolbar)">
 
 <!ENTITY Ctr_ui				"General UI">
 <!ENTITY Ctr_smallnavbut	"Small buttons on navigation toolbar">
@@ -48,30 +59,30 @@
 <!ENTITY Ctr_buttons		"Toolbar buttons">
 <!ENTITY Ctr_backforward	"Movable back-forward button">
 <!ENTITY Ctr_wincontrols	"Movable fullscreen window controls">
+<!ENTITY Ctr_starinurl		"Star button in urlbar">
 <!ENTITY Ctr_hideurelstop	"Hide urlbars stop &amp; reload buttons">
 <!ENTITY Ctr_combrelstop	"Combine stop &amp; reload buttons">
 <!ENTITY Ctr_findbar_def	"Findbar (default position)">
 <!ENTITY Ctr_findbar_top	"Findbar on top">
 <!ENTITY Ctr_findbar_bot	"Findbar at the bottom">
-<!ENTITY Ctr_nav_txt_ico0	"Show icons only">
-<!ENTITY Ctr_nav_txt_ico1	"Show icons and text">
-<!ENTITY Ctr_nav_txt_ico2	"Show text only">
+<!ENTITY Ctr_nav_txt_ico0	"Show icons only (default)">
+<!ENTITY Ctr_nav_txt_ico1	"Show large icons">
+<!ENTITY Ctr_nav_txt_ico2	"Show icons and text">
+<!ENTITY Ctr_nav_txt_ico3	"Show text only">
 
-<!ENTITY Ctr_customsqtab0	"Tabs">
-<!ENTITY Ctr_customsqtab1	"Custom colors">
+<!ENTITY Ctr_customsqtab0	"Custom tab colors">
+<!ENTITY Ctr_customsqtab1	"Background">
+<!ENTITY Ctr_ctext			"Text">
+<!ENTITY Ctr_ctextsh		"Text shadow">
 <!ENTITY Ctr_tabnor			"Tab (default)">
 <!ENTITY Ctr_tabhov			"Tab (hover)">
 <!ENTITY Ctr_tabact			"Tab (active)">
 <!ENTITY Ctr_ntabnor		"New tab (default)">
 <!ENTITY Ctr_ntabhov		"New tab (hover)">
-
-<!ENTITY Ctr_tabtext		"Tab text and shadow colors">
-<!ENTITY Ctr_ctext			"Custom text colors">
-<!ENTITY Ctr_ctextsh		"Custom text shadow colors">
-<!ENTITY Ctr_topc			"top color">
-<!ENTITY Ctr_bottomc		"bottom color">
-<!ENTITY Ctr_textc			"text color">
-<!ENTITY Ctr_textsh			"text shadow color">
+<!ENTITY Ctr_topc			"top">
+<!ENTITY Ctr_bottomc		"bottom">
+<!ENTITY Ctr_textc			"text">
+<!ENTITY Ctr_textsh			"text shadow">
 
 <!ENTITY Ctr_fixes			"Fixes">
 <!ENTITY Ctr_tnotlfix 		"Black text color on non-active tabs">
@@ -80,9 +91,8 @@
 <!ENTITY Ctr_bfurlbarfixt	"Needs to stay disabled for custom css code being able to change left border-radius. Otherwise this is needed for 'movable back-forward button' option to change urlbars left border to match right border radius.">
 
 <!ENTITY Ctr_specialtw		"Special tweaks">
-<!ENTITY Ctr_alttbappb		"Alternative icons for 'appbutton on toolbar' option">
 <!ENTITY Ctr_paneluibtweak	"Appbutton appearance for panel ui button (on tabs toolbar)">
-<!ENTITY Ctr_appbuttxt		"'Firefox' text for 'appbutton on tabs toolbar'">
 <!ENTITY Ctr_notabfog		"Remove tab toolbars background fog (Windows AeroGlass)">
 <!ENTITY Ctr_tabmokcolor	"White color for tab text and tab buttons (close, new, groups, list all)">
 <!ENTITY Ctr_closeabarbut	"Hide add-on bars close button">
+<!ENTITY Ctr_cuibotbuttons	"Option-buttons in 'customize ui' mode">

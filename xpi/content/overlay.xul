@@ -32,7 +32,23 @@
 	<keyset id="mainKeyset">
 	  <key id="key_toggleCtrAddonBar" command="Browser:ToggleCtrAddonBar" key="/" modifiers="accel"/>
 	</keyset>
-  
+ 
+	<!--### add new buttons to customizing area ###-->
+	<hbox id="customization-container">
+	  <vbox id="customization-palette-container">
+		<hbox pack="start" id="ctr_cuibuttonsbox">
+		  <label value="&Ctr_cuibuttons;" class="ctr_cuibutlabel"/>
+		  <button id="customization-smallnavbut-button1" oncommand="classicthemerestorerjs.settings.cuiPrefChangeBool('smallnavbut',false);" label="&Ctr_cuibutnormal;" class="customizationmode-button"/>
+		  <button id="customization-smallnavbut-button2" oncommand="classicthemerestorerjs.settings.cuiPrefChangeBool('smallnavbut',true);" label="&Ctr_cuibutsmall;" class="customizationmode-button"/>
+		  <spacer flex="1"/>
+		  <label value="&Ctr_cuimode;" class="ctr_cuibutlabel"/>
+		  <button id="customization-icons-button" oncommand="classicthemerestorerjs.settings.cuiPrefChangeString('nav_txt_ico', 'icons');" label="&Ctr_cuiico;" class="customizationmode-button"/>
+		  <button id="customization-iconstext-button" oncommand="classicthemerestorerjs.settings.cuiPrefChangeString('nav_txt_ico', 'iconstxt');" label="&Ctr_cuiicotxt;" class="customizationmode-button"/>
+		  <button id="customization-textonly-button" oncommand="classicthemerestorerjs.settings.cuiPrefChangeString('nav_txt_ico', 'txtonly');" label="&Ctr_cuitxt;" class="customizationmode-button"/>
+		</hbox>
+	  </vbox>
+	</hbox>
+
 	<!--### create new add-ons bar ###-->
 	<vbox id="browser-bottombox">
 		<toolbar id="ctr_addon-bar" customizable="true"
@@ -55,6 +71,13 @@
 					title="&Ctr_flexspace;"
 					customizableui-areatype="toolbar"
 					removable="true"/>
+		</toolbar>
+		<toolbar id="ctr_toolbar_dummy" customizable="false"
+				 collapsed="true"
+				 insertafter="PersonalToolbar"
+				 defaultset="PanelUI-menu-button">
+		  <!-- ### move PanelUI-menu-button dummy here to prevent glitches with CTRs movable button -->
+          <toolbarbutton id="PanelUI-menu-button" removable="false" collapsed="true"/>
 		</toolbar>
 	</vbox>
 	
@@ -455,7 +478,9 @@
 								label="&viewCustomizeToolbar.label;"/>
 					  <menuseparator/>
 					  <menuitem oncommand="window.open('chrome://classic_theme_restorer/content/options.xul','', 'chrome');"
-								label="Classic Theme Restorer"/>
+								label="Classic Theme Restorer"
+								class="menuitem-iconic"
+								id="appmenu_ctr"/>
 						  
 				  </menupopup>
 				</menu>
@@ -908,7 +933,9 @@
 								label="&viewCustomizeToolbar.label;"/>
 					  <menuseparator/>
 					  <menuitem oncommand="window.open('chrome://classic_theme_restorer/content/options.xul','', 'chrome');"
-								label="Classic Theme Restorer"/>
+								label="Classic Theme Restorer"
+								class="menuitem-iconic"
+								id="appmenu_ctr"/>
 				  </menupopup>
 				</menu>
 			</hbox>
@@ -1063,11 +1090,11 @@
 	  <toolbaritem id="ctr_panelui-button"
                    class="chromeclass-toolbar-additional"
                    removable="true"
-                   title="&appmenu.title;">
+                   title="&brandShortName;">
         <toolbarbutton id="PanelUI-menu-button"
                        class="toolbarbutton-1"
                        label="&brandShortName;"
-                       tooltiptext="&appmenu.title;"/>
+                       tooltiptext="&brandShortName;"/>
       </toolbaritem>
 
 	  
@@ -1138,130 +1165,10 @@
                        oncommand="BrowserTryToCloseWindow();"/>
       </toolbaritem>
 	  
-     
-	  <!-- creates flexible space items -->
-	  <toolbaritem id="ctr_flexible_space1"
-                   flex="1"
-				   class="ctr_flexspaces"
-                   title="&Ctr_flexspace;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-      
-	  <toolbaritem id="ctr_flexible_space2"
-                   flex="1"
-				   class="ctr_flexspaces"
-                   title="&Ctr_flexspace;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-      
-	  <toolbaritem id="ctr_flexible_space3"
-                   flex="1"
-				   class="ctr_flexspaces"
-                   title="&Ctr_flexspace;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-
-	  <toolbaritem id="ctr_flexible_space4"
-                   flex="1"
-				   class="ctr_flexspaces"
-                   title="&Ctr_flexspace;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-      
-	  <toolbaritem id="ctr_flexible_space5"
-                   class="ctr_flexspaces"
-				   flex="1"
-                   title="&Ctr_flexspace;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-				   
-	  <toolbaritem id="ctr_flexible_space6"
-                   flex="1"
-				   class="ctr_flexspaces"
-                   title="&Ctr_flexspace;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-      
-	  <toolbaritem id="ctr_flexible_space7"
-                   class="ctr_flexspaces"
-				   flex="1"
-                   title="&Ctr_flexspace;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-				   
-      <!-- creates space items -->
-	  <toolbaritem id="ctr_space1"
-                   class="ctr_spaces"
-                   title="&Ctr_space;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-      
-	  <toolbaritem id="ctr_space2"
-                   class="ctr_spaces"
-                   title="&Ctr_space;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-      
-	  <toolbaritem id="ctr_space3"
-                   class="ctr_spaces"
-                   title="&Ctr_space;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-
-	  <toolbaritem id="ctr_space4"
-                   class="ctr_spaces"
-                   title="&Ctr_space;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-      
-	  <toolbaritem id="ctr_space5"
-                   class="ctr_spaces"
-                   title="&Ctr_space;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-
-	  <toolbaritem id="ctr_space6"
-                   class="ctr_spaces"
-                   title="&Ctr_space;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-      
-	  <toolbaritem id="ctr_space7"
-                   class="ctr_spaces"
-                   title="&Ctr_space;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-				   
-	  <!-- creates separator items -->
-	  <toolbaritem id="ctr_separator1"
-                   class="ctr_separators"
-                   title="&Ctr_separator;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-				   
-	  <toolbaritem id="ctr_separator2"
-                   class="ctr_separators"
-                   title="&Ctr_separator;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-
-	  <toolbaritem id="ctr_separator3"
-                   class="ctr_separators"
-                   title="&Ctr_separator;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-				   
-	  <toolbaritem id="ctr_separator4"
-				   class="ctr_separators"
-                   title="&Ctr_separator;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-				   
-	  <toolbaritem id="ctr_separator5"
-                   class="ctr_separators"
-                   title="&Ctr_separator;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
+	  <!-- restores spaces, flexible spaces and separators -->
+      <toolbarspring 	id="spring"		class="ctr_flexspaces"	label="&Ctr_flexspace;"	customizableui-areatype="toolbar" removable="true" flex="1"/>
+      <toolbarspacer 	id="spacer"		class="ctr_spaces"		label="&Ctr_space;"		customizableui-areatype="toolbar" removable="true"/>
+      <toolbarseparator id="separator"	class="ctr_separators"	label="&Ctr_separator;"	customizableui-areatype="toolbar" removable="true"/>
   
 	</toolbarpalette>
 

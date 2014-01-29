@@ -13,12 +13,10 @@
 	
 	.tabbrowser-tab:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
 	  background-image: linear-gradient(transparent,transparent) !important;
-
 	}
 	
 	.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {
 	  background-image: linear-gradient(transparent,transparent) !important;
-
 	}
 	
 	.tabs-newtab-button:not(:-moz-lwtheme) {

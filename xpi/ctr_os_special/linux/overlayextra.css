@@ -47,6 +47,13 @@
 	  -moz-appearance: none !important;
 	}
 	
+	#TabsToolbar #ctr_appbutton:hover image{
+	  -moz-appearance: none !important;
+	  background: none !important;
+	  border-color: transparent !important;
+	  box-shadow: none !important;
+	}
+	
 	#TabsToolbar #ctr_appbutton #ctr_appbuttonPopup{
 	  margin-top:-3px;
 	}

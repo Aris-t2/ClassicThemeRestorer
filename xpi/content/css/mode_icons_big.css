@@ -1,0 +1,198 @@
+@import url(chrome://ctr_os_special/skin/mode_icons_big_extra.css);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#nav-bar :-moz-any(#home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #switch-to-metro-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button)[cui-areatype="toolbar"] {
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	}
+	
+	#nav-bar #ctr_back-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel3.png) !important;
+	}
+	
+	#nav-bar #ctr_forward-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel3.png) !important;
+	}
+
+	#nav-bar #home-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 128px, 32px, 96px) !important;
+	}
+	
+	#nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 160px, 32px, 128px) !important;
+	}
+
+	#nav-bar #bookmarks-menu-button[starred][cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 192px, 32px, 160px) !important;
+	}
+
+	#nav-bar #history-panelmenu[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 224px, 32px, 192px) !important;
+	}
+
+	#nav-bar #downloads-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 256px, 32px, 224px) !important;
+	}
+
+	#nav-bar #downloads-indicator-icon {
+	  width:32px !important;
+	  height:32px !important;
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/menuPanel.png"),
+					0, 256, 32, 224) center no-repeat !important;
+	}
+
+	#nav-bar #add-ons-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 288px, 32px, 256px) !important;
+	}
+
+	#nav-bar #open-file-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 320px, 32px, 288px) !important;
+	}
+
+	#nav-bar #save-page-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 352px, 32px, 320px) !important;
+	}
+
+	#nav-bar #sync-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 384px, 32px, 352px) !important;
+	}
+
+	#nav-bar #feed-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 416px, 32px, 384px) !important;
+	}
+
+	#nav-bar #social-share-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 448px, 32px, 416px) !important;
+	}
+
+	#nav-bar #email-link-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 448px, 32px, 416px) !important;
+	}
+
+	#nav-bar #email-link-button[cui-areatype="toolbar"] > image {
+	  transform: scale(-1, -1) !important;
+	}
+
+	#nav-bar #characterencoding-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 480px, 32px, 448px) !important;
+	}
+
+	#nav-bar #new-window-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 512px, 32px, 480px) !important;
+	}
+
+	#nav-bar #new-tab-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 544px, 32px, 512px) !important;
+	}
+
+	#nav-bar #privatebrowsing-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 576px, 32px, 544px) !important;
+	}
+
+	#nav-bar #find-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 640px, 32px, 608px) !important;
+	}
+
+	#nav-bar #print-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 672px, 32px, 640px) !important;
+	}
+
+	#nav-bar #fullscreen-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 704px, 32px, 672px) !important;
+	}
+
+	#nav-bar #developer-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 736px, 32px, 704px) !important;
+	}
+
+	#nav-bar #preferences-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 768px, 32px, 736px) !important;
+	}
+
+	#nav-bar #switch-to-metro-button[cui-areatype="toolbar"] {
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/Metro_Glyph-menuPanel.png) !important;
+	}
+	
+	#nav-bar #ctr_appbutton > .toolbarbutton-icon{
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/appbutton_menuPanel.png) !important;
+	}
+	
+	#nav-bar #PanelUI-menu-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
+	  -moz-image-region: rect(0px, 32px, 32px, 0px) !important;
+	}
+
+	#nav-bar #cut-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
+	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
+	}
+
+	#nav-bar #copy-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
+	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
+	}
+
+	#nav-bar #paste-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
+	  -moz-image-region: rect(0px, 128px, 32px, 96px) !important;
+	}
+
+	#nav-bar #zoom-out-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
+	  -moz-image-region: rect(0px, 160px, 32px, 128px) !important;
+	}
+
+	#nav-bar #zoom-in-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
+	  -moz-image-region: rect(0px, 192px, 32px, 160px) !important;
+	}
+
+	#webrtc-status-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
+	  -moz-image-region: rect(0px, 224px, 32px, 192px) !important;
+	}
+
+	#nav-bar-overflow-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
+	  -moz-image-region: rect(0px, 256px, 32px, 224px) !important;
+	}
+
+	#bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
+	  -moz-image-region: rect(0px, 286px, 32px, 256px) !important;
+	}
+
+	/* fixes bug with tabview buttons wrong panel icon */
+	#nav-bar #tabview-button[cui-areatype="toolbar"],
+	#tabview-button[cui-areatype="menu-panel"],
+	toolbarpaletteitem[place="palette"] > #tabview-button {
+	  -moz-image-region: rect(0px, 608px, 32px, 576px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	}
+
+	/* extra buttons from CTR add-on*/
+	#nav-bar #ctr_stop-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	}
+
+	#nav-bar #ctr_reload-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	}
+
+	#nav-bar #ctr_history-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 224px, 32px, 192px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	}
+	/* star icon instead of old bookmarks icon */
+	#nav-bar #ctr_bookmarks-button > .toolbarbutton-icon,
+	#nav-bar #ctr_bookmarks-menu-toolbar-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 160px, 32px, 128px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	}
+
+}

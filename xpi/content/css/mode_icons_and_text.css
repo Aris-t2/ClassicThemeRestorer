@@ -43,7 +43,7 @@
     :-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) {
        border: 1px solid transparent !important;
     }
-	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]):hover,
+	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not(#bookmarks-menu-button):not([disabled]):hover,
 	#ctr_comb_stopreload-button #urlbar-reload-button:not([disabled]):hover,
 	#ctr_comb_stopreload-button #urlbar-stop-button:not([disabled]):hover {
 	  border: 1px solid !important;
@@ -54,8 +54,39 @@
                   0 0 2px hsla(210,54%,20%,.1) !important;
 	}
 	
+	toolbar #bookmarks-menu-button:hover {
+	  border: 1px solid !important;
+      background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.1)) !important;
+      border-color: hsla(210,54%,20%,.15) hsla(210,54%,20%,.2) hsla(210,54%,20%,.25) !important;
+      box-shadow: 0 1px hsla(0,0%,100%,.3) inset,
+                  0 1px hsla(210,54%,20%,.03),
+                  0 0 2px hsla(210,54%,20%,.1) !important;
+	}
+	
+	/* CTRs star-button in urlbar support */
+	#main-window toolbar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing]) #bookmarks-menu-button .toolbarbutton-text {
+	  display: none !important;
+	  visibility: collapse !important;
+	}
+	#main-window toolbar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing]) #bookmarks-menu-button {
+	  -moz-box-orient: horizontal !important;
+	}
+	#main-window toolbar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing]) #bookmarks-menu-button {
+      min-width: 0px !important;
+      width: 32px !important;
+	}
+	
+	#main-window toolbar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing]) #bookmarks-menu-button:hover {	
+	  border: 1px solid transparent !important;
+      background-image: linear-gradient(hsla(0,0%,100%,.0), hsla(0,0%,100%,.0)) !important;
+      border-color: hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) !important;
+      box-shadow: none !important;
+	  padding:0 !important;
+	}
+	  
+	/* CTR add-on bar*/
 	#ctr_addon-bar .toolbarbutton-menubutton-button{
-	 min-width:60px !important;
+	  min-width:60px !important;
 	}
 
 	#ctr_addon-bar toolbarbutton[type=menu] {
@@ -78,26 +109,38 @@
 	  clip-path: none !important;
 	}
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
-	  margin-left: 0px !important;
 	  transition: none !important;
 	  transition-property: none !important;
 	  transition-delay: 0s !important;
 	}
-    #urlbar {
+	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr) {
+	  margin-left: 0px !important;
+	}
+	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
+	  margin-right: 24px !important;
+	}
+	
+    #urlbar:-moz-locale-dir(ltr) {
       border-left:1px solid #b4c1cf !important;
     }
-    #urlbar[focused="true"] {
+    #urlbar[focused="true"]:-moz-locale-dir(ltr) {
       border-left:1px solid #72c0fe !important;
+    }
+    #urlbar:-moz-locale-dir(rtl) {
+      border-right:1px solid #b4c1cf !important;
+    }
+    #urlbar[focused="true"]:-moz-locale-dir(rtl) {
+      border-right:1px solid #72c0fe !important;
     }
 	
 	#ctr_addon-bar #zoom-reset-button{
 	  padding-top:8px !important;
 	}
 	
-	/* support for star button in urlbar */
+	/* support for star button in urlbar addon */
 	#nav-bar #urlbar-container #bookmarks-menu-button .toolbarbutton-text {
 	  display: none !important;
-	visibility: collapse !important;
+	  visibility: collapse !important;
 	}
 	#nav-bar #urlbar-container #bookmarks-menu-button {
 	  -moz-box-orient: horizontal !important;
@@ -114,6 +157,11 @@
 	}
 	#nav-bar #urlbar-container #bookmarks-menu-button .toolbarbutton-icon {
 	  margin: -8px -4px !important;
+	}
+	
+	#ctr_back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
+	#ctr_forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon{
+	  transform: scaleX(-1);
 	}
     
 }

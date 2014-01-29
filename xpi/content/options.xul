@@ -7,6 +7,7 @@
 	id="ClassicTRoptions"
 	title="&Ctr_title;"
     type="prefwindow"
+	onunload="classicthemerestorerjs.settings.loadUnloadCSS('cui_buttons',true)"
 	buttons="accept"
 	autosize="true"
 	resizable="yes"
@@ -24,11 +25,14 @@
 		
 		<preference id="ctr_appbutton"		name="extensions.classicthemerestorer.appbutton" 	type="string"	instantApply="true"/>
 		<preference id="ctr_appbuttonc"		name="extensions.classicthemerestorer.appbuttonc" 	type="string"	instantApply="true"/>
+		<preference id="ctr_alttbappb"		name="extensions.classicthemerestorer.alttbappb" 	type="bool"		instantApply="true"/>
+		<preference id="ctr_appbuttxt"		name="extensions.classicthemerestorer.appbuttxt" 	type="bool"		instantApply="true"/>
 		
 		<preference id="ctr_smallnavbut"	name="extensions.classicthemerestorer.smallnavbut"	type="bool"		instantApply="true"/>
 		<preference id="ctr_hidenavbar"		name="extensions.classicthemerestorer.hidenavbar"	type="bool"		instantApply="true"/>
 		<preference id="ctr_backforward"	name="extensions.classicthemerestorer.backforward"	type="bool"		instantApply="true"/>
 		<preference id="ctr_wincontrols"	name="extensions.classicthemerestorer.wincontrols"	type="bool"		instantApply="true"/>
+		<preference id="ctr_starinurl"		name="extensions.classicthemerestorer.starinurl"	type="bool"		instantApply="true"/>
 		<preference id="ctr_hideurelstop"	name="extensions.classicthemerestorer.hideurelstop"	type="bool"		instantApply="true"/>
 		<preference id="ctr_combrelstop"	name="extensions.classicthemerestorer.combrelstop"	type="bool"		instantApply="true"/>
 		<preference id="ctr_findbar"		name="extensions.classicthemerestorer.findbar"		type="string"	instantApply="true"/>
@@ -37,12 +41,11 @@
 		<preference id="ctr_tnotlfix"		name="extensions.classicthemerestorer.tnotlfix"		type="bool"		instantApply="true"/>
 		<preference id="ctr_bfurlbarfix"	name="extensions.classicthemerestorer.bfurlbarfix"	type="bool"		instantApply="true"/>
 
-		<preference id="ctr_alttbappb"		name="extensions.classicthemerestorer.alttbappb" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_paneluibtweak"	name="extensions.classicthemerestorer.paneluibtweak" type="bool"	instantApply="true"/>
-		<preference id="ctr_appbuttxt"		name="extensions.classicthemerestorer.appbuttxt" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_notabfog"		name="extensions.classicthemerestorer.notabfog" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_tabmokcolor"	name="extensions.classicthemerestorer.tabmokcolor" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_closeabarbut"	name="extensions.classicthemerestorer.closeabarbut" type="bool"		instantApply="true"/>
+		<preference id="ctr_cuibuttons"		name="extensions.classicthemerestorer.cuibuttons"	type="bool"		instantApply="true"/>
 
 		<preference id="ctr_customsqtab"	name="extensions.classicthemerestorer.customsqtab"	type="bool"		instantApply="true"/>
 		<preference id="ctr_ctab1"			name="extensions.classicthemerestorer.ctab1"		type="string"	instantApply="true"/>
@@ -71,27 +74,39 @@
 
 	<tooltip id="combrelstop">
 	  <hbox>
-		<spacer flex="1"/>
-		<image src="chrome://classic_theme_restorer/content/images/stopreload.png"/>
-		<spacer flex="1"/>
-	  </hbox>
-	  <hbox>
 	    <spacer flex="1"/>
 	    <label value="&Ctr_combrelstoptt;"/>
 		<spacer flex="1"/>
 	  </hbox>
 	  <hbox>
 		<spacer flex="1"/>
-		<image src="chrome://classic_theme_restorer/content/images/stopreload2.png"/>
+		<image src="chrome://classic_theme_restorer/content/images/stopreload.png"/>
 		<spacer flex="1"/>
 	  </hbox>
 	</tooltip>
-	
+
+	<tooltip id="starbuttoninfo">
+	  <hbox>
+	    <spacer flex="1"/>
+	    <label value="&Ctr_starbuttont1;"/>
+		<spacer flex="1"/>
+	  </hbox>
+	  <hbox>
+		<spacer flex="1"/>
+		<image src="chrome://classic_theme_restorer/content/images/starbuttoninfo.png"/>
+		<spacer flex="1"/>
+	  </hbox>
+	  <hbox>
+	    <spacer flex="1"/>
+	    <label value="&Ctr_starbuttont2;"/>
+		<spacer flex="1"/>
+	  </hbox>
+	</tooltip>
+
 	<tabbox>
 		<tabs>
 			<tab label="&Ctr_main_t;"/>
 			<tab label="&Ctr_tabcolors_t;" id="ctr_sqtabcolorstab"/>
-			<tab label="&Ctr_tabtext_t;"/>
 			<tab label="&Ctr_fixes_t;"/>
 			<tab label="&Ctr_special_t;"/>
 		</tabs>
@@ -158,6 +173,8 @@
 						<label value="&Ctr_appbuttonI3;" class="ctb_font1"/>
 					</menupopup>
 				</menulist>
+				<checkbox label="&Ctr_alttbappb;" preference="ctr_alttbappb" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('alttbappb',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('alttbappb',false);}"/>
+				<checkbox label="&Ctr_appbuttxt;" preference="ctr_appbuttxt" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('appbuttxt',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('appbuttxt',false);}"/>
 			  </groupbox>
 
 			</vbox>
@@ -170,6 +187,7 @@
 				<checkbox label="&Ctr_hidenavbar;"	preference="ctr_hidenavbar"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('hidenavbar',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('hidenavbar',false);}"/>
 				<checkbox label="&Ctr_backforward;"	preference="ctr_backforward" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('backforward',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('backforward',false);}"/>
 				<checkbox label="&Ctr_wincontrols;"	preference="ctr_wincontrols" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('wincontrols',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('wincontrols',false);}" id="ctr_wincontrols"/>
+				<checkbox label="&Ctr_starinurl;"	preference="ctr_starinurl"	 oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('starinurl',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('starinurl',false);}" onmouseover="document.getElementById('starbuttoninfo').openPopup();" onmouseout="document.getElementById('starbuttoninfo').hidePopup();"/>
 				<checkbox label="&Ctr_hideurelstop;" preference="ctr_hideurelstop" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('hideurelstop',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('hideurelstop',false);}"/>
 				<checkbox label="&Ctr_combrelstop;" preference="ctr_combrelstop" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('combrelstop',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('combrelstop',false);}" onmouseover="document.getElementById('combrelstop').openPopup();" onmouseout="document.getElementById('combrelstop').hidePopup();"/>
 				
@@ -184,9 +202,10 @@
 				<menulist preference="ctr_nav_txt_ico">
 					<menupopup>
 						<menuitem value="icons"		label="&Ctr_nav_txt_ico0;" oncommand="classicthemerestorerjs.settings.prefChangeString('nav_txt_ico', 'icons');"/>
-						<menuitem value="iconstxt"	label="&Ctr_nav_txt_ico1;" oncommand="classicthemerestorerjs.settings.prefChangeString('nav_txt_ico', 'iconstxt');"/>
-						<menuitem value="iconstxt2"	label="&Ctr_nav_txt_ico1; v2" oncommand="classicthemerestorerjs.settings.prefChangeString('nav_txt_ico', 'iconstxt2');"/>
-						<menuitem value="txtonly"	label="&Ctr_nav_txt_ico2;" oncommand="classicthemerestorerjs.settings.prefChangeString('nav_txt_ico', 'txtonly');"/>
+						<menuitem value="iconsbig"	label="&Ctr_nav_txt_ico1;" oncommand="classicthemerestorerjs.settings.prefChangeString('nav_txt_ico', 'iconsbig');"/>
+						<menuitem value="iconstxt"	label="&Ctr_nav_txt_ico2;" oncommand="classicthemerestorerjs.settings.prefChangeString('nav_txt_ico', 'iconstxt');"/>
+						<menuitem value="iconstxt2"	label="&Ctr_nav_txt_ico2; v2" oncommand="classicthemerestorerjs.settings.prefChangeString('nav_txt_ico', 'iconstxt2');"/>
+						<menuitem value="txtonly"	label="&Ctr_nav_txt_ico3;" oncommand="classicthemerestorerjs.settings.prefChangeString('nav_txt_ico', 'txtonly');"/>
 					</menupopup>
 				</menulist>
 
@@ -204,31 +223,47 @@
 			<vbox flex="1">
 			  <groupbox flex="1">
 				  <caption  label="&Ctr_customsqtab0;" class="ctb_topic"/>
-				  <checkbox label="&Ctr_customsqtab1;" preference="ctr_customsqtab" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('customsqtab',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('customsqtab',false);}"/>
+				  <hbox>
+					<checkbox label="&Ctr_customsqtab1;"	preference="ctr_customsqtab" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('customsqtab',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('customsqtab',false);}" id="ctr_customsqtab_cb"/>
+				  	<checkbox label="&Ctr_ctext;"			preference="ctr_tabtextc" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('tabtextc',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('tabtextc',false);}"/>
+					<checkbox label="&Ctr_ctextsh;"			preference="ctr_tabtextsh" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('tabtextsh',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('tabtextsh',false);}"/>
+				  </hbox>
 				  <label value=" "/>
-				  <hbox id="tabcolorbox">
+				  <hbox>
 					<label value="&Ctr_tabnor;" class="ctr_tabcolorlabel"/>
 					<spacer flex="1" />
-					<colorpicker preference="ctr_ctab1" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctab1')"/>
-					<label value="&Ctr_topc;"/>
-					<colorpicker preference="ctr_ctab2" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctab2')"/>
-					<label value="&Ctr_bottomc;"/>
+					<colorpicker preference="ctr_ctab1" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctab1')" class="tabcolorbox"/>
+					<label value="&Ctr_topc;"		class="tabcolorbox"/>
+					<colorpicker preference="ctr_ctab2" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctab2')" class="tabcolorbox"/>
+					<label value="&Ctr_bottomc;"	class="tabcolorbox"/>
+					<colorpicker preference="ctr_ctabt" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabt')"/>
+					<label value="&Ctr_textc;"/>
+					<colorpicker preference="ctr_ctabtsh"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabtsh')"/>
+					<label value="&Ctr_textsh;"/>
 				  </hbox>
-				  <hbox id="tabhovcolorbox">
+				  <hbox>
 					<label value="&Ctr_tabhov;" class="ctr_tabcolorlabel"/>
 					<spacer flex="1" />
-					<colorpicker preference="ctr_ctabhov1"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhov1')"/>
-					<label value="&Ctr_topc;"/>
-					<colorpicker preference="ctr_ctabhov2"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhov2')"/>
-					<label value="&Ctr_bottomc;"/>
+					<colorpicker preference="ctr_ctabhov1"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhov1')" class="tabhovcolorbox"/>
+					<label value="&Ctr_topc;"		class="tabhovcolorbox"/>
+					<colorpicker preference="ctr_ctabhov2"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhov2')" class="tabhovcolorbox"/>
+					<label value="&Ctr_bottomc;"	class="tabhovcolorbox"/>
+					<colorpicker preference="ctr_ctabhovt" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhovt')"/>
+					<label value="&Ctr_textc;"/>
+					<colorpicker preference="ctr_ctabhovtsh" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhovtsh')"/>
+					<label value="&Ctr_textsh;"/>
 				  </hbox>
-				  <hbox id="tabactcolorbox">
+				  <hbox>
 					<label value="&Ctr_tabact;" class="ctr_tabcolorlabel"/>
 					<spacer flex="1" />
-					<colorpicker preference="ctr_ctabact1"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabact1')"/>
-					<label value="&Ctr_topc;"/>
-					<colorpicker preference="ctr_ctabact2"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabact2')"/>
-					<label value="&Ctr_bottomc;"/>
+					<colorpicker preference="ctr_ctabact1"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabact1')" class="tabactcolorbox"/>
+					<label value="&Ctr_topc;"		class="tabactcolorbox"/>
+					<colorpicker preference="ctr_ctabact2"	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabact2')" class="tabactcolorbox"/>
+					<label value="&Ctr_bottomc;"	class="tabactcolorbox"/>
+					<colorpicker preference="ctr_ctabactt" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabactt')"/>
+					<label value="&Ctr_textc;"/>
+					<colorpicker preference="ctr_ctabacttsh" type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabacttsh')"/>
+					<label value="&Ctr_textsh;"/>
 				  </hbox>
 				  <label value=" "/>
 				  <hbox id="ntabcolorbox">
@@ -263,45 +298,6 @@
 		</tabpanel>
 		
 		<tabpanel>
-		
-			<vbox flex="1">
-			  <groupbox flex="1">
-				  <caption  label="&Ctr_tabtext;" class="ctb_topic"/>
-				  <hbox>
-					<checkbox label="&Ctr_ctext;" preference="ctr_tabtextc" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('tabtextc',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('tabtextc',false);}"/>
-					<checkbox label="&Ctr_ctextsh;" preference="ctr_tabtextsh" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('tabtextsh',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('tabtextsh',false);}"/>
-				  </hbox>
-				  <label value=" "/>
-			    <hbox>
-					<label value="&Ctr_tabnor;" class="ctr_tabcolorlabel"/>
-					<spacer flex="1" />
-					<colorpicker preference="ctr_ctabt" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabt')"/>
-					<label value="&Ctr_textc;"/>
-					<colorpicker preference="ctr_ctabtsh"		type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabtsh')"/>
-					<label value="&Ctr_textsh;"/>
-				</hbox>
-			    <hbox>
-					<label value="&Ctr_tabhov;" class="ctr_tabcolorlabel"/>
-					<spacer flex="1" />
-					<colorpicker preference="ctr_ctabhovt" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhovt')"/>
-					<label value="&Ctr_textc;"/>
-					<colorpicker preference="ctr_ctabhovtsh" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabhovtsh')"/>
-					<label value="&Ctr_textsh;"/>
-				</hbox>
-			    <hbox>
-					<label value="&Ctr_tabact;" class="ctr_tabcolorlabel"/>
-					<spacer flex="1" />
-					<colorpicker preference="ctr_ctabactt" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabactt')"/>
-					<label value="&Ctr_textc;"/>
-					<colorpicker preference="ctr_ctabacttsh" 	type="button" onchange="classicthemerestorerjs.settings.colorChange(this.color,'ctabacttsh')"/>
-					<label value="&Ctr_textsh;"/>
-				</hbox>
-			  </groupbox>
-			</vbox>
-	
-		</tabpanel>
-		
-		<tabpanel>
 
 			<vbox flex="1">
 			  <groupbox>
@@ -322,16 +318,15 @@
 
 			<vbox flex="1">
 			  <groupbox>
-				<caption label="&Ctr_specialtw; - &Ctr_appbutton;" class="ctb_topic"/>
-				<checkbox label="&Ctr_alttbappb;" preference="ctr_alttbappb" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('alttbappb',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('alttbappb',false);}"/>
-				<checkbox label="&Ctr_paneluibtweak;" preference="ctr_paneluibtweak" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',false);}"/>
-				<checkbox label="&Ctr_appbuttxt;" preference="ctr_appbuttxt" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('appbuttxt',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('appbuttxt',false);}"/>
+				<caption  label="&Ctr_specialtw; - &Ctr_appbutton;" class="ctb_topic"/>
+				<checkbox label="&Ctr_paneluibtweak;"	preference="ctr_paneluibtweak"	oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('paneluibtweak',false);}"/>
 			  </groupbox>
 			  <groupbox>
-				<caption label="&Ctr_specialtw;" class="ctb_topic"/>
-				<checkbox label="&Ctr_notabfog;" preference="ctr_notabfog" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('notabfog',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('notabfog',false);}" class="ctr_windowsonly"/>
-				<checkbox label="&Ctr_tabmokcolor;" preference="ctr_tabmokcolor" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('tabmokcolor',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('tabmokcolor',false);}" class="ctr_winmaconly"/>
-				<checkbox label="&Ctr_closeabarbut;" preference="ctr_closeabarbut" oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('closeabarbut',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('closeabarbut',false);}"/>
+				<caption  label="&Ctr_specialtw;" class="ctb_topic"/>
+				<checkbox label="&Ctr_notabfog;"		preference="ctr_notabfog"		oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('notabfog',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('notabfog',false);}" class="ctr_windowsonly"/>
+				<checkbox label="&Ctr_tabmokcolor;"		preference="ctr_tabmokcolor"	oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('tabmokcolor',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('tabmokcolor',false);}" class="ctr_winmaconly"/>
+				<checkbox label="&Ctr_closeabarbut;"	preference="ctr_closeabarbut"	oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('closeabarbut',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('closeabarbut',false);}"/>
+				<checkbox label="&Ctr_cuibotbuttons;"	preference="ctr_cuibuttons"		oncommand="if(this.checked) {classicthemerestorerjs.settings.loadUnloadCSS('cuibuttons',true);} else {classicthemerestorerjs.settings.loadUnloadCSS('cuibuttons',false);}"/>
 			  </groupbox>
 			</vbox>
 

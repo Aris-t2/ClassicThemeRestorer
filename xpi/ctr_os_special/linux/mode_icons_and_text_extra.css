@@ -25,9 +25,13 @@
 	  margin: 1px 0 !important;
 	}
 
-	#navigator-toolbox #nav-bar #urlbar-container{
+	#navigator-toolbox #nav-bar #urlbar-container:-moz-locale-dir(ltr){
 	  margin-left: 4px !important;
 	}
+	#navigator-toolbox #nav-bar #urlbar-container:-moz-locale-dir(rtl){
+	  margin-right: 4px !important;
+	}
+	
 	#navigator-toolbox #nav-bar #urlbar{
 	  border-radius: 3px !important;
 	}

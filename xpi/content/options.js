@@ -8,10 +8,12 @@ classicthemerestorerjs.settings = {
   ctabsheet: Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   tabtxtcsheet: Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   tabtxtshsheet: Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-
+  
+  cuiButtonssheet: Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  
   /* init css on startup, if corresponding settings are enabled */
   init: function() {
-
+  
 	if (this.prefs.getCharPref("tabs")!="tabs_default"){
 		this.loadUnloadCSS(this.prefs.getCharPref("tabs"),true);
 	}
@@ -33,26 +35,36 @@ classicthemerestorerjs.settings = {
 
 	if (this.prefs.getBoolPref("tabsotoff"))		{ this.loadUnloadCSS("tabsotoff",true); }
 	
+	if (this.prefs.getBoolPref("alttbappb"))		{ this.loadUnloadCSS("alttbappb",true); }
+	if (this.prefs.getBoolPref("appbuttxt"))		{ this.loadUnloadCSS("appbuttxt",true); }
+	
 	if (this.prefs.getBoolPref("smallnavbut"))		{ this.loadUnloadCSS("smallnavbut",true); }
 	if (this.prefs.getBoolPref("hidenavbar"))		{ this.loadUnloadCSS("hidenavbar",true); }
 	if (this.prefs.getBoolPref("backforward"))		{ this.loadUnloadCSS("backforward",true); }
 	if (this.prefs.getBoolPref("wincontrols"))		{ this.loadUnloadCSS("wincontrols",true); }
+	if (this.prefs.getBoolPref("starinurl"))		{ this.loadUnloadCSS("starinurl",true); }
 	if (this.prefs.getBoolPref("hideurelstop"))		{ this.loadUnloadCSS("hideurelstop",true); }
 	if (this.prefs.getBoolPref("combrelstop"))		{ this.loadUnloadCSS("combrelstop",true); }
 
 	if (this.prefs.getBoolPref("tnotlfix"))			{ this.loadUnloadCSS("tnotlfix",true); }
 	if (this.prefs.getBoolPref("bfurlbarfix"))		{ this.loadUnloadCSS("bfurlbarfix",true); }
 	
-	if (this.prefs.getBoolPref("alttbappb"))		{ this.loadUnloadCSS("alttbappb",true); }
 	if (this.prefs.getBoolPref("paneluibtweak"))	{ this.loadUnloadCSS("paneluibtweak",true); }
-	if (this.prefs.getBoolPref("appbuttxt"))		{ this.loadUnloadCSS("appbuttxt",true); }
 	if (this.prefs.getBoolPref("notabfog"))			{ this.loadUnloadCSS("notabfog",true); }
 	if (this.prefs.getBoolPref("tabmokcolor"))		{ this.loadUnloadCSS("tabmokcolor",true); }
 	if (this.prefs.getBoolPref("closeabarbut"))		{ this.loadUnloadCSS("closeabarbut",true); }
+	if (this.prefs.getBoolPref("cuibuttons"))		{ this.loadUnloadCSS("cuibuttons",true); }
 	
 	if (this.prefs.getBoolPref("customsqtab"))		{ this.loadUnloadCSS("customsqtab",true); }
 	if (this.prefs.getBoolPref("tabtextc"))			{ this.loadUnloadCSS("tabtextc",true); }
 	if (this.prefs.getBoolPref("tabtextsh"))		{ this.loadUnloadCSS("tabtextsh",true); }
+	
+	this.loadUnloadCSS('cui_buttons',true);
+	
+    /* extra check to not style spaces and separators while thePuzzlePiece add-on is enabled*/
+	if (Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.").getCharPref("bootstrappedAddons").indexOf("thePuzzlePiece")==-1) {
+	  this.loadUnloadCSS("spaces_extra",true);
+	}
 
   },
   
@@ -119,8 +131,6 @@ classicthemerestorerjs.settings = {
 		
 		case "tabs_curved":
 		
-			//manageCSS("tabs_curved.css");
-			
 			var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;
 			
 			// different appearance for 'tabs not on top' on MacOSX
@@ -213,6 +223,9 @@ classicthemerestorerjs.settings = {
 			} catch(e){}
 			
 			manageCSS("smallnavbut.css");
+			
+			this.loadUnloadCSS('cui_buttons',true);
+
 		break;
 		
 		case "findbar_top": 		manageCSS("findbar_top.css");  			break;
@@ -234,6 +247,7 @@ classicthemerestorerjs.settings = {
 				enable=false;
 			}
 			manageCSS("mode_icons_and_text.css");
+			this.loadUnloadCSS('cui_buttons',true);
 		break;
 		
 		// no 'small button' mode, if 'icons + text' mode is used
@@ -249,9 +263,11 @@ classicthemerestorerjs.settings = {
 				enable=false;
 			}
 			manageCSS("mode_icons_and_text2.css");
+
 		break;
 		
 		case "txtonly":				manageCSS("mode_txtonly.css");			break;
+		case "iconsbig":			manageCSS("mode_icons_big.css");		break;
 		
 		case "appbuttonc_orange":	manageCSS("appbutton_orange.css");		break;
 		case "appbuttonc_aurora":	manageCSS("appbutton_aurora.css");		break;
@@ -261,22 +277,54 @@ classicthemerestorerjs.settings = {
 		case "appbuttonc_red":		manageCSS("appbutton_red.css");			break;
 		case "appbuttonc_green":	manageCSS("appbutton_green.css");		break;
 		case "appbuttonc_gray":		manageCSS("appbutton_gray.css");		break;
+
+		case "alttbappb": 			manageCSS("alt_appbutton_icons.css");	break;
+		case "appbuttxt": 			manageCSS("appbuttxt.css");				break;
 		
 		case "hidenavbar": 			manageCSS("hidenavbar.css");  			break;
 		case "backforward": 		manageCSS("back-forward.css");			break;
 		case "wincontrols": 		manageCSS("windowcontrols.css");		break;
-		case "hideurelstop":		manageCSS("hideurlbarrelstop.css");		break;
+		
+		case "starinurl":
+			
+			manageCSS("starinurl.css");
+			
+			if(enable==true && this.prefs.getBoolPref("hideurelstop")==true){
+				manageCSS("hideurlbarrelstop2.css");
+			}
+			
+			if(enable==false){
+				manageCSS("hideurlbarrelstop2.css");
+			}
+			
+		break;
+		
+		case "hideurelstop":
+		
+			manageCSS("hideurlbarrelstop.css");
+			
+			if(enable==true && this.prefs.getBoolPref("starinurl")==true){
+				manageCSS("hideurlbarrelstop2.css");
+			}
+			
+			if(enable==false){
+				manageCSS("hideurlbarrelstop2.css");
+			}
+		
+		break;
+		
 		case "combrelstop":			manageCSS("combrelstop.css");			break;
 		
 		case "tnotlfix": 			manageCSS("tabsontop_off_lfix.css");	break;
 		case "bfurlbarfix": 		manageCSS("bf_urlbarfix.css");			break;
 		
-		case "alttbappb": 			manageCSS("alt_appbutton_icons.css");	break;
 		case "paneluibtweak": 		manageCSS("paneluibutton_tweak.css");	break;
-		case "appbuttxt": 			manageCSS("appbuttxt.css");				break;
 		case "notabfog": 			manageCSS("notabfog.css");				break;
 		case "tabmokcolor": 		manageCSS("tabmokcolor.css");			break;
 		case "closeabarbut": 		manageCSS("closeabarbut.css");			break;
+		case "cuibuttons": 			manageCSS("cuibuttons.css");			break;
+		
+		case "spaces_extra": 		manageCSS("spaces_extra.css");			break;
 		
 		case "customsqtab":
 
@@ -419,6 +467,39 @@ classicthemerestorerjs.settings = {
 
 		break;
 		
+		case "cui_buttons":
+		
+			removeOldSheet(this.cuiButtonssheet);
+			
+			if(enable==true){
+			
+				var cuismallnavbut='';
+				var cuiicotextbut='';
+			  
+				if (this.prefs.getBoolPref("smallnavbut")) {
+				  cuismallnavbut='#customization-smallnavbut-button1 {background:#e6e6e6 !important;} #customization-smallnavbut-button2 {background:#d0d0d0 !important;}';
+				} else {
+				  cuismallnavbut='#customization-smallnavbut-button1 {background:#d0d0d0 !important;} #customization-smallnavbut-button2 {background:#e6e6e6 !important;}';
+				}
+				
+				switch (this.prefs.getCharPref("nav_txt_ico")) {
+					case "icons":		cuiicotextbut='#customization-icons-button {background:#d0d0d0 !important;} #customization-iconstext-button {background:#e6e6e6 !important;} #customization-textonly-button {background:#e6e6e6 !important;}'; break;
+					case "iconsbig":	cuiicotextbut='#customization-icons-button {background:#bdbdbd !important;} #customization-iconstext-button {background:#e6e6e6 !important;} #customization-textonly-button {background:#e6e6e6 !important;}'; break;
+					case "iconstxt":	cuiicotextbut='#customization-icons-button {background:#e6e6e6 !important;} #customization-iconstext-button {background:#d0d0d0 !important;} #customization-textonly-button {background:#e6e6e6 !important;}'; break;
+					case "iconstxt2":	cuiicotextbut='#customization-icons-button {background:#e6e6e6 !important;} #customization-iconstext-button {background:#bdbdbd !important;} #customization-textonly-button {background:#e6e6e6 !important;}'; break;
+					case "txtonly":		cuiicotextbut='#customization-icons-button {background:#e6e6e6 !important;} #customization-iconstext-button {background:#e6e6e6 !important;} #customization-textonly-button {background:#d0d0d0 !important;}'; break;
+				}
+				
+				this.cuiButtonssheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					'+cuismallnavbut+'\
+					'+cuiicotextbut+'\
+				'), null, null);
+
+				applyNewSheet(this.cuiButtonssheet);
+			}
+		
+		break;
+		
 	}
 	
 	// Apply or remove the style sheet files
@@ -455,6 +536,7 @@ classicthemerestorerjs.settings = {
 
 		if (!sss.sheetRegistered(sheet,sss.AGENT_SHEET)) sss.loadAndRegisterSheet(sheet,sss.AGENT_SHEET);
 	}
+	
   },
 
   prefChangeString: function(which,value){
@@ -467,6 +549,7 @@ classicthemerestorerjs.settings = {
 		this.loadUnloadCSS('customsqtab',false);
 		this.prefs.setBoolPref('customsqtab',false);
 	}
+	
   },
   
   colorChange: function(value,which){
@@ -484,6 +567,53 @@ classicthemerestorerjs.settings = {
 	if (this.prefs.getBoolPref("tabtextsh")==true ){
 		this.loadUnloadCSS("tabtextsh",true);
 	}
+	
+  },
+  
+  cuiPrefChangeBool: function(which, value){
+	
+	if (value==false) {
+	  this.prefs.setBoolPref(which,false);
+	  this.loadUnloadCSS(which,false);
+	}
+	else if (value==true) {
+	  this.prefs.setBoolPref(which,true);
+	  this.loadUnloadCSS(which,true);
+	}
+	
+	this.loadUnloadCSS('cui_buttons',true);
+
+  },
+  
+  cuiPrefChangeString: function(which,value){
+
+	if(this.prefs.getCharPref('nav_txt_ico')=='icons' && value=="icons") {
+	  this.loadUnloadCSS('icons',false);
+	  this.prefs.setCharPref(which,'iconsbig');
+	  this.loadUnloadCSS('iconsbig',true);
+	} 
+	else if(this.prefs.getCharPref('nav_txt_ico')=='iconsbig' && value=="icons") {
+	  this.loadUnloadCSS('iconsbig',false);
+	  this.prefs.setCharPref(which,'icons');
+	  this.loadUnloadCSS('icons',true);
+	}
+	else if(this.prefs.getCharPref('nav_txt_ico')=='iconstxt' && value=="iconstxt") {
+	  this.loadUnloadCSS('iconstxt',false);
+	  this.prefs.setCharPref(which,'iconstxt2');
+	  this.loadUnloadCSS('iconstxt2',true);
+	} 
+	else if(this.prefs.getCharPref('nav_txt_ico')=='iconstxt2' && value=="iconstxt") {
+	  this.loadUnloadCSS('iconstxt2',false);
+	  this.prefs.setCharPref(which,'iconstxt');
+	  this.loadUnloadCSS('iconstxt',true);
+	}
+	else {
+	  this.loadUnloadCSS(this.prefs.getCharPref(which),false);
+	  this.prefs.setCharPref(which,value);
+	  this.loadUnloadCSS(value,true);
+	}
+
+	this.loadUnloadCSS('cui_buttons',true);
 	
   }
 

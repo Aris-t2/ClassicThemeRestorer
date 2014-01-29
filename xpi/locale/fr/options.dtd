@@ -6,11 +6,20 @@
 <!ENTITY Ctr_space			"Espace">
 <!ENTITY Ctr_separator		"Separator">
 
+<!ENTITY Ctr_cuibuttons		"Boutons">
+<!ENTITY Ctr_cuibutnormal	"normal">
+<!ENTITY Ctr_cuibutsmall	"petit">
+<!ENTITY Ctr_cuimode		"Mode">
+<!ENTITY Ctr_cuiico			"icônes">
+<!ENTITY Ctr_cuiicotxt		"icônes + texte">
+<!ENTITY Ctr_cuitxt			"texte">
+
 <!ENTITY Ctr_combrelstoptt	"[stop][actualiser] &gt;&gt; [stop-actualiser]">
+<!ENTITY Ctr_starbuttont1	"[la barre d'adresse][bouton de signets]">
+<!ENTITY Ctr_starbuttont2	"[bouton de signets dans la barre d'adresse]">
 
 <!ENTITY Ctr_main_t			"Principal">
-<!ENTITY Ctr_tabcolors_t	"Couleur des onglets">
-<!ENTITY Ctr_tabtext_t		"Texte des onglets">
+<!ENTITY Ctr_tabcolors_t	"Couleurs personnalisables">
 <!ENTITY Ctr_fixes_t		"Réglages">
 <!ENTITY Ctr_special_t		"Spéciaux">
 
@@ -41,6 +50,8 @@
 <!ENTITY Ctr_appbuttonI1	"redémarrage recommandé">
 <!ENTITY Ctr_appbuttonI2	"sur la barre de titre">
 <!ENTITY Ctr_appbuttonI3	"ou d'onglets seulement!">
+<!ENTITY Ctr_alttbappb		"Icônes alternatives (la barre d'onglets)">
+<!ENTITY Ctr_appbuttxt		"Texte 'Firefox' (la barre d'outils)">
 
 <!ENTITY Ctr_ui				"Interface générale">
 <!ENTITY Ctr_smallnavbut	"Petit boutons (barre de navigation)">
@@ -48,30 +59,30 @@
 <!ENTITY Ctr_buttons		"Boutons de la barre d'outils">
 <!ENTITY Ctr_backforward	"Bouton avancer/reculer déplaçable">
 <!ENTITY Ctr_wincontrols	"Coins déplaçables pour la fenêtre en plein écran">
+<!ENTITY Ctr_starinurl		"Bouton de signets dans la barre d'adresse">
 <!ENTITY Ctr_hideurelstop	"Masquer 'stop-actualiser' sur la barre d'adresse">
 <!ENTITY Ctr_combrelstop 	"Bouton stop-actualiser">
 <!ENTITY Ctr_findbar_def	"Barre de recherche (position par défaut)">
 <!ENTITY Ctr_findbar_top	"Barre de recherche en haut">
 <!ENTITY Ctr_findbar_bot	"Barre de recherche en bas">
-<!ENTITY Ctr_nav_txt_ico0	"Afficher seulement les icônes">
-<!ENTITY Ctr_nav_txt_ico1	"Afficher icônes et textes">
-<!ENTITY Ctr_nav_txt_ico2	"Afficher seulement les textes">
+<!ENTITY Ctr_nav_txt_ico0	"Afficher seulement les icônes (defaut)">
+<!ENTITY Ctr_nav_txt_ico1	"Afficher de grandes icônes">
+<!ENTITY Ctr_nav_txt_ico2	"Afficher icônes et textes">
+<!ENTITY Ctr_nav_txt_ico3	"Afficher seulement les textes">
 
-<!ENTITY Ctr_customsqtab0	"Onglets">
-<!ENTITY Ctr_customsqtab1	"Couleurs personnalisées">
+<!ENTITY Ctr_customsqtab0	"Couleur des onglets">
+<!ENTITY Ctr_customsqtab1	"Fond">
+<!ENTITY Ctr_ctext			"Texte">
+<!ENTITY Ctr_ctextsh		"Ombre du texte">
 <!ENTITY Ctr_tabnor			"Onglet (par défaut)">
 <!ENTITY Ctr_tabhov			"Onglet (au survol)">
 <!ENTITY Ctr_tabact			"Onglet (actif)">
 <!ENTITY Ctr_ntabnor		"Nouvel onglet (par défaut)">
 <!ENTITY Ctr_ntabhov		"Nouvel onglet (au survol)">
-
-<!ENTITY Ctr_tabtext		"Texte des onglets et couleur de l'ombre">
-<!ENTITY Ctr_ctext			"Couleurs de texte sur mesure">
-<!ENTITY Ctr_ctextsh		"Couleurs de l'ombre sur mesure">
 <!ENTITY Ctr_topc			"en haut">
 <!ENTITY Ctr_bottomc		"en bas">
 <!ENTITY Ctr_textc			"texte">
-<!ENTITY Ctr_textsh			"couleur de l'ombre">
+<!ENTITY Ctr_textsh			"ombre du texte">
 
 <!ENTITY Ctr_fixes			"Réglages">
 <!ENTITY Ctr_tnotlfix 		"Texte en noir sur les onglets inactifs">
@@ -80,9 +91,8 @@
 <!ENTITY Ctr_bfurlbarfixt	"Doit demeurer désactivé pour que le code CSS personnalisé puisse modifier la propriété left border-radius. Sinon c'est nécessaire pour que l'option « Bouton avancer/reculer déplaçable » modifie les bordures gauches des barres d'adresse en fonction du right border radius.">
 
 <!ENTITY Ctr_specialtw		"Modifications spéciales">
-<!ENTITY Ctr_alttbappb		"Icônes alternatives pour l'option « bouton d'application sur la barre d'onglets »">
 <!ENTITY Ctr_paneluibtweak 	"Apparence du bouton d'application pour le panneau d'interface (sur la barre des onglets)">
-<!ENTITY Ctr_appbuttxt		"Texte 'Firefox' pour 'bouton sur la barre d'outils'">
 <!ENTITY Ctr_notabfog		"Supprimer l'effet de flou en arrière-plan sur les barres d'onglets (Windows AeroGlass)">
 <!ENTITY Ctr_tabmokcolor	"Texte des onglets et des boutons de couleur blanche (fermer, nouveau, groupes, tout lister)">
 <!ENTITY Ctr_closeabarbut	"Masquer le bouton de fermeture de la barre des modules">
+<!ENTITY Ctr_cuibotbuttons	"Les boutons d'option en mode 'personnaliser ui'">

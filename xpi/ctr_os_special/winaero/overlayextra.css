@@ -148,14 +148,14 @@
 	  max-width: 18px;
 	  max-height: 18px;
 	}
-	#ctr_addon-bar .toolbarbutton-menubutton-dropmarker {
+	#ctr_addon-bar .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(ltr) {
 	  padding: 0px !important;
 	  margin-left: -3px !important;
-	}/*
-	#ctr_addon-bar{
-		padding: 0 !important;
-		margin-bottom: -1px !important;
-	}*/
+	}
+	#ctr_addon-bar .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(rtl) {
+	  padding: 0px !important;
+	  margin-left: -3px !important;
+	}
 
 }
 

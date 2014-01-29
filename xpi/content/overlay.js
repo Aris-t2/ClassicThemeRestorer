@@ -22,7 +22,11 @@ classicthemerestorer.ctr = {
 		TabsInTitlebar.allowedBy("ctr_addon", false);
 		}
 	*/
-
+	
+	// We already use an own movable #PanelUI-menu-button. To prevent glitches
+	// the default one with fixed nav-bar position has to be removed on startup.
+	document.getElementById("nav-bar").removeChild(document.getElementById("PanelUI-button"));
+	
 	// insert buttons on first run or on setting reset
 	if (Components.classes["@mozilla.org/preferences-service;1"]
 		.getService(Components.interfaces.nsIPrefService)
@@ -30,23 +34,14 @@ classicthemerestorer.ctr = {
 				.getBoolPref("firstrun")==true)
 	{
 		// insert custom appmenu button, custom back-forward button, custom
-		// panel ui button and custom wincontrols on first run in nav-bar
+		// panel ui button and custom wincontrols on first run into nav-bar
 		try{
-			var nbar = document.getElementById("nav-bar");
-			var target = document.getElementById("urlbar-container");
-			var elem = nbar.firstChild;
-			while (elem) {
-				if (elem == target) {
-					break;    
-				}
-				elem = elem.nextSibling;
-			}
-			nbar.insertItem("ctr_appbutton", elem, null, false);
-			nbar.insertItem("ctr_back-forward-button", elem, null, false);
-			nbar.insertItem("ctr_panelui-button", elem, null, false);
-			nbar.insertItem("ctr_window-controls", elem, null, false);
-			document.persist("nav-bar", "currentset");
 			
+			document.getElementById("nav-bar").insertItem("ctr_appbutton", null, null, true);
+			document.getElementById("nav-bar").insertItem("ctr_back-forward-button", null, null, true);
+			document.getElementById("nav-bar").insertItem("ctr_panelui-button", null, null, true);
+			document.getElementById("nav-bar").insertItem("ctr_window-controls", null, null, true);
+
 			var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;
 			
 			// switch to appbutton on title, if on Windows

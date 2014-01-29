@@ -132,7 +132,8 @@
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
-	#ctr_sqtabcolorstab{
+	#ctr_customsqtab_cb,
+	.tabactcolorbox{
 	  visibility: collapse !important;
 	}
 }

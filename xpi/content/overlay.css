@@ -5,39 +5,13 @@
 			   url(chrome://global/content/customizeToolbar.xul) {
 	
 	#main-window {
-	  min-width: 200px !important;
+	  min-width: 300px !important;
 	}
 
-	/* spaces, flexible spaces, separators */
-	*[customizing] .ctr_flexspaces{
-	  min-width:32px;
-	  width:32px;
-	  background: url("chrome://classic_theme_restorer/content/images/flex_space.png") center no-repeat;
-	}
-
-	.ctr_spaces{
-	  min-width:15px;
-	  width:15px;
-	}
-	
 	.ctrprefs{
 	  margin-left:26px !important;
 	}
 	
-	*:not([customizing]) .ctr_spaces{
-	  background: url("chrome://classic_theme_restorer/content/images/space2.png") center no-repeat;
-	}
-	
-	*[customizing] .ctr_spaces{
-	  background: url("chrome://classic_theme_restorer/content/images/space1.png") center no-repeat;
-	}
-
-	.ctr_separators{
-	  min-width:5px;
-	  width:5px;
-	  background: url("chrome://classic_theme_restorer/content/images/seperator.png") center no-repeat;
-	}
-
 	/*ctr_back-forward-dropmarker */
 	#ctr_back-forward-dropmarker {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/toolbarbutton-dropdown-arrow.png");
@@ -53,9 +27,13 @@
 	  visibility: collapse !important;
 	}
 
-	#ctr_back-forward-button ~ #ctr_back-forward-dropmarker{
+	#main-window #navigator-toolbox #nav-bar[currentset*="ctr_back-forward-button,ctr_back-forward-dropmarker"]:not([customizing]) #ctr_back-forward-dropmarker:-moz-locale-dir(ltr) {
 	  margin-left: -6px !important;
 	}
+	#main-window #navigator-toolbox #nav-bar[currentset*="ctr_back-forward-button,ctr_back-forward-dropmarker"]:not([customizing]) #ctr_back-forward-dropmarker:-moz-locale-dir(rtl) {
+	  margin-right: -6px !important;
+	}
+
 	#customization-palette #ctr_back-forward-dropmarker image{
 		background:url("chrome://browser/skin/toolbarbutton-dropdown-arrow.png") center center no-repeat !important;
 		list-style-image:none !important;
@@ -100,6 +78,12 @@
 	#ctr_addonbar-close[selected="true"] {
 	  -moz-image-region: rect(0, 16px, 16px, 0);
 	}
+	
+	/*toolbar dummy */
+	#ctr_toolbar_dummy{
+	  -moz-appearance: none !important;
+	  -moz-box-ordinal-group:999999 !important;
+	}
 
 	/* custom bookmarks-menu-toolbar-button */
 	#PersonalToolbar #ctr_bookmarks-menu-toolbar-button .toolbarbutton-text {
@@ -118,13 +102,14 @@
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton.png");
 	}
 	
-	#nav-bar #ctr_appbutton{
+	#nav-bar #ctr_appbutton image{
 	  margin-left: -3px;
 	  margin-right: -3px;
 	}
 	
 	.customization-target > #ctr_appbutton > .toolbarbutton-icon {
-	  padding-right:7px !important;
+	  padding-left:4px !important;
+	  padding-right:4px !important;
 	}
 
 	* #ctr_appbutton dropmarker,
@@ -165,6 +150,13 @@
 	#ctr_appbuttonPopup #menu_paste,
 	#ctr_appbuttonPopup #appmenu-paste{
 		list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_paste.png");
+	}
+	#ctr_appbuttonPopup #appmenu_ctr{
+		list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_ctr.png");
+	}
+	
+	#menu_newPreferencesmenuPopup {
+	  padding-right:4px !important;
 	}
 
 	#appmenu-edit-label,
@@ -237,7 +229,7 @@
 	
 	#nav-bar #ctr_appbutton #ctr_appbuttonPopup{
 		margin-top:-10px;
-		margin-left:5px;
+		margin-left:2px;
 	}
 	
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton:hover:active,
@@ -262,11 +254,7 @@
 	  visibility: collapse !important;
 	}
 
-	#customization-palette #ctr_panelui-button{
-	  background:url("chrome://classic_theme_restorer/content/images/panelui.png") center no-repeat !important;
-	}
-
-	#customization-palette #ctr_appbutton,
+	/*#customization-palette #ctr_appbutton,*/
 	#customization-palette #ctr_back-forward-button,
 	#customization-palette #ctr_window-controls{
 		visibility: visible !important;
@@ -274,16 +262,9 @@
 		border:none !important;
 	}
 
-	#customization-palette #ctr_appbutton image,
-	#customization-palette #ctr_bookmarks-menu-toolbar-button image,
-	#customization-palette #ctr_bookmarks-button image,
-	#customization-palette #ctr_history-button image,
+	/*#customization-palette #ctr_appbutton image,*/
 	#customization-palette #ctr_panelui-button image,
 	#customization-palette #ctr_back-forward-button image,
-	#customization-palette #ctr_stop-button image,
-	#customization-palette #ctr_reload-button image,
-	#customization-palette #urlbar-reload-button image,
-	#customization-palette #urlbar-stop-button image,
 	#customization-palette #ctr_back-forward-dropmarker image{
 		background:none !important;
 		list-style-image:none !important;
@@ -299,40 +280,71 @@
 	  max-width:0px !important;
 	}
 
-	#customization-palette #ctr_panelui-button{
-		width: 82px !important;
-	}
-
 	/* buttons */
-	#customization-palette #ctr_bookmarks-menu-toolbar-button,
-	#customization-palette #ctr_bookmarks-button{
-	  background:url("chrome://classic_theme_restorer/content/images/bookmarks.png") center no-repeat;
-	}
-	#customization-palette #ctr_history-button{
-	  background:url("chrome://classic_theme_restorer/content/images/history.png") center no-repeat;
-	}
-	#customization-palette #ctr_reload-button{
-	  background:url("chrome://classic_theme_restorer/content/images/reload.png") center no-repeat;
-	}
-	#customization-palette #ctr_stop-button{
-	  background:url("chrome://classic_theme_restorer/content/images/stop.png") center no-repeat;
-	}
 	#customization-palette #ctr_back-forward-dropmarker {
 	  background:url("chrome://classic_theme_restorer/content/images/toolbarbutton-dropdown-arrow.png") center no-repeat;
 	}
 
 	/*Adblock+ Australis/UX*/
-	#abp-toolbarbutton[customizableui-areatype="toolbar"],
-	#abp-site-info[customizableui-areatype="toolbar"] {
+	#abp-toolbarbutton[cui-areatype="toolbar"],
+	#abp-site-info[cui-areatype="toolbar"] {
 	  list-style-image: url("chrome://adblockplus/skin/abp-status-16.png")!important;
 	  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
 	}
-	#abp-toolbarbutton[customizableui-areatype="toolbar"][abpstate="disabled"],
-	#abp-toolbarbutton[customizableui-areatype="toolbar"][abpstate="whitelisted"],
-	#abp-site-info[customizableui-areatype="toolbar"][abpaction="enable"],
-	#abp-site-info[customizableui-areatype="toolbar"][abpaction="enable_site"] {
+	#abp-toolbarbutton[cui-areatype="toolbar"][abpstate="disabled"],
+	#abp-toolbarbutton[cui-areatype="toolbar"][abpstate="whitelisted"],
+	#abp-site-info[cui-areatype="toolbar"][abpaction="enable"],
+	#abp-site-info[cui-areatype="toolbar"][abpaction="enable_site"] {
 	  -moz-image-region: rect(16px, 16px, 32px, 0px)!important;
 	}
+
+	/* palette items */
+	#ctr_appbutton[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+	toolbarpaletteitem[place="palette"] > #ctr_appbutton > .toolbarbutton-icon{
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/appbutton_menuPanel.png) !important;
+	}
+	
+	toolbarpaletteitem[place="palette"] > #ctr_panelui-button {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/menuPanel2.png"),
+					0, 32, 32, 0) center no-repeat !important;
+	}
+	
+	#tabview-button[cui-areatype="menu-panel"],
+	toolbarpaletteitem[place="palette"] > #tabview-button {
+	  -moz-image-region: rect(0px, 608px, 32px, 576px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	}
+	
+	#ctr_stop-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+	toolbarpaletteitem[place="palette"] > #ctr_stop-button > .toolbarbutton-icon {
+	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	}
+
+	#ctr_reload-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+	toolbarpaletteitem[place="palette"] > #ctr_reload-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	}
+
+	#ctr_history-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+	toolbarpaletteitem[place="palette"] > #ctr_history-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 224px, 32px, 192px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	}
+
+	#ctr_bookmarks-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+	toolbarpaletteitem[place="palette"] > #ctr_bookmarks-button > .toolbarbutton-icon,
+	#ctr_bookmarks-menu-toolbar-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+	toolbarpaletteitem[place="palette"] > #ctr_bookmarks-menu-toolbar-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 160px, 32px, 128px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	}
+	
+	#ctr_cuibuttonsbox{
+	  visibility: collapse;
+	}
+
 }
 
 /* style settings for this add-ons options window */
@@ -340,22 +352,22 @@
 	#ctr_combrelstopinfo,
 	#ctr_appbutton_list1,
 	#ctr_appbutton_list2{
-		visibility: collapse;
+	  visibility: collapse;
 	}
 	.ctr_tabcolorlabel,
 	.ctb_font1{
-		font-weight:bold;
-		font-style:italic;
+	  font-weight:bold;
+	  font-style:italic;
 	}
 	.ctr_tabcolorlabel2{
-		font-style:italic;
+	  font-style:italic;
 	}
 	.ctb_topic{
-		font-weight:bold;
+	  font-weight:bold;
 	}
 	
-	#tabcolorbox,
-	#tabhovcolorbox,
+	.tabcolorbox,
+	.tabhovcolorbox,
 	#ntabcolorbox,
 	#ntabhovcolorbox,
 	#ctr_ccap_t_squared,

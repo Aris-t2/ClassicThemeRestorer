@@ -13,12 +13,10 @@
 	
 	.tabbrowser-tab:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
 	  background-image: linear-gradient(to bottom, #676f76 0px, transparent 1px),linear-gradient(to bottom, #949494,#9f9f9f,#a9a9a9);
-	  color:black !important;
 	}
 	
 	.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {
 	  background-image: linear-gradient(to bottom, #676f76 0px, transparent 1px),linear-gradient(to bottom,#adadad,#b8b8b8);
-	  color:black !important;
 	}
 
 	.tabs-newtab-button:not(:-moz-lwtheme) {
@@ -239,8 +237,8 @@
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
-	#tabcolorbox,
-	#tabhovcolorbox,
+	.tabcolorbox,
+	.tabhovcolorbox,
 	#ntabcolorbox,
 	#ntabhovcolorbox,
 	#ctr_ccap_t_squared{

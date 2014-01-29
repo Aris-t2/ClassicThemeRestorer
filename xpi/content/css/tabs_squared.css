@@ -193,8 +193,8 @@
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
-	#tabcolorbox,
-	#tabhovcolorbox,
+	.tabcolorbox,
+	.tabhovcolorbox,
 	#ntabcolorbox,
 	#ntabhovcolorbox,
 	#ctr_ccap_t_squared{

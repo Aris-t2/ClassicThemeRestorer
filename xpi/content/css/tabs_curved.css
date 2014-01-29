@@ -33,13 +33,17 @@
 	  margin-top:2px !important;
 	}
 	
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start{
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start:-moz-locale-dir(ltr),
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl),
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end:-moz-locale-dir(rtl) {
 	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;
 	}
 	
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end,
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end	{
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end:-moz-locale-dir(ltr),
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl),
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start:-moz-locale-dir(rtl)	{
 	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;
 	}
 
@@ -52,8 +56,8 @@
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
-	#tabcolorbox,
-	#tabhovcolorbox,
+	.tabcolorbox,
+	.tabhovcolorbox,
 	#ctr_ccap_t_curved{
 	  visibility: visible !important;
 	}

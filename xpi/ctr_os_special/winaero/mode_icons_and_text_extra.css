@@ -41,8 +41,12 @@
 	#nav-bar .toolbarbutton-1 {
 	  margin: 1px 0 !important;
 	}
-	#navigator-toolbox #nav-bar #urlbar-container{
+	
+	#navigator-toolbox #nav-bar #urlbar-container:-moz-locale-dir(ltr){
 	  margin-left: 4px !important;
+	}
+	#navigator-toolbox #nav-bar #urlbar-container:-moz-locale-dir(rtl){
+	  margin-right: 24px !important;
 	}
 	
 	#ctr_addon-bar toolbarbutton .toolbarbutton-icon {

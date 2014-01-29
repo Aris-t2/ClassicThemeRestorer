@@ -15,38 +15,60 @@
 	#ctr_addon-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
 	  -moz-box-orient: vertical !important;
 	}
-	#navigator-toolbox toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-icon,
+	#navigator-toolbox  toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-icon,
 	#ctr_addon-bar toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-icon,
 	#navigator-toolbox #TabsToolbar #ctr_appbutton .toolbarbutton-text {
 	  visibility: collapse !important;
 	}
+	
+	#navigator-toolbox #urlbar-go-button:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-icon,
+	#navigator-toolbox #urlbar-stop-button:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-icon,
+	#navigator-toolbox #urlbar-reload-button:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-icon {
+	  visibility: visible !important;
+	}
+	
 	#navigator-toolbox #TabsToolbar #ctr_appbutton .toolbarbutton-icon{
 	  visibility: visible !important;
 	}
 	.toolbarbutton-1[type="menu"] dropmarker{
 	   visibility:collapse !important;
 	}
-	/*make custom back-forward visible and hide back-forward on urlbar item*/
+	/* make custom back-forward visible and hide back-forward on urlbar item */
 	#ctr_back-forward-button{
 	  visibility: visible !important;
 	}
-	#urlbar-container #back-button,
-	#urlbar-container #forward-button{
+	#main-window #navigator-toolbox #nav-bar #urlbar-container #back-button,
+	#main-window #navigator-toolbox #nav-bar #urlbar-container #forward-button{
 	  visibility: collapse !important;
 	}
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper {
 	  clip-path: none !important;
 	}
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
-	  margin-left: 0px !important;
 	  transition: none !important;
-	  transition-property:  none !important;
+	  transition-property: none !important;
 	  transition-delay: 0s !important;
 	}
-    #urlbar{
+	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr) {
+	  margin-left: 0px !important;
+	}
+	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
+	  margin-right: 0px !important;
+	}
+	#navigator-toolbox #nav-bar #urlbar-container:-moz-locale-dir(rtl){
+	  margin-right: 24px !important;
+	}
+	
+    #urlbar:-moz-locale-dir(ltr) {
       border-left:1px solid #b4c1cf !important;
     }
-    #urlbar[focused="true"]{
+    #urlbar[focused="true"]:-moz-locale-dir(ltr) {
       border-left:1px solid #72c0fe !important;
+    }
+    #urlbar:-moz-locale-dir(rtl) {
+      border-right:1px solid #b4c1cf !important;
+    }
+    #urlbar[focused="true"]:-moz-locale-dir(rtl) {
+      border-right:1px solid #72c0fe !important;
     }
 }

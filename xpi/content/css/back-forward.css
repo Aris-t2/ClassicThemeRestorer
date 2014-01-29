@@ -3,17 +3,20 @@
 
 @-moz-document url(chrome://browser/content/browser.xul),
 			   url(chrome://global/content/customizeToolbar.xul) {
+	
 	#ctr_back-forward-button{
 	  visibility: visible !important;
 	}
+	
 	#customization-palette #ctr_back-forward-button{
-		background:url("chrome://classic_theme_restorer/content/images/back-forward.png") center no-repeat !important;
+	  background:url("chrome://classic_theme_restorer/content/images/back-forward.png") center no-repeat !important;
 	}
 
 	#urlbar-container #back-button,
 	#urlbar-container #forward-button{
 	  visibility: collapse !important;
 	}
+	
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper {
 	  clip-path: none !important;
 	}
@@ -24,15 +27,28 @@
 	  transition-property:  none !important;
 	  transition-delay: 0s !important;
 	}
-    #urlbar{
+	
+    #urlbar:-moz-locale-dir(ltr){
       border-left:1px solid #b4c1cf !important;
     }
-    #urlbar[focused="true"]{
+    #urlbar[focused="true"]:-moz-locale-dir(ltr){
       border-left:1px solid #72c0fe !important;
     }
 	
+    #urlbar:-moz-locale-dir(rtl){
+      border-right:1px solid #b4c1cf !important;
+    }
+    #urlbar[focused="true"]:-moz-locale-dir(rtl){
+      border-right:1px solid #72c0fe !important;
+    }
+	
 	#nav-bar #urlbar-container #forward-button[disabled]{
-		visibility:collapse !important;
-		opacity: 1.0 !important;
+	  visibility:collapse !important;
+	  opacity: 1.0 !important;
+	}
+	
+	#ctr_back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
+	#ctr_forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon{
+	  transform: scaleX(-1);
 	}
 }

@@ -10,4 +10,9 @@
 	#TabsToolbar #ctr_appbutton > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-inv.png") !important;
 	}
+	
+	.customization-target > #ctr_appbutton > .toolbarbutton-icon {
+	  padding-left:7px !important;
+	  padding-right:7px !important;
+	}
 }
