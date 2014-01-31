@@ -1,6 +1,8 @@
 if (typeof classicthemerestorerjs == "undefined") {var classicthemerestorerjs = {};};
 if (!classicthemerestorerjs.settings) {classicthemerestorerjs.settings = {};};
 
+Components.utils.import("resource://gre/modules/AddonManager.jsm");
+
 classicthemerestorerjs.settings = {
 
   prefs: Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.classicthemerestorer."),
@@ -14,57 +16,259 @@ classicthemerestorerjs.settings = {
   /* init css on startup, if corresponding settings are enabled */
   init: function() {
   
-	if (this.prefs.getCharPref("tabs")!="tabs_default"){
-		this.loadUnloadCSS(this.prefs.getCharPref("tabs"),true);
-	}
-	if (this.prefs.getCharPref("tabwidth")!="tabwidth_default"){
-		this.loadUnloadCSS(this.prefs.getCharPref("tabwidth"),true);
-	}
-	if (this.prefs.getCharPref("findbar")!="findbar_default"){
-		this.loadUnloadCSS(this.prefs.getCharPref("findbar"),true);
-	}
-	if (this.prefs.getCharPref("appbutton")!="appbutton_off"){
-		this.loadUnloadCSS(this.prefs.getCharPref("appbutton"),true);
-	}
-	if (this.prefs.getCharPref("appbuttonc")!="off"){
-		this.loadUnloadCSS(this.prefs.getCharPref("appbuttonc"),true);
-	}
-	if (this.prefs.getCharPref("nav_txt_ico")!="icons"){
-		this.loadUnloadCSS(this.prefs.getCharPref("nav_txt_ico"),true);
-	}
-
-	if (this.prefs.getBoolPref("tabsotoff"))		{ this.loadUnloadCSS("tabsotoff",true); }
-	
-	if (this.prefs.getBoolPref("alttbappb"))		{ this.loadUnloadCSS("alttbappb",true); }
-	if (this.prefs.getBoolPref("appbuttxt"))		{ this.loadUnloadCSS("appbuttxt",true); }
-	
-	if (this.prefs.getBoolPref("smallnavbut"))		{ this.loadUnloadCSS("smallnavbut",true); }
-	if (this.prefs.getBoolPref("hidenavbar"))		{ this.loadUnloadCSS("hidenavbar",true); }
-	if (this.prefs.getBoolPref("backforward"))		{ this.loadUnloadCSS("backforward",true); }
-	if (this.prefs.getBoolPref("wincontrols"))		{ this.loadUnloadCSS("wincontrols",true); }
-	if (this.prefs.getBoolPref("starinurl"))		{ this.loadUnloadCSS("starinurl",true); }
-	if (this.prefs.getBoolPref("hideurelstop"))		{ this.loadUnloadCSS("hideurelstop",true); }
-	if (this.prefs.getBoolPref("combrelstop"))		{ this.loadUnloadCSS("combrelstop",true); }
-
-	if (this.prefs.getBoolPref("tnotlfix"))			{ this.loadUnloadCSS("tnotlfix",true); }
-	if (this.prefs.getBoolPref("bfurlbarfix"))		{ this.loadUnloadCSS("bfurlbarfix",true); }
-	
-	if (this.prefs.getBoolPref("paneluibtweak"))	{ this.loadUnloadCSS("paneluibtweak",true); }
-	if (this.prefs.getBoolPref("notabfog"))			{ this.loadUnloadCSS("notabfog",true); }
-	if (this.prefs.getBoolPref("tabmokcolor"))		{ this.loadUnloadCSS("tabmokcolor",true); }
-	if (this.prefs.getBoolPref("closeabarbut"))		{ this.loadUnloadCSS("closeabarbut",true); }
-	if (this.prefs.getBoolPref("cuibuttons"))		{ this.loadUnloadCSS("cuibuttons",true); }
-	
-	if (this.prefs.getBoolPref("customsqtab"))		{ this.loadUnloadCSS("customsqtab",true); }
-	if (this.prefs.getBoolPref("tabtextc"))			{ this.loadUnloadCSS("tabtextc",true); }
-	if (this.prefs.getBoolPref("tabtextsh"))		{ this.loadUnloadCSS("tabtextsh",true); }
-	
+	/* styles CTRs customize ui option buttons on startup */
 	this.loadUnloadCSS('cui_buttons',true);
 	
-    /* extra check to not style spaces and separators while thePuzzlePiece add-on is enabled*/
-	if (Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.").getCharPref("bootstrappedAddons").indexOf("thePuzzlePiece")==-1) {
-	  this.loadUnloadCSS("spaces_extra",true);
+	/* extra check to not style spaces and separators while 'ThePuzzlePiece' add-on is enabled */
+	var TPPListener = {
+	   onEnabled: function(addon) {
+		  if(addon.id == 'thePuzzlePiece@quicksaver') { classicthemerestorerjs.settings.loadUnloadCSS("spaces_extra",false); }
+	   },
+	   onDisabled: function(addon) {
+		  if(addon.id == 'thePuzzlePiece@quicksaver') { classicthemerestorerjs.settings.loadUnloadCSS("spaces_extra",true); }
+	   }
+	};
+	AddonManager.addAddonListener(TPPListener);
+	
+	AddonManager.getAddonByID('thePuzzlePiece@quicksaver', function(addon) {
+	   if(addon && addon.isActive) { classicthemerestorerjs.settings.loadUnloadCSS("spaces_extra",false); }
+	    else { classicthemerestorerjs.settings.loadUnloadCSS("spaces_extra",true); }
+	});
+	
+	/*Preferences listener*/
+	function PrefListener(branch_name, callback) {
+	  // Keeping a reference to the observed preference branch or it will get
+	  // garbage collected.
+	  var prefService = Components.classes["@mozilla.org/preferences-service;1"]
+		.getService(Components.interfaces.nsIPrefService);
+	  this._branch = prefService.getBranch(branch_name);
+	  this._branch.QueryInterface(Components.interfaces.nsIPrefBranch2);
+	  this._callback = callback;
 	}
+
+	PrefListener.prototype.observe = function(subject, topic, data) {
+	  if (topic == 'nsPref:changed')
+		this._callback(this._branch, data);
+	};
+
+	PrefListener.prototype.register = function(trigger) {
+	  this._branch.addObserver('', this, false);
+	  if (trigger) {
+		let that = this;
+		this._branch.getChildList('', {}).
+		  forEach(function (pref_leaf_name)
+			{ that._callback(that._branch, pref_leaf_name); });
+	  }
+	};
+
+	PrefListener.prototype.unregister = function() {
+	  if (this._branch)
+		this._branch.removeObserver('', this);
+	};
+
+	var ctrSettingsListener = new PrefListener(
+	  "extensions.classicthemerestorer.",
+	  function(branch, name) {
+		switch (name) {
+		
+		  // Tabs
+		  case "tabs":
+			classicthemerestorerjs.settings.loadUnloadCSS('tabs_squared',false);
+			classicthemerestorerjs.settings.loadUnloadCSS('tabs_squared2',false);
+			classicthemerestorerjs.settings.loadUnloadCSS('tabs_curved',false);
+			classicthemerestorerjs.settings.loadUnloadCSS('tabs_curvedall',false);
+			
+			if (branch.getCharPref("tabs")!="tabs_default"){
+			  classicthemerestorerjs.settings.loadUnloadCSS(branch.getCharPref("tabs"),true);
+			}
+		  break;
+		  
+		  case "tabsotoff":
+			if (branch.getBoolPref("tabsotoff")) classicthemerestorerjs.settings.loadUnloadCSS("tabsotoff",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("tabsotoff",false);
+		  break;
+		  
+		  case "tabwidth":
+			classicthemerestorerjs.settings.loadUnloadCSS('tabwidth_150',false);
+			classicthemerestorerjs.settings.loadUnloadCSS('tabwidth_250',false);
+
+			if (branch.getCharPref("tabwidth")!="tabwidth_default"){
+			  classicthemerestorerjs.settings.loadUnloadCSS(branch.getCharPref("tabwidth"),true);
+			}
+		  break;
+		  
+		  // Appbutton
+		  case "appbutton":
+			classicthemerestorerjs.settings.loadUnloadCSS('appbutton_v1',false);
+			classicthemerestorerjs.settings.loadUnloadCSS('appbutton_v2',false);
+
+			if (branch.getCharPref("appbutton")!="appbutton_off"){
+			  classicthemerestorerjs.settings.loadUnloadCSS(branch.getCharPref("appbutton"),true);
+			}
+		  break;
+		  
+		  case "appbuttonc":
+			classicthemerestorerjs.settings.loadUnloadCSS('appbuttonc_orange',false);
+			classicthemerestorerjs.settings.loadUnloadCSS('appbuttonc_aurora',false);
+			classicthemerestorerjs.settings.loadUnloadCSS('appbuttonc_nightly',false);
+			classicthemerestorerjs.settings.loadUnloadCSS('appbuttonc_transp',false);
+			classicthemerestorerjs.settings.loadUnloadCSS('appbuttonc_palemo',false);
+			classicthemerestorerjs.settings.loadUnloadCSS('appbuttonc_red',false);
+			classicthemerestorerjs.settings.loadUnloadCSS('appbuttonc_green',false);
+			classicthemerestorerjs.settings.loadUnloadCSS('appbuttonc_gray',false);
+
+			if (branch.getCharPref("appbuttonc")!="off"){
+			  classicthemerestorerjs.settings.loadUnloadCSS(branch.getCharPref("appbuttonc"),true);
+			}
+		  break;
+		  
+		  case "alttbappb":
+			if (branch.getBoolPref("alttbappb")) classicthemerestorerjs.settings.loadUnloadCSS("alttbappb",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("alttbappb",false);
+		  break;
+		  
+		  case "appbuttxt":
+			if (branch.getBoolPref("appbuttxt")) classicthemerestorerjs.settings.loadUnloadCSS("appbuttxt",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("appbuttxt",false);
+		  break;
+
+
+		  //General UI options
+		  case "smallnavbut":
+			if (branch.getBoolPref("smallnavbut")) classicthemerestorerjs.settings.loadUnloadCSS("smallnavbut",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("smallnavbut",false);
+		  break;
+		  
+		  case "hidenavbar":
+			if (branch.getBoolPref("hidenavbar")) classicthemerestorerjs.settings.loadUnloadCSS("hidenavbar",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("hidenavbar",false);
+		  break;
+		  
+		  case "backforward":
+			if (branch.getBoolPref("backforward")) classicthemerestorerjs.settings.loadUnloadCSS("backforward",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("backforward",false);
+		  break;
+		  
+		  case "wincontrols":
+			if (branch.getBoolPref("wincontrols")) classicthemerestorerjs.settings.loadUnloadCSS("wincontrols",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("wincontrols",false);
+		  break;
+		  
+		  case "starinurl":
+			if (branch.getBoolPref("starinurl")) classicthemerestorerjs.settings.loadUnloadCSS("starinurl",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("starinurl",false);
+		  break;
+		  
+		  case "hideurelstop":
+			if (branch.getBoolPref("hideurelstop")) classicthemerestorerjs.settings.loadUnloadCSS("hideurelstop",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("hideurelstop",false);
+		  break;
+		  
+		  case "combrelstop":
+			if (branch.getBoolPref("combrelstop")) classicthemerestorerjs.settings.loadUnloadCSS("combrelstop",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("combrelstop",false);
+		  break;
+		  
+		  case "findbar":
+			classicthemerestorerjs.settings.loadUnloadCSS('findbar_top',false);
+			classicthemerestorerjs.settings.loadUnloadCSS('findbar_bottom',false);
+
+			if (branch.getCharPref("findbar")!="findbar_default"){
+			  classicthemerestorerjs.settings.loadUnloadCSS(branch.getCharPref("findbar"),true);
+			}
+		  break;
+		  
+		  case "nav_txt_ico":
+			classicthemerestorerjs.settings.loadUnloadCSS('iconsbig',false);
+			classicthemerestorerjs.settings.loadUnloadCSS('iconstxt',false);
+			classicthemerestorerjs.settings.loadUnloadCSS('iconstxt2',false);
+			classicthemerestorerjs.settings.loadUnloadCSS('txtonly',false);
+
+			if (branch.getCharPref("nav_txt_ico")!="icons"){
+			  classicthemerestorerjs.settings.loadUnloadCSS(branch.getCharPref("nav_txt_ico"),true);
+			}
+		  break;
+		  
+		  // Color settings (checkboxes)
+		  case "customsqtab":
+			if (branch.getBoolPref("customsqtab")) classicthemerestorerjs.settings.loadUnloadCSS("customsqtab",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("customsqtab",false);
+		  break;
+		  
+		  case "tabtextc":
+			if (branch.getBoolPref("tabtextc")) classicthemerestorerjs.settings.loadUnloadCSS("tabtextc",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("tabtextc",false);
+		  break;
+		  
+		  case "tabtextsh":
+			if (branch.getBoolPref("tabtextsh")) classicthemerestorerjs.settings.loadUnloadCSS("tabtextsh",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("tabtextsh",false);
+		  break;
+		  
+		  // Color settings (colorpickers)
+		  
+		  case "ctab1": case "ctab2": case "ctabhov1": case "ctabhov2": case "ctabact1": case "ctabact2":
+		  case "cntab1": case "cntab2": case "cntabhov1": case "cntabhov2":
+			if (branch.getBoolPref("customsqtab")) classicthemerestorerjs.settings.loadUnloadCSS("customsqtab",true);
+		  break;
+	  
+		  case "ctabt": case "ctabhovt": case "ctabactt":
+			if (branch.getBoolPref("tabtextc")) classicthemerestorerjs.settings.loadUnloadCSS("tabtextc",true);
+		  break;
+
+	  
+		  case 'ctabtsh': case 'ctabhovtsh': case 'ctabacttsh':
+			if (branch.getBoolPref("tabtextsh")) classicthemerestorerjs.settings.loadUnloadCSS("tabtextsh",true);
+		  break;
+		  
+		  // Fixes
+		  case "tnotlfix":
+			if (branch.getBoolPref("tnotlfix")) classicthemerestorerjs.settings.loadUnloadCSS("tnotlfix",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("tnotlfix",false);
+		  break;
+		  
+		  case "bfurlbarfix":
+			if (branch.getBoolPref("bfurlbarfix")) classicthemerestorerjs.settings.loadUnloadCSS("bfurlbarfix",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("bfurlbarfix",false);
+		  break;
+		  
+		  // Special
+		  case "paneluibtweak":
+			if (branch.getBoolPref("paneluibtweak")) classicthemerestorerjs.settings.loadUnloadCSS("paneluibtweak",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("paneluibtweak",false);
+		  break;
+		  
+		  case "notabfog":
+			if (branch.getBoolPref("notabfog")) classicthemerestorerjs.settings.loadUnloadCSS("notabfog",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("notabfog",false);
+		  break;
+		  
+		  case "tabmokcolor":
+			if (branch.getBoolPref("tabmokcolor")) classicthemerestorerjs.settings.loadUnloadCSS("tabmokcolor",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("tabmokcolor",false);
+		  break;
+		  
+		  case "closeabarbut":
+			if (branch.getBoolPref("closeabarbut")) classicthemerestorerjs.settings.loadUnloadCSS("closeabarbut",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("closeabarbut",false);
+		  break;
+
+		  case "cpanelmenus":
+			if (branch.getBoolPref("cpanelmenus")) classicthemerestorerjs.settings.loadUnloadCSS("cpanelmenus",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("cpanelmenus",false);
+		  break;
+
+		  case "cuibuttons":
+			if (branch.getBoolPref("cuibuttons")) classicthemerestorerjs.settings.loadUnloadCSS("cuibuttons",true);
+			  else classicthemerestorerjs.settings.loadUnloadCSS("cuibuttons",false);
+		  break;
+		}
+	  }
+	);
+
+	ctrSettingsListener.register(true);
+	
+	
 
   },
   
@@ -322,6 +526,7 @@ classicthemerestorerjs.settings = {
 		case "notabfog": 			manageCSS("notabfog.css");				break;
 		case "tabmokcolor": 		manageCSS("tabmokcolor.css");			break;
 		case "closeabarbut": 		manageCSS("closeabarbut.css");			break;
+		case "cpanelmenus": 		manageCSS("compactpanelmenus.css");		break;
 		case "cuibuttons": 			manageCSS("cuibuttons.css");			break;
 		
 		case "spaces_extra": 		manageCSS("spaces_extra.css");			break;
@@ -335,19 +540,19 @@ classicthemerestorerjs.settings = {
 				if (this.prefs.getCharPref('tabs')=='tabs_squared') {
 				
 					this.ctabsheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {\
 						  background-image: linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
 						}\
-						.tabbrowser-tab:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {\
 						  background-image: linear-gradient('+this.prefs.getCharPref('ctab1')+','+this.prefs.getCharPref('ctab2')+') !important;\
 						}\
-						.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {\
 						  background-image: linear-gradient('+this.prefs.getCharPref('ctabhov1')+','+this.prefs.getCharPref('ctabhov2')+') !important;\
 						}\
-						.tabs-newtab-button:not(:-moz-lwtheme) {\
+						#main-window #navigator-toolbox #TabsToolbar .tabs-newtab-button:not(:-moz-lwtheme) {\
 						  background-image: linear-gradient('+this.prefs.getCharPref('cntab1')+','+this.prefs.getCharPref('cntab2')+') !important;\
 						}\
-						.tabs-newtab-button:hover:not(:-moz-lwtheme) {\
+						#main-window #navigator-toolbox #TabsToolbar .tabs-newtab-button:hover:not(:-moz-lwtheme) {\
 						  background-image: linear-gradient('+this.prefs.getCharPref('cntabhov1')+','+this.prefs.getCharPref('cntabhov2')+') !important;\
 						}\
 					'), null, null);
@@ -357,7 +562,7 @@ classicthemerestorerjs.settings = {
 				else if (this.prefs.getCharPref('tabs')=='tabs_squared2') {
 				
 					this.ctabsheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {\
 						  background-image: linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
 						}\
 					'), null, null);
@@ -367,27 +572,27 @@ classicthemerestorerjs.settings = {
 				else if (this.prefs.getCharPref('tabs')=='tabs_curved') {
 				
 					this.ctabsheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,\
-						.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,\
-						.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end {\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end {\
 						  background-image: linear-gradient(to top, #868d94 0px, transparent 1px),linear-gradient('+this.prefs.getCharPref('ctab1')+','+this.prefs.getCharPref('ctab2')+');\
 						}\
-						.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-stack .tab-background-middle,\
-						.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start,\
-						.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end {\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-stack .tab-background-middle,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end {\
 						  background-image: linear-gradient(to top, #868d94 0px, transparent 1px),linear-gradient('+this.prefs.getCharPref('ctabhov1')+','+this.prefs.getCharPref('ctabhov2')+');\
 						}\
-						.tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						.tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
 						}\
-						.tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						.tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
-						.tab-background-middle[selected=true] {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[selected=true] {\
 						  background-clip: padding-box, padding-box, content-box !important;\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png), linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctabact1')+' 0px, '+this.prefs.getCharPref('ctabact2')+'), none !important;\
 						}\
@@ -398,17 +603,17 @@ classicthemerestorerjs.settings = {
 				else if (this.prefs.getCharPref('tabs')=='tabs_default') {
 				
 					this.ctabsheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						.tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						.tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
 						}\
-						.tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						.tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
-						.tab-background-middle[selected=true] {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[selected=true] {\
 						  background-clip: padding-box, padding-box, content-box !important;\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png), linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctabact1')+' 0px, '+this.prefs.getCharPref('ctabact2')+'), none !important;\
 						}\
@@ -428,13 +633,13 @@ classicthemerestorerjs.settings = {
 			if(enable==true){
 	
 				this.tabtxtcsheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab[selected="true"] {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[selected="true"] {\
 					  color: '+this.prefs.getCharPref('ctabactt')+' !important;\
 					}\
-					.tabbrowser-tab:not([selected="true"]):not(:hover) {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):not(:hover) {\
 					  color: '+this.prefs.getCharPref('ctabt')+' !important;\
 					}\
-					.tabbrowser-tab:not([selected="true"]):hover{\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):hover{\
 					  color: '+this.prefs.getCharPref('ctabhovt')+' !important;\
 					}\
 				'), null, null);
@@ -451,13 +656,13 @@ classicthemerestorerjs.settings = {
 			if(enable==true){
 				
 				this.tabtxtshsheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab[selected="true"] {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[selected="true"] {\
 					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabacttsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabacttsh')+' !important;\
 					}\
-					.tabbrowser-tab:not([selected="true"]):not(:hover) {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):not(:hover) {\
 					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabtsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabtsh')+' !important;\
 					}\
-					.tabbrowser-tab:not([selected="true"]):hover {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):hover {\
 					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabhovtsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabhovtsh')+' !important;\
 					}\
 				'), null, null);
@@ -539,82 +744,25 @@ classicthemerestorerjs.settings = {
 	
   },
 
-  prefChangeString: function(which,value){
-	
-	this.loadUnloadCSS(this.prefs.getCharPref(which),false);
-	this.loadUnloadCSS(value,true);
-	
-	// make sure custom tab colors get disabled on tab change
-	if (which=="tabs"){
-		this.loadUnloadCSS('customsqtab',false);
-		this.prefs.setBoolPref('customsqtab',false);
-	}
-	
-  },
-  
-  colorChange: function(value,which){
-
-	this.prefs.setCharPref(which,value);
-	
-	if (this.prefs.getBoolPref("customsqtab")){
-		this.loadUnloadCSS("customsqtab",true);
-	}
-
-	if (this.prefs.getBoolPref("tabtextc")){
-		this.loadUnloadCSS("tabtextc",true);
-	}
-
-	if (this.prefs.getBoolPref("tabtextsh")==true ){
-		this.loadUnloadCSS("tabtextsh",true);
-	}
-	
-  },
-  
-  cuiPrefChangeBool: function(which, value){
-	
-	if (value==false) {
-	  this.prefs.setBoolPref(which,false);
-	  this.loadUnloadCSS(which,false);
-	}
-	else if (value==true) {
-	  this.prefs.setBoolPref(which,true);
-	  this.loadUnloadCSS(which,true);
-	}
-	
-	this.loadUnloadCSS('cui_buttons',true);
-
-  },
-  
+  // handles two 'options' per button on 'icons' and 'icon+text' buttons
   cuiPrefChangeString: function(which,value){
 
 	if(this.prefs.getCharPref('nav_txt_ico')=='icons' && value=="icons") {
-	  this.loadUnloadCSS('icons',false);
 	  this.prefs.setCharPref(which,'iconsbig');
-	  this.loadUnloadCSS('iconsbig',true);
 	} 
 	else if(this.prefs.getCharPref('nav_txt_ico')=='iconsbig' && value=="icons") {
-	  this.loadUnloadCSS('iconsbig',false);
 	  this.prefs.setCharPref(which,'icons');
-	  this.loadUnloadCSS('icons',true);
 	}
 	else if(this.prefs.getCharPref('nav_txt_ico')=='iconstxt' && value=="iconstxt") {
-	  this.loadUnloadCSS('iconstxt',false);
 	  this.prefs.setCharPref(which,'iconstxt2');
-	  this.loadUnloadCSS('iconstxt2',true);
 	} 
 	else if(this.prefs.getCharPref('nav_txt_ico')=='iconstxt2' && value=="iconstxt") {
-	  this.loadUnloadCSS('iconstxt2',false);
 	  this.prefs.setCharPref(which,'iconstxt');
-	  this.loadUnloadCSS('iconstxt',true);
 	}
 	else {
-	  this.loadUnloadCSS(this.prefs.getCharPref(which),false);
 	  this.prefs.setCharPref(which,value);
-	  this.loadUnloadCSS(value,true);
 	}
 
-	this.loadUnloadCSS('cui_buttons',true);
-	
   }
 
 }

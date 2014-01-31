@@ -10,13 +10,14 @@
 	  margin: 6px 0px 0px 3px !important;
 	}
 	
-	.customizationmode-button label{
+	#customization-smallnavbut-button1 label,
+	#customization-icons-button label,
+	#customization-iconstext-button label,
+	#customization-smallnavbut-button2 label,
+	#customization-iconstext-button label,
+	#customization-textonly-button label{
 	  min-width:0 !important;
 	  margin: 0 -2px !important;
-	}
-
-	#customization-reset-button2 label{
-	  margin: 0 -8px !important;
 	}
 
 }

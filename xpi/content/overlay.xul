@@ -17,6 +17,8 @@
 		%customizeToolbarDTD;
 	<!ENTITY % window SYSTEM "chrome://classic_theme_restorer/locale/options.dtd">
 		%window;
+	<!ENTITY % mainwindowDTD SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
+		%mainwindowDTD;
 ]>
 
 <overlay id="classic_theme_restorer-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
@@ -36,10 +38,10 @@
 	<!--### add new buttons to customizing area ###-->
 	<hbox id="customization-container">
 	  <vbox id="customization-palette-container">
-		<hbox pack="start" id="ctr_cuibuttonsbox">
+		<hbox pack="start" id="ctr_cuibuttonsbox" ordinal="999999">
 		  <label value="&Ctr_cuibuttons;" class="ctr_cuibutlabel"/>
-		  <button id="customization-smallnavbut-button1" oncommand="classicthemerestorerjs.settings.cuiPrefChangeBool('smallnavbut',false);" label="&Ctr_cuibutnormal;" class="customizationmode-button"/>
-		  <button id="customization-smallnavbut-button2" oncommand="classicthemerestorerjs.settings.cuiPrefChangeBool('smallnavbut',true);" label="&Ctr_cuibutsmall;" class="customizationmode-button"/>
+		  <button id="customization-smallnavbut-button1" oncommand="classicthemerestorerjs.settings.prefs.setBoolPref('smallnavbut',false);" label="&Ctr_cuibutnormal;" class="customizationmode-button"/>
+		  <button id="customization-smallnavbut-button2" oncommand="classicthemerestorerjs.settings.prefs.setBoolPref('smallnavbut',true);" label="&Ctr_cuibutsmall;" class="customizationmode-button"/>
 		  <spacer flex="1"/>
 		  <label value="&Ctr_cuimode;" class="ctr_cuibutlabel"/>
 		  <button id="customization-icons-button" oncommand="classicthemerestorerjs.settings.cuiPrefChangeString('nav_txt_ico', 'icons');" label="&Ctr_cuiico;" class="customizationmode-button"/>
@@ -1000,7 +1002,7 @@
                      removable="true"
                      type="menu"
                      label="&bookmarksMenuButton.label;"
-                     tooltiptext="&bookmarksMenuButton.tooltip;"
+                     tooltiptext="&bookmarksButton.tooltip;"
                      ondragenter="PlacesMenuDNDHandler.onDragEnter(event);"
                      ondragover="PlacesMenuDNDHandler.onDragOver(event);"
                      ondragleave="PlacesMenuDNDHandler.onDragLeave(event);"

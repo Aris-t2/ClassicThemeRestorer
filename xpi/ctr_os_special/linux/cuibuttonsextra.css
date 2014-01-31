@@ -4,20 +4,21 @@
 
 	/* customize area buttons */
 	.ctr_cuibutlabel:-moz-locale-dir(ltr){
-	  margin: 4px 3px 0px 0px !important;
+	  margin: 2px 3px 0px 0px !important;
 	}
 	
 	.ctr_cuibutlabel:-moz-locale-dir(rtl){
-	  margin: 4px 0px 0px 3px !important;
+	  margin: 2px 0px 0px 3px !important;
 	}
 	
-	.customizationmode-button label{
+	#customization-smallnavbut-button1 label,
+	#customization-icons-button label,
+	#customization-iconstext-button label,
+	#customization-smallnavbut-button2 label,
+	#customization-iconstext-button label,
+	#customization-textonly-button label{
 	  min-width:0 !important;
 	  margin: 0 1px !important;
-	}
-
-	#customization-reset-button2 label{
-	  margin: 0 -6px !important;
 	}
 
 }

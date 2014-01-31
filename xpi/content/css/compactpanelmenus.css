@@ -1,0 +1,29 @@
+@import url(chrome://ctr_os_special/skin/cuibuttonsextra.css);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	.toolbarbutton-1[cui-areatype="menu-panel"] { 
+	  margin: 0px !important;
+	  padding:0px !important;
+	}
+
+	#PanelUI-history *,
+	#PanelUI-bookmarks *,
+	#PanelUI-helpView *,
+	#PanelUI-developer *,
+	#PanelUI-characterEncodingView * {
+	  margin-top: 0px !important;
+	  margin-bottom: 0px !important;
+	  padding-top:0px !important;
+	  padding-bottom:0px !important;
+	}
+
+	#bookmarks-menu-button #BMB_bookmarksPopup menu,
+	#bookmarks-menu-button #BMB_bookmarksPopup menuitem,
+	#bookmarks-menu-button #BMB_bookmarksPopup menuseparator {
+	  padding:0px !important;
+	  margin:0px !important;
+	}
+
+}

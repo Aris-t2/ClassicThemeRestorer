@@ -5,6 +5,8 @@
 
 	#ctr_cuibuttonsbox{
 	  visibility: visible !important;
+	  background-color: #ececec !important;
+      padding: 0 15px 2px 15px !important;
 	}
 
 	/* customize area buttons */	
@@ -31,10 +33,16 @@
 
 	#customization-smallnavbut-button1:-moz-locale-dir(ltr),
 	#customization-icons-button:-moz-locale-dir(ltr),
-	#customization-iconstext-button:-moz-locale-dir(ltr){
+	#customization-iconstext-button:-moz-locale-dir(ltr),
+	#customization-smallnavbut-button2:-moz-locale-dir(rtl),
+	#customization-iconstext-button:-moz-locale-dir(rtl),
+	#customization-textonly-button:-moz-locale-dir(rtl){
 	  border-top-right-radius: 0px !important;
 	  border-bottom-right-radius: 0px !important;
 	}
+	#customization-smallnavbut-button2:-moz-locale-dir(ltr),
+	#customization-iconstext-button:-moz-locale-dir(ltr),
+	#customization-textonly-button:-moz-locale-dir(ltr),
 	#customization-smallnavbut-button1:-moz-locale-dir(rtl),
 	#customization-icons-button:-moz-locale-dir(rtl),
 	#customization-iconstext-button:-moz-locale-dir(rtl){
@@ -47,12 +55,12 @@
 	}
 	
 	/* temp fix */
-	#customization-toolbar-visibility-button #customization-toolbar-menu {
+	/*#customization-toolbar-visibility-button #customization-toolbar-menu {
 	  min-width: 150px !important;
-	}
+	}*/
 	
 	/* adjust buttons */
-	#customization-toolbar-visibility-button,
+	/*#customization-toolbar-visibility-button,
 	#customization-reset-button{
 	  margin:2px 0px !important;
 	  background:#e6e6e6 !important;
@@ -79,7 +87,7 @@
 	  padding-bottom: 5px !important;
 	  padding-top: 4px !important;
 	  border-top: 0px !important;
-	}
+	}*/
 	.customizationmode-button:hover{
 	  border-top: 1px solid #89b3d4 !important;
 	  border-bottom: 1px solid #89b3d4 !important;
