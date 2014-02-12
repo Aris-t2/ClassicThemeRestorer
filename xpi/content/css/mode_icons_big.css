@@ -68,14 +68,6 @@
 	  -moz-image-region: rect(0px, 448px, 32px, 416px) !important;
 	}
 
-	#nav-bar #email-link-button[cui-areatype="toolbar"] {
-	  -moz-image-region: rect(0, 448px, 32px, 416px) !important;
-	}
-
-	#nav-bar #email-link-button[cui-areatype="toolbar"] > image {
-	  transform: scale(-1, -1) !important;
-	}
-
 	#nav-bar #characterencoding-button[cui-areatype="toolbar"] {
 	  -moz-image-region: rect(0px, 480px, 32px, 448px) !important;
 	}
@@ -110,6 +102,10 @@
 
 	#nav-bar #preferences-button[cui-areatype="toolbar"] {
 	  -moz-image-region: rect(0px, 768px, 32px, 736px) !important;
+	}
+	
+	#nav-bar #email-link-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 800px, 32px, 768px) !important;
 	}
 
 	#nav-bar #switch-to-metro-button[cui-areatype="toolbar"] {

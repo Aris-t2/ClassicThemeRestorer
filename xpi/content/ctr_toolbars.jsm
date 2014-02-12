@@ -12,9 +12,3 @@ CustomizableUI.registerArea("ctr_extra-bar", {
   legacy: true,
   defaultPlacements: ["ctr_flexible_space_eb"]
 });
-
-CustomizableUI.registerArea("ctr_toolbar_dummy", {
-  type: CustomizableUI.TYPE_TOOLBAR,
-  legacy: true,
-  defaultPlacements: ["PanelUI-menu-button"]
-});

@@ -43,13 +43,17 @@
 	}
 
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton{
-		margin-top:-16px;
-		margin-bottom:22px;
-		border-radius: 0 0 4px 4px;
+	  margin-top:-16px;
+	  margin-bottom:22px;
+	  border-radius: 0 0 4px 4px;
 	}
 	
-	#nav-bar :-moz-any(#ctr_bookmarks-button,#ctr_history-button,#ctr_back-button,#ctr_forward-button,#ctr_stop-button,#ctr_reload-button) > .toolbarbutton-icon{
+	#nav-bar :-moz-any(#ctr_appbutton,#ctr_bookmarks-button,#ctr_history-button,#ctr_back-button,#ctr_forward-button,#ctr_stop-button,#ctr_reload-button) > .toolbarbutton-icon{
 	  padding: 2px 6px 2px 6px !important;
+	}
+	
+	#PanelUI-menu-button{
+		margin: 0px !important;
 	}
 	
 	#nav-bar #ctr_bookmarks-menu-toolbar-button  > .toolbarbutton-icon{

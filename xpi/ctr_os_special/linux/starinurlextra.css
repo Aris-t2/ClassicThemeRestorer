@@ -1,0 +1,23 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	toolbar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing])  #bookmarks-menu-button[cui-areatype="toolbar"] .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton1lin.png") !important;
+	}
+	toolbar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing])  #bookmarks-menu-button[cui-areatype="toolbar"]:hover .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton1lin.png") !important;
+	}
+	toolbar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing])  #bookmarks-menu-button[cui-areatype="toolbar"]:hover:active .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton1lin.png") !important;
+	}
+	toolbar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing])  #bookmarks-menu-button[cui-areatype="toolbar"][starred] .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton2lin.png") !important;
+	}
+	toolbar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing])  #bookmarks-menu-button[cui-areatype="toolbar"][starred]:hover .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton2lin.png") !important;
+	}
+	toolbar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing])  #bookmarks-menu-button[cui-areatype="toolbar"][starred]:hover:active .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton2lin.png") !important;
+	}
+}

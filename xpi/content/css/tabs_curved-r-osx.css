@@ -2,23 +2,33 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	.tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]){
+	.tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([selected=true]),
+	.tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]),
+	.tabs-newtab-button:not(:-moz-lwtheme) {
 	  background-position: left bottom, 30px bottom, right bottom;
 	  background-repeat: no-repeat;
 	  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;
 	}
 
+	.tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([selected=true]),
 	.tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]){
 	  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start.png),
 						url(chrome://browser/skin/tabbrowser/tab-background-middle.png),
 						url(chrome://browser/skin/tabbrowser/tab-background-end.png) !important;
 	}
-
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-stack .tab-background-middle	{
-	  margin-top:2px !important;
-	}
 	
+	.tabs-newtab-button:not(:-moz-lwtheme){
+	  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),
+						url(chrome://browser/skin/tabbrowser/tab-active-middle.png),
+						url(chrome://browser/skin/tabbrowser/tab-stroke-end.png) !important;
+	}
+
+	.tabs-newtab-button:not(:-moz-lwtheme):hover{
+	  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start.png),
+						url(chrome://browser/skin/tabbrowser/tab-background-middle.png),
+						url(chrome://browser/skin/tabbrowser/tab-background-end.png) !important;
+	}
+
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start{
 	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;
@@ -38,13 +48,13 @@
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end {
-	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #949494,#9f9f9f,#a9a9a9);
+	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(transparent, transparent 2px, #a9a9a9 0px, #9f9f9f, #949494), none !important;
 	}
 	
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-stack .tab-background-middle,
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start,
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end {
-	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#adadad,#b8b8b8);
+	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(transparent, transparent 2px, #b8b8b8 0px, #adadad), none !important;
 	}
 
 	.tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
@@ -57,12 +67,12 @@
 	  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(to top,#d3d3d3,#d3d3d3,#cdcdcd) !important;
 	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;
 	}
-	.tab-background-middle[selected=true] {
+	.tab-background-middle[selected=true]:not(:-moz-lwtheme) {
 	  background-clip: padding-box, padding-box, content-box !important;
 	  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png), linear-gradient(to top,#d3d3d3,#d3d3d3,#cdcdcd), none !important;
 	}
 	
-	.tabbrowser-tab[selected=true]{
+	.tabbrowser-tab[selected=true]:not(:-moz-lwtheme){
 	  margin-top:-1px !important;
 	}
 
@@ -71,13 +81,24 @@
 	  border-top: 1px solid #8b8b8b !important;
 	}
 	
-	.tabs-newtab-button{
+	#TabsToolbar:not(:-moz-lwtheme).tabs-newtab-button{
 	  margin-left: -14px !important;
 	}
 
 	.tabbrowser-tab,
-	.tabbrowser-tab .tab-content {
+	.tabbrowser-tab .tab-content,
+	.tabbrowser-tab progressmeter.tab-progress,
+	.tabs-newtab-button	{
 	  transform: scale(-1, -1) !important;
+	}
+	.tabs-newtab-button	{
+	  z-index: 1 !important;
+	}
+	.tabbrowser-tab:not([selected=true]){
+	  z-index: 2 !important;
+	}
+	.tabbrowser-tab[selected=true]{
+	  z-index: 3 !important;
 	}
 }
 

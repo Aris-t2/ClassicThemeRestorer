@@ -13,12 +13,15 @@
 	
 	.tabbrowser-tab:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
 	  background-image: linear-gradient(to bottom, #676f76 0px, transparent 1px),linear-gradient(to bottom, #949494,#9f9f9f,#a9a9a9);
-	  color:black !important;
 	}
 	
 	.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {
 	  background-image: linear-gradient(to bottom, #676f76 0px, transparent 1px),linear-gradient(to bottom,#adadad,#b8b8b8);
-	  color:black !important;
+	}
+	
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover),
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover{
+	  color: black !important;
 	}
 
 	.tabs-newtab-button:not(:-moz-lwtheme) {
@@ -58,12 +61,15 @@
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton{
 		margin-left:-2px !important;
 	}
-
+	
+	.tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-background-middle:not([selected=true]),
+	.tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-background-start:not([selected=true]),
+	.tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-background-end:not([selected=true]),
 	.tab-background-middle[selected=true],
 	.tab-background-start[selected=true]::before,
 	.tab-background-end[selected=true]::before,
 	.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]){
-		background:none !important;
+	  background:none !important;
 	}
 	
 	.tab-background-start[selected=true]:-moz-locale-dir(ltr)::after,
@@ -158,7 +164,7 @@
 
 	.tabbrowser-tab[selected="true"]:-moz-lwtheme,
 	.tabbrowser-tab[pinned]:-moz-lwtheme {
-	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.5) 50%) !important;
+	  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.7) 50%) !important;
 	  background-size: calc(100% - 1px) calc(100% - 4px) !important;
 	}
 
@@ -232,9 +238,17 @@
 	  margin-right:-4px !important;
 	}
 
+	.tabbrowser-tab:not([pinned]) .tab-throbber,
 	.tabbrowser-tab:not([pinned]) .tab-icon-image{
 	  margin-left:-3px !important;
 	  margin-right:3px !important;
+	}
+	
+	#TabsToolbar{
+	  background-image: none !important;
+	}
+	#TabsToolbar::after {
+	  border-bottom: 0px !important;
 	}
 }
 

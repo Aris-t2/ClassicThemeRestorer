@@ -5,6 +5,7 @@
 <!ENTITY Ctr_flexspace		"Flexibler Zwischenraum">
 <!ENTITY Ctr_space			"Zwischenraum">
 <!ENTITY Ctr_separator		"Trennlinie">
+<!ENTITY Ctr_puibseparator	"PanelUI-Button Trennlinie">
 
 <!ENTITY Ctr_cuibuttons		"Buttons">
 <!ENTITY Ctr_cuibutnormal	"Normal">
@@ -15,8 +16,8 @@
 <!ENTITY Ctr_cuitxt			"Text">
 
 <!ENTITY Ctr_combrelstoptt	"[Stop][Aktualisieren] &gt;&gt; [Stop-Aktualisieren]">
-<!ENTITY Ctr_starbuttont1	"[Adressleiste][Favoriten Button]">
-<!ENTITY Ctr_starbuttont2	"[Favoriten-Button in der Adressleiste]">
+<!ENTITY Ctr_starbuttont1	"[Adressleiste][Lesezeichen-Button]">
+<!ENTITY Ctr_starbuttont2	"[Lesezeichen-Button in der Adressleiste]">
 
 <!ENTITY Ctr_main_t			"Grundeinstellungen">
 <!ENTITY Ctr_tabcolors_t	"Eigene Farben">
@@ -29,11 +30,16 @@
 <!ENTITY Ctr_tabs1m			"Quadratische Tabs (australisiert)">
 <!ENTITY Ctr_tabs2			"Gerundete Tabs (alternativ)">
 <!ENTITY Ctr_tabs3			"Gerundete Tabs (alternativ Aero)">
-<!ENTITY Ctr_tabsotoff		"Tabs 'unten'">
+<!ENTITY Ctr_tabsontop0		"Tabs oben [nicht gesetzt] (standard)">
+<!ENTITY Ctr_tabsontop1		"Tabs oben [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Tabs 'unten' [tabsontop=false]">
 <!ENTITY Ctr_tabsintitlebar	"Tabs auf Titelleiste (about:config)">
 <!ENTITY Ctr_tabwidth0		"Maximalbreite: 180px (standard)">
 <!ENTITY Ctr_tabwidth1		"Maximalbreite: 150px">
 <!ENTITY Ctr_tabwidth2		"Maximalbreite: 250px (klassisch)">
+<!ENTITY Ctr_tabmwidth0		"Minimalbreite: 100px (default)">
+<!ENTITY Ctr_tabmwidth1		"Minimalbreite: 150px">
+<!ENTITY Ctr_tabmwidth2		"Minimalbreite: 54px">
 
 <!ENTITY Ctr_appbutton		"Anwendungsbutton">
 <!ENTITY Ctr_appbutton0		"Button deaktiviert">
@@ -54,17 +60,21 @@
 <!ENTITY Ctr_appbuttxt		"'Firefox' Text (auf Tableiste)">
 
 <!ENTITY Ctr_ui				"Oberfläche">
+<!ENTITY Ctr_nbiconsize1	"#nav-bar[iconsize='small'] (standard)">
+<!ENTITY Ctr_nbiconsize2	"#nav-bar[iconsize='large']">
 <!ENTITY Ctr_smallnavbut	"Kleine Buttons (Navigationsleiste)">
 <!ENTITY Ctr_hidenavbar		"Navigationsleiste verstecken">
 <!ENTITY Ctr_buttons		"Buttons">
 <!ENTITY Ctr_backforward	"Vor-Zurück Button verschiebbar">
 <!ENTITY Ctr_wincontrols	"Vollbild-Min/Max/Schl. verschiebbar">
-<!ENTITY Ctr_starinurl		"Favoriten-Button in der Adressleiste">
+<!ENTITY Ctr_starinurl		"Lesezeichen-Button in der Adressleiste">
 <!ENTITY Ctr_hideurelstop	"Adressleiste ohne Stop &amp; Aktualisieren">
 <!ENTITY Ctr_combrelstop	"Kombiniere Stop &amp; Aktualisieren">
 <!ENTITY Ctr_findbar_def	"Suchleiste (Standardposition)">
 <!ENTITY Ctr_findbar_top	"Suchleiste oben">
 <!ENTITY Ctr_findbar_bot	"Suchleiste unten">
+<!ENTITY Ctr_findbar_topa	"Suchleiste oben (alternativ)">
+<!ENTITY Ctr_findbar_bota	"Suchleiste unten (alternativ)">
 <!ENTITY Ctr_nav_txt_ico0	"Zeige Symbole (standard)">
 <!ENTITY Ctr_nav_txt_ico1	"Zeige große Symbole">
 <!ENTITY Ctr_nav_txt_ico2	"Zeige Symbole und Text">
@@ -84,16 +94,15 @@
 <!ENTITY Ctr_textc			"Text">
 <!ENTITY Ctr_textsh			"Textschatten">
 
-<!ENTITY Ctr_fixes			"Korrekturen">
-<!ENTITY Ctr_tnotlfix 		"Dunkle Textfarbe für nicht-aktive Tabs">
-<!ENTITY Ctr_tnotlfixt		"Einige Linux Versionen und Windows Themes können Text unleserlich darstellen, wenn die 'Tabs unten' Einstellung gewählt ist.">
-<!ENTITY Ctr_bfurlbarfix 	"2.5px Adressleisten-Randradius auf der linken Seite">
-<!ENTITY Ctr_bfurlbarfixt	"Der verschiebbare Vor-Zurück Button benötigt diese Option, falls kein anderer CSS-Code zur Änderung des Randradius verwendet wird.">
-
 <!ENTITY Ctr_specialtw		"Spezial Einstellungen">
 <!ENTITY Ctr_paneluibtweak	"PanelUI Button wie Anwendungsbutton darstellen (auf der Tableiste)">
 <!ENTITY Ctr_notabfog		"Tableistenhintergrund deaktivieren (Windows AeroGlass)">
-<!ENTITY Ctr_tabmokcolor	"Weißer Tabtext und weiße Tabbuttons (Neu, Schließen, Gruppen, Listen)">
+<!ENTITY Ctr_tabmokcolor	"Weiße Trennlinien und Tabbuttons (Neu, Schließen, Gruppen, Listen)">
+<!ENTITY Ctr_tabmokcolor2	"Weißer Tabtext und dunkler Schatten für nicht aktive Tabs">
 <!ENTITY Ctr_closeabarbut	"Entferne 'Schließen'-Button von der Addonleiste">
+<!ENTITY Ctr_bfurlbarfix 	"2.5px Adressleisten-Randradius auf der linken Seite">
+<!ENTITY Ctr_bmanimation	"Entferne Animation vom Lesezeichen-Button">
+<!ENTITY Ctr_tabanimation	"Tab-Animation (about:config)">
+<!ENTITY Ctr_dlanimation	"Downloads-Button Benachrichtigungsanimation (about:config)">
 <!ENTITY Ctr_cpanelmenus	"Kompakte 'Panel-Menüs' (Lesezeichen, Chronic etc.)">
 <!ENTITY Ctr_cuibotbuttons	"Einstellungs-Buttons im 'Anpassen'-Modus">

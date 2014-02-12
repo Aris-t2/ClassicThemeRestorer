@@ -4,7 +4,7 @@
 			   url(chrome://global/content/customizeToolbar.xul) {
 
 	#TabsToolbar #ctr_appbutton,
-	#ctr_appbutton2{
+	#main-window #titlebar #ctr_appbutton2{
 	  visibility: collapse !important;
 	}
 	

@@ -7,7 +7,13 @@
 	  visibility: collapse !important;
 	}
 	
-	#ctr_appbutton2{
+	window:not([chromehidden~="toolbar"]) #ctr_appbutton2{
+	  visibility: visible !important;
+	}
+	#main-window:not([tabsintitlebar]) #ctr_appbutton2{
+	  visibility: collapse !important;
+	}
+	#main-window:not([tabsintitlebar]):not([chromehidden~="toolbar"]) #ctr_appbutton{
 	  visibility: visible !important;
 	}
 
@@ -77,16 +83,6 @@
 	  -moz-appearance: none !important;
 	  visibility:collapse !important;
 	}
-	
-
-	#titlebar[hidden] #ctr_appbutton2{
-	  visibility: collapse !important;
-	}
-
-	#main-window #titlebar[hidden] ~ * #ctr_appbutton{
-	  visibility: visible !important;
-	}
-
 
 	/* restore hidden titlebar and move it behind tabs toolbar for 
 	   'tabsintitlebar=false' */

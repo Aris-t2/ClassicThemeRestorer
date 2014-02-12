@@ -5,6 +5,7 @@
 <!ENTITY Ctr_flexspace		"Espacio flexible">
 <!ENTITY Ctr_space			"Espacio">
 <!ENTITY Ctr_separator		"Separador">
+<!ENTITY Ctr_puibseparator	"PanelUI-botón Separador">
 
 <!ENTITY Ctr_cuibuttons		"Botones">
 <!ENTITY Ctr_cuibutnormal	"normal">
@@ -29,11 +30,16 @@
 <!ENTITY Ctr_tabs1m			"Pestañas cuadradas (australizado)">
 <!ENTITY Ctr_tabs2			"Pestañas curvadas (alternativa)">
 <!ENTITY Ctr_tabs3			"Pestañas curvadas (alternativa Aero)">
-<!ENTITY Ctr_tabsotoff		"Pestañas no arriba">
+<!ENTITY Ctr_tabsontop0		"Pestañas arriba [no ajuste] (por defecto)">
+<!ENTITY Ctr_tabsontop1		"Pestañas arriba [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Pestañas no arriba [tabsontop=false]">
 <!ENTITY Ctr_tabsintitlebar	"Pestañas en la barra de título">
 <!ENTITY Ctr_tabwidth0		"Ancho-máximo: 180px (por defecto)">
 <!ENTITY Ctr_tabwidth1		"Ancho-máximo: 150px">
 <!ENTITY Ctr_tabwidth2		"Ancho-máximo: 250px (clásico)">
+<!ENTITY Ctr_tabmwidth0		"Ancho-minimo: 100px (por defecto)">
+<!ENTITY Ctr_tabmwidth1		"Ancho-minimo: 150px">
+<!ENTITY Ctr_tabmwidth2		"Ancho-minimo: 54px">
 
 <!ENTITY Ctr_appbutton		"Botón de la aplicación">
 <!ENTITY Ctr_appbutton0		"Botón deshabilitado">
@@ -54,6 +60,8 @@
 <!ENTITY Ctr_appbuttxt		"Texto 'Firefox' (la barra de pestañas)">
 
 <!ENTITY Ctr_ui				"Interfaz de usuario general">
+<!ENTITY Ctr_nbiconsize1	"#nav-bar[iconsize='small'] (por defecto)">
+<!ENTITY Ctr_nbiconsize2	"#nav-bar[iconsize='large']">
 <!ENTITY Ctr_smallnavbut	"Botones pequeños (barra de navegación)">
 <!ENTITY Ctr_hidenavbar		"Ocultar barra de navegación">
 <!ENTITY Ctr_buttons		"Botones de barra de herramientas">
@@ -65,6 +73,8 @@
 <!ENTITY Ctr_findbar_def	"Barra de búsqueda (posición por defecto)">
 <!ENTITY Ctr_findbar_top	"Barra de búsqueda arriba">
 <!ENTITY Ctr_findbar_bot	"Barra de búsqueda abajo">
+<!ENTITY Ctr_findbar_topa	"Barra de búsqueda arriba (alternativa)">
+<!ENTITY Ctr_findbar_bota	"Barra de búsqueda abajo (alternativa)">
 <!ENTITY Ctr_nav_txt_ico0	"Mostrar sólo iconos">
 <!ENTITY Ctr_nav_txt_ico1	"Mostrar iconos grandes">
 <!ENTITY Ctr_nav_txt_ico2	"Mostrar iconos y texto">
@@ -84,16 +94,15 @@
 <!ENTITY Ctr_textc			"texto">
 <!ENTITY Ctr_textsh			"sombra del texto">
 
-<!ENTITY Ctr_fixes			"Arreglos">
-<!ENTITY Ctr_tnotlfix 		"Color de texto negro para pestañas no-activas">
-<!ENTITY Ctr_tnotlfixt		"Algunas versiones de Linux y algunos temas de personalización de Windows pueden mostrar colores de texto de pestaña equivocados, si las pestañas no están en la parte superior.">
-<!ENTITY Ctr_bfurlbarfix 	"Forzar radio del borde izquierdo de la barra de URL a 2.5px">
-<!ENTITY Ctr_bfurlbarfixt	"Es preciso que permanezca deshabilitada para que u ncódigo CSS personalizado pueda cambiar el radio del borde (border-radius) izquierdo. Fuera de ese uso, esta configuración es necesaria para que la opción 'botón atrás-adelante movible' cambie el borde izquierdo de la barra de URL para coincida con el radio del borde derecho del botón.">
-
 <!ENTITY Ctr_specialtw		"Ajustes especiales">
 <!ENTITY Ctr_paneluibtweak	"Apariencia del botón de la aplicación para el botón del panel UI (en la barra de pestañas)">
 <!ENTITY Ctr_notabfog		"Eliminar niebla de fondo de la barra de pestañas (Windows AeroGlass)">
-<!ENTITY Ctr_tabmokcolor	"Color blanco para texto y botones (cerrar, nuevo, grupos, listar todas) de pestañas">
+<!ENTITY Ctr_tabmokcolor	"Color blanco para botones (cerrar, nuevo, grupos, listar todas) de pestañas">
+<!ENTITY Ctr_tabmokcolor2	"Color blanco para texto de pestañas">
 <!ENTITY Ctr_closeabarbut	"Ocultar botón cerrar de la barra de complementos">
+<!ENTITY Ctr_bfurlbarfix 	"Forzar radio del borde izquierdo de la barra de URL a 2.5px">
+<!ENTITY Ctr_bmanimation	"Ocultar la animación de botón de menú de marcadores">
+<!ENTITY Ctr_tabanimation	"Animación pestaña (about:config)">
+<!ENTITY Ctr_dlanimation	"Animación notificación descargas (about:config)">
 <!ENTITY Ctr_cpanelmenus	"Menús del panel compacto (marcadores, historial, etc)">
 <!ENTITY Ctr_cuibotbuttons	"Los botones de opción en el modo de 'personalizar ui'">

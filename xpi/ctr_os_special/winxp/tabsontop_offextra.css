@@ -2,11 +2,6 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	#TabsToolbar:not(:-moz-lwtheme),
-	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:not(:-moz-lwtheme){
-	  background: -moz-Dialog !important;
-	}
-	
 	#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{
 	  margin-top: 4px !important;
 	  margin-bottom: 4px !important;

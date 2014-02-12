@@ -5,6 +5,7 @@
 <!ENTITY Ctr_flexspace		"Flexible space">
 <!ENTITY Ctr_space			"Space">
 <!ENTITY Ctr_separator		"Separator">
+<!ENTITY Ctr_puibseparator	"PanelUI-button Separator">
 
 <!ENTITY Ctr_cuibuttons		"Buttons">
 <!ENTITY Ctr_cuibutnormal	"Normal">
@@ -29,11 +30,16 @@
 <!ENTITY Ctr_tabs1m			"Squared tabs (australized)">
 <!ENTITY Ctr_tabs2			"Curved tabs (alternative)">
 <!ENTITY Ctr_tabs3			"Curved tabs (alternative Aero)">
-<!ENTITY Ctr_tabsotoff		"Tabs not on top">
+<!ENTITY Ctr_tabsontop0		"Tabs on top [not set] (default)">
+<!ENTITY Ctr_tabsontop1		"Tabs on top [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Tabs not on top [tabsontop=false]">
 <!ENTITY Ctr_tabsintitlebar	"Tabs in titlebar (about:config)">
 <!ENTITY Ctr_tabwidth0		"Max-width: 180px (default)">
 <!ENTITY Ctr_tabwidth1		"Max-width: 150px">
 <!ENTITY Ctr_tabwidth2		"Max-width: 250px (classic)">
+<!ENTITY Ctr_tabmwidth0		"Min-width: 100px (default)">
+<!ENTITY Ctr_tabmwidth1		"Min-width: 150px">
+<!ENTITY Ctr_tabmwidth2		"Min-width: 54px">
 
 <!ENTITY Ctr_appbutton		"Application button">
 <!ENTITY Ctr_appbutton0		"Button disabled">
@@ -54,6 +60,8 @@
 <!ENTITY Ctr_appbuttxt		"'Firefox' label (if on tabs toolbar)">
 
 <!ENTITY Ctr_ui				"General UI">
+<!ENTITY Ctr_nbiconsize1	"#nav-bar[iconsize='small'] (default)">
+<!ENTITY Ctr_nbiconsize2	"#nav-bar[iconsize='large']">
 <!ENTITY Ctr_smallnavbut	"Small buttons on navigation toolbar">
 <!ENTITY Ctr_hidenavbar		"Hide navigation toolbar">
 <!ENTITY Ctr_buttons		"Toolbar buttons">
@@ -63,8 +71,10 @@
 <!ENTITY Ctr_hideurelstop	"Hide urlbars stop &amp; reload buttons">
 <!ENTITY Ctr_combrelstop	"Combine stop &amp; reload buttons">
 <!ENTITY Ctr_findbar_def	"Findbar (default position)">
-<!ENTITY Ctr_findbar_top	"Findbar on top">
-<!ENTITY Ctr_findbar_bot	"Findbar at the bottom">
+<!ENTITY Ctr_findbar_top	"Findbar top position">
+<!ENTITY Ctr_findbar_bot	"Findbar bottom position">
+<!ENTITY Ctr_findbar_topa	"Findbar top position (alternative)">
+<!ENTITY Ctr_findbar_bota	"Findbar bottom position (alternative)">
 <!ENTITY Ctr_nav_txt_ico0	"Show icons only (default)">
 <!ENTITY Ctr_nav_txt_ico1	"Show large icons">
 <!ENTITY Ctr_nav_txt_ico2	"Show icons and text">
@@ -84,16 +94,15 @@
 <!ENTITY Ctr_textc			"text">
 <!ENTITY Ctr_textsh			"text shadow">
 
-<!ENTITY Ctr_fixes			"Fixes">
-<!ENTITY Ctr_tnotlfix 		"Black text color on non-active tabs">
-<!ENTITY Ctr_tnotlfixt		"Some Linux versions and some Windows themes may display wrong tab text colors, if tabs are not on top.">
-<!ENTITY Ctr_bfurlbarfix	"Force urlbars left border-radius to 2.5px">
-<!ENTITY Ctr_bfurlbarfixt	"Needs to stay disabled for custom css code being able to change left border-radius. Otherwise this is needed for 'movable back-forward button' option to change urlbars left border to match right border radius.">
-
 <!ENTITY Ctr_specialtw		"Special tweaks">
 <!ENTITY Ctr_paneluibtweak	"Appbutton appearance for panel ui button (on tabs toolbar)">
 <!ENTITY Ctr_notabfog		"Remove tab toolbars background fog (Windows AeroGlass)">
-<!ENTITY Ctr_tabmokcolor	"White color for tab text and tab buttons (close, new, groups, list all)">
+<!ENTITY Ctr_tabmokcolor	"White color for separators and tab buttons (close, new, groups, list all)">
+<!ENTITY Ctr_tabmokcolor2	"White color and dark shadow for text on non-active tab">
 <!ENTITY Ctr_closeabarbut	"Hide add-on bars close button">
+<!ENTITY Ctr_bfurlbarfix	"Force urlbars left border-radius to 2.5px">
+<!ENTITY Ctr_bmanimation	"Hide bookmarks menu buttons animation">
+<!ENTITY Ctr_tabanimation	"Tabs animation (about:config)">
+<!ENTITY Ctr_dlanimation	"Downloads notification animation (about:config)">
 <!ENTITY Ctr_cpanelmenus	"Compact panel menus (bookmarks, history etc.)">
 <!ENTITY Ctr_cuibotbuttons	"Option-buttons in 'customize ui' mode">

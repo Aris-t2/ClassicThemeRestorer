@@ -43,10 +43,14 @@
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/reload-inv.png");
 	}
 
-	#nav-bar :-moz-any(#ctr_bookmarks-button,#ctr_history-button,#ctr_back-button,#ctr_forward-button,#ctr_stop-button,#ctr_reload-button) > .toolbarbutton-icon{
+	#nav-bar :-moz-any(#ctr_appbutton,#ctr_bookmarks-button,#ctr_history-button,#ctr_back-button,#ctr_forward-button,#ctr_stop-button,#ctr_reload-button) > .toolbarbutton-icon{
 	  padding: 2px 6px 2px 6px !important;
 	}
-	
+
+	#PanelUI-menu-button{
+		margin: 0px !important;
+	}
+
 	#nav-bar #ctr_bookmarks-menu-toolbar-button  > .toolbarbutton-icon{
 	  padding-top: 2px !important;
 	  padding-bottom: 2px !important;

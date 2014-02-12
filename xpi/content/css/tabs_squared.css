@@ -7,11 +7,14 @@
 		margin-left:-2px !important;
 	}
 
+	.tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-background-middle:not([selected=true]),
+	.tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-background-start:not([selected=true]),
+	.tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-background-end:not([selected=true]),
 	.tab-background-middle[selected=true],
 	.tab-background-start[selected=true]::before,
 	.tab-background-end[selected=true]::before,
 	.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]){
-		background:none !important;
+	  background:none !important;
 	}
 	
 	.tab-background-start[selected=true]:-moz-locale-dir(ltr)::after,
@@ -42,10 +45,11 @@
 	  -moz-border-image: none !important;
 	  padding-left: 5px !important;
 	  padding-right: 5px !important;
+      padding-bottom: 1px !important;
 	  margin-left: 0px !important;
 	  margin-right: 0px !important;
 	  margin-top: 0px !important;
-	  margin-bottom: 0px !important;
+	  margin-bottom: 1px !important;
 	}
 
 	#TabsToolbar {
@@ -114,10 +118,13 @@
 	.tabs-newtab-button:-moz-lwtheme,
 	.tabbrowser-tab:-moz-lwtheme,
 	.tabbrowser-tab[pinned]:-moz-lwtheme{
-	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.5) 50%) !important;
 	  background-size: calc(100% - 1px) calc(100% - 3px) !important;
 	}
-
+	
+	.tabs-newtab-button:-moz-lwtheme{
+	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.5) 50%) !important;
+	}
+	
 	@media all and (-moz-windows-glass) {
 		.tabs-newtab-button:-moz-lwtheme,		
 		.tabbrowser-tab:-moz-lwtheme,
@@ -126,24 +133,21 @@
 		}
 	}
 
-	.tabbrowser-tab:-moz-lwtheme-brighttext:not([selected="true"]),
-	.tabs-newtab-button:-moz-lwtheme-brighttext {
-	  background-image: linear-gradient(hsla(0,0%,40%,.6), hsla(0,0%,30%,.6) 80%) !important;
-	}
-
-	.tabbrowser-tab:-moz-lwtheme-brighttext:not([selected="true"]):hover,
+	.tabbrowser-tab:not([selected=true]):hover:-moz-lwtheme-brighttext,
 	.tabs-newtab-button:-moz-lwtheme-brighttext:hover {
 	  background-image: linear-gradient(hsla(0,0%,60%,.6), hsla(0,0%,45%,.6) 80%) !important;
 	}
-
-	.tabbrowser-tab:-moz-lwtheme-darktext:not([selected="true"]),
-	.tabs-newtab-button:-moz-lwtheme-darktext {
-	  background-image: linear-gradient(hsla(0,0%,60%,.5), hsla(0,0%,45%,.5) 80%) !important;
-	}
-
-	.tabbrowser-tab:-moz-lwtheme-darktext:not([selected="true"]):hover,
-	.tabs-newtab-button:-moz-lwtheme-darktext:hover {
+	.tabbrowser-tab:not([selected=true]):hover:-moz-lwtheme-darktext,
+	.tabs-newtab-button:-moz-lwtheme-darktext:hover	{
 	  background-image: linear-gradient(hsla(0,0%,80%,.5), hsla(0,0%,60%,.5) 80%) !important;
+	}
+	.tabbrowser-tab:not([selected=true]):-moz-lwtheme-brighttext,
+	.tabs-newtab-button:-moz-lwtheme-brighttext {
+      background-image: linear-gradient(hsla(0,0%,40%,.6), hsla(0,0%,30%,.6) 80%) !important;
+	}
+	.tabbrowser-tab:not([selected=true]):-moz-lwtheme-darktext,
+	.tabs-newtab-button:-moz-lwtheme-darktext {
+      background-image: linear-gradient(hsla(0,0%,60%,.5), hsla(0,0%,45%,.5) 80%) !important;
 	}
 
 	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]) {
@@ -154,13 +158,16 @@
 						radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,1) 3%, rgba(186,221,251,.75) 40%, rgba(127,179,255,.5) 80%, rgba(127,179,255,.25)) !important;
 	}
 
-	.tab-background-middle[selected=true]:-moz-lwtheme{
-	  background: linear-gradient(to top, rgba(10%,10%,10%,.2) 0px, transparent 0px), linear-gradient(transparent, hsla(0,0%,45%,.0) 1px, hsla(0,0%,32%,.0) 80%, hsla(0,0%,0%,.0)) !important;
-	}
-
 	#navigator-toolbox toolbar:-moz-lwtheme{
 	  box-shadow:none !important;
 	  border: 0px solid transparent !important;
+	}
+	
+	#TabsToolbar{
+	  background-image: none !important;
+	}
+	#TabsToolbar::after {
+	  border-bottom: 0px !important;
 	}
 
 	.tabbrowser-tab[pinned]{
@@ -185,6 +192,7 @@
 	  margin-right:-4px !important;
 	}
 
+	.tabbrowser-tab:not([pinned]) .tab-throbber,
 	.tabbrowser-tab:not([pinned]) .tab-icon-image{
 	  margin-left:-3px !important;
 	  margin-right:3px !important;

@@ -1,0 +1,21 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#nav-bar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing]) #bookmarks-menu-button:-moz-locale-dir(ltr) {
+	  margin-left: -68px !important;
+	  margin-right: 40px !important;
+	}
+	#nav-bar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing]) #bookmarks-menu-button:-moz-locale-dir(rtl) {
+	  margin-right: -68px !important;
+	  margin-left: 40px !important;
+	}
+	
+	toolbar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing]) #urlbar-container #urlbar-wrapper #urlbar #urlbar-icons {
+	  padding-right:24px !important;
+	}
+	toolbar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing]) #urlbar-container #urlbar-wrapper #urlbar:-moz-locale-dir(rtl) #urlbar-icons {
+	  padding-left:24px !important;
+	}
+
+}

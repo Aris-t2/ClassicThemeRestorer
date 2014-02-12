@@ -2,21 +2,6 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	@media not all and (-moz-windows-classic) {
-		#TabsToolbar:not(:-moz-lwtheme),
-		#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:not(:-moz-lwtheme){
-			background: #dbeaf9 !important;
-		}
-	}
-	
-	@media all and (-moz-windows-classic) {
-
-		#TabsToolbar:not(:-moz-lwtheme),
-		#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:not(:-moz-lwtheme){
-			background: -moz-Dialog !important;
-		}
-	}
-	
     #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:-moz-locale-dir(ltr){
       margin-left: 0px !important;
     }
@@ -29,13 +14,6 @@
     #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:-moz-locale-dir(rtl){
       padding-right: 2px !important;
     }
-
-	@media all and (-moz-windows-glass) {	
-		#TabsToolbar{
-			border-left:1px solid #95adb8 !important;
-			border-right:1px solid #95adb8 !important;
-		}
-	}
 	
 	#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{
 	  margin-top: 3px !important;

@@ -3,7 +3,7 @@
 @-moz-document url(chrome://browser/content/browser.xul),
 			   url(chrome://global/content/customizeToolbar.xul) {
 
-	#ctr_appbutton {
+	window:not([chromehidden~="toolbar"]) #ctr_appbutton {
 	  visibility: visible !important;
 	}
 	

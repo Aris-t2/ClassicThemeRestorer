@@ -11,26 +11,158 @@
 	  transition: none !important;
 	}
 	
-	#bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
-	  padding-top: 0px !important;
-	  padding-bottom: 0px !important;
-	}
-
-	window:not([chromehidden~="toolbar"]) #ctr_back-forward-button > #forward-button,
-	window:not([chromehidden~="toolbar"]) #urlbar-container > #forward-button{
-	  -moz-margin-start: 10px !important;
-	  -moz-margin-end: 6px !important;
-	}
-	
-	#navigator-toolbox #nav-bar .toolbarbutton-1 {
-		margin: 1px 1px !important;
-	}
-
-    window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
-      margin-left: 0px !important;
+    window:not([chromehidden~="toolbar"]):-moz-locale-dir(ltr) #urlbar-container > #urlbar-wrapper > #urlbar,
+	window:not([chromehidden~="toolbar"]):-moz-locale-dir(ltr) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
+      margin-left: 3px !important;
       transition: none !important;
       transition-property:  none !important;
       transition-delay: 0s !important;
     }
+
+    window:not([chromehidden~="toolbar"]):-moz-locale-dir(rtl) #urlbar-container > #urlbar-wrapper > #urlbar,
+	window:not([chromehidden~="toolbar"]):-moz-locale-dir(rtl) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
+      margin-right: 3px !important;
+      transition: none !important;
+      transition-property:  none !important;
+      transition-delay: 0s !important;
+    }
+
+	#nav-bar #ctr_appbutton #ctr_appbuttonPopup{
+		margin-top: -3px !important;
+		margin-left:1px !important;
+	}
+
+	#navigator-toolbox #nav-bar #back-button > .toolbarbutton-icon,
+    #navigator-toolbox #nav-bar #forward-button > .toolbarbutton-icon{
+	  padding: 2px !important;
+      margin: 1px !important;
+	}
+
+	#nav-bar .toolbarbutton-1 {
+      -moz-appearance: toolbarbutton !important;
+      background: unset !important;
+      box-shadow: unset !important;
+    }
+
+	#navigator-toolbox #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button,
+	#navigator-toolbox #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
+	#navigator-toolbox #nav-bar .toolbarbutton-1 {
+	  padding: 0px 0px !important;
+      margin: 0.5px 0 0 0 !important;
+	}
+
+	@media not all and (-moz-windows-theme:aero) {
+	
+		#nav-bar .toolbarbutton-1:not([disabled]):hover {
+		  box-shadow: inset 0px 0px 2px #000000 !important;
+		  border-radius: 2.5px !important;
+		}
+
+	}
+	
+	#nav-bar .toolbarbutton-1 {
+      min-width:24px !important;
+    }
+
+    #nav-bar * .toolbarbutton-icon,
+	#nav-bar * {
+	  clip-path: none !important;
+	}
+
+	#urlbar-container #back-button:not([cui-areatype="menu-panel"]) {
+	  -moz-image-region: rect(0, 54px, 18px, 36px) !important;
+	}
+
+	#urlbar-container #forward-button[disabled]{
+	  visibility: visible !important;
+	  opacity: 1.0 !important;
+	}
+
+    #navigator-toolbox #nav-bar #back-button[disabled] > .toolbarbutton-icon,
+	#navigator-toolbox #nav-bar .toolbarbutton-menubutton-dropmarker > image,
+	#navigator-toolbox #nav-bar .toolbarbutton-menubutton-button .toolbarbutton-icon,
+	#navigator-toolbox #nav-bar toolbarbutton[type="menu-button"] > .toolbarbutton-icon,
+	#navigator-toolbox #nav-bar .toolbarbutton-1:-moz-any(:hover ,[checked],[open],[type="menu-button"]) > .toolbarbutton-icon,
+	#navigator-toolbox #nav-bar .toolbarbutton-1[type="menu-button"] > .toolbarbutton-menubutton-dropmarker::before{
+	  -moz-appearance: none !important;
+	  background: none !important;
+	  background-image: none !important;
+	  border-radius: 2.5px;
+	  border-color: transparent !important;
+	  box-shadow: none !important;
+	  transition-property: none !important;
+      transition-duration: 0ms !important;
+	}   
+
+	#nav-bar .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+	#nav-bar .toolbarbutton-1:not([type="menu"]) > .toolbarbutton-icon{
+	  padding: 2px !important;
+	}
+
+	#nav-bar #back-button:not(:hover) > .toolbarbutton-icon,
+	#nav-bar #forward-button:not(:hover) > .toolbarbutton-icon,
+	#nav-bar #back-button:hover[disabled] > .toolbarbutton-icon,
+	#nav-bar #forward-button:hover[disabled] > .toolbarbutton-icon{
+	  -moz-appearance: none !important;
+	  border: 0px solid transparent !important;
+	  box-shadow: none !important;
+	  background: none !important;
+	}
+
+    #urlbar:-moz-locale-dir(ltr){
+      border-left:1px solid #b4c1cf !important;
+    }
+    #urlbar[focused="true"]:-moz-locale-dir(ltr){
+      border-left:1px solid #72c0fe !important;
+    }
+    #urlbar:-moz-locale-dir(rtl){
+      border-right:1px solid #b4c1cf !important;
+    }
+    #urlbar[focused="true"]:-moz-locale-dir(rtl){
+      border-right:1px solid #72c0fe !important;
+    }
+	
+	#ctr_puib_separator{
+	  margin-top: 2px !important;
+	  margin-bottom: 2px !important;
+	}
+
+	/* star button in urlbar support */
+	#navigator-toolbox  #nav-bar #urlbar-container #bookmarks-menu-button {
+      -moz-appearance: none !important;
+      background: unset !important;
+      box-shadow: unset !important;
+	  border: unset !important;
+    }
+
+	#navigator-toolbox #nav-bar #urlbar-container #bookmarks-menu-button > .toolbarbutton-menubutton-button {
+	  -moz-appearance: none !important;
+	  padding: 0px 0px !important;
+	  background: none !important;
+	  border: 0px solid !important;
+	  margin: -8px 0 !important;
+	  box-shadow: none !important;
+	}
+	#navigator-toolbox #nav-bar #urlbar-container  #bookmarks-menu-button > .toolbarbutton-menubutton-button:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]):hover > .toolbarbutton-icon {
+      background-image: linear-gradient(hsla(0,0%,100%,.0), hsla(0,0%,100%,.0)) !important;
+      border-color: hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) !important;
+      box-shadow: none !important;
+	}
+	
+	/* zoom page add-on */
+    #navigator-toolbox #nav-bar #zoompage-zoomdisplay-s,
+    #navigator-toolbox #nav-bar #zoompage-zoomin-s,
+    #navigator-toolbox #nav-bar #zoompage-zoomout-s,
+    #navigator-toolbox #nav-bar #zoompage-zoomdisplay-t,
+    #navigator-toolbox #nav-bar #zoompage-zoomout-t,
+    #navigator-toolbox #nav-bar #zoompage-zoomin-t {
+      -moz-appearance: none !important;
+    }
+	#nav-bar #zoompage-zoomout-s image,
+	#nav-bar #zoompage-zoomin-s image,
+	#nav-bar #zoompage-zoomout-t image,
+	#nav-bar #zoompage-zoomin-t image{
+	  padding:1px !important;
+	}
 
 }

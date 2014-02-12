@@ -3,6 +3,7 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
+	.tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([selected=true]),
 	.tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]),
 	.tabs-newtab-button:not(:-moz-lwtheme) {
 	  background-position: left bottom, 30px bottom, right bottom;
@@ -10,6 +11,7 @@
 	  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;
 	}
 
+	.tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([selected=true]),
 	.tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]){
 	  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start.png),
 						url(chrome://browser/skin/tabbrowser/tab-background-middle.png),
@@ -26,11 +28,6 @@
 	  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start.png),
 						url(chrome://browser/skin/tabbrowser/tab-background-middle.png),
 						url(chrome://browser/skin/tabbrowser/tab-background-end.png) !important;
-	}
-	
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-stack .tab-background-middle	{
-	  margin-top:2px !important;
 	}
 	
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),

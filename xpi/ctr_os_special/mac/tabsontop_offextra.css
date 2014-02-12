@@ -2,9 +2,6 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	#TabsToolbar:not(:-moz-lwtheme){
-		background: #d2d2d2 !important;
-	}
 	#titlebar{
 		padding-top: 0px !important;
 		padding-bottom: 24px !important;

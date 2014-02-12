@@ -1,0 +1,28 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	@media all and (-moz-windows-theme:aero) {
+		#TabsToolbar:not(:-moz-lwtheme) {
+		  background: #dbeaf9 !important;
+		}
+	}
+	
+	@media not all and (-moz-windows-theme:aero) {
+
+		#TabsToolbar:not(:-moz-lwtheme) {
+		  background: -moz-Dialog !important;
+		}
+	}
+	
+	@media all and (-moz-windows-glass) {	
+		#TabsToolbar{
+		  border-left: 1px solid #95adb8 !important;
+		  border-right: 1px solid #95adb8 !important;
+		}
+		#main-window:not(:-moz-lwtheme) #content-deck {
+		  border-top: 1px solid #aabccf !important;
+		}
+	}
+	
+}
