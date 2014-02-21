@@ -1,13 +1,16 @@
-@import url(chrome://ctr_os_special/skin/hidenavbarextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
-	#nav-bar:not([customizing]){
-	  min-height:0px !important;
-	  height:0px !important;
-	  max-height:0px !important;
+	#main-window:not([customizing]) #nav-bar{
+	  min-height:2px !important;
+	  height:2px !important;
+	  max-height:2px !important;
 	}
-	#PanelUI-button {
+	#main-window:not([customizing]) #PanelUI-button {
 	  visibility: collapse !important;
+	}
+	
+	#PersonalToolbar {
+	  background-image: linear-gradient(rgba(253, 253, 253, 0.5), rgba(255, 255, 255, 0));
 	}
 }

@@ -1,19 +1,18 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul),
-			   url(chrome://global/content/customizeToolbar.xul) {
+@-moz-document url(chrome://browser/content/browser.xul){
 
 	#ctr_appbutton2:not(:hover):not(:active):not([open]){
 	  background-image: linear-gradient(rgb(82,182,247), rgb(10,98,215) 95%) !important;
-	  border-color: rgba(6,42,83,.9)!important;
+	  border-color: rgba(6,42,83,.9) !important;
 	  box-shadow: 0 1px 0 rgba(255,255,255,.25) inset,
-				  0 0 0 1px rgba(255,255,255,.25) inset!important;
+				  0 0 0 1px rgba(255,255,255,.25) inset !important;
 	}
 	#TabsToolbar #ctr_appbutton{
 	  background: linear-gradient(rgb(82,182,247), rgb(10,98,215) 95%) !important;
-	  border-color: rgba(6,42,83,.9)!important;
+	  border-color: rgba(6,42,83,.9) !important;
 	  box-shadow: 0 1px 0 rgba(255,255,255,.25) inset,
-				  0 0 0 1px rgba(255,255,255,.25) inset!important;
+				  0 0 0 1px rgba(255,255,255,.25) inset !important;
 	}
 	#TabsToolbar #ctr_appbutton:hover:not(:active):not([open]),
 	#ctr_appbutton2:hover:not(:active):not([open]){

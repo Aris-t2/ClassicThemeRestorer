@@ -16,8 +16,6 @@
 <!ENTITY Ctr_cuitxt			"Text">
 
 <!ENTITY Ctr_combrelstoptt	"[Stop][Aktualisieren] &gt;&gt; [Stop-Aktualisieren]">
-<!ENTITY Ctr_starbuttont1	"[Adressleiste][Lesezeichen-Button]">
-<!ENTITY Ctr_starbuttont2	"[Lesezeichen-Button in der Adressleiste]">
 
 <!ENTITY Ctr_main_t			"Grundeinstellungen">
 <!ENTITY Ctr_tabcolors_t	"Eigene Farben">
@@ -56,18 +54,20 @@
 <!ENTITY Ctr_appbuttonI1	"Neustart empfohlen">
 <!ENTITY Ctr_appbuttonI2	"Farbe nur auf der Titelleiste">
 <!ENTITY Ctr_appbuttonI3	"und der Tabsleiste sichtbar!">
-<!ENTITY Ctr_alttbappb		"Alternative Symbole (auf Leisten)">
-<!ENTITY Ctr_appbuttxt		"'Firefox' Text (auf Tableiste)">
+<!ENTITY Ctr_alttbappb		"Alternative Symbole (alle Leisten)">
+<!ENTITY Ctr_appbuttxt		"'Firefox' Text (nur Tableiste)">
+<!ENTITY Ctr_appbutmhi		"Höhere Position (nur Tableiste)">
 
 <!ENTITY Ctr_ui				"Oberfläche">
-<!ENTITY Ctr_nbiconsize1	"#nav-bar[iconsize='small'] (standard)">
-<!ENTITY Ctr_nbiconsize2	"#nav-bar[iconsize='large']">
+<!ENTITY Ctr_nbiconsize1	"Benutze #nav-bar[iconsize='small'] (standard)">
+<!ENTITY Ctr_nbiconsize2	"Benutze #nav-bar[iconsize='large']">
 <!ENTITY Ctr_smallnavbut	"Kleine Buttons (Navigationsleiste)">
 <!ENTITY Ctr_hidenavbar		"Navigationsleiste verstecken">
 <!ENTITY Ctr_buttons		"Buttons">
-<!ENTITY Ctr_backforward	"Vor-Zurück Button verschiebbar">
-<!ENTITY Ctr_wincontrols	"Vollbild-Min/Max/Schl. verschiebbar">
-<!ENTITY Ctr_starinurl		"Lesezeichen-Button in der Adressleiste">
+<!ENTITY Ctr_backforward	"Verschiebbarer Vor-Zurück-Button">
+<!ENTITY Ctr_wincontrols	"Verschiebbare Vollbild-Buttons: Min/Max/Schließen ">
+<!ENTITY Ctr_starinurl		"Star-Button in der Adressleiste (Firefox neustarten)">
+<!ENTITY Ctr_statusbar		"Statusbereich in der Addonleiste (Firefox neustarten)">
 <!ENTITY Ctr_hideurelstop	"Adressleiste ohne Stop &amp; Aktualisieren">
 <!ENTITY Ctr_combrelstop	"Kombiniere Stop &amp; Aktualisieren">
 <!ENTITY Ctr_findbar_def	"Suchleiste (Standardposition)">
@@ -100,9 +100,11 @@
 <!ENTITY Ctr_tabmokcolor	"Weiße Trennlinien und Tabbuttons (Neu, Schließen, Gruppen, Listen)">
 <!ENTITY Ctr_tabmokcolor2	"Weißer Tabtext und dunkler Schatten für nicht aktive Tabs">
 <!ENTITY Ctr_closeabarbut	"Entferne 'Schließen'-Button von der Addonleiste">
-<!ENTITY Ctr_bfurlbarfix 	"2.5px Adressleisten-Randradius auf der linken Seite">
-<!ENTITY Ctr_bmanimation	"Entferne Animation vom Lesezeichen-Button">
-<!ENTITY Ctr_tabanimation	"Tab-Animation (about:config)">
-<!ENTITY Ctr_dlanimation	"Downloads-Button Benachrichtigungsanimation (about:config)">
+<!ENTITY Ctr_bfurlbarfix 	"Korrigiere Randradius der Adressleiste: 2px (Win) / 2.5px (Mac)">
+<!ENTITY Ctr_throbberalt	"Alternative Tab-Throbber Ladeanimation">
+<!ENTITY Ctr_bmanimation	"'Lesezeichen hinzufügen' Animation">
+<!ENTITY Ctr_tabanimation	"'Tab schließen/öffnen' Animation (about:config)">
+<!ENTITY Ctr_dlanimation	"'Download fertig' Animation (about:config)">
+<!ENTITY Ctr_showtabclose	"'Tab-Schließen'-Button immer anzeigen (Neustart benötigt!)">
 <!ENTITY Ctr_cpanelmenus	"Kompakte 'Panel-Menüs' (Lesezeichen, Chronic etc.)">
 <!ENTITY Ctr_cuibotbuttons	"Einstellungs-Buttons im 'Anpassen'-Modus">

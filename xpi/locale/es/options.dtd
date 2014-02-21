@@ -16,8 +16,6 @@
 <!ENTITY Ctr_cuitxt			"texto">
 
 <!ENTITY Ctr_combrelstoptt	"[parar][recargar] &gt;&gt; [parar-recargar]">
-<!ENTITY Ctr_starbuttont1	"[urlbar][botón de favoritos]">
-<!ENTITY Ctr_starbuttont2	"[botón de favoritos en urlbar]">
 
 <!ENTITY Ctr_main_t			"Pricipal">
 <!ENTITY Ctr_tabcolors_t	"Colores personalizables">
@@ -58,16 +56,18 @@
 <!ENTITY Ctr_appbuttonI3	"herramientasy la barra de pestañas!">
 <!ENTITY Ctr_alttbappb		"Iconos alternativos (la barra de herramientas)">
 <!ENTITY Ctr_appbuttxt		"Texto 'Firefox' (la barra de pestañas)">
+<!ENTITY Ctr_appbutmhi		"Posición más alta (la barra de pestañas)">
 
 <!ENTITY Ctr_ui				"Interfaz de usuario general">
-<!ENTITY Ctr_nbiconsize1	"#nav-bar[iconsize='small'] (por defecto)">
-<!ENTITY Ctr_nbiconsize2	"#nav-bar[iconsize='large']">
+<!ENTITY Ctr_nbiconsize1	"Utilizar #nav-bar[iconsize='small'] (por defecto)">
+<!ENTITY Ctr_nbiconsize2	"Utilizar #nav-bar[iconsize='large']">
 <!ENTITY Ctr_smallnavbut	"Botones pequeños (barra de navegación)">
 <!ENTITY Ctr_hidenavbar		"Ocultar barra de navegación">
 <!ENTITY Ctr_buttons		"Botones de barra de herramientas">
 <!ENTITY Ctr_backforward	"Botón atrás-adelante movible">
-<!ENTITY Ctr_wincontrols	"Contr. de ventana de pantalla compl. movibles">
-<!ENTITY Ctr_starinurl		"Botón de favoritos en urlbar">
+<!ENTITY Ctr_wincontrols	"Controles de ventana de pantalla completa movibles">
+<!ENTITY Ctr_starinurl		"Botón de favoritos en urlbar (reiniciar Firefox!)">
+<!ENTITY Ctr_statusbar		"Barra de estado en barra de complementos (reiniciar Firefox!)">
 <!ENTITY Ctr_hideurelstop	"Ocultar botón parar-recargar urlbar">
 <!ENTITY Ctr_combrelstop	"Botón combinado parar-recargar">
 <!ENTITY Ctr_findbar_def	"Barra de búsqueda (posición por defecto)">
@@ -100,9 +100,11 @@
 <!ENTITY Ctr_tabmokcolor	"Color blanco para botones (cerrar, nuevo, grupos, listar todas) de pestañas">
 <!ENTITY Ctr_tabmokcolor2	"Color blanco para texto de pestañas">
 <!ENTITY Ctr_closeabarbut	"Ocultar botón cerrar de la barra de complementos">
-<!ENTITY Ctr_bfurlbarfix 	"Forzar radio del borde izquierdo de la barra de URL a 2.5px">
-<!ENTITY Ctr_bmanimation	"Ocultar la animación de botón de menú de marcadores">
-<!ENTITY Ctr_tabanimation	"Animación pestaña (about:config)">
-<!ENTITY Ctr_dlanimation	"Animación notificación descargas (about:config)">
+<!ENTITY Ctr_bfurlbarfix 	"Corregir la frontera de radio de la barra de URL: 2px (Win) / 2.5px (Mac)">
+<!ENTITY Ctr_throbberalt	"Animación de carga alternativo para tabuladores throbber">
+<!ENTITY Ctr_bmanimation	"Animación al añadir nuevos marcadores">
+<!ENTITY Ctr_tabanimation	"Animación 'abrir y cerrar' para pestañas (about:config)">
+<!ENTITY Ctr_dlanimation	"'Descarga completa' animación (about:config)">
+<!ENTITY Ctr_showtabclose	"Mostrar siempre el botón-pestaña de cierre (reiniciar Firefox!)">
 <!ENTITY Ctr_cpanelmenus	"Menús del panel compacto (marcadores, historial, etc)">
 <!ENTITY Ctr_cuibotbuttons	"Los botones de opción en el modo de 'personalizar ui'">

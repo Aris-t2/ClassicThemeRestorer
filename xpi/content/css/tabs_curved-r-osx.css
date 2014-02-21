@@ -69,20 +69,20 @@
 	}
 	.tab-background-middle[selected=true]:not(:-moz-lwtheme) {
 	  background-clip: padding-box, padding-box, content-box !important;
-	  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png), linear-gradient(to top,#d3d3d3,#d3d3d3,#cdcdcd), none !important;
+	  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png), linear-gradient(transparent, transparent 2px, #cdcdcd 0px,#d3d3d3), none !important;
 	}
 	
 	.tabbrowser-tab[selected=true]:not(:-moz-lwtheme){
 	  margin-top:-1px !important;
 	}
 
-	#TabsToolbar:not(:-moz-lwtheme){
-	  background: linear-gradient(to top,#5e5e5e 1px,#898989,#939393,#989898,#a1a1a1 1px) !important;
-	  border-top: 1px solid #8b8b8b !important;
-	}
-	
 	#TabsToolbar:not(:-moz-lwtheme).tabs-newtab-button{
 	  margin-left: -14px !important;
+	}
+	
+	#navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
+	  background: linear-gradient(to top,#5e5e5e 1px,#898989,#939393,#989898,#a1a1a1 1px) !important;
+	  border-top: 1px solid #8b8b8b !important;
 	}
 
 	.tabbrowser-tab,

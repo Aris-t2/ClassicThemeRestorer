@@ -1,0 +1,44 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	/* tab colors */
+	.tabs-newtab-button:not(:-moz-lwtheme),
+	.tabbrowser-tab:not(:-moz-lwtheme) .tab-content {
+	  background-image: linear-gradient(hsla(0,0%,100%,.2), hsla(0,0%,45%,.2) 2px, hsla(0,0%,32%,.2) 80%) !important;
+	}
+	.tabs-newtab-button:hover:not(:-moz-lwtheme),
+	.tabbrowser-tab:not([selected]):hover:not(:-moz-lwtheme) .tab-content {
+	  background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.2) 4px, hsla(0,0%,75%,.2) 80%) !important;
+	}
+	.tabbrowser-tab[selected]:not(:-moz-lwtheme) .tab-content {
+	  background-image: linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%),
+						linear-gradient(-moz-dialog, -moz-dialog) !important;
+	}
+
+	/* tab colors lightweight theme */
+	.tabbrowser-tab[selected]:-moz-lwtheme .tab-content {
+	  background-image: linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%) !important;
+	}
+
+    /* lightweight theme tweaks*/
+	#navigator-toolbox #TabsToolbar:-moz-lwtheme{
+	  box-shadow:none !important;
+	}
+	#navigator-toolbox #nav-bar:-moz-lwtheme{
+      box-shadow:none !important;
+	  border-top: 1px solid transparent !important;
+	}
+	
+	/* other */
+	#navigator-toolbox #nav-bar:not(:-moz-lwtheme){
+	  box-shadow:none !important;
+	  border-top: 1px solid grey !important;
+	}
+
+	#TabsToolbar::after{
+	  box-shadow:none !important;
+      border-bottom:0px solid transparent !important;
+	}
+
+}

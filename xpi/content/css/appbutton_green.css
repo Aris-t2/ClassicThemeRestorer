@@ -1,7 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul),
-			   url(chrome://global/content/customizeToolbar.xul) {
+@-moz-document url(chrome://browser/content/browser.xul) {
 
 	#ctr_appbutton2:not(:hover):not(:active):not([open]){
 	  background-image: linear-gradient(lightgreen, green 95%) !important;

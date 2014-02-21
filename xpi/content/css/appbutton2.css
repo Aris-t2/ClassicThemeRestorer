@@ -3,17 +3,14 @@
 @-moz-document url(chrome://browser/content/browser.xul),
 			   url(chrome://global/content/customizeToolbar.xul) {
 
-	#ctr_appbutton {
+	#ctr_appbutton,
+	#main-window:not([tabsintitlebar]) #ctr_appbutton2,
+	#main-window[customizing][sizemode="maximized"] #ctr_appbutton2	{
 	  visibility: collapse !important;
 	}
 	
-	window:not([chromehidden~="toolbar"]) #ctr_appbutton2{
-	  visibility: visible !important;
-	}
-	#main-window:not([tabsintitlebar]) #ctr_appbutton2{
-	  visibility: collapse !important;
-	}
-	#main-window:not([tabsintitlebar]):not([chromehidden~="toolbar"]) #ctr_appbutton{
+	window:not([chromehidden~="toolbar"]) #ctr_appbutton2,
+	#main-window:not([tabsintitlebar]):not([chromehidden~="toolbar"]) #ctr_appbutton {
 	  visibility: visible !important;
 	}
 
@@ -63,20 +60,26 @@
 	  background:url("chrome://classic_theme_restorer/content/images/enableoption.png") center no-repeat !important;
 	}
 	
-	#titlebar:not([hidden]) ~ * #toolbar-menubar:-moz-locale-dir(ltr) {
-	  margin-left:98px !important;
+	#main-window[tabsintitlebar] #titlebar:not([hidden]) ~ * #toolbar-menubar:-moz-locale-dir(ltr) {
+	  margin-left: 99px !important;
 	}
-	#titlebar:not([hidden]) ~ * #toolbar-menubar:-moz-locale-dir(rtl) {
-	  margin-right:98px !important;
+	#main-window[tabsintitlebar][customizing][sizemode="maximized"] #titlebar:not([hidden]) ~ * #toolbar-menubar:-moz-locale-dir(ltr) {
+	  margin-left: 26px !important;
+	}
+	#main-window[tabsintitlebar] #titlebar:not([hidden]) ~ * #toolbar-menubar:-moz-locale-dir(rtl) {
+	  margin-right: 99px !important;
+	}
+	#main-window[tabsintitlebar][customizing][sizemode="maximized"] #titlebar:not([hidden]) ~ * #toolbar-menubar:-moz-locale-dir(rtl) {
+	  margin-right: 26px !important;
 	}
 	
 	#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="maximized"] #toolbar-menubar ~ #TabsToolbar:-moz-locale-dir(ltr),
 	#main-window[tabsintitlebar][sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar:-moz-locale-dir(ltr) {
-	  margin-left: 96px;
+	  margin-left: 97px;
 	}
 	#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="maximized"] #toolbar-menubar ~ #TabsToolbar:-moz-locale-dir(rtl),
 	#main-window[tabsintitlebar][sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar:-moz-locale-dir(rtl) {
-	  margin-right: 96px;
+	  margin-right: 97px;
 	}
 	
 	#main-window:not([tabsintitlebar]) #titlebar-buttonbox-container{
@@ -102,7 +105,7 @@
 			
 			#main-window[sizemode="normal"] #ctr_appbutton2{
 				margin-top:1px !important;
-				margin: 1px 0 2px 1px !important;
+				margin: 1px 0 2px 0px !important;
 			}
 			
 			#main-window[sizemode="maximized"] #ctr_appbutton2{

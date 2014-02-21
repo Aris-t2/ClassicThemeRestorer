@@ -56,12 +56,6 @@
 	  padding-bottom: 2px !important;
 	}	
 
-	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton{
-		margin-top:-19px;
-		margin-bottom:25px;
-		border-radius: 0 0 4px 4px;
-	}
-
 	/* style appmenu */
 	#ctr_appbuttonPopup{
 		-moz-appearance:none;

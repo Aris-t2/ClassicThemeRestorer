@@ -3,12 +3,27 @@
 
 	#nav-bar .toolbarbutton-1,
 	#nav-bar .toolbarbutton-1 .toolbarbutton-icon{
-	  padding:0px !important;
+	  padding: 0px !important;
 	  margin: 0px !important;
 	}
 	
-	#main-window #navigator-toolbox #nav-bar #urlbar-container #forward-button[disabled]{
-	  padding:0 12px !important;
+	#urlbar-container > #urlbar-wrapper > #urlbar,
+	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
+	  transition: none !important;
+	  transition-property:  none !important;
+	  transition-delay: 0s !important;
+	}
+	#urlbar-container > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr),
+	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr) {
+	  margin-left: 0px !important;
+	}
+	#urlbar-container > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl),
+	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
+	  margin-right: 0px !important;
+	}
+	#forward-button[disabled] {
+	  transform: unset !important;
+	  opacity: unset !important;
 	}
 	
 	#urlbar-container #back-button:not([cui-areatype="menu-panel"]) {
@@ -20,10 +35,14 @@
 	  padding:0px 0px !important;
 	}
 
-	#navigator-toolbox #nav-bar .toolbarbutton-1[type="menu-button"] .toolbarbutton-menubutton-dropmarker{
+	#navigator-toolbox #nav-bar:-moz-locale-dir(ltr) .toolbarbutton-1[type="menu-button"] .toolbarbutton-menubutton-dropmarker{
 	  margin-left:-2px !important;
 	}
-
+	
+	#navigator-toolbox #nav-bar:-moz-locale-dir(rtl) .toolbarbutton-1[type="menu-button"] .toolbarbutton-menubutton-dropmarker{
+	  margin-right:-2px !important;
+	}
+	
 	#nav-bar #back-button:hover > .toolbarbutton-icon,
 	#nav-bar #forward-button:hover > .toolbarbutton-icon{
 	  transition-property: none !important;

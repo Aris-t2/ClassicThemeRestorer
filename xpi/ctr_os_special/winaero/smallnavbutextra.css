@@ -1,11 +1,13 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 @-moz-document url(chrome://browser/content/browser.xul) {
 
+	window:not([chromehidden~="toolbar"]) #urlbar-container > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + *:-moz-locale-dir(ltr),
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + *:-moz-locale-dir(ltr) {
 	  padding-left: 2px !important;
 	  transition: none !important;
 	}
 
+	window:not([chromehidden~="toolbar"]) #urlbar-container > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + *:-moz-locale-dir(rtl),
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + *:-moz-locale-dir(rtl) {
 	  padding-right: 2px !important;
 	  transition: none !important;
@@ -27,17 +29,22 @@
       transition-delay: 0s !important;
     }
 
-	#nav-bar #ctr_appbutton #ctr_appbuttonPopup{
-		margin-top: -3px !important;
-		margin-left:1px !important;
+	#nav-bar:-moz-locale-dir(ltr) #ctr_appbutton #ctr_appbuttonPopup{
+	  margin-top: -3px !important;
+	  margin-left:1px !important;
+	}
+	
+	#nav-bar:-moz-locale-dir(rtl) #ctr_appbutton #ctr_appbuttonPopup{
+	  margin-top: -3px !important;
+	  margin-right:1px !important;
 	}
 
 	#navigator-toolbox #nav-bar #back-button > .toolbarbutton-icon,
     #navigator-toolbox #nav-bar #forward-button > .toolbarbutton-icon{
 	  padding: 2px !important;
-      margin: 1px !important;
+      margin: 0px !important;
 	}
-
+	
 	#nav-bar .toolbarbutton-1 {
       -moz-appearance: toolbarbutton !important;
       background: unset !important;
@@ -108,20 +115,27 @@
 	  box-shadow: none !important;
 	  background: none !important;
 	}
-
-    #urlbar:-moz-locale-dir(ltr){
-      border-left:1px solid #b4c1cf !important;
-    }
-    #urlbar[focused="true"]:-moz-locale-dir(ltr){
-      border-left:1px solid #72c0fe !important;
-    }
-    #urlbar:-moz-locale-dir(rtl){
-      border-right:1px solid #b4c1cf !important;
-    }
-    #urlbar[focused="true"]:-moz-locale-dir(rtl){
-      border-right:1px solid #72c0fe !important;
-    }
 	
+	/* urlbar border tweaks */
+	#urlbar {
+	  border: 1px solid ThreeDShadow !important;
+	}
+	@media (-moz-windows-default-theme) {
+	  #urlbar {
+		border-color: rgba(0,0,0,.32) !important;
+	  }
+	}
+	#urlbar:-moz-lwtheme {
+	  border-color: rgba(0,0,0,.32) !important;
+	}
+
+	#nav-bar #ctr_appbutton > .toolbarbutton-icon {
+	  padding-left: 0px !important;
+	  padding-right: 0px !important;
+	  margin-left: 0px !important;
+	  margin-right: 0px !important;
+	}
+
 	#ctr_puib_separator{
 	  margin-top: 2px !important;
 	  margin-bottom: 2px !important;
@@ -147,6 +161,11 @@
       background-image: linear-gradient(hsla(0,0%,100%,.0), hsla(0,0%,100%,.0)) !important;
       border-color: hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) !important;
       box-shadow: none !important;
+	}
+	
+	#main-window #navigator-toolbox #nav-bar #urlbar-container #bookmarks-menu-button .toolbarbutton-icon {
+	  padding: 0px 4px !important;
+	  margin: -1px 0 0 0px !important;
 	}
 	
 	/* zoom page add-on */

@@ -1,14 +1,9 @@
+@import url(back-forwardextra2.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + *:-moz-locale-dir(ltr) {
-	  padding-left: 4px !important;
-	  transition: none !important;
-	}
-
-	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + *:-moz-locale-dir(rtl) {
-	  padding-right: 4px !important;
-	  transition: none !important;
+	#urlbar[focused="true"]{
+	  border-color: -moz-mac-focusring !important;
 	}
 }

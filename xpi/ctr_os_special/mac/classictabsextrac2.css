@@ -1,0 +1,60 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	/* tab colors */
+	.tabs-newtab-button:not(:-moz-lwtheme),
+	.tabbrowser-tab:not(:-moz-lwtheme) .tab-content {
+	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #a1a1a1,#c0c0c0,#cccccc,#d4d4d4) !important;
+	}
+	.tabs-newtab-button:hover:not(:-moz-lwtheme),
+	.tabbrowser-tab:not([selected]):hover:not(:-moz-lwtheme) .tab-content {
+	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#b3b3b3,#cfcfcf,#dedede,#e5e5e5) !important;
+	}
+	.tabbrowser-tab[selected]:not(:-moz-lwtheme) .tab-content {
+	  background-image: linear-gradient(to top,#eaeaea,#e2e2e2,#ededed,#fcfcfc) !important;
+	}
+
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover),
+	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover {
+	  color:black !important;
+	}
+	
+	/* tab colors lightweight theme */
+	.tabbrowser-tab[selected]:-moz-lwtheme .tab-content {
+	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.5) 50%) !important;
+	}
+
+    /* lightweight theme tweaks*/
+	#navigator-toolbox #TabsToolbar:not([tabsontop="false"]):-moz-lwtheme{
+	  box-shadow:none !important;
+	  border-bottom: 1px solid transparent !important;
+	}
+	#navigator-toolbox #nav-bar:-moz-lwtheme{
+      box-shadow:none !important;
+	  border-top: 1px solid transparent !important;
+	}
+	
+	/* other */
+	#navigator-toolbox #nav-bar:not(:-moz-lwtheme){
+	  box-shadow:none !important;
+	  border-top: 1px solid transparent !important;
+	}
+	
+	#navigator-toolbox #TabsToolbar:not([tabsontop="false"]):not(:-moz-lwtheme){
+	  box-shadow:none !important;
+	  border-bottom: 1px solid transparent !important;
+	}
+	
+	#TabsToolbar{
+	  background-image: none !important;
+	}
+	#TabsToolbar::after {
+	  border-bottom: 0px !important;
+	}
+	.tabs-newtab-button > .toolbarbutton-icon{
+	  margin-left:-10px !important;
+	  margin-right:-10px !important;
+	}
+
+}

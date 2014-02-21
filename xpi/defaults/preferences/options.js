@@ -8,6 +8,7 @@ pref("extensions.classicthemerestorer.appbutton",'appbutton_v1');
 pref("extensions.classicthemerestorer.appbuttonc",'appbuttonc_orange');
 pref("extensions.classicthemerestorer.alttbappb",false);
 pref("extensions.classicthemerestorer.appbuttxt",false);
+pref("extensions.classicthemerestorer.appbutmhi",false);
 
 pref("extensions.classicthemerestorer.nbiconsize",'small');
 pref("extensions.classicthemerestorer.smallnavbut",false);
@@ -15,6 +16,7 @@ pref("extensions.classicthemerestorer.hidenavbar",false);
 pref("extensions.classicthemerestorer.backforward",false);
 pref("extensions.classicthemerestorer.wincontrols",false);
 pref("extensions.classicthemerestorer.starinurl",false);
+pref("extensions.classicthemerestorer.statusbar",false);
 pref("extensions.classicthemerestorer.hideurelstop",false);
 pref("extensions.classicthemerestorer.combrelstop",false);
 pref("extensions.classicthemerestorer.findbar","findbar_default");
@@ -27,7 +29,9 @@ pref("extensions.classicthemerestorer.tabmokcolor",false);
 pref("extensions.classicthemerestorer.tabmokcolor2",false);
 pref("extensions.classicthemerestorer.closeabarbut",false);
 pref("extensions.classicthemerestorer.bfurlbarfix",false);
-pref("extensions.classicthemerestorer.bmanimation",false);
+pref("extensions.classicthemerestorer.throbberalt",false);
+pref("extensions.classicthemerestorer.bmanimation",true);
+pref("extensions.classicthemerestorer.showtabclose",false);
 pref("extensions.classicthemerestorer.cpanelmenus",false);
 pref("extensions.classicthemerestorer.cuibuttons",true);
 

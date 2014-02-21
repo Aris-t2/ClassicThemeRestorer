@@ -40,8 +40,8 @@
 	  <vbox id="customization-palette-container">
 		<hbox pack="start" id="ctr_cuibuttonsbox" ordinal="999999">
 		  <label value="&Ctr_cuibuttons;" class="ctr_cuibutlabel" id="ctr_cuibuttons_main"/>
-		  <button id="customization-smallnavbut-button1" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);" label="&Ctr_cuibutnormal;" class="customizationmode-button"/>
-		  <button id="customization-smallnavbut-button2" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',true);" label="&Ctr_cuibutsmall;" class="customizationmode-button"/>
+		  <button id="customization-smallnavbut-button1" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',false);" label="&Ctr_cuibutnormal;" class="customizationmode-button"/>
+		  <button id="customization-smallnavbut-button2" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',true);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',true);" label="&Ctr_cuibutsmall;" class="customizationmode-button"/>
 		  <spacer flex="1"/>
 		  <label value="&Ctr_cuimode;" class="ctr_cuibutlabel"/>
 		  <button id="customization-icons-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'icons');" label="&Ctr_cuiico;" class="customizationmode-button"/>
@@ -50,7 +50,7 @@
 		</hbox>
 	  </vbox>
 	</hbox>
-
+	
 	<!--### create new add-ons bar ###-->
 	<vbox id="browser-bottombox">
 		<toolbar id="ctr_addon-bar" customizable="true"
@@ -75,7 +75,7 @@
 					removable="true"/>
 		</toolbar>
 		<toolbar id="ctr_toolbar_dummy" customizable="false"
-				 collapsed="true"
+				 hidden="true"
 				 insertafter="PersonalToolbar"
 				 defaultset="PanelUI-menu-button">
 		  <!-- ### move PanelUI-menu-button dummy here to prevent glitches with CTRs movable button -->
@@ -105,21 +105,20 @@
 	</toolbox>
 
 	<!--### moveable urlbar & buttons ###-->
-	<toolbaritem id="urlbar-container" style="min-width:130px !important;" removable="true"/>
+	<toolbaritem id="urlbar-container" style="min-width:200px !important;" removable="true"/>
 	<toolbarbutton id="alltabs-button" removable="true"/>
 	<toolbarbutton id="webrtc-status-button" removable="true"/>
 	<toolbarbutton id="social-share-button" removable="true"/>
 	<toolbaritem id="social-toolbar-item" removable="true"/>
+
 	
 	<hbox id="titlebar-content">
 	  <!--### place own appbutton on titlebar (Windows only) ###-->
 	  <toolbarbutton id="ctr_appbutton2"
 					 ordinal="0"
-                     removable="true"
+                     removable="false"
                      type="menu"
-                     label="&brandShortName;">
-		
-		<!--### rebuild appmenu using available items and code from default browser.xul ###-->
+                     label="&brandShortName;" >
 		<menupopup id="ctr_appbuttonPopup">
 		<hbox>
 		  <vbox id="appmenuPrimaryPane">
@@ -151,7 +150,7 @@
 					</menupopup>
 				</menu>
 			</hbox>
-
+			
 			<menuitem id="menu_newPrivateWindow"
 					label="&newPrivateWindow.label;"
 					class="menuitem-iconic"
@@ -218,7 +217,6 @@
 					</menupopup>
 				</menu>
 			</hbox>
-			
 			<menuitem id="menu_find"
 					  label="&findOnCmd.label;"
 					  command="cmd_find"/>
@@ -226,7 +224,7 @@
 			<menuitem id="menu_savePage"
 					  label="&savePageCmd.label;"
 					  command="Browser:SavePage"/>
-			<menuitem id="menu_sendLink"
+			<menuitem id="menu_sendLink2"
 					  label="&emailPageCmd.label;"
 					  command="Browser:SendLink"/>
 
@@ -324,6 +322,7 @@
 					  command="cmd_quitApplication"/>
 
 		  </vbox>
+
 		  <vbox id="appmenuSecondaryPane">
 
 			<hbox>
@@ -535,15 +534,15 @@
 				</menu>
 			</hbox>
 		  </vbox>
-		</hbox>
-					  
+		  </hbox>
 		</menupopup>
 	  </toolbarbutton>
-
 	</hbox>
-
 	
-	<!--### add custom buttons to customizing area ###-->
+	<!--### add custom buttons ... ###-->
+	<!--########################## ###-->	
+	<!--### ...to customizing area ###-->
+	
 	<toolbarpalette id="BrowserToolbarPalette">
 		
 		<!--### another appbutton to be used on toolbars (Windows, Linux, MacOSX) ###-->

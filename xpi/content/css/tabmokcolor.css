@@ -19,6 +19,7 @@
 
 	#main-window[tabsintitlebar]:not([inFullscreen]) #TabsToolbar > #tabview-button {
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/tabview-inverted.png) !important;
+	  -moz-image-region: rect(0, 18px, 18px, 0) !important;
 	}
 
 	#main-window[tabsintitlebar]:not([inFullscreen]) .tab-close-button:not(:-moz-any(:hover,:-moz-lwtheme,[selected="true"])),

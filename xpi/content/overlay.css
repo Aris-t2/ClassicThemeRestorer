@@ -26,8 +26,16 @@
 	  border-top:1px solid rgba(0,0,0,.0) !important;
 	  border-bottom:1px solid rgba(0,0,0,.5) !important;
 	}
+	
+	/* status bar on CTRs add-on bar*/
+	#ctr_addon-bar #status-bar{
+	  -moz-appearance: none !important;
+	  background: none !important;
+	  border:0 !important;
+	  border-right:0 !important;
+	}
 
-	/*ctr_back-forward-dropmarker */
+	/* CTRs Back-forward dropmarker */
 	#ctr_back-forward-dropmarker {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/toolbarbutton-dropdown-arrow.png");
 	}
@@ -50,14 +58,15 @@
 	}
 
 	#customization-palette #ctr_back-forward-dropmarker image{
-		background:url("chrome://browser/skin/toolbarbutton-dropdown-arrow.png") center center no-repeat !important;
-		list-style-image:none !important;
+	  background:url("chrome://browser/skin/toolbarbutton-dropdown-arrow.png") center center no-repeat !important;
+	  list-style-image:none !important;
 	}
 	
 	/*toolbar dummy */
 	#ctr_toolbar_dummy{
 	  -moz-appearance: none !important;
 	  -moz-box-ordinal-group: 999999 !important;
+	  visibility:hidden;
 	}
 	
 	/* ctr addonbar */
@@ -77,26 +86,26 @@
 	}
 	
 	/* addon-bar close button */
-	#ctr_addonbar-close	{
+	#ctr_addon-bar #ctr_addonbar-close	{
 	  -moz-appearance: none !important;
 	  -moz-image-region: rect(0, 64px, 16px, 48px);
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png");
-	}
-
-	#ctr_addonbar-close:hover,
-	#ctr_addonbar-close:hover[selected="true"] {
-	  -moz-image-region: rect(0, 32px, 16px, 16px);
 	  background: none !important;
-	  background-image: linear-gradient(hsla(0,0%,100%,.0), hsla(0,0%,100%,.0)) !important;
+	  border-color: transparent !important;
 	  box-shadow: none !important;
 	}
 
-	#ctr_addonbar-close:hover:active,
-	#ctr_addonbar-close:hover:active[selected="true"] {
+	#ctr_addon-bar #ctr_addonbar-close:hover,
+	#ctr_addon-bar #ctr_addonbar-close:hover[selected="true"] {
+	  -moz-image-region: rect(0, 32px, 16px, 16px);
+	}
+
+	#ctr_addon-bar #ctr_addonbar-close:hover:active,
+	#ctr_addon-bar #ctr_addonbar-close:hover:active[selected="true"] {
 	  -moz-image-region: rect(0, 48px, 16px, 32px);
 	}
 
-	#ctr_addonbar-close[selected="true"] {
+	#ctr_addon-bar #ctr_addonbar-close[selected="true"] {
 	  -moz-image-region: rect(0, 16px, 16px, 0);
 	}
 	
@@ -117,20 +126,21 @@
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton.png");
 	}
 	
-	#nav-bar #ctr_appbutton image{
+	#nav-bar #ctr_appbutton > .toolbarbutton-icon{
 	  margin-left: -3px;
 	  margin-right: -3px;
 	}
 	
 	* #ctr_appbutton dropmarker,
 	* #ctr_appbutton > .toolbarbutton-menu-dropmarker,
-	* #ctr_appbutton > .toolbarbutton-menubutton-dropmarker,
-	* #ctr_appbutton2 dropmarker,
-	* #ctr_appbutton2 > .toolbarbutton-menu-dropmarker,
-	* #ctr_appbutton2 > .toolbarbutton-menubutton-dropmarker{
+	* #ctr_appbutton > .toolbarbutton-menubutton-dropmarker{
 	  list-style-image: none !important;
 	  display: none !important;
 	  visibility:collapse !important;
+	}
+	
+	#ctr_appbutton2 > .toolbarbutton-menu-dropmarker{
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/appmenu-dropmarker.png) !important;
 	}
 	
 	#ctr_appbuttonPopup #menu_newPrivateWindow{
@@ -190,29 +200,13 @@
 	}
 
 	/* remove empty appmenu menu button labels */
-	#ctr_appbuttonPopup #menu_newTabmenu label,
-	#ctr_appbuttonPopup #menu_newEditmenu label,
-	#ctr_appbuttonPopup #menu_newPrintmenu label,
-	#ctr_appbuttonPopup #newwebDeveloperPopupMenu label,
-	#ctr_appbuttonPopup #menu_newBookmarksmenu label,
-	#ctr_appbuttonPopup #menu_newHistorymenu label,
-	#ctr_appbuttonPopup #menu_newHistorymenu2 label,
-	#ctr_appbuttonPopup #menu_newPreferencesmenu label,
-	#ctr_appbuttonPopup #newhelpMenu label{
-	  visibility:collapse;
+	#ctr_appbuttonPopup  > hbox > vbox > hbox > menu > .menu-iconic-left,
+	#ctr_appbuttonPopup > hbox > vbox > hbox > menu label {
+	  visibility: collapse;
 	}
-
 	/* make sure submenu labels stay */
-	#ctr_appbuttonPopup #menu_newTabmenu #menu_newTabmenupopup label,
-	#ctr_appbuttonPopup #menu_newEditmenu #menu_newEditmenupopup label,
-	#ctr_appbuttonPopup #menu_newPrintmenu #menu_newPrintmenupopup label,
-	#ctr_appbuttonPopup #newwebDeveloperPopupMenu #newmenuWebDeveloperPopup label,
-	#ctr_appbuttonPopup #menu_newBookmarksmenu #newbookmarksMenuPopup label,
-	#ctr_appbuttonPopup #menu_newHistorymenu #newHistorymenuPopup label,
-	#ctr_appbuttonPopup #menu_newHistorymenu2 #newHistorymenuPopup label,
-	#ctr_appbuttonPopup #menu_newPreferencesmenu #menu_newPreferencesmenuPopup label,
-	#ctr_appbuttonPopup #newhelpMenu #menu_newHelpPopup label{
-		visibility:visible;
+	#ctr_appbuttonPopup > hbox > vbox > hbox > menu > menupopup label{
+	  visibility: visible;
 	}
 	
 	/* appmenu: reduce visibility of disabled cut, copy, paste buttons */
@@ -233,7 +227,7 @@
 	}
 
 	#PersonalToolbar #ctr_appbutton #ctr_appbuttonPopup,
-	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="false"] ~ #TabsToolbar #ctr_appbutton #ctr_appbuttonPopup{
+	#main-window[tabsintitlebar] #toolbar-menubar[autohide="false"] ~ #TabsToolbar #ctr_appbutton #ctr_appbuttonPopup{
 		margin-top:-3px;
 	}
 	
@@ -242,20 +236,13 @@
 	  margin-left:2px;
 	}
 	
-	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton:hover:active,
-	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton[open]{
-		border-radius: 0 0 0 0;
-	}
-
-	#TabsToolbar #ctr_appbutton:hover:active,
-	#TabsToolbar #ctr_appbutton[open] {
-	  -moz-appearance:none !important;
+	#TabsToolbar #ctr_appbutton {
 	  border-radius: 2.5px 2.5px 0 0;
 	}
 
 	toolbar #ctr_appbutton,
 	#ctr_appbutton2,
-	#ctr_back-forward-button,
+	toolbar #ctr_back-forward-button,
 	#main-window:not([customizing]) #ctr_window-controls{
 	  visibility: collapse;
 	}
@@ -391,6 +378,7 @@
 	}
 	
 	#ctr_ccap_t_squared,
+	#ctr_ccap_t_squaredc2,
 	#ctr_ccap_t_squared2,
 	#ctr_ccap_t_curved,
 	#ctr_ccap_t_curvedaero{

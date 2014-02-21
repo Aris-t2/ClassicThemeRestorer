@@ -124,27 +124,14 @@
 	  border-bottom-right-radius: 9px !important;
 	}
 
-	.tabs-newtab-button:not(:-moz-lwtheme){
-	  border-width: 1px 3px 3px !important;
-	  border-image: url(chrome://classic_theme_restorer/content/images/tab-r.png) 0 3 1 fill repeat stretch !important;
-	  border-style: solid !important;
-	}
-	
+	.tabs-newtab-button:not(:-moz-lwtheme),
 	.tabs-newtab-button:-moz-lwtheme{
 	  border-width: 1px 3px 3px !important;
 	  border-image: url(chrome://classic_theme_restorer/content/images/tab-r.png) 0 3 1 fill repeat stretch !important;
 	  border-style: solid !important;
 	}
-	.tabbrowser-tab[selected=true] > .tab-stack > .tab-content {
-      border-image: url("chrome://classic_theme_restorer/content/images/tab-r.png") 1 3 0 fill repeat stretch !important;
-      border-style: solid !important;
-    }
-	
-	.tabbrowser-tab:not([selected=true]):not(:-moz-lwtheme) > .tab-stack > .tab-content {
-      border-image: url("chrome://classic_theme_restorer/content/images/tab-r.png") 1 3 0 fill repeat stretch !important;
-      border-style: solid !important;
-    }
-
+	.tabbrowser-tab[selected=true] > .tab-stack > .tab-content,
+	.tabbrowser-tab:not([selected=true]):not(:-moz-lwtheme) > .tab-stack > .tab-content,
 	.tabbrowser-tab:not([selected=true]):-moz-lwtheme > .tab-stack > .tab-content {
       border-image: url("chrome://classic_theme_restorer/content/images/tab-r.png") 1 3 0 fill repeat stretch !important;
       border-style: solid !important;
@@ -221,11 +208,6 @@
 	  margin-right: -8px !important;
 	}
 
-	#TabsToolbar:not(:-moz-lwtheme){
-		background: linear-gradient(to bottom,#5e5e5e 1px,#898989,#939393,#989898,#a1a1a1 1px) !important;
-		border-bottom: 1px solid #6f6f6f !important;
-	}
-	
 	#TabsToolbar #ctr_appbutton{
 	  border-radius: 0 !important;
 	  border-bottom-left-radius: 3px !important;
@@ -247,6 +229,12 @@
 	#TabsToolbar{
 	  background-image: none !important;
 	}
+	
+	#navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
+	  background: linear-gradient(to bottom,#5e5e5e 1px,#898989,#939393,#989898,#a1a1a1 1px) !important;
+	  border-bottom: 1px solid #6f6f6f !important;
+	}
+	
 	#TabsToolbar::after {
 	  border-bottom: 0px !important;
 	}

@@ -1,0 +1,13 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	.tab-throbber {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/throbber-connecting-alt.png") !important;
+	}
+
+	.tab-throbber[progress] {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/throbber-loading-alt.png") !important;
+	}
+
+}

@@ -7,15 +7,14 @@
 	id="ClassicTRoptions"
 	title="&Ctr_title;"
     type="prefwindow"
-	onload="classicthemerestorerjs.ctr.initprefwindow()"
-	onunload="classicthemerestorerjs.ctr.loadUnloadCSS('cui_buttons',true)"
+	onload="classicthemerestorerjso.ctr.initprefwindow()"
 	buttons="accept"
 	autosize="true"
 	resizable="yes"
 	ondialogaccept="return true"
 	persist="screenX screenY sizemode"
 >
-<script type="application/x-javascript" src="overlay.js"/>
+<script type="application/x-javascript" src="options.js"/>
   <prefpane id="ClassicTRoptionsPane">
     <preferences>
 	
@@ -29,6 +28,7 @@
 		<preference id="ctr_appbuttonc"		name="extensions.classicthemerestorer.appbuttonc" 	type="string"	instantApply="true"/>
 		<preference id="ctr_alttbappb"		name="extensions.classicthemerestorer.alttbappb" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_appbuttxt"		name="extensions.classicthemerestorer.appbuttxt" 	type="bool"		instantApply="true"/>
+		<preference id="ctr_appbutmhi"		name="extensions.classicthemerestorer.appbutmhi" 	type="bool"		instantApply="true"/>
 		
 		<preference id="ctr_nbiconsize"		name="extensions.classicthemerestorer.nbiconsize" 	type="string"	instantApply="true"/>
 		<preference id="ctr_smallnavbut"	name="extensions.classicthemerestorer.smallnavbut"	type="bool"		instantApply="true"/>
@@ -36,6 +36,7 @@
 		<preference id="ctr_backforward"	name="extensions.classicthemerestorer.backforward"	type="bool"		instantApply="true"/>
 		<preference id="ctr_wincontrols"	name="extensions.classicthemerestorer.wincontrols"	type="bool"		instantApply="true"/>
 		<preference id="ctr_starinurl"		name="extensions.classicthemerestorer.starinurl"	type="bool"		instantApply="true"/>
+		<preference id="ctr_statusbar"		name="extensions.classicthemerestorer.statusbar"	type="bool"		instantApply="true"/>
 		<preference id="ctr_hideurelstop"	name="extensions.classicthemerestorer.hideurelstop"	type="bool"		instantApply="true"/>
 		<preference id="ctr_combrelstop"	name="extensions.classicthemerestorer.combrelstop"	type="bool"		instantApply="true"/>
 		<preference id="ctr_findbar"		name="extensions.classicthemerestorer.findbar"		type="string"	instantApply="true"/>
@@ -64,6 +65,7 @@
 		
 		<preference id="ctr_paneluibtweak"	name="extensions.classicthemerestorer.paneluibtweak" type="bool"	instantApply="true"/>
 		<preference id="ctr_notabfog"		name="extensions.classicthemerestorer.notabfog" 	type="bool"		instantApply="true"/>
+		<preference id="ctr_throbberalt"	name="extensions.classicthemerestorer.throbberalt" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_tabmokcolor"	name="extensions.classicthemerestorer.tabmokcolor" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_tabmokcolor2"	name="extensions.classicthemerestorer.tabmokcolor2" type="bool"		instantApply="true"/>
 		<preference id="ctr_closeabarbut"	name="extensions.classicthemerestorer.closeabarbut" type="bool"		instantApply="true"/>
@@ -71,6 +73,7 @@
 		<preference id="ctr_bmanimation"	name="extensions.classicthemerestorer.bmanimation"	type="bool"		instantApply="true"/>
 		<preference id="ctr_tabsanimate"	name="browser.tabs.animate"							type="bool"		instantApply="true"/>
 		<preference id="ctr_dlanimate"		name="browser.download.animateNotifications"		type="bool"		instantApply="true"/>
+		<preference id="ctr_showtabclose"	name="extensions.classicthemerestorer.showtabclose"	type="bool"		instantApply="true"/>
 		<preference id="ctr_cpanelmenus"	name="extensions.classicthemerestorer.cpanelmenus"	type="bool"		instantApply="true"/>
 		<preference id="ctr_cuibuttons"		name="extensions.classicthemerestorer.cuibuttons"	type="bool"		instantApply="true"/>
 
@@ -90,24 +93,6 @@
 	  </hbox>
 	</tooltip>
 
-	<tooltip id="starbuttoninfo">
-	  <hbox>
-	    <spacer flex="1"/>
-	    <label value="&Ctr_starbuttont1;"/>
-		<spacer flex="1"/>
-	  </hbox>
-	  <hbox>
-		<spacer flex="1"/>
-		<image src="chrome://classic_theme_restorer/content/images/starbuttoninfo.png"/>
-		<spacer flex="1"/>
-	  </hbox>
-	  <hbox>
-	    <spacer flex="1"/>
-	    <label value="&Ctr_starbuttont2;"/>
-		<spacer flex="1"/>
-	  </hbox>
-	</tooltip>
-
 	<tabbox>
 		<tabs>
 			<tab label="&Ctr_main_t;"/>
@@ -119,18 +104,19 @@
 
 		<tabpanel>
 
-		<vbox>
+		<vbox flex="1">
 		  <hbox>
 			<vbox flex="1">
 			  <groupbox flex="1">
 				<caption  label="&Ctr_tabs;" class="ctb_topic"/>
 				<menulist preference="ctr_tabs" id="ctr_pw_tabmenulist">
 					<menupopup>
-						<menuitem value="tabs_default"	 label="&Ctr_tabs0;"  oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('customsqtab',false);"/>
-						<menuitem value="tabs_squared"	 label="&Ctr_tabs1;"  oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('customsqtab',false);"/>
-						<menuitem value="tabs_squared2"	 label="&Ctr_tabs1m;" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('customsqtab',false);"/>
-						<menuitem value="tabs_curved" 	 label="&Ctr_tabs2;"  oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('customsqtab',false);"/>
-						<menuitem value="tabs_curvedall" label="&Ctr_tabs3;"  oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('customsqtab',false);" id="tabs_curvedall"/>
+						<menuitem value="tabs_default"	 label="&Ctr_tabs0;"  oncommand="classicthemerestorerjso.ctr.prefs.setBoolPref('customsqtab',false);"/>
+						<menuitem value="tabs_squared"	 label="&Ctr_tabs1;"  oncommand="classicthemerestorerjso.ctr.prefs.setBoolPref('customsqtab',false);"/>
+						<menuitem value="tabs_squaredc2" label="&Ctr_tabs1; (v2)"  oncommand="classicthemerestorerjso.ctr.prefs.setBoolPref('customsqtab',false);"/>
+						<menuitem value="tabs_squared2"	 label="&Ctr_tabs1m;" oncommand="classicthemerestorerjso.ctr.prefs.setBoolPref('customsqtab',false);"/>
+						<menuitem value="tabs_curved" 	 label="&Ctr_tabs2;"  oncommand="classicthemerestorerjso.ctr.prefs.setBoolPref('customsqtab',false);"/>
+						<menuitem value="tabs_curvedall" label="&Ctr_tabs3;"  oncommand="classicthemerestorerjso.ctr.prefs.setBoolPref('customsqtab',false);" id="tabs_curvedall"/>
 					</menupopup>
 				</menulist>
 				
@@ -164,9 +150,9 @@
 				<caption  label="&Ctr_appbutton;" class="ctb_topic"/>
 				<menulist preference="ctr_appbutton" id="ctr_appbutton_list1">
 					<menupopup>
-						<menuitem value="appbutton_off"	label="&Ctr_appbutton0;"/>
-						<menuitem value="appbutton_v1"	label="&Ctr_appbutton1;"/>
-						<menuitem value="appbutton_v2"	label="&Ctr_appbutton2;"/>
+						<menuitem value="appbutton_off"	label="&Ctr_appbutton0;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_off')"/>
+						<menuitem value="appbutton_v1"	label="&Ctr_appbutton1;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v1')"/>
+						<menuitem value="appbutton_v2"	label="&Ctr_appbutton2;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v2')"/>
 						<label value=" "/>
 						<label value="&Ctr_appbuttonI1;" class="ctb_font1"/>
 					</menupopup>
@@ -192,8 +178,9 @@
 						<label value="&Ctr_appbuttonI3;" class="ctb_font1"/>
 					</menupopup>
 				</menulist>
-				<checkbox label="&Ctr_alttbappb;" preference="ctr_alttbappb"/>
-				<checkbox label="&Ctr_appbuttxt;" preference="ctr_appbuttxt"/>
+				<checkbox label="&Ctr_alttbappb;" preference="ctr_alttbappb" id="ctr_alt_abicons"/>
+				<checkbox label="&Ctr_appbuttxt;" preference="ctr_appbuttxt" id="ctr_abtext"/>
+				<checkbox label="&Ctr_appbutmhi;" preference="ctr_appbutmhi" id="ctr_abhigher" class="ctr_windowsonly"/>
 			  </groupbox>
 
 			</vbox>
@@ -210,11 +197,12 @@
 					</menupopup>
 				</menulist>
 				
-				<checkbox label="&Ctr_smallnavbut;"	 preference="ctr_smallnavbut" id="ctr_pw_smallnavbut"/>
+				<checkbox label="&Ctr_smallnavbut;"	 preference="ctr_smallnavbut" oncommand="if(this.checked) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',true);} else if(classicthemerestorerjso.ctr.prefs.getBoolPref('backforward')==false) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',false);}" id="ctr_pw_smallnavbut"/>
 				<checkbox label="&Ctr_hidenavbar;"	 preference="ctr_hidenavbar"/>
-				<checkbox label="&Ctr_backforward;"	 preference="ctr_backforward"/>
+				<checkbox label="&Ctr_backforward;"	 preference="ctr_backforward" oncommand="if(this.checked) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',true);} else if(classicthemerestorerjso.ctr.prefs.getBoolPref('smallnavbut')==false) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',false);}"/>
 				<checkbox label="&Ctr_wincontrols;"	 preference="ctr_wincontrols" id="ctr_wincontrols"/>
-				<checkbox label="&Ctr_starinurl;"	 preference="ctr_starinurl" onmouseover="document.getElementById('starbuttoninfo').openPopup();" onmouseout="document.getElementById('starbuttoninfo').hidePopup();"/>
+				<checkbox label="&Ctr_starinurl;"	 preference="ctr_starinurl"/>
+				<checkbox label="&Ctr_statusbar;"	 preference="ctr_statusbar"/>
 				<checkbox label="&Ctr_hideurelstop;" preference="ctr_hideurelstop"/>
 				<checkbox label="&Ctr_combrelstop;"  preference="ctr_combrelstop" onmouseover="document.getElementById('combrelstop').openPopup();" onmouseout="document.getElementById('combrelstop').hidePopup();"/>
 				
@@ -318,6 +306,7 @@
 			    <spacer flex="1"/>
 				  <label value="&Ctr_tabs0;"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_default"/>
 				  <label value="&Ctr_tabs1;"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_squared"/>
+				  <label value="&Ctr_tabs1; v2"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_squaredc2"/>
 				  <label value="&Ctr_tabs1m;" class="ctr_tabcolorlabel2" id="ctr_ccap_t_squared2"/>
 				  <label value="&Ctr_tabs2;"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_curved"/>
 				  <label value="&Ctr_tabs3;"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_curvedaero"/>
@@ -338,9 +327,11 @@
 				<checkbox label="&Ctr_tabmokcolor2;"	preference="ctr_tabmokcolor2" class="ctr_winmaconly" id="ctr_pw_tabmokcolor2"/>
 				<checkbox label="&Ctr_closeabarbut;"	preference="ctr_closeabarbut"/>
 				<checkbox label="&Ctr_bfurlbarfix;"		preference="ctr_bfurlbarfix" class="ctr_winmaconly" id="ctr_pw_bfurlbarfix"/>
+				<checkbox label="&Ctr_throbberalt;"		preference="ctr_throbberalt"/>
 				<checkbox label="&Ctr_bmanimation;"		preference="ctr_bmanimation"/>
 				<checkbox label="&Ctr_tabanimation;"	preference="ctr_tabsanimate"/>
 				<checkbox label="&Ctr_dlanimation;"		preference="ctr_dlanimate"/>
+				<checkbox label="&Ctr_showtabclose;"	preference="ctr_showtabclose"/>
 				<checkbox label="&Ctr_cpanelmenus;"		preference="ctr_cpanelmenus"/>
 				<checkbox label="&Ctr_cuibotbuttons;"	preference="ctr_cuibuttons"/>
 			  </groupbox>

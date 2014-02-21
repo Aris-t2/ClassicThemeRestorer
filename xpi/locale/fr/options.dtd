@@ -16,8 +16,6 @@
 <!ENTITY Ctr_cuitxt			"texte">
 
 <!ENTITY Ctr_combrelstoptt	"[stop][actualiser] &gt;&gt; [stop-actualiser]">
-<!ENTITY Ctr_starbuttont1	"[la barre d'adresse][bouton de signets]">
-<!ENTITY Ctr_starbuttont2	"[bouton de signets dans la barre d'adresse]">
 
 <!ENTITY Ctr_main_t			"Principal">
 <!ENTITY Ctr_tabcolors_t	"Couleurs personnalisables">
@@ -58,16 +56,18 @@
 <!ENTITY Ctr_appbuttonI3	"ou d'onglets seulement!">
 <!ENTITY Ctr_alttbappb		"Icônes alternatives (la barre d'onglets)">
 <!ENTITY Ctr_appbuttxt		"Texte 'Firefox' (la barre d'outils)">
+<!ENTITY Ctr_appbutmhi		"Position plus élevée (la barre d'outils)">
 
 <!ENTITY Ctr_ui				"Interface générale">
-<!ENTITY Ctr_nbiconsize1	"#nav-bar[iconsize='small'] (par défaut)">
-<!ENTITY Ctr_nbiconsize2	"#nav-bar[iconsize='large']">
+<!ENTITY Ctr_nbiconsize1	"Utiliser #nav-bar[iconsize='small'] (par défaut)">
+<!ENTITY Ctr_nbiconsize2	"Utiliser #nav-bar[iconsize='large']">
 <!ENTITY Ctr_smallnavbut	"Petit boutons (barre de navigation)">
 <!ENTITY Ctr_hidenavbar		"Masquer la barre de navigation">
 <!ENTITY Ctr_buttons		"Boutons de la barre d'outils">
 <!ENTITY Ctr_backforward	"Bouton avancer/reculer déplaçable">
 <!ENTITY Ctr_wincontrols	"Coins déplaçables pour la fenêtre en plein écran">
-<!ENTITY Ctr_starinurl		"Bouton de signets dans la barre d'adresse">
+<!ENTITY Ctr_starinurl		"Bouton de signets dans la barre d'adresse (redémarrer Fx!)">
+<!ENTITY Ctr_statusbar		"La barre d'état sur la barre des modules (redémarrer Fx!)">
 <!ENTITY Ctr_hideurelstop	"Masquer 'stop-actualiser' sur la barre d'adresse">
 <!ENTITY Ctr_combrelstop 	"Bouton stop-actualiser">
 <!ENTITY Ctr_findbar_def	"Barre de recherche (position par défaut)">
@@ -100,9 +100,11 @@
 <!ENTITY Ctr_tabmokcolor	"Boutons des onglets de couleur blanche (fermer, nouveau, groupes, tout lister)">
 <!ENTITY Ctr_tabmokcolor2	"Texte des onglets de couleur blanche">
 <!ENTITY Ctr_closeabarbut	"Masquer le bouton de fermeture de la barre des modules">
-<!ENTITY Ctr_bfurlbarfix 	"Forcer la barre d'adresse à avoir un left border-radius de 2.5px">
-<!ENTITY Ctr_bmanimation	"Masquer l'animation de bouton de menu de favoris">
-<!ENTITY Ctr_tabanimation	"Onglet animation (about:config)">
-<!ENTITY Ctr_dlanimation	"Animation de notification des téléchargements (about:config)">
+<!ENTITY Ctr_bfurlbarfix 	"Corriger rayon de frontière de la barre d'adresse: 2px (Win) / 2.5px (Mac)">
+<!ENTITY Ctr_throbberalt	"Animation de chargement alternative pour tab-throbber">
+<!ENTITY Ctr_bmanimation	"Animation lors de l'ajout de nouveaux signets">
+<!ENTITY Ctr_tabanimation	"'Ouverture et la fermeture' animation pour les onglets (about:config)">
+<!ENTITY Ctr_dlanimation	"'Téléchargement terminé' animation (about:config)">
+<!ENTITY Ctr_showtabclose	"Toujours afficher le bouton onglet de près (redémarrer Firefox!)">
 <!ENTITY Ctr_cpanelmenus	"Menus du panneau compact (signets, histoire, etc)">
 <!ENTITY Ctr_cuibotbuttons	"Les boutons d'option en mode 'personnaliser ui'">

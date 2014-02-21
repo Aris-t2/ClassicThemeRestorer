@@ -1,9 +1,7 @@
-@import url(chrome://ctr_os_special/skin/back-forwardextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul),
-			   url(chrome://global/content/customizeToolbar.xul) {
-	
+@-moz-document url(chrome://browser/content/browser.xul) {
+
 	#ctr_back-forward-button{
 	  visibility: visible !important;
 	}
@@ -13,31 +11,26 @@
 	  visibility: collapse !important;
 	}
 	
-	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper {
+	#urlbar-container[forwarddisabled] > #urlbar-wrapper {
 	  clip-path: none !important;
 	}
-
-	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
-	  margin-left: 0px !important;
+	
+	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
 	  transition: none !important;
-	  transition-property:  none !important;
+	  transition-property: none !important;
 	  transition-delay: 0s !important;
 	}
 	
-    #urlbar:-moz-locale-dir(ltr){
-      border-left:1px solid #b4c1cf !important;
-    }
-    #urlbar[focused="true"]:-moz-locale-dir(ltr){
-      border-left:1px solid #72c0fe !important;
-    }
+	#urlbar-container > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr),
+	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr) {
+	  margin-left: 4px !important;
+	}
 	
-    #urlbar:-moz-locale-dir(rtl){
-      border-right:1px solid #b4c1cf !important;
-    }
-    #urlbar[focused="true"]:-moz-locale-dir(rtl){
-      border-right:1px solid #72c0fe !important;
-    }
-	
+	#urlbar-container > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl),
+	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
+	  margin-right: 4px !important;
+	}
+
 	#nav-bar #urlbar-container #forward-button[disabled]{
 	  visibility:collapse !important;
 	  opacity: 1.0 !important;

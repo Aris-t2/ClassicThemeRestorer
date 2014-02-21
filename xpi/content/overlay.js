@@ -1,4 +1,5 @@
 Components.utils.import("chrome://classic_theme_restorer/content/ctr_toolbars.jsm");
+
 Components.utils.import("resource://gre/modules/AddonManager.jsm");
 
 if (typeof classicthemerestorerjs == "undefined") {var classicthemerestorerjs = {};};
@@ -17,16 +18,30 @@ classicthemerestorerjs.ctr = {
   fxdefaulttheme: Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("general.skins.").getCharPref("selectedSkin") == 'classic/1.0',
 
   init: function() {
-
-	// We already use an own movable #PanelUI-menu-button. To prevent glitches
-	// the default one with fixed nav-bar position has to be removed on startup.
+  
 	try{
 		document.getElementById("nav-bar").removeChild(document.getElementById("PanelUI-button"));
 	} catch(e){}
+
+
+	// star-button in urlbar
+	if (this.prefs.getBoolPref('starinurl')) {
+		
+		classicthemerestorerjs.ctr.loadUnloadCSS("starinurl",true);
+		// needs timeout to prevent issues with other add-ons, that add icons to an own
+		// box on urlbar (like 'rss icon in awesomebar' add-on) instead of using 'urlbar-icons'
+		setTimeout(function(){
+			try{
+				document.getElementById("urlbar-icons").insertBefore(document.getElementById("bookmarks-menu-button"), null);
+			} catch(e){}
+		},100);
+
+	}
 	
-	// disable preferences not usable on third party themes
+	// disable preferences which are not usable on third party themes
 	if (!this.fxdefaulttheme) {
 		this.prefs.setCharPref('tabs','tabs_default');
+		this.prefs.setBoolPref('appbutmhi',false);
 		this.prefs.setBoolPref('smallnavbut',false);
 		this.prefs.setBoolPref('customsqtab',false);
 		this.prefs.setBoolPref('paneluibtweak',false);
@@ -40,11 +55,14 @@ classicthemerestorerjs.ctr = {
 	}
 
 	
-	/* style CTRs 'customize-ui' option buttons on startup */
+	// style CTRs 'customize-ui' option buttons on startup
 	this.loadUnloadCSS('cui_buttons',true);
 
 	
-	/* extra check to not style spaces and separators while 'ThePuzzlePiece' add-on is enabled */
+	// statusbar boolean
+	var enableCtrstatusbar = this.prefs.getBoolPref('statusbar');
+	
+	// extra check to not enable spaces/separators styles or statusbar while 'ThePuzzlePiece' add-on is enabled
 	var TPPListener = {
 	   onEnabled: function(addon) {
 		  if(addon.id == 'thePuzzlePiece@quicksaver') { classicthemerestorerjs.ctr.loadUnloadCSS("spaces_extra",false); }
@@ -56,12 +74,24 @@ classicthemerestorerjs.ctr = {
 	AddonManager.addAddonListener(TPPListener);
 	
 	AddonManager.getAddonByID('thePuzzlePiece@quicksaver', function(addon) {
-	   if(addon && addon.isActive) { classicthemerestorerjs.ctr.loadUnloadCSS("spaces_extra",false); }
+	   if(addon && addon.isActive) { classicthemerestorerjs.ctr.loadUnloadCSS("spaces_extra",false); enableCtrstatusbar = false; }
 	    else { classicthemerestorerjs.ctr.loadUnloadCSS("spaces_extra",true); }
 	});
 	
+	// statusbar in addonbar
+	if (enableCtrstatusbar) {
+		
+		// needs timeout to prevent issues and glitches with other add-ons
+		setTimeout(function(){
+			try{
+				document.getElementById("ctr_addon-bar").insertBefore(document.getElementById("status-bar"), null);
+			} catch(e){}
+		},100);
+
+	}
 	
-	/*CTR Preferences listener*/
+	
+	// CTR Preferences listener
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get
 	  // garbage collected.
@@ -101,12 +131,13 @@ classicthemerestorerjs.ctr = {
 		  case "firstrun":
 			if (branch.getBoolPref("firstrun")) {
 
-				// insert custom appmenu button, custom back-forward button, custom
-				// panel ui button and custom wincontrols on first run into nav-bar
+				// insert CTRs items on first run into nav-bar
+				// since the buttons do not exist without CTR we cannot move them to a specific nav-bar location
+				// without breaking ui (randomly)
 				try{
-					
-					document.getElementById("nav-bar").insertItem("ctr_appbutton", null, null, true);
+			
 					document.getElementById("nav-bar").insertItem("ctr_back-forward-button", null, null, true);
+					document.getElementById("nav-bar").insertItem("ctr_appbutton", null, null, true);
 					document.getElementById("nav-bar").insertItem("ctr_puib_separator", null, null, true);
 					document.getElementById("nav-bar").insertItem("ctr_panelui-button", null, null, true);
 					document.getElementById("nav-bar").insertItem("ctr_window-controls", null, null, true);
@@ -119,7 +150,7 @@ classicthemerestorerjs.ctr = {
 					}
 					
 				} catch(e){}
-
+				
 				// set 'first run' to false
 				branch.setBoolPref("firstrun",false);
 			
@@ -129,6 +160,7 @@ classicthemerestorerjs.ctr = {
 		  // Tabs
 		  case "tabs":
 			classicthemerestorerjs.ctr.loadUnloadCSS('tabs_squared',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('tabs_squaredc2',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('tabs_squared2',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('tabs_curved',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('tabs_curvedall',false);
@@ -175,7 +207,7 @@ classicthemerestorerjs.ctr = {
 		  
 		  case "tabwidth":
 			classicthemerestorerjs.ctr.loadUnloadCSS('tabwidth_150',false);
-			classicthemerestorerjs.ctr.loadUnloadCSS('tabwidth_100',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('tabwidth_250',false);
 
 			if (branch.getCharPref("tabwidth")!="tabwidth_default"){
 			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("tabwidth"),true);
@@ -189,16 +221,18 @@ classicthemerestorerjs.ctr = {
 			if (branch.getCharPref("tabmwidth")!="tabmwidth_default"){
 			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("tabmwidth"),true);
 			}
-		  break;
-		  
+		  break; 
+
+
 		  // Appbutton
 		  case "appbutton":
 			classicthemerestorerjs.ctr.loadUnloadCSS('appbutton_v1',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('appbutton_v2',false);
-
+		
 			if (branch.getCharPref("appbutton")!="appbutton_off"){
 			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("appbutton"),true);
 			}
+
 		  break;
 		  
 		  case "appbuttonc":
@@ -226,6 +260,10 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("appbuttxt",false);
 		  break;
 
+		  case "appbutmhi":
+			if (branch.getBoolPref("appbutmhi")) classicthemerestorerjs.ctr.loadUnloadCSS("appbutmhi",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("appbutmhi",false);
+		  break;
 
 		  //General UI options
 		  case "nbiconsize":
@@ -240,11 +278,30 @@ classicthemerestorerjs.ctr = {
 		  break;
 
 		  case "smallnavbut":
-			if (branch.getBoolPref("smallnavbut")) classicthemerestorerjs.ctr.loadUnloadCSS("smallnavbut",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("smallnavbut",false);
+			if (branch.getBoolPref("smallnavbut")) {
+			
+				var activate = true;
+				
+				try{
+					// If 'Classic Toolbar Buttons' add-on is used to style nav-bar buttons,
+					// CTRs small button option should stay disabled -> prevents glitches
+					// 'Classic Toolbar Buttons' add-on has an own 'small button option',
+					// which is not compatible to CTRs option.
+					if(Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService)
+							.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off"){
+						
+						activate=false;
+						
+					}
+				} catch(e){}
+				
+				classicthemerestorerjs.ctr.loadUnloadCSS("smallnavbut",activate);
+			}
+			else  classicthemerestorerjs.ctr.loadUnloadCSS("smallnavbut",false);
+
 		  break;
 		  
-		  case "hidenavbar":
+		  case "hidenavbar":	  
 			if (branch.getBoolPref("hidenavbar")) classicthemerestorerjs.ctr.loadUnloadCSS("hidenavbar",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("hidenavbar",false);
 		  break;
@@ -258,12 +315,7 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("wincontrols")) classicthemerestorerjs.ctr.loadUnloadCSS("wincontrols",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("wincontrols",false);
 		  break;
-		  
-		  case "starinurl":
-			if (branch.getBoolPref("starinurl")) classicthemerestorerjs.ctr.loadUnloadCSS("starinurl",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("starinurl",false);
-		  break;
-		  
+  
 		  case "hideurelstop":
 			if (branch.getBoolPref("hideurelstop")) classicthemerestorerjs.ctr.loadUnloadCSS("hideurelstop",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("hideurelstop",false);
@@ -358,13 +410,45 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "bfurlbarfix":
-			if (branch.getBoolPref("bfurlbarfix")) classicthemerestorerjs.ctr.loadUnloadCSS("bfurlbarfix",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("bfurlbarfix",false);
+		    if (classicthemerestorerjs.ctr.fxdefaulttheme) {
+			  if (branch.getBoolPref("bfurlbarfix")) classicthemerestorerjs.ctr.loadUnloadCSS("bfurlbarfix",true);
+			    else classicthemerestorerjs.ctr.loadUnloadCSS("bfurlbarfix",false);
+			}
 		  break;
 
+		  case "throbberalt":
+			if (branch.getBoolPref("throbberalt")) classicthemerestorerjs.ctr.loadUnloadCSS("throbberalt",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("throbberalt",false);
+		  break;
+		  
+		  // reverse option to match other animation preference labels
 		  case "bmanimation":
-			if (branch.getBoolPref("bmanimation")) classicthemerestorerjs.ctr.loadUnloadCSS("bmanimation",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmanimation",false);
+			if (branch.getBoolPref("bmanimation")) classicthemerestorerjs.ctr.loadUnloadCSS("bmanimation",false);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmanimation",true);
+		  break;
+		  
+		  
+		  case "showtabclose":
+		  
+			var def_tcw = Components.classes["@mozilla.org/preferences-service;1"]
+						  .getService(Components.interfaces.nsIPrefService)
+							.getBranch("browser.tabs.").getIntPref("tabClipWidth") == 140;
+							
+			if (branch.getBoolPref("showtabclose")) {
+			  // if we allow tabs to have a reduced min-width, browser.tabs.tabClipWidth
+			  // requires a smaller value
+			  Components.classes["@mozilla.org/preferences-service;1"]
+				.getService(Components.interfaces.nsIPrefService)
+				  .getBranch("browser.tabs.").setIntPref("tabClipWidth",1);
+			}
+			else {
+				// set browser.tabs.tabClipWidth back to default
+				if (def_tcw==false) {
+				  Components.classes["@mozilla.org/preferences-service;1"]
+					.getService(Components.interfaces.nsIPrefService)
+					  .getBranch("browser.tabs.").setIntPref("tabClipWidth",140);
+				}
+			}
 		  break;
 
 		  case "cpanelmenus":
@@ -381,50 +465,24 @@ classicthemerestorerjs.ctr = {
 	);
 
 	ctrSettingsListener.register(true);
+	
+	var ctrSettingsListener_forCTB = new PrefListener(
+	  "extensions.cstbb-extension.",
+	  function(branch, name) {
+		switch (name) {
+
+		  case "navbarbuttons":
+			if (branch.getCharPref("navbarbuttons")!="nabbuttons_off")
+			  classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);
+		  break;
+		}
+	  }
+	);
+	
+	ctrSettingsListener_forCTB.register(true);
 
   },
-
-  initprefwindow: function() {
   
-	// disable and hide items not usable on third party themes
-	if (!this.fxdefaulttheme) {
-		document.getElementById('ctr_pw_tabmenulist').disabled = true;
-		document.getElementById('ctr_pw_smallnavbut').disabled = true;
-		document.getElementById('ctr_pw_iconsbig').disabled = true;
-		document.getElementById('ctr_customsqtab_cb').disabled = true;
-		document.getElementById('ctr_pw_cp_actt1').disabled = true;
-		document.getElementById('ctr_pw_cp_actt2').disabled = true;
-		document.getElementById('ctr_pw_bfurlbarfix').disabled = true;
-		document.getElementById('ctr_pw_paneluibtweak').disabled = true;
-		document.getElementById('ctr_pw_tabmokcolor').disabled = true;
-		document.getElementById('ctr_pw_tabmokcolor2').disabled = true;
-
-		document.getElementById('ctr_pw_tabmenulist').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_smallnavbut').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_iconsbig').style.visibility = 'collapse';
-		document.getElementById('ctr_customsqtab_cb').style.visibility = 'collapse';
-		
-		document.getElementById('ctr_pw_cp_deft1').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_deft2').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_deftl1').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_deftl2').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_hovt1').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_hovt2').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_hovtl1').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_hovtl2').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_actt1').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_actt2').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_acttl1').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_acttl2').style.visibility = 'collapse';
-		
-		document.getElementById('ctr_pw_ctablabel').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_bfurlbarfix').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_paneluibtweak').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_tabmokcolor').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_tabmokcolor2').style.visibility = 'collapse';
-	}
-  },
-
   /* enable/disable css sheets*/
   loadUnloadCSS: function(which,enable) {
 	
@@ -457,6 +515,10 @@ classicthemerestorerjs.ctr = {
 				}
 			}
 		
+		break;
+		
+		case "tabs_squaredc2":
+			manageCSS("tabs_squaredc2.css");
 		break;
 		
 		case "tabs_squared2":
@@ -570,21 +632,11 @@ classicthemerestorerjs.ctr = {
 			else if (enable==true && this.prefs.getCharPref("nav_txt_ico")=="iconstxt2"){
 				enable=false;
 			}
-			
-			// If 'Classic Toolbar Buttons' add-on is used to style nav-bar buttons,
-			// CTRs small button option should not be enabled -> prevents glitches.
-			// 'Classic Toolbar Buttons' add-on has an own 'small button option',
-			// which is not compatible to CTRs option.
-			try{
-				if(Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService)
-						.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off"){
-					
-					enable=false;
-					
-				}
-			} catch(e){}
-			
+	
 			manageCSS("smallnavbut.css");
+			
+			if(this.fxdefaulttheme) manageCSS("urlbarborderfocus_nt.css");
+			  else if(!this.fxdefaulttheme) manageCSS("urlbarborderfocus_t.css");
 			
 			this.loadUnloadCSS('cui_buttons',true);
 
@@ -634,7 +686,7 @@ classicthemerestorerjs.ctr = {
 		
 		case "iconsbig":
 			
-			if (this.fxdefaulttheme) manageCSS("mode_icons_big.css");
+			if(this.fxdefaulttheme) manageCSS("mode_icons_big.css");
 		
 		break;
 		
@@ -649,54 +701,32 @@ classicthemerestorerjs.ctr = {
 
 		case "alttbappb": 			manageCSS("alt_appbutton_icons.css");	break;
 		case "appbuttxt": 			manageCSS("appbuttxt.css");				break;
+		case "appbutmhi": 			manageCSS("appbuthigherposition.css");  break;
 		
 		case "hidenavbar": 			manageCSS("hidenavbar.css");  			break;
-		case "backforward": 		manageCSS("back-forward.css");			break;
+		
+		case "backforward":
+	
+			if(this.fxdefaulttheme) manageCSS("back-forward1.css");
+			  else if(!this.fxdefaulttheme) manageCSS("back-forward2.css");
+
+		break;
+		
 		case "wincontrols": 		manageCSS("windowcontrols.css");		break;
-		
 		case "starinurl":
-			
-			manageCSS("starinurl.css");
-			
-			if (this.fxdefaulttheme) {
-				manageCSS("starinurl_nt.css");
-			} else {
-				manageCSS("starinurl_wt.css");
-			}
-			
-			if(enable==true && this.prefs.getBoolPref("hideurelstop")==true){
-				manageCSS("hideurlbarrelstop2.css");
-			}
-			
-			if(enable==false){
-				manageCSS("hideurlbarrelstop2.css");
-			}
-			
+			if (this.fxdefaulttheme) manageCSS("starinurl_nt.css");
+			  else manageCSS("starinurl_t.css");
 		break;
-		
-		case "hideurelstop":
-		
-			manageCSS("hideurlbarrelstop.css");
-			
-			if(enable==true && this.prefs.getBoolPref("starinurl")==true){
-				manageCSS("hideurlbarrelstop2.css");
-			}
-			
-			if(enable==false){
-				manageCSS("hideurlbarrelstop2.css");
-			}
-		
-		break;
-		
+		case "hideurelstop": 		manageCSS("hideurlbarrelstop.css"); 	break;
 		case "combrelstop":			manageCSS("combrelstop.css");			break;
-		
-		case "bfurlbarfix": 		manageCSS("bf_urlbarfix.css");			break;
-		
+
 		case "paneluibtweak": 		manageCSS("paneluibutton_tweak.css");	break;
 		case "notabfog": 			manageCSS("notabfog.css");				break;
 		case "tabmokcolor": 		manageCSS("tabmokcolor.css");			break;
 		case "tabmokcolor2": 		manageCSS("tabmokcolor2.css");			break;
+		case "bfurlbarfix": 		manageCSS("bf_urlbarfix.css");			break;
 		case "closeabarbut": 		manageCSS("closeabarbut.css");			break;
+		case "throbberalt": 		manageCSS("throbberalt.css");			break;
 		case "bmanimation": 		manageCSS("hidebmanimation.css");		break;
 		case "cpanelmenus": 		manageCSS("compactpanelmenus.css");		break;
 		case "cuibuttons":
@@ -738,6 +768,28 @@ classicthemerestorerjs.ctr = {
 				
 				}
 				
+				else if (this.prefs.getCharPref('tabs')=='tabs_squaredc2') {
+				
+					this.ctabsheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[selected]:not(:-moz-lwtheme) .tab-content {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
+						}\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme) .tab-content {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('ctab1')+','+this.prefs.getCharPref('ctab2')+') !important;\
+						}\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected]):hover:not(:-moz-lwtheme) .tab-content {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('ctabhov1')+','+this.prefs.getCharPref('ctabhov2')+') !important;\
+						}\
+						#main-window #navigator-toolbox #TabsToolbar .tabs-newtab-button:not(:-moz-lwtheme) {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('cntab1')+','+this.prefs.getCharPref('cntab2')+') !important;\
+						}\
+						#main-window #navigator-toolbox #TabsToolbar .tabs-newtab-button:hover:not(:-moz-lwtheme) {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('cntabhov1')+','+this.prefs.getCharPref('cntabhov2')+') !important;\
+						}\
+					'), null, null);
+				
+				}
+				
 				else if (this.prefs.getCharPref('tabs')=='tabs_squared2') {
 				
 					this.ctabsheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
@@ -761,19 +813,19 @@ classicthemerestorerjs.ctr = {
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end {\
 						  background-image: linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctabhov1')+' 0px, '+this.prefs.getCharPref('ctabhov2')+'), none !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
-						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(ltr)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(rtl)::before {\
+						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
-						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(ltr)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(rtl)::before {\
+						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[selected=true]:not(:-moz-lwtheme) {\
-						  background-clip: padding-box, padding-box, content-box !important;\
-						  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png), linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctabact1')+' 0px, '+this.prefs.getCharPref('ctabact2')+'), none !important;\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[selected=true]  {\
+						  background-color: transparent !important;\
+						  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+'), none !important;\
 						}\
 					'), null, null);
 				
@@ -782,19 +834,19 @@ classicthemerestorerjs.ctr = {
 				else if (this.prefs.getCharPref('tabs')=='tabs_default') {
 				
 					this.ctabsheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
-						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(ltr)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(rtl)::before {\
+						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
-						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(ltr)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(rtl)::before {\
+						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[selected=true]:not(:-moz-lwtheme) {\
-						  background-clip: padding-box, padding-box, content-box !important;\
-						  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png), linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctabact1')+' 0px, '+this.prefs.getCharPref('ctabact2')+'), none !important;\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[selected=true]  {\
+						  background-color: transparent !important;\
+						  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+'), none !important;\
 						}\
 					'), null, null);
 				
