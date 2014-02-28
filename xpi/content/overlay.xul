@@ -25,8 +25,7 @@
 <overlay id="classic_theme_restorer-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 	<script type="application/x-javascript" src="overlay.js"/>
-  
-  
+
 	<commandset id="mainCommandSet">
 	   <command id="Browser:ToggleCtrAddonBar" oncommand="classicthemerestorerjs.ctr.toggleCtrAddonBar();"/>
 	</commandset>
@@ -64,15 +63,9 @@
 				 lockiconsize="true"
 				 accesskey="A"
 				 key="key_toggleCtrAddonBar"
-				 defaultset="ctr_addonbar-close,ctr_flexible_space_ab">
+				 defaultset="ctr_addonbar-close,spring">
 		  <toolbarbutton id="ctr_addonbar-close" removable="false"
 				    oncommand="classicthemerestorerjs.ctr.toggleCtrAddonBar();"/>
-		  <toolbaritem id="ctr_flexible_space_ab"
-					flex="1"
-					class="ctr_flexspaces"
-					title="&Ctr_flexspace;"
-					customizableui-areatype="toolbar"
-					removable="true"/>
 		</toolbar>
 		<toolbar id="ctr_toolbar_dummy" customizable="false"
 				 hidden="true"
@@ -94,13 +87,8 @@
 				 toolbarname="&Ctr_extrabar;"
 				 collapsed="true"
 				 lockiconsize="true"
-				 accesskey="D">
-		  <toolbaritem id="ctr_flexible_space_eb"
-					flex="1"
-					class="ctr_flexspaces"
-					title="&Ctr_flexspace;"
-					customizableui-areatype="toolbar"
-					removable="true"/>
+				 accesskey="D"
+				 defaultset="spring">
 		</toolbar>
 	</toolbox>
 
@@ -111,6 +99,10 @@
 	<toolbarbutton id="social-share-button" removable="true"/>
 	<toolbaritem id="social-toolbar-item" removable="true"/>
 
+	<!--### Appbutton needs to be created twice, one for titlebar and one for toolbars.
+		Otherwise assigning appbutton popup to both buttons would make buttons to lose
+		their active/open status and ui. Native splitmenus are not added yet, because
+		of compatibility issues with themes and MacOSX ###-->
 	
 	<hbox id="titlebar-content">
 	  <!--### place own appbutton on titlebar (Windows only) ###-->
@@ -995,7 +987,7 @@
 	  </toolbarbutton>
 	  
       
-	  <!--### add own bookmarks menu button to browsers customizing area ###-->
+	  <!--### adds own bookmarks menu button to browsers customizing area ###-->
 	  <toolbarbutton id="ctr_bookmarks-menu-toolbar-button"
                      class="toolbarbutton-1 chromeclass-toolbar-additional"
                      persist="class"
@@ -1151,7 +1143,7 @@
                      command="Browser:Stop"
                      tooltiptext="&stopButton.tooltip;"/>
   
-	  <!-- duplicates fullscreen window controls -->
+	  <!--### duplicates fullscreen window controls ###-->
 	  <toolbaritem id="ctr_window-controls" class="chromeclass-toolbar-additional"
                    removable="true" title="window controls">
         <toolbarbutton id="minimize-button"
@@ -1167,11 +1159,12 @@
                        oncommand="BrowserTryToCloseWindow();"/>
       </toolbaritem>
 	  
-	  <!-- restores spaces, flexible spaces and separators -->
+	  <!--### restores spaces, flexible spaces and separators ###-->
       <toolbarspring 	id="spring"		class="ctr_flexspaces"	label="&Ctr_flexspace;"	customizableui-areatype="toolbar" removable="true" flex="1"/>
       <toolbarspacer 	id="spacer"		class="ctr_spaces"		label="&Ctr_space;"		customizableui-areatype="toolbar" removable="true"/>
       <toolbarseparator id="separator"	class="ctr_separators"	label="&Ctr_separator;"	customizableui-areatype="toolbar" removable="true"/>
  
+	  <!--### extra separator for panel ui button ###-->
 	  <toolbaritem id="ctr_puib_separator"
                    title="&Ctr_puibseparator;"
                    customizableui-areatype="toolbar"

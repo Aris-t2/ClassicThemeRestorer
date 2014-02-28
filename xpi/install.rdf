@@ -5,7 +5,7 @@
 	<Description rdf:about="urn:mozilla:install-manifest">
 		<em:id>ClassicThemeRestorer@ArisT2Noia4dev</em:id>
 		<em:name>Classic Theme Restorer</em:name>
-		<em:version>1.1.3</em:version>
+		<em:version>1.1.5</em:version>
 		<em:type>2</em:type>
 
 		<em:optionsURL>chrome://classic_theme_restorer/content/options.xul</em:optionsURL>
@@ -14,7 +14,7 @@
 			<Description>
 				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
 				<em:minVersion>29.0a1</em:minVersion>
-				<em:maxVersion>30.0</em:maxVersion>
+				<em:maxVersion>31.0</em:maxVersion>
 			</Description>
 		</em:targetApplication>
 
@@ -43,6 +43,14 @@
 				<em:locale>fr</em:locale>
 				<em:description>Le 'Classic Theme Restorer' add-on restaure appmenu classique, barre d'outils add-ons, bouton de menu des signets, signets bouton de la barre latérale, bouton de barre latérale d'historique, de petits boutons nav-bar et carré onglets sur Firefox Australis UI. Utilisez le menu "Personnaliser" pour déplacer les boutons de votre barre d'outils pratique.</em:description>
 				<em:translator>goofy (fr)</em:translator>
+			</Description>
+		</em:localized>
+		
+		<em:localized>
+			<Description>
+				<em:locale>ru</em:locale>
+				<em:description>'Classic Theme Restorer' brings back appmenu button, squared tabs, add-ons bar, small nav-bar buttons, a few older buttons and more to Firefox Australis UI. Use 'Customize' menu to move buttons on toolbars.</em:description>
+				<em:translator>radion-t (ru)</em:translator>
 			</Description>
 		</em:localized>
 		

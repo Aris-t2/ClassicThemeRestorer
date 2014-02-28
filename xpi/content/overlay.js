@@ -315,7 +315,12 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("wincontrols")) classicthemerestorerjs.ctr.loadUnloadCSS("wincontrols",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("wincontrols",false);
 		  break;
-  
+		  
+		  case "statusbar":
+			if (branch.getBoolPref("statusbar")) classicthemerestorerjs.ctr.loadUnloadCSS("statusbar",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("statusbar",false);
+		  break;
+		  
 		  case "hideurelstop":
 			if (branch.getBoolPref("hideurelstop")) classicthemerestorerjs.ctr.loadUnloadCSS("hideurelstop",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("hideurelstop",false);
@@ -472,8 +477,13 @@ classicthemerestorerjs.ctr = {
 		switch (name) {
 
 		  case "navbarbuttons":
-			if (branch.getCharPref("navbarbuttons")!="nabbuttons_off")
-			  classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);
+			if (branch.getCharPref("navbarbuttons")!="nabbuttons_off") {
+				classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS("hidesmallbuttons",true);
+			}
+			else {
+				classicthemerestorerjs.ctr.loadUnloadCSS("hidesmallbuttons",false);
+			}
 		  break;
 		}
 	  }
@@ -717,6 +727,7 @@ classicthemerestorerjs.ctr = {
 			if (this.fxdefaulttheme) manageCSS("starinurl_nt.css");
 			  else manageCSS("starinurl_t.css");
 		break;
+		case "statusbar": 			manageCSS("statusbar.css"); 			break;
 		case "hideurelstop": 		manageCSS("hideurlbarrelstop.css"); 	break;
 		case "combrelstop":			manageCSS("combrelstop.css");			break;
 
@@ -739,6 +750,8 @@ classicthemerestorerjs.ctr = {
 		break;
 		
 		case "spaces_extra": 		manageCSS("spaces_extra.css");			break;
+		
+		case "hidesmallbuttons": 	manageCSS("hidesmallbuttons.css");		break;
 		
 		case "customsqtab":
 

@@ -1,0 +1,150 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	
+	#ctr_bookmarks-menu-toolbar-button > .toolbarbutton-icon,
+	#ctr_bookmarks-button > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks.png");
+	}
+	#ctr_bookmarks-menu-toolbar-button:-moz-lwtheme-brighttext > .toolbarbutton-icon,
+	#ctr_bookmarks-button:-moz-lwtheme-brighttext > .toolbarbutton-icon{
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks-inv.png");
+	}
+
+	:-moz-any(#ctr_history-button,#ctr_back-button,#ctr_forward-button,#ctr_stop-button,#ctr_reload-button) > .toolbarbutton-icon {
+	  list-style-image: url("chrome://browser/skin/Toolbar.png");
+	}
+	
+	:-moz-any(#ctr_history-button,#ctr_back-button,#ctr_forward-button,#ctr_stop-button,#ctr_reload-button):-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	  list-style-image: url("chrome://browser/skin/Toolbar-inverted.png");
+	}
+	
+	#ctr_history-button > .toolbarbutton-icon {
+	  -moz-image-region: rect(0, 180px, 18px, 162px);
+	}
+	#ctr_back-button > .toolbarbutton-icon {
+	  -moz-image-region: rect(0, 54px, 18px, 36px);
+	}
+	#ctr_forward-button > .toolbarbutton-icon {
+	  -moz-image-region: rect(0, 72px, 18px, 54px);
+	}
+	#ctr_reload-button > .toolbarbutton-icon {
+	  -moz-image-region: rect(0, 90px, 18px, 72px);
+	}
+	#ctr_stop-button > .toolbarbutton-icon {
+	  -moz-image-region: rect(0, 108px, 18px, 90px);
+	}
+
+	#nav-bar :-moz-any(#ctr_appbutton,#ctr_bookmarks-button,#ctr_history-button,#ctr_back-button,#ctr_forward-button,#ctr_stop-button,#ctr_reload-button) > .toolbarbutton-icon {
+	  padding: 2px 6px 2px 6px !important;
+	}
+	
+	#PanelUI-menu-button{
+	  margin: 0px !important;
+	}
+	
+	#nav-bar #ctr_bookmarks-menu-toolbar-button  > .toolbarbutton-icon{
+	  padding-top: 2px !important;
+	  padding-bottom: 2px !important;
+	}
+
+	/* style appmenu */
+	#ctr_appbuttonPopup{
+	  -moz-appearance:none;
+	  box-shadow:none;
+	  border:1px solid #a0a0a0;
+	}
+	
+	#appmenuPrimaryPane{
+	  -moz-appearance:none;
+	  background:white;
+	  box-shadow:none;
+	  border:0;
+	  padding: 2px;
+	  -moz-border-end: none;
+	  }
+	
+	#appmenuSecondaryPane {
+	  box-shadow: 1px 0 2px rgb(204,214,234) inset;
+	  -moz-padding-start: 3px;
+	  -moz-padding-end: 2px;
+	  padding-top: 2px;
+	  padding-bottom: 2px;
+	  font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
+	}
+		
+	#appmenuSecondaryPane:-moz-locale-dir(rtl) {
+	  box-shadow: -1px 0 2px rgb(204,214,234) inset;
+	}
+
+	#appmenuPrimaryPane menuseparator {
+	  -moz-appearance: none;
+	  margin-top: 3px;
+	  margin-bottom: 3px;
+	  margin-right:3px;
+	  -moz-margin-start: 30px;
+	  padding: 0;
+	  border-top: 1px solid -moz-dialog;
+	  border-bottom: none;
+	}
+
+	#appmenuPrimaryPane #menu_newTabmenupopup,
+	#appmenuPrimaryPane #menu_newEditmenupopup,
+	#appmenuPrimaryPane #menu_newPrintmenupopup,
+	#appmenuPrimaryPane #newmenuWebDeveloperPopup {
+	  -moz-appearance:none;
+	  background:white;
+	  box-shadow:none;
+	  border:1px solid #a0a0a0;
+	}
+
+	#appmenu-edit-label,
+	#appmenu-edit-label:hover{
+	  -moz-appearance: none !important;
+	}
+	
+	
+	#appmenu-edit-label{
+	  margin-left: 2px !important;
+	}
+	
+	#appmenuSecondaryPane{
+	  border-left: 1px solid -moz-dialog !important;
+	}
+	
+	/* ctr addonbar */
+	#ctr_addon-bar toolbarbutton {
+	  -moz-appearance: none;
+	  margin: 0px 3px;
+	  padding:0px;
+	}
+	#ctr_addon-bar toolbarbutton .toolbarbutton-icon {
+	  max-width: 18px;
+	  max-height: 18px;
+	}
+	#ctr_addon-bar .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(ltr) {
+	  padding: 0px;
+	  margin-left: -3px;
+	}
+	#ctr_addon-bar .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(rtl) {
+	  padding: 0px;
+	  margin-right: -3px;
+	}
+
+}
+
+.ctr_nonwindows,
+.ctr_linuxonly,
+.ctr_maconly{
+  visibility: collapse !important;
+}
+
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+	#ctr_appbutton_list1{
+	  visibility: visible !important;
+	}
+	#tabs_curvedall,
+	#ctr_appbutton_list2{
+	  visibility: collapse !important;
+	}
+}

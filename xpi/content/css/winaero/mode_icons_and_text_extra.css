@@ -1,0 +1,56 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#nav-bar .toolbarbutton-1:not([type="menu-button"]):not([type="menu"]) .toolbarbutton-icon {
+	  min-width: 20px !important;
+	  height: 20px !important;
+	  padding: 0px !important;
+	  margin: -2px 0 0 0 !important;
+	}
+	#nav-bar .toolbarbutton-1[type="menu-button"] .toolbarbutton-icon {
+	  min-width: 18px !important;
+	  height: 18px !important;
+	  padding: 0px !important;
+	  margin: -2px 0 0 0 !important;
+	}
+	#nav-bar .toolbarbutton-1[type="menu"] .toolbarbutton-icon {
+	  min-width: 18px !important;
+	  height: 18px !important;
+	  padding: 0px !important;
+	  margin: -2px 0 0 0 !important;
+	}
+
+	#nav-bar .toolbarbutton-1:not([type="menu-button"]):not([type="menu"]) .toolbarbutton-text {
+	  padding: 0px !important;
+	  margin: 0 0 -4px 0 !important;
+	}
+	#nav-bar .toolbarbutton-1[type="menu-button"] .toolbarbutton-text {
+	  padding: 3px 0 0 0 !important;
+	  margin: 0 0 -4px 0 !important;
+	}
+	#nav-bar .toolbarbutton-1[type="menu"] .toolbarbutton-text {
+	  padding: 2px 0 0 0 !important;
+	  margin: 0 0 -4px 0 !important;
+	}
+	#nav-bar .toolbarbutton-1 dropmarker {
+	  padding: 0px !important;
+	  margin: 0px 0 -4px 0 !important;
+	}
+
+	#nav-bar .toolbarbutton-1 {
+	  margin: 1px 0 !important;
+	}
+	
+	#navigator-toolbox #nav-bar #urlbar-container:-moz-locale-dir(ltr){
+	  margin-left: 4px !important;
+	}
+	#navigator-toolbox #nav-bar #urlbar-container:-moz-locale-dir(rtl){
+	  margin-right: 24px !important;
+	}
+	
+	#ctr_addon-bar toolbarbutton .toolbarbutton-icon {
+	  max-height: 34px !important;
+	}
+
+}

@@ -1,0 +1,24 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#main-window:not([customizing]) #ctr_addon-bar #status-bar{
+	  -moz-appearance: none !important;
+	  background: none !important;
+	  border: none !important;
+	  border-right: none !important;
+	}
+	
+	#main-window[customizing] #ctr_addon-bar #status-bar{
+	  -moz-appearance: none !important;
+	  background: none !important;
+	  border-right: none !important;
+	  border: 1px solid !important;
+	}
+	
+	#ctr_addon-bar #status-bar statusbarpanel {
+	  -moz-appearance:none !important;
+	  border:none !important;
+	}
+
+}

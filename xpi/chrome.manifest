@@ -4,14 +4,18 @@ skin    classic_theme_restorer	classic/1.0		skin/
 #locales
 locale	classic_theme_restorer	de				locale/de/
 locale	classic_theme_restorer	en-US			locale/en-US/
-locale	classic_theme_restorer	fr				locale/fr/
 locale	classic_theme_restorer	es				locale/es/
+locale	classic_theme_restorer	fr				locale/fr/
+locale	classic_theme_restorer	ru				locale/ru/
 
 #different css for all supported OS
-skin	ctr_os_special	classic_theme_restorer	ctr_os_special/mac/		os=Darwin
-skin	ctr_os_special	classic_theme_restorer	ctr_os_special/linux/	os=Linux
-skin	ctr_os_special	classic_theme_restorer	ctr_os_special/winxp/	os=WINNT osversion<6
-skin	ctr_os_special	classic_theme_restorer	ctr_os_special/winaero/	os=WINNT osversion>=6
+skin	ctr_os_special	classic_theme_restorer	content/css/mac/		os=Darwin
+skin	ctr_os_special	classic_theme_restorer	content/css/linux/		os=Linux
+skin	ctr_os_special	classic_theme_restorer	content/css/winxp/		os=WINNT osversion<6
+skin	ctr_os_special	classic_theme_restorer	content/css/winaero/	os=WINNT osversion=6.0
+skin	ctr_os_special	classic_theme_restorer	content/css/winaero/	os=WINNT osversion=6.1
+skin	ctr_os_special	classic_theme_restorer	content/css/winaero/	os=WINNT osversion>=6.2 appversion<30.0a1
+skin	ctr_os_special	classic_theme_restorer	content/css/win8/		os=WINNT osversion>=6.2 appversion>=30.0a1
 
 overlay chrome://browser/content/browser.xul			chrome://classic_theme_restorer/content/overlay.xul
 style   chrome://global/content/customizeToolbar.xul	chrome://classic_theme_restorer/content/overlay.css

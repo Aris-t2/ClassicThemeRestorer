@@ -1,0 +1,53 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+
+    #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:-moz-locale-dir(ltr){
+      margin-left: 0px !important;
+    }
+    #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:-moz-locale-dir(ltr){
+      padding-left: 2px !important;
+    }
+    #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:-moz-locale-dir(rtl){
+      margin-right: 0px !important;
+    }
+    #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:-moz-locale-dir(rtl){
+      padding-right: 2px !important;
+    }
+
+	#TabsToolbar .tabbrowser-tabs{
+	  margin-left: -2px !important;
+	  margin-right: -2px !important;
+	}
+	
+	#TabsToolbar {
+	  border-left: 1px solid #9ca3aa !important;
+	  border-right: 1px solid #9ca3aa !important;
+	}
+	
+	#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{
+	  margin-top: 3px !important;
+	  margin-bottom: 3px !important;
+	}
+
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+	  margin-top: 26px !important;
+	}
+
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+	  margin-top: 23px !important;
+	}
+	
+	#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{
+	  margin-top: 3px !important;
+	  margin-bottom: 3px !important;
+	}
+
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+	  margin-top: 25px !important;
+	}
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+	  margin-top: 25px !important;
+	}
+
+}

@@ -1,0 +1,34 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{
+	  margin-top: 4px !important;
+	  margin-bottom: 4px !important;
+	}
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+	  margin-top: 27px !important;
+	}
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+	  margin-top: 27px !important;
+	}
+
+	#TabsToolbar .tabbrowser-tabs{
+	  margin-left: -2px !important;
+	  margin-right: -2px !important;
+	}
+	
+	@media all and (-moz-windows-classic) {	
+		#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{
+		  margin-top: 3px !important;
+		  margin-bottom: 3px !important;
+		}
+
+		#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+		  margin-top: 23px !important;
+		}
+		#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
+		  margin-top: 23px !important;
+		}
+	}
+}

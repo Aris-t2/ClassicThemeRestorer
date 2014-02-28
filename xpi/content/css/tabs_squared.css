@@ -198,12 +198,6 @@
 	  margin-right:3px !important;
 	}
 	
-	@media all and (-moz-windows-glass) {
-		/* TMP multibar support */
-		#TabsToolbar:-moz-lwtheme[multibar] .tabbrowser-tab {
-		  /*margin-bottom: -1px !important;*/
-		}
-	}
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {

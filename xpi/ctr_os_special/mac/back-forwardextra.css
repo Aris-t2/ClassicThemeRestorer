@@ -1,9 +1,0 @@
-@import url(back-forwardextra2.css);
-@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
-
-@-moz-document url(chrome://browser/content/browser.xul){
-
-	#urlbar[focused="true"]{
-	  border-color: -moz-mac-focusring !important;
-	}
-}

@@ -1,8 +1,7 @@
 @import url(chrome://ctr_os_special/skin/overlayextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul),
-			   url(chrome://global/content/customizeToolbar.xul) {
+@-moz-document url(chrome://browser/content/browser.xul) {
 	
 	#main-window {
 	  min-width: 300px !important;
@@ -25,14 +24,6 @@
 	  margin-left: 2px !important;
 	  border-top:1px solid rgba(0,0,0,.0) !important;
 	  border-bottom:1px solid rgba(0,0,0,.5) !important;
-	}
-	
-	/* status bar on CTRs add-on bar*/
-	#ctr_addon-bar #status-bar{
-	  -moz-appearance: none !important;
-	  background: none !important;
-	  border:0 !important;
-	  border-right:0 !important;
 	}
 
 	/* CTRs Back-forward dropmarker */
@@ -345,8 +336,16 @@
 	}
 	
 	/* temporary fix for customizing area*/
-	#main-window[customizing] #browser-bottombox {
-		margin:-24px 24px 24px 24px;
+	@media all and (-moz-windows-theme:aero) {
+		#main-window[customizing] #browser-bottombox {
+		  margin:-24px 24px 24px 24px;
+		}
+	}
+	
+	@media not all and (-moz-windows-theme:aero) {
+		#main-window[customizing] #browser-bottombox {
+		  margin:-22px 24px 22px 24px;
+		}
 	}
 
 }

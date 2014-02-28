@@ -1,0 +1,16 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#main-window[tabsintitlebar] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton{
+	  margin-top:-16px !important;
+	  margin-bottom:22px !important;
+	  border-radius: 0 0 4px 4px !important;
+	}
+
+	#main-window[tabsintitlebar] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton:hover:active,
+	#main-window[tabsintitlebar] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton[open] {
+	  border-radius: 0 0 0 0 !important;
+	}
+
+}

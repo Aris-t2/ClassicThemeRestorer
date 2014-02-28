@@ -2,27 +2,27 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
   
-	#main-window[tabsintitlebar]:not([inFullscreen]) .tabbrowser-arrowscrollbox > .scrollbutton-up,
-	#main-window[tabsintitlebar]:not([inFullscreen]) .tabbrowser-arrowscrollbox > .scrollbutton-down {
+	#main-window[tabsintitlebar] .tabbrowser-arrowscrollbox > .scrollbutton-up,
+	#main-window[tabsintitlebar] .tabbrowser-arrowscrollbox > .scrollbutton-down {
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/tab-arrow-left-inverted.png) !important;
 	}
 
-	#main-window[tabsintitlebar]:not([inFullscreen]) .tabs-newtab-button,
-	#main-window[tabsintitlebar]:not([inFullscreen]) #TabsToolbar > #new-tab-button,
-	#main-window[tabsintitlebar]:not([inFullscreen]) #TabsToolbar > toolbarpaletteitem > #new-tab-button {
+	#main-window[tabsintitlebar] .tabs-newtab-button,
+	#main-window[tabsintitlebar] #TabsToolbar > #new-tab-button,
+	#main-window[tabsintitlebar] #TabsToolbar > toolbarpaletteitem > #new-tab-button {
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/newtab-inverted.png) !important;
 	}
 
-	#main-window[tabsintitlebar]:not([inFullscreen]) #TabsToolbar > #alltabs-button {
+	#main-window[tabsintitlebar] #TabsToolbar > #alltabs-button {
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/toolbarbutton-dropdown-arrow-inverted.png) !important;
 	}
 
-	#main-window[tabsintitlebar]:not([inFullscreen]) #TabsToolbar > #tabview-button {
+	#main-window[tabsintitlebar] #TabsToolbar > #tabview-button {
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/tabview-inverted.png) !important;
 	  -moz-image-region: rect(0, 18px, 18px, 0) !important;
 	}
 
-	#main-window[tabsintitlebar]:not([inFullscreen]) .tab-close-button:not(:-moz-any(:hover,:-moz-lwtheme,[selected="true"])),
+	#main-window[tabsintitlebar] .tab-close-button:not(:-moz-any(:hover,:-moz-lwtheme,[selected="true"])),
 	.tab-close-button:not(:hover):not([selected="true"]):-moz-lwtheme-brighttext {
 	  background-image: url(chrome://classic_theme_restorer/content/images/tab-close.png) !important;
 	  -moz-image-region: rect(0, 64px, 16px, 48px) !important;

@@ -1,7 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul),
-			   url(chrome://global/content/customizeToolbar.xul) {
+@-moz-document url(chrome://browser/content/browser.xul) {
 
 	#TabsToolbar #ctr_appbutton,
 	#main-window #titlebar #ctr_appbutton2{
@@ -10,13 +9,16 @@
 	
 	#TabsToolbar #ctr_panelui-button #PanelUI-menu-button {
 	  -moz-appearance: none !important;
-	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton.png") !important;
-	  -moz-image-region: rect(0, 25px, 16px, 0px) !important;
 	  border:1px solid !important;
 	  border-color:hsla(214,89%,21%,.5) !important;
 	  border-radius:2.5px 2.5px 0px 0px !important;
 	  margin-top:1px !important;
 	  margin-bottom:1px !important;
+	}
+
+	#TabsToolbar #ctr_panelui-button #PanelUI-menu-button .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton.png") !important;
+	  -moz-image-region: rect(0, 25px, 16px, 0px) !important;
 	}
 
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_panelui-button #PanelUI-menu-button:hover:active,
