@@ -42,7 +42,9 @@
 <!ENTITY Ctr_appbutton		"Anwendungsbutton">
 <!ENTITY Ctr_appbutton0		"Button deaktiviert">
 <!ENTITY Ctr_appbutton1		"Button auf Leisten">
+<!ENTITY Ctr_appbutton1wt	"Button auf Leisten (nur Text)">
 <!ENTITY Ctr_appbutton2		"Button auf Titelleiste">
+<!ENTITY Ctr_appbutton2io	"Button auf Titelleiste (nur Symbol)">
 <!ENTITY Ctr_appbuttonc_o	"Farbe: Orange (Standard)">
 <!ENTITY Ctr_appbuttonc_a	"Farbe: Blau (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Farbe: Schwarz (Nightly)">
@@ -55,7 +57,6 @@
 <!ENTITY Ctr_appbuttonI2	"Farbe nur auf der Titelleiste">
 <!ENTITY Ctr_appbuttonI3	"und der Tabsleiste sichtbar!">
 <!ENTITY Ctr_alttbappb		"Alternative Symbole (alle Leisten)">
-<!ENTITY Ctr_appbuttxt		"'Firefox' Text (nur Tableiste)">
 <!ENTITY Ctr_appbutmhi		"Höhere Position (nur Tableiste)">
 
 <!ENTITY Ctr_ui				"Oberfläche">
@@ -101,10 +102,14 @@
 <!ENTITY Ctr_tabmokcolor2	"Weißer Tabtext und dunkler Schatten für nicht aktive Tabs">
 <!ENTITY Ctr_closeabarbut	"Entferne 'Schließen'-Button von der Addonleiste">
 <!ENTITY Ctr_bfurlbarfix 	"Korrigiere Randradius der Adressleiste: 2px (Win) / 2.5px (Mac)">
-<!ENTITY Ctr_throbberalt	"Alternative Tab-Throbber Ladeanimation">
-<!ENTITY Ctr_bmanimation	"'Lesezeichen hinzufügen' Animation">
-<!ENTITY Ctr_tabanimation	"'Tab schließen/öffnen' Animation (about:config)">
-<!ENTITY Ctr_dlanimation	"'Download fertig' Animation (about:config)">
 <!ENTITY Ctr_showtabclose	"'Tab-Schließen'-Button immer anzeigen (Neustart benötigt!)">
 <!ENTITY Ctr_cpanelmenus	"Kompakte 'Panel-Menüs' (Lesezeichen, Chronic etc.)">
+
+<!ENTITY Ctr_throbberalt	"Alternative Tab-Throbber Ladeanimation">
+<!ENTITY Ctr_bmanimation	"'Lesezeichen hinzufügen' Animation">
+<!ENTITY Ctr_tabanimation	"'Tab schließen und öffnen' Animationen (about:config)">
+<!ENTITY Ctr_dlanimation	"'Download gestartet und beendet' Animationen (about:config)">
+
+<!ENTITY Ctr_toolsitem		"Eintrag im Menü 'Extra'">
+<!ENTITY Ctr_appmenuitem	"Eintrag im Menü des Andwendungsbuttons">
 <!ENTITY Ctr_cuibotbuttons	"Einstellungs-Buttons im 'Anpassen'-Modus">

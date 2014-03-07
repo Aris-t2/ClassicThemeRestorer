@@ -27,7 +27,6 @@
 		<preference id="ctr_appbutton"		name="extensions.classicthemerestorer.appbutton" 	type="string"	instantApply="true"/>
 		<preference id="ctr_appbuttonc"		name="extensions.classicthemerestorer.appbuttonc" 	type="string"	instantApply="true"/>
 		<preference id="ctr_alttbappb"		name="extensions.classicthemerestorer.alttbappb" 	type="bool"		instantApply="true"/>
-		<preference id="ctr_appbuttxt"		name="extensions.classicthemerestorer.appbuttxt" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_appbutmhi"		name="extensions.classicthemerestorer.appbutmhi" 	type="bool"		instantApply="true"/>
 		
 		<preference id="ctr_nbiconsize"		name="extensions.classicthemerestorer.nbiconsize" 	type="string"	instantApply="true"/>
@@ -65,16 +64,20 @@
 		
 		<preference id="ctr_paneluibtweak"	name="extensions.classicthemerestorer.paneluibtweak" type="bool"	instantApply="true"/>
 		<preference id="ctr_notabfog"		name="extensions.classicthemerestorer.notabfog" 	type="bool"		instantApply="true"/>
-		<preference id="ctr_throbberalt"	name="extensions.classicthemerestorer.throbberalt" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_tabmokcolor"	name="extensions.classicthemerestorer.tabmokcolor" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_tabmokcolor2"	name="extensions.classicthemerestorer.tabmokcolor2" type="bool"		instantApply="true"/>
 		<preference id="ctr_closeabarbut"	name="extensions.classicthemerestorer.closeabarbut" type="bool"		instantApply="true"/>
 		<preference id="ctr_bfurlbarfix"	name="extensions.classicthemerestorer.bfurlbarfix"	type="bool"		instantApply="true"/>
+		<preference id="ctr_showtabclose"	name="extensions.classicthemerestorer.showtabclose"	type="bool"		instantApply="true"/>
+		<preference id="ctr_cpanelmenus"	name="extensions.classicthemerestorer.cpanelmenus"	type="bool"		instantApply="true"/>
+		
+		<preference id="ctr_throbberalt"	name="extensions.classicthemerestorer.throbberalt" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_bmanimation"	name="extensions.classicthemerestorer.bmanimation"	type="bool"		instantApply="true"/>
 		<preference id="ctr_tabsanimate"	name="browser.tabs.animate"							type="bool"		instantApply="true"/>
 		<preference id="ctr_dlanimate"		name="browser.download.animateNotifications"		type="bool"		instantApply="true"/>
-		<preference id="ctr_showtabclose"	name="extensions.classicthemerestorer.showtabclose"	type="bool"		instantApply="true"/>
-		<preference id="ctr_cpanelmenus"	name="extensions.classicthemerestorer.cpanelmenus"	type="bool"		instantApply="true"/>
+		
+		<preference id="ctr_toolsitem"		name="extensions.classicthemerestorer.toolsitem"	type="bool"		instantApply="true"/>
+		<preference id="ctr_appmenuitem"	name="extensions.classicthemerestorer.appmenuitem"	type="bool"		instantApply="true"/>
 		<preference id="ctr_cuibuttons"		name="extensions.classicthemerestorer.cuibuttons"	type="bool"		instantApply="true"/>
 
 	</preferences>
@@ -98,6 +101,7 @@
 			<tab label="&Ctr_main_t;"/>
 			<tab label="&Ctr_tabcolors_t;" id="ctr_sqtabcolorstab"/>
 			<tab label="&Ctr_special_t;"/>
+			<tab label="&Ctr_special_t; 2"/>
 		</tabs>
 			
 	  <tabpanels>
@@ -150,17 +154,20 @@
 				<caption  label="&Ctr_appbutton;" class="ctb_topic"/>
 				<menulist preference="ctr_appbutton" id="ctr_appbutton_list1">
 					<menupopup>
-						<menuitem value="appbutton_off"	label="&Ctr_appbutton0;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_off')"/>
-						<menuitem value="appbutton_v1"	label="&Ctr_appbutton1;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v1')"/>
-						<menuitem value="appbutton_v2"	label="&Ctr_appbutton2;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v2')"/>
+						<menuitem value="appbutton_off"	 label="&Ctr_appbutton0;"   oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_off')"/>
+						<menuitem value="appbutton_v1"	 label="&Ctr_appbutton1;"   oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v1')"/>
+						<menuitem value="appbutton_v1wt" label="&Ctr_appbutton1wt;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v1wt')"/>
+						<menuitem value="appbutton_v2"	 label="&Ctr_appbutton2;"   oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v2')"/>
+						<menuitem value="appbutton_v2io" label="&Ctr_appbutton2io;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v2io')"/>
 						<label value=" "/>
 						<label value="&Ctr_appbuttonI1;" class="ctb_font1"/>
 					</menupopup>
 				</menulist>
 				<menulist preference="ctr_appbutton" id="ctr_appbutton_list2">
 					<menupopup>
-						<menuitem value="appbutton_off"	label="&Ctr_appbutton0;"/>
-						<menuitem value="appbutton_v1"	label="&Ctr_appbutton1;"/>
+						<menuitem value="appbutton_off"	 label="&Ctr_appbutton0;"	oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_off')"/>
+						<menuitem value="appbutton_v1"	 label="&Ctr_appbutton1;"	oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v1')"/>
+						<menuitem value="appbutton_v1wt" label="&Ctr_appbutton1wt;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v1wt')"/>
 					</menupopup>
 				</menulist>
 				<menulist preference="ctr_appbuttonc">
@@ -179,7 +186,6 @@
 					</menupopup>
 				</menulist>
 				<checkbox label="&Ctr_alttbappb;" preference="ctr_alttbappb" id="ctr_alt_abicons"/>
-				<checkbox label="&Ctr_appbuttxt;" preference="ctr_appbuttxt" id="ctr_abtext"/>
 				<checkbox label="&Ctr_appbutmhi;" preference="ctr_appbutmhi" id="ctr_abhigher" class="ctr_windowsonly"/>
 			  </groupbox>
 
@@ -327,12 +333,27 @@
 				<checkbox label="&Ctr_tabmokcolor2;"	preference="ctr_tabmokcolor2" class="ctr_winmaconly" id="ctr_pw_tabmokcolor2"/>
 				<checkbox label="&Ctr_closeabarbut;"	preference="ctr_closeabarbut"/>
 				<checkbox label="&Ctr_bfurlbarfix;"		preference="ctr_bfurlbarfix" class="ctr_winmaconly" id="ctr_pw_bfurlbarfix"/>
+				<checkbox label="&Ctr_showtabclose;"	preference="ctr_showtabclose"/>
+				<checkbox label="&Ctr_cpanelmenus;"		preference="ctr_cpanelmenus"/>
+			  </groupbox>
+			</vbox>
+
+		</tabpanel>
+		
+		<tabpanel>
+
+			<vbox flex="1">
+			  <groupbox>
+				<caption  label="&Ctr_specialtw; 2" class="ctb_topic"/>
 				<checkbox label="&Ctr_throbberalt;"		preference="ctr_throbberalt"/>
 				<checkbox label="&Ctr_bmanimation;"		preference="ctr_bmanimation"/>
 				<checkbox label="&Ctr_tabanimation;"	preference="ctr_tabsanimate"/>
 				<checkbox label="&Ctr_dlanimation;"		preference="ctr_dlanimate"/>
-				<checkbox label="&Ctr_showtabclose;"	preference="ctr_showtabclose"/>
-				<checkbox label="&Ctr_cpanelmenus;"		preference="ctr_cpanelmenus"/>
+			  </groupbox>
+			  <groupbox>
+				<caption  label="Classic Theme Restorer" class="ctb_topic"/>
+				<checkbox label="&Ctr_toolsitem;"		preference="ctr_toolsitem"/>
+				<checkbox label="&Ctr_appmenuitem;"		preference="ctr_appmenuitem"/>
 				<checkbox label="&Ctr_cuibotbuttons;"	preference="ctr_cuibuttons"/>
 			  </groupbox>
 			</vbox>

@@ -42,7 +42,9 @@
 <!ENTITY Ctr_appbutton		"Application button">
 <!ENTITY Ctr_appbutton0		"Button disabled">
 <!ENTITY Ctr_appbutton1		"Button on toolbar">
+<!ENTITY Ctr_appbutton1wt	"Button on toolbar (text only)">
 <!ENTITY Ctr_appbutton2		"Button on titlebar">
+<!ENTITY Ctr_appbutton2io	"Button on titlebar (icon only)">
 <!ENTITY Ctr_appbuttonc_o	"Orange button color (default)">
 <!ENTITY Ctr_appbuttonc_a	"Blue button color (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Black button color (Nightly)">
@@ -55,7 +57,6 @@
 <!ENTITY Ctr_appbuttonI2	"Only colored on titlebar">
 <!ENTITY Ctr_appbuttonI3	"and tabs toolbar!">
 <!ENTITY Ctr_alttbappb		"Alternative icons (if on toolbar)">
-<!ENTITY Ctr_appbuttxt		"'Firefox' label (if on tabs toolbar)">
 <!ENTITY Ctr_appbutmhi		"Higher position (if on tabs toolbar)">
 
 <!ENTITY Ctr_ui				"General UI">
@@ -101,10 +102,14 @@
 <!ENTITY Ctr_tabmokcolor2	"White color and dark shadow for text on non-active tab">
 <!ENTITY Ctr_closeabarbut	"Hide add-on bars close button">
 <!ENTITY Ctr_bfurlbarfix	"Fix urlbars border-radius: 2px (Win) / 2.5px (Mac)">
+<!ENTITY Ctr_showtabclose	"Always show tab close button (requires restart!)">
+<!ENTITY Ctr_cpanelmenus	"Compact panel menus (bookmarks, history etc.)">
+
 <!ENTITY Ctr_throbberalt	"Alternative tab throbber loading animation">
 <!ENTITY Ctr_bmanimation	"Bookmarking animation">
 <!ENTITY Ctr_tabanimation	"Tab closing/opening animation (about:config)">
-<!ENTITY Ctr_dlanimation	"'Download complete' animation (about:config)">
-<!ENTITY Ctr_showtabclose	"Always show tab close button (requires restart!)">
-<!ENTITY Ctr_cpanelmenus	"Compact panel menus (bookmarks, history etc.)">
+<!ENTITY Ctr_dlanimation	"'Download notification' animation (about:config)">
+
+<!ENTITY Ctr_toolsitem		"Menuitem in tools menu">
+<!ENTITY Ctr_appmenuitem	"Menuitem in appbuttons menu">
 <!ENTITY Ctr_cuibotbuttons	"Option-buttons in 'customize ui' mode">

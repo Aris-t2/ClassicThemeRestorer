@@ -227,7 +227,9 @@ classicthemerestorerjs.ctr = {
 		  // Appbutton
 		  case "appbutton":
 			classicthemerestorerjs.ctr.loadUnloadCSS('appbutton_v1',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('appbutton_v1wt',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('appbutton_v2',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('appbutton_v2io',false);
 		
 			if (branch.getCharPref("appbutton")!="appbutton_off"){
 			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("appbutton"),true);
@@ -255,11 +257,6 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("alttbappb",false);
 		  break;
 		  
-		  case "appbuttxt":
-			if (branch.getBoolPref("appbuttxt")) classicthemerestorerjs.ctr.loadUnloadCSS("appbuttxt",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("appbuttxt",false);
-		  break;
-
 		  case "appbutmhi":
 			if (branch.getBoolPref("appbutmhi")) classicthemerestorerjs.ctr.loadUnloadCSS("appbutmhi",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("appbutmhi",false);
@@ -460,7 +457,30 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("cpanelmenus")) classicthemerestorerjs.ctr.loadUnloadCSS("cpanelmenus",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("cpanelmenus",false);
 		  break;
+		  
+		  // hide item using js instead of css or it won't work on MacOSX
+		  case "toolsitem":
+			if (branch.getBoolPref("toolsitem")) {
+				setTimeout(function(){
+				  try{
+					document.getElementById("ctr_tools_menu_entry").collapsed = false;
+				  } catch(e){}
+				},1);
+			}
+			  else {
+				setTimeout(function(){
+				  try{
+					document.getElementById("ctr_tools_menu_entry").collapsed = true;
+				  } catch(e){}
+				},1);
+			  }
+		  break;
 
+		  case "appmenuitem":
+			if (branch.getBoolPref("appmenuitem")) classicthemerestorerjs.ctr.loadUnloadCSS("appmenuitem",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("appmenuitem",false);
+		  break;
+		  
 		  case "cuibuttons":
 			if (branch.getBoolPref("cuibuttons")) classicthemerestorerjs.ctr.loadUnloadCSS("cuibuttons",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("cuibuttons",false);
@@ -658,7 +678,9 @@ classicthemerestorerjs.ctr = {
 		case "findbar_bottoma": 	manageCSS("findbar_bottom_alt.css");	break;
 
 		case "appbutton_v1":		manageCSS("appbutton.css");				break;
-		case "appbutton_v2":		manageCSS("appbutton2.css");			break;
+		case "appbutton_v1wt":		manageCSS("appbutton_wt.css");			break;
+		case "appbutton_v2":		manageCSS("appbutton2wt.css");			break;
+		case "appbutton_v2io":		manageCSS("appbutton2io.css");			break;
 		
 		// no 'small button' mode, if 'icons + text' mode is used
 		case "iconstxt":
@@ -710,7 +732,6 @@ classicthemerestorerjs.ctr = {
 		case "appbuttonc_gray":		manageCSS("appbutton_gray.css");		break;
 
 		case "alttbappb": 			manageCSS("alt_appbutton_icons.css");	break;
-		case "appbuttxt": 			manageCSS("appbuttxt.css");				break;
 		case "appbutmhi": 			manageCSS("appbuthigherposition.css");  break;
 		
 		case "hidenavbar": 			manageCSS("hidenavbar.css");  			break;
@@ -740,6 +761,7 @@ classicthemerestorerjs.ctr = {
 		case "throbberalt": 		manageCSS("throbberalt.css");			break;
 		case "bmanimation": 		manageCSS("hidebmanimation.css");		break;
 		case "cpanelmenus": 		manageCSS("compactpanelmenus.css");		break;
+		case "appmenuitem": 		manageCSS("ctr_appmenuitem.css");		break;
 		case "cuibuttons":
 			if (this.fxdefaulttheme)
 			{

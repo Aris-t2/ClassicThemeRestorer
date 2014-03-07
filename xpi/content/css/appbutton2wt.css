@@ -1,0 +1,47 @@
+@import url(appbutton2.css);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#ctr_appbutton2{
+	  width: 95px !important;
+	}
+
+	#ctr_appbutton2:-moz-locale-dir(ltr) > label{
+	  -moz-appearance: none !important;
+      margin: 0 -26px 0 -34px !important;
+	}
+	#ctr_appbutton2:-moz-locale-dir(rtl) > label{
+	  -moz-appearance: none !important;
+      margin: 0 -34px 0 -26px !important;
+	}
+
+	#ctr_appbutton2 > .toolbarbutton-menu-dropmarker,
+	#ctr_appbutton2:hover:active > .toolbarbutton-menu-dropmarker,
+	#ctr_appbutton2[open] > .toolbarbutton-menu-dropmarker{
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/appmenu-dropmarker.png) !important;
+	}
+	
+	#main-window[tabsintitlebar] #titlebar:not([hidden]) ~ * #toolbar-menubar:-moz-locale-dir(ltr) {
+	  margin-left: 99px !important;
+	}
+	#main-window[tabsintitlebar][customizing][sizemode="maximized"] #titlebar:not([hidden]) ~ * #toolbar-menubar:-moz-locale-dir(ltr) {
+	  margin-left: 26px !important;
+	}
+	#main-window[tabsintitlebar] #titlebar:not([hidden]) ~ * #toolbar-menubar:-moz-locale-dir(rtl) {
+	  margin-right: 99px !important;
+	}
+	#main-window[tabsintitlebar][customizing][sizemode="maximized"] #titlebar:not([hidden]) ~ * #toolbar-menubar:-moz-locale-dir(rtl) {
+	  margin-right: 26px !important;
+	}
+	
+	#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="maximized"] #toolbar-menubar ~ #TabsToolbar:-moz-locale-dir(ltr),
+	#main-window[tabsintitlebar][sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar:-moz-locale-dir(ltr) {
+	  margin-left: 97px;
+	}
+	#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="maximized"] #toolbar-menubar ~ #TabsToolbar:-moz-locale-dir(rtl),
+	#main-window[tabsintitlebar][sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar:-moz-locale-dir(rtl) {
+	  margin-right: 97px;
+	}
+
+}

@@ -50,6 +50,11 @@
 	  -moz-appearance: none !important;
 	}
 	
+	#TabsToolbar #ctr_appbutton > .toolbarbutton-icon{
+	  margin-top: -3px;
+	  margin-bottom: -3px;
+	}
+	
 	#TabsToolbar #ctr_appbutton[open] image,
 	#TabsToolbar #ctr_appbutton:hover image{
 	  -moz-appearance: none !important;

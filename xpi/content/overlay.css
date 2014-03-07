@@ -112,7 +112,7 @@
 	  -moz-box-orient: horizontal !important;
 	}
 	
-	/* appbutton on toolbars */
+	/* appbutton menu on toolbars */
 	#ctr_appbutton > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton.png");
 	}
@@ -130,40 +130,61 @@
 	  visibility:collapse !important;
 	}
 	
-	#ctr_appbutton2 > .toolbarbutton-menu-dropmarker{
-	  list-style-image: url(chrome://classic_theme_restorer/content/images/appmenu-dropmarker.png) !important;
+	/* style appbutton*/
+	#TabsToolbar #ctr_appbutton{
+	  -moz-appearance:none !important;
+	  border:1px solid;
+	  border-color:hsla(214,89%,21%,.5);
+	  border-radius:2.5px 2.5px 0px 0px;
+	  margin-top:1px;
+	  margin-bottom:1px;
+	}
+
+	#PersonalToolbar #ctr_appbutton #ctr_appbuttonPopup,
+	#main-window[tabsintitlebar] #toolbar-menubar[autohide="false"] ~ #TabsToolbar #ctr_appbutton #ctr_appbuttonPopup{
+		margin-top:-3px;
+	}
+	
+	#nav-bar #ctr_appbutton #ctr_appbuttonPopup{
+	  margin-top:-10px;
+	  margin-left:2px;
+	}
+	
+	#TabsToolbar #ctr_appbutton {
+	  border-radius: 2.5px 2.5px 0 0;
 	}
 	
 	#ctr_appbuttonPopup #menu_newPrivateWindow{
-		list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_private.png");
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_private.png");
 	}
 
 	#ctr_appbuttonPopup #menu_print{
-		list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_print.png");
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_print.png");
 	}
 	#ctr_appbuttonPopup #appmenu-quit{
-		list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_close.png");
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_close.png");
 	}
 	#ctr_appbuttonPopup #menu_newBookmarks{
-		list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_bookmarks.png");
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_bookmarks.png");
 	}
 	#ctr_appbuttonPopup #menu_openAddons{
-		list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons.png");
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons.png");
 	}
 	#ctr_appbuttonPopup #menu_cut,
 	#ctr_appbuttonPopup #appmenu-cut{
-		list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_cut.png");
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_cut.png");
 	}
 	#ctr_appbuttonPopup #menu_copy,
 	#ctr_appbuttonPopup #appmenu-copy{
-		list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_copy.png");
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_copy.png");
 	}
 	#ctr_appbuttonPopup #menu_paste,
 	#ctr_appbuttonPopup #appmenu-paste{
-		list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_paste.png");
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_paste.png");
 	}
+	#ctr_tools_menu_entry,
 	#ctr_appbuttonPopup #appmenu_ctr{
-		list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_ctr.png");
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_ctr.png");
 	}
 	
 	#menu_newPreferencesmenuPopup {
@@ -207,30 +228,7 @@
 	  opacity: .3 !important;
 	}
 	
-	/* style appbutton*/
-	#TabsToolbar #ctr_appbutton{
-	  -moz-appearance:none !important;
-	  border:1px solid;
-	  border-color:hsla(214,89%,21%,.5);
-	  border-radius:2.5px 2.5px 0px 0px;
-	  margin-top:1px;
-	  margin-bottom:1px;
-	}
-
-	#PersonalToolbar #ctr_appbutton #ctr_appbuttonPopup,
-	#main-window[tabsintitlebar] #toolbar-menubar[autohide="false"] ~ #TabsToolbar #ctr_appbutton #ctr_appbuttonPopup{
-		margin-top:-3px;
-	}
-	
-	#nav-bar #ctr_appbutton #ctr_appbuttonPopup{
-	  margin-top:-10px;
-	  margin-left:2px;
-	}
-	
-	#TabsToolbar #ctr_appbutton {
-	  border-radius: 2.5px 2.5px 0 0;
-	}
-
+	/* hide buttons */
 	toolbar #ctr_appbutton,
 	#ctr_appbutton2,
 	toolbar #ctr_back-forward-button,
@@ -330,11 +328,7 @@
 	#ctr_bookmarks-menu-toolbar-button[cui-areatype="menu-panel"] {
       -moz-box-orient: vertical !important;
 	}
-	
-	#ctr_cuibuttonsbox{
-	  visibility: collapse;
-	}
-	
+
 	/* temporary fix for customizing area*/
 	@media all and (-moz-windows-theme:aero) {
 		#main-window[customizing] #browser-bottombox {
@@ -347,6 +341,7 @@
 		  margin:-22px 24px 22px 24px;
 		}
 	}
+
 
 }
 

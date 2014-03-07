@@ -42,7 +42,9 @@
 <!ENTITY Ctr_appbutton		"Кнопка приложения:">
 <!ENTITY Ctr_appbutton0		"отключена">
 <!ENTITY Ctr_appbutton1		"в панели инструментов">
+<!ENTITY Ctr_appbutton1wt	"в панели инструментов (text only)">
 <!ENTITY Ctr_appbutton2		"в панели заголовка">
+<!ENTITY Ctr_appbutton2io	"в панели заголовка (icon only)">
 <!ENTITY Ctr_appbuttonc_o	"Оранжевая кнопка (по умолчанию)">
 <!ENTITY Ctr_appbuttonc_a	"Синяя кнопка (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Черная кнопка (Nightly)">
@@ -55,12 +57,11 @@
 <!ENTITY Ctr_appbuttonI2	"Только цвета на панели заголовка">
 <!ENTITY Ctr_appbuttonI3	"и вкладок!">
 <!ENTITY Ctr_alttbappb		"Другие значки (если на панели инструментов)">
-<!ENTITY Ctr_appbuttxt		"Ярлык «Firefox» (если на панели вкладок)">
 <!ENTITY Ctr_appbutmhi		"Высокое положение (если на панели вкладок)">
 
 <!ENTITY Ctr_ui				"Основной интерфейс">
 <!ENTITY Ctr_nbiconsize1	"#nav-bar[iconsize='small'] (по умолчанию)">
-<!ENTITY Ctr_nbiconsize2	"Use #nav-bar[iconsize='large']">
+<!ENTITY Ctr_nbiconsize2	"#nav-bar[iconsize='large']">
 <!ENTITY Ctr_smallnavbut	"Малые кнопки на панели навигации">
 <!ENTITY Ctr_hidenavbar		"Скрыть панель навигации">
 <!ENTITY Ctr_buttons		"Кнопки панели инструментов">
@@ -101,10 +102,14 @@
 <!ENTITY Ctr_tabmokcolor2	"Белый цвет и темная тень для текста на неактивной вкладке">
 <!ENTITY Ctr_closeabarbut	"Скрыть кнопку закрытия панели дополнений">
 <!ENTITY Ctr_bfurlbarfix	"Радиус углов строки адреса: 2px (Win) / 2.5px (Mac)">
+<!ENTITY Ctr_showtabclose	"Всегда показывать кнопку закрытия вкладки (требуется перезапустить!)">
+<!ENTITY Ctr_cpanelmenus	"Компактная панель меню (закладки, история и т. д.)">
+
 <!ENTITY Ctr_throbberalt	"Заменить анимацию загрузки вкладки">
 <!ENTITY Ctr_bmanimation	"Анимация создания закладок">
 <!ENTITY Ctr_tabanimation	"Анимация открытия и закрытия вкладок (about:config)">
 <!ENTITY Ctr_dlanimation	"Анимация «Загрузка завершена» (about:config)">
-<!ENTITY Ctr_showtabclose	"Всегда показывать кнопку закрытия вкладки (требуется перезапустить!)">
-<!ENTITY Ctr_cpanelmenus	"Компактная панель меню (закладки, история и т. д.)">
+
+<!ENTITY Ctr_toolsitem		"Пункт в меню инструментов">
+<!ENTITY Ctr_appmenuitem	"Пункт в меню кнопки приложения">
 <!ENTITY Ctr_cuibotbuttons	"Показывать свои кнопки в режиме «Настроить»">

@@ -23,7 +23,8 @@
 	.tabbrowser-tab:not(:-moz-lwtheme) .tab-background-end[selected=true]:-moz-locale-dir(ltr)::after{
 	  content:none !important;
 	}
-
+	
+	#TabsToolbar:not(:-moz-lwtheme)::after,
 	#TabsToolbar:not(:-moz-lwtheme)::before {
 	  box-shadow: none !important;
 	}

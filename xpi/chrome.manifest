@@ -14,8 +14,7 @@ skin	ctr_os_special	classic_theme_restorer	content/css/linux/		os=Linux
 skin	ctr_os_special	classic_theme_restorer	content/css/winxp/		os=WINNT osversion<6
 skin	ctr_os_special	classic_theme_restorer	content/css/winaero/	os=WINNT osversion=6.0
 skin	ctr_os_special	classic_theme_restorer	content/css/winaero/	os=WINNT osversion=6.1
-skin	ctr_os_special	classic_theme_restorer	content/css/winaero/	os=WINNT osversion>=6.2 appversion<30.0a1
-skin	ctr_os_special	classic_theme_restorer	content/css/win8/		os=WINNT osversion>=6.2 appversion>=30.0a1
+skin	ctr_os_special	classic_theme_restorer	content/css/win8/		os=WINNT osversion>=6.2
 
 overlay chrome://browser/content/browser.xul			chrome://classic_theme_restorer/content/overlay.xul
 style   chrome://global/content/customizeToolbar.xul	chrome://classic_theme_restorer/content/overlay.css

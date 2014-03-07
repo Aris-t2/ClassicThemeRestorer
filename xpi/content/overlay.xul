@@ -37,7 +37,7 @@
 	<!--### add new buttons to customizing area ###-->
 	<hbox id="customization-container">
 	  <vbox id="customization-palette-container">
-		<hbox pack="start" id="ctr_cuibuttonsbox" ordinal="999999">
+		<hbox pack="start" id="ctr_cuibuttonsbox" ordinal="999999" collapsed="true">
 		  <label value="&Ctr_cuibuttons;" class="ctr_cuibutlabel" id="ctr_cuibuttons_main"/>
 		  <button id="customization-smallnavbut-button1" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',false);" label="&Ctr_cuibutnormal;" class="customizationmode-button"/>
 		  <button id="customization-smallnavbut-button2" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',true);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',true);" label="&Ctr_cuibutsmall;" class="customizationmode-button"/>
@@ -49,6 +49,7 @@
 		</hbox>
 	  </vbox>
 	</hbox>
+
 	
 	<!--### create new add-ons bar ###-->
 	<vbox id="browser-bottombox">
@@ -98,6 +99,15 @@
 	<toolbarbutton id="webrtc-status-button" removable="true"/>
 	<toolbarbutton id="social-share-button" removable="true"/>
 	<toolbaritem id="social-toolbar-item" removable="true"/>
+	
+	<!--### CTR entry in menubars 'Tools' menu popup ###-->
+	<menupopup id="menu_ToolsPopup">
+	  <menuitem oncommand="window.open('chrome://classic_theme_restorer/content/options.xul','', 'chrome');"
+		label="Classic Theme Restorer"
+		class="menuitem-iconic"
+		id="ctr_tools_menu_entry"
+		collapsed="true"/>
+	</menupopup>
 
 	<!--### Appbutton needs to be created twice, one for titlebar and one for toolbars.
 		Otherwise assigning appbutton popup to both buttons would make buttons to lose
@@ -469,11 +479,12 @@
 					  <menuitem command="cmd_CustomizeToolbars"
 								accesskey="&viewCustomizeToolbar.accesskey;"
 								label="&viewCustomizeToolbar.label;"/>
-					  <menuseparator/>
+					  <menuseparator id="appmenu_ctr_sep" collapsed="true"/>
 					  <menuitem oncommand="window.open('chrome://classic_theme_restorer/content/options.xul','', 'chrome');"
 								label="Classic Theme Restorer"
 								class="menuitem-iconic"
-								id="appmenu_ctr"/>
+								id="appmenu_ctr"
+								collapsed="true"/>
 						  
 				  </menupopup>
 				</menu>
@@ -925,11 +936,12 @@
 					  <menuitem command="cmd_CustomizeToolbars"
 								accesskey="&viewCustomizeToolbar.accesskey;"
 								label="&viewCustomizeToolbar.label;"/>
-					  <menuseparator/>
+					  <menuseparator id="appmenu_ctr_sep" collapsed="true"/>
 					  <menuitem oncommand="window.open('chrome://classic_theme_restorer/content/options.xul','', 'chrome');"
 								label="Classic Theme Restorer"
 								class="menuitem-iconic"
-								id="appmenu_ctr"/>
+								id="appmenu_ctr"
+								collapsed="true"/>
 				  </menupopup>
 				</menu>
 			</hbox>

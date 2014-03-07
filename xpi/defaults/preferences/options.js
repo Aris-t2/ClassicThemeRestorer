@@ -7,7 +7,6 @@ pref("extensions.classicthemerestorer.tabmwidth",'tabmwidth_default');
 pref("extensions.classicthemerestorer.appbutton",'appbutton_v1');
 pref("extensions.classicthemerestorer.appbuttonc",'appbuttonc_orange');
 pref("extensions.classicthemerestorer.alttbappb",false);
-pref("extensions.classicthemerestorer.appbuttxt",false);
 pref("extensions.classicthemerestorer.appbutmhi",false);
 
 pref("extensions.classicthemerestorer.nbiconsize",'small');
@@ -29,10 +28,15 @@ pref("extensions.classicthemerestorer.tabmokcolor",false);
 pref("extensions.classicthemerestorer.tabmokcolor2",false);
 pref("extensions.classicthemerestorer.closeabarbut",false);
 pref("extensions.classicthemerestorer.bfurlbarfix",false);
-pref("extensions.classicthemerestorer.throbberalt",false);
-pref("extensions.classicthemerestorer.bmanimation",true);
 pref("extensions.classicthemerestorer.showtabclose",false);
 pref("extensions.classicthemerestorer.cpanelmenus",false);
+
+//special 2
+pref("extensions.classicthemerestorer.throbberalt",false);
+pref("extensions.classicthemerestorer.bmanimation",true);
+
+pref("extensions.classicthemerestorer.toolsitem",true);
+pref("extensions.classicthemerestorer.appmenuitem",true);
 pref("extensions.classicthemerestorer.cuibuttons",true);
 
 // tab color settings

@@ -56,19 +56,20 @@ classicthemerestorerjso.ctr = {
   
 	if (which=="appbutton_v1" && this.fxdefaulttheme){
 	  document.getElementById('ctr_alt_abicons').disabled = false;
-	  document.getElementById('ctr_abtext').disabled = false;
+	  document.getElementById('ctr_abhigher').disabled = false;
+	} else if (which=="appbutton_v1wt" && this.fxdefaulttheme){
+	  document.getElementById('ctr_alt_abicons').disabled = true;
 	  document.getElementById('ctr_abhigher').disabled = false;
 	} else if (which=="appbutton_v1" && !this.fxdefaulttheme){
 	  document.getElementById('ctr_alt_abicons').disabled = false;
-	  document.getElementById('ctr_abtext').disabled = false;
+	  document.getElementById('ctr_abhigher').disabled = true;
+	} else if (which=="appbutton_v1wt" && !this.fxdefaulttheme){
+	  document.getElementById('ctr_alt_abicons').disabled = false;
 	  document.getElementById('ctr_abhigher').disabled = true;
 	} else {
 	  document.getElementById('ctr_alt_abicons').disabled = true;
-	  document.getElementById('ctr_abtext').disabled = true;
 	  document.getElementById('ctr_abhigher').disabled = true;
 	}
   }
   
 };
-
-//classicthemerestorerjso.ctr.init();

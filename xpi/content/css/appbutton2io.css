@@ -1,0 +1,53 @@
+@import url(appbutton2.css);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+ 
+	#ctr_appbutton2 .toolbarbutton-text {
+	  visibility: hidden !important;  
+	}
+    #ctr_appbutton2 > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-inv.png") !important;
+      padding: 0 6px 0 6px !important;
+	}
+	
+	#ctr_appbutton2{
+	  width: 32px !important;
+	}
+
+	#ctr_appbutton2:-moz-locale-dir(ltr) > label{
+	  -moz-appearance: none !important;
+      margin: 0 -26px 0 -34px !important;
+	}
+	#ctr_appbutton2:-moz-locale-dir(rtl) > label{
+	  -moz-appearance: none !important;
+      margin: 0 -34px 0 -26px !important;
+	}
+
+	#ctr_appbutton2 > .toolbarbutton-menu-dropmarker{
+      visibility: collapse !important;
+	}
+	
+	#main-window[tabsintitlebar] #titlebar:not([hidden]) ~ * #toolbar-menubar:-moz-locale-dir(ltr) {
+	  margin-left: 30px !important;
+	}
+	#main-window[tabsintitlebar][customizing][sizemode="maximized"] #titlebar:not([hidden]) ~ * #toolbar-menubar:-moz-locale-dir(ltr) {
+	  margin-left: 0px !important;
+	}
+	#main-window[tabsintitlebar] #titlebar:not([hidden]) ~ * #toolbar-menubar:-moz-locale-dir(rtl) {
+	  margin-right: 30px !important;
+	}
+	#main-window[tabsintitlebar][customizing][sizemode="maximized"] #titlebar:not([hidden]) ~ * #toolbar-menubar:-moz-locale-dir(rtl) {
+	  margin-right: 0px !important;
+	}
+	
+	#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="maximized"] #toolbar-menubar ~ #TabsToolbar:-moz-locale-dir(ltr),
+	#main-window[tabsintitlebar][sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar:-moz-locale-dir(ltr) {
+	  margin-left: 32px;
+	}
+	#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="maximized"] #toolbar-menubar ~ #TabsToolbar:-moz-locale-dir(rtl),
+	#main-window[tabsintitlebar][sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar:-moz-locale-dir(rtl) {
+	  margin-right: 32px;
+	}
+
+}

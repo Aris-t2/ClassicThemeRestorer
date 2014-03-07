@@ -51,6 +51,10 @@
 	  margin-top: 0px !important;
 	  margin-bottom: 1px !important;
 	}
+	
+	#tabbrowser-tabs{
+	  min-height: 0px !important;
+	}
 
 	#TabsToolbar {
 	  min-height: 0px !important;
@@ -128,6 +132,7 @@
 	  background-size: calc(100% - 2px) calc(100% - 1px) !important;
 	}
 	
+	#TabsToolbar:not(:-moz-lwtheme)::after,
 	#TabsToolbar:not(:-moz-lwtheme)::before {
 	  box-shadow: none !important;
 	}

@@ -4,7 +4,7 @@
 @-moz-document url(chrome://browser/content/browser.xul){
 	
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton{
-		margin-left:-2px !important;
+	  margin-left:-2px !important;
 	}
 
 	.tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-background-middle:not([selected=true]),
@@ -50,6 +50,10 @@
 	  margin-right: 0px !important;
 	  margin-top: 0px !important;
 	  margin-bottom: 1px !important;
+	}
+	
+	#tabbrowser-tabs{
+	  min-height: 0px !important;
 	}
 
 	#TabsToolbar {
@@ -107,6 +111,7 @@
 		background-size: calc(100% - 2px) calc(100% - 1px) !important;
 	}
 	
+	#TabsToolbar:not(:-moz-lwtheme)::after,
 	#TabsToolbar:not(:-moz-lwtheme)::before {
 	  box-shadow: none !important;
 	}
