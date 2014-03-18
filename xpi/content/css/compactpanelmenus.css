@@ -4,13 +4,16 @@
 
 	.toolbarbutton-1[cui-areatype="menu-panel"] { 
 	  margin: 0px !important;
+	  padding-top: 0px !important;
+	  padding-bottom: 0px !important;
 	}
 
 	#PanelUI-history *,
 	#PanelUI-bookmarks *,
 	#PanelUI-helpView *,
 	#PanelUI-developer *,
-	#PanelUI-characterEncodingView * {
+	#PanelUI-characterEncodingView *,
+	#PanelUI-sidebar * {
 	  margin-top: 0px !important;
 	  margin-bottom: 0px !important;
 	  padding-top:0px !important;

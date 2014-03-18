@@ -32,12 +32,10 @@
 <!ENTITY Ctr_tabsontop1		"Вкладки вверху [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Вкладки не вверху [tabsontop=false]">
 <!ENTITY Ctr_tabsintitlebar	"Вкладки в заголовке (about:config)">
-<!ENTITY Ctr_tabwidth0		"Макс. ширина: 180px (по умолчанию)">
-<!ENTITY Ctr_tabwidth1		"Макс. ширина: 150px">
-<!ENTITY Ctr_tabwidth2		"Макс. ширина: 250px (классич.)">
-<!ENTITY Ctr_tabmwidth0		"Мин. ширина: 100px (по умолчанию)">
-<!ENTITY Ctr_tabmwidth1		"Мин. ширина: 150px">
-<!ENTITY Ctr_tabmwidth2		"Мин. ширина: 54px">
+<!ENTITY Ctr_tabwidthdef	"(по умолчанию)">
+<!ENTITY Ctr_tabwidthcla	"(классич.)">
+<!ENTITY Ctr_tabmaxwidth	"Макс. ширина:">
+<!ENTITY Ctr_tabminwidth	"Мин. ширина:">
 
 <!ENTITY Ctr_appbutton		"Кнопка приложения:">
 <!ENTITY Ctr_appbutton0		"отключена">
@@ -88,6 +86,7 @@
 <!ENTITY Ctr_tabnor			"Обычная вкладка">
 <!ENTITY Ctr_tabhov			"Ожидающая вкладка">
 <!ENTITY Ctr_tabact			"Активная вкладка">
+<!ENTITY Ctr_tabpen			"Непрочитанная вкладка">
 <!ENTITY Ctr_ntabnor		"Обычная новая вкладка">
 <!ENTITY Ctr_ntabhov		"Ожидающая новая вкладка">
 <!ENTITY Ctr_topc			"вверху">
@@ -104,6 +103,7 @@
 <!ENTITY Ctr_bfurlbarfix	"Радиус углов строки адреса: 2px (Win) / 2.5px (Mac)">
 <!ENTITY Ctr_showtabclose	"Всегда показывать кнопку закрытия вкладки (требуется перезапустить!)">
 <!ENTITY Ctr_cpanelmenus	"Компактная панель меню (закладки, история и т. д.)">
+<!ENTITY Ctr_panelmenucol	"Альтернативный цвет фона для меню панели">
 
 <!ENTITY Ctr_throbberalt	"Заменить анимацию загрузки вкладки">
 <!ENTITY Ctr_bmanimation	"Анимация создания закладок">

@@ -32,12 +32,10 @@
 <!ENTITY Ctr_tabsontop1		"Tabs on top [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Tabs not on top [tabsontop=false]">
 <!ENTITY Ctr_tabsintitlebar	"Tabs in titlebar (about:config)">
-<!ENTITY Ctr_tabwidth0		"Max-width: 180px (default)">
-<!ENTITY Ctr_tabwidth1		"Max-width: 150px">
-<!ENTITY Ctr_tabwidth2		"Max-width: 250px (classic)">
-<!ENTITY Ctr_tabmwidth0		"Min-width: 100px (default)">
-<!ENTITY Ctr_tabmwidth1		"Min-width: 150px">
-<!ENTITY Ctr_tabmwidth2		"Min-width: 54px">
+<!ENTITY Ctr_tabwidthdef	"(default)">
+<!ENTITY Ctr_tabwidthcla	"(classic)">
+<!ENTITY Ctr_tabmaxwidth	"Max-width:">
+<!ENTITY Ctr_tabminwidth	"Min-width:">
 
 <!ENTITY Ctr_appbutton		"Application button">
 <!ENTITY Ctr_appbutton0		"Button disabled">
@@ -88,6 +86,7 @@
 <!ENTITY Ctr_tabnor			"Tab (default)">
 <!ENTITY Ctr_tabhov			"Tab (hover)">
 <!ENTITY Ctr_tabact			"Tab (active)">
+<!ENTITY Ctr_tabpen			"Tab (unread)">
 <!ENTITY Ctr_ntabnor		"New tab (default)">
 <!ENTITY Ctr_ntabhov		"New tab (hover)">
 <!ENTITY Ctr_topc			"top">
@@ -104,6 +103,7 @@
 <!ENTITY Ctr_bfurlbarfix	"Fix urlbars border-radius: 2px (Win) / 2.5px (Mac)">
 <!ENTITY Ctr_showtabclose	"Always show tab close button (requires restart!)">
 <!ENTITY Ctr_cpanelmenus	"Compact panel menus (bookmarks, history etc.)">
+<!ENTITY Ctr_panelmenucol	"Alternative panel menu background color">
 
 <!ENTITY Ctr_throbberalt	"Alternative tab throbber loading animation">
 <!ENTITY Ctr_bmanimation	"Bookmarking animation">

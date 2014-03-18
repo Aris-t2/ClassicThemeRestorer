@@ -21,8 +21,8 @@
 		<preference id="ctr_tabs"			name="extensions.classicthemerestorer.tabs" 		type="string"	instantApply="true"/>
 		<preference id="ctr_tabsontop"		name="extensions.classicthemerestorer.tabsontop" 	type="string"	instantApply="true"/>
 		<preference id="ctr_tabsintitlebar"	name="browser.tabs.drawInTitlebar"					type="bool"		instantApply="true"/>
-		<preference id="ctr_tabwidth"		name="extensions.classicthemerestorer.tabwidth"		type="string"	instantApply="true"/>
-		<preference id="ctr_tabmwidth"		name="extensions.classicthemerestorer.tabmwidth"	type="string"	instantApply="true"/>
+		<preference id="ctr_tabwidth"		name="extensions.classicthemerestorer.ctabwidth"	type="int"		instantApply="true"/>
+		<preference id="ctr_tabmwidth"		name="extensions.classicthemerestorer.ctabmwidth"	type="int"		instantApply="true"/>
 		
 		<preference id="ctr_appbutton"		name="extensions.classicthemerestorer.appbutton" 	type="string"	instantApply="true"/>
 		<preference id="ctr_appbuttonc"		name="extensions.classicthemerestorer.appbuttonc" 	type="string"	instantApply="true"/>
@@ -51,6 +51,8 @@
 		<preference id="ctr_ctabhov2"		name="extensions.classicthemerestorer.ctabhov2"		type="string"	instantApply="true"/>
 		<preference id="ctr_ctabact1"		name="extensions.classicthemerestorer.ctabact1"		type="string"	instantApply="true"/>
 		<preference id="ctr_ctabact2"		name="extensions.classicthemerestorer.ctabact2"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabpen1"		name="extensions.classicthemerestorer.ctabpen1"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabpen2"		name="extensions.classicthemerestorer.ctabpen2"		type="string"	instantApply="true"/>
 		<preference id="ctr_cntab1"			name="extensions.classicthemerestorer.cntab1"		type="string"	instantApply="true"/>
 		<preference id="ctr_cntab2"			name="extensions.classicthemerestorer.cntab2"		type="string"	instantApply="true"/>
 		<preference id="ctr_cntabhov1"		name="extensions.classicthemerestorer.cntabhov1"	type="string"	instantApply="true"/>
@@ -58,9 +60,11 @@
 		<preference id="ctr_ctabt"			name="extensions.classicthemerestorer.ctabt"		type="string"	instantApply="true"/>
 		<preference id="ctr_ctabhovt"		name="extensions.classicthemerestorer.ctabhovt"		type="string"	instantApply="true"/>
 		<preference id="ctr_ctabactt"		name="extensions.classicthemerestorer.ctabactt"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabpent"		name="extensions.classicthemerestorer.ctabpent"		type="string"	instantApply="true"/>
 		<preference id="ctr_ctabtsh"		name="extensions.classicthemerestorer.ctabtsh"		type="string"	instantApply="true"/>
 		<preference id="ctr_ctabhovtsh"		name="extensions.classicthemerestorer.ctabhovtsh"	type="string"	instantApply="true"/>
 		<preference id="ctr_ctabacttsh"		name="extensions.classicthemerestorer.ctabacttsh"	type="string"	instantApply="true"/>
+		<preference id="ctr_ctabpentsh"		name="extensions.classicthemerestorer.ctabpentsh"	type="string"	instantApply="true"/>
 		
 		<preference id="ctr_paneluibtweak"	name="extensions.classicthemerestorer.paneluibtweak" type="bool"	instantApply="true"/>
 		<preference id="ctr_notabfog"		name="extensions.classicthemerestorer.notabfog" 	type="bool"		instantApply="true"/>
@@ -70,6 +74,7 @@
 		<preference id="ctr_bfurlbarfix"	name="extensions.classicthemerestorer.bfurlbarfix"	type="bool"		instantApply="true"/>
 		<preference id="ctr_showtabclose"	name="extensions.classicthemerestorer.showtabclose"	type="bool"		instantApply="true"/>
 		<preference id="ctr_cpanelmenus"	name="extensions.classicthemerestorer.cpanelmenus"	type="bool"		instantApply="true"/>
+		<preference id="ctr_panelmenucol"	name="extensions.classicthemerestorer.panelmenucol"	type="bool"		instantApply="true"/>
 		
 		<preference id="ctr_throbberalt"	name="extensions.classicthemerestorer.throbberalt" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_bmanimation"	name="extensions.classicthemerestorer.bmanimation"	type="bool"		instantApply="true"/>
@@ -133,18 +138,25 @@
 				</menulist>
 				
 				<checkbox label="&Ctr_tabsintitlebar;"	preference="ctr_tabsintitlebar" id="ctr_tabs_in_titlebar"/>
-				<menulist preference="ctr_tabwidth">
+				
+				<menulist preference="ctr_tabwidth" id="ctr_pw_tabmaxwidth">
 					<menupopup>
-						<menuitem value="tabwidth_default"	label="&Ctr_tabwidth0;"/>
-						<menuitem value="tabwidth_150"	 	label="&Ctr_tabwidth1;"/>
-						<menuitem value="tabwidth_250" 		label="&Ctr_tabwidth2;"/>
+						<menuitem value="210"	label="&Ctr_tabmaxwidth; 210px &Ctr_tabwidthdef;"/>
+						<menuitem value="50"	label="&Ctr_tabmaxwidth; 50px"/>
+						<menuitem value="80"	label="&Ctr_tabmaxwidth; 80px"/>
+						<menuitem value="100"	label="&Ctr_tabmaxwidth; 100px"/>
+						<menuitem value="150"	label="&Ctr_tabmaxwidth; 150px"/>
+						<menuitem value="180"	label="&Ctr_tabmaxwidth; 180px"/>
+						<menuitem value="250" 	label="&Ctr_tabmaxwidth; 250px &Ctr_tabwidthcla;"/>
 					</menupopup>
 				</menulist>
-				<menulist preference="ctr_tabmwidth">
+				<menulist preference="ctr_tabmwidth" id="ctr_pw_tabminwidth">
 					<menupopup>
-						<menuitem value="tabmwidth_default"	label="&Ctr_tabmwidth0;"/>
-						<menuitem value="tabmwidth_150"	 	label="&Ctr_tabmwidth1;"/>
-						<menuitem value="tabmwidth_54"		label="&Ctr_tabmwidth2;"/>
+						<menuitem value="100"	label="&Ctr_tabminwidth; 100px &Ctr_tabwidthdef;"/>
+						<menuitem value="50"	label="&Ctr_tabminwidth; 50px"/>
+						<menuitem value="80"	label="&Ctr_tabminwidth; 80px"/>
+						<menuitem value="150"	label="&Ctr_tabminwidth; 150px"/>
+						
 					</menupopup>
 				</menulist>
 
@@ -244,8 +256,16 @@
 		<tabpanel>
 
 			<vbox flex="1">
+			  
 			  <groupbox flex="1">
-				  <caption  label="&Ctr_customsqtab0;" class="ctb_topic"/>
+				  <caption  class="ctb_topic">
+					  <label value="&Ctr_customsqtab0; - &Ctr_tabs0;"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_default"/>
+					  <label value="&Ctr_customsqtab0; - &Ctr_tabs1;"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_squared"/>
+					  <label value="&Ctr_customsqtab0; - &Ctr_tabs1; v2"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_squaredc2"/>
+					  <label value="&Ctr_customsqtab0; - &Ctr_tabs1m;" class="ctr_tabcolorlabel2" id="ctr_ccap_t_squared2"/>
+					  <label value="&Ctr_customsqtab0; - &Ctr_tabs2;"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_curved"/>
+					  <label value="&Ctr_customsqtab0; - &Ctr_tabs3;"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_curvedaero"/>
+				  </caption>
 				  <hbox>
 					<checkbox label="&Ctr_customsqtab1;" preference="ctr_customsqtab" id="ctr_customsqtab_cb"/>
 				  	<checkbox label="&Ctr_ctext;" preference="ctr_tabtextc"/>
@@ -263,6 +283,18 @@
 					<label value="&Ctr_textsh;"/>
 					<spacer flex="1" />
 					<label value="&Ctr_tabnor;" class="ctr_tabcolorlabel"/>
+				  </hbox>
+				  <hbox>
+					<colorpicker preference="ctr_ctabpen1" type="button" class="tabcolorbox" id="ctr_pw_cp_pent1"/>
+					<label value="&Ctr_topc;" class="tabcolorbox" id="ctr_pw_cp_pentl1"/>
+					<colorpicker preference="ctr_ctabpen2" type="button" class="tabcolorbox" id="ctr_pw_cp_pent2"/>
+					<label value="&Ctr_bottomc;" class="tabcolorbox" id="ctr_pw_cp_pentl2"/>
+					<colorpicker preference="ctr_ctabpent" type="button"/>
+					<label value="&Ctr_textc;"/>
+					<colorpicker preference="ctr_ctabpentsh" type="button"/>
+					<label value="&Ctr_textsh;"/>
+					<spacer flex="1" />
+					<label value="&Ctr_tabpen;" class="ctr_tabcolorlabel"/>
 				  </hbox>
 				  <hbox>
 					<colorpicker preference="ctr_ctabhov1" type="button" class="tabhovcolorbox" id="ctr_pw_cp_hovt1"/>
@@ -307,17 +339,7 @@
 				  </hbox>
 
 			  </groupbox>
-			  
-			  <hbox id="ctr_pw_ctablabel">
-			    <spacer flex="1"/>
-				  <label value="&Ctr_tabs0;"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_default"/>
-				  <label value="&Ctr_tabs1;"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_squared"/>
-				  <label value="&Ctr_tabs1; v2"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_squaredc2"/>
-				  <label value="&Ctr_tabs1m;" class="ctr_tabcolorlabel2" id="ctr_ccap_t_squared2"/>
-				  <label value="&Ctr_tabs2;"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_curved"/>
-				  <label value="&Ctr_tabs3;"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_curvedaero"/>
-				<spacer flex="1"/>
-			  </hbox>
+
 			</vbox>
 
 		</tabpanel>
@@ -335,6 +357,7 @@
 				<checkbox label="&Ctr_bfurlbarfix;"		preference="ctr_bfurlbarfix" class="ctr_winmaconly" id="ctr_pw_bfurlbarfix"/>
 				<checkbox label="&Ctr_showtabclose;"	preference="ctr_showtabclose"/>
 				<checkbox label="&Ctr_cpanelmenus;"		preference="ctr_cpanelmenus"/>
+				<checkbox label="&Ctr_panelmenucol;"	preference="ctr_panelmenucol" id="ctr_pw_panelmenucolor"/>
 			  </groupbox>
 			</vbox>
 

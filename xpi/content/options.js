@@ -1,6 +1,8 @@
 if (typeof classicthemerestorerjso == "undefined") {var classicthemerestorerjso = {};};
 if (!classicthemerestorerjso.ctr) {classicthemerestorerjso.ctr = {};};
 
+Components.utils.import("resource://gre/modules/AddonManager.jsm");
+
 classicthemerestorerjso.ctr = {
 
   prefs: Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.classicthemerestorer."),
@@ -21,6 +23,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctr_pw_paneluibtweak').disabled = true;
 		document.getElementById('ctr_pw_tabmokcolor').disabled = true;
 		document.getElementById('ctr_pw_tabmokcolor2').disabled = true;
+		document.getElementById('ctr_pw_panelmenucolor').disabled = true;
 
 		document.getElementById('ctr_pw_tabmenulist').style.visibility = 'collapse';
 		document.getElementById('ctr_abhigher').style.visibility = 'collapse';
@@ -40,13 +43,40 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctr_pw_cp_actt2').style.visibility = 'collapse';
 		document.getElementById('ctr_pw_cp_acttl1').style.visibility = 'collapse';
 		document.getElementById('ctr_pw_cp_acttl2').style.visibility = 'collapse';
-		
-		document.getElementById('ctr_pw_ctablabel').style.visibility = 'collapse';
+		document.getElementById('ctr_pw_cp_pent1').style.visibility = 'collapse';
+		document.getElementById('ctr_pw_cp_pent2').style.visibility = 'collapse';
+		document.getElementById('ctr_pw_cp_pentl1').style.visibility = 'collapse';
+		document.getElementById('ctr_pw_cp_pentl2').style.visibility = 'collapse';
+
 		document.getElementById('ctr_pw_bfurlbarfix').style.visibility = 'collapse';
 		document.getElementById('ctr_pw_paneluibtweak').style.visibility = 'collapse';
 		document.getElementById('ctr_pw_tabmokcolor').style.visibility = 'collapse';
 		document.getElementById('ctr_pw_tabmokcolor2').style.visibility = 'collapse';
+		document.getElementById('ctr_pw_panelmenucolor').style.visibility = 'collapse';
 	};
+	
+	// extra checks to not enable tab widht setting while 'TabMixPlus'/'TabUtilities' is enabled
+	AddonManager.getAddonByID('{dc572301-7619-498c-a57d-39143191b318}', function(addon) {
+	  if(addon && addon.isActive) {
+		document.getElementById('ctr_pw_tabmaxwidth').disabled = true;
+		document.getElementById('ctr_pw_tabminwidth').disabled = true;
+	  }
+	  /*else {
+	    document.getElementById('ctr_pw_tabmaxwidth').disabled = false;
+		document.getElementById('ctr_pw_tabminwidth').disabled = false;
+	  }*/
+	});
+	
+	AddonManager.getAddonByID('tabutils@ithinc.cn', function(addon) {
+	  if(addon && addon.isActive) {
+		document.getElementById('ctr_pw_tabmaxwidth').disabled = true;
+		document.getElementById('ctr_pw_tabminwidth').disabled = true;
+	  }
+	  /*else {
+	    document.getElementById('ctr_pw_tabmaxwidth').disabled = false;
+		document.getElementById('ctr_pw_tabminwidth').disabled = false;
+	  }*/
+	});
 	
 	this.ctrpwAppbuttonextra(this.prefs.getCharPref("appbutton"));
 

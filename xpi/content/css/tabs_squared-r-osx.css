@@ -39,8 +39,13 @@
 
 	.tabbrowser-tabs{
 	  border-bottom:0 !important;
+	  margin-top: -2px !important;
 	}
 	
+	#tabbrowser-tabs:not([overflow="true"]) {
+	  margin-right: -8px !important;
+	}
+
 	#tabbrowser-tabs{
 	  min-height: 0px !important;
 	}
@@ -208,11 +213,6 @@
 		background-image: none !important;
 	}
 	
-	.tabbrowser-tabs{
-	  margin-top: -2px !important;
-	  margin-right: -8px !important;
-	}
-
 	#TabsToolbar #ctr_appbutton{
 	  border-radius: 0 !important;
 	  border-bottom-left-radius: 3px !important;

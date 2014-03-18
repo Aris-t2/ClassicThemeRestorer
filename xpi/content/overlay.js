@@ -20,10 +20,10 @@ classicthemerestorerjs.ctr = {
   init: function() {
   
 	try{
-		document.getElementById("nav-bar").removeChild(document.getElementById("PanelUI-button"));
+		document.getElementById("PanelUI-button").removeChild(document.getElementById("PanelUI-menu-button"));
 	} catch(e){}
 
-
+	
 	// star-button in urlbar
 	if (this.prefs.getBoolPref('starinurl')) {
 		
@@ -37,7 +37,7 @@ classicthemerestorerjs.ctr = {
 		},100);
 
 	}
-	
+
 	// disable preferences which are not usable on third party themes
 	if (!this.fxdefaulttheme) {
 		this.prefs.setCharPref('tabs','tabs_default');
@@ -48,6 +48,7 @@ classicthemerestorerjs.ctr = {
 		this.prefs.setBoolPref('tabmokcolor',false);
 		this.prefs.setBoolPref('tabmokcolor2',false);
 		this.prefs.setBoolPref('bfurlbarfix',false);
+		this.prefs.setBoolPref('panelmenucol',false);
 		
 		if (this.prefs.getCharPref('nav_txt_ico')=='iconsbig') {
 			this.prefs.setCharPref('nav_txt_ico','icons');
@@ -62,7 +63,7 @@ classicthemerestorerjs.ctr = {
 	// statusbar boolean
 	var enableCtrstatusbar = this.prefs.getBoolPref('statusbar');
 	
-	// extra check to not enable spaces/separators styles or statusbar while 'ThePuzzlePiece' add-on is enabled
+	// extra check to not enable spaces/separators styles or status-bar while 'ThePuzzlePiece' add-on is enabled
 	var TPPListener = {
 	   onEnabled: function(addon) {
 		  if(addon.id == 'thePuzzlePiece@quicksaver') { classicthemerestorerjs.ctr.loadUnloadCSS("spaces_extra",false); }
@@ -78,6 +79,7 @@ classicthemerestorerjs.ctr = {
 	    else { classicthemerestorerjs.ctr.loadUnloadCSS("spaces_extra",true); }
 	});
 	
+	
 	// statusbar in addonbar
 	if (enableCtrstatusbar) {
 		
@@ -89,7 +91,6 @@ classicthemerestorerjs.ctr = {
 		},100);
 
 	}
-	
 	
 	// CTR Preferences listener
 	function PrefListener(branch_name, callback) {
@@ -130,29 +131,27 @@ classicthemerestorerjs.ctr = {
 		  // first run
 		  case "firstrun":
 			if (branch.getBoolPref("firstrun")) {
-
-				// insert CTRs items on first run into nav-bar
-				// since the buttons do not exist without CTR we cannot move them to a specific nav-bar location
-				// without breaking ui (randomly)
-				try{
 			
-					document.getElementById("nav-bar").insertItem("ctr_back-forward-button", null, null, true);
-					document.getElementById("nav-bar").insertItem("ctr_appbutton", null, null, true);
-					document.getElementById("nav-bar").insertItem("ctr_puib_separator", null, null, true);
-					document.getElementById("nav-bar").insertItem("ctr_panelui-button", null, null, true);
-					document.getElementById("nav-bar").insertItem("ctr_window-controls", null, null, true);
+			  try {
 
-					var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;
-					
-					// switch to 'appbutton on titlebar' on Windows
-					if (osString=="WINNT") {
-						branch.setCharPref("appbutton",'appbutton_v2');
-					}
-					
-				} catch(e){}
+				// insert CTRs items on first run into toolbars
+				CustomizableUI.addWidgetToArea("ctr_back-forward-button", CustomizableUI.AREA_NAVBAR);
+				CustomizableUI.addWidgetToArea("ctr_appbutton", CustomizableUI.AREA_NAVBAR);
+				CustomizableUI.addWidgetToArea("ctr_puib_separator", CustomizableUI.AREA_NAVBAR);
+				CustomizableUI.addWidgetToArea("ctr_panelui-button", CustomizableUI.AREA_NAVBAR);
+				CustomizableUI.addWidgetToArea("ctr_window-controls", CustomizableUI.AREA_NAVBAR);
+				CustomizableUI.addWidgetToArea("ctr_bookmarks-menu-toolbar-button", CustomizableUI.AREA_BOOKMARKS);						
 				
-				// set 'first run' to false
-				branch.setBoolPref("firstrun",false);
+				// switch to 'appbutton on titlebar' on Windows
+				if (Components.classes["@mozilla.org/xre/app-info;1"]
+				  .getService(Components.interfaces.nsIXULRuntime).OS=="WINNT") {
+					branch.setCharPref("appbutton",'appbutton_v2');
+				}
+					
+			  } catch(e){}
+
+			  // set 'first run' to false
+			  branch.setBoolPref("firstrun",false);
 			
 			}
 		  break;
@@ -205,24 +204,31 @@ classicthemerestorerjs.ctr = {
 
 		  break;
 		  
-		  case "tabwidth":
-			classicthemerestorerjs.ctr.loadUnloadCSS('tabwidth_150',false);
-			classicthemerestorerjs.ctr.loadUnloadCSS('tabwidth_250',false);
-
-			if (branch.getCharPref("tabwidth")!="tabwidth_default"){
-			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("tabwidth"),true);
+		  case "ctabwidth": case "ctabmwidth":
+			
+			// replace tabs min/max-width rules instead of overriding them
+			// to improve compatibility and prevent tab resizing bug
+			function findCSSRule(selector) {
+			  var ruleIndex = -1;
+			  var theRules = document.styleSheets[0].cssRules;
+			   for (i=0; i<theRules.length; i++) {
+				 if (theRules[i].selectorText == selector) {
+				  ruleIndex = i;
+				  break;
+				 }
+			   }
+			  return ruleIndex;
 			}
+	
+			var theRule = document.styleSheets[0].cssRules[findCSSRule('.tabbrowser-tab:not([pinned])')];
+			theRule.style.maxWidth=""+branch.getIntPref('ctabwidth')+"px";
+			theRule.style.minWidth=""+branch.getIntPref('ctabmwidth')+"px";
+	
+			/* logging */
+			/*var style_rules = document.styleSheets[0].cssRules;
+			console.log(style_rules);*/
+ 
 		  break;
-		  
-		  case "tabmwidth":
-			classicthemerestorerjs.ctr.loadUnloadCSS('tabmwidth_150',false);
-			classicthemerestorerjs.ctr.loadUnloadCSS('tabmwidth_54',false);
-
-			if (branch.getCharPref("tabmwidth")!="tabmwidth_default"){
-			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("tabmwidth"),true);
-			}
-		  break; 
-
 
 		  // Appbutton
 		  case "appbutton":
@@ -371,16 +377,16 @@ classicthemerestorerjs.ctr = {
 		  // Color settings (colorpickers)
 		  
 		  case "ctab1": case "ctab2": case "ctabhov1": case "ctabhov2": case "ctabact1": case "ctabact2":
-		  case "cntab1": case "cntab2": case "cntabhov1": case "cntabhov2":
+		  case "ctabpen1": case "ctabpen2": case "cntab1": case "cntab2": case "cntabhov1": case "cntabhov2":
 			if (branch.getBoolPref("customsqtab")) classicthemerestorerjs.ctr.loadUnloadCSS("customsqtab",true);
 		  break;
 	  
-		  case "ctabt": case "ctabhovt": case "ctabactt":
+		  case "ctabt": case "ctabhovt": case "ctabactt": case "ctabpent":
 			if (branch.getBoolPref("tabtextc")) classicthemerestorerjs.ctr.loadUnloadCSS("tabtextc",true);
 		  break;
 
 	  
-		  case 'ctabtsh': case 'ctabhovtsh': case 'ctabacttsh':
+		  case 'ctabtsh': case 'ctabhovtsh': case 'ctabacttsh': case 'ctabpentsh':
 			if (branch.getBoolPref("tabtextsh")) classicthemerestorerjs.ctr.loadUnloadCSS("tabtextsh",true);
 		  break;
 		  
@@ -457,23 +463,39 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("cpanelmenus")) classicthemerestorerjs.ctr.loadUnloadCSS("cpanelmenus",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("cpanelmenus",false);
 		  break;
+
+		  case "panelmenucol":
+			if (branch.getBoolPref("panelmenucol")) classicthemerestorerjs.ctr.loadUnloadCSS("panelmenucol",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("panelmenucol",false);
+		  break;
 		  
-		  // hide item using js instead of css or it won't work on MacOSX
 		  case "toolsitem":
-			if (branch.getBoolPref("toolsitem")) {
-				setTimeout(function(){
-				  try{
-					document.getElementById("ctr_tools_menu_entry").collapsed = false;
-				  } catch(e){}
-				},1);
+		  
+		  	var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;
+			
+			// for Windows & Linux
+			if (osString!="Darwin"){
+				if (branch.getBoolPref("toolsitem")) classicthemerestorerjs.ctr.loadUnloadCSS("toolsitem",true);
+				  else classicthemerestorerjs.ctr.loadUnloadCSS("toolsitem",false);
 			}
-			  else {
-				setTimeout(function(){
-				  try{
-					document.getElementById("ctr_tools_menu_entry").collapsed = true;
-				  } catch(e){}
-				},1);
-			  }
+			
+			// for MacOSX: hide item using js instead of css or it won't work
+			if (osString=="Darwin"){
+				if (branch.getBoolPref("toolsitem")) {
+					setTimeout(function(){
+					  try{
+						document.getElementById("ctr_tools_menu_entry").collapsed = false;
+					  } catch(e){}
+					},100);
+				}
+				else {
+				  setTimeout(function(){
+					try{
+					  document.getElementById("ctr_tools_menu_entry").collapsed = true;
+					} catch(e){}
+				  },100);
+				}
+			}
 		  break;
 
 		  case "appmenuitem":
@@ -522,7 +544,7 @@ classicthemerestorerjs.ctr = {
 	
 		case "tabs_squared":
 
-			manageCSS("tabs_squared.css");
+			//manageCSS("tabs_squared.css");
 		
 			var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;
 
@@ -543,6 +565,8 @@ classicthemerestorerjs.ctr = {
 					manageCSS("tabs_squared-r-osx.css");
 					manageCSS("tabs_squared-osx.css");
 				}
+			} else {
+				manageCSS("tabs_squared.css");
 			}
 		
 		break;
@@ -553,7 +577,7 @@ classicthemerestorerjs.ctr = {
 		
 		case "tabs_squared2":
 
-			manageCSS("tabs_squared2.css");
+			//manageCSS("tabs_squared2.css");
 		
 			var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;
 
@@ -574,6 +598,8 @@ classicthemerestorerjs.ctr = {
 					manageCSS("tabs_squared-r-osx2.css");
 					manageCSS("tabs_squared-osx2.css");
 				}
+			} else {
+				manageCSS("tabs_squared2.css");
 			}
 		
 		break;
@@ -606,12 +632,6 @@ classicthemerestorerjs.ctr = {
 		
 		break;
 		case "tabs_curvedall":		manageCSS("tabs_curvedall.css");		break;
-
-		case "tabwidth_150": 		manageCSS("tabwidth_150.css");  		break;
-		case "tabwidth_250": 		manageCSS("tabwidth_250.css");  		break;
-		
-		case "tabmwidth_150": 		manageCSS("tabminwidth_150.css");  		break;
-		case "tabmwidth_54": 		manageCSS("tabminwidth_54.css");  		break;
 		
 		case "tabsotoff":
 		
@@ -761,7 +781,9 @@ classicthemerestorerjs.ctr = {
 		case "throbberalt": 		manageCSS("throbberalt.css");			break;
 		case "bmanimation": 		manageCSS("hidebmanimation.css");		break;
 		case "cpanelmenus": 		manageCSS("compactpanelmenus.css");		break;
+		case "panelmenucol": 		manageCSS("panelmenucolor.css");		break;
 		case "appmenuitem": 		manageCSS("ctr_appmenuitem.css");		break;
+		case "toolsitem": 			manageCSS("ctr_toolsitem.css");			break;
 		case "cuibuttons":
 			if (this.fxdefaulttheme)
 			{
@@ -793,6 +815,9 @@ classicthemerestorerjs.ctr = {
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {\
 						  background-image: linear-gradient('+this.prefs.getCharPref('ctabhov1')+','+this.prefs.getCharPref('ctabhov2')+') !important;\
 						}\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('ctabpen1')+','+this.prefs.getCharPref('ctabpen2')+') !important;\
+						}\
 						#main-window #navigator-toolbox #TabsToolbar .tabs-newtab-button:not(:-moz-lwtheme) {\
 						  background-image: linear-gradient('+this.prefs.getCharPref('cntab1')+','+this.prefs.getCharPref('cntab2')+') !important;\
 						}\
@@ -814,6 +839,9 @@ classicthemerestorerjs.ctr = {
 						}\
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected]):hover:not(:-moz-lwtheme) .tab-content {\
 						  background-image: linear-gradient('+this.prefs.getCharPref('ctabhov1')+','+this.prefs.getCharPref('ctabhov2')+') !important;\
+						}\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover):not(:-moz-lwtheme) .tab-content {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('ctabpen1')+','+this.prefs.getCharPref('ctabpen2')+') !important;\
 						}\
 						#main-window #navigator-toolbox #TabsToolbar .tabs-newtab-button:not(:-moz-lwtheme) {\
 						  background-image: linear-gradient('+this.prefs.getCharPref('cntab1')+','+this.prefs.getCharPref('cntab2')+') !important;\
@@ -847,6 +875,11 @@ classicthemerestorerjs.ctr = {
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start,\
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end {\
 						  background-image: linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctabhov1')+' 0px, '+this.prefs.getCharPref('ctabhov2')+'), none !important;\
+						}\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end {\
+						  background-image: linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctabpen1')+' 0px, '+this.prefs.getCharPref('ctabpen2')+'), none !important;\
 						}\
 						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(ltr)::before,\
 						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(rtl)::before {\
@@ -899,14 +932,17 @@ classicthemerestorerjs.ctr = {
 			if(enable==true){
 	
 				this.tabtxtcsheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[selected="true"] {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[selected="true"] .tab-text {\
 					  color: '+this.prefs.getCharPref('ctabactt')+' !important;\
 					}\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):not(:hover) {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):not(:hover) .tab-text {\
 					  color: '+this.prefs.getCharPref('ctabt')+' !important;\
 					}\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):hover{\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):hover .tab-text {\
 					  color: '+this.prefs.getCharPref('ctabhovt')+' !important;\
+					}\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) .tab-text {\
+					  color: '+this.prefs.getCharPref('ctabpent')+' !important;\
 					}\
 				'), null, null);
 
@@ -922,14 +958,17 @@ classicthemerestorerjs.ctr = {
 			if(enable==true){
 				
 				this.tabtxtshsheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[selected="true"] {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[selected="true"] .tab-text {\
 					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabacttsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabacttsh')+' !important;\
 					}\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):not(:hover) {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):not(:hover) .tab-text {\
 					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabtsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabtsh')+' !important;\
 					}\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):hover {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):hover .tab-text {\
 					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabhovtsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabhovtsh')+' !important;\
+					}\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) .tab-text {\
+					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabpentsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabpentsh')+' !important;\
 					}\
 				'), null, null);
 

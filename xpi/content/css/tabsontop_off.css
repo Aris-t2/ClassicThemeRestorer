@@ -3,9 +3,14 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
+	/* toolbars above navigator-toolbox (only one at a time can visible anyway) */
+	#print-preview-toolbar,
+	#printedit-toolbar,
 	#titlebar {
 	  -moz-box-ordinal-group: 0 !important;
 	}
+	
+	/* START: navigator-toolbox toolbars */
 	#toolbar-menubar {
 	  -moz-box-ordinal-group: 1 !important;
 	}
@@ -25,6 +30,7 @@
 	#TabsToolbar {
 	  -moz-box-ordinal-group: 100 !important;
 	}
+	/* END: navigator-toolbox toolbars */
 
 	#TabsToolbar,
 	#TabsToolbar:not(:-moz-lwtheme),

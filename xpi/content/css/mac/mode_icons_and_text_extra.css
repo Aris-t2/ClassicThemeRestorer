@@ -2,6 +2,36 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
+	toolbar .toolbarbutton-1:not([type="menu-button"]),
+	toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button,
+	toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
+	toolbar .toolbarbutton-1:not(:-moz-any([type="menu-button"],#back-button,#forward-button)),
+	toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button,
+	toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
+	toolbar #restore-button,
+	toolbar .toolbarbutton-1:not(:-moz-any([type="menu-button"],[disabled],[open],#back-button,#forward-button)):hover,
+	toolbar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open])):hover > .toolbarbutton-menubutton-button,
+	toolbar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open])):hover > .toolbarbutton-menubutton-dropmarker,
+	toolbar .toolbaritem-combined-buttons:hover > .toolbarbutton-combined,
+	toolbar #restore-button:not([disabled]):hover,
+	toolbar .toolbarbutton-1:not(:-moz-any([type="menu-button"],[disabled],[open],#back-button,#forward-button)):hover,
+	toolbar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open]))[buttonover] > .toolbarbutton-menubutton-button,
+	toolbar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open],[buttonover])):hover > .toolbarbutton-menubutton-dropmarker,
+	toolbar #restore-button:not([disabled]):hover,
+	toolbar .toolbarbutton-1:not(:-moz-any([type="menu-button"],[disabled],#back-button,#forward-button)):-moz-any(:hover:active,[open]),
+	toolbar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open]))[buttonover]:active > .toolbarbutton-menubutton-button,
+	toolbar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open],[buttonover])):hover:active > .toolbarbutton-menubutton-dropmarker,
+	toolbar .toolbarbutton-1[type="menu-button"][open] > .toolbarbutton-menubutton-dropmarker,
+	toolbar #restore-button:not([disabled]):hover:active {
+	  -moz-appearance: none !important;
+	  border: 1px solid transparent !important;
+	  background: none !important;
+	  border-color: none !important;
+	  box-shadow: none !important;
+	  transition-duration: 0ms !important;
+	  transition-property: none !important;
+	}
+
 	#nav-bar .toolbarbutton-1:not([type="menu-button"]) .toolbarbutton-icon {
 	  min-width: 18px !important;
 	  height: 18px !important;

@@ -14,12 +14,9 @@
 	  -moz-appearance: none !important;
 	  background: none !important;
 	  padding:0 !important;
-	  /*margin:-8px 0px !important;*/
 	  border:0 !important;
+	  border-image:none !important;
 	  box-shadow:none !important;
-	}
-	#nav-bar #urlbar-icons #bookmarks-menu-button .toolbarbutton-icon {
-	  /*margin: -2px -2px !important;*/
 	}
 	
 	#urlbar-icons #bookmarks-menu-button > .toolbarbutton-menubutton-button,
@@ -28,6 +25,7 @@
 	  background: none !important;
 	  background-image: none !important;
 	  border-color: transparent !important;
+	  border-image:none !important;
 	  box-shadow: none !important;
 	  transition-property: none !important;
       transition-duration: 0ms !important;

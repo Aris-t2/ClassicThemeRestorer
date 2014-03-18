@@ -40,7 +40,7 @@
 	}
 	
 	#PanelUI-menu-button{
-		margin: 0px !important;
+	  margin: 0px !important;
 	}
 	
 	#nav-bar #ctr_bookmarks-menu-toolbar-button  > .toolbarbutton-icon{
@@ -50,20 +50,20 @@
 
 	/* style appmenu */
 	#ctr_appbuttonPopup{
-		-moz-appearance:none;
-		box-shadow:none;
-		border:1px solid #a0a0a0;
+	  -moz-appearance:none;
+	  box-shadow:none;
+	  border:1px solid #a0a0a0;
 	}
 
 	@media not all and (-moz-windows-classic) {
 	
 		#appmenuPrimaryPane{
-			-moz-appearance:none;
-			background:white;
-			box-shadow:none;
-			border:0;
-			padding: 2px;
-			-moz-border-end: none;
+		  -moz-appearance:none;
+		  background:white;
+		  box-shadow:none;
+		  border:0;
+		  padding: 2px;
+		  -moz-border-end: none;
 		}
 		
 		#appmenuSecondaryPane {
@@ -80,35 +80,47 @@
 		  box-shadow: -1px 0 2px rgb(204,214,234) inset;
 		}
 
-		#appmenuPrimaryPane menuseparator {
+		#appmenuPrimaryPane > menuseparator {
 		  -moz-appearance: none;
 		  margin-top: 3px;
 		  margin-bottom: 3px;
-		  margin-right:3px;
-		  -moz-margin-start: 30px;
 		  padding: 0;
 		  border-top: 1px solid #d6e5f5;
 		  border-bottom: none;
 		}
-
-		#appmenuPrimaryPane #menu_newTabmenupopup,
-		#appmenuPrimaryPane #menu_newEditmenupopup,
-		#appmenuPrimaryPane #menu_newPrintmenupopup,
-		#appmenuPrimaryPane #newmenuWebDeveloperPopup {
-			-moz-appearance:none;
-			background:white;
-			box-shadow:none;
-			border:1px solid #a0a0a0;
+		
+		#appmenuPrimaryPane:-moz-locale-dir(ltr) > menuseparator {
+		  -moz-margin-start: 30px;
 		}
 		
-		#appmenuSecondaryPane #newbookmarksMenuPopup,
-		#appmenuSecondaryPane #newHistorymenuPopup,
-		#appmenuSecondaryPane #menu_newHelpPopup,
-		#appmenuSecondaryPane #menu_newPreferencesmenuPopup{
-			-moz-appearance:none;
-			background:#f1f5fb;
-			box-shadow:none;
-			border:1px solid #a0a0a0;
+		#appmenuPrimaryPane:-moz-locale-dir(rtl) > menuseparator {
+		  -moz-margin-end: 30px;
+		}
+	
+		#ctr_appbuttonPopup > hbox > vbox > menu > menupopup,
+		#ctr_appbuttonPopup > hbox > vbox > hbox > menu > menupopup{
+		  -moz-appearance:none;
+		  box-shadow: 1px 0 12px rgb(204,214,234);
+		  padding:2px;
+		  border:1px solid #a0a0a0;
+		}
+
+		#ctr_appbuttonPopup > hbox > #appmenuPrimaryPane:-moz-locale-dir(ltr) > menu > menupopup,
+		#ctr_appbuttonPopup > hbox > #appmenuPrimaryPane:-moz-locale-dir(ltr) > hbox > menu > menupopup {
+		  background: url("chrome://classic_theme_restorer/content/images/appmenupane_left_sep.png") left repeat-y, white;
+		}
+		#ctr_appbuttonPopup > hbox > #appmenuSecondaryPane:-moz-locale-dir(ltr) > menu > menupopup,
+		#ctr_appbuttonPopup > hbox > #appmenuSecondaryPane:-moz-locale-dir(ltr) > hbox > menu > menupopup{
+		  background: url("chrome://classic_theme_restorer/content/images/appmenupane_left_sep.png") left repeat-y, #f1f5fb;
+		}
+		#ctr_appbuttonPopup > hbox > #appmenuPrimaryPane:-moz-locale-dir(rtl) > menu > menupopup,
+		#ctr_appbuttonPopup > hbox > #appmenuPrimaryPane:-moz-locale-dir(rtl) > hbox > menu > menupopup {
+		  background: url("chrome://classic_theme_restorer/content/images/appmenupane_right_sep.png") right repeat-y, white;
+		}
+		
+		#ctr_appbuttonPopup > hbox > #appmenuSecondaryPane:-moz-locale-dir(rtl) > menu > menupopup,
+		#ctr_appbuttonPopup > hbox > #appmenuSecondaryPane:-moz-locale-dir(rtl) > hbox > menu > menupopup{
+		  background: url("chrome://classic_theme_restorer/content/images/appmenupane_right_sep.png") right repeat-y, #f1f5fb;
 		}
 	
 	}

@@ -19,16 +19,17 @@
 	}
 
 	.tabs-newtab-button:not(:-moz-lwtheme){
-	  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),
-						url(chrome://browser/skin/tabbrowser/tab-active-middle.png),
-						url(chrome://browser/skin/tabbrowser/tab-stroke-end.png) !important;
-	}
-
-	.tabs-newtab-button:not(:-moz-lwtheme):hover{
 	  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start.png),
 						url(chrome://browser/skin/tabbrowser/tab-background-middle.png),
 						url(chrome://browser/skin/tabbrowser/tab-background-end.png) !important;
 	}
+
+	.tabs-newtab-button:not(:-moz-lwtheme):hover{
+	  background-image: url(chrome://classic_theme_restorer/content/images/ntab-hov-start.png),
+						url(chrome://classic_theme_restorer/content/images/ntab-hov-middle.png),
+						url(chrome://classic_theme_restorer/content/images/ntab-hov-end.png) !important;
+	}
+
 	
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start:-moz-locale-dir(ltr),
@@ -48,6 +49,10 @@
 	.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
 	#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
 	  background-image: none !important;
+	}
+	
+	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive], :not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
+	  clip-path: none !important;
 	}
 
 }

@@ -32,12 +32,10 @@
 <!ENTITY Ctr_tabsontop1		"Onglets en haut [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Onglets position basse [tabsontop=false]">
 <!ENTITY Ctr_tabsintitlebar	"Onglets dans la barre de titre">
-<!ENTITY Ctr_tabwidth0		"Largeur maximale: 180px (defaut)">
-<!ENTITY Ctr_tabwidth1		"Largeur maximale: 150px">
-<!ENTITY Ctr_tabwidth2		"Largeur maximale: 250px (classique)">
-<!ENTITY Ctr_tabmwidth0		"Largeur minimale: 100px (defaut)">
-<!ENTITY Ctr_tabmwidth1		"Largeur minimale: 150px">
-<!ENTITY Ctr_tabmwidth2		"Largeur minimale: 54px">
+<!ENTITY Ctr_tabwidthdef	"(defaut)">
+<!ENTITY Ctr_tabwidthcla	"(classique)">
+<!ENTITY Ctr_tabmaxwidth	"Largeur maximale:">
+<!ENTITY Ctr_tabminwidth	"Largeur minimale:">
 
 <!ENTITY Ctr_appbutton		"Bouton d'application">
 <!ENTITY Ctr_appbutton0		"Bouton désactivé">
@@ -88,6 +86,7 @@
 <!ENTITY Ctr_tabnor			"Onglet (par défaut)">
 <!ENTITY Ctr_tabhov			"Onglet (au survol)">
 <!ENTITY Ctr_tabact			"Onglet (actif)">
+<!ENTITY Ctr_tabpen			"Onglet (non lu)">
 <!ENTITY Ctr_ntabnor		"Nouvel onglet (par défaut)">
 <!ENTITY Ctr_ntabhov		"Nouvel onglet (au survol)">
 <!ENTITY Ctr_topc			"en haut">
@@ -104,6 +103,7 @@
 <!ENTITY Ctr_bfurlbarfix 	"Corriger rayon de frontière de la barre d'adresse: 2px (Win) / 2.5px (Mac)">
 <!ENTITY Ctr_showtabclose	"Toujours afficher le bouton onglet de près (redémarrer Firefox!)">
 <!ENTITY Ctr_cpanelmenus	"Menus du panneau compact (signets, histoire, etc)">
+<!ENTITY Ctr_panelmenucol	"Couleur de fond alternatif pour 'menus du panneau'">
 
 <!ENTITY Ctr_throbberalt	"Animation de chargement alternative pour tab-throbber">
 <!ENTITY Ctr_bmanimation	"Animation lors de l'ajout de nouveaux signets">

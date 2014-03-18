@@ -2,7 +2,42 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	#navigator-toolbox #nav-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]):hover .toolbarbutton-text {
+	toolbar .toolbarbutton-1:not([type="menu-button"]),
+	toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button,
+	toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
+	toolbar .toolbarbutton-1:not(:-moz-any([type="menu-button"],#back-button,#forward-button)),
+	toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button,
+	toolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
+	toolbar #restore-button,
+	toolbar .toolbarbutton-1:not(:-moz-any([type="menu-button"],[disabled],[open],#back-button,#forward-button)):hover,
+	toolbar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open])):hover > .toolbarbutton-menubutton-button,
+	toolbar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open])):hover > .toolbarbutton-menubutton-dropmarker,
+	toolbar .toolbaritem-combined-buttons:hover > .toolbarbutton-combined,
+	toolbar #restore-button:not([disabled]):hover,
+	toolbar .toolbarbutton-1:not(:-moz-any([type="menu-button"],[disabled],[open],#back-button,#forward-button)):hover,
+	toolbar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open]))[buttonover] > .toolbarbutton-menubutton-button,
+	toolbar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open],[buttonover])):hover > .toolbarbutton-menubutton-dropmarker,
+	toolbar #restore-button:not([disabled]):hover,
+	toolbar .toolbarbutton-1:not(:-moz-any([type="menu-button"],[disabled],#back-button,#forward-button)):-moz-any(:hover:active,[open]),
+	toolbar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open]))[buttonover]:active > .toolbarbutton-menubutton-button,
+	toolbar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open],[buttonover])):hover:active > .toolbarbutton-menubutton-dropmarker,
+	toolbar .toolbarbutton-1[type="menu-button"][open] > .toolbarbutton-menubutton-dropmarker,
+	toolbar #restore-button:not([disabled]):hover:active {
+	  -moz-appearance: none !important;
+	  border: 1px solid transparent !important;
+	  background: none !important;
+	  border-color: none !important;
+	  box-shadow: none !important;
+	  transition-duration: 0ms !important;
+	  transition-property: none !important;
+	  padding:0 !important;
+	}
+
+	toolbar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]) .toolbarbutton-text {
+	  border: 1px solid transparent;
+	}
+
+	toolbar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]):hover .toolbarbutton-text {
 	  border: 1px solid;
 	  background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.1));
 	  border-color: hsla(210,54%,20%,.15) hsla(210,54%,20%,.2) hsla(210,54%,20%,.25) !important;
@@ -10,9 +45,9 @@
 				  0 1px hsla(210,54%,20%,.03),
 				  0 0 2px hsla(210,54%,20%,.1);
 	}
-	#navigator-toolbox .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
+	/*#navigator-toolbox .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
 	  padding: 4px !important;
-	}
+	}*/
 	
 	#ctr_addon-bar #zoom-reset-button label{
 	  margin-top:-6px !important;

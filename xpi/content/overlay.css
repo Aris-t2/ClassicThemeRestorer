@@ -341,7 +341,11 @@
 		  margin:-22px 24px 22px 24px;
 		}
 	}
-
+	
+	/* fix ui tour popup position for ctrs panel ui button */
+	#UITourTooltip {
+	  margin-right:0px !important;
+	}
 
 }
 

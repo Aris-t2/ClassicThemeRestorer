@@ -32,12 +32,10 @@
 <!ENTITY Ctr_tabsontop1		"Tabs oben [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Tabs 'unten' [tabsontop=false]">
 <!ENTITY Ctr_tabsintitlebar	"Tabs auf Titelleiste (about:config)">
-<!ENTITY Ctr_tabwidth0		"Maximalbreite: 180px (standard)">
-<!ENTITY Ctr_tabwidth1		"Maximalbreite: 150px">
-<!ENTITY Ctr_tabwidth2		"Maximalbreite: 250px (klassisch)">
-<!ENTITY Ctr_tabmwidth0		"Minimalbreite: 100px (default)">
-<!ENTITY Ctr_tabmwidth1		"Minimalbreite: 150px">
-<!ENTITY Ctr_tabmwidth2		"Minimalbreite: 54px">
+<!ENTITY Ctr_tabwidthdef	"(standard)">
+<!ENTITY Ctr_tabwidthcla	"(klassisch)">
+<!ENTITY Ctr_tabmaxwidth	"Maximalbreite:">
+<!ENTITY Ctr_tabminwidth	"Minimalbreite:">
 
 <!ENTITY Ctr_appbutton		"Anwendungsbutton">
 <!ENTITY Ctr_appbutton0		"Button deaktiviert">
@@ -88,6 +86,7 @@
 <!ENTITY Ctr_tabnor			"Tab (standard)">
 <!ENTITY Ctr_tabhov			"Tab (hover)">
 <!ENTITY Ctr_tabact			"Tab (aktiv)">
+<!ENTITY Ctr_tabpen			"Tab (ungelesen)">
 <!ENTITY Ctr_ntabnor		"Neuer Tab (standard)">
 <!ENTITY Ctr_ntabhov		"Neuer Tab (hover)">
 <!ENTITY Ctr_topc			"Oben">
@@ -104,6 +103,7 @@
 <!ENTITY Ctr_bfurlbarfix 	"Korrigiere Randradius der Adressleiste: 2px (Win) / 2.5px (Mac)">
 <!ENTITY Ctr_showtabclose	"'Tab-Schließen'-Button immer anzeigen (Neustart benötigt!)">
 <!ENTITY Ctr_cpanelmenus	"Kompakte 'Panel-Menüs' (Lesezeichen, Chronic etc.)">
+<!ENTITY Ctr_panelmenucol	"Alternative Hintergrundfarbe für 'Panel-Menüs'">
 
 <!ENTITY Ctr_throbberalt	"Alternative Tab-Throbber Ladeanimation">
 <!ENTITY Ctr_bmanimation	"'Lesezeichen hinzufügen' Animation">
@@ -111,5 +111,5 @@
 <!ENTITY Ctr_dlanimation	"'Download gestartet und beendet' Animationen (about:config)">
 
 <!ENTITY Ctr_toolsitem		"Eintrag im Menü 'Extra'">
-<!ENTITY Ctr_appmenuitem	"Eintrag im Menü des Andwendungsbuttons">
+<!ENTITY Ctr_appmenuitem	"Eintrag im Menü des Anwendungsbuttons">
 <!ENTITY Ctr_cuibotbuttons	"Einstellungs-Buttons im 'Anpassen'-Modus">

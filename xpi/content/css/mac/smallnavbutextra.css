@@ -1,6 +1,41 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 @-moz-document url(chrome://browser/content/browser.xul) {
 
+	#nav-bar .toolbarbutton-1:not([type="menu-button"]),
+	#nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button,
+	#nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
+	#nav-bar .toolbarbutton-1:not(:-moz-any([type="menu-button"],#back-button,#forward-button)),
+	#nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button,
+	#nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
+	#nav-bar #restore-button,
+	#nav-bar .toolbarbutton-1:not(:-moz-any([type="menu-button"],[disabled],[open],#back-button,#forward-button)):hover,
+	#nav-bar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open])):hover > .toolbarbutton-menubutton-button,
+	#nav-bar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open])):hover > .toolbarbutton-menubutton-dropmarker,
+	#nav-bar .toolbaritem-combined-buttons:hover > .toolbarbutton-combined,
+	#nav-bar #restore-button:not([disabled]):hover,
+	#nav-bar .toolbarbutton-1:not(:-moz-any([type="menu-button"],[disabled],[open],#back-button,#forward-button)):hover,
+	#nav-bar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open]))[buttonover] > .toolbarbutton-menubutton-button,
+	#nav-bar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open],[buttonover])):hover > .toolbarbutton-menubutton-dropmarker,
+	#nav-bar #restore-button:not([disabled]):hover,
+	#nav-bar .toolbarbutton-1:not(:-moz-any([type="menu-button"],[disabled],#back-button,#forward-button)):-moz-any(:hover:active,[open]),
+	#nav-bar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open]))[buttonover]:active > .toolbarbutton-menubutton-button,
+	#nav-bar .toolbarbutton-1[type="menu-button"]:not(:-moz-any([disabled],[open],[buttonover])):hover:active > .toolbarbutton-menubutton-dropmarker,
+	#nav-bar .toolbarbutton-1[type="menu-button"][open] > .toolbarbutton-menubutton-dropmarker,
+	#nav-bar #restore-button:not([disabled]):hover:active {
+	  -moz-appearance: none !important;
+	  border: 1px solid transparent !important;
+	  background: none !important;
+	  border-color: none !important;
+	  box-shadow: none !important;
+	  transition-duration: 0ms !important;
+	  transition-property: none !important;
+	}
+
+	#nav-bar .toolbarbutton-1:not(:-moz-any([type="menu-button"],#back-button,#forward-button)),
+	#nav-bar #restore-button {
+	  padding: 0px 0px !important;
+	}
+
 	#nav-bar #back-button{
 	  background:none !important;
 	  padding: 0 !important;

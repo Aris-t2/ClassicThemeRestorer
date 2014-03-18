@@ -6,11 +6,17 @@
 	  visibility: visible !important;
 	}
 	
-	#urlbar-container #back-button,
-	#urlbar-container #forward-button{
+	#urlbar-container:-moz-locale-dir(ltr) #back-button,
+	#urlbar-container:-moz-locale-dir(ltr) #forward-button{
 	  visibility: collapse !important;
 	}
 	
+	/* RTL locale fix */
+	#urlbar-container:-moz-locale-dir(rtl) #back-button,
+	#urlbar-container:-moz-locale-dir(rtl) #forward-button{
+	  visibility: hidden !important;
+	}
+
 	#urlbar-container[forwarddisabled] > #urlbar-wrapper {
 	  clip-path: none !important;
 	}

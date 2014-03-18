@@ -71,31 +71,44 @@
 	  padding-top: 2px;
 	  padding-bottom: 2px;
 	  font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
+	  border-left: 1px solid -moz-dialog !important;
 	}
 		
 	#appmenuSecondaryPane:-moz-locale-dir(rtl) {
 	  box-shadow: -1px 0 2px rgb(204,214,234) inset;
 	}
 
-	#appmenuPrimaryPane menuseparator {
+	#appmenuPrimaryPane > menuseparator {
 	  -moz-appearance: none;
 	  margin-top: 3px;
 	  margin-bottom: 3px;
-	  margin-right:3px;
-	  -moz-margin-start: 30px;
 	  padding: 0;
 	  border-top: 1px solid -moz-dialog;
 	  border-bottom: none;
 	}
-
-	#appmenuPrimaryPane #menu_newTabmenupopup,
-	#appmenuPrimaryPane #menu_newEditmenupopup,
-	#appmenuPrimaryPane #menu_newPrintmenupopup,
-	#appmenuPrimaryPane #newmenuWebDeveloperPopup {
+	
+	#appmenuPrimaryPane:-moz-locale-dir(ltr) > menuseparator {
+	  -moz-margin-start: 30px;
+	}
+	
+	#appmenuPrimaryPane:-moz-locale-dir(rtl) > menuseparator {
+	  -moz-margin-end: 30px;
+	}
+		
+	#ctr_appbuttonPopup > hbox > #appmenuPrimaryPane > menu > menupopup,
+	#ctr_appbuttonPopup > hbox > #appmenuPrimaryPane > hbox > menu > menupopup{
 	  -moz-appearance:none;
-	  background:white;
-	  box-shadow:none;
+	  box-shadow: 1px 0 12px rgb(204,214,234);
+	  padding:2px;
 	  border:1px solid #a0a0a0;
+	}
+	#ctr_appbuttonPopup > hbox > #appmenuPrimaryPane:-moz-locale-dir(ltr) > menu > menupopup,
+	#ctr_appbuttonPopup > hbox > #appmenuPrimaryPane:-moz-locale-dir(ltr) > hbox > menu > menupopup {
+	  background: url("chrome://classic_theme_restorer/content/images/appmenupane_left_sep.png") left repeat-y, white;
+	}
+	#ctr_appbuttonPopup > hbox > #appmenuPrimaryPane:-moz-locale-dir(rtl) > menu > menupopup,
+	#ctr_appbuttonPopup > hbox > #appmenuPrimaryPane:-moz-locale-dir(rtl) > hbox > menu > menupopup {
+	  background: url("chrome://classic_theme_restorer/content/images/appmenupane_right_sep.png") right repeat-y, white;
 	}
 
 	#appmenu-edit-label,
@@ -103,13 +116,8 @@
 	  -moz-appearance: none !important;
 	}
 	
-	
 	#appmenu-edit-label{
 	  margin-left: 2px !important;
-	}
-	
-	#appmenuSecondaryPane{
-	  border-left: 1px solid -moz-dialog !important;
 	}
 	
 	/* ctr addonbar */

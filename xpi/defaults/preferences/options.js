@@ -1,8 +1,8 @@
 // main settings
 pref("extensions.classicthemerestorer.tabs","tabs_squared");
 pref("extensions.classicthemerestorer.tabsontop",'unset');
-pref("extensions.classicthemerestorer.tabwidth",'tabwidth_default');
-pref("extensions.classicthemerestorer.tabmwidth",'tabmwidth_default');
+pref("extensions.classicthemerestorer.ctabwidth",210);
+pref("extensions.classicthemerestorer.ctabmwidth",100);
 
 pref("extensions.classicthemerestorer.appbutton",'appbutton_v1');
 pref("extensions.classicthemerestorer.appbuttonc",'appbuttonc_orange');
@@ -30,6 +30,7 @@ pref("extensions.classicthemerestorer.closeabarbut",false);
 pref("extensions.classicthemerestorer.bfurlbarfix",false);
 pref("extensions.classicthemerestorer.showtabclose",false);
 pref("extensions.classicthemerestorer.cpanelmenus",false);
+pref("extensions.classicthemerestorer.panelmenucol",false);
 
 //special 2
 pref("extensions.classicthemerestorer.throbberalt",false);
@@ -48,6 +49,8 @@ pref("extensions.classicthemerestorer.ctabhov1",'#ffffbb');
 pref("extensions.classicthemerestorer.ctabhov2",'#ffff00');
 pref("extensions.classicthemerestorer.ctabact1",'#ff8800');
 pref("extensions.classicthemerestorer.ctabact2",'#ff0000');
+pref("extensions.classicthemerestorer.ctabpen1",'#00ff00');
+pref("extensions.classicthemerestorer.ctabpen2",'#007700');
 pref("extensions.classicthemerestorer.cntab1",'#00ff00');
 pref("extensions.classicthemerestorer.cntab2",'#007700');
 pref("extensions.classicthemerestorer.cntabhov1",'#ffffbb');
@@ -57,11 +60,13 @@ pref("extensions.classicthemerestorer.tabtextc",false);
 pref("extensions.classicthemerestorer.ctabt",'#000000');
 pref("extensions.classicthemerestorer.ctabhovt",'#000000');
 pref("extensions.classicthemerestorer.ctabactt",'#000000');
+pref("extensions.classicthemerestorer.ctabpent",'#000000');
 
 pref("extensions.classicthemerestorer.tabtextsh",false);
 pref("extensions.classicthemerestorer.ctabtsh",'#ffffff');
 pref("extensions.classicthemerestorer.ctabhovtsh",'#ffffff');
 pref("extensions.classicthemerestorer.ctabacttsh",'#ffffff');
+pref("extensions.classicthemerestorer.ctabpentsh",'#ffffff');
 
 // first run setting
 pref("extensions.classicthemerestorer.firstrun",true);

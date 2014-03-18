@@ -64,28 +64,7 @@
                   0 1px hsla(210,54%,20%,.03),
                   0 0 2px hsla(210,54%,20%,.1) !important;
 	}
-	
-	/* CTRs star-button in urlbar support */
-	#main-window toolbar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing]) #bookmarks-menu-button .toolbarbutton-text {
-	  display: none !important;
-	  visibility: collapse !important;
-	}
-	#main-window toolbar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing]) #bookmarks-menu-button {
-	  -moz-box-orient: horizontal !important;
-	}
-	#main-window toolbar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing]) #bookmarks-menu-button {
-      min-width: 0px !important;
-      width: 32px !important;
-	}
-	
-	#main-window toolbar[currentset*="urlbar-container,bookmarks-menu-button"]:not([customizing]) #bookmarks-menu-button:hover {	
-	  border: 1px solid transparent !important;
-      background-image: linear-gradient(hsla(0,0%,100%,.0), hsla(0,0%,100%,.0)) !important;
-      border-color: hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) !important;
-      box-shadow: none !important;
-	  padding:0 !important;
-	}
-	  
+  
 	/* CTR add-on bar*/
 	#ctr_addon-bar .toolbarbutton-menubutton-button{
 	 min-width:60px !important;
@@ -151,14 +130,14 @@
 	  min-width: inherit !important;
 	}
 	#nav-bar #urlbar-container #bookmarks-menu-button:hover{
-	  border: 1px solid transparent !important;
+	  border: 0px solid transparent !important;
       background-image: linear-gradient(hsla(0,0%,100%,.0), hsla(0,0%,100%,.0)) !important;
       border-color: hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) !important;
       box-shadow: none !important;
 	  padding:0 !important;
 	}
 	#nav-bar #urlbar-container #bookmarks-menu-button .toolbarbutton-icon {
-	  margin: -8px -4px !important;
+	  margin: -8px 4px !important;
 	}
 	
 	#ctr_back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,

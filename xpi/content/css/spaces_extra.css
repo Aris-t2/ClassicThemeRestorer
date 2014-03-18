@@ -1,82 +1,70 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul),
-			   url(chrome://global/content/customizeToolbar.xul) {
+@-moz-document url(chrome://browser/content/browser.xul) {
 			   
-	/* spaces, flexible spaces, separators */
-	
-	*[customizing] .ctr_flexspaces{
-	  min-width:32px;
-	  width:32px;
-	  background: url("chrome://classic_theme_restorer/content/images/flex_space.png") center no-repeat;
-	}
-
-	.ctr_spaces{
-	  min-width:15px;
-	  width:15px;
-	}
-
-	*:not([customizing]) .ctr_spaces{
-	  background: url("chrome://classic_theme_restorer/content/images/space2.png") center no-repeat;
-	}
-	
-	*[customizing] .ctr_spaces{
-	  background: url("chrome://classic_theme_restorer/content/images/space1.png") center no-repeat;
-	}
-	
-	.ctr_separators{
-	  min-width:5px;
-	  width:5px;
-	  background: url("chrome://classic_theme_restorer/content/images/separator.png") center no-repeat;
-	}
-	
-	/* spaces, flexible spaces, separators on toolbars while in customizing mode */
-	toolbarpaletteitem[place="toolbar"] > *[id^="customizableui-special-spring"]{
-	  min-width:32px !important;
-	  background: url("chrome://classic_theme_restorer/content/images/flex_space.png") white center no-repeat !important;
+	/* spaces, flexible spaces, separators on toolbars in customizing mode */
+	/* on palette */
+	toolbarpaletteitem[place="palette"] > toolbarspring{
+	  background: url("chrome://classic_theme_restorer/content/images/flex_space.png") white center no-repeat;
 	  border: 1px solid black !important;
 	}
-
-	toolbarpaletteitem[place="toolbar"] > *[id^="customizableui-special-separator"]{
-	  background: url("chrome://classic_theme_restorer/content/images/separator.png") center no-repeat !important;
+	toolbarpaletteitem[place="palette"] > toolbarseparator{
+	  background: url("chrome://classic_theme_restorer/content/images/separator.png") center no-repeat;
 	}
-
-	toolbarpaletteitem[place="toolbar"] > *[id^="customizableui-special-spacer"]{
-	  background: url("chrome://classic_theme_restorer/content/images/space1.png") center no-repeat !important;
-	  min-width:15px !important;
+	toolbarpaletteitem[place="palette"] > toolbarspacer{
+	  background: url("chrome://classic_theme_restorer/content/images/space1.png") center no-repeat;
+	}
+	/* on toolbar */
+	toolbarpaletteitem[place="toolbar"] > toolbarspring{
+	  background: url("chrome://classic_theme_restorer/content/images/flex_space.png") white center no-repeat;
+	  min-width: 32px;
+	  border: 1px solid black !important;
+	}
+	toolbarpaletteitem[place="toolbar"] > toolbarseparator{
+	  background: url("chrome://classic_theme_restorer/content/images/separator.png") center no-repeat;
+	  min-width: 5px;
+	  width: 5px;
+	}
+	toolbarpaletteitem[place="toolbar"] > toolbarspacer{
+	  background: url("chrome://classic_theme_restorer/content/images/space1.png") center no-repeat;
+	  min-width: 15px;
+	  width: 15px;
 	}
 	
 	/* spaces, flexible spaces, separators in panel ui menu */
-	toolbarpaletteitem *[id^="customizableui-special-spring"][cui-areatype="menu-panel"]{
-	  background: url("chrome://classic_theme_restorer/content/images/flex_space.png") white center no-repeat !important;
-	  border: 1px solid black !important;
+	toolbarpaletteitem toolbarspring[cui-areatype="menu-panel"]{
+	  background: url("chrome://classic_theme_restorer/content/images/flex_space.png") white center no-repeat;
+	  border: 1px solid black;
 	}
 	
-	toolbarpaletteitem *[id^="customizableui-special-separator"][cui-areatype="menu-panel"]{
-	  background: url("chrome://classic_theme_restorer/content/images/separator.png") center no-repeat !important;
+	toolbarpaletteitem toolbarseparator[cui-areatype="menu-panel"]{
+	  background: url("chrome://classic_theme_restorer/content/images/separator.png") center no-repeat;
 	}
 
-	toolbarpaletteitem *[id^="customizableui-special-spacer"][cui-areatype="menu-panel"]{
-	  background: url("chrome://classic_theme_restorer/content/images/space1.png") center no-repeat !important;
+	toolbarpaletteitem toolbarspacer[cui-areatype="menu-panel"]{
+	  background: url("chrome://classic_theme_restorer/content/images/space1.png") center no-repeat;
 	}
 	
-	*[id^="customizableui-special-spring"][cui-areatype="menu-panel"]{
-	  width:260px !important;
-	  min-height:20px !important;
+	/* adjustments for spaces, flexible spaces, separators in panel ui menu */
+	toolbarspring[cui-areatype="menu-panel"]{
+	  -moz-appearance: none !important;
+	  width: 260px !important;
+	  min-height: 20px !important;
 	  margin-right: 2px !important;
 	  margin-left: 2px !important;
-	  border:0px !important;
 	}
-	*[id^="customizableui-special-separator"][cui-areatype="menu-panel"]{
-	  width:260px !important;
-	  min-height:0px !important;
+	toolbarseparator[cui-areatype="menu-panel"]{
+	  -moz-appearance: none !important;
+	  width: 260px !important;
+	  min-height: 0px !important;
 	  margin-right: 2px !important;
 	  margin-left: 2px !important;
-	  border-top:1px solid rgba(0,0,0,.0) !important;
-	  border-bottom:1px solid rgba(0,0,0,.5) !important;
+	  border-top: 1px solid rgba(0,0,0,.0) !important;
+	  border-bottom: 1px solid rgba(0,0,0,.5) !important;
 	}
-	*[id^="customizableui-special-spacer"][cui-areatype="menu-panel"]{
-	  height:67px !important;
+	toolbarspacer[cui-areatype="menu-panel"]{
+	  -moz-appearance: none !important;
+	  height: 67px !important;
       width: 89px !important;
       padding-top: 38px !important;
 	}

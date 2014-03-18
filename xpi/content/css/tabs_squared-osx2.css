@@ -34,9 +34,12 @@
 
 	.tabbrowser-tabs{
 	  border-bottom:0 !important;
-	  margin-right: -8px !important;
 	}
 	
+	#tabbrowser-tabs:not([overflow="true"]) {
+	  margin-right: -8px !important;
+	}
+
 	#tabbrowser-tabs{
 	  min-height: 0px !important;
 	}
