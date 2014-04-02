@@ -20,7 +20,7 @@
 <!ENTITY Ctr_main_t			"Principale">
 <!ENTITY Ctr_tabcolors_t	"Colori personalizzati">
 <!ENTITY Ctr_fixes_t		"Correzioni">
-<!ENTITY Ctr_special_t		"Effetti">
+<!ENTITY Ctr_special_t		"Speciali">
 
 <!ENTITY Ctr_tabs			"Schede">
 <!ENTITY Ctr_tabs0			"Schede con angoli arrotondati (predefinito in Australis)">
@@ -28,9 +28,9 @@
 <!ENTITY Ctr_tabs1m			"Schede con angoli spigolosi (effetto Australis)">
 <!ENTITY Ctr_tabs2			"Scheda con angoli arrotondati (stile alternativo)">
 <!ENTITY Ctr_tabs3			"Schede con angoli arrotondati (stile Aero)">
-<!ENTITY Ctr_tabsontop0		"Schede in alto[non impostato] (predefinito)">
-<!ENTITY Ctr_tabsontop1		"Schede in alto [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Schede in basso [tabsontop=false]">
+<!ENTITY Ctr_tabsontop0		"Schede in alto in stile Australis">
+<!ENTITY Ctr_tabsontop1		"Schede in alto in stile classico">
+<!ENTITY Ctr_tabsontop2		"Schede in basso">
 <!ENTITY Ctr_tabsintitlebar	"Schede nella barra del titolo (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(predefinita)">
 <!ENTITY Ctr_tabwidthcla	"(stile classico)">
@@ -55,29 +55,29 @@
 <!ENTITY Ctr_appbuttonI2	"Colorato solo nella barra del titolo">
 <!ENTITY Ctr_appbuttonI3	"e nella barra delle schede.">
 <!ENTITY Ctr_alttbappb		"Icone alternative (nella barra degli strumenti)">
-<!ENTITY Ctr_appbutmhi		"Posizione più elevata (barra degli strumenti)">
+<!ENTITY Ctr_appbutmhi		"In cima a tutto (se nella barra delle schede)">
 
 <!ENTITY Ctr_ui				"Interfaccia base">
-<!ENTITY Ctr_nbiconsize1	"utilizzare #nav-bar[iconsize=’small’] (predefinito)">
-<!ENTITY Ctr_nbiconsize2	"Utilizzare #nav-bar[iconsize=’large’]">
+<!ENTITY Ctr_nbiconsize1	"Utilizza icone piccole nella barra di navigazione (predefinito)">
+<!ENTITY Ctr_nbiconsize2	"Utilizza icone grandi nella barra di navigazione">
 <!ENTITY Ctr_smallnavbut	"Pulsanti piccoli nella barra di navigazione">
-<!ENTITY Ctr_hidenavbar		"Nascondere la barra di navigazione">
+<!ENTITY Ctr_hidenavbar		"Nascondi barra di navigazione">
 <!ENTITY Ctr_buttons		"Pulsanti della barra degli strumenti">
 <!ENTITY Ctr_backforward	"Pulsante Indietro/Avanti mobile">
-<!ENTITY Ctr_wincontrols	"Controlli a tutto schermo mobili">
+<!ENTITY Ctr_wincontrols	"Angoli finestra mobili in modalità schermo intero">
 <!ENTITY Ctr_starinurl		"Stella nella barra degli indirizzi (riavviare Firefox)">
 <!ENTITY Ctr_statusbar		"Barra di stato nella barra dei componenti aggiuntivi (riavviare Firefox)">
-<!ENTITY Ctr_hideurelstop	"Nascondere i pulsanti Stop e Ricarica nella barra degli indirizzi">
-<!ENTITY Ctr_combrelstop	"Unire i pulsanti Stop e Ricarica">
+<!ENTITY Ctr_hideurelstop	"Nascondi pulsanti Stop e Ricarica nella barra degli indirizzi">
+<!ENTITY Ctr_combrelstop	"Unisci i pulsanti Stop e Ricarica">
 <!ENTITY Ctr_findbar_def	"Barra di ricerca nel testo (posizione predefinita)">
 <!ENTITY Ctr_findbar_top	"barra di ricerca nel testo in alto">
 <!ENTITY Ctr_findbar_bot	"Barra di ricerca nel testo in basso">
 <!ENTITY Ctr_findbar_topa	"Barra di ricerca nel testo in alto (stile alternativo)">
 <!ENTITY Ctr_findbar_bota	"Barra di ricerca nel testo in basso (stile alternativo)">
-<!ENTITY Ctr_nav_txt_ico0	"Utilizzare solo icone (predefinito)">
-<!ENTITY Ctr_nav_txt_ico1	"Utilizzare solo icone grandi">
-<!ENTITY Ctr_nav_txt_ico2	"Utilizzare icone e testo">
-<!ENTITY Ctr_nav_txt_ico3	"Utilizzare solo testo">
+<!ENTITY Ctr_nav_txt_ico0	"Utilizza solo icone (predefinito)">
+<!ENTITY Ctr_nav_txt_ico1	"Utilizza solo icone grandi">
+<!ENTITY Ctr_nav_txt_ico2	"Utilizza icone e testo">
+<!ENTITY Ctr_nav_txt_ico3	"Utilizza solo testo">
 
 <!ENTITY Ctr_customsqtab0	"Colori personalizzati per le schede">
 <!ENTITY Ctr_customsqtab1	"Sfondo">
@@ -94,23 +94,22 @@
 <!ENTITY Ctr_textc			"testo">
 <!ENTITY Ctr_textsh			"ombreggiatura testo">
 
-<!ENTITY Ctr_specialtw		"Effetti speciali">
-<!ENTITY Ctr_paneluibtweak	"Utilizzare lo stile del pulsante app per i pulsanti nella barra delle schede">
-<!ENTITY Ctr_notabfog		"Disattivare l’effetto nebbia della barra delle schede (Windows AeroGlass)">
-<!ENTITY Ctr_tabmokcolor	"Utilizzare il colore bianco per il separatore e i pulsanti delle schede (Chiudi, Nuova, Gruppi, Mostra tutte)">
-<!ENTITY Ctr_tabmokcolor2	"Utilizzare il colore bianco e un ’ombreggiatura scura per il testo delle schede non attive">
-<!ENTITY Ctr_closeabarbut	"Nascondere il pulsante di chiusura della barra dei componenti aggiuntivi">
-<!ENTITY Ctr_bfurlbarfix	"Correggere la curvatura dei bordi della barra degli indirizzi: 2px (Windows) / 2.5px (Mac)">
-<!ENTITY Ctr_showtabclose	"Mostrare sempre il pulsante di chiusura schede (riavviare Firefox)">
+<!ENTITY Ctr_specialtw		"Modifiche speciali">
+<!ENTITY Ctr_paneluibtweak	"Utilizza lo stile del pulsante app per i pulsanti nella barra delle schede">
+<!ENTITY Ctr_notabfog		"Disattiva l’effetto nebbia della barra delle schede (Windows AeroGlass)">
+<!ENTITY Ctr_tabmokcolor	"Utilizza il colore bianco per il separatore e i pulsanti delle schede (Chiudi, Nuova, Gruppi, Mostra tutte)">
+<!ENTITY Ctr_tabmokcolor2	"Utilizza testo bianco con ombreggiatura scura nelle schede non attive">
+<!ENTITY Ctr_closeabarbut	"Nascondi pulsante di chiusura della barra dei componenti aggiuntivi">
+<!ENTITY Ctr_bfurlbarfix	"Correggi la curvatura dei bordi della barra degli indirizzi: 2px (Windows) / 2.5px (Mac)">
+<!ENTITY Ctr_showtabclose	"Mostra sempre il pulsante di chiusura schede (riavviare Firefox)">
 <!ENTITY Ctr_cpanelmenus	"Pannello menu unificato (Segnalibri, Cronologia, ecc..)">
-<!ENTITY Ctr_panelmenucol	"Colore di sfondo personalizzato per i menu">
+<!ENTITY Ctr_panelmenucol	"Colore di sfondo alternativo per i menu">
 
-<!ENTITY Ctr_throbberalt	"Throbber di caricamento scheda personalizzato">
-<!ENTITY Ctr_bmanimation	"Icona animata utilizzata quando si aggiunge un nuovo segnalibro ">
+<!ENTITY Ctr_throbberalt	"Throbber di caricamento scheda alternativo">
+<!ENTITY Ctr_bmanimation	"Icona animata durante l’aggiunta ai segnalibri ">
 <!ENTITY Ctr_tabanimation	"Icona animata per l’apertura o chiusura di una scheda (about:config)">
 <!ENTITY Ctr_dlanimation	"Icona animata avviso download (about:config)">
 
-
-<!ENTITY Ctr_toolsitem		"Voci del menu Strumenti">
-<!ENTITY Ctr_appmenuitem	"Voci di menu nel pulsante app">
-<!ENTITY Ctr_cuibotbuttons	"Pulsanti opzioni nella modalità interfaccia personalizzata">
+<!ENTITY Ctr_toolsitem		"Aggiungi voci al menu Strumenti">
+<!ENTITY Ctr_appmenuitem	"Aggiungi voci nel menu del pulsante app">
+<!ENTITY Ctr_cuibotbuttons	"Aggiungi pulsanti in modalità personalizzazione barre degli strumenti">
