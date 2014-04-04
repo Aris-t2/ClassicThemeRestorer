@@ -1,6 +1,7 @@
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Addonleiste">
+<!ENTITY Ctr_statusbar		"Statusleiste">
 <!ENTITY Ctr_extrabar		"Extraleiste">
 <!ENTITY Ctr_flexspace		"Flexibler Zwischenraum">
 <!ENTITY Ctr_space			"Zwischenraum">
@@ -28,9 +29,9 @@
 <!ENTITY Ctr_tabs1m			"Quadratische Tabs (australisiert)">
 <!ENTITY Ctr_tabs2			"Gerundete Tabs (alternativ)">
 <!ENTITY Ctr_tabs3			"Gerundete Tabs (alternativ Aero)">
-<!ENTITY Ctr_tabsontop0		"Tabs oben [nicht gesetzt] (standard)">
-<!ENTITY Ctr_tabsontop1		"Tabs oben [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Tabs 'unten' [tabsontop=false]">
+<!ENTITY Ctr_tabsontop0		"Tabs oben (standard) - [nicht gesetzt]">
+<!ENTITY Ctr_tabsontop1		"Tabs oben - setze [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Tabs 'unten' - setze [tabsontop=false]">
 <!ENTITY Ctr_tabsintitlebar	"Tabs auf Titelleiste (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(standard)">
 <!ENTITY Ctr_tabwidthcla	"(klassisch)">
@@ -51,22 +52,24 @@
 <!ENTITY Ctr_appbuttonc_r	"Farbe: Rot">
 <!ENTITY Ctr_appbuttonc_g	"Farbe: Grün">
 <!ENTITY Ctr_appbuttonc_gr	"Farbe: Grau">
+<!ENTITY Ctr_appbuttonc_pu	"Farbe: Lila">
 <!ENTITY Ctr_appbuttonI1	"Neustart empfohlen">
 <!ENTITY Ctr_appbuttonI2	"Farbe nur auf der Titelleiste">
 <!ENTITY Ctr_appbuttonI3	"und der Tabsleiste sichtbar!">
 <!ENTITY Ctr_alttbappb		"Alternative Symbole (alle Leisten)">
 <!ENTITY Ctr_appbutmhi		"Höhere Position (nur Tableiste)">
+<!ENTITY Ctr_appbutbdl		"Entferne Ränder &amp; Hintergrundfarbe">
 
 <!ENTITY Ctr_ui				"Oberfläche">
-<!ENTITY Ctr_nbiconsize1	"Benutze #nav-bar[iconsize='small'] (standard)">
-<!ENTITY Ctr_nbiconsize2	"Benutze #nav-bar[iconsize='large']">
+<!ENTITY Ctr_nbiconsize1	"Setze #nav-bar[iconsize='small'] (standard)">
+<!ENTITY Ctr_nbiconsize2	"Setze #nav-bar[iconsize='large']">
 <!ENTITY Ctr_smallnavbut	"Kleine Buttons (Navigationsleiste)">
 <!ENTITY Ctr_hidenavbar		"Navigationsleiste verstecken">
 <!ENTITY Ctr_buttons		"Buttons">
 <!ENTITY Ctr_backforward	"Verschiebbarer Vor-Zurück-Button">
 <!ENTITY Ctr_wincontrols	"Verschiebbare Vollbild-Buttons: Min/Max/Schließen ">
 <!ENTITY Ctr_starinurl		"Star-Button in der Adressleiste (Firefox neustarten)">
-<!ENTITY Ctr_statusbar		"Statusbereich in der Addonleiste (Firefox neustarten)">
+<!ENTITY Ctr_mstatusbar		"Verschiebbarer Statusbereich">
 <!ENTITY Ctr_hideurelstop	"Adressleiste ohne Stop &amp; Aktualisieren">
 <!ENTITY Ctr_combrelstop	"Kombiniere Stop &amp; Aktualisieren">
 <!ENTITY Ctr_findbar_def	"Suchleiste (Standardposition)">
@@ -79,6 +82,9 @@
 <!ENTITY Ctr_nav_txt_ico2	"Zeige Symbole und Text">
 <!ENTITY Ctr_nav_txt_ico3	"Zeige nur Text">
 
+<!ENTITY Ctr_tab_tf_info	"Felder können Namen, Hexcodes, RGB(A) und HSL(A) Farben beinhalten. Eingaben werden nicht überprüft!">
+<!ENTITY Ctr_tabacthovdef	"Tab (aktiv/hover/standard)">
+<!ENTITY Ctr_tabnorunrnew	"Tab (ungelesen) / Neuer Tab">
 <!ENTITY Ctr_customsqtab0	"Eigene Tabfarben">
 <!ENTITY Ctr_customsqtab1	"Hintergrund">
 <!ENTITY Ctr_ctext			"Text">
@@ -89,10 +95,8 @@
 <!ENTITY Ctr_tabpen			"Tab (ungelesen)">
 <!ENTITY Ctr_ntabnor		"Neuer Tab (standard)">
 <!ENTITY Ctr_ntabhov		"Neuer Tab (hover)">
-<!ENTITY Ctr_topc			"Oben">
-<!ENTITY Ctr_bottomc		"Unten">
-<!ENTITY Ctr_textc			"Text">
-<!ENTITY Ctr_textsh			"Textschatten">
+<!ENTITY Ctr_bold			"Fett">
+<!ENTITY Ctr_italic			"Kursiv">
 
 <!ENTITY Ctr_specialtw		"Spezial Einstellungen">
 <!ENTITY Ctr_paneluibtweak	"PanelUI Button wie Anwendungsbutton darstellen (auf der Tableiste)">
@@ -102,6 +106,8 @@
 <!ENTITY Ctr_closeabarbut	"Entferne 'Schließen'-Button von der Addonleiste">
 <!ENTITY Ctr_bfurlbarfix 	"Korrigiere Randradius der Adressleiste: 2px (Win) / 2.5px (Mac)">
 <!ENTITY Ctr_showtabclose	"'Tab-Schließen'-Button immer anzeigen (Neustart benötigt!)">
+<!ENTITY Ctr_dblclnewtab	"Tableiste: Doppelklick öffnet neuen Tab">
+<!ENTITY Ctr_hightabpososx	"Reduziere obere Lücke für die Kombination 'Tabs oben und Tabs in der Titelleiste'">
 <!ENTITY Ctr_cpanelmenus	"Kompakte 'Panel-Menüs' (Lesezeichen, Chronic etc.)">
 <!ENTITY Ctr_panelmenucol	"Alternative Hintergrundfarbe für 'Panel-Menüs'">
 

@@ -16,5 +16,8 @@
 		border-color: rgba(146, 146, 146, 0.84) !important;
 	  }
 	}
+	#main-window[defaultfxtheme="true"] #urlbar[focused="true"]{
+	  border-color: -moz-mac-focusring !important;
+	}
 
 }

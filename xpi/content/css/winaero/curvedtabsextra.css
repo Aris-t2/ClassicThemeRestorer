@@ -39,6 +39,16 @@
 		.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover{
 		  color:black !important;
 		}
+		
+		.tabs-newtab-button:not(:-moz-lwtheme),
+		#TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
+		  list-style-image: url(chrome://browser/skin/tabbrowser/newtab.png) !important;
+		}
+		
+		.tabs-newtab-button	{
+		  z-index: 0 !important;
+		}
+
 	}
 
 }

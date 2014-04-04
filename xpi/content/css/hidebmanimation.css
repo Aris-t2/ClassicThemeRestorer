@@ -6,7 +6,9 @@
 	  visibility: collapse !important;
 	}
 	
-	#bookmarks-menu-button * {
+	#bookmarks-menu-button *,
+	#bookmarked-notification,
+	#bookmarked-notification-dropmarker-icon {
 	  animation: none !important;
 	}
 	

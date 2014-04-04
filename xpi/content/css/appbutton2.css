@@ -2,7 +2,7 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#ctr_appbutton,
+	toolbar #ctr_appbutton,
 	#main-window:not([tabsintitlebar]) #ctr_appbutton2,
 	#main-window[customizing][sizemode="maximized"] #ctr_appbutton2	{
 	  visibility: collapse !important;

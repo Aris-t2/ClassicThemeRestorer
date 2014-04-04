@@ -3,7 +3,7 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	#menu_ToolsPopup #ctr_tools_menu_entry{
-	  visibility: visible !important;
+	  visibility: collapse !important;
 	}
 	
 }

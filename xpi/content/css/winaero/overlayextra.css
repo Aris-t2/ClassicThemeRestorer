@@ -11,27 +11,45 @@
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks-inv.png");
 	}
 
-	:-moz-any(#ctr_history-button,#ctr_back-button,#ctr_forward-button,#ctr_stop-button,#ctr_reload-button) > .toolbarbutton-icon {
+	/* fallback images for non-default theme */
+	#ctr_history-button > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/history2_mac.png");
+	}
+	#ctr_back-button > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/back2_mac.png");
+	}
+	#ctr_forward-button > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/forward2_mac.png");
+	}
+	#ctr_stop-button > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/stop2_mac.png");
+	}
+	#ctr_reload-button > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/reload2_mac.png");
+	}
+	
+	/* images for default theme */
+	#main-window[defaultfxtheme="true"] :-moz-any(#ctr_history-button,#ctr_back-button,#ctr_forward-button,#ctr_stop-button,#ctr_reload-button) > .toolbarbutton-icon {
 	  list-style-image: url("chrome://browser/skin/Toolbar.png");
 	}
 	
-	:-moz-any(#ctr_history-button,#ctr_back-button,#ctr_forward-button,#ctr_stop-button,#ctr_reload-button):-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] :-moz-any(#ctr_history-button,#ctr_back-button,#ctr_forward-button,#ctr_stop-button,#ctr_reload-button):-moz-lwtheme-brighttext > .toolbarbutton-icon {
 	  list-style-image: url("chrome://browser/skin/Toolbar-inverted.png");
 	}
 	
-	#ctr_history-button > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] #ctr_history-button > .toolbarbutton-icon {
 	  -moz-image-region: rect(0, 180px, 18px, 162px);
 	}
-	#ctr_back-button > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] #ctr_back-button > .toolbarbutton-icon {
 	  -moz-image-region: rect(0, 54px, 18px, 36px);
 	}
-	#ctr_forward-button > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] #ctr_forward-button > .toolbarbutton-icon {
 	  -moz-image-region: rect(0, 72px, 18px, 54px);
 	}
-	#ctr_reload-button > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] #ctr_reload-button > .toolbarbutton-icon {
 	  -moz-image-region: rect(0, 90px, 18px, 72px);
 	}
-	#ctr_stop-button > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] #ctr_stop-button > .toolbarbutton-icon {
 	  -moz-image-region: rect(0, 108px, 18px, 90px);
 	}
 
@@ -49,10 +67,14 @@
 	}
 
 	/* style appmenu */
-	#ctr_appbuttonPopup{
+	#appmenu-popup{
 	  -moz-appearance:none;
 	  box-shadow:none;
 	  border:1px solid #a0a0a0;
+	}
+	
+	#main-window[ctr_appbutton_on_navbar="true"] #appmenu-popup {
+	  margin-top:-8px;
 	}
 
 	@media not all and (-moz-windows-classic) {
@@ -97,29 +119,29 @@
 		  -moz-margin-end: 30px;
 		}
 	
-		#ctr_appbuttonPopup > hbox > vbox > menu > menupopup,
-		#ctr_appbuttonPopup > hbox > vbox > hbox > menu > menupopup{
+		#appmenu-popup > hbox > vbox > menu > menupopup,
+		#appmenu-popup > hbox > vbox > hbox > menu > menupopup{
 		  -moz-appearance:none;
 		  box-shadow: 1px 0 12px rgb(204,214,234);
 		  padding:2px;
 		  border:1px solid #a0a0a0;
 		}
 
-		#ctr_appbuttonPopup > hbox > #appmenuPrimaryPane:-moz-locale-dir(ltr) > menu > menupopup,
-		#ctr_appbuttonPopup > hbox > #appmenuPrimaryPane:-moz-locale-dir(ltr) > hbox > menu > menupopup {
+		#appmenu-popup > hbox > #appmenuPrimaryPane:-moz-locale-dir(ltr) > menu > menupopup,
+		#appmenu-popup > hbox > #appmenuPrimaryPane:-moz-locale-dir(ltr) > hbox > menu > menupopup {
 		  background: url("chrome://classic_theme_restorer/content/images/appmenupane_left_sep.png") left repeat-y, white;
 		}
-		#ctr_appbuttonPopup > hbox > #appmenuSecondaryPane:-moz-locale-dir(ltr) > menu > menupopup,
-		#ctr_appbuttonPopup > hbox > #appmenuSecondaryPane:-moz-locale-dir(ltr) > hbox > menu > menupopup{
+		#appmenu-popup > hbox > #appmenuSecondaryPane:-moz-locale-dir(ltr) > menu > menupopup,
+		#appmenu-popup > hbox > #appmenuSecondaryPane:-moz-locale-dir(ltr) > hbox > menu > menupopup{
 		  background: url("chrome://classic_theme_restorer/content/images/appmenupane_left_sep.png") left repeat-y, #f1f5fb;
 		}
-		#ctr_appbuttonPopup > hbox > #appmenuPrimaryPane:-moz-locale-dir(rtl) > menu > menupopup,
-		#ctr_appbuttonPopup > hbox > #appmenuPrimaryPane:-moz-locale-dir(rtl) > hbox > menu > menupopup {
+		#appmenu-popup > hbox > #appmenuPrimaryPane:-moz-locale-dir(rtl) > menu > menupopup,
+		#appmenu-popup > hbox > #appmenuPrimaryPane:-moz-locale-dir(rtl) > hbox > menu > menupopup {
 		  background: url("chrome://classic_theme_restorer/content/images/appmenupane_right_sep.png") right repeat-y, white;
 		}
 		
-		#ctr_appbuttonPopup > hbox > #appmenuSecondaryPane:-moz-locale-dir(rtl) > menu > menupopup,
-		#ctr_appbuttonPopup > hbox > #appmenuSecondaryPane:-moz-locale-dir(rtl) > hbox > menu > menupopup{
+		#appmenu-popup > hbox > #appmenuSecondaryPane:-moz-locale-dir(rtl) > menu > menupopup,
+		#appmenu-popup > hbox > #appmenuSecondaryPane:-moz-locale-dir(rtl) > hbox > menu > menupopup{
 		  background: url("chrome://classic_theme_restorer/content/images/appmenupane_right_sep.png") right repeat-y, #f1f5fb;
 		}
 	

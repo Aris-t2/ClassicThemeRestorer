@@ -90,7 +90,7 @@
 	  margin-left: -14px !important;
 	}
 	
-	#navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
+	#main-window[defaultfxtheme="true"][tabsontop="false"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
 	  background: linear-gradient(to top,#5e5e5e 1px,#898989,#939393,#989898,#a1a1a1 1px) !important;
 	  border-top: 1px solid #8b8b8b !important;
 	}
@@ -110,11 +110,18 @@
 	.tabbrowser-tab[selected=true]{
 	  z-index: 3 !important;
 	}
+	
+	/* remove ridiculous clipping */
+	#main-window[tabsintitlebar][sizemode="maximized"] .tab-background-middle:not([selected=true]),
+	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive], :not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
+	  clip-path: none !important;
+	}
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
 	.tabcolorbox,
 	.tabhovcolorbox,
+	.tabpencolorbox,
 	#ctr_ccap_t_curved{
 	  visibility: visible !important;
 	}

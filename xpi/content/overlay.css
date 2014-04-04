@@ -65,6 +65,9 @@
 	  -moz-appearance: none !important;
 	  -moz-box-ordinal-group: 99999 !important;
 	  border: 0px !important;
+	}
+	
+	#ctr_addon-bar:not(:-moz-lwtheme) {
 	  border-top: 1px solid #bac7d4 !important;
 	}
 	
@@ -140,50 +143,40 @@
 	  margin-bottom:1px;
 	}
 
-	#PersonalToolbar #ctr_appbutton #ctr_appbuttonPopup,
-	#main-window[tabsintitlebar] #toolbar-menubar[autohide="false"] ~ #TabsToolbar #ctr_appbutton #ctr_appbuttonPopup{
-		margin-top:-3px;
-	}
-	
-	#nav-bar #ctr_appbutton #ctr_appbuttonPopup{
-	  margin-top:-10px;
-	  margin-left:2px;
-	}
-	
 	#TabsToolbar #ctr_appbutton {
 	  border-radius: 2.5px 2.5px 0 0;
 	}
 	
-	#ctr_appbuttonPopup #menu_newPrivateWindow{
+	#appmenu-popup #appmenu_newPrivateWindow{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_private.png");
 	}
-
-	#ctr_appbuttonPopup #menu_print{
+	#appmenu-popup #appmenu_print_popup,
+	#appmenu-popup #appmenu_print{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_print.png");
 	}
-	#ctr_appbuttonPopup #appmenu-quit{
+	#appmenu-popup #appmenu-quit{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_close.png");
 	}
-	#ctr_appbuttonPopup #menu_newBookmarks{
+	#appmenu-popup #appmenu_bookmarks{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_bookmarks.png");
 	}
-	#ctr_appbuttonPopup #menu_openAddons{
+	#appmenu-popup #appmenu_addons{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons.png");
 	}
-	#ctr_appbuttonPopup #menu_cut,
-	#ctr_appbuttonPopup #appmenu-cut{
+	#appmenu-popup #appmenu-editmenu-cut,
+	#appmenu-popup #appmenu-cut{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_cut.png");
 	}
-	#ctr_appbuttonPopup #menu_copy,
-	#ctr_appbuttonPopup #appmenu-copy{
+	#appmenu-popup #appmenu-editmenu-copy,
+	#appmenu-popup #appmenu-copy{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_copy.png");
 	}
-	#ctr_appbuttonPopup #menu_paste,
-	#ctr_appbuttonPopup #appmenu-paste{
+	#appmenu-popup #appmenu-editmenu-paste,
+	#appmenu-popup #appmenu-paste{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_paste.png");
 	}
 	#ctr_tools_menu_entry,
-	#ctr_appbuttonPopup #appmenu_ctr{
+	#appmenu-popup #appmenu_ctr{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_ctr.png");
 	}
 	
@@ -198,11 +191,11 @@
 	  border-color: transparent;
 	}
 	
-	#ctr_appbuttonPopup #menu_openAddons{
+	#appmenu-popup #appmenu_addons{
 	  margin-top: 12px;
 	}
 	
-	#ctr_appbuttonPopup #menu_newEditmenu{
+	#appmenu-popup #appmenu-editmenu{
 	  margin-top: 2px;
 	  margin-bottom: 2px;
 	}
@@ -212,12 +205,12 @@
 	}
 
 	/* remove empty appmenu menu button labels */
-	#ctr_appbuttonPopup  > hbox > vbox > hbox > menu > .menu-iconic-left,
-	#ctr_appbuttonPopup > hbox > vbox > hbox > menu label {
+	#appmenu-popup  > hbox > vbox > hbox > menu > .menu-iconic-left,
+	#appmenu-popup > hbox > vbox > hbox > menu label {
 	  visibility: collapse;
 	}
 	/* make sure submenu labels stay */
-	#ctr_appbuttonPopup > hbox > vbox > hbox > menu > menupopup label{
+	#appmenu-popup > hbox > vbox > hbox > menu > menupopup label{
 	  visibility: visible;
 	}
 	
@@ -295,18 +288,24 @@
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png);
 	}
 	
+	#main-window[defaultfxtheme="true"] #ctr_stop-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+	#main-window[defaultfxtheme="true"] toolbarpaletteitem[place="palette"] > #ctr_stop-button > .toolbarbutton-icon,
 	#ctr_stop-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
 	toolbarpaletteitem[place="palette"] > #ctr_stop-button > .toolbarbutton-icon {
 	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png);
 	}
 
+	#main-window[defaultfxtheme="true"] #ctr_reload-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+	#main-window[defaultfxtheme="true"] toolbarpaletteitem[place="palette"] > #ctr_reload-button > .toolbarbutton-icon,
 	#ctr_reload-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
 	toolbarpaletteitem[place="palette"] > #ctr_reload-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 64px, 32px, 32px);
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png);
 	}
 
+	#main-window[defaultfxtheme="true"] #ctr_history-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+	#main-window[defaultfxtheme="true"] toolbarpaletteitem[place="palette"] > #ctr_history-button > .toolbarbutton-icon,
 	#ctr_history-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
 	toolbarpaletteitem[place="palette"] > #ctr_history-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 224px, 32px, 192px);
@@ -327,6 +326,18 @@
 	}
 	#ctr_bookmarks-menu-toolbar-button[cui-areatype="menu-panel"] {
       -moz-box-orient: vertical !important;
+	}
+	
+	@media all and (-moz-windows-theme:aero) {
+		/* appmenu submenu icons positions */
+		#main-window[defaultfxtheme="true"] #appmenu-popup > hbox > vbox > hbox > menu > .menu-right,
+		#main-window[defaultfxtheme="true"] #appmenu-popup > hbox > vbox > hbox > menu > .menu-accel-container,
+		#main-window[defaultfxtheme="true"] #appmenu-popup > hbox > vbox > hbox > menu > .menu-iconic-text,
+		#main-window[defaultfxtheme="true"] #appmenu-popup > hbox > vbox > hbox > menu > .menu-iconic-left{
+		  min-width: 4px !important;
+		  width: 4px !important;
+		  max-width: 4px !important;
+		}
 	}
 
 	/* temporary fix for customizing area*/
@@ -361,18 +372,18 @@
 	  font-weight:bold;
 	  font-style:italic;
 	}
-	.ctr_tabcolorlabel2{
-	  font-style:italic;
-	}
 	.ctb_topic{
 	  font-weight:bold;
 	}
 	
 	.tabcolorbox,
 	.tabhovcolorbox,
+	.tabpencolorbox,
+	.ntabcolorbox,
+	.ntabhovcolorbox,
 	#ntabcolorbox,
 	#ntabhovcolorbox{
-	  visibility: hidden;
+	  visibility: collapse;
 	}
 	
 	#ctr_ccap_t_squared,
@@ -381,6 +392,12 @@
 	#ctr_ccap_t_curved,
 	#ctr_ccap_t_curvedaero{
 	  visibility: collapse;
+	}
+	
+	textbox {
+	  min-width: 50px !important;
+	  width: 122px !important;
+	  max-width: 122px !important;
 	}
 	
 	@media not all and (-moz-windows-theme:aero) {

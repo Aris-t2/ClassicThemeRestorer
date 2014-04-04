@@ -92,9 +92,21 @@
 	  margin-right:-12px !important;
 	}
 	
-	/* TMP tweaks */
-	#navigator-toolbox #TabsToolbar[multibar][tabsontop="false"]:not(:-moz-lwtheme)  {
-	  margin-bottom: 0px !important;
+	/* TU workaround */
+	#PinnedTabsBarItems:-moz-locale-dir(ltr) {
+	  margin-left:-14px !important;
+	  margin-right:0px !important;
 	}
+	#tabbrowser-tabs[overflow] #PinnedTabsBarItems:-moz-locale-dir(ltr){
+	  margin-right:-14px !important;
+	}
+	#PinnedTabsBarItems:-moz-locale-dir(rtl) {
+	  margin-right:-14px !important;
+	  margin-left:0px !important;
+	}
+	#tabbrowser-tabs[overflow] #PinnedTabsBarItems:-moz-locale-dir(rtl){
+	  margin-left:-14px !important;
+	}
+	/**/
 
 }

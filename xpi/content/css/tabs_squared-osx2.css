@@ -6,7 +6,7 @@
 	  -moz-padding-end: 22px !important;
 	  -moz-padding-start: 0px !important;
 	}
-	
+
 	.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme){
 	  background-image: linear-gradient(to top,#eaeaea,#e2e2e2,#ededed,#fcfcfc);
 	}
@@ -49,9 +49,11 @@
 	  height:28px !important;
 	}
 
-	.tabs-newtab-button > .toolbarbutton-icon{
+	.tabs-newtab-button > .toolbarbutton-icon {
 	  margin-left:-10px !important;
 	  margin-right:-10px !important;
+	  margin-top: -2px !important;
+	  margin-bottom: -2px !important;
 	}
 	
 	#main-window[tabsintitlebar][sizemode="normal"]  #TabsToolbar{
@@ -261,6 +263,35 @@
 	#TabsToolbar::after {
 	  border-bottom: 0px !important;
 	}
+	
+	/* remove ridiculous clipping */
+	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive],:not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
+	  clip-path: none !important;
+	}
+	
+	/* TMP support */
+	.tabbrowser-tab[pinned][locked] image,
+	.tabbrowser-tab[pinned][protected] image {
+	  margin-left:0px !important;
+	  margin-right:0px !important;
+	}
+	
+	/* TabUtilities workaround */
+	#PinnedTabsBarItems:-moz-locale-dir(ltr) {
+	  margin-left:-14px !important;
+	  margin-right:0px !important;
+	}
+	#tabbrowser-tabs[overflow] #PinnedTabsBarItems:-moz-locale-dir(ltr){
+	  margin-right:-14px !important;
+	}
+	#PinnedTabsBarItems:-moz-locale-dir(rtl) {
+	  margin-right:-14px !important;
+	  margin-left:0px !important;
+	}
+	#tabbrowser-tabs[overflow] #PinnedTabsBarItems:-moz-locale-dir(rtl){
+	  margin-left:-14px !important;
+	}
+
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {

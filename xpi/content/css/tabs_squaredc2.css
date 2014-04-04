@@ -124,6 +124,11 @@
 	  margin-bottom:-1px !important;
 	}
 	
+	/* remove ridiculous clipping */
+	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive],:not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
+	  clip-path: none !important;
+	}
+	
 	/* TMP support */
 	.tab-stack .tab-progress-container{
 	  -moz-box-ordinal-group:2 !important;
@@ -131,12 +136,21 @@
 	.tab-stack .tab-content {
 	  -moz-box-ordinal-group:1 !important;
 	}
+	
+	.tabbrowser-tab[pinned][locked] image,
+	.tabbrowser-tab[pinned][protected] image {
+	  margin-left:0px !important;
+	  margin-right:0px !important;
+	}
 
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
 	.tabcolorbox,
 	.tabhovcolorbox,
+	.tabpencolorbox,
+	.ntabcolorbox,
+	.ntabhovcolorbox,
 	#ntabcolorbox,
 	#ntabhovcolorbox,
 	#ctr_ccap_t_squaredc2{

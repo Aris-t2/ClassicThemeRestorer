@@ -24,9 +24,9 @@
 	toolbar {
 	  -moz-box-ordinal-group: 10 !important;
 	}
-	#ctr_extra-bar {
+	/*#ctr_extra-bar {
 	  -moz-box-ordinal-group: 98 !important;
-	}
+	}*/
 	#TabsToolbar {
 	  -moz-box-ordinal-group: 100 !important;
 	}
@@ -36,6 +36,10 @@
 	#TabsToolbar:not(:-moz-lwtheme),
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
 	  margin-top: 0px !important;
+	}
+	
+	#main-window:-moz-lwtheme #navigator-toolbox::after {
+	   background: none !important; 
 	}
 
 	#TabsToolbar .tabs-newtab-button,

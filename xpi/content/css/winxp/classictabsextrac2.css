@@ -21,6 +21,12 @@
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover {
 	  color:black !important;
 	}
+	
+	.tabs-newtab-button:not(:-moz-lwtheme),
+	#TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
+	  list-style-image: url(chrome://browser/skin/tabbrowser/newtab.png) !important;
+	}
+
 
 	/* tab colors lightweight theme */
 	.tabbrowser-tab[selected]:-moz-lwtheme .tab-content {
@@ -85,6 +91,23 @@
 	.tabs-newtab-button{
 	  margin-right:-12px !important;
 	}
+	
+	/* TU workaround */
+	#PinnedTabsBarItems:-moz-locale-dir(ltr) {
+	  margin-left:-14px !important;
+	  margin-right:0px !important;
+	}
+	#tabbrowser-tabs[overflow] #PinnedTabsBarItems:-moz-locale-dir(ltr){
+	  margin-right:-14px !important;
+	}
+	#PinnedTabsBarItems:-moz-locale-dir(rtl) {
+	  margin-right:-14px !important;
+	  margin-left:0px !important;
+	}
+	#tabbrowser-tabs[overflow] #PinnedTabsBarItems:-moz-locale-dir(rtl){
+	  margin-left:-14px !important;
+	}
+	/**/
 	
 	/* TMP tweaks */
 	@media all and (-moz-windows-glass) {

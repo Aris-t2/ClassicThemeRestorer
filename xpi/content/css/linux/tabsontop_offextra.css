@@ -3,31 +3,36 @@
 @-moz-document url(chrome://browser/content/browser.xul){
 
 	#TabsToolbar:not(:-moz-lwtheme){
-		-moz-appearance: none !important;
+	  -moz-appearance: none !important;
 	}
 	#TabsToolbar{
-		margin-bottom: -2px !important;
+	  margin-bottom: -2px !important;
 	}
 	#ctr_appbutton,
 	#TabsToolbar #ctr_appbutton{
-		margin-bottom:1px !important;
-		border-radius: 2.5px 2.5px 0 0 !important;
+	  margin-bottom:1px !important;
+	  border-radius: 2.5px 2.5px 0 0 !important;
 	}
 	.tabbrowser-tabs{
-		margin-top:-1px !important;
-		margin-bottom:1px !important;
+	  margin-top:-1px !important;
+	  margin-bottom:1px !important;
 	}
 	#TabsToolbar #ctr_appbutton{
-		margin-top:0px !important;
-		margin-bottom:1px !important;
+	  margin-top:0px !important;
+	  margin-bottom:1px !important;
 	}
 	#TabsToolbar #ctr_appbuttonPopup{
-		margin-top:0px !important;
+	  margin-top:0px !important;
 	}
 	
 	.tabs-newtab-button,
 	.tabbrowser-tab{
-		height: 30px !important;
+	  height: 30px !important;
+	  color:black !important;
+	}
+	
+	#main-window[defaultfxtheme="true"] #TabsToolbar:not(:-moz-lwtheme){
+	  -moz-appearance: none !important;
 	}
 	
 }

@@ -74,37 +74,34 @@
 	  margin-top:2px !important;
 	}
 
-	#ctr_appbuttonPopup menu,
-	#ctr_appbuttonPopup .menu-right{
+	#appmenu-popup menu,
+	#appmenu-popup .menu-right{
 	  -moz-padding-start: 0px !important;
 	  -moz-margin-start: 0px !important;	
 	}
 	
-	#ctr_appbuttonPopup #newwebDeveloperPopupMenu #newmenuWebDeveloperPopup menu,
-	#ctr_appbuttonPopup #menu_newBookmarksmenu #newbookmarksMenuPopup menu,
-	#ctr_appbuttonPopup #menu_newHistorymenu #newHistorymenuPopup menu,
-	#ctr_appbuttonPopup #newwebDeveloperPopupMenu #newmenuWebDeveloperPopup .menu-right,
-	#ctr_appbuttonPopup #menu_newBookmarksmenu #newbookmarksMenuPopup .menu-right,
-	#ctr_appbuttonPopup #menu_newHistorymenu #newHistorymenuPopup .menu-right{
+	#appmenu-popup #newwebDeveloperPopupMenu #appmenu_webDeveloper_popup menu,
+	#appmenu-popup #menu_newBookmarksmenu #appmenu_bookmarksPopup menu,
+	#appmenu-popup #menu_newHistorymenu #appmenu_historyMenupopup menu,
+	#appmenu-popup #newwebDeveloperPopupMenu #appmenu_webDeveloper_popup .menu-right,
+	#appmenu-popup #menu_newBookmarksmenu #appmenu_bookmarksPopup .menu-right,
+	#appmenu-popup #menu_newHistorymenu #appmenu_historyMenupopup .menu-right{
 	  -moz-padding-start:20px !important;
 	  -moz-margin-start: 0px !important;
 	}
 	
-	#nav-bar #ctr_appbutton #ctr_appbuttonPopup{
-	  margin-top:0px !important;
-	}
-	
+
 	#navigator-toolbox #nav-bar #ctr_appbutton image{
 	  margin-left: 0px !important;
 	  margin-right: 0px !important;
 	}
 	
-	#ctr_appbuttonPopup .menu-iconic-left {
+	#appmenu-popup .menu-iconic-left {
       padding-right: 4px !important;
 	}
 	
-	#ctr_appbuttonPopup #historyUndoMenu,
-	#ctr_appbuttonPopup #historyUndoWindowMenu{
+	#appmenu-popup #appmenu_recentlyClosedTabsMenu,
+	#appmenu-popup #appmenu_recentlyClosedWindowsMenu{
 	  margin-left: 21px !important;
 	}
 

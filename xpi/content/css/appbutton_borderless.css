@@ -1,0 +1,15 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#main-window #ctr_appbutton2,
+	#main-window #navigator-toolbox #TabsToolbar #ctr_appbutton{
+	  -moz-appearance:none !important;
+	  border:1px solid transparent !important;
+	  border-color: transparent  !important;
+	  border-radius:0px !important;
+	  box-shadow: none !important;
+	  background:none !important;
+	}
+
+}

@@ -2,15 +2,27 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	#notification-popup-box[hidden] + *:-moz-locale-dir(ltr),
-	#notification-popup-box + *:-moz-locale-dir(ltr) {
+	#main-window[defaultfxtheme="true"] #notification-popup-box[hidden] + *:-moz-locale-dir(ltr),
+	#main-window[defaultfxtheme="true"] #notification-popup-box + *:-moz-locale-dir(ltr) {
 	  padding-left: 2px !important;
 	  transition: none !important;
 	}
 
-	#notification-popup-box[hidden] + *:-moz-locale-dir(rtl),
-	#notification-popup-box + *:-moz-locale-dir(rtl) {
+	#main-window[defaultfxtheme="true"] #notification-popup-box[hidden] + *:-moz-locale-dir(rtl),
+	#main-window[defaultfxtheme="true"] #notification-popup-box + *:-moz-locale-dir(rtl) {
 	  padding-right: 2px !important;
+	  transition: none !important;
+	}
+	
+	#main-window:not([defaultfxtheme="true"]) #notification-popup-box[hidden] + *:-moz-locale-dir(ltr),
+	#main-window:not([defaultfxtheme="true"]) #notification-popup-box + *:-moz-locale-dir(ltr) {
+	  padding-left: 0px !important;
+	  transition: none !important;
+	}
+
+	#main-window:not([defaultfxtheme="true"]) #notification-popup-box[hidden] + *:-moz-locale-dir(rtl),
+	#main-window:not([defaultfxtheme="true"]) #notification-popup-box + *:-moz-locale-dir(rtl) {
+	  padding-right: 0px !important;
 	  transition: none !important;
 	}
 	
@@ -36,7 +48,7 @@
 	  }
 	}
 	
-	#urlbar[focused="true"]{
+	#main-window[defaultfxtheme="true"] #urlbar[focused="true"]{
 	  border-color: -moz-mac-focusring !important;
 	}
 }

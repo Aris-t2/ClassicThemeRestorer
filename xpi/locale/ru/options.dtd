@@ -1,6 +1,7 @@
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Панель дополнений">
+<!ENTITY Ctr_statusbar		"Статус панель">
 <!ENTITY Ctr_extrabar		"Доплнительная панель">
 <!ENTITY Ctr_flexspace		"Растягивающийся интервал">
 <!ENTITY Ctr_space			"Интервал">
@@ -51,11 +52,13 @@
 <!ENTITY Ctr_appbuttonc_r	"Red button color">
 <!ENTITY Ctr_appbuttonc_g	"Залёная кнопка">
 <!ENTITY Ctr_appbuttonc_gr	"Серая кнопка">
+<!ENTITY Ctr_appbuttonc_pu	"Фиолетовая кнопка">
 <!ENTITY Ctr_appbuttonI1	"рекомендуется перезапуск">
 <!ENTITY Ctr_appbuttonI2	"Только цвета на панели заголовка">
 <!ENTITY Ctr_appbuttonI3	"и вкладок!">
 <!ENTITY Ctr_alttbappb		"Другие значки (если на панели инструментов)">
 <!ENTITY Ctr_appbutmhi		"Высокое положение (если на панели вкладок)">
+<!ENTITY Ctr_appbutbdl		"Скрыть рамки и цвет фона">
 
 <!ENTITY Ctr_ui				"Основной интерфейс">
 <!ENTITY Ctr_nbiconsize1	"#nav-bar[iconsize='small'] (по умолчанию)">
@@ -66,7 +69,7 @@
 <!ENTITY Ctr_backforward	"Подвижная кнопка «назад-вперед»">
 <!ENTITY Ctr_wincontrols	"Подвижное управление полноэкранным режимом">
 <!ENTITY Ctr_starinurl		"Звёздочка в адресной строке (перезапустите Firefox)">
-<!ENTITY Ctr_statusbar		"Строка состояния на панели дополнений (перезапустите Firefox)">
+<!ENTITY Ctr_mstatusbar		"Подвижное строка состояния">
 <!ENTITY Ctr_hideurelstop	"Скрыть в адресной строке кнопку «Остановить и перезагрузить»">
 <!ENTITY Ctr_combrelstop	"Совместить кнопки «Остановить» и «Перезагрузить»">
 <!ENTITY Ctr_findbar_def	"Панель поиска (положение по умолчанию)">
@@ -79,6 +82,9 @@
 <!ENTITY Ctr_nav_txt_ico2	"Показывать значки и текст">
 <!ENTITY Ctr_nav_txt_ico3	"Показывать только текст">
 
+<!ENTITY Ctr_tab_tf_info	"Textfields support color names, hexcodes, rgb(a) and hsl(a) values. Inputs won't be validated!">
+<!ENTITY Ctr_tabacthovdef	"Активная/Ожидающая/Обычная вкладка">
+<!ENTITY Ctr_tabnorunrnew	"Непрочитанная вкладка / Новая вкладка">
 <!ENTITY Ctr_customsqtab0	"Пользовательские цвета вкладок">
 <!ENTITY Ctr_customsqtab1	"Фон">
 <!ENTITY Ctr_ctext			"Текст">
@@ -89,10 +95,8 @@
 <!ENTITY Ctr_tabpen			"Непрочитанная вкладка">
 <!ENTITY Ctr_ntabnor		"Обычная новая вкладка">
 <!ENTITY Ctr_ntabhov		"Ожидающая новая вкладка">
-<!ENTITY Ctr_topc			"вверху">
-<!ENTITY Ctr_bottomc		"внизу">
-<!ENTITY Ctr_textc			"текст">
-<!ENTITY Ctr_textsh			"тень от текста">
+<!ENTITY Ctr_bold			"Смелый">
+<!ENTITY Ctr_italic			"Курсив">
 
 <!ENTITY Ctr_specialtw		"Особые хитрости">
 <!ENTITY Ctr_paneluibtweak	"Кнопка приложения как кнопка панели инструментов (на панели вкладок)">
@@ -102,6 +106,8 @@
 <!ENTITY Ctr_closeabarbut	"Скрыть кнопку закрытия панели дополнений">
 <!ENTITY Ctr_bfurlbarfix	"Радиус углов строки адреса: 2px (Win) / 2.5px (Mac)">
 <!ENTITY Ctr_showtabclose	"Всегда показывать кнопку закрытия вкладки (требуется перезапустить!)">
+<!ENTITY Ctr_dblclnewtab	"Панель инструментов вкладки: двойной клик открыть новую вкладку">
+<!ENTITY Ctr_hightabpososx	"Уменьшите верхнюю щел для модуса 'tabsintitlebar' + 'tabsontop'">
 <!ENTITY Ctr_cpanelmenus	"Компактная панель меню (закладки, история и т. д.)">
 <!ENTITY Ctr_panelmenucol	"Альтернативный цвет фона для меню панели">
 

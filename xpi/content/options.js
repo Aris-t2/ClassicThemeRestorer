@@ -16,9 +16,6 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctr_abhigher').disabled = true;
 		document.getElementById('ctr_pw_smallnavbut').disabled = true;
 		document.getElementById('ctr_pw_iconsbig').disabled = true;
-		document.getElementById('ctr_customsqtab_cb').disabled = true;
-		document.getElementById('ctr_pw_cp_actt1').disabled = true;
-		document.getElementById('ctr_pw_cp_actt2').disabled = true;
 		document.getElementById('ctr_pw_bfurlbarfix').disabled = true;
 		document.getElementById('ctr_pw_paneluibtweak').disabled = true;
 		document.getElementById('ctr_pw_tabmokcolor').disabled = true;
@@ -29,24 +26,12 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctr_abhigher').style.visibility = 'collapse';
 		document.getElementById('ctr_pw_smallnavbut').style.visibility = 'collapse';
 		document.getElementById('ctr_pw_iconsbig').style.visibility = 'collapse';
-		document.getElementById('ctr_customsqtab_cb').style.visibility = 'collapse';
-		
-		document.getElementById('ctr_pw_cp_deft1').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_deft2').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_deftl1').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_deftl2').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_hovt1').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_hovt2').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_hovtl1').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_hovtl2').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_actt1').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_actt2').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_acttl1').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_acttl2').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_pent1').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_pent2').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_pentl1').style.visibility = 'collapse';
-		document.getElementById('ctr_pw_cp_pentl2').style.visibility = 'collapse';
+
+		document.getElementById('ctr_pw_ccol_act_pref').style.visibility = 'collapse';
+		document.getElementById('ctr_pw_ccol_act_cp1').style.visibility = 'collapse';
+		document.getElementById('ctr_pw_ccol_act_cp2').style.visibility = 'collapse';
+		document.getElementById('ctr_pw_ccol_act_b1').style.visibility = 'collapse';
+		document.getElementById('ctr_pw_ccol_act_b2').style.visibility = 'collapse';
 
 		document.getElementById('ctr_pw_bfurlbarfix').style.visibility = 'collapse';
 		document.getElementById('ctr_pw_paneluibtweak').style.visibility = 'collapse';
@@ -61,10 +46,6 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctr_pw_tabmaxwidth').disabled = true;
 		document.getElementById('ctr_pw_tabminwidth').disabled = true;
 	  }
-	  /*else {
-	    document.getElementById('ctr_pw_tabmaxwidth').disabled = false;
-		document.getElementById('ctr_pw_tabminwidth').disabled = false;
-	  }*/
 	});
 	
 	AddonManager.getAddonByID('tabutils@ithinc.cn', function(addon) {
@@ -72,14 +53,23 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctr_pw_tabmaxwidth').disabled = true;
 		document.getElementById('ctr_pw_tabminwidth').disabled = true;
 	  }
-	  /*else {
-	    document.getElementById('ctr_pw_tabmaxwidth').disabled = false;
-		document.getElementById('ctr_pw_tabminwidth').disabled = false;
-	  }*/
 	});
 	
+	// disable bookmark animation option, if star button in urlbar is used
+	if (this.prefs.getBoolPref('starinurl')) document.getElementById('ctr_pw_bmanimation').disabled = true;
+	
+	// update appbutton extra settings
 	this.ctrpwAppbuttonextra(this.prefs.getCharPref("appbutton"));
 
+  },
+  
+  unsetCustomTabcolors: function() {
+	this.prefs.setBoolPref('tabcolor_def',false);
+	this.prefs.setBoolPref('tabcolor_act',false);
+	this.prefs.setBoolPref('tabcolor_unr',false);
+	this.prefs.setBoolPref('tabcolor_hov',false);
+	this.prefs.setBoolPref('ntabcolor_def',false);
+	this.prefs.setBoolPref('ntabcolor_hov',false);
   },
   
   ctrpwAppbuttonextra: function(which) {

@@ -69,13 +69,14 @@
 
 	/* urlbar tweaks */
 	#nav-bar #urlbar {
-	  border-left: 1px solid #b2c1cf !important;
+	  border: 1px solid ThreeDShadow !important;
 	  padding-top: 2px !important;
 	  padding-bottom: 2px !important;
 	}
 
-	#nav-bar #urlbar[focused="true"] {
-	  border-left: 1px solid #72c0fe !important;
+	#nav-bar #urlbar[focused],
+	#nav-bar .searchbar-textbox[focused] {
+	  border-color: Highlight !important;
 	}
 
 	#nav-bar .searchbar-textbox{

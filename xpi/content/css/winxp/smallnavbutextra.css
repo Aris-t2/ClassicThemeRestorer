@@ -1,50 +1,44 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#notification-popup-box + *:-moz-locale-dir(ltr){
+	#nav-bar #notification-popup-box + *:-moz-locale-dir(ltr){
 	  padding-left: 5px !important;
 	  transition: none !important;
 	}
-	#notification-popup-box + *:-moz-locale-dir(rtl){
+	#nav-bar #notification-popup-box + *:-moz-locale-dir(rtl){
 	  padding-right: 5px !important;
 	  transition: none !important;
 	}
-	#notification-popup-box[hidden] + *:-moz-locale-dir(ltr) {
+	#nav-bar #notification-popup-box[hidden] + *:-moz-locale-dir(ltr) {
 	  padding-left: 2px !important;
 	  transition: none !important;
 	}
-	#notification-popup-box[hidden] + *:-moz-locale-dir(rtl) {
+	#nav-bar #notification-popup-box[hidden] + *:-moz-locale-dir(rtl) {
 	  padding-right: 2px !important;
 	  transition: none !important;
 	}
-	#notification-popup-box:not([hidden]) {
+	#nav-bar #notification-popup-box:not([hidden]) {
 	  padding-left:2px !important;
 	  padding-right:2px !important;
 	  transition: none !important;
 	}	
-    #urlbar-container:-moz-locale-dir(ltr) > #urlbar-wrapper > #urlbar,
-	#urlbar-container[forwarddisabled]:-moz-locale-dir(ltr) > #urlbar-wrapper > #urlbar {
+    #nav-bar #urlbar-container:-moz-locale-dir(ltr) > #urlbar-wrapper > #urlbar,
+	#nav-bar #urlbar-container[forwarddisabled]:-moz-locale-dir(ltr) > #urlbar-wrapper > #urlbar {
       margin-left: 3px !important;
       transition: none !important;
       transition-property:  none !important;
       transition-delay: 0s !important;
     }
-    #urlbar-container:-moz-locale-dir(rtl) > #urlbar-wrapper > #urlbar,
-	#urlbar-container[forwarddisabled]:-moz-locale-dir(rtl) > #urlbar-wrapper > #urlbar {
+    #nav-bar #urlbar-container:-moz-locale-dir(rtl) > #urlbar-wrapper > #urlbar,
+	#nav-bar #urlbar-container[forwarddisabled]:-moz-locale-dir(rtl) > #urlbar-wrapper > #urlbar {
       margin-right: 3px !important;
       transition: none !important;
       transition-property:  none !important;
       transition-delay: 0s !important;
     }
 
-	#nav-bar:-moz-locale-dir(ltr) #ctr_appbutton #ctr_appbuttonPopup{
-	  margin-top: -3px !important;
-	  margin-left:1px !important;
-	}
-	
-	#nav-bar:-moz-locale-dir(rtl) #ctr_appbutton #ctr_appbuttonPopup{
-	  margin-top: -3px !important;
-	  margin-right:1px !important;
+	#main-window[ctr_appbutton_on_navbar="true"] #appmenu-popup {
+	  margin-top:0px !important;
 	}
 
 	#navigator-toolbox #nav-bar #back-button > .toolbarbutton-icon{
@@ -58,10 +52,19 @@
 	}
 
 	#nav-bar .toolbarbutton-1 {
-      -moz-appearance: toolbarbutton !important;
-      background: unset !important;
-      box-shadow: unset !important;
-    }
+	  -moz-appearance: none !important;
+	  background: unset !important;
+	  box-shadow: unset !important;
+	}
+	
+	#nav-bar .toolbarbutton-1:hover {
+	  -moz-appearance: none !important;
+	  background: unset !important;
+	  box-shadow: 0px 0px 1px black inset,
+				  0px 0px 3px white inset !important;
+	  border-radius:3px !important;
+	}
+
 	
 	#navigator-toolbox #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button,
 	#navigator-toolbox #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
@@ -79,11 +82,11 @@
 	  clip-path: none !important;
 	}
 
-	#urlbar-container #back-button:not([cui-areatype="menu-panel"]) {
+	#nav-bar #urlbar-container #back-button:not([cui-areatype="menu-panel"]) {
 	  -moz-image-region: rect(0, 54px, 18px, 36px) !important;
 	}
 
-	#urlbar-container #forward-button[disabled]{
+	#nav-bar #urlbar-container #forward-button[disabled]{
 	  visibility: visible !important;
 	  opacity: 1.0 !important;
 	}
@@ -120,15 +123,15 @@
 	}
 
 	/* urlbar border tweaks */
-	#urlbar {
+	#nav-bar #urlbar {
 	  border: 1px solid ThreeDShadow !important;
 	}
 	@media (-moz-windows-default-theme) {
-	  #urlbar {
+	  #nav-bar #urlbar {
 		border-color: rgba(0,0,0,.32) !important;
 	  }
 	}
-	#urlbar:-moz-lwtheme {
+	#nav-bar #urlbar:-moz-lwtheme {
 	  border-color: rgba(0,0,0,.32) !important;
 	}
 
@@ -139,7 +142,7 @@
 	  margin-right: 0px !important;
 	}
 
-	#ctr_puib_separator{
+	#nav-bar #ctr_puib_separator{
 	  margin-top: 2px !important;
 	  margin-bottom: 2px !important;
 	}

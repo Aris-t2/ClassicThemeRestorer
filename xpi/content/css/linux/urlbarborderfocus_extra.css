@@ -3,16 +3,12 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	/* urlbar border tweaks */
-	#urlbar {
+	#nav-bar #urlbar {
 	  border: 1px solid ThreeDShadow !important;
 	}
-	@media (-moz-windows-default-theme) {
-	  #urlbar {
-		border-color: rgba(0,0,0,.32) !important;
-	  }
-	}
-	#urlbar:-moz-lwtheme {
-	  border-color: rgba(0,0,0,.32) !important;
+	#nav-bar #urlbar[focused],
+	#nav-bar .searchbar-textbox[focused] {
+	  border-color: Highlight !important;
 	}
 
 }

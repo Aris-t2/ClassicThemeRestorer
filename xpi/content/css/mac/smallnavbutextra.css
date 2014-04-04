@@ -67,11 +67,11 @@
 	  clip-path: none !important;
 	}
 
-	#urlbar-container #back-button:not([cui-areatype="menu-panel"]) {
+	#nav-bar #urlbar-container #back-button:not([cui-areatype="menu-panel"]) {
 	  -moz-image-region: rect(0, 54px, 18px, 36px) !important;
 	}
 
-	#urlbar-container #forward-button[disabled]{
+	#nav-bar #urlbar-container #forward-button[disabled]{
 	  visibility: visible !important;
 	  opacity: 1.0 !important;
 	}
@@ -115,33 +115,33 @@
 	  margin-right: 0px !important;
 	}
 
-	#notification-popup-box[hidden] + *:-moz-locale-dir(ltr),
-	#notification-popup-box + *:-moz-locale-dir(ltr) {
+	#nav-bar #notification-popup-box[hidden] + *:-moz-locale-dir(ltr),
+	#nav-bar #notification-popup-box + *:-moz-locale-dir(ltr) {
 	  padding-left: 4px !important;
 	  transition: none !important;
 	}
 
-	#notification-popup-box[hidden] + *:-moz-locale-dir(rtl),
-	#notification-popup-box + *:-moz-locale-dir(rtl) {
+	#nav-bar #notification-popup-box[hidden] + *:-moz-locale-dir(rtl),
+	#nav-bar #notification-popup-box + *:-moz-locale-dir(rtl) {
 	  padding-right: 4px !important;
 	  transition: none !important;
 	}
 	
-	#urlbar-container[forwarddisabled]:hover:not([switchingtabs]) > #urlbar-wrapper > #urlbar {
+	#nav-bar #urlbar-container[forwarddisabled]:hover:not([switchingtabs]) > #urlbar-wrapper > #urlbar {
 	  transition-delay: 0s !important;
 	}
 
-	#urlbar-container > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr),
-	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr) {
+	#nav-bar #urlbar-container > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr),
+	#nav-bar #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr) {
 	  margin-left: 4px !important;
 	}
 	
-	#urlbar-container > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl),
-	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
+	#nav-bar #urlbar-container > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl),
+	#nav-bar #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
 	  margin-right: 4px !important;
 	}
 
-	#ctr_puib_separator{
+	#nav-bar #ctr_puib_separator{
 	  margin-top: 2px !important;
 	  margin-bottom: 2px !important;
 	}

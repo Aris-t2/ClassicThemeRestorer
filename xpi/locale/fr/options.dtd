@@ -1,6 +1,7 @@
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Barre des modules">
+<!ENTITY Ctr_statusbar		"Barre d'état">
 <!ENTITY Ctr_extrabar		"Barre d'outils supplémentaire">
 <!ENTITY Ctr_flexspace		"Espace flexible">
 <!ENTITY Ctr_space			"Espace">
@@ -51,11 +52,13 @@
 <!ENTITY Ctr_appbuttonc_r	"Bouton rouge">
 <!ENTITY Ctr_appbuttonc_g	"Bouton vert">
 <!ENTITY Ctr_appbuttonc_gr	"Bouton gris">
+<!ENTITY Ctr_appbuttonc_pu	"Bouton pourpre">
 <!ENTITY Ctr_appbuttonI1	"redémarrage recommandé">
 <!ENTITY Ctr_appbuttonI2	"sur la barre de titre">
 <!ENTITY Ctr_appbuttonI3	"ou d'onglets seulement!">
 <!ENTITY Ctr_alttbappb		"Icônes alternatives (la barre d'onglets)">
 <!ENTITY Ctr_appbutmhi		"Position plus élevée (la barre d'outils)">
+<!ENTITY Ctr_appbutbdl		"Masquer les bordures et les couleurs de fond">
 
 <!ENTITY Ctr_ui				"Interface générale">
 <!ENTITY Ctr_nbiconsize1	"Utiliser #nav-bar[iconsize='small'] (par défaut)">
@@ -66,7 +69,7 @@
 <!ENTITY Ctr_backforward	"Bouton avancer/reculer déplaçable">
 <!ENTITY Ctr_wincontrols	"Coins déplaçables pour la fenêtre en plein écran">
 <!ENTITY Ctr_starinurl		"Bouton de signets dans la barre d'adresse (redémarrer Fx!)">
-<!ENTITY Ctr_statusbar		"La barre d'état sur la barre des modules (redémarrer Fx!)">
+<!ENTITY Ctr_mstatusbar		"La barre d'état déplaçable">
 <!ENTITY Ctr_hideurelstop	"Masquer 'stop-actualiser' sur la barre d'adresse">
 <!ENTITY Ctr_combrelstop 	"Bouton stop-actualiser">
 <!ENTITY Ctr_findbar_def	"Barre de recherche (position par défaut)">
@@ -79,6 +82,9 @@
 <!ENTITY Ctr_nav_txt_ico2	"Afficher icônes et textes">
 <!ENTITY Ctr_nav_txt_ico3	"Afficher seulement les textes">
 
+<!ENTITY Ctr_tab_tf_info	"Entrées en charge les noms de couleurs, les codes hexadécimaux, rgb(a) et hsl(a) valeurs. Entrées ne seront pas validés!">
+<!ENTITY Ctr_tabacthovdef	"Onglet (actif/au survol/par défaut)">
+<!ENTITY Ctr_tabnorunrnew	"Onglet (non lu) / Nouvel onglet">
 <!ENTITY Ctr_customsqtab0	"Couleur des onglets">
 <!ENTITY Ctr_customsqtab1	"Fond">
 <!ENTITY Ctr_ctext			"Texte">
@@ -89,10 +95,8 @@
 <!ENTITY Ctr_tabpen			"Onglet (non lu)">
 <!ENTITY Ctr_ntabnor		"Nouvel onglet (par défaut)">
 <!ENTITY Ctr_ntabhov		"Nouvel onglet (au survol)">
-<!ENTITY Ctr_topc			"en haut">
-<!ENTITY Ctr_bottomc		"en bas">
-<!ENTITY Ctr_textc			"texte">
-<!ENTITY Ctr_textsh			"ombre du texte">
+<!ENTITY Ctr_bold			"Audacieux">
+<!ENTITY Ctr_italic			"Italique">
 
 <!ENTITY Ctr_specialtw		"Modifications spéciales">
 <!ENTITY Ctr_paneluibtweak 	"Apparence du bouton d'application pour le panneau d'interface (sur la barre des onglets)">
@@ -102,6 +106,8 @@
 <!ENTITY Ctr_closeabarbut	"Masquer le bouton de fermeture de la barre des modules">
 <!ENTITY Ctr_bfurlbarfix 	"Corriger rayon de frontière de la barre d'adresse: 2px (Win) / 2.5px (Mac)">
 <!ENTITY Ctr_showtabclose	"Toujours afficher le bouton onglet de près (redémarrer Firefox!)">
+<!ENTITY Ctr_dblclnewtab	"Barre d'outils onglets: double-cliquez sur ouvrir un nouvel onglet">
+<!ENTITY Ctr_hightabpososx	"Réduire l'écart en haut pour le mode: 'tabsintitlebar'+'tabsontop'">
 <!ENTITY Ctr_cpanelmenus	"Menus du panneau compact (signets, histoire, etc)">
 <!ENTITY Ctr_panelmenucol	"Couleur de fond alternatif pour 'menus du panneau'">
 

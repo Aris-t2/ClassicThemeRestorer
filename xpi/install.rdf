@@ -5,7 +5,7 @@
 	<Description rdf:about="urn:mozilla:install-manifest">
 		<em:id>ClassicThemeRestorer@ArisT2Noia4dev</em:id>
 		<em:name>Classic Theme Restorer</em:name>
-		<em:version>1.1.7</em:version>
+		<em:version>1.1.8</em:version>
 		<em:type>2</em:type>
 
 		<em:optionsURL>chrome://classic_theme_restorer/content/options.xul</em:optionsURL>
@@ -14,7 +14,7 @@
 			<Description>
 				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
 				<em:minVersion>29.0a1</em:minVersion>
-				<em:maxVersion>31.0</em:maxVersion>
+				<em:maxVersion>32.0</em:maxVersion>
 			</Description>
 		</em:targetApplication>
 
@@ -48,6 +48,15 @@
 				<em:translator>goofy (fr)</em:translator>
 			</Description>
 		</em:localized>
+		
+	<em:localized>
+		<Description>
+			<em:name>Classic Theme Restorer (Customize Australis)</em:name>
+			<em:locale>it</em:locale>
+			<em:description>'Classic Theme Restorer' permette di ripristinare il pulsante app, lo stile spigoloso delle schede, la Barra dei componenti aggiuntivi, le icone piccole nella Barra di navigazione, alcuni altri pulsanti presenti nelle versioni precedenti e altri elementi in Australis, la nuova interfaccia di Firefox. Per spostare i pulsanti nelle barre degli strumenti utilizzare il menu Personalizza.</em:description>
+			<em:translator>gialloporpora</em:translator>
+		</Description>
+	</em:localized>
 		
 		<em:localized>
 			<Description>

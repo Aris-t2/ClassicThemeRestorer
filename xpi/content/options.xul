@@ -28,6 +28,7 @@
 		<preference id="ctr_appbuttonc"		name="extensions.classicthemerestorer.appbuttonc" 	type="string"	instantApply="true"/>
 		<preference id="ctr_alttbappb"		name="extensions.classicthemerestorer.alttbappb" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_appbutmhi"		name="extensions.classicthemerestorer.appbutmhi" 	type="bool"		instantApply="true"/>
+		<preference id="ctr_appbutbdl"		name="extensions.classicthemerestorer.appbutbdl" 	type="bool"		instantApply="true"/>
 		
 		<preference id="ctr_nbiconsize"		name="extensions.classicthemerestorer.nbiconsize" 	type="string"	instantApply="true"/>
 		<preference id="ctr_smallnavbut"	name="extensions.classicthemerestorer.smallnavbut"	type="bool"		instantApply="true"/>
@@ -41,10 +42,6 @@
 		<preference id="ctr_findbar"		name="extensions.classicthemerestorer.findbar"		type="string"	instantApply="true"/>
 		<preference id="ctr_nav_txt_ico"	name="extensions.classicthemerestorer.nav_txt_ico" 	type="string"	instantApply="true"/>
 
-		<preference id="ctr_customsqtab"	name="extensions.classicthemerestorer.customsqtab"	type="bool"		instantApply="true"/>
-		<preference id="ctr_tabtextc"		name="extensions.classicthemerestorer.tabtextc"		type="bool"		instantApply="true"/>
-		<preference id="ctr_tabtextsh"		name="extensions.classicthemerestorer.tabtextsh"	type="bool"		instantApply="true"/>
-		
 		<preference id="ctr_ctab1"			name="extensions.classicthemerestorer.ctab1"		type="string"	instantApply="true"/>
 		<preference id="ctr_ctab2"			name="extensions.classicthemerestorer.ctab2"		type="string"	instantApply="true"/>
 		<preference id="ctr_ctabhov1"		name="extensions.classicthemerestorer.ctabhov1"		type="string"	instantApply="true"/>
@@ -66,15 +63,62 @@
 		<preference id="ctr_ctabacttsh"		name="extensions.classicthemerestorer.ctabacttsh"	type="string"	instantApply="true"/>
 		<preference id="ctr_ctabpentsh"		name="extensions.classicthemerestorer.ctabpentsh"	type="string"	instantApply="true"/>
 		
+		<preference id="ctr_ctab1b"			name="extensions.classicthemerestorer.ctab1"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctab2b"			name="extensions.classicthemerestorer.ctab2"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabtb"			name="extensions.classicthemerestorer.ctabt"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabtshb"		name="extensions.classicthemerestorer.ctabtsh"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabact1b"		name="extensions.classicthemerestorer.ctabact1"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabact2b"		name="extensions.classicthemerestorer.ctabact2"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabacttb"		name="extensions.classicthemerestorer.ctabactt"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabacttshb"	name="extensions.classicthemerestorer.ctabacttsh"	type="string"	instantApply="true"/>
+		<preference id="ctr_ctabhov1b"		name="extensions.classicthemerestorer.ctabhov1"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabhov2b"		name="extensions.classicthemerestorer.ctabhov2"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabhovtb"		name="extensions.classicthemerestorer.ctabhovt"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabhovtshb"	name="extensions.classicthemerestorer.ctabhovtsh"	type="string"	instantApply="true"/>
+		<preference id="ctr_ctabpen1b"		name="extensions.classicthemerestorer.ctabpen1"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabpen2b"		name="extensions.classicthemerestorer.ctabpen2"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabpentb"		name="extensions.classicthemerestorer.ctabpent"		type="string"	instantApply="true"/>
+		<preference id="ctr_ctabpentshb"	name="extensions.classicthemerestorer.ctabpentsh"	type="string"	instantApply="true"/>
+		<preference id="ctr_cntab1b"		name="extensions.classicthemerestorer.cntab1"		type="string"	instantApply="true"/>
+		<preference id="ctr_cntab2b"		name="extensions.classicthemerestorer.cntab2"		type="string"	instantApply="true"/>
+		<preference id="ctr_cntabhov1b"		name="extensions.classicthemerestorer.cntabhov1"	type="string"	instantApply="true"/>
+		<preference id="ctr_cntabhov2b"		name="extensions.classicthemerestorer.cntabhov2"	type="string"	instantApply="true"/>
+		
+		<preference id="ctr_tabcolor_def"	name="extensions.classicthemerestorer.tabcolor_def"	 type="bool"	instantApply="true"/>
+		<preference id="ctr_tabtextc_def"	name="extensions.classicthemerestorer.tabtextc_def"	 type="bool"	instantApply="true"/>
+		<preference id="ctr_tabtextsh_def"	name="extensions.classicthemerestorer.tabtextsh_def" type="bool"	instantApply="true"/>
+		<preference id="ctr_tabcolor_act"	name="extensions.classicthemerestorer.tabcolor_act"	 type="bool"	instantApply="true"/>
+		<preference id="ctr_tabtextc_act"	name="extensions.classicthemerestorer.tabtextc_act"	 type="bool"	instantApply="true"/>
+		<preference id="ctr_tabtextsh_act"	name="extensions.classicthemerestorer.tabtextsh_act" type="bool"	instantApply="true"/>
+		<preference id="ctr_tabcolor_hov"	name="extensions.classicthemerestorer.tabcolor_hov"	 type="bool"	instantApply="true"/>
+		<preference id="ctr_tabtextc_hov"	name="extensions.classicthemerestorer.tabtextc_hov"	 type="bool"	instantApply="true"/>
+		<preference id="ctr_tabtextsh_hov"	name="extensions.classicthemerestorer.tabtextsh_hov" type="bool"	instantApply="true"/>
+		<preference id="ctr_tabcolor_unr"	name="extensions.classicthemerestorer.tabcolor_unr"	 type="bool"	instantApply="true"/>
+		<preference id="ctr_tabtextc_unr"	name="extensions.classicthemerestorer.tabtextc_unr"	 type="bool"	instantApply="true"/>
+		<preference id="ctr_tabtextsh_unr"	name="extensions.classicthemerestorer.tabtextsh_unr" type="bool"	instantApply="true"/>
+		<preference id="ctr_ntabcolor_def"	name="extensions.classicthemerestorer.ntabcolor_def" type="bool"	instantApply="true"/>
+		<preference id="ctr_ntabcolor_hov"	name="extensions.classicthemerestorer.ntabcolor_hov" type="bool"	instantApply="true"/>
+		
+		<preference id="ctr_tabfbold_def"	name="extensions.classicthemerestorer.tabfbold_def" type="bool"		instantApply="true"/>
+		<preference id="ctr_tabfbold_act"	name="extensions.classicthemerestorer.tabfbold_act" type="bool"		instantApply="true"/>
+		<preference id="ctr_tabfbold_unr"	name="extensions.classicthemerestorer.tabfbold_unr" type="bool"		instantApply="true"/>
+		<preference id="ctr_tabfbold_hov"	name="extensions.classicthemerestorer.tabfbold_hov" type="bool"		instantApply="true"/>
+		<preference id="ctr_tabfita_def"	name="extensions.classicthemerestorer.tabfita_def"	type="bool"		instantApply="true"/>
+		<preference id="ctr_tabfita_act"	name="extensions.classicthemerestorer.tabfita_act"	type="bool"		instantApply="true"/>
+		<preference id="ctr_tabfita_unr"	name="extensions.classicthemerestorer.tabfita_unr"	type="bool"		instantApply="true"/>
+		<preference id="ctr_tabfita_hov"	name="extensions.classicthemerestorer.tabfita_hov"	type="bool"		instantApply="true"/>
+			
 		<preference id="ctr_paneluibtweak"	name="extensions.classicthemerestorer.paneluibtweak" type="bool"	instantApply="true"/>
-		<preference id="ctr_notabfog"		name="extensions.classicthemerestorer.notabfog" 	type="bool"		instantApply="true"/>
-		<preference id="ctr_tabmokcolor"	name="extensions.classicthemerestorer.tabmokcolor" 	type="bool"		instantApply="true"/>
-		<preference id="ctr_tabmokcolor2"	name="extensions.classicthemerestorer.tabmokcolor2" type="bool"		instantApply="true"/>
-		<preference id="ctr_closeabarbut"	name="extensions.classicthemerestorer.closeabarbut" type="bool"		instantApply="true"/>
-		<preference id="ctr_bfurlbarfix"	name="extensions.classicthemerestorer.bfurlbarfix"	type="bool"		instantApply="true"/>
-		<preference id="ctr_showtabclose"	name="extensions.classicthemerestorer.showtabclose"	type="bool"		instantApply="true"/>
-		<preference id="ctr_cpanelmenus"	name="extensions.classicthemerestorer.cpanelmenus"	type="bool"		instantApply="true"/>
-		<preference id="ctr_panelmenucol"	name="extensions.classicthemerestorer.panelmenucol"	type="bool"		instantApply="true"/>
+		<preference id="ctr_notabfog"		name="extensions.classicthemerestorer.notabfog" 	 type="bool"	instantApply="true"/>
+		<preference id="ctr_tabmokcolor"	name="extensions.classicthemerestorer.tabmokcolor" 	 type="bool"	instantApply="true"/>
+		<preference id="ctr_tabmokcolor2"	name="extensions.classicthemerestorer.tabmokcolor2"  type="bool"	instantApply="true"/>
+		<preference id="ctr_closeabarbut"	name="extensions.classicthemerestorer.closeabarbut"  type="bool"	instantApply="true"/>
+		<preference id="ctr_bfurlbarfix"	name="extensions.classicthemerestorer.bfurlbarfix"	 type="bool"	instantApply="true"/>
+		<preference id="ctr_showtabclose"	name="extensions.classicthemerestorer.showtabclose"	 type="bool"	instantApply="true"/>
+		<preference id="ctr_dblclnewtab"	name="extensions.classicthemerestorer.dblclnewtab"	 type="bool"	instantApply="true"/>
+		<preference id="ctr_hightabpososx"	name="extensions.classicthemerestorer.hightabpososx" type="bool"	instantApply="true"/>
+		<preference id="ctr_cpanelmenus"	name="extensions.classicthemerestorer.cpanelmenus"	 type="bool"	instantApply="true"/>
+		<preference id="ctr_panelmenucol"	name="extensions.classicthemerestorer.panelmenucol"	 type="bool"	instantApply="true"/>
 		
 		<preference id="ctr_throbberalt"	name="extensions.classicthemerestorer.throbberalt" 	type="bool"		instantApply="true"/>
 		<preference id="ctr_bmanimation"	name="extensions.classicthemerestorer.bmanimation"	type="bool"		instantApply="true"/>
@@ -110,7 +154,7 @@
 		</tabs>
 			
 	  <tabpanels>
-
+	  
 		<tabpanel>
 
 		<vbox flex="1">
@@ -120,12 +164,12 @@
 				<caption  label="&Ctr_tabs;" class="ctb_topic"/>
 				<menulist preference="ctr_tabs" id="ctr_pw_tabmenulist">
 					<menupopup>
-						<menuitem value="tabs_default"	 label="&Ctr_tabs0;"  oncommand="classicthemerestorerjso.ctr.prefs.setBoolPref('customsqtab',false);"/>
-						<menuitem value="tabs_squared"	 label="&Ctr_tabs1;"  oncommand="classicthemerestorerjso.ctr.prefs.setBoolPref('customsqtab',false);"/>
-						<menuitem value="tabs_squaredc2" label="&Ctr_tabs1; (v2)"  oncommand="classicthemerestorerjso.ctr.prefs.setBoolPref('customsqtab',false);"/>
-						<menuitem value="tabs_squared2"	 label="&Ctr_tabs1m;" oncommand="classicthemerestorerjso.ctr.prefs.setBoolPref('customsqtab',false);"/>
-						<menuitem value="tabs_curved" 	 label="&Ctr_tabs2;"  oncommand="classicthemerestorerjso.ctr.prefs.setBoolPref('customsqtab',false);"/>
-						<menuitem value="tabs_curvedall" label="&Ctr_tabs3;"  oncommand="classicthemerestorerjso.ctr.prefs.setBoolPref('customsqtab',false);" id="tabs_curvedall"/>
+						<menuitem value="tabs_default"	 label="&Ctr_tabs0;"  oncommand="classicthemerestorerjso.ctr.unsetCustomTabcolors();"/>
+						<menuitem value="tabs_squared"	 label="&Ctr_tabs1;"  oncommand="classicthemerestorerjso.ctr.unsetCustomTabcolors();"/>
+						<menuitem value="tabs_squaredc2" label="&Ctr_tabs1; (v2)"  oncommand="classicthemerestorerjso.ctr.unsetCustomTabcolors();"/>
+						<menuitem value="tabs_squared2"	 label="&Ctr_tabs1m;" oncommand="classicthemerestorerjso.ctr.unsetCustomTabcolors();"/>
+						<menuitem value="tabs_curved" 	 label="&Ctr_tabs2;"  oncommand="classicthemerestorerjso.ctr.unsetCustomTabcolors();"/>
+						<menuitem value="tabs_curvedall" label="&Ctr_tabs3;"  oncommand="classicthemerestorerjso.ctr.unsetCustomTabcolors();" id="tabs_curvedall"/>
 					</menupopup>
 				</menulist>
 				
@@ -142,19 +186,24 @@
 				<menulist preference="ctr_tabwidth" id="ctr_pw_tabmaxwidth">
 					<menupopup>
 						<menuitem value="210"	label="&Ctr_tabmaxwidth; 210px &Ctr_tabwidthdef;"/>
+						<menuitem value="48"	label="&Ctr_tabmaxwidth; 48px"/>
 						<menuitem value="50"	label="&Ctr_tabmaxwidth; 50px"/>
 						<menuitem value="80"	label="&Ctr_tabmaxwidth; 80px"/>
 						<menuitem value="100"	label="&Ctr_tabmaxwidth; 100px"/>
 						<menuitem value="150"	label="&Ctr_tabmaxwidth; 150px"/>
 						<menuitem value="180"	label="&Ctr_tabmaxwidth; 180px"/>
 						<menuitem value="250" 	label="&Ctr_tabmaxwidth; 250px &Ctr_tabwidthcla;"/>
+						<menuitem value="280"	label="&Ctr_tabmaxwidth; 280px"/>
+						<menuitem value="310"	label="&Ctr_tabmaxwidth; 310px"/>
 					</menupopup>
 				</menulist>
 				<menulist preference="ctr_tabmwidth" id="ctr_pw_tabminwidth">
 					<menupopup>
 						<menuitem value="100"	label="&Ctr_tabminwidth; 100px &Ctr_tabwidthdef;"/>
+						<menuitem value="48"	label="&Ctr_tabminwidth; 48px"/>
 						<menuitem value="50"	label="&Ctr_tabminwidth; 50px"/>
 						<menuitem value="80"	label="&Ctr_tabminwidth; 80px"/>
+						<menuitem value="120"	label="&Ctr_tabminwidth; 120px"/>
 						<menuitem value="150"	label="&Ctr_tabminwidth; 150px"/>
 						
 					</menupopup>
@@ -192,6 +241,7 @@
 						<menuitem value="appbuttonc_red"	 label="&Ctr_appbuttonc_r;"/>
 						<menuitem value="appbuttonc_green"	 label="&Ctr_appbuttonc_g;"/>
 						<menuitem value="appbuttonc_gray"	 label="&Ctr_appbuttonc_gr;"/>
+						<menuitem value="appbuttonc_purple"	 label="&Ctr_appbuttonc_pu;"/>
 						<label value=" "/>
 						<label value="&Ctr_appbuttonI2;" class="ctb_font1"/>
 						<label value="&Ctr_appbuttonI3;" class="ctb_font1"/>
@@ -199,6 +249,7 @@
 				</menulist>
 				<checkbox label="&Ctr_alttbappb;" preference="ctr_alttbappb" id="ctr_alt_abicons"/>
 				<checkbox label="&Ctr_appbutmhi;" preference="ctr_appbutmhi" id="ctr_abhigher" class="ctr_windowsonly"/>
+				<checkbox label="&Ctr_appbutbdl;" preference="ctr_appbutbdl"/>
 			  </groupbox>
 
 			</vbox>
@@ -208,22 +259,23 @@
 			  <groupbox flex="1">
 				<caption  label="&Ctr_ui;" class="ctb_topic"/>
 				
+				<checkbox label="&Ctr_smallnavbut;"	 preference="ctr_smallnavbut" oncommand="if(this.checked) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',true);} else if(classicthemerestorerjso.ctr.prefs.getBoolPref('backforward')==false) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',false);}" id="ctr_pw_smallnavbut"/>
+				<checkbox label="&Ctr_hidenavbar;"	 preference="ctr_hidenavbar"/>
+				<checkbox label="&Ctr_backforward;"	 preference="ctr_backforward" oncommand="if(this.checked) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',true);} else if(classicthemerestorerjso.ctr.prefs.getBoolPref('smallnavbut')==false) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',false);}"/>
+				<checkbox label="&Ctr_wincontrols;"	 preference="ctr_wincontrols" id="ctr_wincontrols"/>
+				<checkbox label="&Ctr_starinurl;"	 preference="ctr_starinurl"/>
+				<checkbox label="&Ctr_mstatusbar;"	 preference="ctr_statusbar"/>
+				<checkbox label="&Ctr_hideurelstop;" preference="ctr_hideurelstop"/>
+				<checkbox label="&Ctr_combrelstop;"  preference="ctr_combrelstop" onmouseover="document.getElementById('combrelstop').openPopupAtScreen(this.boxObject.screenX, this.boxObject.screenY+this.boxObject.height-1, false);" onmouseout="document.getElementById('combrelstop').hidePopup();"/>
+				<checkbox label="&Ctr_panelmenucol;"	preference="ctr_panelmenucol" id="ctr_pw_panelmenucolor"/>
+
 				<menulist preference="ctr_nbiconsize">
 					<menupopup>
 						<menuitem value="small"	label="&Ctr_nbiconsize1;"/>
 						<menuitem value="large"	label="&Ctr_nbiconsize2;"/>
 					</menupopup>
 				</menulist>
-				
-				<checkbox label="&Ctr_smallnavbut;"	 preference="ctr_smallnavbut" oncommand="if(this.checked) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',true);} else if(classicthemerestorerjso.ctr.prefs.getBoolPref('backforward')==false) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',false);}" id="ctr_pw_smallnavbut"/>
-				<checkbox label="&Ctr_hidenavbar;"	 preference="ctr_hidenavbar"/>
-				<checkbox label="&Ctr_backforward;"	 preference="ctr_backforward" oncommand="if(this.checked) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',true);} else if(classicthemerestorerjso.ctr.prefs.getBoolPref('smallnavbut')==false) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',false);}"/>
-				<checkbox label="&Ctr_wincontrols;"	 preference="ctr_wincontrols" id="ctr_wincontrols"/>
-				<checkbox label="&Ctr_starinurl;"	 preference="ctr_starinurl"/>
-				<checkbox label="&Ctr_statusbar;"	 preference="ctr_statusbar"/>
-				<checkbox label="&Ctr_hideurelstop;" preference="ctr_hideurelstop"/>
-				<checkbox label="&Ctr_combrelstop;"  preference="ctr_combrelstop" onmouseover="document.getElementById('combrelstop').openPopup();" onmouseout="document.getElementById('combrelstop').hidePopup();"/>
-				
+
 				<menulist preference="ctr_findbar">
 					<menupopup>
 						<menuitem value="findbar_default" label="&Ctr_findbar_def;"/>
@@ -254,93 +306,191 @@
 		</tabpanel>
 		
 		<tabpanel>
+		
+		  <vbox flex="1">
+		  
+			<label value="&Ctr_customsqtab0; - &Ctr_tabs0;"		class="ctr_tabcolorlabel" id="ctr_ccap_t_default"/>
+			<label value="&Ctr_customsqtab0; - &Ctr_tabs1;"		class="ctr_tabcolorlabel" id="ctr_ccap_t_squared"/>
+			<label value="&Ctr_customsqtab0; - &Ctr_tabs1; v2"  class="ctr_tabcolorlabel" id="ctr_ccap_t_squaredc2"/>
+			<label value="&Ctr_customsqtab0; - &Ctr_tabs1m;"	class="ctr_tabcolorlabel" id="ctr_ccap_t_squared2"/>
+			<label value="&Ctr_customsqtab0; - &Ctr_tabs2;"		class="ctr_tabcolorlabel" id="ctr_ccap_t_curved"/>
+			<label value="&Ctr_customsqtab0; - &Ctr_tabs3;"		class="ctr_tabcolorlabel" id="ctr_ccap_t_curvedaero"/>
+			<label value="&Ctr_tab_tf_info;"/>
+			<label value="" />
+		
+			<tabbox>
+			  <tabs>
+				<tab label="&Ctr_tabacthovdef;"/>
+				<tab label="&Ctr_tabnorunrnew;"/>
+			  </tabs>
+				
+			  <tabpanels>
 
-			<vbox flex="1">
+				<tabpanel>
+				
+				 <hbox flex="1">
+				
+				  <groupbox flex="1">
+				  <caption  label="&Ctr_tabact;" class="ctb_topic"/>
+
+					<checkbox label="&Ctr_customsqtab1;" preference="ctr_tabcolor_act" class="tabactcolorbox" id="ctr_pw_ccol_act_pref"/>
+					  <hbox>
+						<colorpicker preference="ctr_ctabact1" type="button" class="tabactcolorbox" id="ctr_pw_ccol_act_cp1"/>
+						<textbox preference="ctr_ctabact1b" class="tabactcolorbox" id="ctr_pw_ccol_act_b1"/>
+					  </hbox>
+					  <hbox>
+						<colorpicker preference="ctr_ctabact2" type="button" class="tabactcolorbox" id="ctr_pw_ccol_act_cp2"/>
+						<textbox preference="ctr_ctabact2b" class="tabactcolorbox" id="ctr_pw_ccol_act_b2"/>
+					  </hbox>
+					<checkbox label="&Ctr_ctext;"	preference="ctr_tabtextc_act"/>
+					  <hbox>
+						<colorpicker preference="ctr_ctabactt" type="button"/>
+						<textbox preference="ctr_ctabacttb" />
+					  </hbox>
+					<checkbox label="&Ctr_ctextsh;"	preference="ctr_tabtextsh_act"/>
+					  <hbox>
+						<colorpicker preference="ctr_ctabacttsh" type="button"/>
+						<textbox preference="ctr_ctabacttshb" />
+					  </hbox>
+					<hbox>
+						<checkbox label="&Ctr_bold;"	preference="ctr_tabfbold_act"/>
+						<checkbox label="&Ctr_italic;"	preference="ctr_tabfita_act"/>
+					</hbox>
+					  
+				  </groupbox>
+				  
+				  <groupbox flex="1">
+				  <caption  label="&Ctr_tabhov;" class="ctb_topic"/>
+
+					<checkbox label="&Ctr_customsqtab1;" preference="ctr_tabcolor_hov" class="tabhovcolorbox"/>
+					  <hbox>
+						<colorpicker preference="ctr_ctabhov1" type="button" class="tabhovcolorbox"/>
+						<textbox preference="ctr_ctabhov1b" class="tabhovcolorbox"/>
+					  </hbox>
+					  <hbox>
+						<colorpicker preference="ctr_ctabhov2" type="button" class="tabhovcolorbox"/>
+						<textbox preference="ctr_ctabhov2b" class="tabhovcolorbox"/>
+					  </hbox>
+					<checkbox label="&Ctr_ctext;"	preference="ctr_tabtextc_hov"/>
+					  <hbox>
+						<colorpicker preference="ctr_ctabhovt" type="button"/>
+						<textbox preference="ctr_ctabtb" />
+					  </hbox>
+					<checkbox label="&Ctr_ctextsh;"	preference="ctr_tabtextsh_hov"/>
+					  <hbox>
+						<colorpicker preference="ctr_ctabhovtsh" type="button"/>
+						<textbox preference="ctr_ctabhovtshb" />
+					  </hbox>
+					<hbox>
+						<checkbox label="&Ctr_bold;"	preference="ctr_tabfbold_hov"/>
+						<checkbox label="&Ctr_italic;"	preference="ctr_tabfita_hov"/>
+					</hbox>
+					
+				  </groupbox>
+				  <groupbox flex="1">
+				  <caption  label="&Ctr_tabnor;" class="ctb_topic"/>
+
+					<checkbox label="&Ctr_customsqtab1;"  preference="ctr_tabcolor_def" class="tabcolorbox"/>
+					  <hbox>
+						<colorpicker preference="ctr_ctab1" type="button" class="tabcolorbox"/>
+						<textbox preference="ctr_ctab1b" class="tabcolorbox"/>
+					  </hbox>
+					  <hbox>
+						<colorpicker preference="ctr_ctab2" type="button" class="tabcolorbox"/>
+						<textbox preference="ctr_ctab2b" class="tabcolorbox"/>
+					  </hbox>
+					<checkbox label="&Ctr_ctext;"	preference="ctr_tabtextc_def"/>
+					  <hbox>
+						<colorpicker preference="ctr_ctabt" type="button"/>
+						<textbox preference="ctr_ctabtb" />
+					  </hbox>
+					<checkbox label="&Ctr_ctextsh;"	preference="ctr_tabtextsh_def"/>
+					  <hbox>
+						<colorpicker preference="ctr_ctabtsh" type="button"/>
+						<textbox preference="ctr_ctabtshb" />
+					  </hbox>
+					<hbox>
+						<checkbox label="&Ctr_bold;"	preference="ctr_tabfbold_def"/>
+						<checkbox label="&Ctr_italic;"	preference="ctr_tabfita_def"/>
+					</hbox>
+					  
+				  </groupbox>
+				  
+				 </hbox>
+				</tabpanel>
+
+				<tabpanel>
+				
+				 <hbox flex="1">
+
+				  <groupbox flex="1">
+				  <caption  label="&Ctr_tabpen;" class="ctb_topic"/>
+
+					<checkbox label="&Ctr_customsqtab1;" preference="ctr_tabcolor_unr" class="tabpencolorbox"/>
+					  <hbox>
+						<colorpicker preference="ctr_ctabpen1" type="button" class="tabpencolorbox"/>
+						<textbox preference="ctr_ctabpen1b" class="tabpencolorbox"/>
+					  </hbox>
+					  <hbox>
+						<colorpicker preference="ctr_ctabpen2" type="button" class="tabpencolorbox"/>
+						<textbox preference="ctr_ctabpen2b" class="tabpencolorbox"/>
+					  </hbox>
+					<checkbox label="&Ctr_ctext;"	preference="ctr_tabtextc_unr"/>
+					  <hbox>
+						<colorpicker preference="ctr_ctabpent" type="button"/>
+						<textbox preference="ctr_ctabpentb" />
+					  </hbox>
+					<checkbox label="&Ctr_ctextsh;"	preference="ctr_tabtextsh_unr"/>
+					  <hbox>
+						<colorpicker preference="ctr_ctabpentsh" type="button"/>
+						<textbox preference="ctr_ctabpentshb" />
+					  </hbox>
+					<hbox>
+						<checkbox label="&Ctr_bold;"	preference="ctr_tabfbold_unr"/>
+						<checkbox label="&Ctr_italic;"	preference="ctr_tabfita_unr"/>
+					</hbox>
+					  
+				  </groupbox>
+				  
+				  <groupbox flex="1" class="ntabcolorbox">
+				  <caption  label="&Ctr_ntabnor;" class="ctb_topic"/>
+
+					<checkbox label="&Ctr_customsqtab1;"	preference="ctr_ntabcolor_def"/>
+					  <hbox>
+						<colorpicker preference="ctr_cntab1" type="button" class="tabcolorbox"/>
+						<textbox preference="ctr_cntab1b" />
+					  </hbox>
+					  <hbox>
+						<colorpicker preference="ctr_cntab2" type="button" class="tabcolorbox"/>
+						<textbox preference="ctr_cntab2b" />
+					  </hbox>
 			  
-			  <groupbox flex="1">
-				  <caption  class="ctb_topic">
-					  <label value="&Ctr_customsqtab0; - &Ctr_tabs0;"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_default"/>
-					  <label value="&Ctr_customsqtab0; - &Ctr_tabs1;"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_squared"/>
-					  <label value="&Ctr_customsqtab0; - &Ctr_tabs1; v2"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_squaredc2"/>
-					  <label value="&Ctr_customsqtab0; - &Ctr_tabs1m;" class="ctr_tabcolorlabel2" id="ctr_ccap_t_squared2"/>
-					  <label value="&Ctr_customsqtab0; - &Ctr_tabs2;"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_curved"/>
-					  <label value="&Ctr_customsqtab0; - &Ctr_tabs3;"  class="ctr_tabcolorlabel2" id="ctr_ccap_t_curvedaero"/>
-				  </caption>
-				  <hbox>
-					<checkbox label="&Ctr_customsqtab1;" preference="ctr_customsqtab" id="ctr_customsqtab_cb"/>
-				  	<checkbox label="&Ctr_ctext;" preference="ctr_tabtextc"/>
-					<checkbox label="&Ctr_ctextsh;" preference="ctr_tabtextsh"/>
-				  </hbox>
-				  <label value=" "/>
-				  <hbox>
-					<colorpicker preference="ctr_ctab1" type="button" class="tabcolorbox" id="ctr_pw_cp_deft1"/>
-					<label value="&Ctr_topc;" class="tabcolorbox" id="ctr_pw_cp_deftl1"/>
-					<colorpicker preference="ctr_ctab2" type="button" class="tabcolorbox" id="ctr_pw_cp_deft2"/>
-					<label value="&Ctr_bottomc;" class="tabcolorbox" id="ctr_pw_cp_deftl2"/>
-					<colorpicker preference="ctr_ctabt" type="button"/>
-					<label value="&Ctr_textc;"/>
-					<colorpicker preference="ctr_ctabtsh" type="button"/>
-					<label value="&Ctr_textsh;"/>
-					<spacer flex="1" />
-					<label value="&Ctr_tabnor;" class="ctr_tabcolorlabel"/>
-				  </hbox>
-				  <hbox>
-					<colorpicker preference="ctr_ctabpen1" type="button" class="tabcolorbox" id="ctr_pw_cp_pent1"/>
-					<label value="&Ctr_topc;" class="tabcolorbox" id="ctr_pw_cp_pentl1"/>
-					<colorpicker preference="ctr_ctabpen2" type="button" class="tabcolorbox" id="ctr_pw_cp_pent2"/>
-					<label value="&Ctr_bottomc;" class="tabcolorbox" id="ctr_pw_cp_pentl2"/>
-					<colorpicker preference="ctr_ctabpent" type="button"/>
-					<label value="&Ctr_textc;"/>
-					<colorpicker preference="ctr_ctabpentsh" type="button"/>
-					<label value="&Ctr_textsh;"/>
-					<spacer flex="1" />
-					<label value="&Ctr_tabpen;" class="ctr_tabcolorlabel"/>
-				  </hbox>
-				  <hbox>
-					<colorpicker preference="ctr_ctabhov1" type="button" class="tabhovcolorbox" id="ctr_pw_cp_hovt1"/>
-					<label value="&Ctr_topc;" class="tabhovcolorbox" id="ctr_pw_cp_hovtl1"/>
-					<colorpicker preference="ctr_ctabhov2" type="button" class="tabhovcolorbox" id="ctr_pw_cp_hovt2"/>
-					<label value="&Ctr_bottomc;" class="tabhovcolorbox" id="ctr_pw_cp_hovtl2"/>
-					<colorpicker preference="ctr_ctabhovt" type="button"/>
-					<label value="&Ctr_textc;"/>
-					<colorpicker preference="ctr_ctabhovtsh" type="button"/>
-					<label value="&Ctr_textsh;"/>
-					<spacer flex="1" />
-					<label value="&Ctr_tabhov;" class="ctr_tabcolorlabel"/>
-				  </hbox>
-				  <hbox>
-					<colorpicker preference="ctr_ctabact1" type="button" class="tabactcolorbox" id="ctr_pw_cp_actt1"/>
-					<label value="&Ctr_topc;" class="tabactcolorbox" id="ctr_pw_cp_acttl1"/>
-					<colorpicker preference="ctr_ctabact2" type="button" class="tabactcolorbox" id="ctr_pw_cp_actt2"/>
-					<label value="&Ctr_bottomc;" class="tabactcolorbox" id="ctr_pw_cp_acttl2"/>
-					<colorpicker preference="ctr_ctabactt" type="button"/>
-					<label value="&Ctr_textc;"/>
-					<colorpicker preference="ctr_ctabacttsh" type="button"/>
-					<label value="&Ctr_textsh;"/>
-					<spacer flex="1" />
-					<label value="&Ctr_tabact;" class="ctr_tabcolorlabel"/>
-				  </hbox>
-				  <label value=" "/>
-				  <hbox id="ntabcolorbox">
-					<colorpicker preference="ctr_cntab1" type="button"/>
-					<label value="&Ctr_topc;"/>
-					<colorpicker preference="ctr_cntab2" type="button"/>
-					<label value="&Ctr_bottomc;"/>
-					<spacer flex="1" />
-					<label value="&Ctr_ntabnor;" class="ctr_tabcolorlabel"/>
-				  </hbox>
-				  <hbox id="ntabhovcolorbox">
-					<colorpicker preference="ctr_cntabhov1"	type="button"/>
-					<label value="&Ctr_topc;"/>
-					<colorpicker preference="ctr_cntabhov2"	type="button"/>
-					<label value="&Ctr_bottomc;"/>
-					<spacer flex="1" />
-					<label value="&Ctr_ntabhov;" class="ctr_tabcolorlabel"/>
-				  </hbox>
+				  </groupbox>
+				  
+				  <groupbox flex="1" class="ntabcolorbox">
+				  <caption  label="&Ctr_ntabhov;" class="ctb_topic"/>
 
-			  </groupbox>
+					<checkbox label="&Ctr_customsqtab1;"	preference="ctr_ntabcolor_hov"/>
+					  <hbox>
+						<colorpicker preference="ctr_cntabhov1" type="button" class="tabcolorbox"/>
+						<textbox preference="ctr_cntabhov1b" />
+					  </hbox>
+					  <hbox>
+						<colorpicker preference="ctr_cntabhov2" type="button" class="tabcolorbox"/>
+						<textbox preference="ctr_cntabhov2b" />
+					  </hbox>
+					  
+				  </groupbox>
+				  
+				 </hbox>
+			  
+				</tabpanel>
+				
+			  </tabpanels>
+			  
+			</tabbox>
 
-			</vbox>
+		  </vbox>
 
 		</tabpanel>
 		
@@ -354,10 +504,11 @@
 				<checkbox label="&Ctr_tabmokcolor;"		preference="ctr_tabmokcolor" class="ctr_winmaconly" id="ctr_pw_tabmokcolor"/>
 				<checkbox label="&Ctr_tabmokcolor2;"	preference="ctr_tabmokcolor2" class="ctr_winmaconly" id="ctr_pw_tabmokcolor2"/>
 				<checkbox label="&Ctr_closeabarbut;"	preference="ctr_closeabarbut"/>
-				<checkbox label="&Ctr_bfurlbarfix;"		preference="ctr_bfurlbarfix" class="ctr_winmaconly" id="ctr_pw_bfurlbarfix"/>
+				<checkbox label="&Ctr_bfurlbarfix;"		preference="ctr_bfurlbarfix" id="ctr_pw_bfurlbarfix"/>
 				<checkbox label="&Ctr_showtabclose;"	preference="ctr_showtabclose"/>
+				<checkbox label="&Ctr_dblclnewtab;"		preference="ctr_dblclnewtab"/>
+				<checkbox label="&Ctr_hightabpososx;"	preference="ctr_hightabpososx" class="ctr_maconly"/>
 				<checkbox label="&Ctr_cpanelmenus;"		preference="ctr_cpanelmenus"/>
-				<checkbox label="&Ctr_panelmenucol;"	preference="ctr_panelmenucol" id="ctr_pw_panelmenucolor"/>
 			  </groupbox>
 			</vbox>
 
@@ -369,7 +520,7 @@
 			  <groupbox>
 				<caption  label="&Ctr_specialtw; 2" class="ctb_topic"/>
 				<checkbox label="&Ctr_throbberalt;"		preference="ctr_throbberalt"/>
-				<checkbox label="&Ctr_bmanimation;"		preference="ctr_bmanimation"/>
+				<checkbox label="&Ctr_bmanimation;"		preference="ctr_bmanimation" id="ctr_pw_bmanimation"/>
 				<checkbox label="&Ctr_tabanimation;"	preference="ctr_tabsanimate"/>
 				<checkbox label="&Ctr_dlanimation;"		preference="ctr_dlanimate"/>
 			  </groupbox>

@@ -1,3 +1,4 @@
+@import url(chrome://ctr_os_special/skin/back-forwardextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
@@ -37,7 +38,7 @@
 	  margin-right: 4px !important;
 	}
 
-	#nav-bar #urlbar-container #forward-button[disabled]{
+	#main-window #navigator-toolbox #urlbar-container #forward-button[disabled]{
 	  visibility:collapse !important;
 	  opacity: 1.0 !important;
 	}

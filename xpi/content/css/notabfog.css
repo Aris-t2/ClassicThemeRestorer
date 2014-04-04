@@ -5,4 +5,7 @@
 	#TabsToolbar:not(:-moz-lwtheme)::before {
 	  box-shadow: none !important;
 	}
+	#main-window[defaultfxtheme="true"][tabsontop="false"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) {
+	  background:unset !important;
+	}
 }

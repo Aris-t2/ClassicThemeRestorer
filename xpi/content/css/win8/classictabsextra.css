@@ -32,6 +32,23 @@
 	.tabs-newtab-button{
 	  margin-right:-15px !important;
 	}
+	
+	/* TU workaround */
+	#PinnedTabsBarItems:-moz-locale-dir(ltr) {
+	  margin-left:-14px !important;
+	  margin-right:0px !important;
+	}
+	#tabbrowser-tabs[overflow] #PinnedTabsBarItems:-moz-locale-dir(ltr){
+	  margin-right:-14px !important;
+	}
+	#PinnedTabsBarItems:-moz-locale-dir(rtl) {
+	  margin-right:-14px !important;
+	  margin-left:0px !important;
+	}
+	#tabbrowser-tabs[overflow] #PinnedTabsBarItems:-moz-locale-dir(rtl){
+	  margin-left:-14px !important;
+	}
+	/**/
 
 	.tabbrowser-tab[selected=true]:-moz-lwtheme {
 	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.46) 50%) !important;

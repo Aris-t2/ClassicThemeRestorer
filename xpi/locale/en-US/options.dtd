@@ -1,6 +1,7 @@
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Add-on Bar">
+<!ENTITY Ctr_statusbar		"Status Bar">
 <!ENTITY Ctr_extrabar		"Additional Toolbar">
 <!ENTITY Ctr_flexspace		"Flexible space">
 <!ENTITY Ctr_space			"Space">
@@ -28,9 +29,9 @@
 <!ENTITY Ctr_tabs1m			"Squared tabs (australized)">
 <!ENTITY Ctr_tabs2			"Curved tabs (alternative)">
 <!ENTITY Ctr_tabs3			"Curved tabs (alternative Aero)">
-<!ENTITY Ctr_tabsontop0		"Tabs on top [not set] (default)">
-<!ENTITY Ctr_tabsontop1		"Tabs on top [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Tabs not on top [tabsontop=false]">
+<!ENTITY Ctr_tabsontop0		"Tabs on top (default) - [not set]">
+<!ENTITY Ctr_tabsontop1		"Tabs on top - set [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Tabs not on top - set [tabsontop=false]">
 <!ENTITY Ctr_tabsintitlebar	"Tabs in titlebar (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(default)">
 <!ENTITY Ctr_tabwidthcla	"(classic)">
@@ -51,22 +52,24 @@
 <!ENTITY Ctr_appbuttonc_r	"Red button color">
 <!ENTITY Ctr_appbuttonc_g	"Green button color">
 <!ENTITY Ctr_appbuttonc_gr	"Gray button color">
+<!ENTITY Ctr_appbuttonc_pu	"Purple button color">
 <!ENTITY Ctr_appbuttonI1	"restart recommended">
 <!ENTITY Ctr_appbuttonI2	"Only colored on titlebar">
 <!ENTITY Ctr_appbuttonI3	"and tabs toolbar!">
 <!ENTITY Ctr_alttbappb		"Alternative icons (if on toolbar)">
 <!ENTITY Ctr_appbutmhi		"Higher position (if on tabs toolbar)">
+<!ENTITY Ctr_appbutbdl		"Hide borders and background colors">
 
 <!ENTITY Ctr_ui				"General UI">
-<!ENTITY Ctr_nbiconsize1	"Use #nav-bar[iconsize='small'] (default)">
-<!ENTITY Ctr_nbiconsize2	"Use #nav-bar[iconsize='large']">
+<!ENTITY Ctr_nbiconsize1	"Set #nav-bar[iconsize='small'] (default)">
+<!ENTITY Ctr_nbiconsize2	"Set #nav-bar[iconsize='large']">
 <!ENTITY Ctr_smallnavbut	"Small buttons on navigation toolbar">
 <!ENTITY Ctr_hidenavbar		"Hide navigation toolbar">
 <!ENTITY Ctr_buttons		"Toolbar buttons">
 <!ENTITY Ctr_backforward	"Movable back-forward button">
 <!ENTITY Ctr_wincontrols	"Movable fullscreen window controls">
 <!ENTITY Ctr_starinurl		"Star-button in urlbar (restart Firefox)">
-<!ENTITY Ctr_statusbar		"Statusbar on add-ons bar (restart Firefox)">
+<!ENTITY Ctr_mstatusbar		"Movable status-bar panel">
 <!ENTITY Ctr_hideurelstop	"Hide urlbars stop &amp; reload buttons">
 <!ENTITY Ctr_combrelstop	"Combine stop &amp; reload buttons">
 <!ENTITY Ctr_findbar_def	"Findbar (default position)">
@@ -79,6 +82,9 @@
 <!ENTITY Ctr_nav_txt_ico2	"Show icons and text">
 <!ENTITY Ctr_nav_txt_ico3	"Show text only">
 
+<!ENTITY Ctr_tab_tf_info	"Textfields support color names, hexcodes, rgb(a) and hsl(a) values. Inputs won't be validated!">
+<!ENTITY Ctr_tabacthovdef	"Tab (active/hover/default)">
+<!ENTITY Ctr_tabnorunrnew	"Tab (unread) / New Tab">
 <!ENTITY Ctr_customsqtab0	"Custom tab colors">
 <!ENTITY Ctr_customsqtab1	"Background">
 <!ENTITY Ctr_ctext			"Text">
@@ -89,10 +95,8 @@
 <!ENTITY Ctr_tabpen			"Tab (unread)">
 <!ENTITY Ctr_ntabnor		"New tab (default)">
 <!ENTITY Ctr_ntabhov		"New tab (hover)">
-<!ENTITY Ctr_topc			"top">
-<!ENTITY Ctr_bottomc		"bottom">
-<!ENTITY Ctr_textc			"text">
-<!ENTITY Ctr_textsh			"text shadow">
+<!ENTITY Ctr_bold			"Bold">
+<!ENTITY Ctr_italic			"Italic">
 
 <!ENTITY Ctr_specialtw		"Special tweaks">
 <!ENTITY Ctr_paneluibtweak	"Appbutton appearance for panel ui button (on tabs toolbar)">
@@ -102,6 +106,8 @@
 <!ENTITY Ctr_closeabarbut	"Hide add-on bars close button">
 <!ENTITY Ctr_bfurlbarfix	"Fix urlbars border-radius: 2px (Win) / 2.5px (Mac)">
 <!ENTITY Ctr_showtabclose	"Always show tab close button (requires restart!)">
+<!ENTITY Ctr_dblclnewtab	"Tabs toolbar: double click opens a new tab">
+<!ENTITY Ctr_hightabpososx	"Reduce top gap for 'tabsintitlebar'+'tabsontop' mode">
 <!ENTITY Ctr_cpanelmenus	"Compact panel menus (bookmarks, history etc.)">
 <!ENTITY Ctr_panelmenucol	"Alternative panel menu background color">
 

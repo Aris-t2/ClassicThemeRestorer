@@ -20,7 +20,7 @@
 	  margin-right: -2px !important;
 	}
 	
-	#TabsToolbar {
+	#TabsToolbar:not(:-moz-lwtheme) {
 	  border-left: 1px solid #9ca3aa !important;
 	  border-right: 1px solid #9ca3aa !important;
 	}
@@ -48,6 +48,10 @@
 	}
 	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
 	  margin-top: 25px !important;
+	}
+	
+	#main-window[defaultfxtheme="true"] #TabsToolbar:not(:-moz-lwtheme){
+	  background: -moz-Dialog !important;
 	}
 
 }

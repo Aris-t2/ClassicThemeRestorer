@@ -3,12 +3,12 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	* #bookmarks-menu-button {
+	/** #bookmarks-menu-button {
 	  visibility:collapse !important;
 	}
 	#urlbar-icons #bookmarks-menu-button {
 	  visibility:visible !important;
-	}
+	}*/
 	
 	#urlbar-icons #bookmarks-menu-button {
 	  -moz-appearance: none !important;
@@ -58,5 +58,29 @@
 	#urlbar-icons #star-button,
 	#urlbar-icons #bookmarks-menu-button .toolbarbutton-menubutton-dropmarker {
 	  visibility:collapse !important;
+	}
+	
+	#main-window:not([defaultfxtheme="true"]) #urlbar-icons #bookmarks-menu-button {
+	  margin:-8px 0px !important;
+	}
+	#main-window:not([defaultfxtheme="true"]) #nav-bar #urlbar-icons #bookmarks-menu-button .toolbarbutton-icon {
+	  margin: -2px 0px !important;
+	}
+	#main-window[defaultfxtheme="true"] #urlbar-icons #bookmarks-menu-button {
+	  margin:-8px -4px !important;
+	}
+	#main-window[defaultfxtheme="true"] #nav-bar #urlbar-icons #bookmarks-menu-button .toolbarbutton-icon {
+	  margin: -8px 0px !important;
+	}
+	
+	#bookmarked-notification-dropmarker-icon,
+	#bookmarked-notification {
+	  visibility: collapse !important;
+	}
+	
+	#bookmarks-menu-button *,
+	#bookmarked-notification,
+	#bookmarked-notification-dropmarker-icon {
+	  animation: none !important;
 	}
 }
