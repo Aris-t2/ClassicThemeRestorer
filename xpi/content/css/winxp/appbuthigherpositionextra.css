@@ -2,14 +2,21 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#main-window[tabsintitlebar] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton{
+	#main-window[tabsintitlebar][sizemode="normal"]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_appbutton{
 	  margin-top:-19px !important;
 	  margin-bottom:25px !important;
 	  border-radius: 0 0 4px 4px !important;
 	}
+	#main-window[tabsintitlebar][sizemode="maximized"]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_appbutton{
+	  margin-top:-7px !important;
+	  -moz-margin-start:-2px !important;
+	  -moz-margin-end:2px !important;
+	  margin-bottom:13px !important;
+	  border-radius: 0 0 4px 4px !important;
+	}
 	
-	#main-window[tabsintitlebar] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton:hover:active,
-	#main-window[tabsintitlebar] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton[open] {
+	#main-window[tabsintitlebar] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_appbutton:hover:active,
+	#main-window[tabsintitlebar] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_appbutton[open] {
 	  border-radius: 0 0 0 0 !important;
 	}
 }

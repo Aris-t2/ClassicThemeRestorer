@@ -1,0 +1,20 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	#main-window #navigator-toolbox #nav-bar,
+	#main-window #navigator-toolbox toolbar {
+	  border: none !important;
+	  box-shadow: none !important;
+	}
+
+	#main-window[defaultfxtheme="true"][tabsontop="false"][sizemode="normal"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) {
+	  border-left: none !important;
+	  border-right: none !important;
+	}
+
+	#main-window[defaultfxtheme="true"][tabsontop="false"][sizemode="maximized"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) {
+	  border-bottom: none !important;
+	}
+
+}

@@ -87,11 +87,16 @@
 	}
 
 	#TabsToolbar:not(:-moz-lwtheme).tabs-newtab-button{
-	  margin-left: -14px !important;
+	  -moz-margin-start: -14px !important;
 	}
 	
 	#main-window[defaultfxtheme="true"][tabsontop="false"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
 	  background: linear-gradient(to top,#5e5e5e 1px,#898989,#939393,#989898,#a1a1a1 1px) !important;
+	  border-top: 1px solid #8b8b8b !important;
+	}
+	
+	#main-window[defaultfxtheme="true"][tabsontop="false"]:-moz-window-inactive #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) {
+	  background: linear-gradient(to bottom,#919191 1px,#b0b0b0 1px) !important;
 	  border-top: 1px solid #8b8b8b !important;
 	}
 
@@ -122,11 +127,12 @@
 	.tabcolorbox,
 	.tabhovcolorbox,
 	.tabpencolorbox,
-	#ctr_ccap_t_curved{
+	.tabunrcolorbox,
+	#ctraddon_ccap_t_curved{
 	  visibility: visible !important;
 	}
 	
-	#ctr_ccap_t_default{
+	#ctraddon_ccap_t_default{
 	  visibility: collapse !important;
 	}
 }

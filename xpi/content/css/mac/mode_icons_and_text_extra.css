@@ -59,23 +59,24 @@
 	  margin: 1px 0 !important;
 	}
 	
-	#navigator-toolbox #nav-bar #urlbar-container:-moz-locale-dir(ltr){
-	  margin-left: 4px !important;
+	#navigator-toolbox #nav-bar #urlbar-container{
+	  -moz-margin-start: 4px !important;
 	}
-	#navigator-toolbox #nav-bar #urlbar-container:-moz-locale-dir(rtl){
-	  margin-right: 4px !important;
-	}	
 
 	#navigator-toolbox #nav-bar #urlbar{
 	  border-radius: 3px !important;
 	}
 
-	#ctr_addon-bar toolbarbutton {
+	#ctraddon_addon-bar toolbarbutton {
 	  max-height: 38px !important;
 	  margin-top: 0px !important;
 	}
 
-	#ctr_extra-bar {
+	#ctraddon_extra-bar {
 	  padding-bottom: 3px !important;
+	}
+	
+	#main-window toolbar #ctraddon_back-forward-dropmarker .toolbarbutton-icon {
+	  padding:0px 4px !important;
 	}
 }

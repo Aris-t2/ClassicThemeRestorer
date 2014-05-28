@@ -32,8 +32,17 @@
 
 	#nav-bar #forward-button:not(:hover) > .toolbarbutton-icon{
 	  background: none !important;
-	  border: none !important;
+	  border: 1px solid transparent !important;
 	  box-shadow: none !important;
+	}
+	
+	#main-windows[fx31="true"] #nav-bar #forward-button > .toolbarbutton-icon{
+      padding:2px 6px !important;
+	}
+
+	#main-window[fx31="true"] #navigator-toolbox #nav-bar #urlbar-container #forward-button {
+	  margin-top:-10px !important;
+	  margin-bottom:-10px !important;
 	}
 	
 	#nav-bar #forward-button {
@@ -73,17 +82,16 @@
 	  padding-bottom: 2px !important;
 	}
 	
-	#nav-bar #urlbar:-moz-locale-dir(ltr){
-	  border-left: 1px solid #b2c1cf !important;
-	}
-	#nav-bar #urlbar[focused="true"]:-moz-locale-dir(ltr) {
-	  border-left: 1px solid #72c0fe !important;
-	}
-	#nav-bar #urlbar:-moz-locale-dir(rtl) {
-	  border-right: 1px solid #b2c1cf !important;
-	}
-	#nav-bar #urlbar[focused="true"]:-moz-locale-dir(rtl) {
-	  border-right: 1px solid #72c0fe !important;
+    .searchbar-textbox,
+	#urlbar {
+      border:1px solid ThreeDShadow !important;
+    }
+
+	@media all and (-moz-windows-theme:aero) {
+		.searchbar-textbox[focused="true"],
+		#urlbar[focused="true"] {
+		  border:1px solid #72c0fe !important;
+		}
 	}
 
 	#nav-bar .searchbar-textbox{

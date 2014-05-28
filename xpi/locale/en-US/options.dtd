@@ -6,7 +6,7 @@
 <!ENTITY Ctr_flexspace		"Flexible space">
 <!ENTITY Ctr_space			"Space">
 <!ENTITY Ctr_separator		"Separator">
-<!ENTITY Ctr_puibseparator	"PanelUI-button Separator">
+<!ENTITY Ctr_puibseparator	"PanelUI button separator">
 
 <!ENTITY Ctr_cuibuttons		"Buttons">
 <!ENTITY Ctr_cuibutnormal	"Normal">
@@ -32,18 +32,28 @@
 <!ENTITY Ctr_tabsontop0		"Tabs on top (default) - [not set]">
 <!ENTITY Ctr_tabsontop1		"Tabs on top - set [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Tabs not on top - set [tabsontop=false]">
-<!ENTITY Ctr_tabsintitlebar	"Tabs in titlebar (about:config)">
+<!ENTITY Ctr_tabsontopI1	"Adds attribute [tabsontop=true/false] to">
+<!ENTITY Ctr_tabsontopI2	"#main-window, #titlebar, #nav-bar">
+<!ENTITY Ctr_tabsontopI3	"#navigator-toolbox, #toolbar-menubar">
+<!ENTITY Ctr_tabsontopI4	"#TabsToolbar, #ctraddon_extra-bar">
+<!ENTITY Ctr_tabsontopI5	"#PersonalToolbar, #ctraddon_addon-bar">
+<!ENTITY Ctr_tabsintitlebar	"Firefox titlebar (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(default)">
 <!ENTITY Ctr_tabwidthcla	"(classic)">
 <!ENTITY Ctr_tabmaxwidth	"Max-width:">
 <!ENTITY Ctr_tabminwidth	"Min-width:">
+<!ENTITY Ctr_closetab_0		"Tab Close: on all tabs (default)">
+<!ENTITY Ctr_closetab_1		"Tab Close: on active tab only">
+<!ENTITY Ctr_closetab_2		"Tab Close: nowhere">
+<!ENTITY Ctr_closetab_3		"Tab Close: on tab toolbars end">
+<!ENTITY Ctr_closetab_4		"Tab Close: on tab toolbars start">
 
 <!ENTITY Ctr_appbutton		"Application button">
 <!ENTITY Ctr_appbutton0		"Button disabled">
 <!ENTITY Ctr_appbutton1		"Button on toolbar">
 <!ENTITY Ctr_appbutton1wt	"Button on toolbar (text only)">
-<!ENTITY Ctr_appbutton2		"Button on titlebar">
-<!ENTITY Ctr_appbutton2io	"Button on titlebar (icon only)">
+<!ENTITY Ctr_appbutton2		"Button on [Firefox] titlebar">
+<!ENTITY Ctr_appbutton2io	"Button on [Firefox] titlebar (icon only)">
 <!ENTITY Ctr_appbuttonc_o	"Orange button color (default)">
 <!ENTITY Ctr_appbuttonc_a	"Blue button color (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Black button color (Nightly)">
@@ -53,25 +63,30 @@
 <!ENTITY Ctr_appbuttonc_g	"Green button color">
 <!ENTITY Ctr_appbuttonc_gr	"Gray button color">
 <!ENTITY Ctr_appbuttonc_pu	"Purple button color">
-<!ENTITY Ctr_appbuttonI1	"restart recommended">
-<!ENTITY Ctr_appbuttonI2	"Only colored on titlebar">
-<!ENTITY Ctr_appbuttonI3	"and tabs toolbar!">
-<!ENTITY Ctr_alttbappb		"Alternative icons (if on toolbar)">
+<!ENTITY Ctr_appbuttonc_wh	"White button color">
+<!ENTITY Ctr_appbuttonI1	"Restart recommended">
+<!ENTITY Ctr_appbuttonI1e	"Not visible on Windows titlebar!">
+<!ENTITY Ctr_appbuttonI2	"Button colors are only visible">
+<!ENTITY Ctr_appbuttonI3	"on titlebar and tabs toolbar!">
+<!ENTITY Ctr_alttbappb		"Alternative icons">
 <!ENTITY Ctr_appbutmhi		"Higher position (if on tabs toolbar)">
 <!ENTITY Ctr_appbutbdl		"Hide borders and background colors">
 
 <!ENTITY Ctr_ui				"General UI">
-<!ENTITY Ctr_nbiconsize1	"Set #nav-bar[iconsize='small'] (default)">
-<!ENTITY Ctr_nbiconsize2	"Set #nav-bar[iconsize='large']">
+<!ENTITY Ctr_nbiconsize0	"Set navigation toolbar attribute:">
+<!ENTITY Ctr_nbiconsize1	"#nav-bar[iconsize='small'] (default)">
+<!ENTITY Ctr_nbiconsize2	"#nav-bar[iconsize='large']">
 <!ENTITY Ctr_smallnavbut	"Small buttons on navigation toolbar">
 <!ENTITY Ctr_hidenavbar		"Hide navigation toolbar">
 <!ENTITY Ctr_buttons		"Toolbar buttons">
 <!ENTITY Ctr_backforward	"Movable back-forward button">
 <!ENTITY Ctr_wincontrols	"Movable fullscreen window controls">
-<!ENTITY Ctr_starinurl		"Star-button in urlbar (restart Firefox)">
+<!ENTITY Ctr_starinurl		"Star-button in urlbar (restart Firefox!)">
 <!ENTITY Ctr_mstatusbar		"Movable status-bar panel">
+<!ENTITY Ctr_movpaneluib	"Movable panel menu button (restart Firefox!)">
 <!ENTITY Ctr_hideurelstop	"Hide urlbars stop &amp; reload buttons">
 <!ENTITY Ctr_combrelstop	"Combine stop &amp; reload buttons">
+<!ENTITY Ctr_panelmenucol	"Panel menus: alternative background color">
 <!ENTITY Ctr_findbar_def	"Findbar (default position)">
 <!ENTITY Ctr_findbar_top	"Findbar top position">
 <!ENTITY Ctr_findbar_bot	"Findbar bottom position">
@@ -82,9 +97,9 @@
 <!ENTITY Ctr_nav_txt_ico2	"Show icons and text">
 <!ENTITY Ctr_nav_txt_ico3	"Show text only">
 
-<!ENTITY Ctr_tab_tf_info	"Textfields support color names, hexcodes, rgb(a) and hsl(a) values. Inputs won't be validated!">
+<!ENTITY Ctr_tab_tf_info	"Color names, hexcodes, rgb(a) and hsl(a) values are supported. Inputs won't be validated!">
 <!ENTITY Ctr_tabacthovdef	"Tab (active/hover/default)">
-<!ENTITY Ctr_tabnorunrnew	"Tab (unread) / New Tab">
+<!ENTITY Ctr_tabnorunrnew	"Tab (unloaded/unread) / New Tab">
 <!ENTITY Ctr_customsqtab0	"Custom tab colors">
 <!ENTITY Ctr_customsqtab1	"Background">
 <!ENTITY Ctr_ctext			"Text">
@@ -92,30 +107,72 @@
 <!ENTITY Ctr_tabnor			"Tab (default)">
 <!ENTITY Ctr_tabhov			"Tab (hover)">
 <!ENTITY Ctr_tabact			"Tab (active)">
-<!ENTITY Ctr_tabpen			"Tab (unread)">
+<!ENTITY Ctr_tabpen			"Tab (unloaded)">
+<!ENTITY Ctr_tabunr			"Tab (unread)">
 <!ENTITY Ctr_ntabnor		"New tab (default)">
 <!ENTITY Ctr_ntabhov		"New tab (hover)">
 <!ENTITY Ctr_bold			"Bold">
 <!ENTITY Ctr_italic			"Italic">
 
-<!ENTITY Ctr_specialtw		"Special tweaks">
-<!ENTITY Ctr_paneluibtweak	"Appbutton appearance for panel ui button (on tabs toolbar)">
-<!ENTITY Ctr_notabfog		"Remove tab toolbars background fog (Windows AeroGlass)">
-<!ENTITY Ctr_tabmokcolor	"White color for separators and tab buttons (close, new, groups, list all)">
-<!ENTITY Ctr_tabmokcolor2	"White color and dark shadow for text on non-active tab">
-<!ENTITY Ctr_closeabarbut	"Hide add-on bars close button">
-<!ENTITY Ctr_bfurlbarfix	"Fix urlbars border-radius: 2px (Win) / 2.5px (Mac)">
-<!ENTITY Ctr_showtabclose	"Always show tab close button (requires restart!)">
-<!ENTITY Ctr_dblclnewtab	"Tabs toolbar: double click opens a new tab">
-<!ENTITY Ctr_hightabpososx	"Reduce top gap for 'tabsintitlebar'+'tabsontop' mode">
-<!ENTITY Ctr_cpanelmenus	"Compact panel menus (bookmarks, history etc.)">
-<!ENTITY Ctr_panelmenucol	"Alternative panel menu background color">
+<!ENTITY Ctr_toolbars		"Toolbar settings">
+<!ENTITY Ctr_altmenubar		"Menubar: add background color (OS titlebar)">
+<!ENTITY Ctr_menubarnofog	"Menubar: remove background color/fog (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_notabfog		"Tabs toolbar: remove background fog (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_notabbg		"Tabs toolbar: remove background color (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_highaddonsbar	"Add-on bar: increase toolbar height">
+<!ENTITY Ctr_hightabpos		"Tabs toolbar: reduce space above toolbar (if possible)">
 
+<!ENTITY Ctr_toolbars2		"Toolbar settings (mainly for 'tabs not on top' mode &amp; Windows AeroGlass / Win8)">
+<!ENTITY Ctr_nobookbarbg	"Bookmarks toolbar: remove background color">
+<!ENTITY Ctr_nonavbarbg		"Navigation toolbar: remove background color">
+<!ENTITY Ctr_nonavborder	"Bookmarks toolbar: add top border to toolbar">
+<!ENTITY Ctr_nonavtbborder	"Top toolbars: remove toolbar borders">
+<!ENTITY Ctr_alttabstb		"Tabs toolbar: alternative background color">
+
+<!ENTITY Ctr_invicons		"Inverted icons">
+<!ENTITY Ctr_menubar		"Menubar">
+<!ENTITY Ctr_tabstoolbar	"Tabs Toolbar">
+<!ENTITY Ctr_navbar			"Navigation Toolbar">
+<!ENTITY Ctr_bookbar		"Bookmarks Toolbar">
+
+<!ENTITY Ctr_specialtw		"Special tweaks">
+<!ENTITY Ctr_emptyfavicon	"Restore empty favicon (if a site does not offer one)">
+<!ENTITY Ctr_bfurlbarfix	"Fix urlbars border-radius for 'movable back/forward button' and 'small button view'">
+<!ENTITY Ctr_showtabclose	"Always show tab close button (restart recommended!)">
+<!ENTITY Ctr_cpanelmenus	"Compact panel menus (bookmarks, history etc.)">
+<!ENTITY Ctr_hidezoomres	"Zoom controls on toolbar: hide zoom-reset button">
+<!ENTITY Ctr_pmhidelabels	"Panel menu: hide button labels">
+<!ENTITY Ctr_menupopupscr	"Menupopups: show scrollbars instead of scroll arrows">
+<!ENTITY Ctr_hideprivmask	"Private browsing: hide mask indicator">
+
+<!ENTITY Ctr_fxmockup		"Firefox Mockup">
+<!ENTITY Ctr_tabmokcolor	"White color for tab buttons (close, new, groups, list all)">
+<!ENTITY Ctr_tabmokcolor2	"White color and dark shadow for text on non-active tabs">
+<!ENTITY Ctr_tabmokcolor3	"White color for tab separators">
+
+<!ENTITY Ctr_paneluibtweak	"PanelUI button (on tabs toolbar): appearance like appbutton on titlebar">
+<!ENTITY Ctr_dblclnewtab	"Tabs toolbar: double click opens a 'new' tab (using browser.newtab.url)">
+<!ENTITY Ctr_dblclclosefx	"Appbutton on titlebar: double click closes current window">
+<!ENTITY Ctr_hide_bf_popup	"Movable back/forward button: hide history menu on mouse press">
+
+<!ENTITY Ctr_animation		"Animation">
 <!ENTITY Ctr_throbberalt	"Alternative tab throbber loading animation">
 <!ENTITY Ctr_bmanimation	"Bookmarking animation">
+<!ENTITY Ctr_pananimation	"Panel opening animation">
 <!ENTITY Ctr_tabanimation	"Tab closing/opening animation (about:config)">
 <!ENTITY Ctr_dlanimation	"'Download notification' animation (about:config)">
 
+<!ENTITY Ctr_closeabarbut	"Hide add-on bars close button">
 <!ENTITY Ctr_toolsitem		"Menuitem in tools menu">
 <!ENTITY Ctr_appmenuitem	"Menuitem in appbuttons menu">
-<!ENTITY Ctr_cuibotbuttons	"Option-buttons in 'customize ui' mode">
+<!ENTITY Ctr_cuibotbuttons	"Extra buttons in 'customizing' mode">
+
+
+<!ENTITY Ctr_special_font	"Background color settings are for default theme only!">
+<!ENTITY Ctr_special_info	"Some options only offer visual changes in certain cases!">
+<!ENTITY Ctr_special_info2	"Settings are made for Firefox default theme and may not work with all third party themes!">
+<!ENTITY Ctr_support		"Support Forum">
+<!ENTITY Ctr_newversion		"New version?">
+
+<!ENTITY Ctr_addon-bar.accesskey	"A">
+<!ENTITY Ctr_extrabar.accesskey		"D">

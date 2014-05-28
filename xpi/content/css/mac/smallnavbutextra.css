@@ -48,16 +48,11 @@
 	  border: 0 !important;
 	}
 
-    #navigator-toolbox #nav-bar #forward-button:-moz-locale-dir(ltr){
-      margin-right: 2px !important;
-	  margin-left: -4px !important;
+    #navigator-toolbox #nav-bar #forward-button{
+      -moz-margin-end: 2px !important;
+	  -moz-margin-start: -4px !important;
 	}
-	
-    #navigator-toolbox #nav-bar #forward-button:-moz-locale-dir(rtl){
-      margin-left: 2px !important;
-	  margin-right: -4px !important;
-	}
-	
+
 	#nav-bar .toolbarbutton-1 {
       min-width:24px !important;
     }
@@ -108,40 +103,30 @@
                   0 0 2px hsla(210,54%,20%,.1) !important;
 	}
 
-	#navigator-toolbox #nav-bar #urlbar-container:-moz-locale-dir(ltr) {
-	  margin-left: 0px !important;
-	}
-	#navigator-toolbox #nav-bar #urlbar-container:-moz-locale-dir(rtl) {
-	  margin-right: 0px !important;
+	#navigator-toolbox #nav-bar #urlbar-container {
+	  -moz-margin-start: 0px !important;
 	}
 
-	#nav-bar #notification-popup-box[hidden] + *:-moz-locale-dir(ltr),
-	#nav-bar #notification-popup-box + *:-moz-locale-dir(ltr) {
-	  padding-left: 4px !important;
+	#nav-bar #notification-popup-box[hidden] + *,
+	#nav-bar #notification-popup-box + * {
+	  -moz-padding-start: 4px !important;
 	  transition: none !important;
 	}
 
-	#nav-bar #notification-popup-box[hidden] + *:-moz-locale-dir(rtl),
-	#nav-bar #notification-popup-box + *:-moz-locale-dir(rtl) {
-	  padding-right: 4px !important;
-	  transition: none !important;
-	}
-	
 	#nav-bar #urlbar-container[forwarddisabled]:hover:not([switchingtabs]) > #urlbar-wrapper > #urlbar {
 	  transition-delay: 0s !important;
 	}
 
-	#nav-bar #urlbar-container > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr),
-	#nav-bar #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr) {
-	  margin-left: 4px !important;
+	#nav-bar #urlbar-container > #urlbar-wrapper > #urlbar,
+	#nav-bar #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
+	  margin-left: 4px !important; /* for both ltr and rtl*/
 	}
 	
-	#nav-bar #urlbar-container > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl),
-	#nav-bar #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
-	  margin-right: 4px !important;
+	#main-window #navigator-toolbox #urlbar-wrapper {
+	  -moz-box-align: center !important;
 	}
-
-	#nav-bar #ctr_puib_separator{
+	
+	#nav-bar #ctraddon_puib_separator{
 	  margin-top: 2px !important;
 	  margin-bottom: 2px !important;
 	}
@@ -153,17 +138,11 @@
 	  margin: 0.5px 0 0 0 !important;
 	}
 	
-	#navigator-toolbox:-moz-locale-dir(ltr) #nav-bar #bookmarks-menu-button .toolbarbutton-menubutton-dropmarker .dropmarker-icon{
-	  margin-left:1px !important;
+	#navigator-toolbox #nav-bar #bookmarks-menu-button .toolbarbutton-menubutton-dropmarker .dropmarker-icon{
+	  -moz-margin-start:1px !important;
 	}
-	#navigator-toolbox:-moz-locale-dir(ltr) #nav-bar #bookmarks-menu-button .toolbarbutton-menubutton-dropmarker{
-	  margin-left:-5px !important;
-	}
-	#navigator-toolbox:-moz-locale-dir(rtl) #nav-bar #bookmarks-menu-button .toolbarbutton-menubutton-dropmarker .dropmarker-icon{
-	  margin-right:1px !important;
-	}
-	#navigator-toolbox:-moz-locale-dir(rtl) #nav-bar #bookmarks-menu-button .toolbarbutton-menubutton-dropmarker{
-	  margin-right:-5px !important;
+	#navigator-toolbox #nav-bar #bookmarks-menu-button .toolbarbutton-menubutton-dropmarker{
+	  -moz-margin-start:-5px !important;
 	}
 	
 	/* star button in urlbar support */

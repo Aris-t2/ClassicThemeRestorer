@@ -6,8 +6,8 @@
 	** Hide disabled stop button and hide reload button,
 	** if stop button is not disabled.
 	**/
-	toolbar[currentset*="ctr_stop-button,ctr_reload-button"]:not([customizing]) #ctr_stop-button[disabled],
-	toolbar[currentset*="ctr_stop-button,ctr_reload-button"]:not([customizing]) #ctr_stop-button:not([disabled]) ~ #ctr_reload-button{
+	toolbar[currentset*="ctraddon_stop-button,ctraddon_reload-button"]:not([customizing]) #ctraddon_stop-button[disabled],
+	toolbar[currentset*="ctraddon_stop-button,ctraddon_reload-button"]:not([customizing]) #ctraddon_stop-button:not([disabled]) ~ #ctraddon_reload-button{
 	  visibility:collapse !important;
 	}
 

@@ -1,0 +1,28 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	.tabbrowser-tab .tab-close-button {
+	  visibility: collapse !important;
+	}
+	#ctraddon_tabs-closebutton{
+	  visibility: visible !important;
+	}
+	/*#tabbrowser-tabs {
+	  -moz-box-ordinal-group: 901 !important;
+	}
+	#TabsToolbar #new-tab-button {
+	  -moz-box-ordinal-group: 902 !important;
+	}
+	#TabsToolbar #alltabs-button {
+	  -moz-box-ordinal-group: 902 !important;
+	}*/
+	#ctraddon_tabs-closebutton {
+	  -moz-box-ordinal-group: 0 !important;
+	}
+}
+
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+	#ctraddon_pw_alw_tabclose{
+	  visibility: collapse !important;
+	}
+}

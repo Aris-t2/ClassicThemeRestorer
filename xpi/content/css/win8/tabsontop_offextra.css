@@ -2,27 +2,15 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-    #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:-moz-locale-dir(ltr){
-      margin-left: 0px !important;
-    }
-    #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:-moz-locale-dir(ltr){
-      padding-left: 2px !important;
-    }
-    #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:-moz-locale-dir(rtl){
-      margin-right: 0px !important;
-    }
-    #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:-moz-locale-dir(rtl){
-      padding-right: 2px !important;
+    #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
+      -moz-margin-start: 0px !important;
+	  -moz-padding-start: 0px !important;
     }
 
-	#TabsToolbar .tabbrowser-tabs{
-	  margin-left: -2px !important;
-	  margin-right: -2px !important;
-	}
-	
-	#TabsToolbar:not(:-moz-lwtheme) {
-	  border-left: 1px solid #9ca3aa !important;
-	  border-right: 1px solid #9ca3aa !important;
+	#main-window[defaultfxtheme="true"][tabsontop="false"][sizemode="normal"]  #TabsToolbar:not(:-moz-lwtheme) {
+	  border-left: 1px solid hsla(209,67%,12%,0.35) !important;
+	  border-right: 1px solid hsla(209,67%,12%,0.35) !important;
+	  background-clip: padding-box !important;
 	}
 	
 	#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{

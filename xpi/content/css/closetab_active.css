@@ -1,0 +1,16 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	.tabbrowser-tab:not([selected="true"]) .tab-close-button {
+	  visibility: collapse !important;
+	}
+	#ctraddon_pw_alw_tabclose{
+	  visibility: collapse !important;
+	}
+}
+
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+	#ctraddon_pw_alw_tabclose{
+	  visibility: collapse !important;
+	}
+}

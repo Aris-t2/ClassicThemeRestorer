@@ -1,0 +1,20 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	#navigator-toolbox toolbar:not(#TabsToolbar):not(#PersonalToolbar) {
+	  border-left: 0px !important;
+	  border-right: 0px !important;
+	}
+	#PersonalToolbar {
+	  border-top: 1px solid hsla(209,67%,12%,0.35) !important;
+	  background-clip: padding-box !important;
+	  border-top-left-radius: 2px !important;
+	  border-top-right-radius: 2px !important;
+	}
+	#main-window #navigator-toolbox #nav-bar {
+	  border: none !important;
+	  box-shadow: none !important;
+	}
+	
+}

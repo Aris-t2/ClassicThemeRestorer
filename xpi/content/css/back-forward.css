@@ -1,9 +1,9 @@
-@import url(chrome://ctr_os_special/skin/back-forwardextra.css);
+@import url(chrome://ctraddon_os_special/skin/back-forwardextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#ctr_back-forward-button{
+	#ctraddon_back-forward-button{
 	  visibility: visible !important;
 	}
 	
@@ -15,10 +15,10 @@
 	/* RTL locale fix */
 	#urlbar-container:-moz-locale-dir(rtl) #back-button,
 	#urlbar-container:-moz-locale-dir(rtl) #forward-button{
-	  visibility: hidden !important;
+	  visibility: collapse !important; /*hidden*/
 	}
 
-	#urlbar-container[forwarddisabled] > #urlbar-wrapper {
+	#urlbar-container *{
 	  clip-path: none !important;
 	}
 	
@@ -28,23 +28,13 @@
 	  transition-delay: 0s !important;
 	}
 	
-	#urlbar-container > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr),
-	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr) {
-	  margin-left: 4px !important;
-	}
-	
-	#urlbar-container > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl),
-	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
-	  margin-right: 4px !important;
-	}
-
 	#main-window #navigator-toolbox #urlbar-container #forward-button[disabled]{
 	  visibility:collapse !important;
 	  opacity: 1.0 !important;
 	}
 	
-	#ctr_back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
-	#ctr_forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon{
+	#ctraddon_back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
+	#ctraddon_forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon{
 	  transform: scaleX(-1);
 	}
 }

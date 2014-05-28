@@ -1,4 +1,4 @@
-@import url(chrome://ctr_os_special/skin/curvedtabsextra.css);
+@import url(chrome://ctraddon_os_special/skin/curvedtabsextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul){
@@ -62,11 +62,12 @@
 	.tabcolorbox,
 	.tabhovcolorbox,
 	.tabpencolorbox,
-	#ctr_ccap_t_curved{
+	.tabunrcolorbox,
+	#ctraddon_ccap_t_curved{
 	  visibility: visible !important;
 	}
 	
-	#ctr_ccap_t_default{
+	#ctraddon_ccap_t_default{
 	  visibility: collapse !important;
 	}
 }

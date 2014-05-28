@@ -2,19 +2,22 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	toolbar #ctr_appbutton,
-	#main-window:not([tabsintitlebar]) #ctr_appbutton2,
-	#main-window[customizing][sizemode="maximized"] #ctr_appbutton2	{
+	toolbar #ctraddon_appbutton,
+	#main-window:not([tabsintitlebar]) #ctraddon_appbutton2,
+	#main-window[customizing][sizemode="maximized"] #ctraddon_appbutton2	{
 	  visibility: collapse !important;
 	}
 	
-	window:not([chromehidden~="toolbar"]) #ctr_appbutton2,
-	#main-window:not([tabsintitlebar]):not([chromehidden~="toolbar"]) #ctr_appbutton {
+	window:not([chromehidden~="toolbar"]) #ctraddon_appbutton2 {
 	  visibility: visible !important;
+	}
+	
+	#main-window[tabsintitlebar][sizemode="maximized"]:not([tabsontop="false"]) #TabsToolbar {
+	  -moz-padding-start: 2px !important;
 	}
 
 	/* style appbutton*/
-	#ctr_appbutton2{
+	#ctraddon_appbutton2{
 	  -moz-appearance:none !important;
 	  background-clip: padding-box !important;
 	  border-radius: 0 0 4px 4px;
@@ -32,20 +35,14 @@
 	  -moz-border-bottom-colors: rgba(255,255,255,.70) hsla(214,89%,21%,.5) !important;
 	}
 
-	#ctr_appbutton2 #ctr_appbuttonPopup{
+	#ctraddon_appbutton2 #ctraddon_appbuttonPopup{
 	  margin-top:-1px;
-	  margin-left:0px;
+	  -moz-margin-start:0px;
 	}
 	
-	#ctr_appbutton2:hover:active,
-	#ctr_appbutton2[open] {
+	#ctraddon_appbutton2:hover:active,
+	#ctraddon_appbutton2[open] {
 	  border-radius:0 0 0 0;
-	}
-
-	
-	#main-window:not([tabsintitlebar]) #titlebar-buttonbox-container{
-	  -moz-appearance: none !important;
-	  visibility:collapse !important;
 	}
 
 	/* restore hidden titlebar and move it behind tabs toolbar for 
@@ -54,153 +51,100 @@
 	@media all and (-moz-windows-theme:aero) {
 
 		@media all and (-moz-windows-compositor) {
-			#main-window:not([tabsintitlebar])[sizemode="normal"] #titlebar{
-			  display: block !important;
-			  margin-bottom:-30px !important;
-			}
 			
-			#main-window:not([tabsintitlebar])[sizemode="maximized"] #titlebar{
-			  display: block !important;
-			  margin-bottom:-24px !important;
-			}
-			
-			#main-window[sizemode="normal"] #ctr_appbutton2{
+			#main-window[sizemode="normal"] #ctraddon_appbutton2{
 			  margin-top:1px !important;
 			  margin: 1px 0 2px 0px !important;
 			}
 			
-			#main-window[sizemode="maximized"] #ctr_appbutton2{
+			#main-window[sizemode="maximized"] #ctraddon_appbutton2{
 			  margin-top:0px !important;
 			  margin: 0px 0 2px 0px !important;
 			}
 			
-			#main-window[sizemode="normal"] > #titlebar:-moz-lwtheme #ctr_appbutton2{
+			#main-window[sizemode="normal"] > #titlebar:-moz-lwtheme #ctraddon_appbutton2{
 			  margin-top:1px !important;
 			  margin: -1px 0 2px 1px !important;
 			}
 			
-			#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"] #toolbar-menubar ~ #TabsToolbar,
+			/*#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"] #toolbar-menubar ~ #TabsToolbar,
 			#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
 			  margin-top: 20px !important;
-			}
+			}*/
 			
-			#main-window[tabsintitlebar][sizemode="normal"] #TabsToolbar .titlebar-placeholder{
+			/*#main-window[tabsintitlebar][sizemode="normal"] #TabsToolbar .titlebar-placeholder{
 			  visibility:collapse !important;
-			}
+			}*/
 			
 		}
 		
 		@media not all and (-moz-windows-compositor) {
-			#main-window:not([tabsintitlebar])[sizemode="normal"] #titlebar,
-			#main-window:not([tabsintitlebar])[sizemode="maximized"] #titlebar{
-			  display: block !important;
-			  margin-bottom:-18px !important;
-			  -moz-appearance:none !important;
-			}
-			
-			#main-window:not([tabsintitlebar]) #ctr_appbutton2{
-			  margin-top:-1px !important;
-			  margin: -1px 0 2px 1px !important;
-			}
-			#main-window[tabsintitlebar][sizemode="normal"]  #ctr_appbutton2{
+			#main-window[tabsintitlebar][sizemode="normal"]  #ctraddon_appbutton2{
 			  margin-top:0px !important;
 			  margin: 0px 0 10px 1px !important;
 			}
-			#main-window[tabsintitlebar][sizemode="maximized"]  #ctr_appbutton2{
+			#main-window[tabsintitlebar][sizemode="maximized"]  #ctraddon_appbutton2{
 			  margin-top:-1px !important;
 			  margin: -2px 0 2px 0px !important;
 			}
-			#main-window[sizemode="normal"] > #titlebar:-moz-lwtheme #ctr_appbutton2{
+			#main-window[sizemode="normal"] > #titlebar:-moz-lwtheme #ctraddon_appbutton2{
 			  margin-top:1px !important;
 			  margin: -1px 0 8px 1px !important;
 			}
 			
-			#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"] #toolbar-menubar ~ #TabsToolbar,
+			/*#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"] #toolbar-menubar ~ #TabsToolbar,
 			#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
 			  margin-top: 18px !important;
-			}
+			}*/
 		}
 		
 	}
 
 	@media all and (-moz-windows-classic) {
-	  @media  not all and (-moz-os-version: windows-xp){
-		#main-window:not([tabsintitlebar])[sizemode="normal"] #titlebar,
-		#main-window:not([tabsintitlebar])[sizemode="maximized"] #titlebar{
-		  display: block !important;
-		  margin-bottom:-14px !important;
-		  -moz-appearance:none !important;
-		}
-		#main-window:not([tabsintitlebar]) #ctr_appbutton2{
-		  margin-top:0px !important;
-		  margin: 0px 0 16px 0px !important;
-		}
-	  }
-	  @media  all and (-moz-os-version: windows-xp){
-		#main-window:not([tabsintitlebar])[sizemode="normal"] #titlebar,
-		#main-window:not([tabsintitlebar])[sizemode="maximized"] #titlebar{
-		  display: block !important;
-		  margin-bottom:-12px !important;
-		  -moz-appearance:none !important;
-		}
-		#ctr_appbutton2{
+
+	  /*@media  all and (-moz-os-version: windows-xp){*/
+
+		#ctraddon_appbutton2{
 		  margin-top:0px !important;
 		  margin: 0px 0 2px 0px !important;
 		}
-	  }
+	  /*}*/
 	}
 	
 	@media all and (-moz-windows-theme: luna-blue){
-		#main-window:not([tabsintitlebar])[sizemode="normal"] #titlebar,
-		#main-window:not([tabsintitlebar])[sizemode="maximized"] #titlebar{
-		  display: block !important;
-		  margin-bottom:-12px !important;
-		  -moz-appearance:none !important;
-		}
-		#main-window[tabsintitlebar][sizemode="normal"]  #ctr_appbutton2{
+
+		#main-window[tabsintitlebar][sizemode="normal"]  #ctraddon_appbutton2{
 		  margin-top:0px !important;
 		  margin: 0px 0 10px 1px !important;
 		}
 		
-		#main-window[tabsintitlebar][sizemode="maximized"]   #ctr_appbutton2{
+		#main-window[tabsintitlebar][sizemode="maximized"]   #ctraddon_appbutton2{
 		  margin-top:-1px !important;
 		  margin: -1px 0 8px 0px !important;
 		}
 	}
 	
 	@media all and (-moz-windows-theme: luna-silver){
-		#main-window:not([tabsintitlebar])[sizemode="normal"] #titlebar,
-		#main-window:not([tabsintitlebar])[sizemode="maximized"] #titlebar{
-		  display: block !important;
-		  margin-bottom:-12px !important;
-		  -moz-appearance:none !important;
-		}
 	
-		#main-window[tabsintitlebar][sizemode="normal"]  #ctr_appbutton2{
+		#main-window[tabsintitlebar][sizemode="normal"]  #ctraddon_appbutton2{
 		  margin-top:0px !important;
 		  margin: 0px 0 10px 1px !important;
 		}
 		
-		#main-window[tabsintitlebar][sizemode="maximized"]   #ctr_appbutton2{
+		#main-window[tabsintitlebar][sizemode="maximized"]   #ctraddon_appbutton2{
 		  margin-top:-1px !important;
 		  margin: -1px 0 8px 0px !important;
 		}
 	}
 	
 	@media all and (-moz-windows-theme: luna-olive){
-		#main-window:not([tabsintitlebar])[sizemode="normal"] #titlebar,
-		#main-window:not([tabsintitlebar])[sizemode="maximized"] #titlebar{
-		  display: block !important;
-		  margin-bottom:-12px !important;
-		  -moz-appearance:none !important;
-		}
-	
-		#main-window[tabsintitlebar][sizemode="normal"]  #ctr_appbutton2{
+
+		#main-window[tabsintitlebar][sizemode="normal"]  #ctraddon_appbutton2{
 		  margin-top:0px !important;
 		  margin: 0px 0 10px 1px !important;
 		}
 		
-		#main-window[tabsintitlebar][sizemode="maximized"]   #ctr_appbutton2{
+		#main-window[tabsintitlebar][sizemode="maximized"]   #ctraddon_appbutton2{
 		  margin-top:-1px !important;
 		  margin: -1px 0 8px 0px !important;
 		}
@@ -214,34 +158,39 @@
 		  -moz-appearance:none !important;
 		}
 	
-		#main-window[tabsintitlebar][sizemode="normal"]  #ctr_appbutton2{
+		#main-window[tabsintitlebar][sizemode="normal"]  #ctraddon_appbutton2{
 		  margin-top:0px !important;
 		  margin: 0px 0 13px 1px !important;
 		}
 		
-		#main-window[tabsintitlebar][sizemode="maximized"]   #ctr_appbutton2{
+		#main-window[tabsintitlebar][sizemode="maximized"]   #ctraddon_appbutton2{
 		  margin-top:-1px !important;
 		  margin: -1px 0 8px 0px !important;
 		}
 	}
 	
 	@media all and (-moz-windows-theme: zune){
-		#main-window:not([tabsintitlebar])[sizemode="normal"] #titlebar,
-		#main-window:not([tabsintitlebar])[sizemode="maximized"] #titlebar{
-		  display: block !important;
-		  margin-bottom:-12px !important;
-		  -moz-appearance:none !important;
-		}
-
-		#main-window[tabsintitlebar][sizemode="normal"]  #ctr_appbutton2{
+		#main-window[tabsintitlebar][sizemode="normal"]  #ctraddon_appbutton2{
 		  margin-top:0px !important;
 		  margin: 0px 0 13px 1px !important;
 		}
 		
-		#main-window[tabsintitlebar][sizemode="maximized"]   #ctr_appbutton2{
+		#main-window[tabsintitlebar][sizemode="maximized"]   #ctraddon_appbutton2{
 		  margin-top:-1px !important;
 		  margin: -1px 0 8px 0px !important;
 		}
 	}
+	
+	/* trigger non-default themes on Win7/8, but exclude Windows Classic theme*/
+	@media not all and (-moz-windows-classic) {
+	@media not all and (-moz-os-version: windows-xp){
+	@media not all and (-moz-windows-default-theme) {
+		#main-window[sizemode="normal"] #titlebar #titlebar-content #ctraddon_appbutton2{
+		  margin: 0px 0 5px 0px !important;
+		}
+		#main-window[sizemode="maximized"] #titlebar #titlebar-content #ctraddon_appbutton2{
+		  margin: -2px 0 1px -1px !important;
+		}
+	}}}
 
 }

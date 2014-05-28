@@ -1,5 +1,5 @@
-@import url(chrome://ctr_os_special/skin/back-forwardextra.css);
-@import url(chrome://ctr_os_special/skin/mode_icons_and_text_extra.css);
+@import url(chrome://ctraddon_os_special/skin/back-forwardextra.css);
+@import url(chrome://ctraddon_os_special/skin/mode_icons_and_text_extra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
@@ -8,7 +8,7 @@
 	#nav-bar .toolbarbutton-menubutton-dropmarker > image,
 	#nav-bar .toolbarbutton-menubutton-button .toolbarbutton-icon,
 	#nav-bar toolbarbutton[type="menu-button"] > .toolbarbutton-icon,
-	#nav-bar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#ctr_back-button):not(#ctr_forward-button):-moz-any(:hover,[checked],[open],[type="menu-button"]) > .toolbarbutton-icon,
+	#nav-bar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#ctraddon_back-button):not(#ctraddon_forward-button):-moz-any(:hover,[checked],[open],[type="menu-button"]) > .toolbarbutton-icon,
 	#nav-bar .toolbarbutton-1[type="menu-button"] > .toolbarbutton-menubutton-dropmarker::before,
 	#nav-bar .toolbarbutton-1 > .toolbarbutton-icon,
 	#nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
@@ -22,32 +22,32 @@
 		transition-property: none !important;
         transition-duration: 0ms !important;
 	}
-	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
+	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
 	  display: -moz-box !important;
 	}
-	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
+	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
 	  -moz-box-orient: vertical !important;
 	}
-	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
+	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
 	  min-width: 0px !important;
 	}
-	#ctr_addon-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
+	#ctraddon_addon-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
 	  min-width: 57px !important;
 	}
-	:-moz-any(#toolbar-menubar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1[type="menu"] dropmarker{
+	:-moz-any(#toolbar-menubar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar) .toolbarbutton-1[type="menu"] dropmarker{
 	   visibility: collapse !important;
 	}
-	:-moz-any(#toolbar-menubar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
+	:-moz-any(#toolbar-menubar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
       padding: 0px !important;
     }
 
-    :-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) {
+    :-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) {
        border: 1px solid transparent !important;
     }
 	
-	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctr_addon-bar, #ctr_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not(#bookmarks-menu-button):not([disabled]):hover,
-	#ctr_comb_stopreload-button #urlbar-reload-button:not([disabled]):hover,
-	#ctr_comb_stopreload-button #urlbar-stop-button:not([disabled]):hover {
+	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not(#bookmarks-menu-button):not([disabled]):hover,
+	#ctraddon_comb_stopreload-button #urlbar-reload-button:not([disabled]):hover,
+	#ctraddon_comb_stopreload-button #urlbar-stop-button:not([disabled]):hover {
 	  border: 1px solid !important;
       background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.1)) !important;
       border-color: hsla(210,54%,20%,.15) hsla(210,54%,20%,.2) hsla(210,54%,20%,.25) !important;
@@ -66,11 +66,11 @@
 	}
   
 	/* CTR add-on bar*/
-	#ctr_addon-bar .toolbarbutton-menubutton-button{
+	#ctraddon_addon-bar .toolbarbutton-menubutton-button{
 	 min-width:60px !important;
 	}
 
-	#ctr_addon-bar toolbarbutton[type=menu] {
+	#ctraddon_addon-bar toolbarbutton[type=menu] {
 	  padding:8px !important;
 	}
 
@@ -79,7 +79,7 @@
 	}
 
 	/* make custom back-forward visible and hide urlbars back-forward item */
-	#ctr_back-forward-button {
+	#ctraddon_back-forward-button {
 	  visibility: visible !important;
 	}	
 	#urlbar-container #back-button,
@@ -98,23 +98,20 @@
 	  margin-left: 0px !important;
 	}
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
-	  margin-right: 0px !important;
+	  margin-left: -20px !important;
 	}
 	
-    #urlbar:-moz-locale-dir(ltr) {
-      border-left:1px solid #b4c1cf !important;
+    #urlbar {
+      border:1px solid #b4c1cf !important;
     }
-    #urlbar[focused="true"]:-moz-locale-dir(ltr) {
-      border-left:1px solid #72c0fe !important;
-    }
-    #urlbar:-moz-locale-dir(rtl) {
-      border-right:1px solid #b4c1cf !important;
-    }
-    #urlbar[focused="true"]:-moz-locale-dir(rtl) {
-      border-right:1px solid #72c0fe !important;
-    }
+
+	@media all and (-moz-windows-theme:aero) {
+		#urlbar[focused="true"] {
+		  border:1px solid #72c0fe !important;
+		}
+	}
 	
-	#ctr_addon-bar #zoom-reset-button{
+	#ctraddon_addon-bar #zoom-reset-button{
 	  padding-top:8px !important;
 	}
 	
@@ -140,9 +137,21 @@
 	  margin: -8px 4px !important;
 	}
 	
-	#ctr_back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
-	#ctr_forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon{
+	#ctraddon_back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
+	#ctraddon_forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon{
 	  transform: scaleX(-1);
 	}
-    
+	
+	#nav-bar toolbarbutton[type="menu"] dropmarker{
+	  visibility: collapse !important;
+	}
+	
+	toolbar #ctraddon_back-forward-dropmarker  .toolbarbutton-text {
+	  display: none !important;
+	  visibility: collapse !important;
+	}
+	toolbar #ctraddon_back-forward-dropmarker  {
+	  min-width:0px !important;
+	}
+ 
 }

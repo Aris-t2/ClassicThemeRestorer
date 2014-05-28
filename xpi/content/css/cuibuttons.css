@@ -1,52 +1,76 @@
-@import url(chrome://ctr_os_special/skin/cuibuttonsextra.css);
+@import url(chrome://ctraddon_os_special/skin/cuibuttonsextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#ctr_cuibuttonsbox{
+	#ctraddon_cuibuttonsbox{
 	  visibility: visible !important;
+	}
+	
+	#main-window[defaultfxtheme="true"] #ctraddon_cuibuttonsbox{
 	  background-color: #ececec;
       padding: 0 15px 15px 15px;
 	  margin-top:-6px;
 	}
 
 	/* customize area buttons */
-	#customization-smallnavbut-button1:-moz-locale-dir(ltr),
-	#customization-smallnavbut-button2:-moz-locale-dir(ltr),
-	#customization-icons-button:-moz-locale-dir(ltr),
-	#customization-iconstext-button:-moz-locale-dir(ltr),
-	#customization-textonly-button:-moz-locale-dir(ltr){
-	  padding-left:0 !important;
-	  padding-right:0 !important;
-	  margin-left:-1px !important;
-	  margin-right:0 !important;
-	}
-	#customization-smallnavbut-button1:-moz-locale-dir(rtl),
-	#customization-smallnavbut-button2:-moz-locale-dir(rtl),
-	#customization-icons-button:-moz-locale-dir(rtl),
-	#customization-iconstext-button:-moz-locale-dir(rtl),
-	#customization-textonly-button:-moz-locale-dir(rtl){
-	  padding-left:0 !important;
-	  padding-right:0 !important;
-	  margin-right:-1px !important;
-	  margin-left:0 !important;
+	#main-window[defaultfxtheme="true"] #ctraddon_cui-smallnavbut-button1,
+	#main-window[defaultfxtheme="true"] #ctraddon_cui-smallnavbut-button2,
+	#main-window[defaultfxtheme="true"] #ctraddon_cui-icons-button,
+	#main-window[defaultfxtheme="true"] #ctraddon_cui-iconstext-button,
+	#main-window[defaultfxtheme="true"] #ctraddon_cui-textonly-button{
+	  -moz-padding-start: 0 !important;
+	  -moz-padding-end: 0 !important;
+	  -moz-margin-start: -1px !important;
+	  -moz-margin-end: 0 !important;
 	}
 
-	#customization-smallnavbut-button1:-moz-locale-dir(ltr),
-	#customization-icons-button:-moz-locale-dir(ltr),
-	#customization-iconstext-button:-moz-locale-dir(ltr),
-	#customization-smallnavbut-button2:-moz-locale-dir(rtl),
-	#customization-iconstext-button:-moz-locale-dir(rtl),
-	#customization-textonly-button:-moz-locale-dir(rtl){
+	#main-window[defaultfxtheme="true"] #ctraddon_cui-smallnavbut-button1:-moz-locale-dir(ltr),
+	#main-window[defaultfxtheme="true"] #ctraddon_cui-icons-button:-moz-locale-dir(ltr),
+	#main-window[defaultfxtheme="true"] #ctraddon_cui-iconstext-button:-moz-locale-dir(ltr),
+	#main-window[defaultfxtheme="true"] #ctraddon_cui-smallnavbut-button2:-moz-locale-dir(rtl),
+	#main-window[defaultfxtheme="true"] #ctraddon_cui-iconstext-button:-moz-locale-dir(rtl),
+	#main-window[defaultfxtheme="true"] #ctraddon_cui-textonly-button:-moz-locale-dir(rtl){
 	  border-top-right-radius: 0px !important;
 	  border-bottom-right-radius: 0px !important;
 	}
-	#customization-smallnavbut-button2:-moz-locale-dir(ltr),
-	#customization-iconstext-button:-moz-locale-dir(ltr),
-	#customization-textonly-button:-moz-locale-dir(ltr),
-	#customization-smallnavbut-button1:-moz-locale-dir(rtl),
-	#customization-icons-button:-moz-locale-dir(rtl),
-	#customization-iconstext-button:-moz-locale-dir(rtl){
+	#main-window[defaultfxtheme="true"] #ctraddon_cui-smallnavbut-button2:-moz-locale-dir(ltr),
+	#main-window[defaultfxtheme="true"] #ctraddon_cui-iconstext-button:-moz-locale-dir(ltr),
+	#main-window[defaultfxtheme="true"] #ctraddon_cui-textonly-button:-moz-locale-dir(ltr),
+	#main-window[defaultfxtheme="true"] #ctraddon_cui-smallnavbut-button1:-moz-locale-dir(rtl),
+	#main-window[defaultfxtheme="true"] #ctraddon_cui-icons-button:-moz-locale-dir(rtl),
+	#main-window[defaultfxtheme="true"] #ctraddon_cui-iconstext-button:-moz-locale-dir(rtl){
+	  border-top-left-radius: 0px !important;
+	  border-bottom-left-radius: 0px !important;
+	}
+	
+	#main-window:not([defaultfxtheme="true"]) #ctraddon_cuibuttons_main,
+	#main-window:not([defaultfxtheme="true"]) #ctraddon_cui-smallnavbut-button2,
+	#main-window:not([defaultfxtheme="true"]) #ctraddon_cui-smallnavbut-button1 {
+	  visibility:collapse !important;
+	}
+
+	/* customize area buttons */	
+	#main-window:not([defaultfxtheme="true"]) #ctraddon_cui-icons-button,
+	#main-window:not([defaultfxtheme="true"]) #ctraddon_cui-iconstext-button,
+	#main-window:not([defaultfxtheme="true"]) #ctraddon_cui-textonly-button{
+	  -moz-padding-start: 0 !important;
+	  -moz-padding-end: 0 !important;
+	  -moz-margin-start: -1px !important;
+	  -moz-margin-end: 0 !important;
+	}
+
+	#main-window:not([defaultfxtheme="true"]) #ctraddon_cui-icons-button:-moz-locale-dir(ltr),
+	#main-window:not([defaultfxtheme="true"]) #ctraddon_cui-iconstext-button:-moz-locale-dir(ltr),
+	#main-window:not([defaultfxtheme="true"]) #ctraddon_cui-iconstext-button:-moz-locale-dir(rtl),
+	#main-window:not([defaultfxtheme="true"]) #ctraddon_cui-textonly-button:-moz-locale-dir(rtl){
+	  border-top-right-radius: 0px !important;
+	  border-bottom-right-radius: 0px !important;
+	}
+	#main-window:not([defaultfxtheme="true"]) #ctraddon_cui-iconstext-button:-moz-locale-dir(ltr),
+	#main-window:not([defaultfxtheme="true"]) #ctraddon_cui-textonly-button:-moz-locale-dir(ltr),
+	#main-window:not([defaultfxtheme="true"]) #ctraddon_cui-icons-button:-moz-locale-dir(rtl),
+	#main-window:not([defaultfxtheme="true"]) #ctraddon_cui-iconstext-button:-moz-locale-dir(rtl){
 	  border-top-left-radius: 0px !important;
 	  border-bottom-left-radius: 0px !important;
 	}

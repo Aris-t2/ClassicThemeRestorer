@@ -1,0 +1,11 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+	menupopup scrollbox {
+	  overflow-y: auto !important
+	}
+	menupopup .autorepeatbutton-up,
+	menupopup .autorepeatbutton-down {
+	  display: none !important;
+	}
+}

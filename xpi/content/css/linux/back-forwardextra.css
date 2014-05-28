@@ -2,43 +2,30 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + *:-moz-locale-dir(ltr),
-	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + *:-moz-locale-dir(rtl),
+	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + *,
+	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar,
 	#urlbar-container[forwarddisabled] > #urlbar-wrapper,
-	#urlbar-container[forwarddisabled] > *{
-	  transition: none !important;
-	}
-	
-	#urlbar-container > #urlbar-wrapper:-moz-locale-dir(ltr),
-	#urlbar-container[forwarddisabled] > #urlbar-wrapper:-moz-locale-dir(ltr){
-      padding-left: 44px !important;
-	}
-	
-	#urlbar-container > #urlbar-wrapper:-moz-locale-dir(rtl),
-	#urlbar-container[forwarddisabled] > #urlbar-wrapper:-moz-locale-dir(rtl){
-      padding-right: 44px !important;
-	}
-	
-	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
+	#urlbar-container[forwarddisabled] > *,
+	#wrapper-urlbar-container, #urlbar-container,#urlbar-wrapper,#urlbar {
 	  transition: none !important;
 	  transition-property:  none !important;
 	  transition-delay: 0s !important;
+	}
+	
+	#main-window:not([fx31="true"]) #urlbar-container > #urlbar-wrapper,
+	#main-window:not([fx31="true"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper {
+      -moz-padding-start: 33px !important;
+	}
+	#main-window[fx31="true"] #urlbar-container > #urlbar-wrapper,
+	#main-window[fx31="true"] #urlbar-container[forwarddisabled] > #urlbar-wrapper {
+      -moz-padding-start: 8px !important;
+	}
+		
+	#nav-bar #notification-popup-box[hidden] + * {
+	  -moz-padding-start: 2px !important;
+	  transition: none !important;
 	}
 
-	#wrapper-urlbar-container, #urlbar-container,#urlbar-wrapper,#urlbar{
-	  transition: none !important;
-	  transition-property:  none !important;
-	  transition-delay: 0s !important;
-	}
-	
-	#nav-bar #notification-popup-box[hidden] + *:-moz-locale-dir(ltr) {
-	  padding-left: 2px !important;
-	  transition: none !important;
-	}
-	#nav-bar #notification-popup-box[hidden] + *:-moz-locale-dir(rtl) {
-	  padding-right: 2px !important;
-	  transition: none !important;
-	}
 	#nav-bar #notification-popup-box:not([hidden]) {
 	  padding-left:2px !important;
 	  padding-right:2px !important;
@@ -46,12 +33,17 @@
 	}
 	
 	/* urlbar border tweaks */
-	#nav-bar #urlbar {
+	#main-window[defaultfxtheme="true"] #nav-bar #urlbar {
 	  border: 1px solid ThreeDShadow !important;
 	}
-	#nav-bar #urlbar[focused],
-	#nav-bar .searchbar-textbox[focused] {
+	#main-window[defaultfxtheme="true"] #nav-bar #urlbar[focused],
+	#main-window[defaultfxtheme="true"] #nav-bar .searchbar-textbox[focused] {
 	  border-color: Highlight !important;
+	}
+
+	#urlbar-container > #urlbar-wrapper > #urlbar,
+	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
+	  margin-left: 4px !important; /* for both ltr and rtl */
 	}
 
 }

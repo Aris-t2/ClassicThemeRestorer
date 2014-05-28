@@ -1,14 +1,16 @@
-@import url(chrome://ctr_os_special/skin/starinurlextra.css);
+@import url(chrome://ctraddon_os_special/skin/starinurlextra.css);
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	/** #bookmarks-menu-button {
+	#nav-bar #bookmarks-menu-button,
+	#urlbar[pageproxystate="invalid"] > #urlbar-icons #bookmarks-menu-button {
 	  visibility:collapse !important;
 	}
-	#urlbar-icons #bookmarks-menu-button {
+	
+	#urlbar:not([pageproxystate="invalid"]) > #urlbar-icons #bookmarks-menu-button {
 	  visibility:visible !important;
-	}*/
+	}
 	
 	#urlbar-icons #bookmarks-menu-button {
 	  -moz-appearance: none !important;

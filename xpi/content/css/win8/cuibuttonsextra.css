@@ -3,10 +3,10 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	/* customize area buttons */
-	.ctr_cuibutlabel:-moz-locale-dir(ltr){
+	.ctraddon_cuibutlabel:-moz-locale-dir(ltr){
 	  margin: 6px 3px 0px 0px !important;
 	}
-	.ctr_cuibutlabel:-moz-locale-dir(rtl){
+	.ctraddon_cuibutlabel:-moz-locale-dir(rtl){
 	  margin: 6px 0px 0px 3px !important;
 	}
 

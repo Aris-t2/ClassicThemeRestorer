@@ -1,0 +1,57 @@
+@import url(appbutton2.css);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#ctraddon_appbutton2{
+	  width: 95px !important;
+	}
+
+	#ctraddon_appbutton2:-moz-locale-dir(ltr) > label{
+	  -moz-appearance: none !important;
+      margin: 0 -26px 0 -34px !important;
+	}
+	#ctraddon_appbutton2:-moz-locale-dir(rtl) > label{
+	  -moz-appearance: none !important;
+      margin: 0 -34px 0 -26px !important;
+	}
+
+	#ctraddon_appbutton2 > .toolbarbutton-menu-dropmarker,
+	#ctraddon_appbutton2:hover:active > .toolbarbutton-menu-dropmarker,
+	#ctraddon_appbutton2[open] > .toolbarbutton-menu-dropmarker{
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/appmenu-dropmarker.png) !important;
+	}
+
+	#main-window[tabsintitlebar]:not([tabsontop="false"]) #titlebar:not([hidden]) ~ * #toolbar-menubar {
+	  -moz-margin-start: 99px !important;
+	}
+
+	#main-window[tabsintitlebar][customizing]:not([tabsontop="false"]) #titlebar:not([hidden]) ~ * #toolbar-menubar {
+	  -moz-margin-start: 26px !important;
+	}
+	
+	#main-window[tabsintitlebar][chromehidden~="menubar"]:not([tabsontop="false"]) #toolbar-menubar ~ #TabsToolbar,
+	#main-window[tabsintitlebar]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
+	  -moz-margin-start: 97px;
+	}
+	
+	
+	#main-window:not([tabsintitlebar])[tabsontop="false"] #titlebar-buttonbox-container{
+	  -moz-appearance: none !important;
+	  visibility:collapse !important;
+	}
+	
+	#main-window[tabsintitlebar][tabsontop="false"] #titlebar:not([hidden]) ~ * #toolbar-menubar {
+	  -moz-margin-start: 99px !important;
+	}
+
+	#main-window[tabsintitlebar][customizing][sizemode="maximized"][tabsontop="false"] #titlebar:not([hidden]) ~ * #toolbar-menubar {
+	  -moz-margin-start: 26px !important;
+	}
+	
+	#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="maximized"][tabsontop="false"] #toolbar-menubar ~ #TabsToolbar,
+	#main-window[tabsintitlebar][sizemode="maximized"][tabsontop="false"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
+	  -moz-margin-start: 97px;
+	}
+
+}

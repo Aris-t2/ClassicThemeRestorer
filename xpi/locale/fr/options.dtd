@@ -5,16 +5,16 @@
 <!ENTITY Ctr_extrabar		"Barre d'outils supplémentaire">
 <!ENTITY Ctr_flexspace		"Espace flexible">
 <!ENTITY Ctr_space			"Espace">
-<!ENTITY Ctr_separator		"Separator">
-<!ENTITY Ctr_puibseparator	"PanelUI-bouton Separator">
+<!ENTITY Ctr_separator		"Séparateur">
+<!ENTITY Ctr_puibseparator	"Séparateur du bouton menu">
 
 <!ENTITY Ctr_cuibuttons		"Boutons">
-<!ENTITY Ctr_cuibutnormal	"normal">
-<!ENTITY Ctr_cuibutsmall	"petit">
+<!ENTITY Ctr_cuibutnormal	"Taille normale">
+<!ENTITY Ctr_cuibutsmall	"Petits boutons">
 <!ENTITY Ctr_cuimode		"Mode">
-<!ENTITY Ctr_cuiico			"icônes">
-<!ENTITY Ctr_cuiicotxt		"icônes + texte">
-<!ENTITY Ctr_cuitxt			"texte">
+<!ENTITY Ctr_cuiico			"Icônes">
+<!ENTITY Ctr_cuiicotxt		"Icônes + texte">
+<!ENTITY Ctr_cuitxt			"Texte">
 
 <!ENTITY Ctr_combrelstoptt	"[stop][actualiser] &gt;&gt; [stop-actualiser]">
 
@@ -24,26 +24,36 @@
 <!ENTITY Ctr_special_t		"Spéciaux">
 
 <!ENTITY Ctr_tabs			"Onglets">
-<!ENTITY Ctr_tabs0			"Onglets arrondis (Australis)">
-<!ENTITY Ctr_tabs1			"Onglets à angle droit (classique)">
-<!ENTITY Ctr_tabs1m			"Onglets à angle droit (australized)">
-<!ENTITY Ctr_tabs2			"Onglets arrondis (alternative)">
-<!ENTITY Ctr_tabs3			"Onglets arrondis (alternative Aero)">
-<!ENTITY Ctr_tabsontop0		"Onglets en haut [pas fixé] (par défaut)">
-<!ENTITY Ctr_tabsontop1		"Onglets en haut [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Onglets position basse [tabsontop=false]">
-<!ENTITY Ctr_tabsintitlebar	"Onglets dans la barre de titre">
-<!ENTITY Ctr_tabwidthdef	"(defaut)">
+<!ENTITY Ctr_tabs0			"Onglets arrondis (Australis - par défaut)">
+<!ENTITY Ctr_tabs1			"Onglets à angle droit (classiques)">
+<!ENTITY Ctr_tabs1m			"Onglets à angle droit (australisés)">
+<!ENTITY Ctr_tabs2			"Onglets arrondis (alternatifs)">
+<!ENTITY Ctr_tabs3			"Onglets arrondis (alternatifs Aero)">
+<!ENTITY Ctr_tabsontop0		"Onglets en haut (réglage par défaut)">
+<!ENTITY Ctr_tabsontop1		"Onglets en haut - réglage [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Onglets position basse - réglage [tabsontop=false]">
+<!ENTITY Ctr_tabsontopI1	"L'attribut [tabsontop=true/false] est assigné à">
+<!ENTITY Ctr_tabsontopI2	"#main-window, #titlebar, #nav-bar">
+<!ENTITY Ctr_tabsontopI3	"#navigator-toolbox, #toolbar-menubar">
+<!ENTITY Ctr_tabsontopI4	"#TabsToolbar, #ctraddon_extra-bar">
+<!ENTITY Ctr_tabsontopI5	"#PersonalToolbar, #ctraddon_addon-bar">
+<!ENTITY Ctr_tabsintitlebar	"Barre de titre Firefox (about:config)">
+<!ENTITY Ctr_tabwidthdef	"(défaut)">
 <!ENTITY Ctr_tabwidthcla	"(classique)">
 <!ENTITY Ctr_tabmaxwidth	"Largeur maximale:">
 <!ENTITY Ctr_tabminwidth	"Largeur minimale:">
+<!ENTITY Ctr_closetab_0		"Bouton de fermeture : sur tous les onglets (défaut)">
+<!ENTITY Ctr_closetab_1		"Bouton de fermeture : onglet actif uniquement">
+<!ENTITY Ctr_closetab_2		"Bouton de fermeture : aucun">
+<!ENTITY Ctr_closetab_3		"Bouton de fermeture : à la fin de la barre d'onglets">
+<!ENTITY Ctr_closetab_4		"Bouton de fermeture : au début de la barre d'onglets">
 
-<!ENTITY Ctr_appbutton		"Bouton d'application">
+<!ENTITY Ctr_appbutton		"Bouton d'applications">
 <!ENTITY Ctr_appbutton0		"Bouton désactivé">
-<!ENTITY Ctr_appbutton1		"Bouton sur la barre d'outils">
-<!ENTITY Ctr_appbutton1wt	"Bouton sur la barre d'outils (text only)">
-<!ENTITY Ctr_appbutton2		"Bouton sur la barre de titre">
-<!ENTITY Ctr_appbutton2io	"Bouton sur la barre de titre (icon only)">
+<!ENTITY Ctr_appbutton1		"Bouton sur une barre d'outils">
+<!ENTITY Ctr_appbutton1wt	"Bouton sur une barre d'outils (texte seul)">
+<!ENTITY Ctr_appbutton2		"Bouton sur la barre de titre [Firefox]">
+<!ENTITY Ctr_appbutton2io	"Bouton sur la barre de titre [Firefox] (icône seule)">
 <!ENTITY Ctr_appbuttonc_o	"Bouton orange (par défaut)">
 <!ENTITY Ctr_appbuttonc_a	"Bouton bleu (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Bouton noir (Nightly)">
@@ -53,69 +63,116 @@
 <!ENTITY Ctr_appbuttonc_g	"Bouton vert">
 <!ENTITY Ctr_appbuttonc_gr	"Bouton gris">
 <!ENTITY Ctr_appbuttonc_pu	"Bouton pourpre">
-<!ENTITY Ctr_appbuttonI1	"redémarrage recommandé">
-<!ENTITY Ctr_appbuttonI2	"sur la barre de titre">
-<!ENTITY Ctr_appbuttonI3	"ou d'onglets seulement!">
-<!ENTITY Ctr_alttbappb		"Icônes alternatives (la barre d'onglets)">
-<!ENTITY Ctr_appbutmhi		"Position plus élevée (la barre d'outils)">
+<!ENTITY Ctr_appbuttonc_wh	"Bouton blanc">
+<!ENTITY Ctr_appbuttonI1	"Redémarrage recommandé">
+<!ENTITY Ctr_appbuttonI1e	"Non visible sur la barre de titre de l'OS">
+<!ENTITY Ctr_appbuttonI2	"Bouton coloré uniquement sur la barre de titre">
+<!ENTITY Ctr_appbuttonI3	"ou sur la barre d'onglets!">
+<!ENTITY Ctr_alttbappb		"Icône alternative">
+<!ENTITY Ctr_appbutmhi		"Position plus élevée (si sur la barre d'onglets)">
 <!ENTITY Ctr_appbutbdl		"Masquer les bordures et les couleurs de fond">
 
 <!ENTITY Ctr_ui				"Interface générale">
-<!ENTITY Ctr_nbiconsize1	"Utiliser #nav-bar[iconsize='small'] (par défaut)">
-<!ENTITY Ctr_nbiconsize2	"Utiliser #nav-bar[iconsize='large']">
-<!ENTITY Ctr_smallnavbut	"Petit boutons (barre de navigation)">
+<!ENTITY Ctr_nbiconsize0	"Assigner l'attribut suivant à la barre de navigation:">
+<!ENTITY Ctr_nbiconsize1	"#nav-bar[iconsize='small'] (par défaut)">
+<!ENTITY Ctr_nbiconsize2	"#nav-bar[iconsize='large']">
+<!ENTITY Ctr_smallnavbut	"Petits boutons (barre de navigation)">
 <!ENTITY Ctr_hidenavbar		"Masquer la barre de navigation">
 <!ENTITY Ctr_buttons		"Boutons de la barre d'outils">
 <!ENTITY Ctr_backforward	"Bouton avancer/reculer déplaçable">
-<!ENTITY Ctr_wincontrols	"Coins déplaçables pour la fenêtre en plein écran">
-<!ENTITY Ctr_starinurl		"Bouton de signets dans la barre d'adresse (redémarrer Fx!)">
-<!ENTITY Ctr_mstatusbar		"La barre d'état déplaçable">
+<!ENTITY Ctr_wincontrols	"Plein écran : boutons 'Réduire - Restaurer - Fermer' déplaçables">
+<!ENTITY Ctr_starinurl		"Bouton des marque-pages dans la barre d'adresse (redémarrer Fx!)">
+<!ENTITY Ctr_mstatusbar		"Barre d'état déplaçable">
+<!ENTITY Ctr_movpaneluib	"Bouton menu déplaçable (redémarrer Fx!)">
 <!ENTITY Ctr_hideurelstop	"Masquer 'stop-actualiser' sur la barre d'adresse">
-<!ENTITY Ctr_combrelstop 	"Bouton stop-actualiser">
+<!ENTITY Ctr_combrelstop 	"Combiner les boutons stop-actualiser">
+<!ENTITY Ctr_panelmenucol	"Couleur de fond alternative pour les panneaux">
 <!ENTITY Ctr_findbar_def	"Barre de recherche (position par défaut)">
 <!ENTITY Ctr_findbar_top	"Barre de recherche en haut">
 <!ENTITY Ctr_findbar_bot	"Barre de recherche en bas">
-<!ENTITY Ctr_findbar_topa	"Barre de recherche en haut (alternative)">
-<!ENTITY Ctr_findbar_bota	"Barre de recherche en bas (alternative)">
-<!ENTITY Ctr_nav_txt_ico0	"Afficher seulement les icônes (defaut)">
+<!ENTITY Ctr_findbar_topa	"Barre de recherche en haut (aspect alternatif)">
+<!ENTITY Ctr_findbar_bota	"Barre de recherche en bas (aspect alternatif)">
+<!ENTITY Ctr_nav_txt_ico0	"Afficher seulement les icônes (défaut)">
 <!ENTITY Ctr_nav_txt_ico1	"Afficher de grandes icônes">
 <!ENTITY Ctr_nav_txt_ico2	"Afficher icônes et textes">
 <!ENTITY Ctr_nav_txt_ico3	"Afficher seulement les textes">
 
-<!ENTITY Ctr_tab_tf_info	"Entrées en charge les noms de couleurs, les codes hexadécimaux, rgb(a) et hsl(a) valeurs. Entrées ne seront pas validés!">
+<!ENTITY Ctr_tab_tf_info	"Les noms de couleurs, les codes hexadécimaux, les valeurs rgb(a) et hsl(a) sont pris en charge. Toute autre saisie ne fonctionnera pas!">
 <!ENTITY Ctr_tabacthovdef	"Onglet (actif/au survol/par défaut)">
-<!ENTITY Ctr_tabnorunrnew	"Onglet (non lu) / Nouvel onglet">
-<!ENTITY Ctr_customsqtab0	"Couleur des onglets">
+<!ENTITY Ctr_tabnorunrnew	"Onglet (non lu/non chargé) / Nouvel onglet">
+<!ENTITY Ctr_customsqtab0	"Couleurs des onglets">
 <!ENTITY Ctr_customsqtab1	"Fond">
 <!ENTITY Ctr_ctext			"Texte">
 <!ENTITY Ctr_ctextsh		"Ombre du texte">
 <!ENTITY Ctr_tabnor			"Onglet (par défaut)">
 <!ENTITY Ctr_tabhov			"Onglet (au survol)">
 <!ENTITY Ctr_tabact			"Onglet (actif)">
-<!ENTITY Ctr_tabpen			"Onglet (non lu)">
+<!ENTITY Ctr_tabpen			"Onglet (non chargé)">
+<!ENTITY Ctr_tabunr			"Onglet (non lu)">
 <!ENTITY Ctr_ntabnor		"Nouvel onglet (par défaut)">
 <!ENTITY Ctr_ntabhov		"Nouvel onglet (au survol)">
-<!ENTITY Ctr_bold			"Audacieux">
+<!ENTITY Ctr_bold			"Gras">
 <!ENTITY Ctr_italic			"Italique">
 
+<!ENTITY Ctr_toolbars		"Barres d'outils">
+<!ENTITY Ctr_altmenubar		"Barre de menus : ajouter un arrière-plan (barre de titre de l'OS visible)">
+<!ENTITY Ctr_menubarnofog	"Barre de menus : enlever l'effet de flou/l'arrière-plan des éléments (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_notabfog		"Barre d'onglets : enlever l'effet de flou (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_notabbg		"Barre d'onglets : enlever l'arrière-plan (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_highaddonsbar	"Augmenter la hauteur de la barre des modules">
+<!ENTITY Ctr_hightabpos		"Barre d'onglets : Réduire l'espace supérieur (si possible)">
+
+<!ENTITY Ctr_toolbars2		"Barres d'outils (mode 'Onglets position basse' &amp; Windows AeroGlass / Win8)">
+<!ENTITY Ctr_nobookbarbg	"Barre personnelle : enlever l'arrière-plan">
+<!ENTITY Ctr_nonavbarbg		"Barre de navigation : enlever l'arrière-plan">
+<!ENTITY Ctr_nonavborder	"Barre personnelle : ajouter une bordure en haut de la barre">
+<!ENTITY Ctr_nonavtbborder	"Barres d'outils supérieures : enlever les bordures">
+<!ENTITY Ctr_alttabstb		"Barre d'onglets : arrière plan alternatif">
+
+<!ENTITY Ctr_invicons		"Icônes inversées">
+<!ENTITY Ctr_menubar		"Barre de menus">
+<!ENTITY Ctr_tabstoolbar	"Barre d'onglets">
+<!ENTITY Ctr_navbar			"Barre de navigation">
+<!ENTITY Ctr_bookbar		"Barre personnelle">
+
 <!ENTITY Ctr_specialtw		"Modifications spéciales">
-<!ENTITY Ctr_paneluibtweak 	"Apparence du bouton d'application pour le panneau d'interface (sur la barre des onglets)">
-<!ENTITY Ctr_notabfog		"Supprimer l'effet de flou en arrière-plan sur les barres d'onglets (Windows AeroGlass)">
+<!ENTITY Ctr_emptyfavicon	"Restaurer le favicon vide sur les onglets (sites ne possédant pas de favicon)">
+<!ENTITY Ctr_bfurlbarfix 	"Corriger le border-radius de la barre d'adresse pour 'Bouton avancer/reculer déplaçable' et 'Petits boutons'">
+<!ENTITY Ctr_showtabclose	"Toujours afficher le bouton de fermeture d'onglet (redémarrer Firefox!)">
+<!ENTITY Ctr_cpanelmenus	"Compacter les panneaux (marque-pages, historique, etc)">
+<!ENTITY Ctr_hidezoomres	"Boutons de zoom (si sur une barre d'outils) : cacher le bouton 'Réinitialiser le niveau de zoom'">
+<!ENTITY Ctr_pmhidelabels	"Panneau menu : icônes seules">
+<!ENTITY Ctr_menupopupscr	"Menus pop-up : afficher des ascenseurs au lieu des flèches de défilement">
+<!ENTITY Ctr_hideprivmask	"Navigation privée : cacher le masque">
+
+<!ENTITY Ctr_fxmockup		"Firefox Mockup">
 <!ENTITY Ctr_tabmokcolor	"Boutons des onglets de couleur blanche (fermer, nouveau, groupes, tout lister)">
-<!ENTITY Ctr_tabmokcolor2	"Texte des onglets de couleur blanche">
+<!ENTITY Ctr_tabmokcolor2	"Texte des onglets de couleur blanche + ombre noire pour les onglets non actifs">
+<!ENTITY Ctr_tabmokcolor3	"Séparateurs de couleur blanche sur la barre d'onglets">
+
+<!ENTITY Ctr_paneluibtweak 	"Bouton menu (si sur la barre d'onglets) : aspect identique à celui du bouton d'applications de la barre de titre">
+<!ENTITY Ctr_dblclnewtab	"Barre d'onglets : double-cliquer pour ouvrir un nouvel onglet (browser.newtab.url)">
+<!ENTITY Ctr_dblclclosefx	"Bouton d'applications sur la barre de titre : un double clic ferme la fenêtre courante">
+<!ENTITY Ctr_hide_bf_popup	"Bouton avancer/reculer déplaçable : cacher le menu historique lors du clic droit">
+
+<!ENTITY Ctr_animation		"Animation">
+<!ENTITY Ctr_throbberalt	"Icône animée alternative pour le chargement des onglets">
+<!ENTITY Ctr_bmanimation	"Animation lors de l'ajout de nouveaux marque-pages">
+<!ENTITY Ctr_pananimation	"Animation d'ouverture des panneaux">
+<!ENTITY Ctr_tabanimation	"Animation de l'ouverture et la fermeture des onglets (about:config)">
+<!ENTITY Ctr_dlanimation	"Animation de 'Téléchargement terminé' (about:config)">
+
 <!ENTITY Ctr_closeabarbut	"Masquer le bouton de fermeture de la barre des modules">
-<!ENTITY Ctr_bfurlbarfix 	"Corriger rayon de frontière de la barre d'adresse: 2px (Win) / 2.5px (Mac)">
-<!ENTITY Ctr_showtabclose	"Toujours afficher le bouton onglet de près (redémarrer Firefox!)">
-<!ENTITY Ctr_dblclnewtab	"Barre d'outils onglets: double-cliquez sur ouvrir un nouvel onglet">
-<!ENTITY Ctr_hightabpososx	"Réduire l'écart en haut pour le mode: 'tabsintitlebar'+'tabsontop'">
-<!ENTITY Ctr_cpanelmenus	"Menus du panneau compact (signets, histoire, etc)">
-<!ENTITY Ctr_panelmenucol	"Couleur de fond alternatif pour 'menus du panneau'">
+<!ENTITY Ctr_toolsitem		"Classic Theme Restorer dans le menu outils">
+<!ENTITY Ctr_appmenuitem	"Classic Theme Restorer dans le menu d'applications">
+<!ENTITY Ctr_cuibotbuttons	"Boutons d'options en mode personnalisation">
 
-<!ENTITY Ctr_throbberalt	"Animation de chargement alternative pour tab-throbber">
-<!ENTITY Ctr_bmanimation	"Animation lors de l'ajout de nouveaux signets">
-<!ENTITY Ctr_tabanimation	"'Ouverture et la fermeture' animation pour les onglets (about:config)">
-<!ENTITY Ctr_dlanimation	"'Téléchargement terminé' animation (about:config)">
 
-<!ENTITY Ctr_toolsitem		"Élément dans le menu outils">
-<!ENTITY Ctr_appmenuitem	"Élément dans le menu d'application">
-<!ENTITY Ctr_cuibotbuttons	"Les boutons d'option en mode 'personnaliser ui'">
+<!ENTITY Ctr_special_font	"La configuration de la couleur de fond est réservée au thème par défaut!">
+<!ENTITY Ctr_special_info	"Certaines options ne fonctionnent que dans certains cas!">
+<!ENTITY Ctr_special_info2	"Options prévues pour le thème par défaut. Certaines options peuvent ne pas fonctionner pas avec les autres thèmes!">
+<!ENTITY Ctr_support		"Forum d'assistance">
+<!ENTITY Ctr_newversion		"Nouvelle version?">
+
+<!ENTITY Ctr_addon-bar.accesskey	"D">
+<!ENTITY Ctr_extrabar.accesskey		"S">

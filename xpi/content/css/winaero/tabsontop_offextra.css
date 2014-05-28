@@ -2,21 +2,20 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-    #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:-moz-locale-dir(ltr){
-      margin-left: 0px !important;
+    #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
+      -moz-margin-start: 0px !important;
+	  -moz-padding-start: 2px !important;
     }
-    #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:-moz-locale-dir(ltr){
-      padding-left: 2px !important;
-    }
-    #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:-moz-locale-dir(rtl){
-      margin-right: 0px !important;
-    }
-    #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:-moz-locale-dir(rtl){
-      padding-right: 2px !important;
-    }
+	@media all and (-moz-windows-glass) {
+		#main-window:not([tabsintitlebar])[tabsontop="false"][sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
+		  -moz-margin-start: 0px !important;
+		  -moz-padding-start: 0px !important;
+		}
+	}
 	
 	@media not all and (-moz-windows-glass) {
-		#TabsToolbar .tabbrowser-tabs{
+		#main-window:not([tabsintitlebar])[tabsontop="false"][sizemode="maximized"] #TabsToolbar .tabbrowser-tabs,
+		#main-window[sizemode="normal"] #TabsToolbar .tabbrowser-tabs {
 		  margin-left: -2px !important;
 		  margin-right: -2px !important;
 		}
@@ -64,7 +63,6 @@
 		}
 	}
 	
-	
 	@media all and (-moz-windows-theme:aero) {
 		#main-window[defaultfxtheme="true"] #TabsToolbar:not(:-moz-lwtheme) {
 		  background: #dbeaf9 !important;
@@ -79,13 +77,15 @@
 	}
 	
 	@media all and (-moz-windows-glass) {	
-		#main-window[defaultfxtheme="true"]:not(:-moz-lwtheme) #TabsToolbar{
-		  border-left: 1px solid #95adb8 !important;
-		  border-right: 1px solid #95adb8 !important;
-		}
-		#main-window[defaultfxtheme="true"]:not(:-moz-lwtheme) #content-deck {
-		  border-top: 1px solid #aabccf !important;
-		}
+	    #main-window[defaultfxtheme="true"][tabsontop="false"][sizemode="normal"]  #TabsToolbar:not(:-moz-lwtheme) {
+		  border-left: 1px solid hsla(209,67%,12%,0.35) !important;
+		  border-right: 1px solid hsla(209,67%,12%,0.35) !important;
+		  border-bottom: 1px solid #aabccf !important;
+		  background-clip: padding-box !important;
+	    }
+	    #main-window[defaultfxtheme="true"][tabsontop="false"][sizemode="maximized"]  #TabsToolbar:not(:-moz-lwtheme) {
+		  border-bottom: 1px solid #aabccf !important;
+	    }
 	}
 
 }

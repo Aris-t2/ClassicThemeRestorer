@@ -6,11 +6,16 @@
 	  height:2px !important;
 	  max-height:2px !important;
 	}
+
+	#main-window:not([customizing]) #nav-bar *{
+      padding-top: 1px !important; 
+	}
+
 	#main-window:not([customizing]) #PanelUI-button {
 	  visibility: collapse !important;
 	}
 	
-	#PersonalToolbar {
+	#PersonalToolbar:not(:-moz-lwtheme)  {
 	  background-image: linear-gradient(rgba(253, 253, 253, 0.5), rgba(255, 255, 255, 0));
 	}
 }

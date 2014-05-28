@@ -1,13 +1,13 @@
 const EXPORTED_SYMBOLS = [];
 
 Components.utils.import("resource:///modules/CustomizableUI.jsm");
-CustomizableUI.registerArea("ctr_addon-bar", {
+CustomizableUI.registerArea("ctraddon_addon-bar", {
   type: CustomizableUI.TYPE_TOOLBAR,
   legacy: true,
-  defaultPlacements: ["ctr_addonbar-close","spring","ctr_statusbar"]
+  defaultPlacements: ["ctraddon_addonbar-close","spring","ctraddon_statusbar"]
 });
 
-CustomizableUI.registerArea("ctr_extra-bar", {
+CustomizableUI.registerArea("ctraddon_extra-bar", {
   type: CustomizableUI.TYPE_TOOLBAR,
   legacy: true,
   defaultPlacements: ["spring"]

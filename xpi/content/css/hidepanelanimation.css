@@ -1,0 +1,13 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	panel[type="arrow"][animate],
+	#BMB_bookmarksPopup{
+	  transition-duration: 0.01s !important;
+	}
+	#PanelUI-popup * {
+	  transition: none !important;
+	}
+	
+}

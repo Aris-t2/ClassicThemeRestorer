@@ -7,15 +7,23 @@ locale	classic_theme_restorer	en-US			locale/en-US/
 locale	classic_theme_restorer	es				locale/es/
 locale	classic_theme_restorer	fr				locale/fr/
 locale	classic_theme_restorer	it				locale/it/
+locale	classic_theme_restorer	ja				locale/ja/
+locale	classic_theme_restorer	pt-BR			locale/pt-BR/
 locale	classic_theme_restorer	ru				locale/ru/
+locale	classic_theme_restorer	zh-CN			locale/zh-CN/
+locale	classic_theme_restorer	zh-TW			locale/zh-TW/
 
 #different css for all supported OS
-skin	ctr_os_special	classic_theme_restorer	content/css/mac/		os=Darwin
-skin	ctr_os_special	classic_theme_restorer	content/css/linux/		os=Linux
-skin	ctr_os_special	classic_theme_restorer	content/css/winxp/		os=WINNT osversion<6
-skin	ctr_os_special	classic_theme_restorer	content/css/winaero/	os=WINNT osversion=6.0
-skin	ctr_os_special	classic_theme_restorer	content/css/winaero/	os=WINNT osversion=6.1
-skin	ctr_os_special	classic_theme_restorer	content/css/win8/		os=WINNT osversion>=6.2
+skin	ctraddon_os_special	classic_theme_restorer	content/css/winxp/		os=WINNT osversion<6
+skin	ctraddon_os_special	classic_theme_restorer	content/css/winaero/	os=WINNT osversion=6.0
+skin	ctraddon_os_special	classic_theme_restorer	content/css/winaero/	os=WINNT osversion=6.1
+skin	ctraddon_os_special	classic_theme_restorer	content/css/win8/		os=WINNT osversion>=6.2
+skin	ctraddon_os_special	classic_theme_restorer	content/css/mac/		os=Darwin
+skin	ctraddon_os_special	classic_theme_restorer	content/css/linux/		os=Linux
+skin	ctraddon_os_special	classic_theme_restorer	content/css/linux/		os=FreeBSD
+skin	ctraddon_os_special	classic_theme_restorer	content/css/linux/		os=OpenBSD
+skin	ctraddon_os_special	classic_theme_restorer	content/css/linux/		os=NetBSD
+skin	ctraddon_os_special	classic_theme_restorer	content/css/linux/		os=SunOS
 
 overlay chrome://browser/content/browser.xul			chrome://classic_theme_restorer/content/overlay.xul
 style   chrome://global/content/customizeToolbar.xul	chrome://classic_theme_restorer/content/overlay.css

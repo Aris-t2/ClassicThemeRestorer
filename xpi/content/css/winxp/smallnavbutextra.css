@@ -1,55 +1,56 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#nav-bar #notification-popup-box + *:-moz-locale-dir(ltr){
-	  padding-left: 5px !important;
+	#nav-bar #notification-popup-box + *{
+	  -moz-padding-start: 5px !important;
 	  transition: none !important;
 	}
-	#nav-bar #notification-popup-box + *:-moz-locale-dir(rtl){
-	  padding-right: 5px !important;
+	
+	#nav-bar #notification-popup-box[hidden] + * {
+	  -moz-padding-start: 2px !important;
 	  transition: none !important;
 	}
-	#nav-bar #notification-popup-box[hidden] + *:-moz-locale-dir(ltr) {
-	  padding-left: 2px !important;
-	  transition: none !important;
-	}
-	#nav-bar #notification-popup-box[hidden] + *:-moz-locale-dir(rtl) {
-	  padding-right: 2px !important;
-	  transition: none !important;
-	}
+	
 	#nav-bar #notification-popup-box:not([hidden]) {
 	  padding-left:2px !important;
 	  padding-right:2px !important;
 	  transition: none !important;
 	}	
-    #nav-bar #urlbar-container:-moz-locale-dir(ltr) > #urlbar-wrapper > #urlbar,
-	#nav-bar #urlbar-container[forwarddisabled]:-moz-locale-dir(ltr) > #urlbar-wrapper > #urlbar {
-      margin-left: 3px !important;
+	
+    #nav-bar #urlbar-container > #urlbar-wrapper > #urlbar,
+	#nav-bar #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
+      margin-left: 8px !important; /* has to be this for ltr and rtl locales */
       transition: none !important;
-      transition-property:  none !important;
+      transition-property: none !important;
       transition-delay: 0s !important;
     }
-    #nav-bar #urlbar-container:-moz-locale-dir(rtl) > #urlbar-wrapper > #urlbar,
-	#nav-bar #urlbar-container[forwarddisabled]:-moz-locale-dir(rtl) > #urlbar-wrapper > #urlbar {
-      margin-right: 3px !important;
-      transition: none !important;
-      transition-property:  none !important;
-      transition-delay: 0s !important;
-    }
-
-	#main-window[ctr_appbutton_on_navbar="true"] #appmenu-popup {
+	
+	#main-window #navigator-toolbox #urlbar-wrapper {
+	  -moz-box-align: center !important;
+	}
+	
+	#main-window[ctraddon_appbutton_on_navbar="true"] #appmenu-popup {
 	  margin-top:0px !important;
 	}
 
-	#navigator-toolbox #nav-bar #back-button > .toolbarbutton-icon{
-	  padding: 3px 2px !important;
-      margin: 1px !important;
-	}
-
-    #navigator-toolbox #nav-bar #forward-button > .toolbarbutton-icon{
-	  padding: 3px 2px !important;
+    #navigator-toolbox #nav-bar #back-button > .toolbarbutton-icon {
+	  padding: 3px 1px !important;
       margin: 0px !important;
 	}
+
+	#navigator-toolbox #nav-bar #forward-button > .toolbarbutton-icon {
+	  padding: 1px 1px !important;
+      margin: 0px !important;
+	}
+	
+	/* Fx31*/
+	#main-window[fx31="true"] #navigator-toolbox #nav-bar:-moz-locale-dir(ltr) #forward-button{
+      margin-left: 4px !important;
+	}
+	#main-window[fx31="true"] #navigator-toolbox #nav-bar:-moz-locale-dir(rtl) #forward-button{
+      margin-left: 6px !important;
+	}
+	/**/
 
 	#nav-bar .toolbarbutton-1 {
 	  -moz-appearance: none !important;
@@ -57,7 +58,7 @@
 	  box-shadow: unset !important;
 	}
 	
-	#nav-bar .toolbarbutton-1:hover {
+	#nav-bar .toolbarbutton-1:not([disabled]):hover {
 	  -moz-appearance: none !important;
 	  background: unset !important;
 	  box-shadow: 0px 0px 1px black inset,
@@ -70,11 +71,16 @@
 	#navigator-toolbox #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
 	#navigator-toolbox #nav-bar .toolbarbutton-1 {
 	  padding: 0px 0px !important;
-	  margin: 0.5px 0 0 0 !important;
+	  margin: 1px 0 0 0 !important;
+	}
+
+	#navigator-toolbox:not([customizing]) #nav-bar-customization-target {
+      /*-moz-padding-end: 10px !important;*/
+      -moz-margin-end: 4px !important;
 	}
 	
 	#nav-bar .toolbarbutton-1 {
-      min-width:24px !important;
+      min-width:22px !important;
     }
 
     #nav-bar * .toolbarbutton-icon,
@@ -123,26 +129,26 @@
 	}
 
 	/* urlbar border tweaks */
-	#nav-bar #urlbar {
+	#main-window[defaultfxtheme="true"] #nav-bar #urlbar {
 	  border: 1px solid ThreeDShadow !important;
 	}
 	@media (-moz-windows-default-theme) {
-	  #nav-bar #urlbar {
+	  #main-window[defaultfxtheme="true"] #nav-bar #urlbar {
 		border-color: rgba(0,0,0,.32) !important;
 	  }
 	}
-	#nav-bar #urlbar:-moz-lwtheme {
+	#main-window[defaultfxtheme="true"] #nav-bar #urlbar:-moz-lwtheme {
 	  border-color: rgba(0,0,0,.32) !important;
 	}
 
-	#nav-bar #ctr_appbutton > .toolbarbutton-icon {
+	#nav-bar #ctraddon_appbutton > .toolbarbutton-icon {
 	  padding-left: 0px !important;
 	  padding-right: 0px !important;
 	  margin-left: 0px !important;
 	  margin-right: 0px !important;
 	}
 
-	#nav-bar #ctr_puib_separator{
+	#nav-bar #ctraddon_puib_separator{
 	  margin-top: 2px !important;
 	  margin-bottom: 2px !important;
 	}
@@ -159,7 +165,8 @@
 	  padding: 0px 0px !important;
 	  background: none !important;
 	  border: 0px solid !important;
-	  margin: -8px -4px !important;
+      -moz-margin-start: 2px !important;
+      -moz-margin-end: 2px !important;
 	  box-shadow: none !important;
 	}
 	#navigator-toolbox #nav-bar #urlbar-container  #bookmarks-menu-button > .toolbarbutton-menubutton-button:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]):hover > .toolbarbutton-icon {

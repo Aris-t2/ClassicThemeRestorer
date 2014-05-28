@@ -8,7 +8,7 @@
 	  padding: 0px !important;
 	  margin: -2px 0 0 0 !important;
 	}
-	#nav-bar .toolbarbutton-1[type="menu-button"] .toolbarbutton-icon {
+	#nav-bar #nav-bar-customization-target > .toolbarbutton-1[type="menu-button"] .toolbarbutton-icon {
 	  min-width: 18px !important;
 	  height: 18px !important;
 	  padding: 0px !important;
@@ -20,7 +20,7 @@
 	  padding: 0px !important;
 	  margin: -2px 0 0 0 !important;
 	}
-	#nav-bar #urlbar-container #bookmarks-menu-button .toolbarbutton-icon {
+	#nav-bar #nav-bar-customization-target > #bookmarks-menu-button .toolbarbutton-icon {
 	  min-width: 19px !important;
 	  height: 20px !important;
 	}
@@ -53,8 +53,11 @@
 	  margin-right: 24px !important;
 	}
 	
-	#ctr_addon-bar toolbarbutton .toolbarbutton-icon {
+	#ctraddon_addon-bar toolbarbutton .toolbarbutton-icon {
 	  max-height: 34px !important;
+	}
+	#main-window toolbar #ctraddon_back-forward-dropmarker .toolbarbutton-icon {
+	  padding:0px 3px !important;
 	}
 
 }

@@ -2,7 +2,7 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 	
-	.tabbrowser-tab[pending]:not([selected=true]):not(:hover) .tab-text {
+	.tabbrowser-tab[unread]:not([selected=true]):not(:hover) .tab-text {
       font-weight: bold !important;
     }
 }

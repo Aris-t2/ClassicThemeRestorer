@@ -6,10 +6,10 @@
 	  -moz-appearance: none !important;
 	}
 	#TabsToolbar{
-	  margin-bottom: -2px !important;
+	  margin-bottom: -1px !important;
 	}
-	#ctr_appbutton,
-	#TabsToolbar #ctr_appbutton{
+	#ctraddon_appbutton,
+	#TabsToolbar #ctraddon_appbutton{
 	  margin-bottom:1px !important;
 	  border-radius: 2.5px 2.5px 0 0 !important;
 	}
@@ -17,18 +17,32 @@
 	  margin-top:-1px !important;
 	  margin-bottom:1px !important;
 	}
-	#TabsToolbar #ctr_appbutton{
+	#TabsToolbar #ctraddon_appbutton{
 	  margin-top:0px !important;
 	  margin-bottom:1px !important;
 	}
-	#TabsToolbar #ctr_appbuttonPopup{
+	
+	#main-window[tabsontop="false"] #navigator-toolbox #TabsToolbar #ctraddon_appbutton{
+	  margin-top:0px !important;
+	  margin-bottom:1px !important;
+	}
+	#TabsToolbar #ctraddon_appbuttonPopup{
 	  margin-top:0px !important;
 	}
 	
 	.tabs-newtab-button,
 	.tabbrowser-tab{
 	  height: 30px !important;
+	}
+	#main-window[defaultfxtheme="true"] #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab{
 	  color:black !important;
+	}
+	#main-window[defaultfxtheme="true"][tabsontop="false"] .tabbrowser-tab:not([selected="true"]) .tab-close-button:not(:hover) {
+	  -moz-appearance: none !important;
+	  -moz-image-region: rect(0, 64px, 16px, 48px) !important;
+	  border: none !important;
+	  padding: 0px !important;
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png") !important;
 	}
 	
 	#main-window[defaultfxtheme="true"] #TabsToolbar:not(:-moz-lwtheme){

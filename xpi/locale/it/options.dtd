@@ -29,14 +29,24 @@
 <!ENTITY Ctr_tabs1m			"Schede con angoli spigolosi (effetto Australis)">
 <!ENTITY Ctr_tabs2			"Scheda con angoli arrotondati (stile alternativo)">
 <!ENTITY Ctr_tabs3			"Schede con angoli arrotondati (stile Aero)">
-<!ENTITY Ctr_tabsontop0		"Schede in alto - [not set]">
-<!ENTITY Ctr_tabsontop1		"Schede in alto - [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Schede in basso - [tabsontop=false]">
+<!ENTITY Ctr_tabsontop0		"Schede in alto (predefinito) - [CTR disattivata]">
+<!ENTITY Ctr_tabsontop1		"Schede in alto - CTR attivata - [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Schede in basso - CTR attivata - [tabsontop=false]">
+<!ENTITY Ctr_tabsontopI1	"Aggiunge l’attributo [tabsontop=true/false] a">
+<!ENTITY Ctr_tabsontopI2	"#main-window, #titlebar, #nav-bar">
+<!ENTITY Ctr_tabsontopI3	"#navigator-toolbox, #toolbar-menubar">
+<!ENTITY Ctr_tabsontopI4	"#TabsToolbar, #ctraddon_extra-bar">
+<!ENTITY Ctr_tabsontopI5	"#PersonalToolbar, #ctraddon_addon-bar">
 <!ENTITY Ctr_tabsintitlebar	"Schede nella barra del titolo (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(predefinita)">
 <!ENTITY Ctr_tabwidthcla	"(stile classico)">
 <!ENTITY Ctr_tabmaxwidth	"Larghezza massima:">
 <!ENTITY Ctr_tabminwidth	"Larghezza minima:">
+<!ENTITY Ctr_closetab_0		"Pulsante di chiusura in tutte le schede (predefinito)">
+<!ENTITY Ctr_closetab_1		"Pulsante di chiusura nella scheda attiva">
+<!ENTITY Ctr_closetab_2		"Nessun pulsante di chiusura schede">
+<!ENTITY Ctr_closetab_3		"Pulsante di chiusura a destra della barra delle schede">
+<!ENTITY Ctr_closetab_4		"Pulsante di chiusura a sinistra della barra delle schede">
 
 <!ENTITY Ctr_appbutton		"Pulsante applicazione">
 <!ENTITY Ctr_appbutton0		"Nessun pulsante">
@@ -52,17 +62,20 @@
 <!ENTITY Ctr_appbuttonc_r	"Pulsante rosso">
 <!ENTITY Ctr_appbuttonc_g	"Pulsante verde">
 <!ENTITY Ctr_appbuttonc_gr	"Pulsante grigio">
-<!ENTITY Ctr_appbuttonc_pu	"Pulsante porpora">
+<!ENTITY Ctr_appbuttonc_pu	"Pulsante viola">
+<!ENTITY Ctr_appbuttonc_wh	"Pulsante bianco">
 <!ENTITY Ctr_appbuttonI1	"riavvio consigliato">
+<!ENTITY Ctr_appbuttonI1e	"non visibile nella barra del titolo di sistema">
 <!ENTITY Ctr_appbuttonI2	"Colorato solo nella barra del titolo">
 <!ENTITY Ctr_appbuttonI3	"e nella barra delle schede.">
-<!ENTITY Ctr_alttbappb		"Icone alternative (nella barra degli strumenti)">
+<!ENTITY Ctr_alttbappb		"Icone alternative">
 <!ENTITY Ctr_appbutmhi		"In cima a tutto (se nella barra delle schede)">
-<!ENTITY Ctr_appbutbdl		"Nascondere i bordi e colori di sfondo.">
+<!ENTITY Ctr_appbutbdl		"Nascondi bordi e colori di sfondo">
 
 <!ENTITY Ctr_ui				"Interfaccia base">
-<!ENTITY Ctr_nbiconsize1	"Utilizza #nav-bar[iconsize='small'] (predefinito)">
-<!ENTITY Ctr_nbiconsize2	"Utilizza #nav-bar[iconsize='large']">
+<!ENTITY Ctr_nbiconsize0	"Imposta attributo alla barra di navigazione">
+<!ENTITY Ctr_nbiconsize1	"#nav-bar[iconsize='small'] (predefinito)">
+<!ENTITY Ctr_nbiconsize2	"#nav-bar[iconsize='large']">
 <!ENTITY Ctr_smallnavbut	"Pulsanti piccoli nella barra di navigazione">
 <!ENTITY Ctr_hidenavbar		"Nascondi barra di navigazione">
 <!ENTITY Ctr_buttons		"Pulsanti della barra degli strumenti">
@@ -70,52 +83,96 @@
 <!ENTITY Ctr_wincontrols	"Angoli finestra mobili in modalità schermo intero">
 <!ENTITY Ctr_starinurl		"Stella nella barra degli indirizzi (riavviare Firefox)">
 <!ENTITY Ctr_mstatusbar		"Barra di stato mobile">
+<!ENTITY Ctr_movpaneluib	"Pulsante dei menu mobile (riavviare Firefox)">
 <!ENTITY Ctr_hideurelstop	"Nascondi pulsanti Stop e Ricarica nella barra degli indirizzi">
 <!ENTITY Ctr_combrelstop	"Unisci i pulsanti Stop e Ricarica">
+<!ENTITY Ctr_panelmenucol	"Colore di sfondo alternativo per i menu">
 <!ENTITY Ctr_findbar_def	"Barra di ricerca nel testo (posizione predefinita)">
 <!ENTITY Ctr_findbar_top	"Barra di ricerca nel testo in alto">
 <!ENTITY Ctr_findbar_bot	"Barra di ricerca nel testo in basso">
 <!ENTITY Ctr_findbar_topa	"Barra di ricerca nel testo in alto (stile alternativo)">
 <!ENTITY Ctr_findbar_bota	"Barra di ricerca nel testo in basso (stile alternativo)">
 <!ENTITY Ctr_nav_txt_ico0	"Utilizza solo icone (predefinito)">
-<!ENTITY Ctr_nav_txt_ico1	"Utilizza solo icone grandi">
+<!ENTITY Ctr_nav_txt_ico1	"Utilizza icone grandi">
 <!ENTITY Ctr_nav_txt_ico2	"Utilizza icone e testo">
 <!ENTITY Ctr_nav_txt_ico3	"Utilizza solo testo">
 
-<!ENTITY Ctr_tab_tf_info	"Campi di testo supportano nomi di colori, hexcodes, rgb(a) e hsl(a) valori. No convalida!">
-<!ENTITY Ctr_tabacthovdef	"Scheda (attiva/al passaggio del mouse/generica)">
-<!ENTITY Ctr_tabnorunrnew	"Scheda (non letta) / Nuova scheda">
+<!ENTITY Ctr_tab_tf_info	"È possibile usare nomi di colori (in inglese), valori esadecimali e i formati rgb(a) e hsl(a). Nessuna validazione dell’input.">
+<!ENTITY Ctr_tabacthovdef	"Scheda (attiva/al passaggio del mouse/predefinita)">
+<!ENTITY Ctr_tabnorunrnew	"Scheda (non letta/non caricata) / Nuova scheda">
 <!ENTITY Ctr_customsqtab0	"Colori personalizzati per le schede">
 <!ENTITY Ctr_customsqtab1	"Sfondo">
 <!ENTITY Ctr_ctext			"Testo">
 <!ENTITY Ctr_ctextsh		"Ombreggiatura testo">
-<!ENTITY Ctr_tabnor			"Scheda generica">
+<!ENTITY Ctr_tabnor			"Scheda predefinita">
 <!ENTITY Ctr_tabhov			"Scheda al passaggio del mouse">
 <!ENTITY Ctr_tabact			"Scheda attiva">
-<!ENTITY Ctr_tabpen			"Scheda non letta">
-<!ENTITY Ctr_ntabnor		"Nuova scheda generica">
+<!ENTITY Ctr_tabpen			"Scheda non caricata">
+<!ENTITY Ctr_tabunr			"Scheda non letta">
+<!ENTITY Ctr_ntabnor		"Nuova scheda predefinita">
 <!ENTITY Ctr_ntabhov		"Nuova scheda al passaggio del mouse">
 <!ENTITY Ctr_bold			"Grassetto">
 <!ENTITY Ctr_italic			"Corsivo">
 
-<!ENTITY Ctr_specialtw		"Modifiche speciali">
-<!ENTITY Ctr_paneluibtweak	"Utilizza lo stile del pulsante app per i pulsanti nella barra delle schede">
-<!ENTITY Ctr_notabfog		"Disattiva l’effetto nebbia della barra delle schede (Windows AeroGlass)">
-<!ENTITY Ctr_tabmokcolor	"Utilizza il colore bianco per il separatore e i pulsanti delle schede (Chiudi, Nuova, Gruppi, Mostra tutte)">
-<!ENTITY Ctr_tabmokcolor2	"Utilizza testo bianco con ombreggiatura scura nelle schede non attive">
-<!ENTITY Ctr_closeabarbut	"Nascondi pulsante di chiusura della barra dei componenti aggiuntivi">
-<!ENTITY Ctr_bfurlbarfix	"Correggi la curvatura dei bordi della barra degli indirizzi: 2px (Windows) / 2.5px (Mac)">
-<!ENTITY Ctr_showtabclose	"Mostra sempre il pulsante di chiusura schede (riavviare Firefox)">
-<!ENTITY Ctr_dblclnewtab	"Barra di schede: doppio clic si apre una nuova scheda">
-<!ENTITY Ctr_hightabpososx	"Ridurre il divario top per 'schede barra del titolo'+'schede in alto' modo">
-<!ENTITY Ctr_cpanelmenus	"Pannello menu unificato (Segnalibri, Cronologia, ecc..)">
-<!ENTITY Ctr_panelmenucol	"Colore di sfondo alternativo per i menu">
+<!ENTITY Ctr_toolbars		"Barra degli strumenti">
+<!ENTITY Ctr_altmenubar		"Aggiungi colore di sfondo alla barra dei menu (Barra del titolo di sistema)">
+<!ENTITY Ctr_menubarnofog	"Elimina l’effetto nebbia o il colore di sfondo nelle barre dei menu (Windows AeroGlass e Windows 8)">
+<!ENTITY Ctr_notabfog		"Disattiva l’effetto nebbia della barra delle schede (Windows AeroGlass e Win8)">
+<!ENTITY Ctr_notabbg		"Rimuovi colore di sfondo nella barra delle schede (Windows AeroGlass e Win8)">
+<!ENTITY Ctr_highaddonsbar	"Aumenta l’altezza della barra dei componenti aggiuntivi">
+<!ENTITY Ctr_hightabpos		"Quando possibile, riduci lo spazio sopra la barra delle schede">
 
+<!ENTITY Ctr_toolbars2		"Impostazione per le barre degli strumenti ('schede in basso' e Windows AeroGlass / Win8)">
+<!ENTITY Ctr_nobookbarbg	"Rimuovi colore di sfondo dalla barra dei segnalibri">
+<!ENTITY Ctr_nonavbarbg		"Rimuovi colore di sfondo dalla barra di navigazione">
+<!ENTITY Ctr_nonavborder	"Aggiungi bordo superiore alla barra dei segnalibri">
+<!ENTITY Ctr_nonavtbborder	"Rimuovi i bordi alle barre degli strumenti posizionate in alto">
+<!ENTITY Ctr_alttabstb		"Colore di sfondo alternativo per la barra delle schede">
+
+<!ENTITY Ctr_invicons		"Inverted icons">
+<!ENTITY Ctr_menubar		"Menubar">
+<!ENTITY Ctr_tabstoolbar	"Tabs Toolbar">
+<!ENTITY Ctr_navbar			"Navigation Toolbar">
+<!ENTITY Ctr_bookbar		"Bookmarks Toolbar">
+
+<!ENTITY Ctr_specialtw		"Modifiche speciali">
+<!ENTITY Ctr_emptyfavicon	"Nei siti che non hanno una favicon usa la vecchia favicon vuota">
+<!ENTITY Ctr_bfurlbarfix	"Correggi la curvatura della barra degli indirizzi per i pulsanti Avanti e Indietro mobili e i pulsanti piccoli">
+<!ENTITY Ctr_showtabclose	"Mostra sempre il pulsante di chiusura schede (riavvio consigliato)">
+<!ENTITY Ctr_cpanelmenus	"Pannello menu unificato (Segnalibri, Cronologia, ecc..)">
+<!ENTITY Ctr_hidezoomres	"Nascondi il pulsante per ripristinare il livello di zoom dalla barra degli strumenti">
+<!ENTITY Ctr_pmhidelabels	"Mostra solo icone nel pannello menu">
+<!ENTITY Ctr_menupopupscr	"Utilizza barra di scorrimento al posto delle frecce nei menu di popup">
+<!ENTITY Ctr_hideprivmask	"Nascondi indicatore modalità di Navigazione anonima">
+
+<!ENTITY Ctr_fxmockup		"Mockup">
+<!ENTITY Ctr_tabmokcolor	"Utilizza il colore bianco per i pulsanti delle schede (Chiudi, Nuova, Gruppi, Mostra tutte)">
+<!ENTITY Ctr_tabmokcolor2	"Utilizza testo bianco con ombreggiatura scura nelle schede non attive">
+<!ENTITY Ctr_tabmokcolor3	"Utilizza separatori bianchi nella barra delle schede">
+
+<!ENTITY Ctr_paneluibtweak	"Utilizza lo stile del pulsante app per i pulsanti nella barra delle schede">
+<!ENTITY Ctr_dblclnewtab	"Barra delle schede: doppio clic del mouse per aprire una nuova scheda">
+<!ENTITY Ctr_dblclclosefx	"Pulsante applicazione nella barra del titolo: doppio clic per chiudere la finestra corrente">
+<!ENTITY Ctr_hide_bf_popup	"Nascondi la cronologia tenendo premuto il pulsante Avanti/Indietro mobile">
+
+<!ENTITY Ctr_animation		"Icone animate">
 <!ENTITY Ctr_throbberalt	"Throbber di caricamento scheda alternativo">
-<!ENTITY Ctr_bmanimation	"Icona animata durante l’aggiunta ai segnalibri ">
+<!ENTITY Ctr_bmanimation	"Icona animata durante l’aggiunta ai segnalibri">
+<!ENTITY Ctr_pananimation	"Icona animata durante l’apertura di un pannello">
 <!ENTITY Ctr_tabanimation	"Icona animata per l’apertura o chiusura di una scheda (about:config)">
 <!ENTITY Ctr_dlanimation	"Icona animata avviso download (about:config)">
 
+<!ENTITY Ctr_closeabarbut	"Nascondi pulsante di chiusura della barra dei componenti aggiuntivi">
 <!ENTITY Ctr_toolsitem		"Aggiungi voci al menu Strumenti">
 <!ENTITY Ctr_appmenuitem	"Aggiungi voci nel menu del pulsante app">
 <!ENTITY Ctr_cuibotbuttons	"Aggiungi pulsanti in modalità personalizzazione barre degli strumenti">
+
+
+<!ENTITY Ctr_special_font	"La modifica del colore di sfondo si applica solo utilizzando il tema predefinito!">
+<!ENTITY Ctr_special_info	"Alcune opzioni si applicano solo in casi particolari">
+<!ENTITY Ctr_special_info2	"Le impostazioni sono pensate per il tema predefinito e potrebbero non funzionare con altri temi">
+<!ENTITY Ctr_support		"Forum di supporto">
+<!ENTITY Ctr_newversion		"È disponibile una nuova versione?">
+
+<!ENTITY Ctr_addon-bar.accesskey	"B">
+<!ENTITY Ctr_extrabar.accesskey		"A">

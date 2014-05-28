@@ -1,4 +1,4 @@
-@import url(chrome://ctr_os_special/skin/classictabsextrac2.css);
+@import url(chrome://ctraddon_os_special/skin/classictabsextrac2.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul){
@@ -37,6 +37,17 @@
 	.tabs-newtab-button:hover:-moz-lwtheme-brighttext,
 	.tabbrowser-tab:not([selected]):hover:-moz-lwtheme-brighttext .tab-content {
 	  background-image: linear-gradient(hsla(0,0%,60%,.6), hsla(0,0%,45%,.6) 80%) !important;
+	}
+	/* titlechanged pinned tabs */
+	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]) .tab-content{
+	  background-size: 100% 100% !important;
+	  background-image: linear-gradient(hsla(0,0%,100%,.4), hsla(0,0%,75%,.4) 80%),
+						radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,.75) 3%, rgba(186,221,251,.55) 40%, rgba(127,179,255,.25) 80%, rgba(127,179,255,.15)) !important;
+	}
+	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):hover .tab-content{
+	  background-size: 100% 100% !important;
+	  background-image: linear-gradient(hsla(0,0%,100%,.4), hsla(0,0%,75%,.4) 80%),
+						radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,1) 3%, rgba(186,221,251,.75) 40%, rgba(127,179,255,.5) 80%, rgba(127,179,255,.25)) !important;
 	}
 
 	/* tab borders */
@@ -80,26 +91,11 @@
 	}
 
 	/* tab image, throbber, close button position*/
-	#TabsToolbar:-moz-locale-dir(ltr) .tabbrowser-tab:not([pinned]) .tab-close-button{
-	  margin-right: -7px !important;
+	#TabsToolbar .tabbrowser-tab:not([pinned]) .tab-close-button{
+	  -moz-margin-end: -7px !important;
 	}
-	#TabsToolbar:-moz-locale-dir(rtl) .tabbrowser-tab:not([pinned]) .tab-close-button{
-	  margin-left: -7px !important;
-	}
-	
-	#TabsToolbar:-moz-locale-dir(ltr) .tabbrowser-tab:not([pinned]) .tab-throbber,
-	#TabsToolbar:-moz-locale-dir(ltr) .tabbrowser-tab:not([pinned]) .tab-icon-image{
-	  margin-left: -5px !important;
-	  margin-right: 3px !important;
-	}
-	#TabsToolbar:-moz-locale-dir(rtl) .tabbrowser-tab:not([pinned]) .tab-throbber,
-	#TabsToolbar:-moz-locale-dir(rtl) .tabbrowser-tab:not([pinned]) .tab-icon-image{
-	  margin-right: -5px !important;
-	  margin-left: 3px !important;
-	}
-	
+
 	/* Tabs Toolbar */
-	
 	#tabbrowser-tabs{
 	  min-height: 0px !important;
 	}
@@ -115,12 +111,8 @@
 	  min-height: 0px !important;
 	}
 	
-	/*#main-window[tabsintitlebar]:not([tabsontop='false']):not([sizemode="maximized"]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
-	  padding-top: 3px !important;
-	}*/
-	
 	/**/
-	#TabsToolbar #ctr_appbutton{
+	#TabsToolbar #ctraddon_appbutton{
 	  margin-bottom:-1px !important;
 	}
 	
@@ -136,12 +128,6 @@
 	.tab-stack .tab-content {
 	  -moz-box-ordinal-group:1 !important;
 	}
-	
-	.tabbrowser-tab[pinned][locked] image,
-	.tabbrowser-tab[pinned][protected] image {
-	  margin-left:0px !important;
-	  margin-right:0px !important;
-	}
 
 }
 
@@ -149,15 +135,16 @@
 	.tabcolorbox,
 	.tabhovcolorbox,
 	.tabpencolorbox,
+	.tabunrcolorbox,
 	.ntabcolorbox,
 	.ntabhovcolorbox,
 	#ntabcolorbox,
 	#ntabhovcolorbox,
-	#ctr_ccap_t_squaredc2{
+	#ctraddon_ccap_t_squaredc2{
 	  visibility: visible !important;
 	}
 	
-	#ctr_ccap_t_default{
+	#ctraddon_ccap_t_default{
 	  visibility: collapse !important;
 	}
 }

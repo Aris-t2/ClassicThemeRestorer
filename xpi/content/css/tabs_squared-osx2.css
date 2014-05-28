@@ -57,14 +57,14 @@
 	}
 	
 	#main-window[tabsintitlebar][sizemode="normal"]  #TabsToolbar{
-		margin-left: 0px !important;
+	  -moz-margin-start: 0px !important;
 	}
 	#main-window:not([tabsintitlebar])[sizemode="normal"]  #TabsToolbar{
-		margin-left: 0px !important;
+	  -moz-margin-start: 0px !important;
 	}
 	
-	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton{
-		margin-left:-2px !important;
+	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_appbutton{
+	  -moz-margin-start:-2px !important;
 	}
 
 	.tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-background-middle:not([selected=true]),
@@ -231,14 +231,8 @@
 
 	.tabbrowser-tab[pinned]{
 	  min-width: 32px !important;
-	  width: 32px !important;
-	  max-width: 32px !important;
 	  background-position: 0px 2px !important;
 	  background-size: calc(100% - 0px) calc(100% - 1px) !important;
-	}
-
-	.tabbrowser-tab[pinned] image{
-	  margin-left:0px !important;
 	}
 
 	#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
@@ -248,13 +242,7 @@
 	}
 
 	.tabbrowser-tab:not([pinned]) .tab-close-button{
-	  margin-right:-4px !important;
-	}
-	
-	.tabbrowser-tab:not([pinned]) .tab-throbber,
-	.tabbrowser-tab:not([pinned]) .tab-icon-image{
-	  margin-left:-3px !important;
-	  margin-right:3px !important;
+	  -moz-margin-end:-4px !important;
 	}
 
 	#TabsToolbar{
@@ -269,37 +257,47 @@
 	  clip-path: none !important;
 	}
 	
-	/* TMP support */
-	.tabbrowser-tab[pinned][locked] image,
-	.tabbrowser-tab[pinned][protected] image {
-	  margin-left:0px !important;
-	  margin-right:0px !important;
+	/* Pinned tabs & TabMixPlus/TabUtilities locked/protected tabs support */	
+	.tabbrowser-tab:not([pinned]) .tab-close-button{
+	  -moz-margin-end:-5px !important;
+	  -moz-margin-start:0px !important;
+	}
+	.tabbrowser-tab:not([pinned]):not([locked]) .tab-throbber,
+	.tabbrowser-tab:not([pinned]) .tab-icon-image{
+	  -moz-margin-start:-3px !important;
+	  -moz-margin-end:3px !important;
+	}
+	.tabbrowser-tab:not([pinned])[locked] .tab-throbber{
+	  -moz-margin-start:-3px !important;
+	  -moz-margin-end:-13px !important;
+	}
+  
+ 	.tabbrowser-tab[pinned]:not([locked]):not([pinned]) image{
+	  -moz-margin-start:0px !important;
 	}
 	
 	/* TabUtilities workaround */
-	#PinnedTabsBarItems:-moz-locale-dir(ltr) {
-	  margin-left:-14px !important;
-	  margin-right:0px !important;
+	#PinnedTabsBarItems {
+	  -moz-margin-start:-14px !important;
+	  -moz-margin-end:0px !important;
 	}
-	#tabbrowser-tabs[overflow] #PinnedTabsBarItems:-moz-locale-dir(ltr){
-	  margin-right:-14px !important;
+	#tabbrowser-tabs[overflow] #PinnedTabsBarItems{
+	  -moz-margin-end:-14px !important;
 	}
-	#PinnedTabsBarItems:-moz-locale-dir(rtl) {
-	  margin-right:-14px !important;
-	  margin-left:0px !important;
-	}
-	#tabbrowser-tabs[overflow] #PinnedTabsBarItems:-moz-locale-dir(rtl){
-	  margin-left:-14px !important;
+	
+	/* Private Tab extension */
+	.tabs-newtab-button + .tabs-newtab-button {
+	  -moz-margin-start: 15px !important;
 	}
 
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
-	#ctr_ccap_t_squared2{
+	#ctraddon_ccap_t_squared2{
 	  visibility: visible !important;
 	}
 	
-	#ctr_ccap_t_default{
+	#ctraddon_ccap_t_default{
 	  visibility: collapse !important;
 	}
 }

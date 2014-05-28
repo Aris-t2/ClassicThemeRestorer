@@ -2,9 +2,8 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#ctr_appbuttonPopup #appmenu_ctr_sep,
-	#ctr_appbuttonPopup #appmenu_ctr{
-	  visibility: collapse !important;
+	#navigator-toolbox > #TabsToolbar { 
+	  -moz-binding: url("chrome://global/content/bindings/toolbar.xml#toolbar")!important;
 	}
-	
+
 }

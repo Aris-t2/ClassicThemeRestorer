@@ -9,19 +9,26 @@
 	  border-right: none !important;
 	}
 	
+	#ctraddon_addon-bar:not([customizing]) #status-bar{
+	  margin-top: -1px !important;
+	  margin-bottom: -1px !important;
+	  padding-top: 0px;
+	  padding-bottom: 0px;
+	}
+
 	#main-window[customizing] #status-bar{
 	  -moz-appearance: none !important;
 	  background: none !important;
 	  border: none !important;
 	  border-right: none !important;
 	  min-width: 50px !important;
-	  box-shadow: 2px 2px 8px rgba(255,255,255,0.6) inset,
-          		  1px 1px 8px rgba(0,0,0,0.8) inset,
-                  0px 0px 0px 1px rgba(0,0,0,0.8) inset,
-				  0px 0px 0px 2px rgba(255,255,255,0.9) inset !important;
+	  opacity: .5 !important;
+	  background-image: repeating-linear-gradient(135deg,
+						rgba(255,255,255,.3), rgba(255,255,255,.3) 5px,
+						rgba(0,0,0,.3) 5px, rgba(0,0,0,.3) 10px) !important;
 	}
 	
-	#main-window[customizing] #ctr_addon-bar #status-bar{
+	#main-window[customizing] #ctraddon_addon-bar #status-bar{
 	  margin-top:-1px !important;
 	}
 	
@@ -30,22 +37,14 @@
 	  border:none !important;
 	}
 
-	#ctr_statusbar[cui-areatype="menu-panel"] #status-bar,
-	toolbarpaletteitem[place="palette"] > #ctr_statusbar #status-bar,
-	#ctr_statusbar[cui-areatype="menu-panel"],
-	toolbarpaletteitem[place="palette"] > #ctr_statusbar {
+	#ctraddon_statusbar[cui-areatype="menu-panel"] #status-bar,
+	toolbarpaletteitem[place="palette"] > #ctraddon_statusbar #status-bar,
+	#ctraddon_statusbar[cui-areatype="menu-panel"],
+	toolbarpaletteitem[place="palette"] > #ctraddon_statusbar {
 	  width: 100px !important;
-	  box-shadow: 2px 2px 8px rgba(255,255,255,0.6) inset,
-          		  1px 1px 8px rgba(0,0,0,0.8) inset,
-                  0px 0px 0px 1px rgba(0,0,0,0.8) inset,
-				  0px 0px 0px 2px rgba(255,255,255,0.9) inset !important;
 	}
-	toolbarpaletteitem[place="toolbar"] #ctr_statusbar {
+	toolbarpaletteitem[place="toolbar"] #ctraddon_statusbar {
 	  min-width: 50px !important;
-	  box-shadow: 2px 2px 8px rgba(255,255,255,0.6) inset,
-          		  1px 1px 8px rgba(0,0,0,0.8) inset,
-                  0px 0px 0px 1px rgba(0,0,0,0.8) inset,
-				  0px 0px 0px 2px rgba(255,255,255,0.9) inset !important;
 	}
 	
 	/* temp. workaround for 'Request Policy' add-on until dev adds a fix for Fx 29+ */

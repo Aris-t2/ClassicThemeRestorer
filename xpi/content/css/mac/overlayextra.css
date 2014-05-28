@@ -2,71 +2,140 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#ctr_bookmarks-menu-toolbar-button > .toolbarbutton-icon,
-	#ctr_bookmarks-button > .toolbarbutton-icon {
+	#ctraddon_bookmarks-menu-toolbar-button > .toolbarbutton-icon,
+	#ctraddon_bookmarks-button > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks_mac.png");
 	}
-	#ctr_bookmarks-menu-toolbar-button:active > .toolbarbutton-icon,
-	#ctr_bookmarks-button:active > .toolbarbutton-icon {
+	#ctraddon_bookmarks-menu-toolbar-button:active > .toolbarbutton-icon,
+	#ctraddon_bookmarks-button:active > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks2_mac.png");
 	}
-	#ctr_bookmarks-menu-toolbar-button:-moz-lwtheme-brighttext > .toolbarbutton-icon,
-	#ctr_bookmarks-button:-moz-lwtheme-brighttext > .toolbarbutton-icon{
+	#ctraddon_bookmarks-menu-toolbar-button:-moz-lwtheme-brighttext > .toolbarbutton-icon,
+	#ctraddon_bookmarks-button:-moz-lwtheme-brighttext > .toolbarbutton-icon{
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks-inv.png");
 	}
-	#ctr_bookmarks-menu-toolbar-button[open] > .toolbarbutton-icon,
-	#ctr_bookmarks-menu-toolbar-button[open]:active > .toolbarbutton-icon,
-	#ctr_bookmarks-menu-toolbar-button[open]:-moz-lwtheme-brighttext > .toolbarbutton-icon,
-	#ctr_bookmarks-menu-toolbar-button[open]:active:-moz-lwtheme-brighttext > .toolbarbutton-icon{
+	#ctraddon_bookmarks-menu-toolbar-button[open] > .toolbarbutton-icon,
+	#ctraddon_bookmarks-menu-toolbar-button[open]:active > .toolbarbutton-icon,
+	#ctraddon_bookmarks-menu-toolbar-button[open]:-moz-lwtheme-brighttext > .toolbarbutton-icon,
+	#ctraddon_bookmarks-menu-toolbar-button[open]:active:-moz-lwtheme-brighttext > .toolbarbutton-icon{
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks3_mac.png");
 	}
-	#ctr_history-button > .toolbarbutton-icon {
+	#ctraddon_history-menu-toolbar-button > .toolbarbutton-icon,
+	#ctraddon_history-button > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/history_mac.png");
 	}
-	#ctr_history-button:active  > .toolbarbutton-icon {
+	#ctraddon_history-menu-toolbar-button:active  > .toolbarbutton-icon,
+	#ctraddon_history-button:active  > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/history2_mac.png");
 	}
-	#ctr_history-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	#ctraddon_history-menu-toolbar-button:-moz-lwtheme-brighttext > .toolbarbutton-icon,
+	#ctraddon_history-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/history-inv.png");
 	}
-	#ctr_back-button > .toolbarbutton-icon {
+	#ctraddon_back-button > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/back_mac.png");
 	}
-	#ctr_back-button:active  > .toolbarbutton-icon {
+	#ctraddon_back-button:active  > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/back2_mac.png");
 	}
-	#ctr_back-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	#ctraddon_back-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/back-inv.png");
 	}
-	#ctr_forward-button > .toolbarbutton-icon {
+	#ctraddon_forward-button > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/forward_mac.png");
 	}
-	#ctr_forward-button:active > .toolbarbutton-icon {
+	#ctraddon_forward-button:active > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/forward2_mac.png");
 	}
-	#ctr_forward-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	#ctraddon_forward-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/forward-inv.png");
 	}
-	#ctr_stop-button > .toolbarbutton-icon {
+	#ctraddon_stop-button > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/stop_mac.png");
 	}
-	#ctr_stop-button:active > .toolbarbutton-icon {
+	#ctraddon_stop-button:active > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/stop2_mac.png");
 	}
-	#ctr_stop-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	#ctraddon_stop-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/stop-inv.png");
 	}
-	#ctr_reload-button > .toolbarbutton-icon {
+	#ctraddon_reload-button > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/reload_mac.png");
 	}
-	#ctr_reload-button:active  > .toolbarbutton-icon {
+	#ctraddon_reload-button:active  > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/reload2_mac.png");
 	}
-	#ctr_reload-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	#ctraddon_reload-button:-moz-lwtheme-brighttext > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/reload-inv.png");
 	}
+	
+	/* for Retina display */
+	@media (min-resolution: 2dppx) {
+	  #main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_back-button, #ctraddon_forward-button, #ctraddon_bookmarks-menu-toolbar-button, #ctraddon_bookmarks-button, #ctraddon_history-button, #ctraddon_history-menu-toolbar-button, #ctraddon_reload-button, #ctraddon_stop-button) > .toolbarbutton-icon  {
+		list-style-image: url("chrome://browser/skin/Toolbar@2x.png") !important;
+	  }
+	  #main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_back-button, #ctraddon_forward-button, #ctraddon_bookmarks-menu-toolbar-button, #ctraddon_bookmarks-button, #ctraddon_history-button, #ctraddon_history-menu-toolbar-button, #ctraddon_reload-button, #ctraddon_stop-button):-moz-lwtheme-brighttext  > .toolbarbutton-icon  {
+		list-style-image: url("chrome://browser/skin/Toolbar-inverted@2x.png") !important;
+	  }
+	  
+	  #main-window[defaultfxtheme="true"] #ctraddon_back-button > .toolbarbutton-icon {
+		-moz-image-region: rect(0, 108px, 36px, 72px) !important;
+	  }
 
-	#TabsToolbar #ctr_appbutton{
+	  #main-window[defaultfxtheme="true"] #ctraddon_back-button:hover:active:not([disabled="true"]) > .toolbarbutton-icon {
+		-moz-image-region: rect(36px, 108px, 72px, 72px) !important;
+	  }
+
+	  #main-window[defaultfxtheme="true"] #ctraddon_forward-button > .toolbarbutton-icon {
+		-moz-image-region: rect(0, 144px, 36px, 108px) !important;
+	  }
+
+	  #main-window[defaultfxtheme="true"] #ctraddon_forward-button:hover:active:not([disabled="true"]) > .toolbarbutton-icon {
+		-moz-image-region: rect(36px, 144px, 72px, 108px) !important;
+	  }
+	  
+	  #main-window[defaultfxtheme="true"] #ctraddon_bookmarks-button > .toolbarbutton-icon,
+	  #main-window[defaultfxtheme="true"] #ctraddon_bookmarks-menu-toolbar-button > .toolbarbutton-icon {
+		-moz-image-region: rect(0, 288px, 36px, 252px) !important;
+	  }
+	  
+	  #main-window[defaultfxtheme="true"] #ctraddon_bookmarks-button:hover:active:not([disabled="true"]) > .toolbarbutton-icon,
+	  #main-window[defaultfxtheme="true"] #ctraddon_bookmarks-menu-toolbar-button:hover:active:not([disabled="true"]) > .toolbarbutton-icon {
+		-moz-image-region: rect(36px, 288px, 72px, 252px) !important;
+	  }
+	  #main-window[defaultfxtheme="true"] #ctraddon_history-menu-toolbar-button > .toolbarbutton-icon,
+	  #main-window[defaultfxtheme="true"] #ctraddon_history-button > .toolbarbutton-icon {
+		-moz-image-region: rect(0, 360px, 36px, 324px) !important;
+	  }
+	  
+	  #main-window[defaultfxtheme="true"] #ctraddon_history-menu-toolbar-button:hover:active:not([disabled="true"]) > .toolbarbutton-icon,
+	  #main-window[defaultfxtheme="true"] #ctraddon_history-button:hover:active:not([disabled="true"]) > .toolbarbutton-icon {
+		-moz-image-region: rect(36px, 360px, 72px, 324px) !important;
+	  }
+
+	  #main-window[defaultfxtheme="true"] #ctraddon_reload-button > .toolbarbutton-icon {
+		-moz-image-region: rect(0, 180px, 36px, 144px) !important;
+	  }
+	  
+	  #main-window[defaultfxtheme="true"] #ctraddon_reload-button:hover:active:not([disabled="true"]) > .toolbarbutton-icon {
+		-moz-image-region: rect(36px, 180px, 72px, 144px) !important;
+	  }
+	  
+	  #main-window[defaultfxtheme="true"] #ctraddon_stop-button  > .toolbarbutton-icon{
+		-moz-image-region: rect(0, 216px, 36px, 180px) !important;
+	  }
+	  
+	  #main-window[defaultfxtheme="true"] #ctraddon_stop-button:hover:active:not([disabled="true"]) > .toolbarbutton-icon {
+		-moz-image-region: rect(36px, 216px, 72px, 180px) !important;
+	  }
+	  #main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_back-button, #ctraddon_forward-button, #ctraddon_bookmarks-menu-toolbar-button, #ctraddon_bookmarks-button, #ctraddon_history-button,#ctraddon_history-menu-toolbar-button, #ctraddon_reload-button, #ctraddon_stop-button) > .toolbarbutton-icon {
+		width: 18px !important;
+	  }
+	  
+	}
+	
+
+	#TabsToolbar #ctraddon_appbutton{
 	  -moz-appearance:none !important;
 	  border:1px solid #727475 !important;
 	  border-color: hsla(214,89%,21%,.5) !important;
@@ -80,55 +149,86 @@
 	  -moz-margin-start: 0px !important;	
 	}
 	
-	#appmenu-popup #newwebDeveloperPopupMenu #appmenu_webDeveloper_popup menu,
-	#appmenu-popup #menu_newBookmarksmenu #appmenu_bookmarksPopup menu,
-	#appmenu-popup #menu_newHistorymenu #appmenu_historyMenupopup menu,
-	#appmenu-popup #newwebDeveloperPopupMenu #appmenu_webDeveloper_popup .menu-right,
-	#appmenu-popup #menu_newBookmarksmenu #appmenu_bookmarksPopup .menu-right,
-	#appmenu-popup #menu_newHistorymenu #appmenu_historyMenupopup .menu-right{
+	#appmenu-popup #ctraddon_newwebDeveloperPopupMenu #appmenu_webDeveloper_popup menu,
+	#appmenu-popup #ctraddon_menu_newBookmarksmenu #appmenu_bookmarksPopup menu,
+	#appmenu-popup #ctraddon_menu_newHistorymenu #appmenu_historyMenupopup menu,
+	#appmenu-popup #ctraddon_newwebDeveloperPopupMenu #appmenu_webDeveloper_popup .menu-right,
+	#appmenu-popup #ctraddon_menu_newBookmarksmenu #appmenu_bookmarksPopup .menu-right,
+	#appmenu-popup #ctraddon_menu_newHistorymenu #appmenu_historyMenupopup .menu-right{
 	  -moz-padding-start:20px !important;
 	  -moz-margin-start: 0px !important;
 	}
 	
 
-	#navigator-toolbox #nav-bar #ctr_appbutton image{
+	#navigator-toolbox #nav-bar #ctraddon_appbutton image{
 	  margin-left: 0px !important;
 	  margin-right: 0px !important;
 	}
 	
 	#appmenu-popup .menu-iconic-left {
-      padding-right: 4px !important;
+      -moz-padding-end: 4px !important;
 	}
 	
 	#appmenu-popup #appmenu_recentlyClosedTabsMenu,
 	#appmenu-popup #appmenu_recentlyClosedWindowsMenu{
-	  margin-left: 21px !important;
+	  -moz-margin-start: 21px !important;
 	}
 
 	/* ctr addonbar */
-	#ctr_addon-bar:not(:-moz-lwtheme),
-	#ctr_addon-bar:not(:-moz-lwtheme)[customizing] {
+	#ctraddon_addon-bar:not(:-moz-lwtheme),
+	#ctraddon_addon-bar:not(:-moz-lwtheme)[customizing] {
 	  background:linear-gradient(to bottom,#d2d2d2,#d9d9d9,#e9e9e9);
 	}
+	
+	#ctraddon_addon-bar{
+	  -moz-appearance: none;
+	  padding: 0px !important;
+	  margin: 0 0 -1px 0 !important;
+	  border-top-style: none;
+	  border-bottom-style: none;
+	  background-image: linear-gradient(rgba(0,0,0,.15) 1px, rgba(255,255,255,.15) 1px);
+	  background-size: 100% 2px;
+	  background-repeat: no-repeat;
+	}
+	#ctraddon_addon-bar .toolbarbutton-1,
+	#ctraddon_addon-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button  {
+	  -moz-appearance: none !important;
+	  border-style: none !important;
+	  padding: 0 3px !important;;
+	}
 
-	#main-window toolbar #ctr_window-controls {
+	#ctraddon_addon-bar .toolbarbutton-1:not([disabled]):hover,
+	#ctraddon_addon-bar .toolbarbutton-1[open],
+	#ctraddon_addon-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):hover {
+	  background-image: linear-gradient(to top, transparent, rgba(0,0,0,.15)),
+						linear-gradient(to top, transparent, rgba(0,0,0,.15) 30%),
+						linear-gradient(to top, transparent, rgba(0,0,0,.15) 30%);
+	  background-position: left, left, right;
+	  background-size: auto, 1px 100%, 1px 100%;
+	  background-repeat: no-repeat;
+	}
+
+	/* window controls*/
+	#main-window toolbar #ctraddon_window-controls {
 	  visibility: collapse !important;
 	}
 
 }
 
-.ctr_linuxonly,
-.ctr_windowsonly{
+.ctraddon_winlinonly,
+.ctraddon_linuxonly,
+.ctraddon_windowsonly{
   visibility: collapse !important;
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
-	#ctr_appbutton_list2{
+	#ctraddon_appbutton_list2{
 	  visibility: visible !important;
 	}
-
-	#ctr_wincontrols,
-	#ctr_appbutton_list1{
+	#ctraddon_pw_menubarnofog,
+	#ctraddon_pw_altmenubar,
+	#ctraddon_wincontrols,
+	#ctraddon_appbutton_list1{
 	  visibility: collapse !important;
 	}
 }

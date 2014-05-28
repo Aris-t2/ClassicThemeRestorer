@@ -32,8 +32,17 @@
 
 	#nav-bar #forward-button:not(:hover) > .toolbarbutton-icon{
 	  background: none !important;
-	  border: none !important;
+	  border: 1px solid transparent !important;
 	  box-shadow: none !important;
+	}
+	
+	#main-windows[fx31="true"] #nav-bar #forward-button > .toolbarbutton-icon{
+      padding:2px 6px !important;
+	}
+
+	#main-window[fx31="true"] #navigator-toolbox #nav-bar #urlbar-container #forward-button {
+	  margin-top:-10px !important;
+	  margin-bottom:-10px !important;
 	}
 	
 	#nav-bar #forward-button {
@@ -95,13 +104,8 @@
 	  visibility:hidden !important;
 	}
 
-	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + *:-moz-locale-dir(ltr) {
-	  padding-left: 2px !important;
-	  transition: none !important;
-	}
-
-	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + *:-moz-locale-dir(rtl) {
-	  padding-right: 2px !important;
+	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + * {
+	  -moz-padding-start: 2px !important;
 	  transition: none !important;
 	}
 

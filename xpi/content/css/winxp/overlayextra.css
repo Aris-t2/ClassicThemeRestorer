@@ -2,69 +2,71 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#ctr_bookmarks-menu-toolbar-button > .toolbarbutton-icon,
-	#ctr_bookmarks-button > .toolbarbutton-icon{
+	#ctraddon_bookmarks-menu-toolbar-button > .toolbarbutton-icon,
+	#ctraddon_bookmarks-button > .toolbarbutton-icon{
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks_linux.png");
 	}
 	
-	#ctr_bookmarks-menu-toolbar-button:-moz-lwtheme-brighttext > .toolbarbutton-icon,
-	#ctr_bookmarks-button:-moz-lwtheme-brighttext > .toolbarbutton-icon{
+	#ctraddon_bookmarks-menu-toolbar-button:-moz-lwtheme-brighttext > .toolbarbutton-icon,
+	#ctraddon_bookmarks-button:-moz-lwtheme-brighttext > .toolbarbutton-icon{
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks-inv.png");
 	}
 
 	/* fallback images for non-default theme */
-	#ctr_history-button > .toolbarbutton-icon {
+	#ctraddon_history-menu-toolbar-button > .toolbarbutton-icon,
+	#ctraddon_history-button > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/history2_mac.png");
 	}
-	#ctr_back-button > .toolbarbutton-icon {
+	#ctraddon_back-button > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/back2_mac.png");
 	}
-	#ctr_forward-button > .toolbarbutton-icon {
+	#ctraddon_forward-button > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/forward2_mac.png");
 	}
-	#ctr_stop-button > .toolbarbutton-icon {
+	#ctraddon_stop-button > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/stop2_mac.png");
 	}
-	#ctr_reload-button > .toolbarbutton-icon {
+	#ctraddon_reload-button > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/reload2_mac.png");
 	}
 	
 	/* images for default theme */
-	#main-window[defaultfxtheme="true"] :-moz-any(#ctr_history-button,#ctr_back-button,#ctr_forward-button,#ctr_stop-button,#ctr_reload-button) > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button) > .toolbarbutton-icon {
 	  list-style-image: url("chrome://browser/skin/Toolbar.png");
 	}
 	
-	#main-window[defaultfxtheme="true"] :-moz-any(#ctr_history-button,#ctr_back-button,#ctr_forward-button,#ctr_stop-button,#ctr_reload-button):-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button):-moz-lwtheme-brighttext > .toolbarbutton-icon {
 	  list-style-image: url("chrome://browser/skin/Toolbar-inverted.png");
 	}
 	
-	#main-window[defaultfxtheme="true"] #ctr_history-button > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] #ctraddon_history-menu-toolbar-button > .toolbarbutton-icon,
+	#main-window[defaultfxtheme="true"] #ctraddon_history-button > .toolbarbutton-icon {
 	  -moz-image-region: rect(0, 180px, 18px, 162px);
 	}
-	#main-window[defaultfxtheme="true"] #ctr_back-button > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] #ctraddon_back-button > .toolbarbutton-icon {
 	  -moz-image-region: rect(0, 54px, 18px, 36px);
 	}
-	#main-window[defaultfxtheme="true"] #ctr_forward-button > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] #ctraddon_forward-button > .toolbarbutton-icon {
 	  -moz-image-region: rect(0, 72px, 18px, 54px);
 	}
-	#main-window[defaultfxtheme="true"] #ctr_reload-button > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] #ctraddon_reload-button > .toolbarbutton-icon {
 	  -moz-image-region: rect(0, 90px, 18px, 72px);
 	}
-	#main-window[defaultfxtheme="true"] #ctr_stop-button > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] #ctraddon_stop-button > .toolbarbutton-icon {
 	  -moz-image-region: rect(0, 108px, 18px, 90px);
 	}
 
-	#nav-bar :-moz-any(#ctr_appbutton,#ctr_bookmarks-button,#ctr_history-button,#ctr_back-button,#ctr_forward-button,#ctr_stop-button,#ctr_reload-button) > .toolbarbutton-icon{
-	  padding: 2px 6px 2px 6px !important;
+	#nav-bar :-moz-any(#ctraddon_appbutton,#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button) > .toolbarbutton-icon{
+	  padding: 2px 6px !important;
 	}
 
 	#PanelUI-menu-button{
 		margin: 0px !important;
 	}
 
-	#nav-bar #ctr_bookmarks-menu-toolbar-button  > .toolbarbutton-icon{
-	  padding-top: 2px !important;
-	  padding-bottom: 2px !important;
+	#nav-bar #ctraddon_bookmarks-menu-toolbar-button  > .toolbarbutton-icon{
+	  padding-top: 2px;
+	  padding-bottom: 2px;
 	}	
 
 	/* style appmenu */
@@ -74,59 +76,50 @@
 		border:1px solid #a0a0a0;
 	}
 	
-	#main-window[ctr_appbutton_on_navbar="true"] #appmenu-popup {
+	#main-window[defaultfxtheme="true"][ctraddon_appbutton_on_navbar="true"] #appmenu-popup {
 	  margin-top:-8px;
 	}
 	
-	@media not all and (-moz-windows-classic) {
-		#appmenuPrimaryPane{
-		  -moz-appearance:none;
-		  background:white;
-		  box-shadow:none;
-		  border:0;
-		}
-		#appmenuSecondaryPane{
-		  -moz-appearance:none;
-		  background:#f1f5fb;
-		  box-shadow:none;
-		  border:0;
-		  border-left:1px solid #d6e5f5;
-		}
-		
-		#appmenuPrimaryPane > menuseparator {
-		  -moz-appearance: none;
-		  margin-top: 3px;
-		  margin-bottom: 3px;
-		  padding: 0;
-		  border-top: 1px solid #d6e5f5;
-		  border-bottom: none;
-		}
-		
-		#appmenuPrimaryPane:-moz-locale-dir(ltr) > menuseparator {
-		  -moz-margin-start: 20px;
-		}
-		
-		#appmenuPrimaryPane:-moz-locale-dir(rtl) > menuseparator {
-		  -moz-margin-end: 20px;
-		}
-		
-		#appmenu-popup > hbox > vbox > menu > menupopup,
-		#appmenu-popup > hbox > vbox > hbox > menu > menupopup{
-		  -moz-appearance:none;
-		  box-shadow: 1px 0 12px rgb(204,214,234);
-		  padding:2px;
-		  border:1px solid #a0a0a0;
-		}
-	
-		#appmenu-popup > hbox > #appmenuPrimaryPane > menu > menupopup,
-		#appmenu-popup > hbox > #appmenuPrimaryPane > hbox > menu > menupopup {
-		  background: white;
-		}
-		
-		#appmenu-popup > hbox > #appmenuSecondaryPane > menu > menupopup,
-		#appmenu-popup > hbox > #appmenuSecondaryPane > hbox > menu > menupopup{
-		  background: #f1f5fb;
-		}
+	@media (-moz-windows-default-theme) {
+	  #main-window[defaultfxtheme="true"] #appmenu-popup {
+		-moz-appearance: none;
+		background: white;
+		border: 1px solid ThreeDShadow;
+	  }
+	  #main-window[defaultfxtheme="true"] #appmenuPrimaryPane {
+		background-color: rgba(255,255,255,0.5);
+		padding: 2px;
+		-moz-border-end: none;
+	  }
+	  #main-window[defaultfxtheme="true"] #appmenuSecondaryPane {
+		background-color: #f1f5fb;
+		box-shadow: 1px 0 2px rgb(204,214,234) inset;
+		-moz-padding-start: 3px;
+		-moz-padding-end: 2px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
+	  }
+	  #main-window[defaultfxtheme="true"] #appmenuSecondaryPane:-moz-locale-dir(rtl) {
+		box-shadow: -1px 0 2px rgb(204,214,234) inset;
+	  }
+
+	  #main-window[defaultfxtheme="true"] #appmenuSecondaryPane menupopup {
+		-moz-appearance: none;
+		background-color: #f1f5fb;
+		border: 1px solid ThreeDShadow;
+		padding: 2px;
+	  }
+
+	  #main-window[defaultfxtheme="true"] #appmenuPrimaryPane > menuseparator {
+		-moz-appearance: none;
+		margin-top: 3px;
+		margin-bottom: 3px;
+		-moz-margin-start: calc(1.45em + 4px);
+		padding: 0;
+		border-top: 1px solid #d6e5f5;
+		border-bottom: none;
+	  }
 
 	}
 	
@@ -143,38 +136,76 @@
 		}
 	}
 	
-	/* ctr addonbar */
-	#ctr_addon-bar toolbarbutton {
+	/* CTR addons-bar */
+	#main-window[defaultfxtheme="true"] #ctraddon_addon-bar:not(:-moz-lwtheme) {
+	  border-top: 1px solid rgba(0,0,0,.15) !important;
+	}
+	
+	#ctraddon_addon-bar {
+	  min-height: 20px;
+	}
+	
+	#ctraddon_addon-bar toolbarbutton {
+	  -moz-appearance: none;
+	  border: none;
+	  margin-top: 0px;
+	  margin-bottom: 0px;
+	  padding-top: 1px;
+	  padding-bottom: 1px;
+	}
+
+	#ctraddon_addon-bar toolbaritem{
+	  margin-top: 0px;
+	  margin-bottom: 0px;
+	  padding-top: 0px;
+	  padding-bottom: 0px;
+	}
+	
+	#ctraddon_addon-bar toolbaritem[id^="widget"]{
 	  -moz-appearance: none !important;
-	  margin: 0px 3px !important;
-	  padding:0px !important;
 	}
-	#ctr_addon-bar toolbarbutton .toolbarbutton-icon {
-	  max-width: 18px;
-	  max-height: 18px;
+
+	#ctraddon_addon-bar .toolbarbutton-1:not([disabled]):hover,
+	#ctraddon_addon-bar .toolbarbutton-1[open],
+	#ctraddon_addon-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):hover {
+	  background-image: linear-gradient(to top, transparent, rgba(0,0,0,.15)),
+						linear-gradient(to top, transparent, rgba(0,0,0,.15) 30%),
+						linear-gradient(to top, transparent, rgba(0,0,0,.15) 30%);
+	  background-position: left, left, right;
+	  background-size: auto, 1px 100%, 1px 100%;
+	  background-repeat: no-repeat;
 	}
-	#ctr_addon-bar .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(ltr) {
-	  padding: 0px !important;
-	  margin-left: -3px !important;
+	#ctraddon_addon-bar .toolbarbutton-1,
+	#ctraddon_addon-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button  {
+	  -moz-appearance: none;
+	  border-style: none;
 	}
-	#ctr_addon-bar .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(rtl) {
-	  padding: 0px !important;
-	  margin-left: -3px !important;
-	}
+	
+	/* fix recent icon stretching*/
+    #nav-bar .toolbarbutton-1:not([type=menu-button]),
+    #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button,
+    #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
+     -moz-box-align: center !important;
+    }
 
 }
 
-.ctr_nonwindows,
-.ctr_linuxonly,
-.ctr_maconly{
+.ctraddon_nonwindows,
+.ctraddon_linuxonly,
+.ctraddon_maconly{
   visibility: collapse !important;
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
-	#ctr_appbutton_list1{
+	#ctraddon_appbutton_list1{
 	  visibility: visible !important;
 	}
-	#ctr_appbutton_list2{
+	#ctraddon_pw_menubarnofog,
+	#ctraddon_pw_altmenubar,
+	#ctraddon_appbutton_list2{
 	  visibility: collapse !important;
+	}
+	#ctraddon_pw_okbutton{
+	  display: inline !important;
 	}
 }

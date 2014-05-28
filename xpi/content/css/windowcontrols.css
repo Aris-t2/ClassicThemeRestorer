@@ -7,16 +7,16 @@
 	  visibility:collapse !important;
 	}
 
-	#main-window:not([inFullscreen]):not([customizing]) #ctr_window-controls,
+	#main-window:not([inFullscreen]):not([customizing]) #ctraddon_window-controls,
 	#main-window[inFullscreen] #window-controls {
 	  visibility:collapse !important;
 	}
 
-	#main-window[inFullscreen]  #ctr_window-controls {
+	#main-window[inFullscreen]  #ctraddon_window-controls {
 	  visibility: visible !important;
 	}
 	
-	#nav-bar #ctr_window-controls{
+	#nav-bar #ctraddon_window-controls{
 	  -moz-box-align: start !important;
 	}
 

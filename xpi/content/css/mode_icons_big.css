@@ -1,4 +1,4 @@
-@import url(chrome://ctr_os_special/skin/mode_icons_big_extra.css);
+@import url(chrome://ctraddon_os_special/skin/mode_icons_big_extra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
@@ -7,12 +7,12 @@
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
 	}
 	
-	#nav-bar #ctr_back-button > .toolbarbutton-icon{
+	#nav-bar #ctraddon_back-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel3.png) !important;
 	}
 	
-	#nav-bar #ctr_forward-button > .toolbarbutton-icon{
+	#nav-bar #ctraddon_forward-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel3.png) !important;
 	}
@@ -116,7 +116,7 @@
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/Metro_Glyph-menuPanel.png) !important;
 	}
 	
-	#nav-bar #ctr_appbutton > .toolbarbutton-icon{
+	#nav-bar #ctraddon_appbutton > .toolbarbutton-icon{
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/appbutton_menuPanel.png) !important;
 	}
 	
@@ -174,23 +174,24 @@
 	}
 
 	/* extra buttons from CTR add-on*/
-	#nav-bar #ctr_stop-button > .toolbarbutton-icon{
+	#nav-bar #ctraddon_stop-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
 	}
 
-	#nav-bar #ctr_reload-button > .toolbarbutton-icon{
+	#nav-bar #ctraddon_reload-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
 	}
 
-	#nav-bar #ctr_history-button > .toolbarbutton-icon{
+	#nav-bar #ctraddon_history-menu-toolbar-button > .toolbarbutton-icon,
+	#nav-bar #ctraddon_history-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 224px, 32px, 192px) !important;
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
 	}
 	/* star icon instead of old bookmarks icon */
-	#nav-bar #ctr_bookmarks-button > .toolbarbutton-icon,
-	#nav-bar #ctr_bookmarks-menu-toolbar-button > .toolbarbutton-icon{
+	#nav-bar #ctraddon_bookmarks-button > .toolbarbutton-icon,
+	#nav-bar #ctraddon_bookmarks-menu-toolbar-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 160px, 32px, 128px) !important;
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
 	}

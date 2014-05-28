@@ -1,9 +1,10 @@
-@import url(chrome://ctr_os_special/skin/classictabsextra.css);
+/*AGENT_SHEET*/
+@import url(chrome://ctraddon_os_special/skin/classictabsextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul){
 	
-	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctr_appbutton{
+	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_appbutton{
 	  margin-left:-2px !important;
 	}
 
@@ -43,21 +44,21 @@
 	.tabbrowser-tab .tab-content{
 	  -moz-appearance: none !important;
 	  -moz-border-image: none !important;
+      padding-bottom: 1px !important;
 	  padding-left: 5px !important;
 	  padding-right: 5px !important;
-      padding-bottom: 1px !important;
 	  margin-left: 0px !important;
 	  margin-right: 0px !important;
 	  margin-top: 0px !important;
 	  margin-bottom: 1px !important;
 	}
 	
-	#tabbrowser-tabs{
-	  min-height: 0px !important;
-	}
-
+	#tabbrowser-tabs,
 	#TabsToolbar {
 	  min-height: 0px !important;
+	}
+	
+	#main-window:not([sizemode="maximized"]):not([inFullscreen]) #TabsToolbar {
 	  padding-left: 2px !important;
 	  padding-right: 2px !important;
 	}
@@ -109,6 +110,18 @@
 
 	.tabbrowser-tab[selected="true"] {
 		background-size: calc(100% - 2px) calc(100% - 1px) !important;
+	}
+	
+	@media not all and (-moz-windows-theme:aero) {
+		.tabs-newtab-button,
+		.tabbrowser-tab:not([selected=true]),
+		.tabbrowser-tab:not([selected=true])[pinned]{
+		  background-size: calc(100% - 1px) calc(100% - 3px) !important;
+		}
+
+		.tabbrowser-tab[selected=true] > .tab-stack > .tab-content {
+		  border-image: url("chrome://classic_theme_restorer/content/images/tab.png") 3 3 0 fill repeat stretch !important;
+		}
 	}
 	
 	#TabsToolbar:not(:-moz-lwtheme)::after,
@@ -168,39 +181,89 @@
 	  border: 0px solid transparent !important;
 	}
 	
-	#TabsToolbar{
-	  background-image: none !important;
+	@media all and (-moz-windows-theme:aero) {
+	  #TabsToolbar{
+		background-image: none !important;
+	  }
 	}
+	
 	#TabsToolbar::after {
 	  border-bottom: 0px !important;
 	}
 
 	.tabbrowser-tab[pinned]{
 	  min-width: 32px !important;
-	  width: 32px !important;
-	  max-width: 32px !important;
+	  /*width: 32px !important;
+	  max-width: 32px !important;*/
 	  background-position: 0px 2px !important;
 	  background-size: calc(100% - 0px) calc(100% - 1px) !important;
 	}
 
-	.tabbrowser-tab[pinned] image{
-	  margin-left:0px !important;
+	#TabsToolbar[tabsontop="false"] .tabbrowser-tab[pinned] {
+      background-size: calc(100% - 0px) calc(100% - 3px) !important;
 	}
 
+	#TabsToolbar[tabsontop="false"] .tabbrowser-tab[pinned]:-moz-lwtheme {
+      background-size: calc(100% - 0px) calc(100% - 4px) !important;
+	}
+	
+	/* trick to use code for win8+*/
+	@media all and (-moz-windows-compositor) {
+	@media  not all and (-moz-os-version: windows-vista){
+	@media  not all and (-moz-os-version: windows-win7){
+		#TabsToolbar[tabsontop="false"] .tabbrowser-tab[pinned] {
+		  background-size: calc(100% - 0px) calc(100% - 4px) !important;
+		}
+		#TabsToolbar[tabsontop="false"] .tabbrowser-tab:not([selected=true])[pinned]  > .tab-stack > .tab-content {
+		  border-image: url("chrome://classic_theme_restorer/content/images/taba.png") 3 3 0 fill repeat stretch !important;
+		  border-style: solid !important;
+		}
+	}}}
+	
+	#main-window[tabsontop="false"] #navigator-toolbox #TabsToolbar #tabbrowser-tabs .tabbrowser-tab[pinned],
+	#main-window[tabsontop="false"] #navigator-toolbox #TabsToolbar #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned] {
+	  clip: rect(0px, auto, 25.5px, 0px) !important;
+	}
+
+    #main-window[tabsontop="false"] #navigator-toolbox #TabsToolbar .toolbarbutton-1,
+	#main-window[tabsontop="false"] #navigator-toolbox #TabsToolbar .scrollbutton-up,
+	#main-window[tabsontop="false"] #navigator-toolbox #TabsToolbar .scrollbutton-down {
+      margin-bottom: 0px !important;
+    }
+
+    #main-window[tabsontop="false"]:-moz-lwtheme #navigator-toolbox #TabsToolbar .toolbarbutton-1,
+	#main-window[tabsontop="false"]:-moz-lwtheme #navigator-toolbox #TabsToolbar .scrollbutton-up,
+	#main-window[tabsontop="false"]:-moz-lwtheme #navigator-toolbox #TabsToolbar .scrollbutton-down {
+      margin-bottom: -1px !important;
+    }
+	
 	#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
 	.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
 	#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
-		background-image: none !important;
+	  background-image: none !important;
 	}
 	
 	.tabbrowser-tab:not([pinned]) .tab-close-button{
-	  margin-right:-4px !important;
+	  -moz-margin-end:-4px !important;
 	}
-
-	.tabbrowser-tab:not([pinned]) .tab-throbber,
+	
+	/* Pinned tabs & TabMixPlus/TabUtilities locked/protected tabs support */	
+	.tabbrowser-tab:not([pinned]) .tab-close-button{
+	  -moz-margin-end:-5px !important;
+	  -moz-margin-start:0px !important;
+	}
+	.tabbrowser-tab:not([pinned]):not([locked]) .tab-throbber,
 	.tabbrowser-tab:not([pinned]) .tab-icon-image{
-	  margin-left:-3px !important;
-	  margin-right:3px !important;
+	  -moz-margin-start:-3px !important;
+	  -moz-margin-end:3px !important;
+	}
+	.tabbrowser-tab:not([pinned])[locked] .tab-throbber{
+	  -moz-margin-start:-3px !important;
+	  -moz-margin-end:-13px !important;
+	}
+  
+ 	.tabbrowser-tab[pinned]:not([locked]):not([pinned]) image{
+	  -moz-margin-start:0px !important;
 	}
 
 	/* remove ridiculous clipping */
@@ -208,11 +271,14 @@
 	  clip-path: none !important;
 	}
 	
-	/* TMP support */
-	.tabbrowser-tab[pinned][locked] image,
-	.tabbrowser-tab[pinned][protected] image {
-	  margin-left:0px !important;
-	  margin-right:0px !important;
+	/* Private Tab extension */
+	.tabs-newtab-button + .tabs-newtab-button {
+	  -moz-margin-start: 15px !important;
+	}
+	
+	/*ColorfulTabs extension*/
+	#navigator-toolbox[tabsontop="false"] #colorfulTabsStack {
+	  margin-top: -1px !important;
 	}
 	
 }
@@ -221,15 +287,16 @@
 	.tabcolorbox,
 	.tabhovcolorbox,
 	.tabpencolorbox,
+	.tabunrcolorbox,
 	.ntabcolorbox,
 	.ntabhovcolorbox,
 	#ntabcolorbox,
 	#ntabhovcolorbox,
-	#ctr_ccap_t_squared{
+	#ctraddon_ccap_t_squared{
 	  visibility: visible !important;
 	}
 	
-	#ctr_ccap_t_default{
+	#ctraddon_ccap_t_default{
 	  visibility: collapse !important;
 	}
 }

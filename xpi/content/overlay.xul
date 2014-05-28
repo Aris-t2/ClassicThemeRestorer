@@ -27,54 +27,51 @@
 	<script type="application/x-javascript" src="overlay.js"/>
 
 	<commandset id="mainCommandSet">
-	   <command id="Browser:ToggleCtrAddonBar" oncommand="classicthemerestorerjs.ctr.toggleCtrAddonBar();"/>
+	   <command id="CtrExtension:ToggleCtrAddonBar" oncommand="classicthemerestorerjs.ctr.toggleCtrAddonBar();"/>
 	</commandset>
 	
 	<keyset id="mainKeyset">
-	  <key id="key_toggleCtrAddonBar" command="Browser:ToggleCtrAddonBar" key="/" modifiers="accel"/>
+	  <key id="ctraddon_key_toggleCtrAddonBar" command="CtrExtension:ToggleCtrAddonBar" key="/" modifiers="accel"/>
 	</keyset>
  
 	<!--### add new buttons to customizing area ###-->
 	<hbox id="customization-container">
 	  <vbox id="customization-palette-container">
-		<hbox pack="start" id="ctr_cuibuttonsbox" ordinal="999999" collapsed="true">
-		  <label value="&Ctr_cuibuttons;" class="ctr_cuibutlabel" id="ctr_cuibuttons_main"/>
-		  <button id="customization-smallnavbut-button1" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',false);" label="&Ctr_cuibutnormal;" class="customizationmode-button"/>
-		  <button id="customization-smallnavbut-button2" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',true);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',true);" label="&Ctr_cuibutsmall;" class="customizationmode-button"/>
+		<hbox pack="start" id="ctraddon_cuibuttonsbox" ordinal="999999" collapsed="true">
+		  <label value="&Ctr_cuibuttons;" class="ctraddon_cuibutlabel" id="ctraddon_cuibuttons_main"/>
+		  <button id="ctraddon_cui-smallnavbut-button1" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',false);" label="&Ctr_cuibutnormal;" class="customizationmode-button"/>
+		  <button id="ctraddon_cui-smallnavbut-button2" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',true);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',true);" label="&Ctr_cuibutsmall;" class="customizationmode-button"/>
 		  <spacer flex="1"/>
-		  <label value="&Ctr_cuimode;" class="ctr_cuibutlabel"/>
-		  <button id="customization-icons-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'icons');" label="&Ctr_cuiico;" class="customizationmode-button"/>
-		  <button id="customization-iconstext-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'iconstxt');" label="&Ctr_cuiicotxt;" class="customizationmode-button"/>
-		  <button id="customization-textonly-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'txtonly');" label="&Ctr_cuitxt;" class="customizationmode-button"/>
+		  <label value="&Ctr_cuimode;" class="ctraddon_cuibutlabel"/>
+		  <button id="ctraddon_cui-icons-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'icons');" label="&Ctr_cuiico;" class="customizationmode-button"/>
+		  <button id="ctraddon_cui-iconstext-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'iconstxt');" label="&Ctr_cuiicotxt;" class="customizationmode-button"/>
+		  <button id="ctraddon_cui-textonly-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'txtonly');" label="&Ctr_cuitxt;" class="customizationmode-button"/>
 		</hbox>
 	  </vbox>
 	</hbox>
-
 	
 	<!--### create new add-ons bar ###-->
 	<vbox id="browser-bottombox">
-		<toolbar id="ctr_addon-bar" customizable="true"
+		<toolbar id="ctraddon_addon-bar" customizable="true"
 				 class="toolbar-primary chromeclass-toolbar"
 				 mode="icons"
 				 iconsize="small"
 				 toolboxid="navigator-toolbox"
-				 insertafter="PersonalToolbar"
 				 context="toolbar-context-menu"
 				 toolbarname="&Ctr_addonbar;"
 				 lockiconsize="true"
-				 accesskey="N"
+				 accesskey="&Ctr_addon-bar.accesskey;"
 				 key="key_toggleCtrAddonBar"
-				 defaultset="ctr_addonbar-close,spring,ctr_statusbar">
-		  <toolbarbutton id="ctr_addonbar-close" removable="false"
+				 defaultset="ctraddon_addonbar-close,spring,ctraddon_statusbar">
+		  <toolbarbutton id="ctraddon_addonbar-close" removable="false"
 				    oncommand="classicthemerestorerjs.ctr.toggleCtrAddonBar();"/>
-		  <toolbaritem id="ctr_statusbar"
+		  <toolbaritem id="ctraddon_statusbar"
 					   title="&Ctr_statusbar;"
 					   customizableui-areatype="toolbar"
 					   removable="true"/>
 		</toolbar>
-		<toolbar id="ctr_toolbar_dummy" customizable="false"
+		<toolbar id="ctraddon_toolbar_dummy" customizable="false"
 				 hidden="true"
-				 insertafter="PersonalToolbar"
 				 defaultset="PanelUI-menu-button">
 		  <!-- ### move PanelUI-menu-button dummy here to prevent glitches with CTRs movable button -->
           <toolbarbutton id="PanelUI-menu-button" removable="false" collapsed="true"/>
@@ -84,15 +81,17 @@
 	<!--### create a new toolbar ###-->
 	<toolbox id="navigator-toolbox">
 		
-		<toolbar id="ctr_extra-bar" customizable="true"
+		<toolbar id="ctraddon_extra-bar" customizable="true"
 				 class="toolbar-primary chromeclass-toolbar"
 				 mode="icons"
 				 iconsize="small"
+				 insertafter="nav-bar"
+				 insertbefore="PersonalToolbar"
 				 context="toolbar-context-menu"
 				 toolbarname="&Ctr_extrabar;"
 				 collapsed="true"
 				 lockiconsize="true"
-				 accesskey="D"
+				 accesskey="&Ctr_extrabar.accesskey;"
 				 defaultset="spring">
 		</toolbar>
 	</toolbox>
@@ -103,34 +102,60 @@
 	<toolbarbutton id="alltabs-button" removable="true"/>
 	<toolbarbutton id="webrtc-status-button" removable="true"/>
 	<toolbarbutton id="social-share-button" removable="true"/>
+	<toolbarbutton id="bookmarks-menu-button" overflows="false"/>
 	<toolbaritem id="social-toolbar-item" removable="true"/>
+	
+	<toolbar id="TabsToolbar">
+      <toolbarbutton id="ctraddon_tabs-closebutton"
+                     class="close-button tabs-closebutton close-icon"
+                     command="cmd_close"
+                     label="&closeTab.label;"
+                     cui-areatype="toolbar"
+                     tooltiptext="&closeTab.label;"
+					 removable="false"/>
+	</toolbar>
 	
 	<!--### CTR entry in menubars 'Tools' menu popup ###-->
 	<menupopup id="menu_ToolsPopup">
 	  <menuitem oncommand="window.open('chrome://classic_theme_restorer/content/options.xul','', 'chrome');"
 		label="Classic Theme Restorer"
 		class="menuitem-iconic"
-		id="ctr_tools_menu_entry"/>
+		id="ctraddon_tools_menu_entry"/>
 	</menupopup>
 
-	<!--### Appbutton needs to be created twice, one for titlebar and one for toolbars.
-		Otherwise assigning appbutton popup to both buttons would make buttons to lose
-		their active/open status and ui. Native splitmenus are not added yet, because
-		of compatibility issues with themes and MacOSX ###-->
-
+	<!--### CTRs appmenu popup
+		!!!! IMPORTANT for AMO Editors !!!
+	
+		Almost all '*appmenu / appmenu*' menuitems, panes and popups have to use
+		pre-Australis ids. They have to do this - not being prefixed by CTR -
+		to be compatible to add-ons that add or have added items to appmenu
+		and to allow themes to use previous code to add menuitem icons!
+		
+		Using non-pre-Australis or own ids would require every add-on/theme to
+		add support to CTR manually resulting in a much lower compatibility without
+		any benefit to anyone!
+		
+		Using non-pre-Australis or own ids does not create any conflicts, because
+		pre-Australis menuitem ids are not used by Firefox 29+ anymore.
+		
+		Native splitmenus are not added yet, because of compatibility issues with
+		themes and Apple MacOSX.
+		
+		!!!! IMPORTANT for AMO Editors !!!
+	###-->
 	<popupset>
 		<menupopup id="appmenu-popup" position="after_start">
 		<hbox>
 		  <vbox id="appmenuPrimaryPane">
-			<hbox>
+			<hbox id="ctraddon_appmenubox_newtab" label="&tabCmd.label;">
 				<menuitem id="appmenu_newTab"
 							label="&tabCmd.label;"
 							command="cmd_newNavigatorTab"
 							flex="1"/>
-				<menu id="menu_newTabmenu"
+				<menu id="ctraddon_menu_newTabmenu"
 							label=""
 							class="menu-iconic">
-					<menupopup id="menu_newTabmenupopup">
+					<menupopup id="ctraddon_menu_newTabmenupopup">
 						<menuitem id="appmenu_newTab_popup"
 								  label="&tabCmd.label;"
 								  command="cmd_newNavigatorTab"
@@ -157,7 +182,7 @@
 					command="Tools:PrivateBrowsing"/>
 			<menuseparator/>
 
-			<hbox>
+			<hbox id="ctraddon_appmenubox_edit" label="&editMenu.label;">
 				<menuitem id="appmenu-edit-label"
 						  label="&editMenu.label;"
 						  disabled="true"
@@ -229,16 +254,16 @@
 					  label="&emailPageCmd.label;"
 					  command="Browser:SendLink"/>
 
-			<hbox>
+			<hbox id="ctraddon_appmenubox_print" label="&printCmd.label;">
 				<menuitem id="appmenu_print"
 							label="&printCmd.label;"
 							class="menuitem-iconic"
 							command="cmd_print"
 							flex="1"/>
-				<menu id="menu_newPrintmenu"
+				<menu id="ctraddon_menu_newPrintmenu"
 						label=""
 						class="menu-iconic">
-					<menupopup id="menu_newPrintmenupopup">
+					<menupopup id="ctraddon_menu_newPrintmenupopup">
 						<menuitem id="appmenu_print_popup"
 								  label="&printCmd.label;"
 								  class="menuitem-iconic"
@@ -257,12 +282,12 @@
 				 </menu>
 			 </hbox>
 			 <menuseparator/>
-			 <hbox>
-			   <menuitem id="appmenu_webDeveloper"
+			 <hbox id="ctraddon_appmenubox_developer" label="&webDeveloperMenu.label;">
+			    <menuitem id="appmenu_webDeveloper"
 						  label="&webDeveloperMenu.label;"
-						  oncommand="DeveloperToolbar.toggle();"
+						  command="Tools:DevToolbox"
 						  flex="1"/>
-			  <menu id="newwebDeveloperPopupMenu"
+			  <menu id="ctraddon_newwebDeveloperPopupMenu"
                     label=""
 					class="menu-iconic">
                 <menupopup id="appmenu_webDeveloper_popup">
@@ -317,17 +342,17 @@
 					  observes="sync-setup-state"
 					  oncommand="gSyncUI.openSetup()"/>
 			<menuitem id="appmenu-quit"
-					  class="menuitem-iconic ctr_windowsonly"
+					  class="menuitem-iconic ctraddon_windowsonly"
 					  label="&quitApplicationCmdWin.label;"
 					  accesskey="&quitApplicationCmdWin.accesskey;"
 					  command="cmd_quitApplication"/>
 			<menuitem id="appmenu-quit"
-					  class="menuitem-iconic ctr_linuxonly"
+					  class="menuitem-iconic ctraddon_linuxonly"
 					  label="&quitApplicationCmd.label;"
 					  accesskey="&quitApplicationCmd.accesskey;"
 					  command="cmd_quitApplication"/>
 			<menuitem id="appmenu-quit"
-					  class="menuitem-iconic ctr_maconly"
+					  class="menuitem-iconic ctraddon_maconly"
 					  label="&quitApplicationCmdMac.label;"
 					  accesskey="&quitApplicationCmd.accesskey;"
 					  command="cmd_quitApplication"/>
@@ -335,13 +360,13 @@
 		  </vbox>
 		  <vbox id="appmenuSecondaryPane">
 
-			<hbox>
+			<hbox id="ctraddon_appmenubox_bookmarks" label="&bookmarksMenu.label;">
 				<menuitem id="appmenu_bookmarks"
 						  label="&bookmarksMenu.label;"
 						  class="menuitem-iconic"
 						  command="Browser:ShowAllBookmarks"
 						  flex="1"/>
-				<menu id="menu_newBookmarksmenu"
+				<menu id="ctraddon_menu_newBookmarksmenu"
 					  label=" "
 					  class="menu-iconic">
 
@@ -406,12 +431,12 @@
 				</menu>
 			</hbox>
 
-			<hbox>
+			<hbox id="ctraddon_appmenubox_history" label="&historyMenu.label;">
 				<menuitem id="appmenu_history"
 						  label="&historyMenu.label;"
 						  command="Browser:ShowAllHistory"
 						  flex="1"/>
-				<menu id="menu_newHistorymenu"
+				<menu id="ctraddon_menu_newHistorymenu"
 					  label=""
 					  class="menu-iconic">
 				  <menupopup id="appmenu_historyMenupopup"
@@ -446,7 +471,7 @@
 						  disabled="true">
 					  <menupopup id="appmenu_recentlyClosedTabsMenupopup"
 								 placespopup="true"
-								 onpopupshowing="document.getElementById('menu_newHistorymenu')._placesView.populateUndoSubmenu();"/>
+								 onpopupshowing="document.getElementById('ctraddon_menu_newHistorymenu')._placesView.populateUndoSubmenu();"/>
 					</menu>
 					<menu id="appmenu_recentlyClosedWindowsMenu"
 						  class="recentlyClosedWindowsMenu"
@@ -454,7 +479,7 @@
 						  disabled="true">
 					  <menupopup id="appmenu_recentlyClosedWindowsMenupopup"
 								 placespopup="true"
-								 onpopupshowing="document.getElementById('menu_newHistorymenu')._placesView.populateUndoWindowSubmenu();"/>
+								 onpopupshowing="document.getElementById('ctraddon_menu_newHistorymenu')._placesView.populateUndoWindowSubmenu();"/>
 					</menu>
 					<menuseparator/>
 				  </menupopup>
@@ -469,49 +494,53 @@
                       label="&addons.label;"
 					  class="menuitem-iconic"
                       command="Tools:Addons"/>
-			<hbox>
+			<hbox id="ctraddon_appmenubox_settings" label="&preferencesCmd2.label;">
 				<menuitem id="appmenu_customize"
 						  label="&preferencesCmd2.label;"
-						  class="ctr_windowsonly"
+						  class="ctraddon_windowsonly"
 						  oncommand="openPreferences();"
 						  flex="1"/>
-				<menuitem id="appmenu_customize"
+				<menuitem id="appmenu_customizeUnix"
 						  label="&preferencesCmdUnix.label;"
-						  class="ctr_nonwindows"
+						  class="ctraddon_nonwindows"
 						  oncommand="openPreferences();"
 						  flex="1"/>
-				<menu id="menu_newPreferencesmenu"
+				<menu id="ctraddon_menu_newPreferencesmenu"
 						label=" "
 						class="menu-iconic">
 				  <menupopup id="appmenu_customizeMenu">					  
 					  <menuitem id="appmenu_preferences"
 								label="&preferencesCmd2.label;"
-								class="ctr_windowsonly"
+								class="ctraddon_windowsonly"
 								accesskey="&preferencesCmd2.accesskey;"
 								oncommand="openPreferences();"/>
-					  <menuitem id="appmenu_preferences"
+					  <menuitem id="appmenu_preferencesUnix"
 								label="&preferencesCmdUnix.label;"
-								class="ctr_nonwindows"
+								class="ctraddon_nonwindows"
 								accesskey="&preferencesCmdUnix.accesskey;"
 								oncommand="openPreferences();"/>
+					  <!--menuitem oncommand="window.open('chrome://browser/content/preferences/preferences.xul','dlg','all=no');"
+								label="&preferencesCmd2.label; (Window)"
+								class="menuitem-iconic"
+								id="ctraddon_prefsinwindow"/-->
 					  <menuseparator/>
 					  <menuitem command="cmd_CustomizeToolbars"
 								accesskey="&viewCustomizeToolbar.accesskey;"
 								label="&viewCustomizeToolbar.label;"/>
-					  <menuseparator id="appmenu_ctr_sep" collapsed="true"/>
+					  <menuseparator id="ctraddon_appmenu_sep" collapsed="true"/>
 					  <menuitem oncommand="window.open('chrome://classic_theme_restorer/content/options.xul','', 'chrome');"
 								label="Classic Theme Restorer"
 								class="menuitem-iconic"
-								id="appmenu_ctr"/>
+								id="ctraddon_appmenu_ctr"/>
 				  </menupopup>
 				</menu>
 			</hbox>
-			<hbox>
+			<hbox id="ctraddon_appmenubox_help" label="&helpMenuWin.label;">
 				<menuitem id="appmenu_help"
 						  oncommand="openHelpLink('firefox-help')"
 						  label="&helpMenuWin.label;"
 						  flex="1"/>					  
-				<menu id="newhelpMenu"
+				<menu id="ctraddon_newhelpMenu"
 						label=" "
 						class="menu-iconic">
 				  <menupopup id="appmenu_helpMenupopup" onpopupshowing="buildHelpMenu();">
@@ -565,7 +594,7 @@
 
 	<hbox id="titlebar-content">
 	  <!--### place own appbutton on titlebar (Windows only) ###-->
-	  <toolbarbutton id="ctr_appbutton2"
+	  <toolbarbutton id="ctraddon_appbutton2"
 					 ordinal="0"
                      removable="false"
                      type="menu"
@@ -582,7 +611,7 @@
 	<toolbarpalette id="BrowserToolbarPalette">
 		
 		<!--### another appbutton to be used on toolbars (Windows, Linux, MacOSX) ###-->
-		<toolbarbutton id="ctr_appbutton"
+		<toolbarbutton id="ctraddon_appbutton"
                      class="toolbarbutton-1"
                      persist="class"
                      removable="true"
@@ -590,10 +619,63 @@
                      label="Firefox"
 					 onmousedown="classicthemerestorerjs.ctr.openCtrAppmenuPopup(this);">
 	    </toolbarbutton>
-	  
+
+
+	  <toolbarbutton id="ctraddon_history-menu-toolbar-button"
+                     class="toolbarbutton-1 chromeclass-toolbar-additional"
+                     persist="class"
+                     removable="true"
+                     type="menu"
+                     label="&historyButton.label;">
+				  <menupopup id="ctraddon_history_historyMenupopup"
+							 placespopup="true"
+							 oncommand="this.parentNode._placesView._onCommand(event);"
+							 onclick="checkForMiddleClick(this, event);"
+							 onpopupshowing="if (!this.parentNode._placesView)
+											   new HistoryMenu(event);"
+							 tooltip="bhTooltip"
+							 popupsinherittooltip="true">
+					<menuitem id="ctraddon_history_showAllHistory"
+							  label="&showAllHistoryCmd2.label;"
+							  key="showAllHistoryKb"
+							  command="Browser:ShowAllHistory"/>
+					<menuseparator/>
+					<menuitem id="ctraddon_history_sanitizeHistory"
+							  label="&clearRecentHistory.label;"
+							  key="key_sanitize"
+							  command="Tools:Sanitize"/>
+					<menuseparator id="sanitizeSeparator"/>
+					<menuitem id="ctraddon_history_sync-tabs"
+							  class="syncTabsMenuItem"
+							  label="&syncTabsMenu2.label;"
+							  oncommand="BrowserOpenSyncTabs();"
+							  disabled="true"/>
+					<menuitem id="ctraddon_history_restoreLastSession"
+							  label="&historyRestoreLastSession.label;"
+							  command="Browser:RestoreLastSession"/>
+					<menu id="ctraddon_history_recentlyClosedTabsMenu"
+						  class="recentlyClosedTabsMenu"
+						  label="&historyUndoMenu.label;"
+						  disabled="true">
+					  <menupopup id="ctraddon_history_recentlyClosedTabsMenupopup"
+								 placespopup="true"
+								 onpopupshowing="document.getElementById('ctraddon_history-menu-toolbar-button')._placesView.populateUndoSubmenu();"/>
+					</menu>
+					<menu id="ctraddon_history_recentlyClosedWindowsMenu"
+						  class="recentlyClosedWindowsMenu"
+						  label="&historyUndoWindowMenu.label;"
+						  disabled="true">
+					  <menupopup id="ctraddon_history_recentlyClosedWindowsMenupopup"
+								 placespopup="true"
+								 onpopupshowing="document.getElementById('ctraddon_history-menu-toolbar-button')._placesView.populateUndoWindowSubmenu();"/>
+					</menu>
+					<menuseparator/>
+				  </menupopup>
+	  </toolbarbutton>
+
       
 	  <!--### adds own bookmarks menu button to browsers customizing area ###-->
-	  <toolbarbutton id="ctr_bookmarks-menu-toolbar-button"
+	  <toolbarbutton id="ctraddon_bookmarks-menu-toolbar-button"
                      class="toolbarbutton-1 chromeclass-toolbar-additional"
                      persist="class"
                      removable="true"
@@ -604,7 +686,7 @@
                      ondragover="PlacesMenuDNDHandler.onDragOver(event);"
                      ondragleave="PlacesMenuDNDHandler.onDragLeave(event);"
                      ondrop="PlacesMenuDNDHandler.onDrop(event);">
-        <menupopup id="ctr_BMB_bookmarksPopup"
+        <menupopup id="ctraddon_BMB_bookmarksPopup"
                    placespopup="true"
                    context="placesContext"
                    openInTabs="children"
@@ -619,33 +701,33 @@
                     command="Browser:ShowAllBookmarks"
                     key="manBookmarkKb"/>
           <menuseparator/>
-          <menuitem id="BMB_bookmarkThisPage"
+          <menuitem id="ctraddon_BMB_bookmarkThisPage"
                     class="menuitem-iconic"
                     label="&bookmarkThisPageCmd.label;"
                     command="Browser:AddBookmarkAs"
                     key="addBookmarkAsKb"/>
-          <menuitem id="BMB_subscribeToPageMenuitem"
+          <menuitem id="ctraddon_BMB_subscribeToPageMenuitem"
                     class="menuitem-iconic"
                     label="&subscribeToPageMenuitem.label;"
                     oncommand="return FeedHandler.subscribeToFeed(null, event);"
                     onclick="checkForMiddleClick(this, event);"
                     observes="singleFeedMenuitemState"/>
-          <menu id="BMB_subscribeToPageMenupopup"
+          <menu id="ctraddon_BMB_subscribeToPageMenupopup"
                 class="menu-iconic"
                 label="&subscribeToPageMenupopup.label;"
                 observes="multipleFeedsMenuState">
-            <menupopup id="BMB_subscribeToPageSubmenuMenupopup"
+            <menupopup id="ctraddon_BMB_subscribeToPageSubmenuMenupopup"
                        onpopupshowing="return FeedHandler.buildFeedList(event.target);"
                        oncommand="return FeedHandler.subscribeToFeed(null, event);"
                        onclick="checkForMiddleClick(this, event);"/>
           </menu>
           <menuseparator/>
-          <menu id="BMB_bookmarksToolbar"
+          <menu id="ctraddon_BMB_bookmarksToolbar"
                 placesanonid="toolbar-autohide"
                 class="menu-iconic bookmark-item"
                 label="&personalbarCmd.label;"
                 container="true">
-            <menupopup id="BMB_bookmarksToolbarPopup"
+            <menupopup id="ctraddon_BMB_bookmarksToolbarPopup"
                        placespopup="true"
                        context="placesContext"
                        onpopupshowing="if (!this.parentNode._placesView)
@@ -655,7 +737,7 @@
           <!-- Bookmarks menu items -->
           <menuseparator builder="end"
                          class="hide-if-empty-places-result"/>
-          <menuitem id="BMB_unsortedBookmarks"
+          <menuitem id="ctraddon_BMB_unsortedBookmarks"
                     label="&bookmarksMenuButton.unsorted.label;"
                     oncommand="PlacesCommandHook.showPlacesOrganizer('UnfiledBookmarks');"
                     class="menuitem-iconic"/>
@@ -664,7 +746,7 @@
 	  
       
 	  <!--### creates a bookmarks sidebar button ###-->
-	  <toolbarbutton id="ctr_bookmarks-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+	  <toolbarbutton id="ctraddon_bookmarks-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
                      observes="viewBookmarksSidebar"
                      tooltiptext="&bookmarksMenuButton.label;"
                      ondrop="bookmarksButtonObserver.onDrop(event)"
@@ -673,35 +755,42 @@
                      ondragexit="bookmarksButtonObserver.onDragExit(event)"/>
 					 
       <!--### creates a history sidebar button ###-->
-	  <toolbarbutton id="ctr_history-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+	  <toolbarbutton id="ctraddon_history-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
                      observes="viewHistorySidebar" label="&historyButton.label;"
                      tooltiptext="&historyButton.label;"/>
 					 
 					 
 	  <!--### creates a duplicated PanelUI button ###-->
-	  <toolbaritem id="ctr_panelui-button"
+	  <toolbaritem id="ctraddon_panelui-button"
                    class="chromeclass-toolbar-additional"
                    removable="true"
+				   overflows="false"
                    title="&brandShortName;">
         <toolbarbutton id="PanelUI-menu-button"
                        class="toolbarbutton-1"
                        label="&brandShortName;"
                        tooltiptext="&brandShortName;"/>
       </toolbaritem>
+	  <!--### extra separator for panel ui button ###-->
+	  <toolbaritem id="ctraddon_puib_separator"
+                   title="&Ctr_puibseparator;"
+                   customizableui-areatype="toolbar"
+                   removable="true"/>
 	  
 	  <!--### creates a custom movable back-forward button ###-->
-	  <toolbaritem id="ctr_back-forward-button" class="chromeclass-toolbar-additional"
+	  <toolbaritem id="ctraddon_back-forward-button" class="chromeclass-toolbar-additional"
                    context="backForwardMenu" removable="true"
                    forwarddisabled="false"
+				   overflows="false"
                    title="&backCmd.label; &forwardCmd.label;">
-          <toolbarbutton id="ctr_back-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+          <toolbarbutton id="ctraddon_back-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
                          label="&backCmd.label;"
                          command="Browser:BackOrBackDuplicate"
 						 onmousedown="classicthemerestorerjs.ctr.ctrBackMenuShow(this);"
 						 onclick="checkForMiddleClick(this, event);"
                          tooltip="back-button-tooltip"
                          context="backForwardMenu"/>
-          <toolbarbutton id="ctr_forward-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+          <toolbarbutton id="ctraddon_forward-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
                          label="&forwardCmd.label;"
                          command="Browser:ForwardOrForwardDuplicate"
 						 onmousedown="classicthemerestorerjs.ctr.ctrBackMenuShow(this);"
@@ -712,7 +801,7 @@
 	  
 	  
 	  <!--### creates a custom back-forward history dropmarker ###-->
-	  <toolbarbutton id="ctr_back-forward-dropmarker" type="menu" 
+	  <toolbarbutton id="ctraddon_back-forward-dropmarker" type="menu" 
 			disabled="false"
 			label="&backCmd.label; &forwardCmd.label;"
 			class="toolbarbutton-1 chromeclass-toolbar-additional tabs-alltabs-button"
@@ -730,20 +819,20 @@
 	  
       
 	  <!--### creates a custom movable reload button ###-->
-	  <toolbarbutton id="ctr_reload-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+	  <toolbarbutton id="ctraddon_reload-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
                      label="&reloadCmd.label;" removable="true"
                      command="Browser:ReloadOrDuplicate"
                      onclick="checkForMiddleClick(this, event);"
                      tooltiptext="&reloadButton.tooltip;"/>
 
       <!--### creates a custom movable stop button ###-->
-	  <toolbarbutton id="ctr_stop-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+	  <toolbarbutton id="ctraddon_stop-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
                      label="&stopCmd.label;" removable="true"
                      command="Browser:Stop"
                      tooltiptext="&stopButton.tooltip;"/>
   
 	  <!--### duplicates fullscreen window controls ###-->
-	  <toolbaritem id="ctr_window-controls" class="chromeclass-toolbar-additional"
+	  <toolbaritem id="ctraddon_window-controls" class="chromeclass-toolbar-additional"
                    removable="true" title="window controls">
         <toolbarbutton id="minimize-button"
                        tooltiptext="&fullScreenMinimize.tooltip;"
@@ -759,15 +848,9 @@
       </toolbaritem>
 	  
 	  <!--### restores spaces, flexible spaces and separators ###-->
-      <toolbarspring 	id="spring"		class="ctr_flexspaces"	label="&Ctr_flexspace;"	customizableui-areatype="toolbar" removable="true" flex="1"/>
-      <toolbarspacer 	id="spacer"		class="ctr_spaces"		label="&Ctr_space;"		customizableui-areatype="toolbar" removable="true"/>
-      <toolbarseparator id="separator"	class="ctr_separators"	label="&Ctr_separator;"	customizableui-areatype="toolbar" removable="true"/>
- 
-	  <!--### extra separator for panel ui button ###-->
-	  <toolbaritem id="ctr_puib_separator"
-                   title="&Ctr_puibseparator;"
-                   customizableui-areatype="toolbar"
-                   removable="true"/>
-	</toolbarpalette>
+      <toolbarspring 	id="spring"		class="ctraddon_flexspaces"	label="&Ctr_flexspace;"	customizableui-areatype="toolbar" removable="true" flex="1"/>
+      <toolbarspacer 	id="spacer"		class="ctraddon_spaces"		label="&Ctr_space;"		customizableui-areatype="toolbar" removable="true"/>
+      <toolbarseparator id="separator"	class="ctraddon_separators"	label="&Ctr_separator;"	customizableui-areatype="toolbar" removable="true"/>
 
+	</toolbarpalette>
 </overlay> 

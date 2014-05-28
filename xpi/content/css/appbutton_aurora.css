@@ -2,20 +2,20 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	#ctr_appbutton2:not(:hover):not(:active):not([open]) {
+	#ctraddon_appbutton2:not(:hover):not(:active):not([open]) {
 	  background-image: linear-gradient(hsl(208,99%,37%), hsl(214,90%,23%) 95%) !important;
 	  border-color: hsla(214,89%,21%,.9) !important;
 	  box-shadow: 0 1px 0 hsla(205,100%,72%,.2) inset,
 				  0 0 2px 1px hsla(205,100%,72%,.25) inset !important;
 	}
-	#TabsToolbar #ctr_appbutton{
+	#TabsToolbar #ctraddon_appbutton{
 	  background: linear-gradient(hsl(208,99%,37%), hsl(214,90%,23%) 95%) !important;
 	  border-color: hsla(214,89%,21%,.9) !important;
 	  box-shadow: 0 1px 0 hsla(205,100%,72%,.2) inset,
 				  0 0 2px 1px hsla(205,100%,72%,.25) inset !important;
 	}
-	#TabsToolbar #ctr_appbutton:hover:not(:active):not([open]),
-	#ctr_appbutton2:hover:not(:active):not([open]){
+	#TabsToolbar #ctraddon_appbutton:hover:not(:active):not([open]),
+	#ctraddon_appbutton2:hover:not(:active):not([open]){
 	  background-image: radial-gradient(farthest-side at center bottom, hsla(202,100%,85%,.5) 10%, hsla(202,100%,85%,0) 70%),
 						radial-gradient(farthest-side at center bottom, hsla(205,100%,72%,.7), hsla(205,100%,72%,0)),
 						linear-gradient(hsl(208,98%,34%), hsl(213,87%,20%) 95%) !important;
@@ -25,23 +25,23 @@
 				  0 -1px 0 hsla(205,100%,72%,.2) inset !important;
 	}
 
-	#TabsToolbar #ctr_appbutton:hover:active,
-	#TabsToolbar #ctr_appbutton[open],
-	#ctr_appbutton2:hover:active,
-	#ctr_appbutton2[open] {
+	#TabsToolbar #ctraddon_appbutton:hover:active,
+	#TabsToolbar #ctraddon_appbutton[open],
+	#ctraddon_appbutton2:hover:active,
+	#ctraddon_appbutton2[open] {
 	  background-image: linear-gradient(hsl(208,95%,30%), hsl(214,85%,17%) 95%) !important;
 	  box-shadow: 0 2px 3px rgba(0,0,0,.4) inset,
 				  0 1px 1px rgba(0,0,0,.2) inset !important;
 	}
 
-	#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctr_appbutton,
-	#main-window[privatebrowsingmode=temporary] #ctr_appbutton2{
+	#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctraddon_appbutton,
+	#main-window[privatebrowsingmode=temporary] #ctraddon_appbutton2{
 	  background-image: linear-gradient(rgb(153,38,211), rgb(105,19,163) 95%) !important;
 	  border-color: rgba(43,8,65,.9) !important;
 	}
 
-	#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctr_appbutton:hover:not(:active):not([open]),
-	#main-window[privatebrowsingmode=temporary] #ctr_appbutton2:hover:not(:active):not([open]){
+	#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctraddon_appbutton:hover:not(:active):not([open]),
+	#main-window[privatebrowsingmode=temporary] #ctraddon_appbutton2:hover:not(:active):not([open]){
 	  background-image: radial-gradient(farthest-side at center bottom, rgba(240,193,255,.5) 10%, rgba(240,193,255,0) 70%),
 						radial-gradient(farthest-side at center bottom, rgb(192,81,247), rgba(236,172,255,0)),
 						linear-gradient(rgb(144,20,207), rgb(95,0,158) 95%) !important;
@@ -51,10 +51,10 @@
 				  0 -1px 0 rgba(240,193,255,.5) inset !important;
 	}
 
-	#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctr_appbutton:hover:active,
-	#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctr_appbutton[open],
-	#main-window[privatebrowsingmode=temporary] #ctr_appbutton2:hover:active,
-	#main-window[privatebrowsingmode=temporary]  #ctr_appbutton2[open] {
+	#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctraddon_appbutton:hover:active,
+	#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctraddon_appbutton[open],
+	#main-window[privatebrowsingmode=temporary] #ctraddon_appbutton2:hover:active,
+	#main-window[privatebrowsingmode=temporary]  #ctraddon_appbutton2[open] {
 	  background-image: linear-gradient(rgb(144,20,207), rgb(95,0,158) 95%) !important;
 	}
 

@@ -2,7 +2,7 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
   
-  #main-window[tabsintitlebar] .tabbrowser-tab:not([selected]):not(:-moz-lwtheme) {
+  #main-window .tabbrowser-tab:not([selected]):not(:-moz-lwtheme) {
 	color: white !important;
 	text-shadow:
 	  0px 0px 3px black,

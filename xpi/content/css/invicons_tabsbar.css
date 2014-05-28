@@ -1,0 +1,61 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	
+	#TabsToolbar :-moz-any(#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_bookmarks-menu-toolbar-button,#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_history-menu-toolbar-button) .toolbarbutton-icon,
+	#TabsToolbar :-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button:not([starred]), #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #switch-to-metro-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button),
+	#TabsToolbar #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+	  list-style-image: url(chrome://browser/skin/Toolbar-inverted.png) !important;
+	}
+	#TabsToolbar #sync-button[status="active"],
+	#TabsToolbar #sync-button[status="active"]:hover:active:not([disabled="true"]) {
+	  list-style-image: url("chrome://browser/skin/syncProgress-toolbar-inverted.png") !important;
+	}
+	#TabsToolbar #downloads-button:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon {
+	  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"),
+								  0, 198, 18, 180) center no-repeat !important;
+	}
+	#TabsToolbar #downloads-button:not([counter]):not([attention]) > #downloads-indicator-anchor > #downloads-button-progress-area > #downloads-indicator-counter {
+	  background-image: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"), 0, 198, 18, 180) !important;
+	}
+	#TabsToolbar .toolbarbutton-1 > .toolbarbutton-menu-dropmarker,
+	#TabsToolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
+	  list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png") !important;
+	}
+	#TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-up,
+	#TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-down {
+	  list-style-image: url(chrome://browser/skin/tabbrowser/tab-arrow-left-inverted.png) !important;
+	}
+	#TabsToolbar > #new-tab-button,
+	#TabsToolbar > toolbarpaletteitem > #new-tab-button {
+	  list-style-image: url(chrome://browser/skin/tabbrowser/newtab-inverted.png) !important;
+	}
+	#TabsToolbar > #alltabs-button,
+	#TabsToolbar > toolbarpaletteitem > #alltabs-button {
+	  list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png") !important;
+	}
+	#TabsToolbar #switch-to-metro-button[cui-areatype="toolbar"] {
+	  list-style-image: url(chrome://browser/skin/Metro_Glyph-inverted.png) !important;
+	}
+	
+	#TabsToolbar #ctraddon_back-button:not([cui-areatype="menu-panel"]) {
+	  -moz-image-region: rect(0, 54px, 18px, 36px) !important;
+	}
+	#TabsToolbar #ctraddon_forward-button:not([cui-areatype="menu-panel"]) {
+	  -moz-image-region: rect(0, 72px, 18px, 54px) !important;
+	}
+	#TabsToolbar #ctraddon_stop-button:not([cui-areatype="menu-panel"]){
+	  -moz-image-region: rect(0, 108px, 18px, 90px) !important;
+	}
+	#TabsToolbar #ctraddon_reload-button:not([cui-areatype="menu-panel"]){
+	  -moz-image-region: rect(0, 90px, 18px, 72px) !important;
+	}
+	#TabsToolbar #ctraddon_bookmarks-menu-toolbar-button:not([cui-areatype="menu-panel"]),
+	#TabsToolbar #ctraddon_bookmarks-button:not([cui-areatype="menu-panel"]) {
+	  -moz-image-region: rect(0, 162px, 18px, 144px) !important;
+	}
+	#TabsToolbar #ctraddon_history-button:not([cui-areatype="menu-panel"]),
+	#TabsToolbar #ctraddon_history-menu-toolbar-button:not([cui-areatype="menu-panel"]){
+	  -moz-image-region: rect(0, 180px, 18px, 162px) !important;
+	}
+}

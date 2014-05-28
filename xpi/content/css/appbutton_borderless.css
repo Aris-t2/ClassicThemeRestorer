@@ -2,8 +2,8 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#main-window #ctr_appbutton2,
-	#main-window #navigator-toolbox #TabsToolbar #ctr_appbutton{
+	#main-window #ctraddon_appbutton2,
+	#main-window #navigator-toolbox #TabsToolbar #ctraddon_appbutton{
 	  -moz-appearance:none !important;
 	  border:1px solid transparent !important;
 	  border-color: transparent  !important;

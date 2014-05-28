@@ -22,8 +22,18 @@
 	}
 
 	#bookmarks-menu-button #BMB_bookmarksPopup .subviewbutton {
-	  padding:0px !important;
-	  margin:0px !important;
+	  padding:0px 2px !important;
+	  margin:0px 2px !important;
 	}
+
+	#PanelUI-popup #PanelUI-contents:empty {
+	  height: 0px !important;
+	  margin-bottom:-11.5px !important;
+	}
+	#PanelUI-popup #PanelUI-contents:empty::before {
+	  background:none !important;
+	  animation: none !important;
+	}
+
 
 }

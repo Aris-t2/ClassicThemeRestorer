@@ -2,79 +2,70 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#ctr_bookmarks-menu-toolbar-button > .toolbarbutton-icon,
-	#ctr_bookmarks-button > .toolbarbutton-icon{
+	#ctraddon_bookmarks-menu-toolbar-button > .toolbarbutton-icon,
+	#ctraddon_bookmarks-button > .toolbarbutton-icon{
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks_linux.png");
 	}
-	#ctr_bookmarks-menu-toolbar-button:-moz-lwtheme-brighttext > .toolbarbutton-icon,
-	#ctr_bookmarks-button:-moz-lwtheme-brighttext > .toolbarbutton-icon{
+	#ctraddon_bookmarks-menu-toolbar-button:-moz-lwtheme-brighttext > .toolbarbutton-icon,
+	#ctraddon_bookmarks-button:-moz-lwtheme-brighttext > .toolbarbutton-icon{
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks-inv.png");
 	}
 
 	/* fallback images for non-default theme */
-	#ctr_history-button > .toolbarbutton-icon {
+	#ctraddon_history-menu-toolbar-button > .toolbarbutton-icon,
+	#ctraddon_history-button > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/history2_mac.png");
 	}
-	#ctr_back-button > .toolbarbutton-icon {
+	#ctraddon_back-button > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/back2_mac.png");
 	}
-	#ctr_forward-button > .toolbarbutton-icon {
+	#ctraddon_forward-button > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/forward2_mac.png");
 	}
-	#ctr_stop-button > .toolbarbutton-icon {
+	#ctraddon_stop-button > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/stop2_mac.png");
 	}
-	#ctr_reload-button > .toolbarbutton-icon {
+	#ctraddon_reload-button > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/reload2_mac.png");
 	}
 	
 	/* images for default theme */
-	#main-window[defaultfxtheme="true"] :-moz-any(#ctr_history-button,#ctr_back-button,#ctr_forward-button,#ctr_stop-button,#ctr_reload-button) > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button) > .toolbarbutton-icon {
 	  list-style-image: url("chrome://browser/skin/Toolbar.png");
 	}
 	
-	#main-window[defaultfxtheme="true"] :-moz-any(#ctr_history-button,#ctr_back-button,#ctr_forward-button,#ctr_stop-button,#ctr_reload-button):-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button):-moz-lwtheme-brighttext > .toolbarbutton-icon {
 	  list-style-image: url("chrome://browser/skin/Toolbar-inverted.png");
 	}
 	
-	#main-window[defaultfxtheme="true"] #ctr_history-button > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] #ctraddon_history-menu-toolbar-button > .toolbarbutton-icon,
+	#main-window[defaultfxtheme="true"] #ctraddon_history-button > .toolbarbutton-icon {
 	  -moz-image-region: rect(0, 180px, 18px, 162px);
 	}
-	#main-window[defaultfxtheme="true"] #ctr_back-button > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] #ctraddon_back-button > .toolbarbutton-icon {
 	  -moz-image-region: rect(0, 54px, 18px, 36px);
 	}
-	#main-window[defaultfxtheme="true"] #ctr_forward-button > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] #ctraddon_forward-button > .toolbarbutton-icon {
 	  -moz-image-region: rect(0, 72px, 18px, 54px);
 	}
-	#main-window[defaultfxtheme="true"] #ctr_reload-button > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] #ctraddon_reload-button > .toolbarbutton-icon {
 	  -moz-image-region: rect(0, 90px, 18px, 72px);
 	}
-	#main-window[defaultfxtheme="true"] #ctr_stop-button > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] #ctraddon_stop-button > .toolbarbutton-icon {
 	  -moz-image-region: rect(0, 108px, 18px, 90px);
 	}
 
-	#nav-bar #ctr_bookmarks-button[checked] .toolbarbutton-icon,
-	#nav-bar #ctr_history-button[checked] .toolbarbutton-icon {
-		padding: 1px 5px !important;
-		box-shadow: 1px 1px 4px black !important;
-	}
-	#nav-bar #ctr_bookmarks-button[checked]:hover .toolbarbutton-icon,
-	#nav-bar #ctr_history-button[checked]:hover .toolbarbutton-icon {
-		background: none !important;
-		border: 1px solid transparent !important;
-	}
-
-	#TabsToolbar #ctr_appbutton{
+	#TabsToolbar #ctraddon_appbutton{
 	  -moz-appearance: none !important;
 	}
 	
-	#TabsToolbar #ctr_appbutton > .toolbarbutton-icon{
+	#TabsToolbar #ctraddon_appbutton > .toolbarbutton-icon{
 	  margin-top: -3px;
 	  margin-bottom: -3px;
 	}
 	
-	#TabsToolbar #ctr_appbutton[open] image,
-	#TabsToolbar #ctr_appbutton:hover image{
+	#TabsToolbar #ctraddon_appbutton[open] image,
+	#TabsToolbar #ctraddon_appbutton:hover image{
 	  -moz-appearance: none !important;
 	  background: none !important;
 	  border-color: transparent !important;
@@ -87,25 +78,46 @@
 	}
 	
 	/* ctr addonbar */
-	#ctr_addon-bar{
-	  padding: 0 !important;
-	  margin-bottom: -1px !important;
+	#ctraddon_addon-bar{
+	  -moz-appearance: none;
+	  padding: 0px !important;
+	  margin: 0 0 -1px 0 !important;
+	  border-top-style: none;
+	  border-bottom-style: none;
+	  background-image: linear-gradient(rgba(0,0,0,.15) 1px, rgba(255,255,255,.15) 1px);
+	  background-size: 100% 2px;
+	  background-repeat: no-repeat;
+	}
+	#ctraddon_addon-bar .toolbarbutton-1,
+	#ctraddon_addon-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button  {
+	  border-style: none !important;
+	  padding: 0 3px !important;
+	}
+
+	#ctraddon_addon-bar .toolbarbutton-1 .toolbarbutton-icon,
+	#ctraddon_addon-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button .toolbarbutton-icon  {
+      margin:-2px 0 !important;
 	}
 
 }
 
-.ctr_maconly,
-.ctr_windowsonly{
+.ctraddon_maconly,
+.ctraddon_windowsonly{
   visibility: collapse !important;
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
-	#ctr_appbutton_list2{
+	#ctraddon_appbutton_list2{
 	  visibility: visible !important;
 	}
-	#ctr_tabs_in_titlebar,
-	.ctr_winmaconly,
-	#ctr_appbutton_list1{
+	#ctraddon_pw_menubarnofog,
+	#ctraddon_pw_altmenubar,
+	#ctraddon_tabs_in_titlebar,
+	.ctraddon_winmaconly,
+	#ctraddon_appbutton_list1{
 	  visibility: collapse !important;
+	}
+	#ctraddon_pw_okbutton{
+	  display: inline !important;
 	}
 }

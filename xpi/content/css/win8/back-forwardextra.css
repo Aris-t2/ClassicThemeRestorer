@@ -2,49 +2,55 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#main-window[defaultfxtheme="true"] #notification-popup-box + *:-moz-locale-dir(ltr){
-	  padding-left: 5px !important;
+	#main-window:not([defaultfxtheme="true"]) #notification-popup-box[hidden] + *,
+	#main-window:not([defaultfxtheme="true"]) #notification-popup-box + .notification-anchor-icon {
+	  -moz-padding-start: 0px !important;
 	  transition: none !important;
 	}
-	#main-window[defaultfxtheme="true"] #notification-popup-box + *:-moz-locale-dir(rtl){
-	  padding-right: 5px !important;
+	
+	#main-window[defaultfxtheme="true"] #notification-popup-box + .notification-anchor-icon{
+	  -moz-padding-start: 5px !important;
 	  transition: none !important;
 	}
-	#main-window[defaultfxtheme="true"] #notification-popup-box[hidden] + *:-moz-locale-dir(ltr) {
-	  padding-left: 2px !important;
+
+	#main-window[defaultfxtheme="true"] #notification-popup-box[hidden] + * {
+	  -moz-padding-start: 5px !important;
 	  transition: none !important;
 	}
-	#main-window[defaultfxtheme="true"] #notification-popup-box[hidden] + *:-moz-locale-dir(rtl) {
-	  padding-right: 2px !important;
-	  transition: none !important;
-	}
+
 	#main-window[defaultfxtheme="true"] #notification-popup-box:not([hidden]) {
-	  padding-left:2px !important;
-	  padding-right:2px !important;
+	  padding-left:0px !important;
+	  padding-right:0px !important;
 	  transition: none !important;
 	}
 	
-	#main-window:not([defaultfxtheme="true"]) #notification-popup-box[hidden] + *:-moz-locale-dir(ltr),
-	#main-window:not([defaultfxtheme="true"]) #notification-popup-box + *:-moz-locale-dir(ltr) {
-	  padding-left: 0px !important;
-	  transition: none !important;
-	}
-	#main-window:not([defaultfxtheme="true"]) #notification-popup-box[hidden] + *:-moz-locale-dir(rtl),
-	#main-window:not([defaultfxtheme="true"]) #notification-popup-box + *:-moz-locale-dir(rtl) {
-	  padding-right: 0px !important;
-	  transition: none !important;
-	}
-	
-	#urlbar {
+	#main-window[defaultfxtheme="true"] .searchbar-textbox,
+	#main-window[defaultfxtheme="true"] #urlbar {
 	  border: 1px solid ThreeDShadow !important;
 	}
 	@media (-moz-windows-default-theme) {
-	  #urlbar {
+	  #main-window[defaultfxtheme="true"] .searchbar-textbox,
+	  #main-window[defaultfxtheme="true"] #urlbar {
 		border-color: rgba(0,0,0,.32) !important;
 	  }
+	  #main-window[defaultfxtheme="true"] .searchbar-textbox[focused="true"],
+	  #main-window[defaultfxtheme="true"] #urlbar[focused="true"] {
+		border:1px solid #72c0fe !important;
+	  }
 	}
-	#urlbar:-moz-lwtheme {
+	#main-window[defaultfxtheme="true"] .searchbar-textbox:-moz-lwtheme,
+	#main-window[defaultfxtheme="true"] #urlbar:-moz-lwtheme {
 	  border-color: rgba(0,0,0,.32) !important;
+	}
+	
+	#main-window:not([fx31="true"]) #urlbar-container > #urlbar-wrapper > #urlbar,
+	#main-window:not([fx31="true"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
+	  margin-left: 4px !important;
+	}
+	
+	#main-window[fx31="true"] #urlbar-container > #urlbar-wrapper > #urlbar,
+	#main-window[fx31="true"] #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
+	  margin-left: 8px !important;
 	}
 
 }

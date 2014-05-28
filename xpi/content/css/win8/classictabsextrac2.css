@@ -61,26 +61,41 @@
 	  border-top: 1px solid transparent !important;
 	}
 	
+	/* Tabs toolbar tab close button (Fx31+) */
+	#ctraddon_tabs-closebutton{
+	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
+	  -moz-appearance: none !important;
+	  border: none !important;
+	  padding: 0px !important;
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png") !important;
+	}
+	#ctraddon_tabs-closebutton:hover{
+	  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
+	}
+	#ctraddon_tabs-closebutton:hover:active {
+	  -moz-image-region: rect(0, 48px, 16px, 32px) !important;
+	}
+	
 	/* Tab close button */
-	.tab-close-button {
+	.tabbrowser-tab:not([pinned]):not([protected]) .tab-close-button {
 	  -moz-appearance: none !important;
 	  -moz-image-region: rect(0, 64px, 16px, 48px) !important;
 	  border: none !important;
 	  padding: 0px !important;
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png") !important;
 	}
-
-	.tab-close-button:hover,
-	.tab-close-button:hover[selected="true"] {
+	
+	.tabbrowser-tab:not([pinned]):not([protected]) .tab-close-button:hover,
+	.tabbrowser-tab:not([pinned]):not([protected]) .tab-close-button:hover[selected="true"] {
 	  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
 	}
-
-	.tab-close-button:hover:active,
-	.tab-close-button:hover:active[selected="true"] {
+	
+	.tabbrowser-tab:not([pinned]):not([protected]) .tab-close-button:hover:active,
+	.tabbrowser-tab:not([pinned]):not([protected]) .tab-close-button:hover:active[selected="true"] {
 	  -moz-image-region: rect(0, 48px, 16px, 32px) !important;
 	}
-
-	.tab-close-button[selected="true"] {
+	
+	.tabbrowser-tab:not([pinned]):not([protected]) .tab-close-button[selected="true"] {
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	}
 
@@ -93,19 +108,12 @@
 	}
 	
 	/* TU workaround */
-	#PinnedTabsBarItems:-moz-locale-dir(ltr) {
-	  margin-left:-14px !important;
-	  margin-right:0px !important;
+	#PinnedTabsBarItems {
+	  -moz-margin-start:-15px !important;
+	  -moz-margin-end:0px !important;
 	}
-	#tabbrowser-tabs[overflow] #PinnedTabsBarItems:-moz-locale-dir(ltr){
-	  margin-right:-14px !important;
-	}
-	#PinnedTabsBarItems:-moz-locale-dir(rtl) {
-	  margin-right:-14px !important;
-	  margin-left:0px !important;
-	}
-	#tabbrowser-tabs[overflow] #PinnedTabsBarItems:-moz-locale-dir(rtl){
-	  margin-left:-14px !important;
+	#tabbrowser-tabs[overflow] #PinnedTabsBarItems {
+	  -moz-margin-end:-15px !important;
 	}
 	/**/
 

@@ -1,0 +1,14 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#TabsToolbar {
+	  margin-top:0px !important;
+	}
+	#main-window[sizemode="normal"] #titlebar-placeholder-on-TabsToolbar-for-captions-buttons{
+	  -moz-margin-start: 0px !important;
+	}
+	#main-window[sizemode="maximized"] #titlebar-placeholder-on-TabsToolbar-for-captions-buttons{
+	  -moz-margin-start: 2px !important;
+	}
+}

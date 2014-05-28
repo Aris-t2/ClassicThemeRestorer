@@ -1,23 +1,23 @@
-@import url(chrome://ctr_os_special/skin/back-forwardextra.css);
-@import url(chrome://ctr_os_special/skin/nav_txtonlyextra.css);
+@import url(chrome://ctraddon_os_special/skin/back-forwardextra.css);
+@import url(chrome://ctraddon_os_special/skin/nav_txtonlyextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	#navigator-toolbox .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text,
-	#ctr_addon-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text	{
+	#ctraddon_addon-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text	{
 	  display: -moz-box !important;
 	}
 	#navigator-toolbox #nav-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
       border: 1px solid transparent;
     }
 	#navigator-toolbox .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]),
-	#ctr_addon-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
+	#ctraddon_addon-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
 	  -moz-box-orient: vertical !important;
 	}
-	#navigator-toolbox  toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-icon,
-	#ctr_addon-bar toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-icon,
-	#navigator-toolbox #TabsToolbar #ctr_appbutton .toolbarbutton-text {
+	#navigator-toolbox  toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
+	#ctraddon_addon-bar toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
+	#navigator-toolbox #TabsToolbar #ctraddon_appbutton .toolbarbutton-text {
 	  visibility: collapse !important;
 	}
 	
@@ -27,14 +27,14 @@
 	  visibility: visible !important;
 	}
 	
-	#navigator-toolbox #TabsToolbar #ctr_appbutton .toolbarbutton-icon{
+	#navigator-toolbox #TabsToolbar #ctraddon_appbutton .toolbarbutton-icon{
 	  visibility: visible !important;
 	}
 	.toolbarbutton-1[type="menu"] dropmarker{
 	   visibility:collapse !important;
 	}
 	/* make custom back-forward visible and hide back-forward on urlbar item */
-	#ctr_back-forward-button{
+	#ctraddon_back-forward-button{
 	  visibility: visible !important;
 	}
 	#main-window #navigator-toolbox #nav-bar #urlbar-container #back-button,
@@ -49,28 +49,18 @@
 	  transition-property: none !important;
 	  transition-delay: 0s !important;
 	}
-	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr) {
+	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr),
+	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
 	  margin-left: 0px !important;
 	}
-	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
-	  margin-right: 0px !important;
-	}
-	#navigator-toolbox #nav-bar #urlbar-container:-moz-locale-dir(rtl){
-	  margin-right: 24px !important;
-	}
 	
-    #urlbar:-moz-locale-dir(ltr) {
-      border-left:1px solid #b4c1cf !important;
+    #urlbar {
+      border:1px solid #b4c1cf !important;
     }
-    #urlbar[focused="true"]:-moz-locale-dir(ltr) {
-      border-left:1px solid #72c0fe !important;
-    }
-    #urlbar:-moz-locale-dir(rtl) {
-      border-right:1px solid #b4c1cf !important;
-    }
+
 	@media all and (-moz-windows-theme:aero) {
-		#urlbar[focused="true"]:-moz-locale-dir(rtl) {
-		  border-right:1px solid #72c0fe !important;
+		#urlbar[focused="true"] {
+		  border:1px solid #72c0fe !important;
 		}
 	}
 	
