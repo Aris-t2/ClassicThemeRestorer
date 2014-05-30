@@ -32,7 +32,7 @@
 <!ENTITY Ctr_tabsontop0		"分頁列置頂 (預設值) - [無設定]">
 <!ENTITY Ctr_tabsontop1		"分頁列置頂 - 設定 [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"分頁列不置頂 - 設定 [tabsontop=false]">
-<!ENTITY Ctr_tabsontopI1	"Adds attribute [tabsontop=true/false] to">
+<!ENTITY Ctr_tabsontopI1	"加入 [tabsontop=true/false] 屬性到">
 <!ENTITY Ctr_tabsontopI2	"#main-window, #titlebar, #nav-bar">
 <!ENTITY Ctr_tabsontopI3	"#navigator-toolbox, #toolbar-menubar">
 <!ENTITY Ctr_tabsontopI4	"#TabsToolbar, #ctraddon_extra-bar">
@@ -41,7 +41,7 @@
 <!ENTITY Ctr_tabwidthdef	"(預設值)">
 <!ENTITY Ctr_tabwidthcla	"(經典傳統)">
 <!ENTITY Ctr_tabmaxwidth	"最大寬度:">
-<!ENTITY Ctr_tabminwidth	"最小寬度::">
+<!ENTITY Ctr_tabminwidth	"最小寬度:">
 <!ENTITY Ctr_closetab_0		"全部的分頁都顯示關閉按鈕 (預設值)">
 <!ENTITY Ctr_closetab_1		"僅在目前的分頁顯示關閉按鈕">
 <!ENTITY Ctr_closetab_2		"不顯示關閉按鈕 ">
@@ -49,7 +49,7 @@
 <!ENTITY Ctr_closetab_4		"在分頁列左端顯示關閉按鈕">
 
 <!ENTITY Ctr_appbutton		"應用程式按鈕 (火狐橙按鈕)">
-<!ENTITY Ctr_appbutton0		"停用">
+<!ENTITY Ctr_appbutton0		"不顯示">
 <!ENTITY Ctr_appbutton1		"顯示在工具列">
 <!ENTITY Ctr_appbutton1wt	"顯示在工具列 (僅文字)">
 <!ENTITY Ctr_appbutton2		"顯示在標題列">
@@ -63,17 +63,17 @@
 <!ENTITY Ctr_appbuttonc_g	"綠色按鈕">
 <!ENTITY Ctr_appbuttonc_gr	"灰色按鈕">
 <!ENTITY Ctr_appbuttonc_pu	"紫色按鈕">
-<!ENTITY Ctr_appbuttonc_wh	"White button color">
-<!ENTITY Ctr_appbuttonI1	"建議重啟瀏覽器">
-<!ENTITY Ctr_appbuttonI1e	"not visible on OS titlebar">
+<!ENTITY Ctr_appbuttonc_wh	"白色按鈕">
+<!ENTITY Ctr_appbuttonI1	"建議重啟瀏覽器!">
+<!ENTITY Ctr_appbuttonI1e	"在作業系統標題列上不可見">
 <!ENTITY Ctr_appbuttonI2	"此項設定僅生效於標題列">
 <!ENTITY Ctr_appbuttonI3	"與分頁列!">
 <!ENTITY Ctr_alttbappb		"替代圖示">
 <!ENTITY Ctr_appbutmhi		"提高位置 (當顯示於分頁列時)">
 <!ENTITY Ctr_appbutbdl		"隱藏邊框和背景顏色">
 
-<!ENTITY Ctr_ui				"一般介面">
-<!ENTITY Ctr_nbiconsize0	"Set navigation toolbar attribute:">
+<!ENTITY Ctr_ui				"介面">
+<!ENTITY Ctr_nbiconsize0	"設定瀏覽工具列屬性:">
 <!ENTITY Ctr_nbiconsize1	"#nav-bar[iconsize='small'] (預設值)">
 <!ENTITY Ctr_nbiconsize2	"#nav-bar[iconsize='large']">
 <!ENTITY Ctr_smallnavbut	"在瀏覽工具列使用小圖示按鈕">
@@ -99,7 +99,7 @@
 
 <!ENTITY Ctr_tab_tf_info	"可使用色彩名稱, hexcodes, rgb(a) 和 hsl(a) 值. 沒有防呆機制（輸入無效值，不會有警告）!">
 <!ENTITY Ctr_tabacthovdef	"分頁 (目前/懸停/預設)">
-<!ENTITY Ctr_tabnorunrnew	"未讀分頁/unloaded / 新分頁">
+<!ENTITY Ctr_tabnorunrnew	"分頁(未讀/未載入) / 新分頁">
 <!ENTITY Ctr_customsqtab0	"自訂分頁色彩">
 <!ENTITY Ctr_customsqtab1	"背景">
 <!ENTITY Ctr_ctext			"文字">
@@ -107,31 +107,31 @@
 <!ENTITY Ctr_tabnor			"分頁 (預設)">
 <!ENTITY Ctr_tabhov			"分頁 (懸停)">
 <!ENTITY Ctr_tabact			"分頁 (目前)">
-<!ENTITY Ctr_tabpen			"分頁 (unloaded)">
+<!ENTITY Ctr_tabpen			"分頁 (未載入)">
 <!ENTITY Ctr_tabunr			"未讀分頁">
 <!ENTITY Ctr_ntabnor		"新分頁 (預設)">
 <!ENTITY Ctr_ntabhov		"新分頁 (懸停)">
 <!ENTITY Ctr_bold			"粗體">
 <!ENTITY Ctr_italic			"斜體">
 
-<!ENTITY Ctr_toolbars		"Toolbars">
+<!ENTITY Ctr_toolbars		"工具列">
 <!ENTITY Ctr_altmenubar		"選單列: 加上背景色彩 (OS 標題列)">
 <!ENTITY Ctr_menubarnofog	"選單列: 移除背景色彩/模糊 (Windows AeroGlass / Win8)">
-<!ENTITY Ctr_notabfog		"Tabs toolbar: remove background fog (Windows AeroGlass / Win8)">
-<!ENTITY Ctr_notabbg		"Tabs toolbar: remove background color (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_notabfog		"分頁列: 移除背景模糊 (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_notabbg		"分頁列: 移除背景色彩 (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_highaddonsbar	"增加附加元件列高度">
-<!ENTITY Ctr_hightabpos		"Tabs toolbar: reduce space above toolbar (if possible)">
+<!ENTITY Ctr_hightabpos		"縮小分頁列上方空間 (如有可能)">
 
-<!ENTITY Ctr_toolbars2		"Toolbars ('tabs not on top' mode &amp; Windows AeroGlass / Win8)">
+<!ENTITY Ctr_toolbars2		"工具列 (「分頁列不置頂」模式 &amp; Windows AeroGlass / Win8)">
 <!ENTITY Ctr_nobookbarbg	"書籤列: 移除背景色彩">
 <!ENTITY Ctr_nonavbarbg		"瀏覽工具列: 移除背景色彩">
 <!ENTITY Ctr_nonavborder	"書籤列: 顯示上邊框">
-<!ENTITY Ctr_nonavtbborder	"Top toolbars: remove toolbar borders">
-<!ENTITY Ctr_alttabstb		"Tabs toolbar: alternative background color">
+<!ENTITY Ctr_nonavtbborder	"上方工具列: 移除工具列邊框">
+<!ENTITY Ctr_alttabstb		"分頁列: 換一個背景色彩">
 
-<!ENTITY Ctr_invicons		"Inverted icons">
+<!ENTITY Ctr_invicons		"圖示反相">
 <!ENTITY Ctr_menubar		"選單列">
-<!ENTITY Ctr_tabstoolbar	"Tabs Toolbar">
+<!ENTITY Ctr_tabstoolbar	"分頁列">
 <!ENTITY Ctr_navbar			"瀏覽工具列">
 <!ENTITY Ctr_bookbar		"書籤列">
 
@@ -141,12 +141,12 @@
 <!ENTITY Ctr_showtabclose	"永遠顯示分頁關閉按鈕 (建議重啟!)">
 <!ENTITY Ctr_cpanelmenus	"緊湊的面板選單(書籤、歷史等等.)">
 <!ENTITY Ctr_hidezoomres	"當縮放控制按鈕置於工具列上時，隱藏工具列上的縮放重設按鈕">
-<!ENTITY Ctr_pmhidelabels	"Panel menu: hide button labels">
-<!ENTITY Ctr_menupopupscr	"Menupopups: show scrollbars instead of scroll arrows">
-<!ENTITY Ctr_hideprivmask	"Private browsing: hide mask indicator">
+<!ENTITY Ctr_pmhidelabels	"面板選單: 隱藏按鈕文字標籤">
+<!ENTITY Ctr_menupopupscr	"彈出式選單: 用捲軸取代捲動箭頭">
+<!ENTITY Ctr_hideprivmask	"隱私瀏覽模式下，隱藏面具圖示">
 
-<!ENTITY Ctr_fxmockup		"Firefox Mockup">
-<!ENTITY Ctr_tabmokcolor	"白色分頁按鈕 (關閉, 新增, 分頁群組, 列出所有分頁)">
+<!ENTITY Ctr_fxmockup		"Firefox 樣式">
+<!ENTITY Ctr_tabmokcolor	"白色分頁按鈕 (關閉、新增、分頁群組、列出所有分頁)">
 <!ENTITY Ctr_tabmokcolor2	"非目前的分頁，其字型使用白色文字，並加上文字陰影">
 <!ENTITY Ctr_tabmokcolor3	"白色分頁分隔線">
 
@@ -168,11 +168,11 @@
 <!ENTITY Ctr_cuibotbuttons	"介面自訂模式中，更豐富的按鈕自訂選項">
 
 
-<!ENTITY Ctr_special_font	"Background color settings are for default theme only!">
-<!ENTITY Ctr_special_info	"Some options only offer visual changes in certain cases!">
-<!ENTITY Ctr_special_info2	"Settings are made for Firefox default theme and may not work with all third party themes!">
-<!ENTITY Ctr_support		"Support Forum">
-<!ENTITY Ctr_newversion		"New version?">
+<!ENTITY Ctr_special_font	"背景色彩設定僅生效於預設佈景主題!">
+<!ENTITY Ctr_special_info	"部份選項僅在某些情況下提供視覺上的變化!">
+<!ENTITY Ctr_special_info2	"設定僅在 Firefox 的預設佈景主題下測試，因此可能不生效於第三方佈景主題!">
+<!ENTITY Ctr_support		"技術支援討論區">
+<!ENTITY Ctr_newversion		"有新版本?">
 
 <!ENTITY Ctr_addon-bar.accesskey	"A">
 <!ENTITY Ctr_extrabar.accesskey		"D">
