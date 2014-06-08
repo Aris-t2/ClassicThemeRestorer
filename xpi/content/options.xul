@@ -102,7 +102,10 @@
 		<preference id="ctraddon_highaddonsbar"	name="extensions.classicthemerestorer.highaddonsbar" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hightabpososx"	name="extensions.classicthemerestorer.hightabpososx" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_altmenubar"	name="extensions.classicthemerestorer.altmenubar" 	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_altmenubarpos"	name="extensions.classicthemerestorer.altmenubarpos" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_altmenubarpos2" name="extensions.classicthemerestorer.altmenubarpos2" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_menubarnofog"	name="extensions.classicthemerestorer.menubarnofog"  type="bool"	instantApply="true"/>
+		<preference id="ctraddon_noaddonbarbg"	name="extensions.classicthemerestorer.noaddonbarbg"  type="bool"	instantApply="true"/>
 		<preference id="ctraddon_notabfog"		name="extensions.classicthemerestorer.notabfog" 	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_notabbg"		name="extensions.classicthemerestorer.notabbg" 	 	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_nobookbarbg"	name="extensions.classicthemerestorer.nobookbarbg" 	 type="bool"	instantApply="true"/>
@@ -114,6 +117,7 @@
 		<preference id="ctraddon_cpanelmenus"	name="extensions.classicthemerestorer.cpanelmenus"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bfurlbarfix"	name="extensions.classicthemerestorer.bfurlbarfix"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_emptyfavicon"	name="extensions.classicthemerestorer.emptyfavicon"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_emptyfavicon2"	name="extensions.classicthemerestorer.emptyfavicon2" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hidezoomres"	name="extensions.classicthemerestorer.hidezoomres"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_pmhidelabels"	name="extensions.classicthemerestorer.pmhidelabels"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_menupopupscr"	name="extensions.classicthemerestorer.menupopupscr"	 type="bool"	instantApply="true"/>
@@ -124,6 +128,7 @@
 		<preference id="ctraddon_inviconavbar"	name="extensions.classicthemerestorer.inviconavbar"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_invicoextrabar" name="extensions.classicthemerestorer.invicoextrabar" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_invicobookbar"	name="extensions.classicthemerestorer.invicobookbar" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_invicoaddonbar" name="extensions.classicthemerestorer.invicoaddonbar" type="bool"	instantApply="true"/>
 		
 		<preference id="ctraddon_tabmokcolor"	name="extensions.classicthemerestorer.tabmokcolor" 	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_tabmokcolor2"	name="extensions.classicthemerestorer.tabmokcolor2"  type="bool"	instantApply="true"/>
@@ -132,8 +137,11 @@
 		<preference id="ctraddon_paneluibtweak"	name="extensions.classicthemerestorer.paneluibtweak" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_showtabclose"	name="extensions.classicthemerestorer.showtabclose"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_dblclnewtab"	name="extensions.classicthemerestorer.dblclnewtab"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_hidetbwot"		name="extensions.classicthemerestorer.hidetbwot"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_faviconurl"	name="extensions.classicthemerestorer.faviconurl"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_dblclclosefx"	name="extensions.classicthemerestorer.dblclclosefx"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hide_bf_popup"	name="extensions.classicthemerestorer.hide_bf_popup" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_verifiedcolors" name="extensions.classicthemerestorer.verifiedcolors" type="bool"	instantApply="true"/>
 		
 		
 		<preference id="ctraddon_throbberalt"	name="extensions.classicthemerestorer.throbberalt" 	type="bool"		instantApply="true"/>
@@ -591,71 +599,55 @@
 					<checkbox label="&Ctr_cpanelmenus;"		preference="ctraddon_cpanelmenus"/>
 					<checkbox label="&Ctr_bfurlbarfix;"		preference="ctraddon_bfurlbarfix" id="ctraddon_pw_bfurlbarfix"/>
 					<checkbox label="&Ctr_emptyfavicon;"	preference="ctraddon_emptyfavicon"/>
+					<checkbox label="&Ctr_emptyfavicon; (v2)" preference="ctraddon_emptyfavicon2"/>
 					<checkbox label="&Ctr_hidezoomres;"		preference="ctraddon_hidezoomres"/>
 					<checkbox label="&Ctr_pmhidelabels;"	preference="ctraddon_pmhidelabels"/>
 					<checkbox label="&Ctr_menupopupscr;"	preference="ctraddon_menupopupscr"/>
-					
+					<checkbox label="&Ctr_verifiedcolors;"	preference="ctraddon_verifiedcolors" id="ctraddon_pw_verifiedcolors"/>
 				  </groupbox>
 				</vbox>
 			   </tabpanel>
 				
 			   <tabpanel>
-			   <vbox flex="1">
+			     <vbox flex="1" style="max-height:300px; overflow-y:auto;">
 
-				<tabbox id="ctraddon_pw_special_toolbar_tabbox">
-				  <tabs>
-					<tab label="  1  "/>
-					<tab label="  2  "/>
-					<tab label="&Ctr_invicons;"/>
-				  </tabs>
-						
-				  <tabpanels>
-				  
-				   <tabpanel>
-					<vbox flex="1">
-					  <groupbox>
-						<caption  label="&Ctr_toolbars;" class="ctraddon_topic"/>
-						<checkbox label="&Ctr_menubarnofog;"	preference="ctraddon_menubarnofog" id="ctraddon_pw_menubarnofog"/>
-						<checkbox label="&Ctr_highaddonsbar;"	preference="ctraddon_highaddonsbar"/>
-						<checkbox label="&Ctr_notabfog;"		preference="ctraddon_notabfog" class="ctraddon_windowsonly" id="ctraddon_pw_notabfog"/>
-						<checkbox label="&Ctr_notabbg;"			preference="ctraddon_notabbg" class="ctraddon_windowsonly" id="ctraddon_pw_notabbg"/>
-						<checkbox label="&Ctr_hightabpos;"		preference="ctraddon_hightabpososx"/>
-					  </groupbox>
-					</vbox>
-				   </tabpanel>
-				   
-				   <tabpanel>
-					<vbox flex="1">
-					  <groupbox id="ctraddon_pw_toolbartweaks">
-						<caption  label="&Ctr_toolbars2;" class="ctraddon_topic"/>
-						<checkbox label="&Ctr_altmenubar;"		preference="ctraddon_altmenubar" id="ctraddon_pw_altmenubar"/>
-						<checkbox label="&Ctr_nobookbarbg;"		preference="ctraddon_nobookbarbg" class="ctraddon_windowsonly" id="ctraddon_pw_nobookbarbg"/>
-						<checkbox label="&Ctr_nonavbarbg;"		preference="ctraddon_nonavbarbg" class="ctraddon_windowsonly" id="ctraddon_pw_nonavbarbg"/>
-						<checkbox label="&Ctr_nonavborder;"		preference="ctraddon_nonavborder" class="ctraddon_windowsonly" id="ctraddon_pw_nonavborder"/>
-						<checkbox label="&Ctr_nonavtbborder;"	preference="ctraddon_nonavtbborder" class="ctraddon_windowsonly" id="ctraddon_pw_nonavtbborder"/>
-						<checkbox label="&Ctr_alttabstb;"		preference="ctraddon_alttabstb" class="ctraddon_windowsonly" id="ctraddon_pw_alttabstb"/>
-					  </groupbox>
-					</vbox>
-				   </tabpanel>
-				   
-				   <tabpanel>
-					<vbox flex="1">
-					  <groupbox id="ctraddon_pw_invertedicons">
-						<caption  label="&Ctr_invicons;" class="ctraddon_topic"/>
-						<checkbox label="&Ctr_menubar;"		preference="ctraddon_invicomenubar"/>
-						<checkbox label="&Ctr_tabstoolbar;"	preference="ctraddon_invicotabsbar"/>
-						<checkbox label="&Ctr_navbar;"		preference="ctraddon_inviconavbar"/>
-						<checkbox label="&Ctr_extrabar;"	preference="ctraddon_invicoextrabar"/>
-						<checkbox label="&Ctr_bookbar;"		preference="ctraddon_invicobookbar"/>
-						
-					  </groupbox>
-					</vbox>
-				   </tabpanel>
-				   
-				  </tabpanels>
-				</tabbox>
-			   
-			   </vbox>
+				  <groupbox>
+					<caption  label="&Ctr_toolbars;" class="ctraddon_topic"/>
+					<checkbox label="&Ctr_menubarnofog;"	preference="ctraddon_menubarnofog" id="ctraddon_pw_menubarnofog"/>
+					<checkbox label="&Ctr_altmenubarpos;"	preference="ctraddon_altmenubarpos" class="ctraddon_windowsonly" id="ctraddon_pw_altmenubarpos"/>
+					<checkbox label="&Ctr_altmenubarpos; (v2)" preference="ctraddon_altmenubarpos2" class="ctraddon_windowsonly" id="ctraddon_pw_altmenubarpos2"/>
+					<checkbox label="&Ctr_highaddonsbar;"	preference="ctraddon_highaddonsbar"/>
+					<checkbox label="&Ctr_noaddonbarbg;"	preference="ctraddon_noaddonbarbg" id="ctraddon_pw_noaddonbarbg"/>
+					<checkbox label="&Ctr_notabfog;"		preference="ctraddon_notabfog" id="ctraddon_pw_notabfog"/>
+					<checkbox label="&Ctr_notabbg;"			preference="ctraddon_notabbg" class="ctraddon_windowsonly" id="ctraddon_pw_notabbg"/>
+					<checkbox label="&Ctr_hightabpos;"		preference="ctraddon_hightabpososx"/>
+					<checkbox label="&Ctr_alttabstb;"		preference="ctraddon_alttabstb" id="ctraddon_pw_alttabstb"/>
+				  </groupbox>
+
+				  <groupbox id="ctraddon_pw_toolbartweaks">
+					<caption  label="&Ctr_toolbars2;" class="ctraddon_topic"/>
+					<checkbox label="&Ctr_altmenubar;"		preference="ctraddon_altmenubar" id="ctraddon_pw_altmenubar"/>
+					<checkbox label="&Ctr_nobookbarbg;"		preference="ctraddon_nobookbarbg" id="ctraddon_pw_nobookbarbg"/>
+					<checkbox label="&Ctr_nonavbarbg;"		preference="ctraddon_nonavbarbg" id="ctraddon_pw_nonavbarbg"/>
+					<checkbox label="&Ctr_nonavborder;"		preference="ctraddon_nonavborder" class="ctraddon_windowsonly" id="ctraddon_pw_nonavborder"/>
+					<checkbox label="&Ctr_nonavtbborder;"	preference="ctraddon_nonavtbborder" id="ctraddon_pw_nonavtbborder"/>
+				  </groupbox>
+
+				  <groupbox id="ctraddon_pw_invertedicons">
+					<caption  label="&Ctr_invicons;" class="ctraddon_topic"/>
+					<hbox>
+					  <checkbox label="&Ctr_menubar;"		preference="ctraddon_invicomenubar"/>
+					  <checkbox label="&Ctr_tabstoolbar;"	preference="ctraddon_invicotabsbar"/>
+					  <checkbox label="&Ctr_navbar;"		preference="ctraddon_inviconavbar"/>
+					</hbox>
+					<hbox>
+					  <checkbox label="&Ctr_extrabar;"		preference="ctraddon_invicoextrabar"/>
+					  <checkbox label="&Ctr_bookbar;"		preference="ctraddon_invicobookbar"/>
+					  <checkbox label="&Ctr_addonbar;"		preference="ctraddon_invicoaddonbar"/>
+					</hbox>
+				  </groupbox>
+
+			     </vbox>
 			   </tabpanel>
 			   
 			   <tabpanel>
@@ -671,6 +663,8 @@
 					<checkbox label="&Ctr_paneluibtweak;"	preference="ctraddon_paneluibtweak" id="ctraddon_pw_paneluibtweak"/>
 					<checkbox label="&Ctr_showtabclose;"	preference="ctraddon_showtabclose"  id="ctraddon_pw_alw_tabclose"/>
 					<checkbox label="&Ctr_dblclnewtab;"		preference="ctraddon_dblclnewtab" class="ctraddon_winlinonly"/>
+					<checkbox label="&Ctr_hidetbwot;"		preference="ctraddon_hidetbwot"/>
+					<checkbox label="&Ctr_faviconurl;"		preference="ctraddon_faviconurl"/>
 					<checkbox label="&Ctr_dblclclosefx;"	preference="ctraddon_dblclclosefx" class="ctraddon_windowsonly"/>
 					<checkbox label="&Ctr_hide_bf_popup;"	preference="ctraddon_hide_bf_popup"/>
 				  </groupbox>

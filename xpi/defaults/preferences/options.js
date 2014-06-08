@@ -28,6 +28,7 @@ pref("extensions.classicthemerestorer.nav_txt_ico","icons");
 pref("extensions.classicthemerestorer.cpanelmenus",false);
 pref("extensions.classicthemerestorer.bfurlbarfix",false);
 pref("extensions.classicthemerestorer.emptyfavicon",false);
+pref("extensions.classicthemerestorer.emptyfavicon2",false);
 pref("extensions.classicthemerestorer.hidezoomres",false);
 pref("extensions.classicthemerestorer.pmhidelabels",false);
 pref("extensions.classicthemerestorer.menupopupscr",false);
@@ -35,7 +36,10 @@ pref("extensions.classicthemerestorer.hideprivmask",false);
 
 //specials 2.1/2.2
 pref("extensions.classicthemerestorer.altmenubar",false);
+pref("extensions.classicthemerestorer.altmenubarpos",false);
+pref("extensions.classicthemerestorer.altmenubarpos2",false);
 pref("extensions.classicthemerestorer.menubarnofog",false);
+pref("extensions.classicthemerestorer.noaddonbarbg",false);
 pref("extensions.classicthemerestorer.notabfog",false);
 pref("extensions.classicthemerestorer.notabbg",false);
 pref("extensions.classicthemerestorer.nobookbarbg",false);
@@ -52,6 +56,7 @@ pref("extensions.classicthemerestorer.invicotabsbar",false);
 pref("extensions.classicthemerestorer.inviconavbar",false);
 pref("extensions.classicthemerestorer.invicoextrabar",false);
 pref("extensions.classicthemerestorer.invicobookbar",false);
+pref("extensions.classicthemerestorer.invicoaddonbar",false);
 
 //specials 3
 pref("extensions.classicthemerestorer.tabmokcolor",false);
@@ -61,8 +66,11 @@ pref("extensions.classicthemerestorer.tabmokcolor3",false);
 pref("extensions.classicthemerestorer.paneluibtweak",false);
 pref("extensions.classicthemerestorer.showtabclose",false);
 pref("extensions.classicthemerestorer.dblclnewtab",false);
+pref("extensions.classicthemerestorer.hidetbwot",false);
+pref("extensions.classicthemerestorer.faviconurl",false);
 pref("extensions.classicthemerestorer.dblclclosefx",false);
 pref("extensions.classicthemerestorer.hide_bf_popup",false);
+pref("extensions.classicthemerestorer.verifiedcolors",false);
 
 //special 4
 pref("extensions.classicthemerestorer.throbberalt",false);

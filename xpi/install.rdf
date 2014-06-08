@@ -5,7 +5,7 @@
 	<Description rdf:about="urn:mozilla:install-manifest">
 		<em:id>ClassicThemeRestorer@ArisT2Noia4dev</em:id>
 		<em:name>Classic Theme Restorer</em:name>
-		<em:version>1.2.0</em:version>
+		<em:version>1.2.1beta2</em:version>
 		<em:type>2</em:type>
 
 		<em:optionsURL>chrome://classic_theme_restorer/content/options.xul</em:optionsURL>
@@ -30,6 +30,15 @@
 				<em:translator>Aris (de)</em:translator>
 			</Description>
 		</em:localized>
+		
+		<em:localized>
+			<Description>
+				<em:name>Classic Theme Restorer (Customize Australis)</em:name>
+				<em:locale>dsb</em:locale>
+				<em:description>Rozšyrjenje 'Classic Theme Restorer' wótnowja znate elementy ako menijowy tłocašk Firefox, rožkate rejtarki,rědku dodankow,  naglěd małych tłocaškow a někotare tłocaški. Pśez meni 'Pśiměrjenje' daju se tłocaški na rědkach pśesunuś.</em:description>
+				<em:translator>milupo (dsb)</em:translator>
+			</Description>
+		</em:localized>
 
 		<em:localized>
 			<Description>
@@ -45,8 +54,17 @@
 				<em:name>Classic Theme Restorer (Customize Australis)</em:name>
 				<em:locale>fr</em:locale>
 				<em:description>L'extension 'Classic Theme Restorer' vous permet de restaurer dans l'interface Australis: l'ancien bouton Firefox (bouton appmenu), les onglets classiques 'carrés', la barre des modules, les petits boutons de la barre de navigation et bien d'autres paramètres des versions pré-Australis de Firefox. Utilisez le menu 'Personnaliser' pour déplacer les boutons de vos barres d'outils.</em:description>
-				<em:translator>goofy (fr)</em:translator>
 				<em:translator>David V. (fr)</em:translator>
+				<em:translator>goofy (fr)</em:translator>
+			</Description>
+		</em:localized>
+
+		<em:localized>
+			<Description>
+				<em:name>Classic Theme Restorer (Customize Australis)</em:name>
+				<em:locale>hsb</em:locale>
+				<em:description>Rozšěrjenje 'Classic Theme Restorer' wobnowja znate elementy kaž menijowe tłóčatko Firefox, róžkate rajtarki, lajstu přidatkow,  napohlad małych tłóčatkow a někotre tłóčatka. Přez meni 'Přiměrjenje' hodźa so tłóčatka na lajstach přesunyć.</em:description>
+				<em:translator>milupo (hsb)</em:translator>
 			</Description>
 		</em:localized>
 		
@@ -75,6 +93,15 @@
 				<em:locale>ru</em:locale>
 				<em:description>«Classic Theme Restorer» возвращает главную кнопку приложения, квадратные вкладки, панель дополнений, маленькие кнопки на панели навигации, несколько старых кнопок и другое, в интерфейсе Australis Firefox. Используйте меню «Настроить», чтобы переместить кнопки на панели инструментов.</em:description>
 				<em:translator>radion-t (ru)</em:translator>
+			</Description>
+		</em:localized>
+		
+		<em:localized>
+			<Description>
+				<em:name>Classic Theme Restorer (Customize Australis)</em:name>
+				<em:locale>zh-TW</em:locale>
+				<em:description>Classic Theme Restorer 恢復了應用程式按鈕(火狐橙)、矩形分頁、附加元件列、瀏覽工具列小圖示按鈕、其他經典傳統風格的按鈕，以及更多對 Firefox Australis 介面的改造。 使用「自訂」選單移動按鈕到工具列上。</em:description>
+				<em:translator>Shyangs (zh-TW)</em:translator>
 			</Description>
 		</em:localized>
 		

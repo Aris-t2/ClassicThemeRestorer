@@ -20,7 +20,6 @@
 
 <!ENTITY Ctr_main_t			"Principal">
 <!ENTITY Ctr_tabcolors_t	"Couleurs personnalisables">
-<!ENTITY Ctr_fixes_t		"Réglages">
 <!ENTITY Ctr_special_t		"Spéciaux">
 
 <!ENTITY Ctr_tabs			"Onglets">
@@ -83,7 +82,6 @@
 <!ENTITY Ctr_wincontrols	"Plein écran : boutons 'Réduire - Restaurer - Fermer' déplaçables">
 <!ENTITY Ctr_starinurl		"Bouton des marque-pages dans la barre d'adresse (redémarrer Fx!)">
 <!ENTITY Ctr_mstatusbar		"Barre d'état déplaçable">
-<!ENTITY Ctr_movpaneluib	"Bouton menu déplaçable (redémarrer Fx!)">
 <!ENTITY Ctr_hideurelstop	"Masquer 'stop-actualiser' sur la barre d'adresse">
 <!ENTITY Ctr_combrelstop 	"Combiner les boutons stop-actualiser">
 <!ENTITY Ctr_panelmenucol	"Couleur de fond alternative pour les panneaux">
@@ -116,6 +114,8 @@
 
 <!ENTITY Ctr_toolbars		"Barres d'outils">
 <!ENTITY Ctr_altmenubar		"Barre de menus : ajouter un arrière-plan (barre de titre de l'OS visible)">
+<!ENTITY Ctr_altmenubarpos	"Barre de menus : position alternative (sous la barre de titre Firefox)">
+<!ENTITY Ctr_noaddonbarbg	"Barre des modules : enlever l'arrière-plan (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_menubarnofog	"Barre de menus : enlever l'effet de flou/l'arrière-plan des éléments (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_notabfog		"Barre d'onglets : enlever l'effet de flou (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_notabbg		"Barre d'onglets : enlever l'arrière-plan (Windows AeroGlass / Win8)">
@@ -152,8 +152,11 @@
 
 <!ENTITY Ctr_paneluibtweak 	"Bouton menu (si sur la barre d'onglets) : aspect identique à celui du bouton d'applications de la barre de titre">
 <!ENTITY Ctr_dblclnewtab	"Barre d'onglets : double-cliquer pour ouvrir un nouvel onglet (browser.newtab.url)">
+<!ENTITY Ctr_hidetbwot		"Barre d'onglets : cacher la barre d'onglets quand un seul onglet est ouvert (redémarrer Firefox!)">
+<!ENTITY Ctr_faviconurl		"Afficher le favicon dans la barre d'adresse (redémarrer Firefox!)">
 <!ENTITY Ctr_dblclclosefx	"Bouton d'applications sur la barre de titre : un double clic ferme la fenêtre courante">
 <!ENTITY Ctr_hide_bf_popup	"Bouton avancer/reculer déplaçable : cacher le menu historique lors du clic droit">
+<!ENTITY Ctr_verifiedcolors	"Bouton d'identité : couleurs alternatives pour les sites web vérifiés">
 
 <!ENTITY Ctr_animation		"Animation">
 <!ENTITY Ctr_throbberalt	"Icône animée alternative pour le chargement des onglets">

@@ -15,8 +15,8 @@
 	#ctraddon_addon-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
 	  -moz-box-orient: vertical !important;
 	}
-	#navigator-toolbox  toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
-	#ctraddon_addon-bar toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
+	#navigator-toolbox  toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
+	#ctraddon_addon-bar toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
 	#navigator-toolbox #TabsToolbar #ctraddon_appbutton .toolbarbutton-text {
 	  visibility: collapse !important;
 	}

@@ -20,7 +20,6 @@
 
 <!ENTITY Ctr_main_t			"Main">
 <!ENTITY Ctr_tabcolors_t	"Custom colors">
-<!ENTITY Ctr_fixes_t		"Fixes">
 <!ENTITY Ctr_special_t		"Special">
 
 <!ENTITY Ctr_tabs			"Tabs">
@@ -83,7 +82,6 @@
 <!ENTITY Ctr_wincontrols	"Movable fullscreen window controls">
 <!ENTITY Ctr_starinurl		"Star-button in urlbar (restart Firefox!)">
 <!ENTITY Ctr_mstatusbar		"Movable status-bar panel">
-<!ENTITY Ctr_movpaneluib	"Movable panel menu button (restart Firefox!)">
 <!ENTITY Ctr_hideurelstop	"Hide urlbars stop &amp; reload buttons">
 <!ENTITY Ctr_combrelstop	"Combine stop &amp; reload buttons">
 <!ENTITY Ctr_panelmenucol	"Panel menus: alternative background color">
@@ -116,6 +114,8 @@
 
 <!ENTITY Ctr_toolbars		"Toolbar settings">
 <!ENTITY Ctr_altmenubar		"Menubar: add background color (OS titlebar)">
+<!ENTITY Ctr_altmenubarpos	"Menubar: alternative position (below Firefox titlebar)">
+<!ENTITY Ctr_noaddonbarbg	"Add-on bar: remove background color (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_menubarnofog	"Menubar: remove background color/fog (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_notabfog		"Tabs toolbar: remove background fog (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_notabbg		"Tabs toolbar: remove background color (Windows AeroGlass / Win8)">
@@ -152,8 +152,11 @@
 
 <!ENTITY Ctr_paneluibtweak	"PanelUI button (on tabs toolbar): appearance like appbutton on titlebar">
 <!ENTITY Ctr_dblclnewtab	"Tabs toolbar: double click opens a 'new' tab (using browser.newtab.url)">
+<!ENTITY Ctr_hidetbwot		"Tabs toolbar: hide tabs toolbar with one tab (restart Firefox!)">
+<!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
 <!ENTITY Ctr_dblclclosefx	"Appbutton on titlebar: double click closes current window">
 <!ENTITY Ctr_hide_bf_popup	"Movable back/forward button: hide history menu on mouse press">
+<!ENTITY Ctr_verifiedcolors	"Alternative identity-box colors for verified websites">
 
 <!ENTITY Ctr_animation		"Animation">
 <!ENTITY Ctr_throbberalt	"Alternative tab throbber loading animation">

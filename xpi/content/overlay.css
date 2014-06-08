@@ -327,6 +327,13 @@
       -moz-box-orient: vertical !important;
 	}
 	
+	/* show missing icon */
+	#main-window[defaultfxtheme="true"] #appmenu_unsortedBookmarks,
+	#main-window[defaultfxtheme="true"] #ctraddon_BMB_unsortedBookmarks {
+	  list-style-image: url("chrome://browser/skin/places/unsortedBookmarks.png");
+	  -moz-image-region: auto;
+	}
+	
 	/* fix ui tour popup position for ctrs panel ui button */
 	#UITourTooltip {
 	  -moz-margin-end:0px !important;

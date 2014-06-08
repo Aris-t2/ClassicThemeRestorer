@@ -20,7 +20,6 @@
 
 <!ENTITY Ctr_main_t			"主要">
 <!ENTITY Ctr_tabcolors_t	"自定义色彩">
-<!ENTITY Ctr_fixes_t		"调整">
 <!ENTITY Ctr_special_t		"高级">
 
 <!ENTITY Ctr_tabs			"标签页">
@@ -83,7 +82,6 @@
 <!ENTITY Ctr_wincontrols	"使窗口控制按钮可以移动">
 <!ENTITY Ctr_starinurl		"收藏按钮嵌入地址栏 (需要重启 Firefox!)">
 <!ENTITY Ctr_mstatusbar		"使状态栏面板可以移动">
-<!ENTITY Ctr_movpaneluib	"使菜单面板按钮可以移动 (需要重启 Firefox!)">
 <!ENTITY Ctr_hideurelstop	"隐藏地址栏中的停止和重新加载按钮">
 <!ENTITY Ctr_combrelstop	"合并停止和重新加载按钮">
 <!ENTITY Ctr_panelmenucol	"面板菜单: 替代的背景颜色">
@@ -116,6 +114,8 @@
 
 <!ENTITY Ctr_toolbars		"工具栏">
 <!ENTITY Ctr_altmenubar		"菜单栏: 添加背景颜色 (OS 标题栏)">
+<!ENTITY Ctr_altmenubarpos	"Menubar: alternative position (below Firefox titlebar)">
+<!ENTITY Ctr_noaddonbarbg	"Add-on bar: remove background color (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_menubarnofog	"菜单栏: 移除背景颜色/模糊 (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_notabfog		"Tabs toolbar: remove background fog (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_notabbg		"Tabs toolbar: remove background color (Windows AeroGlass / Win8)">
@@ -152,8 +152,11 @@
 
 <!ENTITY Ctr_paneluibtweak	"当面板按钮在标签页栏上: 使其外观像火狐按钮">
 <!ENTITY Ctr_dblclnewtab	"标签页栏: 双击新建标签页 (在 browser.newtab.url 设置)">
+<!ENTITY Ctr_hidetbwot		"标签页栏: hide tabs toolbar with one tab (restart Firefox!)">
+<!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
 <!ENTITY Ctr_dblclclosefx	"火狐按钮: 双击关闭当前窗口">
 <!ENTITY Ctr_hide_bf_popup	"可移动的后退按钮: 鼠标长按时隐藏历史菜单">
+<!ENTITY Ctr_verifiedcolors	"Alternative identity-box colors for verified websites">
 
 <!ENTITY Ctr_animation		"动画">
 <!ENTITY Ctr_throbberalt	"使用替代的动画效果">

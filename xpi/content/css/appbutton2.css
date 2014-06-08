@@ -67,15 +67,6 @@
 			  margin: -1px 0 2px 1px !important;
 			}
 			
-			/*#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"] #toolbar-menubar ~ #TabsToolbar,
-			#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
-			  margin-top: 20px !important;
-			}*/
-			
-			/*#main-window[tabsintitlebar][sizemode="normal"] #TabsToolbar .titlebar-placeholder{
-			  visibility:collapse !important;
-			}*/
-			
 		}
 		
 		@media not all and (-moz-windows-compositor) {
@@ -91,11 +82,6 @@
 			  margin-top:1px !important;
 			  margin: -1px 0 8px 1px !important;
 			}
-			
-			/*#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"] #toolbar-menubar ~ #TabsToolbar,
-			#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
-			  margin-top: 18px !important;
-			}*/
 		}
 		
 	}

@@ -31,6 +31,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_nonavborder').disabled = true;
 		document.getElementById('ctraddon_pw_nonavtbborder').disabled = true;
 		document.getElementById('ctraddon_pw_alttabstb').disabled = true;
+		document.getElementById('ctraddon_pw_verifiedcolors').disabled = true;
 
 		document.getElementById('ctraddon_pw_tabmenulist').style.visibility = 'collapse';
 		document.getElementById('ctraddon_abhigher').style.visibility = 'collapse';
@@ -53,6 +54,8 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_panelmenucolor').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_mockupoptions').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_toolbartweaks').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_invertedicons').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_verifiedcolors').style.visibility = 'collapse';
 	} else {
 		document.getElementById('ctraddon_pw_special_info2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_special_font').style.visibility = 'collapse';

@@ -20,4 +20,8 @@
 	#urlbar-container #bookmarks-menu-button[starred]:hover:active .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton2lin.png");
 	}
+
+	#main-window[defaultfxtheme="true"] #editBookmarkPanelStarIcon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/starred48lin.png") !important;
+	}
 }

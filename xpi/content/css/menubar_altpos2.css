@@ -1,0 +1,71 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"] #toolbar-menubar ~ #TabsToolbar,
+	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
+	  margin-top: unset !important;
+	}
+
+	#titlebar {
+     margin-bottom: 0 !important;
+     padding-top: 0 !important;
+	}
+
+	#main-window[sizemode="maximized"] #toolbar-menubar {
+     margin-top: 2px !important;
+	}
+
+	#main-window[sizemode="maximized"] #TabsToolbar {
+     margin-top: 0px !important;
+	}
+
+	#main-window[sizemode="normal"] #TabsToolbar {
+     margin-top: -4px !important;
+	}
+       
+	@media all and (-moz-windows-glass:1) {
+	  #main-window[sizemode="normal"] #navigator-toolbox {
+		margin-top: -4px !important;
+	  }
+	  #main-window[sizemode="normal"] #nav-bar-customization-target {
+		margin-top: -2px !important;
+      }
+    }
+
+	#ctraddon_appbutton2 {
+	  margin-bottom: 2px !important;
+	}
+
+	#titlebar-content {
+	  height: 24px !important;
+	  margin-bottom: 0 !important;
+	}
+
+	#titlebar-text-container2 {
+	  margin: 0px 6px 0 !important;
+	  font-weight: bold !important;
+	}
+
+	#main-window[sizemode="maximized"] #titlebar-text-container2 {
+	  margin: -2px 6px 0 !important;
+	}
+
+	#main-window[sizemode="maximized"] #titlebar {
+	  height: 28px;
+	}
+
+	#main-window:not([defaultfxtheme="true"])[sizemode="maximized"] #titlebar {
+	  height: 28px;
+	  margin-top: 8px !important;
+	}
+
+	#main-window:not([defaultfxtheme="true"]) #titlebar-text {
+	  color: white !important;
+	}
+
+	#main-window[tabsintitlebar] #titlebar-text-shadow {
+	  display: none !important;
+	}
+
+}

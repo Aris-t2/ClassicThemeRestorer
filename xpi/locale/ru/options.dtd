@@ -20,7 +20,6 @@
 
 <!ENTITY Ctr_main_t			"Главные">
 <!ENTITY Ctr_tabcolors_t	"Настройки цветов">
-<!ENTITY Ctr_fixes_t		"Исправления">
 <!ENTITY Ctr_special_t		"Особые">
 
 <!ENTITY Ctr_tabs			"Вкладки">
@@ -59,11 +58,11 @@
 <!ENTITY Ctr_appbuttonc_n	"Черная кнопка (Nightly)">
 <!ENTITY Ctr_appbuttonc_t	"Прозрачная кнопка">
 <!ENTITY Ctr_appbuttonc_p	"Голубая кнопка (Palemoon)">
-<!ENTITY Ctr_appbuttonc_r	"Red button color">
-<!ENTITY Ctr_appbuttonc_g	"Залёная кнопка">
+<!ENTITY Ctr_appbuttonc_r	"Красная кнопка">
+<!ENTITY Ctr_appbuttonc_g	"Зеленая кнопка">
 <!ENTITY Ctr_appbuttonc_gr	"Серая кнопка">
 <!ENTITY Ctr_appbuttonc_pu	"Фиолетовая кнопка">
-<!ENTITY Ctr_appbuttonc_wh	"White button color">
+<!ENTITY Ctr_appbuttonc_wh	"Белая кнопка">
 <!ENTITY Ctr_appbuttonI1	"рекомендуется перезапуск">
 <!ENTITY Ctr_appbuttonI1e	"not visible on OS titlebar">
 <!ENTITY Ctr_appbuttonI2	"Только цвета на панели заголовка">
@@ -83,7 +82,6 @@
 <!ENTITY Ctr_wincontrols	"Подвижное управление полноэкранным режимом">
 <!ENTITY Ctr_starinurl		"Звёздочка в адресной строке (перезапустите Firefox)">
 <!ENTITY Ctr_mstatusbar		"Подвижноя строка состояния">
-<!ENTITY Ctr_movpaneluib	"Подвижноя кнопка меню панели (перезапустите Firefox)">
 <!ENTITY Ctr_hideurelstop	"Скрыть в адресной строке кнопку «Остановить и перезагрузить»">
 <!ENTITY Ctr_combrelstop	"Совместить кнопки «Остановить» и «Перезагрузить»">
 <!ENTITY Ctr_panelmenucol	"Альтернативный цвет фона для меню панели">
@@ -116,6 +114,8 @@
 
 <!ENTITY Ctr_toolbars		"Toolbars">
 <!ENTITY Ctr_altmenubar		"Удалить меню бар прозрачности (OS titlebar)">
+<!ENTITY Ctr_altmenubarpos	"Menubar: alternative position (below Firefox titlebar)">
+<!ENTITY Ctr_noaddonbarbg	"Add-on bar: remove background color (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_menubarnofog	"Удалить туман от фона меню из строки меню (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_notabfog		"Отключить затуманивание фона панели вкладок (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_notabbg		"Tabs toolbar: remove background color (Windows AeroGlass / Win8)">
@@ -152,8 +152,11 @@
 
 <!ENTITY Ctr_paneluibtweak	"Кнопка приложения как кнопка панели инструментов (на панели вкладок)">
 <!ENTITY Ctr_dblclnewtab	"Панель инструментов вкладки: двойной клик открыть новую вкладку">
+<!ENTITY Ctr_hidetbwot		"Панель инструментов вкладки: hide tabs toolbar with one tab (restart Firefox!)">
+<!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
 <!ENTITY Ctr_dblclclosefx	"Кнопка приложения в панели заголовка: двойной клик закрывает активное окно">
 <!ENTITY Ctr_hide_bf_popup	"Movable back/forward button: hide history menu on mouse press">
+<!ENTITY Ctr_verifiedcolors	"Alternative identity-box colors for verified websites">
 
 <!ENTITY Ctr_animation		"Анимация">
 <!ENTITY Ctr_throbberalt	"Заменить анимацию загрузки вкладки">

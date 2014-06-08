@@ -47,7 +47,7 @@
 	  -moz-margin-end: 0px !important; /*-15px*/
 	}
 	#TabsToolbar:not([orient="vertical"]) #tabbrowser-tabs:not([overflow]) {
-	  margin-right: -15px !important;
+	  -moz-margin-end: -15px !important;
 	}
 	
 	/* TU workaround */

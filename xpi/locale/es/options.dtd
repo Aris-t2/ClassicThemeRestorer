@@ -20,7 +20,6 @@
 
 <!ENTITY Ctr_main_t			"Pricipal">
 <!ENTITY Ctr_tabcolors_t	"Colores personalizables">
-<!ENTITY Ctr_fixes_t		"Arreglos">
 <!ENTITY Ctr_special_t		"Especial">
 
 <!ENTITY Ctr_tabs			"Pestañas">
@@ -83,7 +82,6 @@
 <!ENTITY Ctr_wincontrols	"Controles de ventana de pantalla completa movibles">
 <!ENTITY Ctr_starinurl		"Botón de favoritos en urlbar (reiniciar Firefox!)">
 <!ENTITY Ctr_mstatusbar		"Barra de estado movible">
-<!ENTITY Ctr_movpaneluib	"Movable panel menu button (reiniciar Firefox!)">
 <!ENTITY Ctr_hideurelstop	"Ocultar botón parar-recargar urlbar">
 <!ENTITY Ctr_combrelstop	"Botón combinado parar-recargar">
 <!ENTITY Ctr_panelmenucol	"Color de fondo alternativo para los 'menús del panel'">
@@ -116,6 +114,8 @@
 
 <!ENTITY Ctr_toolbars		"Toolbar settings">
 <!ENTITY Ctr_altmenubar		"Menubar: add background color (OS titlebar)">
+<!ENTITY Ctr_altmenubarpos	"Menubar: alternative position (below Firefox titlebar)">
+<!ENTITY Ctr_noaddonbarbg	"Add-on bar: remove background color (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_menubarnofog	"Menubar: remove background color/fog (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_notabfog		"Eliminar niebla de fondo de la barra de pestañas (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_notabbg		"Tabs toolbar: remove background color (Windows AeroGlass / Win8)">
@@ -152,8 +152,11 @@
 
 <!ENTITY Ctr_paneluibtweak	"Apariencia del botón de la aplicación para el botón del panel UI (en la barra de pestañas)">
 <!ENTITY Ctr_dblclnewtab	"Barra de pestañas: doble clic en Abrir una nueva pestaña">
+<!ENTITY Ctr_hidetbwot		"Barra de pestañas: hide tabs toolbar with one tab (restart Firefox!)">
+<!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
 <!ENTITY Ctr_dblclclosefx	"Botón de la aplicación en la barra de título: doble click cierra ventana actual">
 <!ENTITY Ctr_hide_bf_popup	"Movable back/forward button: hide history menu on mouse press">
+<!ENTITY Ctr_verifiedcolors	"Alternative identity-box colors for verified websites">
 
 <!ENTITY Ctr_animation		"Animación">
 <!ENTITY Ctr_throbberalt	"Animación de carga alternativo para tabuladores throbber">

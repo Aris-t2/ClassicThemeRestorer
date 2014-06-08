@@ -1,12 +1,16 @@
 "use strict";
 /*
- There are a few "timeouts" on this document. In almost all cases they are needed to
- make sure a 'get' call looks only for items already on DOM.  
+	There are a few "timeouts" on this document. In almost all cases they are needed to
+	make sure a 'get' call looks only for items already on DOM. 
+ 
+	Components.classes: Cc
+	Components.interfaces: Ci
+	Components.utils: Cu
 */
 
-Components.utils.import("chrome://classic_theme_restorer/content/ctraddon_toolbars.jsm");
-Components.utils.import("resource:///modules/CustomizableUI.jsm");
-Components.utils.import("resource://gre/modules/AddonManager.jsm");
+Cu.import("chrome://classic_theme_restorer/content/ctraddon_toolbars.jsm");
+Cu.import("resource:///modules/CustomizableUI.jsm");
+Cu.import("resource://gre/modules/AddonManager.jsm");
 
 if (typeof classicthemerestorerjs == "undefined") {var classicthemerestorerjs = {};};
 if (!classicthemerestorerjs.ctr) {classicthemerestorerjs.ctr = {};};
@@ -14,30 +18,30 @@ if (!classicthemerestorerjs.ctr) {classicthemerestorerjs.ctr = {};};
 classicthemerestorerjs.ctr = {
  
   // initialize custom sheets for tab color settings
-  ctabsheet_def:		Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  ctabsheet_act:		Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  ctabsheet_hov:		Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  ctabsheet_pen:		Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  ctabsheet_unr:		Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  cntabsheet_def:		Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  cntabsheet_hov:		Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtcsheet_def:		Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtcsheet_act:		Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtcsheet_hov:		Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtcsheet_pen:		Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtcsheet_unr:		Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtshsheet_def:	Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtshsheet_act:	Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtshsheet_hov:	Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtshsheet_pen:	Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtshsheet_unr:	Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  ctabsheet_def:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  ctabsheet_act:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  ctabsheet_hov:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  ctabsheet_pen:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  ctabsheet_unr:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  cntabsheet_def:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  cntabsheet_hov:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtcsheet_def:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtcsheet_act:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtcsheet_hov:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtcsheet_pen:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtcsheet_unr:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtshsheet_def:	Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtshsheet_act:	Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtshsheet_hov:	Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtshsheet_pen:	Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtshsheet_unr:	Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
-  cuiButtonssheet:		Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  cuiButtonssheet:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
 
-  prefs:				Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.classicthemerestorer."),
+  prefs:				Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("extensions.classicthemerestorer."),
   
-  fxdefaulttheme:		Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("general.skins.").getCharPref("selectedSkin") == 'classic/1.0',
-  appversion:			parseInt(Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.").getCharPref("lastAppVersion")),
+  fxdefaulttheme:		Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("general.skins.").getCharPref("selectedSkin") == 'classic/1.0',
+  appversion:			parseInt(Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("extensions.").getCharPref("lastAppVersion")),
   
   init: function() {
 
@@ -80,10 +84,10 @@ classicthemerestorerjs.ctr = {
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get
 	  // garbage collected.
-	  var prefService = Components.classes["@mozilla.org/preferences-service;1"]
-		.getService(Components.interfaces.nsIPrefService);
+	  var prefService = Cc["@mozilla.org/preferences-service;1"]
+		.getService(Ci.nsIPrefService);
 	  this._branch = prefService.getBranch(branch_name);
-	  this._branch.QueryInterface(Components.interfaces.nsIPrefBranch2);
+	  this._branch.QueryInterface(Ci.nsIPrefBranch2);
 	  this._callback = callback;
 	}
 
@@ -126,11 +130,11 @@ classicthemerestorerjs.ctr = {
 				CustomizableUI.addWidgetToArea("ctraddon_window-controls", CustomizableUI.AREA_NAVBAR);
 				CustomizableUI.addWidgetToArea("ctraddon_bookmarks-menu-toolbar-button", CustomizableUI.AREA_BOOKMARKS);						
 
-				var oswindows = Components.classes["@mozilla.org/xre/app-info;1"]
-								  .getService(Components.interfaces.nsIXULRuntime).OS=="WINNT";
+				var oswindows = Cc["@mozilla.org/xre/app-info;1"]
+								  .getService(Ci.nsIXULRuntime).OS=="WINNT";
 
-				var tabsintitlebar = Components.classes["@mozilla.org/preferences-service;1"]
-									  .getService(Components.interfaces.nsIPrefService)
+				var tabsintitlebar = Cc["@mozilla.org/preferences-service;1"]
+									  .getService(Ci.nsIPrefService)
 										.getBranch("browser.tabs.").getBoolPref("drawInTitlebar");
 										
 				// disable TMPs/TUs colors on first run, so users do not see corrupted tabs
@@ -334,7 +338,7 @@ classicthemerestorerjs.ctr = {
 					// CTRs small button option should stay disabled -> prevents glitches
 					// 'Classic Toolbar Buttons' add-on has an own 'small button option',
 					// which is not compatible to CTRs option.
-					if(Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService)
+					if(Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService)
 							.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off"){
 						
 						activate=false;
@@ -665,9 +669,30 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("altmenubar",false);
 		  break;
 		  
+		  case "altmenubarpos":
+			if (branch.getBoolPref("altmenubarpos")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("altmenubarpos",true);
+			  branch.setBoolPref("altmenubarpos2",false);
+			}
+			else classicthemerestorerjs.ctr.loadUnloadCSS("altmenubarpos",false);
+		  break;
+		  
+		  case "altmenubarpos2":
+			if (branch.getBoolPref("altmenubarpos2")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("altmenubarpos2",true);
+			  branch.setBoolPref("altmenubarpos",false);
+			}
+			else classicthemerestorerjs.ctr.loadUnloadCSS("altmenubarpos2",false);
+		  break;
+		  
 		  case "menubarnofog":
 			if (branch.getBoolPref("menubarnofog") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("menubarnofog",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("menubarnofog",false);
+		  break;
+		  
+		  case "noaddonbarbg":
+			if (branch.getBoolPref("noaddonbarbg") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("noaddonbarbg",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("noaddonbarbg",false);
 		  break;
 		  
 		  case "notabfog":
@@ -733,8 +758,19 @@ classicthemerestorerjs.ctr = {
 		  break;
 
 		  case "emptyfavicon":
-			if (branch.getBoolPref("emptyfavicon")) classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",false);
+			if (branch.getBoolPref("emptyfavicon")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",true);
+			  branch.setBoolPref("emptyfavicon2",false);
+			}
+			else classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",false);
+		  break;
+		  
+		  case "emptyfavicon2":
+			if (branch.getBoolPref("emptyfavicon2")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon2",true);
+			  branch.setBoolPref("emptyfavicon",false);
+			}
+			else classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon2",false);
 		  break;
 		  
 		  case "hidezoomres":
@@ -751,6 +787,12 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("menupopupscr")) classicthemerestorerjs.ctr.loadUnloadCSS("menupopupscr",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("menupopupscr",false);
 		  break;
+		  
+		  case "verifiedcolors":
+			if (branch.getBoolPref("verifiedcolors")  && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("verifiedcolors",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("verifiedcolors",false);
+		  break;
+
 		  
 		  case "hideprivmask":
 			if (branch.getBoolPref("hideprivmask")) classicthemerestorerjs.ctr.loadUnloadCSS("hideprivmask",true);
@@ -782,22 +824,22 @@ classicthemerestorerjs.ctr = {
 		  
 		  case "showtabclose":
 		  
-			var def_tcw = Components.classes["@mozilla.org/preferences-service;1"]
-						  .getService(Components.interfaces.nsIPrefService)
+			var def_tcw = Cc["@mozilla.org/preferences-service;1"]
+						  .getService(Ci.nsIPrefService)
 							.getBranch("browser.tabs.").getIntPref("tabClipWidth") == 140;
 							
 			if (branch.getBoolPref("showtabclose")) {
 			  // if we allow tabs to have a reduced min-width, browser.tabs.tabClipWidth
 			  // requires a smaller value
-			  Components.classes["@mozilla.org/preferences-service;1"]
-				.getService(Components.interfaces.nsIPrefService)
+			  Cc["@mozilla.org/preferences-service;1"]
+				.getService(Ci.nsIPrefService)
 				  .getBranch("browser.tabs.").setIntPref("tabClipWidth",1);
 			}
 			else {
 				// set browser.tabs.tabClipWidth back to default
 				if (def_tcw==false) {
-				  Components.classes["@mozilla.org/preferences-service;1"]
-					.getService(Components.interfaces.nsIPrefService)
+				  Cc["@mozilla.org/preferences-service;1"]
+					.getService(Ci.nsIPrefService)
 					  .getBranch("browser.tabs.").setIntPref("tabClipWidth",140);
 				}
 			}
@@ -805,8 +847,8 @@ classicthemerestorerjs.ctr = {
 		  
 		  case "dblclnewtab":
 			
-			var oswindows = Components.classes["@mozilla.org/xre/app-info;1"]
-								  .getService(Components.interfaces.nsIXULRuntime).OS=="WINNT";
+			var oswindows = Cc["@mozilla.org/xre/app-info;1"]
+								  .getService(Ci.nsIXULRuntime).OS=="WINNT";
 			if (branch.getBoolPref("dblclnewtab") && oswindows==true) {
 			  
 				document.getElementById("TabsToolbar").ondblclick = e=>{
@@ -836,14 +878,25 @@ classicthemerestorerjs.ctr = {
 			}
 		  break;
 		  
+		  
+		  case "hidetbwot":
+			if (classicthemerestorerjs.ctr.prefs.getBoolPref("hidetbwot"))
+		      classicthemerestorerjs.ctr.hideTabsToolbarWithOnTab();
+		  break;
+		  
+		  case "faviconurl":
+			if (classicthemerestorerjs.ctr.prefs.getBoolPref("faviconurl"))
+		      classicthemerestorerjs.ctr.favIconinUrlbarCTR();
+		  break;
+		  
 		  case "dblclclosefx":
 		    try{
 				if (branch.getBoolPref("dblclclosefx")) {
 				
 					setTimeout(function(){
 					  try{
-						var mWindows = Components.classes["@mozilla.org/embedcomp/window-watcher;1"]  
-										.getService(Components.interfaces.nsIWindowWatcher).getWindowEnumerator();
+						var mWindows = Cc["@mozilla.org/embedcomp/window-watcher;1"]  
+										.getService(Ci.nsIWindowWatcher).getWindowEnumerator();
 						while (mWindows.hasMoreElements()) {
 						  var mNextWindow=mWindows.getNext();
 						  mNextWindow.document.getElementById('ctraddon_appbutton2').addEventListener('dblclick',mNextWindow.BrowserTryToCloseWindow, false);
@@ -856,8 +909,8 @@ classicthemerestorerjs.ctr = {
 
 					setTimeout(function(){
 					  try{
-						var mWindows = Components.classes["@mozilla.org/embedcomp/window-watcher;1"]  
-										.getService(Components.interfaces.nsIWindowWatcher).getWindowEnumerator();
+						var mWindows = Cc["@mozilla.org/embedcomp/window-watcher;1"]  
+										.getService(Ci.nsIWindowWatcher).getWindowEnumerator();
 						while (mWindows.hasMoreElements()) {
 						  var mNextWindow=mWindows.getNext();
 						  mNextWindow.document.getElementById('ctraddon_appbutton2').removeEventListener('dblclick',mNextWindow.BrowserTryToCloseWindow, false);
@@ -921,11 +974,16 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("invicobookbar") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("invicobookbar",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("invicobookbar",false);
 		  break;
+		  
+		  case "invicoaddonbar":
+			if (branch.getBoolPref("invicoaddonbar") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("invicoaddonbar",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("invicoaddonbar",false);
+		  break;
 		  //inv icons END
 		  
 		  case "toolsitem":
 		  
-		  	var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;
+		  	var osString = Cc["@mozilla.org/xre/app-info;1"].getService(Ci.nsIXULRuntime).OS;
 			
 			// for Windows & Linux
 			if (osString!="Darwin"){
@@ -1003,7 +1061,7 @@ classicthemerestorerjs.ctr = {
 	timeoutID = window.setTimeout(
 	  function(){
 		document.getElementById("backForwardMenu").openPopupAtScreen(anchorElem.boxObject.screenX, anchorElem.boxObject.screenY+anchorElem.boxObject.height-1, false);
-	  }, 600);
+	  }, 650);
 
 	anchorElem.onmouseup = function() {
 	  window.clearTimeout(timeoutID);
@@ -1052,10 +1110,10 @@ classicthemerestorerjs.ctr = {
 	  } catch(e){}
 	},300);
 	
-	// remove CTR window controls extra for Linux and MacOSX
+	// remove CTRs window controls 'extra item' on Linux and MacOSX
 	setTimeout(function(){
 	  try{
-		var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;
+		var osString = Cc["@mozilla.org/xre/app-info;1"].getService(Ci.nsIXULRuntime).OS;
 		if(osString!="WINNT")
 		  classicthemerestorerjs.ctr.ctrGetId("ctraddon_window-controls")
 			.parentNode.removeChild(classicthemerestorerjs.ctr.ctrGetId("ctraddon_window-controls"));
@@ -1068,8 +1126,8 @@ classicthemerestorerjs.ctr = {
 	// TMPs/TUs colors for rounded tabs in Fx29+ are not compatible with CTRs (squared) tabs.
 	// This just disables TMPs/TUs non-compatible tab color options.
 	try{
-	  var tmpprefs = Components.classes["@mozilla.org/preferences-service;1"]
-						.getService(Components.interfaces.nsIPrefService).getBranch("extensions.tabmix.");
+	  var tmpprefs = Cc["@mozilla.org/preferences-service;1"]
+						.getService(Ci.nsIPrefService).getBranch("extensions.tabmix.");
 	  if(tmpprefs.getBoolPref("currentTab")) tmpprefs.setBoolPref("currentTab",false);
 	  if(tmpprefs.getBoolPref("unloadedTab")) tmpprefs.setBoolPref("unloadedTab",false);
 	  if(tmpprefs.getBoolPref("unreadTab")) tmpprefs.setBoolPref("unreadTab",false);
@@ -1077,8 +1135,8 @@ classicthemerestorerjs.ctr = {
 	} catch(e){}
 
 	try{
-	  var tuprefs = Components.classes["@mozilla.org/preferences-service;1"]
-						.getService(Components.interfaces.nsIPrefService).getBranch("extensions.tabutils.");
+	  var tuprefs = Cc["@mozilla.org/preferences-service;1"]
+						.getService(Ci.nsIPrefService).getBranch("extensions.tabutils.");
 	  if(tuprefs.getBoolPref("highlightCurrent")) tuprefs.setBoolPref("highlightCurrent",false);
 	  if(tuprefs.getBoolPref("highlightRead")) tuprefs.setBoolPref("highlightRead",false);
 	  if(tuprefs.getBoolPref("highlightSelected")) tuprefs.setBoolPref("highlightSelected",false);
@@ -1098,8 +1156,8 @@ classicthemerestorerjs.ctr = {
 	  
 	function onCtrAppmenuPopup(event){
 	
-	  var oswindows = Components.classes["@mozilla.org/xre/app-info;1"]
-						.getService(Components.interfaces.nsIXULRuntime).OS=="WINNT";
+	  var oswindows = Cc["@mozilla.org/xre/app-info;1"]
+						.getService(Ci.nsIXULRuntime).OS=="WINNT";
 	
 	  if (event.target != classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) return;
 	  if(event.type == "popupshown"){
@@ -1128,6 +1186,74 @@ classicthemerestorerjs.ctr = {
 	  }
 	}
   },
+  
+  // hide tabs toolbar, if only one tab is visible
+  hideTabsToolbarWithOnTab: function(){
+
+	var target = document.querySelector('#toolbar-menubar');
+	var config = { attributes: true, attributeFilter: ['inactive'], subtree: true, childList: true, characterData: true };
+	
+	var observer = new MutationObserver(function(mutations) {
+	  mutations.forEach(function(mutation) {
+		ctrTabClose();
+	  });    
+	});
+	
+
+	window.addEventListener("TabClose", ctrTabClose, false);  
+	window.addEventListener("TabOpen", ctrTabClose, false);
+	window.addEventListener("DOMContentLoaded", ctrTabClose, false);
+	observer.observe(target, config);
+
+	  
+	function ctrTabClose(event){
+	
+	  var osString = Cc["@mozilla.org/xre/app-info;1"].getService(Ci.nsIXULRuntime).OS;
+					  
+	  if(gBrowser.tabContainer.tabbrowser.visibleTabs.length < 2) {
+		document.getElementById("TabsToolbar").collapsed = true;
+		
+		  if(osString=="WINNT"){
+			  if (document.getElementById("toolbar-menubar").getAttribute("autohide") == "true"
+				&& document.getElementById("toolbar-menubar").getAttribute("inactive") == "true") {
+				  document.getElementById("toolbar-menubar").style.marginBottom="26px";
+			  } else document.getElementById("toolbar-menubar").style.marginBottom="unset";
+		  } else if(osString=="Darwin") {
+			  document.getElementById("titlebar").style.paddingBottom="28px";
+		  } else {} //Linux/Unix do not need special treatment
+	  }
+	  else {
+		document.getElementById("TabsToolbar").collapsed = false;
+		document.getElementById("toolbar-menubar").style.marginBottom="unset";
+		
+		if(osString=="Darwin") document.getElementById("titlebar").style.paddingBottom="unset";
+	  }
+					
+	}
+
+  },
+  
+  // replace default icons with tab-favicons
+  favIconinUrlbarCTR: function() {
+
+	window.addEventListener("DOMContentLoaded", faviconInUrlbar, false);
+	window.addEventListener("load", faviconInUrlbar, false);
+	window.addEventListener("TabAttrModified", faviconInUrlbar, false);
+	
+	function faviconInUrlbar(event){
+	 if(gBrowser.selectedTab.image) {
+	  document.getElementById("page-proxy-favicon").removeAttribute("blank");
+	  document.getElementById("page-proxy-favicon").setAttribute("src", gBrowser.selectedTab.image);
+	 }
+	 if(!gBrowser.selectedTab.image) {
+	  document.getElementById("page-proxy-favicon").setAttribute("blank", true);
+	  document.getElementById("page-proxy-favicon").setAttribute("src", "chrome://classic_theme_restorer/content/images/default_favicon.png");
+	 }
+	}
+	
+	classicthemerestorerjs.ctr.loadUnloadCSS("faviconurl",true)
+  
+  },  
 
   // disable preferences which are not usable with third party themes  
   disableSettingsforThemes: function() {
@@ -1189,7 +1315,8 @@ classicthemerestorerjs.ctr = {
 			try{
 				CustomizableUI.addWidgetToArea("bookmarks-menu-button", CustomizableUI.AREA_NAVBAR);
 				CustomizableUI.moveWidgetWithinArea("bookmarks-menu-button",0);
-				document.getElementById("urlbar-icons").insertBefore(classicthemerestorerjs.ctr.ctrGetId("bookmarks-menu-button"), null);
+				//document.getElementById("urlbar-icons").insertBefore(classicthemerestorerjs.ctr.ctrGetId("bookmarks-menu-button"), null);
+				document.getElementById("urlbar-icons").appendChild(classicthemerestorerjs.ctr.ctrGetId("bookmarks-menu-button"));
 			} catch(e){}
 		},500);
 
@@ -1199,13 +1326,13 @@ classicthemerestorerjs.ctr = {
   /* enable/disable css sheets*/
   loadUnloadCSS: function(which,enable) {
 	
-	const ios = Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService);
+	const ios = Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService);
 	
 	switch (which) {
 	
 		case "tabs_squared":
 	
-			var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;
+			var osString = Cc["@mozilla.org/xre/app-info;1"].getService(Ci.nsIXULRuntime).OS;
 
 			// different appearance for 'tabs not on top' on MacOSX
 			if (osString=="Darwin"){
@@ -1236,7 +1363,7 @@ classicthemerestorerjs.ctr = {
 		
 		case "tabs_squared2":
 	
-			var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;
+			var osString = Cc["@mozilla.org/xre/app-info;1"].getService(Ci.nsIXULRuntime).OS;
 
 			// different appearance for 'tabs not on top' on MacOSX
 			if (osString=="Darwin"){
@@ -1263,7 +1390,7 @@ classicthemerestorerjs.ctr = {
 		
 		case "tabs_curved":
 		
-			var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;
+			var osString = Cc["@mozilla.org/xre/app-info;1"].getService(Ci.nsIXULRuntime).OS;
 			
 			// different appearance for 'tabs not on top' on MacOSX
 			if (osString=="Darwin"){
@@ -1294,7 +1421,7 @@ classicthemerestorerjs.ctr = {
 		
 			manageCSS("tabsontop_off.css");
 			
-			var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;
+			var osString = Cc["@mozilla.org/xre/app-info;1"].getService(Ci.nsIXULRuntime).OS;
 
 			// different appearance for 'tabs not on top' on MacOSX
 			if (osString=="Darwin"){
@@ -1332,7 +1459,7 @@ classicthemerestorerjs.ctr = {
 		
 			manageCSS("tabsontop_off2.css");
 			
-			var osString = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS;
+			var osString = Cc["@mozilla.org/xre/app-info;1"].getService(Ci.nsIXULRuntime).OS;
 
 			// different appearance for 'tabs not on top' on MacOSX
 			if (osString=="Darwin"){
@@ -1477,7 +1604,10 @@ classicthemerestorerjs.ctr = {
 		case "tabfita_unr":			manageCSS("tab_font_italic_unr.css");	break;
 
 		case "altmenubar": 			manageCSS("menubar.css");				break;
+		case "altmenubarpos": 		manageCSS("menubar_altpos.css");		break;
+		case "altmenubarpos2": 		manageCSS("menubar_altpos2.css");		break;
 		case "menubarnofog": 		manageCSS("menubar_nofog.css");			break;
+		case "noaddonbarbg": 		manageCSS("noaddonbarbg.css");			break;
 		case "notabfog": 			manageCSS("notabfog.css");				break;
 		case "notabbg": 			manageCSS("notabbg.css");				break;
 		case "nobookbarbg": 		manageCSS("nobookbarbg.css");			break;
@@ -1489,9 +1619,11 @@ classicthemerestorerjs.ctr = {
 		case "alttabstb": 			manageCSS("alttabstoolbar.css");		break;
 		
 		case "emptyfavicon": 		manageCSS("empty_favicon.css");			break;
+		case "emptyfavicon2": 		manageCSS("empty_favicon2.css");		break;
 		case "hidezoomres": 		manageCSS("hide_zoomreset.css");		break;
 		case "pmhidelabels": 		manageCSS("panelmenu_nolabels.css");	break;
 		case "menupopupscr": 		manageCSS("menupopupscrollbar.css");	break;
+		case "verifiedcolors": 		manageCSS("verifiedcolors.css");		break;
 		case "hideprivmask": 		manageCSS("hideprivatemask.css");		break;
 		case "bfurlbarfix": 		manageCSS("bf_urlbarfix.css");			break;
 		
@@ -1500,10 +1632,12 @@ classicthemerestorerjs.ctr = {
 		case "inviconavbar": 		manageCSS("invicons_navbar.css");		break;
 		case "invicoextrabar": 		manageCSS("invicons_extrabar.css");		break;
 		case "invicobookbar": 		manageCSS("invicons_bookmarksbar.css");	break;
+		case "invicoaddonbar": 		manageCSS("invicons_addonbar.css");		break;
 
 		case "tabmokcolor": 		manageCSS("tabmokcolor.css");			break;
 		case "tabmokcolor2": 		manageCSS("tabmokcolor2.css");			break;
 		case "tabmokcolor3": 		manageCSS("tabmokcolor3.css");			break;
+		case "faviconurl": 			manageCSS("faviconurl.css");			break;
 		
 		case "paneluibtweak": 		manageCSS("paneluibutton_tweak.css");	break;
 		case "dblclnewtab": 		manageCSS("dblclnewtab.css");			break;
@@ -2047,8 +2181,8 @@ classicthemerestorerjs.ctr = {
 	// Apply or remove the style sheet files
 	function manageCSS(file) {
 
-		const sss = Components.classes["@mozilla.org/content/style-sheet-service;1"].getService(Components.interfaces.nsIStyleSheetService);
-		const ios = Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService);
+		const sss = Cc["@mozilla.org/content/style-sheet-service;1"].getService(Ci.nsIStyleSheetService);
+		const ios = Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService);
 
 		let uri = ios.newURI("chrome://classic_theme_restorer/content/css/" + file,null,null);
 		
@@ -2066,7 +2200,7 @@ classicthemerestorerjs.ctr = {
 	// remove style sheet
 	function removeOldSheet(sheet){
 
-	  const sss = Components.classes["@mozilla.org/content/style-sheet-service;1"].getService(Components.interfaces.nsIStyleSheetService);
+	  const sss = Cc["@mozilla.org/content/style-sheet-service;1"].getService(Ci.nsIStyleSheetService);
 
 		if (sss.sheetRegistered(sheet,sss.AGENT_SHEET)) sss.unregisterSheet(sheet,sss.AGENT_SHEET);
 	}
@@ -2074,7 +2208,7 @@ classicthemerestorerjs.ctr = {
 	// apply style sheet
 	function applyNewSheet(sheet){
 
-	  const sss = Components.classes["@mozilla.org/content/style-sheet-service;1"].getService(Components.interfaces.nsIStyleSheetService);
+	  const sss = Cc["@mozilla.org/content/style-sheet-service;1"].getService(Ci.nsIStyleSheetService);
 
 		try {
 			if (!sss.sheetRegistered(sheet,sss.AGENT_SHEET)) sss.loadAndRegisterSheet(sheet,sss.AGENT_SHEET);

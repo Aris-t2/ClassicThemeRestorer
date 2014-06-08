@@ -257,6 +257,10 @@
 		}
 	}
 
+	#main-window[sizemode="maximized"] #TabsToolbar #ctraddon_appbutton{
+	  margin-top:0px !important;
+	}
+
 	/* CTR addons-bar */
 	#main-window[defaultfxtheme="true"] #ctraddon_addon-bar:not(:-moz-lwtheme) {
 	  border-top: 1px solid rgba(0,0,0,.15) !important;

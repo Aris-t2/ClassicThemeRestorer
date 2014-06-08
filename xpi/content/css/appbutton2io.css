@@ -67,5 +67,18 @@
 		}
 
 	}
+	
+	@media (-moz-os-version: windows-win7){
+	@media (-moz-windows-classic){
+	
+		#main-window[tabsintitlebar][sizemode="normal"] #TabsToolbar .titlebar-placeholder{
+		  visibility:collapse !important;
+		}
+		#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"] #toolbar-menubar ~ #TabsToolbar,
+		#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
+		  margin-top: 16px !important;
+		}
+	
+	}}
 
 }

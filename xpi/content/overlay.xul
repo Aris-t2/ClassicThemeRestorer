@@ -426,6 +426,7 @@
 									 class="hide-if-empty-places-result"/>
 					  <menuitem id="appmenu_unsortedBookmarks"
 								label="&unsortedBookmarksCmd.label;"
+								class="menuitem-iconic"
 								oncommand="PlacesCommandHook.showPlacesOrganizer('UnfiledBookmarks');"/>
 					</menupopup>
 				</menu>

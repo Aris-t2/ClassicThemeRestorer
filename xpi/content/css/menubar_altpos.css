@@ -1,0 +1,16 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #tab-view-deck #navigator-toolbox #toolbar-menubar[inactive="true"]:not([autohide="true"]),
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #tab-view-deck #navigator-toolbox #toolbar-menubar[inactive="true"][autohide="false"],
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #tab-view-deck #navigator-toolbox #toolbar-menubar[autohide="true"]:not([inactive="true"]),
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #tab-view-deck #navigator-toolbox #toolbar-menubar:not([autohide="true"]),
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #tab-view-deck #navigator-toolbox #toolbar-menubar[inactive="true"][autohide="false"],
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #tab-view-deck #navigator-toolbox #toolbar-menubar[autohide="true"]:not([inactive="true"]),
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #tab-view-deck #navigator-toolbox #toolbar-menubar:not([autohide="true"]) {
+	  margin-top: 27px !important;
+	  -moz-margin-start: 0 !important;
+	}
+
+}
