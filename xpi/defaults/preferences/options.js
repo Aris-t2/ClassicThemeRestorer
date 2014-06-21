@@ -63,11 +63,10 @@ pref("extensions.classicthemerestorer.tabmokcolor",false);
 pref("extensions.classicthemerestorer.tabmokcolor2",false);
 pref("extensions.classicthemerestorer.tabmokcolor3",false);
 
-pref("extensions.classicthemerestorer.paneluibtweak",false);
-pref("extensions.classicthemerestorer.showtabclose",false);
 pref("extensions.classicthemerestorer.dblclnewtab",false);
 pref("extensions.classicthemerestorer.hidetbwot",false);
 pref("extensions.classicthemerestorer.faviconurl",false);
+pref("extensions.classicthemerestorer.faviconurlpl",true);
 pref("extensions.classicthemerestorer.dblclclosefx",false);
 pref("extensions.classicthemerestorer.hide_bf_popup",false);
 pref("extensions.classicthemerestorer.verifiedcolors",false);
@@ -80,6 +79,7 @@ pref("extensions.classicthemerestorer.pananimation",true);
 pref("extensions.classicthemerestorer.closeabarbut",false);
 pref("extensions.classicthemerestorer.toolsitem",true);
 pref("extensions.classicthemerestorer.appmenuitem",true);
+pref("extensions.classicthemerestorer.contextitem",false);
 pref("extensions.classicthemerestorer.cuibuttons",true);
 
 // tab color settings

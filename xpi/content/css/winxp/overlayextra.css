@@ -76,10 +76,6 @@
 		border:1px solid #a0a0a0;
 	}
 	
-	#main-window[defaultfxtheme="true"][ctraddon_appbutton_on_navbar="true"] #appmenu-popup {
-	  margin-top:-8px;
-	}
-	
 	@media (-moz-windows-default-theme) {
 	  #main-window[defaultfxtheme="true"] #appmenu-popup {
 		-moz-appearance: none;

@@ -46,6 +46,7 @@
 <!ENTITY Ctr_closetab_2		"Tab Schließen: nirgends">
 <!ENTITY Ctr_closetab_3		"Tab Schließen: am Ende der Tableiste">
 <!ENTITY Ctr_closetab_4		"Tab Schließen: am Anfang der Tableiste">
+<!ENTITY Ctr_closetab_5		"Tab Schließen: auf allen Tabs (erzwungen)">
 
 <!ENTITY Ctr_appbutton		"Anwendungsbutton">
 <!ENTITY Ctr_appbutton0		"Button deaktiviert">
@@ -53,6 +54,7 @@
 <!ENTITY Ctr_appbutton1wt	"Button auf den Leisten (nur Text)">
 <!ENTITY Ctr_appbutton2		"Button auf der Firefox Titelleiste">
 <!ENTITY Ctr_appbutton2io	"Button auf der Firefox Titelleiste (nur Symbol)">
+<!ENTITY Ctr_paneluibtweak	"Oranger Firefoxmenü-Button auf der Tableiste">
 <!ENTITY Ctr_appbuttonc_o	"Farbe: Orange (vorgegeben)">
 <!ENTITY Ctr_appbuttonc_a	"Farbe: Blau (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Farbe: Schwarz (Nightly)">
@@ -82,8 +84,8 @@
 <!ENTITY Ctr_wincontrols	"Verschiebbare Vollbild-Buttons: Min/Max/Schließen ">
 <!ENTITY Ctr_starinurl		"Lesezeichen-Button in der Adressleiste (Firefox neustarten)">
 <!ENTITY Ctr_mstatusbar		"Statusbereich: aktiv und verschiebbar">
-<!ENTITY Ctr_hideurelstop	"Adressleiste ohne Stop &amp; Aktualisieren Buttons">
-<!ENTITY Ctr_combrelstop	"Kombiniere Stop &amp; Aktualisieren Buttons">
+<!ENTITY Ctr_hideurelstop	"Adressleiste ohne Stopp &amp; Aktualisieren Buttons">
+<!ENTITY Ctr_combrelstop	"Kombiniere Stopp &amp; Aktualisieren Buttons">
 <!ENTITY Ctr_panelmenucol	"Alternative Hintergrundfarbe für 'Panel-Menüs'">
 <!ENTITY Ctr_findbar_def	"Suchleiste (vorgegebene Position)">
 <!ENTITY Ctr_findbar_top	"Suchleiste oben">
@@ -94,6 +96,8 @@
 <!ENTITY Ctr_nav_txt_ico1	"Zeige große Symbole">
 <!ENTITY Ctr_nav_txt_ico2	"Zeige Symbole und Text">
 <!ENTITY Ctr_nav_txt_ico3	"Zeige nur Text">
+<!ENTITY Ctr_stoprel0		"Stopp- &amp; Aktualisieren-Button Einstellungen">
+<!ENTITY Ctr_stoprel1		"Positioniere 'Aktualisieren' rechts von 'Stopp'!">
 
 <!ENTITY Ctr_tab_tf_info	"Felder können Namen, Hexcodes, RGB(A) und HSL(A) Farben beinhalten. Eingaben werden nicht überprüft!">
 <!ENTITY Ctr_tabacthovdef	"Tab (aktiv/über/normal)">
@@ -137,8 +141,8 @@
 
 <!ENTITY Ctr_specialtw		"Spezial Einstellungen">
 <!ENTITY Ctr_emptyfavicon	"'Leeres' Favoritensymbol auf Tabs wiederherstellen">
+<!ENTITY Ctr_emptyfavicon2	"Leeres und gepunktetes Favoritensymbol durch Papierblatt-Symbol ersetzten">
 <!ENTITY Ctr_bfurlbarfix 	"Setze Radius der Ränder der Adressleiste auf 2px (Windows) / 2.5px (MacOSX)">
-<!ENTITY Ctr_showtabclose	"'Tab-Schließen'-Button immer anzeigen (Neustart empfohlen!)">
 <!ENTITY Ctr_cpanelmenus	"Kompakte 'Panel-Menüs' (Lesezeichen, Chronik etc.)">
 <!ENTITY Ctr_hidezoomres	"Vergrößern/Verkleinern-Buttons auf Leisten: Verstecke 'Normalgröße'-Button">
 <!ENTITY Ctr_pmhidelabels	"Verstecke Text unter 'Panel-Menü'-Elementen und Buttons">
@@ -150,13 +154,13 @@
 <!ENTITY Ctr_tabmokcolor2	"Weißer Tabtext und dunkler Schatten für nicht aktive Tabs">
 <!ENTITY Ctr_tabmokcolor3	"Weiße Trennlinien zwischen den Tabs">
 
-<!ENTITY Ctr_paneluibtweak	"Firefoxmenü-Button wie Anwendungsbutton darstellen (auf der Tableiste)">
 <!ENTITY Ctr_dblclnewtab	"Tableiste: Doppelklick öffnet einen neuen Tab (und beachet 'browser.newtab.url')">
 <!ENTITY Ctr_hidetbwot		"Tableiste: Verstecke Tableiste mit nur einem sichtbaren Tab (Firefox neustarten)">
 <!ENTITY Ctr_faviconurl		"Favoriten-Symbol in der Adressleiste (Firefox neustarten)">
+<!ENTITY Ctr_faviconurl2	"Schloß-Symbol">
 <!ENTITY Ctr_dblclclosefx	"Anwendungsbutton auf der Titelleiste: Doppelklick schließt aktuelles Fenster">
 <!ENTITY Ctr_hide_bf_popup	"Verschiebbarer Vor-Zurück-Button: Verstecke Chronik-Popup bei gedrückter Maustaste">
-<!ENTITY Ctr_verifiedcolors	"Alternative Verifizierungsbox-Farben für verifizierte Webseiten">
+<!ENTITY Ctr_verifiedcolors	"Grüne/blaue Verifizierungsbox für verifizierte Webseiten">
 
 <!ENTITY Ctr_animation		"Animationen">
 <!ENTITY Ctr_throbberalt	"Alternative Ladeanzeige für Tabs">
@@ -168,8 +172,14 @@
 <!ENTITY Ctr_closeabarbut	"Entferne 'Schließen'-Button von der Addonleiste">
 <!ENTITY Ctr_toolsitem		"Eintrag im Menuleisten-Menü 'Extras'">
 <!ENTITY Ctr_appmenuitem	"Eintrag im Options-Untermenü des Anwendungsbuttons">
+<!ENTITY Ctr_contextitem	"Eintrag im Leisten Kontextmenü">
 <!ENTITY Ctr_cuibotbuttons	"Einstellungs-Buttons im 'Anpassen'-Modus">
 
+<!ENTITY Ctr_pw_settings	"Einstellungen">
+<!ENTITY Ctr_pw_set_reset	"Vorgabe wiederherstellen">
+<!ENTITY Ctr_pw_set_predef	"Vorgabe (klassisch)">
+<!ENTITY Ctr_pw_set_export	"Exportiere Einstellungen">
+<!ENTITY Ctr_pw_set_import	"Importiere Einstellungen">
 
 <!ENTITY Ctr_special_font	"Hintergrund-Farbeinstellungen sind nur für das Standard-Thema vorhanden!">
 <!ENTITY Ctr_special_info	"Einige Optionen haben nur in bestimmten Fällen sichtbare Auswirkungen!">

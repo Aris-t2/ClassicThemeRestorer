@@ -46,6 +46,7 @@
 <!ENTITY Ctr_closetab_2		"タブを閉じる: 表示しない">
 <!ENTITY Ctr_closetab_3		"タブを閉じる: ツールバーの最後に表示">
 <!ENTITY Ctr_closetab_4		"タブを閉じる: ツールバーの最初に表示">
+<!ENTITY Ctr_closetab_5		"タブを閉じる: 全タブに表示 (forced)">
 
 <!ENTITY Ctr_appbutton		"アプリケーションボタン">
 <!ENTITY Ctr_appbutton0		"ボタンを無効にする">
@@ -53,6 +54,7 @@
 <!ENTITY Ctr_appbutton1wt	"ツールバーに表示 (テキストのみ)">
 <!ENTITY Ctr_appbutton2		"Firefox タイトルバーに表示">
 <!ENTITY Ctr_appbutton2io	"Firefox タイトルバーに表示 (アイコンのみ)">
+<!ENTITY Ctr_paneluibtweak	"Orange panel menu button on tabs toolbar">
 <!ENTITY Ctr_appbuttonc_o	"橙色 (デフォルト)">
 <!ENTITY Ctr_appbuttonc_a	"青色 (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"黒色 (Nightly)">
@@ -94,6 +96,8 @@
 <!ENTITY Ctr_nav_txt_ico1	"大きいアイコンを表示">
 <!ENTITY Ctr_nav_txt_ico2	"アイコンとテキストを表示">
 <!ENTITY Ctr_nav_txt_ico3	"テキストのみを表示">
+<!ENTITY Ctr_stoprel0		"Reload and stop button settings">
+<!ENTITY Ctr_stoprel1		"Toolbar: place reload button after stop button!">
 
 <!ENTITY Ctr_tab_tf_info	"色名、16 進コード、rgb(a)、hsl(a) の値をサポートします。入力値は検証されません。">
 <!ENTITY Ctr_tabacthovdef	"タブ (アクティブ / hover / デフォルト)">
@@ -137,8 +141,8 @@
 
 <!ENTITY Ctr_specialtw		"特別な調整">
 <!ENTITY Ctr_emptyfavicon	"空 favicon を表示する (サイトが提供しない場合)">
+<!ENTITY Ctr_emptyfavicon2	"Replace generic favicon (empty and dotted) with sheet favicon">
 <!ENTITY Ctr_bfurlbarfix	"'移動可の戻る/進むボタン' と '小さいボタン表示'の URL バーの border-radius を修正する">
-<!ENTITY Ctr_showtabclose	"常にタブの閉じるボタンを表示 (再起動を推奨)">
 <!ENTITY Ctr_cpanelmenus	"コンパクトなパネルメニュー (ブックマーク、履歴など)">
 <!ENTITY Ctr_hidezoomres	"ツールバーのズームコントロール: ズームリセットボタンを隠す">
 <!ENTITY Ctr_pmhidelabels	"パネルメニューのラベルを隠す">
@@ -150,13 +154,13 @@
 <!ENTITY Ctr_tabmokcolor2	"非アクティブタブを白色の文字にして、灰色の影をつける">
 <!ENTITY Ctr_tabmokcolor3	"タブセパレータを白色にする">
 
-<!ENTITY Ctr_paneluibtweak	"パネル UI ボタン (タブツールバー上): タイトルボタン上でアプリボタンのような見た目に">
 <!ENTITY Ctr_dblclnewtab	"タブツールバー: ダブルクリックで'新しい'タブを開く (browser.newtab.url を使用)">
 <!ENTITY Ctr_hidetbwot		"タブツールバー: hide tabs toolbar with one tab (restart Firefox!)">
 <!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
+<!ENTITY Ctr_faviconurl2	"Padlock">
 <!ENTITY Ctr_dblclclosefx	"タイトルボタン上のアプリボタン: ダブルクリックで現在のウィンドウを閉じる">
 <!ENTITY Ctr_hide_bf_popup	"移動可 戻る/進むボタン: マウスを押す時に履歴メニューを隠す">
-<!ENTITY Ctr_verifiedcolors	"Alternative identity-box colors for verified websites">
+<!ENTITY Ctr_verifiedcolors	"Green/blue identity-box for verified websites">
 
 <!ENTITY Ctr_animation		"アニメーション">
 <!ENTITY Ctr_throbberalt	"別バージョンのタブ読み込みアイコンアニメーションにする">
@@ -168,8 +172,14 @@
 <!ENTITY Ctr_closeabarbut	"アドオンバーの閉じるボタンを隠す">
 <!ENTITY Ctr_toolsitem		"ツールメニューに項目を表示する">
 <!ENTITY Ctr_appmenuitem	"アプリボタンメニューに項目を表示する">
+<!ENTITY Ctr_contextitem	"Menuitem in toolbars context menu">
 <!ENTITY Ctr_cuibotbuttons	"'カスタマイズ'モードの追加ボタンを表示する">
 
+<!ENTITY Ctr_pw_settings	"Settings">
+<!ENTITY Ctr_pw_set_reset	"Restore defaults">
+<!ENTITY Ctr_pw_set_predef	"Classic preset">
+<!ENTITY Ctr_pw_set_export	"Export preferences">
+<!ENTITY Ctr_pw_set_import	"Import preferences">
 
 <!ENTITY Ctr_special_font	"背景色の設定はデフォルトテーマのみに適用されます。">
 <!ENTITY Ctr_special_info	"一部オプションは特定のケースでのみ動作します。">

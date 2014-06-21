@@ -2,7 +2,7 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	#nav-bar #notification-popup-box + *{
-	  -moz-padding-start: 5px !important;
+	  -moz-padding-start: 9px !important;
 	  transition: none !important;
 	}
 	
@@ -75,8 +75,10 @@
 	}
 
 	#navigator-toolbox:not([customizing]) #nav-bar-customization-target {
-      /*-moz-padding-end: 10px !important;*/
-      -moz-margin-end: 4px !important;
+      /*-moz-padding-end: 10px !important;
+      -moz-margin-end: 4px !important;*/
+      -moz-padding-end: 3px !important;
+      -moz-margin-end: -3px !important;
 	}
 	
 	#nav-bar .toolbarbutton-1 {

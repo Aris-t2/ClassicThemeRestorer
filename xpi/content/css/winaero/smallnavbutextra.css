@@ -2,7 +2,7 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	#nav-bar #notification-popup-box + *{
-	  -moz-padding-start: 5px !important;
+	  -moz-padding-start: 9px !important;
 	  transition: none !important;
 	}
 
@@ -15,7 +15,6 @@
 	  padding-left:2px !important;
 	  padding-right:2px !important;
 	  transition: none !important;
-
 	}
 	
     #nav-bar #urlbar-container > #urlbar-wrapper > #urlbar,
@@ -226,7 +225,6 @@
       margin-bottom: -8px !important;
       -moz-margin-start: 2px !important;
       -moz-margin-end: 2px !important;
-
 	  box-shadow: none !important;
 	}
 	#navigator-toolbox #nav-bar #urlbar-container  #bookmarks-menu-button > .toolbarbutton-menubutton-button:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]):hover > .toolbarbutton-icon {

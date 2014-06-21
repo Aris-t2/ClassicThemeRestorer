@@ -46,6 +46,7 @@
 <!ENTITY Ctr_closetab_2		"Bouton de fermeture : aucun">
 <!ENTITY Ctr_closetab_3		"Bouton de fermeture : à la fin de la barre d'onglets">
 <!ENTITY Ctr_closetab_4		"Bouton de fermeture : au début de la barre d'onglets">
+<!ENTITY Ctr_closetab_5		"Bouton de fermeture : sur tous les onglets (forced)">
 
 <!ENTITY Ctr_appbutton		"Bouton d'applications">
 <!ENTITY Ctr_appbutton0		"Bouton désactivé">
@@ -53,6 +54,7 @@
 <!ENTITY Ctr_appbutton1wt	"Bouton sur une barre d'outils (texte seul)">
 <!ENTITY Ctr_appbutton2		"Bouton sur la barre de titre [Firefox]">
 <!ENTITY Ctr_appbutton2io	"Bouton sur la barre de titre [Firefox] (icône seule)">
+<!ENTITY Ctr_paneluibtweak	"Orange panel menu button on tabs toolbar">
 <!ENTITY Ctr_appbuttonc_o	"Bouton orange (par défaut)">
 <!ENTITY Ctr_appbuttonc_a	"Bouton bleu (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Bouton noir (Nightly)">
@@ -94,6 +96,8 @@
 <!ENTITY Ctr_nav_txt_ico1	"Afficher de grandes icônes">
 <!ENTITY Ctr_nav_txt_ico2	"Afficher icônes et textes">
 <!ENTITY Ctr_nav_txt_ico3	"Afficher seulement les textes">
+<!ENTITY Ctr_stoprel0		"Reload and stop button settings">
+<!ENTITY Ctr_stoprel1		"Toolbar: place reload button after stop button!">
 
 <!ENTITY Ctr_tab_tf_info	"Les noms de couleurs, les codes hexadécimaux, les valeurs rgb(a) et hsl(a) sont pris en charge. Toute autre saisie ne fonctionnera pas!">
 <!ENTITY Ctr_tabacthovdef	"Onglet (actif/au survol/par défaut)">
@@ -137,8 +141,8 @@
 
 <!ENTITY Ctr_specialtw		"Modifications spéciales">
 <!ENTITY Ctr_emptyfavicon	"Restaurer le favicon vide sur les onglets (sites ne possédant pas de favicon)">
+<!ENTITY Ctr_emptyfavicon2	"Replace generic favicon (empty and dotted) with sheet favicon">
 <!ENTITY Ctr_bfurlbarfix 	"Corriger le border-radius de la barre d'adresse pour 'Bouton avancer/reculer déplaçable' et 'Petits boutons'">
-<!ENTITY Ctr_showtabclose	"Toujours afficher le bouton de fermeture d'onglet (redémarrer Firefox!)">
 <!ENTITY Ctr_cpanelmenus	"Compacter les panneaux (marque-pages, historique, etc)">
 <!ENTITY Ctr_hidezoomres	"Boutons de zoom (si sur une barre d'outils) : cacher le bouton 'Réinitialiser le niveau de zoom'">
 <!ENTITY Ctr_pmhidelabels	"Panneau menu : icônes seules">
@@ -150,10 +154,10 @@
 <!ENTITY Ctr_tabmokcolor2	"Texte des onglets de couleur blanche + ombre noire pour les onglets non actifs">
 <!ENTITY Ctr_tabmokcolor3	"Séparateurs de couleur blanche sur la barre d'onglets">
 
-<!ENTITY Ctr_paneluibtweak 	"Bouton menu (si sur la barre d'onglets) : aspect identique à celui du bouton d'applications de la barre de titre">
 <!ENTITY Ctr_dblclnewtab	"Barre d'onglets : double-cliquer pour ouvrir un nouvel onglet (browser.newtab.url)">
 <!ENTITY Ctr_hidetbwot		"Barre d'onglets : cacher la barre d'onglets quand un seul onglet est ouvert (redémarrer Firefox!)">
 <!ENTITY Ctr_faviconurl		"Afficher le favicon dans la barre d'adresse (redémarrer Firefox!)">
+<!ENTITY Ctr_faviconurl2	"Padlock">
 <!ENTITY Ctr_dblclclosefx	"Bouton d'applications sur la barre de titre : un double clic ferme la fenêtre courante">
 <!ENTITY Ctr_hide_bf_popup	"Bouton avancer/reculer déplaçable : cacher le menu historique lors du clic droit">
 <!ENTITY Ctr_verifiedcolors	"Bouton d'identité : couleurs alternatives pour les sites web vérifiés">
@@ -168,8 +172,14 @@
 <!ENTITY Ctr_closeabarbut	"Masquer le bouton de fermeture de la barre des modules">
 <!ENTITY Ctr_toolsitem		"Classic Theme Restorer dans le menu outils">
 <!ENTITY Ctr_appmenuitem	"Classic Theme Restorer dans le menu d'applications">
+<!ENTITY Ctr_contextitem	"Menuitem in toolbars context menu">
 <!ENTITY Ctr_cuibotbuttons	"Boutons d'options en mode personnalisation">
 
+<!ENTITY Ctr_pw_settings	"Settings">
+<!ENTITY Ctr_pw_set_reset	"Restore defaults">
+<!ENTITY Ctr_pw_set_predef	"Classic preset">
+<!ENTITY Ctr_pw_set_export	"Export preferences">
+<!ENTITY Ctr_pw_set_import	"Import preferences">
 
 <!ENTITY Ctr_special_font	"La configuration de la couleur de fond est réservée au thème par défaut!">
 <!ENTITY Ctr_special_info	"Certaines options ne fonctionnent que dans certains cas!">

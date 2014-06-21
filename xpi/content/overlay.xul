@@ -122,6 +122,13 @@
 		class="menuitem-iconic"
 		id="ctraddon_tools_menu_entry"/>
 	</menupopup>
+	
+	<menupopup id="toolbar-context-menu">
+	  <menuitem oncommand="window.open('chrome://classic_theme_restorer/content/options.xul','', 'chrome');"
+		label="Classic Theme Restorer"
+		class="menuitem-iconic"
+		id="ctraddon_context_menu_entry"/>
+	</menupopup>
 
 	<!--### CTRs appmenu popup
 		!!!! IMPORTANT for AMO Editors !!!
@@ -520,10 +527,6 @@
 								class="ctraddon_nonwindows"
 								accesskey="&preferencesCmdUnix.accesskey;"
 								oncommand="openPreferences();"/>
-					  <!--menuitem oncommand="window.open('chrome://browser/content/preferences/preferences.xul','dlg','all=no');"
-								label="&preferencesCmd2.label; (Window)"
-								class="menuitem-iconic"
-								id="ctraddon_prefsinwindow"/-->
 					  <menuseparator/>
 					  <menuitem command="cmd_CustomizeToolbars"
 								accesskey="&viewCustomizeToolbar.accesskey;"
@@ -600,6 +603,7 @@
                      removable="false"
                      type="menu"
                      label="&brandShortName;"
+					 popup="appmenu-popup"
 					 onmousedown="classicthemerestorerjs.ctr.openCtrAppmenuPopup(this);">
 
 	  </toolbarbutton>
@@ -618,6 +622,7 @@
                      removable="true"
                      type="menu"
                      label="Firefox"
+					 popup="appmenu-popup"
 					 onmousedown="classicthemerestorerjs.ctr.openCtrAppmenuPopup(this);">
 	    </toolbarbutton>
 

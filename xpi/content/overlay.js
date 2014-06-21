@@ -61,7 +61,7 @@ classicthemerestorerjs.ctr = {
 		if (this.appversion >= 31) document.getElementById("main-window").setAttribute('fx31',true);
 		  else document.getElementById("main-window").removeAttribute('fx31');
 	} catch(e){}
-	
+
 	// add-on fixes
 	this.addonCompatibilityImprovements();
 
@@ -243,13 +243,26 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "closetab":
+		  
+			var def_tcw = Cc["@mozilla.org/preferences-service;1"]
+						  .getService(Ci.nsIPrefService)
+							.getBranch("browser.tabs.").getIntPref("tabClipWidth") == 140;
+
 			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_active',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_none',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_tb_end',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_tb_start',false);
+			if (def_tcw==false) { classicthemerestorerjs.ctr.setCTRtabClipWidth(140); }
 			
-			if (branch.getCharPref("closetab")!="closetab_default" && classicthemerestorerjs.ctr.appversion >= 31){
-			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("closetab"),true);
+			if (branch.getCharPref("closetab")!="closetab_default"){
+			  
+			  if (branch.getCharPref("closetab")=="closetab_forced") {
+			    classicthemerestorerjs.ctr.setCTRtabClipWidth(1);
+			  }
+			  else if (classicthemerestorerjs.ctr.appversion >= 31) {
+			    classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("closetab"),true);
+			  }
+
 			}
 		  break;
 
@@ -261,10 +274,11 @@ classicthemerestorerjs.ctr = {
 			classicthemerestorerjs.ctr.loadUnloadCSS('appbutton_v2wt2',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('appbutton_v2io',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('appbutton_v2io2',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('appbutton_pm',false);
 		
 			if (branch.getCharPref("appbutton")!="appbutton_off"){
 			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("appbutton"),true);
-			  if (branch.getBoolPref("paneluibtweak")==true) branch.setBoolPref("paneluibtweak",false);
+			  classicthemerestorerjs.ctr.checkAppbuttonOnNavbar();
 			}
 
 		  break;
@@ -329,26 +343,20 @@ classicthemerestorerjs.ctr = {
 		  break;
 
 		  case "smallnavbut":
-			if (branch.getBoolPref("smallnavbut") && classicthemerestorerjs.ctr.fxdefaulttheme==true) {
-			
-				var activate = true;
-				
-				try{
-					// If 'Classic Toolbar Buttons' add-on is used to style nav-bar buttons,
-					// CTRs small button option should stay disabled -> prevents glitches
-					// 'Classic Toolbar Buttons' add-on has an own 'small button option',
-					// which is not compatible to CTRs option.
-					if(Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService)
-							.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off"){
-						
-						activate=false;
-						
-					}
-				} catch(e){}
-				
-				classicthemerestorerjs.ctr.loadUnloadCSS("smallnavbut",activate);
+		  
+			var cstbb = false;
+			try {
+			  if(Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService)
+				  .getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
+			   cstbb = true;
+			} catch(e){}
+	
+			if (branch.getBoolPref("smallnavbut") && classicthemerestorerjs.ctr.fxdefaulttheme==true && cstbb==false) {			
+				classicthemerestorerjs.ctr.loadUnloadCSS("smallnavbut",true);
 			}
 			else  classicthemerestorerjs.ctr.loadUnloadCSS("smallnavbut",false);
+			
+			classicthemerestorerjs.ctr.checkAppbuttonOnNavbar();
 
 		  break;
 		  
@@ -655,15 +663,7 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_unr",false);
 		  break;
 
-		  // Special
-		  case "paneluibtweak":
-			if (branch.getBoolPref("paneluibtweak") && classicthemerestorerjs.ctr.fxdefaulttheme==true) {
-			  classicthemerestorerjs.ctr.loadUnloadCSS("paneluibtweak",true);
-			  if(branch.getCharPref("appbutton")!="appbutton_off") branch.setCharPref("appbutton","appbutton_off");
-			}
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("paneluibtweak",false);
-		  break;
-		  
+		  // Special	  
 		  case "altmenubar":
 			if (branch.getBoolPref("altmenubar") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("altmenubar",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("altmenubar",false);
@@ -758,19 +758,13 @@ classicthemerestorerjs.ctr = {
 		  break;
 
 		  case "emptyfavicon":
-			if (branch.getBoolPref("emptyfavicon")) {
-			  classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",true);
-			  branch.setBoolPref("emptyfavicon2",false);
-			}
-			else classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",false);
+			if (branch.getBoolPref("emptyfavicon")) classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",false);
 		  break;
 		  
 		  case "emptyfavicon2":
-			if (branch.getBoolPref("emptyfavicon2")) {
-			  classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon2",true);
-			  branch.setBoolPref("emptyfavicon",false);
-			}
-			else classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon2",false);
+			if (branch.getBoolPref("emptyfavicon2")) classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon2",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon2",false);
 		  break;
 		  
 		  case "hidezoomres":
@@ -822,34 +816,11 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  // end reverse...
 		  
-		  case "showtabclose":
-		  
-			var def_tcw = Cc["@mozilla.org/preferences-service;1"]
-						  .getService(Ci.nsIPrefService)
-							.getBranch("browser.tabs.").getIntPref("tabClipWidth") == 140;
-							
-			if (branch.getBoolPref("showtabclose")) {
-			  // if we allow tabs to have a reduced min-width, browser.tabs.tabClipWidth
-			  // requires a smaller value
-			  Cc["@mozilla.org/preferences-service;1"]
-				.getService(Ci.nsIPrefService)
-				  .getBranch("browser.tabs.").setIntPref("tabClipWidth",1);
-			}
-			else {
-				// set browser.tabs.tabClipWidth back to default
-				if (def_tcw==false) {
-				  Cc["@mozilla.org/preferences-service;1"]
-					.getService(Ci.nsIPrefService)
-					  .getBranch("browser.tabs.").setIntPref("tabClipWidth",140);
-				}
-			}
-		  break;
-		  
 		  case "dblclnewtab":
 			
 			var oswindows = Cc["@mozilla.org/xre/app-info;1"]
 								  .getService(Ci.nsIXULRuntime).OS=="WINNT";
-			if (branch.getBoolPref("dblclnewtab") && oswindows==true) {
+			if (branch.getBoolPref("dblclnewtab")==true && oswindows==true) {
 			  
 				document.getElementById("TabsToolbar").ondblclick = e=>{
 				  // cases where double click should not open a new tab
@@ -869,12 +840,8 @@ classicthemerestorerjs.ctr = {
 				}
 				
 			}
-			else if (branch.getBoolPref("dblclnewtab") && oswindows==false) {
-			  classicthemerestorerjs.ctr.loadUnloadCSS("dblclnewtab",true);
-			}
-			else {
+			else if (branch.getBoolPref("dblclnewtab")==false && oswindows==true){
 			  document.getElementById("TabsToolbar").ondblclick = e=>{};
-			  classicthemerestorerjs.ctr.loadUnloadCSS("dblclnewtab",false);
 			}
 		  break;
 		  
@@ -884,7 +851,7 @@ classicthemerestorerjs.ctr = {
 		      classicthemerestorerjs.ctr.hideTabsToolbarWithOnTab();
 		  break;
 		  
-		  case "faviconurl":
+		  case "faviconurl": case "faviconurlpl":
 			if (classicthemerestorerjs.ctr.prefs.getBoolPref("faviconurl"))
 		      classicthemerestorerjs.ctr.favIconinUrlbarCTR();
 		  break;
@@ -1015,6 +982,11 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("appmenuitem",true);
 		  break;
 		  
+		  case "contextitem":
+			if (branch.getBoolPref("contextitem")) classicthemerestorerjs.ctr.loadUnloadCSS("contextitem",false);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("contextitem",true);
+		  break;
+		  
 		  case "cuibuttons":
 			if (branch.getBoolPref("cuibuttons")) classicthemerestorerjs.ctr.loadUnloadCSS("cuibuttons",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("cuibuttons",false);
@@ -1032,12 +1004,14 @@ classicthemerestorerjs.ctr = {
 
 		  case "navbarbuttons":
 			if (branch.getCharPref("navbarbuttons")!="nabbuttons_off") {
-				classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);
-				classicthemerestorerjs.ctr.loadUnloadCSS("hidesmallbuttons",true);
+			  classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("hidesmallbuttons",true);
 			}
 			else {
-				classicthemerestorerjs.ctr.loadUnloadCSS("hidesmallbuttons",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("hidesmallbuttons",false);
 			}
+			classicthemerestorerjs.ctr.checkAppbuttonOnNavbar();
+			
 		  break;
 		}
 	  }
@@ -1050,6 +1024,12 @@ classicthemerestorerjs.ctr = {
   // 'getElementById' would return wrongly 'null' for items on toolbar palette
   ctrGetId: function(id) {
 	return document.getElementById(id) || window.gNavToolbox.palette.querySelector("#" + id);
+  },
+  
+  // change tabClipWidth
+  setCTRtabClipWidth: function(value) {
+	Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService)
+	  .getBranch("browser.tabs.").setIntPref("tabClipWidth",value);
   },
    
   // show backForwardMenu popup for CTRs back/forward buttons 'mouse hold event'
@@ -1151,22 +1131,15 @@ classicthemerestorerjs.ctr = {
 	  
 	app_popup.addEventListener("popupshown",  onCtrAppmenuPopup, false);
 	app_popup.addEventListener("popuphidden", onCtrAppmenuPopup, false);
-
-	app_popup.openPopupAtScreen(anchorElem.boxObject.screenX, anchorElem.boxObject.screenY+anchorElem.boxObject.height-1, false);
-	  
+  
 	function onCtrAppmenuPopup(event){
 	
-	  var oswindows = Cc["@mozilla.org/xre/app-info;1"]
-						.getService(Ci.nsIXULRuntime).OS=="WINNT";
+	  var oswindows = Cc["@mozilla.org/xre/app-info;1"].getService(Ci.nsIXULRuntime).OS=="WINNT";
 	
 	  if (event.target != classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) return;
 	  if(event.type == "popupshown"){
 		classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton').setAttribute("open", "true");
 		if (oswindows) classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton2').setAttribute("open", "true");
-		 if(classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton').parentNode.id=="nav-bar-customization-target"
-		      && (classicthemerestorerjs.ctr.prefs.getCharPref("appbutton")=="appbutton_v1"
-			    || classicthemerestorerjs.ctr.prefs.getCharPref("appbutton")=="appbutton_v1wt"))
-		  document.getElementById('main-window').setAttribute("ctraddon_appbutton_on_navbar", "true");
 		 if(classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton').parentNode.id=="ctraddon_addon-bar"
 		      && (classicthemerestorerjs.ctr.prefs.getCharPref("appbutton")=="appbutton_v1"
 			    || classicthemerestorerjs.ctr.prefs.getCharPref("appbutton")=="appbutton_v1wt"))
@@ -1175,16 +1148,43 @@ classicthemerestorerjs.ctr = {
 	  }else if( event.type == "popuphidden" ){
 		classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton').removeAttribute("open");
 		if (oswindows) classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton2').removeAttribute("open");
-		if(classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton').parentNode.id=="nav-bar-customization-target"
-		    && (classicthemerestorerjs.ctr.prefs.getCharPref("appbutton")=="appbutton_v1"
-		      || classicthemerestorerjs.ctr.prefs.getCharPref("appbutton")=="appbutton_v1wt"))
-		  document.getElementById('main-window').removeAttribute("ctraddon_appbutton_on_navbar");
 		 if(classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton').parentNode.id=="ctraddon_addon-bar"
 		      && (classicthemerestorerjs.ctr.prefs.getCharPref("appbutton")=="appbutton_v1"
 			    || classicthemerestorerjs.ctr.prefs.getCharPref("appbutton")=="appbutton_v1wt"))
 		  document.getElementById('main-window').removeAttribute("ctraddon_appbutton_on_addonbar");
 	  }
 	}
+	this.checkAppbuttonOnNavbar();
+  },
+  
+  checkAppbuttonOnNavbar: function() {
+	
+	var appbutton = false;
+	try {
+	  if (classicthemerestorerjs.ctr.prefs.getCharPref("appbutton")=="appbutton_v1"
+		  || classicthemerestorerjs.ctr.prefs.getCharPref("appbutton")=="appbutton_v1wt")
+	   appbutton = true
+	} catch(e){}
+	
+	var cstbb = false;
+	try {
+	  if(Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService)
+		  .getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
+	   cstbb = true;
+	} catch(e){}
+
+
+	/* make sure popup position gets adjusted, if appbutton is on nav-bar in normal button mode */
+	if (classicthemerestorerjs.ctr.prefs.getBoolPref("smallnavbut")==false && cstbb==false
+		&& classicthemerestorerjs.ctr.fxdefaulttheme==true && appbutton==true) {
+			setTimeout(function(){
+			  try{
+			    if(classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton').parentNode.parentNode.id=="nav-bar")
+				  classicthemerestorerjs.ctr.loadUnloadCSS("appbutton_on_nav",true);
+			  } catch(e){}
+			},300);
+	}
+	else classicthemerestorerjs.ctr.loadUnloadCSS("appbutton_on_nav",false);
   },
   
   // hide tabs toolbar, if only one tab is visible
@@ -1198,7 +1198,6 @@ classicthemerestorerjs.ctr = {
 		ctrTabClose();
 	  });    
 	});
-	
 
 	window.addEventListener("TabClose", ctrTabClose, false);  
 	window.addEventListener("TabOpen", ctrTabClose, false);
@@ -1240,7 +1239,11 @@ classicthemerestorerjs.ctr = {
 	window.addEventListener("load", faviconInUrlbar, false);
 	window.addEventListener("TabAttrModified", faviconInUrlbar, false);
 	
-	function faviconInUrlbar(event){
+	// Using additional 'setInterval' prevents some sites with empty or slow
+	// loading tab icons from cheating a blank space into urlbars favicon area.
+	setInterval(function() { faviconInUrlbar();	}, 500);
+	
+	function faviconInUrlbar(){
 	 if(gBrowser.selectedTab.image) {
 	  document.getElementById("page-proxy-favicon").removeAttribute("blank");
 	  document.getElementById("page-proxy-favicon").setAttribute("src", gBrowser.selectedTab.image);
@@ -1251,7 +1254,8 @@ classicthemerestorerjs.ctr = {
 	 }
 	}
 	
-	classicthemerestorerjs.ctr.loadUnloadCSS("faviconurl",true)
+	if (classicthemerestorerjs.ctr.prefs.getBoolPref("faviconurlpl")) classicthemerestorerjs.ctr.loadUnloadCSS("faviconurl",true);
+	else classicthemerestorerjs.ctr.loadUnloadCSS("faviconurl",false);
   
   },  
 
@@ -1510,8 +1514,6 @@ classicthemerestorerjs.ctr = {
 	
 			manageCSS("smallnavbut.css");
 			
-			manageCSS("urlbarborderfocus.css");
-			
 			this.loadUnloadCSS('cui_buttons',true);
 
 		break;
@@ -1527,6 +1529,9 @@ classicthemerestorerjs.ctr = {
 		case "appbutton_v2wt2":		manageCSS("appbutton2wt2.css");			break;
 		case "appbutton_v2io":		manageCSS("appbutton2io.css");			break;
 		case "appbutton_v2io2":		manageCSS("appbutton2io2.css");			break;
+		case "appbutton_pm": 		manageCSS("paneluibutton_tweak.css");	break;
+		
+		case "appbutton_on_nav":	manageCSS("appbutton_on_navbar.css");	break;
 		
 		// no 'small button' mode, if 'icons + text' mode is used
 		case "iconstxt":
@@ -1639,9 +1644,6 @@ classicthemerestorerjs.ctr = {
 		case "tabmokcolor3": 		manageCSS("tabmokcolor3.css");			break;
 		case "faviconurl": 			manageCSS("faviconurl.css");			break;
 		
-		case "paneluibtweak": 		manageCSS("paneluibutton_tweak.css");	break;
-		case "dblclnewtab": 		manageCSS("dblclnewtab.css");			break;
-		
 		case "throbberalt": 		manageCSS("throbberalt.css");			break;
 		case "bmanimation": 		manageCSS("hidebmanimation.css");		break;
 		case "pananimation": 		manageCSS("hidepanelanimation.css");	break;
@@ -1649,6 +1651,7 @@ classicthemerestorerjs.ctr = {
 		
 		case "closeabarbut": 		manageCSS("closeabarbut.css");			break;
 		case "appmenuitem": 		manageCSS("ctraddon_appmenuitem.css");	break;
+		case "contextitem": 		manageCSS("ctraddon_contextmitem.css");	break;
 		case "toolsitem": 			manageCSS("ctraddon_toolsitem.css");	break;
 		case "cuibuttons":			manageCSS("cuibuttons.css");			break;
 		

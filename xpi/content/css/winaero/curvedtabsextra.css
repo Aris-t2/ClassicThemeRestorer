@@ -19,6 +19,17 @@
 		.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover{
 		  color: black !important;
 		}
+
+		#TabsToolbar .tabs-newtab-button:not(:-moz-lwtheme){
+		   background-image: url(chrome://classic_theme_restorer/content/images/nt_aero_start.png),
+							 url(chrome://classic_theme_restorer/content/images/nt_aero_middle.png),
+							 url(chrome://classic_theme_restorer/content/images/nt_aero_end.png) !important;
+		}
+		#TabsToolbar .tabs-newtab-button:not(:-moz-lwtheme):hover{
+		  background-image: url(chrome://classic_theme_restorer/content/images/nt_aero_start_hov.png),
+							url(chrome://classic_theme_restorer/content/images/nt_aero_middle_hov.png),
+							url(chrome://classic_theme_restorer/content/images/nt_aero_end_hov.png) !important;
+		}
 		
 	}
 

@@ -46,6 +46,7 @@
 <!ENTITY Ctr_closetab_2		"标签页关闭按钮: 不显示">
 <!ENTITY Ctr_closetab_3		"标签页关闭按钮: 在标签页栏末端">
 <!ENTITY Ctr_closetab_4		"标签页关闭按钮: 在标签页栏始端">
+<!ENTITY Ctr_closetab_5		"标签页关闭按钮: 在所有标签页中显示 (forced)">
 
 <!ENTITY Ctr_appbutton		"火狐按钮">
 <!ENTITY Ctr_appbutton0		"不显示">
@@ -53,6 +54,7 @@
 <!ENTITY Ctr_appbutton1wt	"在工具栏上显示 (纯文本)">
 <!ENTITY Ctr_appbutton2		"在标题栏上显示">
 <!ENTITY Ctr_appbutton2io	"在标题栏上显示 (图标)">
+<!ENTITY Ctr_paneluibtweak	"Orange panel menu button on tabs toolbar">
 <!ENTITY Ctr_appbuttonc_o	"橙色按钮 (默认)">
 <!ENTITY Ctr_appbuttonc_a	"蓝色按钮 (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"黑色按钮 (Nightly)">
@@ -94,6 +96,8 @@
 <!ENTITY Ctr_nav_txt_ico1	"显示大图标">
 <!ENTITY Ctr_nav_txt_ico2	"显示图标和文本">
 <!ENTITY Ctr_nav_txt_ico3	"只显示文本">
+<!ENTITY Ctr_stoprel0		"Reload and stop button settings">
+<!ENTITY Ctr_stoprel1		"Toolbar: place reload button after stop button!">
 
 <!ENTITY Ctr_tab_tf_info	"可以使用颜色名称, hex 值, rgb(a) 以及 hsl(a) 值。输入错误不会被提示！">
 <!ENTITY Ctr_tabacthovdef	"标签页 (激活/悬停/默认)">
@@ -137,8 +141,8 @@
 
 <!ENTITY Ctr_specialtw		"特殊设置">
 <!ENTITY Ctr_emptyfavicon	"使用空白网站小图标 (如果网站没有提供)">
+<!ENTITY Ctr_emptyfavicon2	"Replace generic favicon (empty and dotted) with sheet favicon">
 <!ENTITY Ctr_bfurlbarfix	"当处于「后退」按钮可以移动和小图标显示模式时，修改地址栏圆弧半径">
-<!ENTITY Ctr_showtabclose	"总是显示标签页关闭按钮 (需要重启 Firefox!)">
 <!ENTITY Ctr_cpanelmenus	"更紧凑的面板菜单 (书签、历史等等)">
 <!ENTITY Ctr_hidezoomres	"当缩放控制按钮在工具栏上时: 隐藏重置缩放按钮">
 <!ENTITY Ctr_pmhidelabels	"面板菜单: 隐藏按钮标签">
@@ -150,13 +154,13 @@
 <!ENTITY Ctr_tabmokcolor2	"在非激活标签页上使用白色文字以及添加文字阴影">
 <!ENTITY Ctr_tabmokcolor3	"白色标签页分隔符">
 
-<!ENTITY Ctr_paneluibtweak	"当面板按钮在标签页栏上: 使其外观像火狐按钮">
 <!ENTITY Ctr_dblclnewtab	"标签页栏: 双击新建标签页 (在 browser.newtab.url 设置)">
 <!ENTITY Ctr_hidetbwot		"标签页栏: hide tabs toolbar with one tab (restart Firefox!)">
 <!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
+<!ENTITY Ctr_faviconurl2	"Padlock">
 <!ENTITY Ctr_dblclclosefx	"火狐按钮: 双击关闭当前窗口">
 <!ENTITY Ctr_hide_bf_popup	"可移动的后退按钮: 鼠标长按时隐藏历史菜单">
-<!ENTITY Ctr_verifiedcolors	"Alternative identity-box colors for verified websites">
+<!ENTITY Ctr_verifiedcolors	"Green/blue identity-box for verified websites">
 
 <!ENTITY Ctr_animation		"动画">
 <!ENTITY Ctr_throbberalt	"使用替代的动画效果">
@@ -168,8 +172,14 @@
 <!ENTITY Ctr_closeabarbut	"隐藏附加组件栏关闭按钮">
 <!ENTITY Ctr_toolsitem		"在工具菜单中显示">
 <!ENTITY Ctr_appmenuitem	"在火狐按钮菜单中显示">
+<!ENTITY Ctr_contextitem	"Menuitem in toolbars context menu">
 <!ENTITY Ctr_cuibotbuttons	"在界面自定义模式中显示更多按钮">
 
+<!ENTITY Ctr_pw_settings	"Settings">
+<!ENTITY Ctr_pw_set_reset	"Restore defaults">
+<!ENTITY Ctr_pw_set_predef	"Classic preset">
+<!ENTITY Ctr_pw_set_export	"Export preferences">
+<!ENTITY Ctr_pw_set_import	"Import preferences">
 
 <!ENTITY Ctr_special_font	"Background color settings are for default theme only!">
 <!ENTITY Ctr_special_info	"Some options only offer visual changes in certain cases!">

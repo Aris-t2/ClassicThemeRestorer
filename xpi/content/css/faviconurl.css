@@ -5,8 +5,8 @@
 	#urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"],
 	#urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
 	  background: url("chrome://classic_theme_restorer/content/images/tab-secure.png") no-repeat center left !important;
-	  width:34px !important;
-	  -moz-padding-start: 18px !important;
+	  width:36px !important;
+	  -moz-padding-start: 20px !important;
 	}
 	
 	#urlbar:-moz-locale-dir(rtl) .verifiedDomain #page-proxy-favicon[pageproxystate="valid"],

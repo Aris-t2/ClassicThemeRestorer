@@ -2,7 +2,7 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	#nav-bar #notification-popup-box + *{
-	  -moz-padding-start: 5px !important;
+	  -moz-padding-start: 9px !important;
 	  transition: none !important;
 	}
 
@@ -15,14 +15,13 @@
 	  padding-left:2px !important;
 	  padding-right:2px !important;
 	  transition: none !important;
-
 	}
 	
     #nav-bar #urlbar-container > #urlbar-wrapper > #urlbar,
 	#nav-bar #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
       margin-left: 4px !important; /* has to be this for ltr and rtl locales */
       transition: none !important;
-      transition-property:  none !important;
+      transition-property: none !important;
       transition-delay: 0s !important;
     }
 
@@ -36,7 +35,7 @@
 
 	#navigator-toolbox #nav-bar #back-button > .toolbarbutton-icon{
 	  padding: 2px 0px !important;
-      margin: 0px 0 !important;
+      margin: 0px 0px !important;
 	}
 	
 	#navigator-toolbox #nav-bar #forward-button > .toolbarbutton-icon{

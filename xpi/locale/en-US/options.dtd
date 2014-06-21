@@ -36,7 +36,7 @@
 <!ENTITY Ctr_tabsontopI3	"#navigator-toolbox, #toolbar-menubar">
 <!ENTITY Ctr_tabsontopI4	"#TabsToolbar, #ctraddon_extra-bar">
 <!ENTITY Ctr_tabsontopI5	"#PersonalToolbar, #ctraddon_addon-bar">
-<!ENTITY Ctr_tabsintitlebar	"Firefox titlebar (about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Firefox titlebar (about:config preference)">
 <!ENTITY Ctr_tabwidthdef	"(default)">
 <!ENTITY Ctr_tabwidthcla	"(classic)">
 <!ENTITY Ctr_tabmaxwidth	"Max-width:">
@@ -46,6 +46,7 @@
 <!ENTITY Ctr_closetab_2		"Tab Close: nowhere">
 <!ENTITY Ctr_closetab_3		"Tab Close: on tab toolbars end">
 <!ENTITY Ctr_closetab_4		"Tab Close: on tab toolbars start">
+<!ENTITY Ctr_closetab_5		"Tab Close: on all tabs (forced)">
 
 <!ENTITY Ctr_appbutton		"Application button">
 <!ENTITY Ctr_appbutton0		"Button disabled">
@@ -53,6 +54,7 @@
 <!ENTITY Ctr_appbutton1wt	"Button on toolbar (text only)">
 <!ENTITY Ctr_appbutton2		"Button on [Firefox] titlebar">
 <!ENTITY Ctr_appbutton2io	"Button on [Firefox] titlebar (icon only)">
+<!ENTITY Ctr_paneluibtweak	"Orange panel menu button on tabs toolbar">
 <!ENTITY Ctr_appbuttonc_o	"Orange button color (default)">
 <!ENTITY Ctr_appbuttonc_a	"Blue button color (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Black button color (Nightly)">
@@ -94,6 +96,8 @@
 <!ENTITY Ctr_nav_txt_ico1	"Show large icons">
 <!ENTITY Ctr_nav_txt_ico2	"Show icons and text">
 <!ENTITY Ctr_nav_txt_ico3	"Show text only">
+<!ENTITY Ctr_stoprel0		"Reload and stop button settings">
+<!ENTITY Ctr_stoprel1		"Toolbar: place reload button after stop button!">
 
 <!ENTITY Ctr_tab_tf_info	"Color names, hexcodes, rgb(a) and hsl(a) values are supported. Inputs won't be validated!">
 <!ENTITY Ctr_tabacthovdef	"Tab (active/hover/default)">
@@ -137,8 +141,8 @@
 
 <!ENTITY Ctr_specialtw		"Special tweaks">
 <!ENTITY Ctr_emptyfavicon	"Restore empty favicon (if a site does not offer one)">
+<!ENTITY Ctr_emptyfavicon2	"Replace generic favicon (empty and dotted) with sheet favicon">
 <!ENTITY Ctr_bfurlbarfix	"Fix urlbars border-radius for 'movable back/forward button' and 'small button view'">
-<!ENTITY Ctr_showtabclose	"Always show tab close button (restart recommended!)">
 <!ENTITY Ctr_cpanelmenus	"Compact panel menus (bookmarks, history etc.)">
 <!ENTITY Ctr_hidezoomres	"Zoom controls on toolbar: hide zoom-reset button">
 <!ENTITY Ctr_pmhidelabels	"Panel menu: hide button labels">
@@ -150,26 +154,33 @@
 <!ENTITY Ctr_tabmokcolor2	"White color and dark shadow for text on non-active tabs">
 <!ENTITY Ctr_tabmokcolor3	"White color for tab separators">
 
-<!ENTITY Ctr_paneluibtweak	"PanelUI button (on tabs toolbar): appearance like appbutton on titlebar">
 <!ENTITY Ctr_dblclnewtab	"Tabs toolbar: double click opens a 'new' tab (using browser.newtab.url)">
 <!ENTITY Ctr_hidetbwot		"Tabs toolbar: hide tabs toolbar with one tab (restart Firefox!)">
 <!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
+<!ENTITY Ctr_faviconurl2	"Padlock">
 <!ENTITY Ctr_dblclclosefx	"Appbutton on titlebar: double click closes current window">
 <!ENTITY Ctr_hide_bf_popup	"Movable back/forward button: hide history menu on mouse press">
-<!ENTITY Ctr_verifiedcolors	"Alternative identity-box colors for verified websites">
+<!ENTITY Ctr_verifiedcolors	"Green/blue identity-box for verified websites">
 
 <!ENTITY Ctr_animation		"Animation">
 <!ENTITY Ctr_throbberalt	"Alternative tab throbber loading animation">
 <!ENTITY Ctr_bmanimation	"Bookmarking animation">
 <!ENTITY Ctr_pananimation	"Panel opening animation">
-<!ENTITY Ctr_tabanimation	"Tab closing/opening animation (about:config)">
-<!ENTITY Ctr_dlanimation	"'Download notification' animation (about:config)">
+<!ENTITY Ctr_tabanimation	"Tab closing/opening animation (about:config preference)">
+<!ENTITY Ctr_dlanimation	"'Download notification' animation (about:config preference)">
 
 <!ENTITY Ctr_closeabarbut	"Hide add-on bars close button">
 <!ENTITY Ctr_toolsitem		"Menuitem in tools menu">
 <!ENTITY Ctr_appmenuitem	"Menuitem in appbuttons menu">
+<!ENTITY Ctr_contextitem	"Menuitem in toolbars context menu">
 <!ENTITY Ctr_cuibotbuttons	"Extra buttons in 'customizing' mode">
 
+
+<!ENTITY Ctr_pw_settings	"Settings">
+<!ENTITY Ctr_pw_set_reset	"Restore defaults">
+<!ENTITY Ctr_pw_set_predef	"Classic preset">
+<!ENTITY Ctr_pw_set_export	"Export preferences">
+<!ENTITY Ctr_pw_set_import	"Import preferences">
 
 <!ENTITY Ctr_special_font	"Background color settings are for default theme only!">
 <!ENTITY Ctr_special_info	"Some options only offer visual changes in certain cases!">

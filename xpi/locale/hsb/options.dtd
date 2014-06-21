@@ -46,6 +46,7 @@
 <!ENTITY Ctr_closetab_2		"Rajtark začinić: nihdźe">
 <!ENTITY Ctr_closetab_3		"Rajtark začinić: na kóncu rajtarkoweje lajsty">
 <!ENTITY Ctr_closetab_4		"Rajtark začinić: na spočatku rajtarkoweje lajsty">
+<!ENTITY Ctr_closetab_5		"Rajtark začinić: na wšěch rajtarkach (forced)">
 
 <!ENTITY Ctr_appbutton		"Nałoženske tłóčatko">
 <!ENTITY Ctr_appbutton0		"Tłóčatko znjemóžnjeny">
@@ -53,6 +54,7 @@
 <!ENTITY Ctr_appbutton1wt	"Tłóčatko na symbolowej lajsće (jenož tekst)">
 <!ENTITY Ctr_appbutton2		"Tłóčatko na titulnej lajsće [Firefox]">
 <!ENTITY Ctr_appbutton2io	"Tłóčatko na titulnej lajsće [Firefox] (jenož symbol)">
+<!ENTITY Ctr_paneluibtweak	"Orange panel menu button on tabs toolbar">
 <!ENTITY Ctr_appbuttonc_o	"Tłóčatkowa barba: Oranžowy (standard)">
 <!ENTITY Ctr_appbuttonc_a	"Tłóčatkowa barba: Módry (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Tłóčatkowa barba: Čorny (Nightly)">
@@ -94,6 +96,8 @@
 <!ENTITY Ctr_nav_txt_ico1	"Wulke symbole pokazać">
 <!ENTITY Ctr_nav_txt_ico2	"Symbole a tekst pokazać">
 <!ENTITY Ctr_nav_txt_ico3	"Jenož tekst pokazać">
+<!ENTITY Ctr_stoprel0		"Reload and stop button settings">
+<!ENTITY Ctr_stoprel1		"Toolbar: place reload button after stop button!">
 
 <!ENTITY Ctr_tab_tf_info	"Barbne mjena, heksadecimalne kody, rgb(a)- a hsl(a)-hódnoty so podpěruja. Zapodaća so njepřepruwuja!">
 <!ENTITY Ctr_tabacthovdef	"Rajtark (aktiwny/hover/standard)">
@@ -137,8 +141,8 @@
 
 <!ENTITY Ctr_specialtw		"Specialne nastajenja">
 <!ENTITY Ctr_emptyfavicon	"Prózdny faworitowy symbol wobnowić (jeli sydło žadyn njeposkića)">
+<!ENTITY Ctr_emptyfavicon2	"Replace generic favicon (empty and dotted) with sheet favicon">
 <!ENTITY Ctr_bfurlbarfix	"Ramikowy radius za 'přesuwajomne tłóčatko Wróćo/Doprědka' a 'napohlad małych tłóčatkow' porjedźić">
-<!ENTITY Ctr_showtabclose	"Tłóčatko Rajtark začinić přeco pokazać (nowy start doporučeny!)">
 <!ENTITY Ctr_cpanelmenus	"Kompaktne pólne menije (zapołožki, historija atd.)">
 <!ENTITY Ctr_hidezoomres	"Skalowanske elementy na symbolowej lajsće: Tłóčatko za wróćostajenje skalowanja schować">
 <!ENTITY Ctr_pmhidelabels	"Pólny meni: Tekst tłóčatkow schować">
@@ -150,13 +154,13 @@
 <!ENTITY Ctr_tabmokcolor2	"Běła barba a ćmowy sćin za tekst na njeaktiwnych rajtarkach">
 <!ENTITY Ctr_tabmokcolor3	"Běła barba za rajtarkowe dźělatka">
 
-<!ENTITY Ctr_paneluibtweak	"Tłóčatko pólneho powjercha (na rajtarkowej lajsće): napohlad kaž nałoženske tłóčatko w titulnej lajsće">
 <!ENTITY Ctr_dblclnewtab	"Rajtarkowa lajsta: dwójne kliknjenje wočinja 'nowy' rajtark (z pomocu browser.newtab.url)">
 <!ENTITY Ctr_hidetbwot		"Rajtarkowa lajsta: hide tabs toolbar with one tab (restart Firefox!)">
 <!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
+<!ENTITY Ctr_faviconurl2	"Padlock">
 <!ENTITY Ctr_dblclclosefx	"Nałoženske tłóčatko w titulnej lajsće: dwójne kliknjenje začinja aktualne wokno">
 <!ENTITY Ctr_hide_bf_popup	"Přesuwajomne tłóčatko Wróćo/Doprědka: meni historije přez tłóčenje tasty myše schować">
-<!ENTITY Ctr_verifiedcolors	"Alternative identity-box colors for verified websites">
+<!ENTITY Ctr_verifiedcolors	"Green/blue identity-box for verified websites">
 
 <!ENTITY Ctr_animation		"Animacija">
 <!ENTITY Ctr_throbberalt	"Alternatiwna animacija za začitowanje rajtarkoweho symbola">
@@ -168,8 +172,14 @@
 <!ENTITY Ctr_closeabarbut	"Tłóčatko 'Začinić' na lajsće přidatkow schować">
 <!ENTITY Ctr_toolsitem		"Menijowy zapisk w meniju Nastroje">
 <!ENTITY Ctr_appmenuitem	"Menijowy zapisk w meniju nałoženskich tłóčatkow">
+<!ENTITY Ctr_contextitem	"Menuitem in toolbars context menu">
 <!ENTITY Ctr_cuibotbuttons	"Wosebite tłóčatka w 'přiměrjenskim' modusu">
 
+<!ENTITY Ctr_pw_settings	"Settings">
+<!ENTITY Ctr_pw_set_reset	"Restore defaults">
+<!ENTITY Ctr_pw_set_predef	"Classic preset">
+<!ENTITY Ctr_pw_set_export	"Export preferences">
+<!ENTITY Ctr_pw_set_import	"Import preferences">
 
 <!ENTITY Ctr_special_font	"Nastajenja za pozadkowu barbu su jenož za standardnu drastu!">
 <!ENTITY Ctr_special_info	"Někotre nastajenja poskićeja wizuelne změny jenož we wěstach padach!">

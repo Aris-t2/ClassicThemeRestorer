@@ -46,6 +46,7 @@
 <!ENTITY Ctr_closetab_2		"不顯示關閉按鈕 ">
 <!ENTITY Ctr_closetab_3		"在分頁列右端顯示關閉按鈕">
 <!ENTITY Ctr_closetab_4		"在分頁列左端顯示關閉按鈕">
+<!ENTITY Ctr_closetab_5		"全部的分頁都顯示關閉按鈕 (forced)">
 
 <!ENTITY Ctr_appbutton		"應用程式按鈕 (火狐橙按鈕)">
 <!ENTITY Ctr_appbutton0		"不顯示">
@@ -53,6 +54,7 @@
 <!ENTITY Ctr_appbutton1wt	"顯示在工具列 (僅文字)">
 <!ENTITY Ctr_appbutton2		"顯示在標題列">
 <!ENTITY Ctr_appbutton2io	"顯示在標題列 (僅圖示)">
+<!ENTITY Ctr_paneluibtweak	"Orange panel menu button on tabs toolbar">
 <!ENTITY Ctr_appbuttonc_o	"橙色按鈕 (預設值)">
 <!ENTITY Ctr_appbuttonc_a	"藍色按鈕 (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"黑色按鈕 (Nightly)">
@@ -94,6 +96,8 @@
 <!ENTITY Ctr_nav_txt_ico1	"顯示大圖示">
 <!ENTITY Ctr_nav_txt_ico2	"顯示圖示與文字">
 <!ENTITY Ctr_nav_txt_ico3	"僅顯示文字">
+<!ENTITY Ctr_stoprel0		"Reload and stop button settings">
+<!ENTITY Ctr_stoprel1		"Toolbar: place reload button after stop button!">
 
 <!ENTITY Ctr_tab_tf_info	"可使用色彩名稱, hexcodes, rgb(a) 和 hsl(a) 值. 沒有防呆機制（輸入無效值，不會有警告）!">
 <!ENTITY Ctr_tabacthovdef	"分頁 (目前/懸停/預設)">
@@ -137,8 +141,8 @@
 
 <!ENTITY Ctr_specialtw		"進階調整">
 <!ENTITY Ctr_emptyfavicon	"開啟的網頁若未提供網站圖示，仍在該分頁顯示空圖示">
+<!ENTITY Ctr_emptyfavicon2	"Replace generic favicon (empty and dotted) with sheet favicon">
 <!ENTITY Ctr_bfurlbarfix	"當「回到上一頁按鈕可移動」和「小圖示按鈕」模式下，固定網址列圓角半徑">
-<!ENTITY Ctr_showtabclose	"永遠顯示分頁關閉按鈕 (建議重啟!)">
 <!ENTITY Ctr_cpanelmenus	"緊湊的面板選單(書籤、歷史等等.)">
 <!ENTITY Ctr_hidezoomres	"當縮放控制按鈕置於工具列上時，隱藏工具列上的縮放重設按鈕">
 <!ENTITY Ctr_pmhidelabels	"面板選單: 隱藏按鈕文字標籤">
@@ -150,13 +154,13 @@
 <!ENTITY Ctr_tabmokcolor2	"非目前的分頁，其字型使用白色文字，並加上文字陰影">
 <!ENTITY Ctr_tabmokcolor3	"白色分頁分隔線">
 
-<!ENTITY Ctr_paneluibtweak	"當面板按鈕置於分頁列上，讓它的外觀顯示像火狐橙按鈕。">
 <!ENTITY Ctr_dblclnewtab	"在分頁列上連按兩下，則開啟新分頁(分頁網址由 browser.newtab.url 設定)">
 <!ENTITY Ctr_hidetbwot		"Tabs toolbar: hide tabs toolbar with one tab (restart Firefox!)">
 <!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
+<!ENTITY Ctr_faviconurl2	"Padlock">
 <!ENTITY Ctr_dblclclosefx	"在標題列的火狐橙上連按兩下，則關閉目前的視窗">
 <!ENTITY Ctr_hide_bf_popup	"可移動的上一頁按鈕: 當滑鼠長按時，不顯示分頁歷史瀏覽選單">
-<!ENTITY Ctr_verifiedcolors	"Alternative identity-box colors for verified websites">
+<!ENTITY Ctr_verifiedcolors	"Green/blue identity-box for verified websites">
 
 <!ENTITY Ctr_animation		"動畫">
 <!ENTITY Ctr_throbberalt	"換一個分頁載入圖示動畫 (進度指示器)">
@@ -168,8 +172,14 @@
 <!ENTITY Ctr_closeabarbut	"隱藏附加元件關閉按鈕">
 <!ENTITY Ctr_toolsitem		"工具選單中顯示 Classic Theme Restorer 項目">
 <!ENTITY Ctr_appmenuitem	"火狐橙選單中顯示 Classic Theme Restorer 項目">
+<!ENTITY Ctr_contextitem	"Menuitem in toolbars context menu">
 <!ENTITY Ctr_cuibotbuttons	"介面自訂模式中，更豐富的按鈕自訂選項">
 
+<!ENTITY Ctr_pw_settings	"Settings">
+<!ENTITY Ctr_pw_set_reset	"Restore defaults">
+<!ENTITY Ctr_pw_set_predef	"Classic preset">
+<!ENTITY Ctr_pw_set_export	"Export preferences">
+<!ENTITY Ctr_pw_set_import	"Import preferences">
 
 <!ENTITY Ctr_special_font	"背景色彩設定僅生效於預設佈景主題!">
 <!ENTITY Ctr_special_info	"部份選項僅在某些情況下提供視覺上的變化!">

@@ -1,3 +1,4 @@
+/*AGENT_SHEET*/
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul){
@@ -36,7 +37,7 @@
 	}
 
     .tabs-newtab-button:not(:-moz-lwtheme) {
-      margin-left: -20px !important;
+      -moz-margin-start: -20px !important;
       background: url("chrome://classic_theme_restorer/content/images/atab.png") 3px 0px no-repeat !important;
     }
     .tabs-newtab-button:hover:not(:-moz-lwtheme) {
@@ -60,24 +61,25 @@
     
     .tabbrowser-tab:not(:-moz-lwtheme) .tab-close-button {
       pointer-events: auto;
-      margin-right: -16px !important;
+      -moz-margin-end: -16px !important;
     }
 
     .tabbrowser-tab:not(:-moz-lwtheme) .tab-text {
-      margin-left: -4px !important;
-	  margin-right: -6px !important;
+      -moz-margin-start: -4px !important;
+	  -moz-margin-end: -6px !important;
     }
 
     .tabbrowser-tab:not([pinned]):not(:-moz-lwtheme) .tab-icon-image,
     .tabbrowser-tab:not([pinned]):not(:-moz-lwtheme) .tab-throbber {
       pointer-events: auto;
-      margin-left: -16px !important;
+      -moz-margin-start: -16px !important;
     }
     .tabbrowser-tab[pinned]:not(:-moz-lwtheme) .tab-icon-image,
     .tabbrowser-tab[pinned]:not(:-moz-lwtheme) .tab-throbber {
       pointer-events: auto;
       margin-left: -16px !important;
       margin-right: -16px !important;
+	  max-width:16px !important;
     }
 
     .tabbrowser-tab[pinned]:not(:-moz-lwtheme) .tab-text {
@@ -162,6 +164,14 @@
 	/* remove ridiculous clipping */
 	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive],:not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
 	  clip-path: none !important;
+	}
+	/* TabMixPlus pinned tabs: icon size fix*/
+    #main-window[tabmix_lwt="true"] .tabbrowser-tab[pinned]:not(:-moz-lwtheme) .tab-icon-image,
+    #main-window[tabmix_lwt="true"] .tabbrowser-tab[pinned]:not(:-moz-lwtheme) .tab-throbber,
+	#main-window[tabmix_lwt="false"] .tabbrowser-tab[pinned]:not(:-moz-lwtheme) .tab-icon-image,
+    #main-window[tabmix_lwt="false"] .tabbrowser-tab[pinned]:not(:-moz-lwtheme) .tab-throbber {
+	  padding-left: 8px !important;
+	  padding-right: 8px !important;
 	}
 }
 

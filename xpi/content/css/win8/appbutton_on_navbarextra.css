@@ -2,8 +2,10 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#navigator-toolbox > #TabsToolbar { 
-	  -moz-binding: url("chrome://global/content/bindings/toolbar.xml#toolbar")!important;
+	/* style appmenu */
+	#main-window[defaultfxtheme="true"] #appmenu-popup {
+	  margin-top:-9px;
+	  -moz-margin-start:2px;
 	}
 
 }

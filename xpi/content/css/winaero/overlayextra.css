@@ -34,7 +34,7 @@
 	  list-style-image: url("chrome://browser/skin/Toolbar.png");
 	}
 	
-	#main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_history-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button):-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_history-menu-toolbar-button,#ctraddon_history-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button):-moz-lwtheme-brighttext > .toolbarbutton-icon {
 	  list-style-image: url("chrome://browser/skin/Toolbar-inverted.png");
 	}
 	
@@ -67,11 +67,6 @@
 	#nav-bar #ctraddon_history-menu-toolbar-button  > .toolbarbutton-icon{
 	  padding-top: 2px;
 	  padding-bottom: 2px;
-	}
-
-	/* style appmenu */
-	#main-window[defaultfxtheme="true"][ctraddon_appbutton_on_navbar="true"] #appmenu-popup {
-	  margin-top:-8px;
 	}
 
 	#main-window[defaultfxtheme="true"] #appmenuPrimaryPane {

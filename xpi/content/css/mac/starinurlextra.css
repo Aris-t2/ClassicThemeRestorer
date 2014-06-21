@@ -2,22 +2,71 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	#urlbar-container #bookmarks-menu-button .toolbarbutton-icon {
-	  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton1osx.png");
+	@media not all and (min-resolution: 2dppx) {
+
+		#urlbar-icons #bookmarks-menu-button .toolbarbutton-icon {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton1osx.png");
+		  -moz-image-region: rect(0px 18px 18px 0px);
+		  opacity: 1.0 !important;
+		}
+		#urlbar-icons #bookmarks-menu-button:hover .toolbarbutton-icon {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton1osx.png");
+		  background-image: radial-gradient(circle closest-side, hsla(45,100%,73%,.3), hsla(45,100%,73%,0));
+		  -moz-image-region: rect(0px 36px 18px 18px);
+		}
+		#urlbar-icons #bookmarks-menu-button:hover:active .toolbarbutton-icon {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton1osx.png");
+		  background-image: radial-gradient(circle closest-side, hsla(45,100%,73%,.1), hsla(45,100%,73%,0));
+		  -moz-image-region: rect(0px 54px 18px 36px);
+		}
+		#urlbar-icons #bookmarks-menu-button[starred] .toolbarbutton-icon {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton2osx.png");
+		  -moz-image-region: rect(0px 18px 18px 0px);
+		}
+		#urlbar-icons #bookmarks-menu-button[starred]:hover .toolbarbutton-icon {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton2osx.png");
+		  background-image: radial-gradient(circle closest-side, hsla(45,100%,73%,.3), hsla(45,100%,73%,0));
+		  -moz-image-region: rect(0px 36px 18px 18px);
+		}
+		#urlbar-icons #bookmarks-menu-button[starred]:hover:active .toolbarbutton-icon {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton2osx.png");
+		  background-image: radial-gradient(circle closest-side, hsla(45,100%,73%,.1), hsla(45,100%,73%,0));
+		  -moz-image-region: rect(0px 54px 18px 36px);
+		}
+
 	}
-	#urlbar-container #bookmarks-menu-button:hover .toolbarbutton-icon {
-	  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton1osx.png");
-	}
-	#urlbar-container #bookmarks-menu-button:hover:active .toolbarbutton-icon {
-	  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton1osx.png");
-	}
-	#urlbar-container #bookmarks-menu-button[starred] .toolbarbutton-icon {
-	  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton2osx.png");
-	}
-	#urlbar-container #bookmarks-menu-button[starred]:hover .toolbarbutton-icon {
-	  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton2osx.png");
-	}
-	#urlbar-container #bookmarks-menu-button[starred]:hover:active .toolbarbutton-icon {
-	  list-style-image: url("chrome://classic_theme_restorer/content/images/starbutton2osx.png");
+	
+	/* for retina displays */
+	@media (min-resolution: 2dppx) {
+	
+		#urlbar-icons #bookmarks-menu-button .toolbarbutton-icon {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/star-icons@2x.png");
+		  -moz-image-region: rect(0, 32px, 32px, 0);
+		  opacity: 1.0 !important;
+		}
+		#urlbar-icons #bookmarks-menu-button:hover .toolbarbutton-icon {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/star-icons@2x.png");
+		  background-image: radial-gradient(circle closest-side, hsla(45,100%,73%,.3), hsla(45,100%,73%,0));
+		  -moz-image-region: rect(0, 64px, 32px, 32px);
+		}
+		#urlbar-icons #bookmarks-menu-button:hover:active .toolbarbutton-icon {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/star-icons@2x.png");
+		  background-image: radial-gradient(circle closest-side, hsla(45,100%,73%,.1), hsla(45,100%,73%,0));
+		  -moz-image-region: rect(0, 64px, 32px, 32px);
+		}
+		#urlbar-icons #bookmarks-menu-button[starred] .toolbarbutton-icon {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/star-icons@2x.png");
+		  -moz-image-region: rect(0, 64px, 32px, 32px);
+		}
+		#urlbar-icons #bookmarks-menu-button[starred]:hover .toolbarbutton-icon {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/star-icons@2x.png");
+		  background-image: radial-gradient(circle closest-side, hsla(45,100%,73%,.3), hsla(45,100%,73%,0));
+		  -moz-image-region: rect(0, 64px, 32px, 32px);
+		}
+		#urlbar-icons #bookmarks-menu-button[starred]:hover:active .toolbarbutton-icon {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/star-icons@2x.png");
+		  background-image: radial-gradient(circle closest-side, hsla(45,100%,73%,.1), hsla(45,100%,73%,0));
+		  -moz-image-region: rect(0, 96px, 32px, 64px);
+		}
 	}
 }

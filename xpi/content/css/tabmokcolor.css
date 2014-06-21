@@ -22,14 +22,14 @@
 	  -moz-image-region: rect(0, 18px, 18px, 0) !important;
 	}
 
-	#main-window .tab-close-button:not(:-moz-any(:hover,:-moz-lwtheme,[selected="true"])),
-	.tab-close-button:not(:hover):not([selected="true"]):-moz-lwtheme-brighttext {
+	#main-window .tabbrowser-tab:not([protected]):not([pinned]) .tab-close-button:not(:-moz-any(:hover,:-moz-lwtheme,[selected="true"])),
+	.tabbrowser-tab:not([protected]):not([pinned]) .tab-close-button:not(:hover):not([selected="true"]):-moz-lwtheme-brighttext {
 	  background-image: url(chrome://classic_theme_restorer/content/images/tab-close.png) !important;
 	  -moz-image-region: rect(0, 64px, 16px, 48px) !important;
 	}
 
 	/* Tab close button */
-	#main-window #navigator-toolbox #TabsToolbar .tab-close-button,
+	#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([protected]):not([pinned]) .tab-close-button,
 	#main-window #navigator-toolbox #TabsToolbar .tabs-closebutton {
 	  -moz-appearance: none !important;
 	  -moz-image-region: rect(0, 64px, 16px, 48px) !important;
@@ -38,7 +38,7 @@
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/close2.png") !important;
 	}
 	
-	#main-window #navigator-toolbox #TabsToolbar .tab-close-button[selected="true"] {
+	#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([protected]):not([pinned]) .tab-close-button[selected="true"] {
 	  -moz-appearance: none !important;
 	  -moz-image-region: rect(0, 64px, 16px, 48px) !important;
 	  border: none !important;
@@ -46,19 +46,19 @@
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png") !important;
 	}
 
-	#main-window #navigator-toolbox #TabsToolbar .tab-close-button:hover,
-	#main-window #navigator-toolbox #TabsToolbar .tab-close-button:hover[selected="true"],
+	#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([protected]):not([pinned]) .tab-close-button:hover,
+	#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([protected]):not([pinned]) .tab-close-button:hover[selected="true"],
 	#main-window #navigator-toolbox #TabsToolbar .tabs-closebutton:hover	{
 	  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
 	}
 
-	#main-window #navigator-toolbox #TabsToolbar .tab-close-button:hover:active,
-	#main-window #navigator-toolbox #TabsToolbar .tab-close-button:hover:active[selected="true"],
+	#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([protected]):not([pinned]) .tab-close-button:hover:active,
+	#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([protected]):not([pinned]) .tab-close-button:hover:active[selected="true"],
 	#main-window #navigator-toolbox #TabsToolbar .tabs-closebutton:hover:active {
 	  -moz-image-region: rect(0, 48px, 16px, 32px) !important;
 	}
 
-	#main-window #navigator-toolbox #TabsToolbar .tab-close-button[selected="true"] {
+	#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([protected]):not([pinned]) .tab-close-button[selected="true"] {
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	} 
   

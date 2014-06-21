@@ -1,21 +1,27 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
-	#main-window:not([customizing]) #nav-bar{
+	#main-window:not([customizing]):not([tabsontop="false"]) #nav-bar{
 	  min-height:2px !important;
 	  height:2px !important;
 	  max-height:2px !important;
 	}
 
-	#main-window:not([customizing]) #nav-bar *{
+	#main-window:not([customizing]):not([tabsontop="false"]) #nav-bar *{
       padding-top: 1px !important; 
 	}
 
 	#main-window:not([customizing]) #PanelUI-button {
 	  visibility: collapse !important;
 	}
-	
-	#PersonalToolbar:not(:-moz-lwtheme)  {
+
+	#main-window:not([customizing]) #PersonalToolbar:not(:-moz-lwtheme)  {
 	  background-image: linear-gradient(rgba(253, 253, 253, 0.5), rgba(255, 255, 255, 0));
+	}
+	
+	#main-window:not([customizing])[tabsontop="false"] #nav-bar{
+	  min-height:0px !important;
+	  height:0px !important;
+	  max-height:0px !important;
 	}
 }

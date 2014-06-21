@@ -11,6 +11,11 @@
 	#titlebar-placeholder-on-TabsToolbar-for-captions-buttons{
 	  -moz-margin-start: 0px !important;
 	}
+	#main-window #navigator-toolbox #TabsToolbar #ctraddon_tabs-closebutton{
+	  -moz-appearance: none !important;
+	  border: none !important;
+	  padding: 0px !important;
+	}
 
 }
 

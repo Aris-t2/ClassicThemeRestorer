@@ -46,6 +46,7 @@
 <!ENTITY Ctr_closetab_2		"Fechar a Guia: em nenhuma">
 <!ENTITY Ctr_closetab_3		"Fechar a Guia: no final das barras de guias">
 <!ENTITY Ctr_closetab_4		"Fechar a Guia: no início das barras de guias">
+<!ENTITY Ctr_closetab_5		"Fechar a Guia: em todas as guias (forced)">
 
 <!ENTITY Ctr_appbutton		"Botão do aplicativo">
 <!ENTITY Ctr_appbutton0		"Botão desativado">
@@ -53,6 +54,7 @@
 <!ENTITY Ctr_appbutton1wt	"Botão na barra de ferramentas (só o texto)">
 <!ENTITY Ctr_appbutton2		"Botão na [Firefox] barra de título">
 <!ENTITY Ctr_appbutton2io	"Botão na [Firefox] barra de título (só o ícone)">
+<!ENTITY Ctr_paneluibtweak	"Orange panel menu button on tabs toolbar">
 <!ENTITY Ctr_appbuttonc_o	"Botão laranja (padrão)">
 <!ENTITY Ctr_appbuttonc_a	"Botão azul (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Botão preto (Nightly)">
@@ -94,6 +96,8 @@
 <!ENTITY Ctr_nav_txt_ico1	"Exibir ícones grandes">
 <!ENTITY Ctr_nav_txt_ico2	"Exibir ícones e texto">
 <!ENTITY Ctr_nav_txt_ico3	"Exibir só o texto">
+<!ENTITY Ctr_stoprel0		"Reload and stop button settings">
+<!ENTITY Ctr_stoprel1		"Toolbar: place reload button after stop button!">
 
 <!ENTITY Ctr_tab_tf_info	"Nomes de cores, códigos hex., valores rgb(a) e hsl(a) são suportados. As entradas não serão validadas!">
 <!ENTITY Ctr_tabacthovdef	"Guia (ativa/flutuante/padrão)">
@@ -137,8 +141,8 @@
 
 <!ENTITY Ctr_specialtw		"Ajustes especiais">
 <!ENTITY Ctr_emptyfavicon	"Restaurar o favicon vazio (se um site não oferecer um)">
+<!ENTITY Ctr_emptyfavicon2	"Replace generic favicon (empty and dotted) with sheet favicon">
 <!ENTITY Ctr_bfurlbarfix	"Corrigir a borda-alcance das barras de URLs para o 'botão móvel voltar/avançar' e 'exibir botão pequeno'">
-<!ENTITY Ctr_showtabclose	"Sempre exibir o botão fechar a guia (recomenda-se reiniciar!)">
 <!ENTITY Ctr_cpanelmenus	"Menús do painel compacto (marcadores, histórico etc.)">
 <!ENTITY Ctr_hidezoomres	"Controles de zoom na barra de ferramentas: ocultar o botão zoom-redefinir">
 <!ENTITY Ctr_pmhidelabels	"Menú do painel: ocultar as etiquetas do botão">
@@ -150,13 +154,13 @@
 <!ENTITY Ctr_tabmokcolor2	"Texto na cor branca e sombra escura nas guias inativas">
 <!ENTITY Ctr_tabmokcolor3	"Separadores para as guias na cor branca">
 
-<!ENTITY Ctr_paneluibtweak	"Botão do Painel IU (na barra de guias): aparência igual a do botão do aplicativo na barra de título">
 <!ENTITY Ctr_dblclnewtab	"Barra de guias: um duplo clique abre uma 'nova' guia (usando navegador.novaguia.url)">
 <!ENTITY Ctr_hidetbwot		"Barra de guias: hide tabs toolbar with one tab (restart Firefox!)">
 <!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
+<!ENTITY Ctr_faviconurl2	"Padlock">
 <!ENTITY Ctr_dblclclosefx	"Botão do aplicativo na barra de título: um duplo clique fecha a janela atual">
 <!ENTITY Ctr_hide_bf_popup	"Botão móvel voltar/avançar: ocultar o menú histórico ao pressionar o mouse">
-<!ENTITY Ctr_verifiedcolors	"Alternative identity-box colors for verified websites">
+<!ENTITY Ctr_verifiedcolors	"Green/blue identity-box for verified websites">
 
 <!ENTITY Ctr_animation		"Animações">
 <!ENTITY Ctr_throbberalt	"Guia alternativa 'throbber' ao carregar a animação">
@@ -168,8 +172,14 @@
 <!ENTITY Ctr_closeabarbut	"Ocultar o botão fechar as barras de complementos">
 <!ENTITY Ctr_toolsitem		"Item do menú no menú ferramentas">
 <!ENTITY Ctr_appmenuitem	"Item do menú no menú botões do aplicativo">
+<!ENTITY Ctr_contextitem	"Menuitem in toolbars context menu">
 <!ENTITY Ctr_cuibotbuttons	"Botões extra no modo 'personalização'">
 
+<!ENTITY Ctr_pw_settings	"Settings">
+<!ENTITY Ctr_pw_set_reset	"Restore defaults">
+<!ENTITY Ctr_pw_set_predef	"Classic preset">
+<!ENTITY Ctr_pw_set_export	"Export preferences">
+<!ENTITY Ctr_pw_set_import	"Import preferences">
 
 <!ENTITY Ctr_special_font	"Background color settings are for default theme only!">
 <!ENTITY Ctr_special_info	"Some options only offer visual changes in certain cases!">

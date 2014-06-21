@@ -46,6 +46,7 @@
 <!ENTITY Ctr_closetab_2		"Кнопка закрытия вкладки: нигде">
 <!ENTITY Ctr_closetab_3		"Кнопка закрытия вкладки: в конце панели">
 <!ENTITY Ctr_closetab_4		"Кнопка закрытия вкладки: в начале панели">
+<!ENTITY Ctr_closetab_5		"Кнопка закрытия вкладки: на всех вкладках (forced)">
 
 <!ENTITY Ctr_appbutton		"Кнопка приложения:">
 <!ENTITY Ctr_appbutton0		"отключена">
@@ -53,6 +54,7 @@
 <!ENTITY Ctr_appbutton1wt	"в панели инструментов (text only)">
 <!ENTITY Ctr_appbutton2		"в панели заголовка">
 <!ENTITY Ctr_appbutton2io	"в панели заголовка (icon only)">
+<!ENTITY Ctr_paneluibtweak	"Orange panel menu button on tabs toolbar">
 <!ENTITY Ctr_appbuttonc_o	"Оранжевая кнопка (по умолчанию)">
 <!ENTITY Ctr_appbuttonc_a	"Синяя кнопка (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Черная кнопка (Nightly)">
@@ -94,6 +96,8 @@
 <!ENTITY Ctr_nav_txt_ico1	"Показывать большие значки">
 <!ENTITY Ctr_nav_txt_ico2	"Показывать значки и текст">
 <!ENTITY Ctr_nav_txt_ico3	"Показывать только текст">
+<!ENTITY Ctr_stoprel0		"Reload and stop button settings">
+<!ENTITY Ctr_stoprel1		"Toolbar: place reload button after stop button!">
 
 <!ENTITY Ctr_tab_tf_info	"Textfields support color names, hexcodes, rgb(a) and hsl(a) values. Inputs won't be validated!">
 <!ENTITY Ctr_tabacthovdef	"Активная/Ожидающая/Обычная вкладка">
@@ -137,8 +141,8 @@
 
 <!ENTITY Ctr_specialtw		"Особые хитрости">
 <!ENTITY Ctr_emptyfavicon	"Восстановить 'пустой значок' на вкладках">
+<!ENTITY Ctr_emptyfavicon2	"Replace generic favicon (empty and dotted) with sheet favicon">
 <!ENTITY Ctr_bfurlbarfix	"Радиус углов строки адреса: 2px (Win) / 2.5px (Mac)">
-<!ENTITY Ctr_showtabclose	"Всегда показывать кнопку закрытия вкладки (требуется перезапустить!)">
 <!ENTITY Ctr_cpanelmenus	"Компактная панель меню (закладки, история и т. д.)">
 <!ENTITY Ctr_hidezoomres	"кнопки масштаба: скрыть сброс масштабирования">
 <!ENTITY Ctr_pmhidelabels	"Panel menu: hide button labels">
@@ -150,13 +154,13 @@
 <!ENTITY Ctr_tabmokcolor2	"Белый цвет и темная тень для текста на неактивной вкладке">
 <!ENTITY Ctr_tabmokcolor3	"Белый цвет для разделителей на панели вкладок">
 
-<!ENTITY Ctr_paneluibtweak	"Кнопка приложения как кнопка панели инструментов (на панели вкладок)">
 <!ENTITY Ctr_dblclnewtab	"Панель инструментов вкладки: двойной клик открыть новую вкладку">
 <!ENTITY Ctr_hidetbwot		"Панель инструментов вкладки: hide tabs toolbar with one tab (restart Firefox!)">
 <!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
+<!ENTITY Ctr_faviconurl2	"Padlock">
 <!ENTITY Ctr_dblclclosefx	"Кнопка приложения в панели заголовка: двойной клик закрывает активное окно">
 <!ENTITY Ctr_hide_bf_popup	"Movable back/forward button: hide history menu on mouse press">
-<!ENTITY Ctr_verifiedcolors	"Alternative identity-box colors for verified websites">
+<!ENTITY Ctr_verifiedcolors	"Green/blue identity-box for verified websites">
 
 <!ENTITY Ctr_animation		"Анимация">
 <!ENTITY Ctr_throbberalt	"Заменить анимацию загрузки вкладки">
@@ -168,8 +172,14 @@
 <!ENTITY Ctr_closeabarbut	"Скрыть кнопку закрытия панели дополнений">
 <!ENTITY Ctr_toolsitem		"Пункт в меню инструментов">
 <!ENTITY Ctr_appmenuitem	"Пункт в меню кнопки приложения">
+<!ENTITY Ctr_contextitem	"Menuitem in toolbars context menu">
 <!ENTITY Ctr_cuibotbuttons	"Показывать свои кнопки в режиме «Настроить»">
 
+<!ENTITY Ctr_pw_settings	"Settings">
+<!ENTITY Ctr_pw_set_reset	"Restore defaults">
+<!ENTITY Ctr_pw_set_predef	"Classic preset">
+<!ENTITY Ctr_pw_set_export	"Export preferences">
+<!ENTITY Ctr_pw_set_import	"Import preferences">
 
 <!ENTITY Ctr_special_font	"Background color settings are for default theme only!">
 <!ENTITY Ctr_special_info	"Some options only offer visual changes in certain cases!">

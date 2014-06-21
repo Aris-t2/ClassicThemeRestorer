@@ -46,6 +46,7 @@
 <!ENTITY Ctr_closetab_2		"Rejtark zacyniś: niźi">
 <!ENTITY Ctr_closetab_3		"Rejtark zacyniś: na kóńcu rejtarkoweje rědki">
 <!ENTITY Ctr_closetab_4		"Rejtark zacyniś: na zachopjeńku rejtarkoweje rědki">
+<!ENTITY Ctr_closetab_5		"Rejtark zacyniś: na wšych rejtarkach (forced)">
 
 <!ENTITY Ctr_appbutton		"Nałožeński tłocašk">
 <!ENTITY Ctr_appbutton0		"Tłocašk znjemóžnjony">
@@ -53,6 +54,7 @@
 <!ENTITY Ctr_appbutton1wt	"Tłocašk na symbolowej rědce (jano tekst)">
 <!ENTITY Ctr_appbutton2		"Tłocašk na titelowej rědce [Firefox]">
 <!ENTITY Ctr_appbutton2io	"Tłocašk na titelowej rědce [Firefox] (jano symbol)">
+<!ENTITY Ctr_paneluibtweak	"Orange panel menu button on tabs toolbar">
 <!ENTITY Ctr_appbuttonc_o	"Tłocaškowa barwa: Oranžowy (standard)">
 <!ENTITY Ctr_appbuttonc_a	"Tłocaškkowa barwa: Módry (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Tłocaškowa barwa: Carny (Nightly)">
@@ -94,6 +96,8 @@
 <!ENTITY Ctr_nav_txt_ico1	"Wjelike symbole pokazaś">
 <!ENTITY Ctr_nav_txt_ico2	"Symbole a tekst pokazaś">
 <!ENTITY Ctr_nav_txt_ico3	"Jano tekst pokazaś">
+<!ENTITY Ctr_stoprel0		"Reload and stop button settings">
+<!ENTITY Ctr_stoprel1		"Toolbar: place reload button after stop button!">
 
 <!ENTITY Ctr_tab_tf_info	"Barwowe mjenja, heksadecimalne kody, rgb(a)- a hsl(a)-gódnoty se pódpěraju. Zapódaśa se njepśespytuju!">
 <!ENTITY Ctr_tabacthovdef	"Rejtark (aktiwny/hover/standard)">
@@ -137,8 +141,8 @@
 
 <!ENTITY Ctr_specialtw		"Specialne nastajenja">
 <!ENTITY Ctr_emptyfavicon	"Prozny faworitowy symbol wótnowiś (jolic sedło njepóbitujo žeden)">
+<!ENTITY Ctr_emptyfavicon2	"Replace generic favicon (empty and dotted) with sheet favicon">
 <!ENTITY Ctr_bfurlbarfix	"Ramikowy radius za 'pśesuwajobny tłocašk Slědk/Doprědka' a 'naglěd małych tłocaškow' pópšawiś">
-<!ENTITY Ctr_showtabclose	"Tłocašk Rejtark zacyniś pśecej pokazaś (nowy start dopórucony!)">
 <!ENTITY Ctr_cpanelmenus	"Kompaktne pólowe menije (cytańske znamjenja, historija atd.)">
 <!ENTITY Ctr_hidezoomres	"Skalěrowańske elementy na symbolowej rědce: Tłocašk za slědkstajenje skalěrowanja schowaś">
 <!ENTITY Ctr_pmhidelabels	"Pólowy meni: Tekst tłocaškow schowaś">
@@ -150,13 +154,13 @@
 <!ENTITY Ctr_tabmokcolor2	"Běła barwa a śamna wóseń za tekst na njeaktiwnych rejtarkach">
 <!ENTITY Ctr_tabmokcolor3	"Běła barwa za rejtarkowe źěleńske smužki">
 
-<!ENTITY Ctr_paneluibtweak	"Tłocašk pólowego pówjercha (na rejtarkowej rědce): naglěd ako nałožeński tłocašk w titelowej rědce">
 <!ENTITY Ctr_dblclnewtab	"Rejtarkowa rědka: dwójne kliknjenje wócynja 'nowy' rejtark (z pomocu browser.newtab.url)">
 <!ENTITY Ctr_hidetbwot		"Rejtarkowa rědka: hide tabs toolbar with one tab (restart Firefox!)">
 <!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
+<!ENTITY Ctr_faviconurl2	"Padlock">
 <!ENTITY Ctr_dblclclosefx	"Nałožeński tłocašk w titelowej rědce: dwójne kliknjenje zacynja aktualne wokno">
 <!ENTITY Ctr_hide_bf_popup	"Pśesuwajobny tłocašk Slědk/Doprědka: meni historije pśez tłocenje myškoweje tasty schowaś">
-<!ENTITY Ctr_verifiedcolors	"Alternative identity-box colors for verified websites">
+<!ENTITY Ctr_verifiedcolors	"Green/blue identity-box for verified websites">
 
 <!ENTITY Ctr_animation		"Animacija">
 <!ENTITY Ctr_throbberalt	"Alternatiwna animacija za zacytowanje rejtarkowego symbola">
@@ -168,8 +172,14 @@
 <!ENTITY Ctr_closeabarbut	"Tłocašk 'Zacyniś' na rědce dodankow schowaś">
 <!ENTITY Ctr_toolsitem		"Menijowy zapisk w meniju Rědy">
 <!ENTITY Ctr_appmenuitem	"Menijowy zapisk w meniju nałožeńskich tłocaškow">
+<!ENTITY Ctr_contextitem	"Menuitem in toolbars context menu">
 <!ENTITY Ctr_cuibotbuttons	"Wósebne tłocaški w 'pśiměrjeńskem' modusu">
 
+<!ENTITY Ctr_pw_settings	"Settings">
+<!ENTITY Ctr_pw_set_reset	"Restore defaults">
+<!ENTITY Ctr_pw_set_predef	"Classic preset">
+<!ENTITY Ctr_pw_set_export	"Export preferences">
+<!ENTITY Ctr_pw_set_import	"Import preferences">
 
 <!ENTITY Ctr_special_font	"Nastajenja za slězynowu barwu su jano za standardnu drastwu!">
 <!ENTITY Ctr_special_info	"Někotare nastajenja póbituju wizuelne změny jano we wěstach padach!">
