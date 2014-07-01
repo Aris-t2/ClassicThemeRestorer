@@ -35,8 +35,8 @@
 	  -moz-margin-start: 26px !important;
 	}
 	
-	#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="maximized"] #toolbar-menubar ~ #TabsToolbar,
-	#main-window[tabsintitlebar][sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
+	#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="maximized"]:not([tabsontop="false"]) #toolbar-menubar ~ #TabsToolbar,
+	#main-window[tabsintitlebar][sizemode="maximized"]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
 	  -moz-margin-start: 97px;
 	}
 	
@@ -53,17 +53,22 @@
 			}
 			
 		}
-		@media not all and (-moz-windows-compositor) {	
+		@media not all and (-moz-windows-compositor) {
+
+			#main-window[tabsintitlebar][sizemode="normal"] #TabsToolbar .titlebar-placeholder{
+			  visibility:collapse !important;
+			}
+
 			#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"] #toolbar-menubar ~ #TabsToolbar,
 			#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
-			  margin-top: 18px !important;
+			  margin-top: 26px !important;
 			}
 		}
 
 	}
 	
 	@media (-moz-os-version: windows-win7){
-	@media (-moz-windows-classic){
+	  @media (-moz-windows-classic){
 	
 		#main-window[tabsintitlebar][sizemode="normal"] #TabsToolbar .titlebar-placeholder{
 		  visibility:collapse !important;
@@ -73,6 +78,7 @@
 		  margin-top: 16px !important;
 		}
 	
-	}}
+	  }
+	}
 
 }

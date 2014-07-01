@@ -72,6 +72,13 @@
 	  box-shadow: none !important;
 	}
 	
+	#appmenu-popup #appmenu_newPrivateWindow{
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_private_lin.png");
+	}
+	#appmenu-popup #appmenu_addons{
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons_lin.png");
+	}
+	
 	/* some Linux versions hide icons */
 	.menu-iconic-left {
       visibility: visible !important;

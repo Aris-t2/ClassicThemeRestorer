@@ -41,10 +41,9 @@
 				  0 1px 3px 1px hsla(92,81%,16%,.5) inset !important;
 	}
 	
-	#urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"],
-	#urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
-	  list-style-image: url("chrome://classic_theme_restorer/content/images/tab-secure.png") !important;
-	  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+	#urlbar .verifiedDomain,
+	#urlbar .verifiedIdentity {
+	  -moz-border-end: 1px solid;
 	}
 
 }

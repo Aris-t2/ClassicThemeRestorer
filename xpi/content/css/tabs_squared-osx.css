@@ -159,6 +159,10 @@
 	#TabsToolbar:not(:-moz-lwtheme)::before {
 	  box-shadow: none !important;
 	}
+	#tabbrowser-tabs .tabbrowser-arrowscrollbox .arrowscrollbox-overflow-start-indicator,
+	#tabbrowser-tabs .tabbrowser-arrowscrollbox .arrowscrollbox-overflow-end-indicator {
+	  background-image: none !important;
+	}
 
 	.tabbrowser-tab:-moz-lwtheme {
 	  color: inherit !important;
@@ -205,6 +209,9 @@
 	#navigator-toolbox toolbar:-moz-lwtheme{
 	  box-shadow:none !important;
 	  border: 0px solid transparent !important;
+	}
+	#navigator-toolbox #nav-bar:-moz-lwtheme{
+	  border-top: 1px solid transparent !important;
 	}
 
 	.tabbrowser-tab[pinned]{
@@ -281,7 +288,8 @@
 	.ntabhovcolorbox,
 	#ntabcolorbox,
 	#ntabhovcolorbox,
-	#ctraddon_ccap_t_squared{
+	#ctraddon_ccap_t_squared,
+	#ClassicTRoptionsPane[defaultfxtheme="true"] #ctraddon_pw_colors_ntab_t{
 	  visibility: visible !important;
 	}
 	

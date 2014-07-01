@@ -2,10 +2,10 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-    #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
+    /*#main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
       -moz-margin-start: 0px !important;
 	  -moz-padding-start: 0px !important;
-    }
+    }*/
 
 	#main-window[defaultfxtheme="true"][tabsontop="false"][sizemode="normal"]  #TabsToolbar:not(:-moz-lwtheme) {
 	  border-left: 1px solid hsla(209,67%,12%,0.35) !important;

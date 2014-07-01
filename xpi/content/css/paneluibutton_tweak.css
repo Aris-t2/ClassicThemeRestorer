@@ -7,6 +7,13 @@
 	  visibility: collapse !important;
 	}
 	
+	#main-window #navigator-toolbox #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button .toolbarbutton-text {
+	  display:none !important;
+	}
+	#main-window #navigator-toolbox #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button .toolbarbutton-icon{
+	  visibility: visible !important;
+	}
+	
 	#TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button {
 	  -moz-appearance: none !important;
 	  border:1px solid !important;

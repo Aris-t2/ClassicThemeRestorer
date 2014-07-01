@@ -68,6 +68,13 @@
 	  padding-top: 2px;
 	  padding-bottom: 2px;
 	}
+	
+	#appmenu-popup #appmenu_newPrivateWindow{
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_private.png");
+	}
+	#appmenu-popup #appmenu_addons{
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons.png");
+	}
 
 	#main-window[defaultfxtheme="true"] #appmenuPrimaryPane {
 	  -moz-border-end: 1px solid ThreeDShadow;

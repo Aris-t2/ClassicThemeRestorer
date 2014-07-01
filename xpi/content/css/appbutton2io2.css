@@ -54,9 +54,9 @@
 	  -moz-margin-start: 0px !important;
 	}
 
-	#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="maximized"][tabsontop="false"] #toolbar-menubar ~ #TabsToolbar,
+	/*#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="maximized"][tabsontop="false"] #toolbar-menubar ~ #TabsToolbar,
 	#main-window[tabsintitlebar][sizemode="maximized"][tabsontop="false"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
 	  -moz-margin-start: 32px;
-	}
+	}*/
 
 }

@@ -4,17 +4,20 @@
 	.tabbrowser-tab .tab-close-button {
 	  visibility: collapse !important;
 	}
+	
 	#ctraddon_tabs-closebutton{
 	  visibility: visible !important;
 	  -moz-margin-end: -3px !important;
 	}
-	#titlebar-placeholder-on-TabsToolbar-for-captions-buttons{
-	  -moz-margin-start: 0px !important;
-	}
+
 	#main-window #navigator-toolbox #TabsToolbar #ctraddon_tabs-closebutton{
 	  -moz-appearance: none !important;
 	  border: none !important;
 	  padding: 0px !important;
+	}
+	
+	#titlebar-placeholder-on-TabsToolbar-for-captions-buttons{
+	  -moz-margin-start: 0px !important;
 	}
 
 }

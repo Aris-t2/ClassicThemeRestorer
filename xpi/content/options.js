@@ -15,6 +15,12 @@ classicthemerestorerjso.ctr = {
 
   initprefwindow: function() {
   
+	// adds a new global attribute 'defaultfxtheme' -> better parting css for default and non-default themes
+	try{
+		if (this.fxdefaulttheme) document.getElementById("ClassicTRoptionsPane").setAttribute('defaultfxtheme',true);
+		  else document.getElementById("ClassicTRoptionsPane").removeAttribute('defaultfxtheme');
+	} catch(e){}
+
 	// disable and hide items not usable on third party themes
 	if (!this.fxdefaulttheme) {
 		document.getElementById('ctraddon_pw_tabmenulist').disabled = true;
@@ -34,8 +40,11 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_nonavtbborder').disabled = true;
 		document.getElementById('ctraddon_pw_alttabstb').disabled = true;
 		document.getElementById('ctraddon_pw_verifiedcolors').disabled = true;
+		document.getElementById('ctraddon_pw_colors_ntab_t').disabled = true;
+		document.getElementById('ctraddon_pw_notabfog').disabled = true;
+		document.getElementById('ctraddon_pw_notabbg').disabled = true;
 
-		document.getElementById('ctraddon_pw_tabmenulist').style.visibility = 'collapse';
+		//document.getElementById('ctraddon_pw_tabmenulist').style.visibility = 'collapse';
 		document.getElementById('ctraddon_abhigher').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_smallnavbut').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_iconsbig').style.visibility = 'collapse';
@@ -54,26 +63,37 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_tabmokcolor3').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_panelmenucolor').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_mockupoptions').style.visibility = 'collapse';
-		document.getElementById('ctraddon_pw_toolbartweaks').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_invertedicons').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_alttabstb').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_verifiedcolors').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_notabfog').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_notabbg').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_nonavbarbg').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_nonavborder').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_nonavtbborder').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_nobookbarbg').style.visibility = 'collapse';
 	} else {
 		document.getElementById('ctraddon_pw_special_info2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_special_font').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'collapse';
 	};
+	
+	document.getElementById('ctraddon_pw_tabwidthinfo').style.visibility = 'collapse';
 	
 	// extra checks to not enable tab width settings while 'TabMixPlus' or 'TabUtilities' is enabled
 	AddonManager.getAddonByID('{dc572301-7619-498c-a57d-39143191b318}', function(addon) {
 	  if(addon && addon.isActive) {
-		document.getElementById('ctraddon_pw_tabmaxwidth').disabled = true;
-		document.getElementById('ctraddon_pw_tabminwidth').disabled = true;
+	  	document.getElementById('ctraddon_pw_tabMinWidth').disabled = true;
+		document.getElementById('ctraddon_pw_tabMaxWidth').disabled = true;
+		document.getElementById('ctraddon_pw_tabwidthinfo').style.visibility = 'visible';
 	  }
 	});
 	
 	AddonManager.getAddonByID('tabutils@ithinc.cn', function(addon) {
 	  if(addon && addon.isActive) {
-		document.getElementById('ctraddon_pw_tabmaxwidth').disabled = true;
-		document.getElementById('ctraddon_pw_tabminwidth').disabled = true;
+		document.getElementById('ctraddon_pw_tabMinWidth').disabled = true;
+		document.getElementById('ctraddon_pw_tabMaxWidth').disabled = true;
+		document.getElementById('ctraddon_pw_tabwidthinfo').style.visibility = 'visible';
 	  }
 	});
 	
@@ -91,9 +111,70 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_closetab_pw_end').style.visibility = 'collapse';
 	}
 	
+	function PrefListener(branch_name, callback) {
+	  // Keeping a reference to the observed preference branch or it will get
+	  // garbage collected.
+	  var prefService = Components.classes["@mozilla.org/preferences-service;1"]
+		.getService(Components.interfaces.nsIPrefService);
+	  this._branch = prefService.getBranch(branch_name);
+	  this._branch.QueryInterface(Components.interfaces.nsIPrefBranch2);
+	  this._callback = callback;
+	}
+
+	PrefListener.prototype.observe = function(subject, topic, data) {
+	  if (topic == 'nsPref:changed')
+		this._callback(this._branch, data);
+	};
+
+	PrefListener.prototype.register = function(trigger) {
+	  this._branch.addObserver('', this, false);
+	  if (trigger) {
+		let that = this;
+		this._branch.getChildList('', {}).
+		  forEach(function (pref_leaf_name)
+			{ that._callback(that._branch, pref_leaf_name); });
+	  }
+	};
+
+	PrefListener.prototype.unregister = function() {
+	  if (this._branch)
+		this._branch.removeObserver('', this);
+	};
+	
+	var ctrSettingsListenerW_forCTB = new PrefListener(
+	  "extensions.cstbb-extension.",
+	  function(branch, name) {
+		switch (name) {
+
+		  case "navbarbuttons":
+		  
+		    var ctbbuttons = false;
+			
+			try {
+			  ctbbuttons = branch.getCharPref("navbarbuttons")!="nabbuttons_off";
+			} catch(e){}
+		  
+			if (ctbbuttons) {
+			  document.getElementById('ctraddon_pw_smallnavbut').disabled = true;
+			}
+			else {
+			  document.getElementById('ctraddon_pw_smallnavbut').disabled = false;
+			}
+			
+		  break;
+		}
+	  }
+	);
+	
+	ctrSettingsListenerW_forCTB.register(true);
+	
+	
 	// update appbutton extra settings
 	this.ctrpwAppbuttonextra(this.prefs.getCharPref("appbutton"),false);
 	this.ctrpwFaviconextra(this.prefs.getBoolPref("faviconurl"));
+	this.ctrpwBFextra(this.prefs.getBoolPref("backforward"));
+
+	this.onCtrPanelSelect();
 
   },
   
@@ -113,6 +194,7 @@ classicthemerestorerjso.ctr = {
 		)) {
 		app.quit(app.eForceQuit | app.eRestart);
 	}
+
 	return true;
   },
   
@@ -128,7 +210,13 @@ classicthemerestorerjso.ctr = {
   ctrpwFaviconextra: function(which) {
     if(which==true) which=false;
 	else which=true;
-    document.getElementById('ctraddon_pw_faviconurlpl').disabled = which;
+	document.getElementById('ctraddon_padlock_extra').disabled = which;
+  },
+  
+  ctrpwBFextra: function(which) {
+    if(which==true) which=false;
+	else which=true;
+    document.getElementById('ctraddon_pw_hide_bf_popup').disabled = which;
   },
   
   ctrpwAppbuttonextra: function(which,fromprefwindow) {
@@ -142,31 +230,37 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_abhigher').disabled = false;
 	  document.getElementById('ctraddon_appbutbdl').disabled = false;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = false;
+	  document.getElementById('ctraddon_dblclclosefx').disabled = true;
 	} else if (which=="appbutton_v1wt" && this.fxdefaulttheme){
 	  document.getElementById('ctraddon_alt_abicons').disabled = true;
 	  document.getElementById('ctraddon_abhigher').disabled = false;
 	  document.getElementById('ctraddon_appbutbdl').disabled = false;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = false;
+	  document.getElementById('ctraddon_dblclclosefx').disabled = true;
 	} else if (which=="appbutton_v1" && !this.fxdefaulttheme){
 	  document.getElementById('ctraddon_alt_abicons').disabled = false;
 	  document.getElementById('ctraddon_abhigher').disabled = true;
 	  document.getElementById('ctraddon_appbutbdl').disabled = false;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = false;
+	  document.getElementById('ctraddon_dblclclosefx').disabled = true;
 	} else if (which=="appbutton_v1wt" && !this.fxdefaulttheme){
 	  document.getElementById('ctraddon_alt_abicons').disabled = false;
 	  document.getElementById('ctraddon_abhigher').disabled = true;
 	  document.getElementById('ctraddon_appbutbdl').disabled = false;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = false;
+	  document.getElementById('ctraddon_dblclclosefx').disabled = true;
 	} else if (which=="appbutton_off" || which=="appbutton_pm"){
 	  document.getElementById('ctraddon_alt_abicons').disabled = true;
 	  document.getElementById('ctraddon_abhigher').disabled = true;
 	  document.getElementById('ctraddon_appbutbdl').disabled = true;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = true;
+	  document.getElementById('ctraddon_dblclclosefx').disabled = true;
 	} else {
 	  document.getElementById('ctraddon_alt_abicons').disabled = true;
 	  document.getElementById('ctraddon_abhigher').disabled = true;
 	  document.getElementById('ctraddon_appbutbdl').disabled = false;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = false;
+	  document.getElementById('ctraddon_dblclclosefx').disabled = false;
 	  if (tabsintitlebar==false && fromprefwindow==true) {
 		Components.classes["@mozilla.org/preferences-service;1"]
 		 .getService(Components.interfaces.nsIPrefService)
@@ -341,7 +435,7 @@ classicthemerestorerjso.ctr = {
 	patterns[106]="dblclnewtab="+this.prefs.getBoolPref("dblclnewtab");
 	patterns[107]="hidetbwot="+this.prefs.getBoolPref("hidetbwot");
 	patterns[108]="faviconurl="+this.prefs.getBoolPref("faviconurl");
-	patterns[109]="faviconurlpl="+this.prefs.getBoolPref("faviconurlpl");
+	patterns[109]="padlock:"+this.prefs.getCharPref("padlock");
 	patterns[110]="dblclclosefx="+this.prefs.getBoolPref("dblclclosefx");
 	patterns[111]="hide_bf_popup="+this.prefs.getBoolPref("hide_bf_popup");
 		
@@ -354,6 +448,8 @@ classicthemerestorerjso.ctr = {
 	patterns[117]="appmenuitem="+this.prefs.getBoolPref("appmenuitem");
 	patterns[118]="contextitem="+this.prefs.getBoolPref("contextitem");
 	patterns[119]="cuibuttons="+this.prefs.getBoolPref("cuibuttons");
+	
+	patterns[120]="padlockex="+this.prefs.getBoolPref("padlockex");
 
 	saveToFile(patterns);
 	  
@@ -459,6 +555,18 @@ classicthemerestorerjso.ctr = {
 	this.needsRestart = true;
 	
 	return true;
+  },
+ 
+  onCtrPanelSelect: function() {
+    let ctrAddonPrefBoxTab = document.getElementById("CtrRadioGroup");
+    let selectedPanel = document.getElementById(ctrAddonPrefBoxTab.value);
+    selectedPanel.parentNode.selectedPanel = selectedPanel;
+
+    for (let i = 0; i < ctrAddonPrefBoxTab.itemCount; i++) {
+      let radioItem = ctrAddonPrefBoxTab.getItemAtIndex(i);
+      let pane = document.getElementById(radioItem.value);
+      pane.setAttribute("selected", (radioItem.selected)? "true" : "false");
+    }
   }
   
 };

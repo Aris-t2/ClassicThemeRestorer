@@ -1,0 +1,26 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@-moz-document url(chrome://browser/content/browser.xul) {
+	
+	#identity-popup.verifiedDomain,
+	#identity-popup.verifiedIdentity {
+	  -moz-margin-start:-30px !important;
+	}
+
+	/* provides the padlock icon for secure connections */
+	#urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"],
+	#urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
+	  width:36px !important;
+	  -moz-padding-start: 20px !important;
+	}
+
+	#urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"],
+	#urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
+	  background: url("chrome://classic_theme_restorer/content/images/padlock_modern.png") no-repeat center left !important;
+	}
+	
+	#urlbar:-moz-locale-dir(rtl) .verifiedDomain #page-proxy-favicon[pageproxystate="valid"],
+	#urlbar:-moz-locale-dir(rtl) .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
+	  background: url("chrome://classic_theme_restorer/content/images/padlock_modern.png") no-repeat center right !important;
+	}
+
+}

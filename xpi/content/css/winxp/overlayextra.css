@@ -67,7 +67,14 @@
 	#nav-bar #ctraddon_bookmarks-menu-toolbar-button  > .toolbarbutton-icon{
 	  padding-top: 2px;
 	  padding-bottom: 2px;
-	}	
+	}
+	
+	#appmenu-popup #appmenu_newPrivateWindow{
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_private_xp.png");
+	}
+	#appmenu-popup #appmenu_addons{
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons_xp.png");
+	}
 
 	/* style appmenu */
 	#appmenu-popup{

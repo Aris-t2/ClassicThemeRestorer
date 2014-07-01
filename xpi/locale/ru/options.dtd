@@ -2,7 +2,7 @@
 
 <!ENTITY Ctr_addonbar		"Панель дополнений">
 <!ENTITY Ctr_statusbar		"Статус панель">
-<!ENTITY Ctr_extrabar		"Доплнительная панель">
+<!ENTITY Ctr_extrabar		"Дополнительная панель">
 <!ENTITY Ctr_flexspace		"Растягивающийся интервал">
 <!ENTITY Ctr_space			"Интервал">
 <!ENTITY Ctr_separator		"Разделитель">
@@ -17,10 +17,10 @@
 <!ENTITY Ctr_cuitxt			"Текст">
 
 <!ENTITY Ctr_combrelstoptt	"[остановить][перезагружать] &gt;&gt; [остановить-перезагружать]">
+<!ENTITY Ctr_tnot			"(Вкладки не вверху)">
 
-<!ENTITY Ctr_main_t			"Главные">
 <!ENTITY Ctr_tabcolors_t	"Настройки цветов">
-<!ENTITY Ctr_special_t		"Особые">
+<!ENTITY Ctr_icons_t		"Favicon &amp; icons">
 
 <!ENTITY Ctr_tabs			"Вкладки">
 <!ENTITY Ctr_tabs0			"Изогнутые (по умолчанию в Australis)">
@@ -28,20 +28,18 @@
 <!ENTITY Ctr_tabs1m			"Квадратные (аустрализированные)">
 <!ENTITY Ctr_tabs2			"Изогнутые (другие)">
 <!ENTITY Ctr_tabs3			"Изогнутые (другие, Aero)">
+<!ENTITY Ctr_tabforminfo	"Tab appearance is controlled by the current theme.">
 <!ENTITY Ctr_tabsontop0		"Вкладки вверху [не задано] (по умолчанию)">
 <!ENTITY Ctr_tabsontop1		"Вкладки вверху [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Вкладки не вверху [tabsontop=false]">
 <!ENTITY Ctr_tabsontopI1	"Adds attribute [tabsontop=true/false] to">
-<!ENTITY Ctr_tabsontopI2	"#main-window, #titlebar, #nav-bar">
-<!ENTITY Ctr_tabsontopI3	"#navigator-toolbox, #toolbar-menubar">
-<!ENTITY Ctr_tabsontopI4	"#TabsToolbar, #ctraddon_extra-bar">
-<!ENTITY Ctr_tabsontopI5	"#PersonalToolbar, #ctraddon_addon-bar">
 <!ENTITY Ctr_tabsintitlebar	"Firefox titlebar (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(по умолчанию)">
 <!ENTITY Ctr_tabwidthcla	"(классич.)">
 <!ENTITY Ctr_tabmaxwidth	"Макс. ширина:">
 <!ENTITY Ctr_tabminwidth	"Мин. ширина:">
-<!ENTITY Ctr_closetab_0		"Кнопка закрытия вкладки: на всех вкладках (по умолчанию)">
+<!ENTITY Ctr_tabwidthinfo	"Tabs min-width and max-width are controlled by TabMixPlus / TabUtilities">
+<!ENTITY Ctr_closetab_0		"Кнопка закрытия вкладки (по умолчанию)">
 <!ENTITY Ctr_closetab_1		"Кнопка закрытия вкладки: на активной вкладке">
 <!ENTITY Ctr_closetab_2		"Кнопка закрытия вкладки: нигде">
 <!ENTITY Ctr_closetab_3		"Кнопка закрытия вкладки: в конце панели">
@@ -67,41 +65,56 @@
 <!ENTITY Ctr_appbuttonc_wh	"Белая кнопка">
 <!ENTITY Ctr_appbuttonI1	"рекомендуется перезапуск">
 <!ENTITY Ctr_appbuttonI1e	"not visible on OS titlebar">
-<!ENTITY Ctr_appbuttonI2	"Только цвета на панели заголовка">
-<!ENTITY Ctr_appbuttonI3	"и вкладок!">
+<!ENTITY Ctr_appbuttonI2	"Только цвета на панели заголовка и вкладок!">
 <!ENTITY Ctr_alttbappb		"Другие значки">
 <!ENTITY Ctr_appbutmhi		"Высокое положение (если на панели вкладок)">
 <!ENTITY Ctr_appbutbdl		"Скрыть рамки и цвет фона">
+<!ENTITY Ctr_dblclclosefx	"Двойной клик закрывает активное окно">
 
 <!ENTITY Ctr_ui				"Основной интерфейс">
-<!ENTITY Ctr_nbiconsize0	"Set navigation toolbar attribute:">
-<!ENTITY Ctr_nbiconsize1	"#nav-bar[iconsize='small'] (по умолчанию)">
-<!ENTITY Ctr_nbiconsize2	"#nav-bar[iconsize='large']">
+<!ENTITY Ctr_nbiconsize0	"Set navigation toolbar attribute">
 <!ENTITY Ctr_smallnavbut	"Малые кнопки на панели навигации">
-<!ENTITY Ctr_hidenavbar		"Скрыть панель навигации">
-<!ENTITY Ctr_buttons		"Кнопки панели инструментов">
+<!ENTITY Ctr_bfurlbarfix	"Радиус углов строки адреса: 2px (Win) / 2.5px (Mac)">
 <!ENTITY Ctr_backforward	"Подвижная кнопка «назад-вперед»">
+<!ENTITY Ctr_hide_bf_popup	"Hide history menu on mouse press">
 <!ENTITY Ctr_wincontrols	"Подвижное управление полноэкранным режимом">
 <!ENTITY Ctr_starinurl		"Звёздочка в адресной строке (перезапустите Firefox)">
 <!ENTITY Ctr_mstatusbar		"Подвижноя строка состояния">
 <!ENTITY Ctr_hideurelstop	"Скрыть в адресной строке кнопку «Остановить и перезагрузить»">
 <!ENTITY Ctr_combrelstop	"Совместить кнопки «Остановить» и «Перезагрузить»">
 <!ENTITY Ctr_panelmenucol	"Альтернативный цвет фона для меню панели">
-<!ENTITY Ctr_findbar_def	"Панель поиска (положение по умолчанию)">
-<!ENTITY Ctr_findbar_top	"Панель поиска вверху">
-<!ENTITY Ctr_findbar_bot	"Панель поиска внизу">
-<!ENTITY Ctr_findbar_topa	"Панель поиска вверху (по другому)">
-<!ENTITY Ctr_findbar_bota	"Панель поиска внизу (по другому)">
+<!ENTITY Ctr_hideprivmask	"Private browsing: hide mask indicator">
+<!ENTITY Ctr_verifiedcolors	"Green/blue identity-box for verified websites">
+<!ENTITY Ctr_findbar		"Панель поиска">
+<!ENTITY Ctr_findbar_def	"Положение по умолчанию">
+<!ENTITY Ctr_findbar_top	"вверху">
+<!ENTITY Ctr_findbar_bot	"внизу">
+<!ENTITY Ctr_findbar_topa	"вверху (по другому)">
+<!ENTITY Ctr_findbar_bota	"внизу (по другому)">
 <!ENTITY Ctr_nav_txt_ico0	"Показывать только значки (по умолчанию)">
 <!ENTITY Ctr_nav_txt_ico1	"Показывать большие значки">
 <!ENTITY Ctr_nav_txt_ico2	"Показывать значки и текст">
 <!ENTITY Ctr_nav_txt_ico3	"Показывать только текст">
 <!ENTITY Ctr_stoprel0		"Reload and stop button settings">
 <!ENTITY Ctr_stoprel1		"Toolbar: place reload button after stop button!">
+<!ENTITY Ctr_cpanelmenus	"Компактная панель меню (закладки, история и т. д.)">
+<!ENTITY Ctr_hidezoomres	"кнопки масштаба: скрыть сброс масштабирования">
+<!ENTITY Ctr_pmhidelabels	"Panel menu: hide button labels">
+<!ENTITY Ctr_menupopupscr	"Menupopups: show scrollbars instead of scroll arrows">
 
-<!ENTITY Ctr_tab_tf_info	"Textfields support color names, hexcodes, rgb(a) and hsl(a) values. Inputs won't be validated!">
-<!ENTITY Ctr_tabacthovdef	"Активная/Ожидающая/Обычная вкладка">
-<!ENTITY Ctr_tabnorunrnew	"Непрочитанная/unloaded/Новая вкладка">
+<!ENTITY Ctr_fxmockup		"Firefox Mockup tweaks">
+<!ENTITY Ctr_tabmokcolor	"Белый цвет для кнопок вкладок (закрыть, новая, группы, список всех)">
+<!ENTITY Ctr_tabmokcolor2	"Белый цвет и темная тень для текста на неактивной вкладке">
+<!ENTITY Ctr_tabmokcolor3	"Белый цвет для разделителей на панели вкладок">
+
+<!ENTITY Ctr_tab_tf_info1	"Textfields support color names, hexcodes, rgb(a) and hsl(a) values.">
+<!ENTITY Ctr_tab_tf_info2	"Inputs won't be validated!">
+<!ENTITY Ctr_tabact_t		"Активная">
+<!ENTITY Ctr_tabhov_t		"Ожидающая">
+<!ENTITY Ctr_tabnor_t		"Обычная">
+<!ENTITY Ctr_tabpen_t		"unloaded">
+<!ENTITY Ctr_tabunr_t		"Непрочитанная">
+<!ENTITY Ctr_ntab_t			"Новая">
 <!ENTITY Ctr_customsqtab0	"Пользовательские цвета вкладок">
 <!ENTITY Ctr_customsqtab1	"Фон">
 <!ENTITY Ctr_ctext			"Текст">
@@ -116,22 +129,15 @@
 <!ENTITY Ctr_bold			"Полужирный">
 <!ENTITY Ctr_italic			"Курсив">
 
-<!ENTITY Ctr_toolbars		"Toolbars">
-<!ENTITY Ctr_altmenubar		"Удалить меню бар прозрачности (OS titlebar)">
-<!ENTITY Ctr_altmenubarpos	"Menubar: alternative position (below Firefox titlebar)">
-<!ENTITY Ctr_noaddonbarbg	"Add-on bar: remove background color (Windows AeroGlass / Win8)">
-<!ENTITY Ctr_menubarnofog	"Удалить туман от фона меню из строки меню (Windows AeroGlass / Win8)">
-<!ENTITY Ctr_notabfog		"Отключить затуманивание фона панели вкладок (Windows AeroGlass / Win8)">
-<!ENTITY Ctr_notabbg		"Tabs toolbar: remove background color (Windows AeroGlass / Win8)">
-<!ENTITY Ctr_highaddonsbar	"Увеличить высоту панели дополнений">
-<!ENTITY Ctr_hightabpos		"Tabs toolbar: reduce space above toolbar (if possible)">
-
-<!ENTITY Ctr_toolbars2		"Toolbars ('tabs not on top' mode &amp; Windows AeroGlass / Win8)">
-<!ENTITY Ctr_nobookbarbg	"Bookmarks toolbar: remove background color">
-<!ENTITY Ctr_nonavbarbg		"Navigation toolbar: remove background color">
-<!ENTITY Ctr_nonavborder	"Bookmarks toolbar: add top border to toolbar">
-<!ENTITY Ctr_nonavtbborder	"Top toolbars: remove toolbar borders">
-<!ENTITY Ctr_alttabstb		"Tabs toolbar: alternative background color">
+<!ENTITY Ctr_favicon		"Значок">
+<!ENTITY Ctr_emptyfavicon	"Восстановить 'пустой значок' на вкладках">
+<!ENTITY Ctr_emptyfavicon2	"Replace generic favicon (empty and dotted) with sheet favicon">
+<!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
+<!ENTITY Ctr_padlock_hid	"Padlock (hidden)">
+<!ENTITY Ctr_padlock_def	"Padlock (default)">
+<!ENTITY Ctr_padlock_cla	"Padlock (classic)">
+<!ENTITY Ctr_padlock_mod	"Padlock (modern)">
+<!ENTITY Ctr_padlock_ext	"Security icons">
 
 <!ENTITY Ctr_invicons		"Inverted icons">
 <!ENTITY Ctr_menubar		"Menubar">
@@ -139,28 +145,27 @@
 <!ENTITY Ctr_navbar			"Navigation Toolbar">
 <!ENTITY Ctr_bookbar		"Bookmarks Toolbar">
 
-<!ENTITY Ctr_specialtw		"Особые хитрости">
-<!ENTITY Ctr_emptyfavicon	"Восстановить 'пустой значок' на вкладках">
-<!ENTITY Ctr_emptyfavicon2	"Replace generic favicon (empty and dotted) with sheet favicon">
-<!ENTITY Ctr_bfurlbarfix	"Радиус углов строки адреса: 2px (Win) / 2.5px (Mac)">
-<!ENTITY Ctr_cpanelmenus	"Компактная панель меню (закладки, история и т. д.)">
-<!ENTITY Ctr_hidezoomres	"кнопки масштаба: скрыть сброс масштабирования">
-<!ENTITY Ctr_pmhidelabels	"Panel menu: hide button labels">
-<!ENTITY Ctr_menupopupscr	"Menupopups: show scrollbars instead of scroll arrows">
-<!ENTITY Ctr_hideprivmask	"Private browsing: hide mask indicator">
+<!ENTITY Ctr_toolbars		"Toolbars">
+<!ENTITY Ctr_dblclnewtab	"двойной клик открыть новую вкладку">
+<!ENTITY Ctr_hidetbwot		"Hide tabs toolbar with one tab (restart Firefox!)">
+<!ENTITY Ctr_notabfog		"Отключить затуманивание фона панели вкладок (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_notabbg		"Remove background color (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_hightabpos		"Reduce space above toolbar (if possible)">
+<!ENTITY Ctr_alttabstb		"Alternative background color">
 
-<!ENTITY Ctr_fxmockup		"Firefox Mockup tweaks">
-<!ENTITY Ctr_tabmokcolor	"Белый цвет для кнопок вкладок (закрыть, новая, группы, список всех)">
-<!ENTITY Ctr_tabmokcolor2	"Белый цвет и темная тень для текста на неактивной вкладке">
-<!ENTITY Ctr_tabmokcolor3	"Белый цвет для разделителей на панели вкладок">
+<!ENTITY Ctr_altmenubar		"Add background color (OS titlebar)">
+<!ENTITY Ctr_altmenubarpos	"Alternative position (below Firefox titlebar)">
+<!ENTITY Ctr_menubarnofog	"Удалить туман от фона меню (Windows AeroGlass / Win8)">
 
-<!ENTITY Ctr_dblclnewtab	"Панель инструментов вкладки: двойной клик открыть новую вкладку">
-<!ENTITY Ctr_hidetbwot		"Панель инструментов вкладки: hide tabs toolbar with one tab (restart Firefox!)">
-<!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
-<!ENTITY Ctr_faviconurl2	"Padlock">
-<!ENTITY Ctr_dblclclosefx	"Кнопка приложения в панели заголовка: двойной клик закрывает активное окно">
-<!ENTITY Ctr_hide_bf_popup	"Movable back/forward button: hide history menu on mouse press">
-<!ENTITY Ctr_verifiedcolors	"Green/blue identity-box for verified websites">
+<!ENTITY Ctr_hidenavbar		"Скрыть панель навигации">
+<!ENTITY Ctr_nobookbarbg	"Bookmarks toolbar: remove background color">
+<!ENTITY Ctr_nonavbarbg		"Navigation toolbar: remove background color">
+<!ENTITY Ctr_nonavborder	"Bookmarks toolbar: add top border to toolbar">
+<!ENTITY Ctr_nonavtbborder	"Top toolbars: remove toolbar borders">
+
+<!ENTITY Ctr_closeabarbut	"Скрыть кнопку закрытия">
+<!ENTITY Ctr_highaddonsbar	"Увеличить высоту">
+<!ENTITY Ctr_noaddonbarbg	"Remove background color (Windows AeroGlass / Win8)">
 
 <!ENTITY Ctr_animation		"Анимация">
 <!ENTITY Ctr_throbberalt	"Заменить анимацию загрузки вкладки">
@@ -169,11 +174,11 @@
 <!ENTITY Ctr_tabanimation	"Анимация открытия и закрытия вкладок (about:config)">
 <!ENTITY Ctr_dlanimation	"Анимация «Загрузка завершена» (about:config)">
 
-<!ENTITY Ctr_closeabarbut	"Скрыть кнопку закрытия панели дополнений">
 <!ENTITY Ctr_toolsitem		"Пункт в меню инструментов">
 <!ENTITY Ctr_appmenuitem	"Пункт в меню кнопки приложения">
 <!ENTITY Ctr_contextitem	"Menuitem in toolbars context menu">
 <!ENTITY Ctr_cuibotbuttons	"Показывать свои кнопки в режиме «Настроить»">
+
 
 <!ENTITY Ctr_pw_settings	"Settings">
 <!ENTITY Ctr_pw_set_reset	"Restore defaults">
@@ -182,7 +187,7 @@
 <!ENTITY Ctr_pw_set_import	"Import preferences">
 
 <!ENTITY Ctr_special_font	"Background color settings are for default theme only!">
-<!ENTITY Ctr_special_info	"Some options only offer visual changes in certain cases!">
+<!ENTITY Ctr_special_info	"Some options may offer visual changes in certain cases only!">
 <!ENTITY Ctr_special_info2	"Settings are made for Firefox default theme and may not work with all third party themes!">
 <!ENTITY Ctr_support		"Support Forum">
 <!ENTITY Ctr_newversion		"New version?">

@@ -147,9 +147,6 @@
 	  border-radius: 2.5px 2.5px 0 0;
 	}
 	
-	#appmenu-popup #appmenu_newPrivateWindow{
-	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_private.png");
-	}
 	#appmenu-popup #appmenu_print_popup,
 	#appmenu-popup #appmenu_print{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_print.png");
@@ -159,9 +156,6 @@
 	}
 	#appmenu-popup #appmenu_bookmarks{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_bookmarks.png");
-	}
-	#appmenu-popup #appmenu_addons{
-	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons.png");
 	}
 	#appmenu-popup #appmenu-editmenu-cut,
 	#appmenu-popup #appmenu-cut{
@@ -201,6 +195,12 @@
 	#appmenu-popup  > hbox > vbox > hbox > menu > .menu-iconic-left,
 	#appmenu-popup > hbox > vbox > hbox > menu label {
 	  visibility: collapse;
+	}
+	#main-window[defaultfxtheme="true"]  #appmenu-popup  > hbox > vbox > hbox > menu > .menu-right {
+	  -moz-margin-start: 0px;
+	}
+	#main-window[defaultfxtheme="true"][fx31="true"]  #appmenu-popup  > hbox > vbox > hbox > menu > .menu-right {
+	  -moz-margin-start: 8px;
 	}
 	/* make sure submenu labels stay */
 	#appmenu-popup > hbox > vbox > hbox > menu > menupopup label{
@@ -383,7 +383,8 @@
 	#ctraddon_ccap_t_squaredc2,
 	#ctraddon_ccap_t_squared2,
 	#ctraddon_ccap_t_curved,
-	#ctraddon_ccap_t_curvedaero{
+	#ctraddon_ccap_t_curvedaero,
+	#ClassicTRoptionsPane[defaultfxtheme="true"] #ctraddon_pw_colors_ntab_t{
 	  visibility: collapse;
 	}
 	
@@ -397,6 +398,91 @@
 	  #tabs_curvedall{
 		visibility: collapse;
 	  }
+	}
+	
+	.ctraddontabs, .ctraddontabpanel{
+	  border: 1px solid;
+	}
+	
+	#ClassicTRoptionsPane[defaultfxtheme="true"] .ctraddontabs{
+	  -moz-appearance: listbox;
+	  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
+	  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
+	  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
+	  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
+	  background: -moz-Field;
+	  color: -moz-FieldText;
+	  border: 2px solid;
+	}
+	
+	#ClassicTRoptionsPane[defaultfxtheme="true"] .ctraddontabpanel{
+	  -moz-appearance: none;
+	  background: -moz-dialog;
+	  color: -moz-FieldText;
+	  border: 0px solid;
+	}
+	
+	@media all and (-moz-windows-classic) {
+	  #ClassicTRoptionsPane[defaultfxtheme="true"] .ctraddontabpanel{
+		border: 1px solid;
+	  }
+	}
+
+	.ctraddontabs {
+	  overflow-x: hidden;
+	  overflow-y: auto;
+	  max-width: 180px;
+	  width: 180px;
+	}
+	
+	radio.ctraddontab {
+	  -moz-appearance: none;
+	  margin: 0;
+	  padding: 1px;
+	  border: solid 1px transparent;
+	}
+
+	radio.ctraddontab[selected] {
+	  background: Highlight;
+	  color: HighlightText;
+	}
+	
+	radio.ctraddontab:not([selected]):hover {
+	  background: -moz-CellHighlight;
+	  color: -moz-CellHighlightText;
+	}
+	
+	radio.ctraddontab .radio-spacer-box,
+	radio.ctraddontab .radio-check,
+	radio.ctraddontab .radio-check-box1 {
+	  visibility: collapse;
+	}
+	
+	.ctraddontabpanel {
+	  height:330px;
+	  max-height:330px;
+	  width:450px;
+	  max-width:550px;
+	  overflow-x:auto;
+	  overflow-y:auto;
+	}
+	
+	.ctraddontabpanel {
+	  visibility: collapse;
+	}
+	
+	.ctraddontabpanel[selected="true"] {
+	  visibility: visible;
+	}
+	
+	#ctraddon_pw_splitter {
+	  border:0;
+	}
+	
+	#ctraddon_pw_tabMinWidth,
+	#ctraddon_pw_tabMaxWidth{
+	  width:50px !important;
+	  max-width:70px !important;
 	}
 
 }

@@ -183,6 +183,10 @@
 	#TabsToolbar:not(:-moz-lwtheme)::before {
 	  box-shadow: none !important;
 	}
+	#tabbrowser-tabs .tabbrowser-arrowscrollbox .arrowscrollbox-overflow-start-indicator,
+	#tabbrowser-tabs .tabbrowser-arrowscrollbox .arrowscrollbox-overflow-end-indicator {
+	  background-image: none !important;
+	}
 
 	.tabbrowser-tab:-moz-lwtheme {
 	  color: inherit !important;

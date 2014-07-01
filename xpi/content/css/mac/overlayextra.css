@@ -165,6 +165,13 @@
 	  margin-right: 0px !important;
 	}
 	
+	#appmenu-popup #appmenu_newPrivateWindow{
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_private.png");
+	}
+	#appmenu-popup #appmenu_addons{
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons.png");
+	}
+	
 	#appmenu-popup .menu-iconic-left {
       -moz-padding-end: 4px !important;
 	}
@@ -225,10 +232,18 @@
 	#ctraddon_appbutton_list2{
 	  visibility: visible !important;
 	}
+	#ctraddon_pw_menubargroup,
 	#ctraddon_pw_menubarnofog,
 	#ctraddon_pw_altmenubar,
 	#ctraddon_wincontrols,
 	#ctraddon_appbutton_list1{
 	  visibility: collapse !important;
+	}
+	
+	#ClassicTRoptionsPane .ctraddontabpanel {
+	  height:370px;
+	  max-height:400px;
+	  width:500px;
+	  max-width:600px;
 	}
 }

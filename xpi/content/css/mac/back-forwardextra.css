@@ -24,7 +24,7 @@
 	  transition: none !important;
 	}
 	
-	#main-window:not([fx31="true"]) #nav-bar #urlbar-container {
+	#main-window:not([fx31="true"]) * #urlbar-container {
 	  -moz-margin-start: 4px !important;
 	}
 	

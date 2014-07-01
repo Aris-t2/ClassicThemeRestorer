@@ -2,6 +2,11 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul){
+
+	#titlebar-placeholder-on-TabsToolbar-for-captions-buttons{
+	  -moz-margin-start: 0px !important;
+	}
+	
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar:not(:-moz-lwtheme) #ctraddon_appbutton{
 	  margin-left:-2px !important;
 	}

@@ -5,7 +5,7 @@
 	<Description rdf:about="urn:mozilla:install-manifest">
 		<em:id>ClassicThemeRestorer@ArisT2Noia4dev</em:id>
 		<em:name>Classic Theme Restorer</em:name>
-		<em:version>1.2.1</em:version>
+		<em:version>1.2.2beta10</em:version>
 		<em:type>2</em:type>
 
 		<em:optionsURL>chrome://classic_theme_restorer/content/options.xul</em:optionsURL>
@@ -13,7 +13,7 @@
 		<em:targetApplication>
 			<Description>
 				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-				<em:minVersion>29.0a1</em:minVersion>
+				<em:minVersion>29.0</em:minVersion>
 				<em:maxVersion>33.0</em:maxVersion>
 			</Description>
 		</em:targetApplication>
@@ -21,6 +21,15 @@
 		<em:description>'Classic Theme Restorer' brings back appmenu button, squared tabs, add-ons bar, small nav-bar buttons, a few older buttons and more to Firefox Australis UI. Use 'Customize' menu to move buttons on toolbars.</em:description>
 		<em:homepageURL>https://addons.mozilla.org/addon/classicthemerestorer/</em:homepageURL>
 		<em:creator>Aris</em:creator>
+
+		<em:localized>
+			<Description>
+				<em:name>Classic Theme Restorer (Customize Australis)</em:name>
+				<em:locale>cs</em:locale>
+				<em:description>'Classic Theme Restorer' brings back appmenu button, squared tabs, add-ons bar, small nav-bar buttons, a few older buttons and more to Firefox Australis UI. Use 'Customize' menu to move buttons on toolbars.</em:description>
+				<em:translator>MichalS (cs)</em:translator>
+			</Description>
+		</em:localized>
 
 		<em:localized>
 			<Description>
@@ -83,7 +92,15 @@
 				<em:locale>ja</em:locale>
 				<em:description>'Classic Theme Restorer' は、アプリメニューボタン、四角いタブ、アドオンバー、小さなナビゲーションバー、古いボタンを Australis UI に復活させます。ボタンやツールバーを移動させるには、'カスタマイズ' メニューを使用してください。</em:description>
 				<em:translator>momdo</em:translator>
-				
+			</Description>
+		</em:localized>
+		
+		<em:localized>
+			<Description>
+				<em:name>Classic Theme Restorer (Customize Australis)</em:name>
+				<em:locale>pt-BR</em:locale>
+				<em:description>'Classic Theme Restorer' brings back appmenu button, squared tabs, add-ons bar, small nav-bar buttons, a few older buttons and more to Firefox Australis UI. Use 'Customize' menu to move buttons on toolbars.</em:description>
+				<em:translator>Claudio (pt-BR)</em:translator>
 			</Description>
 		</em:localized>
 		
@@ -93,6 +110,15 @@
 				<em:locale>ru</em:locale>
 				<em:description>«Classic Theme Restorer» возвращает главную кнопку приложения, квадратные вкладки, панель дополнений, маленькие кнопки на панели навигации, несколько старых кнопок и другое, в интерфейсе Australis Firefox. Используйте меню «Настроить», чтобы переместить кнопки на панели инструментов.</em:description>
 				<em:translator>radion-t (ru)</em:translator>
+			</Description>
+		</em:localized>
+		
+		<em:localized>
+			<Description>
+				<em:name>Classic Theme Restorer (Customize Australis)</em:name>
+				<em:locale>zh-CN</em:locale>
+				<em:description>'Classic Theme Restorer' brings back appmenu button, squared tabs, add-ons bar, small nav-bar buttons, a few older buttons and more to Firefox Australis UI. Use 'Customize' menu to move buttons on toolbars.</em:description>
+				<em:translator>jzhone (zh-CN)</em:translator>
 			</Description>
 		</em:localized>
 		

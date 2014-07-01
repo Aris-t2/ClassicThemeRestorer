@@ -31,6 +31,11 @@
 	  -moz-box-ordinal-group: 100 !important;
 	}
 	/* END: navigator-toolbox toolbars */
+	
+	/* fix for popup windows, which disable 'menubar' by force*/
+	window[chromehidden~="menubar"] #titlebar{
+	  margin-bottom:-26px !important;
+	}
 
 	#TabsToolbar,
 	#TabsToolbar:not(:-moz-lwtheme),
@@ -56,12 +61,6 @@
 	  margin-top: 2px !important; 
 	  margin-bottom: 0px !important;
 	  border-radius: 2.5px 2.5px 0 0 !important;
-	}
-	
-	#main-window[chromehidden~="menubar"][sizemode="maximized"] #toolbar-menubar ~ #TabsToolbar,
-	#main-window[sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar,
-	#main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar {
-	  -moz-margin-start: 0px !important;
 	}
 	
 	#main-window[tabsintitlebar] #TabsToolbar .titlebar-placeholder{

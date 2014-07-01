@@ -67,10 +67,10 @@ classicthemerestorerjs.ctr = {
 
 	// star-button in urlbar	
 	this.moveStarButtonIntoUrbar();
-	
+
 	// handle max/min tab-width for every new window
-	window.addEventListener("DOMContentLoaded", function load(event){
-		window.removeEventListener("DOMContentLoaded", load, false);
+	window.addEventListener("DOMWindowCreated", function load(event){
+		window.removeEventListener("DOMWindowCreated", load, false);
 		classicthemerestorerjs.ctr.updateTabWidth();  
 	},false);
 
@@ -783,7 +783,7 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "verifiedcolors":
-			if (branch.getBoolPref("verifiedcolors")  && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("verifiedcolors",true);
+			if (branch.getBoolPref("verifiedcolors") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("verifiedcolors",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("verifiedcolors",false);
 		  break;
 
@@ -851,11 +851,40 @@ classicthemerestorerjs.ctr = {
 		      classicthemerestorerjs.ctr.hideTabsToolbarWithOnTab();
 		  break;
 		  
-		  case "faviconurl": case "faviconurlpl":
+		  case "faviconurl": case "padlockex":
 			if (classicthemerestorerjs.ctr.prefs.getBoolPref("faviconurl"))
 		      classicthemerestorerjs.ctr.favIconinUrlbarCTR();
 		  break;
 		  
+		  case "padlock":
+			if (classicthemerestorerjs.ctr.prefs.getBoolPref("faviconurl"))
+		      classicthemerestorerjs.ctr.favIconinUrlbarCTR();
+			else if (classicthemerestorerjs.ctr.prefs.getCharPref("padlock")!="padlock_default"){
+				
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_default',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_classic',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_modern',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_none',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_classic',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_modern',false);
+				
+				if (classicthemerestorerjs.ctr.prefs.getCharPref("padlock")=="padlock_none")
+					classicthemerestorerjs.ctr.loadUnloadCSS("padlock2_none",true);
+				if (classicthemerestorerjs.ctr.prefs.getCharPref("padlock")=="padlock_classic")
+					classicthemerestorerjs.ctr.loadUnloadCSS("padlock2_classic",true);
+				if (classicthemerestorerjs.ctr.prefs.getCharPref("padlock")=="padlock_modern")
+					classicthemerestorerjs.ctr.loadUnloadCSS("padlock2_modern",true);
+
+			} else {
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_default',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_classic',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_modern',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_none',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_classic',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_modern',false);
+			}
+		  break;
+
 		  case "dblclclosefx":
 		    try{
 				if (branch.getBoolPref("dblclclosefx")) {
@@ -1005,10 +1034,6 @@ classicthemerestorerjs.ctr = {
 		  case "navbarbuttons":
 			if (branch.getCharPref("navbarbuttons")!="nabbuttons_off") {
 			  classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);
-			  classicthemerestorerjs.ctr.loadUnloadCSS("hidesmallbuttons",true);
-			}
-			else {
-			  classicthemerestorerjs.ctr.loadUnloadCSS("hidesmallbuttons",false);
 			}
 			classicthemerestorerjs.ctr.checkAppbuttonOnNavbar();
 			
@@ -1213,9 +1238,14 @@ classicthemerestorerjs.ctr = {
 		document.getElementById("TabsToolbar").collapsed = true;
 		
 		  if(osString=="WINNT"){
-			  if (document.getElementById("toolbar-menubar").getAttribute("autohide") == "true"
+			  if (classicthemerestorerjs.ctr.prefs.getCharPref("tabs")=="tabs_squared" &&
+				document.getElementById("toolbar-menubar").getAttribute("autohide") == "true"
 				&& document.getElementById("toolbar-menubar").getAttribute("inactive") == "true") {
 				  document.getElementById("toolbar-menubar").style.marginBottom="26px";
+			  } else if (classicthemerestorerjs.ctr.prefs.getCharPref("tabs")=="tabs_squaredc2" &&
+				document.getElementById("toolbar-menubar").getAttribute("autohide") == "true"
+				&& document.getElementById("toolbar-menubar").getAttribute("inactive") == "true") {
+				  document.getElementById("toolbar-menubar").style.marginBottom="24px";
 			  } else document.getElementById("toolbar-menubar").style.marginBottom="unset";
 		  } else if(osString=="Darwin") {
 			  document.getElementById("titlebar").style.paddingBottom="28px";
@@ -1253,9 +1283,20 @@ classicthemerestorerjs.ctr = {
 	  document.getElementById("page-proxy-favicon").setAttribute("src", "chrome://classic_theme_restorer/content/images/default_favicon.png");
 	 }
 	}
+
+	classicthemerestorerjs.ctr.loadUnloadCSS('padlock_default',false);
+	classicthemerestorerjs.ctr.loadUnloadCSS('padlock_classic',false);
+	classicthemerestorerjs.ctr.loadUnloadCSS('padlock_modern',false);
+	classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_none',false);
+	classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_classic',false);
+	classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_modern',false);
 	
-	if (classicthemerestorerjs.ctr.prefs.getBoolPref("faviconurlpl")) classicthemerestorerjs.ctr.loadUnloadCSS("faviconurl",true);
-	else classicthemerestorerjs.ctr.loadUnloadCSS("faviconurl",false);
+	if (classicthemerestorerjs.ctr.prefs.getCharPref("padlock")!="padlock_none"){
+	  classicthemerestorerjs.ctr.loadUnloadCSS(classicthemerestorerjs.ctr.prefs.getCharPref("padlock"),true);
+	}
+	
+	if (classicthemerestorerjs.ctr.prefs.getBoolPref("padlockex")) classicthemerestorerjs.ctr.loadUnloadCSS("padlock_extra",true);
+	  else classicthemerestorerjs.ctr.loadUnloadCSS("padlock_extra",false);
   
   },  
 
@@ -1278,25 +1319,26 @@ classicthemerestorerjs.ctr = {
   },
   
   updateTabWidth: function() {
-	// replace tabs min/max-width rules instead of overriding them
-	// to improve compatibility and prevent tab resizing bug
-	function findCSSRule(selector) {
-	  var ruleIndex = -1;
-	  var i=0;
-	  var theRules = document.styleSheets[0].cssRules;
-	   for (i=0; i<theRules.length; i++) {
-		 if (theRules[i].selectorText == selector) {
-		  ruleIndex = i;
-		  break;
-		 }
-	   }
-	  return ruleIndex;
-	}
+		
+	var minWidthValue = classicthemerestorerjs.ctr.prefs.getIntPref('ctabmwidth');
+	var maxWidthValue = classicthemerestorerjs.ctr.prefs.getIntPref('ctabwidth');
+			
+	//lowest possible size without causing glitches
+	if(minWidthValue<48) minWidthValue=48;
+	if(maxWidthValue<48) maxWidthValue=48;
 	
+	//remove the rule, if already inserted at the end
 	try {
-		var theRule = document.styleSheets[0].cssRules[findCSSRule('.tabbrowser-tab:not([pinned])')];
-		theRule.style.maxWidth=""+classicthemerestorerjs.ctr.prefs.getIntPref('ctabwidth')+"px";
-		theRule.style.minWidth=""+classicthemerestorerjs.ctr.prefs.getIntPref('ctabmwidth')+"px";
+		if (document.styleSheets[1].cssRules[document.styleSheets[1].cssRules.length-1].selectorText==".tabbrowser-tab:not([pinned])")
+		  document.styleSheets[1].deleteRule(document.styleSheets[1].cssRules.length-1);
+	} catch(e){}
+	
+	// insert rule at the end of document.styleSheets[0]
+	try {
+		var ruleEndPosition = document.styleSheets[1].cssRules.length;
+		document.styleSheets[1].cssRules[document.styleSheets[1].insertRule('.tabbrowser-tab:not([pinned]){}', ruleEndPosition)];
+		document.styleSheets[1].cssRules[ruleEndPosition].style.minWidth=""+minWidthValue+"px";
+		document.styleSheets[1].cssRules[ruleEndPosition].style.maxWidth=""+maxWidthValue+"px";
 	} catch(e){}
 	
 	/* logging */
@@ -1642,7 +1684,14 @@ classicthemerestorerjs.ctr = {
 		case "tabmokcolor": 		manageCSS("tabmokcolor.css");			break;
 		case "tabmokcolor2": 		manageCSS("tabmokcolor2.css");			break;
 		case "tabmokcolor3": 		manageCSS("tabmokcolor3.css");			break;
-		case "faviconurl": 			manageCSS("faviconurl.css");			break;
+		
+		case "padlock_default": 	manageCSS("padlock_default.css");		break;
+		case "padlock_classic": 	manageCSS("padlock_classic.css");		break;
+		case "padlock_modern":		manageCSS("padlock_modern.css");		break;
+		case "padlock_extra":		manageCSS("padlock_extra.css");			break;
+		case "padlock2_classic": 	manageCSS("padlock2_classic.css");		break;
+		case "padlock2_modern":		manageCSS("padlock2_modern.css");		break;
+		case "padlock2_none":		manageCSS("padlock2_none.css");			break;
 		
 		case "throbberalt": 		manageCSS("throbberalt.css");			break;
 		case "bmanimation": 		manageCSS("hidebmanimation.css");		break;
@@ -1656,9 +1705,7 @@ classicthemerestorerjs.ctr = {
 		case "cuibuttons":			manageCSS("cuibuttons.css");			break;
 		
 		case "spaces_extra": 		manageCSS("spaces_extra.css");			break;
-		
-		case "hidesmallbuttons": 	manageCSS("hidesmallbuttons.css");		break;
-		
+
 		case "tabcolor_def":
 
 			removeOldSheet(this.ctabsheet_def);

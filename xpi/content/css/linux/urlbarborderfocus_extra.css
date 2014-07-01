@@ -3,11 +3,11 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	/* urlbar border tweaks */
-	#nav-bar #urlbar {
+	* #urlbar {
 	  border: 1px solid ThreeDShadow !important;
 	}
-	#nav-bar #urlbar[focused],
-	#nav-bar .searchbar-textbox[focused] {
+	* #urlbar[focused],
+	* .searchbar-textbox[focused] {
 	  border-color: Highlight !important;
 	}
 

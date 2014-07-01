@@ -1,8 +1,8 @@
 // main settings
 pref("extensions.classicthemerestorer.tabs","tabs_squared");
 pref("extensions.classicthemerestorer.tabsontop",'unset');
-pref("extensions.classicthemerestorer.ctabwidth",210);
 pref("extensions.classicthemerestorer.ctabmwidth",100);
+pref("extensions.classicthemerestorer.ctabwidth",210);
 pref("extensions.classicthemerestorer.closetab","closetab_default");
 
 pref("extensions.classicthemerestorer.appbutton",'appbutton_v1');
@@ -66,7 +66,8 @@ pref("extensions.classicthemerestorer.tabmokcolor3",false);
 pref("extensions.classicthemerestorer.dblclnewtab",false);
 pref("extensions.classicthemerestorer.hidetbwot",false);
 pref("extensions.classicthemerestorer.faviconurl",false);
-pref("extensions.classicthemerestorer.faviconurlpl",true);
+pref("extensions.classicthemerestorer.padlock","padlock_default");
+pref("extensions.classicthemerestorer.padlockex",true);
 pref("extensions.classicthemerestorer.dblclclosefx",false);
 pref("extensions.classicthemerestorer.hide_bf_popup",false);
 pref("extensions.classicthemerestorer.verifiedcolors",false);

@@ -17,10 +17,10 @@
 <!ENTITY Ctr_cuitxt			"Text">
 
 <!ENTITY Ctr_combrelstoptt	"[Stopp][Aktualisieren] &gt;&gt; [Stopp-Aktualisieren]">
+<!ENTITY Ctr_tnot			"(Tabs 'unten')">
 
-<!ENTITY Ctr_main_t			"Grundeinstellungen">
-<!ENTITY Ctr_tabcolors_t	"Eigene Farben">
-<!ENTITY Ctr_special_t		"Extra">
+<!ENTITY Ctr_tabcolors_t	"Tab Farben &amp; Text">
+<!ENTITY Ctr_icons_t		"Symbole">
 
 <!ENTITY Ctr_tabs			"Tabs">
 <!ENTITY Ctr_tabs0			"Gerundete Tabs (Australis-Vorgabe)">
@@ -28,20 +28,18 @@
 <!ENTITY Ctr_tabs1m			"Quadratische Tabs (australisiert)">
 <!ENTITY Ctr_tabs2			"Gerundete Tabs (alternativ)">
 <!ENTITY Ctr_tabs3			"Gerundete Tabs (alternativ für Win7/Vista Aero)">
+<!ENTITY Ctr_tabforminfo	"Das aktuelle Thema bestimmt die Tabdarstellung.">
 <!ENTITY Ctr_tabsontop0		"Tabs oben (vorgegeben) - [nicht gesetzt]">
 <!ENTITY Ctr_tabsontop1		"Tabs oben - setze [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Tabs 'unten' - setze [tabsontop=false]">
 <!ENTITY Ctr_tabsontopI1	"Setzt Attribut [tabsontop=true/false] für">
-<!ENTITY Ctr_tabsontopI2	"#main-window, #titlebar, #nav-bar">
-<!ENTITY Ctr_tabsontopI3	"#navigator-toolbox, #toolbar-menubar">
-<!ENTITY Ctr_tabsontopI4	"#TabsToolbar, #ctraddon_extra-bar">
-<!ENTITY Ctr_tabsontopI5	"#PersonalToolbar, #ctraddon_addon-bar">
 <!ENTITY Ctr_tabsintitlebar	"Firefox Titelleiste (about:config Einstellung)">
 <!ENTITY Ctr_tabwidthdef	"(vorgegeben)">
 <!ENTITY Ctr_tabwidthcla	"(klassisch)">
 <!ENTITY Ctr_tabmaxwidth	"Maximalbreite:">
 <!ENTITY Ctr_tabminwidth	"Minimalbreite:">
-<!ENTITY Ctr_closetab_0		"Tab Schließen: auf allen Tabs (vorgegeben)">
+<!ENTITY Ctr_tabwidthinfo	"Die Minimal- und Maximalbreite von Tabs wird durch TabMixPlus / TabUtilities kontrolliert">
+<!ENTITY Ctr_closetab_0		"Tab Schließen (vorgegeben)">
 <!ENTITY Ctr_closetab_1		"Tab Schließen: nur auf dem aktiven Tab">
 <!ENTITY Ctr_closetab_2		"Tab Schließen: nirgends">
 <!ENTITY Ctr_closetab_3		"Tab Schließen: am Ende der Tableiste">
@@ -54,7 +52,7 @@
 <!ENTITY Ctr_appbutton1wt	"Button auf den Leisten (nur Text)">
 <!ENTITY Ctr_appbutton2		"Button auf der Firefox Titelleiste">
 <!ENTITY Ctr_appbutton2io	"Button auf der Firefox Titelleiste (nur Symbol)">
-<!ENTITY Ctr_paneluibtweak	"Oranger Firefoxmenü-Button auf der Tableiste">
+<!ENTITY Ctr_paneluibtweak	"Orangener Firefox-Menübutton auf der Tableiste">
 <!ENTITY Ctr_appbuttonc_o	"Farbe: Orange (vorgegeben)">
 <!ENTITY Ctr_appbuttonc_a	"Farbe: Blau (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Farbe: Schwarz (Nightly)">
@@ -65,43 +63,58 @@
 <!ENTITY Ctr_appbuttonc_gr	"Farbe: Grau">
 <!ENTITY Ctr_appbuttonc_pu	"Farbe: Lila">
 <!ENTITY Ctr_appbuttonc_wh	"Farbe: weiß">
-<!ENTITY Ctr_appbuttonI1	"Neustart empfohlen">
-<!ENTITY Ctr_appbuttonI1e	"Nicht sichtbar auf der Windows Titelleiste!">
-<!ENTITY Ctr_appbuttonI2	"Farbe nur auf der Titelleiste">
-<!ENTITY Ctr_appbuttonI3	"und der Tabsleiste sichtbar!">
+<!ENTITY Ctr_appbuttonI1	"Nach Änderungen wird ein Neustart empfohlen.">
+<!ENTITY Ctr_appbuttonI1e	"Der Button ist nicht sichtbar auf der Windows Titelleiste!">
+<!ENTITY Ctr_appbuttonI2	"Die Farbe ist nur auf der Titelleiste und der Tableiste sichtbar!">
 <!ENTITY Ctr_alttbappb		"Alternative Symbole">
 <!ENTITY Ctr_appbutmhi		"Höhere Position (nur Tableiste)">
 <!ENTITY Ctr_appbutbdl		"Entferne Ränder &amp; Hintergrundfarbe">
+<!ENTITY Ctr_dblclclosefx	"Doppelklick schließt aktuelles Fenster">
 
 <!ENTITY Ctr_ui				"Oberfläche">
-<!ENTITY Ctr_nbiconsize0	"Setze Navigationsleisten-Attribut:">
-<!ENTITY Ctr_nbiconsize1	"#nav-bar[iconsize='small'] (vorgegeben)">
-<!ENTITY Ctr_nbiconsize2	"#nav-bar[iconsize='large']">
+<!ENTITY Ctr_nbiconsize0	"Setze Navigationsleisten-Attribut">
 <!ENTITY Ctr_smallnavbut	"Kleine Buttons auf der Navigationsleiste">
-<!ENTITY Ctr_hidenavbar		"Navigationsleiste verstecken">
-<!ENTITY Ctr_buttons		"Buttons">
+<!ENTITY Ctr_bfurlbarfix 	"Korrigiere Radius der Adressleistenränder">
 <!ENTITY Ctr_backforward	"Verschiebbarer Vor-Zurück-Button">
-<!ENTITY Ctr_wincontrols	"Verschiebbare Vollbild-Buttons: Min/Max/Schließen ">
+<!ENTITY Ctr_hide_bf_popup	"Verstecke Chronik-Popup bei gedrückter Maustaste">
+<!ENTITY Ctr_wincontrols	"Vollbild: Verschiebbare Minimieren/Maximieren/Schließen-Buttons">
 <!ENTITY Ctr_starinurl		"Lesezeichen-Button in der Adressleiste (Firefox neustarten)">
 <!ENTITY Ctr_mstatusbar		"Statusbereich: aktiv und verschiebbar">
 <!ENTITY Ctr_hideurelstop	"Adressleiste ohne Stopp &amp; Aktualisieren Buttons">
 <!ENTITY Ctr_combrelstop	"Kombiniere Stopp &amp; Aktualisieren Buttons">
 <!ENTITY Ctr_panelmenucol	"Alternative Hintergrundfarbe für 'Panel-Menüs'">
-<!ENTITY Ctr_findbar_def	"Suchleiste (vorgegebene Position)">
-<!ENTITY Ctr_findbar_top	"Suchleiste oben">
-<!ENTITY Ctr_findbar_bot	"Suchleiste unten">
-<!ENTITY Ctr_findbar_topa	"Suchleiste oben (alternative Darstellung)">
-<!ENTITY Ctr_findbar_bota	"Suchleiste unten (alternative Darstellung)">
+<!ENTITY Ctr_hideprivmask	"Privater Modus: entferne 'Masken-Symbole' von Leisten">
+<!ENTITY Ctr_verifiedcolors	"Grüne/blaue Verifizierungsbox für verifizierte Webseiten">
+<!ENTITY Ctr_findbar		"Suchleiste">
+<!ENTITY Ctr_findbar_def	"Vorgegebene Position">
+<!ENTITY Ctr_findbar_top	"Oben">
+<!ENTITY Ctr_findbar_bot	"Unten">
+<!ENTITY Ctr_findbar_topa	"Oben (alternative Darstellung)">
+<!ENTITY Ctr_findbar_bota	"Unten (alternative Darstellung)">
 <!ENTITY Ctr_nav_txt_ico0	"Zeige Symbole (vorgegeben)">
 <!ENTITY Ctr_nav_txt_ico1	"Zeige große Symbole">
 <!ENTITY Ctr_nav_txt_ico2	"Zeige Symbole und Text">
 <!ENTITY Ctr_nav_txt_ico3	"Zeige nur Text">
 <!ENTITY Ctr_stoprel0		"Stopp- &amp; Aktualisieren-Button Einstellungen">
 <!ENTITY Ctr_stoprel1		"Positioniere 'Aktualisieren' rechts von 'Stopp'!">
+<!ENTITY Ctr_cpanelmenus	"Kompakte 'Panel-Menüs' (Lesezeichen, Chronik etc.)">
+<!ENTITY Ctr_hidezoomres	"Zoom-Buttons auf Leisten: verstecke 'Normalgröße'-Button">
+<!ENTITY Ctr_pmhidelabels	"Verstecke Text unter 'Panel-Menü'-Elementen und Buttons">
+<!ENTITY Ctr_menupopupscr	"Popupmenüs: ersetze Scroll-Pfeile durch Scrollbars">
 
-<!ENTITY Ctr_tab_tf_info	"Felder können Namen, Hexcodes, RGB(A) und HSL(A) Farben beinhalten. Eingaben werden nicht überprüft!">
-<!ENTITY Ctr_tabacthovdef	"Tab (aktiv/über/normal)">
-<!ENTITY Ctr_tabnorunrnew	"Tab (ungelesen/ungeladen) / Neuer Tab">
+<!ENTITY Ctr_fxmockup		"Firefox Entwürfe">
+<!ENTITY Ctr_tabmokcolor	"Weiße Tab-Buttons (Neu, Schließen, Gruppen, Listen)">
+<!ENTITY Ctr_tabmokcolor2	"Weißer Tabtext und dunkler Schatten für nicht aktive Tabs">
+<!ENTITY Ctr_tabmokcolor3	"Weiße Trennlinien zwischen den Tabs">
+
+<!ENTITY Ctr_tab_tf_info1	"Textfelder akzeptieren Farbnamen sowie RGB(A), HSL(A) und hexadezimale Eingaben.">
+<!ENTITY Ctr_tab_tf_info2	"Eingegebene Werte werden nicht überprüft!">
+<!ENTITY Ctr_tabact_t		"aktiv">
+<!ENTITY Ctr_tabhov_t		"über">
+<!ENTITY Ctr_tabnor_t		"normal">
+<!ENTITY Ctr_tabpen_t		"ungeladen">
+<!ENTITY Ctr_tabunr_t		"ungelesen">
+<!ENTITY Ctr_ntab_t			"neu">
 <!ENTITY Ctr_customsqtab0	"Eigene Tabfarben">
 <!ENTITY Ctr_customsqtab1	"Hintergrund">
 <!ENTITY Ctr_ctext			"Text">
@@ -116,51 +129,43 @@
 <!ENTITY Ctr_bold			"Fett">
 <!ENTITY Ctr_italic			"Kursiv">
 
-<!ENTITY Ctr_toolbars		"Leisteneinstellungen">
-<!ENTITY Ctr_altmenubar		"Menüleiste: Hintergrundfarbe hinzufügen ('System Titelleiste')">
-<!ENTITY Ctr_altmenubarpos	"Menüleiste: Alternative Position (unter der Firefox Titelleiste)">
-<!ENTITY Ctr_noaddonbarbg	"Addonleiste: Hintergrundfarbe entfernen (Windows AeroGlass / Win8)">
-<!ENTITY Ctr_menubarnofog	"Menüleiste: Hintergrundfarbe/-nebel entfernen (Windows AeroGlass / Win8)">
-<!ENTITY Ctr_notabfog		"Tableiste: Hintergrundnebel entfernen (Windows AeroGlass / Win8)">
-<!ENTITY Ctr_notabbg		"Tableiste: Hintergrundfarbe entfernen (Windows AeroGlass / Win8)">
-<!ENTITY Ctr_highaddonsbar	"Addonleiste: Leistenhöhe vergrößern">
-<!ENTITY Ctr_hightabpos		"Tabsleiste: Höhere Position (falls möglich)">
+<!ENTITY Ctr_favicon		"Favoritensymbol">
+<!ENTITY Ctr_emptyfavicon	"Leeres Favoritensymbol auf Tabs wiederherstellen">
+<!ENTITY Ctr_emptyfavicon2	"Leeres und gepunktetes Favoritensymbol durch Papierblatt-Symbol ersetzen">
+<!ENTITY Ctr_faviconurl		"Favoriten-Symbol in der Adressleiste (Firefox neustarten)">
+<!ENTITY Ctr_padlock_hid	"Schloss-Symbol (versteckt)">
+<!ENTITY Ctr_padlock_def	"Schloss-Symbol (vorgegeben)">
+<!ENTITY Ctr_padlock_cla	"Schloss-Symbol (klassisch)">
+<!ENTITY Ctr_padlock_mod	"Schloss-Symbol (modern)">
+<!ENTITY Ctr_padlock_ext	"Sicherheits-Symbole">
 
-<!ENTITY Ctr_toolbars2		"Leisteneinstellungen (hauptsächlich für 'Tabs unten' &amp; Windows AeroGlass / Win8)">
+<!ENTITY Ctr_invicons		"Invertierte Symbole">
+<!ENTITY Ctr_menubar		"Menüleiste">
+<!ENTITY Ctr_tabstoolbar	"Tableiste">
+<!ENTITY Ctr_navbar			"Navigationsleiste">
+<!ENTITY Ctr_bookbar		"Favoritenleiste">
+
+<!ENTITY Ctr_toolbars		"Leisteneinstellungen">
+<!ENTITY Ctr_dblclnewtab	"Doppelklick öffnet einen neuen Tab (und beachtet 'browser.newtab.url')">
+<!ENTITY Ctr_hidetbwot		"Verstecke Tableiste mit nur einem sichtbaren Tab (Firefox neustarten)">
+<!ENTITY Ctr_notabfog		"Hintergrundnebel entfernen (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_notabbg		"Hintergrundfarbe entfernen (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_hightabpos		"Höhere Position (falls möglich)">
+<!ENTITY Ctr_alttabstb		"Alternative Hintergrundfarbe">
+
+<!ENTITY Ctr_altmenubar		"Hintergrundfarbe hinzufügen ('System Titelleiste')">
+<!ENTITY Ctr_altmenubarpos	"Alternative Position (unter der Firefox Titelleiste)">
+<!ENTITY Ctr_menubarnofog	"Hintergrundfarbe/-nebel entfernen (Windows AeroGlass / Win8)">
+
+<!ENTITY Ctr_hidenavbar		"Navigationsleiste verstecken">
 <!ENTITY Ctr_nobookbarbg	"Favoritenleiste: Hintergrundfarbe entfernen">
 <!ENTITY Ctr_nonavbarbg		"Navigationsleiste: Hintergrundfarbe entfernen">
 <!ENTITY Ctr_nonavborder	"Favoritenleiste: Oberen Rand hinzufügen">
 <!ENTITY Ctr_nonavtbborder	"Obere Leisten: Ränder entfernen">
-<!ENTITY Ctr_alttabstb		"Tabsleiste: alternative Hintergrundfarbe">
 
-<!ENTITY Ctr_invicons		"Invertierte Symbole">
-<!ENTITY Ctr_menubar		"Menüleiste">
-<!ENTITY Ctr_tabstoolbar	"Tabsleiste">
-<!ENTITY Ctr_navbar			"Navigationsleiste">
-<!ENTITY Ctr_bookbar		"Favoritenleiste">
-
-<!ENTITY Ctr_specialtw		"Spezial Einstellungen">
-<!ENTITY Ctr_emptyfavicon	"'Leeres' Favoritensymbol auf Tabs wiederherstellen">
-<!ENTITY Ctr_emptyfavicon2	"Leeres und gepunktetes Favoritensymbol durch Papierblatt-Symbol ersetzten">
-<!ENTITY Ctr_bfurlbarfix 	"Setze Radius der Ränder der Adressleiste auf 2px (Windows) / 2.5px (MacOSX)">
-<!ENTITY Ctr_cpanelmenus	"Kompakte 'Panel-Menüs' (Lesezeichen, Chronik etc.)">
-<!ENTITY Ctr_hidezoomres	"Vergrößern/Verkleinern-Buttons auf Leisten: Verstecke 'Normalgröße'-Button">
-<!ENTITY Ctr_pmhidelabels	"Verstecke Text unter 'Panel-Menü'-Elementen und Buttons">
-<!ENTITY Ctr_menupopupscr	"Popupmenüs: ersetze Scroll-Pfeile durch Scrollbars">
-<!ENTITY Ctr_hideprivmask	"Privater Modus: entferne 'Masken-Symbole' von Leisten">
-
-<!ENTITY Ctr_fxmockup		"Firefox Entwürfe">
-<!ENTITY Ctr_tabmokcolor	"Weiße Tab-Buttons (Neu, Schließen, Gruppen, Listen)">
-<!ENTITY Ctr_tabmokcolor2	"Weißer Tabtext und dunkler Schatten für nicht aktive Tabs">
-<!ENTITY Ctr_tabmokcolor3	"Weiße Trennlinien zwischen den Tabs">
-
-<!ENTITY Ctr_dblclnewtab	"Tableiste: Doppelklick öffnet einen neuen Tab (und beachet 'browser.newtab.url')">
-<!ENTITY Ctr_hidetbwot		"Tableiste: Verstecke Tableiste mit nur einem sichtbaren Tab (Firefox neustarten)">
-<!ENTITY Ctr_faviconurl		"Favoriten-Symbol in der Adressleiste (Firefox neustarten)">
-<!ENTITY Ctr_faviconurl2	"Schloß-Symbol">
-<!ENTITY Ctr_dblclclosefx	"Anwendungsbutton auf der Titelleiste: Doppelklick schließt aktuelles Fenster">
-<!ENTITY Ctr_hide_bf_popup	"Verschiebbarer Vor-Zurück-Button: Verstecke Chronik-Popup bei gedrückter Maustaste">
-<!ENTITY Ctr_verifiedcolors	"Grüne/blaue Verifizierungsbox für verifizierte Webseiten">
+<!ENTITY Ctr_closeabarbut	"Entferne 'Schließen'-Button">
+<!ENTITY Ctr_highaddonsbar	"Höhere Leiste">
+<!ENTITY Ctr_noaddonbarbg	"Hintergrundfarbe entfernen (Windows AeroGlass / Win8)">
 
 <!ENTITY Ctr_animation		"Animationen">
 <!ENTITY Ctr_throbberalt	"Alternative Ladeanzeige für Tabs">
@@ -169,11 +174,11 @@
 <!ENTITY Ctr_tabanimation	"'Tab schließen und öffnen' (about:config Einstellung)">
 <!ENTITY Ctr_dlanimation	"'Download gestartet und beendet' (about:config Einstellung)">
 
-<!ENTITY Ctr_closeabarbut	"Entferne 'Schließen'-Button von der Addonleiste">
-<!ENTITY Ctr_toolsitem		"Eintrag im Menuleisten-Menü 'Extras'">
+<!ENTITY Ctr_toolsitem		"Eintrag im Menü 'Extras'">
 <!ENTITY Ctr_appmenuitem	"Eintrag im Options-Untermenü des Anwendungsbuttons">
-<!ENTITY Ctr_contextitem	"Eintrag im Leisten Kontextmenü">
-<!ENTITY Ctr_cuibotbuttons	"Einstellungs-Buttons im 'Anpassen'-Modus">
+<!ENTITY Ctr_contextitem	"Eintrag im Leisten-Kontextmenü">
+<!ENTITY Ctr_cuibotbuttons	"Einstellungsbuttons im Modus 'Anpassen'">
+
 
 <!ENTITY Ctr_pw_settings	"Einstellungen">
 <!ENTITY Ctr_pw_set_reset	"Vorgabe wiederherstellen">

@@ -141,6 +141,10 @@
 	#TabsToolbar:not(:-moz-lwtheme)::before {
 	  box-shadow: none !important;
 	}
+	#tabbrowser-tabs .tabbrowser-arrowscrollbox .arrowscrollbox-overflow-start-indicator,
+	#tabbrowser-tabs .tabbrowser-arrowscrollbox .arrowscrollbox-overflow-end-indicator {
+	  background-image: none !important;
+	}
 
 	.tabbrowser-tab:-moz-lwtheme {
 	  color: inherit !important;
@@ -179,6 +183,9 @@
 	#navigator-toolbox toolbar:-moz-lwtheme{
 	  box-shadow:none !important;
 	  border: 0px solid transparent !important;
+	}
+	#navigator-toolbox #nav-bar:-moz-lwtheme{
+	  border-top: 1px solid transparent !important;
 	}
 	
 	@media all and (-moz-windows-theme:aero) {
@@ -262,15 +269,14 @@
 	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive],:not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
 	  clip-path: none !important;
 	}
-
-	/* Private Tab extension */
-	.tabs-newtab-button + .tabs-newtab-button {
-	  -moz-margin-start: 15px !important;
-	}
 	
 	/*ColorfulTabs extension*/
 	#navigator-toolbox[tabsontop="false"] #colorfulTabsStack {
 	  margin-top: -1px !important;
+	}
+	/* Private Tab extension */
+	.tabs-newtab-button + .tabs-newtab-button {
+	  -moz-margin-start: 15px !important;
 	}
 }
 

@@ -2,7 +2,7 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-    #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
+   /* #main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
       -moz-margin-start: 0px !important;
 	  -moz-padding-start: 2px !important;
     }
@@ -12,7 +12,7 @@
 		  -moz-padding-start: 0px !important;
 		}
 	}
-	
+	*/
 	@media not all and (-moz-windows-glass) {
 		#main-window:not([tabsintitlebar])[tabsontop="false"][sizemode="maximized"] #TabsToolbar .tabbrowser-tabs,
 		#main-window[sizemode="normal"] #TabsToolbar .tabbrowser-tabs {

@@ -1,0 +1,10 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@-moz-document url(chrome://browser/content/browser.xul) {
+	
+	#urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"],
+	#urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/padlock_modern.png) !important;
+	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
+	}
+
+}

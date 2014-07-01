@@ -39,15 +39,29 @@
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	}
 
-	/* remove gaps before and afer tabs */
+	/* remove gaps before and after tabs */
 	.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
 	  -moz-padding-start: 0px !important;
 	}
-	.tabs-newtab-button{
-	  -moz-margin-end: 0px !important; /*-15px*/
+
+	@media not all and (-moz-windows-classic) {
+	
+		#TabsToolbar:not([currentset*="tabbrowser-tabs,new-tab-button"]):not([orient="vertical"]) .tabs-newtab-button{
+		  -moz-margin-end: 0px !important;
+		}
+		#TabsToolbar:not([currentset*="tabbrowser-tabs,new-tab-button"]):not([orient="vertical"]) #tabbrowser-tabs:not([overflow]) {
+		  -moz-margin-end: -15px !important;
+		}
+	
 	}
-	#TabsToolbar:not([orient="vertical"]) #tabbrowser-tabs:not([overflow]) {
+
+	#TabsToolbar[currentset*="tabbrowser-tabs,search-container"]:not([orient="vertical"]) #tabbrowser-tabs:not([overflow]),
+	#TabsToolbar[currentset*="tabbrowser-tabs,urlbar-container"]:not([orient="vertical"]) #tabbrowser-tabs:not([overflow]) {
 	  -moz-margin-end: -15px !important;
+	}
+	
+	#titlebar-placeholder-on-TabsToolbar-for-captions-buttons{
+	  -moz-margin-start: 0px !important;
 	}
 	
 	/* TU workaround */

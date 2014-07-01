@@ -21,23 +21,23 @@
       -moz-padding-start: 8px !important;
 	}
 		
-	#nav-bar #notification-popup-box[hidden] + * {
+	* #notification-popup-box[hidden] + * {
 	  -moz-padding-start: 2px !important;
 	  transition: none !important;
 	}
 
-	#nav-bar #notification-popup-box:not([hidden]) {
+	* #notification-popup-box:not([hidden]) {
 	  padding-left:2px !important;
 	  padding-right:2px !important;
 	  transition: none !important;
 	}
 	
 	/* urlbar border tweaks */
-	#main-window[defaultfxtheme="true"] #nav-bar #urlbar {
+	#main-window[defaultfxtheme="true"] * #urlbar {
 	  border: 1px solid ThreeDShadow !important;
 	}
-	#main-window[defaultfxtheme="true"] #nav-bar #urlbar[focused],
-	#main-window[defaultfxtheme="true"] #nav-bar .searchbar-textbox[focused] {
+	#main-window[defaultfxtheme="true"] * #urlbar[focused],
+	#main-window[defaultfxtheme="true"] * .searchbar-textbox[focused] {
 	  border-color: Highlight !important;
 	}
 

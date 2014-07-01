@@ -7,17 +7,12 @@
 	  visibility: visible !important;
 	}
 	
-	#urlbar-container:-moz-locale-dir(ltr) #back-button,
-	#urlbar-container:-moz-locale-dir(ltr) #forward-button{
+	#main-window * * #urlbar-container #back-button,
+	#main-window * * #urlbar-container #forward-button{
 	  visibility: collapse !important;
+	  display:none !important;
 	}
 	
-	/* RTL locale fix */
-	#urlbar-container:-moz-locale-dir(rtl) #back-button,
-	#urlbar-container:-moz-locale-dir(rtl) #forward-button{
-	  visibility: collapse !important; /*hidden*/
-	}
-
 	#urlbar-container *{
 	  clip-path: none !important;
 	}
@@ -28,7 +23,7 @@
 	  transition-delay: 0s !important;
 	}
 	
-	#main-window #navigator-toolbox #urlbar-container #forward-button[disabled]{
+	#main-window * #urlbar-container #forward-button[disabled]{
 	  visibility:collapse !important;
 	  opacity: 1.0 !important;
 	}

@@ -104,6 +104,10 @@
 	#TabsToolbar:not(:-moz-lwtheme)::before {
 	  box-shadow: none !important;
 	}
+	#tabbrowser-tabs .tabbrowser-arrowscrollbox .arrowscrollbox-overflow-start-indicator,
+	#tabbrowser-tabs .tabbrowser-arrowscrollbox .arrowscrollbox-overflow-end-indicator {
+	  background-image: none !important;
+	}
 	
 	#TabsToolbar{
 	  background-image: none !important;
@@ -140,7 +144,8 @@
 	.ntabhovcolorbox,
 	#ntabcolorbox,
 	#ntabhovcolorbox,
-	#ctraddon_ccap_t_squaredc2{
+	#ctraddon_ccap_t_squaredc2,
+	#ClassicTRoptionsPane[defaultfxtheme="true"] #ctraddon_pw_colors_ntab_t{
 	  visibility: visible !important;
 	}
 	

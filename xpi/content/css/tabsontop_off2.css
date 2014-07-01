@@ -57,11 +57,11 @@
 	  border-radius: 2.5px 2.5px 0 0 !important;
 	}*/
 	
-	#main-window[chromehidden~="menubar"][sizemode="maximized"] #toolbar-menubar ~ #TabsToolbar,
+	/*#main-window[chromehidden~="menubar"][sizemode="maximized"] #toolbar-menubar ~ #TabsToolbar,
 	#main-window[sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar,
 	#main-window:not([tabsintitlebar]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar {
 	  -moz-margin-start: 0px !important;
-	}
+	}*/
 	
 	#main-window[tabsintitlebar] #TabsToolbar .titlebar-placeholder{
 	  visibility: collapse !important;

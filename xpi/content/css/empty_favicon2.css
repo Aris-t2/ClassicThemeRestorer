@@ -15,12 +15,16 @@
   #TabsToolbar .tabbrowser-tab:not([pinned])[busy] .tab-throbber + .tab-icon-image:not([src]) {
 	display:none !important;
   }
-	 		 
-  #page-proxy-favicon:not(src),
+
+  #page-proxy-favicon:not(src):not([pageproxystate="valid"]),
+  .chromeUI #page-proxy-favicon[pageproxystate="valid"],
+  .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"],
+  .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"],
+  .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"],
   #tabbrowser-tabs .tab-icon-image:not(src),
   #alltabs-popup menuitem[image=""] > .menu-iconic-left > .menu-iconic-icon,
   .sidebar-placesTreechildren::-moz-tree-image(leaf),
-  .bookmark-item:not(#home-button):not(src):not([container]):not([type]),
+  toolbaritem .bookmark-item:not(src):not([container]):not([type]),
   .site-favicon:not(src) {
 	list-style-image: url("chrome://classic_theme_restorer/content/images/default_favicon.png") !important;
 	-moz-image-region: rect(0px, 16px, 16px, 0px) !important;
@@ -84,7 +88,7 @@
 
   treechildren::-moz-tree-image(container, OrganizerQuery_AllBookmarks) {
 	list-style-image: url("chrome://browser/skin/Toolbar-small.png") !important;
-	-moz-image-region: rect(0px 48px 16px 32px) !important
+	-moz-image-region: rect(0px 48px 16px 32px) !important;
   }
 
   treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksToolbar) {
