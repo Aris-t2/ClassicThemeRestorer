@@ -43,8 +43,11 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_colors_ntab_t').disabled = true;
 		document.getElementById('ctraddon_pw_notabfog').disabled = true;
 		document.getElementById('ctraddon_pw_notabbg').disabled = true;
+		document.getElementById('ctraddon_pw_noaddonbarbg').disabled = true;
+		document.getElementById('ctraddon_pw_noconicons').disabled = true;
+		document.getElementById('ctraddon_pw_closeonleft').disabled = true;
+		document.getElementById('ctraddon_pw_closealt').disabled = true;
 
-		//document.getElementById('ctraddon_pw_tabmenulist').style.visibility = 'collapse';
 		document.getElementById('ctraddon_abhigher').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_smallnavbut').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_iconsbig').style.visibility = 'collapse';
@@ -72,6 +75,10 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_nonavborder').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_nonavtbborder').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_nobookbarbg').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_noaddonbarbg').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_noconicons').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_closeonleft').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_closealt').style.visibility = 'collapse';
 	} else {
 		document.getElementById('ctraddon_pw_special_info2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_special_font').style.visibility = 'collapse';
@@ -109,6 +116,10 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_closetab_pw_non').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_closetab_pw_sta').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_closetab_pw_end').style.visibility = 'collapse';
+	}
+	if (this.appversion < 32) {
+	  document.getElementById('ctraddon_pw_noconicons').disabled = true;
+	  document.getElementById('ctraddon_pw_noconicons').style.visibility = 'collapse';
 	}
 	
 	function PrefListener(branch_name, callback) {
@@ -174,6 +185,24 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwFaviconextra(this.prefs.getBoolPref("faviconurl"));
 	this.ctrpwBFextra(this.prefs.getBoolPref("backforward"));
 
+	
+	var closetab_value = this.prefs.getCharPref("closetab");
+  
+    if(closetab_value=="closetab_default"
+		|| closetab_value=="closetab_forced"
+		|| closetab_value=="closetab_active") {
+      this.ctrpwTabcloseextra(false);
+	} else this.ctrpwTabcloseextra(true);
+	
+	switch (this.prefs.getCharPref("closetab")) {
+	  case "closetab_default": this.ctrpwTabcloseextra(false); this.ctrpwTabcloseextra2(true); break;
+	  case "closetab_forced": this.ctrpwTabcloseextra(false); this.ctrpwTabcloseextra2(true); break;
+	  case "closetab_active": this.ctrpwTabcloseextra(false); this.ctrpwTabcloseextra2(true); break;
+	  case "closetab_none": this.ctrpwTabcloseextra(true); this.ctrpwTabcloseextra2(true); break;
+	  case "closetab_tb_start": this.ctrpwTabcloseextra(true); this.ctrpwTabcloseextra2(false); break;
+	  case "closetab_tb_end": this.ctrpwTabcloseextra(true); this.ctrpwTabcloseextra2(false); break;
+	}
+
 	this.onCtrPanelSelect();
 
   },
@@ -183,40 +212,61 @@ classicthemerestorerjso.ctr = {
   unloadprefwindow: function() {
 
 	var app        	 = Components.classes["@mozilla.org/toolkit/app-startup;1"].getService(Components.interfaces.nsIAppStartup);
+	var cancelQuit   = Components.classes["@mozilla.org/supports-PRBool;1"].createInstance(Components.interfaces.nsISupportsPRBool);
+	var observerSvc  = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
 	var promptSvc  	 = Components.classes["@mozilla.org/embedcomp/prompt-service;1"].getService(Components.interfaces.nsIPromptService);
 	var stringBundle = Components.classes["@mozilla.org/intl/stringbundle;1"].getService(Components.interfaces.nsIStringBundleService)
-	                    .createBundle("chrome://classic_theme_restorer/locale/messages.file");
+						.createBundle("chrome://classic_theme_restorer/locale/messages.file");
 
 	if (this.needsRestart &&
 		promptSvc.confirm(null,
 			stringBundle.GetStringFromName("popup.title"),
 			stringBundle.GetStringFromName("popup.msg.restart")
 		)) {
-		app.quit(app.eForceQuit | app.eRestart);
+		observerSvc.notifyObservers(cancelQuit, "quit-application-requested", "restart");
+		if(cancelQuit.data) { // The quit request has been cancelled.
+			return false;
+		};
+		app.quit(app.eAttemptQuit | app.eRestart);
 	}
 
 	return true;
   },
   
-  unsetCustomTabcolors: function() {
+  unsetTabColorsAndMore: function() {
 	this.prefs.setBoolPref('tabcolor_def',false);
 	this.prefs.setBoolPref('tabcolor_act',false);
+	this.prefs.setBoolPref('tabcolor_pen',false);
 	this.prefs.setBoolPref('tabcolor_unr',false);
 	this.prefs.setBoolPref('tabcolor_hov',false);
 	this.prefs.setBoolPref('ntabcolor_def',false);
 	this.prefs.setBoolPref('ntabcolor_hov',false);
+	
+	if(this.prefs.getBoolPref('closeonleft')) {
+	  this.prefs.setBoolPref('closeonleft',false);
+	  setTimeout(function(){
+		classicthemerestorerjso.ctr.prefs.setBoolPref('closeonleft',true);
+	  },20);
+	}
   },
   
   ctrpwFaviconextra: function(which) {
-    if(which==true) which=false;
-	else which=true;
+    if(which==true) which=false; else which=true;
 	document.getElementById('ctraddon_padlock_extra').disabled = which;
   },
   
   ctrpwBFextra: function(which) {
-    if(which==true) which=false;
-	else which=true;
+    if(which==true) which=false; else which=true;
     document.getElementById('ctraddon_pw_hide_bf_popup').disabled = which;
+  },
+  
+  ctrpwTabcloseextra: function(which) {
+	document.getElementById('ctraddon_pw_closetabhfl').disabled = which;
+	document.getElementById('ctraddon_pw_closeonleft').disabled = which;
+  },
+  
+  ctrpwTabcloseextra2: function(which) {
+	document.getElementById('ctraddon_pw_closealt').disabled = which;
   },
   
   ctrpwAppbuttonextra: function(which,fromprefwindow) {
@@ -450,6 +500,10 @@ classicthemerestorerjso.ctr = {
 	patterns[119]="cuibuttons="+this.prefs.getBoolPref("cuibuttons");
 	
 	patterns[120]="padlockex="+this.prefs.getBoolPref("padlockex");
+	patterns[121]="closetabhfl="+this.prefs.getBoolPref("closetabhfl");
+	patterns[122]="noemptypticon="+this.prefs.getBoolPref("noemptypticon");
+	patterns[123]="feedinurl="+this.prefs.getBoolPref("feedinurl");
+	patterns[124]="noconicons="+this.prefs.getBoolPref("noconicons");
 
 	saveToFile(patterns);
 	  

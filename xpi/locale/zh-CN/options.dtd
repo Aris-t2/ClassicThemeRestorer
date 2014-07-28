@@ -7,6 +7,7 @@
 <!ENTITY Ctr_space			"空白">
 <!ENTITY Ctr_separator		"分隔符">
 <!ENTITY Ctr_puibseparator	"面板按钮分隔符">
+<!ENTITY Ctr_sidebarbutton	"(Sidebar)">
 
 <!ENTITY Ctr_cuibuttons		"按钮">
 <!ENTITY Ctr_cuibutnormal	"标准">
@@ -20,7 +21,7 @@
 <!ENTITY Ctr_tnot			"(标签栏不在顶部)">
 
 <!ENTITY Ctr_tabcolors_t	"自定义色彩">
-<!ENTITY Ctr_icons_t		"Favicon &amp; icons">
+<!ENTITY Ctr_icons_t		"网站小图标 &amp; 图标">
 
 <!ENTITY Ctr_tabs			"标签页">
 <!ENTITY Ctr_tabs0			"弧形标签页 (Australis 默认)">
@@ -28,23 +29,28 @@
 <!ENTITY Ctr_tabs1m			"方形标签页 (仿 Australis)">
 <!ENTITY Ctr_tabs2			"弧形标签页 (仿 Australis)">
 <!ENTITY Ctr_tabs3			"弧形标签页 (Aero 风格)">
-<!ENTITY Ctr_tabforminfo	"Tab appearance is controlled by the current theme.">
+<!ENTITY Ctr_tabforminfo	"标签页外观由当前的主题所控制">
 <!ENTITY Ctr_tabsontop0		"标签栏在顶部 (默认) - [没有设置]">
 <!ENTITY Ctr_tabsontop1		"标签栏在顶部 - 设置 [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"标签栏不在顶部 - 设置 [tabsontop=false]">
-<!ENTITY Ctr_tabsontopI1	"Adds attribute [tabsontop=true/false] to">
+<!ENTITY Ctr_tabsontop3		"标签栏不在顶部 (v2) - 设置 [tabsontop=false]">
+<!ENTITY Ctr_tabsontopI1	"添加属性 [tabsontop=true/false] 至">
 <!ENTITY Ctr_tabsintitlebar	"标签栏嵌入标题栏 (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(默认)">
 <!ENTITY Ctr_tabwidthcla	"(经典)">
 <!ENTITY Ctr_tabmaxwidth	"最大宽度:">
 <!ENTITY Ctr_tabminwidth	"最小宽度:">
-<!ENTITY Ctr_tabwidthinfo	"Tabs min-width and max-width are controlled by TabMixPlus / TabUtilities">
-<!ENTITY Ctr_closetab_0		"标签页关闭按钮 (默认)">
-<!ENTITY Ctr_closetab_1		"标签页关闭按钮: 只在激活的标签页中显示">
-<!ENTITY Ctr_closetab_2		"标签页关闭按钮: 不显示">
-<!ENTITY Ctr_closetab_3		"标签页关闭按钮: 在标签页栏末端">
-<!ENTITY Ctr_closetab_4		"标签页关闭按钮: 在标签页栏始端">
-<!ENTITY Ctr_closetab_5		"标签页关闭按钮: 在所有标签页中显示 (forced)">
+<!ENTITY Ctr_tabwidthinfo	"标签页的最小宽度和最大宽度由 TabMixPlus / TabUtilities 所控制">
+<!ENTITY Ctr_closetab_0		"标签页关闭按钮">
+<!ENTITY Ctr_closetab_1		"只在激活的标签页中显示">
+<!ENTITY Ctr_closetab_2		"不显示">
+<!ENTITY Ctr_closetab_3		"在标签页栏末端">
+<!ENTITY Ctr_closetab_4		"在标签页栏始端">
+<!ENTITY Ctr_closetab_5		"在所有标签页中显示 (forced)">
+<!ENTITY Ctr_closetab_hfot	"Hide for one visible tab">
+<!ENTITY Ctr_closealt		"Alternative icon">
+<!ENTITY Ctr_closeonleft	"Alternative position on tab">
+<!ENTITY Ctr_close_wwltab	"Close window with last visible tab (about:config)">
 
 <!ENTITY Ctr_appbutton		"火狐按钮">
 <!ENTITY Ctr_appbutton0		"不显示">
@@ -52,7 +58,7 @@
 <!ENTITY Ctr_appbutton1wt	"在工具栏上显示 (纯文本)">
 <!ENTITY Ctr_appbutton2		"在标题栏上显示">
 <!ENTITY Ctr_appbutton2io	"在标题栏上显示 (图标)">
-<!ENTITY Ctr_paneluibtweak	"Orange panel menu button on tabs toolbar">
+<!ENTITY Ctr_paneluibtweak	"在标签页栏上显示橙色面板菜单按钮">
 <!ENTITY Ctr_appbuttonc_o	"橙色按钮 (默认)">
 <!ENTITY Ctr_appbuttonc_a	"蓝色按钮 (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"黑色按钮 (Nightly)">
@@ -72,19 +78,21 @@
 <!ENTITY Ctr_dblclclosefx	"双击关闭当前窗口">
 
 <!ENTITY Ctr_ui				"界面">
-<!ENTITY Ctr_nbiconsize0	"Set navigation toolbar attribute">
+<!ENTITY Ctr_nbiconsize0	"设置导航工具栏属性">
 <!ENTITY Ctr_smallnavbut	"在工具栏上使用小图标">
 <!ENTITY Ctr_bfurlbarfix	"当处于「后退」按钮可以移动和小图标显示模式时，修改地址栏圆弧半径">
 <!ENTITY Ctr_backforward	"使「后退」按钮可以移动">
 <!ENTITY Ctr_hide_bf_popup	"鼠标长按时隐藏历史菜单">
+<!ENTITY Ctr_noconicons		"Replace page context menu icons with labels (back, forward, stop, reload, bookmark page)">
 <!ENTITY Ctr_wincontrols	"使窗口控制按钮可以移动">
 <!ENTITY Ctr_starinurl		"收藏按钮嵌入地址栏 (需要重启 Firefox!)">
+<!ENTITY Ctr_feedinurl		"Feed-button in urlbar (需要重启 Firefox!)">
 <!ENTITY Ctr_mstatusbar		"使状态栏面板可以移动">
 <!ENTITY Ctr_hideurelstop	"隐藏地址栏中的停止和重新加载按钮">
 <!ENTITY Ctr_combrelstop	"合并停止和重新加载按钮">
 <!ENTITY Ctr_panelmenucol	"面板菜单: 替代的背景颜色">
 <!ENTITY Ctr_hideprivmask	"隐私浏览: 隐藏面具标志">
-<!ENTITY Ctr_verifiedcolors	"Green/blue identity-box for verified websites">
+<!ENTITY Ctr_verifiedcolors	"使用绿色/蓝色的身份盒子来显示被验证的网站">
 <!ENTITY Ctr_findbar		"查找栏">
 <!ENTITY Ctr_findbar_def	"默认位置">
 <!ENTITY Ctr_findbar_top	"在顶部">
@@ -95,8 +103,8 @@
 <!ENTITY Ctr_nav_txt_ico1	"显示大图标">
 <!ENTITY Ctr_nav_txt_ico2	"显示图标和文本">
 <!ENTITY Ctr_nav_txt_ico3	"只显示文本">
-<!ENTITY Ctr_stoprel0		"Reload and stop button settings">
-<!ENTITY Ctr_stoprel1		"Toolbar: place reload button after stop button!">
+<!ENTITY Ctr_stoprel0		"重新加载和停止按钮设置">
+<!ENTITY Ctr_stoprel1		"工具栏: 将重新加载按钮放在停止按钮后面!">
 <!ENTITY Ctr_cpanelmenus	"更紧凑的面板菜单 (书签、历史等等)">
 <!ENTITY Ctr_hidezoomres	"当缩放控制按钮在工具栏上时: 隐藏重置缩放按钮">
 <!ENTITY Ctr_pmhidelabels	"面板菜单: 隐藏按钮标签">
@@ -112,34 +120,35 @@
 <!ENTITY Ctr_tabact_t		"激活">
 <!ENTITY Ctr_tabhov_t		"悬停">
 <!ENTITY Ctr_tabnor_t		"默认">
-<!ENTITY Ctr_tabpen_t		"unloaded">
+<!ENTITY Ctr_tabpen_t		"未加载">
 <!ENTITY Ctr_tabunr_t		"未读">
 <!ENTITY Ctr_ntab_t			"新标签页">
-<!ENTITY Ctr_customsqtab0	"自定义标签页颜色">
 <!ENTITY Ctr_customsqtab1	"背景">
 <!ENTITY Ctr_ctext			"文本">
 <!ENTITY Ctr_ctextsh		"文本阴影">
 <!ENTITY Ctr_tabnor			"标签页 (默认)">
 <!ENTITY Ctr_tabhov			"标签页 (悬停)">
 <!ENTITY Ctr_tabact			"标签页 (激活)">
-<!ENTITY Ctr_tabpen			"标签页 (unloaded)">
+<!ENTITY Ctr_tabpen			"标签页 (未加载)">
 <!ENTITY Ctr_tabunr			"标签页 (未读)">
 <!ENTITY Ctr_ntabnor		"新标签页 (默认)">
 <!ENTITY Ctr_ntabhov		"新标签页 (悬停)">
 <!ENTITY Ctr_bold			"加粗">
 <!ENTITY Ctr_italic			"斜体">
 
-<!ENTITY Ctr_favicon		"Favicon settings">
+<!ENTITY Ctr_favicon		"网站小图标设置">
 <!ENTITY Ctr_emptyfavicon	"使用空白网站小图标 (如果网站没有提供)">
-<!ENTITY Ctr_emptyfavicon2	"Replace generic favicon (empty and dotted) with sheet favicon">
-<!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
-<!ENTITY Ctr_padlock_hid	"Padlock (hidden)">
-<!ENTITY Ctr_padlock_def	"Padlock (default)">
-<!ENTITY Ctr_padlock_cla	"Padlock (classic)">
-<!ENTITY Ctr_padlock_mod	"Padlock (modern)">
-<!ENTITY Ctr_padlock_ext	"Security icons">
+<!ENTITY Ctr_emptyfavicon2	"使用空白页面的图标来取代常规图标(空白或没有的)">
+<!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tab">
+<!ENTITY Ctr_faviconurl0	"Icons in urlbar">
+<!ENTITY Ctr_faviconurl		"在地址栏中显示网站小图标 (需要重启 Firefox!)">
+<!ENTITY Ctr_padlock_hid	"加锁 (隐藏)">
+<!ENTITY Ctr_padlock_def	"加锁 (默认)">
+<!ENTITY Ctr_padlock_cla	"加锁 (经典)">
+<!ENTITY Ctr_padlock_mod	"加锁 (现代)">
+<!ENTITY Ctr_padlock_ext	"安全图标">
 
-<!ENTITY Ctr_invicons		"Inverted icons">
+<!ENTITY Ctr_invicons		"颠倒图标">
 <!ENTITY Ctr_menubar		"菜单栏">
 <!ENTITY Ctr_tabstoolbar	"标签页栏">
 <!ENTITY Ctr_navbar			"导航栏">
@@ -147,14 +156,14 @@
 
 <!ENTITY Ctr_toolbars		"工具栏">
 <!ENTITY Ctr_dblclnewtab	"双击新建标签页 (在 browser.newtab.url 设置)">
-<!ENTITY Ctr_hidetbwot		"Hide tabs toolbar with one tab (restart Firefox!)">
-<!ENTITY Ctr_notabfog		"Remove background fog (Windows AeroGlass / Win8)">
-<!ENTITY Ctr_notabbg		"Remove background color (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_hidetbwot		"当只有一个标签页时隐藏标签页栏 (需要重启 Firefox!)">
+<!ENTITY Ctr_notabfog		"移除背景模糊 (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_notabbg		"移除背景颜色 (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_hightabpos		"减少工具栏上方空间 (如果可以)">
 <!ENTITY Ctr_alttabstb		"替代的背景颜色">
 
 <!ENTITY Ctr_altmenubar		"添加背景颜色 (OS 标题栏)">
-<!ENTITY Ctr_altmenubarpos	"Alternative position (below Firefox titlebar)">
+<!ENTITY Ctr_altmenubarpos	"替代位置 (在 Firefox 标题栏下方)">
 <!ENTITY Ctr_menubarnofog	"移除背景颜色/模糊 (Windows AeroGlass / Win8)">
 
 <!ENTITY Ctr_hidenavbar		"隐藏工具栏">
@@ -165,7 +174,6 @@
 
 <!ENTITY Ctr_closeabarbut	"隐藏附加组件栏关闭按钮">
 <!ENTITY Ctr_highaddonsbar	"增加附加组件栏高度">
-<!ENTITY Ctr_noaddonbarbg	"Remove background color (Windows AeroGlass / Win8)">
 
 <!ENTITY Ctr_animation		"动画">
 <!ENTITY Ctr_throbberalt	"使用替代的动画效果">
@@ -176,19 +184,19 @@
 
 <!ENTITY Ctr_toolsitem		"在工具菜单中显示">
 <!ENTITY Ctr_appmenuitem	"在火狐按钮菜单中显示">
-<!ENTITY Ctr_contextitem	"Menuitem in toolbars context menu">
+<!ENTITY Ctr_contextitem	"在工具栏内容菜单上显示菜单项">
 <!ENTITY Ctr_cuibotbuttons	"在界面自定义模式中显示更多按钮">
 
 
-<!ENTITY Ctr_pw_settings	"Settings">
-<!ENTITY Ctr_pw_set_reset	"Restore defaults">
-<!ENTITY Ctr_pw_set_predef	"Classic preset">
-<!ENTITY Ctr_pw_set_export	"Export preferences">
-<!ENTITY Ctr_pw_set_import	"Import preferences">
+<!ENTITY Ctr_pw_settings	"设置">
+<!ENTITY Ctr_pw_set_reset	"恢复默认">
+<!ENTITY Ctr_pw_set_predef	"经典主题预设">
+<!ENTITY Ctr_pw_set_export	"导出偏好设置">
+<!ENTITY Ctr_pw_set_import	"导入偏好设置">
 
-<!ENTITY Ctr_special_font	"Background color settings are for default theme only!">
-<!ENTITY Ctr_special_info	"Some options may offer visual changes in certain cases only!">
-<!ENTITY Ctr_special_info2	"Settings are made for Firefox default theme and may not work with all third party themes!">
+<!ENTITY Ctr_special_font	"只有默认主题才能设置背景颜色!">
+<!ENTITY Ctr_special_info	"一些视觉变化选项只会在当前的实例中起效!">
+<!ENTITY Ctr_special_info2	"有些设置只能在 Firefox 默认主题中生效，第三方主题可能无法起效!">
 <!ENTITY Ctr_support		"支持讨论区">
 <!ENTITY Ctr_newversion		"有新版本?">
 

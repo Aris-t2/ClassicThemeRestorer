@@ -1,0 +1,10 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	#urlbar-icons #feed-button .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/feedinurlbar_lin.png") !important;
+	  -moz-image-region: rect(0px 18px 18px 0px) !important;
+	}
+
+}

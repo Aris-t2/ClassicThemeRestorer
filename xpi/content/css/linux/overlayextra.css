@@ -128,4 +128,10 @@
 	#ctraddon_pw_okbutton{
 	  display: inline !important;
 	}
+
+	#ClassicTRoptionsPane #ctraddon_pw_tabMinWidth,
+	#ClassicTRoptionsPane #ctraddon_pw_tabMaxWidth{
+	  width:70px !important;
+	  max-width:90px !important;
+	}
 }

@@ -15,12 +15,13 @@
   #TabsToolbar .tabbrowser-tab:not([pinned])[busy] .tab-throbber + .tab-icon-image:not([src]) {
 	display:none !important;
   }
-
-  #page-proxy-favicon:not(src):not([pageproxystate="valid"]),
+  
+  /* "page-proxy-favicon" is despite of its name no real "favicon" */
+  /*#page-proxy-favicon:not(src):not([pageproxystate="valid"]),
   .chromeUI #page-proxy-favicon[pageproxystate="valid"],
   .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"],
   .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"],
-  .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"],
+  .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"],*/
   #tabbrowser-tabs .tab-icon-image:not(src),
   #alltabs-popup menuitem[image=""] > .menu-iconic-left > .menu-iconic-icon,
   .sidebar-placesTreechildren::-moz-tree-image(leaf),
@@ -30,9 +31,9 @@
 	-moz-image-region: rect(0px, 16px, 16px, 0px) !important;
   }
 
-  #page-proxy-favicon:not(src) {
+  /*#page-proxy-favicon:not(src) {
 	opacity: 1.0 !important;
-  }
+  }*/
 
   #all-sites-item > .site-container > .site-favicon {
 	list-style-image: none !important;

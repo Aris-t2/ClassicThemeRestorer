@@ -1,0 +1,10 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#main-window .tabbrowser-arrowscrollbox > .scrollbutton-up,
+	#main-window .tabbrowser-arrowscrollbox > .scrollbutton-down {
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/tab-arrow-left-inverted.png) !important;
+	}
+
+}

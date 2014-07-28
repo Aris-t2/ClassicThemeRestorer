@@ -2,14 +2,27 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	#titlebar{
+	#main-window[tabsintitlebar] #titlebar{
 	  padding-top: 0px !important;
 	  padding-bottom: 24px !important;
+	}
+	
+	#main-window[chromehidden~="toolbar"][chromehidden~="directories"]:-moz-lwtheme #titlebar{
+	  margin-bottom: 0px !important;
 	}
 
 	/*#main-window[inFullscreen]:not(:-moz-lwtheme) #nav-bar {
 	  margin-top:-10px !important;
 	}*/
+	#main-window[inFullscreen]:not(:-moz-lwtheme) #TabsToolbar {
+	  padding-top:0px !important;
+	}
+	
+	#TabsToolbar,
+	#TabsToolbar:not(:-moz-lwtheme),
+	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
+	  -moz-appearance: none !important;
+	}
 
 	#main-window:not([tabsintitlebar])[sizemode="normal"]  #TabsToolbar,
 	#main-window[tabsintitlebar][sizemode="normal"]  #TabsToolbar{

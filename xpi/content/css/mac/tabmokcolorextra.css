@@ -1,0 +1,29 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	@media (min-resolution: 2dppx) {
+	  #navigator-toolbox #TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-locale-dir(ltr),
+	  #navigator-toolbox #TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-locale-dir(rtl) {
+		list-style-image: url("chrome://browser/skin/tabbrowser/tab-arrow-left-inverted@2x.png") !important;
+	  }
+
+	  #navigator-toolbox #TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-locale-dir(ltr),
+	  #navigator-toolbox #TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-locale-dir(rtl) {
+		list-style-image: url("chrome://browser/skin/tabbrowser/tab-arrow-right-inverted@2x.png") !important;
+	  }
+	}
+
+	@media not all and (min-resolution: 2dppx) {
+	  #navigator-toolbox #TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-locale-dir(ltr),
+	  #navigator-toolbox #TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-locale-dir(rtl) {
+		list-style-image: url("chrome://browser/skin/tabbrowser/tab-arrow-left-inverted.png") !important;
+	  }
+
+	  #navigator-toolbox #TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-locale-dir(ltr),
+	  #navigator-toolbox #TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-locale-dir(rtl) {
+		list-style-image: url("chrome://browser/skin/tabbrowser/tab-arrow-right-inverted.png") !important;
+	  }
+	}
+
+}

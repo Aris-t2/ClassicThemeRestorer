@@ -1,0 +1,34 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#context-back image,
+	#context-forward image,
+	#context-reload image,
+	#context-stop image,
+	#context-bookmarkpage image{
+	  display:none !important;
+	}
+	#context-back:before,
+	#context-forward:before,
+	#context-reload:before,
+	#context-stop:before,
+	#context-bookmarkpage:before{
+	  content: attr(aria-label) !important;
+	}
+	#context-navigation{
+	  -moz-box-orient: vertical !important;
+	}
+	#context-navigation > .menuitem-iconic {
+	  -moz-box-pack: start !important;
+	}
+
+	#context-back:before,
+	#context-forward:before,
+	#context-reload:before,
+	#context-stop:before,
+	#context-bookmarkpage:before{
+	  -moz-margin-start:32px !important;
+	}
+
+}

@@ -1,0 +1,9 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@-moz-document url(chrome://browser/content/browser.xul) {
+	
+	.tabbrowser-tab[pinned] .tab-text,
+	.tabbrowser-tab[pinned] .tab-icon-image:not([src]) {
+	  display:none !important;
+	}
+
+}

@@ -132,6 +132,10 @@
 	.tab-stack .tab-content {
 	  -moz-box-ordinal-group:1 !important;
 	}
+	.tabbrowser-tab progressmeter.tab-progress	{
+	  margin-top: 2.5px !important;
+	  height: 3px !important;
+	}
 
 }
 

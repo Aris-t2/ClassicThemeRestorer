@@ -7,6 +7,7 @@
 <!ENTITY Ctr_space			"Space">
 <!ENTITY Ctr_separator		"Separator">
 <!ENTITY Ctr_puibseparator	"PanelUI button separator">
+<!ENTITY Ctr_sidebarbutton	"(Sidebar)">
 
 <!ENTITY Ctr_cuibuttons		"Buttons">
 <!ENTITY Ctr_cuibutnormal	"Normal">
@@ -32,6 +33,7 @@
 <!ENTITY Ctr_tabsontop0		"Tabs on top (default) - [not set]">
 <!ENTITY Ctr_tabsontop1		"Tabs on top - set [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Tabs not on top - set [tabsontop=false]">
+<!ENTITY Ctr_tabsontop3		"Tabs not on top (v2) - set [tabsontop=false]">
 <!ENTITY Ctr_tabsontopI1	"Adds attribute [tabsontop=true/false] to">
 <!ENTITY Ctr_tabsintitlebar	"Firefox titlebar (about:config preference)">
 <!ENTITY Ctr_tabwidthdef	"(default)">
@@ -39,12 +41,16 @@
 <!ENTITY Ctr_tabmaxwidth	"Max-width:">
 <!ENTITY Ctr_tabminwidth	"Min-width:">
 <!ENTITY Ctr_tabwidthinfo	"Tabs min-width and max-width are controlled by TabMixPlus / TabUtilities">
-<!ENTITY Ctr_closetab_0		"Tab Close (default)">
-<!ENTITY Ctr_closetab_1		"Tab Close: on active tab only">
-<!ENTITY Ctr_closetab_2		"Tab Close: nowhere">
-<!ENTITY Ctr_closetab_3		"Tab Close: on tab toolbars end">
-<!ENTITY Ctr_closetab_4		"Tab Close: on tab toolbars start">
-<!ENTITY Ctr_closetab_5		"Tab Close: on all tabs (forced)">
+<!ENTITY Ctr_closetab_0		"Tab Close">
+<!ENTITY Ctr_closetab_1		"On active tab only">
+<!ENTITY Ctr_closetab_2		"Nowhere">
+<!ENTITY Ctr_closetab_3		"On tab toolbars end">
+<!ENTITY Ctr_closetab_4		"On tab toolbars start">
+<!ENTITY Ctr_closetab_5		"On all tabs (forced)">
+<!ENTITY Ctr_closetab_hfot	"Hide for one visible tab">
+<!ENTITY Ctr_closealt		"Alternative icon">
+<!ENTITY Ctr_closeonleft	"Alternative position on tab">
+<!ENTITY Ctr_close_wwltab	"Close window with last visible tab (about:config)">
 
 <!ENTITY Ctr_appbutton		"Application button">
 <!ENTITY Ctr_appbutton0		"Button disabled">
@@ -77,8 +83,10 @@
 <!ENTITY Ctr_bfurlbarfix	"Fix urlbars border-radius">
 <!ENTITY Ctr_backforward	"Movable back-forward button">
 <!ENTITY Ctr_hide_bf_popup	"Hide buttons history menu on mouse press">
+<!ENTITY Ctr_noconicons		"Replace page context menu icons with labels (back, forward, stop, reload, bookmark page)">
 <!ENTITY Ctr_wincontrols	"Movable fullscreen window controls (min/max/close)">
 <!ENTITY Ctr_starinurl		"Star-button in urlbar (restart Firefox!)">
+<!ENTITY Ctr_feedinurl		"Feed-button in urlbar (restart Firefox!)">
 <!ENTITY Ctr_mstatusbar		"Movable status-bar panel">
 <!ENTITY Ctr_hideurelstop	"Hide urlbars stop &amp; reload buttons">
 <!ENTITY Ctr_combrelstop	"Combine stop &amp; reload buttons">
@@ -115,7 +123,6 @@
 <!ENTITY Ctr_tabpen_t		"unloaded">
 <!ENTITY Ctr_tabunr_t		"unread">
 <!ENTITY Ctr_ntab_t			"new tab">
-<!ENTITY Ctr_customsqtab0	"Custom tab colors">
 <!ENTITY Ctr_customsqtab1	"Background">
 <!ENTITY Ctr_ctext			"Text">
 <!ENTITY Ctr_ctextsh		"Text shadow">
@@ -132,11 +139,13 @@
 <!ENTITY Ctr_favicon		"Favicon settings">
 <!ENTITY Ctr_emptyfavicon	"Restore empty favicon (if a site does not offer one)">
 <!ENTITY Ctr_emptyfavicon2	"Replace generic favicon (empty and dotted) with sheet favicon">
+<!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tab">
+<!ENTITY Ctr_faviconurl0	"Icons in urlbar">
 <!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
-<!ENTITY Ctr_padlock_hid	"Padlock (hidden)">
-<!ENTITY Ctr_padlock_def	"Padlock (default)">
-<!ENTITY Ctr_padlock_cla	"Padlock (classic)">
-<!ENTITY Ctr_padlock_mod	"Padlock (modern)">
+<!ENTITY Ctr_padlock_hid	"Padlock icon (hidden)">
+<!ENTITY Ctr_padlock_def	"Padlock icon (default)">
+<!ENTITY Ctr_padlock_cla	"Padlock icon (classic)">
+<!ENTITY Ctr_padlock_mod	"Padlock icon (modern)">
 <!ENTITY Ctr_padlock_ext	"Security icons">
 
 <!ENTITY Ctr_invicons		"Inverted icons">
@@ -165,7 +174,6 @@
 
 <!ENTITY Ctr_closeabarbut	"Hide add-on bars close button">
 <!ENTITY Ctr_highaddonsbar	"Increase height">
-<!ENTITY Ctr_noaddonbarbg	"Remove background color (Windows AeroGlass/8)">
 
 <!ENTITY Ctr_animation		"Animation">
 <!ENTITY Ctr_throbberalt	"Alternative tab throbber loading animation">

@@ -6,9 +6,10 @@
 <!ENTITY Ctr_flexspace		"Flexibler Zwischenraum">
 <!ENTITY Ctr_space			"Zwischenraum">
 <!ENTITY Ctr_separator		"Trennlinie">
-<!ENTITY Ctr_puibseparator	"Firefoxmenü-Button Trennlinie">
+<!ENTITY Ctr_puibseparator	"Trennlinie für die Menüschaltfläche">
+<!ENTITY Ctr_sidebarbutton	"Seitenleiste">
 
-<!ENTITY Ctr_cuibuttons		"Buttons">
+<!ENTITY Ctr_cuibuttons		"Schaltflächen">
 <!ENTITY Ctr_cuibutnormal	"Normal">
 <!ENTITY Ctr_cuibutsmall	"Klein">
 <!ENTITY Ctr_cuimode		"Modus">
@@ -16,44 +17,49 @@
 <!ENTITY Ctr_cuiicotxt		"Symbole + Text">
 <!ENTITY Ctr_cuitxt			"Text">
 
-<!ENTITY Ctr_combrelstoptt	"[Stopp][Aktualisieren] &gt;&gt; [Stopp-Aktualisieren]">
+<!ENTITY Ctr_combrelstoptt	"[Stopp][Neu laden] &gt;&gt; ['Stopp'-'Neu laden']">
 <!ENTITY Ctr_tnot			"(Tabs 'unten')">
 
-<!ENTITY Ctr_tabcolors_t	"Tab Farben &amp; Text">
+<!ENTITY Ctr_tabcolors_t	"Tab Farben / Zeichensatz">
 <!ENTITY Ctr_icons_t		"Symbole">
 
 <!ENTITY Ctr_tabs			"Tabs">
-<!ENTITY Ctr_tabs0			"Gerundete Tabs (Australis-Vorgabe)">
+<!ENTITY Ctr_tabs0			"Gerundete Tabs (Australis-Standard)">
 <!ENTITY Ctr_tabs1			"Quadratische Tabs (klassisch)">
 <!ENTITY Ctr_tabs1m			"Quadratische Tabs (australisiert)">
 <!ENTITY Ctr_tabs2			"Gerundete Tabs (alternativ)">
-<!ENTITY Ctr_tabs3			"Gerundete Tabs (alternativ für Win7/Vista Aero)">
+<!ENTITY Ctr_tabs3			"Gerundete Tabs (alternativ für Windows Aero)">
 <!ENTITY Ctr_tabforminfo	"Das aktuelle Thema bestimmt die Tabdarstellung.">
-<!ENTITY Ctr_tabsontop0		"Tabs oben (vorgegeben) - [nicht gesetzt]">
-<!ENTITY Ctr_tabsontop1		"Tabs oben - setze [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Tabs 'unten' - setze [tabsontop=false]">
+<!ENTITY Ctr_tabsontop0		"Tabs oben (Standard) - kein '[tabsontop]' Attribut gesetzt">
+<!ENTITY Ctr_tabsontop1		"Tabs oben - '[tabsontop=true]' Attribut gesetzt">
+<!ENTITY Ctr_tabsontop2		"Tabs unten - '[tabsontop=false]' Attribut gesetzt">
+<!ENTITY Ctr_tabsontop3		"Tabs unten (v2) - '[tabsontop=false]' Attribut gesetzt">
 <!ENTITY Ctr_tabsontopI1	"Setzt Attribut [tabsontop=true/false] für">
 <!ENTITY Ctr_tabsintitlebar	"Firefox Titelleiste (about:config Einstellung)">
-<!ENTITY Ctr_tabwidthdef	"(vorgegeben)">
+<!ENTITY Ctr_tabwidthdef	"(Standard)">
 <!ENTITY Ctr_tabwidthcla	"(klassisch)">
 <!ENTITY Ctr_tabmaxwidth	"Maximalbreite:">
 <!ENTITY Ctr_tabminwidth	"Minimalbreite:">
 <!ENTITY Ctr_tabwidthinfo	"Die Minimal- und Maximalbreite von Tabs wird durch TabMixPlus / TabUtilities kontrolliert">
-<!ENTITY Ctr_closetab_0		"Tab Schließen (vorgegeben)">
-<!ENTITY Ctr_closetab_1		"Tab Schließen: nur auf dem aktiven Tab">
-<!ENTITY Ctr_closetab_2		"Tab Schließen: nirgends">
-<!ENTITY Ctr_closetab_3		"Tab Schließen: am Ende der Tableiste">
-<!ENTITY Ctr_closetab_4		"Tab Schließen: am Anfang der Tableiste">
-<!ENTITY Ctr_closetab_5		"Tab Schließen: auf allen Tabs (erzwungen)">
+<!ENTITY Ctr_closetab_0		"'Tab schließen'">
+<!ENTITY Ctr_closetab_1		"Nur auf dem aktiven Tab">
+<!ENTITY Ctr_closetab_2		"Nirgends (deaktiviert)">
+<!ENTITY Ctr_closetab_3		"Am Ende der Tableiste">
+<!ENTITY Ctr_closetab_4		"Am Anfang der Tableiste">
+<!ENTITY Ctr_closetab_5		"Auf allen Tabs erzwingen">
+<!ENTITY Ctr_closetab_hfot	"Ausgeblendet bei nur einem sichtbaren Tab">
+<!ENTITY Ctr_closealt		"Alternatives Schließen-Symbol">
+<!ENTITY Ctr_closeonleft	"Am Anfang eines Tabs">
+<!ENTITY Ctr_close_wwltab	"Schließt Fenster mit nur einem sichtbaren Tab (about:config)">
 
-<!ENTITY Ctr_appbutton		"Anwendungsbutton">
-<!ENTITY Ctr_appbutton0		"Button deaktiviert">
-<!ENTITY Ctr_appbutton1		"Button auf den Leisten">
-<!ENTITY Ctr_appbutton1wt	"Button auf den Leisten (nur Text)">
-<!ENTITY Ctr_appbutton2		"Button auf der Firefox Titelleiste">
-<!ENTITY Ctr_appbutton2io	"Button auf der Firefox Titelleiste (nur Symbol)">
-<!ENTITY Ctr_paneluibtweak	"Orangener Firefox-Menübutton auf der Tableiste">
-<!ENTITY Ctr_appbuttonc_o	"Farbe: Orange (vorgegeben)">
+<!ENTITY Ctr_appbutton		"Firefox-Schaltfläche">
+<!ENTITY Ctr_appbutton0		"Deaktiviert">
+<!ENTITY Ctr_appbutton1		"Auf den Symbolleisten">
+<!ENTITY Ctr_appbutton1wt	"Auf den Symbolleisten (nur Text)">
+<!ENTITY Ctr_appbutton2		"Auf der Firefox Titelleiste">
+<!ENTITY Ctr_appbutton2io	"Auf der Firefox Titelleiste (nur Symbol)">
+<!ENTITY Ctr_paneluibtweak	"Orangene Menüschaltfläche auf der Tableiste">
+<!ENTITY Ctr_appbuttonc_o	"Farbe: Orange (Standard)">
 <!ENTITY Ctr_appbuttonc_a	"Farbe: Blau (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Farbe: Schwarz (Nightly)">
 <!ENTITY Ctr_appbuttonc_t	"Farbe: Transparent">
@@ -64,7 +70,7 @@
 <!ENTITY Ctr_appbuttonc_pu	"Farbe: Lila">
 <!ENTITY Ctr_appbuttonc_wh	"Farbe: weiß">
 <!ENTITY Ctr_appbuttonI1	"Nach Änderungen wird ein Neustart empfohlen.">
-<!ENTITY Ctr_appbuttonI1e	"Der Button ist nicht sichtbar auf der Windows Titelleiste!">
+<!ENTITY Ctr_appbuttonI1e	"Die Firefox-Schaltfläche ist auf der Windows Titelleiste nicht sichtbar!">
 <!ENTITY Ctr_appbuttonI2	"Die Farbe ist nur auf der Titelleiste und der Tableiste sichtbar!">
 <!ENTITY Ctr_alttbappb		"Alternative Symbole">
 <!ENTITY Ctr_appbutmhi		"Höhere Position (nur Tableiste)">
@@ -73,77 +79,80 @@
 
 <!ENTITY Ctr_ui				"Oberfläche">
 <!ENTITY Ctr_nbiconsize0	"Setze Navigationsleisten-Attribut">
-<!ENTITY Ctr_smallnavbut	"Kleine Buttons auf der Navigationsleiste">
+<!ENTITY Ctr_smallnavbut	"Kleine Schaltflächen auf der Navigationsleiste">
 <!ENTITY Ctr_bfurlbarfix 	"Korrigiere Radius der Adressleistenränder">
-<!ENTITY Ctr_backforward	"Verschiebbarer Vor-Zurück-Button">
+<!ENTITY Ctr_backforward	"Verschiebbare Vor-Zurück-Schaltflächen">
 <!ENTITY Ctr_hide_bf_popup	"Verstecke Chronik-Popup bei gedrückter Maustaste">
-<!ENTITY Ctr_wincontrols	"Vollbild: Verschiebbare Minimieren/Maximieren/Schließen-Buttons">
-<!ENTITY Ctr_starinurl		"Lesezeichen-Button in der Adressleiste (Firefox neustarten)">
-<!ENTITY Ctr_mstatusbar		"Statusbereich: aktiv und verschiebbar">
-<!ENTITY Ctr_hideurelstop	"Adressleiste ohne Stopp &amp; Aktualisieren Buttons">
-<!ENTITY Ctr_combrelstop	"Kombiniere Stopp &amp; Aktualisieren Buttons">
-<!ENTITY Ctr_panelmenucol	"Alternative Hintergrundfarbe für 'Panel-Menüs'">
-<!ENTITY Ctr_hideprivmask	"Privater Modus: entferne 'Masken-Symbole' von Leisten">
-<!ENTITY Ctr_verifiedcolors	"Grüne/blaue Verifizierungsbox für verifizierte Webseiten">
+<!ENTITY Ctr_noconicons		"Ersetze Symbole im Seitenkontextmenü mit den ursprünglichen Namen (Zurück, Vor, Stopp, Neu laden, Leisezeichen hinzufügen)">
+<!ENTITY Ctr_wincontrols	"Verschiebbare Minimieren/Maximieren/Schließen-Schaltflächen im Vollbild-Modus">
+<!ENTITY Ctr_starinurl		"'Lesezeichen-Stern' in der Adressleiste (Firefox neustarten)">
+<!ENTITY Ctr_feedinurl		"'Feed abonnieren' in der Adressleiste (Firefox neustarten)">
+<!ENTITY Ctr_mstatusbar		"Statusbereich: sichtbar und verschiebbar">
+<!ENTITY Ctr_hideurelstop	"Entferne 'Stopp' &amp; 'Neu laden' von der Adressleiste">
+<!ENTITY Ctr_combrelstop	"Kombiniere 'Stopp' &amp; 'Neu laden'">
+<!ENTITY Ctr_panelmenucol	"Alternative Hintergrundfarbe für 'Panel-Popupmenüs'">
+<!ENTITY Ctr_hideprivmask	"Privater Modus: entferne 'Masken-Symbole' von den Leisten">
+<!ENTITY Ctr_verifiedcolors	"Blaue/grüne Schaltfläche zur Webseitenidentität für überprüfte/verifizierete Webseiten">
 <!ENTITY Ctr_findbar		"Suchleiste">
-<!ENTITY Ctr_findbar_def	"Vorgegebene Position">
+<!ENTITY Ctr_findbar_def	"Standard-Position">
 <!ENTITY Ctr_findbar_top	"Oben">
 <!ENTITY Ctr_findbar_bot	"Unten">
 <!ENTITY Ctr_findbar_topa	"Oben (alternative Darstellung)">
 <!ENTITY Ctr_findbar_bota	"Unten (alternative Darstellung)">
-<!ENTITY Ctr_nav_txt_ico0	"Zeige Symbole (vorgegeben)">
+<!ENTITY Ctr_nav_txt_ico0	"Zeige Symbole (Standard)">
 <!ENTITY Ctr_nav_txt_ico1	"Zeige große Symbole">
 <!ENTITY Ctr_nav_txt_ico2	"Zeige Symbole und Text">
 <!ENTITY Ctr_nav_txt_ico3	"Zeige nur Text">
-<!ENTITY Ctr_stoprel0		"Stopp- &amp; Aktualisieren-Button Einstellungen">
-<!ENTITY Ctr_stoprel1		"Positioniere 'Aktualisieren' rechts von 'Stopp'!">
-<!ENTITY Ctr_cpanelmenus	"Kompakte 'Panel-Menüs' (Lesezeichen, Chronik etc.)">
-<!ENTITY Ctr_hidezoomres	"Zoom-Buttons auf Leisten: verstecke 'Normalgröße'-Button">
-<!ENTITY Ctr_pmhidelabels	"Verstecke Text unter 'Panel-Menü'-Elementen und Buttons">
-<!ENTITY Ctr_menupopupscr	"Popupmenüs: ersetze Scroll-Pfeile durch Scrollbars">
+<!ENTITY Ctr_stoprel0		"'Stopp'- &amp; 'Neu laden'">
+<!ENTITY Ctr_stoprel1		"Wichtig: Positioniere 'Neu laden' rechts von 'Stopp'!">
+<!ENTITY Ctr_cpanelmenus	"Kompakte 'Panel-Popupmenüs' (Lesezeichen, Chronik etc.)">
+<!ENTITY Ctr_hidezoomres	"Zoom-Schaltflächen auf Leisten: verstecke Schaltfläche für 'Normalgröße'">
+<!ENTITY Ctr_pmhidelabels	"Verstecke Text unter 'Menüschaltflächen'-Elementen">
+<!ENTITY Ctr_menupopupscr	"Popupmenüs: ersetze Navigationspfeile durch Bildlaufleisten">
 
 <!ENTITY Ctr_fxmockup		"Firefox Entwürfe">
-<!ENTITY Ctr_tabmokcolor	"Weiße Tab-Buttons (Neu, Schließen, Gruppen, Listen)">
+<!ENTITY Ctr_tabmokcolor	"Weiße Schaltflächen (Neu, Schließen, Gruppen, Listen)">
 <!ENTITY Ctr_tabmokcolor2	"Weißer Tabtext und dunkler Schatten für nicht aktive Tabs">
 <!ENTITY Ctr_tabmokcolor3	"Weiße Trennlinien zwischen den Tabs">
 
 <!ENTITY Ctr_tab_tf_info1	"Textfelder akzeptieren Farbnamen sowie RGB(A), HSL(A) und hexadezimale Eingaben.">
 <!ENTITY Ctr_tab_tf_info2	"Eingegebene Werte werden nicht überprüft!">
 <!ENTITY Ctr_tabact_t		"aktiv">
-<!ENTITY Ctr_tabhov_t		"über">
+<!ENTITY Ctr_tabhov_t		"hover">
 <!ENTITY Ctr_tabnor_t		"normal">
 <!ENTITY Ctr_tabpen_t		"ungeladen">
 <!ENTITY Ctr_tabunr_t		"ungelesen">
 <!ENTITY Ctr_ntab_t			"neu">
-<!ENTITY Ctr_customsqtab0	"Eigene Tabfarben">
 <!ENTITY Ctr_customsqtab1	"Hintergrund">
 <!ENTITY Ctr_ctext			"Text">
 <!ENTITY Ctr_ctextsh		"Textschatten">
 <!ENTITY Ctr_tabnor			"Tab (normal)">
-<!ENTITY Ctr_tabhov			"Tab (über)">
+<!ENTITY Ctr_tabhov			"Tab (hover)">
 <!ENTITY Ctr_tabact			"Tab (aktiv)">
 <!ENTITY Ctr_tabpen			"Tab (ungeladen)">
 <!ENTITY Ctr_tabunr			"Tab (ungelesen)">
 <!ENTITY Ctr_ntabnor		"Neuer Tab (normal)">
-<!ENTITY Ctr_ntabhov		"Neuer Tab (über)">
+<!ENTITY Ctr_ntabhov		"Neuer Tab (hover)">
 <!ENTITY Ctr_bold			"Fett">
 <!ENTITY Ctr_italic			"Kursiv">
 
-<!ENTITY Ctr_favicon		"Favoritensymbol">
-<!ENTITY Ctr_emptyfavicon	"Leeres Favoritensymbol auf Tabs wiederherstellen">
-<!ENTITY Ctr_emptyfavicon2	"Leeres und gepunktetes Favoritensymbol durch Papierblatt-Symbol ersetzen">
-<!ENTITY Ctr_faviconurl		"Favoriten-Symbol in der Adressleiste (Firefox neustarten)">
+<!ENTITY Ctr_favicon		"Lesezeichensymbol (Favicon)">
+<!ENTITY Ctr_emptyfavicon	"Leeres Lesezeichensymbol auf Tabs wiederherstellen">
+<!ENTITY Ctr_emptyfavicon2	"Leeres und gepunktetes Lesezeichensymbol durch Papierblattsymbol ersetzen">
+<!ENTITY Ctr_noemptypticon	"Leeres Lesezeichensymbol vom angehefteten Tab entfernen">
+<!ENTITY Ctr_faviconurl0	"Symbole in der Adressleiste">
+<!ENTITY Ctr_faviconurl		"Lesezeichensymbol (Favicon) in der Schaltfläche zur Webseitenidentität (Firefox neustarten)">
 <!ENTITY Ctr_padlock_hid	"Schloss-Symbol (versteckt)">
-<!ENTITY Ctr_padlock_def	"Schloss-Symbol (vorgegeben)">
+<!ENTITY Ctr_padlock_def	"Schloss-Symbol (Standard)">
 <!ENTITY Ctr_padlock_cla	"Schloss-Symbol (klassisch)">
 <!ENTITY Ctr_padlock_mod	"Schloss-Symbol (modern)">
-<!ENTITY Ctr_padlock_ext	"Sicherheits-Symbole">
+<!ENTITY Ctr_padlock_ext	"Sicherheitssymbole">
 
 <!ENTITY Ctr_invicons		"Invertierte Symbole">
 <!ENTITY Ctr_menubar		"Menüleiste">
 <!ENTITY Ctr_tabstoolbar	"Tableiste">
 <!ENTITY Ctr_navbar			"Navigationsleiste">
-<!ENTITY Ctr_bookbar		"Favoritenleiste">
+<!ENTITY Ctr_bookbar		"Lesezeichenleiste">
 
 <!ENTITY Ctr_toolbars		"Leisteneinstellungen">
 <!ENTITY Ctr_dblclnewtab	"Doppelklick öffnet einen neuen Tab (und beachtet 'browser.newtab.url')">
@@ -158,35 +167,34 @@
 <!ENTITY Ctr_menubarnofog	"Hintergrundfarbe/-nebel entfernen (Windows AeroGlass / Win8)">
 
 <!ENTITY Ctr_hidenavbar		"Navigationsleiste verstecken">
-<!ENTITY Ctr_nobookbarbg	"Favoritenleiste: Hintergrundfarbe entfernen">
+<!ENTITY Ctr_nobookbarbg	"Lesezeichenleiste: Hintergrundfarbe entfernen">
 <!ENTITY Ctr_nonavbarbg		"Navigationsleiste: Hintergrundfarbe entfernen">
-<!ENTITY Ctr_nonavborder	"Favoritenleiste: Oberen Rand hinzufügen">
+<!ENTITY Ctr_nonavborder	"Lesezeichenleiste: Oberen Rand hinzufügen">
 <!ENTITY Ctr_nonavtbborder	"Obere Leisten: Ränder entfernen">
 
-<!ENTITY Ctr_closeabarbut	"Entferne 'Schließen'-Button">
+<!ENTITY Ctr_closeabarbut	"Entferne 'Schließen'-Schaltfläche">
 <!ENTITY Ctr_highaddonsbar	"Höhere Leiste">
-<!ENTITY Ctr_noaddonbarbg	"Hintergrundfarbe entfernen (Windows AeroGlass / Win8)">
 
 <!ENTITY Ctr_animation		"Animationen">
 <!ENTITY Ctr_throbberalt	"Alternative Ladeanzeige für Tabs">
 <!ENTITY Ctr_bmanimation	"'Lesezeichen hinzufügen'">
-<!ENTITY Ctr_pananimation	"'Panel-Popup öffnen'">
+<!ENTITY Ctr_pananimation	"'Panel-Popupmenü öffnen'">
 <!ENTITY Ctr_tabanimation	"'Tab schließen und öffnen' (about:config Einstellung)">
 <!ENTITY Ctr_dlanimation	"'Download gestartet und beendet' (about:config Einstellung)">
 
 <!ENTITY Ctr_toolsitem		"Eintrag im Menü 'Extras'">
-<!ENTITY Ctr_appmenuitem	"Eintrag im Options-Untermenü des Anwendungsbuttons">
+<!ENTITY Ctr_appmenuitem	"Eintrag im Optionsuntermenü der Firefox-Schaltfläche">
 <!ENTITY Ctr_contextitem	"Eintrag im Leisten-Kontextmenü">
-<!ENTITY Ctr_cuibotbuttons	"Einstellungsbuttons im Modus 'Anpassen'">
+<!ENTITY Ctr_cuibotbuttons	"Einstellungen im Modus 'Anpassen'">
 
 
 <!ENTITY Ctr_pw_settings	"Einstellungen">
-<!ENTITY Ctr_pw_set_reset	"Vorgabe wiederherstellen">
-<!ENTITY Ctr_pw_set_predef	"Vorgabe (klassisch)">
+<!ENTITY Ctr_pw_set_reset	"Standard wiederherstellen">
+<!ENTITY Ctr_pw_set_predef	"Standard (klassisch)">
 <!ENTITY Ctr_pw_set_export	"Exportiere Einstellungen">
 <!ENTITY Ctr_pw_set_import	"Importiere Einstellungen">
 
-<!ENTITY Ctr_special_font	"Hintergrund-Farbeinstellungen sind nur für das Standard-Thema vorhanden!">
+<!ENTITY Ctr_special_font	"Hintergrundfarbeinstellungen sind nur für das Standard-Thema vorhanden!">
 <!ENTITY Ctr_special_info	"Einige Optionen haben nur in bestimmten Fällen sichtbare Auswirkungen!">
 <!ENTITY Ctr_special_info2	"Diese Einstellungen sind für das Standard-Thema und funktionieren evtl. nicht mit allen Themes!">
 <!ENTITY Ctr_support		"Hilfe-Forum">

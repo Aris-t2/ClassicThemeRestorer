@@ -1,12 +1,8 @@
+@import url(chrome://ctraddon_os_special/skin/tabmokcolorextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
   
-	#main-window .tabbrowser-arrowscrollbox > .scrollbutton-up,
-	#main-window .tabbrowser-arrowscrollbox > .scrollbutton-down {
-	  list-style-image: url(chrome://classic_theme_restorer/content/images/tab-arrow-left-inverted.png) !important;
-	}
-
 	#main-window .tabs-newtab-button,
 	#main-window #TabsToolbar > #new-tab-button,
 	#main-window #TabsToolbar > toolbarpaletteitem > #new-tab-button {

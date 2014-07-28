@@ -64,7 +64,7 @@
       -moz-margin-end: -10px;
     }
     
-    .tabbrowser-tab:not(:-moz-lwtheme) .tab-close-button {
+    .tabbrowser-tab:not([pinned]):not(:-moz-lwtheme) .tab-close-button {
       pointer-events: auto;
       -moz-margin-end: -16px !important;
     }

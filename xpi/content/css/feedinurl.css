@@ -1,0 +1,23 @@
+@import url(chrome://ctraddon_os_special/skin/feedinurlextra.css);
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	#nav-bar #feed-button,
+	#urlbar[pageproxystate="invalid"] > #urlbar-icons #feed-button {
+	  visibility:collapse !important;
+	}
+	
+	#urlbar:not([pageproxystate="invalid"]) > #urlbar-icons #feed-button:not([disabled]) {
+	  visibility:visible !important;
+	}
+	
+	#urlbar-icons #feed-button,
+	#urlbar-icons #feed-button .toolbarbutton-icon{
+	  background: none !important;
+	  padding:0 !important;
+	  border:0 !important;
+	  border-image:none !important;
+	  box-shadow:none !important;
+	}
+	
+}

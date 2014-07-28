@@ -31,6 +31,11 @@
 	}
 	/* END: navigator-toolbox toolbars */
 
+	/* fix for popup windows, which disable 'menubar' by force*/
+	window[chromehidden~="menubar"] #titlebar{
+	  margin-bottom:-26px !important;
+	}
+
 	#TabsToolbar,
 	#TabsToolbar:not(:-moz-lwtheme),
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{

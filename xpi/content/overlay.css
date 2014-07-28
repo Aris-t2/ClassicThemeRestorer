@@ -404,6 +404,10 @@
 	  border: 1px solid;
 	}
 	
+	.ctraddonsuboption{
+	  -moz-padding-start:20px;
+	}
+	
 	#ClassicTRoptionsPane[defaultfxtheme="true"] .ctraddontabs{
 	  -moz-appearance: listbox;
 	  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
@@ -481,8 +485,8 @@
 	
 	#ctraddon_pw_tabMinWidth,
 	#ctraddon_pw_tabMaxWidth{
-	  width:50px !important;
-	  max-width:70px !important;
+	  width:60px !important;
+	  max-width:80px !important;
 	}
 
 }

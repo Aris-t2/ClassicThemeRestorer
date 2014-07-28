@@ -31,7 +31,7 @@
 	  -moz-box-ordinal-group: 100 !important;
 	}
 	/* END: navigator-toolbox toolbars */
-	
+
 	/* fix for popup windows, which disable 'menubar' by force*/
 	window[chromehidden~="menubar"] #titlebar{
 	  margin-bottom:-26px !important;

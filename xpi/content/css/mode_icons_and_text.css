@@ -113,17 +113,21 @@
 	  padding-top:8px !important;
 	}
 	
-	/* support for star button in urlbar */
+	/* support for star & feed buttons in urlbar */
+	#nav-bar #urlbar-container #feed-button .toolbarbutton-text,
 	#nav-bar #urlbar-container #bookmarks-menu-button .toolbarbutton-text {
 	  display: none !important;
 	  visibility: collapse !important;
 	}
+	#nav-bar #urlbar-container #feed-button,
 	#nav-bar #urlbar-container #bookmarks-menu-button {
 	  -moz-box-orient: horizontal !important;
 	}
+	#nav-bar #urlbar-container #feed-button,
 	#nav-bar #urlbar-container #bookmarks-menu-button {
 	  min-width: inherit !important;
 	}
+	#nav-bar #urlbar-container #feed-button:hover,
 	#nav-bar #urlbar-container #bookmarks-menu-button:hover{
 	  border: 0px solid transparent !important;
       background-image: linear-gradient(hsla(0,0%,100%,.0), hsla(0,0%,100%,.0)) !important;
@@ -131,9 +135,14 @@
       box-shadow: none !important;
 	  padding:0 !important;
 	}
+	#nav-bar #urlbar-container #feed-button .toolbarbutton-icon,
 	#nav-bar #urlbar-container #bookmarks-menu-button .toolbarbutton-icon {
 	  margin: -8px 4px !important;
 	}
+	#nav-bar #urlbar-icons #feed-button:not([type="menu-button"]):not([type="menu"]) .toolbarbutton-icon {
+	  height: 18px !important;
+	}
+	/**/
 	
 	#ctraddon_back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
 	#ctraddon_forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon{

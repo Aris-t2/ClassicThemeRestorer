@@ -86,6 +86,43 @@
 	  #TabsToolbar :-moz-any(#ctraddon_back-button, #ctraddon_forward-button, #ctraddon_bookmarks-menu-toolbar-button, #ctraddon_bookmarks-button, #ctraddon_history-button,#ctraddon_history-menu-toolbar-button, #ctraddon_reload-button, #ctraddon_stop-button) > .toolbarbutton-icon {
 		width: 18px !important;
 	  }
-		  
+	  
+	  #navigator-toolbox #TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-locale-dir(ltr),
+	  #navigator-toolbox #TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-locale-dir(rtl) {
+		list-style-image: url("chrome://browser/skin/tabbrowser/tab-arrow-left-inverted@2x.png") !important;
+	  }
+
+	  #navigator-toolbox #TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-locale-dir(ltr),
+	  #navigator-toolbox #TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-locale-dir(rtl) {
+		list-style-image: url("chrome://browser/skin/tabbrowser/tab-arrow-right-inverted@2x.png") !important;
+	  }
+
+	  #navigator-toolbox #TabsToolbar #alltabs-button,
+	  #navigator-toolbox #TabsToolbar > toolbarpaletteitem > #alltabs-button  {
+		list-style-image: url(chrome://browser/skin/tabbrowser/alltabs-box-bkgnd-icon-inverted@2x.png) !important;
+	  }
+	  
+	  #main-window #navigator-toolbox #TabsToolbar #new-tab-button:not(:-moz-lwtheme),
+	  #main-window #navigator-toolbox #TabsToolbar #new-tab-button,
+	  #main-window #navigator-toolbox #TabsToolbar > toolbarpaletteitem > #new-tab-button {
+		list-style-image: url(chrome://browser/skin/tabbrowser/newtab-inverted@2x.png) !important;
+	  }
+
+	}
+	
+	@media not all and (min-resolution: 2dppx) {
+	  #navigator-toolbox #TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-locale-dir(ltr),
+	  #navigator-toolbox #TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-locale-dir(rtl) {
+		list-style-image: url("chrome://browser/skin/tabbrowser/tab-arrow-left-inverted.png") !important;
+	  }
+
+	  #navigator-toolbox #TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-locale-dir(ltr),
+	  #navigator-toolbox #TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-locale-dir(rtl) {
+		list-style-image: url("chrome://browser/skin/tabbrowser/tab-arrow-right-inverted.png") !important;
+	  }
+	  #navigator-toolbox #TabsToolbar #alltabs-button,
+	  #navigator-toolbox #TabsToolbar > toolbarpaletteitem > #alltabs-button  {
+		list-style-image: url(chrome://browser/skin/tabbrowser/alltabs-box-bkgnd-icon-inverted.png) !important;
+	  }
 	}
 }

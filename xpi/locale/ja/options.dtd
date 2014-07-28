@@ -7,6 +7,7 @@
 <!ENTITY Ctr_space			"スペース">
 <!ENTITY Ctr_separator		"セパレータ">
 <!ENTITY Ctr_puibseparator	"パネル UI ボタンセパレータ">
+<!ENTITY Ctr_sidebarbutton	"(Sidebar)">
 
 <!ENTITY Ctr_cuibuttons		"ボタン">
 <!ENTITY Ctr_cuibutnormal	"通常">
@@ -17,10 +18,10 @@
 <!ENTITY Ctr_cuitxt			"テキスト">
 
 <!ENTITY Ctr_combrelstoptt	"[中止][再読み込み] &gt;&gt; [中止-再読み込み]">
-<!ENTITY Ctr_tnot			"(タブを下にする)">
+<!ENTITY Ctr_tnot			"(tabs not on top)">
 
-<!ENTITY Ctr_tabcolors_t	"カスタム色">
-<!ENTITY Ctr_icons_t		"Favicon &amp; icons">
+<!ENTITY Ctr_tabcolors_t	"タブ色 &amp; テキスト">
+<!ENTITY Ctr_icons_t		"ファビコン &amp; アイコン">
 
 <!ENTITY Ctr_tabs			"タブ">
 <!ENTITY Ctr_tabs0			"丸いタブ (Australis デフォルト)">
@@ -28,23 +29,28 @@
 <!ENTITY Ctr_tabs1m			"四角いタブ (Australis化)">
 <!ENTITY Ctr_tabs2			"丸いタブ (別バージョン)">
 <!ENTITY Ctr_tabs3			"丸いタブ (別バージョン Aero)">
-<!ENTITY Ctr_tabforminfo	"Tab appearance is controlled by the current theme.">
+<!ENTITY Ctr_tabforminfo	"タブの見栄えは現在のテーマで制御されます。">
 <!ENTITY Ctr_tabsontop0		"タブを上にする (デフォルト) - [設定なし]">
 <!ENTITY Ctr_tabsontop1		"タブを上にする - [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"タブを下にする - [tabsontop=false]">
+<!ENTITY Ctr_tabsontop3		"タブを下にする (v2) - [tabsontop=false]">
 <!ENTITY Ctr_tabsontopI1	"以下に属性[tabsontop=true/false]を加える">
-<!ENTITY Ctr_tabsintitlebar	"Firefox タイトルバーを非表示にする (about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Firefoxタイトルバー (about:config設定)">
 <!ENTITY Ctr_tabwidthdef	"(デフォルト)">
 <!ENTITY Ctr_tabwidthcla	"(クラシック)">
 <!ENTITY Ctr_tabmaxwidth	"max-width:">
 <!ENTITY Ctr_tabminwidth	"min-width:">
-<!ENTITY Ctr_tabwidthinfo	"Tabs min-width and max-width are controlled by TabMixPlus / TabUtilities">
-<!ENTITY Ctr_closetab_0		"タブを閉じる (デフォルト)">
-<!ENTITY Ctr_closetab_1		"タブを閉じる: アクティブタブのみ表示">
-<!ENTITY Ctr_closetab_2		"タブを閉じる: 表示しない">
-<!ENTITY Ctr_closetab_3		"タブを閉じる: ツールバーの最後に表示">
-<!ENTITY Ctr_closetab_4		"タブを閉じる: ツールバーの最初に表示">
-<!ENTITY Ctr_closetab_5		"タブを閉じる: 全タブに表示 (forced)">
+<!ENTITY Ctr_tabwidthinfo	"タブのmin-widthとmax-widthはTabMixPlus / TabUtilitiesで制御されます。">
+<!ENTITY Ctr_closetab_0		"タブを閉じる">
+<!ENTITY Ctr_closetab_1		"アクティブタブのみ表示">
+<!ENTITY Ctr_closetab_2		"表示しない">
+<!ENTITY Ctr_closetab_3		"ツールバーの最後に表示">
+<!ENTITY Ctr_closetab_4		"ツールバーの最初に表示">
+<!ENTITY Ctr_closetab_5		"全タブ (強制)">
+<!ENTITY Ctr_closetab_hfot	"Hide for one visible tab">
+<!ENTITY Ctr_closealt		"Alternative icon">
+<!ENTITY Ctr_closeonleft	"Alternative position on tab">
+<!ENTITY Ctr_close_wwltab	"Close window with last visible tab (about:config)">
 
 <!ENTITY Ctr_appbutton		"アプリケーションボタン">
 <!ENTITY Ctr_appbutton0		"ボタンを無効にする">
@@ -52,7 +58,7 @@
 <!ENTITY Ctr_appbutton1wt	"ツールバーに表示 (テキストのみ)">
 <!ENTITY Ctr_appbutton2		"Firefox タイトルバーに表示">
 <!ENTITY Ctr_appbutton2io	"Firefox タイトルバーに表示 (アイコンのみ)">
-<!ENTITY Ctr_paneluibtweak	"Orange panel menu button on tabs toolbar">
+<!ENTITY Ctr_paneluibtweak	"タブツールバーに橙のパネルメニューボタン">
 <!ENTITY Ctr_appbuttonc_o	"橙色 (デフォルト)">
 <!ENTITY Ctr_appbuttonc_a	"青色 (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"黒色 (Nightly)">
@@ -64,8 +70,8 @@
 <!ENTITY Ctr_appbuttonc_pu	"紫色">
 <!ENTITY Ctr_appbuttonc_wh	"白色">
 <!ENTITY Ctr_appbuttonI1	"再起動を推奨">
-<!ENTITY Ctr_appbuttonI1e	"Windows のタイトルバーには表示されません。">
-<!ENTITY Ctr_appbuttonI2	"ボタンの色は タイトルバーとツールバーでのみ付きます">
+<!ENTITY Ctr_appbuttonI1e	"WindowsのOSタイトルバーには表示されません。Firefoxタイトルバー上のみです。">
+<!ENTITY Ctr_appbuttonI2	"ボタン色はタイトルバーとタブツールバーのみに表示されます。">
 <!ENTITY Ctr_alttbappb		"別バージョンのアイコンにする">
 <!ENTITY Ctr_appbutmhi		"高い位置に表示 (タブツールバーに表示した時のみ)">
 <!ENTITY Ctr_appbutbdl		"ボーダーと背景色を隠す">
@@ -74,32 +80,34 @@
 <!ENTITY Ctr_ui				"UI 一般">
 <!ENTITY Ctr_nbiconsize0	"ナビゲーションツールバー属性の設定">
 <!ENTITY Ctr_smallnavbut	"ナビゲーションツールバーのボタンを小さくする">
-<!ENTITY Ctr_bfurlbarfix	"'移動可の戻る/進むボタン' と '小さいボタン表示'の URL バーの border-radius を修正する">
+<!ENTITY Ctr_bfurlbarfix	"URLバーの border-radius を修正する">
 <!ENTITY Ctr_backforward	"戻る-進むボタンを移動可にする">
 <!ENTITY Ctr_hide_bf_popup	"マウスを押す時に履歴メニューを隠す">
-<!ENTITY Ctr_wincontrols	"フルスクリーンウィンドウ制御を移動可にする">
+<!ENTITY Ctr_noconicons		"Replace page context menu icons with labels (back, forward, stop, reload, bookmark page)">
+<!ENTITY Ctr_wincontrols	"フルスクリーンウィンドウ制御を移動可にする (最小/最大/閉じる)">
 <!ENTITY Ctr_starinurl		"URLバーにスターボタンを表示する (要 Firefox 再起動)">
+<!ENTITY Ctr_feedinurl		"Feed-button in urlbar (要 Firefox 再起動)">
 <!ENTITY Ctr_mstatusbar		"ステータスバーパネルを移動可にする">
 <!ENTITY Ctr_hideurelstop	"URL バーの中止&amp;再読み込みボタンを隠す">
 <!ENTITY Ctr_combrelstop	"中止&amp;再読み込みボタンを組み合わせる">
 <!ENTITY Ctr_panelmenucol	"パネルメニューを別の背景色にする">
 <!ENTITY Ctr_hideprivmask	"プライベートブラウジング: マスク表示を隠す">
-<!ENTITY Ctr_verifiedcolors	"Green/blue identity-box for verified websites">
+<!ENTITY Ctr_verifiedcolors	"認証済みウェブサイトに対する緑/青 識別ボックス">
 <!ENTITY Ctr_findbar		"検索バー">
 <!ENTITY Ctr_findbar_def	"デフォルト位置">
-<!ENTITY Ctr_findbar_top	"を上に表示">
-<!ENTITY Ctr_findbar_bot	"を下に表示">
-<!ENTITY Ctr_findbar_topa	"を上に表示 (別バージョン)">
-<!ENTITY Ctr_findbar_bota	"を下に表示 (別バージョン)">
+<!ENTITY Ctr_findbar_top	"上に表示">
+<!ENTITY Ctr_findbar_bot	"下に表示">
+<!ENTITY Ctr_findbar_topa	"上に表示 (別バージョン)">
+<!ENTITY Ctr_findbar_bota	"下に表示 (別バージョン)">
 <!ENTITY Ctr_nav_txt_ico0	"アイコンのみを表示 (デフォルト)">
 <!ENTITY Ctr_nav_txt_ico1	"大きいアイコンを表示">
 <!ENTITY Ctr_nav_txt_ico2	"アイコンとテキストを表示">
 <!ENTITY Ctr_nav_txt_ico3	"テキストのみを表示">
-<!ENTITY Ctr_stoprel0		"Reload and stop button settings">
-<!ENTITY Ctr_stoprel1		"Toolbar: place reload button after stop button!">
-<!ENTITY Ctr_cpanelmenus	"コンパクトなパネルメニュー (ブックマーク、履歴など)">
+<!ENTITY Ctr_stoprel0		"再読み込みと停止ボタンを設定">
+<!ENTITY Ctr_stoprel1		"重要：停止ボタンの後に再読み込みボタンを設置します">
+<!ENTITY Ctr_cpanelmenus	"パネルメニュー：コンパクトビュー (ブックマーク、履歴など)">
 <!ENTITY Ctr_hidezoomres	"ツールバーのズームコントロール: ズームリセットボタンを隠す">
-<!ENTITY Ctr_pmhidelabels	"パネルメニューのラベルを隠す">
+<!ENTITY Ctr_pmhidelabels	"パネルメニューポップアップ：ボタンのラベルを隠す">
 <!ENTITY Ctr_menupopupscr	"メニューポップアップ: 矢印の代わりにスクロールバーを表示する">
 
 <!ENTITY Ctr_fxmockup		"Firefox モックアップ">
@@ -109,13 +117,12 @@
 
 <!ENTITY Ctr_tab_tf_info1	"色名、16 進コード、rgb(a)、hsl(a) の値をサポートします。">
 <!ENTITY Ctr_tab_tf_info2	"入力値は検証されません。">
-<!ENTITY Ctr_tabact_t		"アクティブ">
+<!ENTITY Ctr_tabact_t		"active">
 <!ENTITY Ctr_tabhov_t		"hover">
-<!ENTITY Ctr_tabnor_t		"デフォルト">
+<!ENTITY Ctr_tabnor_t		"default">
 <!ENTITY Ctr_tabpen_t		"未読み込み">
 <!ENTITY Ctr_tabunr_t		"未読">
 <!ENTITY Ctr_ntab_t			"新しいタブ">
-<!ENTITY Ctr_customsqtab0	"カスタムタブ色">
 <!ENTITY Ctr_customsqtab1	"背景色を指定する">
 <!ENTITY Ctr_ctext			"テキスト">
 <!ENTITY Ctr_ctextsh		"テキストに影をつける">
@@ -129,15 +136,17 @@
 <!ENTITY Ctr_bold			"太字">
 <!ENTITY Ctr_italic			"斜体">
 
-<!ENTITY Ctr_favicon		"Favicon">
+<!ENTITY Ctr_favicon		"ファビコン設定">
 <!ENTITY Ctr_emptyfavicon	"空 favicon を表示する (サイトが提供しない場合)">
-<!ENTITY Ctr_emptyfavicon2	"Replace generic favicon (empty and dotted) with sheet favicon">
-<!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
-<!ENTITY Ctr_padlock_hid	"Padlock (hidden)">
-<!ENTITY Ctr_padlock_def	"Padlock (default)">
-<!ENTITY Ctr_padlock_cla	"Padlock (classic)">
-<!ENTITY Ctr_padlock_mod	"Padlock (modern)">
-<!ENTITY Ctr_padlock_ext	"Security icons">
+<!ENTITY Ctr_emptyfavicon2	"スタイルシートファビコンで汎用ファビコン (空ドット) を置換する">
+<!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tab">
+<!ENTITY Ctr_faviconurl0	"Icons in urlbar">
+<!ENTITY Ctr_faviconurl		"URLバーにファビコンを表示する (要 Firefox 再起動)">
+<!ENTITY Ctr_padlock_hid	"南京錠 (隠す)">
+<!ENTITY Ctr_padlock_def	"南京錠 (デフォルト)">
+<!ENTITY Ctr_padlock_cla	"南京錠 (クラシック)">
+<!ENTITY Ctr_padlock_mod	"南京錠 (モダン)">
+<!ENTITY Ctr_padlock_ext	"セキュリティアイコン">
 
 <!ENTITY Ctr_invicons		"反転アイコン">
 <!ENTITY Ctr_menubar		"メニューバー">
@@ -146,51 +155,50 @@
 <!ENTITY Ctr_bookbar		"ブックマークツールバー">
 
 <!ENTITY Ctr_toolbars		"ツールバー設定">
-<!ENTITY Ctr_dblclnewtab	"ダブルクリックで'新しい'タブを開く (browser.newtab.url を使用)">
-<!ENTITY Ctr_hidetbwot		"Hide tabs toolbar with one tab (restart Firefox!)">
+<!ENTITY Ctr_dblclnewtab	" ダブルクリックで'新しい'タブを開く (browser.newtab.url を使用)">
+<!ENTITY Ctr_hidetbwot		"1つのタブでタブツールバーを隠す (要 Firefox 再起動)">
 <!ENTITY Ctr_notabfog		"背景のぼかしを取り除く (Windows AeroGlass / Win8)">
-<!ENTITY Ctr_notabbg		"背景色を取り除く (Windows AeroGlasss / Win8)">
+<!ENTITY Ctr_notabbg		"背景色を取り除く (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_hightabpos		"ツールバーの上の間隔を減らす (可能ならば)">
-<!ENTITY Ctr_alttabstb		"タブツールバーを別の背景色にする">
+<!ENTITY Ctr_alttabstb		"別の背景色にする">
 
 <!ENTITY Ctr_altmenubar		"背景色を加える (OS タイトルバー)">
-<!ENTITY Ctr_altmenubarpos	"Alternative position (below Firefox titlebar)">
+<!ENTITY Ctr_altmenubarpos	"別の位置 (Firefoxタイトルバーの下)">
 <!ENTITY Ctr_menubarnofog	"背景色とぼかしを取り除く (Windows AeroGlass / Win8)">
 
-<!ENTITY Ctr_hidenavbar		"ナビゲーションツールバーを隠す">
+<!ENTITY Ctr_hidenavbar		"ナビゲーションツールバー：ツールバーを隠す">
 <!ENTITY Ctr_nobookbarbg	"ブックマークツールバー: 背景色を取り除く">
 <!ENTITY Ctr_nonavbarbg		"ナビゲーションツールバー: 背景色を取り除く">
 <!ENTITY Ctr_nonavborder	"ブックマークツールバー: ツールバーに上ボーダーを加える">
 <!ENTITY Ctr_nonavtbborder	"ツールバー: 上ボーダーを取り除く">
 
 <!ENTITY Ctr_closeabarbut	"アドオンバーの閉じるボタンを隠す">
-<!ENTITY Ctr_highaddonsbar	"ツールバーの高さを増やす">
-<!ENTITY Ctr_noaddonbarbg	"背景色を取り除く (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_highaddonsbar	"高さを増やす">
 
 <!ENTITY Ctr_animation		"アニメーション">
 <!ENTITY Ctr_throbberalt	"別バージョンのタブ読み込みアイコンアニメーションにする">
 <!ENTITY Ctr_bmanimation	"ブックマーク時にアニメーションさせる">
 <!ENTITY Ctr_pananimation	"パネルを開く時にアニメーションさせる">
-<!ENTITY Ctr_tabanimation	"タブを閉じる/開く時にアニメーションさせる (about:config)">
-<!ENTITY Ctr_dlanimation	"'ダウンロード通知'時にアニメーションさせる (about:config)">
+<!ENTITY Ctr_tabanimation	"タブを閉じる/開く時にアニメーションさせる (about:config設定)">
+<!ENTITY Ctr_dlanimation	"'ダウンロード通知'時にアニメーションさせる (about:config設定)">
 
 <!ENTITY Ctr_toolsitem		"ツールメニューに項目を表示する">
 <!ENTITY Ctr_appmenuitem	"アプリボタンメニューに項目を表示する">
-<!ENTITY Ctr_contextitem	"Menuitem in toolbars context menu">
+<!ENTITY Ctr_contextitem	"ツールバーのメニュー項目のコンテキストメニュー">
 <!ENTITY Ctr_cuibotbuttons	"'カスタマイズ'モードの追加ボタンを表示する">
 
 
-<!ENTITY Ctr_pw_settings	"Settings">
-<!ENTITY Ctr_pw_set_reset	"Restore defaults">
-<!ENTITY Ctr_pw_set_predef	"Classic preset">
-<!ENTITY Ctr_pw_set_export	"Export preferences">
-<!ENTITY Ctr_pw_set_import	"Import preferences">
+<!ENTITY Ctr_pw_settings	"設定">
+<!ENTITY Ctr_pw_set_reset	"デフォルトに戻す">
+<!ENTITY Ctr_pw_set_predef	"クラシックプリセット">
+<!ENTITY Ctr_pw_set_export	"設定をエクスポート">
+<!ENTITY Ctr_pw_set_import	"設定をインポート">
 
 <!ENTITY Ctr_special_font	"背景色の設定はデフォルトテーマのみに適用されます。">
 <!ENTITY Ctr_special_info	"一部オプションは特定のケースでのみ動作します。">
 <!ENTITY Ctr_special_info2	"設定はFirefox デフォルトテーマ用に作成されたもので、サードパーティのテーマで動作しないかもしれません。">
 <!ENTITY Ctr_support		"サポートフォーラム (英語)">
-<!ENTITY Ctr_newversion		"新バージョン？">
+<!ENTITY Ctr_newversion		"新バージョンをチェック">
 
 <!ENTITY Ctr_addon-bar.accesskey	"A">
 <!ENTITY Ctr_extrabar.accesskey		"D">

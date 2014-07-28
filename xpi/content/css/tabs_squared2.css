@@ -278,6 +278,11 @@
 	.tabs-newtab-button + .tabs-newtab-button {
 	  -moz-margin-start: 15px !important;
 	}
+	/* TMP progress tweak */
+	.tabbrowser-tab progressmeter.tab-progress	{
+	  margin-top: 2.5px !important;
+	  height: 3px !important;
+	}
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {

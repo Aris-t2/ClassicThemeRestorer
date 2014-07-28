@@ -1,0 +1,28 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	@media not all and (min-resolution: 2dppx) {
+
+		#urlbar-icons #feed-button .toolbarbutton-icon {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/feedinurlbar_mac.png") !important;
+		  -moz-image-region: rect(0px 18px 18px 0px) !important;
+		}
+
+	}
+	
+	/* for retina displays */
+	@media (min-resolution: 2dppx) {
+	
+		#urlbar-icons #feed-button .toolbarbutton-icon {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/feedinurlbar_mac@2x.png") !important;
+		  -moz-image-region: rect(0px 32px 32px 0px) !important;
+		}
+	}
+	
+	#main-window #urlbar-icons #feed-button {
+	  margin-top:-8px !important;
+	  margin-bottom:-8px !important;
+	}
+
+}

@@ -37,15 +37,22 @@
 	<!--### add new buttons to customizing area ###-->
 	<hbox id="customization-container">
 	  <vbox id="customization-palette-container">
-		<hbox pack="start" id="ctraddon_cuibuttonsbox" ordinal="999999" collapsed="true">
-		  <label value="&Ctr_cuibuttons;" class="ctraddon_cuibutlabel" id="ctraddon_cuibuttons_main"/>
-		  <button id="ctraddon_cui-smallnavbut-button1" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',false);" label="&Ctr_cuibutnormal;" class="customizationmode-button"/>
-		  <button id="ctraddon_cui-smallnavbut-button2" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',true);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',true);" label="&Ctr_cuibutsmall;" class="customizationmode-button"/>
-		  <spacer flex="1"/>
-		  <label value="&Ctr_cuimode;" class="ctraddon_cuibutlabel"/>
-		  <button id="ctraddon_cui-icons-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'icons');" label="&Ctr_cuiico;" class="customizationmode-button"/>
-		  <button id="ctraddon_cui-iconstext-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'iconstxt');" label="&Ctr_cuiicotxt;" class="customizationmode-button"/>
-		  <button id="ctraddon_cui-textonly-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'txtonly');" label="&Ctr_cuitxt;" class="customizationmode-button"/>
+		<hbox id="ctraddon_cuibuttonsbox" ordinal="999999" collapsed="true">
+		
+		<grid>
+		  <rows>
+			<row>
+			  <label value="&Ctr_cuibuttons;" class="ctraddon_cuibutlabel" id="ctraddon_cuibuttons_main"/>
+			  <button id="ctraddon_cui-smallnavbut-button1" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',false);" label="&Ctr_cuibutnormal;" class="customizationmode-button"/>
+			  <button id="ctraddon_cui-smallnavbut-button2" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',true);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',true);" label="&Ctr_cuibutsmall;" class="customizationmode-button"/>
+			  <label value=" "/>
+			  <label value="&Ctr_cuimode;" class="ctraddon_cuibutlabel"/>
+			  <button id="ctraddon_cui-icons-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'icons');" label="&Ctr_cuiico;" class="customizationmode-button"/>
+			  <button id="ctraddon_cui-iconstext-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'iconstxt');" label="&Ctr_cuiicotxt;" class="customizationmode-button"/>
+			  <button id="ctraddon_cui-textonly-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'txtonly');" label="&Ctr_cuitxt;" class="customizationmode-button"/>
+			</row>
+		  </rows>
+		</grid>
 		</hbox>
 	  </vbox>
 	</hbox>
@@ -108,7 +115,7 @@
 	<toolbar id="TabsToolbar">
       <toolbarbutton id="ctraddon_tabs-closebutton"
                      class="close-button tabs-closebutton close-icon"
-                     command="cmd_close"
+					 command="cmd_close"
                      label="&closeTab.label;"
                      cui-areatype="toolbar"
                      tooltiptext="&closeTab.label;"
@@ -753,17 +760,15 @@
       
 	  <!--### creates a bookmarks sidebar button ###-->
 	  <toolbarbutton id="ctraddon_bookmarks-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+					 label="&bookmarksMenuButton.label; &Ctr_sidebarbutton;"
                      observes="viewBookmarksSidebar"
-                     tooltiptext="&bookmarksMenuButton.label;"
-                     ondrop="bookmarksButtonObserver.onDrop(event)"
-                     ondragover="bookmarksButtonObserver.onDragOver(event)"
-                     ondragenter="bookmarksButtonObserver.onDragOver(event)"
-                     ondragexit="bookmarksButtonObserver.onDragExit(event)"/>
+                     tooltiptext="&bookmarksMenuButton.label; &Ctr_sidebarbutton;"/>
 					 
       <!--### creates a history sidebar button ###-->
 	  <toolbarbutton id="ctraddon_history-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
-                     observes="viewHistorySidebar" label="&historyButton.label;"
-                     tooltiptext="&historyButton.label;"/>
+					 label="&historyButton.label; &Ctr_sidebarbutton;"
+                     observes="viewHistorySidebar"
+                     tooltiptext="&historyButton.label; &Ctr_sidebarbutton;"/>
 					 
 					 
 	  <!--### creates a duplicated PanelUI button ###-->

@@ -15,6 +15,7 @@
 	ondialogaccept="return true"
 	persist="screenX screenY sizemode"
 >
+
 <script type="application/x-javascript" src="options.js"/>
 
 <prefpane id="ClassicTRoptionsPane" flex="1">
@@ -27,19 +28,25 @@
 		<preference id="ctraddon_tabwidth"		name="extensions.classicthemerestorer.ctabwidth"	type="int"		instantApply="true"/>
 		<preference id="ctraddon_tabmwidth"		name="extensions.classicthemerestorer.ctabmwidth"	type="int"		instantApply="true"/>
 		<preference id="ctraddon_closetab"		name="extensions.classicthemerestorer.closetab" 	type="string"	instantApply="true"/>
-		
+		<preference id="ctraddon_closetabhfl"	name="extensions.classicthemerestorer.closetabhfl"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_closealt"		name="extensions.classicthemerestorer.closealt"		type="bool"		instantApply="true"/>
+		<preference id="ctraddon_closeonleft"	name="extensions.classicthemerestorer.closeonleft"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_closewwltab"	name="browser.tabs.closeWindowWithLastTab"			type="bool"		instantApply="true"/>
+
 		<preference id="ctraddon_appbutton"		name="extensions.classicthemerestorer.appbutton" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_appbuttonc"	name="extensions.classicthemerestorer.appbuttonc" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_alttbappb"		name="extensions.classicthemerestorer.alttbappb" 	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_appbutmhi"		name="extensions.classicthemerestorer.appbutmhi" 	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_appbutbdl"		name="extensions.classicthemerestorer.appbutbdl" 	type="bool"		instantApply="true"/>
-		
+
 		<preference id="ctraddon_nbiconsize"	name="extensions.classicthemerestorer.nbiconsize" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_smallnavbut"	name="extensions.classicthemerestorer.smallnavbut"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_hidenavbar"	name="extensions.classicthemerestorer.hidenavbar"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_backforward"	name="extensions.classicthemerestorer.backforward"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_noconicons"	name="extensions.classicthemerestorer.noconicons"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_wincontrols"	name="extensions.classicthemerestorer.wincontrols"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_starinurl"		name="extensions.classicthemerestorer.starinurl"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_feedinurl"		name="extensions.classicthemerestorer.feedinurl"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_statusbar"		name="extensions.classicthemerestorer.statusbar"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_hideurelstop"	name="extensions.classicthemerestorer.hideurelstop"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_combrelstop"	name="extensions.classicthemerestorer.combrelstop"	type="bool"		instantApply="true"/>
@@ -72,7 +79,7 @@
 		<preference id="ctraddon_ctabacttsh"	name="extensions.classicthemerestorer.ctabacttsh"	type="string"	instantApply="true"/>
 		<preference id="ctraddon_ctabpentsh"	name="extensions.classicthemerestorer.ctabpentsh"	type="string"	instantApply="true"/>
 		<preference id="ctraddon_ctabunrtsh"	name="extensions.classicthemerestorer.ctabunrtsh"	type="string"	instantApply="true"/>
-		
+
 		<preference id="ctraddon_tabcolor_def"	name="extensions.classicthemerestorer.tabcolor_def"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_tabtextc_def"	name="extensions.classicthemerestorer.tabtextc_def"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_tabtextsh_def"	name="extensions.classicthemerestorer.tabtextsh_def" type="bool"	instantApply="true"/>
@@ -90,7 +97,7 @@
 		<preference id="ctraddon_tabtextsh_unr"	name="extensions.classicthemerestorer.tabtextsh_unr" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_ntabcolor_def"	name="extensions.classicthemerestorer.ntabcolor_def" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_ntabcolor_hov"	name="extensions.classicthemerestorer.ntabcolor_hov" type="bool"	instantApply="true"/>
-		
+
 		<preference id="ctraddon_tabfbold_def"	name="extensions.classicthemerestorer.tabfbold_def"  type="bool"	instantApply="true"/>
 		<preference id="ctraddon_tabfbold_act"	name="extensions.classicthemerestorer.tabfbold_act"  type="bool"	instantApply="true"/>
 		<preference id="ctraddon_tabfbold_pen"	name="extensions.classicthemerestorer.tabfbold_pen"  type="bool"	instantApply="true"/>
@@ -116,23 +123,24 @@
 		<preference id="ctraddon_nonavborder"	name="extensions.classicthemerestorer.nonavborder" 	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_nonavtbborder"	name="extensions.classicthemerestorer.nonavtbborder" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_alttabstb"		name="extensions.classicthemerestorer.alttabstb" 	 type="bool"	instantApply="true"/>
-		
+
 		<preference id="ctraddon_cpanelmenus"	name="extensions.classicthemerestorer.cpanelmenus"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bfurlbarfix"	name="extensions.classicthemerestorer.bfurlbarfix"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_emptyfavicon"	name="extensions.classicthemerestorer.emptyfavicon"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_emptyfavicon2"	name="extensions.classicthemerestorer.emptyfavicon2" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_noemptypticon"	name="extensions.classicthemerestorer.noemptypticon" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hidezoomres"	name="extensions.classicthemerestorer.hidezoomres"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_pmhidelabels"	name="extensions.classicthemerestorer.pmhidelabels"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_menupopupscr"	name="extensions.classicthemerestorer.menupopupscr"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hideprivmask"	name="extensions.classicthemerestorer.hideprivmask"	 type="bool"	instantApply="true"/>
-		
+
 		<preference id="ctraddon_invicomenubar"	name="extensions.classicthemerestorer.invicomenubar"   type="bool"	instantApply="true"/>
 		<preference id="ctraddon_invicotabsbar"	name="extensions.classicthemerestorer.invicotabsbar"   type="bool"	instantApply="true"/>
 		<preference id="ctraddon_inviconavbar"	name="extensions.classicthemerestorer.inviconavbar"	   type="bool"	instantApply="true"/>
 		<preference id="ctraddon_invicoextrabar" name="extensions.classicthemerestorer.invicoextrabar" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_invicobookbar"	name="extensions.classicthemerestorer.invicobookbar"   type="bool"	instantApply="true"/>
 		<preference id="ctraddon_invicoaddonbar" name="extensions.classicthemerestorer.invicoaddonbar" type="bool"	instantApply="true"/>
-		
+
 		<preference id="ctraddon_tabmokcolor"	name="extensions.classicthemerestorer.tabmokcolor" 	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_tabmokcolor2"	name="extensions.classicthemerestorer.tabmokcolor2"  type="bool"	instantApply="true"/>
 		<preference id="ctraddon_tabmokcolor3"	name="extensions.classicthemerestorer.tabmokcolor3"  type="bool"	instantApply="true"/>
@@ -144,15 +152,14 @@
 		<preference id="ctraddon_padlockex"		name="extensions.classicthemerestorer.padlockex"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_dblclclosefx"	name="extensions.classicthemerestorer.dblclclosefx"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hide_bf_popup"	name="extensions.classicthemerestorer.hide_bf_popup" type="bool"	instantApply="true"/>
-		
-		
+
 		<preference id="ctraddon_throbberalt"	name="extensions.classicthemerestorer.throbberalt" 	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_bmanimation"	name="extensions.classicthemerestorer.bmanimation"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_pananimation"	name="extensions.classicthemerestorer.pananimation"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_tabsanimate"	name="browser.tabs.animate"							type="bool"		instantApply="true"/>
 		<preference id="ctraddon_dlanimate"		name="browser.download.animateNotifications"		type="bool"		instantApply="true"/>
 
-		<preference id="ctraddon_closeabarbut"	name="extensions.classicthemerestorer.closeabarbut"	type="bool"		instantApply="true"/>		
+		<preference id="ctraddon_closeabarbut"	name="extensions.classicthemerestorer.closeabarbut"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_toolsitem"		name="extensions.classicthemerestorer.toolsitem"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_appmenuitem"	name="extensions.classicthemerestorer.appmenuitem"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_contextitem"	name="extensions.classicthemerestorer.contextitem"	type="bool"		instantApply="true"/>
@@ -178,62 +185,50 @@
   
   <radiogroup id="CtrRadioGroup" class="ctraddontabs" orient="vertical" flex="1"
 	value="ctraddon_tabsbox" oncommand="classicthemerestorerjso.ctr.onCtrPanelSelect();">
-	  
+
 	  <radio class="ctraddontab" value="ctraddon_tabsbox" 		label="&Ctr_tabs;"/>
 	  <radio class="ctraddontab" value="ctraddon_fontbox"    	label="&Ctr_tabcolors_t;" id="ctraddon_sqtabcolorstab"/>
 	  <radio class="ctraddontab" value="ctraddon_appbuttonbox" 	label="&Ctr_appbutton;"/>
 	  <radio class="ctraddontab" value="ctraddon_generaluibox"	label="&Ctr_ui;"/>
 	  <radio class="ctraddontab" value="ctraddon_iconsbox"		label="&Ctr_icons_t;"/>
 	  <radio class="ctraddontab" value="ctraddon_toolbarsbox"	label="&Ctr_toolbars;"/>
-	  <radio class="ctraddontab" value="ctraddon_animationbox"	label="&Ctr_animation; / CTR"/>
+	  <radio class="ctraddontab" value="ctraddon_animationbox"	label="&Ctr_animation;"/>
+	  <radio class="ctraddontab" value="ctraddon_ctraddonbox"	label="&Ctr_title;"/>
 
   </radiogroup>
 
   <splitter id="ctraddon_pw_splitter"/>
 
   <deck id="ctrPrefBoxContainer" flex="1">
-	
+
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_tabsbox">
-	
+
 	  <groupbox>
 		<caption  label="&Ctr_tabs;" class="ctraddon_topic"/>
 		<menulist preference="ctraddon_tabs" id="ctraddon_pw_tabmenulist">
 			<menupopup>
-				<menuitem value="tabs_default"	 label="&Ctr_tabs0;"  oncommand="classicthemerestorerjso.ctr.unsetCustomTabcolors();"/>
-				<menuitem value="tabs_squared"	 label="&Ctr_tabs1;"  oncommand="classicthemerestorerjso.ctr.unsetCustomTabcolors();"/>
-				<menuitem value="tabs_squaredc2" label="&Ctr_tabs1; (v2)"  oncommand="classicthemerestorerjso.ctr.unsetCustomTabcolors();"/>
-				<menuitem value="tabs_squared2"	 label="&Ctr_tabs1m;" oncommand="classicthemerestorerjso.ctr.unsetCustomTabcolors();"/>
-				<menuitem value="tabs_curved" 	 label="&Ctr_tabs2;"  oncommand="classicthemerestorerjso.ctr.unsetCustomTabcolors();"/>
-				<menuitem value="tabs_curvedall" label="&Ctr_tabs3;"  oncommand="classicthemerestorerjso.ctr.unsetCustomTabcolors();" id="tabs_curvedall"/>
+				<menuitem value="tabs_default"	 label="&Ctr_tabs0;"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
+				<menuitem value="tabs_squared"	 label="&Ctr_tabs1;"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
+				<menuitem value="tabs_squaredc2" label="&Ctr_tabs1; (v2)"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
+				<menuitem value="tabs_squared2"	 label="&Ctr_tabs1m;" oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
+				<menuitem value="tabs_curved" 	 label="&Ctr_tabs2;"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
+				<menuitem value="tabs_curvedall" label="&Ctr_tabs3;"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();" id="tabs_curvedall"/>
 			</menupopup>
 		</menulist>
-		
+
 		<description id="ctraddon_pw_tabforminfo">&Ctr_tabforminfo;</description>
-				
+
 		<menulist preference="ctraddon_tabsontop">
 			<menupopup>
 				<menuitem value="unset"	 label="&Ctr_tabsontop0;"/>
 				<menuitem value="true"	 label="&Ctr_tabsontop1;"/>
 				<menuitem value="false"	 label="&Ctr_tabsontop2;"/>
-				<menuitem value="false2" label="&Ctr_tabsontop2; (v2)"/>
+				<menuitem value="false2" label="&Ctr_tabsontop3;"/>
 				<label value=" "/>
 				<label value="&Ctr_tabsontopI1;" class="ctraddon_font1"/>
 				<label value="#main-window, #navigator-toolbox, #titlebar, #nav-bar,"/>
 				<label value="#toolbar-menubar, #TabsToolbar, #ctraddon_extra-bar,"/>
 				<label value="#PersonalToolbar, #ctraddon_addon-bar"/>
-			</menupopup>
-		</menulist>
-
-		<menulist preference="ctraddon_closetab" id="ctraddon_pw_closetab">
-			<menupopup>
-				<menuitem value="closetab_default"	label="&Ctr_closetab_0;"/>
-				<menuitem value="closetab_forced"	label="&Ctr_closetab_5; *"/>
-				<menuitem value="closetab_active"	label="&Ctr_closetab_1;" id="ctraddon_closetab_pw_act"/>
-				<menuitem value="closetab_none"		label="&Ctr_closetab_2;" id="ctraddon_closetab_pw_non"/>
-				<menuitem value="closetab_tb_start"	label="&Ctr_closetab_4;" id="ctraddon_closetab_pw_sta"/>
-				<menuitem value="closetab_tb_end"	label="&Ctr_closetab_3;" id="ctraddon_closetab_pw_end"/>
-				<label value=" "/>
-				<label value="* &Ctr_appbuttonI1;" class="ctraddon_font1"/>
 			</menupopup>
 		</menulist>
 
@@ -257,25 +252,49 @@
 			</row>
 		  </rows>
 		</grid>
-		
+
 		<description id="ctraddon_pw_tabwidthinfo">&Ctr_tabwidthinfo;</description>
+		
+		<label value="&Ctr_closetab_0;"/>
+		<grid>
+		  <rows>
+			<row class="ctraddonsuboption">
+				<menulist preference="ctraddon_closetab" id="ctraddon_pw_closetab">
+					<menupopup>
+						<menuitem value="closetab_default"	label="&Ctr_tabwidthdef;" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(true);"/>
+						<menuitem value="closetab_forced"	label="&Ctr_closetab_5; *" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(true);"/>
+						<menuitem value="closetab_active"	label="&Ctr_closetab_1;" id="ctraddon_closetab_pw_act" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(true);"/>
+						<menuitem value="closetab_none"		label="&Ctr_closetab_2;" id="ctraddon_closetab_pw_non" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(true);"/>
+						<menuitem value="closetab_tb_start"	label="&Ctr_closetab_4;" id="ctraddon_closetab_pw_sta" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
+						<menuitem value="closetab_tb_end"	label="&Ctr_closetab_3;" id="ctraddon_closetab_pw_end" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
+						<label value=" "/>
+						<label value="* &Ctr_appbuttonI1;" class="ctraddon_font1"/>
+					</menupopup>
+				</menulist>
+				<label value=" "/>
+			</row>
+		  </rows>
+		</grid>
+		<checkbox class="ctraddonsuboption" label="&Ctr_closetab_hfot;" preference="ctraddon_closetabhfl" id="ctraddon_pw_closetabhfl"/>
+		<checkbox class="ctraddonsuboption" label="&Ctr_closeonleft;" preference="ctraddon_closeonleft" id="ctraddon_pw_closeonleft"/>
+		<checkbox class="ctraddonsuboption" label="&Ctr_closealt;" preference="ctraddon_closealt" id="ctraddon_pw_closealt"/>
+		<checkbox class="ctraddonsuboption" label="&Ctr_close_wwltab;" preference="ctraddon_closewwltab"/>
 
 	  </groupbox>
 
 	</box>
 	
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_fontbox">
-		  
-		<label value="&Ctr_customsqtab0; - &Ctr_tabs0;"		class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_default"/>
-		<label value="&Ctr_customsqtab0; - &Ctr_tabs1;"		class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_squared"/>
-		<label value="&Ctr_customsqtab0; - &Ctr_tabs1; v2"  class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_squaredc2"/>
-		<label value="&Ctr_customsqtab0; - &Ctr_tabs1m;"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_squared2"/>
-		<label value="&Ctr_customsqtab0; - &Ctr_tabs2;"		class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curved"/>
-		<label value="&Ctr_customsqtab0; - &Ctr_tabs3;"		class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curvedaero"/>
-		<label value=""/>
-		<description>&Ctr_tab_tf_info1; &Ctr_tab_tf_info2;</description>
-		<label value=""/>
-		
+
+	  <label value="&Ctr_tabs0;"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_default"/>
+	  <label value="&Ctr_tabs1;"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_squared"/>
+	  <label value="&Ctr_tabs1; v2"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_squaredc2"/>
+	  <label value="&Ctr_tabs1m;"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_squared2"/>
+	  <label value="&Ctr_tabs2;"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curved"/>
+	  <label value="&Ctr_tabs3;"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curvedaero"/>
+	  <description>&Ctr_tab_tf_info1; &Ctr_tab_tf_info2;</description>
+	  <label value=""/>
+
 	  <tabbox>
 		<tabs>
 			<tab label="&Ctr_tabact_t;"/>
@@ -285,7 +304,7 @@
 			<tab label="&Ctr_tabunr_t;"/>
 			<tab label="&Ctr_ntab_t;" id="ctraddon_pw_colors_ntab_t"/>
 		</tabs>
-			
+
 		<tabpanels>
 
 		  <tabpanel>
@@ -353,7 +372,6 @@
 					</row>
 				  </rows>
 				</grid>
-						
 			</groupbox>
 
 		  </tabpanel>
@@ -389,7 +407,6 @@
 					</row>
 				  </rows>
 				</grid>
-
 			</groupbox>
 
 		  </tabpanel>
@@ -425,7 +442,6 @@
 					</row>
 				  </rows>
 				</grid>
-
 			</groupbox>
 
 		  </tabpanel>
@@ -461,7 +477,6 @@
 					</row>
 				  </rows>
 				</grid>
-
 			</groupbox>
 
 		  </tabpanel>
@@ -484,9 +499,8 @@
 						</row>
 					  </rows>
 					</grid>
-					  
 				</groupbox>
-						  
+
 				<groupbox class="ntabcolorbox">
 					<caption  label="&Ctr_ntabhov;" class="ctraddon_topic"/>
 					<grid>
@@ -510,15 +524,14 @@
 
 		</tabpanels>
 	  </tabbox>
-
-	  <label value="&Ctr_special_font;" class="ctraddon_topic" id="ctraddon_pw_special_font"/>
+	  <description id="ctraddon_pw_special_font" class="ctraddon_topic">&Ctr_special_font;</description>
 
 	</box>
-	
+
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_appbuttonbox">
 
 	  <hbox><checkbox label="&Ctr_tabsintitlebar;"	preference="ctraddon_tabsintitlebar" id="ctraddon_tabs_in_titlebar"/></hbox>
-			  
+
 	  <groupbox>
 		<caption  label="&Ctr_appbutton;" class="ctraddon_topic"/>
 		<menulist preference="ctraddon_appbutton" id="ctraddon_appbutton_list1">
@@ -533,9 +546,9 @@
 				<menuitem value="appbutton_pm" 	  label="&Ctr_paneluibtweak;"		oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_pm',true)"/>
 				<label value=" "/>
 				<label value="&Ctr_appbuttonI1;" class="ctraddon_font1"/>
-				<label value="&Ctr_appbuttonI1e;" class="ctraddon_font1"/>
 			</menupopup>
 		</menulist>
+		
 		<menulist preference="ctraddon_appbutton" id="ctraddon_appbutton_list2">
 			<menupopup>
 				<menuitem value="appbutton_off"	 label="&Ctr_appbutton0;"	oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_off',true)"/>
@@ -543,6 +556,9 @@
 				<menuitem value="appbutton_v1wt" label="&Ctr_appbutton1wt;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v1wt',true)"/>
 			</menupopup>
 		</menulist>
+
+		<description>&Ctr_appbuttonI1e;</description>
+
 		<menulist preference="ctraddon_appbuttonc" id="ctraddon_appbutcolor_list">
 			<menupopup>
 				<menuitem value="appbuttonc_orange"	 label="&Ctr_appbuttonc_o;"/>
@@ -555,10 +571,11 @@
 				<menuitem value="appbuttonc_gray"	 label="&Ctr_appbuttonc_gr;"/>
 				<menuitem value="appbuttonc_purple"	 label="&Ctr_appbuttonc_pu;"/>
 				<menuitem value="appbuttonc_white"	 label="&Ctr_appbuttonc_wh;"/>
-				<label value=" "/>
-				<label value="&Ctr_appbuttonI2;" class="ctraddon_font1"/>
 			</menupopup>
 		</menulist>
+		
+		<description>&Ctr_appbuttonI2;</description>
+		
 		<checkbox label="&Ctr_alttbappb;"	 preference="ctraddon_alttbappb" id="ctraddon_alt_abicons"/>
 		<checkbox label="&Ctr_appbutmhi;"	 preference="ctraddon_appbutmhi" id="ctraddon_abhigher" class="ctraddon_windowsonly"/>
 		<checkbox label="&Ctr_appbutbdl;"	 preference="ctraddon_appbutbdl" id="ctraddon_appbutbdl"/>
@@ -571,24 +588,25 @@
 	  <groupbox>
 		<caption  label="&Ctr_ui;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_smallnavbut;"		preference="ctraddon_smallnavbut" oncommand="if(this.checked) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',true);} else if(classicthemerestorerjso.ctr.prefs.getBoolPref('backforward')==false) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',false);}" id="ctraddon_pw_smallnavbut"/>
-		<checkbox label="&Ctr_bfurlbarfix;"		preference="ctraddon_bfurlbarfix" id="ctraddon_pw_bfurlbarfix" style="-moz-padding-start:24px;"/>
+		<checkbox label="&Ctr_bfurlbarfix;"		preference="ctraddon_bfurlbarfix" id="ctraddon_pw_bfurlbarfix" class="ctraddonsuboption"/>
 		<checkbox label="&Ctr_backforward;"		preference="ctraddon_backforward" oncommand="if(this.checked) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',true);classicthemerestorerjso.ctr.ctrpwBFextra(true);} else if(classicthemerestorerjso.ctr.prefs.getBoolPref('smallnavbut')==false) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',false);classicthemerestorerjso.ctr.ctrpwBFextra(false);} else {classicthemerestorerjso.ctr.ctrpwBFextra(false);}"/>
-		<checkbox label="&Ctr_hide_bf_popup;"	preference="ctraddon_hide_bf_popup" id="ctraddon_pw_hide_bf_popup" style="-moz-padding-start:24px;"/>
+		<checkbox label="&Ctr_hide_bf_popup;"	preference="ctraddon_hide_bf_popup" id="ctraddon_pw_hide_bf_popup" class="ctraddonsuboption"/>
 		<checkbox label="&Ctr_starinurl;"		preference="ctraddon_starinurl" oncommand="classicthemerestorerjso.ctr.needsRestart=true;"/>
+		<checkbox label="&Ctr_feedinurl;"		preference="ctraddon_feedinurl" oncommand="classicthemerestorerjso.ctr.needsRestart=true;"/>
 		<checkbox label="&Ctr_mstatusbar;"		preference="ctraddon_statusbar"/>
 		<checkbox label="&Ctr_verifiedcolors;"	preference="ctraddon_verifiedcolors" id="ctraddon_pw_verifiedcolors"/>
 		<checkbox label="&Ctr_hideprivmask;"	preference="ctraddon_hideprivmask"/>
-		
+
 		<label value=" "/>
 		<label value="&Ctr_stoprel0;"/>
-		<checkbox label="&Ctr_hideurelstop;"	preference="ctraddon_hideurelstop" style="-moz-padding-start:24px;"/>
-		<checkbox label="&Ctr_combrelstop;"		preference="ctraddon_combrelstop" onmouseover="document.getElementById('combrelstop').openPopupAtScreen(this.boxObject.screenX, this.boxObject.screenY+this.boxObject.height-1, false);" onmouseout="document.getElementById('combrelstop').hidePopup();" style="-moz-padding-start:24px;"/>
-		<label value="&Ctr_stoprel1;" style="-moz-padding-start:24px;"/>
+		<checkbox label="&Ctr_hideurelstop;"	preference="ctraddon_hideurelstop" class="ctraddonsuboption"/>
+		<checkbox label="&Ctr_combrelstop;"		preference="ctraddon_combrelstop" onmouseover="document.getElementById('combrelstop').openPopupAtScreen(this.boxObject.screenX, this.boxObject.screenY+this.boxObject.height-1, false);" onmouseout="document.getElementById('combrelstop').hidePopup();" class="ctraddonsuboption"/>
+		<description class="ctraddonsuboption">&Ctr_stoprel1;</description>
 
 		<grid>
 		  <rows>
 		    <label value="&Ctr_nbiconsize0;"/>
-			<row style="-moz-padding-start:24px;">
+			<row class="ctraddonsuboption">
 				<menulist preference="ctraddon_nbiconsize">
 					<menupopup>
 						<menuitem value="small"	label="#nav-bar[iconsize='small'] &Ctr_tabwidthdef;"/>
@@ -598,7 +616,7 @@
 				<label value=" "/>
 			</row>
 			<label value="&Ctr_findbar;"/>
-			<row style="-moz-padding-start:24px;">
+			<row class="ctraddonsuboption">
 				<menulist preference="ctraddon_findbar">
 					<menupopup>
 						<menuitem value="findbar_default" label="&Ctr_findbar_def;"/>
@@ -611,7 +629,7 @@
 				<label value=" "/>
 			</row>
 			<label value="&Ctr_cuimode;"/>
-			<row style="-moz-padding-start:24px;">
+			<row class="ctraddonsuboption">
 				<menulist preference="ctraddon_nav_txt_ico">
 					<menupopup>
 						<menuitem value="icons"		label="&Ctr_nav_txt_ico0;"/>
@@ -626,6 +644,7 @@
 		  </rows>
 		</grid>
 		<label value=" "/>
+		<checkbox label="&Ctr_noconicons;"		preference="ctraddon_noconicons" id="ctraddon_pw_noconicons"/>
 		<checkbox label="&Ctr_wincontrols;"		preference="ctraddon_wincontrols" id="ctraddon_wincontrols"/>
 		<checkbox label="&Ctr_panelmenucol;"	preference="ctraddon_panelmenucol" id="ctraddon_pw_panelmenucolor"/>
 		<checkbox label="&Ctr_cpanelmenus;"		preference="ctraddon_cpanelmenus"/>
@@ -649,9 +668,11 @@
 	    <caption  label="&Ctr_favicon;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_emptyfavicon;"	preference="ctraddon_emptyfavicon"/>
 		<checkbox label="&Ctr_emptyfavicon2;"	preference="ctraddon_emptyfavicon2"/>
-		<checkbox label="&Ctr_faviconurl;"		preference="ctraddon_faviconurl" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwFaviconextra(true);} else {classicthemerestorerjso.ctr.ctrpwFaviconextra(false);} classicthemerestorerjso.ctr.needsRestart=true;"/>
-		<checkbox label="&Ctr_padlock_ext;"		preference="ctraddon_padlockex" id="ctraddon_padlock_extra" style="-moz-padding-start:24px;"/>
-		<hbox>
+		<checkbox label="&Ctr_noemptypticon;"	preference="ctraddon_noemptypticon"/>
+		<label value="&Ctr_faviconurl0;"/>
+		<checkbox label="&Ctr_faviconurl;"		preference="ctraddon_faviconurl" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwFaviconextra(true);} else {classicthemerestorerjso.ctr.ctrpwFaviconextra(false);} classicthemerestorerjso.ctr.needsRestart=true;" class="ctraddonsuboption"/>
+		<checkbox label="&Ctr_padlock_ext;"		preference="ctraddon_padlockex" id="ctraddon_padlock_extra" class="ctraddonsuboption"/>
+		<hbox class="ctraddonsuboption">
 		  <menulist preference="ctraddon_padlock" id="ctraddon_padlock_list">
 			<menupopup>
 				<menuitem value="padlock_none"	  label="&Ctr_padlock_hid;" id="ctraddon_pw_padlock_none"/>
@@ -686,7 +707,7 @@
 	</box>
 
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_toolbarsbox">
-	
+
 	  <description class="ctraddon_topic">&Ctr_special_info;</description>
 
 	  <groupbox>
@@ -702,25 +723,25 @@
 	    <caption  label="&Ctr_tabstoolbar;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_dblclnewtab;"		preference="ctraddon_dblclnewtab" class="ctraddon_windowsonly"/>
 		<checkbox label="&Ctr_hidetbwot;"		preference="ctraddon_hidetbwot" oncommand="classicthemerestorerjso.ctr.needsRestart=true;"/>
-		<checkbox label="&Ctr_notabfog;"		preference="ctraddon_notabfog" id="ctraddon_pw_notabfog"/>
-		<checkbox label="&Ctr_notabbg;"			preference="ctraddon_notabbg" class="ctraddon_windowsonly" id="ctraddon_pw_notabbg"/>
+		<checkbox label="&Ctr_notabfog;"		preference="ctraddon_notabfog" class="ctraddon_windowsonly" id="ctraddon_pw_notabfog"/>
+		<checkbox label="&Ctr_notabbg;"			preference="ctraddon_notabbg" id="ctraddon_pw_notabbg"/>
 		<checkbox label="&Ctr_hightabpos;"		preference="ctraddon_hightabpososx"/>
-		<checkbox label="&Ctr_alttabstb;"		preference="ctraddon_alttabstb" id="ctraddon_pw_alttabstb"/>
+		<checkbox label="&Ctr_alttabstb;"		preference="ctraddon_alttabstb" id="ctraddon_pw_alttabstb" class="ctraddon_winlinonly"/>
 	  </groupbox>
 
-	  <groupbox id="ctraddon_pw_menubargroup">
+	  <groupbox id="ctraddon_pw_menubargroup" class="ctraddon_windowsonly">
 	    <caption  label="&Ctr_menubar;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_menubarnofog;"			preference="ctraddon_menubarnofog" id="ctraddon_pw_menubarnofog"/>
-		<checkbox label="&Ctr_altmenubarpos;"			preference="ctraddon_altmenubarpos" class="ctraddon_windowsonly" id="ctraddon_pw_altmenubarpos"/>
-		<checkbox label="&Ctr_altmenubarpos; (v2)" 		preference="ctraddon_altmenubarpos2" class="ctraddon_windowsonly" id="ctraddon_pw_altmenubarpos2"/>
+		<checkbox label="&Ctr_altmenubarpos;"			preference="ctraddon_altmenubarpos" id="ctraddon_pw_altmenubarpos"/>
+		<checkbox label="&Ctr_altmenubarpos; (v2)" 		preference="ctraddon_altmenubarpos2" id="ctraddon_pw_altmenubarpos2"/>
 		<checkbox label="&Ctr_altmenubar; &Ctr_tnot;"	preference="ctraddon_altmenubar" id="ctraddon_pw_altmenubar"/>
 	  </groupbox>
 
 	  <groupbox>
 	    <caption  label="&Ctr_addonbar;" class="ctraddon_topic"/>
-	    <checkbox label="&Ctr_closeabarbut;"	preference="ctraddon_closeabarbut"/>
+		<checkbox label="&Ctr_closeabarbut;"	preference="ctraddon_closeabarbut"/>
 		<checkbox label="&Ctr_highaddonsbar;"	preference="ctraddon_highaddonsbar"/>
-		<checkbox label="&Ctr_noaddonbarbg;"	preference="ctraddon_noaddonbarbg" id="ctraddon_pw_noaddonbarbg"/>
+		<checkbox label="&Ctr_notabbg;"			preference="ctraddon_noaddonbarbg" id="ctraddon_pw_noaddonbarbg"/>
 	  </groupbox>
 
 	</box>
@@ -736,14 +757,18 @@
 		<checkbox label="&Ctr_dlanimation;"		preference="ctraddon_dlanimate"/>
 	  </groupbox>
 
+	</box>
+	
+	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_ctraddonbox">
+
 	  <groupbox>
-		<caption  label="Classic Theme Restorer" class="ctraddon_topic"/>
+		<caption  label="&Ctr_title;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_toolsitem;"		preference="ctraddon_toolsitem"/>
 		<checkbox label="&Ctr_appmenuitem;"		preference="ctraddon_appmenuitem"/>
 		<checkbox label="&Ctr_contextitem;"		preference="ctraddon_contextitem"/>
 		<checkbox label="&Ctr_cuibotbuttons;"	preference="ctraddon_cuibuttons"/>
 	  </groupbox>
-	
+
 	</box>
 	
   </deck>

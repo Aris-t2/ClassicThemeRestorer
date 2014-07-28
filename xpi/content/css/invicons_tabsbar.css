@@ -27,8 +27,9 @@
 	#TabsToolbar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-down {
 	  list-style-image: url(chrome://browser/skin/tabbrowser/tab-arrow-left-inverted.png) !important;
 	}
-	#TabsToolbar > #new-tab-button,
-	#TabsToolbar > toolbarpaletteitem > #new-tab-button {
+	#main-window #navigator-toolbox #TabsToolbar #new-tab-button:not(:-moz-lwtheme),
+	#main-window #navigator-toolbox #TabsToolbar #new-tab-button,
+	#main-window #navigator-toolbox #TabsToolbar > toolbarpaletteitem > #new-tab-button {
 	  list-style-image: url(chrome://browser/skin/tabbrowser/newtab-inverted.png) !important;
 	}
 	#TabsToolbar > #alltabs-button,
