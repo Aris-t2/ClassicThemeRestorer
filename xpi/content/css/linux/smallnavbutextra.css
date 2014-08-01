@@ -72,8 +72,6 @@
       box-shadow: none !important;
 	}
 	
-	/*   */
-	
 	#nav-bar #notification-popup-box[hidden] + * {
 	  -moz-padding-start: 2px !important;
 	  transition: none !important;
@@ -140,6 +138,14 @@
 	#main-window[defaultfxtheme="true"] #nav-bar #urlbar[focused],
 	#main-window[defaultfxtheme="true"] #nav-bar .searchbar-textbox[focused] {
 	  border-color: Highlight !important;
+	}
+
+	/*buttons with SVG images*/
+	#nav-bar .toolbarbutton-1[image$="svg"] .toolbarbutton-icon {
+	  max-width: 22px !important;
+	  max-height: 22px !important;
+	  width: auto !important;
+	  height: auto !important;
 	}
 
 }

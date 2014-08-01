@@ -43,7 +43,7 @@
       margin: 0px !important;
 	}
 	
-	/* Fx31*/
+	/* Fx31+*/
 	#main-window[fx31="true"] #navigator-toolbox #nav-bar:-moz-locale-dir(ltr) #forward-button{
       margin-left: 4px !important;
 	}
@@ -75,8 +75,6 @@
 	}
 
 	#navigator-toolbox:not([customizing]) #nav-bar-customization-target {
-      /*-moz-padding-end: 10px !important;
-      -moz-margin-end: 4px !important;*/
       -moz-padding-end: 3px !important;
       -moz-margin-end: -3px !important;
 	}
@@ -191,6 +189,14 @@
       margin: -8px -4px !important;
     }
 	
+	/*buttons with SVG images*/
+	#nav-bar .toolbarbutton-1[image$="svg"] .toolbarbutton-icon {
+	  max-width: 22px !important;
+	  max-height: 22px !important;
+	  width: auto !important;
+	  height: auto !important;
+	}
+
 	/* zoom page add-on */
     #navigator-toolbox #nav-bar #zoompage-zoomdisplay-s,
     #navigator-toolbox #nav-bar #zoompage-zoomin-s,
