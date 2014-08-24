@@ -7,7 +7,9 @@
 <!ENTITY Ctr_space			"Интервал">
 <!ENTITY Ctr_separator		"Разделитель">
 <!ENTITY Ctr_puibseparator	"Разделитель (кнопка меню)">
-<!ENTITY Ctr_sidebarbutton	"(Боковая панель)">
+<!ENTITY Ctr_navthrobber	"Activity Indicator">
+<!ENTITY Ctr_sidebarbutton	"Боковая панель">
+<!ENTITY Ctr_windowcontrols	"Min/max/close (Fullscreen)">
 
 <!ENTITY Ctr_cuibuttons		"Кнопки:">
 <!ENTITY Ctr_cuibutnormal	"Обычные">
@@ -40,7 +42,9 @@
 <!ENTITY Ctr_tabwidthcla	"(классич.)">
 <!ENTITY Ctr_tabmaxwidth	"Макс. ширина:">
 <!ENTITY Ctr_tabminwidth	"Мин. ширина:">
-<!ENTITY Ctr_tabwidthinfo	"Минимальная и максимальная ширина вкладок изменяются расширениями TabMixPlus и TabUtilities">
+<!ENTITY Ctr_tabwidthinfo	"Минимальная и максимальная ширина вкладок изменяются расширениями TabMixPlus">
+<!ENTITY Ctr_tabwidthinfo2	"Минимальная и максимальная ширина вкладок изменяются расширениями TabUtilities">
+<!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
 <!ENTITY Ctr_closetab_0		"Кнопка закрытия вкладки">
 <!ENTITY Ctr_closetab_1		"на активной вкладке">
 <!ENTITY Ctr_closetab_2		"нигде">
@@ -48,8 +52,8 @@
 <!ENTITY Ctr_closetab_4		"в начале панели">
 <!ENTITY Ctr_closetab_5		"на всех вкладках (принудительно)">
 <!ENTITY Ctr_closetab_hfot	"Скрыть для одной вкладки">
-<!ENTITY Ctr_closealt		"Alternative icon">
-<!ENTITY Ctr_closeonleft	"Alternative position on tab">
+<!ENTITY Ctr_closealt		"Альтернативный значок">
+<!ENTITY Ctr_closeonleft	"Альтернативная позиция на вкладке">
 <!ENTITY Ctr_close_wwltab	"Закрыть окно при закрытии последней вкладки (about:config)">
 
 <!ENTITY Ctr_appbutton		"Кнопка приложения">
@@ -83,7 +87,7 @@
 <!ENTITY Ctr_bfurlbarfix	"Радиус углов строки адреса: 2px (Win) / 2.5px (Mac)">
 <!ENTITY Ctr_backforward	"Подвижная кнопка «назад-вперед»">
 <!ENTITY Ctr_hide_bf_popup	"Не показывать меню истории при нажатии мыши">
-<!ENTITY Ctr_noconicons		"Replace page context menu icons with labels (back, forward, stop, reload, bookmark page)">
+<!ENTITY Ctr_noconicons		"На странице, в контекстном меню, заменить значки метками (назад, вперёд, остановить, обновить, страница закладок)">
 <!ENTITY Ctr_wincontrols	"Подвижное управление полноэкранным режимом">
 <!ENTITY Ctr_starinurl		"Звёздочка в адресной строке (перезапустите Firefox!)">
 <!ENTITY Ctr_feedinurl		"Кнопка RSS в адресной строке (перезапустите Firefox!)">
@@ -140,7 +144,7 @@
 <!ENTITY Ctr_emptyfavicon	"Восстановить пустой значок на вкладках">
 <!ENTITY Ctr_emptyfavicon2	"Установить общий значок (пустой и пунктирный)">
 <!ENTITY Ctr_noemptypticon	"Удалить пустой значок из прикреплённой вкладки">
-<!ENTITY Ctr_faviconurl0	"Icons in urlbar">
+<!ENTITY Ctr_faviconurl0	"Значки в адресной строке">
 <!ENTITY Ctr_faviconurl		"Значок в адресной строке (перезапустите Firefox!)">
 <!ENTITY Ctr_padlock_hid	"Скрыть замок">
 <!ENTITY Ctr_padlock_def	"Замок (по умолчанию)">

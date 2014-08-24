@@ -1,4 +1,3 @@
-@import url(chrome://ctraddon_os_special/skin/cuibuttonsextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
@@ -9,8 +8,8 @@
 	
 	#main-window[defaultfxtheme="true"] #ctraddon_cuibuttonsbox{
 	  background-color: #ececec;
-      padding: 0 15px 15px 15px;
-	  margin-top:-6px;
+      padding: 0 15px 13px 15px;
+	  margin-top:-8px;
 	}
 
 	/* customize area buttons */
@@ -84,10 +83,17 @@
 	  border-bottom: 1px solid #89b3d4 !important;
 	}
 	
-#customization-palette-container #ctraddon_cuibuttonsbox .customizationmode-button {
-	padding:0 !important;
-	margin-top:0 !important;
-	margin-bottom:0 !important;
-}
+	.ctraddon_cuibutlabel,
+	.ctraddon_cuibutlabel:hover{
+	  -moz-appearance: none !important;
+	  border:0 !important;
+	  border-top:0 !important;
+	  border-bottom:0 !important;
+	  background: none !important;
+	  min-width: 0 !important;
+	  box-shadow: none !important;
+	  padding-left:0 !important;
+	  padding-right:0 !important;
+	}
 	
 }

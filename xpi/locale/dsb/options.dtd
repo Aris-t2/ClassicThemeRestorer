@@ -7,7 +7,9 @@
 <!ENTITY Ctr_space			"Mjazyrum">
 <!ENTITY Ctr_separator		"Źěleńska smužka">
 <!ENTITY Ctr_puibseparator	"Źěleńska smužka tłocaškow pólowego menija">
-<!ENTITY Ctr_sidebarbutton	"(Sidebar)">
+<!ENTITY Ctr_navthrobber	"Activity Indicator">
+<!ENTITY Ctr_sidebarbutton	"Bócnica">
+<!ENTITY Ctr_windowcontrols	"Min/max/close (Fullscreen)">
 
 <!ENTITY Ctr_cuibuttons		"Tłocaški">
 <!ENTITY Ctr_cuibutnormal	"Normalny">
@@ -40,17 +42,19 @@
 <!ENTITY Ctr_tabwidthcla	"(klasiski)">
 <!ENTITY Ctr_tabmaxwidth	"Maksimalna šyrokosć:">
 <!ENTITY Ctr_tabminwidth	"Minimalna šyrokosć:">
-<!ENTITY Ctr_tabwidthinfo	"Maksimalna a minimalna šyrokosć wótwisujotej wót TabMixPlus / TabUtilities">
+<!ENTITY Ctr_tabwidthinfo	"Maksimalna a minimalna šyrokosć wótwisujotej wót TabMixPlus">
+<!ENTITY Ctr_tabwidthinfo2	"Maksimalna a minimalna šyrokosć wótwisujotej wót TabUtilities">
+<!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
 <!ENTITY Ctr_closetab_0		"Rejtark zacyniś">
 <!ENTITY Ctr_closetab_1		"Jano na aktiwnem rejtarku">
 <!ENTITY Ctr_closetab_2		"Niźi">
 <!ENTITY Ctr_closetab_3		"Na kóńcu rejtarkoweje rědki">
 <!ENTITY Ctr_closetab_4		"Na zachopjeńku rejtarkoweje rědki">
 <!ENTITY Ctr_closetab_5		"Na wšych rejtarkach (wunuźony)">
-<!ENTITY Ctr_closetab_hfot	"Hide for one visible tab">
-<!ENTITY Ctr_closealt		"Alternative icon">
-<!ENTITY Ctr_closeonleft	"Alternative position on tab">
-<!ENTITY Ctr_close_wwltab	"Close window with last visible tab (about:config)">
+<!ENTITY Ctr_closetab_hfot	"Za jaden widobny rejtar schowaś">
+<!ENTITY Ctr_closealt		"Alternatiwny symbol">
+<!ENTITY Ctr_closeonleft	"Alternatiwna pozcija na rejtarku">
+<!ENTITY Ctr_close_wwltab	"Wokno ze slědnym widobnym rejtarkom zacyniś (about:config)">
 
 <!ENTITY Ctr_appbutton		"Nałožeński tłocašk">
 <!ENTITY Ctr_appbutton0		"Tłocašk znjemóžnjony">
@@ -83,10 +87,10 @@
 <!ENTITY Ctr_bfurlbarfix	"Ramikowy radius za adresowe rědki pópšawiś">
 <!ENTITY Ctr_backforward	"Pśesuwajobny tłocašk Slědk-Doprědka">
 <!ENTITY Ctr_hide_bf_popup	"Meni historije pśez tłocenje myškoweje tasty schowaś">
-<!ENTITY Ctr_noconicons		"Replace page context menu icons with labels (back, forward, stop, reload, bookmark page)">
+<!ENTITY Ctr_noconicons		"Symbole kontekstowego menija boka pśez pomjenjenja wuměniś (slědk, dalej, stoj, znowego, bok ako cytańske znamje składowaś)">
 <!ENTITY Ctr_wincontrols	"Pśesuwajobne wóźeńske elementy połneje wobrazowki">
 <!ENTITY Ctr_starinurl		"Gwězdowy tłocašk w adresowej rědce (startujśo Firefox znowego!)">
-<!ENTITY Ctr_feedinurl		"Feed-button in urlbar (startujśo Firefox znowego!)">
+<!ENTITY Ctr_feedinurl		"Kanalowy tłocašk w adresowej rědce (startujśo Firefox znowego!)">
 <!ENTITY Ctr_mstatusbar		"Pśesuwajobny wobcerk statusoweje rědki">
 <!ENTITY Ctr_hideurelstop	"Tłocaška Stoj a Znowego adresowych rědkow schowaś">
 <!ENTITY Ctr_combrelstop	"Tłocaška Stoj a Znowego kombiněrowaś">
@@ -139,8 +143,8 @@
 <!ENTITY Ctr_favicon		"Faworitowy symbol">
 <!ENTITY Ctr_emptyfavicon	"Prozny faworitowy symbol wótnowiś (jolic sedło njepóbitujo žeden)">
 <!ENTITY Ctr_emptyfavicon2	"Prozny a dypkaty faworitowy symbol pśez łopjenowy symbol wuměniś">
-<!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tab">
-<!ENTITY Ctr_faviconurl0	"Icons in urlbar">
+<!ENTITY Ctr_noemptypticon	"Prozny faworitowy symbol z pśipětego rejtarka">
+<!ENTITY Ctr_faviconurl0	"Symbole w adresowej rědce">
 <!ENTITY Ctr_faviconurl		"Faworitowy symbol w adresowej rědce (Firefox znowego startowaś!)">
 <!ENTITY Ctr_padlock_hid	"Pytkowy symbol (schowany)">
 <!ENTITY Ctr_padlock_def	"Pytkowy symbol (standard)">
@@ -163,7 +167,7 @@
 <!ENTITY Ctr_alttabstb		"Alternatiwna slězynowa barwa">
 
 <!ENTITY Ctr_altmenubar		"Slězynowu barwu pśidaś (titelowa rědka źěłowego systema)">
-<!ENTITY Ctr_altmenubarpos	"Alternative position (below Firefox titlebar)">
+<!ENTITY Ctr_altmenubarpos	"Alternatiwna pozicija (pód titeloweju rědku Firefox)">
 <!ENTITY Ctr_menubarnofog	"Slězynowu barwu/młu wótpóraś (Windows AeroGlass / Win8)">
 
 <!ENTITY Ctr_hidenavbar		"Nawigacisku rědku schowaś">
@@ -196,7 +200,7 @@
 
 <!ENTITY Ctr_special_font	"Nastajenja za slězynowu barwu su jano za standardnu drastwu!">
 <!ENTITY Ctr_special_info	"Někotare nastajenja njepóbituju wizuelne změny we wšych padach!">
-<!ENTITY Ctr_special_info2	"Nastajenja su za standardnu drastwu zgótowane a jo móžno, až njefunkcioněrujuz z drugimi drastwami!">
+<!ENTITY Ctr_special_info2	"Nastajenja su za standardnu drastwu zgótowane a jo móžno, až njefunkcioněruju z drugimi drastwami!">
 <!ENTITY Ctr_support		"Pódpěrowański forum">
 <!ENTITY Ctr_newversion		"Nowa wersija?">
 

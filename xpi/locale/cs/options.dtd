@@ -7,7 +7,9 @@
 <!ENTITY Ctr_space			"Mezera">
 <!ENTITY Ctr_separator		"Oddělovač">
 <!ENTITY Ctr_puibseparator	"PanelUI oddělovač tlačítek">
-<!ENTITY Ctr_sidebarbutton	"(Sidebar)">
+<!ENTITY Ctr_navthrobber	"Activity Indicator">
+<!ENTITY Ctr_sidebarbutton	"Postranní lišta">
+<!ENTITY Ctr_windowcontrols	"Min/max/zavřít (Fullscreen)">
 
 <!ENTITY Ctr_cuibuttons		"Tlačítka">
 <!ENTITY Ctr_cuibutnormal	"Normální">
@@ -40,17 +42,19 @@
 <!ENTITY Ctr_tabwidthcla	"(klasický)">
 <!ENTITY Ctr_tabmaxwidth	"Max-width:">
 <!ENTITY Ctr_tabminwidth	"Min-width:">
-<!ENTITY Ctr_tabwidthinfo	"Šířka panelů (min-width a max-width) je určena doplňkem TabMixPlus nebo TabUtilities">
+<!ENTITY Ctr_tabwidthinfo	"Šířka panelů (min-width a max-width) je určena doplňkem TabMixPlus">
+<!ENTITY Ctr_tabwidthinfo2	"Šířka panelů (min-width a max-width) je určena doplňkem TabUtilities">
+<!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
 <!ENTITY Ctr_closetab_0		"Zavřít panel">
 <!ENTITY Ctr_closetab_1		"Pouze na aktivním panelu">
 <!ENTITY Ctr_closetab_2		"Nikde">
 <!ENTITY Ctr_closetab_3		"Na konci lišty s panely">
 <!ENTITY Ctr_closetab_4		"Na začátku lišty s panely">
 <!ENTITY Ctr_closetab_5		"Na všech panelech (vynutit)">
-<!ENTITY Ctr_closetab_hfot	"Hide for one visible tab">
-<!ENTITY Ctr_closealt		"Alternative icon">
-<!ENTITY Ctr_closeonleft	"Alternative position on tab">
-<!ENTITY Ctr_close_wwltab	"Close window with last visible tab (about:config)">
+<!ENTITY Ctr_closetab_hfot	"Skrýt pro jeden viditelný panel">
+<!ENTITY Ctr_closealt		"Alternativní ikona">
+<!ENTITY Ctr_closeonleft	"Alternativní pozice na panelu">
+<!ENTITY Ctr_close_wwltab	"Zavřít okno s posledním viditelným panelem (about:config)">
 
 <!ENTITY Ctr_appbutton		"Tlačítko aplikace">
 <!ENTITY Ctr_appbutton0		"Tlačítko zakázáno">
@@ -83,10 +87,10 @@
 <!ENTITY Ctr_bfurlbarfix	"Upravit okraje adresního řádku">
 <!ENTITY Ctr_backforward	"Přesunutelná tlačítka zpět-vpřed">
 <!ENTITY Ctr_hide_bf_popup	"Skrýt nabídku historie tlačítek při kliknutí myší">
-<!ENTITY Ctr_noconicons		"Replace page context menu icons with labels (back, forward, stop, reload, bookmark page)">
+<!ENTITY Ctr_noconicons		"Nahradit ikony v kontextové nabídce stránky textem (zpět, vpřed, zastavit, obnovit, přidat do záložek)">
 <!ENTITY Ctr_wincontrols	"Přesunutelné ovládací prvky okna v režimu celé obrazovky (min/max/zavřít)">
 <!ENTITY Ctr_starinurl		"Tlačítko hvězdičky v adresním řádku (restartujte Firefox!)">
-<!ENTITY Ctr_feedinurl		"Feed-button in urlbar (restartujte Firefox!)">
+<!ENTITY Ctr_feedinurl		"Tlačítko kanálu v adresním řádku (restartujte Firefox!)">
 <!ENTITY Ctr_mstatusbar		"Přesunutelný stavový řádek">
 <!ENTITY Ctr_hideurelstop	"Skrýt tlačítka zastavit &amp; obnovit v adresním řádku">
 <!ENTITY Ctr_combrelstop	"Spojit tlačítka zastavit &amp; obnovit">
@@ -139,8 +143,8 @@
 <!ENTITY Ctr_favicon		"Nastavení favicon">
 <!ENTITY Ctr_emptyfavicon	"Obnovit prázdnou faviconu (pokud stránka nemá vlastní)">
 <!ENTITY Ctr_emptyfavicon2	"Nahradit obecnou faviconu (prázdnou tečkovanou) faviconou listu">
-<!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tab">
-<!ENTITY Ctr_faviconurl0	"Icons in urlbar">
+<!ENTITY Ctr_noemptypticon	"Odebrat prázdnou faviconu z připnutého panelu">
+<!ENTITY Ctr_faviconurl0	"Ikony v adresním řádku">
 <!ENTITY Ctr_faviconurl		"Favicona v adresním řádku (restartujte Firefox!)">
 <!ENTITY Ctr_padlock_hid	"Zámek (skrytý)">
 <!ENTITY Ctr_padlock_def	"Zámek (výchozí)">

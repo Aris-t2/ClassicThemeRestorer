@@ -1,4 +1,4 @@
-@import url(appbutton2.css);
+@import url(chrome://classic_theme_restorer/content/css/appbutton2.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
@@ -17,11 +17,11 @@
 
 	#ctraddon_appbutton2:-moz-locale-dir(ltr) > label{
 	  -moz-appearance: none !important;
-      margin: 0 -26px 0 -34px !important;
+      margin: -1px -26px 0 -34px !important;
 	}
 	#ctraddon_appbutton2:-moz-locale-dir(rtl) > label{
 	  -moz-appearance: none !important;
-      margin: 0 -34px 0 -26px !important;
+      margin: -1px -34px 0 -26px !important;
 	}
 
 	#ctraddon_appbutton2 > .toolbarbutton-menu-dropmarker{

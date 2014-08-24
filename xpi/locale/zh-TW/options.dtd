@@ -7,7 +7,9 @@
 <!ENTITY Ctr_space			"空白">
 <!ENTITY Ctr_separator		"分隔線">
 <!ENTITY Ctr_puibseparator	"面板按鈕分隔線">
-<!ENTITY Ctr_sidebarbutton	"(Sidebar)">
+<!ENTITY Ctr_navthrobber	"Activity Indicator">
+<!ENTITY Ctr_sidebarbutton	"側邊欄">
+<!ENTITY Ctr_windowcontrols	"Min/max/close (Fullscreen)">
 
 <!ENTITY Ctr_cuibuttons		"按鈕">
 <!ENTITY Ctr_cuibutnormal	"標準圖示">
@@ -40,17 +42,19 @@
 <!ENTITY Ctr_tabwidthcla	"(經典傳統)">
 <!ENTITY Ctr_tabmaxwidth	"最大寬度:">
 <!ENTITY Ctr_tabminwidth	"最小寬度:">
-<!ENTITY Ctr_tabwidthinfo	"分頁的最小和最大寬度由 TabMixPlus / TabUtilities 控制">
+<!ENTITY Ctr_tabwidthinfo	"分頁的最小和最大寬度由 TabMixPlus 控制">
+<!ENTITY Ctr_tabwidthinfo2	"分頁的最小和最大寬度由 TabUtilities 控制">
+<!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
 <!ENTITY Ctr_closetab_0		"關閉按鈕">
 <!ENTITY Ctr_closetab_1		"僅在目前的分頁顯示關閉按鈕">
-<!ENTITY Ctr_closetab_2		"不顯示關閉按鈕 ">
+<!ENTITY Ctr_closetab_2		"不顯示關閉按鈕">
 <!ENTITY Ctr_closetab_3		"在分頁列右端顯示關閉按鈕">
 <!ENTITY Ctr_closetab_4		"在分頁列左端顯示關閉按鈕">
 <!ENTITY Ctr_closetab_5		"全部的分頁都顯示關閉按鈕 (強制)">
-<!ENTITY Ctr_closetab_hfot	"Hide for one visible tab">
-<!ENTITY Ctr_closealt		"Alternative icon">
-<!ENTITY Ctr_closeonleft	"Alternative position on tab">
-<!ENTITY Ctr_close_wwltab	"Close window with last visible tab (about:config)">
+<!ENTITY Ctr_closetab_hfot	"只有一個分頁時，則隱藏關閉按鈕">
+<!ENTITY Ctr_closealt		"換一個圖示">
+<!ENTITY Ctr_closeonleft	"關閉按鈕置於分頁左側">
+<!ENTITY Ctr_close_wwltab	"關閉最後一個分頁時，也關閉視窗 (about:config)">
 
 <!ENTITY Ctr_appbutton		"應用程式按鈕 (火狐橙按鈕)">
 <!ENTITY Ctr_appbutton0		"不顯示">
@@ -83,10 +87,10 @@
 <!ENTITY Ctr_bfurlbarfix	"當「回到上一頁按鈕可移動」和「小圖示按鈕」模式下，修正網址列圓角半徑">
 <!ENTITY Ctr_backforward	"使「回到上一頁按鈕」可移動">
 <!ENTITY Ctr_hide_bf_popup	"當滑鼠長按時，不顯示分頁歷史瀏覽選單">
-<!ENTITY Ctr_noconicons		"Replace page context menu icons with labels (back, forward, stop, reload, bookmark page)">
+<!ENTITY Ctr_noconicons		"右鍵選單的「回到上一頁、前進下一頁、停止載入、重新載入、加入書籤」由橫排圖示換回縱排文字風格">
 <!ENTITY Ctr_wincontrols	"可移動的全螢幕視窗控制項">
 <!ENTITY Ctr_starinurl		"星形書籤按鈕併入網址列 (需重啟 Firefox!)">
-<!ENTITY Ctr_feedinurl		"Feed-button in urlbar (需重啟 Firefox!)">
+<!ENTITY Ctr_feedinurl		"網址列中顯示消息來源訂閱按鈕 (需重啟 Firefox!)">
 <!ENTITY Ctr_mstatusbar		"使狀態列可移動">
 <!ENTITY Ctr_hideurelstop	"隱藏網址列中的停止與重新載入按鈕">
 <!ENTITY Ctr_combrelstop	"合併停止與重新載入按鈕">
@@ -139,8 +143,8 @@
 <!ENTITY Ctr_favicon		"網站圖示設定">
 <!ENTITY Ctr_emptyfavicon	"開啟的網頁若未提供網站圖示，仍在該分頁顯示空圖示">
 <!ENTITY Ctr_emptyfavicon2	"以白紙圖示取代空圖示">
-<!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tab">
-<!ENTITY Ctr_faviconurl0	"Icons in urlbar">
+<!ENTITY Ctr_noemptypticon	"從釘選分頁移除空圖示">
+<!ENTITY Ctr_faviconurl0	"網址列裡的圖示">
 <!ENTITY Ctr_faviconurl		"網址列顯示網站圖示 (需重啟 Firefox!)">
 <!ENTITY Ctr_padlock_hid	"鎖頭 (隱藏)">
 <!ENTITY Ctr_padlock_def	"鎖頭 (預設)">

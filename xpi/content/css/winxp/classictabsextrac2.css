@@ -77,7 +77,7 @@
 	}
 	
 	/* Tab close button */
-	.tabbrowser-tab:not([pinned]):not([protected]) .tab-close-button {
+	.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button {
 	  -moz-appearance: none !important;
 	  -moz-image-region: rect(0, 64px, 16px, 48px) !important;
 	  border: none !important;
@@ -85,18 +85,27 @@
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png") !important;
 	}
 	
-	.tabbrowser-tab:not([pinned]):not([protected]) .tab-close-button:hover,
-	.tabbrowser-tab:not([pinned]):not([protected]) .tab-close-button:hover[selected="true"] {
+	.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button:hover,
+	.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button:hover[selected="true"] {
 	  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
 	}
 	
-	.tabbrowser-tab:not([pinned]):not([protected]) .tab-close-button:hover:active,
-	.tabbrowser-tab:not([pinned]):not([protected]) .tab-close-button:hover:active[selected="true"] {
+	.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button:hover:active,
+	.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button:hover:active[selected="true"] {
 	  -moz-image-region: rect(0, 48px, 16px, 32px) !important;
 	}
 	
-	.tabbrowser-tab:not([pinned]):not([protected]) .tab-close-button[selected="true"] {
+	.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button[selected="true"] {
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
+	}
+	
+	/*TabUtilities autoreload extra*/
+	.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover,
+	.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover[selected="true"] {
+	  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
+	  border: none !important;
+	  padding: 0px !important;
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png") !important;
 	}
 
 	.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {

@@ -193,7 +193,12 @@
 	  width: auto !important;
 	  height: auto !important;
 	}
-	
+
+	/* The Fox, only better add-on support*/
+	#navigator-toolbox[slimChrome="true"] #nav-bar{
+	  padding-bottom:2px !important;
+	}
+
 	/* zoom page add-on */
     #navigator-toolbox #nav-bar #zoompage-zoomdisplay-s,
     #navigator-toolbox #nav-bar #zoompage-zoomin-s,

@@ -7,7 +7,9 @@
 <!ENTITY Ctr_space			"Space">
 <!ENTITY Ctr_separator		"Separator">
 <!ENTITY Ctr_puibseparator	"PanelUI button separator">
+<!ENTITY Ctr_navthrobber	"Activity Indicator">
 <!ENTITY Ctr_sidebarbutton	"(Sidebar)">
+<!ENTITY Ctr_windowcontrols	"Min/max/close (Fullscreen)">
 
 <!ENTITY Ctr_cuibuttons		"Buttons">
 <!ENTITY Ctr_cuibutnormal	"Normal">
@@ -40,7 +42,9 @@
 <!ENTITY Ctr_tabwidthcla	"(classic)">
 <!ENTITY Ctr_tabmaxwidth	"Max-width:">
 <!ENTITY Ctr_tabminwidth	"Min-width:">
-<!ENTITY Ctr_tabwidthinfo	"Tabs min-width and max-width are controlled by TabMixPlus / TabUtilities">
+<!ENTITY Ctr_tabwidthinfo	"Tab width is controlled by TabMixPlus">
+<!ENTITY Ctr_tabwidthinfo2	"Tab width is controlled by TabUtilities">
+<!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
 <!ENTITY Ctr_closetab_0		"Tab Close">
 <!ENTITY Ctr_closetab_1		"On active tab only">
 <!ENTITY Ctr_closetab_2		"Nowhere">
@@ -117,8 +121,8 @@
 
 <!ENTITY Ctr_tab_tf_info1	"Color names, hexcodes, rgb(a) and hsl(a) values are supported.">
 <!ENTITY Ctr_tab_tf_info2	"Inputs won't be validated!">
-<!ENTITY Ctr_tabact_t		"active">
-<!ENTITY Ctr_tabhov_t		"hover">
+<!ENTITY Ctr_tabact_t		"selected">
+<!ENTITY Ctr_tabhov_t		"hovered">
 <!ENTITY Ctr_tabnor_t		"default">
 <!ENTITY Ctr_tabpen_t		"unloaded">
 <!ENTITY Ctr_tabunr_t		"unread">
@@ -195,7 +199,7 @@
 <!ENTITY Ctr_pw_set_import	"Import preferences">
 
 <!ENTITY Ctr_special_font	"Background color settings are for default theme only!">
-<!ENTITY Ctr_special_info	"Some options may not offer visual changes in all cases">
+<!ENTITY Ctr_special_info	"Some options may not offer visible changes in all cases">
 <!ENTITY Ctr_special_info2	"Settings are made for Firefox default theme and may not work with all third party themes!">
 <!ENTITY Ctr_support		"Support Forum">
 <!ENTITY Ctr_newversion		"New version?">

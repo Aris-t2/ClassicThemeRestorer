@@ -253,7 +253,9 @@
 		  </rows>
 		</grid>
 
-		<description id="ctraddon_pw_tabwidthinfo">&Ctr_tabwidthinfo;</description>
+		<description id="ctraddon_pw_tabwidthinfo" class="ctraddon_topic">&Ctr_tabwidthinfo;</description>
+		<description id="ctraddon_pw_tabwidthinfo2" class="ctraddon_topic">&Ctr_tabwidthinfo2;</description>
+		<description id="ctraddon_pw_tabwidthinfo3" class="ctraddon_topic">&Ctr_tabwidthinfo3;</description>
 		
 		<label value="&Ctr_closetab_0;"/>
 		<grid>
@@ -292,7 +294,8 @@
 	  <label value="&Ctr_tabs1m;"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_squared2"/>
 	  <label value="&Ctr_tabs2;"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curved"/>
 	  <label value="&Ctr_tabs3;"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curvedaero"/>
-	  <description>&Ctr_tab_tf_info1; &Ctr_tab_tf_info2;</description>
+	  <description>&Ctr_tab_tf_info1;</description>
+	  <description>&Ctr_tab_tf_info2;</description>
 	  <label value=""/>
 
 	  <tabbox>
@@ -637,6 +640,9 @@
 						<menuitem value="iconstxt"	label="&Ctr_nav_txt_ico2;"/>
 						<menuitem value="iconstxt2"	label="&Ctr_nav_txt_ico2; v2"/>
 						<menuitem value="txtonly"	label="&Ctr_nav_txt_ico3;"/>
+						<label value="Experimental and unstable:" class="ctraddon_font1"/>
+						<menuitem value="full"		label="[mode='full'] attribute"/>
+						<menuitem value="text"		label="[mode='text'] attribute"/>
 					</menupopup>
 				</menulist>
 				<label value=" "/>
@@ -792,9 +798,18 @@
   <hbox align="center" flex="1" style="padding-top:5px;">
     <button label="&Ctr_pw_settings;" popup="ctr_pw_settingsPopup"/>
 	<spacer flex="1" />
-	<label value="Classic Toolbar Buttons" href="https://addons.mozilla.org/addon/cstbb/versions/" class="text-link ctraddon_windowsonly"/>
-	<label value="&Ctr_support;" href="http://forums.mozillazine.org/viewtopic.php?t=2827985" class="text-link" id="ctraddon_support"/>
-	<label value="&Ctr_newversion;" href="https://addons.mozilla.org/addon/classicthemerestorer/versions/" class="text-link" id="ctraddon_newversion"/>
+	<label value="Classic Toolbar Buttons" onclick="if(event.button == 0) {
+		window.close(); window.opener.openURL('https://addons.mozilla.org/addon/cstbb/versions/');
+		};"
+		class="text-link ctraddon_windowsonly"/>
+	<label value="&Ctr_support;" onclick="if(event.button == 0) {
+		window.close(); window.opener.openURL('http://forums.mozillazine.org/viewtopic.php?t=2827985');
+		};"
+		class="text-link" id="ctraddon_support"/>
+	<label value="&Ctr_newversion;" onclick="if(event.button == 0) {
+		window.close(); window.opener.openURL('https://addons.mozilla.org/addon/classicthemerestorer/versions/');
+		};"
+		class="text-link" id="ctraddon_newversion"/>
 	<spacer flex="1" />
 	<button dlgtype="accept" id="ctraddon_pw_okbutton"/>
   </hbox> 

@@ -6,8 +6,10 @@
 <!ENTITY Ctr_flexspace		"Espaço flexível">
 <!ENTITY Ctr_space			"Espaço">
 <!ENTITY Ctr_separator		"Separador">
-<!ENTITY Ctr_puibseparator	"Separador do botão Painel da Interface do Usuário">
-<!ENTITY Ctr_sidebarbutton	"(Sidebar)">
+<!ENTITY Ctr_puibseparator	"Separador do botão do Painel da Interface do Usuário">
+<!ENTITY Ctr_navthrobber	"Activity Indicator">
+<!ENTITY Ctr_sidebarbutton	"Barra Lateral">
+<!ENTITY Ctr_windowcontrols	"Min/max/close (Fullscreen)">
 
 <!ENTITY Ctr_cuibuttons		"Botões">
 <!ENTITY Ctr_cuibutnormal	"Normais">
@@ -40,24 +42,26 @@
 <!ENTITY Ctr_tabwidthcla	"(clássica)">
 <!ENTITY Ctr_tabmaxwidth	"Largura Máxima:">
 <!ENTITY Ctr_tabminwidth	"Largura Mínima:">
-<!ENTITY Ctr_tabwidthinfo	"Larguras mínimas e máximas são controladas pelo TabMixPlus / TabUtilities">
-<!ENTITY Ctr_closetab_0		"Fechar Guia">
+<!ENTITY Ctr_tabwidthinfo	"As larguras mínimas e máximas são controladas pelo TabMixPlus">
+<!ENTITY Ctr_tabwidthinfo2	"As larguras mínimas e máximas são controladas pelo TabUtilities">
+<!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
+<!ENTITY Ctr_closetab_0		"Fechar a Guia">
 <!ENTITY Ctr_closetab_1		"Só na guia ativa">
 <!ENTITY Ctr_closetab_2		"Em nenhuma">
 <!ENTITY Ctr_closetab_3		"No final das barras de guias">
 <!ENTITY Ctr_closetab_4		"No início das barras de guias">
-<!ENTITY Ctr_closetab_5		"Em todas guias (forçada)">
-<!ENTITY Ctr_closetab_hfot	"Hide for one visible tab">
-<!ENTITY Ctr_closealt		"Alternative icon">
-<!ENTITY Ctr_closeonleft	"Alternative position on tab">
-<!ENTITY Ctr_close_wwltab	"Close window with last visible tab (about:config)">
+<!ENTITY Ctr_closetab_5		"Em todas as guias (forçada)">
+<!ENTITY Ctr_closetab_hfot	"Ocultar com uma guia visível">
+<!ENTITY Ctr_closealt		"Ícone alternativo">
+<!ENTITY Ctr_closeonleft	"Posição alternativa na guia">
+<!ENTITY Ctr_close_wwltab	"Fechar a janela com a última guia visível (about:config)">
 
 <!ENTITY Ctr_appbutton		"Botão do aplicativo">
 <!ENTITY Ctr_appbutton0		"Botão desativado">
 <!ENTITY Ctr_appbutton1		"Botão na barra de ferramentas">
-<!ENTITY Ctr_appbutton1wt	"Botão na barra de ferramentas (só texto)">
+<!ENTITY Ctr_appbutton1wt	"Botão na barra de ferramentas (só o texto)">
 <!ENTITY Ctr_appbutton2		"Botão na [Firefox] barra de título">
-<!ENTITY Ctr_appbutton2io	"Botão na [Firefox] barra de título (só ícone)">
+<!ENTITY Ctr_appbutton2io	"Botão na [Firefox] barra de título (só o ícone)">
 <!ENTITY Ctr_paneluibtweak	"Botão do menú do painel na barra de guias na cor laranja">
 <!ENTITY Ctr_appbuttonc_o	"Botão laranja (padrão)">
 <!ENTITY Ctr_appbuttonc_a	"Botão azul (Aurora)">
@@ -74,24 +78,24 @@
 <!ENTITY Ctr_appbuttonI2	"Colorido só nas barras de título e de guias!">
 <!ENTITY Ctr_alttbappb		"Ícones alternativos">
 <!ENTITY Ctr_appbutmhi		"Posição superior (se na barra de guias)">
-<!ENTITY Ctr_appbutbdl		"Ocultar bordas e cores de fundo">
-<!ENTITY Ctr_dblclclosefx	"Duplo clique fecha a janela atual">
+<!ENTITY Ctr_appbutbdl		"Ocultar as bordas e cores do fundo">
+<!ENTITY Ctr_dblclclosefx	"Clicar duas vezes para fechar a janela atual">
 
-<!ENTITY Ctr_ui				"I.U. Geral">
-<!ENTITY Ctr_nbiconsize0	"Definir atributo da barra de navegação">
+<!ENTITY Ctr_ui				"Interface do Usuário Geral">
+<!ENTITY Ctr_nbiconsize0	"Definir o atributo da barra de navegação">
 <!ENTITY Ctr_smallnavbut	"Botões pequenos na barra de navegação">
 <!ENTITY Ctr_bfurlbarfix	"Corrigir a borda-alcance das barras de URLs">
 <!ENTITY Ctr_backforward	"Botão móvel voltar-avançar">
 <!ENTITY Ctr_hide_bf_popup	"Ocultar o menú histórico ao pressionar o mouse">
-<!ENTITY Ctr_noconicons		"Replace page context menu icons with labels (back, forward, stop, reload, bookmark page)">
+<!ENTITY Ctr_noconicons		"Substituir os ícones do menu de contexto da página com etiquetas (voltar, avançar, parar, recarregar, página de favoritos)">
 <!ENTITY Ctr_wincontrols	"Controles móveis da janela em tela cheia">
 <!ENTITY Ctr_starinurl		"Botão de favoritos na barra de URLs (reinicie o Firefox!)">
-<!ENTITY Ctr_feedinurl		"Feed-button in urlbar (reinicie o Firefox!)">
+<!ENTITY Ctr_feedinurl		"Botão Feed na barra de URL (reinicie o Firefox!)">
 <!ENTITY Ctr_mstatusbar		"Painel móvel da barra de status">
-<!ENTITY Ctr_hideurelstop	"Ocultar botões parar e recarregar das barras de URLs">
-<!ENTITY Ctr_combrelstop	"Combinar botões parar e recarregar">
-<!ENTITY Ctr_panelmenucol	"Menús do painel: cor de fundo alternativa">
-<!ENTITY Ctr_hideprivmask	"Navegação privada: ocultar indicador da máscara">
+<!ENTITY Ctr_hideurelstop	"Ocultar os botões parar e recarregar das barras de URLs">
+<!ENTITY Ctr_combrelstop	"Combinar os botões parar e recarregar">
+<!ENTITY Ctr_panelmenucol	"Menus do painel: cor do fundo alternativa">
+<!ENTITY Ctr_hideprivmask	"Navegação privada: ocultar o indicador da máscara">
 <!ENTITY Ctr_verifiedcolors	"Caixa de identidade para sites verificados na cor verde/azul">
 <!ENTITY Ctr_findbar		"Barra de pesquisas">
 <!ENTITY Ctr_findbar_def	"Posição padrão">
@@ -99,24 +103,24 @@
 <!ENTITY Ctr_findbar_bot	"Posição inferior">
 <!ENTITY Ctr_findbar_topa	"Posição superior -  alternativa">
 <!ENTITY Ctr_findbar_bota	"Posição inferior - alternativa">
-<!ENTITY Ctr_nav_txt_ico0	"Exibir só ícones (padrão)">
+<!ENTITY Ctr_nav_txt_ico0	"Exibir só os ícones (padrão)">
 <!ENTITY Ctr_nav_txt_ico1	"Exibir ícones grandes">
-<!ENTITY Ctr_nav_txt_ico2	"Exibir ícones e texto">
-<!ENTITY Ctr_nav_txt_ico3	"Exibir só texto">
+<!ENTITY Ctr_nav_txt_ico2	"Exibir os ícones e o texto">
+<!ENTITY Ctr_nav_txt_ico3	"Exibir só o texto">
 <!ENTITY Ctr_stoprel0		"Configurações dos botões recarregar e parar">
-<!ENTITY Ctr_stoprel1		"Barra de ferramentas: colocar botão recarregar após o botão parar!">
-<!ENTITY Ctr_cpanelmenus	"Menús do painel compacto (marcadores, histórico, etc.)">
-<!ENTITY Ctr_hidezoomres	"Controles de zoom na barra de ferramentas: ocultar botão zoom-redefinir">
-<!ENTITY Ctr_pmhidelabels	"Menú do painel: ocultar etiquetas do botão">
-<!ENTITY Ctr_menupopupscr	"Popups do menú: mostrar barras de rolagem em vez das setas de rolagem">
+<!ENTITY Ctr_stoprel1		"Barra de ferramentas: colocar o botão recarregar após o botão parar!">
+<!ENTITY Ctr_cpanelmenus	"Menus do painel compacto (favoritos, histórico, etc.)">
+<!ENTITY Ctr_hidezoomres	"Controles de ampliação na barra de ferramentas: ocultar o botão redefinir ampliação">
+<!ENTITY Ctr_pmhidelabels	"Menu do painel: ocultar as etiquetas do botão">
+<!ENTITY Ctr_menupopupscr	"Popups do menu: exibir as barras de rolagem em vez das setas de rolagem">
 
 <!ENTITY Ctr_fxmockup		"Modelo do Firefox">
 <!ENTITY Ctr_tabmokcolor	"Botões da guia na cor branca (fechar, nova, grupos, listar tudo)">
 <!ENTITY Ctr_tabmokcolor2	"Texto na cor branca e sombra escura nas guias inativas">
-<!ENTITY Ctr_tabmokcolor3	"Separadores para guias na cor branca">
+<!ENTITY Ctr_tabmokcolor3	"Separadores para as guias na cor branca">
 
 <!ENTITY Ctr_tab_tf_info1	"Nomes de cores, códigos hex., valores rgb(a) e hsl(a) são suportados.">
-<!ENTITY Ctr_tab_tf_info2	"Entradas não serão validadas!">
+<!ENTITY Ctr_tab_tf_info2	"As entradas não serão validadas!">
 <!ENTITY Ctr_tabact_t		"ativa">
 <!ENTITY Ctr_tabhov_t		"flutuante">
 <!ENTITY Ctr_tabnor_t		"padrão">
@@ -136,12 +140,12 @@
 <!ENTITY Ctr_bold			"Negrito">
 <!ENTITY Ctr_italic			"Itálico">
 
-<!ENTITY Ctr_favicon		"Configurações do favicon">
-<!ENTITY Ctr_emptyfavicon	"Restaurar favicon vazio (se um site não oferecer um)">
-<!ENTITY Ctr_emptyfavicon2	"Substituir favicon genérico (vazio e pontilhado) com o favicon de folha">
-<!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tab">
-<!ENTITY Ctr_faviconurl0	"Icons in urlbar">
-<!ENTITY Ctr_faviconurl		"Favicon barra de URL (reiniciar o Firefox!)">
+<!ENTITY Ctr_favicon		"Configurações do Favicon">
+<!ENTITY Ctr_emptyfavicon	"Restaurar o favicon vazio (se um site não oferecer um)">
+<!ENTITY Ctr_emptyfavicon2	"Substituir o favicon genérico (vazio e pontilhado) pelo favicon de folha">
+<!ENTITY Ctr_noemptypticon	"Remover o favicon vazio da guia pinada">
+<!ENTITY Ctr_faviconurl0	"Ícones barra de URLs">
+<!ENTITY Ctr_faviconurl		"Favicon na barra de URLs (reiniciar o Firefox!)">
 <!ENTITY Ctr_padlock_hid	"Cadeado (oculto)">
 <!ENTITY Ctr_padlock_def	"Cadeado (padrão)">
 <!ENTITY Ctr_padlock_cla	"Cadeado (clássico)">
@@ -149,56 +153,56 @@
 <!ENTITY Ctr_padlock_ext	"Ícones de segurança">
 
 <!ENTITY Ctr_invicons		"Ícones invertidos">
-<!ENTITY Ctr_menubar		"Barra de menús">
+<!ENTITY Ctr_menubar		"Barra de menus">
 <!ENTITY Ctr_tabstoolbar	"Barra de guias">
 <!ENTITY Ctr_navbar			"Barra de navegação">
 <!ENTITY Ctr_bookbar		"Barra de favoritos">
 
 <!ENTITY Ctr_toolbars		"Barras de Ferramentas">
-<!ENTITY Ctr_dblclnewtab	"Duplo clique abre 'nova' guia (usando navegador.novaguia.url)">
-<!ENTITY Ctr_hidetbwot		"Ocultar barras de guias com uma guia (reiniciar o Firefox!)">
-<!ENTITY Ctr_notabfog		"Remover névoa do fundo (Windows AeroGlass / Win8)">
-<!ENTITY Ctr_notabbg		"Remover cor de fundo (Windows AeroGlass / Win8)">
-<!ENTITY Ctr_hightabpos		"Reduzir espaço acima da barra (se possível)">
-<!ENTITY Ctr_alttabstb		"Cor de fundo alternativa">
+<!ENTITY Ctr_dblclnewtab	"Clicar duas vezes para abrir a 'nova' guia (usando navegador.novaguia.url)">
+<!ENTITY Ctr_hidetbwot		"Ocultar as barras de guias com uma guia (reiniciar o Firefox!)">
+<!ENTITY Ctr_notabfog		"Remover a névoa do fundo (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_notabbg		"Remover a cor do fundo (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_hightabpos		"Reduzir o espaço acima da barra (se possível)">
+<!ENTITY Ctr_alttabstb		"Cor do fundo alternativa">
 
-<!ENTITY Ctr_altmenubar		"Adicionar cor de fundo (Barra de título do S.O.)">
+<!ENTITY Ctr_altmenubar		"Adicionar cor do fundo (Barra de título do Sistema Operacional)">
 <!ENTITY Ctr_altmenubarpos	"Posição alternativa (abaixo da barra de título)">
-<!ENTITY Ctr_menubarnofog	"Remover cor/névoa de fundo (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_menubarnofog	"Remover a cor/névoa do fundo (Windows AeroGlass / Win8)">
 
-<!ENTITY Ctr_hidenavbar		"Ocultar barra de navegação">
-<!ENTITY Ctr_nobookbarbg	"Barra de favoritos: remover cor de fundo">
-<!ENTITY Ctr_nonavbarbg		"Barra de navegação: remover cor de fundo">
+<!ENTITY Ctr_hidenavbar		"Ocultar a barra de navegação">
+<!ENTITY Ctr_nobookbarbg	"Barra de favoritos: remover a cor do fundo">
+<!ENTITY Ctr_nonavbarbg		"Barra de navegação: remover a cor do fundo">
 <!ENTITY Ctr_nonavborder	"Barra de favoritos: adicionar borda superior à barra">
-<!ENTITY Ctr_nonavtbborder	"Barras superiores: remover bordas da barra">
+<!ENTITY Ctr_nonavtbborder	"Barras superiores: remover as bordas da barra">
 
-<!ENTITY Ctr_closeabarbut	"Ocultar botão fechar">
-<!ENTITY Ctr_highaddonsbar	"Aumentar altura">
+<!ENTITY Ctr_closeabarbut	"Ocultar o botão fechar">
+<!ENTITY Ctr_highaddonsbar	"Aumentar a altura">
 
 <!ENTITY Ctr_animation		"Animações">
-<!ENTITY Ctr_throbberalt	"Guia alternativa 'throbber' ao carregar animação">
-<!ENTITY Ctr_bmanimation	"Animação ao usar marcadores">
-<!ENTITY Ctr_pananimation	"Animação ao abrir painel">
-<!ENTITY Ctr_tabanimation	"Animação ao fechar/abrir guia (about:config)">
-<!ENTITY Ctr_dlanimation	"Animação ao 'Notificar download' (about:config)">
+<!ENTITY Ctr_throbberalt	"Guia alternativa 'throbber' ao carregar a animação">
+<!ENTITY Ctr_bmanimation	"Usar animação ao usar os favoritos">
+<!ENTITY Ctr_pananimation	"Usar animação ao abrir o painel">
+<!ENTITY Ctr_tabanimation	"Usar animação ao fechar/abrir a guia (about:config)">
+<!ENTITY Ctr_dlanimation	"Usar animação ao 'Notificar download' (about:config)">
 
-<!ENTITY Ctr_toolsitem		"Item do menú no menú ferramentas">
-<!ENTITY Ctr_appmenuitem	"Item do menú no menú botões do aplicativo">
-<!ENTITY Ctr_contextitem	"Item do menú no menú de contexto das barras de ferramentas">
+<!ENTITY Ctr_toolsitem		"Item do menu no menu ferramentas">
+<!ENTITY Ctr_appmenuitem	"Item do menu no menu botões do aplicativo">
+<!ENTITY Ctr_contextitem	"Item do menu no menu de contexto das barras de ferramentas">
 <!ENTITY Ctr_cuibotbuttons	"Botões extra no modo 'personalização'">
 
 
 <!ENTITY Ctr_pw_settings	"Configurações">
-<!ENTITY Ctr_pw_set_reset	"Restaurar padrões">
-<!ENTITY Ctr_pw_set_predef	"Prédefinição clássica">
-<!ENTITY Ctr_pw_set_export	"Exportar preferências">
-<!ENTITY Ctr_pw_set_import	"Importar preferências">
+<!ENTITY Ctr_pw_set_reset	"Restaurar aos padrões">
+<!ENTITY Ctr_pw_set_predef	"Pré-configuração clássica">
+<!ENTITY Ctr_pw_set_export	"Exportar as preferências">
+<!ENTITY Ctr_pw_set_import	"Importar as preferências">
 
-<!ENTITY Ctr_special_font	"Configurações da cor de fundo são só para o tema padrão!">
-<!ENTITY Ctr_special_info	"Algumas opções podem oferecer modificações visuais só em certos casos!">
-<!ENTITY Ctr_special_info2	"Configurações são feitas para o tema padrão do Firefox, e podem não funcionar com temas de terceiros!">
+<!ENTITY Ctr_special_font	"As configurações da cor do fundo são só para o tema padrão!">
+<!ENTITY Ctr_special_info	"Algumas opções podem oferecer alterações visuais só em certos casos!">
+<!ENTITY Ctr_special_info2	"As configurações são feitas para o tema padrão do Firefox, e podem não funcionar com temas de terceiros!">
 <!ENTITY Ctr_support		"Forum de Suporte">
-<!ENTITY Ctr_newversion		"Nova versão?">
+<!ENTITY Ctr_newversion		"Há uma nova versão?">
 
 <!ENTITY Ctr_addon-bar.accesskey	"A">
 <!ENTITY Ctr_extrabar.accesskey		"D">

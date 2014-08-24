@@ -42,14 +42,14 @@
 		<grid>
 		  <rows>
 			<row>
-			  <label value="&Ctr_cuibuttons;" class="ctraddon_cuibutlabel" id="ctraddon_cuibuttons_main"/>
-			  <button id="ctraddon_cui-smallnavbut-button1" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',false);" label="&Ctr_cuibutnormal;" class="customizationmode-button"/>
-			  <button id="ctraddon_cui-smallnavbut-button2" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',true);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',true);" label="&Ctr_cuibutsmall;" class="customizationmode-button"/>
+			  <button label="&Ctr_cuibuttons;" id="ctraddon_cuibuttons_main" class="ctraddon_cuibutlabel customizationmode-button"/>
+			  <button label="&Ctr_cuibutnormal;" id="ctraddon_cui-smallnavbut-button1" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',false);"/>
+			  <button label="&Ctr_cuibutsmall;" id="ctraddon_cui-smallnavbut-button2" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',true);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',true);"/>
 			  <label value=" "/>
-			  <label value="&Ctr_cuimode;" class="ctraddon_cuibutlabel"/>
-			  <button id="ctraddon_cui-icons-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'icons');" label="&Ctr_cuiico;" class="customizationmode-button"/>
-			  <button id="ctraddon_cui-iconstext-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'iconstxt');" label="&Ctr_cuiicotxt;" class="customizationmode-button"/>
-			  <button id="ctraddon_cui-textonly-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'txtonly');" label="&Ctr_cuitxt;" class="customizationmode-button"/>
+			  <button label="&Ctr_cuimode;" class="ctraddon_cuibutlabel customizationmode-button"/>
+			  <button label="&Ctr_cuiico;" id="ctraddon_cui-icons-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'icons');"/>
+			  <button label="&Ctr_cuiicotxt;" id="ctraddon_cui-iconstext-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'iconstxt');"/>
+			  <button label="&Ctr_cuitxt;" id="ctraddon_cui-textonly-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'txtonly');"/>
 			</row>
 		  </rows>
 		</grid>
@@ -611,8 +611,8 @@
                      type="menu"
                      label="&brandShortName;"
 					 popup="appmenu-popup"
-					 onmousedown="classicthemerestorerjs.ctr.openCtrAppmenuPopup(this);">
-
+					 ondblclick="classicthemerestorerjs.ctr.appbuttonCloseCurrentWindow();"
+					 onmousedown="classicthemerestorerjs.ctr.openCtrAppmenuPopup();">
 	  </toolbarbutton>
 	</hbox>
 	
@@ -760,13 +760,13 @@
       
 	  <!--### creates a bookmarks sidebar button ###-->
 	  <toolbarbutton id="ctraddon_bookmarks-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
-					 label="&bookmarksMenuButton.label; &Ctr_sidebarbutton;"
+					 label="&bookmarksMenuButton.label;"
                      observes="viewBookmarksSidebar"
                      tooltiptext="&bookmarksMenuButton.label; &Ctr_sidebarbutton;"/>
 					 
       <!--### creates a history sidebar button ###-->
 	  <toolbarbutton id="ctraddon_history-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
-					 label="&historyButton.label; &Ctr_sidebarbutton;"
+					 label="&historyButton.label;"
                      observes="viewHistorySidebar"
                      tooltiptext="&historyButton.label; &Ctr_sidebarbutton;"/>
 					 
@@ -786,6 +786,14 @@
 	  <toolbaritem id="ctraddon_puib_separator"
                    title="&Ctr_puibseparator;"
                    customizableui-areatype="toolbar"
+                   removable="true"/>
+				   
+	  <toolbaritem id="ctraddon_navigator-throbber"
+                   title="&Ctr_navthrobber;"
+                   customizableui-areatype="toolbar"
+				   align="center"
+				   pack="center"
+				   mousethrough="always"
                    removable="true"/>
 	  
 	  <!--### creates a custom movable back-forward button ###-->
@@ -844,7 +852,7 @@
   
 	  <!--### duplicates fullscreen window controls ###-->
 	  <toolbaritem id="ctraddon_window-controls" class="chromeclass-toolbar-additional"
-                   removable="true" title="window controls">
+                   removable="true" title="&Ctr_windowcontrols;">
         <toolbarbutton id="minimize-button"
                        tooltiptext="&fullScreenMinimize.tooltip;"
                        oncommand="window.minimize();"/>

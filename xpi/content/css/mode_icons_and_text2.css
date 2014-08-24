@@ -22,30 +22,30 @@
 		transition-property: none !important;
         transition-duration: 0ms !important;
 	}
-	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
+	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar, #vertical-toolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
 	  display: -moz-box !important;
 	}
-	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
+	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar, #vertical-toolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
 	  -moz-box-orient: vertical !important;
 	}
-	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
+	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_extra-bar, #vertical-toolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
 	  min-width: 0px !important;
 	}
 	#ctraddon_addon-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
 	  min-width: 57px !important;
 	}
-	:-moz-any(#toolbar-menubar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar) .toolbarbutton-1[type="menu"] dropmarker{
+	:-moz-any(#toolbar-menubar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar, #vertical-toolbar) .toolbarbutton-1[type="menu"] dropmarker{
 	   visibility: collapse !important;
 	}
-	:-moz-any(#toolbar-menubar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
+	:-moz-any(#toolbar-menubar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar, #vertical-toolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
       padding: 0px !important;
     }
 
-    :-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) {
+    :-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar, #vertical-toolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) {
        border: 1px solid transparent !important;
     }
 	
-	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not(#bookmarks-menu-button):not([disabled]):hover,
+	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, #ctraddon_extra-bar, #vertical-toolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not(#bookmarks-menu-button):not([disabled]):hover,
 	#ctraddon_comb_stopreload-button #urlbar-reload-button:not([disabled]):hover,
 	#ctraddon_comb_stopreload-button #urlbar-stop-button:not([disabled]):hover {
 	  border: 1px solid !important;

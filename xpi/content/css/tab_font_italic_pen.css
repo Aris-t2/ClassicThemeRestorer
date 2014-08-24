@@ -2,7 +2,7 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	.tabbrowser-tab[pending]:not([selected=true]):hover .tab-text,	
+	/*.tabbrowser-tab[pending]:not([selected=true]):hover .tab-text,*/
 	.tabbrowser-tab[pending]:not([selected=true]):not(:hover) .tab-text {
       font-style: italic !important;
     }

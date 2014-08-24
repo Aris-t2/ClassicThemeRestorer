@@ -283,7 +283,8 @@
 	  -moz-margin-start: 15px !important;
 	}
 	/* TMP progress tweak */
-	.tabbrowser-tab progressmeter.tab-progress	{
+	#main-window[tabmix_lwt="true"] .tabbrowser-tab progressmeter.tab-progress,
+	#main-window[tabmix_lwt="false"] .tabbrowser-tab progressmeter.tab-progress {
 	  margin-top: 2.5px !important;
 	  height: 3px !important;
 	}

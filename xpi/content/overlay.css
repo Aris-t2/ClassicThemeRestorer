@@ -2,7 +2,7 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
-	
+
 	#main-window {
 	  min-width: 300px !important;
 	}
@@ -297,24 +297,28 @@
 	#main-window[defaultfxtheme="true"] toolbarpaletteitem[place="palette"] > #ctraddon_history-button > .toolbarbutton-icon,
 	#ctraddon_history-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
 	toolbarpaletteitem[place="palette"] > #ctraddon_history-button > .toolbarbutton-icon{
-	  -moz-image-region: rect(0px, 224px, 32px, 192px);
-	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png);
+	  -moz-image-region: rect(0px, 32px, 32px, 0);
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/history_sidebar.png);
 	}
 	
 	#main-window[defaultfxtheme="true"] #ctraddon_history-menu-toolbar-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
 	#main-window[defaultfxtheme="true"] toolbarpaletteitem[place="palette"] > #ctraddon_history-menu-toolbar-button > .toolbarbutton-icon,
 	#ctraddon_history-menu-toolbar-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
 	toolbarpaletteitem[place="palette"] > #ctraddon_history-menu-toolbar-button > .toolbarbutton-icon{
-	  -moz-image-region: rect(0px, 224px, 32px, 192px);
-	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png);
+	  -moz-image-region: rect(0px, 32px, 32px, 0);
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/history_menu.png);
 	}
 
 	#ctraddon_bookmarks-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
-	toolbarpaletteitem[place="palette"] > #ctraddon_bookmarks-button > .toolbarbutton-icon,
+	toolbarpaletteitem[place="palette"] > #ctraddon_bookmarks-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 32px, 32px, 0);
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/bookmarks_sidebar.png);
+	}
+	
 	#ctraddon_bookmarks-menu-toolbar-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
 	toolbarpaletteitem[place="palette"] > #ctraddon_bookmarks-menu-toolbar-button > .toolbarbutton-icon{
-	  -moz-image-region: rect(0px, 160px, 32px, 128px);
-	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png);
+	  -moz-image-region: rect(0px, 32px, 32px, 0);
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/bookmarks_menu.png);
 	}
 	
 	#ctraddon_bookmarks-menu-toolbar-button[cui-areatype="menu-panel"]  dropmarker,
@@ -326,6 +330,32 @@
 	#ctraddon_bookmarks-menu-toolbar-button[cui-areatype="menu-panel"],
 	#ctraddon_history-menu-toolbar-button[cui-areatype="menu-panel"] {
       -moz-box-orient: vertical !important;
+	}
+	
+	/* CTRs activity throbber */
+	#ctraddon_navigator-throbber {
+	  background:url("chrome://classic_theme_restorer/content/images/throbber_notloading.png") center no-repeat;
+	}
+	#ctraddon_navigator-throbber[busy] {
+	  background:url("chrome://classic_theme_restorer/content/images/throbber_loading.png") center no-repeat;
+	}
+	toolbar #ctraddon_navigator-throbber{
+	  width: 16px;
+	  min-height: 16px;
+	  margin: 0 3px;
+	}
+	#ctraddon_navigator-throbber[cui-areatype="menu-panel"],
+	toolbarpaletteitem[place="palette"] > #ctraddon_navigator-throbber{
+	  background:url("chrome://classic_theme_restorer/content/images/throbber_palette.png") center no-repeat;
+	  border:none;
+	  min-width:100px;
+	  width:100px;
+	  max-width:100px;
+	  min-height:0px;
+	  height:50px;
+	}
+	#ctraddon_navigator-throbber[cui-areatype="menu-panel"]{
+	  margin-top:-30px !important;
 	}
 	
 	/* show missing icon */
@@ -463,8 +493,8 @@
 	}
 	
 	.ctraddontabpanel {
-	  height:330px;
-	  max-height:330px;
+	  height:350px;
+	  max-height:370px;
 	  width:450px;
 	  max-width:550px;
 	  overflow-x:auto;

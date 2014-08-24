@@ -7,7 +7,9 @@
 <!ENTITY Ctr_space			"空白">
 <!ENTITY Ctr_separator		"分隔符">
 <!ENTITY Ctr_puibseparator	"面板按钮分隔符">
-<!ENTITY Ctr_sidebarbutton	"(Sidebar)">
+<!ENTITY Ctr_navthrobber	"Activity Indicator">
+<!ENTITY Ctr_sidebarbutton	"侧边栏">
+<!ENTITY Ctr_windowcontrols	"Min/max/close (Fullscreen)">
 
 <!ENTITY Ctr_cuibuttons		"按钮">
 <!ENTITY Ctr_cuibutnormal	"标准">
@@ -40,17 +42,19 @@
 <!ENTITY Ctr_tabwidthcla	"(经典)">
 <!ENTITY Ctr_tabmaxwidth	"最大宽度:">
 <!ENTITY Ctr_tabminwidth	"最小宽度:">
-<!ENTITY Ctr_tabwidthinfo	"标签页的最小宽度和最大宽度由 TabMixPlus / TabUtilities 所控制">
+<!ENTITY Ctr_tabwidthinfo	"标签页的最小宽度和最大宽度由 TabMixPlus 所控制">
+<!ENTITY Ctr_tabwidthinfo2	"标签页的最小宽度和最大宽度由 TabUtilities 所控制">
+<!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
 <!ENTITY Ctr_closetab_0		"标签页关闭按钮">
 <!ENTITY Ctr_closetab_1		"只在激活的标签页中显示">
 <!ENTITY Ctr_closetab_2		"不显示">
 <!ENTITY Ctr_closetab_3		"在标签页栏末端">
 <!ENTITY Ctr_closetab_4		"在标签页栏始端">
 <!ENTITY Ctr_closetab_5		"在所有标签页中显示 (forced)">
-<!ENTITY Ctr_closetab_hfot	"Hide for one visible tab">
-<!ENTITY Ctr_closealt		"Alternative icon">
-<!ENTITY Ctr_closeonleft	"Alternative position on tab">
-<!ENTITY Ctr_close_wwltab	"Close window with last visible tab (about:config)">
+<!ENTITY Ctr_closetab_hfot	"隐藏一个可见标签页">
+<!ENTITY Ctr_closealt		"弧形图标">
+<!ENTITY Ctr_closeonleft	"标签弧形位置">
+<!ENTITY Ctr_close_wwltab	"关闭前一个可见标签页 (about:config)">
 
 <!ENTITY Ctr_appbutton		"火狐按钮">
 <!ENTITY Ctr_appbutton0		"不显示">
@@ -83,10 +87,10 @@
 <!ENTITY Ctr_bfurlbarfix	"当处于「后退」按钮可以移动和小图标显示模式时，修改地址栏圆弧半径">
 <!ENTITY Ctr_backforward	"使「后退」按钮可以移动">
 <!ENTITY Ctr_hide_bf_popup	"鼠标长按时隐藏历史菜单">
-<!ENTITY Ctr_noconicons		"Replace page context menu icons with labels (back, forward, stop, reload, bookmark page)">
+<!ENTITY Ctr_noconicons		"使用标签来替代菜单中的图标 (后退, 前进, 停止, 重新加载, 书签页面)">
 <!ENTITY Ctr_wincontrols	"使窗口控制按钮可以移动">
 <!ENTITY Ctr_starinurl		"收藏按钮嵌入地址栏 (需要重启 Firefox!)">
-<!ENTITY Ctr_feedinurl		"Feed-button in urlbar (需要重启 Firefox!)">
+<!ENTITY Ctr_feedinurl		"Feed 按钮嵌入地址栏 (需要重启 Firefox!)">
 <!ENTITY Ctr_mstatusbar		"使状态栏面板可以移动">
 <!ENTITY Ctr_hideurelstop	"隐藏地址栏中的停止和重新加载按钮">
 <!ENTITY Ctr_combrelstop	"合并停止和重新加载按钮">
@@ -139,8 +143,8 @@
 <!ENTITY Ctr_favicon		"网站小图标设置">
 <!ENTITY Ctr_emptyfavicon	"使用空白网站小图标 (如果网站没有提供)">
 <!ENTITY Ctr_emptyfavicon2	"使用空白页面的图标来取代常规图标(空白或没有的)">
-<!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tab">
-<!ENTITY Ctr_faviconurl0	"Icons in urlbar">
+<!ENTITY Ctr_noemptypticon	"为固定的标签页移除小图标">
+<!ENTITY Ctr_faviconurl0	"图标在地址栏">
 <!ENTITY Ctr_faviconurl		"在地址栏中显示网站小图标 (需要重启 Firefox!)">
 <!ENTITY Ctr_padlock_hid	"加锁 (隐藏)">
 <!ENTITY Ctr_padlock_def	"加锁 (默认)">

@@ -72,6 +72,17 @@
       box-shadow: none !important;
 	}
 	
+	/* rss in urlbar addon */
+	#navigator-toolbox #nav-bar #urlbar-container #feed-button {
+      -moz-appearance: none !important;
+      background: unset !important;
+      box-shadow: unset !important;
+	  border: unset !important;
+      padding: unset !important;
+      margin: -8px 4px !important;
+    }
+	
+	
 	#nav-bar #notification-popup-box[hidden] + * {
 	  -moz-padding-start: 2px !important;
 	  transition: none !important;
@@ -92,6 +103,11 @@
 	  visibility: visible !important;
 	  opacity: 1.0 !important;
 	}
+
+	#main-window[fx31="true"] #nav-bar #urlbar-container #forward-button{
+      -moz-margin-start:6px !important;
+	}
+
 	#nav-bar #back-button > .toolbarbutton-icon,
 	#nav-bar #forward-button > .toolbarbutton-icon {
 	  -moz-appearance: none !important;
@@ -146,6 +162,11 @@
 	  max-height: 22px !important;
 	  width: auto !important;
 	  height: auto !important;
+	}
+
+	/* The Fox, only better add-on support*/
+	#navigator-toolbox[slimChrome="true"] #nav-bar{
+	  padding-bottom:2px !important;
 	}
 
 }

@@ -86,6 +86,8 @@ classicthemerestorerjso.ctr = {
 	};
 	
 	document.getElementById('ctraddon_pw_tabwidthinfo').style.visibility = 'collapse';
+	document.getElementById('ctraddon_pw_tabwidthinfo2').style.visibility = 'collapse';
+	document.getElementById('ctraddon_pw_tabwidthinfo3').style.visibility = 'collapse';
 	
 	// extra checks to not enable tab width settings while 'TabMixPlus' or 'TabUtilities' is enabled
 	AddonManager.getAddonByID('{dc572301-7619-498c-a57d-39143191b318}', function(addon) {
@@ -93,6 +95,8 @@ classicthemerestorerjso.ctr = {
 	  	document.getElementById('ctraddon_pw_tabMinWidth').disabled = true;
 		document.getElementById('ctraddon_pw_tabMaxWidth').disabled = true;
 		document.getElementById('ctraddon_pw_tabwidthinfo').style.visibility = 'visible';
+		document.getElementById('ctraddon_pw_tabwidthinfo2').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_tabwidthinfo3').style.visibility = 'collapse';
 	  }
 	});
 	
@@ -100,7 +104,9 @@ classicthemerestorerjso.ctr = {
 	  if(addon && addon.isActive) {
 		document.getElementById('ctraddon_pw_tabMinWidth').disabled = true;
 		document.getElementById('ctraddon_pw_tabMaxWidth').disabled = true;
-		document.getElementById('ctraddon_pw_tabwidthinfo').style.visibility = 'visible';
+		document.getElementById('ctraddon_pw_tabwidthinfo').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_tabwidthinfo2').style.visibility = 'visible';
+		document.getElementById('ctraddon_pw_tabwidthinfo3').style.visibility = 'collapse';
 	  }
 	});
 	
@@ -173,14 +179,35 @@ classicthemerestorerjso.ctr = {
 			}
 			
 		  break;
+
 		}
 	  }
 	);
 	
 	ctrSettingsListenerW_forCTB.register(true);
 	
+	var ctrSettingsListenerW_forCTR = new PrefListener(
+	  "extensions.classicthemerestorer.",
+	  function(branch, name) {
+		switch (name) {
+
+		  case "ctabmwidth": case "ctabwidth":
+		  
+		    if(branch.getIntPref("ctabmwidth")<48 || branch.getIntPref("ctabwidth")<48 )
+			  document.getElementById('ctraddon_pw_tabwidthinfo3').style.visibility = 'visible';
+			else
+			  document.getElementById('ctraddon_pw_tabwidthinfo3').style.visibility = 'collapse';
+		  
+		  break;
+
+		}
+	  }
+	);
 	
-	// update appbutton extra settings
+	ctrSettingsListenerW_forCTR.register(true);
+	
+	
+	// update appbuttons extra settings
 	this.ctrpwAppbuttonextra(this.prefs.getCharPref("appbutton"),false);
 	this.ctrpwFaviconextra(this.prefs.getBoolPref("faviconurl"));
 	this.ctrpwBFextra(this.prefs.getBoolPref("backforward"));
@@ -504,6 +531,8 @@ classicthemerestorerjso.ctr = {
 	patterns[122]="noemptypticon="+this.prefs.getBoolPref("noemptypticon");
 	patterns[123]="feedinurl="+this.prefs.getBoolPref("feedinurl");
 	patterns[124]="noconicons="+this.prefs.getBoolPref("noconicons");
+	patterns[125]="closealt="+this.prefs.getBoolPref("closealt");
+	patterns[126]="closeonleft="+this.prefs.getBoolPref("closeonleft");
 
 	saveToFile(patterns);
 	  

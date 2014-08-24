@@ -7,7 +7,9 @@
 <!ENTITY Ctr_space			"Інтервал">
 <!ENTITY Ctr_separator		"Розділювач">
 <!ENTITY Ctr_puibseparator	"PanelUI розділювач кнопок">
-<!ENTITY Ctr_sidebarbutton	"(Sidebar)">
+<!ENTITY Ctr_navthrobber	"Activity Indicator">
+<!ENTITY Ctr_sidebarbutton	"Бокова панель">
+<!ENTITY Ctr_windowcontrols	"мін/макс/закрити (Fullscreen)">
 
 <!ENTITY Ctr_cuibuttons		"Кнопки">
 <!ENTITY Ctr_cuibutnormal	"Нормальні">
@@ -40,17 +42,19 @@
 <!ENTITY Ctr_tabwidthcla	"(класичний)">
 <!ENTITY Ctr_tabmaxwidth	"Макс.ширина:">
 <!ENTITY Ctr_tabminwidth	"Мін.ширина:">
-<!ENTITY Ctr_tabwidthinfo	"Мінімальна та максимальна ширина вкладок контролюються за допомогою TabMixPlus та TabUtilities">
+<!ENTITY Ctr_tabwidthinfo	"Мінімальна та максимальна ширина вкладок контролюються за допомогою TabMixPlus">
+<!ENTITY Ctr_tabwidthinfo2	"Мінімальна та максимальна ширина вкладок контролюються за допомогою TabUtilities">
+<!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
 <!ENTITY Ctr_closetab_0		"Кнопка закриття вкладки">
 <!ENTITY Ctr_closetab_1		"тільки на активній вкладці">
 <!ENTITY Ctr_closetab_2		"ніде">
 <!ENTITY Ctr_closetab_3		"в кінці панелі">
 <!ENTITY Ctr_closetab_4		"на початку панелі">
 <!ENTITY Ctr_closetab_5		"на всіх вкладках (примусово)">
-<!ENTITY Ctr_closetab_hfot	"Hide for one visible tab">
-<!ENTITY Ctr_closealt		"Alternative icon">
-<!ENTITY Ctr_closeonleft	"Alternative position on tab">
-<!ENTITY Ctr_close_wwltab	"Close window with last visible tab (about:config)">
+<!ENTITY Ctr_closetab_hfot	"Приховати для однієї видимої вкладки">
+<!ENTITY Ctr_closealt		"Альтернативна іконка">
+<!ENTITY Ctr_closeonleft	"Альтернативна позиція на вкладці">
+<!ENTITY Ctr_close_wwltab	"Кнопка 'Закрити' з останньою видимою вкладкою (about:config)">
 
 <!ENTITY Ctr_appbutton		"Кнопка додатку">
 <!ENTITY Ctr_appbutton0		"Кнопка вимкнена">
@@ -83,10 +87,10 @@
 <!ENTITY Ctr_bfurlbarfix	"Радіус кутів рядку адреси">
 <!ENTITY Ctr_backforward	"Рухома назад-вперед кнопка">
 <!ENTITY Ctr_hide_bf_popup	"Приховати меню історії при натисканні миші">
-<!ENTITY Ctr_noconicons		"Replace page context menu icons with labels (back, forward, stop, reload, bookmark page)">
+<!ENTITY Ctr_noconicons		"Замінити іконки контекстного меню сторінки ярликами (назад, вперед, стоп, перезавантажити, сторінка закладок)">
 <!ENTITY Ctr_wincontrols	"Рухоме управління повноекранним режимом (мін/макс/закрити)">
 <!ENTITY Ctr_starinurl		"Зірка в рядку адреси (перезапустіть Firefox)">
-<!ENTITY Ctr_feedinurl		"Feed-button in urlbar (перезапустіть Firefox!)">
+<!ENTITY Ctr_feedinurl		"Кнопка RSS в рядку адреси (перезапустіть Firefox!)">
 <!ENTITY Ctr_mstatusbar		"Рухомий рядок стану">
 <!ENTITY Ctr_hideurelstop	"Приховати в рядку адреси кнопку «Зупинити та Перезавантажити»">
 <!ENTITY Ctr_combrelstop	"Об’єднати кнопки «Зупинити» та «Перезавантажити»">
@@ -105,7 +109,7 @@
 <!ENTITY Ctr_nav_txt_ico3	"Показувати тільки текст">
 <!ENTITY Ctr_stoprel0		"Налаштування кнопки «Зупинити та перезавантажити»">
 <!ENTITY Ctr_stoprel1		"Важливо: з’являється кнопка «Перезавантаження» на місці кнопки «Зупинити»!">
-<!ENTITY Ctr_cpanelmenus	"Панель меню: компактний вигляд (закладки, історія тощо.)">
+<!ENTITY Ctr_cpanelmenus	"Панель меню: компактний вигляд (закладки, історія тощо)">
 <!ENTITY Ctr_hidezoomres	"Управління масштабом на панелі: приховати кнопку скидання масштабу">
 <!ENTITY Ctr_pmhidelabels	"Спливаюче вікно панелі меню: приховати написи на кнопках">
 <!ENTITY Ctr_menupopupscr	"Спливаючі вікна меню: показувати полоси прокручування замість стрілки прокручування">
@@ -139,8 +143,8 @@
 <!ENTITY Ctr_favicon		"Налаштування значка сайту">
 <!ENTITY Ctr_emptyfavicon	"Відновити порожній значок сайту (якщо сайт не пропонує його)">
 <!ENTITY Ctr_emptyfavicon2	"Замінити загальний значок сайту (порожній і пунктирний)">
-<!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tab">
-<!ENTITY Ctr_faviconurl0	"Icons in urlbar">
+<!ENTITY Ctr_noemptypticon	"Прибрати порожній значок адреси з прикріпленої вкладки">
+<!ENTITY Ctr_faviconurl0	"Іконки в рядку адреси">
 <!ENTITY Ctr_faviconurl		"Значок сайту в рядку адреси (перезапустіть Firefox)">
 <!ENTITY Ctr_padlock_hid	"Замок (прихований)">
 <!ENTITY Ctr_padlock_def	"Замок (за умовчуванням)">

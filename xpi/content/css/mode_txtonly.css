@@ -94,4 +94,15 @@
 	#nav-bar #urlbar-container #bookmarks-menu-button .toolbarbutton-icon {
 	  margin: -8px 4px !important;
 	}
+	
+	/*Vertical toolbar*/
+	#vertical-toolbar .toolbarbutton-1 .toolbarbutton-text	{
+	  display: -moz-box !important;
+	}
+	#vertical-toolbar .toolbarbutton-1 {
+	  -moz-box-orient: vertical !important;
+	}
+	#vertical-toolbar toolbarbutton .toolbarbutton-icon {
+	  visibility: collapse !important;
+	}
 }

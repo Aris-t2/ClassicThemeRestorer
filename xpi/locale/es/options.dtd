@@ -7,7 +7,9 @@
 <!ENTITY Ctr_space			"Espacio">
 <!ENTITY Ctr_separator		"Separador">
 <!ENTITY Ctr_puibseparator	"Separador de botones del Panel de Interfaz de Usuario">
-<!ENTITY Ctr_sidebarbutton	"(Sidebar)">
+<!ENTITY Ctr_navthrobber	"Activity Indicator">
+<!ENTITY Ctr_sidebarbutton	"Barra lateral">
+<!ENTITY Ctr_windowcontrols	"Min/max/close (Fullscreen)">
 
 <!ENTITY Ctr_cuibuttons		"Botones">
 <!ENTITY Ctr_cuibutnormal	"Normal">
@@ -40,17 +42,19 @@
 <!ENTITY Ctr_tabwidthcla	"(clásico)">
 <!ENTITY Ctr_tabmaxwidth	"Ancho-máximo:">
 <!ENTITY Ctr_tabminwidth	"Ancho-mínimo:">
-<!ENTITY Ctr_tabwidthinfo	"Ancho-mínimo y Ancho-máximo están controlados por TabMixPlus / TabUtilities">
+<!ENTITY Ctr_tabwidthinfo	"Ancho-mínimo y Ancho-máximo están controlados por TabMixPlus">
+<!ENTITY Ctr_tabwidthinfo2	"Ancho-mínimo y Ancho-máximo están controlados por TabUtilities">
+<!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
 <!ENTITY Ctr_closetab_0		"Botón de cierre de pestaña">
 <!ENTITY Ctr_closetab_1		"Sólo en la pestaña activa">
 <!ENTITY Ctr_closetab_2		"En ninguna parte">
 <!ENTITY Ctr_closetab_3		"Al final de las barras de pestañas">
 <!ENTITY Ctr_closetab_4		"Al principio de las barras de pestañas">
 <!ENTITY Ctr_closetab_5		"En todas las pestañas (forzado)">
-<!ENTITY Ctr_closetab_hfot	"Hide for one visible tab">
-<!ENTITY Ctr_closealt		"Alternative icon">
-<!ENTITY Ctr_closeonleft	"Alternative position on tab">
-<!ENTITY Ctr_close_wwltab	"Close window with last visible tab (about:config)">
+<!ENTITY Ctr_closetab_hfot	"Ocultar para una sola pestaña visible">
+<!ENTITY Ctr_closealt		"Icono alternativo">
+<!ENTITY Ctr_closeonleft	"Posición alternativa en la pestaña">
+<!ENTITY Ctr_close_wwltab	"Cerrar ventana con la última pestaña visible (browser.tabs.closeWindowWithLastTab en about:config)">
 
 <!ENTITY Ctr_appbutton		"Botón de la aplicación">
 <!ENTITY Ctr_appbutton0		"Botón deshabilitado">
@@ -83,10 +87,10 @@
 <!ENTITY Ctr_bfurlbarfix 	"Fijar el radio del borde de las barras de URL">
 <!ENTITY Ctr_backforward	"Botón atrás-adelante movible">
 <!ENTITY Ctr_hide_bf_popup	"Ocultar el menú historial de los botones al pulsarlos con el ratón">
-<!ENTITY Ctr_noconicons		"Replace page context menu icons with labels (back, forward, stop, reload, bookmark page)">
+<!ENTITY Ctr_noconicons		"Reemplazar iconos de menú contextual de la página con etiquetas (atrás, adelante, parar, recargar, página de marcadores)">
 <!ENTITY Ctr_wincontrols	"Controles de ventana de pantalla completa movibles (min/max/close)">
 <!ENTITY Ctr_starinurl		"Botón estrella de marcador en la barra de URL (¡requiere reiniciar Firefox!)">
-<!ENTITY Ctr_feedinurl		"Feed-button in urlbar (¡requiere reiniciar Firefox!)">
+<!ENTITY Ctr_feedinurl		"Botón-de-suscripción (feeds) en la barra de URL (¡requiere reiniciar Firefox!)">
 <!ENTITY Ctr_mstatusbar		"Panel de barra de estado movible">
 <!ENTITY Ctr_hideurelstop	"Ocultar botones parar y recargar en las barras de URL">
 <!ENTITY Ctr_combrelstop	"Combinar botones parar-recargar">
@@ -139,7 +143,7 @@
 <!ENTITY Ctr_favicon		"Configuraciones de Favicon">
 <!ENTITY Ctr_emptyfavicon	"Restaurar favicon vacío (si un sitio no ofrece uno)">
 <!ENTITY Ctr_emptyfavicon2	"Reemplazar favicon genérico (vació y punteado) con un favicon en blanco">
-<!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tab">
+<!ENTITY Ctr_noemptypticon	"Eliminar favicon vacío en pestañas fijas">
 <!ENTITY Ctr_faviconurl0	"Icons in urlbar">
 <!ENTITY Ctr_faviconurl		"Favicon en la barra de URL (¡requiere reiniciar Firefox!">
 <!ENTITY Ctr_padlock_hid	"Candado (oculto)">
