@@ -50,6 +50,9 @@
 		#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
 		  margin-top: 25px !important;
 		}
+	    #main-window[defaultfxtheme="true"][fx32plus="true"][tabsontop="false"] #TabsToolbar:not(:-moz-lwtheme) {
+		  border-bottom: 1px solid hsla(209,67%,12%,0.25) !important; /*#aabccf*/
+	    }
 	}
 	
 	@media all and (-moz-windows-theme:aero) {

@@ -3,6 +3,7 @@ if (typeof classicthemerestorerjso == "undefined") {var classicthemerestorerjso 
 if (!classicthemerestorerjso.ctr) {classicthemerestorerjso.ctr = {};};
 
 Components.utils.import("resource://gre/modules/AddonManager.jsm");
+Components.utils.import("resource:///modules/CustomizableUI.jsm");
 
 classicthemerestorerjso.ctr = {
 
@@ -207,10 +208,11 @@ classicthemerestorerjso.ctr = {
 	ctrSettingsListenerW_forCTR.register(true);
 	
 	
-	// update appbuttons extra settings
+	// update sub settings
 	this.ctrpwAppbuttonextra(this.prefs.getCharPref("appbutton"),false);
 	this.ctrpwFaviconextra(this.prefs.getBoolPref("faviconurl"));
 	this.ctrpwBFextra(this.prefs.getBoolPref("backforward"));
+	this.ctrpwHidetbwotExtra(this.prefs.getBoolPref("hidetbwot"));
 
 	
 	var closetab_value = this.prefs.getCharPref("closetab");
@@ -287,6 +289,11 @@ classicthemerestorerjso.ctr = {
     document.getElementById('ctraddon_pw_hide_bf_popup').disabled = which;
   },
   
+  ctrpwHidetbwotExtra: function(which) {
+    if(which==true) which=false; else which=true;
+    document.getElementById('ctraddon_pw_hidetbwote').disabled = which;
+  },
+  
   ctrpwTabcloseextra: function(which) {
 	document.getElementById('ctraddon_pw_closetabhfl').disabled = which;
 	document.getElementById('ctraddon_pw_closeonleft').disabled = which;
@@ -296,6 +303,17 @@ classicthemerestorerjso.ctr = {
 	document.getElementById('ctraddon_pw_closealt').disabled = which;
   },
   
+  ctrMovStatusextra: function() {
+  
+	setTimeout(function(){
+	  try{
+		if(CustomizableUI.getPlacementOfWidget("ctraddon_statusbar")==null)
+		  CustomizableUI.addWidgetToArea("ctraddon_statusbar", "ctraddon_addon-bar");
+
+		} catch(e){}
+	},1300);
+  },
+ 
   ctrpwAppbuttonextra: function(which,fromprefwindow) {
   
   var tabsintitlebar = Components.classes["@mozilla.org/preferences-service;1"]

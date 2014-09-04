@@ -147,6 +147,7 @@
 
 		<preference id="ctraddon_dblclnewtab"	name="extensions.classicthemerestorer.dblclnewtab"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hidetbwot"		name="extensions.classicthemerestorer.hidetbwot"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_hidetbwote"	name="extensions.classicthemerestorer.hidetbwote"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_faviconurl"	name="extensions.classicthemerestorer.faviconurl"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_padlock"		name="extensions.classicthemerestorer.padlock"	 	 type="string"	instantApply="true"/>
 		<preference id="ctraddon_padlockex"		name="extensions.classicthemerestorer.padlockex"	 type="bool"	instantApply="true"/>
@@ -596,7 +597,7 @@
 		<checkbox label="&Ctr_hide_bf_popup;"	preference="ctraddon_hide_bf_popup" id="ctraddon_pw_hide_bf_popup" class="ctraddonsuboption"/>
 		<checkbox label="&Ctr_starinurl;"		preference="ctraddon_starinurl" oncommand="classicthemerestorerjso.ctr.needsRestart=true;"/>
 		<checkbox label="&Ctr_feedinurl;"		preference="ctraddon_feedinurl" oncommand="classicthemerestorerjso.ctr.needsRestart=true;"/>
-		<checkbox label="&Ctr_mstatusbar;"		preference="ctraddon_statusbar"/>
+		<checkbox label="&Ctr_mstatusbar;"		preference="ctraddon_statusbar" oncommand="classicthemerestorerjso.ctr.ctrMovStatusextra()"/>
 		<checkbox label="&Ctr_verifiedcolors;"	preference="ctraddon_verifiedcolors" id="ctraddon_pw_verifiedcolors"/>
 		<checkbox label="&Ctr_hideprivmask;"	preference="ctraddon_hideprivmask"/>
 
@@ -727,12 +728,13 @@
 
 	  <groupbox>
 	    <caption  label="&Ctr_tabstoolbar;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_dblclnewtab;"		preference="ctraddon_dblclnewtab" class="ctraddon_windowsonly"/>
-		<checkbox label="&Ctr_hidetbwot;"		preference="ctraddon_hidetbwot" oncommand="classicthemerestorerjso.ctr.needsRestart=true;"/>
-		<checkbox label="&Ctr_notabfog;"		preference="ctraddon_notabfog" class="ctraddon_windowsonly" id="ctraddon_pw_notabfog"/>
-		<checkbox label="&Ctr_notabbg;"			preference="ctraddon_notabbg" id="ctraddon_pw_notabbg"/>
-		<checkbox label="&Ctr_hightabpos;"		preference="ctraddon_hightabpososx"/>
-		<checkbox label="&Ctr_alttabstb;"		preference="ctraddon_alttabstb" id="ctraddon_pw_alttabstb" class="ctraddon_winlinonly"/>
+		<checkbox label="&Ctr_dblclnewtab;"	preference="ctraddon_dblclnewtab" class="ctraddon_windowsonly"/>
+		<checkbox label="&Ctr_hidetbwot;"	preference="ctraddon_hidetbwot" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(true);} else {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(false);} classicthemerestorerjso.ctr.needsRestart=true;"/>
+		<checkbox label="&Ctr_hidetbwote;"	preference="ctraddon_hidetbwote" class="ctraddonsuboption" id="ctraddon_pw_hidetbwote"/>
+		<checkbox label="&Ctr_notabfog;"	preference="ctraddon_notabfog" class="ctraddon_windowsonly" id="ctraddon_pw_notabfog"/>
+		<checkbox label="&Ctr_notabbg;"		preference="ctraddon_notabbg" id="ctraddon_pw_notabbg"/>
+		<checkbox label="&Ctr_hightabpos;"	preference="ctraddon_hightabpososx"/>
+		<checkbox label="&Ctr_alttabstb;"	preference="ctraddon_alttabstb" id="ctraddon_pw_alttabstb" class="ctraddon_winlinonly"/>
 	  </groupbox>
 
 	  <groupbox id="ctraddon_pw_menubargroup" class="ctraddon_windowsonly">

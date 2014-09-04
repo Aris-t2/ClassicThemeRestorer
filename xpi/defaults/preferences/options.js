@@ -70,6 +70,7 @@ pref("extensions.classicthemerestorer.tabmokcolor3",false);
 
 pref("extensions.classicthemerestorer.dblclnewtab",false);
 pref("extensions.classicthemerestorer.hidetbwot",false);
+pref("extensions.classicthemerestorer.hidetbwote",true);
 pref("extensions.classicthemerestorer.faviconurl",false);
 pref("extensions.classicthemerestorer.padlock","padlock_default");
 pref("extensions.classicthemerestorer.padlockex",true);

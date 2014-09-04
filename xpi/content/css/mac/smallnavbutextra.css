@@ -193,6 +193,11 @@
 	  width: auto !important;
 	  height: auto !important;
 	}
+	
+	/*Jetpacks toggle button support*/
+	toolbarbutton[id^="toggle-button-"] .toolbarbutton-icon {
+	  width:22px !important;
+	}
 
 	/* The Fox, only better add-on support*/
 	#navigator-toolbox[slimChrome="true"] #nav-bar{

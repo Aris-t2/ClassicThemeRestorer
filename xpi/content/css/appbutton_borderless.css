@@ -2,11 +2,21 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#main-window #ctraddon_appbutton2,
+	#main-window #ctraddon_appbutton2{
+	  -moz-appearance:none !important;
+	  -moz-border-right-colors: transparent transparent !important;
+	  -moz-border-left-colors: transparent transparent !important;
+	  -moz-border-bottom-colors: transparent transparent !important;
+	  border-color: transparent !important;
+	  border-radius:0px !important;
+	  box-shadow: none !important;
+	  background:none !important;
+	}
+	
 	#main-window #navigator-toolbox #TabsToolbar #ctraddon_appbutton{
 	  -moz-appearance:none !important;
-	  border:1px solid transparent !important;
-	  border-color: transparent  !important;
+	  border:0px solid transparent !important;
+	  border-color: transparent !important;
 	  border-radius:0px !important;
 	  box-shadow: none !important;
 	  background:none !important;

@@ -61,6 +61,11 @@ classicthemerestorerjs.ctr = {
 		if (this.appversion >= 31) document.getElementById("main-window").setAttribute('fx31',true);
 	} catch(e){}
 	
+	// add a new global attribute 'fx31' -> better parting css between versions
+	try{
+		if (this.appversion >= 32) document.getElementById("main-window").setAttribute('fx32plus',true);
+	} catch(e){}
+	
 	// add-on fixes
 	this.addonCompatibilityImprovements();
 
@@ -177,10 +182,11 @@ classicthemerestorerjs.ctr = {
 			  
 			  // TreeStyleTabs add-on works better with tabs not on top, so this is eanbled on reset/first run
 			  AddonManager.getAddonByID('treestyletab@piro.sakura.ne.jp', function(addon) {
-				if(addon && addon.isActive) { classicthemerestorerjs.ctr.prefs.setCharPref('tabsontop','false'); }
+				if(addon && addon.isActive && classicthemerestorerjs.ctr.osstring=="WINNT")
+				  classicthemerestorerjs.ctr.prefs.setCharPref('tabsontop','false');
 			  });
 			  
-			  // set 'first run'/'ctrreset' to false
+			  // set 'first run' & 'ctrreset' to false
 			  setTimeout(function(){
 				branch.setBoolPref("ctrreset",false);
 			  },3000);
@@ -439,12 +445,12 @@ classicthemerestorerjs.ctr = {
 				classicthemerestorerjs.ctr.loadUnloadCSS("statusbar",true);
 			
 				// restore position of CTRs status bar area, if it is not on a toolbar
-				setTimeout(function(){
+				/*setTimeout(function(){
 				  try{
 					if(CustomizableUI.getPlacementOfWidget("ctraddon_statusbar")==null)
 					  CustomizableUI.addWidgetToArea("ctraddon_statusbar", CustomizableUI.AREA_NAVBAR);
 				  } catch(e){}
-				},300);
+				},1000);*/
 
 				// add status bar shim to CTRs status bar area
 				setTimeout(function(){
@@ -452,25 +458,25 @@ classicthemerestorerjs.ctr = {
 					  if(document.getElementById("status-bar").parentNode.id!="ctraddon_statusbar")
 						document.getElementById("ctraddon_statusbar").insertBefore(document.getElementById("status-bar"), null);
 				  } catch(e){}
-				},450);
+				},1100);
 				
 				// recheck position of CTRs status bar area
 				window.addEventListener("DOMContentLoaded", function loadCTRstatusbar(event){
 					window.removeEventListener("DOMContentLoaded", loadCTRstatusbar, false);
 
-					setTimeout(function(){
+					/*setTimeout(function(){
 					  try{
 						if(CustomizableUI.getPlacementOfWidget("ctraddon_statusbar")==null)
 						  CustomizableUI.addWidgetToArea("ctraddon_statusbar", CustomizableUI.AREA_NAVBAR);
 					  } catch(e){}
-					},350);
+					},1150);*/
 					
 					setTimeout(function(){
 					  try{
 						  if(document.getElementById("status-bar").parentNode.id!="ctraddon_statusbar")
 							document.getElementById("ctraddon_statusbar").insertBefore(document.getElementById("status-bar"), null);
 					  } catch(e){}
-					},500);
+					},1250);
 
 				},false);
 
@@ -1150,6 +1156,12 @@ classicthemerestorerjs.ctr = {
 		classicthemerestorerjs.ctr.ctrGetId("status-bar").appendChild(classicthemerestorerjs.ctr.ctrGetId("showip_status_item"));
 	  } catch(e){}
 	},30);
+	// Gmail Manager NG
+	setTimeout(function(){
+	  try{
+		classicthemerestorerjs.ctr.ctrGetId("status-bar").appendChild(classicthemerestorerjs.ctr.ctrGetId("gmanager-toolbar-item"));
+	  } catch(e){}
+	},300);
 	// isAdmin add-on fix
 	setTimeout(function(){
 	  try{
@@ -1268,8 +1280,13 @@ classicthemerestorerjs.ctr = {
 							.getBranch("browser.tabs.").getBoolPref("drawInTitlebar");
 					  
 	  if(gBrowser.tabContainer.tabbrowser.visibleTabs.length < 2) {
-		document.getElementById("TabsToolbar").collapsed = true;
-
+		
+		// optianally reduces delay on startup (because it can cause glitches with Windows Classic visual style)
+		if(classicthemerestorerjs.ctr.prefs.getBoolPref("hidetbwote"))
+		  document.getElementById("TabsToolbar").style.visibility = 'collapse';
+		else
+		  document.getElementById("TabsToolbar").collapsed = true;
+		
 		  if(classicthemerestorerjs.ctr.osstring=="WINNT" && tabsintitlebar==true){ // Windows
 			  if (classicthemerestorerjs.ctr.prefs.getCharPref("tabs")=="tabs_squared" &&
 				document.getElementById("toolbar-menubar").getAttribute("autohide") == "true"
@@ -1285,7 +1302,12 @@ classicthemerestorerjs.ctr = {
 		  } else {} //Linux does not need special treatment
 	  }
 	  else {
-		document.getElementById("TabsToolbar").collapsed = false;
+		
+		if(classicthemerestorerjs.ctr.prefs.getBoolPref("hidetbwote"))
+		  document.getElementById("TabsToolbar").style.visibility = 'visible';
+		else
+		  document.getElementById("TabsToolbar").collapsed = false;
+		
 		document.getElementById("toolbar-menubar").style.marginBottom="unset";
 		
 		if(classicthemerestorerjs.ctr.osstring=="Darwin") document.getElementById("titlebar").style.paddingBottom="unset";
