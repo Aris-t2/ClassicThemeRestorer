@@ -23,7 +23,7 @@
 <!ENTITY Ctr_tnot			"(tabs not on top)">
 
 <!ENTITY Ctr_tabcolors_t	"Tab colors &amp; text">
-<!ENTITY Ctr_icons_t		"Favicon &amp; icons">
+<!ENTITY Ctr_urlbar_t		"Urlbar settings">
 
 <!ENTITY Ctr_tabs			"Tabs">
 <!ENTITY Ctr_tabs0			"Curved tabs (Australis default)">
@@ -45,6 +45,8 @@
 <!ENTITY Ctr_tabwidthinfo	"Tab width is controlled by TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"Tab width is controlled by TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
+<!ENTITY Ctr_emptyfavicon	"Restore empty favicon (if a site does not offer one)">
+<!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tab">
 <!ENTITY Ctr_closetab_0		"Tab Close">
 <!ENTITY Ctr_closetab_1		"On active tab only">
 <!ENTITY Ctr_closetab_2		"Nowhere">
@@ -80,6 +82,7 @@
 <!ENTITY Ctr_appbutmhi		"Higher position (if on tabs toolbar)">
 <!ENTITY Ctr_appbutbdl		"Hide borders and background colors">
 <!ENTITY Ctr_dblclclosefx	"Double click closes current window">
+<!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
 
 <!ENTITY Ctr_ui				"General UI">
 <!ENTITY Ctr_nbiconsize0	"Set navigation toolbar attribute">
@@ -87,16 +90,17 @@
 <!ENTITY Ctr_bfurlbarfix	"Fix urlbars border-radius">
 <!ENTITY Ctr_backforward	"Movable back-forward button">
 <!ENTITY Ctr_hide_bf_popup	"Hide buttons history menu on mouse press">
-<!ENTITY Ctr_noconicons		"Replace page context menu icons with labels (back, forward, stop, reload, bookmark page)">
+<!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
+<!ENTITY Ctr_noconicons		"Replace icons with labels in 'page context menu' (back, forward...)">
 <!ENTITY Ctr_wincontrols	"Movable fullscreen window controls (min/max/close)">
-<!ENTITY Ctr_starinurl		"Star-button in urlbar (restart Firefox!)">
-<!ENTITY Ctr_feedinurl		"Feed-button in urlbar (restart Firefox!)">
+<!ENTITY Ctr_emptyfavicon2	"Replace generic favicon (empty and dotted) with sheet favicon">
 <!ENTITY Ctr_mstatusbar		"Movable status-bar panel">
-<!ENTITY Ctr_hideurelstop	"Hide urlbars stop &amp; reload buttons">
-<!ENTITY Ctr_combrelstop	"Combine stop &amp; reload buttons">
+<!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
+<!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
+<!ENTITY Ctr_combrelstop	"Stop &amp; reload: combine toolbar buttons">
+<!ENTITY Ctr_stoprel1		"Important: place reload button after stop button!">
 <!ENTITY Ctr_panelmenucol	"Panel menus: alternative background color">
 <!ENTITY Ctr_hideprivmask	"Private browsing: hide mask indicator">
-<!ENTITY Ctr_verifiedcolors	"Green/blue identity-box for verified websites">
 <!ENTITY Ctr_findbar		"Findbar">
 <!ENTITY Ctr_findbar_def	"Default position">
 <!ENTITY Ctr_findbar_top	"Top position">
@@ -107,8 +111,7 @@
 <!ENTITY Ctr_nav_txt_ico1	"Show large icons">
 <!ENTITY Ctr_nav_txt_ico2	"Show icons and text">
 <!ENTITY Ctr_nav_txt_ico3	"Show text only">
-<!ENTITY Ctr_stoprel0		"Reload and stop button settings">
-<!ENTITY Ctr_stoprel1		"Important: place reload button after stop button!">
+<!ENTITY Ctr_nav_txt_exp	"Experimental attributes:">
 <!ENTITY Ctr_cpanelmenus	"Panel menus: compact view (bookmarks, history etc.)">
 <!ENTITY Ctr_hidezoomres	"Zoom controls on toolbar: hide zoom-reset button">
 <!ENTITY Ctr_pmhidelabels	"Panel menu popup: hide button labels">
@@ -118,6 +121,9 @@
 <!ENTITY Ctr_tabmokcolor	"White color for tab buttons (close, new, groups, list all)">
 <!ENTITY Ctr_tabmokcolor2	"White color and dark shadow for text on non-active tabs">
 <!ENTITY Ctr_tabmokcolor3	"White color for tab separators">
+
+<!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
+<!ENTITY Ctr_navthrobber2	"Add url or leave empty">
 
 <!ENTITY Ctr_tab_tf_info1	"Color names, hexcodes, rgb(a) and hsl(a) values are supported.">
 <!ENTITY Ctr_tab_tf_info2	"Inputs won't be validated!">
@@ -140,17 +146,22 @@
 <!ENTITY Ctr_bold			"Bold">
 <!ENTITY Ctr_italic			"Italic">
 
-<!ENTITY Ctr_favicon		"Favicon settings">
-<!ENTITY Ctr_emptyfavicon	"Restore empty favicon (if a site does not offer one)">
-<!ENTITY Ctr_emptyfavicon2	"Replace generic favicon (empty and dotted) with sheet favicon">
-<!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tab">
-<!ENTITY Ctr_faviconurl0	"Icons in urlbar">
-<!ENTITY Ctr_faviconurl		"Favicon in urlbar (restart Firefox!)">
+<!ENTITY Ctr_urlbar			"Urlbar">
+<!ENTITY Ctr_starinurl		"Star-button (restart Firefox!)">
+<!ENTITY Ctr_feedinurl		"RSS feed-button (restart Firefox!)">
+<!ENTITY Ctr_hideurelstop	"Hide 'stop &amp; reload' buttons">
+<!ENTITY Ctr_hideprbutton	"Hide notification icon when a popup gets blocked">
+<!ENTITY Ctr_urlbar_ib		"Urlbars identity box">
+<!ENTITY Ctr_verifiedcolors	"Green/blue colors for verified websites">
+<!ENTITY Ctr_faviconurl		"Favicon (restart Firefox!)">
 <!ENTITY Ctr_padlock_hid	"Padlock icon (hidden)">
 <!ENTITY Ctr_padlock_def	"Padlock icon (default)">
 <!ENTITY Ctr_padlock_cla	"Padlock icon (classic)">
 <!ENTITY Ctr_padlock_mod	"Padlock icon (modern)">
 <!ENTITY Ctr_padlock_ext	"Security icons">
+<!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
+
+<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
 
 <!ENTITY Ctr_invicons		"Inverted icons">
 <!ENTITY Ctr_menubar		"Menubar">
@@ -176,6 +187,8 @@
 <!ENTITY Ctr_nonavbarbg		"Navigation toolbar: remove background color">
 <!ENTITY Ctr_nonavborder	"Bookmarks toolbar: add top border to toolbar">
 <!ENTITY Ctr_nonavtbborder	"Top toolbars: remove toolbar borders">
+<!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
+<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('chevron') at toolbars end">
 
 <!ENTITY Ctr_closeabarbut	"Hide add-on bars close button">
 <!ENTITY Ctr_highaddonsbar	"Increase height">
@@ -190,7 +203,11 @@
 <!ENTITY Ctr_toolsitem		"Menuitem in tools menu">
 <!ENTITY Ctr_appmenuitem	"Menuitem in appbuttons menu">
 <!ENTITY Ctr_contextitem	"Menuitem in toolbars context menu">
+<!ENTITY Ctr_puictrbutton	"Button in main panel menu">
+
+<!ENTITY Ctr_otherctroptns	"Other settings">
 <!ENTITY Ctr_cuibotbuttons	"Extra buttons in 'customizing' mode">
+<!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
 
 
 <!ENTITY Ctr_pw_settings	"Settings">
@@ -207,3 +224,6 @@
 
 <!ENTITY Ctr_addon-bar.accesskey	"A">
 <!ENTITY Ctr_extrabar.accesskey		"D">
+<!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
+<!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
+<!ENTITY appMenuGettingStarted.label	"Getting started">

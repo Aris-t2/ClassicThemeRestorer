@@ -22,7 +22,7 @@
 	@media all and (-moz-windows-compositor) {
 	  @media not all and (-moz-windows-glass) {
 		#main-window[defaultfxtheme="true"][tabsontop="false"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
-		  background: linear-gradient(to bottom,#808080 1px, #ffffff 1px,-moz-Dialog,-moz-Dialog) !important;
+		  background: linear-gradient(to bottom,#a0a0a0 1px, #ffffff 1px,-moz-Dialog,-moz-Dialog) !important;
 		}
 		#main-window[defaultfxtheme="true"]:not([tabsontop="false"]) #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
 		  background: -moz-Dialog !important;

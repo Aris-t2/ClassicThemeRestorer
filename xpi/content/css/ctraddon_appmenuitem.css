@@ -3,7 +3,9 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	#appmenu_customizeMenu #ctraddon_appmenu_sep,
-	#appmenu_customizeMenu #ctraddon_appmenu_ctr{
+	#appmenu_customizeMenu #ctraddon_appmenu_sep2,
+	#appmenu_customizeMenu #ctraddon_appmenu_ctr,
+	#appmenu_customizeMenu #ctraddon_appmenu_ctr2{
 	  visibility: collapse !important;
 	}
 	

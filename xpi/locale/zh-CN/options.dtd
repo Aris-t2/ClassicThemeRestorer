@@ -23,7 +23,7 @@
 <!ENTITY Ctr_tnot			"(标签栏不在顶部)">
 
 <!ENTITY Ctr_tabcolors_t	"自定义色彩">
-<!ENTITY Ctr_icons_t		"网站小图标 &amp; 图标">
+<!ENTITY Ctr_urlbar_t		"Urlbar settings">
 
 <!ENTITY Ctr_tabs			"标签页">
 <!ENTITY Ctr_tabs0			"弧形标签页 (Australis 默认)">
@@ -45,6 +45,8 @@
 <!ENTITY Ctr_tabwidthinfo	"标签页的最小宽度和最大宽度由 TabMixPlus 所控制">
 <!ENTITY Ctr_tabwidthinfo2	"标签页的最小宽度和最大宽度由 TabUtilities 所控制">
 <!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
+<!ENTITY Ctr_emptyfavicon	"使用空白网站小图标 (如果网站没有提供)">
+<!ENTITY Ctr_noemptypticon	"为固定的标签页移除小图标">
 <!ENTITY Ctr_closetab_0		"标签页关闭按钮">
 <!ENTITY Ctr_closetab_1		"只在激活的标签页中显示">
 <!ENTITY Ctr_closetab_2		"不显示">
@@ -80,6 +82,7 @@
 <!ENTITY Ctr_appbutmhi		"更高的位置 (在标签页栏上显示)">
 <!ENTITY Ctr_appbutbdl		"隐藏边框和背景色">
 <!ENTITY Ctr_dblclclosefx	"双击关闭当前窗口">
+<!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
 
 <!ENTITY Ctr_ui				"界面">
 <!ENTITY Ctr_nbiconsize0	"设置导航工具栏属性">
@@ -87,16 +90,17 @@
 <!ENTITY Ctr_bfurlbarfix	"当处于「后退」按钮可以移动和小图标显示模式时，修改地址栏圆弧半径">
 <!ENTITY Ctr_backforward	"使「后退」按钮可以移动">
 <!ENTITY Ctr_hide_bf_popup	"鼠标长按时隐藏历史菜单">
+<!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"使用标签来替代菜单中的图标 (后退, 前进, 停止, 重新加载, 书签页面)">
 <!ENTITY Ctr_wincontrols	"使窗口控制按钮可以移动">
-<!ENTITY Ctr_starinurl		"收藏按钮嵌入地址栏 (需要重启 Firefox!)">
-<!ENTITY Ctr_feedinurl		"Feed 按钮嵌入地址栏 (需要重启 Firefox!)">
+<!ENTITY Ctr_emptyfavicon2	"使用空白页面的图标来取代常规图标(空白或没有的)">
 <!ENTITY Ctr_mstatusbar		"使状态栏面板可以移动">
-<!ENTITY Ctr_hideurelstop	"隐藏地址栏中的停止和重新加载按钮">
+<!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
+<!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
 <!ENTITY Ctr_combrelstop	"合并停止和重新加载按钮">
+<!ENTITY Ctr_stoprel1		"工具栏: 将重新加载按钮放在停止按钮后面!">
 <!ENTITY Ctr_panelmenucol	"面板菜单: 替代的背景颜色">
 <!ENTITY Ctr_hideprivmask	"隐私浏览: 隐藏面具标志">
-<!ENTITY Ctr_verifiedcolors	"使用绿色/蓝色的身份盒子来显示被验证的网站">
 <!ENTITY Ctr_findbar		"查找栏">
 <!ENTITY Ctr_findbar_def	"默认位置">
 <!ENTITY Ctr_findbar_top	"在顶部">
@@ -107,8 +111,7 @@
 <!ENTITY Ctr_nav_txt_ico1	"显示大图标">
 <!ENTITY Ctr_nav_txt_ico2	"显示图标和文本">
 <!ENTITY Ctr_nav_txt_ico3	"只显示文本">
-<!ENTITY Ctr_stoprel0		"重新加载和停止按钮设置">
-<!ENTITY Ctr_stoprel1		"工具栏: 将重新加载按钮放在停止按钮后面!">
+<!ENTITY Ctr_nav_txt_exp	"Experimental attributes:">
 <!ENTITY Ctr_cpanelmenus	"更紧凑的面板菜单 (书签、历史等等)">
 <!ENTITY Ctr_hidezoomres	"当缩放控制按钮在工具栏上时: 隐藏重置缩放按钮">
 <!ENTITY Ctr_pmhidelabels	"面板菜单: 隐藏按钮标签">
@@ -118,6 +121,9 @@
 <!ENTITY Ctr_tabmokcolor	"白色标签页按钮 (关闭, 新建, 分组, 显示所有)">
 <!ENTITY Ctr_tabmokcolor2	"在非激活标签页上使用白色文字以及添加文字阴影">
 <!ENTITY Ctr_tabmokcolor3	"白色标签页分隔符">
+
+<!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
+<!ENTITY Ctr_navthrobber2	"Add url or leave empty">
 
 <!ENTITY Ctr_tab_tf_info1	"可以使用颜色名称, hex 值, rgb(a) 以及 hsl(a) 值。">
 <!ENTITY Ctr_tab_tf_info2	"输入错误不会被提示！">
@@ -140,17 +146,22 @@
 <!ENTITY Ctr_bold			"加粗">
 <!ENTITY Ctr_italic			"斜体">
 
-<!ENTITY Ctr_favicon		"网站小图标设置">
-<!ENTITY Ctr_emptyfavicon	"使用空白网站小图标 (如果网站没有提供)">
-<!ENTITY Ctr_emptyfavicon2	"使用空白页面的图标来取代常规图标(空白或没有的)">
-<!ENTITY Ctr_noemptypticon	"为固定的标签页移除小图标">
-<!ENTITY Ctr_faviconurl0	"图标在地址栏">
+<!ENTITY Ctr_urlbar			"Urlbar">
+<!ENTITY Ctr_starinurl		"收藏按钮嵌入地址栏 (需要重启 Firefox!)">
+<!ENTITY Ctr_feedinurl		"Feed 按钮嵌入地址栏 (需要重启 Firefox!)">
+<!ENTITY Ctr_hideurelstop	"隐藏地址栏中的停止和重新加载按钮">
+<!ENTITY Ctr_hideprbutton	"Hide notification icon when a popup gets blocked">
+<!ENTITY Ctr_urlbar_ib		"Urlbars identity box">
+<!ENTITY Ctr_verifiedcolors	"使用绿色/蓝色的身份盒子来显示被验证的网站">
 <!ENTITY Ctr_faviconurl		"在地址栏中显示网站小图标 (需要重启 Firefox!)">
 <!ENTITY Ctr_padlock_hid	"加锁 (隐藏)">
 <!ENTITY Ctr_padlock_def	"加锁 (默认)">
 <!ENTITY Ctr_padlock_cla	"加锁 (经典)">
 <!ENTITY Ctr_padlock_mod	"加锁 (现代)">
 <!ENTITY Ctr_padlock_ext	"安全图标">
+<!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
+
+<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
 
 <!ENTITY Ctr_invicons		"颠倒图标">
 <!ENTITY Ctr_menubar		"菜单栏">
@@ -176,6 +187,8 @@
 <!ENTITY Ctr_nonavbarbg		"导航栏: 移除背景颜色">
 <!ENTITY Ctr_nonavborder	"书签栏: 添加上边框">
 <!ENTITY Ctr_nonavtbborder	"顶部工具栏: 移除工具栏边框">
+<!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
+<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('chevron') at toolbars end">
 
 <!ENTITY Ctr_closeabarbut	"隐藏附加组件栏关闭按钮">
 <!ENTITY Ctr_highaddonsbar	"增加附加组件栏高度">
@@ -190,7 +203,11 @@
 <!ENTITY Ctr_toolsitem		"在工具菜单中显示">
 <!ENTITY Ctr_appmenuitem	"在火狐按钮菜单中显示">
 <!ENTITY Ctr_contextitem	"在工具栏内容菜单上显示菜单项">
+<!ENTITY Ctr_puictrbutton	"Button in main panel menu">
+
+<!ENTITY Ctr_otherctroptns	"Other settings">
 <!ENTITY Ctr_cuibotbuttons	"在界面自定义模式中显示更多按钮">
+<!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
 
 
 <!ENTITY Ctr_pw_settings	"设置">
@@ -207,3 +224,6 @@
 
 <!ENTITY Ctr_addon-bar.accesskey	"A">
 <!ENTITY Ctr_extrabar.accesskey		"D">
+<!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
+<!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
+<!ENTITY appMenuGettingStarted.label	"Getting started">

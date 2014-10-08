@@ -2,7 +2,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	#nav-bar #feed-button,
+	toolbar #feed-button,
 	#urlbar[pageproxystate="invalid"] > #urlbar-icons #feed-button {
 	  visibility:collapse !important;
 	}
@@ -11,19 +11,29 @@
 	  visibility:visible !important;
 	}
 	
-	#urlbar-icons #feed-button,
-	#urlbar-icons #feed-button .toolbarbutton-icon{
+	#main-window toolbar #urlbar-icons #feed-button .toolbarbutton-icon{
 	  background: none !important;
 	  padding:0 !important;
-	  border:0 !important;
 	  border-image:none !important;
 	  box-shadow:none !important;
+	  margin:0 !important;
+	  border:0 !important;
 	}
 	
-	#urlbar-icons #feed-button{
+	#main-window toolbar #urlbar-icons #feed-button{
 	  -moz-appearance: none !important;
-	  margin-top:-8px !important;
-	  margin-bottom:-8px !important;
+	  background: none !important;
+	  margin:-8px 1px !important;
+	  border-image:none !important;
+	  box-shadow:none !important;
+	  opacity: .85 !important;
+	  padding:0 !important;
+	  border:0 !important;
+	  min-width: unset !important;
+	}
+	
+	#main-window toolbar #urlbar-icons #feed-button:hover {
+	  opacity: 1.0 !important;
 	}
 	
 }

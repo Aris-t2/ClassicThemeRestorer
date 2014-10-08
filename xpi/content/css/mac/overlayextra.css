@@ -128,13 +128,17 @@
 	  #main-window[defaultfxtheme="true"] #ctraddon_stop-button:hover:active:not([disabled="true"]) > .toolbarbutton-icon {
 		-moz-image-region: rect(36px, 216px, 72px, 180px) !important;
 	  }
-	  #main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_back-button, #ctraddon_forward-button, #ctraddon_bookmarks-menu-toolbar-button, #ctraddon_bookmarks-button, #ctraddon_history-button,#ctraddon_history-menu-toolbar-button, #ctraddon_reload-button, #ctraddon_stop-button) > .toolbarbutton-icon {
+	  #main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_back-button, #ctraddon_forward-button, #ctraddon_bookmarks-menu-toolbar-button, #ctraddon_bookmarks-button, #ctraddon_history-button,#ctraddon_history-menu-toolbar-button, #ctraddon_reload-button, #ctraddon_stop-button,#ctraddon_ctr-button) > .toolbarbutton-icon {
+		width: 18px !important;
+	  }
+	  
+	  #main-window #ctraddon_ctr-button > .toolbarbutton-icon {
+	    list-style-image: url("chrome://classic_theme_restorer/content/images/palette_ctr.png");
 		width: 18px !important;
 	  }
 	  
 	}
 	
-
 	#TabsToolbar #ctraddon_appbutton{
 	  -moz-appearance:none !important;
 	  border:1px solid #727475 !important;
@@ -142,24 +146,7 @@
 	  border-radius: 2.5px 2.5px 0 0 !important;
 	  margin-top:2px !important;
 	}
-
-	#appmenu-popup menu,
-	#appmenu-popup .menu-right{
-	  -moz-padding-start: 0px !important;
-	  -moz-margin-start: 0px !important;	
-	}
 	
-	#appmenu-popup #ctraddon_newwebDeveloperPopupMenu #appmenu_webDeveloper_popup menu,
-	#appmenu-popup #ctraddon_menu_newBookmarksmenu #appmenu_bookmarksPopup menu,
-	#appmenu-popup #ctraddon_menu_newHistorymenu #appmenu_historyMenupopup menu,
-	#appmenu-popup #ctraddon_newwebDeveloperPopupMenu #appmenu_webDeveloper_popup .menu-right,
-	#appmenu-popup #ctraddon_menu_newBookmarksmenu #appmenu_bookmarksPopup .menu-right,
-	#appmenu-popup #ctraddon_menu_newHistorymenu #appmenu_historyMenupopup .menu-right{
-	  -moz-padding-start:20px !important;
-	  -moz-margin-start: 0px !important;
-	}
-	
-
 	#navigator-toolbox #nav-bar #ctraddon_appbutton image{
 	  margin-left: 0px !important;
 	  margin-right: 0px !important;
@@ -171,16 +158,13 @@
 	#appmenu-popup #appmenu_addons{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons.png");
 	}
-	
-	#appmenu-popup .menu-iconic-left {
-      -moz-padding-end: 4px !important;
-	}
-	
-	#appmenu-popup #appmenu_recentlyClosedTabsMenu,
-	#appmenu-popup #appmenu_recentlyClosedWindowsMenu{
-	  -moz-margin-start: 21px !important;
-	}
 
+	#main-window[defaultfxtheme="true"] #appmenu-popup #appmenu-editmenu,
+	#main-window[defaultfxtheme="true"] #appmenu-popup #appmenu-editmenu .menu-right{
+	  -moz-padding-start: 0px !important;
+	  -moz-margin-start: 0px !important;	
+	}
+	
 	/* ctr addonbar */
 	#ctraddon_addon-bar:not(:-moz-lwtheme),
 	#ctraddon_addon-bar:not(:-moz-lwtheme)[customizing] {
@@ -218,6 +202,11 @@
 	/* window controls*/
 	#main-window toolbar #ctraddon_window-controls {
 	  visibility: collapse !important;
+	}
+
+	/* OSX default theme should display grey CTR icons in palette */
+	#main-window[defaultfxtheme="true"] toolbarpaletteitem[place="palette"] :-moz-any(#ctraddon_appbutton, #PanelUI-menu-button,#ctraddon_history-menu-toolbar-button,#ctraddon_bookmarks-menu-toolbar-button,#ctraddon_history-button,#ctraddon_bookmarks-button) image{
+	  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='colorize'><feColorMatrix type='saturate' in='SourceGraphic' values = '0'/></filter></svg>#colorize") !important;
 	}
 
 }

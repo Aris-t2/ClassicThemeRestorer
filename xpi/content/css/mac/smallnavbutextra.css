@@ -25,7 +25,7 @@
 	  -moz-appearance: none !important;
 	  border: 1px solid transparent !important;
 	  background: none !important;
-	  border-color: none !important;
+	  border-color: transparent !important;
 	  box-shadow: none !important;
 	  transition-duration: 0ms !important;
 	  transition-property: none !important;
@@ -56,6 +56,9 @@
 	#nav-bar .toolbarbutton-1 {
       min-width:24px !important;
     }
+	#nav-bar #urlbar-icons .toolbarbutton-1 {
+	  min-width: unset !important;
+	}
 
     #nav-bar * .toolbarbutton-icon,
 	#nav-bar * {
@@ -122,26 +125,26 @@
 	  margin-left: 4px !important; /* for both ltr and rtl*/
 	}
 	
-	#main-window #navigator-toolbox #urlbar-wrapper {
+	#main-window #navigator-toolbox #nav-bar #urlbar-wrapper {
 	  -moz-box-align: center !important;
 	}
 	
-	#main-window[defaultfxtheme="true"] #urlbar{
+	#main-window[defaultfxtheme="true"] #nav-bar #urlbar{
 	  border: 1px solid !important;
 	  border-color: #626262 #787878 #8c8c8c !important;
 	}
 	@media (-moz-mac-lion-theme) {
-	  #main-window[defaultfxtheme="true"] #urlbar {
+	  #main-window[defaultfxtheme="true"] #nav-bar #urlbar {
 		border-color: hsla(0,0%,0%,.35) hsla(0,0%,0%,.25) hsla(0,0%,0%,.15) !important;
 	  }
 	}
 	@media not all and (-moz-mac-lion-theme) {
-	  #main-window[defaultfxtheme="true"] #urlbar:-moz-window-inactive {
+	  #main-window[defaultfxtheme="true"] #nav-bar #urlbar:-moz-window-inactive {
 		border-color: rgba(146, 146, 146, 0.84) !important;
 	  }
 	}
 	
-	#main-window[defaultfxtheme="true"] #urlbar[focused]{
+	#main-window[defaultfxtheme="true"] #nav-bar #urlbar[focused]{
 	  border-color: -moz-mac-focusring !important;
 	}
 	
@@ -154,7 +157,7 @@
 	#navigator-toolbox #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
 	#navigator-toolbox #nav-bar .toolbarbutton-1 {
 	  padding: 0px 0px !important;
-	  margin: 0.5px 0 0 0 !important;
+	  margin: 1px 0 !important;
 	}
 	
 	#navigator-toolbox #nav-bar #bookmarks-menu-button .toolbarbutton-menubutton-dropmarker .dropmarker-icon{
@@ -164,26 +167,9 @@
 	  -moz-margin-start:-5px !important;
 	}
 	
-	/* star button in urlbar support */
-	#navigator-toolbox  #nav-bar #urlbar-container #bookmarks-menu-button {
-      -moz-appearance: none !important;
-      background: unset !important;
-      box-shadow: unset !important;
-	  border: unset !important;
-    }
-
-	#navigator-toolbox #nav-bar #urlbar-container #bookmarks-menu-button > .toolbarbutton-menubutton-button {
-	  -moz-appearance: none !important;
-	  padding: 0px 0px !important;
-	  background: none !important;
-	  border: 0px solid !important;
-	  margin: -8px 0 !important;
-	  box-shadow: none !important;
-	}
-	#navigator-toolbox #nav-bar #urlbar-container  #bookmarks-menu-button > .toolbarbutton-menubutton-button:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]):hover > .toolbarbutton-icon {
-      background-image: linear-gradient(hsla(0,0%,100%,.0), hsla(0,0%,100%,.0)) !important;
-      border-color: hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) !important;
-      box-shadow: none !important;
+	#main-window #navigator-toolbox #nav-bar #bookmarks-menu-button{
+	  margin-top: 0px !important;
+	  margin-bottom: 0px !important;
 	}
 	
 	/*buttons with SVG images*/
@@ -194,11 +180,6 @@
 	  height: auto !important;
 	}
 	
-	/*Jetpacks toggle button support*/
-	toolbarbutton[id^="toggle-button-"] .toolbarbutton-icon {
-	  width:22px !important;
-	}
-
 	/* The Fox, only better add-on support*/
 	#navigator-toolbox[slimChrome="true"] #nav-bar{
 	  padding-bottom:2px !important;

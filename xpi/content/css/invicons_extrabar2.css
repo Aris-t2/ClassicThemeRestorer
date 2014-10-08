@@ -1,0 +1,63 @@
+@import url(chrome://ctraddon_os_special/skin/invicons_extrabarextra2.css);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+  @media not all and (min-resolution: 2dppx) {
+	#ctraddon_extra-bar2 :-moz-any(#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_bookmarks-menu-toolbar-button,#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_history-menu-toolbar-button) .toolbarbutton-icon,
+	#ctraddon_extra-bar2 :-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button:not([starred]), #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #switch-to-metro-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #web-apps-button),
+	#ctraddon_extra-bar2 #panic-button:not([open]),
+	#ctraddon_extra-bar2 #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+	  list-style-image: url(chrome://browser/skin/Toolbar-inverted.png) !important;
+	}
+	#ctraddon_extra-bar2 #sync-button[status="active"],
+	#ctraddon_extra-bar2 #sync-button[status="active"]:hover:active:not([disabled="true"]) {
+	  list-style-image: url("chrome://browser/skin/syncProgress-toolbar-inverted.png") !important;
+	}
+	#ctraddon_extra-bar2 #downloads-button:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon {
+	  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"),
+								  0, 198, 18, 180) center no-repeat !important;
+	}
+	#ctraddon_extra-bar2 #downloads-button:not([counter]):not([attention]) > #downloads-indicator-anchor > #downloads-button-progress-area > #downloads-indicator-counter {
+	  background-image: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"), 0, 198, 18, 180) !important;
+	}
+	#ctraddon_extra-bar2 .toolbarbutton-1 > .toolbarbutton-menu-dropmarker,
+	#ctraddon_extra-bar2 .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
+	  list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png") !important;
+	}
+	#ctraddon_extra-bar2 > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-up,
+	#ctraddon_extra-bar2 > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-down {
+	  list-style-image: url(chrome://browser/skin/tabbrowser/tab-arrow-left-inverted.png) !important;
+	}
+	#ctraddon_extra-bar2 > #alltabs-button,
+	#ctraddon_extra-bar2 > toolbarpaletteitem > #alltabs-button {
+	  list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png") !important;
+	}
+	#ctraddon_extra-bar2 #switch-to-metro-button[cui-areatype="toolbar"] {
+	  list-style-image: url(chrome://browser/skin/Metro_Glyph-inverted.png) !important;
+	}
+	
+	#ctraddon_extra-bar2 #ctraddon_back-button:not([cui-areatype="menu-panel"]) {
+	  -moz-image-region: rect(0, 54px, 18px, 36px) !important;
+	}
+	#ctraddon_extra-bar2 #ctraddon_forward-button:not([cui-areatype="menu-panel"]) {
+	  -moz-image-region: rect(0, 72px, 18px, 54px) !important;
+	}
+	#ctraddon_extra-bar2 #ctraddon_stop-button:not([cui-areatype="menu-panel"]){
+	  -moz-image-region: rect(0, 108px, 18px, 90px) !important;
+	}
+	#ctraddon_extra-bar2 #ctraddon_reload-button:not([cui-areatype="menu-panel"]){
+	  -moz-image-region: rect(0, 90px, 18px, 72px) !important;
+	}
+	#ctraddon_extra-bar2 #ctraddon_bookmarks-menu-toolbar-button:not([cui-areatype="menu-panel"]),
+	#ctraddon_extra-bar2 #ctraddon_bookmarks-button:not([cui-areatype="menu-panel"]) {
+	  -moz-image-region: rect(0, 162px, 18px, 144px) !important;
+	}
+	#ctraddon_extra-bar2 #ctraddon_history-button:not([cui-areatype="menu-panel"]),
+	#ctraddon_extra-bar2 #ctraddon_history-menu-toolbar-button:not([cui-areatype="menu-panel"]){
+	  -moz-image-region: rect(0, 180px, 18px, 162px) !important;
+	}
+	#ctraddon_extra-bar2 #loop-call-button:not([cui-areatype="menu-panel"]) > .toolbarbutton-badge-container {
+	  list-style-image: url(chrome://browser/skin/loop/toolbar-inverted.png) !important;
+	}
+  }
+}

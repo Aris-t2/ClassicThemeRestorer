@@ -71,7 +71,7 @@
 	}
 
 	#titlebar-placeholder-on-TabsToolbar-for-captions-buttons{
-	  -moz-margin-start: 0px !important;
+	  -moz-margin-start: 4px !important;
 	}
 	
 	/* TU workaround */
@@ -113,7 +113,6 @@
 		
 		.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:hover):not(:-moz-lwtheme){
 		  background-size: 100% 100% !important;
-		  /*background-image: linear-gradient(to top, #868d94 0px, transparent 1px),linear-gradient(to top,#b4c0cc,#c8d4e1,#d1deec) !important;*/
 		}
 		
 		.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]) {

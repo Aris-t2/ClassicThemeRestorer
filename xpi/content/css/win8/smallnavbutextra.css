@@ -97,6 +97,9 @@
 	#nav-bar .toolbarbutton-1 {
       min-width:22px !important;
     }
+	#nav-bar #urlbar-icons .toolbarbutton-1 {
+	  min-width: unset !important;
+	}
 
     #nav-bar * .toolbarbutton-icon,
 	#nav-bar * {
@@ -176,47 +179,6 @@
 	  margin-bottom: 2px !important;
 	}
 
-	/* star button in urlbar support */
-	#navigator-toolbox  #nav-bar #urlbar-container #bookmarks-menu-button {
-      -moz-appearance: none !important;
-      background: unset !important;
-      box-shadow: unset !important;
-	  border: unset !important;
-    }
-
-	#navigator-toolbox #nav-bar #urlbar-container #bookmarks-menu-button > .toolbarbutton-menubutton-button {
-	  -moz-appearance: none !important;
-	  padding: 0px 0px !important;
-	  background: none !important;
-	  border: 0px solid !important;
-      margin-top: -7px !important;
-      margin-bottom: -8px !important;
-      -moz-margin-start: 2px !important;
-      -moz-margin-end: 2px !important;
-
-	  box-shadow: none !important;
-	}
-	#navigator-toolbox #nav-bar #urlbar-container  #bookmarks-menu-button > .toolbarbutton-menubutton-button:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]):hover > .toolbarbutton-icon {
-      background-image: linear-gradient(hsla(0,0%,100%,.0), hsla(0,0%,100%,.0)) !important;
-      border-color: hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) !important;
-      box-shadow: none !important;
-	}
-	
-	#main-window #navigator-toolbox #nav-bar #urlbar-container #bookmarks-menu-button .toolbarbutton-icon {
-	  padding: 0px 4px !important;
-	  margin: -1px 0 0 0px !important;
-	}
-	
-	/* rss in urlbar addon */
-	#navigator-toolbox #nav-bar #urlbar-container #feed-button {
-      -moz-appearance: none !important;
-      background: unset !important;
-      box-shadow: unset !important;
-	  border: unset !important;
-      padding: unset !important;
-      margin: -8px -4px !important;
-    }
-	
 	/*buttons with SVG images*/
 	#nav-bar .toolbarbutton-1[image$="svg"] .toolbarbutton-icon {
 	  max-width: 22px !important;
@@ -225,8 +187,9 @@
 	  height: auto !important;
 	}
 	
-	/*Jetpacks toggle button support*/
-	toolbarbutton[id^="toggle-button-"] .toolbarbutton-icon {
+	/*Jetpacks toggle & action buttons support*/
+	#nav-bar toolbarbutton[id^="action-button-"] .toolbarbutton-icon,
+	#nav-bar toolbarbutton[id^="toggle-button-"] .toolbarbutton-icon {
 	  width:22px !important;
 	}
 

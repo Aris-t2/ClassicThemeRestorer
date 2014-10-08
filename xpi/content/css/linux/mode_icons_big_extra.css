@@ -1,8 +1,9 @@
+/*AGENT_SHEET*/
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 	#nav-bar :-moz-any(#back-button, #forward-button)[cui-areatype="toolbar"] {
-	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
 	
 	#nav-bar #back-button:not(:hover) > .toolbarbutton-icon,
@@ -10,7 +11,7 @@
 	#nav-bar #back-button:hover[disabled] > .toolbarbutton-icon,
 	#nav-bar #forward-button:hover[disabled] > .toolbarbutton-icon{
 		-moz-appearance: none !important;
-		border: 0px solid transparent !important;
+		border: 1px solid transparent !important;
 		box-shadow: none !important;
 		background: none !important;
 		border-radius: 2.5px !important;
@@ -23,7 +24,7 @@
 	#nav-bar #back-button:hover > .toolbarbutton-icon,
 	#nav-bar #forward-button:hover > .toolbarbutton-icon{
 		-moz-appearance: none !important;
-		border: 0px solid #c8d4e0 !important;
+		border: 1px solid #c8d4e0 !important;
 		border-radius: 2.5px !important;
 		box-shadow: none !important;
 		transition-property: none !important;
@@ -41,8 +42,8 @@
 	}
 
 	#main-window[fx31="true"] #navigator-toolbox #nav-bar #urlbar-container #forward-button {
-	  margin-top:-10px !important;
-	  margin-bottom:-10px !important;
+	  margin-top:-6px !important;
+	  margin-bottom:-6px !important;
 	}
 	
 	#nav-bar #forward-button {
@@ -53,7 +54,7 @@
 	  margin-left:10px !important;
 	  margin-right:10px !important;
 	}
-	
+
 	#nav-bar #back-button > .toolbarbutton-icon {
 	  padding-top: 2px !important;
 	  padding-bottom: 2px !important;
@@ -107,6 +108,16 @@
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + * {
 	  -moz-padding-start: 2px !important;
 	  transition: none !important;
+	}
+	
+	#nav-bar #loop-call-button[cui-areatype="toolbar"] > .toolbarbutton-badge-container  image {
+	  min-width:42px !important;
+	  height:36px !important;
+	}
+	
+	#nav-bar :-moz-any(#back-button, #forward-button, #ctraddon_back-button, #ctraddon_forward-button, #ctraddon_appbutton, #ctraddon_history-button, #ctraddon_history-menu-toolbar-button, #ctraddon_bookmarks-menu-toolbar-button,#ctraddon_bookmarks-button, #PanelUI-menu-button, #cut-button, #copy-button, #paste-button, #zoom-out-button, #zoom-in-button, #webrtc-status-button,#nav-bar-overflow-button) image,
+	#nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+	  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='colorize'><feColorMatrix type='saturate' in='SourceGraphic' values = '0'/></filter></svg>#colorize") !important;
 	}
 
 }

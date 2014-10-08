@@ -1,0 +1,21 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	@media not all and (min-resolution: 2dppx) {
+
+		#TabsToolbar #new-tab-button {
+		  list-style-image: url(chrome://browser/skin/Toolbar-inverted.png) !important;
+		}
+		#main-window #navigator-toolbox #TabsToolbar #new-tab-button:not(:-moz-lwtheme),
+		#main-window #navigator-toolbox #TabsToolbar #new-tab-button,
+		#main-window #navigator-toolbox #TabsToolbar > toolbarpaletteitem > #new-tab-button {
+		  list-style-image: url(chrome://browser/skin/tabbrowser/newtab-inverted.png) !important;
+		}
+		#TabsToolbar > #alltabs-button,
+		#TabsToolbar > toolbarpaletteitem > #alltabs-button {
+		  list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png") !important;
+		}
+
+	}
+}

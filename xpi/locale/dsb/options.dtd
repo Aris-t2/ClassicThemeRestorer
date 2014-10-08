@@ -23,7 +23,7 @@
 <!ENTITY Ctr_tnot			"(Rejtarki nic górjejce)">
 
 <!ENTITY Ctr_tabcolors_t	"Rejarkowe barwy a tekst">
-<!ENTITY Ctr_icons_t		"Faworitowe a druge symbole">
+<!ENTITY Ctr_urlbar_t		"Urlbar settings">
 
 <!ENTITY Ctr_tabs			"Rejtarki">
 <!ENTITY Ctr_tabs0			"Wukulowaśone rejtarki (standard za Australis)">
@@ -45,6 +45,8 @@
 <!ENTITY Ctr_tabwidthinfo	"Maksimalna a minimalna šyrokosć wótwisujotej wót TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"Maksimalna a minimalna šyrokosć wótwisujotej wót TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
+<!ENTITY Ctr_emptyfavicon	"Prozny faworitowy symbol wótnowiś (jolic sedło njepóbitujo žeden)">
+<!ENTITY Ctr_noemptypticon	"Prozny faworitowy symbol z pśipětego rejtarka">
 <!ENTITY Ctr_closetab_0		"Rejtark zacyniś">
 <!ENTITY Ctr_closetab_1		"Jano na aktiwnem rejtarku">
 <!ENTITY Ctr_closetab_2		"Niźi">
@@ -80,6 +82,7 @@
 <!ENTITY Ctr_appbutmhi		"Wuša pozicija (jolic jo na rejtarkowej rědce)">
 <!ENTITY Ctr_appbutbdl		"Ramiki a slězynowe barwy schowaś">
 <!ENTITY Ctr_dblclclosefx	"Dwójne kliknjenje zacynja aktualne wokno">
+<!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
 
 <!ENTITY Ctr_ui				"Wužywarski pówjerch">
 <!ENTITY Ctr_nbiconsize0	"Atribut nawigaciskeje rědki stajiś">
@@ -87,16 +90,17 @@
 <!ENTITY Ctr_bfurlbarfix	"Ramikowy radius za adresowe rědki pópšawiś">
 <!ENTITY Ctr_backforward	"Pśesuwajobny tłocašk Slědk-Doprědka">
 <!ENTITY Ctr_hide_bf_popup	"Meni historije pśez tłocenje myškoweje tasty schowaś">
+<!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"Symbole kontekstowego menija boka pśez pomjenjenja wuměniś (slědk, dalej, stoj, znowego, bok ako cytańske znamje składowaś)">
 <!ENTITY Ctr_wincontrols	"Pśesuwajobne wóźeńske elementy połneje wobrazowki">
-<!ENTITY Ctr_starinurl		"Gwězdowy tłocašk w adresowej rědce (startujśo Firefox znowego!)">
-<!ENTITY Ctr_feedinurl		"Kanalowy tłocašk w adresowej rědce (startujśo Firefox znowego!)">
+<!ENTITY Ctr_emptyfavicon2	"Prozny a dypkaty faworitowy symbol pśez łopjenowy symbol wuměniś">
 <!ENTITY Ctr_mstatusbar		"Pśesuwajobny wobcerk statusoweje rědki">
-<!ENTITY Ctr_hideurelstop	"Tłocaška Stoj a Znowego adresowych rědkow schowaś">
+<!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
+<!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
 <!ENTITY Ctr_combrelstop	"Tłocaška Stoj a Znowego kombiněrowaś">
+<!ENTITY Ctr_stoprel1		"Wažny: Tłocašk Znowego za tłocaškom Stoj placěrowaś!">
 <!ENTITY Ctr_panelmenucol	"Pólowe menije: alternatiwna slězynowa barwa">
 <!ENTITY Ctr_hideprivmask	"Priwatny modus: maskowy pokazowaŕ schowaś">
-<!ENTITY Ctr_verifiedcolors	"Zeleny/módry identifikaciski kašćik za wobkšuśone websedła">
 <!ENTITY Ctr_findbar		"Pytańska rědka">
 <!ENTITY Ctr_findbar_def	"Standardna pozicija">
 <!ENTITY Ctr_findbar_top	"Górjejce">
@@ -107,8 +111,7 @@
 <!ENTITY Ctr_nav_txt_ico1	"Wjelike symbole pokazaś">
 <!ENTITY Ctr_nav_txt_ico2	"Symbole a tekst pokazaś">
 <!ENTITY Ctr_nav_txt_ico3	"Jano tekst pokazaś">
-<!ENTITY Ctr_stoprel0		"Nastajenja za tłocaška Znowego a Stoj">
-<!ENTITY Ctr_stoprel1		"Wažny: Tłocašk Znowego za tłocaškom Stoj placěrowaś!">
+<!ENTITY Ctr_nav_txt_exp	"Experimental attributes:">
 <!ENTITY Ctr_cpanelmenus	"Kompaktne pólowe menije (cytańske znamjenja, historija atd.)">
 <!ENTITY Ctr_hidezoomres	"Skalěrowańske elementy na symbolowej rědce: Tłocašk za slědkstajenje skalěrowanja schowaś">
 <!ENTITY Ctr_pmhidelabels	"Pólowy meni: Tekst tłocaškow schowaś">
@@ -118,6 +121,9 @@
 <!ENTITY Ctr_tabmokcolor	"Běła barwa za rejtarkowe tłocaški (zacyniś, nowy, kupki, wšykne nalicyś)">
 <!ENTITY Ctr_tabmokcolor2	"Běła barwa a śamna wóseń za tekst na njeaktiwnych rejtarkach">
 <!ENTITY Ctr_tabmokcolor3	"Běła barwa za rejtarkowe źěleńske smužki">
+
+<!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
+<!ENTITY Ctr_navthrobber2	"Add url or leave empty">
 
 <!ENTITY Ctr_tab_tf_info1	"Barwowe mjenja, heksadecimalne kody, rgb(a)- a hsl(a)-gódnoty se pódpěraju.">
 <!ENTITY Ctr_tab_tf_info2	"Zapódaśa se njepśespytuju!">
@@ -140,17 +146,22 @@
 <!ENTITY Ctr_bold			"Tucny">
 <!ENTITY Ctr_italic			"Kursiwny">
 
-<!ENTITY Ctr_favicon		"Faworitowy symbol">
-<!ENTITY Ctr_emptyfavicon	"Prozny faworitowy symbol wótnowiś (jolic sedło njepóbitujo žeden)">
-<!ENTITY Ctr_emptyfavicon2	"Prozny a dypkaty faworitowy symbol pśez łopjenowy symbol wuměniś">
-<!ENTITY Ctr_noemptypticon	"Prozny faworitowy symbol z pśipětego rejtarka">
-<!ENTITY Ctr_faviconurl0	"Symbole w adresowej rědce">
+<!ENTITY Ctr_urlbar			"Urlbar">
+<!ENTITY Ctr_starinurl		"Gwězdowy tłocašk w adresowej rědce (startujśo Firefox znowego!)">
+<!ENTITY Ctr_feedinurl		"Kanalowy tłocašk w adresowej rědce (startujśo Firefox znowego!)">
+<!ENTITY Ctr_hideurelstop	"Tłocaška Stoj a Znowego adresowych rědkow schowaś">
+<!ENTITY Ctr_hideprbutton	"Hide notification icon when a popup gets blocked">
+<!ENTITY Ctr_urlbar_ib		"Urlbars identity box">
+<!ENTITY Ctr_verifiedcolors	"Zeleny/módry identifikaciski kašćik za wobkšuśone websedła">
 <!ENTITY Ctr_faviconurl		"Faworitowy symbol w adresowej rědce (Firefox znowego startowaś!)">
 <!ENTITY Ctr_padlock_hid	"Pytkowy symbol (schowany)">
 <!ENTITY Ctr_padlock_def	"Pytkowy symbol (standard)">
 <!ENTITY Ctr_padlock_cla	"Pytkowy symbol (klasiski)">
 <!ENTITY Ctr_padlock_mod	"Pytkowy symbol (moderny)">
 <!ENTITY Ctr_padlock_ext	"Wěstotne symbole">
+<!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
+
+<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
 
 <!ENTITY Ctr_invicons		"Inwertěrowane symbole">
 <!ENTITY Ctr_menubar		"Menijowa rědka">
@@ -176,6 +187,8 @@
 <!ENTITY Ctr_nonavbarbg		"Nawigaciska rědka: slězynowu barwu wótpóraś">
 <!ENTITY Ctr_nonavborder	"Rědka cytańskich znamjenjow: górny ramik symbolowej rědce pśidaś">
 <!ENTITY Ctr_nonavtbborder	"Górne symbolowe rědki: ramiki symboloweje rědki wótpóraś">
+<!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
+<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('chevron') at toolbars end">
 
 <!ENTITY Ctr_closeabarbut	"Tłocašk 'Zacyniś' na rědce dodankow schowaś">
 <!ENTITY Ctr_highaddonsbar	"Wusokosć symboloweje rědki pówětšyś">
@@ -190,7 +203,11 @@
 <!ENTITY Ctr_toolsitem		"Menijowy zapisk w meniju Rědy">
 <!ENTITY Ctr_appmenuitem	"Menijowy zapisk w meniju nałožeńskich tłocaškow">
 <!ENTITY Ctr_contextitem	"Menijowy zapisk w kontekstowem meniju symbolowych rědkow">
+<!ENTITY Ctr_puictrbutton	"Button in main panel menu">
+
+<!ENTITY Ctr_otherctroptns	"Other settings">
 <!ENTITY Ctr_cuibotbuttons	"Wósebne tłocaški w 'pśiměrjeńskem' modusu">
+<!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
 
 
 <!ENTITY Ctr_pw_settings	"Nastajenja">
@@ -207,3 +224,6 @@
 
 <!ENTITY Ctr_addon-bar.accesskey	"R">
 <!ENTITY Ctr_extrabar.accesskey		"P">
+<!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
+<!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
+<!ENTITY appMenuGettingStarted.label	"Getting started">

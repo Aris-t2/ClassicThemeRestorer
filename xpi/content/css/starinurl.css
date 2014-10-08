@@ -3,7 +3,8 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	#nav-bar #bookmarks-menu-button,
+	toolbar #bookmarks-menu-button,
+	#BMB_bookmarksPopup,
 	#urlbar[pageproxystate="invalid"] > #urlbar-icons #bookmarks-menu-button {
 	  visibility:collapse !important;
 	}
@@ -41,16 +42,30 @@
 	#main-window:not([defaultfxtheme="true"]) #urlbar-icons #bookmarks-menu-button {
 	  margin:-8px 0px !important;
 	}
-	#main-window:not([defaultfxtheme="true"]) #nav-bar #urlbar-icons #bookmarks-menu-button .toolbarbutton-icon {
+	#main-window:not([defaultfxtheme="true"]) toolbar #urlbar-icons #bookmarks-menu-button .toolbarbutton-icon {
 	  margin: -2px 0px !important;
 	}
-	#main-window[defaultfxtheme="true"] #urlbar-icons #bookmarks-menu-button {
-	  margin:-8px -4px !important;
+
+	#main-window[defaultfxtheme="true"] toolbar #urlbar-icons #bookmarks-menu-button {
+	  -moz-appearance:none !important;
+	  margin: -8px 1px !important;
+	  padding: 0 !important;
+	  min-width: unset !important;
 	}
-	#main-window[defaultfxtheme="true"] #nav-bar #urlbar-icons #bookmarks-menu-button .toolbarbutton-icon {
-	  margin: -8px 0px !important;
+	#main-window[defaultfxtheme="true"] toolbar #urlbar-icons #bookmarks-menu-button .toolbarbutton-menubutton-button {
+	  -moz-appearance:none !important;
+	  margin: -8px 0 !important;
+	  padding: 0 !important;
 	}
-	
+	#main-window[defaultfxtheme="true"] toolbar #urlbar-icons #bookmarks-menu-button .toolbarbutton-icon {
+	  -moz-appearance:none !important;
+	  margin-top: -8px !important;
+	  margin-bottom: -8px !important;
+	  -moz-margin-start:-1px !important;
+	  -moz-margin-end:0px !important;
+	  padding: 0 !important;
+	}
+
 	#bookmarked-notification-dropmarker-icon,
 	#bookmarked-notification {
 	  visibility: collapse !important;

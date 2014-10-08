@@ -3,7 +3,7 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	#nav-bar :-moz-any(#back-button, #forward-button)[cui-areatype="toolbar"] {
-	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
 	
 	#nav-bar #back-button:not(:hover) > .toolbarbutton-icon,
@@ -126,6 +126,16 @@
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + *:-moz-locale-dir(rtl) {
 	  padding-right: 2px !important;
 	  transition: none !important;
+	}
+
+	#nav-bar #loop-call-button[cui-areatype="toolbar"] > .toolbarbutton-badge-container  image {
+	  min-width:30px !important;
+	  height:30px !important;
+	}
+
+	#nav-bar :-moz-any(#back-button, #forward-button, #ctraddon_back-button, #ctraddon_forward-button, #ctraddon_appbutton, #ctraddon_history-button, #ctraddon_history-menu-toolbar-button, #ctraddon_bookmarks-menu-toolbar-button,#ctraddon_bookmarks-button, #PanelUI-menu-button, #cut-button, #copy-button, #paste-button, #zoom-out-button, #zoom-in-button, #webrtc-status-button,#nav-bar-overflow-button) image,
+	#nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+	  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='colorize'><feColorMatrix type='saturate' in='SourceGraphic' values = '0.4'/></filter></svg>#colorize") !important;
 	}
 
 }

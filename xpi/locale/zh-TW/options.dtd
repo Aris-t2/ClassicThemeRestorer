@@ -23,7 +23,7 @@
 <!ENTITY Ctr_tnot			"(分頁列不置頂)">
 
 <!ENTITY Ctr_tabcolors_t	"色彩">
-<!ENTITY Ctr_icons_t		"網站圖示 &amp; 工具列圖示">
+<!ENTITY Ctr_urlbar_t		"Urlbar settings">
 
 <!ENTITY Ctr_tabs			"分頁">
 <!ENTITY Ctr_tabs0			"弧形分頁 (Australis 預設值)">
@@ -45,6 +45,8 @@
 <!ENTITY Ctr_tabwidthinfo	"分頁的最小和最大寬度由 TabMixPlus 控制">
 <!ENTITY Ctr_tabwidthinfo2	"分頁的最小和最大寬度由 TabUtilities 控制">
 <!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
+<!ENTITY Ctr_emptyfavicon	"開啟的網頁若未提供網站圖示，仍在該分頁顯示空圖示">
+<!ENTITY Ctr_noemptypticon	"從釘選分頁移除空圖示">
 <!ENTITY Ctr_closetab_0		"關閉按鈕">
 <!ENTITY Ctr_closetab_1		"僅在目前的分頁顯示關閉按鈕">
 <!ENTITY Ctr_closetab_2		"不顯示關閉按鈕">
@@ -80,6 +82,7 @@
 <!ENTITY Ctr_appbutmhi		"提高位置 (當顯示於分頁列時)">
 <!ENTITY Ctr_appbutbdl		"隱藏邊框和背景顏色">
 <!ENTITY Ctr_dblclclosefx	"在標題列的火狐橙上連按兩下，則關閉目前的視窗">
+<!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
 
 <!ENTITY Ctr_ui				"介面">
 <!ENTITY Ctr_nbiconsize0	"設定瀏覽工具列屬性">
@@ -87,16 +90,17 @@
 <!ENTITY Ctr_bfurlbarfix	"當「回到上一頁按鈕可移動」和「小圖示按鈕」模式下，修正網址列圓角半徑">
 <!ENTITY Ctr_backforward	"使「回到上一頁按鈕」可移動">
 <!ENTITY Ctr_hide_bf_popup	"當滑鼠長按時，不顯示分頁歷史瀏覽選單">
+<!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"右鍵選單的「回到上一頁、前進下一頁、停止載入、重新載入、加入書籤」由橫排圖示換回縱排文字風格">
 <!ENTITY Ctr_wincontrols	"可移動的全螢幕視窗控制項">
-<!ENTITY Ctr_starinurl		"星形書籤按鈕併入網址列 (需重啟 Firefox!)">
-<!ENTITY Ctr_feedinurl		"網址列中顯示消息來源訂閱按鈕 (需重啟 Firefox!)">
+<!ENTITY Ctr_emptyfavicon2	"以白紙圖示取代空圖示">
 <!ENTITY Ctr_mstatusbar		"使狀態列可移動">
-<!ENTITY Ctr_hideurelstop	"隱藏網址列中的停止與重新載入按鈕">
+<!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
+<!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
 <!ENTITY Ctr_combrelstop	"合併停止與重新載入按鈕">
+<!ENTITY Ctr_stoprel1		"工具列: 將重新載入按鈕放在停止按鈕之後!">
 <!ENTITY Ctr_panelmenucol	"面板選單: 換一個背景色彩">
 <!ENTITY Ctr_hideprivmask	"隱私瀏覽模式下，隱藏面具圖示">
-<!ENTITY Ctr_verifiedcolors	"已驗證的網站識別鈕顯示為綠色/藍色">
 <!ENTITY Ctr_findbar		"尋找列位於">
 <!ENTITY Ctr_findbar_def	"預設位置">
 <!ENTITY Ctr_findbar_top	"頂部">
@@ -107,17 +111,18 @@
 <!ENTITY Ctr_nav_txt_ico1	"顯示大圖示">
 <!ENTITY Ctr_nav_txt_ico2	"顯示圖示與文字">
 <!ENTITY Ctr_nav_txt_ico3	"僅顯示文字">
-<!ENTITY Ctr_stoprel0		"停止和重新載入按鈕設定">
-<!ENTITY Ctr_stoprel1		"工具列: 將重新載入按鈕放在停止按鈕之後!">
+<!ENTITY Ctr_nav_txt_exp	"Experimental attributes:">
 <!ENTITY Ctr_cpanelmenus	"緊湊的面板選單(書籤、歷史等等.)">
 <!ENTITY Ctr_hidezoomres	"當縮放控制按鈕置於工具列上時，隱藏工具列上的縮放重設按鈕">
 <!ENTITY Ctr_pmhidelabels	"面板選單: 隱藏按鈕文字標籤">
 <!ENTITY Ctr_menupopupscr	"彈出式選單: 用捲軸取代捲動箭頭">
-
 <!ENTITY Ctr_fxmockup		"Firefox 樣式">
 <!ENTITY Ctr_tabmokcolor	"白色分頁按鈕 (關閉、新增、分頁群組、列出所有分頁)">
 <!ENTITY Ctr_tabmokcolor2	"非目前的分頁，其字型使用白色文字，並加上文字陰影">
 <!ENTITY Ctr_tabmokcolor3	"白色分頁分隔線">
+
+<!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
+<!ENTITY Ctr_navthrobber2	"Add url or leave empty">
 
 <!ENTITY Ctr_tab_tf_info1	"可使用色彩名稱, hexcodes, rgb(a) 和 hsl(a) 值.">
 <!ENTITY Ctr_tab_tf_info2	"沒有防呆機制（輸入無效值，不會有警告）!">
@@ -140,17 +145,22 @@
 <!ENTITY Ctr_bold			"粗體">
 <!ENTITY Ctr_italic			"斜體">
 
-<!ENTITY Ctr_favicon		"網站圖示設定">
-<!ENTITY Ctr_emptyfavicon	"開啟的網頁若未提供網站圖示，仍在該分頁顯示空圖示">
-<!ENTITY Ctr_emptyfavicon2	"以白紙圖示取代空圖示">
-<!ENTITY Ctr_noemptypticon	"從釘選分頁移除空圖示">
-<!ENTITY Ctr_faviconurl0	"網址列裡的圖示">
+<!ENTITY Ctr_urlbar			"Urlbar">
+<!ENTITY Ctr_starinurl		"星形書籤按鈕併入網址列 (需重啟 Firefox!)">
+<!ENTITY Ctr_feedinurl		"網址列中顯示消息來源訂閱按鈕 (需重啟 Firefox!)">
+<!ENTITY Ctr_hideurelstop	"隱藏網址列中的停止與重新載入按鈕">
+<!ENTITY Ctr_hideprbutton	"Hide notification icon when a popup gets blocked">
+<!ENTITY Ctr_urlbar_ib		"Urlbars identity box">
+<!ENTITY Ctr_verifiedcolors	"已驗證的網站識別鈕顯示為綠色/藍色">
 <!ENTITY Ctr_faviconurl		"網址列顯示網站圖示 (需重啟 Firefox!)">
 <!ENTITY Ctr_padlock_hid	"鎖頭 (隱藏)">
 <!ENTITY Ctr_padlock_def	"鎖頭 (預設)">
 <!ENTITY Ctr_padlock_cla	"鎖頭 (經典風格)">
 <!ENTITY Ctr_padlock_mod	"鎖頭 (現代風格)">
 <!ENTITY Ctr_padlock_ext	"安全圖示">
+<!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
+
+<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
 
 <!ENTITY Ctr_invicons		"圖示反相">
 <!ENTITY Ctr_menubar		"選單列">
@@ -176,6 +186,8 @@
 <!ENTITY Ctr_nonavbarbg		"瀏覽工具列: 移除背景色彩">
 <!ENTITY Ctr_nonavborder	"書籤列: 顯示上邊框">
 <!ENTITY Ctr_nonavtbborder	"上方工具列: 移除工具列邊框">
+<!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
+<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('chevron') at toolbars end">
 
 <!ENTITY Ctr_closeabarbut	"隱藏附加元件關閉按鈕">
 <!ENTITY Ctr_highaddonsbar	"增加附加元件列高度">
@@ -190,7 +202,11 @@
 <!ENTITY Ctr_toolsitem		"工具選單中顯示 Classic Theme Restorer 項目">
 <!ENTITY Ctr_appmenuitem	"火狐橙選單中顯示 Classic Theme Restorer 項目">
 <!ENTITY Ctr_contextitem	"工具列右鍵選單中顯示 Classic Theme Restorer 項目">
+<!ENTITY Ctr_puictrbutton	"Button in main panel menu">
+
+<!ENTITY Ctr_otherctroptns	"Other settings">
 <!ENTITY Ctr_cuibotbuttons	"介面自訂模式中，更豐富的按鈕自訂選項">
+<!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
 
 
 <!ENTITY Ctr_pw_settings	"設定">
@@ -207,3 +223,6 @@
 
 <!ENTITY Ctr_addon-bar.accesskey	"A">
 <!ENTITY Ctr_extrabar.accesskey		"D">
+<!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
+<!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
+<!ENTITY appMenuGettingStarted.label	"Getting started">

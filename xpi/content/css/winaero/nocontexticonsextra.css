@@ -30,6 +30,10 @@
 	#context-bookmarkpage:before{
 	  -moz-margin-start:32px !important;
 	}
+	
+	#context-navigation{
+	  margin-bottom:-4px !important;
+	}
 
 	@media all and (-moz-windows-classic) {
 		#context-back:before,
@@ -38,6 +42,9 @@
 		#context-stop:before,
 		#context-bookmarkpage:before{
 		  -moz-margin-start:18px !important;
+		}
+		#context-navigation{
+		  margin-bottom:-5px !important;
 		}
 	}
 

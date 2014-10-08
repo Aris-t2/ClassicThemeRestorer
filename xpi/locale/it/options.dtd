@@ -23,7 +23,7 @@
 <!ENTITY Ctr_tnot			"(schede in basso)">
 
 <!ENTITY Ctr_tabcolors_t	"Colori personalizzati">
-<!ENTITY Ctr_icons_t		"Favicon e icone">
+<!ENTITY Ctr_urlbar_t		"Urlbar settings">
 
 <!ENTITY Ctr_tabs			"Schede">
 <!ENTITY Ctr_tabs0			"Schede con angoli arrotondati (predefinito in Australis)">
@@ -45,6 +45,8 @@
 <!ENTITY Ctr_tabwidthinfo	"La larghezza minima e massima delle schede è definita da TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"La larghezza minima e massima delle schede è definita da TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
+<!ENTITY Ctr_emptyfavicon	"Nei siti che non hanno una favicon usa la vecchia favicon vuota">
+<!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tab">
 <!ENTITY Ctr_closetab_0		"Pulsante di chiusura)">
 <!ENTITY Ctr_closetab_1		"Nella scheda attiva">
 <!ENTITY Ctr_closetab_2		"Nessun pulsante di chiusura schede">
@@ -80,6 +82,7 @@
 <!ENTITY Ctr_appbutmhi		"In cima a tutto (se nella barra delle schede)">
 <!ENTITY Ctr_appbutbdl		"Nascondi bordi e colori di sfondo">
 <!ENTITY Ctr_dblclclosefx	"Doppio clic per chiudere la finestra corrente">
+<!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
 
 <!ENTITY Ctr_ui				"Interfaccia base">
 <!ENTITY Ctr_nbiconsize0	"Imposta attributo alla barra di navigazione">
@@ -87,16 +90,17 @@
 <!ENTITY Ctr_bfurlbarfix	"Correggi la curvatura della barra degli indirizzi per i pulsanti Avanti e Indietro mobili e i pulsanti piccoli">
 <!ENTITY Ctr_backforward	"Pulsante Indietro/Avanti mobile">
 <!ENTITY Ctr_hide_bf_popup	"Nascondi la cronologia tenendo premuto il pulsante Avanti/Indietro mobile">
+<!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"Replace page context menu icons with labels (back, forward, stop, reload, bookmark page)">
 <!ENTITY Ctr_wincontrols	"Angoli finestra mobili in modalità schermo intero">
-<!ENTITY Ctr_starinurl		"Stella nella barra degli indirizzi (riavviare Firefox)">
-<!ENTITY Ctr_feedinurl		"Feed-button in urlbar (riavviare Firefox!)">
+<!ENTITY Ctr_emptyfavicon2	"Sostituisci la favicon generica predefinita con un’icona a forma di foglio">
 <!ENTITY Ctr_mstatusbar		"Barra di stato mobile">
-<!ENTITY Ctr_hideurelstop	"Nascondi pulsanti Stop e Ricarica nella barra degli indirizzi">
+<!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
+<!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
 <!ENTITY Ctr_combrelstop	"Unisci i pulsanti Stop e Ricarica">
+<!ENTITY Ctr_stoprel1		"Importante: disporre il pulsante Ricarica a destra del pulsante Stop!">
 <!ENTITY Ctr_panelmenucol	"Colore di sfondo alternativo per i menu">
 <!ENTITY Ctr_hideprivmask	"Nascondi indicatore modalità di Navigazione anonima">
-<!ENTITY Ctr_verifiedcolors	"Indicatore connessioni sicure blu o verde per i siti verificati">
 <!ENTITY Ctr_findbar		"Barra di ricerca nel testo">
 <!ENTITY Ctr_findbar_def	"Posizione predefinita">
 <!ENTITY Ctr_findbar_top	"In alto">
@@ -107,8 +111,7 @@
 <!ENTITY Ctr_nav_txt_ico1	"Utilizza icone grandi">
 <!ENTITY Ctr_nav_txt_ico2	"Utilizza icone e testo">
 <!ENTITY Ctr_nav_txt_ico3	"Utilizza solo testo">
-<!ENTITY Ctr_stoprel0		"Impostazioni pulsante ‘Stop e ricarica’">
-<!ENTITY Ctr_stoprel1		"Importante: disporre il pulsante Ricarica a destra del pulsante Stop!">
+<!ENTITY Ctr_nav_txt_exp	"Experimental attributes:">
 <!ENTITY Ctr_cpanelmenus	"Pannello menu unificato (Segnalibri, Cronologia, ecc..)">
 <!ENTITY Ctr_hidezoomres	"Nascondi il pulsante per ripristinare il livello di zoom dalla barra degli strumenti">
 <!ENTITY Ctr_pmhidelabels	"Mostra solo icone nel pannello menu">
@@ -118,6 +121,9 @@
 <!ENTITY Ctr_tabmokcolor	"Utilizza il colore bianco per i pulsanti delle schede (Chiudi, Nuova, Gruppi, Mostra tutte)">
 <!ENTITY Ctr_tabmokcolor2	"Utilizza testo bianco con ombreggiatura scura nelle schede non attive">
 <!ENTITY Ctr_tabmokcolor3	"Utilizza separatori bianchi nella barra delle schede">
+
+<!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
+<!ENTITY Ctr_navthrobber2	"Add url or leave empty">
 
 <!ENTITY Ctr_tab_tf_info1	"È possibile usare nomi di colori (in inglese), valori esadecimali e i formati rgb(a) e hsl(a).">
 <!ENTITY Ctr_tab_tf_info2	"Nessuna validazione dell’input.">
@@ -140,17 +146,22 @@
 <!ENTITY Ctr_bold			"Grassetto">
 <!ENTITY Ctr_italic			"Corsivo">
 
-<!ENTITY Ctr_favicon		"Impostazioni favicon">
-<!ENTITY Ctr_emptyfavicon	"Nei siti che non hanno una favicon usa la vecchia favicon vuota">
-<!ENTITY Ctr_emptyfavicon2	"Sostituisci la favicon generica predefinita con un’icona a forma di foglio">
-<!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tab">
-<!ENTITY Ctr_faviconurl0	"Icons in urlbar">
+<!ENTITY Ctr_urlbar			"Urlbar">
+<!ENTITY Ctr_starinurl		"Stella nella barra degli indirizzi (riavviare Firefox)">
+<!ENTITY Ctr_feedinurl		"Feed-button in urlbar (riavviare Firefox!)">
+<!ENTITY Ctr_hideurelstop	"Nascondi pulsanti Stop e Ricarica nella barra degli indirizzi">
+<!ENTITY Ctr_hideprbutton	"Hide notification icon when a popup gets blocked">
+<!ENTITY Ctr_urlbar_ib		"Urlbars identity box">
+<!ENTITY Ctr_verifiedcolors	"Indicatore connessioni sicure blu o verde per i siti verificati">
 <!ENTITY Ctr_faviconurl		"Favicon nella barra degli indirizzi (riavviare Firefox)">
 <!ENTITY Ctr_padlock_hid	"Lucchetto (nascosto))">
 <!ENTITY Ctr_padlock_def	"Lucchetto (predefinito)">
 <!ENTITY Ctr_padlock_cla	"Lucchetto (classico)">
 <!ENTITY Ctr_padlock_mod	"Lucchetto (moderno)">
 <!ENTITY Ctr_padlock_ext	"Icone connessioni sicure">
+<!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
+
+<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
 
 <!ENTITY Ctr_invicons		"Icone invertite">
 <!ENTITY Ctr_menubar		"Barra dei menu">
@@ -176,6 +187,8 @@
 <!ENTITY Ctr_nonavbarbg		"Rimuovi colore di sfondo dalla barra di navigazione">
 <!ENTITY Ctr_nonavborder	"Aggiungi bordo superiore alla barra dei segnalibri">
 <!ENTITY Ctr_nonavtbborder	"Rimuovi i bordi alle barre degli strumenti posizionate in alto">
+<!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
+<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('chevron') at toolbars end">
 
 <!ENTITY Ctr_closeabarbut	"Nascondi pulsante di chiusura">
 <!ENTITY Ctr_highaddonsbar	"Aumenta l’altezza">
@@ -190,7 +203,11 @@
 <!ENTITY Ctr_toolsitem		"Aggiungi voci al menu Strumenti">
 <!ENTITY Ctr_appmenuitem	"Aggiungi voci nel menu del pulsante app">
 <!ENTITY Ctr_contextitem	"Voci nel menu contestuale delle barre degli strumenti">
+<!ENTITY Ctr_puictrbutton	"Button in main panel menu">
+
+<!ENTITY Ctr_otherctroptns	"Other settings">
 <!ENTITY Ctr_cuibotbuttons	"Aggiungi pulsanti in modalità personalizzazione">
+<!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
 
 
 <!ENTITY Ctr_pw_settings	"Impostazioni">
@@ -207,3 +224,6 @@
 
 <!ENTITY Ctr_addon-bar.accesskey	"B">
 <!ENTITY Ctr_extrabar.accesskey		"A">
+<!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
+<!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
+<!ENTITY appMenuGettingStarted.label	"Getting started">

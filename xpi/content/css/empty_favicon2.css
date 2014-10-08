@@ -16,24 +16,15 @@
 	display:none !important;
   }
   
-  /* "page-proxy-favicon" is despite of its name no real "favicon" */
-  /*#page-proxy-favicon:not(src):not([pageproxystate="valid"]),
-  .chromeUI #page-proxy-favicon[pageproxystate="valid"],
-  .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"],
-  .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"],
-  .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"],*/
   #tabbrowser-tabs .tab-icon-image:not(src),
   #alltabs-popup menuitem[image=""] > .menu-iconic-left > .menu-iconic-icon,
   .sidebar-placesTreechildren::-moz-tree-image(leaf),
   toolbaritem .bookmark-item:not(src):not([container]):not([type]),
+  menupopup .bookmark-item:not(src):not([container]):not([type]),
   .site-favicon:not(src) {
 	list-style-image: url("chrome://classic_theme_restorer/content/images/default_favicon.png") !important;
 	-moz-image-region: rect(0px, 16px, 16px, 0px) !important;
   }
-
-  /*#page-proxy-favicon:not(src) {
-	opacity: 1.0 !important;
-  }*/
 
   #all-sites-item > .site-container > .site-favicon {
 	list-style-image: none !important;

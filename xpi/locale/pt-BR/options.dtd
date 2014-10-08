@@ -23,7 +23,7 @@
 <!ENTITY Ctr_tnot			"(guias embaixo)">
 
 <!ENTITY Ctr_tabcolors_t	"Cores personalizadas">
-<!ENTITY Ctr_icons_t		"Ícones &amp; favicon">
+<!ENTITY Ctr_urlbar_t		"Urlbar settings">
 
 <!ENTITY Ctr_tabs			"Guias">
 <!ENTITY Ctr_tabs0			"Guias arredondadas (padrão Australis)">
@@ -45,6 +45,8 @@
 <!ENTITY Ctr_tabwidthinfo	"As larguras mínimas e máximas são controladas pelo TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"As larguras mínimas e máximas são controladas pelo TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
+<!ENTITY Ctr_emptyfavicon	"Restaurar o favicon vazio (se um site não oferecer um)">
+<!ENTITY Ctr_noemptypticon	"Remover o favicon vazio da guia pinada">
 <!ENTITY Ctr_closetab_0		"Fechar a Guia">
 <!ENTITY Ctr_closetab_1		"Só na guia ativa">
 <!ENTITY Ctr_closetab_2		"Em nenhuma">
@@ -80,6 +82,7 @@
 <!ENTITY Ctr_appbutmhi		"Posição superior (se na barra de guias)">
 <!ENTITY Ctr_appbutbdl		"Ocultar as bordas e cores do fundo">
 <!ENTITY Ctr_dblclclosefx	"Clicar duas vezes para fechar a janela atual">
+<!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
 
 <!ENTITY Ctr_ui				"Interface do Usuário Geral">
 <!ENTITY Ctr_nbiconsize0	"Definir o atributo da barra de navegação">
@@ -87,16 +90,17 @@
 <!ENTITY Ctr_bfurlbarfix	"Corrigir a borda-alcance das barras de URLs">
 <!ENTITY Ctr_backforward	"Botão móvel voltar-avançar">
 <!ENTITY Ctr_hide_bf_popup	"Ocultar o menú histórico ao pressionar o mouse">
+<!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"Substituir os ícones do menu de contexto da página com etiquetas (voltar, avançar, parar, recarregar, página de favoritos)">
 <!ENTITY Ctr_wincontrols	"Controles móveis da janela em tela cheia">
-<!ENTITY Ctr_starinurl		"Botão de favoritos na barra de URLs (reinicie o Firefox!)">
-<!ENTITY Ctr_feedinurl		"Botão Feed na barra de URL (reinicie o Firefox!)">
+<!ENTITY Ctr_emptyfavicon2	"Substituir o favicon genérico (vazio e pontilhado) pelo favicon de folha">
 <!ENTITY Ctr_mstatusbar		"Painel móvel da barra de status">
-<!ENTITY Ctr_hideurelstop	"Ocultar os botões parar e recarregar das barras de URLs">
+<!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
+<!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
 <!ENTITY Ctr_combrelstop	"Combinar os botões parar e recarregar">
+<!ENTITY Ctr_stoprel1		"Barra de ferramentas: colocar o botão recarregar após o botão parar!">
 <!ENTITY Ctr_panelmenucol	"Menus do painel: cor do fundo alternativa">
 <!ENTITY Ctr_hideprivmask	"Navegação privada: ocultar o indicador da máscara">
-<!ENTITY Ctr_verifiedcolors	"Caixa de identidade para sites verificados na cor verde/azul">
 <!ENTITY Ctr_findbar		"Barra de pesquisas">
 <!ENTITY Ctr_findbar_def	"Posição padrão">
 <!ENTITY Ctr_findbar_top	"Posição superior">
@@ -107,8 +111,7 @@
 <!ENTITY Ctr_nav_txt_ico1	"Exibir ícones grandes">
 <!ENTITY Ctr_nav_txt_ico2	"Exibir os ícones e o texto">
 <!ENTITY Ctr_nav_txt_ico3	"Exibir só o texto">
-<!ENTITY Ctr_stoprel0		"Configurações dos botões recarregar e parar">
-<!ENTITY Ctr_stoprel1		"Barra de ferramentas: colocar o botão recarregar após o botão parar!">
+<!ENTITY Ctr_nav_txt_exp	"Experimental attributes:">
 <!ENTITY Ctr_cpanelmenus	"Menus do painel compacto (favoritos, histórico, etc.)">
 <!ENTITY Ctr_hidezoomres	"Controles de ampliação na barra de ferramentas: ocultar o botão redefinir ampliação">
 <!ENTITY Ctr_pmhidelabels	"Menu do painel: ocultar as etiquetas do botão">
@@ -118,6 +121,9 @@
 <!ENTITY Ctr_tabmokcolor	"Botões da guia na cor branca (fechar, nova, grupos, listar tudo)">
 <!ENTITY Ctr_tabmokcolor2	"Texto na cor branca e sombra escura nas guias inativas">
 <!ENTITY Ctr_tabmokcolor3	"Separadores para as guias na cor branca">
+
+<!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
+<!ENTITY Ctr_navthrobber2	"Add url or leave empty">
 
 <!ENTITY Ctr_tab_tf_info1	"Nomes de cores, códigos hex., valores rgb(a) e hsl(a) são suportados.">
 <!ENTITY Ctr_tab_tf_info2	"As entradas não serão validadas!">
@@ -140,17 +146,22 @@
 <!ENTITY Ctr_bold			"Negrito">
 <!ENTITY Ctr_italic			"Itálico">
 
-<!ENTITY Ctr_favicon		"Configurações do Favicon">
-<!ENTITY Ctr_emptyfavicon	"Restaurar o favicon vazio (se um site não oferecer um)">
-<!ENTITY Ctr_emptyfavicon2	"Substituir o favicon genérico (vazio e pontilhado) pelo favicon de folha">
-<!ENTITY Ctr_noemptypticon	"Remover o favicon vazio da guia pinada">
-<!ENTITY Ctr_faviconurl0	"Ícones barra de URLs">
+<!ENTITY Ctr_urlbar			"Urlbar">
+<!ENTITY Ctr_starinurl		"Botão de favoritos na barra de URLs (reinicie o Firefox!)">
+<!ENTITY Ctr_feedinurl		"Botão Feed na barra de URL (reinicie o Firefox!)">
+<!ENTITY Ctr_hideurelstop	"Ocultar os botões parar e recarregar das barras de URLs">
+<!ENTITY Ctr_hideprbutton	"Hide notification icon when a popup gets blocked">
+<!ENTITY Ctr_urlbar_ib		"Urlbars identity box">
+<!ENTITY Ctr_verifiedcolors	"Caixa de identidade para sites verificados na cor verde/azul">
 <!ENTITY Ctr_faviconurl		"Favicon na barra de URLs (reiniciar o Firefox!)">
 <!ENTITY Ctr_padlock_hid	"Cadeado (oculto)">
 <!ENTITY Ctr_padlock_def	"Cadeado (padrão)">
 <!ENTITY Ctr_padlock_cla	"Cadeado (clássico)">
 <!ENTITY Ctr_padlock_mod	"Cadeado (moderno)">
 <!ENTITY Ctr_padlock_ext	"Ícones de segurança">
+<!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
+
+<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
 
 <!ENTITY Ctr_invicons		"Ícones invertidos">
 <!ENTITY Ctr_menubar		"Barra de menus">
@@ -176,6 +187,8 @@
 <!ENTITY Ctr_nonavbarbg		"Barra de navegação: remover a cor do fundo">
 <!ENTITY Ctr_nonavborder	"Barra de favoritos: adicionar borda superior à barra">
 <!ENTITY Ctr_nonavtbborder	"Barras superiores: remover as bordas da barra">
+<!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
+<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('chevron') at toolbars end">
 
 <!ENTITY Ctr_closeabarbut	"Ocultar o botão fechar">
 <!ENTITY Ctr_highaddonsbar	"Aumentar a altura">
@@ -190,7 +203,11 @@
 <!ENTITY Ctr_toolsitem		"Item do menu no menu ferramentas">
 <!ENTITY Ctr_appmenuitem	"Item do menu no menu botões do aplicativo">
 <!ENTITY Ctr_contextitem	"Item do menu no menu de contexto das barras de ferramentas">
+<!ENTITY Ctr_puictrbutton	"Button in main panel menu">
+
+<!ENTITY Ctr_otherctroptns	"Other settings">
 <!ENTITY Ctr_cuibotbuttons	"Botões extra no modo 'personalização'">
+<!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
 
 
 <!ENTITY Ctr_pw_settings	"Configurações">
@@ -207,3 +224,6 @@
 
 <!ENTITY Ctr_addon-bar.accesskey	"A">
 <!ENTITY Ctr_extrabar.accesskey		"D">
+<!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
+<!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
+<!ENTITY appMenuGettingStarted.label	"Getting started">

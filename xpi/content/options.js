@@ -8,7 +8,6 @@ Components.utils.import("resource:///modules/CustomizableUI.jsm");
 classicthemerestorerjso.ctr = {
 
   prefs:			Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.classicthemerestorer."),
-  userPrefs:		Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.classicthemerestorer."),
   fxdefaulttheme:	Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("general.skins.").getCharPref("selectedSkin") == 'classic/1.0',
   appversion:		parseInt(Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.").getCharPref("lastAppVersion")),
   oswindows:		Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS=="WINNT",
@@ -21,7 +20,11 @@ classicthemerestorerjso.ctr = {
 		if (this.fxdefaulttheme) document.getElementById("ClassicTRoptionsPane").setAttribute('defaultfxtheme',true);
 		  else document.getElementById("ClassicTRoptionsPane").removeAttribute('defaultfxtheme');
 	} catch(e){}
-
+	
+	// restore last selected categories/tabs
+	document.getElementById("CtrRadioGroup").selectedIndex = this.prefs.getIntPref('pref_actindx');
+	document.getElementById("ctraddon_tabcolor_tabs").selectedIndex = this.prefs.getIntPref('pref_actindx2');
+	
 	// disable and hide items not usable on third party themes
 	if (!this.fxdefaulttheme) {
 		document.getElementById('ctraddon_pw_tabmenulist').disabled = true;
@@ -95,6 +98,10 @@ classicthemerestorerjso.ctr = {
 	  if(addon && addon.isActive) {
 	  	document.getElementById('ctraddon_pw_tabMinWidth').disabled = true;
 		document.getElementById('ctraddon_pw_tabMaxWidth').disabled = true;
+		document.getElementById('ctraddon_pw_tabMinWidth_L1').disabled = true;
+		document.getElementById('ctraddon_pw_tabMinWidth_L2').disabled = true;
+		document.getElementById('ctraddon_pw_tabMaxWidth_L1').disabled = true;
+		document.getElementById('ctraddon_pw_tabMaxWidth_L2').disabled = true;
 		document.getElementById('ctraddon_pw_tabwidthinfo').style.visibility = 'visible';
 		document.getElementById('ctraddon_pw_tabwidthinfo2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabwidthinfo3').style.visibility = 'collapse';
@@ -105,9 +112,29 @@ classicthemerestorerjso.ctr = {
 	  if(addon && addon.isActive) {
 		document.getElementById('ctraddon_pw_tabMinWidth').disabled = true;
 		document.getElementById('ctraddon_pw_tabMaxWidth').disabled = true;
+		document.getElementById('ctraddon_pw_tabMinWidth_L1').disabled = true;
+		document.getElementById('ctraddon_pw_tabMinWidth_L2').disabled = true;
+		document.getElementById('ctraddon_pw_tabMaxWidth_L1').disabled = true;
+		document.getElementById('ctraddon_pw_tabMaxWidth_L2').disabled = true;
 		document.getElementById('ctraddon_pw_tabwidthinfo').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabwidthinfo2').style.visibility = 'visible';
 		document.getElementById('ctraddon_pw_tabwidthinfo3').style.visibility = 'collapse';
+	  }
+	});
+	
+	/* Status4Evar&ThePuzzlePiece override CTRs mov. status bar panel, so the option gets disabled */
+	document.getElementById('ctraddon_pw_statusbar_s4e_info').style.visibility = 'collapse';
+	document.getElementById('ctraddon_pw_statusbar_tpp_info').style.visibility = 'collapse';
+	AddonManager.getAddonByID('status4evar@caligonstudios.com', function(addon) {
+	  if(addon && addon.isActive) {
+		document.getElementById('ctraddon_pw_statusbar').disabled = true;
+		document.getElementById('ctraddon_pw_statusbar_s4e_info').style.visibility = 'visible';
+	  }
+	});
+	AddonManager.getAddonByID('thePuzzlePiece@quicksaver', function(addon) {
+	  if(addon && addon.isActive) {
+		document.getElementById('ctraddon_pw_statusbar').disabled = true;
+		document.getElementById('ctraddon_pw_statusbar_tpp_info').style.visibility = 'visible';
 	  }
 	});
 	
@@ -210,6 +237,7 @@ classicthemerestorerjso.ctr = {
 	
 	// update sub settings
 	this.ctrpwAppbuttonextra(this.prefs.getCharPref("appbutton"),false);
+	this.ctrpwTabEmptyFavicon(this.prefs.getBoolPref("emptyfavicon2"));
 	this.ctrpwFaviconextra(this.prefs.getBoolPref("faviconurl"));
 	this.ctrpwBFextra(this.prefs.getBoolPref("backforward"));
 	this.ctrpwHidetbwotExtra(this.prefs.getBoolPref("hidetbwot"));
@@ -258,6 +286,10 @@ classicthemerestorerjso.ctr = {
 		};
 		app.quit(app.eAttemptQuit | app.eRestart);
 	}
+	
+	// save last selected categories/tabs
+	this.prefs.setIntPref('pref_actindx',document.getElementById("CtrRadioGroup").selectedIndex);
+	this.prefs.setIntPref('pref_actindx2',document.getElementById("ctraddon_tabcolor_tabs").selectedIndex);
 
 	return true;
   },
@@ -284,9 +316,14 @@ classicthemerestorerjso.ctr = {
 	document.getElementById('ctraddon_padlock_extra').disabled = which;
   },
   
+  ctrpwTabEmptyFavicon: function(which) {
+	document.getElementById('ctraddon_pw_tab_emptyfavicon').disabled = which;
+  },
+  
   ctrpwBFextra: function(which) {
     if(which==true) which=false; else which=true;
     document.getElementById('ctraddon_pw_hide_bf_popup').disabled = which;
+	document.getElementById('ctraddon_pw_bf_space').disabled = which;
   },
   
   ctrpwHidetbwotExtra: function(which) {
@@ -326,36 +363,42 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_appbutbdl').disabled = false;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = false;
 	  document.getElementById('ctraddon_dblclclosefx').disabled = true;
+	  document.getElementById('ctraddon_appbclmmenus').disabled = false;
 	} else if (which=="appbutton_v1wt" && this.fxdefaulttheme){
 	  document.getElementById('ctraddon_alt_abicons').disabled = true;
 	  document.getElementById('ctraddon_abhigher').disabled = false;
 	  document.getElementById('ctraddon_appbutbdl').disabled = false;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = false;
 	  document.getElementById('ctraddon_dblclclosefx').disabled = true;
+	  document.getElementById('ctraddon_appbclmmenus').disabled = false;
 	} else if (which=="appbutton_v1" && !this.fxdefaulttheme){
 	  document.getElementById('ctraddon_alt_abicons').disabled = false;
 	  document.getElementById('ctraddon_abhigher').disabled = true;
 	  document.getElementById('ctraddon_appbutbdl').disabled = false;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = false;
 	  document.getElementById('ctraddon_dblclclosefx').disabled = true;
+	  document.getElementById('ctraddon_appbclmmenus').disabled = false;
 	} else if (which=="appbutton_v1wt" && !this.fxdefaulttheme){
 	  document.getElementById('ctraddon_alt_abicons').disabled = false;
 	  document.getElementById('ctraddon_abhigher').disabled = true;
 	  document.getElementById('ctraddon_appbutbdl').disabled = false;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = false;
 	  document.getElementById('ctraddon_dblclclosefx').disabled = true;
+	  document.getElementById('ctraddon_appbclmmenus').disabled = false;
 	} else if (which=="appbutton_off" || which=="appbutton_pm"){
 	  document.getElementById('ctraddon_alt_abicons').disabled = true;
 	  document.getElementById('ctraddon_abhigher').disabled = true;
 	  document.getElementById('ctraddon_appbutbdl').disabled = true;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = true;
 	  document.getElementById('ctraddon_dblclclosefx').disabled = true;
+	  document.getElementById('ctraddon_appbclmmenus').disabled = true;
 	} else {
 	  document.getElementById('ctraddon_alt_abicons').disabled = true;
 	  document.getElementById('ctraddon_abhigher').disabled = true;
 	  document.getElementById('ctraddon_appbutbdl').disabled = false;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = false;
 	  document.getElementById('ctraddon_dblclclosefx').disabled = false;
+	  document.getElementById('ctraddon_appbclmmenus').disabled = false;
 	  if (tabsintitlebar==false && fromprefwindow==true) {
 		Components.classes["@mozilla.org/preferences-service;1"]
 		 .getService(Components.interfaces.nsIPrefService)
@@ -399,6 +442,8 @@ classicthemerestorerjso.ctr = {
 	this.prefs.setBoolPref("faviconurl",true);
 	this.prefs.setBoolPref("bmanimation",true);
 	this.prefs.setBoolPref("pananimation",true);
+	this.prefs.setBoolPref("feedinurl",true);
+	this.prefs.setBoolPref("noconicons",true);
 	
 	if (this.oswindows) this.prefs.setBoolPref("dblclnewtab",true);
 	
@@ -551,6 +596,20 @@ classicthemerestorerjso.ctr = {
 	patterns[124]="noconicons="+this.prefs.getBoolPref("noconicons");
 	patterns[125]="closealt="+this.prefs.getBoolPref("closealt");
 	patterns[126]="closeonleft="+this.prefs.getBoolPref("closeonleft");
+	patterns[127]="hidetbwote="+this.prefs.getBoolPref("hidetbwote");
+	patterns[128]="puictrbutton="+this.prefs.getBoolPref("puictrbutton");
+	patterns[129]="hideprbutton="+this.prefs.getBoolPref("hideprbutton");
+	patterns[130]="hidesbclose="+this.prefs.getBoolPref("hidesbclose");
+	patterns[131]="athrobberurl:"+this.prefs.getCharPref("athrobberurl");
+	patterns[132]="bmarkoinpw="+this.prefs.getBoolPref("bmarkoinpw");
+	patterns[133]="appbclmmenus="+this.prefs.getBoolPref("appbclmmenus");
+	patterns[134]="chevronfix="+this.prefs.getBoolPref("chevronfix");
+	patterns[135]="bf_space="+this.prefs.getBoolPref("bf_space");
+	patterns[136]="extrabar1="+this.prefs.getBoolPref("extrabar1");
+	patterns[137]="extrabar2="+this.prefs.getBoolPref("extrabar2");
+	patterns[138]="extrabar3="+this.prefs.getBoolPref("extrabar3");
+	patterns[139]="invicoextrabar2="+this.prefs.getBoolPref("invicoextrabar2");
+	patterns[140]="invicoextrabar3="+this.prefs.getBoolPref("invicoextrabar3");
 
 	saveToFile(patterns);
 	  

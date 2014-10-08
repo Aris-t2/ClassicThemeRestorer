@@ -3,8 +3,8 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#nav-bar :-moz-any(#home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #switch-to-metro-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button)[cui-areatype="toolbar"] {
-	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	#nav-bar :-moz-any(#home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #switch-to-metro-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button,#e10s-button,#panic-button,#web-apps-button)[cui-areatype="toolbar"] {
+	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
 	
 	#nav-bar #ctraddon_back-button > .toolbarbutton-icon{
@@ -36,11 +36,26 @@
 	#nav-bar #downloads-button[cui-areatype="toolbar"] {
 	  -moz-image-region: rect(0px, 256px, 32px, 224px) !important;
 	}
+	
+	#nav-bar #e10s-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 512px, 32px, 480px) !important;
+	}
+	
+	#nav-bar #panic-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 896px, 32px, 864px) !important;
+	}
+	#nav-bar #panic-button[open][cui-areatype="toolbar"] {
+	  -moz-image-region: rect(32px, 896px, 64px, 864px) !important;
+	}
+	
+	#nav-bar #web-apps-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 928px, 32px, 896px) !important;
+	}
 
 	#nav-bar #downloads-indicator-icon {
 	  width:32px !important;
 	  height:32px !important;
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/menuPanel.png"),
+	  background: -moz-image-rect(url("chrome://browser/skin/menuPanel.png"),
 					0, 256, 32, 224) center no-repeat !important;
 	}
 
@@ -150,7 +165,7 @@
 	  -moz-image-region: rect(0px, 192px, 32px, 160px) !important;
 	}
 
-	#webrtc-status-button {
+	#nav-bar #webrtc-status-button {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
 	  -moz-image-region: rect(0px, 224px, 32px, 192px) !important;
 	}
@@ -170,30 +185,65 @@
 	#tabview-button[cui-areatype="menu-panel"],
 	toolbarpaletteitem[place="palette"] > #tabview-button {
 	  -moz-image-region: rect(0px, 608px, 32px, 576px) !important;
-	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
 
 	/* extra buttons from CTR add-on*/
 	#nav-bar #ctraddon_stop-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
-	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
 
 	#nav-bar #ctraddon_reload-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
-	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
 
-	#nav-bar #ctraddon_history-menu-toolbar-button > .toolbarbutton-icon,
 	#nav-bar #ctraddon_history-button > .toolbarbutton-icon{
-	  -moz-image-region: rect(0px, 224px, 32px, 192px) !important;
-	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	  -moz-image-region: rect(0px, 32px, 32px, 0px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/history_sidebar.png) !important;
+	}
+	#nav-bar #ctraddon_history-menu-toolbar-button > .toolbarbutton-icon {
+	  -moz-image-region: rect(0px, 32px, 32px, 0px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/history_menu.png) !important;
 	}
 	/* star icon instead of old bookmarks icon */
-	#nav-bar #ctraddon_bookmarks-button > .toolbarbutton-icon,
 	#nav-bar #ctraddon_bookmarks-menu-toolbar-button > .toolbarbutton-icon{
-	  -moz-image-region: rect(0px, 160px, 32px, 128px) !important;
-	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	  -moz-image-region: rect(0px, 32px, 32px, 0px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/bookmarks_menu.png) !important;
+	}
+	#nav-bar #ctraddon_bookmarks-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 32px, 32px, 0px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/bookmarks_sidebar.png) !important;
+	}
+	
+	/*call button*/
+	#nav-bar #loop-call-button[cui-areatype="toolbar"] > .toolbarbutton-badge-container image {
+	  list-style-image: url(chrome://browser/skin/loop/menuPanel.png) !important;
+	  -moz-image-region: rect(0, 32px, 32px, 0) !important;
+	}
+	#nav-bar #loop-call-button[cui-areatype="toolbar"][state="disabled"] > .toolbarbutton-badge-container image,
+	#nav-bar #loop-call-button[cui-areatype="toolbar"][disabled="true"] > .toolbarbutton-badge-container image {
+	  -moz-image-region: rect(0, 64px, 32px, 32px) !important;
+	}
+	#nav-bar #loop-call-button[cui-areatype="toolbar"]:not([disabled="true"])[state="error"] > .toolbarbutton-badge-container image {
+	  -moz-image-region: rect(0, 96px, 32px, 64px) !important;
+	}
+	#nav-bar #loop-call-button[cui-areatype="toolbar"]:not([disabled="true"])[state="action"] > .toolbarbutton-badge-container image{
+	  -moz-image-region: rect(0, 128px, 32px, 96px) !important;
+	}
+	#nav-bar #loop-call-button[cui-areatype="toolbar"]:not([disabled="true"])[state="action"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container image{
+	  -moz-image-region: rect(0, 160px, 32px, 128px) !important;
+	}
+	#nav-bar #loop-call-button[cui-areatype="toolbar"]:not([disabled="true"])[state="active"] > .toolbarbutton-badge-container image {
+	  -moz-image-region: rect(0, 192px, 32px, 160px) !important;
+	}
+	#nav-bar #loop-call-button[cui-areatype="toolbar"]:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container image{
+	  -moz-image-region: rect(0, 224px, 32px, 192px) !important;
+	}
+	
+	#nav-bar #ctraddon_ctr-button[cui-areatype="toolbar"] > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/palette_ctr.png") !important;
 	}
 
 }

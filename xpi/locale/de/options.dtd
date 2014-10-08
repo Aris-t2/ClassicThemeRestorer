@@ -23,7 +23,7 @@
 <!ENTITY Ctr_tnot			"(Tabs 'unten')">
 
 <!ENTITY Ctr_tabcolors_t	"Tab Farben / Zeichensatz">
-<!ENTITY Ctr_icons_t		"Symbole">
+<!ENTITY Ctr_urlbar_t		"Adressleisteneinstellungen">
 
 <!ENTITY Ctr_tabs			"Tabs">
 <!ENTITY Ctr_tabs0			"Gerundete Tabs (Australis-Standard)">
@@ -42,9 +42,11 @@
 <!ENTITY Ctr_tabwidthcla	"(klassisch)">
 <!ENTITY Ctr_tabmaxwidth	"Maximalbreite:">
 <!ENTITY Ctr_tabminwidth	"Minimalbreite:">
-<!ENTITY Ctr_tabwidthinfo	"Die Minimal- und Maximalbreite von Tabs wird durch TabMixPlus kontrolliert">
-<!ENTITY Ctr_tabwidthinfo2	"Die Minimal- und Maximalbreite von Tabs wird durch TabUtilities kontrolliert">
+<!ENTITY Ctr_tabwidthinfo	"Die Minimal- und Maximalbreite von Tabs wird von 'TabMixPlus' kontrolliert">
+<!ENTITY Ctr_tabwidthinfo2	"Die Minimal- und Maximalbreite von Tabs wird von 'TabUtilities' kontrolliert">
 <!ENTITY Ctr_tabwidthinfo3	"Werte unter 48px sorgen meistens für eine fehlerhafte Darstellung!">
+<!ENTITY Ctr_emptyfavicon	"Leeres Lesezeichensymbol auf Tabs wiederherstellen">
+<!ENTITY Ctr_noemptypticon	"Leeres Lesezeichensymbol auf angeheftetem Tab verstecken">
 <!ENTITY Ctr_closetab_0		"'Tab schließen'">
 <!ENTITY Ctr_closetab_1		"Nur auf dem aktiven Tab">
 <!ENTITY Ctr_closetab_2		"Nirgends (deaktiviert)">
@@ -80,6 +82,7 @@
 <!ENTITY Ctr_appbutmhi		"Höhere Position (nur Tableiste)">
 <!ENTITY Ctr_appbutbdl		"Entferne Ränder &amp; Hintergrundfarbe">
 <!ENTITY Ctr_dblclclosefx	"Doppelklick schließt aktuelles Fenster">
+<!ENTITY Ctr_appbclmmenus	"Klickbare Menüs im Firefox-Menü (Neuer Tab, Drucken...)">
 
 <!ENTITY Ctr_ui				"Oberfläche">
 <!ENTITY Ctr_nbiconsize0	"Setze Navigationsleisten-Attribut">
@@ -87,16 +90,17 @@
 <!ENTITY Ctr_bfurlbarfix 	"Korrigiere Radius der Adressleistenränder">
 <!ENTITY Ctr_backforward	"Verschiebbare Vor-Zurück-Schaltflächen">
 <!ENTITY Ctr_hide_bf_popup	"Verstecke Chronik-Popup bei gedrückter Maustaste">
-<!ENTITY Ctr_noconicons		"Ersetze Symbole im Seitenkontextmenü mit den ursprünglichen Namen (Zurück, Vor, Stopp, Neu laden, Leisezeichen hinzufügen)">
+<!ENTITY Ctr_bf_space		"Reduziere Zwischenraum (falls möglich)">
+<!ENTITY Ctr_noconicons		"Ersetze Symbole durch Namen im Seitenkontextmenü (Zurück, Vor...)">
 <!ENTITY Ctr_wincontrols	"Verschiebbare Minimieren/Maximieren/Schließen-Schaltflächen im Vollbild-Modus">
-<!ENTITY Ctr_starinurl		"'Lesezeichen-Stern' in der Adressleiste (Firefox neustarten)">
-<!ENTITY Ctr_feedinurl		"'Feed abonnieren' in der Adressleiste (Firefox neustarten)">
+<!ENTITY Ctr_emptyfavicon2	"Leeres Lesezeichensymbol durch Papierblattsymbol ersetzen">
 <!ENTITY Ctr_mstatusbar		"Statusbereich: sichtbar und verschiebbar">
-<!ENTITY Ctr_hideurelstop	"Entferne 'Stopp' &amp; 'Neu laden' von der Adressleiste">
-<!ENTITY Ctr_combrelstop	"Kombiniere 'Stopp' &amp; 'Neu laden'">
+<!ENTITY Ctr_mstatusbars4e	"Statusbereich wird von 'Status-4-Evar' kontrolliert">
+<!ENTITY Ctr_mstatusbartpp	"Statusbereich wird von 'ThePuzzlePiece' kontrolliert">
+<!ENTITY Ctr_combrelstop	"'Stopp' &amp; 'Neu laden': kombiniere Leistenschaltflächen">
+<!ENTITY Ctr_stoprel1		"Wichtig: positioniere 'Neu laden' rechts von 'Stopp'!">
 <!ENTITY Ctr_panelmenucol	"Alternative Hintergrundfarbe für 'Panel-Popupmenüs'">
 <!ENTITY Ctr_hideprivmask	"Privater Modus: entferne 'Masken-Symbole' von den Leisten">
-<!ENTITY Ctr_verifiedcolors	"Blaue/grüne Schaltfläche zur Webseitenidentität für überprüfte/verifizierete Webseiten">
 <!ENTITY Ctr_findbar		"Suchleiste">
 <!ENTITY Ctr_findbar_def	"Standard-Position">
 <!ENTITY Ctr_findbar_top	"Oben">
@@ -107,8 +111,7 @@
 <!ENTITY Ctr_nav_txt_ico1	"Zeige große Symbole">
 <!ENTITY Ctr_nav_txt_ico2	"Zeige Symbole und Text">
 <!ENTITY Ctr_nav_txt_ico3	"Zeige nur Text">
-<!ENTITY Ctr_stoprel0		"'Stopp'- &amp; 'Neu laden'">
-<!ENTITY Ctr_stoprel1		"Wichtig: Positioniere 'Neu laden' rechts von 'Stopp'!">
+<!ENTITY Ctr_nav_txt_exp	"Experimentelle Attribute:">
 <!ENTITY Ctr_cpanelmenus	"Kompakte 'Panel-Popupmenüs' (Lesezeichen, Chronik etc.)">
 <!ENTITY Ctr_hidezoomres	"Zoom-Schaltflächen auf Leisten: verstecke Schaltfläche für 'Normalgröße'">
 <!ENTITY Ctr_pmhidelabels	"Verstecke Text unter 'Menüschaltflächen'-Elementen">
@@ -118,6 +121,9 @@
 <!ENTITY Ctr_tabmokcolor	"Weiße Schaltflächen (Neu, Schließen, Gruppen, Listen)">
 <!ENTITY Ctr_tabmokcolor2	"Weißer Tabtext und dunkler Schatten für nicht aktive Tabs">
 <!ENTITY Ctr_tabmokcolor3	"Weiße Trennlinien zwischen den Tabs">
+
+<!ENTITY Ctr_navthrobber1	"Ein Klick auf die Aktivitätsanzeige öffnet folgende Adresse:">
+<!ENTITY Ctr_navthrobber2	"Adresse eintragen oder leer lassen">
 
 <!ENTITY Ctr_tab_tf_info1	"Textfelder akzeptieren Farbnamen sowie RGB(A), HSL(A) und hexadezimale Eingaben.">
 <!ENTITY Ctr_tab_tf_info2	"Eingegebene Werte werden nicht überprüft!">
@@ -140,17 +146,22 @@
 <!ENTITY Ctr_bold			"Fett">
 <!ENTITY Ctr_italic			"Kursiv">
 
-<!ENTITY Ctr_favicon		"Lesezeichensymbol/Favicon">
-<!ENTITY Ctr_emptyfavicon	"Leeres Lesezeichensymbol auf Tabs wiederherstellen">
-<!ENTITY Ctr_emptyfavicon2	"Leeres Lesezeichensymbol durch Papierblattsymbol ersetzen">
-<!ENTITY Ctr_noemptypticon	"Leeres Lesezeichensymbol auf angeheftetem Tab verstecken">
-<!ENTITY Ctr_faviconurl0	"Symbole in der Adressleistenschaltfläche zur Webseitenidentität">
+<!ENTITY Ctr_urlbar			"Adressleiste">
+<!ENTITY Ctr_starinurl		"'Lesezeichen-Stern' (Firefox neustarten)">
+<!ENTITY Ctr_feedinurl		"'Feed abonnieren' (Firefox neustarten)">
+<!ENTITY Ctr_hideurelstop	"Entferne 'Stopp' &amp; 'Neu laden'">
+<!ENTITY Ctr_hideprbutton	"Verstecke Informationssymbol, wenn ein Popup blockiert wird">
+<!ENTITY Ctr_urlbar_ib		"Adressleistenschaltfläche zur Webseitenidentität">
+<!ENTITY Ctr_verifiedcolors	"Blau/grün für überprüfte/verifizierete Webseiten">
 <!ENTITY Ctr_faviconurl		"Lesezeichensymbol/Favicon der Webseite (Firefox neustarten)">
 <!ENTITY Ctr_padlock_hid	"Schloss-Symbol (versteckt)">
 <!ENTITY Ctr_padlock_def	"Schloss-Symbol (Standard)">
 <!ENTITY Ctr_padlock_cla	"Schloss-Symbol (klassisch)">
 <!ENTITY Ctr_padlock_mod	"Schloss-Symbol (modern)">
 <!ENTITY Ctr_padlock_ext	"Andere Sicherheitssymbole">
+<!ENTITY Ctr_icopageinfo	"Ein Klick auf das Symbol öffnet das 'Seiteninfo' Fenster">
+
+<!ENTITY Ctr_extrabarinfo	"Der Wechsel zwischen 'Tabs oben' und 'Tabs unten' kann die Reihenfolge der Extraleisten zufällig ändern. Ein Firefox-Neustart stellt die richtige Reihenfolge wieder her.">
 
 <!ENTITY Ctr_invicons		"Invertierte Symbole">
 <!ENTITY Ctr_menubar		"Menüleiste">
@@ -176,6 +187,8 @@
 <!ENTITY Ctr_nonavbarbg		"Navigationsleiste: Hintergrundfarbe entfernen">
 <!ENTITY Ctr_nonavborder	"Lesezeichenleiste: Oberen Rand hinzufügen">
 <!ENTITY Ctr_nonavtbborder	"Obere Leisten: Ränder entfernen">
+<!ENTITY Ctr_hidesbclose	"Seitenleisten: Verstecke 'Schließen'-Schaltfläche">
+<!ENTITY Ctr_chevronfix		"Navigationsleiste: Doppelpfeil am Ende der Leiste nicht anzeigen">
 
 <!ENTITY Ctr_closeabarbut	"Entferne 'Schließen'-Schaltfläche">
 <!ENTITY Ctr_highaddonsbar	"Höhere Leiste">
@@ -190,7 +203,11 @@
 <!ENTITY Ctr_toolsitem		"Eintrag im Menü 'Extras'">
 <!ENTITY Ctr_appmenuitem	"Eintrag im Einstellungsuntermenü der Firefox-Schaltfläche">
 <!ENTITY Ctr_contextitem	"Eintrag im Leisten-Kontextmenü">
+<!ENTITY Ctr_puictrbutton	"Eintrag in der Hauptmenüschaltfläche">
+
+<!ENTITY Ctr_otherctroptns	"Andere Einstellungen">
 <!ENTITY Ctr_cuibotbuttons	"Einstellungsschaltflächen im Modus 'Anpassen'">
+<!ENTITY Ctr_bookmarkoinpw	"'In neuem privaten Fenster öffnen'-Eintrag im Kontextmenu eines Lesezeichens">
 
 
 <!ENTITY Ctr_pw_settings	"Einstellungen">
@@ -207,3 +224,6 @@
 
 <!ENTITY Ctr_addon-bar.accesskey	"A">
 <!ENTITY Ctr_extrabar.accesskey		"E">
+<!ENTITY Ctr_openInPrivateWindow	"In neuem privaten Fenster öffnen">
+<!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
+<!ENTITY appMenuGettingStarted.label	"Erste Schritte">

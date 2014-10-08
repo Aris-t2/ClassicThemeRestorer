@@ -23,7 +23,7 @@
 <!ENTITY Ctr_tnot			"(καρτέλες όχι στο πάνω μέρος)">
 
 <!ENTITY Ctr_tabcolors_t	"Χρώματα καρτελών &amp; κειμένου">
-<!ENTITY Ctr_icons_t		"Favicon &amp; εικονίδια">
+<!ENTITY Ctr_urlbar_t		"Ρυθμίσεις γραμμής τοποθεσιών">
 
 <!ENTITY Ctr_tabs			"Καρτέλες">
 <!ENTITY Ctr_tabs0			"Καμπυλόγραμμες καρτέλες (προεπιλογή Australis)">
@@ -45,6 +45,8 @@
 <!ENTITY Ctr_tabwidthinfo	"Το ελάχιστο/μέγιστο εύρος καρτελών ελέγχονται από τις επεκτάσεις «TabMixPlus»">
 <!ENTITY Ctr_tabwidthinfo2	"Το ελάχιστο/μέγιστο εύρος καρτελών ελέγχονται από τις επεκτάσεις «TabUtilities»">
 <!ENTITY Ctr_tabwidthinfo3	"Τιμές κάτω από 48px θα προκαλέσουν δυσλειτουργίες στις περισσότερες περιπτώσεις!">
+<!ENTITY Ctr_emptyfavicon	"Επαναφορά κενού εικονιδίου (εάν ένας ιστότοπος δεν διαθέτει εικονίδιο)">
+<!ENTITY Ctr_noemptypticon	"Αφαίρεση κενού εικονιδίου από καρτέλες εφαρμογών">
 <!ENTITY Ctr_closetab_0		"Κλείσιμο καρτέλας">
 <!ENTITY Ctr_closetab_1		"Μόνο στην ενεργή καρτέλα">
 <!ENTITY Ctr_closetab_2		"Πουθενά">
@@ -80,6 +82,7 @@
 <!ENTITY Ctr_appbutmhi		"Υψηλότερη θέση (εάν είναι στην εργαλειοθήκη καρτελών)">
 <!ENTITY Ctr_appbutbdl		"Απόκρυψη περιγραμμάτων και χρωμάτων φόντου">
 <!ENTITY Ctr_dblclclosefx	"Κλείσιμο τρέχοντος παραθύρου με διπλό κλικ">
+<!ENTITY Ctr_appbclmmenus	"Επιλέξιμα με κλικ μενού, μέσα στο μενού του κουμπιού («Νέα καρτέλα», «Εκτύπωση...»)">
 
 <!ENTITY Ctr_ui				"Διεπαφή χρήστη - Γενικά">
 <!ENTITY Ctr_nbiconsize0	"Ορισμός χαρακτηριστικού εργαλειοθήκης πλοήγησης">
@@ -87,16 +90,17 @@
 <!ENTITY Ctr_bfurlbarfix	"Διόρθωση ακτίνας περιγράμματος γραμμής τοποθεσιών">
 <!ENTITY Ctr_backforward	"Μετακινήσιμο κουμπί πίσω-εμπρός">
 <!ENTITY Ctr_hide_bf_popup	"Απόκρυψη μενού ιστορικού κουμπιών κατά το πάτημά τους">
+<!ENTITY Ctr_bf_space		"Μείωση διαστήματος μεταξύ των κουμπιών (εάν είναι δυνατόν)">
 <!ENTITY Ctr_noconicons		"Αντικατάσταση εικονιδίων μενού περιεχομένου σελίδας με ετικέτες («Πίσω», «Μπροστά», «Διακοπή», «Ανανέωση», «Η σελίδα ως σελιδοδείκτης»)">
 <!ENTITY Ctr_wincontrols	"Μετακινήσιμα στοιχεία ελέγχου παραθύρου σε προβολή πλήρους οθόνης (ελαχιστοποίηση/επαναφορά/κλείσιμο)">
-<!ENTITY Ctr_starinurl		"Κουμπί-αστέρι στη γραμμή τοποθεσιών (επανεκκινήστε τον Firefox!)">
-<!ENTITY Ctr_feedinurl		"Κουμπί «Συνδρομή» στη γραμμή τοποθεσιών (επανεκκινήστε τον Firefox!)">
+<!ENTITY Ctr_emptyfavicon2	"Αντικατάσταση γενικού εικονιδίου (κενό και διάστικτο) με εικονίδιο φύλλου">
 <!ENTITY Ctr_mstatusbar		"Μετακινήσιμο πινακίδιο γραμμής κατάστασης">
-<!ENTITY Ctr_hideurelstop	"Απόκρυψη κουμπιών «Διακοπή» &amp; «Ανανέωση» γραμμής τοποθεσιών">
+<!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
+<!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
 <!ENTITY Ctr_combrelstop	"Συνδυασμός κουμπιών «Διακοπή» &amp; «Ανανέωση»">
+<!ENTITY Ctr_stoprel1		"Σημαντικό: τοποθετήστε το κουμπί «Ανανέωση» μετά από το κουμπί «Διακοπή»!">
 <!ENTITY Ctr_panelmenucol	"Μενού πίνακα: εναλλακτικό χρώμα φόντου">
 <!ENTITY Ctr_hideprivmask	"Ιδιωτική περιήγηση: απόκρυψη ενδείκτη-μάσκα">
-<!ENTITY Ctr_verifiedcolors	"Πράσινο/μπλε πλαίσιο ταυτοποίησης για επαληθευμένες ιστοσελίδες">
 <!ENTITY Ctr_findbar		"Γραμμή εύρεσης">
 <!ENTITY Ctr_findbar_def	"Προεπιλεγμένη θέση">
 <!ENTITY Ctr_findbar_top	"Κορυφή">
@@ -107,8 +111,7 @@
 <!ENTITY Ctr_nav_txt_ico1	"Εμφάνιση μεγάλων εικονιδίων">
 <!ENTITY Ctr_nav_txt_ico2	"Εμφάνιση εικονιδίων και κειμένου">
 <!ENTITY Ctr_nav_txt_ico3	"Εμφάνιση μόνο κειμένου">
-<!ENTITY Ctr_stoprel0		"Ρυθμίσεις κουμπιών «Ανανέωση» και «Διακοπή»">
-<!ENTITY Ctr_stoprel1		"Σημαντικό: τοποθετήστε το κουμπί «Ανανέωση» μετά από το κουμπί «Διακοπή»!">
+<!ENTITY Ctr_nav_txt_exp	"Πειραματικά χαρακτηριστικά:">
 <!ENTITY Ctr_cpanelmenus	"Μενού πίνακα: συνεπτυγμένη προβολή (σελιδοδείκτες, ιστορικό κλπ.)">
 <!ENTITY Ctr_hidezoomres	"Στοιχεία ελέγχου μεγέθυνσης σε εργαλειοθήκη: απόκρυψη κουμπιού επεναφοράς επιπέδου μεγέθυνσης">
 <!ENTITY Ctr_pmhidelabels	"Μενού πίνακα: απόκρυψη ετικετών κουμπιών">
@@ -118,6 +121,9 @@
 <!ENTITY Ctr_tabmokcolor	"Άσπρο χρώμα κουμπιών καρτελών (κλείσιμο, νέα, ομάδες, λίστα όλων)">
 <!ENTITY Ctr_tabmokcolor2	"Άσπρο χρώμα και σκοτεινή σκιά κειμένου μη ενεργών καρτελών">
 <!ENTITY Ctr_tabmokcolor3	"Άσπρο χρώμα διαχωριστικών καρτελών">
+
+<!ENTITY Ctr_navthrobber1	"Άνοιγμα με κλικ στον ενδείκτη δραστηριότητας, της καθορισμένης διεύθυνσης url:">
+<!ENTITY Ctr_navthrobber2	"Προσθέστε διεύθυνση url ή αφήστε τη γραμμή κενή">
 
 <!ENTITY Ctr_tab_tf_info1	"Ονόματα χρωμάτων, δεκαεξαδικοί κωδικοί, τιμές rgb(a) και hsl(a) υποστηρίζονται.">
 <!ENTITY Ctr_tab_tf_info2	"Οι εισηγμένες τιμές δεν θα επικυρωθούν!">
@@ -140,17 +146,22 @@
 <!ENTITY Ctr_bold			"Έντονη γραφή">
 <!ENTITY Ctr_italic			"Πλάγια γραφή">
 
-<!ENTITY Ctr_favicon		"Ρυθμίσεις εικονιδίου URL (Favicon)">
-<!ENTITY Ctr_emptyfavicon	"Επαναφορά κενού εικονιδίου (εάν ένας ιστότοπος δεν διαθέτει εικονίδιο)">
-<!ENTITY Ctr_emptyfavicon2	"Αντικατάσταση γενικού εικονιδίου (κενό και διάστικτο) με εικονίδιο φύλλου">
-<!ENTITY Ctr_noemptypticon	"Αφαίρεση κενού εικονιδίου από καρτέλες εφαρμογών">
-<!ENTITY Ctr_faviconurl0	"Εικονίδια στη γραμμή τοποθεσιών">
+<!ENTITY Ctr_urlbar			"Γραμμή τοποθεσιών">
+<!ENTITY Ctr_starinurl		"Κουμπί-αστέρι στη γραμμή τοποθεσιών (επανεκκινήστε τον Firefox!)">
+<!ENTITY Ctr_feedinurl		"Κουμπί «Συνδρομή» στη γραμμή τοποθεσιών (επανεκκινήστε τον Firefox!)">
+<!ENTITY Ctr_hideurelstop	"Απόκρυψη κουμπιών «Διακοπή» &amp; «Ανανέωση» γραμμής τοποθεσιών">
+<!ENTITY Ctr_hideprbutton	"Απόκρυψη εικονιδίου ειδοποίησης φραγής αναδυόμενου παραθύρου">
+<!ENTITY Ctr_urlbar_ib		"Πλαίσιο ταυτοποίησης γραμμής τοποθεσιών">
+<!ENTITY Ctr_verifiedcolors	"Πράσινο/μπλε πλαίσιο ταυτοποίησης για επαληθευμένες ιστοσελίδες">
 <!ENTITY Ctr_faviconurl		"Εικονίδιο URL στη γραμμή τοποθεσιών (επανεκκινήστε τον Firefox!)">
 <!ENTITY Ctr_padlock_hid	"Λουκέτο (κρυμμένο)">
 <!ENTITY Ctr_padlock_def	"Λουκέτο (προεπιλογή)">
 <!ENTITY Ctr_padlock_cla	"Λουκέτο (κλασικό)">
 <!ENTITY Ctr_padlock_mod	"Λουκέτο (μοντέρνο)">
 <!ENTITY Ctr_padlock_ext	"Εικονίδια ασφάλειας">
+<!ENTITY Ctr_icopageinfo	"Άνοιγμα παραθύρου «Πληροφορίες σελίδας» με κλικ στο ικονίδιο">
+
+<!ENTITY Ctr_extrabarinfo	"Η εναλλαγή λειτουργιών «Καρτέλες στο πάνω μέρος» και «Καρτέλες όχι στο πάνω μέρος», αλλάζει τυχαία τη σειρά των επιπρόσθετων εργαλειοθηκών. Ο Firefox πρέπει να επανεκκινηθεί για αντιμετώπιση αυτού του θέματος.">
 
 <!ENTITY Ctr_invicons		"Ανεστραμμένα εικονίδια">
 <!ENTITY Ctr_menubar		"Εργαλειοθήκη μενού">
@@ -161,7 +172,7 @@
 <!ENTITY Ctr_toolbars		"Ρυθμίσεις εργαλειοθήκης">
 <!ENTITY Ctr_dblclnewtab	"Άνοιγμα νέας καρτέλας με διπλό κλικ (χρήση browser.newtab.url)">
 <!ENTITY Ctr_hidetbwot		"Απόκρυψη εργαλειοθήκης καρτελών με μια καρτέλα (επανεκκινήστε τον Firefox!)">
-<!ENTITY Ctr_hidetbwote		"Reduce hiding delay on startup">
+<!ENTITY Ctr_hidetbwote		"Μείωση καθυστέρησης απόκρυψης κατά την εκκίνηση">
 <!ENTITY Ctr_notabfog		"Αφαίρεση ομίχλης φόντου (Windows AeroGlass/8)">
 <!ENTITY Ctr_notabbg		"Αφαίρεση χρώματος φόντου (Windows AeroGlass/8)">
 <!ENTITY Ctr_hightabpos		"Μείωση χώρου πάνω από την εργαλειοθήκη (εάν είναι δυνατόν)">
@@ -176,6 +187,8 @@
 <!ENTITY Ctr_nonavbarbg		"Εργαλειοθήκη πλοήγησης: αφαίρεση χρώματος φόντου">
 <!ENTITY Ctr_nonavborder	"Εργαλειοθήκη σελιδοδεικτών: προσθήκη περιγράμματος κορυφής στην εργαλειοθήκη">
 <!ENTITY Ctr_nonavtbborder	"Εργαλειοθήκες κορυφής: αφαίρεση περιγραμμάτων εργαλειοθήκης">
+<!ENTITY Ctr_hidesbclose	"Πλευρικές στήλες: απόκρυψη κουμπιού κλεισίματος πλευρικής στήλης">
+<!ENTITY Ctr_chevronfix		"Εργαλειοθήκη πλοήγησης: απόκρυψη διπλού βέλους («σιρίτι») στο τέλος της εργαλειοθήκης">
 
 <!ENTITY Ctr_closeabarbut	"Απόκρυψη κουμπιού κλεισίματος εργαλειοθήκης πρόσθετων">
 <!ENTITY Ctr_highaddonsbar	"Αύξηση ύψους">
@@ -190,7 +203,11 @@
 <!ENTITY Ctr_toolsitem		"Στοιχείο μενού στο μενού «Εργαλεία»">
 <!ENTITY Ctr_appmenuitem	"Στοιχείο μενού στο μενού του κουμπιού εφαρμογής">
 <!ENTITY Ctr_contextitem	"Στοιχείο μενού στο μενού περιεχομένου εργαλειοθηκών">
+<!ENTITY Ctr_puictrbutton	"Κουμπί στο κύριο μενού πίνακα">
+
+<!ENTITY Ctr_otherctroptns	"Άλλες ρυθμίσεις">
 <!ENTITY Ctr_cuibotbuttons	"Επιπρόσθετα κουμπιά στη λειτουργία προσαρμογής">
+<!ENTITY Ctr_bookmarkoinpw	"Καταχώριση «&Ctr_openInPrivateWindow;» στο μενού περιεχομένου σελιδοδεικτών">
 
 
 <!ENTITY Ctr_pw_settings	"Ρυθμίσεις">
@@ -207,3 +224,6 @@
 
 <!ENTITY Ctr_addon-bar.accesskey	"λ">
 <!ENTITY Ctr_extrabar.accesskey		"π">
+<!ENTITY Ctr_openInPrivateWindow	"Άνοιγμα σε νέο παράθυρο ιδιωτικής περιήγησης">
+<!ENTITY Ctr_openInPrivateWindow.accesskey	"θ">
+<!ENTITY appMenuGettingStarted.label	"Ξεκινώντας">

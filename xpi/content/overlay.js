@@ -1,7 +1,7 @@
 "use strict";
 /*
 	There are a few "timeouts" on this document. In almost all cases they are needed to
-	make sure a 'get' call looks only for items already on DOM. 
+	make sure a 'get' call looks only for items already in DOM. 
  
 	Components.classes: Cc
 	Components.interfaces: Ci
@@ -43,9 +43,10 @@ classicthemerestorerjs.ctr = {
   fxdefaulttheme:		Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("general.skins.").getCharPref("selectedSkin") == 'classic/1.0',
   osstring:				Cc["@mozilla.org/xre/app-info;1"].getService(Ci.nsIXULRuntime).OS,
   appversion:			parseInt(Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("extensions.").getCharPref("lastAppVersion")),
-  
-  init: function() {
 
+
+  init: function() {
+	
 	// remove default panel ui button in favour of CTRs movable duplicate
 	try{
 		document.getElementById("PanelUI-button").removeChild(document.getElementById("PanelUI-menu-button"));
@@ -61,7 +62,7 @@ classicthemerestorerjs.ctr = {
 		if (this.appversion >= 31) document.getElementById("main-window").setAttribute('fx31',true);
 	} catch(e){}
 	
-	// add a new global attribute 'fx31' -> better parting css between versions
+	// add a new global attribute 'fx32plus' -> better parting css between versions
 	try{
 		if (this.appversion >= 32) document.getElementById("main-window").setAttribute('fx32plus',true);
 	} catch(e){}
@@ -69,11 +70,8 @@ classicthemerestorerjs.ctr = {
 	// add-on fixes
 	this.addonCompatibilityImprovements();
 
-	// feed-button in urlbar	
-	this.moveFeedButtonIntoUrbar();
-
-	// star-button in urlbar	
-	this.moveStarButtonIntoUrbar();
+	// star-button/feed-button in urlbar	
+	this.moveStarAndFeedButtonIntoUrbar();
 	
 	// creates activity toolbaritem	
 	this.restoreActivityThrobber();
@@ -205,6 +203,7 @@ classicthemerestorerjs.ctr = {
 			if (branch.getCharPref("tabs")!="tabs_default" && classicthemerestorerjs.ctr.fxdefaulttheme==true){
 			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("tabs"),true);
 			}
+		  
 		  break;
 		  
 		  case "tabsontop":
@@ -433,10 +432,15 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("noconicons") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("noconicons",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("noconicons",false);
 		  break;
-		  
+
 		  case "wincontrols":
 			if (branch.getBoolPref("wincontrols")) classicthemerestorerjs.ctr.loadUnloadCSS("wincontrols",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("wincontrols",false);
+		  break;
+
+		  case "hideprbutton":
+			if (branch.getBoolPref("hideprbutton")) classicthemerestorerjs.ctr.loadUnloadCSS("hideprbutton",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("hideprbutton",false);
 		  break;
 		  
 		  case "statusbar":
@@ -444,14 +448,6 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("statusbar")) {
 				classicthemerestorerjs.ctr.loadUnloadCSS("statusbar",true);
 			
-				// restore position of CTRs status bar area, if it is not on a toolbar
-				/*setTimeout(function(){
-				  try{
-					if(CustomizableUI.getPlacementOfWidget("ctraddon_statusbar")==null)
-					  CustomizableUI.addWidgetToArea("ctraddon_statusbar", CustomizableUI.AREA_NAVBAR);
-				  } catch(e){}
-				},1000);*/
-
 				// add status bar shim to CTRs status bar area
 				setTimeout(function(){
 				  try{
@@ -463,14 +459,7 @@ classicthemerestorerjs.ctr = {
 				// recheck position of CTRs status bar area
 				window.addEventListener("DOMContentLoaded", function loadCTRstatusbar(event){
 					window.removeEventListener("DOMContentLoaded", loadCTRstatusbar, false);
-
-					/*setTimeout(function(){
-					  try{
-						if(CustomizableUI.getPlacementOfWidget("ctraddon_statusbar")==null)
-						  CustomizableUI.addWidgetToArea("ctraddon_statusbar", CustomizableUI.AREA_NAVBAR);
-					  } catch(e){}
-					},1150);*/
-					
+			
 					setTimeout(function(){
 					  try{
 						  if(document.getElementById("status-bar").parentNode.id!="ctraddon_statusbar")
@@ -828,30 +817,45 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("nonavtbborder",false);
 		  break;
 		  
+		  case "hidesbclose":
+			if (branch.getBoolPref("hidesbclose")) classicthemerestorerjs.ctr.loadUnloadCSS("hidesbclose",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("hidesbclose",false);
+		  break;
+		  
+		  case "chevronfix":
+			if (branch.getBoolPref("chevronfix")) classicthemerestorerjs.ctr.loadUnloadCSS("chevronfix",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("chevronfix",false);
+		  break;
+		  
 		  case "tabmokcolor":
 			if (branch.getBoolPref("tabmokcolor") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("tabmokcolor",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("tabmokcolor",false);
 		  break;
-		  
+
 		  case "tabmokcolor2":
 			if (branch.getBoolPref("tabmokcolor2") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("tabmokcolor2",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("tabmokcolor2",false);
 		  break;
-		  
+
 		  case "tabmokcolor3":
 			if (branch.getBoolPref("tabmokcolor3") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("tabmokcolor3",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("tabmokcolor3",false);
 		  break;
-		  
+
 		  case "closeabarbut":
 			if (branch.getBoolPref("closeabarbut"))	classicthemerestorerjs.ctr.loadUnloadCSS("closeabarbut",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("closeabarbut",false);
 		  break;
-		  
+
 		  case "bfurlbarfix":
 			if (branch.getBoolPref("bfurlbarfix") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("bfurlbarfix",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("bfurlbarfix",false);
 		  break;
+
+		  case "bf_space":
+			if (branch.getBoolPref("bf_space") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("bf_space",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("bf_space",false);
+		  break;		  
 
 		  case "emptyfavicon":
 			if (branch.getBoolPref("emptyfavicon")) classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",true);
@@ -955,7 +959,7 @@ classicthemerestorerjs.ctr = {
 			if (classicthemerestorerjs.ctr.prefs.getBoolPref("faviconurl"))
 		      classicthemerestorerjs.ctr.favIconinUrlbarCTR();
 		  break;
-
+		  
 		  case "padlock":
 			if (classicthemerestorerjs.ctr.prefs.getBoolPref("faviconurl"))
 		      classicthemerestorerjs.ctr.favIconinUrlbarCTR();
@@ -1012,6 +1016,21 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("panelmenucol",false);
 		  break;
 		  
+		  case "extrabar1":
+			if (branch.getBoolPref("extrabar1")) classicthemerestorerjs.ctr.loadUnloadCSS("extrabar1",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("extrabar1",false);
+		  break;
+		  
+		  case "extrabar2":
+			if (branch.getBoolPref("extrabar2")) classicthemerestorerjs.ctr.loadUnloadCSS("extrabar2",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("extrabar2",false);
+		  break;
+
+		  case "extrabar3":
+			if (branch.getBoolPref("extrabar3")) classicthemerestorerjs.ctr.loadUnloadCSS("extrabar3",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("extrabar3",false);
+		  break;
+		  
 		  //inv icons START
 		  case "invicomenubar":
 			if (branch.getBoolPref("invicomenubar") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("invicomenubar",true);
@@ -1031,6 +1050,16 @@ classicthemerestorerjs.ctr = {
 		  case "invicoextrabar":
 			if (branch.getBoolPref("invicoextrabar") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("invicoextrabar",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("invicoextrabar",false);
+		  break;
+		  
+		  case "invicoextrabar2":
+			if (branch.getBoolPref("invicoextrabar2") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("invicoextrabar2",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("invicoextrabar2",false);
+		  break;
+		  
+		  case "invicoextrabar3":
+			if (branch.getBoolPref("invicoextrabar3") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("invicoextrabar3",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("invicoextrabar3",false);
 		  break;
 		  
 		  case "invicobookbar":
@@ -1081,10 +1110,21 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("contextitem",true);
 		  break;
 		  
+		  case "puictrbutton":
+			if (branch.getBoolPref("puictrbutton")) classicthemerestorerjs.ctr.loadUnloadCSS("puictrbutton",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("puictrbutton",false);
+		  break;
+		  
 		  case "cuibuttons":
 			if (branch.getBoolPref("cuibuttons")) classicthemerestorerjs.ctr.loadUnloadCSS("cuibuttons",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("cuibuttons",false);
 		  break;
+
+		  case "bmarkoinpw":
+			if (branch.getBoolPref("bmarkoinpw")) classicthemerestorerjs.ctr.loadUnloadCSS("bmarkoinpw",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmarkoinpw",false);
+		  break;
+
 		}
 	  }
 	);
@@ -1108,6 +1148,11 @@ classicthemerestorerjs.ctr = {
 	);
 	
 	ctrSettingsListener_forCTB.register(true);
+	
+	// MacOSX needs extra checks to not load CTRs tab styles for complete themes by accident
+	if (classicthemerestorerjs.ctr.osstring=="Darwin" && this.fxdefaulttheme==false){
+	  classicthemerestorerjs.ctr.prefs.setCharPref('tabs','tabs_default');
+	}
 
   },
 
@@ -1131,6 +1176,15 @@ classicthemerestorerjs.ctr = {
 	  window.clearTimeout(timeoutID);
 	}
    }
+  },
+  
+  // clicking CTRs activity throbber allows to open an url in a new tab
+  openAThrobberUrl: function() {
+  
+    var newathrobberurl=classicthemerestorerjs.ctr.prefs.getCharPref("athrobberurl");
+	
+	if(newathrobberurl!="")
+	  gBrowser.selectedTab = gBrowser.addTab(newathrobberurl);
   },
   
   addonCompatibilityImprovements: function() {
@@ -1447,46 +1501,44 @@ classicthemerestorerjs.ctr = {
 	} catch(e) {}*/
   },
 
-  // feed-button in urlbar: move feed button into 'urlbar-icons' container and remove 'dropmarker' menu
-  moveFeedButtonIntoUrbar: function() {
-
-	if (this.prefs.getBoolPref('feedinurl')) {
-		
-		classicthemerestorerjs.ctr.loadUnloadCSS("feedinurl",true);
-	
-		// needs timeout to prevent issues with add-ons, which insert own (h-)boxes into
-		// urlbar instead of using 'urlbar-icons' node (e.g. 'Rss icon in Awesomebar' add-on)
-		setTimeout(function(){
-			try{
-				if(CustomizableUI.getPlacementOfWidget("feed-button")==null) {
-					CustomizableUI.addWidgetToArea("feed-button", CustomizableUI.AREA_NAVBAR);
-					CustomizableUI.moveWidgetWithinArea("feed-button",0);
-				}
-				document.getElementById("urlbar-icons").appendChild(document.getElementById("feed-button"));
-			} catch(e){}
-		},1050);
-
-	}
-  },
-
-  // star-button in urlbar: move bookmarks button into 'urlbar-icons' container and remove its bookmarks menu
-  moveStarButtonIntoUrbar: function() {
-
+  // star/feed-button in urlbar: move star/feed button into 'urlbar-icons' container
+  // needs timeout to prevent issues with add-ons, which insert own (h-)boxes into
+  // urlbar instead of using 'urlbar-icons' node (e.g. 'Rss icon in Awesomebar' add-on)
+  moveStarAndFeedButtonIntoUrbar: function() {
+  
 	if (this.prefs.getBoolPref('starinurl')) {
 		
 		classicthemerestorerjs.ctr.loadUnloadCSS("starinurl",true);
 		
-		// needs timeout to prevent issues with add-ons, which insert own (h-)boxes into
-		// urlbar instead of using 'urlbar-icons' node (e.g. 'Rss icon in Awesomebar' add-on)
 		setTimeout(function(){
 			try{
 				if(CustomizableUI.getPlacementOfWidget("bookmarks-menu-button")==null) {
 					CustomizableUI.addWidgetToArea("bookmarks-menu-button", CustomizableUI.AREA_NAVBAR);
 					CustomizableUI.moveWidgetWithinArea("bookmarks-menu-button",0);
 				}
-				document.getElementById("urlbar-icons").appendChild(document.getElementById("bookmarks-menu-button"));
+				var urlbaricons = document.getElementById("urlbar-icons");
+				urlbaricons.insertBefore(document.getElementById("bookmarks-menu-button"), urlbaricons.firstChild);
+				//document.getElementById("urlbar-icons").appendChild(document.getElementById("bookmarks-menu-button"));
 			} catch(e){}
-		},1100);
+		},1000);
+
+	}
+
+	if (this.prefs.getBoolPref('feedinurl')) {
+		
+		classicthemerestorerjs.ctr.loadUnloadCSS("feedinurl",true);
+	
+		setTimeout(function(){
+			try{
+				if(CustomizableUI.getPlacementOfWidget("feed-button")==null) {
+					CustomizableUI.addWidgetToArea("feed-button", CustomizableUI.AREA_NAVBAR);
+					CustomizableUI.moveWidgetWithinArea("feed-button",0);
+				}
+				var urlbaricons = document.getElementById("urlbar-icons");
+				urlbaricons.insertBefore(document.getElementById("feed-button"), urlbaricons.firstChild);
+				//document.getElementById("urlbar-icons").appendChild(document.getElementById("feed-button"));
+			} catch(e){}
+		},1250);
 
 	}
   },
@@ -1797,6 +1849,7 @@ classicthemerestorerjs.ctr = {
 		case "backforward":			manageCSS("back-forward.css");			break;
 		case "noconicons": 			manageCSS("nocontexticons.css");		break;
 		case "wincontrols": 		manageCSS("windowcontrols.css");		break;
+		case "hideprbutton": 		manageCSS("hidepagereportbutton.css");	break;
 		case "starinurl":			manageCSS("starinurl.css");				break;
 		case "feedinurl":			manageCSS("feedinurl.css");				break;
 		case "statusbar": 			manageCSS("statusbar.css"); 			break;
@@ -1826,6 +1879,8 @@ classicthemerestorerjs.ctr = {
 		case "nonavbarbg": 			manageCSS("nonavbarbg.css");			break;
 		case "nonavborder": 		manageCSS("nonavborder.css");			break;
 		case "nonavtbborder": 		manageCSS("nonavtbborder.css");			break;
+		case "hidesbclose": 		manageCSS("hidesidebarclose.css");		break;
+		case "chevronfix": 			manageCSS("chevronfix.css");			break;
 		case "highaddonsbar": 		manageCSS("higher_addonsbar.css");		break;
 		case "hightabpososx": 		manageCSS("higher_tabs_pos.css");		break;
 		case "alttabstb": 			manageCSS("alttabstoolbar.css");		break;
@@ -1839,11 +1894,18 @@ classicthemerestorerjs.ctr = {
 		case "verifiedcolors": 		manageCSS("verifiedcolors.css");		break;
 		case "hideprivmask": 		manageCSS("hideprivatemask.css");		break;
 		case "bfurlbarfix": 		manageCSS("bf_urlbarfix.css");			break;
+		case "bf_space": 			manageCSS("bf_space.css");				break;
+		
+		case "extrabar1": 			manageCSS("extratoolbar1.css");			break;
+		case "extrabar2": 			manageCSS("extratoolbar2.css");			break;
+		case "extrabar3": 			manageCSS("extratoolbar3.css");			break;
 		
 		case "invicomenubar": 		manageCSS("invicons_menubar.css");		break;
 		case "invicotabsbar": 		manageCSS("invicons_tabsbar.css");		break;
 		case "inviconavbar": 		manageCSS("invicons_navbar.css");		break;
 		case "invicoextrabar": 		manageCSS("invicons_extrabar.css");		break;
+		case "invicoextrabar2": 	manageCSS("invicons_extrabar2.css");	break;
+		case "invicoextrabar3": 	manageCSS("invicons_extrabar3.css");	break;
 		case "invicobookbar": 		manageCSS("invicons_bookmarksbar.css");	break;
 		case "invicoaddonbar": 		manageCSS("invicons_addonbar.css");		break;
 
@@ -1867,8 +1929,11 @@ classicthemerestorerjs.ctr = {
 		case "closeabarbut": 		manageCSS("closeabarbut.css");			break;
 		case "appmenuitem": 		manageCSS("ctraddon_appmenuitem.css");	break;
 		case "contextitem": 		manageCSS("ctraddon_contextmitem.css");	break;
+		case "puictrbutton": 		manageCSS("ctraddon_puictrbutton.css");	break;
 		case "toolsitem": 			manageCSS("ctraddon_toolsitem.css");	break;
+		
 		case "cuibuttons":			manageCSS("cuibuttons.css");			break;
+		case "bmarkoinpw":			manageCSS("ctraddon_bmark_oinpw.css");	break;
 		
 		case "spaces_extra": 		manageCSS("spaces_extra.css");			break;
 
@@ -1903,8 +1968,24 @@ classicthemerestorerjs.ctr = {
 					this.ctabsheet_def=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,\
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,\
-						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end{\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:-moz-lwtheme:not([selected=true]):not(:hover) .tab-stack .tab-background-middle,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-start,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-end{\
 						  background-image: linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctab1')+' 0px, '+this.prefs.getCharPref('ctab2')+'), none !important;\
+						}\
+						.tabbrowser-tab:-moz-lwtheme:not(:hover) > .tab-stack > .tab-background:not([selected=true]) {\
+						  background-position: left bottom, 30px bottom, right bottom;\
+						  background-repeat: no-repeat;\
+						  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;\
+						}\
+						.tabbrowser-tab:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),\
+						.tabbrowser-tab:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl) {\
+						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
+						}\
+						.tabbrowser-tab:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),\
+						.tabbrowser-tab:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl) {\
+						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
 					'), null, null);
 				
@@ -1964,7 +2045,18 @@ classicthemerestorerjs.ctr = {
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) .tab-background-middle[selected=true]  {\
+						#main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme .tab-background-start[selected=true]:-moz-locale-dir(ltr)::before,\
+						#main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme .tab-background-end[selected=true]:-moz-locale-dir(rtl)::before {\
+						  background: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
+						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
+						}\
+						#main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme .tab-background-end[selected=true]:-moz-locale-dir(ltr)::before,\
+						#main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme .tab-background-start[selected=true]:-moz-locale-dir(rtl)::before {\
+						  background: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
+						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
+						}\
+						#main-window #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) .tab-background-middle[selected=true],\
+						#main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme .tab-background-middle[selected=true] {\
 						  background-color: transparent !important;\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+'), none !important;\
 						}\
@@ -1985,7 +2077,18 @@ classicthemerestorerjs.ctr = {
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) .tab-background-middle[selected=true]  {\
+						#main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme .tab-background-start[selected=true]:-moz-locale-dir(ltr)::before,\
+						#main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme .tab-background-end[selected=true]:-moz-locale-dir(rtl)::before {\
+						  background: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
+						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
+						}\
+						#main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme .tab-background-end[selected=true]:-moz-locale-dir(ltr)::before,\
+						#main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme .tab-background-start[selected=true]:-moz-locale-dir(rtl)::before {\
+						  background: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
+						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
+						}\
+						#main-window #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) .tab-background-middle[selected=true],\
+						#main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme .tab-background-middle[selected=true] {\
 						  background-color: transparent !important;\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+'), none !important;\
 						}\
@@ -2029,8 +2132,24 @@ classicthemerestorerjs.ctr = {
 					this.ctabsheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-stack .tab-background-middle,\
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start,\
-						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end {\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:-moz-lwtheme:not([selected=true]):hover .tab-stack .tab-background-middle,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:-moz-lwtheme:not([selected=true]):hover .tab-background-start,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:-moz-lwtheme:not([selected=true]):hover .tab-background-end{\
 						  background-image: linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctabhov1')+' 0px, '+this.prefs.getCharPref('ctabhov2')+'), none !important;\
+						}\
+						.tabbrowser-tab:-moz-lwtheme:hover > .tab-stack > .tab-background:not([selected=true]){\
+						  background-position: left bottom, 30px bottom, right bottom;\
+						  background-repeat: no-repeat;\
+						  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;\
+						}\
+						.tabbrowser-tab:-moz-lwtheme:not([selected=true]):hover .tab-background-start:-moz-locale-dir(ltr),\
+						.tabbrowser-tab:-moz-lwtheme:not([selected=true]):hover .tab-background-end:-moz-locale-dir(rtl) {\
+						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
+						}\
+						.tabbrowser-tab:-moz-lwtheme:not([selected=true]):hover .tab-background-end:-moz-locale-dir(ltr),\
+						.tabbrowser-tab:-moz-lwtheme:not([selected=true]):hover .tab-background-start:-moz-locale-dir(rtl) {\
+						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
 					'), null, null);
 				
@@ -2072,13 +2191,26 @@ classicthemerestorerjs.ctr = {
 				else if (this.prefs.getCharPref('tabs')=='tabs_curved') {
 				
 					this.ctabsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						/*#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):hover .tab-stack .tab-background-middle,\
-						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start,\
-						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end,*/\
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,\
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,\
-						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end {\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-stack .tab-background-middle,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-start,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-end{\
 						  background-image: linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctabpen1')+' 0px, '+this.prefs.getCharPref('ctabpen2')+'), none !important;\
+						}\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) > .tab-stack > .tab-background:not([selected=true]){\
+						  background-position: left bottom, 30px bottom, right bottom;\
+						  background-repeat: no-repeat;\
+						  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;\
+						}\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl) {\
+						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
+						}\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl) {\
+						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
 					'), null, null);
 				
@@ -2120,13 +2252,26 @@ classicthemerestorerjs.ctr = {
 				else if (this.prefs.getCharPref('tabs')=='tabs_curved') {
 				
 					this.ctabsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						/*#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not(:-moz-lwtheme):not([selected=true]):hover .tab-stack .tab-background-middle,\
-						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start,\
-						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end,*/\
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,\
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,\
-						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end {\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-stack .tab-background-middle,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-start,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-end						{\
 						  background-image: linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctabunr1')+' 0px, '+this.prefs.getCharPref('ctabunr2')+'), none !important;\
+						}\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) > .tab-stack > .tab-background:not([selected=true]){\
+						  background-position: left bottom, 30px bottom, right bottom;\
+						  background-repeat: no-repeat;\
+						  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;\
+						}\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl) {\
+						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
+						}\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl) {\
+						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
 					'), null, null);
 				
@@ -2467,7 +2612,21 @@ classicthemerestorerjs.ctr = {
 	}
 
   },
-
+  
+  openCTRPreferences: function(currentWindow) {
+	AddonManager.getAddonByID("ClassicThemeRestorer@ArisT2Noia4dev", function(aAddon) {
+	  let windows = Services.wm.getEnumerator(null);
+		while (windows.hasMoreElements()) {
+		  let win = windows.getNext();
+		  if (win.document.documentURI == aAddon.optionsURL) {
+			win.focus();
+			return;
+		  }
+		}
+		window.open(aAddon.optionsURL,'', 'chrome').focus();
+	});
+  },
+	
   // hides/shows CTRs add-on bar
   toggleCtrAddonBar: function() {
     

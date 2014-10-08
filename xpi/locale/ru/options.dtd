@@ -23,7 +23,7 @@
 <!ENTITY Ctr_tnot			"(Вкладки не вверху)">
 
 <!ENTITY Ctr_tabcolors_t	"Настройки цветов">
-<!ENTITY Ctr_icons_t		"Значки">
+<!ENTITY Ctr_urlbar_t		"Urlbar settings">
 
 <!ENTITY Ctr_tabs			"Вкладки">
 <!ENTITY Ctr_tabs0			"Изогнутые (по умолчанию в Australis)">
@@ -45,6 +45,8 @@
 <!ENTITY Ctr_tabwidthinfo	"Минимальная и максимальная ширина вкладок изменяются расширениями TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"Минимальная и максимальная ширина вкладок изменяются расширениями TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
+<!ENTITY Ctr_emptyfavicon	"Восстановить пустой значок на вкладках">
+<!ENTITY Ctr_noemptypticon	"Удалить пустой значок из прикреплённой вкладки">
 <!ENTITY Ctr_closetab_0		"Кнопка закрытия вкладки">
 <!ENTITY Ctr_closetab_1		"на активной вкладке">
 <!ENTITY Ctr_closetab_2		"нигде">
@@ -80,6 +82,7 @@
 <!ENTITY Ctr_appbutmhi		"Высокое положение (если на панели вкладок)">
 <!ENTITY Ctr_appbutbdl		"Скрыть рамки и цвет фона">
 <!ENTITY Ctr_dblclclosefx	"Двойной клик закрывает активное окно">
+<!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
 
 <!ENTITY Ctr_ui				"Основной интерфейс">
 <!ENTITY Ctr_nbiconsize0	"Размер значков панели навигации: small - малый, large - большой">
@@ -87,16 +90,17 @@
 <!ENTITY Ctr_bfurlbarfix	"Радиус углов строки адреса: 2px (Win) / 2.5px (Mac)">
 <!ENTITY Ctr_backforward	"Подвижная кнопка «назад-вперед»">
 <!ENTITY Ctr_hide_bf_popup	"Не показывать меню истории при нажатии мыши">
+<!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"На странице, в контекстном меню, заменить значки метками (назад, вперёд, остановить, обновить, страница закладок)">
 <!ENTITY Ctr_wincontrols	"Подвижное управление полноэкранным режимом">
-<!ENTITY Ctr_starinurl		"Звёздочка в адресной строке (перезапустите Firefox!)">
-<!ENTITY Ctr_feedinurl		"Кнопка RSS в адресной строке (перезапустите Firefox!)">
+<!ENTITY Ctr_emptyfavicon2	"Установить общий значок (пустой и пунктирный)">
 <!ENTITY Ctr_mstatusbar		"Подвижная строка состояния">
-<!ENTITY Ctr_hideurelstop	"Скрыть в адресной строке кнопку «Остановить и перезагрузить»">
+<!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
+<!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
 <!ENTITY Ctr_combrelstop	"Совместить кнопки «Остановить» и «Перезагрузить»">
+<!ENTITY Ctr_stoprel1		"Кнопка остановки меняется на панели инструментов на кнопку перезагрузки после остановки!">
 <!ENTITY Ctr_panelmenucol	"Альтернативный цвет фона для меню панели">
 <!ENTITY Ctr_hideprivmask	"Приватный просмотр: скрыть значок маски">
-<!ENTITY Ctr_verifiedcolors	"Зеленый и синий индикатор для достоверных сайтов">
 <!ENTITY Ctr_findbar		"Панель поиска">
 <!ENTITY Ctr_findbar_def	"Положение по умолчанию">
 <!ENTITY Ctr_findbar_top	"вверху">
@@ -107,8 +111,7 @@
 <!ENTITY Ctr_nav_txt_ico1	"Показывать большие значки">
 <!ENTITY Ctr_nav_txt_ico2	"Показывать значки и текст">
 <!ENTITY Ctr_nav_txt_ico3	"Показывать только текст">
-<!ENTITY Ctr_stoprel0		"Настройки кнопки «Остановить и перезагрузить»">
-<!ENTITY Ctr_stoprel1		"Кнопка остановки меняется на панели инструментов на кнопку перезагрузки после остановки!">
+<!ENTITY Ctr_nav_txt_exp	"Experimental attributes:">
 <!ENTITY Ctr_cpanelmenus	"Компактная панель меню (закладки, история и т. д.)">
 <!ENTITY Ctr_hidezoomres	"Кнопки масштаба: скрыть сброс масштабирования">
 <!ENTITY Ctr_pmhidelabels	"Панель меню: спрятать надписи на кнопках">
@@ -118,6 +121,9 @@
 <!ENTITY Ctr_tabmokcolor	"Белый цвет для кнопок вкладок (закрыть, новая, группы, список всех)">
 <!ENTITY Ctr_tabmokcolor2	"Белый цвет и темная тень для текста на неактивной вкладке">
 <!ENTITY Ctr_tabmokcolor3	"Белый цвет для разделителей на панели вкладок">
+
+<!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
+<!ENTITY Ctr_navthrobber2	"Add url or leave empty">
 
 <!ENTITY Ctr_tab_tf_info1	"Текстовые поля поддерживают названия цветов на английском, шестнадцатеричные коды, rgb(a) and hsl(a) значения.">
 <!ENTITY Ctr_tab_tf_info2	"Введённое не будет проверяться!">
@@ -140,17 +146,24 @@
 <!ENTITY Ctr_bold			"Полужирный">
 <!ENTITY Ctr_italic			"Курсив">
 
-<!ENTITY Ctr_favicon		"Значок">
-<!ENTITY Ctr_emptyfavicon	"Восстановить пустой значок на вкладках">
-<!ENTITY Ctr_emptyfavicon2	"Установить общий значок (пустой и пунктирный)">
-<!ENTITY Ctr_noemptypticon	"Удалить пустой значок из прикреплённой вкладки">
-<!ENTITY Ctr_faviconurl0	"Значки в адресной строке">
+<!ENTITY Ctr_urlbar			"Urlbar">
+<!ENTITY Ctr_starinurl		"Звёздочка в адресной строке (перезапустите Firefox!)">
+<!ENTITY Ctr_feedinurl		"Кнопка RSS в адресной строке (перезапустите Firefox!)">
+<!ENTITY Ctr_hideurelstop	"Скрыть в адресной строке кнопку «Остановить и перезагрузить»">
+<!ENTITY Ctr_hideprbutton	"Hide notification icon when a popup gets blocked">
+<!ENTITY Ctr_urlbar_ib		"Urlbars identity box">
+<!ENTITY Ctr_verifiedcolors	"Зеленый и синий индикатор для достоверных сайтов">
 <!ENTITY Ctr_faviconurl		"Значок в адресной строке (перезапустите Firefox!)">
 <!ENTITY Ctr_padlock_hid	"Скрыть замок">
 <!ENTITY Ctr_padlock_def	"Замок (по умолчанию)">
 <!ENTITY Ctr_padlock_cla	"Замок (классический)">
 <!ENTITY Ctr_padlock_mod	"Замок (модерн)">
 <!ENTITY Ctr_padlock_ext	"Значки безопасности">
+<!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
+
+<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
+
+<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
 
 <!ENTITY Ctr_invicons		"Перекрашенные наоборот значки">
 <!ENTITY Ctr_menubar		"Панель меню">
@@ -176,6 +189,8 @@
 <!ENTITY Ctr_nonavbarbg		"Панель навигации: удалить цвет фона">
 <!ENTITY Ctr_nonavborder	"Панель закладок: добавить верхнюю границу для панели инструментов">
 <!ENTITY Ctr_nonavtbborder	"Популярные панели инструментов: удалить границы панелей инструментов">
+<!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
+<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('chevron') at toolbars end">
 
 <!ENTITY Ctr_closeabarbut	"Скрыть кнопку закрытия">
 <!ENTITY Ctr_highaddonsbar	"Увеличить высоту">
@@ -190,7 +205,11 @@
 <!ENTITY Ctr_toolsitem		"Пункт в меню инструментов">
 <!ENTITY Ctr_appmenuitem	"Пункт в меню кнопки приложения">
 <!ENTITY Ctr_contextitem	"Пункт в контекстном меню панелей инструментов">
+<!ENTITY Ctr_puictrbutton	"Button in main panel menu">
+
+<!ENTITY Ctr_otherctroptns	"Other settings">
 <!ENTITY Ctr_cuibotbuttons	"Показывать свои кнопки в режиме «Настроить»">
+<!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
 
 
 <!ENTITY Ctr_pw_settings	"Настройки">
@@ -207,3 +226,6 @@
 
 <!ENTITY Ctr_addon-bar.accesskey	"Д">
 <!ENTITY Ctr_extrabar.accesskey		"О">
+<!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
+<!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
+<!ENTITY appMenuGettingStarted.label	"Getting started">

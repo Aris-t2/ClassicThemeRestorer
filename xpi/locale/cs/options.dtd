@@ -23,7 +23,7 @@
 <!ENTITY Ctr_tnot			"(panely navrchu)">
 
 <!ENTITY Ctr_tabcolors_t	"Barvy panelů &amp; textu">
-<!ENTITY Ctr_icons_t		"Favicon &amp; ikony">
+<!ENTITY Ctr_urlbar_t		"Urlbar settings">
 
 <!ENTITY Ctr_tabs			"Panely">
 <!ENTITY Ctr_tabs0			"Zakulacené panely (výchozí Australis)">
@@ -45,6 +45,8 @@
 <!ENTITY Ctr_tabwidthinfo	"Šířka panelů (min-width a max-width) je určena doplňkem TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"Šířka panelů (min-width a max-width) je určena doplňkem TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
+<!ENTITY Ctr_emptyfavicon	"Obnovit prázdnou faviconu (pokud stránka nemá vlastní)">
+<!ENTITY Ctr_noemptypticon	"Odebrat prázdnou faviconu z připnutého panelu">
 <!ENTITY Ctr_closetab_0		"Zavřít panel">
 <!ENTITY Ctr_closetab_1		"Pouze na aktivním panelu">
 <!ENTITY Ctr_closetab_2		"Nikde">
@@ -80,6 +82,7 @@
 <!ENTITY Ctr_appbutmhi		"Vyšší umístění (pokud na liště s panely)">
 <!ENTITY Ctr_appbutbdl		"Skrýt okraje a barvy pozadí">
 <!ENTITY Ctr_dblclclosefx	"Dvojklik zavře současné okno">
+<!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
 
 <!ENTITY Ctr_ui				"Obecné UI">
 <!ENTITY Ctr_nbiconsize0	"Nastavit atribut lišty navigace:">
@@ -87,16 +90,17 @@
 <!ENTITY Ctr_bfurlbarfix	"Upravit okraje adresního řádku">
 <!ENTITY Ctr_backforward	"Přesunutelná tlačítka zpět-vpřed">
 <!ENTITY Ctr_hide_bf_popup	"Skrýt nabídku historie tlačítek při kliknutí myší">
+<!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"Nahradit ikony v kontextové nabídce stránky textem (zpět, vpřed, zastavit, obnovit, přidat do záložek)">
 <!ENTITY Ctr_wincontrols	"Přesunutelné ovládací prvky okna v režimu celé obrazovky (min/max/zavřít)">
-<!ENTITY Ctr_starinurl		"Tlačítko hvězdičky v adresním řádku (restartujte Firefox!)">
-<!ENTITY Ctr_feedinurl		"Tlačítko kanálu v adresním řádku (restartujte Firefox!)">
+<!ENTITY Ctr_emptyfavicon2	"Nahradit obecnou faviconu (prázdnou tečkovanou) faviconou listu">
 <!ENTITY Ctr_mstatusbar		"Přesunutelný stavový řádek">
-<!ENTITY Ctr_hideurelstop	"Skrýt tlačítka zastavit &amp; obnovit v adresním řádku">
+<!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
+<!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
 <!ENTITY Ctr_combrelstop	"Spojit tlačítka zastavit &amp; obnovit">
+<!ENTITY Ctr_stoprel1		"Důležité: umístěte tlačítko obnovit za tlačítko zastavit!">
 <!ENTITY Ctr_panelmenucol	"Nabídky panelů: alternativní barva pozadí">
 <!ENTITY Ctr_hideprivmask	"Anonymní prohlížení: skrýt indikátor s maskou">
-<!ENTITY Ctr_verifiedcolors	"Zelený/modrý identity-box pro ověřené stránky">
 <!ENTITY Ctr_findbar		"Lišta hledání">
 <!ENTITY Ctr_findbar_def	"Výchozí umístění">
 <!ENTITY Ctr_findbar_top	"Nahoře">
@@ -107,8 +111,7 @@
 <!ENTITY Ctr_nav_txt_ico1	"Zobrazit velké ikony">
 <!ENTITY Ctr_nav_txt_ico2	"Zobrazit ikony a text">
 <!ENTITY Ctr_nav_txt_ico3	"Zobrazit pouze text">
-<!ENTITY Ctr_stoprel0		"Možnosti tlačítek zastavit a obnovit">
-<!ENTITY Ctr_stoprel1		"Důležité: umístěte tlačítko obnovit za tlačítko zastavit!">
+<!ENTITY Ctr_nav_txt_exp	"Experimental attributes:">
 <!ENTITY Ctr_cpanelmenus	"Nabídky panelů: kompaktní zobrazení (záložky, historie atd.)">
 <!ENTITY Ctr_hidezoomres	"Přiblížit prvky na liště: skrýt tlačítko pro obnovení lupy">
 <!ENTITY Ctr_pmhidelabels	"Tlačítko nabídky: skrýt texty u ikon">
@@ -118,6 +121,9 @@
 <!ENTITY Ctr_tabmokcolor	"Bílá barva pro tlačítka panelu (zavřít, nový, skupiny, seznam všech)">
 <!ENTITY Ctr_tabmokcolor2	"Bílá barva a tmavý stín pro text na neaktivních panelech">
 <!ENTITY Ctr_tabmokcolor3	"Bílá barva pro oddělovače panelů">
+
+<!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
+<!ENTITY Ctr_navthrobber2	"Add url or leave empty">
 
 <!ENTITY Ctr_tab_tf_info1	"Podporovány jsou názvy barev, hex, rgb(a) a hsl(a) hodnoty.">
 <!ENTITY Ctr_tab_tf_info2	"Vstupy nejsou validovány!">
@@ -140,17 +146,22 @@
 <!ENTITY Ctr_bold			"Tučný">
 <!ENTITY Ctr_italic			"Kurzíva">
 
-<!ENTITY Ctr_favicon		"Nastavení favicon">
-<!ENTITY Ctr_emptyfavicon	"Obnovit prázdnou faviconu (pokud stránka nemá vlastní)">
-<!ENTITY Ctr_emptyfavicon2	"Nahradit obecnou faviconu (prázdnou tečkovanou) faviconou listu">
-<!ENTITY Ctr_noemptypticon	"Odebrat prázdnou faviconu z připnutého panelu">
-<!ENTITY Ctr_faviconurl0	"Ikony v adresním řádku">
+<!ENTITY Ctr_urlbar			"Urlbar">
+<!ENTITY Ctr_starinurl		"Tlačítko hvězdičky v adresním řádku (restartujte Firefox!)">
+<!ENTITY Ctr_feedinurl		"Tlačítko kanálu v adresním řádku (restartujte Firefox!)">
+<!ENTITY Ctr_hideurelstop	"Skrýt tlačítka zastavit &amp; obnovit v adresním řádku">
+<!ENTITY Ctr_hideprbutton	"Hide notification icon when a popup gets blocked">
+<!ENTITY Ctr_urlbar_ib		"Urlbars identity box">
+<!ENTITY Ctr_verifiedcolors	"Zelený/modrý identity-box pro ověřené stránky">
 <!ENTITY Ctr_faviconurl		"Favicona v adresním řádku (restartujte Firefox!)">
 <!ENTITY Ctr_padlock_hid	"Zámek (skrytý)">
 <!ENTITY Ctr_padlock_def	"Zámek (výchozí)">
 <!ENTITY Ctr_padlock_cla	"Zámek (klasický)">
 <!ENTITY Ctr_padlock_mod	"Zámek (moderní)">
 <!ENTITY Ctr_padlock_ext	"Ikony bezpečnosti">
+<!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
+
+<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
 
 <!ENTITY Ctr_invicons		"Invertované ikony">
 <!ENTITY Ctr_menubar		"Hlavní nabídka">
@@ -176,6 +187,8 @@
 <!ENTITY Ctr_nonavbarbg		"Navigační lišta: odstranit barvu pozadí">
 <!ENTITY Ctr_nonavborder	"Lišta záložek: přidat horní okraj lišty">
 <!ENTITY Ctr_nonavtbborder	"Vrchní lišty: odstranit okraje lišt">
+<!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
+<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('chevron') at toolbars end">
 
 <!ENTITY Ctr_closeabarbut	"Skrýt tlačítko zavření lišty doplňků">
 <!ENTITY Ctr_highaddonsbar	"Zvětšit výšku">
@@ -190,7 +203,11 @@
 <!ENTITY Ctr_toolsitem		"Položka v nabídce Nástroje">
 <!ENTITY Ctr_appmenuitem	"Položka v nabídce tlačítka aplikace">
 <!ENTITY Ctr_contextitem	"Položka v kontextové nabídce lišt">
+<!ENTITY Ctr_puictrbutton	"Button in main panel menu">
+
+<!ENTITY Ctr_otherctroptns	"Other settings">
 <!ENTITY Ctr_cuibotbuttons	"Vlastní tlačítka v režimu 'přizpůsobení'">
+<!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
 
 
 <!ENTITY Ctr_pw_settings	"Možnosti">
@@ -207,3 +224,6 @@
 
 <!ENTITY Ctr_addon-bar.accesskey	"D">
 <!ENTITY Ctr_extrabar.accesskey		"N">
+<!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
+<!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
+<!ENTITY appMenuGettingStarted.label	"Getting started">

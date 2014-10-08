@@ -2,7 +2,7 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 	#nav-bar :-moz-any(#back-button, #forward-button)[cui-areatype="toolbar"] {
-	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel.png) !important;
+	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
 	
 	#nav-bar #back-button:not(:hover) > .toolbarbutton-icon,
@@ -113,6 +113,11 @@
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + * {
 	  -moz-padding-start: 2px !important;
 	  transition: none !important;
+	}
+
+	#nav-bar #loop-call-button[cui-areatype="toolbar"] > .toolbarbutton-badge-container  image {
+	  min-width:30px !important;
+	  height:30px !important;
 	}
 
 }

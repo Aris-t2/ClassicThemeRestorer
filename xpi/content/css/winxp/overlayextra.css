@@ -56,7 +56,7 @@
 	  -moz-image-region: rect(0, 108px, 18px, 90px);
 	}
 
-	#nav-bar :-moz-any(#ctraddon_appbutton,#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button) > .toolbarbutton-icon{
+	#nav-bar :-moz-any(#ctraddon_appbutton,#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_ctr-button) > .toolbarbutton-icon{
 	  padding: 2px 6px !important;
 	}
 
@@ -194,6 +194,11 @@
     #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
      -moz-box-align: center !important;
     }
+
+	/* Adjust some buttons colors in palette */
+	#main-window[defaultfxtheme="true"] toolbarpaletteitem[place="palette"] :-moz-any(#ctraddon_appbutton, #PanelUI-menu-button,#ctraddon_history-menu-toolbar-button,#ctraddon_bookmarks-menu-toolbar-button,#ctraddon_history-button,#ctraddon_bookmarks-button) image{
+	  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='colorize'><feColorMatrix type='saturate' in='SourceGraphic' values = '0.4'/></filter></svg>#colorize") !important;
+	}
 
 }
 
