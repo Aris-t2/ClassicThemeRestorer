@@ -36,6 +36,17 @@ classicthemerestorerjs.ctr = {
   tabtxtshsheet_pen:	Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   tabtxtshsheet_unr:	Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
+  tabboldsheet_def:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabboldsheet_act:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabboldsheet_hov:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabboldsheet_pen:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabboldsheet_unr:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabitasheet_def:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabitasheet_act:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabitasheet_hov:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabitasheet_pen:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabitasheet_unr:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  
   cuiButtonssheet:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
 
   prefs:				Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("extensions.classicthemerestorer."),
@@ -511,6 +522,8 @@ classicthemerestorerjs.ctr = {
 			classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt2',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('txtonly',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",false);
+			classicthemerestorerjs.ctr.loadUnloadCSS("to_notf_vt",false);
 			
 			classicthemerestorerjs.ctr.setCTRModeAttributes('icons');
 			
@@ -521,12 +534,18 @@ classicthemerestorerjs.ctr = {
 			  break;
 			  case "iconstxt":
 				classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt',true);
+				if (branch.getBoolPref("iat_notf_vt"))
+				  classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",true);
 			  break;
 			  case "iconstxt2":
 				classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt2',true);
+				if (branch.getBoolPref("iat_notf_vt"))
+				  classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",true);
 			  break;
 			  case "txtonly":
 				classicthemerestorerjs.ctr.loadUnloadCSS('txtonly',true);
+				if (branch.getBoolPref("iat_notf_vt"))
+				  classicthemerestorerjs.ctr.loadUnloadCSS("to_notf_vt",true);
 			  break;
 			  case "text":
 				classicthemerestorerjs.ctr.setCTRModeAttributes('text');
@@ -536,6 +555,18 @@ classicthemerestorerjs.ctr = {
 			  break;
 			}
 
+		  break;
+		  
+		  case "iat_notf_vt":
+			if (branch.getBoolPref("iat_notf_vt")) {
+			  if (branch.getCharPref("nav_txt_ico")=="iconstxt" || branch.getCharPref("nav_txt_ico")=="iconstxt2") 
+			    classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",true);
+			  else if(branch.getCharPref("nav_txt_ico")=="txtonly")
+			    classicthemerestorerjs.ctr.loadUnloadCSS("to_notf_vt",true);
+			} else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("to_notf_vt",false);
+			}
 		  break;
 
 		  // Color settings (checkboxes)
@@ -747,6 +778,84 @@ classicthemerestorerjs.ctr = {
 		  case "tabfita_unr":
 			if (branch.getBoolPref("tabfita_unr")) classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_unr",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_unr",false);
+		  break;
+		  
+		  /* exclude hover settings from unloaded/pending tab */
+		  case "tabc_hov_unl":
+		    if (branch.getBoolPref("tabcolor_pen")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("tabcolor_pen",false);
+			  setTimeout(function(){
+				classicthemerestorerjs.ctr.loadUnloadCSS("tabcolor_pen",true);
+			  },400);
+			} else classicthemerestorerjs.ctr.loadUnloadCSS("tabcolor_pen",false);
+
+		    if (branch.getBoolPref("tabtextc_pen")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("tabtextc_pen",false);
+			  setTimeout(function(){
+				classicthemerestorerjs.ctr.loadUnloadCSS("tabtextc_pen",true);
+			  },400);
+			} else classicthemerestorerjs.ctr.loadUnloadCSS("tabtextc_pen",false);
+			
+		    if (branch.getBoolPref("tabtextsh_pen")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("tabtextsh_pen",false);
+			  setTimeout(function(){
+				classicthemerestorerjs.ctr.loadUnloadCSS("tabtextsh_pen",true);
+			  },400);
+			} else classicthemerestorerjs.ctr.loadUnloadCSS("tabtextsh_pen",false);
+			
+		    if (branch.getBoolPref("tabfbold_pen")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("tabfbold_pen",false);
+			  setTimeout(function(){
+				classicthemerestorerjs.ctr.loadUnloadCSS("tabfbold_pen",true);
+			  },400);
+			} else classicthemerestorerjs.ctr.loadUnloadCSS("tabfbold_pen",false);
+			
+		    if (branch.getBoolPref("tabfita_pen")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_pen",false);
+			  setTimeout(function(){
+				classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_pen",true);
+			  },400);
+			} else classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_pen",false);
+			
+		  break;
+		  
+		  /* exclude hover settings from unread tab */
+		  case "tabc_hov_unr":
+		    if (branch.getBoolPref("tabcolor_unr")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("tabcolor_unr",false);
+			  setTimeout(function(){
+				classicthemerestorerjs.ctr.loadUnloadCSS("tabcolor_unr",true);
+			  },400);
+			} else classicthemerestorerjs.ctr.loadUnloadCSS("tabcolor_unr",false);
+
+		    if (branch.getBoolPref("tabtextc_unr")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("tabtextc_unr",false);
+			  setTimeout(function(){
+				classicthemerestorerjs.ctr.loadUnloadCSS("tabtextc_unr",true);
+			  },400);
+			} else classicthemerestorerjs.ctr.loadUnloadCSS("tabtextc_unr",false);
+			
+		    if (branch.getBoolPref("tabtextsh_unr")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("tabtextsh_unr",false);
+			  setTimeout(function(){
+				classicthemerestorerjs.ctr.loadUnloadCSS("tabtextsh_unr",true);
+			  },400);
+			} else classicthemerestorerjs.ctr.loadUnloadCSS("tabtextsh_unr",false);
+			
+		    if (branch.getBoolPref("tabfbold_unr")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("tabfbold_unr",false);
+			  setTimeout(function(){
+				classicthemerestorerjs.ctr.loadUnloadCSS("tabfbold_unr",true);
+			  },400);
+			} else classicthemerestorerjs.ctr.loadUnloadCSS("tabfbold_unr",false);
+			
+		    if (branch.getBoolPref("tabfita_unr")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_unr",false);
+			  setTimeout(function(){
+				classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_unr",true);
+			  },400);
+			} else classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_unr",false);
+
 		  break;
 
 		  // Special	  
@@ -1848,6 +1957,8 @@ classicthemerestorerjs.ctr = {
 		case "hidenavbar": 			manageCSS("hidenavbar.css");  			break;
 		case "backforward":			manageCSS("back-forward.css");			break;
 		case "noconicons": 			manageCSS("nocontexticons.css");		break;
+		case "iat_notf_vt": 		manageCSS("mode_iat_no_vt.css");		break;
+		case "to_notf_vt": 			manageCSS("mode_to_no_vt.css");			break;
 		case "wincontrols": 		manageCSS("windowcontrols.css");		break;
 		case "hideprbutton": 		manageCSS("hidepagereportbutton.css");	break;
 		case "starinurl":			manageCSS("starinurl.css");				break;
@@ -1856,17 +1967,6 @@ classicthemerestorerjs.ctr = {
 		case "hideurelstop": 		manageCSS("hideurlbarrelstop.css"); 	break;
 		case "combrelstop":			manageCSS("combrelstop.css");			break;
 		case "panelmenucol": 		manageCSS("panelmenucolor.css");		break;
-		
-		case "tabfbold_def":		manageCSS("tab_font_bold_def.css");		break;
-		case "tabfbold_act":		manageCSS("tab_font_bold_act.css");		break;
-		case "tabfbold_hov":		manageCSS("tab_font_bold_hov.css");		break;
-		case "tabfbold_pen":		manageCSS("tab_font_bold_pen.css");		break;
-		case "tabfbold_unr":		manageCSS("tab_font_bold_unr.css");		break;
-		case "tabfita_def":			manageCSS("tab_font_italic_def.css");	break;
-		case "tabfita_act":			manageCSS("tab_font_italic_act.css");	break;
-		case "tabfita_hov":			manageCSS("tab_font_italic_hov.css");	break;
-		case "tabfita_pen":			manageCSS("tab_font_italic_pen.css");	break;
-		case "tabfita_unr":			manageCSS("tab_font_italic_unr.css");	break;
 
 		case "altmenubar": 			manageCSS("menubar.css");				break;
 		case "altmenubarpos": 		manageCSS("menubar_altpos.css");		break;
@@ -2168,28 +2268,85 @@ classicthemerestorerjs.ctr = {
 		
 				if (this.prefs.getCharPref('tabs')=='tabs_squared') {
 				
+				  if(this.prefs.getBoolPref('tabc_hov_unl')){
+				
 					this.ctabsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						/*#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):hover,*/\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):hover,\
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) {\
 						  background-image: linear-gradient('+this.prefs.getCharPref('ctabpen1')+','+this.prefs.getCharPref('ctabpen2')+') !important;\
 						}\
 					'), null, null);
+				  } else {
+					this.ctabsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('ctabpen1')+','+this.prefs.getCharPref('ctabpen2')+') !important;\
+						}\
+					'), null, null);
+				  }
 				
 				}
 				
 				else if (this.prefs.getCharPref('tabs')=='tabs_squaredc2') {
 				
+				  if(this.prefs.getBoolPref('tabc_hov_unl')){
+				
 					this.ctabsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						/*#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):hover .tab-content,*/\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):hover .tab-content,\
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) .tab-content {\
 						  background-image: linear-gradient('+this.prefs.getCharPref('ctabpen1')+','+this.prefs.getCharPref('ctabpen2')+') !important;\
 						}\
 					'), null, null);
+					
+				  } else {
+					this.ctabsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) .tab-content {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('ctabpen1')+','+this.prefs.getCharPref('ctabpen2')+') !important;\
+						}\
+					'), null, null);
+				  }
 				
 				}
 				
 				else if (this.prefs.getCharPref('tabs')=='tabs_curved') {
 				
+				  if(this.prefs.getBoolPref('tabc_hov_unl')){
+				
+					this.ctabsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):hover .tab-stack .tab-background-middle,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:-moz-lwtheme:not([selected=true]):hover .tab-stack .tab-background-middle,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:-moz-lwtheme:not([selected=true]):hover .tab-background-start,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:-moz-lwtheme:not([selected=true]):hover .tab-background-end,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-stack .tab-background-middle,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-start,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-end{\
+						  background-image: linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctabpen1')+' 0px, '+this.prefs.getCharPref('ctabpen2')+'), none !important;\
+						}\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):hover > .tab-stack > .tab-background:not([selected=true]),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) > .tab-stack > .tab-background:not([selected=true]){\
+						  background-position: left bottom, 30px bottom, right bottom;\
+						  background-repeat: no-repeat;\
+						  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;\
+						}\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end:-moz-locale-dir(rtl),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl) {\
+						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
+						}\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start:-moz-locale-dir(rtl),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl) {\
+						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
+						}\
+					'), null, null);
+					
+				  } else {
 					this.ctabsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,\
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,\
@@ -2213,6 +2370,7 @@ classicthemerestorerjs.ctr = {
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
 					'), null, null);
+				  }
 				
 				}
 				
@@ -2229,27 +2387,90 @@ classicthemerestorerjs.ctr = {
 		
 				if (this.prefs.getCharPref('tabs')=='tabs_squared') {
 				
+				  if(this.prefs.getBoolPref('tabc_hov_unr')){
+				
 					this.ctabsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						/*#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):hover,*/\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):hover,\
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):not(:hover) {\
 						  background-image: linear-gradient('+this.prefs.getCharPref('ctabunr1')+','+this.prefs.getCharPref('ctabunr2')+') !important;\
 						}\
 					'), null, null);
+					
+				  } else {
+				
+					this.ctabsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):not(:hover) {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('ctabunr1')+','+this.prefs.getCharPref('ctabunr2')+') !important;\
+						}\
+					'), null, null);
+					
+				  }
 				
 				}
 				
 				else if (this.prefs.getCharPref('tabs')=='tabs_squaredc2') {
 				
+				  if(this.prefs.getBoolPref('tabc_hov_unr')){
+				
 					this.ctabsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						/*#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):hover .tab-content,*/\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):hover .tab-content,\
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):not(:hover) .tab-content {\
 						  background-image: linear-gradient('+this.prefs.getCharPref('ctabunr1')+','+this.prefs.getCharPref('ctabunr2')+') !important;\
 						}\
 					'), null, null);
+					
+				  } else {
+				
+					this.ctabsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):not(:hover) .tab-content {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('ctabunr1')+','+this.prefs.getCharPref('ctabunr2')+') !important;\
+						}\
+					'), null, null);
+					
+				  }
 				
 				}
 				
 				else if (this.prefs.getCharPref('tabs')=='tabs_curved') {
+				
+				  if(this.prefs.getBoolPref('tabc_hov_unr')){
+				
+					this.ctabsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not(:-moz-lwtheme):not([selected=true]):hover .tab-stack .tab-background-middle,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):hover .tab-stack .tab-background-middle,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):hover .tab-background-start,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):hover .tab-background-end,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-stack .tab-background-middle,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-start,\
+						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-end {\
+						  background-image: linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctabunr1')+' 0px, '+this.prefs.getCharPref('ctabunr2')+'), none !important;\
+						}\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):hover > .tab-stack > .tab-background:not([selected=true]),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) > .tab-stack > .tab-background:not([selected=true]){\
+						  background-position: left bottom, 30px bottom, right bottom;\
+						  background-repeat: no-repeat;\
+						  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;\
+						}\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):hover .tab-background-start:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):hover .tab-background-end:-moz-locale-dir(rtl),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl) {\
+						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
+						}\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):hover .tab-background-end:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):hover .tab-background-start:-moz-locale-dir(rtl),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl) {\
+						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
+						}\
+					'), null, null);
+					
+				  } else {
 				
 					this.ctabsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,\
@@ -2274,6 +2495,8 @@ classicthemerestorerjs.ctr = {
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
 					'), null, null);
+					
+				  }
 				
 				}
 				
@@ -2400,15 +2623,25 @@ classicthemerestorerjs.ctr = {
 			removeOldSheet(this.tabtxtcsheet_pen);
 			
 			if(enable==true){
+			
+			  if(this.prefs.getBoolPref('tabc_hov_unl')){
 	
 				this.tabtxtcsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					/*#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):hover .tab-text,*/\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):hover .tab-text,\
 					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) .tab-text {\
 					  color: '+this.prefs.getCharPref('ctabpent')+' !important;\
 					}\
 				'), null, null);
+				
+			  } else {
+				this.tabtxtcsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) .tab-text {\
+					  color: '+this.prefs.getCharPref('ctabpent')+' !important;\
+					}\
+				'), null, null);
+			  }
 
-				applyNewSheet(this.tabtxtcsheet_pen);
+			  applyNewSheet(this.tabtxtcsheet_pen);
 			}
 
 		break;
@@ -2418,15 +2651,27 @@ classicthemerestorerjs.ctr = {
 			removeOldSheet(this.tabtxtcsheet_unr);
 			
 			if(enable==true){
+			
+			  if(this.prefs.getBoolPref('tabc_hov_unr')){
 	
 				this.tabtxtcsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					/*#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):hover .tab-text,*/\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):hover .tab-text,\
 					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):not(:hover) .tab-text {\
 					  color: '+this.prefs.getCharPref('ctabunrt')+' !important;\
 					}\
 				'), null, null);
+				
+			  } else {
+	
+				this.tabtxtcsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):not(:hover) .tab-text {\
+					  color: '+this.prefs.getCharPref('ctabunrt')+' !important;\
+					}\
+				'), null, null);
+				
+			  }
 
-				applyNewSheet(this.tabtxtcsheet_unr);
+			  applyNewSheet(this.tabtxtcsheet_unr);
 			}
 
 		break;
@@ -2487,15 +2732,27 @@ classicthemerestorerjs.ctr = {
 			removeOldSheet(this.tabtxtshsheet_pen);
 			
 			if(enable==true){
-				
+			
+			  if(this.prefs.getBoolPref('tabc_hov_unl')){
+			
 				this.tabtxtshsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					/*#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):hover .tab-text,*/\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):hover .tab-text,\
 					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) .tab-text {\
 					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabpentsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabpentsh')+' !important;\
 					}\
 				'), null, null);
+				
+			  } else {
+			  
+				this.tabtxtshsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) .tab-text {\
+					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabpentsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabpentsh')+' !important;\
+					}\
+				'), null, null);
+				
+			  }
 
-				applyNewSheet(this.tabtxtshsheet_pen);
+			  applyNewSheet(this.tabtxtshsheet_pen);
 			}
 
 		break;
@@ -2505,15 +2762,249 @@ classicthemerestorerjs.ctr = {
 			removeOldSheet(this.tabtxtshsheet_unr);
 			
 			if(enable==true){
+			
+			  if(this.prefs.getBoolPref('tabc_hov_unr')){
 				
 				this.tabtxtshsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					/*#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):hover .tab-text,*/\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):hover .tab-text,\
 					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):not(:hover) .tab-text {\
 					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabunrtsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabunrtsh')+' !important;\
 					}\
 				'), null, null);
+			
+			  } else {
+			  
+				this.tabtxtshsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):not(:hover) .tab-text {\
+					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabunrtsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabunrtsh')+' !important;\
+					}\
+				'), null, null);
+				
+			  }
 
-				applyNewSheet(this.tabtxtshsheet_unr);
+			  applyNewSheet(this.tabtxtshsheet_unr);
+			}
+
+		break;
+		
+		case "tabfbold_def":
+		
+			removeOldSheet(this.tabboldsheet_def);
+			
+			if(enable==true){
+				
+				this.tabboldsheet_def=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					.tabbrowser-tab:not([selected=true]):not(:hover) .tab-text {\
+					  font-weight: bold !important;\
+					}\
+				'), null, null);
+
+				applyNewSheet(this.tabboldsheet_def);
+			}
+		
+		break;
+
+		case "tabfbold_act":
+
+			removeOldSheet(this.tabboldsheet_act);
+			
+			if(enable==true){
+				
+				this.tabboldsheet_act=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					.tabbrowser-tab[selected=true] .tab-text {\
+					  font-weight: bold !important;\
+					}\
+				'), null, null);
+
+				applyNewSheet(this.tabboldsheet_act);
+			}
+
+		break;
+		
+		case "tabfbold_hov":
+
+			removeOldSheet(this.tabboldsheet_hov);
+			
+			if(enable==true){
+				
+				this.tabboldsheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					.tabbrowser-tab:not([selected=true]):hover .tab-text {\
+					  font-weight: bold !important;\
+					}\
+				'), null, null);
+
+				applyNewSheet(this.tabboldsheet_hov);
+			}
+
+		break;
+		
+		case "tabfbold_pen":
+
+			removeOldSheet(this.tabboldsheet_pen);
+			
+			if(enable==true){
+			
+			  if(this.prefs.getBoolPref('tabc_hov_unr')){
+
+				this.tabboldsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					.tabbrowser-tab[pending]:not([selected=true]):hover .tab-text,\
+					.tabbrowser-tab[pending]:not([selected=true]):not(:hover) .tab-text {\
+					  font-weight: bold !important;\
+					}\
+				'), null, null);
+
+			  } else {
+
+				this.tabboldsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					.tabbrowser-tab[pending]:not([selected=true]):not(:hover) .tab-text {\
+					  font-weight: bold !important;\
+					}\
+				'), null, null);
+
+			  }
+
+			  applyNewSheet(this.tabboldsheet_pen);
+			}
+
+		break;
+		
+		case "tabfbold_unr":
+	
+			removeOldSheet(this.tabboldsheet_unr);
+			
+			if(enable==true){
+			
+			  if(this.prefs.getBoolPref('tabc_hov_unr')){
+
+				this.tabboldsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					.tabbrowser-tab[unread]:not([selected=true]):hover .tab-text,\
+					.tabbrowser-tab[unread]:not([selected=true]):not(:hover) .tab-text {\
+					  font-weight: bold !important;\
+					}\
+				'), null, null);
+
+			  } else {
+
+				this.tabboldsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					.tabbrowser-tab[unread]:not([selected=true]):not(:hover) .tab-text {\
+					  font-weight: bold !important;\
+					}\
+				'), null, null);
+
+			  }
+
+			  applyNewSheet(this.tabboldsheet_unr);
+			}
+
+		break;
+		
+		case "tabfita_def":
+		
+			removeOldSheet(this.tabitasheet_def);
+			
+			if(enable==true){
+				
+				this.tabitasheet_def=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					.tabbrowser-tab:not([selected=true]):not(:hover) .tab-text {\
+					  font-style: italic !important;\
+					}\
+				'), null, null);
+
+				applyNewSheet(this.tabitasheet_def);
+			}
+		
+		break;
+
+		case "tabfita_act":
+
+			removeOldSheet(this.tabitasheet_act);
+			
+			if(enable==true){
+				
+				this.tabitasheet_act=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					.tabbrowser-tab[selected=true] .tab-text {\
+					  font-style: italic !important;\
+					}\
+				'), null, null);
+
+				applyNewSheet(this.tabitasheet_act);
+			}
+
+		break;
+		
+		case "tabfita_hov":
+
+			removeOldSheet(this.tabitasheet_hov);
+			
+			if(enable==true){
+				
+				this.tabitasheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					.tabbrowser-tab:not([selected=true]):hover .tab-text {\
+					  font-style: italic !important;\
+					}\
+				'), null, null);
+
+				applyNewSheet(this.tabitasheet_hov);
+			}
+
+		break;
+		
+		case "tabfita_pen":
+
+			removeOldSheet(this.tabitasheet_pen);
+			
+			if(enable==true){
+			
+			  if(this.prefs.getBoolPref('tabc_hov_unr')){
+
+				this.tabitasheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					.tabbrowser-tab[pending]:not([selected=true]):hover .tab-text,\
+					.tabbrowser-tab[pending]:not([selected=true]):not(:hover) .tab-text {\
+					  font-style: italic !important;\
+					}\
+				'), null, null);
+
+			  } else {
+
+				this.tabitasheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					.tabbrowser-tab[pending]:not([selected=true]):not(:hover) .tab-text {\
+					  font-style: italic !important;\
+					}\
+				'), null, null);
+
+			  }
+
+			  applyNewSheet(this.tabitasheet_pen);
+			}
+
+		break;
+		
+		case "tabfita_unr":
+	
+			removeOldSheet(this.tabitasheet_unr);
+			
+			if(enable==true){
+			
+			  if(this.prefs.getBoolPref('tabc_hov_unr')){
+
+				this.tabitasheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					.tabbrowser-tab[unread]:not([selected=true]):hover .tab-text,\
+					.tabbrowser-tab[unread]:not([selected=true]):not(:hover) .tab-text {\
+					  font-style: italic !important;\
+					}\
+				'), null, null);
+
+			  } else {
+
+				this.tabitasheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					.tabbrowser-tab[unread]:not([selected=true]):not(:hover) .tab-text {\
+					  font-style: italic !important;\
+					}\
+				'), null, null);
+
+			  }
+
+			  applyNewSheet(this.tabitasheet_unr);
 			}
 
 		break;

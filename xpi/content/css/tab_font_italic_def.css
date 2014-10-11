@@ -1,8 +1,0 @@
-@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
-
-@-moz-document url(chrome://browser/content/browser.xul){
-	
-	.tabbrowser-tab:not([selected=true]):not(:hover) .tab-text {
-      font-style: italic !important;
-    }
-}

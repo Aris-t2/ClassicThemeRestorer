@@ -132,7 +132,7 @@ classicthemerestorerjso.ctr = {
 	  }
 	});
 	AddonManager.getAddonByID('thePuzzlePiece@quicksaver', function(addon) {
-	  if(addon && addon.isActive) {
+	  if(addon && addon.isActive && parseInt(addon.version) < 2) {
 		document.getElementById('ctraddon_pw_statusbar').disabled = true;
 		document.getElementById('ctraddon_pw_statusbar_tpp_info').style.visibility = 'visible';
 	  }
@@ -241,6 +241,7 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwFaviconextra(this.prefs.getBoolPref("faviconurl"));
 	this.ctrpwBFextra(this.prefs.getBoolPref("backforward"));
 	this.ctrpwHidetbwotExtra(this.prefs.getBoolPref("hidetbwot"));
+	this.ctrpwModeextra(this.prefs.getCharPref("nav_txt_ico"));
 
 	
 	var closetab_value = this.prefs.getCharPref("closetab");
@@ -349,6 +350,14 @@ classicthemerestorerjso.ctr = {
 
 		} catch(e){}
 	},1300);
+  },
+  
+  ctrpwModeextra: function(which) {
+  
+    if (which=="iconstxt" || which=="iconstxt2" || which=="txtonly") {
+	  document.getElementById('ctraddon_pw_iat_notf_vt').disabled = false;
+	} else document.getElementById('ctraddon_pw_iat_notf_vt').disabled = true;
+  
   },
  
   ctrpwAppbuttonextra: function(which,fromprefwindow) {
@@ -610,6 +619,9 @@ classicthemerestorerjso.ctr = {
 	patterns[138]="extrabar3="+this.prefs.getBoolPref("extrabar3");
 	patterns[139]="invicoextrabar2="+this.prefs.getBoolPref("invicoextrabar2");
 	patterns[140]="invicoextrabar3="+this.prefs.getBoolPref("invicoextrabar3");
+	patterns[141]="tabc_hov_unr="+this.prefs.getBoolPref("tabc_hov_unr");
+	patterns[142]="tabc_hov_unl="+this.prefs.getBoolPref("tabc_hov_unl");
+	patterns[143]="iat_notf_vt="+this.prefs.getBoolPref("iat_notf_vt");
 
 	saveToFile(patterns);
 	  

@@ -1,0 +1,12 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	* #vertical-toolbar .toolbarbutton-1 .toolbarbutton-text {
+	  visibility: collapse !important;
+	}
+	* #vertical-toolbar .toolbarbutton-1 {
+	  min-width: unset !important;
+	}
+
+}

@@ -31,6 +31,7 @@ pref("extensions.classicthemerestorer.combrelstop",false);
 pref("extensions.classicthemerestorer.nbiconsize",'small');
 pref("extensions.classicthemerestorer.findbar","findbar_default");
 pref("extensions.classicthemerestorer.nav_txt_ico","icons");
+pref("extensions.classicthemerestorer.iat_notf_vt",false);
 pref("extensions.classicthemerestorer.wincontrols",false);
 pref("extensions.classicthemerestorer.emptyfavicon2",false);
 pref("extensions.classicthemerestorer.panelmenucol",false);
@@ -173,5 +174,8 @@ pref("extensions.classicthemerestorer.tabfita_pen",false);
 pref("extensions.classicthemerestorer.tabfita_unr",false);
 pref("extensions.classicthemerestorer.tabfita_hov",false);
 
-// first run preference
+pref("extensions.classicthemerestorer.tabc_hov_unr",false);
+pref("extensions.classicthemerestorer.tabc_hov_unl",false);
+
+// first run/reset preference
 pref("extensions.classicthemerestorer.ctrreset",true);

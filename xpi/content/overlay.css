@@ -433,6 +433,11 @@
 	  visibility: hidden !important;
 	}
 	
+	/* Disconnect */
+	#ctraddon_addon-bar #disconnect-item #disconnect-badge{
+	  margin-top:4px !important;
+	}
+	
 	/* Extra toolbars */
 	#toggle_ctraddon_extra-bar,
 	#ctraddon_extra-bar,
@@ -556,9 +561,9 @@
 	}
 	
 	.ctraddontabpanel {
-	  height:350px;
-	  max-height:370px;
-	  width:450px;
+	  height:360px;
+	  max-height:390px;
+	  width:460px;
 	  max-width:550px;
 	  overflow-x:auto;
 	  overflow-y:auto;
@@ -570,6 +575,10 @@
 	
 	.ctraddontabpanel[selected="true"] {
 	  visibility: visible;
+	}
+	
+	#ctraddon_pw_tabs_tabpanels tabpanel groupbox {
+	  max-width:400px !important;
 	}
 	
 	#ctraddon_pw_splitter {

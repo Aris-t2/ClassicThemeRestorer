@@ -56,6 +56,7 @@
 		<preference id="ctraddon_verifiedcolors" name="extensions.classicthemerestorer.verifiedcolors" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_findbar"		name="extensions.classicthemerestorer.findbar"		type="string"	instantApply="true"/>
 		<preference id="ctraddon_nav_txt_ico"	name="extensions.classicthemerestorer.nav_txt_ico" 	type="string"	instantApply="true"/>
+		<preference id="ctraddon_iat_notf_vt"	name="extensions.classicthemerestorer.iat_notf_vt"	type="bool"		instantApply="true"/>
 
 		<preference id="ctraddon_ctab1"			name="extensions.classicthemerestorer.ctab1"		type="string"	instantApply="true"/>
 		<preference id="ctraddon_ctab2"			name="extensions.classicthemerestorer.ctab2"		type="string"	instantApply="true"/>
@@ -110,6 +111,9 @@
 		<preference id="ctraddon_tabfita_pen"	name="extensions.classicthemerestorer.tabfita_pen"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_tabfita_unr"	name="extensions.classicthemerestorer.tabfita_unr"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_tabfita_hov"	name="extensions.classicthemerestorer.tabfita_hov"	 type="bool"	instantApply="true"/>
+		
+		<preference id="ctraddon_tabc_hov_unl"	name="extensions.classicthemerestorer.tabc_hov_unl"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_tabc_hov_unr"	name="extensions.classicthemerestorer.tabc_hov_unr"	 type="bool"	instantApply="true"/>
 
 		<preference id="ctraddon_highaddonsbar"	name="extensions.classicthemerestorer.highaddonsbar" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hightabpososx"	name="extensions.classicthemerestorer.hightabpososx" type="bool"	instantApply="true"/>
@@ -315,8 +319,7 @@
 	  <label value="&Ctr_tabs1m;"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_squared2"/>
 	  <label value="&Ctr_tabs2;"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curved"/>
 	  <label value="&Ctr_tabs3;"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curvedaero"/>
-	  <description>&Ctr_tab_tf_info1;</description>
-	  <description>&Ctr_tab_tf_info2;</description>
+	  <description>&Ctr_tab_tf_info1; &Ctr_tab_tf_info2;</description>
 	  <label value=""/>
 
 	  <tabbox>
@@ -329,7 +332,7 @@
 			<tab label="&Ctr_ntab_t;" id="ctraddon_pw_colors_ntab_t"/>
 		</tabs>
 
-		<tabpanels>
+		<tabpanels id="ctraddon_pw_tabs_tabpanels">
 
 		  <tabpanel>
 			<groupbox>
@@ -394,6 +397,7 @@
 						<checkbox label="&Ctr_bold;"	preference="ctraddon_tabfbold_hov"/>
 						<checkbox label="&Ctr_italic;"	preference="ctraddon_tabfita_hov"/>
 					</row>
+					
 				  </rows>
 				</grid>
 			</groupbox>
@@ -466,6 +470,7 @@
 					</row>
 				  </rows>
 				</grid>
+				<checkbox label="&Ctr_notabhov;"	preference="ctraddon_tabc_hov_unl"/>
 			</groupbox>
 
 		  </tabpanel>
@@ -501,6 +506,7 @@
 					</row>
 				  </rows>
 				</grid>
+				<checkbox label="&Ctr_notabhov;"	preference="ctraddon_tabc_hov_unr"/>
 			</groupbox>
 
 		  </tabpanel>
@@ -654,20 +660,21 @@
 			<row class="ctraddonsuboption">
 				<menulist preference="ctraddon_nav_txt_ico">
 					<menupopup>
-						<menuitem value="icons"		label="&Ctr_nav_txt_ico0;"/>
-						<menuitem value="iconsbig"	label="&Ctr_nav_txt_ico1;" id="ctraddon_pw_iconsbig"/>
-						<menuitem value="iconstxt"	label="&Ctr_nav_txt_ico2;"/>
-						<menuitem value="iconstxt2"	label="&Ctr_nav_txt_ico2; v2"/>
-						<menuitem value="txtonly"	label="&Ctr_nav_txt_ico3;"/>
+						<menuitem value="icons"		label="&Ctr_nav_txt_ico0;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('icons')"/>
+						<menuitem value="iconsbig"	label="&Ctr_nav_txt_ico1;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconsbig')" id="ctraddon_pw_iconsbig"/>
+						<menuitem value="iconstxt"	label="&Ctr_nav_txt_ico2;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt')"/>
+						<menuitem value="iconstxt2"	label="&Ctr_nav_txt_ico2; v2" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt2')"/>
+						<menuitem value="txtonly"	label="&Ctr_nav_txt_ico3;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('txtonly')"/>
 						<label value="&Ctr_nav_txt_exp;" class="ctraddon_font1"/>
-						<menuitem value="full"		label="[mode='full']"/>
-						<menuitem value="text"		label="[mode='text']"/>
+						<menuitem value="full"		label="[mode='full']" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('full')"/>
+						<menuitem value="text"		label="[mode='text']" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('text')"/>
 					</menupopup>
 				</menulist>
 				<label value=" "/>
 			</row>
 		  </rows>
 		</grid>
+		<checkbox label="&Ctr_iat_notf_vt;"		preference="ctraddon_iat_notf_vt" id="ctraddon_pw_iat_notf_vt" class="ctraddonsuboption"/>
 		<checkbox label="&Ctr_wincontrols;"		preference="ctraddon_wincontrols" id="ctraddon_wincontrols"/>
 		<checkbox label="&Ctr_emptyfavicon2;"	preference="ctraddon_emptyfavicon2" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwTabEmptyFavicon(true);} else {classicthemerestorerjso.ctr.ctrpwTabEmptyFavicon(false);}"/>
 		<checkbox label="&Ctr_panelmenucol;"	preference="ctraddon_panelmenucol" id="ctraddon_pw_panelmenucolor"/>
