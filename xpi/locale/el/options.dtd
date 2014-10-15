@@ -2,7 +2,6 @@
 
 <!ENTITY Ctr_addonbar		"Εργαλειοθήκη πρόσθετων">
 <!ENTITY Ctr_statusbar		"Γραμμή κατάστασης">
-<!ENTITY Ctr_extrabar		"Επιπρόσθετη εργαλειοθήκη">
 <!ENTITY Ctr_flexspace		"Ευέλικτο διάστημα">
 <!ENTITY Ctr_space			"Διάστημα">
 <!ENTITY Ctr_separator		"Διαχωριστικό">
@@ -97,6 +96,8 @@
 <!ENTITY Ctr_mstatusbar		"Μετακινήσιμο πινακίδιο γραμμής κατάστασης">
 <!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
 <!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
+<!ENTITY Ctr_mstatusbarpzt	"Status-bar panel is controlled by 'Puzzle Toolbars'">
+<!ENTITY Ctr_mstatusbarabr	"Status-bar panel is controlled by 'The Addon Bar (Restored)'">
 <!ENTITY Ctr_combrelstop	"Συνδυασμός κουμπιών «Διακοπή» &amp; «Ανανέωση»">
 <!ENTITY Ctr_stoprel1		"Σημαντικό: τοποθετήστε το κουμπί «Ανανέωση» μετά από το κουμπί «Διακοπή»!">
 <!ENTITY Ctr_panelmenucol	"Μενού πίνακα: εναλλακτικό χρώμα φόντου">
@@ -122,6 +123,7 @@
 <!ENTITY Ctr_tabmokcolor	"Άσπρο χρώμα κουμπιών καρτελών (κλείσιμο, νέα, ομάδες, λίστα όλων)">
 <!ENTITY Ctr_tabmokcolor2	"Άσπρο χρώμα και σκοτεινή σκιά κειμένου μη ενεργών καρτελών">
 <!ENTITY Ctr_tabmokcolor3	"Άσπρο χρώμα διαχωριστικών καρτελών">
+<!ENTITY Ctr_tabmokcolor4	"White color for empty dotted tab favicon">
 
 <!ENTITY Ctr_navthrobber1	"Άνοιγμα με κλικ στον ενδείκτη δραστηριότητας, της καθορισμένης διεύθυνσης url:">
 <!ENTITY Ctr_navthrobber2	"Προσθέστε διεύθυνση url ή αφήστε τη γραμμή κενή">
@@ -163,6 +165,8 @@
 <!ENTITY Ctr_padlock_ext	"Εικονίδια ασφάλειας">
 <!ENTITY Ctr_icopageinfo	"Άνοιγμα παραθύρου «Πληροφορίες σελίδας» με κλικ στο ικονίδιο">
 
+<!ENTITY Ctr_extrabar		"Additional Toolbars">
+<!ENTITY Ctr_extrabar0		"Additional Toolbar(s) (restart Firefox!)">
 <!ENTITY Ctr_extrabarinfo	"Η εναλλαγή λειτουργιών «Καρτέλες στο πάνω μέρος» και «Καρτέλες όχι στο πάνω μέρος», αλλάζει τυχαία τη σειρά των επιπρόσθετων εργαλειοθηκών. Ο Firefox πρέπει να επανεκκινηθεί για αντιμετώπιση αυτού του θέματος.">
 
 <!ENTITY Ctr_invicons		"Ανεστραμμένα εικονίδια">
@@ -225,7 +229,6 @@
 <!ENTITY Ctr_newversion		"Νέα έκδοση;">
 
 <!ENTITY Ctr_addon-bar.accesskey	"λ">
-<!ENTITY Ctr_extrabar.accesskey		"π">
 <!ENTITY Ctr_openInPrivateWindow	"Άνοιγμα σε νέο παράθυρο ιδιωτικής περιήγησης">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"θ">
 <!ENTITY appMenuGettingStarted.label	"Ξεκινώντας">

@@ -32,6 +32,8 @@
 		<preference id="ctraddon_closealt"		name="extensions.classicthemerestorer.closealt"		type="bool"		instantApply="true"/>
 		<preference id="ctraddon_closeonleft"	name="extensions.classicthemerestorer.closeonleft"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_closewwltab"	name="browser.tabs.closeWindowWithLastTab"			type="bool"		instantApply="true"/>
+		
+		<preference id="ctraddon_am_extrabars"	name="extensions.classicthemerestorer.am_extrabars"	type="int"		instantApply="true"/>
 
 		<preference id="ctraddon_appbutton"		name="extensions.classicthemerestorer.appbutton" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_appbuttonc"	name="extensions.classicthemerestorer.appbuttonc" 	type="string"	instantApply="true"/>
@@ -143,10 +145,6 @@
 		<preference id="ctraddon_menupopupscr"	name="extensions.classicthemerestorer.menupopupscr"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hideprivmask"	name="extensions.classicthemerestorer.hideprivmask"	 type="bool"	instantApply="true"/>
 
-		<preference id="ctraddon_extrabar1"		name="extensions.classicthemerestorer.extrabar1"	 type="bool"	instantApply="true"/>
-		<preference id="ctraddon_extrabar2"		name="extensions.classicthemerestorer.extrabar2"	 type="bool"	instantApply="true"/>
-		<preference id="ctraddon_extrabar3"		name="extensions.classicthemerestorer.extrabar3"	 type="bool"	instantApply="true"/>
-
 		<preference id="ctraddon_invicomenubar"	name="extensions.classicthemerestorer.invicomenubar"   type="bool"	instantApply="true"/>
 		<preference id="ctraddon_invicotabsbar"	name="extensions.classicthemerestorer.invicotabsbar"   type="bool"	instantApply="true"/>
 		<preference id="ctraddon_inviconavbar"	name="extensions.classicthemerestorer.inviconavbar"	   type="bool"	instantApply="true"/>
@@ -154,12 +152,11 @@
 		<preference id="ctraddon_invicoaddonbar" name="extensions.classicthemerestorer.invicoaddonbar" type="bool"	instantApply="true"/>
 		
 		<preference id="ctraddon_invicoextrabar"  name="extensions.classicthemerestorer.invicoextrabar"  type="bool" instantApply="true"/>
-		<preference id="ctraddon_invicoextrabar2" name="extensions.classicthemerestorer.invicoextrabar2" type="bool" instantApply="true"/>
-		<preference id="ctraddon_invicoextrabar3" name="extensions.classicthemerestorer.invicoextrabar3" type="bool" instantApply="true"/>
 
 		<preference id="ctraddon_tabmokcolor"	name="extensions.classicthemerestorer.tabmokcolor" 	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_tabmokcolor2"	name="extensions.classicthemerestorer.tabmokcolor2"  type="bool"	instantApply="true"/>
 		<preference id="ctraddon_tabmokcolor3"	name="extensions.classicthemerestorer.tabmokcolor3"  type="bool"	instantApply="true"/>
+		<preference id="ctraddon_tabmokcolor4"	name="extensions.classicthemerestorer.tabmokcolor4"  type="bool"	instantApply="true"/>
 		
 		<preference id="ctraddon_athrobberurl"	name="extensions.classicthemerestorer.athrobberurl"	 type="string"	instantApply="true"/>
 
@@ -249,7 +246,7 @@
 				<label value=" "/>
 				<label value="&Ctr_tabsontopI1;" class="ctraddon_font1"/>
 				<label value="#main-window, #navigator-toolbox, #titlebar, #nav-bar,"/>
-				<label value="#toolbar-menubar, #TabsToolbar, #ctraddon_extra-bar,"/>
+				<label value="#toolbar-menubar, #TabsToolbar,"/>
 				<label value="#PersonalToolbar, #ctraddon_addon-bar"/>
 			</menupopup>
 		</menulist>
@@ -623,9 +620,13 @@
 		<checkbox label="&Ctr_backforward;"		preference="ctraddon_backforward" oncommand="if(this.checked) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',true);classicthemerestorerjso.ctr.ctrpwBFextra(true);} else if(classicthemerestorerjso.ctr.prefs.getBoolPref('smallnavbut')==false) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',false);classicthemerestorerjso.ctr.ctrpwBFextra(false);} else {classicthemerestorerjso.ctr.ctrpwBFextra(false);}"/>
 		<checkbox label="&Ctr_hide_bf_popup;"	preference="ctraddon_hide_bf_popup" id="ctraddon_pw_hide_bf_popup" class="ctraddonsuboption"/>
 		<checkbox label="&Ctr_bf_space;"		preference="ctraddon_bf_space" id="ctraddon_pw_bf_space" class="ctraddonsuboption"/>
+		
 		<checkbox label="&Ctr_mstatusbar;"		preference="ctraddon_statusbar" id="ctraddon_pw_statusbar" oncommand="classicthemerestorerjso.ctr.ctrMovStatusextra()"/>
 		<description class="ctraddon_topic ctraddonsuboption" id="ctraddon_pw_statusbar_s4e_info">&Ctr_mstatusbars4e;</description>
 		<description class="ctraddon_topic ctraddonsuboption" id="ctraddon_pw_statusbar_tpp_info">&Ctr_mstatusbartpp;</description>
+		<description class="ctraddon_topic ctraddonsuboption" id="ctraddon_pw_statusbar_pzt_info">&Ctr_mstatusbarpzt;</description>
+		<description class="ctraddon_topic ctraddonsuboption" id="ctraddon_pw_statusbar_abr_info">&Ctr_mstatusbarabr;</description>
+		
 		<checkbox label="&Ctr_noconicons;"		preference="ctraddon_noconicons" id="ctraddon_pw_noconicons"/>
 		<checkbox label="&Ctr_hideprivmask;"	preference="ctraddon_hideprivmask"/>
 		<checkbox label="&Ctr_combrelstop;"		preference="ctraddon_combrelstop" onmouseover="document.getElementById('combrelstop').openPopupAtScreen(this.boxObject.screenX, this.boxObject.screenY+this.boxObject.height-1, false);" onmouseout="document.getElementById('combrelstop').hidePopup();"/>
@@ -689,6 +690,7 @@
 		<checkbox label="&Ctr_tabmokcolor;"		preference="ctraddon_tabmokcolor" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor"/>
 		<checkbox label="&Ctr_tabmokcolor2;"	preference="ctraddon_tabmokcolor2" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor2"/>
 		<checkbox label="&Ctr_tabmokcolor3;"	preference="ctraddon_tabmokcolor3" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor3"/>
+		<checkbox label="&Ctr_tabmokcolor4;"	preference="ctraddon_tabmokcolor4" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor4"/>
 	  </groupbox>
 	  
 	  <groupbox>
@@ -782,18 +784,10 @@
   
 	  <groupbox>
 		<caption  label="&Ctr_extrabar;" class="ctraddon_topic"/>
-		<grid>
-		  <rows>
-			<row>
-			  <checkbox label="&Ctr_extrabar;"		preference="ctraddon_extrabar1" id="ctraddon_pw_extrabar1"/>
-			  <checkbox label="&Ctr_extrabar; (2)"	preference="ctraddon_extrabar2" id="ctraddon_pw_extrabar2"/>
-			</row>
-			<row>
-			  <checkbox label="&Ctr_extrabar; (3)"	preference="ctraddon_extrabar3" id="ctraddon_pw_extrabar3"/>
-			  <label/>
-			</row>
-		  </rows>
-		</grid>
+		<hbox>
+		  <textbox id="ctraddon_pw_am_extrabars" size="2" maxlength="2" preference="ctraddon_am_extrabars" type="number" min="0" max="20"  onchange="classicthemerestorerjso.ctr.needsRestart=true;"/>
+		  <label value="&Ctr_extrabar0;"/>
+		</hbox>
 		<description>&Ctr_extrabarinfo;</description>
 	  </groupbox>
 	  
@@ -812,10 +806,6 @@
 			<row>
 			  <checkbox label="&Ctr_addonbar;"		preference="ctraddon_invicoaddonbar"/>
 			  <checkbox label="&Ctr_extrabar;"		preference="ctraddon_invicoextrabar"/>
-			</row>
-			<row>
-			  <checkbox label="&Ctr_extrabar; (2)"	preference="ctraddon_invicoextrabar2"/>
-			  <checkbox label="&Ctr_extrabar; (3)"	preference="ctraddon_invicoextrabar3"/>
 			</row>
 		  </rows>
 		</grid>

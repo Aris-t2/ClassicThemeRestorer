@@ -37,6 +37,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_tabmokcolor').disabled = true;
 		document.getElementById('ctraddon_pw_tabmokcolor2').disabled = true;
 		document.getElementById('ctraddon_pw_tabmokcolor3').disabled = true;
+		document.getElementById('ctraddon_pw_tabmokcolor4').disabled = true;
 		document.getElementById('ctraddon_pw_panelmenucolor').disabled = true;
 		document.getElementById('ctraddon_pw_nobookbarbg').disabled = true;
 		document.getElementById('ctraddon_pw_nonavbarbg').disabled = true;
@@ -68,6 +69,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_tabmokcolor').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabmokcolor2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabmokcolor3').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_tabmokcolor4').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_panelmenucolor').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_mockupoptions').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_invertedicons').style.visibility = 'collapse';
@@ -122,21 +124,38 @@ classicthemerestorerjso.ctr = {
 	  }
 	});
 	
-	/* Status4Evar&ThePuzzlePiece override CTRs mov. status bar panel, so the option gets disabled */
+	// Status4Evar, The Puzzle Piece, Puzzle Toolbars and The Addon Bar Restored
+	// override CTRs mov. status bar panel, so CTRs option gets disabled 
 	document.getElementById('ctraddon_pw_statusbar_s4e_info').style.visibility = 'collapse';
 	document.getElementById('ctraddon_pw_statusbar_tpp_info').style.visibility = 'collapse';
+	document.getElementById('ctraddon_pw_statusbar_pzt_info').style.visibility = 'collapse';
+	document.getElementById('ctraddon_pw_statusbar_abr_info').style.visibility = 'collapse';
+	
 	AddonManager.getAddonByID('status4evar@caligonstudios.com', function(addon) {
 	  if(addon && addon.isActive) {
 		document.getElementById('ctraddon_pw_statusbar').disabled = true;
 		document.getElementById('ctraddon_pw_statusbar_s4e_info').style.visibility = 'visible';
 	  }
 	});
+	
 	AddonManager.getAddonByID('thePuzzlePiece@quicksaver', function(addon) {
-	  if(addon && addon.isActive && parseInt(addon.version) < 2) {
+	  if(addon && addon.isActive) {
 		document.getElementById('ctraddon_pw_statusbar').disabled = true;
-		document.getElementById('ctraddon_pw_statusbar_tpp_info').style.visibility = 'visible';
+		if(addon && addon.isActive && parseInt(addon.version) < 2) {
+		  document.getElementById('ctraddon_pw_statusbar_tpp_info').style.visibility = 'visible';
+	    } else{
+		  document.getElementById('ctraddon_pw_statusbar_pzt_info').style.visibility = 'visible';
+	    }
 	  }
 	});
+	
+	AddonManager.getAddonByID('the-addon-bar@GeekInTraining-GiT', function(addon) {
+	  if(addon && addon.isActive) {
+		document.getElementById('ctraddon_pw_statusbar').disabled = true;
+		document.getElementById('ctraddon_pw_statusbar_abr_info').style.visibility = 'visible';
+	  }
+	});
+	
 	
 	// disable bookmark animation checkbox, if 'star button in urlbar' is used
 	if (this.prefs.getBoolPref('starinurl')) document.getElementById('ctraddon_pw_bmanimation').disabled = true;
@@ -614,14 +633,11 @@ classicthemerestorerjso.ctr = {
 	patterns[133]="appbclmmenus="+this.prefs.getBoolPref("appbclmmenus");
 	patterns[134]="chevronfix="+this.prefs.getBoolPref("chevronfix");
 	patterns[135]="bf_space="+this.prefs.getBoolPref("bf_space");
-	patterns[136]="extrabar1="+this.prefs.getBoolPref("extrabar1");
-	patterns[137]="extrabar2="+this.prefs.getBoolPref("extrabar2");
-	patterns[138]="extrabar3="+this.prefs.getBoolPref("extrabar3");
-	patterns[139]="invicoextrabar2="+this.prefs.getBoolPref("invicoextrabar2");
-	patterns[140]="invicoextrabar3="+this.prefs.getBoolPref("invicoextrabar3");
-	patterns[141]="tabc_hov_unr="+this.prefs.getBoolPref("tabc_hov_unr");
-	patterns[142]="tabc_hov_unl="+this.prefs.getBoolPref("tabc_hov_unl");
-	patterns[143]="iat_notf_vt="+this.prefs.getBoolPref("iat_notf_vt");
+	patterns[136]="tabc_hov_unr="+this.prefs.getBoolPref("tabc_hov_unr");
+	patterns[137]="tabc_hov_unl="+this.prefs.getBoolPref("tabc_hov_unl");
+	patterns[138]="iat_notf_vt="+this.prefs.getBoolPref("iat_notf_vt");
+	patterns[139]="tabmokcolor4="+this.prefs.getBoolPref("tabmokcolor4");
+	patterns[140]="am_extrabars~"+this.prefs.getIntPref("am_extrabars");
 
 	saveToFile(patterns);
 	  

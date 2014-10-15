@@ -2,7 +2,6 @@
 
 <!ENTITY Ctr_addonbar		"アドオンバー">
 <!ENTITY Ctr_statusbar		"ステータスバー">
-<!ENTITY Ctr_extrabar		"追加のツールバー">
 <!ENTITY Ctr_flexspace		"フレキシブルスペース">
 <!ENTITY Ctr_space			"スペース">
 <!ENTITY Ctr_separator		"セパレータ">
@@ -97,6 +96,8 @@
 <!ENTITY Ctr_mstatusbar		"ステータスバーパネルを移動可にする">
 <!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
 <!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
+<!ENTITY Ctr_mstatusbarpzt	"Status-bar panel is controlled by 'Puzzle Toolbars'">
+<!ENTITY Ctr_mstatusbarabr	"Status-bar panel is controlled by 'The Addon Bar (Restored)'">
 <!ENTITY Ctr_combrelstop	"中止&amp;再読み込みボタンを組み合わせる">
 <!ENTITY Ctr_stoprel1		"重要：停止ボタンの後に再読み込みボタンを設置します">
 <!ENTITY Ctr_panelmenucol	"パネルメニューを別の背景色にする">
@@ -122,6 +123,7 @@
 <!ENTITY Ctr_tabmokcolor	"タブボタンを白色にする (閉じる、新しいタブを開く、タブグループ、タブを一覧表示)">
 <!ENTITY Ctr_tabmokcolor2	"非アクティブタブを白色の文字にして、灰色の影をつける">
 <!ENTITY Ctr_tabmokcolor3	"タブセパレータを白色にする">
+<!ENTITY Ctr_tabmokcolor4	"White color for empty dotted tab favicon">
 
 <!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
 <!ENTITY Ctr_navthrobber2	"Add url or leave empty">
@@ -163,6 +165,8 @@
 <!ENTITY Ctr_padlock_ext	"セキュリティアイコン">
 <!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
 
+<!ENTITY Ctr_extrabar		"Additional Toolbars">
+<!ENTITY Ctr_extrabar0		"Additional Toolbar(s) (restart Firefox!)">
 <!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
 
 <!ENTITY Ctr_invicons		"反転アイコン">
@@ -225,7 +229,6 @@
 <!ENTITY Ctr_newversion		"新バージョンをチェック">
 
 <!ENTITY Ctr_addon-bar.accesskey	"A">
-<!ENTITY Ctr_extrabar.accesskey		"D">
 <!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
 <!ENTITY appMenuGettingStarted.label	"Getting started">

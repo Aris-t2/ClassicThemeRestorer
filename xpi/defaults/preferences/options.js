@@ -44,13 +44,12 @@ pref("extensions.classicthemerestorer.hideprivmask",false);
 pref("extensions.classicthemerestorer.tabmokcolor",false);
 pref("extensions.classicthemerestorer.tabmokcolor2",false);
 pref("extensions.classicthemerestorer.tabmokcolor3",false);
+pref("extensions.classicthemerestorer.tabmokcolor4",false);
 
 pref("extensions.classicthemerestorer.invicomenubar",false);
 pref("extensions.classicthemerestorer.invicotabsbar",false);
 pref("extensions.classicthemerestorer.inviconavbar",false);
 pref("extensions.classicthemerestorer.invicoextrabar",false);
-pref("extensions.classicthemerestorer.invicoextrabar2",false);
-pref("extensions.classicthemerestorer.invicoextrabar3",false);
 pref("extensions.classicthemerestorer.invicobookbar",false);
 pref("extensions.classicthemerestorer.invicoaddonbar",false);
 
@@ -90,13 +89,11 @@ pref("extensions.classicthemerestorer.altmenubarpos",false);
 pref("extensions.classicthemerestorer.altmenubarpos2",false);
 pref("extensions.classicthemerestorer.menubarnofog",false);
 
-pref("extensions.classicthemerestorer.extrabar1",true);
-pref("extensions.classicthemerestorer.extrabar2",false);
-pref("extensions.classicthemerestorer.extrabar3",false);
-
 pref("extensions.classicthemerestorer.closeabarbut",false);
 pref("extensions.classicthemerestorer.highaddonsbar",false);
 pref("extensions.classicthemerestorer.noaddonbarbg",false);
+
+pref("extensions.classicthemerestorer.am_extrabars",1);
 
 // Animation
 pref("extensions.classicthemerestorer.throbberalt",false);

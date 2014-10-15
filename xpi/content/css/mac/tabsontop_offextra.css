@@ -11,9 +11,6 @@
 	  margin-bottom: 0px !important;
 	}
 
-	/*#main-window[inFullscreen]:not(:-moz-lwtheme) #nav-bar {
-	  margin-top:-10px !important;
-	}*/
 	#main-window[inFullscreen]:not(:-moz-lwtheme) #TabsToolbar {
 	  padding-top:0px !important;
 	}
@@ -59,11 +56,5 @@
 	#main-window[tabsontop="false"]:-moz-lwtheme #navigator-toolbox toolbar {
 	  background:none !important
 	}
-	/*#main-window[tabsontop="false"]:-moz-lwtheme #titlebar {
-	  padding-bottom:0px !important;
-	}
-	#main-window[tabsintitlebar][tabsontop="false"][sizemode="normal"]:-moz-lwtheme #titlebar {
-	  margin-bottom:-14px !important;
-	}*/
 	
 }

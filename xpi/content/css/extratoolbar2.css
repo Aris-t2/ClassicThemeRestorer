@@ -1,9 +1,0 @@
-@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
-
-@-moz-document url(chrome://browser/content/browser.xul) {
-	
-	#toggle_ctraddon_extra-bar2,
-	#ctraddon_extra-bar2:not([collapsed="true"]){
-	  visibility: visible !important;
-	}
-}

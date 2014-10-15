@@ -2,7 +2,6 @@
 
 <!ENTITY Ctr_addonbar		"Панель дополнений">
 <!ENTITY Ctr_statusbar		"Статус панель">
-<!ENTITY Ctr_extrabar		"Дополнительная панель">
 <!ENTITY Ctr_flexspace		"Растягивающийся интервал">
 <!ENTITY Ctr_space			"Интервал">
 <!ENTITY Ctr_separator		"Разделитель">
@@ -97,6 +96,8 @@
 <!ENTITY Ctr_mstatusbar		"Подвижная строка состояния">
 <!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
 <!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
+<!ENTITY Ctr_mstatusbarpzt	"Status-bar panel is controlled by 'Puzzle Toolbars'">
+<!ENTITY Ctr_mstatusbarabr	"Status-bar panel is controlled by 'The Addon Bar (Restored)'">
 <!ENTITY Ctr_combrelstop	"Совместить кнопки «Остановить» и «Перезагрузить»">
 <!ENTITY Ctr_stoprel1		"Кнопка остановки меняется на панели инструментов на кнопку перезагрузки после остановки!">
 <!ENTITY Ctr_panelmenucol	"Альтернативный цвет фона для меню панели">
@@ -122,6 +123,7 @@
 <!ENTITY Ctr_tabmokcolor	"Белый цвет для кнопок вкладок (закрыть, новая, группы, список всех)">
 <!ENTITY Ctr_tabmokcolor2	"Белый цвет и темная тень для текста на неактивной вкладке">
 <!ENTITY Ctr_tabmokcolor3	"Белый цвет для разделителей на панели вкладок">
+<!ENTITY Ctr_tabmokcolor4	"White color for empty dotted tab favicon">
 
 <!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
 <!ENTITY Ctr_navthrobber2	"Add url or leave empty">
@@ -163,6 +165,8 @@
 <!ENTITY Ctr_padlock_ext	"Значки безопасности">
 <!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
 
+<!ENTITY Ctr_extrabar		"Additional Toolbars">
+<!ENTITY Ctr_extrabar0		"Additional Toolbar(s) (restart Firefox!)">
 <!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
 
 <!ENTITY Ctr_invicons		"Перекрашенные наоборот значки">
@@ -225,7 +229,6 @@
 <!ENTITY Ctr_newversion		"Новая версия?">
 
 <!ENTITY Ctr_addon-bar.accesskey	"Д">
-<!ENTITY Ctr_extrabar.accesskey		"О">
 <!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
 <!ENTITY appMenuGettingStarted.label	"Getting started">

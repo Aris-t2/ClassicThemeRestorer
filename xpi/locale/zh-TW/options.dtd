@@ -2,7 +2,6 @@
 
 <!ENTITY Ctr_addonbar		"附加元件列">
 <!ENTITY Ctr_statusbar		"狀態列">
-<!ENTITY Ctr_extrabar		"新增工具列">
 <!ENTITY Ctr_flexspace		"彈性空間">
 <!ENTITY Ctr_space			"空白">
 <!ENTITY Ctr_separator		"分隔線">
@@ -97,6 +96,8 @@
 <!ENTITY Ctr_mstatusbar		"使狀態列可移動">
 <!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
 <!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
+<!ENTITY Ctr_mstatusbarpzt	"Status-bar panel is controlled by 'Puzzle Toolbars'">
+<!ENTITY Ctr_mstatusbarabr	"Status-bar panel is controlled by 'The Addon Bar (Restored)'">
 <!ENTITY Ctr_combrelstop	"合併停止與重新載入按鈕">
 <!ENTITY Ctr_stoprel1		"工具列: 將重新載入按鈕放在停止按鈕之後!">
 <!ENTITY Ctr_panelmenucol	"面板選單: 換一個背景色彩">
@@ -121,6 +122,7 @@
 <!ENTITY Ctr_tabmokcolor	"白色分頁按鈕 (關閉、新增、分頁群組、列出所有分頁)">
 <!ENTITY Ctr_tabmokcolor2	"非目前的分頁，其字型使用白色文字，並加上文字陰影">
 <!ENTITY Ctr_tabmokcolor3	"白色分頁分隔線">
+<!ENTITY Ctr_tabmokcolor4	"White color for empty dotted tab favicon">
 
 <!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
 <!ENTITY Ctr_navthrobber2	"Add url or leave empty">
@@ -162,6 +164,8 @@
 <!ENTITY Ctr_padlock_ext	"安全圖示">
 <!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
 
+<!ENTITY Ctr_extrabar		"Additional Toolbars">
+<!ENTITY Ctr_extrabar0		"Additional Toolbar(s) (restart Firefox!)">
 <!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
 
 <!ENTITY Ctr_invicons		"圖示反相">
@@ -224,7 +228,6 @@
 <!ENTITY Ctr_newversion		"有新版本?">
 
 <!ENTITY Ctr_addon-bar.accesskey	"A">
-<!ENTITY Ctr_extrabar.accesskey		"D">
 <!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
 <!ENTITY appMenuGettingStarted.label	"Getting started">

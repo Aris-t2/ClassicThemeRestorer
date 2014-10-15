@@ -438,16 +438,11 @@
 	  margin-top:4px !important;
 	}
 	
-	/* Extra toolbars */
-	#toggle_ctraddon_extra-bar,
-	#ctraddon_extra-bar,
-	#toggle_ctraddon_extra-bar2,
-	#ctraddon_extra-bar2,
-	#toggle_ctraddon_extra-bar3,
-	#ctraddon_extra-bar3{
-	  visibility:collapse;
+	/* hide unsupported menuitems items */
+	#main-window:not([fx34plus="true"]) #appmenu_webide,
+	#main-window[fx34plus="true"] #appmenu_devAppMgr {
+	  visibility: collapse !important;
 	}
-
 }
 
 /* style/hide settings on CTRs options window */
@@ -486,10 +481,20 @@
 	  visibility: collapse;
 	}
 	
-	textbox {
+	#ctraddon_fontbox textbox {
 	  min-width: 50px !important;
 	  width: 122px !important;
 	  max-width: 122px !important;
+	}
+	
+	#ctraddon_pw_tabMinWidth,
+	#ctraddon_pw_tabMaxWidth{
+	  width:60px !important;
+	  max-width:80px !important;
+	}
+	
+	#ctraddon_pw_am_extrabars{
+	  width:50px !important;
 	}
 	
 	@media not all and (-moz-windows-theme:aero) {
@@ -585,10 +590,4 @@
 	  border:0;
 	}
 	
-	#ctraddon_pw_tabMinWidth,
-	#ctraddon_pw_tabMaxWidth{
-	  width:60px !important;
-	  max-width:80px !important;
-	}
-
 }

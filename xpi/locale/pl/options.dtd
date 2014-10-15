@@ -2,7 +2,6 @@
 
 <!ENTITY Ctr_addonbar		"Pasek dodatków">
 <!ENTITY Ctr_statusbar		"Pasek statusu">
-<!ENTITY Ctr_extrabar		"Dodatkowy pasek narzędzi">
 <!ENTITY Ctr_flexspace		"Swobodny odstęp">
 <!ENTITY Ctr_space			"Odstęp">
 <!ENTITY Ctr_separator		"Separator">
@@ -97,6 +96,8 @@
 <!ENTITY Ctr_mstatusbar		"Ruchomy panel paska statusu">
 <!ENTITY Ctr_mstatusbars4e	"Panel paska statusu jest kontrolowany przez 'Status-4-Evar'">
 <!ENTITY Ctr_mstatusbartpp	"Panel paska statusu jest kontrolowany przez 'ThePuzzlePiece'">
+<!ENTITY Ctr_mstatusbarpzt	"Panel paska statusu jest kontrolowany przez 'Puzzle Toolbars'">
+<!ENTITY Ctr_mstatusbarabr	"Panel paska statusu jest kontrolowany przez 'The Addon Bar (Restored)'">
 <!ENTITY Ctr_combrelstop	"Połącz przyciski zatrzymania i odświeżania">
 <!ENTITY Ctr_stoprel1		"Ważne: umieść przycisk odświeżania za przyciskiem zatrzymania!">
 <!ENTITY Ctr_panelmenucol	"Menu panelu: alternatywny kolor tła">
@@ -112,7 +113,7 @@
 <!ENTITY Ctr_nav_txt_ico2	"Pokaż ikony i tekst">
 <!ENTITY Ctr_nav_txt_ico3	"Pokaż tylko tekst">
 <!ENTITY Ctr_nav_txt_exp	"Atrybuty eksperymentalne:">
-<!ENTITY Ctr_iat_notf_vt	"Not for vertical toolbars">
+<!ENTITY Ctr_iat_notf_vt	"Nie dla pionowych pasków narzędzi">
 <!ENTITY Ctr_cpanelmenus	"Menu panelu: widok kompaktowy (zakładki, historia itp.)">
 <!ENTITY Ctr_hidezoomres	"Kontrolki powiększenia na pasku narzędzi: ukryj przycisk resetu powiększenia">
 <!ENTITY Ctr_pmhidelabels	"Wyskakujące okno menu panelu: ukryj etykiety przycisku">
@@ -122,6 +123,7 @@
 <!ENTITY Ctr_tabmokcolor	"Biały kolor przycisków karty (zamknij, nowa, grupy, lista wszystkich)">
 <!ENTITY Ctr_tabmokcolor2	"Biały kolor i ciemny cień tekstu na nieaktywnych kartach">
 <!ENTITY Ctr_tabmokcolor3	"Biały kolor separatorów kart">
+<!ENTITY Ctr_tabmokcolor4	"Biały kolor pustej i wykropkowanej ikony ulubionych na karcie">
 
 <!ENTITY Ctr_navthrobber1	"Kliknięcie wskaźnika aktywności otwiera określony adres:">
 <!ENTITY Ctr_navthrobber2	"Dodaj adres albo pozostaw puste">
@@ -146,7 +148,7 @@
 <!ENTITY Ctr_ntabhov		"Nowa karta (najechana)">
 <!ENTITY Ctr_bold			"Pogrubiona">
 <!ENTITY Ctr_italic			"Kursywa">
-<!ENTITY Ctr_notabhov		"Enabled settings override 'hovered' settings">
+<!ENTITY Ctr_notabhov		"Włączone ustawienia nie uwzględniają ustawień 'najechania'">
 
 <!ENTITY Ctr_urlbar			"Pasek adresu">
 <!ENTITY Ctr_starinurl		"Przycisk 'gwiazdka' na pasku adresu (zrestartuj Firefoksa!)">
@@ -163,6 +165,8 @@
 <!ENTITY Ctr_padlock_ext	"Ikony zabezpieczeń">
 <!ENTITY Ctr_icopageinfo	"Kliknięcie ikony otwiera okno 'informacji o stronie'">
 
+<!ENTITY Ctr_extrabar		"Dodatkowe paski narzędzi">
+<!ENTITY Ctr_extrabar0		"Dodatkowy pasek (dodatkowe paski) narzędzi (zrestartuj Firefoksa!)">
 <!ENTITY Ctr_extrabarinfo	"Przełączanie pomiędzy trybami 'karty na górze' a 'karty nie na górze' losowo zmienia układ dodatkowych pasków narzędzi. Firefox musi zostać zrestartowany, aby rozwiązać ten problem.">
 
 <!ENTITY Ctr_invicons		"Ikony odwrócone">
@@ -225,7 +229,6 @@
 <!ENTITY Ctr_newversion		"Nowa wersja?">
 
 <!ENTITY Ctr_addon-bar.accesskey	"A">
-<!ENTITY Ctr_extrabar.accesskey		"D">
 <!ENTITY Ctr_openInPrivateWindow	"Otwórz w nowym oknie prywatnym">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
 <!ENTITY appMenuGettingStarted.label	"Pierwsze kroki">

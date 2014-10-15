@@ -85,48 +85,6 @@
 		</toolbar>
 	</vbox>
 	
-	<!--### create a new toolbar ###-->
-	<toolbox id="navigator-toolbox">
-		
-		<toolbar id="ctraddon_extra-bar" customizable="true"
-				 class="toolbar-primary chromeclass-toolbar"
-				 mode="icons"
-				 iconsize="small"
-				 insertafter="nav-bar"
-				 insertbefore="PersonalToolbar"
-				 context="toolbar-context-menu"
-				 toolbarname="&Ctr_extrabar;"
-				 collapsed="true"
-				 lockiconsize="true"
-				 accesskey="&Ctr_extrabar.accesskey;"
-				 defaultset="spring">
-		</toolbar>
-		<toolbar id="ctraddon_extra-bar2" customizable="true"
-				 class="toolbar-primary chromeclass-toolbar"
-				 mode="icons"
-				 iconsize="small"
-				 insertafter="ctraddon_extra-bar"
-				 insertbefore="PersonalToolbar"
-				 context="toolbar-context-menu"
-				 toolbarname="&Ctr_extrabar; (2)"
-				 collapsed="true"
-				 lockiconsize="true"
-				 defaultset="spring">
-		</toolbar>
-		<toolbar id="ctraddon_extra-bar3" customizable="true"
-				 class="toolbar-primary chromeclass-toolbar"
-				 mode="icons"
-				 iconsize="small"
-				 insertafter="ctraddon_extra-bar2"
-				 insertbefore="PersonalToolbar"
-				 context="toolbar-context-menu"
-				 toolbarname="&Ctr_extrabar; (3)"
-				 collapsed="true"
-				 lockiconsize="true"
-				 defaultset="spring">
-		</toolbar>
-	</toolbox>
-
 	<!--### add a CTR button to panel menu ###-->
 	<hbox id="PanelUI-footer-inner">
 	  <toolbarbutton id="ctraddon_PanelUI-CTR-button"
@@ -370,6 +328,9 @@
                   <menuitem id="appmenu_devAppMgr"
                             observes="devtoolsMenuBroadcaster_DevAppMgr"
                             accesskey="&devAppMgrMenu.accesskey;"/>
+                  <menuitem id="appmenu_webide"
+                            observes="devtoolsMenuBroadcaster_webide"
+                            accesskey="&webide.accesskey;"/>
                   <menuitem id="appmenu_browserConsole"
                             observes="devtoolsMenuBroadcaster_BrowserConsole"
                             accesskey="&browserConsoleCmd.accesskey;"/>

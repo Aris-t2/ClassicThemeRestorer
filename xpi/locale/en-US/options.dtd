@@ -2,7 +2,6 @@
 
 <!ENTITY Ctr_addonbar		"Add-on Bar">
 <!ENTITY Ctr_statusbar		"Status Bar">
-<!ENTITY Ctr_extrabar		"Additional Toolbar">
 <!ENTITY Ctr_flexspace		"Flexible space">
 <!ENTITY Ctr_space			"Space">
 <!ENTITY Ctr_separator		"Separator">
@@ -97,6 +96,8 @@
 <!ENTITY Ctr_mstatusbar		"Movable status-bar panel">
 <!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
 <!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
+<!ENTITY Ctr_mstatusbarpzt	"Status-bar panel is controlled by 'Puzzle Toolbars'">
+<!ENTITY Ctr_mstatusbarabr	"Status-bar panel is controlled by 'The Addon Bar (Restored)'">
 <!ENTITY Ctr_combrelstop	"Stop &amp; reload: combine toolbar buttons">
 <!ENTITY Ctr_stoprel1		"Important: place reload button after stop button!">
 <!ENTITY Ctr_panelmenucol	"Panel menus: alternative background color">
@@ -122,6 +123,7 @@
 <!ENTITY Ctr_tabmokcolor	"White color for tab buttons (close, new, groups, list all)">
 <!ENTITY Ctr_tabmokcolor2	"White color and dark shadow for text on non-active tabs">
 <!ENTITY Ctr_tabmokcolor3	"White color for tab separators">
+<!ENTITY Ctr_tabmokcolor4	"White color for empty dotted tab favicon">
 
 <!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
 <!ENTITY Ctr_navthrobber2	"Add url or leave empty">
@@ -163,6 +165,8 @@
 <!ENTITY Ctr_padlock_ext	"Security icons">
 <!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
 
+<!ENTITY Ctr_extrabar		"Additional Toolbars">
+<!ENTITY Ctr_extrabar0		"Additional Toolbar(s) (restart Firefox!)">
 <!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
 
 <!ENTITY Ctr_invicons		"Inverted icons">
@@ -225,7 +229,6 @@
 <!ENTITY Ctr_newversion		"New version?">
 
 <!ENTITY Ctr_addon-bar.accesskey	"A">
-<!ENTITY Ctr_extrabar.accesskey		"D">
 <!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
 <!ENTITY appMenuGettingStarted.label	"Getting started">

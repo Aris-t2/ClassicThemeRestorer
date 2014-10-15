@@ -2,7 +2,6 @@
 
 <!ENTITY Ctr_addonbar		"Панель додатків">
 <!ENTITY Ctr_statusbar		"Статус панель">
-<!ENTITY Ctr_extrabar		"Додаткова панель">
 <!ENTITY Ctr_flexspace		"Гнучкий інтервал">
 <!ENTITY Ctr_space			"Інтервал">
 <!ENTITY Ctr_separator		"Розділювач">
@@ -97,6 +96,8 @@
 <!ENTITY Ctr_mstatusbar		"Рухомий рядок стану">
 <!ENTITY Ctr_mstatusbars4e	"Панель статусу контролюється додатком «Status-4-Evar»">
 <!ENTITY Ctr_mstatusbartpp	"Панель статусу контролюється додатком «ThePuzzlePiece»">
+<!ENTITY Ctr_mstatusbarpzt	"Панель статусу контролюється додатком «Puzzle Toolbars»">
+<!ENTITY Ctr_mstatusbarabr	"Панель статусу контролюється додатком «The Addon Bar (Restored)»">
 <!ENTITY Ctr_combrelstop	"Об’єднати кнопки «Зупинити» та «Перезавантажити»">
 <!ENTITY Ctr_stoprel1		"Важливо: з’являється кнопка «Перезавантаження» на місці кнопки «Зупинити»!">
 <!ENTITY Ctr_panelmenucol	"Панель меню: альтернативний колір тла">
@@ -112,7 +113,7 @@
 <!ENTITY Ctr_nav_txt_ico2	"Показувати іконки і текст">
 <!ENTITY Ctr_nav_txt_ico3	"Показувати тільки текст">
 <!ENTITY Ctr_nav_txt_exp	"Експериментальні атрибути:">
-<!ENTITY Ctr_iat_notf_vt	"Not for vertical toolbars">
+<!ENTITY Ctr_iat_notf_vt	"Не для вертикальних панелей інструментів">
 <!ENTITY Ctr_cpanelmenus	"Панель меню: компактний вигляд (закладки, історія тощо)">
 <!ENTITY Ctr_hidezoomres	"Управління масштабом на панелі: приховати кнопку скидання масштабу">
 <!ENTITY Ctr_pmhidelabels	"Спливаюче вікно панелі меню: приховати написи на кнопках">
@@ -122,6 +123,7 @@
 <!ENTITY Ctr_tabmokcolor	"Білий колір для кнопок вкладок (закрити, нова, групи, список усіх)">
 <!ENTITY Ctr_tabmokcolor2	"Білий колір і темна тінь для тексту на неактивній вкладці">
 <!ENTITY Ctr_tabmokcolor3	"Білий колір для розділювачів вкладок">
+<!ENTITY Ctr_tabmokcolor4	"Білий колір для порожньої пунктирної іконки сайту на вкладці">
 
 <!ENTITY Ctr_navthrobber1	"Клік на індикаторі активності відкриває визначену адресу:">
 <!ENTITY Ctr_navthrobber2	"Додати адресу або залишити порожнім">
@@ -146,7 +148,7 @@
 <!ENTITY Ctr_ntabhov		"Нова вкладка (в очікуванні)">
 <!ENTITY Ctr_bold			"Жирний">
 <!ENTITY Ctr_italic			"Курсив">
-<!ENTITY Ctr_notabhov		"Enabled settings override 'hovered' settings">
+<!ENTITY Ctr_notabhov		"Увімкнені налаштування скасовують налаштування 'в очікуванні'">
 
 <!ENTITY Ctr_urlbar			"Панель рядку адреси">
 <!ENTITY Ctr_starinurl		"Зірка в рядку адреси (перезапустіть Firefox)">
@@ -155,7 +157,7 @@
 <!ENTITY Ctr_hideprbutton	"Приховати інфо кнопку 'спливаюче вікно блоковано' ">
 <!ENTITY Ctr_urlbar_ib		"Індикатори справжності панелі рядку адреси">
 <!ENTITY Ctr_verifiedcolors	"Зелений/синій індикатор для перевірених сайтів">
-<!ENTITY Ctr_faviconurl		"Значок сайту в рядку адреси (перезапустіть Firefox)">
+<!ENTITY Ctr_faviconurl		"Значок сайту в рядку адреси (перезапустіть Firefox!)">
 <!ENTITY Ctr_padlock_hid	"Замок (прихований)">
 <!ENTITY Ctr_padlock_def	"Замок (за умовчуванням)">
 <!ENTITY Ctr_padlock_cla	"Замок (класичний)">
@@ -163,6 +165,8 @@
 <!ENTITY Ctr_padlock_ext	"Іконки безпеки">
 <!ENTITY Ctr_icopageinfo	"Клік на іконку відкриває інформаційне вікно">
 
+<!ENTITY Ctr_extrabar		"Додаткові панелі інструментів">
+<!ENTITY Ctr_extrabar0		"Вкажіть кількість панелей (перезапустіть Firefox!)">
 <!ENTITY Ctr_extrabarinfo	"Перемикання між способами 'вкладки нагорі' і 'вкладки не нагорі' змінює розташування додаткових панелей. Firefox повинен бути перезапущений, щоб вирішити цю проблему.">
 
 <!ENTITY Ctr_invicons		"Інвертовані іконки">
@@ -225,7 +229,6 @@
 <!ENTITY Ctr_newversion		"Нова версія?">
 
 <!ENTITY Ctr_addon-bar.accesskey	"A">
-<!ENTITY Ctr_extrabar.accesskey		"D">
 <!ENTITY Ctr_openInPrivateWindow	"Відкрити в новому приватному вікні">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
 <!ENTITY appMenuGettingStarted.label	"Початок роботи">

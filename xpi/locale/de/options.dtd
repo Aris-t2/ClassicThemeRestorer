@@ -2,7 +2,6 @@
 
 <!ENTITY Ctr_addonbar		"Addonleiste">
 <!ENTITY Ctr_statusbar		"Statusleiste">
-<!ENTITY Ctr_extrabar		"Extraleiste">
 <!ENTITY Ctr_flexspace		"Flexibler Zwischenraum">
 <!ENTITY Ctr_space			"Zwischenraum">
 <!ENTITY Ctr_separator		"Trennlinie">
@@ -97,6 +96,8 @@
 <!ENTITY Ctr_mstatusbar		"Statusbereich: sichtbar und verschiebbar">
 <!ENTITY Ctr_mstatusbars4e	"Statusbereich wird von 'Status-4-Evar' kontrolliert">
 <!ENTITY Ctr_mstatusbartpp	"Statusbereich wird von 'ThePuzzlePiece' kontrolliert">
+<!ENTITY Ctr_mstatusbarpzt	"Statusbereich wird von 'Puzzle Toolbars' kontrolliert">
+<!ENTITY Ctr_mstatusbarabr	"Statusbereich wird von 'The Addon Bar (Restored)' kontrolliert">
 <!ENTITY Ctr_combrelstop	"'Stopp' &amp; 'Neu laden': kombiniere Leistenschaltflächen">
 <!ENTITY Ctr_stoprel1		"Wichtig: positioniere 'Neu laden' rechts von 'Stopp'!">
 <!ENTITY Ctr_panelmenucol	"Alternative Hintergrundfarbe für 'Panel-Popupmenüs'">
@@ -122,6 +123,7 @@
 <!ENTITY Ctr_tabmokcolor	"Weiße Schaltflächen (Neu, Schließen, Gruppen, Listen)">
 <!ENTITY Ctr_tabmokcolor2	"Weißer Tabtext und dunkler Schatten für nicht aktive Tabs">
 <!ENTITY Ctr_tabmokcolor3	"Weiße Trennlinien zwischen den Tabs">
+<!ENTITY Ctr_tabmokcolor4	"Weißes leeres Lesezeichensymbol auf Tabs">
 
 <!ENTITY Ctr_navthrobber1	"Ein Klick auf die Aktivitätsanzeige öffnet folgende Adresse:">
 <!ENTITY Ctr_navthrobber2	"Adresse eintragen oder leer lassen">
@@ -163,6 +165,8 @@
 <!ENTITY Ctr_padlock_ext	"Andere Sicherheitssymbole">
 <!ENTITY Ctr_icopageinfo	"Ein Klick auf das Symbol öffnet das 'Seiteninfo' Fenster">
 
+<!ENTITY Ctr_extrabar		"Extraleisten">
+<!ENTITY Ctr_extrabar0		"Extraleiste(n) (Firefox neustarten)">
 <!ENTITY Ctr_extrabarinfo	"Der Wechsel zwischen 'Tabs oben' und 'Tabs unten' kann die Reihenfolge der Extraleisten zufällig ändern. Ein Firefox-Neustart stellt die richtige Reihenfolge wieder her.">
 
 <!ENTITY Ctr_invicons		"Invertierte Symbole">
@@ -225,7 +229,6 @@
 <!ENTITY Ctr_newversion		"Neue Version?">
 
 <!ENTITY Ctr_addon-bar.accesskey	"A">
-<!ENTITY Ctr_extrabar.accesskey		"E">
 <!ENTITY Ctr_openInPrivateWindow	"In neuem privaten Fenster öffnen">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
 <!ENTITY appMenuGettingStarted.label	"Erste Schritte">

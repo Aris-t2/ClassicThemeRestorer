@@ -3,6 +3,7 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	* #private-browsing-indicator-titlebar,
+	* #private-browsing-indicator,
 	* .private-browsing-indicator {
 	  visibility: collapse !important;
 	}

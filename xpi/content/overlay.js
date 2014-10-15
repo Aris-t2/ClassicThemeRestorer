@@ -8,7 +8,6 @@
 	Components.utils: Cu
 */
 
-Cu.import("chrome://classic_theme_restorer/content/ctraddon_toolbars.jsm");
 Cu.import("resource:///modules/CustomizableUI.jsm");
 Cu.import("resource://gre/modules/AddonManager.jsm");
 
@@ -57,7 +56,7 @@ classicthemerestorerjs.ctr = {
 
 
   init: function() {
-	
+  
 	// remove default panel ui button in favour of CTRs movable duplicate
 	try{
 		document.getElementById("PanelUI-button").removeChild(document.getElementById("PanelUI-menu-button"));
@@ -77,6 +76,14 @@ classicthemerestorerjs.ctr = {
 	try{
 		if (this.appversion >= 32) document.getElementById("main-window").setAttribute('fx32plus',true);
 	} catch(e){}
+	
+	// add a new global attribute 'fx34plus' -> better parting css between versions
+	try{
+		if (this.appversion >= 34) document.getElementById("main-window").setAttribute('fx34plus',true);
+	} catch(e){}
+	
+	// additional toolbars
+	this.createAdditionalToolbars();
 	
 	// add-on fixes
 	this.addonCompatibilityImprovements();
@@ -243,7 +250,6 @@ classicthemerestorerjs.ctr = {
 				document.getElementById("TabsToolbar").removeAttribute('tabsontop');
 				document.getElementById("nav-bar").removeAttribute('tabsontop');
 				document.getElementById("PersonalToolbar").removeAttribute('tabsontop');
-				document.getElementById("ctraddon_extra-bar").removeAttribute('tabsontop');
 				document.getElementById("ctraddon_addon-bar").removeAttribute('tabsontop');
 			  }
 			} catch(e){}
@@ -257,7 +263,6 @@ classicthemerestorerjs.ctr = {
 				document.getElementById("TabsToolbar").setAttribute('tabsontop','true');
 				document.getElementById("nav-bar").setAttribute('tabsontop','true');
 				document.getElementById("PersonalToolbar").setAttribute('tabsontop','true');
-				document.getElementById("ctraddon_extra-bar").setAttribute('tabsontop','true');
 				document.getElementById("ctraddon_addon-bar").setAttribute('tabsontop','true');
 					
 			  } else if (tabsont=='false' || tabsont=='false2') {
@@ -268,7 +273,6 @@ classicthemerestorerjs.ctr = {
 				document.getElementById("TabsToolbar").setAttribute('tabsontop','false');
 				document.getElementById("nav-bar").setAttribute('tabsontop','false');
 				document.getElementById("PersonalToolbar").setAttribute('tabsontop','false');
-				document.getElementById("ctraddon_extra-bar").setAttribute('tabsontop','false');
 				document.getElementById("ctraddon_addon-bar").setAttribute('tabsontop','false');
 			  }
 			} catch(e){}
@@ -462,18 +466,18 @@ classicthemerestorerjs.ctr = {
 				// add status bar shim to CTRs status bar area
 				setTimeout(function(){
 				  try{
-					  if(document.getElementById("status-bar").parentNode.id!="ctraddon_statusbar")
+					  if(document.getElementById("status-bar").parentNode.id=="addon-bar")
 						document.getElementById("ctraddon_statusbar").insertBefore(document.getElementById("status-bar"), null);
 				  } catch(e){}
 				},1100);
 				
-				// recheck position of CTRs status bar area
+				// recheck position of CTRs status bar area after DOM content loaded
 				window.addEventListener("DOMContentLoaded", function loadCTRstatusbar(event){
 					window.removeEventListener("DOMContentLoaded", loadCTRstatusbar, false);
 			
 					setTimeout(function(){
 					  try{
-						  if(document.getElementById("status-bar").parentNode.id!="ctraddon_statusbar")
+						  if(document.getElementById("status-bar").parentNode.id=="addon-bar")
 							document.getElementById("ctraddon_statusbar").insertBefore(document.getElementById("status-bar"), null);
 					  } catch(e){}
 					},1250);
@@ -951,6 +955,11 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("tabmokcolor3",false);
 		  break;
 
+		  case "tabmokcolor4":
+			if (branch.getBoolPref("tabmokcolor4") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("tabmokcolor4",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("tabmokcolor4",false);
+		  break;
+
 		  case "closeabarbut":
 			if (branch.getBoolPref("closeabarbut"))	classicthemerestorerjs.ctr.loadUnloadCSS("closeabarbut",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("closeabarbut",false);
@@ -1125,21 +1134,6 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("panelmenucol",false);
 		  break;
 		  
-		  case "extrabar1":
-			if (branch.getBoolPref("extrabar1")) classicthemerestorerjs.ctr.loadUnloadCSS("extrabar1",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("extrabar1",false);
-		  break;
-		  
-		  case "extrabar2":
-			if (branch.getBoolPref("extrabar2")) classicthemerestorerjs.ctr.loadUnloadCSS("extrabar2",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("extrabar2",false);
-		  break;
-
-		  case "extrabar3":
-			if (branch.getBoolPref("extrabar3")) classicthemerestorerjs.ctr.loadUnloadCSS("extrabar3",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("extrabar3",false);
-		  break;
-		  
 		  //inv icons START
 		  case "invicomenubar":
 			if (branch.getBoolPref("invicomenubar") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("invicomenubar",true);
@@ -1159,16 +1153,6 @@ classicthemerestorerjs.ctr = {
 		  case "invicoextrabar":
 			if (branch.getBoolPref("invicoextrabar") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("invicoextrabar",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("invicoextrabar",false);
-		  break;
-		  
-		  case "invicoextrabar2":
-			if (branch.getBoolPref("invicoextrabar2") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("invicoextrabar2",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("invicoextrabar2",false);
-		  break;
-		  
-		  case "invicoextrabar3":
-			if (branch.getBoolPref("invicoextrabar3") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("invicoextrabar3",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("invicoextrabar3",false);
 		  break;
 		  
 		  case "invicobookbar":
@@ -1294,6 +1278,53 @@ classicthemerestorerjs.ctr = {
 	
 	if(newathrobberurl!="")
 	  gBrowser.selectedTab = gBrowser.addTab(newathrobberurl);
+  },
+  
+  // create 0-20 additional toolbars on startup
+  // easier and more accurate compared to adding toolbars manually to overlay.xul
+  createAdditionalToolbars: function() {
+
+	// get amount of toolbars user wants to use
+	var extrabars_num=classicthemerestorerjs.ctr.prefs.getIntPref('am_extrabars');
+	
+	// reset unsupported values
+	if(extrabars_num<0) {extrabars_num=0; classicthemerestorerjs.ctr.prefs.setIntPref('am_extrabars',extrabars_num);}
+	if(extrabars_num>20) {extrabars_num=20; classicthemerestorerjs.ctr.prefs.setIntPref('am_extrabars',extrabars_num);}
+	
+	// only try to add additional toolbar(s), if user enables at least one toolbar
+	if(extrabars_num>0) {
+	
+	  var i=1;
+	  var stringBundle = Cc["@mozilla.org/intl/stringbundle;1"].getService(Ci.nsIStringBundleService)
+						  .createBundle("chrome://classic_theme_restorer/locale/messages.file");
+	
+	  while(i<=extrabars_num) {
+		var ctr_tb = document.createElement("toolbar");
+		
+		if(i==1) {
+		  ctr_tb.setAttribute("id", "ctraddon_extra-bar");
+		  ctr_tb.setAttribute("toolbarname", ""+stringBundle.GetStringFromName("ctr_extrabar")+"");
+		  ctr_tb.setAttribute("collapsed", "true");
+		}
+		else {
+		  ctr_tb.setAttribute("id", "ctraddon_extra-bar"+i+"");
+		  ctr_tb.setAttribute("toolbarname", ""+stringBundle.GetStringFromName("ctr_extrabar")+" ("+i+")");
+		}
+		ctr_tb.setAttribute("class", "toolbar-primary chromeclass-toolbar");
+		ctr_tb.setAttribute("customizable", "true");
+		ctr_tb.setAttribute("mode", "icons");
+		ctr_tb.setAttribute("iconsize", "small");
+		ctr_tb.setAttribute("insertafter", "nav-bar");
+		ctr_tb.setAttribute("insertbefore", "PersonalToolbar");
+		ctr_tb.setAttribute("context", "toolbar-context-menu");
+		ctr_tb.setAttribute("lockiconsize", "true");
+		ctr_tb.setAttribute("defaultset", "spring");
+		
+		document.getElementById("navigator-toolbox").insertBefore(ctr_tb, document.getElementById("PersonalToolbar"));
+		i++;
+	  }
+	}
+  
   },
   
   addonCompatibilityImprovements: function() {
@@ -1995,23 +2026,18 @@ classicthemerestorerjs.ctr = {
 		case "hideprivmask": 		manageCSS("hideprivatemask.css");		break;
 		case "bfurlbarfix": 		manageCSS("bf_urlbarfix.css");			break;
 		case "bf_space": 			manageCSS("bf_space.css");				break;
-		
-		case "extrabar1": 			manageCSS("extratoolbar1.css");			break;
-		case "extrabar2": 			manageCSS("extratoolbar2.css");			break;
-		case "extrabar3": 			manageCSS("extratoolbar3.css");			break;
-		
+	
 		case "invicomenubar": 		manageCSS("invicons_menubar.css");		break;
 		case "invicotabsbar": 		manageCSS("invicons_tabsbar.css");		break;
 		case "inviconavbar": 		manageCSS("invicons_navbar.css");		break;
 		case "invicoextrabar": 		manageCSS("invicons_extrabar.css");		break;
-		case "invicoextrabar2": 	manageCSS("invicons_extrabar2.css");	break;
-		case "invicoextrabar3": 	manageCSS("invicons_extrabar3.css");	break;
 		case "invicobookbar": 		manageCSS("invicons_bookmarksbar.css");	break;
 		case "invicoaddonbar": 		manageCSS("invicons_addonbar.css");		break;
 
 		case "tabmokcolor": 		manageCSS("tabmokcolor.css");			break;
 		case "tabmokcolor2": 		manageCSS("tabmokcolor2.css");			break;
 		case "tabmokcolor3": 		manageCSS("tabmokcolor3.css");			break;
+		case "tabmokcolor4": 		manageCSS("tabmokcolor4.css");			break;
 		
 		case "padlock_default": 	manageCSS("padlock_default.css");		break;
 		case "padlock_classic": 	manageCSS("padlock_classic.css");		break;

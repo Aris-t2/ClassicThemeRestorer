@@ -17,9 +17,7 @@
 	#navigator-toolbox #nav-bar {
 	  -moz-box-ordinal-group: 2 !important;
 	}
-	#navigator-toolbox #ctraddon_extra-bar,
-	#navigator-toolbox #ctraddon_extra-bar2,
-	#navigator-toolbox #ctraddon_extra-bar3 {
+	#navigator-toolbox toolbar[id^=ctraddon_extra-bar] {
 	  -moz-box-ordinal-group: 3 !important;
 	}
 	#navigator-toolbox #PersonalToolbar {
