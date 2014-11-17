@@ -76,4 +76,9 @@
 	#bookmarked-notification-dropmarker-icon {
 	  animation: none !important;
 	}
+
+	/* Flagfox support */
+	#flagfox-button{
+	  -moz-box-ordinal-group:0;
+	}
 }

@@ -340,14 +340,28 @@
 	}
 	#ctraddon_appbutton_list2{
 	  visibility: collapse !important;
+	  display:none !important;
 	}
 	
 	@media not all and (-moz-windows-glass) {
 		#ctraddon_pw_menubarnofog{
 		  visibility: collapse !important;
+		  display:none !important;
 		}
 	}
 	#ctraddon_pw_okbutton{
 	  display: inline !important;
+	}
+
+	#ctraddon_pw_starinurl label{
+	  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/starbutton1.png'),
+				  0, 72, 18, 36) no-repeat left !important;
+	  -moz-padding-start:20px !important;
+	  min-height:16px !important;
+	}
+	#ctraddon_pw_feedinurl label{
+	  background:url('chrome://classic_theme_restorer/content/images/feedinurlbar.png') no-repeat left !important;
+	  -moz-padding-start:20px !important;
+	  min-height:16px !important;
 	}
 }

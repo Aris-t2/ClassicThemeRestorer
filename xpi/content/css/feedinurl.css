@@ -35,5 +35,10 @@
 	#main-window toolbar #urlbar-icons #feed-button:hover {
 	  opacity: 1.0 !important;
 	}
+
+	/* Flagfox support */
+	#flagfox-button{
+	  -moz-box-ordinal-group:0;
+	}
 	
 }

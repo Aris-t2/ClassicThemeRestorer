@@ -40,7 +40,7 @@
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	}
 	
-	/*TabUtilities autoreload extra*/
+	/*TabUtilities auto-reload extra*/
 	.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover,
 	.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover[selected="true"] {
 	  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
@@ -49,11 +49,15 @@
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png") !important;
 	}
 
-	/* remove gaps before and afer tabs */
+	/* remove gaps before and after tabs */
 	.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
 	  -moz-padding-start: 0px !important;
 	}
-
+	
+	#TabsToolbar:not([currentset*="tabbrowser-tabs,new-tab-button"]):not([orient="vertical"]) .tabs-newtab-button + .tabs-newtab-button{
+      -moz-margin-start: 0px !important;
+	}
+	
 	#TabsToolbar:not([currentset*="tabbrowser-tabs,new-tab-button"]):not([orient="vertical"]) .tabs-newtab-button{
 	  -moz-margin-end: 0px !important;
 	}

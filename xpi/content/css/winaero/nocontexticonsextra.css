@@ -31,6 +31,47 @@
 	  -moz-margin-start:32px !important;
 	}
 	
+	/*Windows screen dpi value of 110%*/
+	@media (min-resolution: 105dpi) {
+		#context-back:before,
+		#context-forward:before,
+		#context-reload:before,
+		#context-stop:before,
+		#context-bookmarkpage:before{
+		  -moz-margin-start:29px !important;
+		}
+	}
+	/*Windows screen dpi value of 120%*/
+	@media (min-resolution: 115dpi) {
+		#context-back:before,
+		#context-forward:before,
+		#context-reload:before,
+		#context-stop:before,
+		#context-bookmarkpage:before{
+		  -moz-margin-start:27px !important;
+		}
+	}
+	/*Windows screen dpi value of 125%*/
+	@media (min-resolution: 120dpi) {
+		#context-back:before,
+		#context-forward:before,
+		#context-reload:before,
+		#context-stop:before,
+		#context-bookmarkpage:before{
+		  -moz-margin-start:28px !important;
+		}
+	}
+	/*Windows screen dpi value of 150%*/
+	@media (min-resolution: 140dpi) {
+		#context-back:before,
+		#context-forward:before,
+		#context-reload:before,
+		#context-stop:before,
+		#context-bookmarkpage:before{
+		  -moz-margin-start:25px !important;
+		}
+	}
+	
 	#context-navigation{
 	  margin-bottom:-4px !important;
 	}

@@ -115,6 +115,10 @@
 	  min-height: 0px !important;
 	}
 	
+	#TabsToolbar toolbarbutton:not(.tabs-newtab-button){
+	  position:absolute !important;
+	}
+	
 	/**/
 	#TabsToolbar #ctraddon_appbutton{
 	  margin-bottom:-1px !important;

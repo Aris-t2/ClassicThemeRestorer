@@ -7,10 +7,12 @@
 	#main-window #TabsToolbar > #new-tab-button,
 	#main-window #TabsToolbar > toolbarpaletteitem > #new-tab-button {
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/newtab-inverted.png) !important;
+	  -moz-image-region: rect(0, 16px, 18px, 0) !important;
 	}
 
 	#main-window #TabsToolbar > #alltabs-button {
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/toolbarbutton-dropdown-arrow-inverted.png) !important;
+	  -moz-image-region: rect(0, 9px, 18px, 0) !important;
 	}
 
 	#main-window #TabsToolbar > #tabview-button {

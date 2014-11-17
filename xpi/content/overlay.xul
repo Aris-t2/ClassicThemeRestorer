@@ -110,7 +110,7 @@
 				insertbefore="placesContext_openSeparator"/>
 	</menugroup>
 	
-	<!--### Add ability to open the 'more page info' window by clicking the icon inside identiy box ###-->
+	<!--### Add ability to open the 'more page info' window by clicking the icon inside identity box ###-->
 	<image id="page-proxy-favicon"
 	  onclick="if(classicthemerestorerjs.ctr.prefs.getBoolPref('icopageinfo')) gIdentityHandler.handleMoreInfoClick(event); else PageProxyClickHandler(event);"/>
 
@@ -121,7 +121,7 @@
 	<toolbarbutton id="social-share-button" removable="true"/>
 	<toolbarbutton id="bookmarks-menu-button" overflows="false"/>
 	<toolbaritem id="social-toolbar-item" removable="true"/>
-	
+
 	<toolbar id="TabsToolbar">
       <toolbarbutton id="ctraddon_tabs-closebutton"
                      class="close-button tabs-closebutton close-icon"
@@ -642,27 +642,13 @@
 		</menupopup>
 	</popupset>
 
-	<hbox id="titlebar-content">
-	  <!--### place own appbutton on titlebar (Windows only) ###-->
-	  <toolbarbutton id="ctraddon_appbutton2"
-					 ordinal="0"
-                     removable="false"
-                     type="menu"
-                     label="&brandShortName;"
-					 popup="appmenu-popup"
-					 ondblclick="classicthemerestorerjs.ctr.appbuttonCloseCurrentWindow();"
-					 onmousedown="classicthemerestorerjs.ctr.openCtrAppmenuPopup();">
-	  </toolbarbutton>
-	</hbox>
 	
-	<!--### add custom buttons ... ###-->
-	<!--########################## ###-->	
-	<!--### ...to customizing area ###-->
+	<!--### add custom buttons to customizing palette ###-->
 	
 	<toolbarpalette id="BrowserToolbarPalette">
 		
-		<!--### another appbutton to be used on toolbars (Windows, Linux, MacOSX) ###-->
-		<toolbarbutton id="ctraddon_appbutton"
+	  <!--### appbutton for toolbars (Windows, Linux, MacOSX) ###-->
+	  <toolbarbutton id="ctraddon_appbutton"
                      class="toolbarbutton-1"
                      persist="class"
                      removable="true"
@@ -670,9 +656,9 @@
                      label="Firefox"
 					 popup="appmenu-popup"
 					 onmousedown="classicthemerestorerjs.ctr.openCtrAppmenuPopup();">
-	    </toolbarbutton>
+	  </toolbarbutton>
 
-
+	  <!--### adds own history menu button to browsers customizing area ###-->
 	  <toolbarbutton id="ctraddon_history-menu-toolbar-button"
                      class="toolbarbutton-1 chromeclass-toolbar-additional"
                      persist="class"
@@ -818,7 +804,7 @@
                      tooltiptext="&historyButton.label; &Ctr_sidebarbutton;"/>
 					 
 					 
-	  <!--### creates a duplicated PanelUI button ###-->
+	  <!--### creates a duplicated movable PanelUI button ###-->
 	  <toolbaritem id="ctraddon_panelui-button"
                    class="chromeclass-toolbar-additional"
                    removable="true"
@@ -829,21 +815,14 @@
                        label="&brandShortName;"
                        tooltiptext="&appmenu.tooltip;"/>
       </toolbaritem>
+
 	  <!--### extra separator for panel ui button ###-->
 	  <toolbaritem id="ctraddon_puib_separator"
                    title="&Ctr_puibseparator;"
                    customizableui-areatype="toolbar"
                    removable="true"/>
-				   
-	  <toolbaritem id="ctraddon_navigator-throbber"
-                   title="&Ctr_navthrobber;"
-                   customizableui-areatype="toolbar"
-				   align="center"
-				   pack="center"
-				   onclick="classicthemerestorerjs.ctr.openAThrobberUrl();"
-                   removable="true"/>
 	  
-	  <!--### creates a custom movable back-forward button ###-->
+	  <!--### creates movable back-forward buttons ###-->
 	  <toolbaritem id="ctraddon_back-forward-button" class="chromeclass-toolbar-additional"
                    context="backForwardMenu" removable="true"
                    forwarddisabled="false"
@@ -865,8 +844,7 @@
                          context="backForwardMenu"/>
       </toolbaritem>
 	  
-	  
-	  <!--### creates a custom back-forward history dropmarker ###-->
+	  <!--### creates a back-forward history dropmarker ###-->
 	  <toolbarbutton id="ctraddon_back-forward-dropmarker" type="menu" 
 			disabled="false"
 			label="&backCmd.label; &forwardCmd.label;"
@@ -884,30 +862,28 @@
 	  </toolbarbutton>
 	  
       
-	  <!--### creates a custom movable reload button ###-->
+	  <!--### creates a movable reload button ###-->
 	  <toolbarbutton id="ctraddon_reload-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
                      label="&reloadCmd.label;" removable="true"
                      command="Browser:ReloadOrDuplicate"
                      onclick="checkForMiddleClick(this, event);"
                      tooltiptext="&reloadButton.tooltip;"/>
 
-      <!--### creates a custom movable stop button ###-->
+      <!--### creates a movable stop button ###-->
 	  <toolbarbutton id="ctraddon_stop-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
                      label="&stopCmd.label;" removable="true"
                      command="Browser:Stop"
                      tooltiptext="&stopButton.tooltip;"/>
   
-	  <!--### duplicates fullscreen window controls ###-->
+	  <!--### creates clone of fullscreen window control buttons ###-->
 	  <toolbaritem id="ctraddon_window-controls" class="chromeclass-toolbar-additional"
                    removable="true" title="&Ctr_windowcontrols;">
         <toolbarbutton id="minimize-button"
                        tooltiptext="&fullScreenMinimize.tooltip;"
                        oncommand="window.minimize();"/>
-
         <toolbarbutton id="restore-button"
                        tooltiptext="&fullScreenRestore.tooltip;"
                        oncommand="BrowserFullScreen();"/>
-
         <toolbarbutton id="close-button"
                        tooltiptext="&fullScreenClose.tooltip;"
                        oncommand="BrowserTryToCloseWindow();"/>

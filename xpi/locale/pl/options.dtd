@@ -9,6 +9,7 @@
 <!ENTITY Ctr_navthrobber	"Wskaźnik aktywności">
 <!ENTITY Ctr_sidebarbutton	"(Pasek boczny)">
 <!ENTITY Ctr_windowcontrols	"Minimalizuj, maksymalizuj, zamknij (pełny ekran)">
+<!ENTITY Ctr_rr				"Wymagany restart!">
 
 <!ENTITY Ctr_cuibuttons		"Przyciski">
 <!ENTITY Ctr_cuibutnormal	"Normalne">
@@ -18,11 +19,9 @@
 <!ENTITY Ctr_cuiicotxt		"Ikony i tekst">
 <!ENTITY Ctr_cuitxt			"Tekst">
 
-<!ENTITY Ctr_combrelstoptt	"[zatrzymaj][odśwież] &gt;&gt; [zatrzymaj-odśwież]">
 <!ENTITY Ctr_tnot			"(karty nie na górze)">
 
 <!ENTITY Ctr_tabcolors_t	"Kolory karty i tekstu">
-<!ENTITY Ctr_urlbar_t		"Ustawienia paska adresu">
 
 <!ENTITY Ctr_tabs			"Karty">
 <!ENTITY Ctr_tabs0			"Karty zaokrąglone (domyślne w Australis)">
@@ -82,6 +81,8 @@
 <!ENTITY Ctr_appbutbdl		"Ukryj kolory obramowań i tła">
 <!ENTITY Ctr_dblclclosefx	"Podwójne kliknięcie zamyka bieżące okno">
 <!ENTITY Ctr_appbclmmenus	"Klikalne menu wewnątrz menu przycisku (Nowa karta, Drukuj...)">
+<!ENTITY Ctr_appbutonclab	"Tytuł">
+<!ENTITY Ctr_appbutonclab2	"Dodaj tytuł albo pozostaw puste">
 
 <!ENTITY Ctr_ui				"Główny interfejs użytkownika">
 <!ENTITY Ctr_nbiconsize0	"Ustaw atrybut paska nawigacji">
@@ -91,7 +92,7 @@
 <!ENTITY Ctr_hide_bf_popup	"Ukryj menu historii po naciśnięciu przycisku myszki">
 <!ENTITY Ctr_bf_space		"Zmniejsz odstęp pomiędzy przyciskami (jeżeli możliwe)">
 <!ENTITY Ctr_noconicons		"Zastąp etykietami ikony menu kontekstowego strony (wstecz, do przodu, zatrzymaj, odśwież, dodaj zakładkę)">
-<!ENTITY Ctr_wincontrols	"Ruchome kontrolki okna pełnego ekranu (minimalizuj, maksymalizuj, zamknij)">
+<!ENTITY Ctr_wincontrols	"Ruchome kontrolki okna pełnego ekranu">
 <!ENTITY Ctr_emptyfavicon2	"Wymień standardową ikonę ulubionych (pusta i wykropkowana) na ikonę kartki">
 <!ENTITY Ctr_mstatusbar		"Ruchomy panel paska statusu">
 <!ENTITY Ctr_mstatusbars4e	"Panel paska statusu jest kontrolowany przez 'Status-4-Evar'">
@@ -102,10 +103,10 @@
 <!ENTITY Ctr_stoprel1		"Ważne: umieść przycisk odświeżania za przyciskiem zatrzymania!">
 <!ENTITY Ctr_panelmenucol	"Menu panelu: alternatywny kolor tła">
 <!ENTITY Ctr_hideprivmask	"Prywatne przeglądanie: ukryj wskaźnik-maskę">
+<!ENTITY Ctr_nbisizedelay	"ms opóźnienia wykonania (1000 ms = 1 s)">
 <!ENTITY Ctr_findbar		"Pasek wyszukiwania">
 <!ENTITY Ctr_findbar_def	"Pozycja domyślna">
 <!ENTITY Ctr_findbar_top	"Pozycja na górze">
-<!ENTITY Ctr_findbar_bot	"Pozycja na dole">
 <!ENTITY Ctr_findbar_topa	"Alternatywna pozycja na górze">
 <!ENTITY Ctr_findbar_bota	"Alternatywna pozycja na dole">
 <!ENTITY Ctr_nav_txt_ico0	"Pokaż tylko ikony (domyślne)">
@@ -116,6 +117,7 @@
 <!ENTITY Ctr_iat_notf_vt	"Nie dla pionowych pasków narzędzi">
 <!ENTITY Ctr_cpanelmenus	"Menu panelu: widok kompaktowy (zakładki, historia itp.)">
 <!ENTITY Ctr_hidezoomres	"Kontrolki powiększenia na pasku narzędzi: ukryj przycisk resetu powiększenia">
+<!ENTITY Ctr_alt_newtabp	"Strona nowej karty: wygląd alternatywny">
 <!ENTITY Ctr_pmhidelabels	"Wyskakujące okno menu panelu: ukryj etykiety przycisku">
 <!ENTITY Ctr_menupopupscr	"Menu kontekstowe: pokaż pasek przewijania zamiast strzałek przewijania">
 
@@ -151,13 +153,14 @@
 <!ENTITY Ctr_notabhov		"Włączone ustawienia nie uwzględniają ustawień 'najechania'">
 
 <!ENTITY Ctr_urlbar			"Pasek adresu">
-<!ENTITY Ctr_starinurl		"Przycisk 'gwiazdka' na pasku adresu (zrestartuj Firefoksa!)">
-<!ENTITY Ctr_feedinurl		"Przycisk RSS na pasku adresu (zrestartuj Firefoksa!)">
-<!ENTITY Ctr_hideurelstop	"Ukryj przyciski zatrzymania i odświeżania na pasku adresu">
+<!ENTITY Ctr_starinurl		"Przycisk 'gwiazdka'">
+<!ENTITY Ctr_feedinurl		"Przycisk RSS">
+<!ENTITY Ctr_hideurelstop	"Ukryj przyciski zatrzymania i odświeżania">
+<!ENTITY Ctr_urlbardropm	"Przenieś znacznik rozwinięcia na koniec paska adresu">
 <!ENTITY Ctr_hideprbutton	"Ukryj przycisk informujący o zablokowanym wyskakującym oknie">
 <!ENTITY Ctr_urlbar_ib		"Pole tożsamości paska adresu">
 <!ENTITY Ctr_verifiedcolors	"Zielone i niebieskie pole tożsamości dla zweryfikowanych stron">
-<!ENTITY Ctr_faviconurl		"Ikona ulubionych na pasku adresu (zrestartuj Firefoksa!)">
+<!ENTITY Ctr_faviconurl		"Ikona ulubionych: ikona bieżącej strony">
 <!ENTITY Ctr_padlock_hid	"Ikona kłódki (ukryta)">
 <!ENTITY Ctr_padlock_def	"Ikona kłódki (domyślna)">
 <!ENTITY Ctr_padlock_cla	"Ikona kłódki (klasyczna)">
@@ -165,8 +168,10 @@
 <!ENTITY Ctr_padlock_ext	"Ikony zabezpieczeń">
 <!ENTITY Ctr_icopageinfo	"Kliknięcie ikony otwiera okno 'informacji o stronie'">
 
+<!ENTITY Ctr_menubar_items	"Pokaż pozycje menu paska menu na...">
 <!ENTITY Ctr_extrabar		"Dodatkowe paski narzędzi">
-<!ENTITY Ctr_extrabar0		"Dodatkowy pasek (dodatkowe paski) narzędzi (zrestartuj Firefoksa!)">
+<!ENTITY Ctr_extrabar0		"Dodatkowy pasek (dodatkowe paski) narzędzi">
+<!ENTITY Ctr_extrabar1		"Dodatkowy pasek narzędzi">
 <!ENTITY Ctr_extrabarinfo	"Przełączanie pomiędzy trybami 'karty na górze' a 'karty nie na górze' losowo zmienia układ dodatkowych pasków narzędzi. Firefox musi zostać zrestartowany, aby rozwiązać ten problem.">
 
 <!ENTITY Ctr_invicons		"Ikony odwrócone">
@@ -174,10 +179,11 @@
 <!ENTITY Ctr_tabstoolbar	"Pasek kart">
 <!ENTITY Ctr_navbar			"Pasek nawigacji">
 <!ENTITY Ctr_bookbar		"Pasek zakładek">
+<!ENTITY Ctr_notoolbar		"Brak paska narzędzi">
 
 <!ENTITY Ctr_toolbars		"Ustawienia paska narzędzi">
 <!ENTITY Ctr_dblclnewtab	"Podwójne kliknięcie otwiera 'nową' kartę (używa browser.newtab.url)">
-<!ENTITY Ctr_hidetbwot		"Ukryj pasek kart z jedną kartą (zrestartuj Firefoksa!)">
+<!ENTITY Ctr_hidetbwot		"Ukryj pasek kart z jedną kartą">
 <!ENTITY Ctr_hidetbwote		"Zmniejsz opóźnienie ukrywania przy uruchamianiu">
 <!ENTITY Ctr_notabfog		"Usuń mgłę tła (Windows AeroGlass/8)">
 <!ENTITY Ctr_notabbg		"Usuń kolor tła (Windows AeroGlass/8)">
@@ -219,6 +225,7 @@
 <!ENTITY Ctr_pw_settings	"Ustawienia">
 <!ENTITY Ctr_pw_set_reset	"Przywróć domyślne">
 <!ENTITY Ctr_pw_set_predef	"Klasyczne ustawienia">
+<!ENTITY Ctr_pw_set_preaus	"Ustawienia Firefoksa">
 <!ENTITY Ctr_pw_set_export	"Eksportuj ustawienia">
 <!ENTITY Ctr_pw_set_import	"Importuj ustawienia">
 

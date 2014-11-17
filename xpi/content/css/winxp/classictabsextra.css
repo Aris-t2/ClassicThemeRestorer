@@ -56,6 +56,10 @@
 
 	@media not all and (-moz-windows-classic) {
 	
+		#TabsToolbar:not([currentset*="tabbrowser-tabs,new-tab-button"]):not([orient="vertical"]) .tabs-newtab-button + .tabs-newtab-button{
+          -moz-margin-start: 0px !important;
+		}
+	
 		#TabsToolbar:not([currentset*="tabbrowser-tabs,new-tab-button"]):not([orient="vertical"]) .tabs-newtab-button{
 		  -moz-margin-end: 0px !important;
 		}
@@ -82,9 +86,8 @@
 	#tabbrowser-tabs[overflow] #PinnedTabsBarItems {
 	  -moz-margin-end:-15px !important;
 	}
-	
 	/**/
-	.tabs-newtab-button:not(:-moz-lwtheme),
+	.tabs-newtab-button:not(:-moz-lwtheme):not(#privateTab-afterTabs-openNewPrivateTab),
 	#TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
 	  list-style-image: url(chrome://browser/skin/tabbrowser/newtab.png) !important;
 	}

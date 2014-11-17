@@ -61,11 +61,25 @@
 	#nav-bar .toolbarbutton-1:not([disabled]):hover {
 	  -moz-appearance: none !important;
 	  background: unset !important;
-	  box-shadow: 0px 0px 1px black inset,
-				  0px 0px 3px white inset !important;
-	  border-radius:3px !important;
+	  box-shadow: inset 0px 0px 1px rgba(0,0,0,0.6),
+				  inset 0px 0px 1px rgba(0,0,0,0.6),
+				  inset 0px 0px 2px 0 rgba(255,255,255,1.0),
+				  inset 0px 0px 2px 0 rgba(255,255,255,1.0),
+				  inset 0px 0px 1px rgba(0,0,0,0.7),
+				  inset 0px 0px 1px rgba(0,0,0,0.7),
+				  inset 0px 12px 0px 0px rgba(255,255,255,0.5)  !important;
+	  border-radius: 3px !important;
 	}
-
+	#nav-bar .toolbarbutton-1:not([disabled])[checked],
+	#nav-bar .toolbarbutton-1:not([disabled])[open],
+	#nav-bar .toolbarbutton-1:not([disabled]):active {
+	  -moz-appearance: none !important;
+	  background: unset !important;
+	  box-shadow: inset 0px 0px 1px rgba(0,0,0,0.7),
+				  inset 0px 0px 4px rgba(0,0,0,0.7),
+				  inset 0px 12px 0px 0px rgba(255,255,255,0.5) !important;
+	  border-radius: 3px !important;
+	}
 	
 	#navigator-toolbox #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button,
 	#navigator-toolbox #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
@@ -131,18 +145,28 @@
 	  background: none !important;
 	}
 
-	/* urlbar border tweaks */
-	#main-window[defaultfxtheme="true"] #nav-bar #urlbar {
+	/* START: urlbar border tweaking (default theme does not provide left urlbar border) */
+	#main-window[defaultfxtheme="true"] #urlbar,
+	#main-window[defaultfxtheme="true"] .searchbar-textbox {
 	  border: 1px solid ThreeDShadow !important;
 	}
 	@media (-moz-windows-default-theme) {
-	  #main-window[defaultfxtheme="true"] #nav-bar #urlbar {
+	  #main-window[defaultfxtheme="true"] #urlbar,
+	  #main-window[defaultfxtheme="true"] .searchbar-textbox {
 		border-color: rgba(0,0,0,.32) !important;
 	  }
 	}
-	#main-window[defaultfxtheme="true"] #nav-bar #urlbar:-moz-lwtheme {
+	#main-window[defaultfxtheme="true"] #urlbar:-moz-lwtheme,
+	#main-window[defaultfxtheme="true"] .searchbar-textbox:-moz-lwtheme {
 	  border-color: rgba(0,0,0,.32) !important;
 	}
+	@media (-moz-windows-default-theme) {
+	  #main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme),
+	  #main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme) {
+		border-color: hsla(210,54%,20%,.25) hsla(210,54%,20%,.27) hsla(210,54%,20%,.3) hsla(210,54%,20%,.27) !important;
+	  }
+	}
+	/* END: urlbar border tweaking (default theme does not provide left urlbar border) */
 
 	#nav-bar #ctraddon_appbutton > .toolbarbutton-icon {
 	  padding-left: 0px !important;
@@ -178,6 +202,11 @@
 	/* Disconnect */
 	#nav-bar #disconnect-item #disconnect-badge{
 	  margin-top:6px !important;
+	}
+	
+	/* Ghostery */
+	#nav-bar #ghostery-button .toolbarbutton-icon {
+	  margin-top:2px !important;
 	}
 
 	/* zoom page add-on */

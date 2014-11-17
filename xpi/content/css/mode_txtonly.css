@@ -11,6 +11,10 @@
 	#navigator-toolbox #nav-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
       border: 1px solid transparent;
     }
+	#navigator-toolbox #nav-bar .toolbarbutton-1{
+	 padding-top: 2px !important;
+	 padding-bottom: 2px !important;
+	}
 	#navigator-toolbox .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]),
 	#ctraddon_addon-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
 	  -moz-box-orient: vertical !important;
@@ -21,9 +25,9 @@
 	  visibility: collapse !important;
 	}
 	
-	#navigator-toolbox #urlbar-go-button:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-icon,
-	#navigator-toolbox #urlbar-stop-button:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-icon,
-	#navigator-toolbox #urlbar-reload-button:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-icon {
+	#navigator-toolbox #urlbar-go-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
+	#navigator-toolbox #urlbar-stop-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
+	#navigator-toolbox #urlbar-reload-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon {
 	  visibility: visible !important;
 	}
 	
@@ -53,17 +57,7 @@
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
 	  margin-left: 0px !important;
 	}
-	
-    #urlbar {
-      border:1px solid #b4c1cf !important;
-    }
 
-	@media all and (-moz-windows-theme:aero) {
-		#urlbar[focused="true"] {
-		  border:1px solid #72c0fe !important;
-		}
-	}
-	
 	#downloads-button .toolbarbutton-icon{
 	  margin: -4px !important;
 	}
@@ -104,5 +98,15 @@
 	}
 	#vertical-toolbar toolbarbutton .toolbarbutton-icon {
 	  visibility: collapse !important;
+	}
+	
+	/*call button*/
+	toolbar #loop-button .toolbarbutton-badge,
+	toolbar #loop-button .toolbarbutton-badge-container{
+	  -moz-appearance:none !important;
+	  background:none !important;
+	  border:0 !important;
+	  padding:0 !important;
+	  box-shadow:none !important;
 	}
 }

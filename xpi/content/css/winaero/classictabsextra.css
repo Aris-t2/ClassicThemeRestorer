@@ -49,13 +49,17 @@
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png") !important;
 	}
 
-	/* remove gaps before and afer tabs */
+	/* remove gaps before and after tabs */
 	.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
 	  -moz-padding-start: 0px !important;
 	}
 	
 	@media not all and (-moz-windows-classic) {
-	
+
+		#TabsToolbar:not([currentset*="tabbrowser-tabs,new-tab-button"]):not([orient="vertical"]) .tabs-newtab-button + .tabs-newtab-button{
+          -moz-margin-start: 0px !important;
+		}
+
 		#TabsToolbar:not([currentset*="tabbrowser-tabs,new-tab-button"]):not([orient="vertical"]) .tabs-newtab-button{
 		  -moz-margin-end: 0px !important;
 		}
@@ -82,6 +86,7 @@
 	#tabbrowser-tabs[overflow] #PinnedTabsBarItems {
 	  -moz-margin-end:-15px !important;
 	}
+	/**/
 
 	.tabbrowser-tab[selected=true]:-moz-lwtheme {
 	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.46) 50%) !important;
@@ -174,7 +179,7 @@
 							radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,1) 3%, rgba(186,221,251,.75) 40%, rgba(127,179,255,.5) 80%, rgba(127,179,255,.25)) !important;
 		}
 
-		.tabs-newtab-button:not(:-moz-lwtheme),
+		.tabs-newtab-button:not(:-moz-lwtheme):not(#privateTab-afterTabs-openNewPrivateTab),
 		#TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
 		  list-style-image: url(chrome://browser/skin/tabbrowser/newtab.png) !important;
 		}

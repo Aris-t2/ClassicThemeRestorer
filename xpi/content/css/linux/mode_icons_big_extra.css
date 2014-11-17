@@ -77,15 +77,13 @@
 	  clip-path:none !important;
 	}
 
-	/* urlbar tweaks */
-	#nav-bar #urlbar {
+	/* urlbar border tweaks */
+	#main-window[defaultfxtheme="true"] #nav-bar #urlbar,
+	#main-window[defaultfxtheme="true"] #nav-bar .searchbar-textbox {
 	  border: 1px solid ThreeDShadow !important;
-	  padding-top: 2px !important;
-	  padding-bottom: 2px !important;
 	}
-
-	#nav-bar #urlbar[focused],
-	#nav-bar .searchbar-textbox[focused] {
+	#main-window[defaultfxtheme="true"] #nav-bar #urlbar[focused],
+	#main-window[defaultfxtheme="true"] #nav-bar .searchbar-textbox[focused] {
 	  border-color: Highlight !important;
 	}
 
@@ -115,9 +113,9 @@
 	  height:36px !important;
 	}
 	
-	#nav-bar :-moz-any(#back-button, #forward-button, #ctraddon_back-button, #ctraddon_forward-button, #ctraddon_appbutton, #ctraddon_history-button, #ctraddon_history-menu-toolbar-button, #ctraddon_bookmarks-menu-toolbar-button,#ctraddon_bookmarks-button, #PanelUI-menu-button, #cut-button, #copy-button, #paste-button, #zoom-out-button, #zoom-in-button, #webrtc-status-button,#nav-bar-overflow-button) image,
+	/*#nav-bar :-moz-any(#back-button, #forward-button, #ctraddon_back-button, #ctraddon_forward-button, #ctraddon_appbutton, #ctraddon_history-button, #ctraddon_history-menu-toolbar-button, #ctraddon_bookmarks-menu-toolbar-button,#ctraddon_bookmarks-button, #PanelUI-menu-button, #cut-button, #copy-button, #paste-button, #zoom-out-button, #zoom-in-button, #webrtc-status-button,#nav-bar-overflow-button) image,
 	#nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
 	  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='colorize'><feColorMatrix type='saturate' in='SourceGraphic' values = '0'/></filter></svg>#colorize") !important;
-	}
+	}*/
 
 }

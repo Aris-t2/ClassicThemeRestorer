@@ -1,0 +1,12 @@
+@-moz-document url(about:newtab) {
+	
+	#newtab-intro-what,
+	#newtab-search-form{
+		display:none !important;
+	}
+	.newtab-cell,
+	.newtab-link{ 
+	  border-radius: 0px !important;
+	}
+
+}

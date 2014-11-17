@@ -1,14 +1,15 @@
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Панель додатків">
-<!ENTITY Ctr_statusbar		"Статус панель">
+<!ENTITY Ctr_statusbar		"Панель статусу">
 <!ENTITY Ctr_flexspace		"Гнучкий інтервал">
 <!ENTITY Ctr_space			"Інтервал">
 <!ENTITY Ctr_separator		"Розділювач">
 <!ENTITY Ctr_puibseparator	"Розділювач кнопок UI панелі">
 <!ENTITY Ctr_navthrobber	"Індикатор активності">
 <!ENTITY Ctr_sidebarbutton	"Бокова панель">
-<!ENTITY Ctr_windowcontrols	"мін/макс/закрити (Fullscreen)">
+<!ENTITY Ctr_windowcontrols	"мін/макс/закрити (Повний екран)">
+<!ENTITY Ctr_rr				"Перезапустіть Firefox!">
 
 <!ENTITY Ctr_cuibuttons		"Кнопки">
 <!ENTITY Ctr_cuibutnormal	"Нормальні">
@@ -18,26 +19,24 @@
 <!ENTITY Ctr_cuiicotxt		"Іконки + Текст">
 <!ENTITY Ctr_cuitxt			"Текст">
 
-<!ENTITY Ctr_combrelstoptt	"[зупинити][перезавантажити] &gt;&gt; [зупинити-перезавантажити]">
 <!ENTITY Ctr_tnot			"(вкладки не нагорі)">
 
 <!ENTITY Ctr_tabcolors_t	"Налаштування кольору">
-<!ENTITY Ctr_urlbar_t		"Панель рядку адреси">
 
 <!ENTITY Ctr_tabs			"Вкладки">
-<!ENTITY Ctr_tabs0			"Вигнуті вкладки (за умовчанням в Australis)">
+<!ENTITY Ctr_tabs0			"Вигнуті вкладки (типово в Australis)">
 <!ENTITY Ctr_tabs1			"Квадратні вкладки (класичні)">
 <!ENTITY Ctr_tabs1m			"Квадратні вкладки (австралізовані)">
 <!ENTITY Ctr_tabs2			"Вигнуті вкладки (альтернативні)">
 <!ENTITY Ctr_tabs3			"Вигнуті вкладки (альтернативні Aero)">
 <!ENTITY Ctr_tabforminfo	"Вигляд вкладки контролюється поточною темою.">
-<!ENTITY Ctr_tabsontop0		"Вкладки нагорі (за умовчанням) - [не встановлено]">
+<!ENTITY Ctr_tabsontop0		"Вкладки нагорі (типово) - [не встановлено]">
 <!ENTITY Ctr_tabsontop1		"Вкладки нагорі - встановлено [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Вкладки не нагорі - встановлено [tabsontop=false]">
 <!ENTITY Ctr_tabsontop3		"Вкладки не нагорі (v2) - встановлено [tabsontop=false]">
 <!ENTITY Ctr_tabsontopI1	"Додає атрибут [tabsontop=true/false] для">
 <!ENTITY Ctr_tabsintitlebar	"Панель заголовку Firefox (about:config preference)">
-<!ENTITY Ctr_tabwidthdef	"(за умовчанням)">
+<!ENTITY Ctr_tabwidthdef	"(типово)">
 <!ENTITY Ctr_tabwidthcla	"(класичний)">
 <!ENTITY Ctr_tabmaxwidth	"Макс.ширина:">
 <!ENTITY Ctr_tabminwidth	"Мін.ширина:">
@@ -64,7 +63,7 @@
 <!ENTITY Ctr_appbutton2		"Кнопка на [Firefox] панелі заголовку">
 <!ENTITY Ctr_appbutton2io	"Кнопка на [Firefox] панелі заголовку (тільки іконка)">
 <!ENTITY Ctr_paneluibtweak	"Оранжева кнопка меню на панелі вкладок">
-<!ENTITY Ctr_appbuttonc_o	"Оранжева кнопка (за умовчанням)">
+<!ENTITY Ctr_appbuttonc_o	"Оранжева кнопка (типово)">
 <!ENTITY Ctr_appbuttonc_a	"Синя кнопка (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Чорна кнопка (Nightly)">
 <!ENTITY Ctr_appbuttonc_t	"Прозора кнопка">
@@ -82,16 +81,18 @@
 <!ENTITY Ctr_appbutbdl		"Сховати рамки та кольори тла">
 <!ENTITY Ctr_dblclclosefx	"Подвійний клік закриває поточне вікно">
 <!ENTITY Ctr_appbclmmenus	"Активне меню всередині меню кнопки (Нова вкладка, Друк...)">
+<!ENTITY Ctr_appbutonclab	"Назва">
+<!ENTITY Ctr_appbutonclab2	"Додати назву або залишити порожнім">
 
 <!ENTITY Ctr_ui				"Основний інтерфейс">
 <!ENTITY Ctr_nbiconsize0	"Встановити атрибути панелі навігації">
 <!ENTITY Ctr_smallnavbut	"Малі кнопки на панелі навігації">
-<!ENTITY Ctr_bfurlbarfix	"Радіус кутів рядку адреси">
+<!ENTITY Ctr_bfurlbarfix	"Зміна радіусу кутів рядку адреси">
 <!ENTITY Ctr_backforward	"Рухома назад-вперед кнопка">
 <!ENTITY Ctr_hide_bf_popup	"Приховати меню історії при натисканні миші">
 <!ENTITY Ctr_bf_space		"Зменьшити відстань між кнопками (якщо це можливо)">
 <!ENTITY Ctr_noconicons		"Замінити іконки контекстного меню сторінки написами (назад, вперед, стоп, перезавантажити, сторінка закладок)">
-<!ENTITY Ctr_wincontrols	"Рухоме управління повноекранним режимом (мін/макс/закрити)">
+<!ENTITY Ctr_wincontrols	"Рухоме управління повноекранним режимом">
 <!ENTITY Ctr_emptyfavicon2	"Замінити загальний значок сайту (порожній і пунктирний)">
 <!ENTITY Ctr_mstatusbar		"Рухомий рядок стану">
 <!ENTITY Ctr_mstatusbars4e	"Панель статусу контролюється додатком «Status-4-Evar»">
@@ -102,13 +103,13 @@
 <!ENTITY Ctr_stoprel1		"Важливо: з’являється кнопка «Перезавантаження» на місці кнопки «Зупинити»!">
 <!ENTITY Ctr_panelmenucol	"Панель меню: альтернативний колір тла">
 <!ENTITY Ctr_hideprivmask	"Приватний огляд: приховати індикатор маски">
+<!ENTITY Ctr_nbisizedelay	"мс затримка виконання (1000 мс = 1 сек)">
 <!ENTITY Ctr_findbar		"Панель пошуку">
-<!ENTITY Ctr_findbar_def	"Позиція за замовчуванням">
+<!ENTITY Ctr_findbar_def	"Типова позиція">
 <!ENTITY Ctr_findbar_top	"Нагорі">
-<!ENTITY Ctr_findbar_bot	"Внизу">
 <!ENTITY Ctr_findbar_topa	"Альтернативна позиція нагорі">
 <!ENTITY Ctr_findbar_bota	"Альтернативна позиція внизу">
-<!ENTITY Ctr_nav_txt_ico0	"Показувати тільки іконки (за умовчанням)">
+<!ENTITY Ctr_nav_txt_ico0	"Показувати тільки іконки (типово)">
 <!ENTITY Ctr_nav_txt_ico1	"Показувати великі іконки">
 <!ENTITY Ctr_nav_txt_ico2	"Показувати іконки і текст">
 <!ENTITY Ctr_nav_txt_ico3	"Показувати тільки текст">
@@ -116,6 +117,7 @@
 <!ENTITY Ctr_iat_notf_vt	"Не для вертикальних панелей інструментів">
 <!ENTITY Ctr_cpanelmenus	"Панель меню: компактний вигляд (закладки, історія тощо)">
 <!ENTITY Ctr_hidezoomres	"Управління масштабом на панелі: приховати кнопку скидання масштабу">
+<!ENTITY Ctr_alt_newtabp	"New tab page: alternative appearance">
 <!ENTITY Ctr_pmhidelabels	"Спливаюче вікно панелі меню: приховати написи на кнопках">
 <!ENTITY Ctr_menupopupscr	"Спливаючі вікна меню: показувати полоси прокручування замість стрілки прокручування">
 
@@ -139,34 +141,37 @@
 <!ENTITY Ctr_customsqtab1	"Тло">
 <!ENTITY Ctr_ctext			"Текст">
 <!ENTITY Ctr_ctextsh		"Тінь тексту">
-<!ENTITY Ctr_tabnor			"Вкладка (за умовчанням)">
+<!ENTITY Ctr_tabnor			"Вкладка (типово)">
 <!ENTITY Ctr_tabhov			"Вкладка (в очікуванні)">
 <!ENTITY Ctr_tabact			"Вкладка (активна)">
 <!ENTITY Ctr_tabpen			"Вкладка (незавантажена)">
 <!ENTITY Ctr_tabunr			"Вкладка (непрочитана)">
-<!ENTITY Ctr_ntabnor		"Нова вкладка (за умовчанням)">
+<!ENTITY Ctr_ntabnor		"Нова вкладка (типово)">
 <!ENTITY Ctr_ntabhov		"Нова вкладка (в очікуванні)">
 <!ENTITY Ctr_bold			"Жирний">
 <!ENTITY Ctr_italic			"Курсив">
 <!ENTITY Ctr_notabhov		"Увімкнені налаштування скасовують налаштування 'в очікуванні'">
 
 <!ENTITY Ctr_urlbar			"Панель рядку адреси">
-<!ENTITY Ctr_starinurl		"Зірка в рядку адреси (перезапустіть Firefox)">
-<!ENTITY Ctr_feedinurl		"Кнопка RSS в рядку адреси (перезапустіть Firefox!)">
-<!ENTITY Ctr_hideurelstop	"Приховати в рядку адреси кнопку «Зупинити та Перезавантажити»">
-<!ENTITY Ctr_hideprbutton	"Приховати інфо кнопку 'спливаюче вікно блоковано' ">
+<!ENTITY Ctr_starinurl		"Зірка">
+<!ENTITY Ctr_feedinurl		"Кнопка RSS">
+<!ENTITY Ctr_hideurelstop	"Приховати кнопку «Зупинити та Перезавантажити»">
+<!ENTITY Ctr_urlbardropm	"Перемістити маркер-трикутник в кінець рядку адреси">
+<!ENTITY Ctr_hideprbutton	"Приховати інфо кнопку 'спливаюче вікно блоковано'">
 <!ENTITY Ctr_urlbar_ib		"Індикатори справжності панелі рядку адреси">
 <!ENTITY Ctr_verifiedcolors	"Зелений/синій індикатор для перевірених сайтів">
-<!ENTITY Ctr_faviconurl		"Значок сайту в рядку адреси (перезапустіть Firefox!)">
+<!ENTITY Ctr_faviconurl		"Значок сайту">
 <!ENTITY Ctr_padlock_hid	"Замок (прихований)">
-<!ENTITY Ctr_padlock_def	"Замок (за умовчуванням)">
+<!ENTITY Ctr_padlock_def	"Замок (типово)">
 <!ENTITY Ctr_padlock_cla	"Замок (класичний)">
 <!ENTITY Ctr_padlock_mod	"Замок (сучасний)">
 <!ENTITY Ctr_padlock_ext	"Іконки безпеки">
 <!ENTITY Ctr_icopageinfo	"Клік на іконку відкриває інформаційне вікно">
 
+<!ENTITY Ctr_menubar_items	"Menu items position">
 <!ENTITY Ctr_extrabar		"Додаткові панелі інструментів">
-<!ENTITY Ctr_extrabar0		"Вкажіть кількість панелей (перезапустіть Firefox!)">
+<!ENTITY Ctr_extrabar0		"Додаткова панель(і)">
+<!ENTITY Ctr_extrabar1		"Додаткова панель">
 <!ENTITY Ctr_extrabarinfo	"Перемикання між способами 'вкладки нагорі' і 'вкладки не нагорі' змінює розташування додаткових панелей. Firefox повинен бути перезапущений, щоб вирішити цю проблему.">
 
 <!ENTITY Ctr_invicons		"Інвертовані іконки">
@@ -174,10 +179,11 @@
 <!ENTITY Ctr_tabstoolbar	"Панель вкладок">
 <!ENTITY Ctr_navbar			"Панель навігації">
 <!ENTITY Ctr_bookbar		"Панель закладок">
+<!ENTITY Ctr_notoolbar		"Без панелі">
 
 <!ENTITY Ctr_toolbars		"Налаштування панелі">
 <!ENTITY Ctr_dblclnewtab	"Подвійний клік відкриває нову вкладку (використовує адресу нової вкладки браузера)">
-<!ENTITY Ctr_hidetbwot		"Приховувати панель вкладок з одною вкладкою (перезапустіть Firefox!)">
+<!ENTITY Ctr_hidetbwot		"Приховувати панель вкладок з одною вкладкою">
 <!ENTITY Ctr_hidetbwote		"Зменшити затримки приховування при запуску">
 <!ENTITY Ctr_notabfog		"Прибрати затуманення тла (Windows AeroGlass/8)">
 <!ENTITY Ctr_notabbg		"Прибрати колір тла (Windows AeroGlass/8)">
@@ -218,13 +224,14 @@
 
 <!ENTITY Ctr_pw_settings	"Налаштування">
 <!ENTITY Ctr_pw_set_reset	"Скинути налаштування">
-<!ENTITY Ctr_pw_set_predef	"Класичні передустановки">
+<!ENTITY Ctr_pw_set_predef	"Класичні налаштунки">
+<!ENTITY Ctr_pw_set_preaus	"Firefox налаштунок">
 <!ENTITY Ctr_pw_set_export	"Експорт налаштувань">
 <!ENTITY Ctr_pw_set_import	"Імпорт налаштувань">
 
-<!ENTITY Ctr_special_font	"Налаштування кольору тла - тільки для теми за умовчанням!">
+<!ENTITY Ctr_special_font	"Налаштування кольору тла - тільки для типової теми!">
 <!ENTITY Ctr_special_info	"Деякі параметри не можуть запропонувати візуальні зміни в усіх випадках">
-<!ENTITY Ctr_special_info2	"Налаштування зроблені для теми за умовчанням Firefox і не можуть працювати з усіма сторонніми темами!">
+<!ENTITY Ctr_special_info2	"Налаштування зроблені для типової теми Firefox і не можуть працювати з усіма сторонніми темами!">
 <!ENTITY Ctr_support		"Форум підтримки">
 <!ENTITY Ctr_newversion		"Нова версія?">
 

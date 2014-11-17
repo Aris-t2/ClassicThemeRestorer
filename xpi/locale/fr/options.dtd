@@ -9,6 +9,7 @@
 <!ENTITY Ctr_navthrobber	"Indicateur d'activité">
 <!ENTITY Ctr_sidebarbutton	"Panneau latéral">
 <!ENTITY Ctr_windowcontrols	"Réduire/Restaurer/Fermer (Plein écran)">
+<!ENTITY Ctr_rr				"Redémarrer Firefox!">
 
 <!ENTITY Ctr_cuibuttons		"Boutons">
 <!ENTITY Ctr_cuibutnormal	"Taille normale">
@@ -18,11 +19,9 @@
 <!ENTITY Ctr_cuiicotxt		"Icônes + texte">
 <!ENTITY Ctr_cuitxt			"Texte">
 
-<!ENTITY Ctr_combrelstoptt	"[stop][actualiser] &gt;&gt; [stop-actualiser]">
 <!ENTITY Ctr_tnot			"(onglets position basse)">
 
 <!ENTITY Ctr_tabcolors_t	"Couleurs personnalisables">
-<!ENTITY Ctr_urlbar_t		"Urlbar settings">
 
 <!ENTITY Ctr_tabs			"Onglets">
 <!ENTITY Ctr_tabs0			"Onglets arrondis (Australis - par défaut)">
@@ -82,6 +81,8 @@
 <!ENTITY Ctr_appbutbdl		"Masquer les bordures et les couleurs de fond">
 <!ENTITY Ctr_dblclclosefx	"Un double clic ferme la fenêtre courante">
 <!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
+<!ENTITY Ctr_appbutonclab	"Title">
+<!ENTITY Ctr_appbutonclab2	"Add title or leave empty">
 
 <!ENTITY Ctr_ui				"Interface générale">
 <!ENTITY Ctr_nbiconsize0	"Assigner l'attribut suivant à la barre de navigation">
@@ -91,7 +92,7 @@
 <!ENTITY Ctr_hide_bf_popup	"Cacher le menu historique lors du clic droit">
 <!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"Remplacer les icônes du menu contextuel de la page par du texte (Page précédente, Page suivante, Arrêter/Actualiser, Marquer cette page)">
-<!ENTITY Ctr_wincontrols	"Plein écran : boutons 'Réduire - Restaurer - Fermer' déplaçables">
+<!ENTITY Ctr_wincontrols	"Plein écran : boutons déplaçables">
 <!ENTITY Ctr_emptyfavicon2	"Remplacer le favicon générique (vide avec pointillés) par un favicon avec l'aspect d'une feuille de papier">
 <!ENTITY Ctr_mstatusbar		"Barre d'état déplaçable">
 <!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
@@ -102,10 +103,10 @@
 <!ENTITY Ctr_stoprel1		"Barres d'outils : placer le bouton actualiser après le bouton stop!">
 <!ENTITY Ctr_panelmenucol	"Couleur de fond alternative pour les panneaux">
 <!ENTITY Ctr_hideprivmask	"Navigation privée : cacher le masque">
+<!ENTITY Ctr_nbisizedelay	"ms delay in execution (1000 ms = 1 sec)">
 <!ENTITY Ctr_findbar		"Barre de recherche">
 <!ENTITY Ctr_findbar_def	"Position par défaut">
 <!ENTITY Ctr_findbar_top	"En haut">
-<!ENTITY Ctr_findbar_bot	"En bas">
 <!ENTITY Ctr_findbar_topa	"En haut (aspect alternatif)">
 <!ENTITY Ctr_findbar_bota	"En bas (aspect alternatif)">
 <!ENTITY Ctr_nav_txt_ico0	"Afficher seulement les icônes (défaut)">
@@ -116,6 +117,7 @@
 <!ENTITY Ctr_iat_notf_vt	"Not for vertical toolbars">
 <!ENTITY Ctr_cpanelmenus	"Compacter les panneaux (marque-pages, historique, etc)">
 <!ENTITY Ctr_hidezoomres	"Boutons de zoom (si sur une barre d'outils) : cacher le bouton 'Réinitialiser le niveau de zoom'">
+<!ENTITY Ctr_alt_newtabp	"New tab page: alternative appearance">
 <!ENTITY Ctr_pmhidelabels	"Panneau menu : icônes seules">
 <!ENTITY Ctr_menupopupscr	"Menus pop-up : afficher des ascenseurs au lieu des flèches de défilement">
 
@@ -150,14 +152,15 @@
 <!ENTITY Ctr_italic			"Italique">
 <!ENTITY Ctr_notabhov		"Enabled settings override 'hovered' settings">
 
-<!ENTITY Ctr_urlbar			"Urlbar">
-<!ENTITY Ctr_starinurl		"Bouton des marque-pages dans la barre d'adresse (redémarrer Fx!)">
-<!ENTITY Ctr_feedinurl		"Bouton d'abonnement aux flux dans la barre d'adresse (redémarrer Fx!)">
-<!ENTITY Ctr_hideurelstop	"Masquer 'stop-actualiser' sur la barre d'adresse">
+<!ENTITY Ctr_urlbar			"La barre d'adresse">
+<!ENTITY Ctr_starinurl		"Bouton des marque-pages">
+<!ENTITY Ctr_feedinurl		"Bouton d'abonnement">
+<!ENTITY Ctr_hideurelstop	"Masquer 'stop-actualiser'">
+<!ENTITY Ctr_urlbardropm	"Move dropmarker to urlbars end">
 <!ENTITY Ctr_hideprbutton	"Hide notification icon when a popup gets blocked">
-<!ENTITY Ctr_urlbar_ib		"Urlbars identity box">
-<!ENTITY Ctr_verifiedcolors	"Bouton d'identité : couleurs alternatives pour les sites web vérifiés">
-<!ENTITY Ctr_faviconurl		"Afficher le favicon dans la barre d'adresse (redémarrer Firefox!)">
+<!ENTITY Ctr_urlbar_ib		"Bouton d'identité">
+<!ENTITY Ctr_verifiedcolors	"Couleurs alternatives pour les sites web vérifiés">
+<!ENTITY Ctr_faviconurl		"Afficher le favicon dans la barre d'adresse">
 <!ENTITY Ctr_padlock_hid	"Cadenas (caché)">
 <!ENTITY Ctr_padlock_def	"Cadenas (par défaut)">
 <!ENTITY Ctr_padlock_cla	"Cadenas (classique)">
@@ -165,8 +168,10 @@
 <!ENTITY Ctr_padlock_ext	"Icônes de sécurité">
 <!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
 
+<!ENTITY Ctr_menubar_items	"Menu items position">
 <!ENTITY Ctr_extrabar		"Additional Toolbars">
-<!ENTITY Ctr_extrabar0		"Additional Toolbar(s) (restart Firefox!)">
+<!ENTITY Ctr_extrabar0		"Additional Toolbar(s)">
+<!ENTITY Ctr_extrabar1		"Barre d'outils supplémentaire">
 <!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
 
 <!ENTITY Ctr_invicons		"Icônes inversées">
@@ -174,10 +179,11 @@
 <!ENTITY Ctr_tabstoolbar	"Barre d'onglets">
 <!ENTITY Ctr_navbar			"Barre de navigation">
 <!ENTITY Ctr_bookbar		"Barre personnelle">
+<!ENTITY Ctr_notoolbar		"Hidden (do not show menu items)">
 
 <!ENTITY Ctr_toolbars		"Barres d'outils">
 <!ENTITY Ctr_dblclnewtab	"Double-cliquer pour ouvrir un nouvel onglet (browser.newtab.url)">
-<!ENTITY Ctr_hidetbwot		"Cacher la barre d'onglets quand un seul onglet est ouvert (redémarrer Firefox!)">
+<!ENTITY Ctr_hidetbwot		"Cacher la barre d'onglets quand un seul onglet est ouvert">
 <!ENTITY Ctr_hidetbwote		"Diminuer le délai pour cacher la barre au démarrage">
 <!ENTITY Ctr_notabfog		"Enlever l'effet de flou (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_notabbg		"Enlever l'arrière-plan (Windows AeroGlass / Win8)">
@@ -219,6 +225,7 @@
 <!ENTITY Ctr_pw_settings	"Réglages">
 <!ENTITY Ctr_pw_set_reset	"Restaurer les réglages par défaut">
 <!ENTITY Ctr_pw_set_predef	"Préréglage classique">
+<!ENTITY Ctr_pw_set_preaus	"Préréglage Firefox">
 <!ENTITY Ctr_pw_set_export	"Exporter les préférences">
 <!ENTITY Ctr_pw_set_import	"Importer les préférences">
 

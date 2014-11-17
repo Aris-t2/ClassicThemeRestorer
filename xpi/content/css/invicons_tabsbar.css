@@ -55,5 +55,17 @@
 	#TabsToolbar #loop-call-button:not([cui-areatype="menu-panel"]) > .toolbarbutton-badge-container {
 	  list-style-image: url(chrome://browser/skin/loop/toolbar-inverted.png) !important;
 	}
+
+	/*tabs close button on tabs toolbar*/
+	#main-window #navigator-toolbox #TabsToolbar > .tabs-closebutton {
+	  -moz-image-region: rect(0, 64px, 16px, 48px) !important;
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/close2.png") !important;
+	}
+	#main-window #navigator-toolbox #TabsToolbar > .tabs-closebutton:hover	{
+	  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
+	}
+	#main-window #navigator-toolbox #TabsToolbar > .tabs-closebutton:hover:active {
+	  -moz-image-region: rect(0, 48px, 16px, 32px) !important;
+	}
   }
 }

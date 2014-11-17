@@ -83,24 +83,33 @@
 	  padding-bottom: 2px !important;
 	}
 	
-	#nav-bar .searchbar-textbox,
-	#nav-bar #urlbar {
+	/* START: urlbar border tweaking (default theme does not provide left urlbar border) */
+	#main-window[defaultfxtheme="true"] #urlbar,
+	#main-window[defaultfxtheme="true"] .searchbar-textbox {
 	  border: 1px solid ThreeDShadow !important;
 	}
 	@media (-moz-windows-default-theme) {
-	  #nav-bar .searchbar-textbox,
-	  #nav-bar #urlbar {
+	  #main-window[defaultfxtheme="true"] #urlbar,
+	  #main-window[defaultfxtheme="true"] .searchbar-textbox {
 		border-color: rgba(0,0,0,.32) !important;
 	  }
-	  #nav-bar .searchbar-textbox[focused="true"],
-	  #nav-bar #urlbar[focused="true"] {
-		border:1px solid #72c0fe !important;
-	  }
 	}
-	#nav-bar .searchbar-textbox:-moz-lwtheme,
-	#nav-bar #urlbar:-moz-lwtheme {
+	#main-window[defaultfxtheme="true"] #urlbar:-moz-lwtheme,
+	#main-window[defaultfxtheme="true"] .searchbar-textbox:-moz-lwtheme {
 	  border-color: rgba(0,0,0,.32) !important;
 	}
+	@media (-moz-windows-default-theme) {
+	  #main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme),
+	  #main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme) {
+		border-color: hsla(210,54%,20%,.25) hsla(210,54%,20%,.27) hsla(210,54%,20%,.3) hsla(210,54%,20%,.27) !important;
+	  }
+
+	  #main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme)[focused],
+	  #main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme)[focused] {
+		border-color: Highlight !important;
+	  }
+	}
+	/* END: urlbar border tweaking (default theme does not provide left urlbar border) */
 
 	#nav-bar .searchbar-textbox{
 	  padding-top: 2px !important;
@@ -133,9 +142,9 @@
 	  height:30px !important;
 	}
 
-	#nav-bar :-moz-any(#back-button, #forward-button, #ctraddon_back-button, #ctraddon_forward-button, #ctraddon_appbutton, #ctraddon_history-button, #ctraddon_history-menu-toolbar-button, #ctraddon_bookmarks-menu-toolbar-button,#ctraddon_bookmarks-button, #PanelUI-menu-button, #cut-button, #copy-button, #paste-button, #zoom-out-button, #zoom-in-button, #webrtc-status-button,#nav-bar-overflow-button) image,
+	/*#nav-bar :-moz-any(#back-button, #forward-button, #ctraddon_back-button, #ctraddon_forward-button, #ctraddon_appbutton, #ctraddon_history-button, #ctraddon_history-menu-toolbar-button, #ctraddon_bookmarks-menu-toolbar-button,#ctraddon_bookmarks-button, #PanelUI-menu-button, #cut-button, #copy-button, #paste-button, #zoom-out-button, #zoom-in-button, #webrtc-status-button,#nav-bar-overflow-button) image,
 	#nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
 	  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='colorize'><feColorMatrix type='saturate' in='SourceGraphic' values = '0.4'/></filter></svg>#colorize") !important;
-	}
+	}*/
 
 }

@@ -31,7 +31,7 @@
 	}
 	
 	.tabs-newtab-button .toolbarbutton-icon {
-	  margin-bottom: -3px !important;
+	  margin-bottom: -4px !important;
 	}
 	
 	.tabbrowser-tab .tab-stack {
@@ -250,6 +250,10 @@
 	  -moz-margin-end:-4px !important;
 	}
 	
+	#TabsToolbar toolbarbutton:not(.tabs-newtab-button){
+	  position:absolute !important;
+	}
+	
 	/* Pinned tabs & TabMixPlus/TabUtilities locked/protected tabs support */	
 	.tabbrowser-tab:not([pinned]) .tab-close-button{
 	  -moz-margin-end:-5px !important;
@@ -281,6 +285,9 @@
 	/* Private Tab extension */
 	.tabs-newtab-button + .tabs-newtab-button {
 	  -moz-margin-start: 15px !important;
+	}
+	#TabsToolbar #privateTab-afterTabs-openNewPrivateTab image{
+	  margin-top:-1px !important;
 	}
 	/* TMP progress tweak */
 	#main-window[tabmix_lwt="true"] .tabbrowser-tab progressmeter.tab-progress,

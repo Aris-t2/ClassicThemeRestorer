@@ -76,23 +76,46 @@
 	  clip-path: none !important;
 	}
 
-	/* urlbar tweaks */
-	#nav-bar #urlbar {
-	  padding-top: 2px !important;
-	  padding-bottom: 2px !important;
+	/* START: urlbar border tweaking (default theme does not provide left urlbar border) */
+	#main-window[defaultfxtheme="true"] #urlbar,
+	#main-window[defaultfxtheme="true"] .searchbar-textbox {
+	  border: 1px solid ThreeDShadow !important;
 	}
-	
-	.searchbar-textbox,
-    #urlbar {
-      border:1px solid ThreeDShadow !important;
-    }
+	@media (-moz-windows-default-theme) {
+	  #main-window[defaultfxtheme="true"] #urlbar,
+	  #main-window[defaultfxtheme="true"] .searchbar-textbox {
+		border-color: rgba(0,0,0,.32) !important;
+	  }
+	}
+	#main-window[defaultfxtheme="true"] #urlbar:-moz-lwtheme,
+	#main-window[defaultfxtheme="true"] .searchbar-textbox:-moz-lwtheme {
+	  border-color: rgba(0,0,0,.32) !important;
+	}
+	@media (-moz-windows-default-theme) {
+	  #main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme),
+	  #main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme) {
+		border-color: hsla(210,54%,20%,.25) hsla(210,54%,20%,.27) hsla(210,54%,20%,.3) hsla(210,54%,20%,.27) !important;
+	  }
 
-	@media all and (-moz-windows-theme:aero) {
-		.searchbar-textbox[focused="true"] ,
-		#urlbar[focused="true"] {
-		  border:1px solid #72c0fe !important;
+	  #main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme)[focused],
+	  #main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme)[focused] {
+		border-color: Highlight !important;
+	  }
+	  
+	  @media (-moz-os-version: windows-vista),
+			 (-moz-os-version: windows-win7) {
+		#main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme):not([focused]):hover,
+		#main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme):not([focused]):hover {
+		  border-color: hsla(210,54%,20%,.35) hsla(210,54%,20%,.37) hsla(210,54%,20%,.4) hsla(210,54%,20%,.37) !important;
 		}
+
+		#main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme)[focused],
+		#main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme)[focused] {
+		  border-color: hsla(206,100%,60%,.65) hsla(206,100%,55%,.65) hsla(206,100%,50%,.65) hsla(206,100%,55%,.65) !important;
+		}
+	  }
 	}
+	/* END: urlbar border tweaking (default theme does not provide left urlbar border) */
 
 	#nav-bar .searchbar-textbox{
 	  padding-top: 2px !important;

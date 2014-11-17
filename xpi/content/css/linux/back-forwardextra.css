@@ -33,7 +33,8 @@
 	}
 	
 	/* urlbar border tweaks */
-	#main-window[defaultfxtheme="true"] * #urlbar {
+	#main-window[defaultfxtheme="true"] * #urlbar,
+	#main-window[defaultfxtheme="true"] #nav-bar .searchbar-textbox {
 	  border: 1px solid ThreeDShadow !important;
 	}
 	#main-window[defaultfxtheme="true"] * #urlbar[focused],

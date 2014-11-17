@@ -25,18 +25,28 @@
 	}
 
 
-	/* urlbar border tweaks */
-	#main-window[defaultfxtheme="true"] #urlbar {
+	/* START: urlbar border tweaking (default theme does not provide left urlbar border) */
+	#main-window[defaultfxtheme="true"] #urlbar,
+	#main-window[defaultfxtheme="true"] .searchbar-textbox {
 	  border: 1px solid ThreeDShadow !important;
 	}
 	@media (-moz-windows-default-theme) {
-	  #main-window[defaultfxtheme="true"] #urlbar {
+	  #main-window[defaultfxtheme="true"] #urlbar,
+	  #main-window[defaultfxtheme="true"] .searchbar-textbox {
 		border-color: rgba(0,0,0,.32) !important;
 	  }
 	}
-	#main-window[defaultfxtheme="true"] #urlbar:-moz-lwtheme {
+	#main-window[defaultfxtheme="true"] #urlbar:-moz-lwtheme,
+	#main-window[defaultfxtheme="true"] .searchbar-textbox:-moz-lwtheme {
 	  border-color: rgba(0,0,0,.32) !important;
 	}
+	@media (-moz-windows-default-theme) {
+	  #main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme),
+	  #main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme) {
+		border-color: hsla(210,54%,20%,.25) hsla(210,54%,20%,.27) hsla(210,54%,20%,.3) hsla(210,54%,20%,.27) !important;
+	  }
+	}
+	/* END: urlbar border tweaking (default theme does not provide left urlbar border) */
 	
 	#main-window:not([fx31="true"]) #urlbar-container > #urlbar-wrapper > #urlbar,
 	#main-window:not([fx31="true"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {

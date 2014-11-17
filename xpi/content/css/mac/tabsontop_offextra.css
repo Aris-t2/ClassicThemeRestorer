@@ -57,4 +57,9 @@
 	  background:none !important
 	}
 	
+	#main-window[defaultfxtheme="true"][tabsintitlebar][sizemode="normal"][tabsontop="false"] #titlebar-content{
+	  margin-top: -8px !important;
+	  padding-bottom: 4px !important;
+	}
+	
 }

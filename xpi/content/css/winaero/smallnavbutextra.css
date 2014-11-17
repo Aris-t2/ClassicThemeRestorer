@@ -119,10 +119,24 @@
 	}
 
 	@media not all and (-moz-windows-theme:aero) {
-	
+
 		#nav-bar .toolbarbutton-1:not([disabled]):hover {
-		  box-shadow: inset 0px 0px 2px #000000 !important;
-		  border-radius: 2.5px !important;
+		  box-shadow: inset 0px 0px 1px rgba(0,0,0,0.6),
+					  inset 0px 0px 1px rgba(0,0,0,0.6),
+					  inset 0px 0px 2px 0 rgba(255,255,255,1.0),
+					  inset 0px 0px 2px 0 rgba(255,255,255,1.0),
+					  inset 0px 0px 1px rgba(0,0,0,0.7),
+					  inset 0px 0px 1px rgba(0,0,0,0.7),
+					  inset 0px 12px 0px 0px rgba(255,255,255,0.5)  !important;
+		  border-radius: 3px !important;
+		}
+		#nav-bar .toolbarbutton-1:not([disabled])[checked],
+		#nav-bar .toolbarbutton-1:not([disabled])[open],
+		#nav-bar .toolbarbutton-1:not([disabled]):active {
+		  box-shadow: inset 0px 0px 1px rgba(0,0,0,0.7),
+					  inset 0px 0px 4px rgba(0,0,0,0.7),
+					  inset 0px 12px 0px 0px rgba(255,255,255,0.5) !important;
+		  border-radius: 3px !important;
 		}
 
 	}
@@ -179,25 +193,46 @@
 	  background: none !important;
 	}
 
-	
-	/* urlbar border tweaks */
-	#main-window[defaultfxtheme="true"] #nav-bar #urlbar {
+	/* START: urlbar border tweaking (default theme does not provide left urlbar border) */
+	#main-window[defaultfxtheme="true"] #urlbar,
+	#main-window[defaultfxtheme="true"] .searchbar-textbox {
 	  border: 1px solid ThreeDShadow !important;
 	}
 	@media (-moz-windows-default-theme) {
-	  #main-window[defaultfxtheme="true"] #nav-bar #urlbar {
+	  #main-window[defaultfxtheme="true"] #urlbar,
+	  #main-window[defaultfxtheme="true"] .searchbar-textbox {
 		border-color: rgba(0,0,0,.32) !important;
 	  }
 	}
-	#main-window[defaultfxtheme="true"] #nav-bar #urlbar:-moz-lwtheme {
+	#main-window[defaultfxtheme="true"] #urlbar:-moz-lwtheme,
+	#main-window[defaultfxtheme="true"] .searchbar-textbox:-moz-lwtheme {
 	  border-color: rgba(0,0,0,.32) !important;
 	}
-	
-	@media all and (-moz-windows-theme:aero) {
-		#main-window[defaultfxtheme="true"] #nav-bar #urlbar:not(:-moz-lwtheme)[focused] {
-		  border-color: hsla(206,100%,60%,.65) hsla(206,100%,55%,.65) hsla(206,100%,50%,.65) !important;
+	@media (-moz-windows-default-theme) {
+	  #main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme),
+	  #main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme) {
+		border-color: hsla(210,54%,20%,.25) hsla(210,54%,20%,.27) hsla(210,54%,20%,.3) hsla(210,54%,20%,.27) !important;
+	  }
+
+	  #main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme)[focused],
+	  #main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme)[focused] {
+		border-color: Highlight !important;
+	  }
+	  
+	  @media (-moz-os-version: windows-vista),
+			 (-moz-os-version: windows-win7) {
+		#main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme):not([focused]):hover,
+		#main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme):not([focused]):hover {
+		  border-color: hsla(210,54%,20%,.35) hsla(210,54%,20%,.37) hsla(210,54%,20%,.4) hsla(210,54%,20%,.37) !important;
 		}
+
+		#main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme)[focused],
+		#main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme)[focused] {
+		  border-color: hsla(206,100%,60%,.65) hsla(206,100%,55%,.65) hsla(206,100%,50%,.65) hsla(206,100%,55%,.65) !important;
+		}
+	  }
 	}
+	/* END: urlbar border tweaking (default theme does not provide left urlbar border) */
 
 	#nav-bar #ctraddon_appbutton > .toolbarbutton-icon {
 	  padding-left: 0px !important;
@@ -233,6 +268,11 @@
 	/* Disconnect */
 	#nav-bar #disconnect-item #disconnect-badge{
 	  margin-top:6px !important;
+	}
+	
+	/* Ghostery */
+	#nav-bar #ghostery-button .toolbarbutton-icon {
+	  margin-top:2px !important;
 	}
 
 	/* zoom page add-on */

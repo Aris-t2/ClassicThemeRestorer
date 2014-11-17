@@ -19,6 +19,8 @@ pref("extensions.classicthemerestorer.appbutbdl",false);
 pref("extensions.classicthemerestorer.dblclclosefx",false);
 pref("extensions.classicthemerestorer.appbclmmenus",true);
 
+pref("extensions.classicthemerestorer.appbuttontxt",'');
+
 //General UI
 pref("extensions.classicthemerestorer.smallnavbut",false);
 pref("extensions.classicthemerestorer.bfurlbarfix",false);
@@ -28,7 +30,9 @@ pref("extensions.classicthemerestorer.hide_bf_popup",false);
 pref("extensions.classicthemerestorer.statusbar",true);
 pref("extensions.classicthemerestorer.noconicons",false);
 pref("extensions.classicthemerestorer.combrelstop",false);
+pref("extensions.classicthemerestorer.activndicat",false);
 pref("extensions.classicthemerestorer.nbiconsize",'small');
+pref("extensions.classicthemerestorer.nbisizedelay",0);
 pref("extensions.classicthemerestorer.findbar","findbar_default");
 pref("extensions.classicthemerestorer.nav_txt_ico","icons");
 pref("extensions.classicthemerestorer.iat_notf_vt",false);
@@ -37,6 +41,7 @@ pref("extensions.classicthemerestorer.emptyfavicon2",false);
 pref("extensions.classicthemerestorer.panelmenucol",false);
 pref("extensions.classicthemerestorer.cpanelmenus",false);
 pref("extensions.classicthemerestorer.hidezoomres",false);
+pref("extensions.classicthemerestorer.alt_newtabp",false);
 pref("extensions.classicthemerestorer.pmhidelabels",false);
 pref("extensions.classicthemerestorer.menupopupscr",false);
 pref("extensions.classicthemerestorer.hideprivmask",false);
@@ -60,6 +65,7 @@ pref("extensions.classicthemerestorer.starinurl",false);
 pref("extensions.classicthemerestorer.feedinurl",false);
 pref("extensions.classicthemerestorer.hideurelstop",false);
 pref("extensions.classicthemerestorer.hideprbutton",false);
+pref("extensions.classicthemerestorer.urlbardropm",false);
 
 pref("extensions.classicthemerestorer.verifiedcolors",false);
 pref("extensions.classicthemerestorer.faviconurl",false);
@@ -94,6 +100,8 @@ pref("extensions.classicthemerestorer.highaddonsbar",false);
 pref("extensions.classicthemerestorer.noaddonbarbg",false);
 
 pref("extensions.classicthemerestorer.am_extrabars",1);
+pref("extensions.classicthemerestorer.mbarposition","toolbar-menubar");
+pref("extensions.classicthemerestorer.mbarpositionl","toolbar-menubar");
 
 // Animation
 pref("extensions.classicthemerestorer.throbberalt",false);

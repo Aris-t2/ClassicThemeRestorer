@@ -22,7 +22,7 @@
 	  color:black !important;
 	}
 	
-	.tabs-newtab-button:not(:-moz-lwtheme),
+	.tabs-newtab-button:not(:-moz-lwtheme):not(#privateTab-afterTabs-openNewPrivateTab),
 	#TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
 	  list-style-image: url(chrome://browser/skin/tabbrowser/newtab.png) !important;
 	}

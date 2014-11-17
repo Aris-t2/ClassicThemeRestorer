@@ -67,6 +67,10 @@
 	  border-radius: 3px !important;
 	}
 
+	#main-window[defaultfxtheme="true"] #nav-bar #urlbar[focused]{
+	  border-color: -moz-mac-focusring !important;
+	}
+
 	#ctraddon_addon-bar toolbarbutton {
 	  max-height: 38px !important;
 	  margin-top: 0px !important;

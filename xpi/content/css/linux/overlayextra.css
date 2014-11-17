@@ -107,9 +107,9 @@
 	}
 	
 	/* Linux default theme should display grey CTR icons in palette */
-	#main-window[defaultfxtheme="true"] toolbarpaletteitem[place="palette"] :-moz-any(#ctraddon_appbutton, #PanelUI-menu-button,#ctraddon_history-menu-toolbar-button,#ctraddon_bookmarks-menu-toolbar-button,#ctraddon_history-button,#ctraddon_bookmarks-button) image{
+	/*#main-window[defaultfxtheme="true"] toolbarpaletteitem[place="palette"] :-moz-any(#ctraddon_appbutton, #PanelUI-menu-button,#ctraddon_history-menu-toolbar-button,#ctraddon_bookmarks-menu-toolbar-button,#ctraddon_history-button,#ctraddon_bookmarks-button) image{
 	  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='colorize'><feColorMatrix type='saturate' in='SourceGraphic' values = '0'/></filter></svg>#colorize") !important;
-	}
+	}*/
 
 }
 
@@ -129,6 +129,7 @@
 	.ctraddon_winmaconly,
 	#ctraddon_appbutton_list1{
 	  visibility: collapse !important;
+	  display:none !important;
 	}
 	#ctraddon_pw_okbutton{
 	  display: inline !important;
@@ -138,5 +139,16 @@
 	#ClassicTRoptionsPane #ctraddon_pw_tabMaxWidth{
 	  width:70px !important;
 	  max-width:90px !important;
+	}
+	#ctraddon_pw_starinurl label{
+	  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/starbutton1lin.png'),
+				  0, 72, 18, 36) no-repeat left !important;
+	  -moz-padding-start:20px !important;
+	  min-height:16px !important;
+	}
+	#ctraddon_pw_feedinurl label{
+	  background:url('chrome://classic_theme_restorer/content/images/feedinurlbar_lin.png') no-repeat left !important;
+	  -moz-padding-start:20px !important;
+	  min-height:16px !important;
 	}
 }

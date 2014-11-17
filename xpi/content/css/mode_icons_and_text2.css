@@ -100,17 +100,7 @@
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
 	  margin-left: -20px !important;
 	}
-	
-    #urlbar {
-      border:1px solid #b4c1cf !important;
-    }
 
-	@media all and (-moz-windows-theme:aero) {
-		#urlbar[focused="true"] {
-		  border:1px solid #72c0fe !important;
-		}
-	}
-	
 	#ctraddon_addon-bar #zoom-reset-button{
 	  padding-top:8px !important;
 	}
@@ -161,6 +151,16 @@
 	}
 	toolbar #ctraddon_back-forward-dropmarker  {
 	  min-width:0px !important;
+	}
+	
+	/*call button*/
+	toolbar #loop-button .toolbarbutton-badge,
+	toolbar #loop-button .toolbarbutton-badge-container{
+	  -moz-appearance:none !important;
+	  background:none !important;
+	  border:0 !important;
+	  padding:0 !important;
+	  box-shadow:none !important;
 	}
  
 }
