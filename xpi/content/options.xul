@@ -165,6 +165,8 @@
 		
 		<preference id="ctraddon_mbarposition"	name="extensions.classicthemerestorer.mbarposition"	 type="string"	instantApply="true"/>
 		<preference id="ctraddon_athrobberurl"	name="extensions.classicthemerestorer.athrobberurl"	 type="string"	instantApply="true"/>
+		<preference id="ctraddon_mbarforceleft"	name="extensions.classicthemerestorer.mbarforceleft" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_mbarforceright" name="extensions.classicthemerestorer.mbarforceright" type="bool"	instantApply="true"/>
 
 		<preference id="ctraddon_dblclnewtab"	name="extensions.classicthemerestorer.dblclnewtab"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hidetbwot"		name="extensions.classicthemerestorer.hidetbwot"	 type="bool"	instantApply="true"/>
@@ -240,10 +242,10 @@
 				<menuitem value="false"	 label="&Ctr_tabsontop2;"/>
 				<menuitem value="false2" label="&Ctr_tabsontop3;"/>
 				<label value=" "/>
-				<label value="&Ctr_tabsontopI1;" class="ctraddon_font1"/>
-				<label value="#main-window, #navigator-toolbox, #titlebar, #nav-bar,"/>
-				<label value="#toolbar-menubar, #TabsToolbar,"/>
-				<label value="#PersonalToolbar, #ctraddon_addon-bar"/>
+				<description class="ctraddon_font1">&Ctr_tabsontopI1;</description>
+				<description>#main-window, #navigator-toolbox, #titlebar, #nav-bar,</description>
+				<description>#toolbar-menubar, #TabsToolbar,</description>
+				<description>#PersonalToolbar, #ctraddon_addon-bar</description>
 			</menupopup>
 		</menulist>
 		
@@ -287,7 +289,7 @@
 				<menuitem value="closetab_tb_start"	label="&Ctr_closetab_4;" id="ctraddon_closetab_pw_sta" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
 				<menuitem value="closetab_tb_end"	label="&Ctr_closetab_3;" id="ctraddon_closetab_pw_end" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
 				<label value=" "/>
-				<label value="* &Ctr_appbuttonI1;" class="ctraddon_font1"/>
+				<description class="ctraddon_font1">* &Ctr_appbuttonI1;</description>
 			</menupopup>
 		</menulist>
 		<checkbox label="&Ctr_closetab_hfot;" preference="ctraddon_closetabhfl" id="ctraddon_pw_closetabhfl"/>
@@ -301,12 +303,13 @@
 	
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_fontbox">
 
-	  <label value="&Ctr_tabs0;"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_default"/>
-	  <label value="&Ctr_tabs1;"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_squared"/>
-	  <label value="&Ctr_tabs1; v2"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_squaredc2"/>
-	  <label value="&Ctr_tabs1m;"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_squared2"/>
-	  <label value="&Ctr_tabs2;"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curved"/>
-	  <label value="&Ctr_tabs3;"	class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curvedaero"/>
+	  <description></description>
+	  <description class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_default">&Ctr_tabs0;</description>
+	  <description class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_squared">&Ctr_tabs1;</description>
+	  <description class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_squaredc2">&Ctr_tabs1; v2</description>
+	  <description class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_squared2">&Ctr_tabs1m;</description>
+	  <description class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curved">&Ctr_tabs2;</description>
+	  <description class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curvedaero">&Ctr_tabs3;</description>
 	  <description>&Ctr_tab_tf_info1; &Ctr_tab_tf_info2;</description>
 	  <label value=""/>
 
@@ -563,7 +566,7 @@
 				<menuitem value="appbutton_v2io2" label="&Ctr_appbutton2io; (v2)"	oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v2io2',true)"/>
 				<menuitem value="appbutton_pm" 	  label="&Ctr_paneluibtweak;"		oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_pm',true)"/>
 				<label value=" "/>
-				<label value="&Ctr_appbuttonI1;" class="ctraddon_font1"/>
+				<description class="ctraddon_font1">&Ctr_appbuttonI1;</description>
 			</menupopup>
 		</menulist>
 		
@@ -701,9 +704,7 @@
 	
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_toolbarsbox">
 
-	  <groupbox>
-		<caption label="&Ctr_toolbars;" class="ctraddon_topic"/>
-		<label value="&Ctr_nbiconsize0;" class="ctraddon_font1"/>
+		<description class="ctraddon_font1">&Ctr_nbiconsize0;</description>
 		<menulist preference="ctraddon_nbiconsize">
 			<menupopup>
 				<menuitem value="small"	label="#nav-bar[iconsize='small'] &Ctr_tabwidthdef;"/>
@@ -715,7 +716,7 @@
 		  <label value="&Ctr_nbisizedelay;"/>
 		</hbox>
 		
-		<label value="&Ctr_cuimode;" class="ctraddon_font1"/>
+		<description class="ctraddon_font1">&Ctr_cuimode;</description>
 		<menulist preference="ctraddon_nav_txt_ico">
 			<menupopup>
 				<menuitem value="icons"		label="&Ctr_nav_txt_ico0;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('icons')"/>
@@ -723,14 +724,14 @@
 				<menuitem value="iconstxt"	label="&Ctr_nav_txt_ico2;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt')"/>
 				<menuitem value="iconstxt2"	label="&Ctr_nav_txt_ico2; v2" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt2')"/>
 				<menuitem value="txtonly"	label="&Ctr_nav_txt_ico3;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('txtonly')"/>
-				<label value="&Ctr_nav_txt_exp;" class="ctraddon_font1"/>
+				<description class="ctraddon_font1">&Ctr_nav_txt_exp;</description>
 				<menuitem value="full"		label="[mode='full']" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('full')"/>
 				<menuitem value="text"		label="[mode='text']" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('text')"/>
 			</menupopup>
 		</menulist>
 		<checkbox label="&Ctr_iat_notf_vt;"  preference="ctraddon_iat_notf_vt" id="ctraddon_pw_iat_notf_vt"/>
 		
-		<label value="&Ctr_findbar;" class="ctraddon_font1"/>
+		<description class="ctraddon_font1">&Ctr_findbar;</description>
 		<menulist preference="ctraddon_findbar">
 			<menupopup>
 				<menuitem value="findbar_default" label="&Ctr_findbar_def;"/>
@@ -740,7 +741,7 @@
 			</menupopup>
 		</menulist>
 		
-		<label value="&Ctr_menubar_items;" class="ctraddon_windowsonly ctraddon_font1"/>
+		<description class="ctraddon_windowsonly ctraddon_font1">&Ctr_menubar_items;</description>
 		<menulist preference="ctraddon_mbarposition" class="ctraddon_windowsonly">
 			<menupopup>
 				<menuitem value="toolbar-menubar"	 label="&Ctr_menubar; &Ctr_tabwidthdef;" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
@@ -752,17 +753,18 @@
 				<menuitem value="ctraddon_toolbar_dummy" label="&Ctr_notoolbar;" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 			</menupopup>
 		</menulist>
+		<hbox>
+		  <checkbox label="&Ctr_mbarforceleft;"	preference="ctraddon_mbarforceleft"/>
+		  <checkbox label="&Ctr_mbarforceright;"	preference="ctraddon_mbarforceright"/>
+		  <spacer flex="1"/>
+		</hbox>
 
-	  </groupbox>
-
-	  <groupbox>
-		<caption  label="&Ctr_extrabar;" class="ctraddon_topic"/>
+		<description class="ctraddon_font1">&Ctr_extrabar;</description>
 		<hbox>
 		  <textbox id="ctraddon_pw_am_extrabars" size="2" maxlength="2" preference="ctraddon_am_extrabars" type="number" min="0" max="20"  onchange="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
-		  <label value="&Ctr_extrabar0;"/>
+		  <description>&Ctr_extrabar0;</description>
 		</hbox>
 		<description>&Ctr_extrabarinfo;</description>
-	  </groupbox>
 	  
 	</box>
 
@@ -865,7 +867,7 @@
 
   <hbox flex="1" id="ctraddon_pw_special_info2">
 	<spacer flex="1" />
-	<label value="&Ctr_special_info2;" class="ctraddon_topic"/>
+	<description class="ctraddon_topic">&Ctr_special_info2;</description>
 	<spacer flex="1" />
   </hbox>
 

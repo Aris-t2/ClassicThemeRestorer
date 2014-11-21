@@ -543,8 +543,9 @@
 	.ctraddontabs {
 	  overflow-x: hidden;
 	  overflow-y: auto;
-	  max-width: 180px;
+	  min-width: 180px;
 	  width: 180px;
+	  max-width: 180px;
 	}
 	
 	radio.ctraddontab {
@@ -573,8 +574,9 @@
 	.ctraddontabpanel {
 	  height:400px;
 	  max-height:430px;
+	  min-width:480px;
 	  width:480px;
-	  max-width:550px;
+	  max-width:800px;
 	  overflow-x:auto;
 	  overflow-y:auto;
 	}

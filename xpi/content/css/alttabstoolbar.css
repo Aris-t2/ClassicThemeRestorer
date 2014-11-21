@@ -27,6 +27,9 @@
 		#main-window[defaultfxtheme="true"]:not([tabsontop="false"]) #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
 		  background: -moz-Dialog !important;
 		}
+		#main-window[defaultfxtheme="true"] #titlebar-buttonbox {
+			-moz-margin-end:-5px !important;
+		}
 	  }
 	}
 

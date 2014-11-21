@@ -706,6 +706,8 @@ classicthemerestorerjso.ctr = {
 	patterns[144]="nbisizedelay~"+this.prefs.getIntPref("nbisizedelay");
 	patterns[145]="appbuttontxt:"+this.prefs.getCharPref("appbuttontxt");
 	patterns[146]="alt_newtabp="+this.prefs.getBoolPref("alt_newtabp");
+	patterns[147]="mbarforceleft="+this.prefs.getBoolPref("mbarforceleft");
+	patterns[148]="mbarforceright="+this.prefs.getBoolPref("mbarforceright");
 
 	saveToFile(patterns);
 	  

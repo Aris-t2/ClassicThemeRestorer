@@ -291,6 +291,12 @@
 	  margin-top: 2.5px !important;
 	  height: 3px !important;
 	}
+	/* ColorfulTabs tweak*/
+	#main-window[colorfultabs="true"] #TabsToolbar .tabbrowser-tab{
+	  border-top:0 !important;
+	  border-left:0 !important;
+	  border-right:0 !important;
+	}
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {

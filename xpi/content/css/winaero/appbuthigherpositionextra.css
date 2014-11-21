@@ -4,14 +4,22 @@
 
 	#main-window[tabsintitlebar][sizemode="normal"]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_appbutton{
 	  margin-top:-16px !important;
-	  margin-bottom:22px !important;
+	  margin-bottom:20px !important;
+	  -moz-margin-end:1px !important;
 	  border-radius: 0 0 4px 4px !important;
 	}
+	
+	@media all and (-moz-windows-classic) {
+	  #main-window[tabsintitlebar][sizemode="normal"]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_appbutton{
+		margin-top:-18px !important;
+		margin-bottom:22px !important;
+	  }
+	}
 	#main-window[tabsintitlebar][sizemode="maximized"]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_appbutton{
-	  margin-top:-4px !important;
-	  -moz-margin-start:-2px !important;
+	  margin-top:-1px !important;
+	  -moz-margin-start:0px !important;
 	  -moz-margin-end:2px !important;
-	  margin-bottom:10px !important;
+	  margin-bottom:6px !important;
 	  border-radius: 0 0 4px 4px !important;
 	}
 

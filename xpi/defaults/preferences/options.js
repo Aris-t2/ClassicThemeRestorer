@@ -102,6 +102,8 @@ pref("extensions.classicthemerestorer.noaddonbarbg",false);
 pref("extensions.classicthemerestorer.am_extrabars",1);
 pref("extensions.classicthemerestorer.mbarposition","toolbar-menubar");
 pref("extensions.classicthemerestorer.mbarpositionl","toolbar-menubar");
+pref("extensions.classicthemerestorer.mbarforceleft",false);
+pref("extensions.classicthemerestorer.mbarforceright",false);
 
 // Animation
 pref("extensions.classicthemerestorer.throbberalt",false);

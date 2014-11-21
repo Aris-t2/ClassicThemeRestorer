@@ -53,13 +53,12 @@
 	.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
 	  -moz-padding-start: 0px !important;
 	}
-
+	
 	@media not all and (-moz-windows-classic) {
-	
+
 		#TabsToolbar:not([currentset*="tabbrowser-tabs,new-tab-button"]):not([orient="vertical"]) .tabs-newtab-button + .tabs-newtab-button{
-          -moz-margin-start: 0px !important;
+		  -moz-margin-start: 0px !important;
 		}
-	
 		#TabsToolbar:not([currentset*="tabbrowser-tabs,new-tab-button"]):not([orient="vertical"]) .tabs-newtab-button{
 		  -moz-margin-end: 0px !important;
 		}
@@ -67,6 +66,10 @@
 		  -moz-margin-end: -15px !important;
 		}
 	
+	}
+	
+	#main-window[colorfultabs="true"] #TabsToolbar:not([orient="vertical"]) .tabs-newtab-button + .tabs-newtab-button{
+	  -moz-margin-start: 0px !important;
 	}
 
 	#TabsToolbar[currentset*="tabbrowser-tabs,search-container"]:not([orient="vertical"]) #tabbrowser-tabs:not([overflow]),

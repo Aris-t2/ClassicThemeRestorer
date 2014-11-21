@@ -325,8 +325,8 @@
 	@media (-moz-windows-default-theme) {
 	  @media all and (-moz-windows-theme:aero) {
 	
-		#main-window[defaultfxtheme="true"] #titlebar-buttonbox {
-			-moz-margin-end:-5px !important;
+		#main-window[defaultfxtheme="true"][sizemode="normal"]:-moz-lwtheme #titlebar-buttonbox {
+		  -moz-margin-end:-5px !important;
 		}
 	
 	  }

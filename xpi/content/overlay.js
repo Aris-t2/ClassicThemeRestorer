@@ -624,6 +624,22 @@ classicthemerestorerjs.ctr = {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("to_notf_vt",false);
 			}
 		  break;
+		  
+		 case "mbarforceleft":
+			if (branch.getBoolPref("mbarforceleft")){
+			  classicthemerestorerjs.ctr.loadUnloadCSS("mbarforceleft",true);
+			  branch.setBoolPref("mbarforceright",false);
+			}
+			else classicthemerestorerjs.ctr.loadUnloadCSS("mbarforceleft",false);
+		  break;
+		  
+		 case "mbarforceright":
+			if (branch.getBoolPref("mbarforceright")){
+			  classicthemerestorerjs.ctr.loadUnloadCSS("mbarforceright",true);
+			  branch.setBoolPref("mbarforceleft",false);
+			}
+			else classicthemerestorerjs.ctr.loadUnloadCSS("mbarforceright",false);
+		  break;
 
 		  // Color settings (checkboxes)
 		  
@@ -1518,6 +1534,19 @@ classicthemerestorerjs.ctr = {
 			.parentNode.removeChild(classicthemerestorerjs.ctr.ctrGetId("ctraddon_window-controls"));
 	  } catch(e){}
 	},300);
+	
+	//ColorfulTabs
+	setTimeout(function(){
+	  AddonManager.getAddonByID('{0545b830-f0aa-4d7e-8820-50a4629a56fe}', function(addon) {
+	   if(addon && addon.isActive) {
+	     
+	     try{
+		   document.getElementById("main-window").setAttribute('colorfultabs',true);
+		 } catch(e){}
+		 
+	   }
+	  });
+	},300);
 
   },
   
@@ -2167,6 +2196,8 @@ classicthemerestorerjs.ctr = {
 		case "noconicons": 			manageCSS("nocontexticons.css");		break;
 		case "iat_notf_vt": 		manageCSS("mode_iat_no_vt.css");		break;
 		case "to_notf_vt": 			manageCSS("mode_to_no_vt.css");			break;
+		case "mbarforceleft": 		manageCSS("menuitems_forceleft.css");	break;
+		case "mbarforceright": 		manageCSS("menuitems_forceright.css");	break;
 		case "wincontrols": 		manageCSS("windowcontrols.css");		break;
 		case "hideprbutton": 		manageCSS("hidepagereportbutton.css");	break;
 		case "starinurl":			manageCSS("starinurl.css");				break;

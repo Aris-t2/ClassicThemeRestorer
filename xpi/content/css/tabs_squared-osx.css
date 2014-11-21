@@ -276,6 +276,13 @@
 	.tabs-newtab-button + .tabs-newtab-button {
 	  -moz-margin-start: 15px !important;
 	}
+	
+	/* ColorfulTabs tweak*/
+	#main-window[colorfultabs="true"] #TabsToolbar .tabbrowser-tab{
+	  border-top:0 !important;
+	  border-left:0 !important;
+	  border-right:0 !important;
+	}
 
 }
 

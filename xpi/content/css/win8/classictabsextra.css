@@ -40,7 +40,7 @@
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	}
 	
-	/*TabUtilities auto-reload extra*/
+	/* TabUtilities auto-reload extra */
 	.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover,
 	.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover[selected="true"] {
 	  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
@@ -54,6 +54,7 @@
 	  -moz-padding-start: 0px !important;
 	}
 	
+	#main-window[colorfultabs="true"] #TabsToolbar:not([orient="vertical"]) .tabs-newtab-button + .tabs-newtab-button,
 	#TabsToolbar:not([currentset*="tabbrowser-tabs,new-tab-button"]):not([orient="vertical"]) .tabs-newtab-button + .tabs-newtab-button{
       -moz-margin-start: 0px !important;
 	}

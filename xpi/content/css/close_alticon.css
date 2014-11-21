@@ -19,4 +19,8 @@
 	#navigator-toolbox #TabsToolbar #ctraddon_tabs-closebutton:hover:active {
 	  -moz-image-region: rect(0, 48px, 16px, 32px) !important;
 	}
+	
+	#main-window #navigator-toolbox #TabsToolbar #tabbrowser-tabs .tabbrowser-tab:not([selected]):not(:hover) .tab-close-button{
+	  opacity:.7 !important;
+	}
 }
