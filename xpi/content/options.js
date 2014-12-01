@@ -267,6 +267,7 @@ classicthemerestorerjso.ctr = {
 	
 	// update sub settings
 	this.ctrpwAppbuttonextra(this.prefs.getCharPref("appbutton"),false);
+	this.ctrpwAppbuttonColorExtra(this.prefs.getCharPref("appbuttonc"));
 	this.ctrpwTabEmptyFavicon(this.prefs.getBoolPref("emptyfavicon2"));
 	this.ctrpwFaviconextra(this.prefs.getBoolPref("faviconurl"));
 	this.ctrpwBFextra(this.prefs.getBoolPref("backforward"));
@@ -477,6 +478,22 @@ classicthemerestorerjso.ctr = {
 		   .getBranch("browser.tabs.").setBoolPref("drawInTitlebar", true);
 	  }
 	}
+  },
+  
+  ctrpwAppbuttonColorExtra: function(which){
+  
+    if(which=="appbuttonc_custom") {
+	  document.getElementById('ctraddon_pw_cappbutc1').disabled = false;
+	  document.getElementById('ctraddon_pw_cappbutc1cp').disabled = false;
+	  document.getElementById('ctraddon_pw_cappbutc2').disabled = false;
+	  document.getElementById('ctraddon_pw_cappbutc2cp').disabled = false;
+	} else {
+	  document.getElementById('ctraddon_pw_cappbutc1').disabled = true;
+	  document.getElementById('ctraddon_pw_cappbutc1cp').disabled = true;
+	  document.getElementById('ctraddon_pw_cappbutc2').disabled = true;
+	  document.getElementById('ctraddon_pw_cappbutc2cp').disabled = true;
+	}
+  
   },
   
   resetCTRpreferences: function() {
@@ -708,6 +725,11 @@ classicthemerestorerjso.ctr = {
 	patterns[146]="alt_newtabp="+this.prefs.getBoolPref("alt_newtabp");
 	patterns[147]="mbarforceleft="+this.prefs.getBoolPref("mbarforceleft");
 	patterns[148]="mbarforceright="+this.prefs.getBoolPref("mbarforceright");
+	patterns[149]="ctabheight~"+this.prefs.getIntPref("ctabheight");
+	patterns[150]="ctabheightcb="+this.prefs.getBoolPref("ctabheightcb");
+	patterns[151]="tabc_act_tb="+this.prefs.getBoolPref("tabc_act_tb");
+	patterns[152]="cappbutc1:"+this.prefs.getCharPref("cappbutc1");
+	patterns[153]="cappbutc2:"+this.prefs.getCharPref("cappbutc2");
 
 	saveToFile(patterns);
 	  

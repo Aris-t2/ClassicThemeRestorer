@@ -6,15 +6,13 @@
 	#main-window #navigator-toolbox toolbar {
 	  border: none !important;
 	  box-shadow: none !important;
+	  border-top-left-radius: 0px !important;
+	  border-top-right-radius: 0px !important;
 	}
 
 	#main-window[defaultfxtheme="true"][tabsontop="false"][sizemode="normal"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) {
 	  border-left: none !important;
 	  border-right: none !important;
-	}
-
-	#main-window[defaultfxtheme="true"][tabsontop="false"][sizemode="maximized"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) {
-	  /*border-bottom: none !important;*/
 	}
 
 }

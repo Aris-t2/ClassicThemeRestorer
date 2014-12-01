@@ -118,6 +118,10 @@
 	#TabsToolbar toolbarbutton:not(.tabs-newtab-button){
 	  position:absolute !important;
 	}
+	/* TabUtilities fix*/
+	#TabsToolbar #PinnedTabsBar toolbarbutton:not(.tabs-newtab-button){
+	  position:unset !important;
+	}
 	
 	/**/
 	#TabsToolbar #ctraddon_appbutton{
@@ -149,27 +153,6 @@
 	  border-left:0 !important;
 	  border-right:0 !important;
 	}
-	
-	/* fix tab size for some add-ons/cases */
-	.tab-background-start[selected=true]::after,
-	.tab-background-start[selected=true]::before,
-	.tab-background-start,
-	.tab-background-end,
-	.tab-background-end[selected=true]::after,
-	.tab-background-end[selected=true]::before,
-	.tabbrowser-tab .tab-stack .tab-background,
-	.tabs-newtab-button,
-	#tabbrowser-tabs,
-	.tabbrowser-tab,
-	.tabbrowser-tab .tab-stack,
-	.tabbrowser-tab .tab-stack > .tab-content{
-	  min-height:0 !important;
-	}
-	#TabsToolbar .tabs-newtab-button,
-	#TabsToolbar .tabbrowser-tab{
-	  height: 26px !important;
-	}
-
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {

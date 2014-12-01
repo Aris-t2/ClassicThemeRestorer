@@ -649,7 +649,7 @@
 		
 	  <!--### appbutton for toolbars (Windows, Linux, MacOSX) ###-->
 	  <toolbarbutton id="ctraddon_appbutton"
-                     class="toolbarbutton-1"
+                     class="toolbarbutton-1 ctraddon-toolbarbutton"
                      persist="class"
                      removable="true"
                      type="menu"
@@ -660,7 +660,7 @@
 
 	  <!--### adds own history menu button to browsers customizing area ###-->
 	  <toolbarbutton id="ctraddon_history-menu-toolbar-button"
-                     class="toolbarbutton-1 chromeclass-toolbar-additional"
+                     class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
                      persist="class"
                      removable="true"
                      type="menu"
@@ -714,7 +714,7 @@
       
 	  <!--### adds own bookmarks menu button to browsers customizing area ###-->
 	  <toolbarbutton id="ctraddon_bookmarks-menu-toolbar-button"
-                     class="toolbarbutton-1 chromeclass-toolbar-additional"
+                     class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
                      persist="class"
                      removable="true"
                      type="menu"
@@ -784,7 +784,7 @@
       </toolbarbutton>
 	  
 	  <!--### creates a CTR preference button ###-->
-	  <toolbarbutton id="ctraddon_ctr-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+	  <toolbarbutton id="ctraddon_ctr-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
 					 label="CTR"
 					 persist="class"
 					 cui-areatype="toolbar"
@@ -792,13 +792,13 @@
                      tooltiptext="Classic Theme Restorer"/>
 
 	  <!--### creates a bookmarks sidebar button ###-->
-	  <toolbarbutton id="ctraddon_bookmarks-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+	  <toolbarbutton id="ctraddon_bookmarks-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
 					 label="&bookmarksMenuButton.label;"
                      observes="viewBookmarksSidebar"
                      tooltiptext="&bookmarksMenuButton.label; &Ctr_sidebarbutton;"/>
 					 
       <!--### creates a history sidebar button ###-->
-	  <toolbarbutton id="ctraddon_history-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+	  <toolbarbutton id="ctraddon_history-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
 					 label="&historyButton.label;"
                      observes="viewHistorySidebar"
                      tooltiptext="&historyButton.label; &Ctr_sidebarbutton;"/>
@@ -821,6 +821,14 @@
                    title="&Ctr_puibseparator;"
                    customizableui-areatype="toolbar"
                    removable="true"/>
+				   
+	  <toolbaritem id="ctraddon_navigator-throbber"
+                   title="&Ctr_navthrobber;"
+                   customizableui-areatype="toolbar"
+				   align="center"
+				   pack="center"
+				   onclick="classicthemerestorerjs.ctr.openAThrobberUrl();"
+                   removable="true"/>
 	  
 	  <!--### creates movable back-forward buttons ###-->
 	  <toolbaritem id="ctraddon_back-forward-button" class="chromeclass-toolbar-additional"
@@ -828,14 +836,14 @@
                    forwarddisabled="false"
 				   overflows="false"
                    title="&backCmd.label; &forwardCmd.label;">
-          <toolbarbutton id="ctraddon_back-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+          <toolbarbutton id="ctraddon_back-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
                          label="&backCmd.label;"
                          command="Browser:BackOrBackDuplicate"
 						 onmousedown="classicthemerestorerjs.ctr.ctrBackMenuShow(this);"
 						 onclick="checkForMiddleClick(this, event);"
                          tooltip="back-button-tooltip"
                          context="backForwardMenu"/>
-          <toolbarbutton id="ctraddon_forward-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+          <toolbarbutton id="ctraddon_forward-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
                          label="&forwardCmd.label;"
                          command="Browser:ForwardOrForwardDuplicate"
 						 onmousedown="classicthemerestorerjs.ctr.ctrBackMenuShow(this);"
@@ -848,7 +856,7 @@
 	  <toolbarbutton id="ctraddon_back-forward-dropmarker" type="menu" 
 			disabled="false"
 			label="&backCmd.label; &forwardCmd.label;"
-			class="toolbarbutton-1 chromeclass-toolbar-additional tabs-alltabs-button"
+			class="toolbarbutton-1 chromeclass-toolbar-additional tabs-alltabs-button ctraddon-toolbarbutton"
 			onbroadcast="if (this.disabled) this.disabled =
 			document.getElementById('Browser:Back').hasAttribute('disabled') &amp;&amp;
 			document.getElementById('Browser:Forward').hasAttribute('disabled');">
@@ -863,14 +871,14 @@
 	  
       
 	  <!--### creates a movable reload button ###-->
-	  <toolbarbutton id="ctraddon_reload-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+	  <toolbarbutton id="ctraddon_reload-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
                      label="&reloadCmd.label;" removable="true"
                      command="Browser:ReloadOrDuplicate"
                      onclick="checkForMiddleClick(this, event);"
                      tooltiptext="&reloadButton.tooltip;"/>
 
       <!--### creates a movable stop button ###-->
-	  <toolbarbutton id="ctraddon_stop-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+	  <toolbarbutton id="ctraddon_stop-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
                      label="&stopCmd.label;" removable="true"
                      command="Browser:Stop"
                      tooltiptext="&stopButton.tooltip;"/>

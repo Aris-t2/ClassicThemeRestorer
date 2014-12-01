@@ -1,0 +1,13 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	/* FXChrome support */
+	#main-window[currenttheme="FXChrome"] .ctraddon-toolbarbutton .toolbarbutton-icon{
+	  padding:0 !important;
+	}
+	
+	/*Nuvola support */
+	#main-window[currenttheme="Nuvola"] #ctraddon_ctr-button .toolbarbutton-icon{
+	  padding: 2px !important;
+	}
+}

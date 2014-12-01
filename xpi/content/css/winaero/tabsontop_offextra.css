@@ -9,6 +9,16 @@
 		  margin-right: -2px !important;
 		}
 	}
+	
+	#main-window[tabsontop="false"]:not([tabsintitlebar]):not([inFullscreen])[sizemode="normal"] #tab-view-deck #navigator-toolbox #toolbar-menubar[inactive="true"]:not([autohide="true"]),
+	#main-window[tabsontop="false"]:not([tabsintitlebar]):not([inFullscreen])[sizemode="normal"] #tab-view-deck #navigator-toolbox #toolbar-menubar[inactive="true"][autohide="false"],
+	#main-window[tabsontop="false"]:not([tabsintitlebar]):not([inFullscreen])[sizemode="normal"] #tab-view-deck #navigator-toolbox #toolbar-menubar[autohide="true"]:not([inactive="true"]),
+	#main-window[tabsontop="false"]:not([tabsintitlebar]):not([inFullscreen])[sizemode="normal"] #tab-view-deck #navigator-toolbox #toolbar-menubar:not([autohide="true"]),
+	#main-window[tabsontop="false"]:not([tabsintitlebar]):not([inFullscreen])[sizemode="maximized"] #tab-view-deck #navigator-toolbox #toolbar-menubar[inactive="true"][autohide="false"],
+	#main-window[tabsontop="false"]:not([tabsintitlebar]):not([inFullscreen])[sizemode="maximized"] #tab-view-deck #navigator-toolbox #toolbar-menubar[autohide="true"]:not([inactive="true"]),
+	#main-window[tabsontop="false"]:not([tabsintitlebar]):not([inFullscreen])[sizemode="maximized"] #tab-view-deck #navigator-toolbox #toolbar-menubar:not([autohide="true"]) {
+	  margin-bottom: 1px !important;
+	}
 
 	#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{
 	  margin-top: 3px !important;

@@ -3,8 +3,11 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	.tabbrowser-tab:not([pinned]):not([protected])[first-visible-tab][last-visible-tab] .tab-close-button,
+	.tabbrowser-tab:not([pinned]):not([protected])[first-tab="true"][last-tab="true"]:not([first-visible-tab]) .tab-close-button,
 	#main-window[tabmix_lwt="true"] #TabsToolbar .tabbrowser-tab[protected][first-visible-tab][last-visible-tab] .tab-close-button,
-	#main-window[tabmix_lwt="false"] #TabsToolbar .tabbrowser-tab[protected][first-visible-tab][last-visible-tab] .tab-close-button{
+	#main-window[tabmix_lwt="true"] #TabsToolbar .tabbrowser-tab[protected][first-tab="true"][last-tab="true"]:not([first-visible-tab]) .tab-close-button,
+	#main-window[tabmix_lwt="false"] #TabsToolbar .tabbrowser-tab[protected][first-visible-tab][last-visible-tab] .tab-close-button,
+	#main-window[tabmix_lwt="false"] #TabsToolbar .tabbrowser-tab[protected][first-tab="true"][last-tab="true"]:not([first-visible-tab]) .tab-close-button{
 	  visibility: collapse !important;
 	}
 

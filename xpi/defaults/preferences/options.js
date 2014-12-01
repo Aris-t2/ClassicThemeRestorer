@@ -1,6 +1,8 @@
 // tab settings
 pref("extensions.classicthemerestorer.tabs","tabs_squared");
 pref("extensions.classicthemerestorer.tabsontop",'unset');
+pref("extensions.classicthemerestorer.ctabheightcb",false);
+pref("extensions.classicthemerestorer.ctabheight",28);
 pref("extensions.classicthemerestorer.ctabmwidth",100);
 pref("extensions.classicthemerestorer.ctabwidth",210);
 pref("extensions.classicthemerestorer.emptyfavicon",false);
@@ -20,6 +22,9 @@ pref("extensions.classicthemerestorer.dblclclosefx",false);
 pref("extensions.classicthemerestorer.appbclmmenus",true);
 
 pref("extensions.classicthemerestorer.appbuttontxt",'');
+
+pref("extensions.classicthemerestorer.cappbutc1",'#00FF00');
+pref("extensions.classicthemerestorer.cappbutc2",'#007700');
 
 //General UI
 pref("extensions.classicthemerestorer.smallnavbut",false);
@@ -181,6 +186,7 @@ pref("extensions.classicthemerestorer.tabfita_pen",false);
 pref("extensions.classicthemerestorer.tabfita_unr",false);
 pref("extensions.classicthemerestorer.tabfita_hov",false);
 
+pref("extensions.classicthemerestorer.tabc_act_tb",false);
 pref("extensions.classicthemerestorer.tabc_hov_unr",false);
 pref("extensions.classicthemerestorer.tabc_hov_unl",false);
 

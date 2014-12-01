@@ -253,6 +253,10 @@
 	#TabsToolbar toolbarbutton:not(.tabs-newtab-button){
 	  position:absolute !important;
 	}
+	/* TabUtilities fix*/
+	#TabsToolbar #PinnedTabsBar toolbarbutton:not(.tabs-newtab-button){
+	  position:unset !important;
+	}
 	
 	/* Pinned tabs & TabMixPlus/TabUtilities locked/protected tabs support */	
 	.tabbrowser-tab:not([pinned]) .tab-close-button{

@@ -110,6 +110,13 @@
 	/*#main-window[defaultfxtheme="true"] toolbarpaletteitem[place="palette"] :-moz-any(#ctraddon_appbutton, #PanelUI-menu-button,#ctraddon_history-menu-toolbar-button,#ctraddon_bookmarks-menu-toolbar-button,#ctraddon_history-button,#ctraddon_bookmarks-button) image{
 	  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='colorize'><feColorMatrix type='saturate' in='SourceGraphic' values = '0'/></filter></svg>#colorize") !important;
 	}*/
+	
+	/* Hide Windows OS window controls*/
+	#ctraddon_window-controls,
+	#wrapper-ctraddon_window-controls{
+	  visibility:collapse !important;
+	  display:none !important;
+	}
 
 }
 

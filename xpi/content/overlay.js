@@ -46,6 +46,10 @@ classicthemerestorerjs.ctr = {
   tabitasheet_pen:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   tabitasheet_unr:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
+  tabheight:			Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  
+  appbutton_color:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  
   cuiButtonssheet:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
 
   prefs:				Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("extensions.classicthemerestorer."),
@@ -66,7 +70,14 @@ classicthemerestorerjs.ctr = {
 
 	// adds a new global attribute 'defaultfxtheme' -> better parting css for default and non-default themes
 	try{
-		if (this.fxdefaulttheme) document.getElementById("main-window").setAttribute('defaultfxtheme',true);
+		if (this.fxdefaulttheme){
+		  document.getElementById("main-window").setAttribute('defaultfxtheme',true);
+		}
+		else {
+		  var thirdpartytheme = Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("general.skins.").getCharPref("selectedSkin");
+		  document.getElementById("main-window").setAttribute('currenttheme',thirdpartytheme);
+		  classicthemerestorerjs.ctr.loadUnloadCSS("thirdpartythemes",true);
+		}
 	} catch(e){}
 	
 	// add a new global attribute 'fx31' -> better parting css between versions
@@ -155,7 +166,7 @@ classicthemerestorerjs.ctr = {
 				CustomizableUI.addWidgetToArea("ctraddon_appbutton", CustomizableUI.AREA_NAVBAR);
 				CustomizableUI.addWidgetToArea("ctraddon_puib_separator", CustomizableUI.AREA_NAVBAR);
 				CustomizableUI.addWidgetToArea("ctraddon_panelui-button", CustomizableUI.AREA_NAVBAR);
-				CustomizableUI.addWidgetToArea("ctraddon_window-controls", CustomizableUI.AREA_NAVBAR);
+				if (classicthemerestorerjs.ctr.osstring=="WINNT") CustomizableUI.addWidgetToArea("ctraddon_window-controls", CustomizableUI.AREA_NAVBAR);
 				CustomizableUI.addWidgetToArea("ctraddon_bookmarks-menu-toolbar-button", CustomizableUI.AREA_BOOKMARKS);						
 
 				var tabsintitlebar = Cc["@mozilla.org/preferences-service;1"]
@@ -242,22 +253,23 @@ classicthemerestorerjs.ctr = {
 			}
 			
 			// only try to remove attributes, if they exist
-			// they are set for many nodes at once by CTR, so if one has it all others have too
-			try {
-			  if(document.getElementById("main-window").hasAttribute('tabsontop')) {
-				document.getElementById("main-window").removeAttribute('tabsontop');
-				document.getElementById("titlebar").removeAttribute('tabsontop');
-				document.getElementById("navigator-toolbox").removeAttribute('tabsontop');
-				document.getElementById("toolbar-menubar").removeAttribute('tabsontop');
-				document.getElementById("TabsToolbar").removeAttribute('tabsontop');
-				document.getElementById("nav-bar").removeAttribute('tabsontop');
-				document.getElementById("PersonalToolbar").removeAttribute('tabsontop');
-				document.getElementById("ctraddon_addon-bar").removeAttribute('tabsontop');
-			  }
-			} catch(e){}
-			
-			try {
-			  if (tabsont=='true') {
+			// they are set for many nodes at once by CTR, so if one has it all others have too	
+			if (tabsont=='unset') {
+			  try {
+				if(document.getElementById("main-window").hasAttribute('tabsontop')) {
+					document.getElementById("main-window").removeAttribute('tabsontop');
+					document.getElementById("titlebar").removeAttribute('tabsontop');
+					document.getElementById("navigator-toolbox").removeAttribute('tabsontop');
+					document.getElementById("toolbar-menubar").removeAttribute('tabsontop');
+					document.getElementById("TabsToolbar").removeAttribute('tabsontop');
+					document.getElementById("nav-bar").removeAttribute('tabsontop');
+					document.getElementById("PersonalToolbar").removeAttribute('tabsontop');
+					document.getElementById("ctraddon_addon-bar").removeAttribute('tabsontop');
+				}
+			  } catch(e){}
+			}
+			else if (tabsont=='true') {
+			  try {
 				document.getElementById("main-window").setAttribute('tabsontop','true');
 				document.getElementById("titlebar").setAttribute('tabsontop','true');
 				document.getElementById("navigator-toolbox").setAttribute('tabsontop','true');
@@ -266,8 +278,10 @@ classicthemerestorerjs.ctr = {
 				document.getElementById("nav-bar").setAttribute('tabsontop','true');
 				document.getElementById("PersonalToolbar").setAttribute('tabsontop','true');
 				document.getElementById("ctraddon_addon-bar").setAttribute('tabsontop','true');
-					
-			  } else if (tabsont=='false' || tabsont=='false2') {
+			  } catch(e){}
+			}
+			else {
+			  try {
 				document.getElementById("main-window").setAttribute('tabsontop','false');
 				document.getElementById("titlebar").setAttribute('tabsontop','false');
 				document.getElementById("navigator-toolbox").setAttribute('tabsontop','false');
@@ -276,9 +290,18 @@ classicthemerestorerjs.ctr = {
 				document.getElementById("nav-bar").setAttribute('tabsontop','false');
 				document.getElementById("PersonalToolbar").setAttribute('tabsontop','false');
 				document.getElementById("ctraddon_addon-bar").setAttribute('tabsontop','false');
-			  }
-			} catch(e){}
+			  } catch(e){}
+			}
 			
+		  break;
+		  
+		  case "ctabheightcb":
+			if (branch.getBoolPref("ctabheightcb")) classicthemerestorerjs.ctr.loadUnloadCSS("ctabheight",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("ctabheight",false);
+		  break;
+		  
+		  case "ctabheight":
+			if (branch.getBoolPref("ctabheightcb")) classicthemerestorerjs.ctr.loadUnloadCSS("ctabheight",true);
 		  break;
 		  
 		  case "ctabwidth": case "ctabmwidth":
@@ -360,10 +383,15 @@ classicthemerestorerjs.ctr = {
 			classicthemerestorerjs.ctr.loadUnloadCSS('appbuttonc_gray',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('appbuttonc_purple',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('appbuttonc_white',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('appbuttonc_custom',false);
 
 			if (branch.getCharPref("appbuttonc")!="off"){
 			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("appbuttonc"),true);
 			}
+		  break;
+		  
+		  case "cappbutc1": case "cappbutc2":
+			if (branch.getCharPref("appbuttonc")=="appbuttonc_custom") classicthemerestorerjs.ctr.loadUnloadCSS("appbuttonc_custom",true);
 		  break;
 		  
 		  case "alttbappb":
@@ -455,50 +483,15 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "activndicat":
-			if (branch.getBoolPref('activndicat')) {
-
-			  //create activity throbber (toolbaritem)
-			  CustomizableUI.createWidget({
-				id: 'ctraddon_navigator-throbber',
-				type: 'custom',
-				defaultArea: CustomizableUI.AREA_NAVBAR,
-				onBuild: function(aDocument) {
-					var toolbaritem = aDocument.createElementNS('http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul', 'toolbaritem');
-					var image = aDocument.createElementNS('http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul', 'image');
-					var props = {
-						id: 'ctraddon_navigator-throbber',
-						title: ''+classicthemerestorerjs.ctr.stringBundle.GetStringFromName("ctr_actthrobber"),
-						align: 'center',
-						pack: 'center',
-						removable: 'true',
-						sdkstylewidget: 'true',
-						overflows: false
-					};
-					for (var p in props) {
-						toolbaritem.setAttribute(p, props[p]);
-					}
-					toolbaritem.appendChild(image);
-					
-					// clicking CTRs activity throbber allows to open a specified url in a new tab
-					toolbaritem.addEventListener("click", function openAThrobberUrl() {
-					  var newathrobberurl = classicthemerestorerjs.ctr.prefs.getCharPref("athrobberurl");
-					  if(newathrobberurl!="")
-						gBrowser.selectedTab = gBrowser.addTab(newathrobberurl);
-					},false);
-					
-					return toolbaritem;
-				}
-
-			  });
-
+			if (branch.getBoolPref('activndicat'))
 			  classicthemerestorerjs.ctr.restoreActivityThrobber();
-			  
-			}
-			else {
-
-			  CustomizableUI.destroyWidget("ctraddon_navigator-throbber");
-
-			}
+			else
+			  setTimeout(function(){
+				try{
+				  classicthemerestorerjs.ctr.ctrGetId("ctraddon_navigator-throbber")
+					.parentNode.removeChild(classicthemerestorerjs.ctr.ctrGetId("ctraddon_navigator-throbber"));
+				} catch(e){}
+			  },300);
 		  break;
 
 		  case "hideprbutton":
@@ -928,6 +921,11 @@ classicthemerestorerjs.ctr = {
 			  },400);
 			} else classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_unr",false);
 
+		  break;
+		  
+		  case "tabc_act_tb":
+			if (branch.getBoolPref("tabcolor_act")) classicthemerestorerjs.ctr.loadUnloadCSS("tabcolor_act",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("tabcolor_act",false);
 		  break;
 
 		  // Special	  
@@ -1480,7 +1478,7 @@ classicthemerestorerjs.ctr = {
   },
   
   addonCompatibilityImprovements: function() {
-	// 'ThePuzzlePiece' add-on: check to not enable CTRs space/separator styles while add-on is enabled
+	// 'ThePuzzlePiece'/'PuzzleToolbars' add-on: check to not enable CTRs space/separator styles while add-on is enabled
 	var TPPListener = {
 	   onEnabled: function(addon) {
 		  if(addon.id == 'thePuzzlePiece@quicksaver') { classicthemerestorerjs.ctr.loadUnloadCSS("spaces_extra",false); }
@@ -1526,14 +1524,14 @@ classicthemerestorerjs.ctr = {
 	  } catch(e){}
 	},300);
 	
-	// remove CTRs window controls 'extra item' on Linux and MacOSX
-	setTimeout(function(){
+	// remove CTRs window controls 'extra items' on Linux and MacOSX
+	/*setTimeout(function(){
 	  try{
 		if(classicthemerestorerjs.ctr.osstring != "WINNT")
 		  classicthemerestorerjs.ctr.ctrGetId("ctraddon_window-controls")
 			.parentNode.removeChild(classicthemerestorerjs.ctr.ctrGetId("ctraddon_window-controls"));
 	  } catch(e){}
-	},300);
+	},300);*/
 	
 	//ColorfulTabs
 	setTimeout(function(){
@@ -1548,6 +1546,11 @@ classicthemerestorerjs.ctr = {
 	  });
 	},300);
 
+  },
+  
+  openAThrobberUrl: function() {
+	var newathrobberurl = classicthemerestorerjs.ctr.prefs.getCharPref("athrobberurl");
+	if(newathrobberurl!="") gBrowser.selectedTab = gBrowser.addTab(newathrobberurl);
   },
   
   // attach appmenu to appbutton on toolbar
@@ -2272,6 +2275,112 @@ classicthemerestorerjs.ctr = {
 		case "bmarkoinpw":			manageCSS("ctraddon_bmark_oinpw.css");	break;
 		
 		case "spaces_extra": 		manageCSS("spaces_extra.css");			break;
+		
+		case "thirdpartythemes": 	manageCSS("thirdpartythemes.css");		break;
+		
+		case "appbuttonc_custom":
+		
+			removeOldSheet(this.appbutton_color);
+			
+			if(enable==true && this.prefs.getCharPref('appbuttonc')=='appbuttonc_custom') {
+			
+				this.appbutton_color=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);\
+					@-moz-document url(chrome://browser/content/browser.xul) {\
+						#ctraddon_appbutton2:not(:hover):not(:active):not([open]){\
+						  background-image: linear-gradient('+this.prefs.getCharPref('cappbutc1')+', '+this.prefs.getCharPref('cappbutc2')+' 95%) !important;\
+						  border-color: hsla(210,59%,13%,.9) !important;\
+						  box-shadow: 0 1px 0 hsla(210,48%,90%,.15) inset,\
+									  0 0 2px 1px hsla(211,65%,85%,.15) inset !important;\
+						}\
+						#TabsToolbar #ctraddon_appbutton{\
+						  background: linear-gradient('+this.prefs.getCharPref('cappbutc1')+', '+this.prefs.getCharPref('cappbutc2')+' 95%) !important;\
+						  border-color: hsla(210,59%,13%,.9) !important;\
+						  box-shadow: 0 1px 0 hsla(210,48%,90%,.15) inset,\
+									  0 0 2px 1px hsla(211,65%,85%,.15) inset !important;\
+						}\
+						#TabsToolbar #ctraddon_appbutton:hover:not(:active):not([open]),\
+						#ctraddon_appbutton2:hover:not(:active):not([open]){\
+						  background-image: radial-gradient(farthest-side at center bottom, hsla(210,48%,90%,.5) 10%, hsla(210,48%,90%,0) 70%),\
+											radial-gradient(farthest-side at center bottom, hsla(211,70%,83%,.5), hsla(211,70%,83%,0)),\
+											linear-gradient('+this.prefs.getCharPref('cappbutc1')+', '+this.prefs.getCharPref('cappbutc2')+' 95%) !important;\
+						  border-color: hsla(210,59%,13%,.9) !important;\
+						  box-shadow: 0 1px 0 hsla(210,48%,90%,.15) inset,\
+									  0 0 2px 1px hsla(210,48%,90%,.4) inset,\
+									  0 -1px 0 hsla(210,48%,90%,.2) inset !important;\
+						}\
+						#TabsToolbar #ctraddon_appbutton:hover:active,\
+						#TabsToolbar #ctraddon_appbutton[open],\
+						#ctraddon_appbutton2:hover:active,\
+						#ctraddon_appbutton2[open] {\
+						  background-image: linear-gradient('+this.prefs.getCharPref('cappbutc1')+', '+this.prefs.getCharPref('cappbutc2')+' 95%) !important;\
+						  box-shadow: 0 2px 3px rgba(0,0,0,.4) inset,\
+									  0 1px 1px rgba(0,0,0,.2) inset !important;\
+						}\
+						#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctraddon_appbutton,\
+						#main-window[privatebrowsingmode=temporary] #ctraddon_appbutton2{\
+						  background-image: linear-gradient(rgb(153,38,211), rgb(105,19,163) 95%) !important;\
+						  border-color: rgba(43,8,65,.9) !important;\
+						}\
+						#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctraddon_appbutton:hover:not(:active):not([open]),\
+						#main-window[privatebrowsingmode=temporary] #ctraddon_appbutton2:hover:not(:active):not([open]){\
+						  background-image: radial-gradient(farthest-side at center bottom, rgba(240,193,255,.5) 10%, rgba(240,193,255,0) 70%),\
+											radial-gradient(farthest-side at center bottom, rgb(192,81,247), rgba(236,172,255,0)),\
+											linear-gradient(rgb(144,20,207), rgb(95,0,158) 95%) !important;\
+						  border-color: rgba(43,8,65,.9) !important;\
+						  box-shadow: 0 1px 0 rgba(255,255,255,.1) inset,\
+									  0 0 2px 1px rgba(240,193,255,.7) inset,\
+									  0 -1px 0 rgba(240,193,255,.5) inset !important;\
+						}\
+						#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctraddon_appbutton:hover:active,\
+						#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctraddon_appbutton[open],\
+						#main-window[privatebrowsingmode=temporary] #ctraddon_appbutton2:hover:active,\
+						#main-window[privatebrowsingmode=temporary]  #ctraddon_appbutton2[open] {\
+						  background-image: linear-gradient(rgb(144,20,207), rgb(95,0,158) 95%) !important;\
+						}\
+					}\
+				'), null, null);
+			
+				applyNewSheet(this.appbutton_color);
+			
+			}
+		
+		break;
+		
+		case "ctabheight":
+			removeOldSheet(this.tabheight);
+			
+			if(enable==true && this.prefs.getBoolPref('ctabheightcb')){
+			
+			
+				this.tabheight=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					.tab-background-start[selected=true]::after,\
+					.tab-background-start[selected=true]::before,\
+					.tab-background-start,\
+					.tab-background-end,\
+					.tab-background-end[selected=true]::after,\
+					.tab-background-end[selected=true]::before,\
+					.tabbrowser-tab .tab-stack .tab-background,\
+					.tabs-newtab-button,\
+					#tabbrowser-tabs,\
+					.tabbrowser-tab,\
+					.tabbrowser-tab[pinned],\
+					.tabbrowser-tab .tab-stack,\
+					.tabbrowser-tab .tab-stack > .tab-content{\
+					  min-height:'+this.prefs.getIntPref('ctabheight')+'px !important;\
+					}\
+					#TabsToolbar .tabbrowser-tab[pinned],\
+					#TabsToolbar .tabs-newtab-button,\
+					#TabsToolbar .tabbrowser-tab{\
+					  height: '+this.prefs.getIntPref('ctabheight')+'px !important;\
+					}\
+				'), null, null);
+				
+				applyNewSheet(this.tabheight);
+			
+			}
+		
+		break;
 
 		case "tabcolor_def":
 
@@ -2337,6 +2446,22 @@ classicthemerestorerjs.ctr = {
 			removeOldSheet(this.ctabsheet_act);
 			
 			if(enable==true){
+			
+				var tabc_act_tb_sheet = '';
+				if (this.prefs.getBoolPref('tabc_act_tb'))
+				
+					tabc_act_tb_sheet = '\
+						#nav-bar{\
+						  box-shadow:none !important;\
+						  background: none !important;\
+						}\
+						toolbar:not(#TabsToolbar):not(#toolbar-menubar),\
+						#main-window[defaultfxtheme="true"] #navigator-toolbox #TabsToolbar[tabsontop=false]:not(:-moz-lwtheme),\
+						#main-window[defaultfxtheme="true"][tabsontop=false]:not([tabsintitlebar]):not(:-moz-lwtheme) #toolbar-menubar,\
+						#TabsToolbar[tabsontop="false"]{\
+						  background-color: '+this.prefs.getCharPref('ctabact2')+' !important;\
+						}\
+					';
 		
 				if (this.prefs.getCharPref('tabs')=='tabs_squared') {
 				
@@ -2344,6 +2469,7 @@ classicthemerestorerjs.ctr = {
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[selected="true"] {\
 						  background-image: linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
 						}\
+						'+tabc_act_tb_sheet+'\
 					'), null, null);
 				
 				}
@@ -2354,6 +2480,7 @@ classicthemerestorerjs.ctr = {
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[selected] .tab-content {\
 						  background-image: linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
 						}\
+						'+tabc_act_tb_sheet+'\
 					'), null, null);
 				
 				}
@@ -2364,6 +2491,7 @@ classicthemerestorerjs.ctr = {
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[selected="true"] {\
 						  background-image: linear-gradient('+this.prefs.getCharPref('ctabact1')+','+this.prefs.getCharPref('ctabact2')+') !important;\
 						}\
+						'+tabc_act_tb_sheet+'\
 					'), null, null);
 				
 				}
@@ -2396,6 +2524,7 @@ classicthemerestorerjs.ctr = {
 						  background-color: transparent !important;\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+'), none !important;\
 						}\
+						'+tabc_act_tb_sheet+'\
 					'), null, null);
 				
 				}
@@ -2428,6 +2557,7 @@ classicthemerestorerjs.ctr = {
 						  background-color: transparent !important;\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+'), none !important;\
 						}\
+						'+tabc_act_tb_sheet+'\
 					'), null, null);
 				
 				}
