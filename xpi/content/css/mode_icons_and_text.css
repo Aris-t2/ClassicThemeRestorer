@@ -24,11 +24,9 @@
 	}
 	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, toolbar[id^=ctraddon_extra-bar], #vertical-toolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
 	  display: -moz-box !important;
-
 	}
 	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, toolbar[id^=ctraddon_extra-bar], #vertical-toolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
 	  -moz-box-orient: vertical !important;
-
 	}
 	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, toolbar[id^=ctraddon_extra-bar], #vertical-toolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
 	  min-width: 57px !important;
@@ -151,9 +149,13 @@
 	  min-width:0px !important;
 	}
 	
-	/*call button*/
+	/* Main menu button & call button fix */
+	toolbar #PanelUI-menu-button .toolbarbutton-badge,
+	toolbar #PanelUI-menu-button .toolbarbutton-badge-container,
 	toolbar #loop-button .toolbarbutton-badge,
-	toolbar #loop-button .toolbarbutton-badge-container{
+	toolbar #loop-button .toolbarbutton-badge-container,
+	toolbar #loop-button-throttled .toolbarbutton-badge,
+	toolbar #loop-button-throttled .toolbarbutton-badge-container{
 	  -moz-appearance:none !important;
 	  background:none !important;
 	  border:0 !important;

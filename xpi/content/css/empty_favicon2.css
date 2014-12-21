@@ -40,7 +40,7 @@
   .bookmark-item[container][livemark] .bookmark-item[visited] {
    -moz-image-region: rect(0px, 32px, 16px, 16px) !important; }
 
-  #PopupAutoCompleteRichResult .ac-site-icon[src="chrome://mozapps/skin/places/defaultFavicon.png"] {
+  #PopupAutoCompleteRichResult .ac-site-icon[src^="chrome://mozapps/skin/places/defaultFavicon.png"] {
 	width: 0 !important;
 	padding-right: 16px !important;
 	background-image: url("chrome://classic_theme_restorer/content/images/default_favicon.png") !important;

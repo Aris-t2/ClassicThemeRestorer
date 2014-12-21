@@ -443,6 +443,13 @@
 	#main-window[fx34plus="true"] #appmenu_devAppMgr {
 	  visibility: collapse !important;
 	}
+	
+	/* temp fix for Mozillas broken icons */
+	toolbar #loop-button .toolbarbutton-badge-container image,
+	toolbar #loop-button-throttled .toolbarbutton-badge-container image,
+	toolbar #PanelUI-menu-button .toolbarbutton-badge-container image{
+	  min-width:18px;
+	}
 }
 
 /* style/hide settings on CTRs options window */
@@ -679,6 +686,18 @@
 	}
 	#ctraddon_pw_urlbarpblocked label{
 	  background:url('chrome://classic_theme_restorer/content/images/pw_urlbar_popup_blocked.png') no-repeat left !important;
+	  -moz-padding-start:20px !important;
+	  min-height:16px !important;
+	}
+
+	#ctraddon_pw_oldsearch label {
+	  background:url('chrome://classic_theme_restorer/content/images/newsearch.png') no-repeat left !important;
+	  -moz-padding-start:20px !important;
+	  min-height:16px !important;
+	}
+
+	#ctraddon_pw_loopcall label {
+	  background:url('chrome://classic_theme_restorer/content/images/loopcall.png') no-repeat left !important;
 	  -moz-padding-start:20px !important;
 	  min-height:16px !important;
 	}

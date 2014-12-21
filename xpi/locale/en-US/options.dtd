@@ -30,11 +30,12 @@
 <!ENTITY Ctr_tabs2			"Curved tabs (alternative)">
 <!ENTITY Ctr_tabs3			"Curved tabs (alternative Aero)">
 <!ENTITY Ctr_tabforminfo	"Tab appearance is controlled by the current theme.">
-<!ENTITY Ctr_tabsontop0		"Tabs on top (default) - [not set]">
-<!ENTITY Ctr_tabsontop1		"Tabs on top - set [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Tabs not on top - set [tabsontop=false]">
-<!ENTITY Ctr_tabsontop3		"Tabs not on top (v2) - set [tabsontop=false]">
-<!ENTITY Ctr_tabsontopI1	"Adds attribute [tabsontop=true/false] to">
+<!ENTITY Ctr_tabsontop0		"Tabs on top (default)">
+<!ENTITY Ctr_tabsontop1		"Tabs on top --- [tabsontop=true] attribute">
+<!ENTITY Ctr_tabsontop2		"Tabs not on top (v1) --- [tabsontop=false] attribute">
+<!ENTITY Ctr_tabsontop3		"Tabs not on top (v2) --- [tabsontop=false] attribute">
+<!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
+<!ENTITY Ctr_tabsontopI1	"Attribute [tabsontop=true/false] gets added to">
 <!ENTITY Ctr_tabsintitlebar	"Firefox titlebar (about:config preference)">
 <!ENTITY Ctr_tabwidthdef	"(default)">
 <!ENTITY Ctr_tabwidthcla	"(classic)">
@@ -46,6 +47,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
 <!ENTITY Ctr_emptyfavicon	"Restore empty favicon (if a site does not offer one)">
 <!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tabs">
+<!ENTITY Ctr_e10stab_notd	"E10s tabs: remove underline">
 <!ENTITY Ctr_closetab_0		"Tab Close">
 <!ENTITY Ctr_closetab_1		"On active tab only">
 <!ENTITY Ctr_closetab_2		"Nowhere">
@@ -62,6 +64,7 @@
 <!ENTITY Ctr_appbutton1		"Button on toolbar">
 <!ENTITY Ctr_appbutton1wt	"Button on toolbar (text only)">
 <!ENTITY Ctr_appbutton2		"Button on [Firefox] titlebar">
+<!ENTITY Ctr_appbutton2h	"Button on [Firefox] titlebar (hidden)">
 <!ENTITY Ctr_appbutton2io	"Button on [Firefox] titlebar (icon only)">
 <!ENTITY Ctr_paneluibtweak	"Orange panel menu button on tabs toolbar">
 <!ENTITY Ctr_appbuttonc_o	"Orange button color (default)">
@@ -91,9 +94,11 @@
 <!ENTITY Ctr_smallnavbut	"Small buttons on navigation toolbar">
 <!ENTITY Ctr_bfurlbarfix	"Fix location bars border-radius">
 <!ENTITY Ctr_backforward	"Movable back-forward buttons">
+<!ENTITY Ctr_nbcompact		"Reduce navigation toolbars height">
 <!ENTITY Ctr_hide_bf_popup	"Hide buttons history popup menu on mouse press">
 <!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"Page context menu: replace icons with labels (back, forward...)">
+<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
 <!ENTITY Ctr_wincontrols	"Movable fullscreen window controls">
 <!ENTITY Ctr_emptyfavicon2	"Replace generic (empty and dotted) favicon with sheet favicon">
 <!ENTITY Ctr_mstatusbar		"Movable status panel">
@@ -143,13 +148,13 @@
 <!ENTITY Ctr_customsqtab1	"Background">
 <!ENTITY Ctr_ctext			"Text">
 <!ENTITY Ctr_ctextsh		"Text shadow">
-<!ENTITY Ctr_tabnor			"Tab (default)">
-<!ENTITY Ctr_tabhov			"Tab (hovered)">
-<!ENTITY Ctr_tabact			"Tab (selected)">
-<!ENTITY Ctr_tabpen			"Tab (unloaded)">
-<!ENTITY Ctr_tabunr			"Tab (unread)">
-<!ENTITY Ctr_ntabnor		"New tab (default)">
-<!ENTITY Ctr_ntabhov		"New tab (hovered)">
+<!ENTITY Ctr_tabnor			"Default Tab">
+<!ENTITY Ctr_tabhov			"Hovered Tab">
+<!ENTITY Ctr_tabact			"Selected Tab">
+<!ENTITY Ctr_tabpen			"Unloaded Tab">
+<!ENTITY Ctr_tabunr			"Unread Tab">
+<!ENTITY Ctr_ntabnor		"Default New tab">
+<!ENTITY Ctr_ntabhov		"Hovered New tab">
 <!ENTITY Ctr_bold			"Bold">
 <!ENTITY Ctr_italic			"Italic">
 <!ENTITY Ctr_notabhov		"Enabled settings override 'hovered' settings">
@@ -200,9 +205,12 @@
 <!ENTITY Ctr_altmenubarpos	"Alternative position (below Firefox titlebar)">
 <!ENTITY Ctr_menubarnofog	"Remove background color/fog (Windows AeroGlass/8)">
 
+<!ENTITY Ctr_aerocolors		"Blue Aero colors for toolbars (and tabs)">
 <!ENTITY Ctr_hidenavbar		"Navigation toolbar: hide toolbar">
 <!ENTITY Ctr_nobookbarbg	"Bookmarks toolbar: remove background color">
 <!ENTITY Ctr_nonavbarbg		"Navigation toolbar: remove background color">
+<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
+<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
 <!ENTITY Ctr_nonavborder	"Bookmarks toolbar: add top border to toolbar">
 <!ENTITY Ctr_nonavtbborder	"Top toolbars: remove toolbar borders">
 <!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
@@ -226,6 +234,11 @@
 <!ENTITY Ctr_otherctroptns	"Other settings">
 <!ENTITY Ctr_cuibotbuttons	"Extra buttons in 'customizing' mode">
 <!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
+
+<!ENTITY Ctr_experttweaks	"Advanced">
+<!ENTITY Ctr_fx33layers		"Firefox 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
+<!ENTITY Ctr_fx34search		"Firefox 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
+<!ENTITY Ctr_fx34loop		"Firefox 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
 
 
 <!ENTITY Ctr_pw_settings	"Settings">

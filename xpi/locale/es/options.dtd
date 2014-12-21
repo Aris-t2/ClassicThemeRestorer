@@ -30,10 +30,11 @@
 <!ENTITY Ctr_tabs2			"Pestañas curvadas (alternativo)">
 <!ENTITY Ctr_tabs3			"Pestañas curvadas (Aero alternativo)">
 <!ENTITY Ctr_tabforminfo	"La apariencia de la pestaña está controlada por el tema de decoración actual.">
-<!ENTITY Ctr_tabsontop0		"Pestañas arriba (por defecto) - [no establecido]">
-<!ENTITY Ctr_tabsontop1		"Pestañas arriba - establecido [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Pestañas no arriba - establecido [tabsontop=false]">
-<!ENTITY Ctr_tabsontop3		"Pestañas no arriba (v2) - establecido [tabsontop=false]">
+<!ENTITY Ctr_tabsontop0		"Pestañas arriba (por defecto)">
+<!ENTITY Ctr_tabsontop1		"Pestañas arriba --- establecido [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Pestañas no arriba (v1) --- establecido [tabsontop=false]">
+<!ENTITY Ctr_tabsontop3		"Pestañas no arriba (v2) --- establecido [tabsontop=false]">
+<!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
 <!ENTITY Ctr_tabsontopI1	"Añade el atributo [tabsontop=true/false] a">
 <!ENTITY Ctr_tabsintitlebar	"Pestañas en la barra de título (browser.tabs.drawInTitlebar en about:config)">
 <!ENTITY Ctr_tabwidthdef	"(por defecto)">
@@ -46,6 +47,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
 <!ENTITY Ctr_emptyfavicon	"Restaurar favicon vacío (si un sitio no ofrece uno)">
 <!ENTITY Ctr_noemptypticon	"Eliminar favicon vacío en pestañas fijas">
+<!ENTITY Ctr_e10stab_notd	"E10s tabs: remove underline">
 <!ENTITY Ctr_closetab_0		"Botón de cierre de pestaña">
 <!ENTITY Ctr_closetab_1		"Sólo en la pestaña activa">
 <!ENTITY Ctr_closetab_2		"En ninguna parte">
@@ -62,6 +64,7 @@
 <!ENTITY Ctr_appbutton1		"Botón en la barra de herramientas">
 <!ENTITY Ctr_appbutton1wt	"Botón en la barra de herramientas (sólo texto)">
 <!ENTITY Ctr_appbutton2		"Botón en la barra de título [de Firefox]">
+<!ENTITY Ctr_appbutton2h	"Botón en la barra de título [de Firefox] (hidden)">
 <!ENTITY Ctr_appbutton2io	"Botón en la barra de título [de Firefox] (sólo icono)">
 <!ENTITY Ctr_paneluibtweak	"Botón de menú de panel naranja en la barra de pestañas">
 <!ENTITY Ctr_appbuttonc_o	"Color de botón naranja (por defecto)">
@@ -91,9 +94,11 @@
 <!ENTITY Ctr_smallnavbut	"Botones pequeños en la barra de navegación">
 <!ENTITY Ctr_bfurlbarfix 	"Fijar el radio del borde de las barras de URL">
 <!ENTITY Ctr_backforward	"Botón atrás-adelante movible">
+<!ENTITY Ctr_nbcompact		"Reduce navigation toolbars height">
 <!ENTITY Ctr_hide_bf_popup	"Ocultar el menú historial de los botones al pulsarlos con el ratón">
 <!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"Reemplazar iconos de menú contextual de la página con etiquetas (atrás, adelante, parar, recargar, página de marcadores)">
+<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
 <!ENTITY Ctr_wincontrols	"Controles de ventana de pantalla completa movibles">
 <!ENTITY Ctr_emptyfavicon2	"Reemplazar favicon genérico (vació y punteado) con un favicon en blanco">
 <!ENTITY Ctr_mstatusbar		"Panel de barra de estado movible">
@@ -200,9 +205,12 @@
 <!ENTITY Ctr_altmenubarpos	"Posición alternativa (debajo de la barra de título de Firefox)">
 <!ENTITY Ctr_menubarnofog	"Eliminar color/niebla de fondo (Windows 8/Aeroglass)">
 
+<!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
 <!ENTITY Ctr_hidenavbar		"Ocultar barra de navegación">
 <!ENTITY Ctr_nobookbarbg	"Barra de marcadores: eliminar color de fondo">
 <!ENTITY Ctr_nonavbarbg		"Barra de navegación: eliminar color de fondo">
+<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
+<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
 <!ENTITY Ctr_nonavborder	"Añadir borde superior a la barra de marcadores">
 <!ENTITY Ctr_nonavtbborder	"Barras de herramientas en la parte superior: eliminar bordes de barra de herramientas">
 <!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
@@ -226,6 +234,11 @@
 <!ENTITY Ctr_otherctroptns	"Other settings">
 <!ENTITY Ctr_cuibotbuttons	"Botones extra en el modo 'Personalizar'">
 <!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
+
+<!ENTITY Ctr_experttweaks	"Advanced">
+<!ENTITY Ctr_fx33layers		"Firefox 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
+<!ENTITY Ctr_fx34search		"Firefox 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
+<!ENTITY Ctr_fx34loop		"Firefox 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
 
 
 <!ENTITY Ctr_pw_settings	"Configuraciones">

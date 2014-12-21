@@ -30,10 +30,11 @@
 <!ENTITY Ctr_tabs2			"Wukulowaśone rejtarki (alternatiwny)">
 <!ENTITY Ctr_tabs3			"Wukulowaśone rejtarki (alternatiwa Aero)">
 <!ENTITY Ctr_tabforminfo	"Naglěd rejtarkow wótwisujo wót aktualneje drastwy.">
-<!ENTITY Ctr_tabsontop0		"Rejtarki górjejce (standard) - [njenastajony]">
-<!ENTITY Ctr_tabsontop1		"Rejtarki górjejce - stajśo [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Rejtarki nic górjejce - stajśo [tabsontop=false]">
-<!ENTITY Ctr_tabsontop3		"Rejtarki nic górjejce (v2) - stajśo [tabsontop=false]">
+<!ENTITY Ctr_tabsontop0		"Rejtarki górjejce (standard)">
+<!ENTITY Ctr_tabsontop1		"Rejtarki górjejce --- stajśo [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Rejtarki nic górjejce (v1) --- stajśo [tabsontop=false]">
+<!ENTITY Ctr_tabsontop3		"Rejtarki nic górjejce (v2) --- stajśo [tabsontop=false]">
+<!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
 <!ENTITY Ctr_tabsontopI1	"Pśidawa atribut [tabsontop=true/false] na">
 <!ENTITY Ctr_tabsintitlebar	"Titelowa rědka Firefox (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(standard)">
@@ -46,6 +47,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
 <!ENTITY Ctr_emptyfavicon	"Prozny faworitowy symbol wótnowiś (jolic sedło njepóbitujo žeden)">
 <!ENTITY Ctr_noemptypticon	"Prozny faworitowy symbol z pśipětego rejtarka">
+<!ENTITY Ctr_e10stab_notd	"E10s tabs: remove underline">
 <!ENTITY Ctr_closetab_0		"Rejtark zacyniś">
 <!ENTITY Ctr_closetab_1		"Jano na aktiwnem rejtarku">
 <!ENTITY Ctr_closetab_2		"Niźi">
@@ -62,6 +64,7 @@
 <!ENTITY Ctr_appbutton1		"Tłocašk na symbolowej rědce">
 <!ENTITY Ctr_appbutton1wt	"Tłocašk na symbolowej rědce (jano tekst)">
 <!ENTITY Ctr_appbutton2		"Tłocašk na titelowej rědce [Firefox]">
+<!ENTITY Ctr_appbutton2h	"Tłocašk na titelowej rědce (hidden)">
 <!ENTITY Ctr_appbutton2io	"Tłocašk na titelowej rědce [Firefox] (jano symbol)">
 <!ENTITY Ctr_paneluibtweak	"Oranžowy menijowy tłocašk na rejtarkowej rědce">
 <!ENTITY Ctr_appbuttonc_o	"Tłocaškowa barwa: Oranžowy (standard)">
@@ -91,9 +94,11 @@
 <!ENTITY Ctr_smallnavbut	"Małe tłocaški na nawigaciskej rědce">
 <!ENTITY Ctr_bfurlbarfix	"Ramikowy radius za adresowe rědki pópšawiś">
 <!ENTITY Ctr_backforward	"Pśesuwajobny tłocašk Slědk-Doprědka">
+<!ENTITY Ctr_nbcompact		"Reduce navigation toolbars height">
 <!ENTITY Ctr_hide_bf_popup	"Meni historije pśez tłocenje myškoweje tasty schowaś">
 <!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"Symbole kontekstowego menija boka pśez pomjenjenja wuměniś (slědk, dalej, stoj, znowego, bok ako cytańske znamje składowaś)">
+<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
 <!ENTITY Ctr_wincontrols	"Pśesuwajobne wóźeńske elementy połneje wobrazowki">
 <!ENTITY Ctr_emptyfavicon2	"Prozny a dypkaty faworitowy symbol pśez łopjenowy symbol wuměniś">
 <!ENTITY Ctr_mstatusbar		"Pśesuwajobny wobcerk statusoweje rědki">
@@ -200,9 +205,12 @@
 <!ENTITY Ctr_altmenubarpos	"Alternatiwna pozicija (pód titeloweju rědku Firefox)">
 <!ENTITY Ctr_menubarnofog	"Slězynowu barwu/młu wótpóraś (Windows AeroGlass / Win8)">
 
+<!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
 <!ENTITY Ctr_hidenavbar		"Nawigacisku rědku schowaś">
 <!ENTITY Ctr_nobookbarbg	"Rědka cytańskich znamjenjow: slězynowu barwu wótpóraś">
 <!ENTITY Ctr_nonavbarbg		"Nawigaciska rědka: slězynowu barwu wótpóraś">
+<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
+<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
 <!ENTITY Ctr_nonavborder	"Rědka cytańskich znamjenjow: górny ramik symbolowej rědce pśidaś">
 <!ENTITY Ctr_nonavtbborder	"Górne symbolowe rědki: ramiki symboloweje rědki wótpóraś">
 <!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
@@ -226,6 +234,11 @@
 <!ENTITY Ctr_otherctroptns	"Other settings">
 <!ENTITY Ctr_cuibotbuttons	"Wósebne tłocaški w 'pśiměrjeńskem' modusu">
 <!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
+
+<!ENTITY Ctr_experttweaks	"Advanced">
+<!ENTITY Ctr_fx33layers		"Firefox 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
+<!ENTITY Ctr_fx34search		"Firefox 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
+<!ENTITY Ctr_fx34loop		"Firefox 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
 
 
 <!ENTITY Ctr_pw_settings	"Nastajenja">

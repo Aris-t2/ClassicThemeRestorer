@@ -30,10 +30,11 @@
 <!ENTITY Ctr_tabs2			"Skulojćene rajtarki (alternatiwny)">
 <!ENTITY Ctr_tabs3			"Skulojćene rajtarki (alternatiwa Aero)">
 <!ENTITY Ctr_tabforminfo	"Napohlad rajtarkow wot aktualneje drasty wotwisuje.">
-<!ENTITY Ctr_tabsontop0		"Rajtarki horjeka (standard) - [njenastajeny]">
-<!ENTITY Ctr_tabsontop1		"Rajtarki horjeka - stajće [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Rajtarki nic horjeka - stajće [tabsontop=false]">
-<!ENTITY Ctr_tabsontop3		"Rajtarki nic horjeka (v2) - stajće [tabsontop=false]">
+<!ENTITY Ctr_tabsontop0		"Rajtarki horjeka (standard)">
+<!ENTITY Ctr_tabsontop1		"Rajtarki horjeka --- stajće [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Rajtarki nic horjeka (v1) --- stajće [tabsontop=false]">
+<!ENTITY Ctr_tabsontop3		"Rajtarki nic horjeka (v2) --- stajće [tabsontop=false]">
+<!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
 <!ENTITY Ctr_tabsontopI1	"Přidawa atribut [tabsontop=true/false] na">
 <!ENTITY Ctr_tabsintitlebar	"Titulna lajsta Firefox (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(standard)">
@@ -46,6 +47,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
 <!ENTITY Ctr_emptyfavicon	"Prózdny faworitowy symbol wobnowić (jeli sydło žadyn njeposkića)">
 <!ENTITY Ctr_noemptypticon	"Prózdny faworitowy symbol z připinjeneho rajtarka wotstronić">
+<!ENTITY Ctr_e10stab_notd	"E10s tabs: remove underline">
 <!ENTITY Ctr_closetab_0		"Rajtark začinić">
 <!ENTITY Ctr_closetab_1		"Jenož na aktiwnym rajtarku">
 <!ENTITY Ctr_closetab_2		"Nihdźe">
@@ -62,6 +64,7 @@
 <!ENTITY Ctr_appbutton1		"Tłóčatko na symbolowej lajsće">
 <!ENTITY Ctr_appbutton1wt	"Tłóčatko na symbolowej lajsće (jenož tekst)">
 <!ENTITY Ctr_appbutton2		"Tłóčatko na titulnej lajsće [Firefox]">
+<!ENTITY Ctr_appbutton2h	"Tłóčatko na titulnej lajsće [Firefox] (hidden)">
 <!ENTITY Ctr_appbutton2io	"Tłóčatko na titulnej lajsće [Firefox] (jenož symbol)">
 <!ENTITY Ctr_paneluibtweak	"Oranžowe menijowe tłóčatko na rajtarkowej lajsće">
 <!ENTITY Ctr_appbuttonc_o	"Tłóčatkowa barba: Oranžowy (standard)">
@@ -91,9 +94,11 @@
 <!ENTITY Ctr_smallnavbut	"Małe tłóčatka na nawigaciskej lajsće">
 <!ENTITY Ctr_bfurlbarfix	"Ramikowy radius za adresowe lajsty porjedźić">
 <!ENTITY Ctr_backforward	"Přesuwajomne tłóčatko Wróćo-Doprědka">
+<!ENTITY Ctr_nbcompact		"Reduce navigation toolbars height">
 <!ENTITY Ctr_hide_bf_popup	"Meni historije přez tłóčenje tasty myše schować">
 <!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"Symbole kontekstoweho menija strony přez pomjenowanja wuměnić (wróćo, dale, stój, znowa, stronu jako zapołožku składować)">
+<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
 <!ENTITY Ctr_wincontrols	"Přesuwajomne wodźenske elementy połneje wobrazowki">
 <!ENTITY Ctr_emptyfavicon2	"Prózdny a dypkowany faworitowy symbol přez łopjenowy symbol wuměnić">
 <!ENTITY Ctr_mstatusbar		"Přesuwajomny wobłuk statusoweje lajsty">
@@ -200,9 +205,12 @@
 <!ENTITY Ctr_altmenubarpos	"Alternatiwna pozicijia (pod titulnej lajstu Firefox)">
 <!ENTITY Ctr_menubarnofog	"Pozadkowu barbu/młu wotstronić (Windows AeroGlass / Win8)">
 
+<!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
 <!ENTITY Ctr_hidenavbar		"Nawigacisku lajstu schować">
 <!ENTITY Ctr_nobookbarbg	"Lajsta zapołožkow: pozadkowu barbu wotstronić">
 <!ENTITY Ctr_nonavbarbg		"Nawigaciska lajsta: pozadkowu barbu wotstronić">
+<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
+<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
 <!ENTITY Ctr_nonavborder	"Lajsta zapołožkow: horni ramik symbolowej lajsće přidać">
 <!ENTITY Ctr_nonavtbborder	"Hornje symbolowe lajsty: ramiki symboloweje lajsty wotstronić">
 <!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
@@ -226,6 +234,11 @@
 <!ENTITY Ctr_otherctroptns	"Other settings">
 <!ENTITY Ctr_cuibotbuttons	"Wosebite tłóčatka w 'přiměrjenskim' modusu">
 <!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
+
+<!ENTITY Ctr_experttweaks	"Advanced">
+<!ENTITY Ctr_fx33layers		"Firefox 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
+<!ENTITY Ctr_fx34search		"Firefox 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
+<!ENTITY Ctr_fx34loop		"Firefox 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
 
 
 <!ENTITY Ctr_pw_settings	"Nastajenja">

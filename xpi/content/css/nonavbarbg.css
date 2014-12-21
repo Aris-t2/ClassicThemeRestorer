@@ -6,4 +6,9 @@
 	  background: transparent !important;
 	}
 	
+	/*Make the container "The Fox Only Better" add-on moves toolbar into */
+	#theFoxOnlyBetter-slimChrome-container > *:not(#theFoxOnlyBetter-slimChrome-toolbars-bottom):not(:-moz-lwtheme){
+	  background:unset !important;
+	}
+	
 }

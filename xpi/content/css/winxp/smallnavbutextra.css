@@ -179,6 +179,16 @@
 	  margin-top: 2px !important;
 	  margin-bottom: 2px !important;
 	}
+	
+	/* default badge buttons: loop/panelUI */
+	#nav-bar #PanelUI-menu-button .toolbarbutton-badge,
+	#nav-bar #PanelUI-menu-button .toolbarbutton-badge-container,
+	#nav-bar #loop-button .toolbarbutton-badge,
+	#nav-bar #loop-button .toolbarbutton-badge-container,
+	#nav-bar #loop-button-throttled .toolbarbutton-badge,
+	#nav-bar #loop-button-throttled .toolbarbutton-badge-container{
+	  padding:0 !important;
+	}
 
 	/*buttons with SVG images*/
 	#nav-bar .toolbarbutton-1[image$="svg"] .toolbarbutton-icon {
@@ -207,6 +217,11 @@
 	/* Ghostery */
 	#nav-bar #ghostery-button .toolbarbutton-icon {
 	  margin-top:2px !important;
+	}
+	#nav-bar #ghostery-button-badge{
+	  margin-bottom:-3px !important;
+	  -moz-margin-end: 0px !important;
+	  padding: 0px !important;
 	}
 
 	/* zoom page add-on */

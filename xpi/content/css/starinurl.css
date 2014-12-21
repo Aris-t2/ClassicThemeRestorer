@@ -76,6 +76,22 @@
 	#bookmarked-notification-dropmarker-icon {
 	  animation: none !important;
 	}
+	
+	/* support for text and icons+text modes */
+	toolbar #urlbar-icons #bookmarks-menu-button .toolbarbutton-text {
+	  display: none !important;
+	}
+	toolbar #urlbar-icons #bookmarks-menu-button {
+	  -moz-box-orient: unset !important;
+	}
+	toolbar #urlbar-container #urlbar #urlbar-icons #bookmarks-menu-button .toolbarbutton-icon {
+	  visibility: visible !important;
+	}
+	
+	/**/
+	#urlbar-icons #bookmarks-menu-button .toolbarbutton-icon { 
+	  filter: none !important;
+	}
 
 	/* Flagfox support */
 	#flagfox-button{

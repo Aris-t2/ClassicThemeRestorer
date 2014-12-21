@@ -45,8 +45,8 @@
 	  -moz-margin-start: 0px !important;
 	}
 
-	#main-window[tabsintitlebar][chromehidden~="menubar"] #toolbar-menubar ~ #TabsToolbar,
-	#main-window[tabsintitlebar]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
+	#main-window[tabsintitlebar][chromehidden~="menubar"]:not([inFullscreen]) #toolbar-menubar ~ #TabsToolbar,
+	#main-window[tabsintitlebar]:not([tabsontop="false"]):not([inFullscreen]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
 	  -moz-margin-start: 32px;
 	}
 	

@@ -39,6 +39,8 @@
 
 	#TabsToolbar,
 	#TabsToolbar:not(:-moz-lwtheme),
+	#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] #toolbar-menubar ~ #TabsToolbar,
+	#main-window[tabsintitlebar][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar,
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
 	  margin-top: 0px !important;
 	}

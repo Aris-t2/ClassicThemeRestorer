@@ -30,10 +30,11 @@
 <!ENTITY Ctr_tabs2			"Zakulacené panely (alternativní)">
 <!ENTITY Ctr_tabs3			"Zakulacené panely (alternativní Aero)">
 <!ENTITY Ctr_tabforminfo	"Vzhled panelů je určen současným motivem vzhledu.">
-<!ENTITY Ctr_tabsontop0		"Panely navrchu (výchozí) - [not set]">
-<!ENTITY Ctr_tabsontop1		"Panely navrchu - nastaveno [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Panely pod adresním řádkem - nastaveno [tabsontop=false]">
-<!ENTITY Ctr_tabsontop3		"Panely pod adresním řádkem (v2) - nastaveno [tabsontop=false]">
+<!ENTITY Ctr_tabsontop0		"Panely navrchu (výchozí)">
+<!ENTITY Ctr_tabsontop1		"Panely navrchu --- nastaveno [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Panely pod adresním řádkem (v1) --- nastaveno [tabsontop=false]">
+<!ENTITY Ctr_tabsontop3		"Panely pod adresním řádkem (v2) --- nastaveno [tabsontop=false]">
+<!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
 <!ENTITY Ctr_tabsontopI1	"Přidává atribut [tabsontop=true/false] pro">
 <!ENTITY Ctr_tabsintitlebar	"Záhlaví okna Firefox (předvolba about:config)">
 <!ENTITY Ctr_tabwidthdef	"(výchozí)">
@@ -46,6 +47,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
 <!ENTITY Ctr_emptyfavicon	"Obnovit prázdnou faviconu (pokud stránka nemá vlastní)">
 <!ENTITY Ctr_noemptypticon	"Odebrat prázdnou faviconu z připnutého panelu">
+<!ENTITY Ctr_e10stab_notd	"E10s tabs: remove underline">
 <!ENTITY Ctr_closetab_0		"Zavřít panel">
 <!ENTITY Ctr_closetab_1		"Pouze na aktivním panelu">
 <!ENTITY Ctr_closetab_2		"Nikde">
@@ -62,6 +64,7 @@
 <!ENTITY Ctr_appbutton1		"Tlačítko na nástrojové liště">
 <!ENTITY Ctr_appbutton1wt	"Tlačítko na nástrojové liště (pouze text)">
 <!ENTITY Ctr_appbutton2		"Tlačítko v záhlaví okna [Firefox]">
+<!ENTITY Ctr_appbutton2h	"Tlačítko v záhlaví okna [Firefox] (hidden)">
 <!ENTITY Ctr_appbutton2io	"Tlačítko v záhlaví okna [Firefox] (pouze ikona)">
 <!ENTITY Ctr_paneluibtweak	"Oranžový panel jako tlačítko na liště s panely">
 <!ENTITY Ctr_appbuttonc_o	"Oranžové tlačítko (výchozí)">
@@ -91,9 +94,11 @@
 <!ENTITY Ctr_smallnavbut	"Malá tlačítka na liště navigace">
 <!ENTITY Ctr_bfurlbarfix	"Upravit okraje adresního řádku">
 <!ENTITY Ctr_backforward	"Přesunutelná tlačítka zpět-vpřed">
+<!ENTITY Ctr_nbcompact		"Reduce navigation toolbars height">
 <!ENTITY Ctr_hide_bf_popup	"Skrýt nabídku historie tlačítek při kliknutí myší">
 <!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"Nahradit ikony v kontextové nabídce stránky textem (zpět, vpřed, zastavit, obnovit, přidat do záložek)">
+<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
 <!ENTITY Ctr_wincontrols	"Přesunutelné ovládací prvky okna v režimu celé obrazovky">
 <!ENTITY Ctr_emptyfavicon2	"Nahradit obecnou faviconu (prázdnou tečkovanou) faviconou listu">
 <!ENTITY Ctr_mstatusbar		"Přesunutelný stavový řádek">
@@ -200,9 +205,12 @@
 <!ENTITY Ctr_altmenubarpos	"Alternativní umístění (pod lištou záhlaví Firefox)">
 <!ENTITY Ctr_menubarnofog	"Odstranit barevné/zamlžené pozadí (Windows AeroGlass/8)">
 
+<!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
 <!ENTITY Ctr_hidenavbar		"Navigační lišta: skrýt lištu">
 <!ENTITY Ctr_nobookbarbg	"Lišta záložek: odstranit barvu pozadí">
 <!ENTITY Ctr_nonavbarbg		"Navigační lišta: odstranit barvu pozadí">
+<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
+<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
 <!ENTITY Ctr_nonavborder	"Lišta záložek: přidat horní okraj lišty">
 <!ENTITY Ctr_nonavtbborder	"Vrchní lišty: odstranit okraje lišt">
 <!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
@@ -226,6 +234,11 @@
 <!ENTITY Ctr_otherctroptns	"Other settings">
 <!ENTITY Ctr_cuibotbuttons	"Vlastní tlačítka v režimu 'přizpůsobení'">
 <!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
+
+<!ENTITY Ctr_experttweaks	"Advanced">
+<!ENTITY Ctr_fx33layers		"Firefox 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
+<!ENTITY Ctr_fx34search		"Firefox 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
+<!ENTITY Ctr_fx34loop		"Firefox 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
 
 
 <!ENTITY Ctr_pw_settings	"Možnosti">

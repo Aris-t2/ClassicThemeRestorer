@@ -30,10 +30,11 @@
 <!ENTITY Ctr_tabs2			"丸いタブ (別バージョン)">
 <!ENTITY Ctr_tabs3			"丸いタブ (別バージョン Aero)">
 <!ENTITY Ctr_tabforminfo	"タブの見栄えは現在のテーマで制御されます。">
-<!ENTITY Ctr_tabsontop0		"タブを上にする (デフォルト) - [設定なし]">
-<!ENTITY Ctr_tabsontop1		"タブを上にする - [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"タブを下にする - [tabsontop=false]">
-<!ENTITY Ctr_tabsontop3		"タブを下にする (v2) - [tabsontop=false]">
+<!ENTITY Ctr_tabsontop0		"タブを上にする (デフォルト)">
+<!ENTITY Ctr_tabsontop1		"タブを上にする --- [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"タブを下にする (v1) --- [tabsontop=false]">
+<!ENTITY Ctr_tabsontop3		"タブを下にする (v2) --- [tabsontop=false]">
+<!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
 <!ENTITY Ctr_tabsontopI1	"以下に属性[tabsontop=true/false]を加える">
 <!ENTITY Ctr_tabsintitlebar	"Firefoxタイトルバー (about:config設定)">
 <!ENTITY Ctr_tabwidthdef	"(デフォルト)">
@@ -46,6 +47,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
 <!ENTITY Ctr_emptyfavicon	"空 favicon を表示する (サイトが提供しない場合)">
 <!ENTITY Ctr_noemptypticon	"ピン止めタブから空ファビコンを取り除く">
+<!ENTITY Ctr_e10stab_notd	"E10s tabs: remove underline">
 <!ENTITY Ctr_closetab_0		"タブを閉じる">
 <!ENTITY Ctr_closetab_1		"アクティブタブのみ表示">
 <!ENTITY Ctr_closetab_2		"表示しない">
@@ -62,6 +64,7 @@
 <!ENTITY Ctr_appbutton1		"ツールバーに表示">
 <!ENTITY Ctr_appbutton1wt	"ツールバーに表示 (テキストのみ)">
 <!ENTITY Ctr_appbutton2		"Firefox タイトルバーに表示">
+<!ENTITY Ctr_appbutton2h	"Firefox タイトルバーに表示 (hidden)">
 <!ENTITY Ctr_appbutton2io	"Firefox タイトルバーに表示 (アイコンのみ)">
 <!ENTITY Ctr_paneluibtweak	"タブツールバーに橙のパネルメニューボタン">
 <!ENTITY Ctr_appbuttonc_o	"橙色 (デフォルト)">
@@ -91,9 +94,11 @@
 <!ENTITY Ctr_smallnavbut	"ナビゲーションツールバーのボタンを小さくする">
 <!ENTITY Ctr_bfurlbarfix	"URLバーの border-radius を修正する">
 <!ENTITY Ctr_backforward	"戻る-進むボタンを移動可にする">
+<!ENTITY Ctr_nbcompact		"Reduce navigation toolbars height">
 <!ENTITY Ctr_hide_bf_popup	"マウスを押す時に履歴メニューを隠す">
 <!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"ラベル(戻る、進む、停止、ブックマーク)をもつページコンテキストメニューアイコンを置換する">
+<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
 <!ENTITY Ctr_wincontrols	"フルスクリーンウィンドウ制御を移動可にする">
 <!ENTITY Ctr_emptyfavicon2	"スタイルシートファビコンで汎用ファビコン (空ドット) を置換する">
 <!ENTITY Ctr_mstatusbar		"ステータスバーパネルを移動可にする">
@@ -200,9 +205,12 @@
 <!ENTITY Ctr_altmenubarpos	"別の位置 (Firefoxタイトルバーの下)">
 <!ENTITY Ctr_menubarnofog	"背景色とぼかしを取り除く (Windows AeroGlass / Win8)">
 
+<!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
 <!ENTITY Ctr_hidenavbar		"ナビゲーションツールバー：ツールバーを隠す">
 <!ENTITY Ctr_nobookbarbg	"ブックマークツールバー: 背景色を取り除く">
 <!ENTITY Ctr_nonavbarbg		"ナビゲーションツールバー: 背景色を取り除く">
+<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
+<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
 <!ENTITY Ctr_nonavborder	"ブックマークツールバー: ツールバーに上ボーダーを加える">
 <!ENTITY Ctr_nonavtbborder	"ツールバー: 上ボーダーを取り除く">
 <!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
@@ -226,6 +234,11 @@
 <!ENTITY Ctr_otherctroptns	"Other settings">
 <!ENTITY Ctr_cuibotbuttons	"'カスタマイズ'モードの追加ボタンを表示する">
 <!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
+
+<!ENTITY Ctr_experttweaks	"Advanced">
+<!ENTITY Ctr_fx33layers		"Firefox 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
+<!ENTITY Ctr_fx34search		"Firefox 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
+<!ENTITY Ctr_fx34loop		"Firefox 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
 
 
 <!ENTITY Ctr_pw_settings	"設定">

@@ -5,7 +5,7 @@
 	<Description rdf:about="urn:mozilla:install-manifest">
 		<em:id>ClassicThemeRestorer@ArisT2Noia4dev</em:id>
 		<em:name>Classic Theme Restorer</em:name>
-		<em:version>1.2.7beta3</em:version>
+		<em:version>1.2.8.2</em:version>
 		<em:type>2</em:type>
 		<em:multiprocessCompatible>true</em:multiprocessCompatible>
 
@@ -15,7 +15,7 @@
 			<Description>
 				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
 				<em:minVersion>29.0</em:minVersion>
-				<em:maxVersion>37.0</em:maxVersion>
+				<em:maxVersion>38.0</em:maxVersion>
 			</Description>
 		</em:targetApplication>
 
@@ -23,6 +23,7 @@
 		<em:homepageURL>https://addons.mozilla.org/addon/classicthemerestorer/</em:homepageURL>
 		<em:creator>Aris</em:creator>
 		<em:translator>MichalS (cs) - Czech</em:translator>
+		<em:translator>scootergrisen (da) - Danish</em:translator>
 		<em:translator>Aris (de) - German</em:translator>
 		<em:translator>milupo (dsb) - Lower Sorbian</em:translator>
 		<em:translator>Γιώργος Μαλαμάς (el) - Greek</em:translator>
@@ -37,6 +38,7 @@
 		<em:translator>Alexei (ru) - Russian</em:translator>
 		<em:translator>radion-t (ru) - Russian</em:translator>
 		<em:translator>Alexander T. (ru) - Russian</em:translator>
+		<em:translator>Klofutar (sl) - Slovenian</em:translator>
 		<em:translator>Sacredwheels (uk) - Ukrainian</em:translator>
 		<em:translator>jzhone (zh-CN) - Chinese [China]</em:translator>
 		<em:translator>Shyangs (zh-TW) - Chinese [Taiwan]</em:translator>
@@ -47,6 +49,15 @@
 				<em:locale>cs</em:locale>
 				<em:description>'Classic Theme Restorer' restores appmenu button, squared tabs, add-ons bar, small nav-bar buttons, other buttons and more. Use 'Customize' menu to move buttons on toolbars.</em:description>
 				<em:translator>MichalS (cs) - Czech</em:translator>
+			</Description>
+		</em:localized>
+
+		<em:localized>
+			<Description>
+				<em:name>Classic Theme Restorer (Tilpas brugerfladen)</em:name>
+				<em:locale>da</em:locale>
+				<em:description>'Classic Theme Restorer' genskaber Firefox-menuknappen, firkantede faneblade, tilføjelseslinjen, små knapper på navigationslinjen, og andre ældre knapper og mere. Brug 'Tilpas' for at flytte knapperne hen på værktøjslinjerne.</em:description>
+				<em:translator>scootergrisen (da) - Danish</em:translator>
 			</Description>
 		</em:localized>
 
@@ -148,6 +159,15 @@
 				<em:translator>Alexei (ru) - Russian</em:translator>
 				<em:translator>radion-t (ru) - Russian</em:translator>
 				<em:translator>Alexander T. (ru) - Russian</em:translator>
+			</Description>
+		</em:localized>
+		
+		<em:localized>
+			<Description>
+				<em:name>Classic Theme Restorer (Customize UI)</em:name>
+				<em:locale>sl</em:locale>
+				<em:description>'Classic Theme Restorer' brings back appmenu button, squared tabs, add-ons bar, small nav-bar buttons, a few older buttons and more to Firefox Australis UI. Use 'Customize' menu to move buttons on toolbars.</em:description>
+				<em:translator>Klofutar (sl) - Slovenian</em:translator>
 			</Description>
 		</em:localized>
 

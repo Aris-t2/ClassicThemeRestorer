@@ -25,6 +25,9 @@
 	  height: 20px !important;
 	  margin-top:-3px !important;
 	}
+	#nav-bar #nav-bar-customization-target > #wrapper-bookmarks-menu-button {
+	  margin-top:-7px !important;
+	}
 
 	#nav-bar .toolbarbutton-1:not([type="menu-button"]):not([type="menu"]) .toolbarbutton-text {
 	  padding: 0px !important;
@@ -59,11 +62,6 @@
 	}
 	#main-window toolbar #ctraddon_back-forward-dropmarker .toolbarbutton-icon {
 	  padding:0px 3px !important;
-	}
-	#nav-bar #loop-call-button .toolbarbutton-badge-container{ 
-	  padding:0 !important;
-	  border:0 !important;
-	  box-shadow:none !important;
 	}
 
 }

@@ -16,10 +16,10 @@
 	#navigator-toolbox #nav-bar  #bookmarks-menu-button .toolbarbutton-text{
 	  font-size: 12px !important;
 	}
-	#nav-bar #loop-call-button .toolbarbutton-badge-container{ 
-	  padding:0 !important;
-	  border:0 !important;
-	  box-shadow:none !important;
+	#nav-bar #nav-bar-customization-target > #wrapper-bookmarks-menu-button,
+	#nav-bar #nav-bar-customization-target > #bookmarks-menu-button{
+	  margin-top: -8px !important;
+      margin-bottom: -8px !important;
 	}
 	#ctraddon_addon-bar toolbarbutton {
 	  padding-top: 3px !important;

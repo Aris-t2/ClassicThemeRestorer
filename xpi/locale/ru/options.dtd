@@ -14,12 +14,12 @@
 <!ENTITY Ctr_cuibuttons		"Кнопки:">
 <!ENTITY Ctr_cuibutnormal	"Обычные">
 <!ENTITY Ctr_cuibutsmall	"Маленькие">
-<!ENTITY Ctr_cuimode		"Режим">
+<!ENTITY Ctr_cuimode		"Режим:">
 <!ENTITY Ctr_cuiico			"Значки">
 <!ENTITY Ctr_cuiicotxt		"Значки + текст">
 <!ENTITY Ctr_cuitxt			"Текст">
 
-<!ENTITY Ctr_tnot			"(Вкладки не вверху)">
+<!ENTITY Ctr_tnot			"(вкладки не вверху)">
 
 <!ENTITY Ctr_tabcolors_t	"Настройки цветов">
 
@@ -30,10 +30,11 @@
 <!ENTITY Ctr_tabs2			"Изогнутые (другие)">
 <!ENTITY Ctr_tabs3			"Изогнутые (другие, Aero)">
 <!ENTITY Ctr_tabforminfo	"Вид вкладки задаётся текущей темой.">
-<!ENTITY Ctr_tabsontop0		"Вкладки вверху [не задано] (по умолчанию)">
-<!ENTITY Ctr_tabsontop1		"Вкладки вверху [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Вкладки не вверху [tabsontop=false]">
-<!ENTITY Ctr_tabsontop3		"Вкладки не вверху (v2) [tabsontop=false]">
+<!ENTITY Ctr_tabsontop0		"Вкладки вверху (по умолчанию)">
+<!ENTITY Ctr_tabsontop1		"Вкладки вверху --- [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Вкладки не вверху (v1) --- [tabsontop=false]">
+<!ENTITY Ctr_tabsontop3		"Вкладки не вверху (v2) --- [tabsontop=false]">
+<!ENTITY Ctr_tabsontopW1	"v2 только для некоторых дополнений и для полных тем!">
 <!ENTITY Ctr_tabsontopI1	"Добавляет атрибут [tabsontop=true/false] для">
 <!ENTITY Ctr_tabsintitlebar	"Строка заголовка (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(по умолчанию)">
@@ -46,6 +47,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Значение ниже 48px вызовет сбои в большинстве случаев!">
 <!ENTITY Ctr_emptyfavicon	"Восстановить пустой значок на вкладках">
 <!ENTITY Ctr_noemptypticon	"Удалить пустой значок из прикреплённой вкладки">
+<!ENTITY Ctr_e10stab_notd	"E10s вкладки: удалить подчёркивание">
 <!ENTITY Ctr_closetab_0		"Кнопка закрытия вкладки">
 <!ENTITY Ctr_closetab_1		"на активной вкладке">
 <!ENTITY Ctr_closetab_2		"нигде">
@@ -62,6 +64,7 @@
 <!ENTITY Ctr_appbutton1		"в панели инструментов">
 <!ENTITY Ctr_appbutton1wt	"в панели инструментов (только текст)">
 <!ENTITY Ctr_appbutton2		"в панели заголовка">
+<!ENTITY Ctr_appbutton2h	"в панели заголовка (hidden)">
 <!ENTITY Ctr_appbutton2io	"в панели заголовка (только значки)">
 <!ENTITY Ctr_paneluibtweak	"Оранжевая кнопка меню на панели вкладок">
 <!ENTITY Ctr_appbuttonc_o	"Оранжевая кнопка (по умолчанию)">
@@ -91,9 +94,11 @@
 <!ENTITY Ctr_smallnavbut	"Малые кнопки на панели навигации">
 <!ENTITY Ctr_bfurlbarfix	"Радиус углов строки адреса: 2px (Win) / 2.5px (Mac)">
 <!ENTITY Ctr_backforward	"Подвижная кнопка «Назад-Вперёд»">
+<!ENTITY Ctr_nbcompact		"Уменьшить высоту панели навигации">
 <!ENTITY Ctr_hide_bf_popup	"Не показывать меню истории при нажатии мыши">
 <!ENTITY Ctr_bf_space		"Уменьшить расстояние между кнопками (если это возможно)">
 <!ENTITY Ctr_noconicons		"На странице, в контекстном меню, заменить значки метками (назад, вперёд, остановить, обновить, страница закладок)">
+<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
 <!ENTITY Ctr_wincontrols	"Подвижное управление полноэкранным режимом">
 <!ENTITY Ctr_emptyfavicon2	"Установить общий значок (пустой и пунктирный)">
 <!ENTITY Ctr_mstatusbar		"Подвижная строка состояния">
@@ -200,9 +205,12 @@
 <!ENTITY Ctr_altmenubarpos	"Изменить расположение (ниже строки заголовка Firefox)">
 <!ENTITY Ctr_menubarnofog	"Убрать затуманивание/цвет фона (Windows AeroGlass/8)">
 
+<!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
 <!ENTITY Ctr_hidenavbar		"Скрыть панель навигации">
 <!ENTITY Ctr_nobookbarbg	"Панель закладок: удалить цвет фона">
 <!ENTITY Ctr_nonavbarbg		"Панель навигации: удалить цвет фона">
+<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
+<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
 <!ENTITY Ctr_nonavborder	"Панель закладок: добавить верхнюю границу для панели инструментов">
 <!ENTITY Ctr_nonavtbborder	"Популярные панели инструментов: удалить границы панелей инструментов">
 <!ENTITY Ctr_hidesbclose	"Боковые панели: скрыть кнопку «Закрыть» на боковой панели">
@@ -227,6 +235,11 @@
 <!ENTITY Ctr_cuibotbuttons	"Дополнительные кнопки в режиме «Настройка»">
 <!ENTITY Ctr_bookmarkoinpw	"«Открыть в новом приватном окне» в контекстном меню закладок">
 
+<!ENTITY Ctr_experttweaks	"Продвинутые">
+<!ENTITY Ctr_fx33layers		"С Firefox 33+ новые возможности визуализации, на некоторых системах вызывает ошибки с вкладками (нет реакции, вкладки заморожены). Отключение этой опции решает проблему.">
+<!ENTITY Ctr_fx34search		"С Firefox 34+ новая панель поиска. Отключение этой опции позволяет вернуть старую панель поиска.">
+<!ENTITY Ctr_fx34loop		"С Firefox 34+ добавлен клиент для связи в режиме реального времени. Отключение параметра удаляет эту функцию.">
+
 
 <!ENTITY Ctr_pw_settings	"Настройки">
 <!ENTITY Ctr_pw_set_reset	"Сбросить настройки">
@@ -241,7 +254,7 @@
 <!ENTITY Ctr_support		"Форум поддержки">
 <!ENTITY Ctr_newversion		"Новая версия?">
 
-<!ENTITY Ctr_addon-bar.accesskey	"Д">
+<!ENTITY Ctr_addon-bar.accesskey	"A">
 <!ENTITY Ctr_openInPrivateWindow	"Открыть в новом приватном окне">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
 <!ENTITY appMenuGettingStarted.label	"Начало работы">

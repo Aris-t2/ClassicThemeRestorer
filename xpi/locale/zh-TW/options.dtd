@@ -30,10 +30,11 @@
 <!ENTITY Ctr_tabs2			"弧形分頁 (非傳統風格)">
 <!ENTITY Ctr_tabs3			"弧形分頁 (Aero 風格)">
 <!ENTITY Ctr_tabforminfo	"分頁外觀由目前的佈景主題控制">
-<!ENTITY Ctr_tabsontop0		"分頁列置頂 (預設值) - [無設定]">
-<!ENTITY Ctr_tabsontop1		"分頁列置頂 - 設定 [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"分頁列不置頂 - 設定 [tabsontop=false]">
-<!ENTITY Ctr_tabsontop3		"分頁列不置頂 (v2) - 設定 [tabsontop=false]">
+<!ENTITY Ctr_tabsontop0		"分頁列置頂 (預設值)">
+<!ENTITY Ctr_tabsontop1		"分頁列置頂 --- 設定 [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"分頁列不置頂 (v1) --- 設定 [tabsontop=false]">
+<!ENTITY Ctr_tabsontop3		"分頁列不置頂 (v2) --- 設定 [tabsontop=false]">
+<!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
 <!ENTITY Ctr_tabsontopI1	"加入 [tabsontop=true/false] 屬性到">
 <!ENTITY Ctr_tabsintitlebar	"分頁列併入標題列 (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(預設值)">
@@ -46,6 +47,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
 <!ENTITY Ctr_emptyfavicon	"開啟的網頁若未提供網站圖示，仍在該分頁顯示空圖示">
 <!ENTITY Ctr_noemptypticon	"從釘選分頁移除空圖示">
+<!ENTITY Ctr_e10stab_notd	"E10s tabs: remove underline">
 <!ENTITY Ctr_closetab_0		"關閉按鈕">
 <!ENTITY Ctr_closetab_1		"僅在目前的分頁顯示關閉按鈕">
 <!ENTITY Ctr_closetab_2		"不顯示關閉按鈕">
@@ -62,6 +64,7 @@
 <!ENTITY Ctr_appbutton1		"顯示在工具列">
 <!ENTITY Ctr_appbutton1wt	"顯示在工具列 (僅文字)">
 <!ENTITY Ctr_appbutton2		"顯示在標題列">
+<!ENTITY Ctr_appbutton2h	"顯示在標題列 (hidden)">
 <!ENTITY Ctr_appbutton2io	"顯示在標題列 (僅圖示)">
 <!ENTITY Ctr_paneluibtweak	"橘色面板選單按鈕顯示在分頁列">
 <!ENTITY Ctr_appbuttonc_o	"橙色按鈕 (預設值)">
@@ -91,9 +94,11 @@
 <!ENTITY Ctr_smallnavbut	"在瀏覽工具列使用小圖示按鈕">
 <!ENTITY Ctr_bfurlbarfix	"當「回到上一頁按鈕可移動」和「小圖示按鈕」模式下，修正網址列圓角半徑">
 <!ENTITY Ctr_backforward	"使「回到上一頁按鈕」可移動">
+<!ENTITY Ctr_nbcompact		"Reduce navigation toolbars height">
 <!ENTITY Ctr_hide_bf_popup	"當滑鼠長按時，不顯示分頁歷史瀏覽選單">
 <!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"右鍵選單的「回到上一頁、前進下一頁、停止載入、重新載入、加入書籤」由橫排圖示換回縱排文字風格">
+<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
 <!ENTITY Ctr_wincontrols	"可移動的全螢幕視窗控制項">
 <!ENTITY Ctr_emptyfavicon2	"以白紙圖示取代空圖示">
 <!ENTITY Ctr_mstatusbar		"使狀態列可移動">
@@ -200,9 +205,12 @@
 <!ENTITY Ctr_altmenubarpos	"換一個位置 (標題列下方)">
 <!ENTITY Ctr_menubarnofog	"移除背景色彩/模糊 (Windows AeroGlass / Win8)">
 
+<!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
 <!ENTITY Ctr_hidenavbar		"隱藏瀏覽工具列">
 <!ENTITY Ctr_nobookbarbg	"書籤列: 移除背景色彩">
 <!ENTITY Ctr_nonavbarbg		"瀏覽工具列: 移除背景色彩">
+<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
+<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
 <!ENTITY Ctr_nonavborder	"書籤列: 顯示上邊框">
 <!ENTITY Ctr_nonavtbborder	"上方工具列: 移除工具列邊框">
 <!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
@@ -226,6 +234,11 @@
 <!ENTITY Ctr_otherctroptns	"Other settings">
 <!ENTITY Ctr_cuibotbuttons	"介面自訂模式中，更豐富的按鈕自訂選項">
 <!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
+
+<!ENTITY Ctr_experttweaks	"Advanced">
+<!ENTITY Ctr_fx33layers		"Firefox 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
+<!ENTITY Ctr_fx34search		"Firefox 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
+<!ENTITY Ctr_fx34loop		"Firefox 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
 
 
 <!ENTITY Ctr_pw_settings	"設定">

@@ -30,10 +30,11 @@
 <!ENTITY Ctr_tabs2			"Gerundete Tabs (alternativ)">
 <!ENTITY Ctr_tabs3			"Gerundete Tabs (alternativ für Windows Aero)">
 <!ENTITY Ctr_tabforminfo	"Das aktuelle Thema bestimmt die Tabdarstellung.">
-<!ENTITY Ctr_tabsontop0		"Tabs oben (Standard) - kein '[tabsontop]' Attribut gesetzt">
-<!ENTITY Ctr_tabsontop1		"Tabs oben - '[tabsontop=true]' Attribut gesetzt">
-<!ENTITY Ctr_tabsontop2		"Tabs unten - '[tabsontop=false]' Attribut gesetzt">
-<!ENTITY Ctr_tabsontop3		"Tabs unten (v2) - '[tabsontop=false]' Attribut gesetzt">
+<!ENTITY Ctr_tabsontop0		"Tabs oben (Standard)">
+<!ENTITY Ctr_tabsontop1		"Tabs oben --- '[tabsontop=true]' Attribut gesetzt">
+<!ENTITY Ctr_tabsontop2		"Tabs unten (v1) --- '[tabsontop=false]' Attribut gesetzt">
+<!ENTITY Ctr_tabsontop3		"Tabs unten (v2) --- '[tabsontop=false]' Attribut gesetzt">
+<!ENTITY Ctr_tabsontopW1	"v2 ist nur für einige Add-ons und vollständige Themen gedacht!">
 <!ENTITY Ctr_tabsontopI1	"Setzt Attribut [tabsontop=true/false] für">
 <!ENTITY Ctr_tabsintitlebar	"Firefox Titelleiste (about:config Einstellung)">
 <!ENTITY Ctr_tabwidthdef	"(Standard)">
@@ -46,6 +47,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Werte unter 48px sorgen meistens für eine fehlerhafte Darstellung!">
 <!ENTITY Ctr_emptyfavicon	"Leeres Lesezeichensymbol auf Tabs wiederherstellen">
 <!ENTITY Ctr_noemptypticon	"Leeres Lesezeichensymbol auf angehefteten Tabs verstecken">
+<!ENTITY Ctr_e10stab_notd	"E10s Tabs: Unterstrich entfernen">
 <!ENTITY Ctr_closetab_0		"'Tab schließen'">
 <!ENTITY Ctr_closetab_1		"Nur auf dem aktiven Tab">
 <!ENTITY Ctr_closetab_2		"Nirgends (deaktiviert)">
@@ -62,6 +64,7 @@
 <!ENTITY Ctr_appbutton1		"Auf den Symbolleisten">
 <!ENTITY Ctr_appbutton1wt	"Auf den Symbolleisten (nur Text)">
 <!ENTITY Ctr_appbutton2		"Auf der Firefox Titelleiste">
+<!ENTITY Ctr_appbutton2h	"Auf der Firefox Titelleiste (versteckt)">
 <!ENTITY Ctr_appbutton2io	"Auf der Firefox Titelleiste (nur Symbol)">
 <!ENTITY Ctr_paneluibtweak	"Orangene Menüschaltfläche auf der Tableiste">
 <!ENTITY Ctr_appbuttonc_o	"Farbe: orange (Standard)">
@@ -91,9 +94,11 @@
 <!ENTITY Ctr_smallnavbut	"Kleine Schaltflächen auf der Navigationsleiste">
 <!ENTITY Ctr_bfurlbarfix 	"Korrigiere Radius der Adressleistenränder">
 <!ENTITY Ctr_backforward	"Verschiebbare Vor-Zurück-Schaltflächen">
+<!ENTITY Ctr_nbcompact		"Reduziere die Höhe der Navigationsleiste">
 <!ENTITY Ctr_hide_bf_popup	"Verstecke Chronik-Aufklappmenü bei gedrückter Maustaste">
 <!ENTITY Ctr_bf_space		"Reduziere Zwischenraum (falls möglich)">
 <!ENTITY Ctr_noconicons		"Seitenkontextmenü: ersetze Symbole durch Namen (Zurück, Vor...)">
+<!ENTITY Ctr_svgfilters		"SVG Farben für Symbole von Standard-Schaltflächen">
 <!ENTITY Ctr_wincontrols	"Verschiebbare Fenster-Schaltflächen im Vollbild-Modus">
 <!ENTITY Ctr_emptyfavicon2	"Leeres Lesezeichensymbol durch Papierblattsymbol ersetzen">
 <!ENTITY Ctr_mstatusbar		"Statusbereich: sichtbar und verschiebbar">
@@ -162,7 +167,7 @@
 <!ENTITY Ctr_urlbardropm	"Verschiebe die 'Schaltfläche' ans Ende der Adressleiste">
 <!ENTITY Ctr_hideprbutton	"Verstecke 'Infosymbol' (wenn ein Popup-Fenster blockiert wurde)">
 <!ENTITY Ctr_urlbar_ib		"Schaltfläche zur Webseitenidentität">
-<!ENTITY Ctr_verifiedcolors	"Grüne bzw. blaue Schaltflächenfarbe bei sicheren Verbindungen und verifizierten Webseiten">
+<!ENTITY Ctr_verifiedcolors	"Grüne bzw. blaue Farbe bei sicheren Verbindungen und verifizierten Webseiten">
 <!ENTITY Ctr_faviconurl		"Lesezeichensymbol (Favicon) der Webseite">
 <!ENTITY Ctr_padlock_hid	"Schloss-Symbol bei sicheren Verbindungen: versteckt">
 <!ENTITY Ctr_padlock_def	"Schloss-Symbol bei sicheren Verbindungen: unverändert">
@@ -200,9 +205,12 @@
 <!ENTITY Ctr_altmenubarpos	"Alternative Position (unter der Firefox Titelleiste)">
 <!ENTITY Ctr_menubarnofog	"Hintergrundfarbe/-nebel entfernen (Windows AeroGlass / Win8)">
 
+<!ENTITY Ctr_aerocolors		"Blaue 'Aero' Farben für Leisten (und Tabs)">
 <!ENTITY Ctr_hidenavbar		"Navigationsleiste verstecken">
 <!ENTITY Ctr_nobookbarbg	"Lesezeichenleiste: Hintergrundfarbe entfernen">
 <!ENTITY Ctr_nonavbarbg		"Navigationsleiste: Hintergrundfarbe entfernen">
+<!ENTITY Ctr_nonavbarbg1	"Einstellung hat Auswirkung auf alle Extraleisten und andere obere Leisten.">
+<!ENTITY Ctr_nonavbarbg2	"Einstellung hat Auswirkung auf alle Leisten in der 'Slim'-Darstellung der Erweiterung 'The Fox, only better'.">
 <!ENTITY Ctr_nonavborder	"Lesezeichenleiste: Oberen Rand hinzufügen">
 <!ENTITY Ctr_nonavtbborder	"Obere Leisten: Ränder entfernen">
 <!ENTITY Ctr_hidesbclose	"Seitenleisten: Verstecke 'Schließen'-Schaltfläche">
@@ -227,6 +235,11 @@
 <!ENTITY Ctr_cuibotbuttons	"Einstellungsschaltflächen im Modus 'Anpassen'">
 <!ENTITY Ctr_bookmarkoinpw	"'In neuem privaten Fenster öffnen'-Eintrag im Kontextmenu eines Lesezeichens">
 
+<!ENTITY Ctr_experttweaks	"Erweitert">
+<!ENTITY Ctr_fx33layers		"Mit Firefox 33+ wurden neue 'Render-Funktionen' eingeführt, die zurzeit für 'nicht reagierende und einfrierende Tabs' auf einigen Systemen sorgen. Das Deaktivieren dieser Option löst das Problem.">
+<!ENTITY Ctr_fx34search		"Mit Firefox 34+ wurde eine neue 'Suchoberfläche' eingeführt. Das Deaktivieren dieser Option stellt die 'alte Suchoberfläche' wieder her.">
+<!ENTITY Ctr_fx34loop		"Mit Firefox 34+ wurden 'Anruf- und Konversations-Funktionen' eingeführt. Das Deaktivieren dieser Option entfernt diese Funktionen.">
+
 
 <!ENTITY Ctr_pw_settings	"Einstellungen">
 <!ENTITY Ctr_pw_set_reset	"Standard wiederherstellen">
@@ -237,7 +250,7 @@
 
 <!ENTITY Ctr_special_font	"Hintergrundfarbeinstellungen sind nur für das Standard-Thema vorhanden!">
 <!ENTITY Ctr_special_info	"Einige Optionen haben nur in bestimmten Fällen sichtbare Auswirkungen!">
-<!ENTITY Ctr_special_info2	"Diese Einstellungen sind für das Standard-Thema und funktionieren evtl. nicht mit allen Themes!">
+<!ENTITY Ctr_special_info2	"Diese Einstellungen sind für das Standard-Thema und funktionieren evtl. nicht mit allen Themen!">
 <!ENTITY Ctr_support		"Hilfe-Forum">
 <!ENTITY Ctr_newversion		"Neue Version?">
 

@@ -153,9 +153,13 @@
 	  min-width:0px !important;
 	}
 	
-	/*call button*/
+	/* Main menu button & call button fix */
+	toolbar #PanelUI-menu-button .toolbarbutton-badge,
+	toolbar #PanelUI-menu-button .toolbarbutton-badge-container,
 	toolbar #loop-button .toolbarbutton-badge,
-	toolbar #loop-button .toolbarbutton-badge-container{
+	toolbar #loop-button .toolbarbutton-badge-container,
+	toolbar #loop-button-throttled .toolbarbutton-badge,
+	toolbar #loop-button-throttled .toolbarbutton-badge-container{
 	  -moz-appearance:none !important;
 	  background:none !important;
 	  border:0 !important;

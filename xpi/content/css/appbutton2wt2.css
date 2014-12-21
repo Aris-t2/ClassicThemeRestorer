@@ -30,8 +30,8 @@
 	  -moz-margin-start: 26px !important;
 	}
 	
-	#main-window[tabsintitlebar][chromehidden~="menubar"]:not([tabsontop="false"]) #toolbar-menubar ~ #TabsToolbar,
-	#main-window[tabsintitlebar]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
+	#main-window[tabsintitlebar][chromehidden~="menubar"]:not([tabsontop="false"]):not([inFullscreen]) #toolbar-menubar ~ #TabsToolbar,
+	#main-window[tabsintitlebar]:not([tabsontop="false"]):not([inFullscreen]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
 	  -moz-margin-start: 97px;
 	}
 	
@@ -48,10 +48,5 @@
 	#main-window[tabsintitlebar][customizing][sizemode="maximized"][tabsontop="false"] #titlebar:not([hidden]) ~ * #toolbar-menubar {
 	  -moz-margin-start: 26px !important;
 	}
-	
-	/*#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="maximized"][tabsontop="false"] #toolbar-menubar ~ #TabsToolbar,
-	#main-window[tabsintitlebar][sizemode="maximized"][tabsontop="false"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
-	  -moz-margin-start: 97px;
-	}*/
 
 }

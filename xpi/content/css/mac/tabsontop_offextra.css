@@ -46,6 +46,10 @@
 	  box-shadow: none !important;
 	}
 	
+	#main-window[defaultfxtheme="true"] #navigator-toolbox #nav-bar:not(:-moz-lwtheme) {
+	  border-top: none !important;
+	}
+	
 	#main-window:not([tabsintitlebar])[sizemode="normal"][defaultfxtheme="true"][tabsontop="false"] #nav-bar:not(:-moz-lwtheme) {
 	  background-image: linear-gradient(to bottom, #d6d6d6, #d2d2d2) !important;
 	}

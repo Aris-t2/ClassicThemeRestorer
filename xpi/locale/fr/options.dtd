@@ -30,22 +30,24 @@
 <!ENTITY Ctr_tabs2			"Onglets arrondis (alternatifs)">
 <!ENTITY Ctr_tabs3			"Onglets arrondis (alternatifs Aero)">
 <!ENTITY Ctr_tabforminfo	"L'aspect des onglets est controlé par le thème actuel.">
-<!ENTITY Ctr_tabsontop0		"Onglets en haut (réglage par défaut)">
-<!ENTITY Ctr_tabsontop1		"Onglets en haut - réglage [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Onglets position basse - réglage [tabsontop=false]">
-<!ENTITY Ctr_tabsontop3		"Onglets position basse (v2) - réglage [tabsontop=false]">
+<!ENTITY Ctr_tabsontop0		"Onglets en haut (par défaut)">
+<!ENTITY Ctr_tabsontop1		"Onglets en haut --- réglage [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Onglets position basse (v1) --- réglage [tabsontop=false]">
+<!ENTITY Ctr_tabsontop3		"Onglets position basse (v2) --- réglage [tabsontop=false]">
+<!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
 <!ENTITY Ctr_tabsontopI1	"L'attribut [tabsontop=true/false] est assigné à">
 <!ENTITY Ctr_tabsintitlebar	"Barre de titre Firefox (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(défaut)">
 <!ENTITY Ctr_tabwidthcla	"(classique)">
-<!ENTITY Ctr_tabminheight	"Height:">
-<!ENTITY Ctr_tabmaxwidth	"Largeur maximale:">
-<!ENTITY Ctr_tabminwidth	"Largeur minimale:">
+<!ENTITY Ctr_tabminheight	"Hauteur :">
+<!ENTITY Ctr_tabmaxwidth	"Largeur maximale :">
+<!ENTITY Ctr_tabminwidth	"Largeur minimale :">
 <!ENTITY Ctr_tabwidthinfo	"Onglets : les largeurs mini et maxi sont controlées par TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"Onglets : les largeurs mini et maxi sont controlées par TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"Les valeurs en dessous de 48px causent des problèmes dans la majorité des cas!">
 <!ENTITY Ctr_emptyfavicon	"Restaurer le favicon vide sur les onglets (sites ne possédant pas de favicon)">
 <!ENTITY Ctr_noemptypticon	"Enlever les favicons vides des onglets épinglés">
+<!ENTITY Ctr_e10stab_notd	"E10s tabs: remove underline">
 <!ENTITY Ctr_closetab_0		"Bouton de fermeture">
 <!ENTITY Ctr_closetab_1		"Onglet actif uniquement">
 <!ENTITY Ctr_closetab_2		"Aucun">
@@ -62,6 +64,7 @@
 <!ENTITY Ctr_appbutton1		"Bouton sur une barre d'outils">
 <!ENTITY Ctr_appbutton1wt	"Bouton sur une barre d'outils (texte seul)">
 <!ENTITY Ctr_appbutton2		"Bouton sur la barre de titre [Firefox]">
+<!ENTITY Ctr_appbutton2h	"Bouton sur la barre de titre [Firefox] (hidden)">
 <!ENTITY Ctr_appbutton2io	"Bouton sur la barre de titre [Firefox] (icône seule)">
 <!ENTITY Ctr_paneluibtweak	"Bouton orange sur la barre d'onglets">
 <!ENTITY Ctr_appbuttonc_o	"Bouton orange (par défaut)">
@@ -74,7 +77,7 @@
 <!ENTITY Ctr_appbuttonc_gr	"Bouton gris">
 <!ENTITY Ctr_appbuttonc_pu	"Bouton pourpre">
 <!ENTITY Ctr_appbuttonc_wh	"Bouton blanc">
-<!ENTITY Ctr_appbuttonc_cu	"Custom button color">
+<!ENTITY Ctr_appbuttonc_cu	"Bouton avec couleurs personnalisées">
 <!ENTITY Ctr_appbuttonI1	"Redémarrage recommandé">
 <!ENTITY Ctr_appbuttonI1e	"Non visible sur la barre de titre de l'OS">
 <!ENTITY Ctr_appbuttonI2	"Bouton coloré uniquement sur la barre de titre ou sur la barre d'onglets!">
@@ -91,9 +94,11 @@
 <!ENTITY Ctr_smallnavbut	"Petits boutons (barre de navigation)">
 <!ENTITY Ctr_bfurlbarfix 	"Corriger le border-radius de la barre d'adresse">
 <!ENTITY Ctr_backforward	"Bouton avancer/reculer déplaçable">
+<!ENTITY Ctr_nbcompact		"Diminuer la hauteur des barres de navigations">
 <!ENTITY Ctr_hide_bf_popup	"Masquer le menu historique lors du clic droit">
 <!ENTITY Ctr_bf_space		"Réduire l'espace entre les boutons (si possible)">
 <!ENTITY Ctr_noconicons		"Remplacer les icônes du menu contextuel de la page par du texte (Page précédente, Page suivante, Arrêter/Actualiser, Marquer cette page)">
+<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
 <!ENTITY Ctr_wincontrols	"Plein écran : boutons déplaçables">
 <!ENTITY Ctr_emptyfavicon2	"Remplacer le favicon générique (vide avec pointillés) par un favicon avec l'aspect d'une feuille de papier">
 <!ENTITY Ctr_mstatusbar		"Barre d'état déplaçable">
@@ -153,7 +158,7 @@
 <!ENTITY Ctr_bold			"Gras">
 <!ENTITY Ctr_italic			"Italique">
 <!ENTITY Ctr_notabhov		"Ignorer la configuration 'Au survol' pour cette configuration">
-<!ENTITY Ctr_tabc_act_tb	"Background color on toolbars">
+<!ENTITY Ctr_tabc_act_tb	"Couleur de fond pour les barres d'outils">
 
 <!ENTITY Ctr_urlbar			"Barre d'adresse">
 <!ENTITY Ctr_starinurl		"Bouton des marque-pages">
@@ -200,9 +205,12 @@
 <!ENTITY Ctr_altmenubarpos	"Position alternative (sous la barre de titre Firefox)">
 <!ENTITY Ctr_menubarnofog	"Enlever l'effet de flou/l'arrière-plan des éléments (Windows AeroGlass / Win8)">
 
+<!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
 <!ENTITY Ctr_hidenavbar		"Masquer la barre de navigation">
 <!ENTITY Ctr_nobookbarbg	"Barre personnelle : enlever l'arrière-plan">
 <!ENTITY Ctr_nonavbarbg		"Barre de navigation : enlever l'arrière-plan">
+<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
+<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
 <!ENTITY Ctr_nonavborder	"Barre personnelle : ajouter une bordure en haut de la barre">
 <!ENTITY Ctr_nonavtbborder	"Barres d'outils supérieures : enlever les bordures">
 <!ENTITY Ctr_hidesbclose	"Panneaux latéraux : masquer le bouton de fermeture">
@@ -226,6 +234,11 @@
 <!ENTITY Ctr_otherctroptns	"Autres options">
 <!ENTITY Ctr_cuibotbuttons	"Boutons d'options en mode personnalisation">
 <!ENTITY Ctr_bookmarkoinpw	"'Ouvrir dans une nouvelle fenêtre de navigation privée' dans le menu contextuel des marque-pages">
+
+<!ENTITY Ctr_experttweaks	"Expert">
+<!ENTITY Ctr_fx33layers		"Firefox 33+ introduit de nouvelles possibilités de rendu responsables actuellement de bugs avec les onglets sur certains systèmes (pas de réaction, onglets gelés). Ce problème est résolu en décochant cette option.">
+<!ENTITY Ctr_fx34search		"Firefox 34+ introduit une nouvelle barre de recherche. Si cette option est décochée, l'ancienne barre de recherche est activée.">
+<!ENTITY Ctr_fx34loop		"Firefox 34+ introduit la possibilité d'inviter quelqu'un à discuter. Cette possibilité est desactivée en décochant cette option.">
 
 
 <!ENTITY Ctr_pw_settings	"Réglages">

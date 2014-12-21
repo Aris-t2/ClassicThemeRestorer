@@ -30,15 +30,16 @@
 <!ENTITY Ctr_tabs2			"Καμπυλόγραμμες καρτέλες (εναλλακτική τεχνοτροπία)">
 <!ENTITY Ctr_tabs3			"Καμπυλόγραμμες καρτέλες (εναλλακτική τεχνοτροπία, Aero)">
 <!ENTITY Ctr_tabforminfo	"Η εμφάνιση των καρτελών ελέγχεται από το τρέχον θέμα.">
-<!ENTITY Ctr_tabsontop0		"Καρτέλες στο πάνω μέρος (προεπιλογή) - [μη ορισμένο]">
-<!ENTITY Ctr_tabsontop1		"Καρτέλες στο πάνω μέρος - ορισμός [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Καρτέλες όχι στο πάνω μέρος - ορισμός [tabsontop=false]">
-<!ENTITY Ctr_tabsontop3		"Καρτέλες όχι στο πάνω μέρος (v2) - ορισμός [tabsontop=false]">
+<!ENTITY Ctr_tabsontop0		"Καρτέλες στο πάνω μέρος (προεπιλογή)">
+<!ENTITY Ctr_tabsontop1		"Καρτέλες στο πάνω μέρος --- ορισμός χαρακτηριστικού [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Καρτέλες όχι στο πάνω μέρος (v1) --- ορισμός χαρακτηριστικού [tabsontop=false]">
+<!ENTITY Ctr_tabsontop3		"Καρτέλες όχι στο πάνω μέρος (v2) --- ορισμός χαρακτηριστικού [tabsontop=false]">
+<!ENTITY Ctr_tabsontopW1	"Η v2 είναι για ορισμένες επεκτάσεις και πλήρη θέματα μόνο!">
 <!ENTITY Ctr_tabsontopI1	"Προσθέτει χαρακτηριστικό [tabsontop=true/false] σε">
 <!ENTITY Ctr_tabsintitlebar	"Γραμμή τίτλου Firefox (προτίμηση about:config)">
 <!ENTITY Ctr_tabwidthdef	"(προεπιλογή)">
 <!ENTITY Ctr_tabwidthcla	"(κλασικό)">
-<!ENTITY Ctr_tabminheight	"Height:">
+<!ENTITY Ctr_tabminheight	"Ύψος:">
 <!ENTITY Ctr_tabmaxwidth	"Μέγιστο εύρος:">
 <!ENTITY Ctr_tabminwidth	"Ελάχιστο εύρος:">
 <!ENTITY Ctr_tabwidthinfo	"Το εύρος καρτελών ελέγχεται από την επέκταση «TabMixPlus»">
@@ -46,6 +47,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Τιμές κάτω από 48px θα προκαλέσουν δυσλειτουργίες στις περισσότερες περιπτώσεις!">
 <!ENTITY Ctr_emptyfavicon	"Επαναφορά κενού εικονιδίου (εάν ένας ιστότοπος δεν διαθέτει εικονίδιο)">
 <!ENTITY Ctr_noemptypticon	"Αφαίρεση κενού εικονιδίου από καρτέλες εφαρμογών">
+<!ENTITY Ctr_e10stab_notd	"Καρτέλες E10s: αφαίρεση υπογράμμισης">
 <!ENTITY Ctr_closetab_0		"Κλείσιμο καρτέλας">
 <!ENTITY Ctr_closetab_1		"Μόνο στην ενεργή καρτέλα">
 <!ENTITY Ctr_closetab_2		"Πουθενά">
@@ -62,6 +64,7 @@
 <!ENTITY Ctr_appbutton1		"Στην εργαλειοθήκη">
 <!ENTITY Ctr_appbutton1wt	"Στην εργαλειοθήκη (μόνο κείμενο)">
 <!ENTITY Ctr_appbutton2		"Στη γραμμή τίτλου [Firefox]">
+<!ENTITY Ctr_appbutton2h	"Στη γραμμή τίτλου [Firefox] (hidden)">
 <!ENTITY Ctr_appbutton2io	"Στη γραμμή τίτλου [Firefox] (μόνο εικονίδιο)">
 <!ENTITY Ctr_paneluibtweak	"Πορτοκαλί κουμπί μενού πίνακα στην εργαλειοθήκη καρτελών">
 <!ENTITY Ctr_appbuttonc_o	"Πορτοκαλί χρώμα κουμπιού (προεπιλογή)">
@@ -74,7 +77,7 @@
 <!ENTITY Ctr_appbuttonc_gr	"Γκρι χρώμα κουμπιού">
 <!ENTITY Ctr_appbuttonc_pu	"Πορφυρό χρώμα κουμπιού">
 <!ENTITY Ctr_appbuttonc_wh	"Άσπρο χρώμα κουμπιού">
-<!ENTITY Ctr_appbuttonc_cu	"Custom button color">
+<!ENTITY Ctr_appbuttonc_cu	"Προσαρμοσμένο χρώμα κουμπιού">
 <!ENTITY Ctr_appbuttonI1	"Συνιστάται επανεκκίνηση">
 <!ENTITY Ctr_appbuttonI1e	"Δεν είναι ορατό στη γραμμή τίτλου του Λ.Σ. Windows, μόνο στη γραμμή τίτλου του Firefox!">
 <!ENTITY Ctr_appbuttonI2	"Τα χρώματα του κουμπιού είναι ορατά μόνο στη γραμμή τίτλου και στην εργαλειοθήκη καρτελών!">
@@ -91,9 +94,11 @@
 <!ENTITY Ctr_smallnavbut	"Μικρά κουμπιά στην εργαλειοθήκη πλοήγησης">
 <!ENTITY Ctr_bfurlbarfix	"Διόρθωση ακτίνας περιγράμματος γραμμής τοποθεσιών">
 <!ENTITY Ctr_backforward	"Μετακινήσιμα κουμπιά πίσω-εμπρός">
+<!ENTITY Ctr_nbcompact		"Μείωση ύψους εργαλειοθήκης πλοήγησης">
 <!ENTITY Ctr_hide_bf_popup	"Απόκρυψη αναδυόμενου μενού ιστορικού κουμπιών κατά το πάτημά τους">
 <!ENTITY Ctr_bf_space		"Μείωση διαστήματος μεταξύ των κουμπιών (εάν είναι δυνατόν)">
 <!ENTITY Ctr_noconicons		"Μενού περιεχομένου σελίδας: αντικατάσταση εικονιδίων με ετικέτες («Πίσω», «Μπροστά», «Διακοπή», «Ανανέωση», «Η σελίδα ως σελιδοδείκτης»)">
+<!ENTITY Ctr_svgfilters		"Χρώματα SVG για προεπιλεγμένα εικονίδια κουμπιών εργαλειοθήκης">
 <!ENTITY Ctr_wincontrols	"Μετακινήσιμα στοιχεία ελέγχου παραθύρου σε προβολή πλήρους οθόνης">
 <!ENTITY Ctr_emptyfavicon2	"Αντικατάσταση γενικού εικονιδίου (κενό και διάστικτο) με εικονίδιο φύλλου">
 <!ENTITY Ctr_mstatusbar		"Μετακινήσιμο πινακίδιο γραμμής κατάστασης">
@@ -116,10 +121,10 @@
 <!ENTITY Ctr_nav_txt_ico2	"Εμφάνιση εικονιδίων και κειμένου">
 <!ENTITY Ctr_nav_txt_ico3	"Εμφάνιση μόνο κειμένου">
 <!ENTITY Ctr_nav_txt_exp	"Πειραματικά χαρακτηριστικά:">
-<!ENTITY Ctr_iat_notf_vt	"Όχι για κατακόρυφες εργαλειοθήκες">
+<!ENTITY Ctr_iat_notf_vt	"Εξαιρούνται κατακόρυφες εργαλειοθήκες">
 <!ENTITY Ctr_cpanelmenus	"Μενού πίνακα: συνεπτυγμένη προβολή (σελιδοδείκτες, ιστορικό κλπ.)">
 <!ENTITY Ctr_hidezoomres	"Στοιχεία ελέγχου μεγέθυνσης σε εργαλειοθήκη: απόκρυψη κουμπιού επεναφοράς επιπέδου μεγέθυνσης">
-<!ENTITY Ctr_alt_newtabp	"New tab page: alternative appearance">
+<!ENTITY Ctr_alt_newtabp	"Σελίδα νέας καρτέλας: εναλλακτική εμφάνιση">
 <!ENTITY Ctr_pmhidelabels	"Μενού πίνακα: απόκρυψη ετικετών κουμπιών">
 <!ENTITY Ctr_menupopupscr	"Αναδυόμενα μενού: εμφάνιση γραμμών κύλισης αντί για βέλη κύλισης">
 
@@ -143,17 +148,17 @@
 <!ENTITY Ctr_customsqtab1	"Φόντο">
 <!ENTITY Ctr_ctext			"Κείμενο">
 <!ENTITY Ctr_ctextsh		"Σκιά κειμένου">
-<!ENTITY Ctr_tabnor			"Καρτέλα (προεπιλογή)">
-<!ENTITY Ctr_tabhov			"Καρτέλα (κατάδειξη)">
-<!ENTITY Ctr_tabact			"Καρτέλα (ενεργή)">
-<!ENTITY Ctr_tabpen			"Καρτέλα (μη φορτωμένη)">
-<!ENTITY Ctr_tabunr			"Καρτέλα (μη αναγνωσμένη)">
-<!ENTITY Ctr_ntabnor		"Νέα καρτέλα (προεπιλογή)">
-<!ENTITY Ctr_ntabhov		"Νέα καρτέλα (κατάδειξη)">
+<!ENTITY Ctr_tabnor			"Προεπιλογές καρτέλας">
+<!ENTITY Ctr_tabhov			"Κατάδειξη καρτέλας">
+<!ENTITY Ctr_tabact			"Ενεργή καρτέλα">
+<!ENTITY Ctr_tabpen			"Μη φορτωμένη καρτέλα">
+<!ENTITY Ctr_tabunr			"Μη αναγνωσμένη καρτέλα">
+<!ENTITY Ctr_ntabnor		"Προεπιλογές νέας καρτέλας">
+<!ENTITY Ctr_ntabhov		"Κατάδειξη νέας καρτέλας">
 <!ENTITY Ctr_bold			"Έντονη γραφή">
 <!ENTITY Ctr_italic			"Πλάγια γραφή">
 <!ENTITY Ctr_notabhov		"Παράκαμψη ρυθμίσεων κατάδειξης από τις ενεργοποιημένες ρυθμίσεις εδώ">
-<!ENTITY Ctr_tabc_act_tb	"Background color on toolbars">
+<!ENTITY Ctr_tabc_act_tb	"Χρώμα φόντου σε εργαλειοθήκες">
 
 <!ENTITY Ctr_urlbar			"Γραμμή τοποθεσιών">
 <!ENTITY Ctr_starinurl		"Κουμπί-αστέρι">
@@ -184,8 +189,8 @@
 <!ENTITY Ctr_bookbar		"Εργαλειοθήκη σελιδοδεικτών">
 <!ENTITY Ctr_notoolbar		"Απόκρυψη (μη εμφάνιση των στοιχείων μενού)">
 
-<!ENTITY Ctr_mbarforceleft	"First element">
-<!ENTITY Ctr_mbarforceright	"Last element">
+<!ENTITY Ctr_mbarforceleft	"Ως πρώτο στοιχείο">
+<!ENTITY Ctr_mbarforceright	"Ως τελευταίο στοιχείο">
 
 <!ENTITY Ctr_toolbars		"Εργαλειοθήκες">
 <!ENTITY Ctr_dblclnewtab	"Άνοιγμα νέας καρτέλας με διπλό κλικ (χρήση browser.newtab.url)">
@@ -200,9 +205,12 @@
 <!ENTITY Ctr_altmenubarpos	"Εναλλακτική θέση (παρακάτω από τη γραμμή τίτλου του Firefox)">
 <!ENTITY Ctr_menubarnofog	"Αφαίρεση χρώματος/ομίχλης φόντου (Windows AeroGlass/8)">
 
+<!ENTITY Ctr_aerocolors		"Μπλε χρώματα «Aero» για βασικές εργαλειοθήκες και καρτέλες">
 <!ENTITY Ctr_hidenavbar		"Εργαλειοθήκη πλοήγησης: απόκρυψη εργαλειοθήκης">
 <!ENTITY Ctr_nobookbarbg	"Εργαλειοθήκη σελιδοδεικτών: αφαίρεση χρώματος φόντου">
 <!ENTITY Ctr_nonavbarbg		"Εργαλειοθήκη πλοήγησης: αφαίρεση χρώματος φόντου">
+<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
+<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
 <!ENTITY Ctr_nonavborder	"Εργαλειοθήκη σελιδοδεικτών: προσθήκη περιγράμματος κορυφής στην εργαλειοθήκη">
 <!ENTITY Ctr_nonavtbborder	"Εργαλειοθήκες κορυφής: αφαίρεση περιγραμμάτων εργαλειοθήκης">
 <!ENTITY Ctr_hidesbclose	"Πλευρικές στήλες: απόκρυψη κουμπιού κλεισίματος πλευρικής στήλης">
@@ -226,6 +234,11 @@
 <!ENTITY Ctr_otherctroptns	"Άλλες ρυθμίσεις">
 <!ENTITY Ctr_cuibotbuttons	"Επιπρόσθετα κουμπιά στη λειτουργία προσαρμογής">
 <!ENTITY Ctr_bookmarkoinpw	"Καταχώριση «&Ctr_openInPrivateWindow;» στο μενού περιεχομένου σελιδοδεικτών">
+
+<!ENTITY Ctr_experttweaks	"Προηγμένες">
+<!ENTITY Ctr_fx33layers		"Ο Firefox 33+ εισήγαγε «νέα χαρακτηριστικά απόδοσης», τρεχόντως υπεύθυνα για το «κρέμασμα καρτελών» σε ορισμένα συστήματα. Αποεπιλέγοντας αυτή την προτίμηση επιλύεται αυτό το ζήτημα.">
+<!ENTITY Ctr_fx34search		"Ο Firefox 34+ εισήγαγε μία «νέα διεπαφή αναζήτησης». Αποεπιλέγοντας αυτή την προτίμηση επαναφέρεται η προηγούμενη διεπαφή.">
+<!ENTITY Ctr_fx34loop		"Ο Firefox 34+ εισήγαγε δυνατότητες «κλήσης και συνομιλίας». Αποεπιλέγοντας αυτή την προτίμηση αφαιρούνται αυτές οι δυνατότητες.">
 
 
 <!ENTITY Ctr_pw_settings	"Ρυθμίσεις">

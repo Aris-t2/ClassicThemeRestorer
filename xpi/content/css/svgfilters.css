@@ -1,0 +1,190 @@
+/*
+	Taken with permission from 'Patrick Dimpseys' "SVG Colors Theme v0.4"
+*/
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	/*Blue*/
+	#ctraddon_navigator-throbber,
+	#save-page-button .toolbarbutton-icon,
+	#developer-button .toolbarbutton-icon,
+	#preferences-button .toolbarbutton-icon,
+	#webrtc-status-button .toolbarbutton-icon { 
+	  filter: url("data:image/svg+xml;utf8,\
+		<svg xmlns='http://www.w3.org/2000/svg'>\
+		 <filter id='matrix-b' color-interpolation-filters='sRGB' filterUnits='objectBoundingBox' x='0' y='0' width='100%' height='100%'>\
+		  <feColorMatrix type='saturate' in='SourceGraphic' values='0' result='A'/>\
+		  <feColorMatrix type='matrix' in='A' values='0.38  0.3  0.3  0.0  0.0 0.3  0.38  0.3  0.0  0.0 0.3  0.3  0.38  0.0  0.3 0.0  0.0  0.0  1.0  0.0'/>\
+		 </filter>\
+		</svg>#matrix-b") !important;
+	}
+
+	/*Red*/
+	#PanelUI-quit:not(:hover) .toolbarbutton-icon,
+	#web-apps-button .toolbarbutton-icon,
+	#e10s-button .toolbarbutton-icon,
+	#panic-button .toolbarbutton-icon,
+	toolbarbutton[id^="loop-"]:not([state="error"]):not([state="action"]):not([state="active"]),
+	.tabs-closebutton:hover .toolbarbutton-icon,
+	.tab-close-button:hover .toolbarbutton-icon,
+	#urlbar-stop-button:hover,
+	#cut-button .toolbarbutton-icon,
+	#zoom-out-button .toolbarbutton-icon,
+	#stop-button .toolbarbutton-icon,
+	#ctraddon_stop-button .toolbarbutton-icon,
+	#characterencoding-button .toolbarbutton-icon { 
+	  filter: url("data:image/svg+xml;utf8,\
+		<svg xmlns='http://www.w3.org/2000/svg'>\
+		  <filter id='matrix-r' color-interpolation-filters='sRGB' filterUnits='objectBoundingBox' x='0' y='0' width='100%' height='100%'>\
+			<feColorMatrix type='saturate' in='SourceGraphic' values='0' result='A'/>\
+			<feColorMatrix type='matrix' in='A' values='0.38  0.3  0.3  0.0  0.4 0.3  0.38  0.3  0.0  0.0 0.3  0.3  0.38  0.0  0.0 0.0  0.0  0.0  1.0  0.0'/>\
+		  </filter>\
+		</svg>#matrix-r") !important;
+	}
+
+	/*Lime*/
+	#ctraddon_back-button .toolbarbutton-icon, 
+	#ctraddon_forward-button .toolbarbutton-icon,
+	#ctraddon_back-forward-dropmarker .toolbarbutton-icon,
+	#back-button .toolbarbutton-icon,
+	#forward-button .toolbarbutton-icon,
+	#new-window-button .toolbarbutton-icon,
+	#new-tab-button .toolbarbutton-icon,
+	.search-go-button,
+	#downloads-button .toolbarbutton-icon,
+	#go-button:hover,
+	#urlbar-go-button:hover,
+	#zoom-in-button .toolbarbutton-icon,
+	#copy-button .toolbarbutton-icon,
+	#add-ons-button .toolbarbutton-icon,
+	#find-button .toolbarbutton-icon,
+	#sidebar-button .toolbarbutton-icon { 
+	  filter: url("data:image/svg+xml;utf8,\
+		<svg xmlns='http://www.w3.org/2000/svg'>\
+		  <filter id='matrix-ygg' color-interpolation-filters='sRGB' filterUnits='objectBoundingBox' x='0' y='0' width='100%' height='100%'>\
+			<feColorMatrix type='saturate' in='SourceGraphic' values='0' result='A'/>\
+			<feColorMatrix type='matrix' in='A' values='0.38  0.3  0.3  0.0  0.1 0.3  0.38  0.3  0.0  0.28 0.3  0.3  0.38  0.0  0.0 0.0  0.0  0.0  1.0  0.0'/>\
+		  </filter>\
+		</svg>#matrix-ygg") !important;
+	}
+	
+	/*Royal*/
+	#ctraddon_history-menu-toolbar-button .toolbarbutton-icon,
+	#history-button .toolbarbutton-icon,
+	#history-panelmenu .toolbarbutton-icon,
+	#ctraddon_history-button .toolbarbutton-icon,
+	#fullscreen-button .toolbarbutton-icon,
+	#urlbar-reload-button:hover,
+	#paste-button .toolbarbutton-icon,
+	#reload-button .toolbarbutton-icon ,
+	#ctraddon_reload-button .toolbarbutton-icon { 
+	  filter: url("data:image/svg+xml;utf8,\
+		<svg xmlns='http://www.w3.org/2000/svg'>\
+		  <filter id='matrix-cbb' color-interpolation-filters='sRGB' filterUnits='objectBoundingBox' x='0' y='0' width='100%' height='100%'>\
+			<feColorMatrix type='saturate' in='SourceGraphic' values='0' result='A'/>\
+			<feColorMatrix type='matrix' in='A' values='0.38  0.3  0.3  0.0  0.0 0.3  0.38  0.3  0.0  0.07 0.3  0.3  0.38  0.0  0.3 0.0  0.0  0.0  1.0  0.0'/>\
+		  </filter>\
+		</svg>#matrix-cbb") !important;
+	}
+
+	/*Poppy*/
+	#urlbar[level="broken"] #page-proxy-favicon { 
+	  filter: url("data:image/svg+xml;utf8,\
+		<svg xmlns='http://www.w3.org/2000/svg'>\
+		  <filter id='matrix-rry' color-interpolation-filters='sRGB' filterUnits='objectBoundingBox' x='0' y='0' width='100%' height='100%'>\
+			<feColorMatrix type='saturate' in='SourceGraphic' values='0' result='A'/>\
+			<feColorMatrix type='matrix' in='A' values='0.38  0.3  0.3  0.0  0.4 0.3  0.38  0.3  0.0  0.1 0.3  0.3  0.38  0.0  0.0 0.0  0.0  0.0  1.0  0.0'/>\
+		  </filter>\
+		</svg>#matrix-rry") !important;
+	}
+
+	/*Orange*/
+	#feed-button .toolbarbutton-icon {
+	  filter: url("data:image/svg+xml;utf8,\
+		<svg xmlns='http://www.w3.org/2000/svg'>\
+		  <filter id='matrix-ry' color-interpolation-filters='sRGB' filterUnits='objectBoundingBox' x='0' y='0' width='100%' height='100%'>\
+			<feColorMatrix type='saturate' in='SourceGraphic' values='0' result='A'/>\
+			<feColorMatrix type='matrix' in='A' values='0.38  0.3  0.3  0.0  0.4 0.3  0.38  0.3  0.0  0.2 0.3  0.3  0.38  0.0  0.0 0.0  0.0  0.0  1.0  0.0'/>\
+		  </filter>\
+		</svg>#matrix-ry") !important;
+	}
+	
+	/*Gold */
+	#PanelUI-customize .toolbarbutton-icon,
+	#password-notification-icon,
+	#home-button .toolbarbutton-icon,
+	#open-file-button .toolbarbutton-icon,
+	#email-link-button .toolbarbutton-icon { 
+	  filter: url("data:image/svg+xml;utf8,\
+		<svg xmlns='http://www.w3.org/2000/svg'>\
+		  <filter id='matrix-ryy' color-interpolation-filters='sRGB' filterUnits='objectBoundingBox' x='0' y='0' width='100%' height='100%'>\
+			<feColorMatrix type='saturate' in='SourceGraphic' values='0' result='A'/>\
+			<feColorMatrix type='matrix' in='A' values='0.38  0.3  0.3  0.0  0.4 0.3  0.38  0.3  0.0  0.3 0.3  0.3  0.38  0.0  0.0 0.0  0.0  0.0  1.0  0.0'/>\
+		  </filter>\
+		</svg>#matrix-ryy") !important;
+	}
+	
+	/*Cyan*/
+	#PanelUI-fxa-status .toolbarbutton-icon,
+	#sync-button .toolbarbutton-icon,
+	#tabview-button .toolbarbutton-icon,
+	#social-share-button .toolbarbutton-icon { 
+	  filter: url("data:image/svg+xml;utf8,\
+		<svg xmlns='http://www.w3.org/2000/svg'>\
+		  <filter id='matrix-c' color-interpolation-filters='sRGB' filterUnits='objectBoundingBox' x='0' y='0' width='100%' height='100%'>\
+			<feColorMatrix type='saturate' in='SourceGraphic' values='0' result='A'/>\
+			<feColorMatrix type='matrix' in='A' values='0.38  0.3  0.3  0.0  0.0 0.3  0.38  0.3  0.0  0.3 0.3  0.3  0.38  0.0  0.3 0.0  0.0  0.0  1.0  0.0'/>\
+		  </filter>\
+		</svg>#matrix-c") !important;
+	}
+
+	/*Purple*/
+	#privatebrowsing-button .toolbarbutton-icon,
+	#print-button .toolbarbutton-icon { 
+	  filter: url("data:image/svg+xml;utf8,\
+		<svg xmlns='http://www.w3.org/2000/svg'>\
+		  <filter id='matrix-bmm' color-interpolation-filters='sRGB' filterUnits='objectBoundingBox' x='0' y='0' width='100%' height='100%'>\
+			<feColorMatrix type='saturate' in='SourceGraphic' values='0' result='A'/>\
+			<feColorMatrix type='matrix' in='A' values='0.38  0.3  0.3  0.0  0.18 0.3  0.38  0.3  0.0  0.0 0.3  0.3  0.38  0.0  0.26 0.0  0.0  0.0  1.0  0.0'/>\
+		  </filter>\
+		</svg>#matrix-bmm") !important;
+	}
+	
+	/*Azure*/
+	#webide-button .toolbarbutton-icon,
+	#PanelUI-help:not(:hover) .toolbarbutton-icon,
+	#PanelUI-menu-button .toolbarbutton-icon,
+	#nav-bar-overflow-button .toolbarbutton-icon,
+	#classic_bm_button23-toolbar-button > .toolbarbutton-icon,
+	#ctraddon_bookmarks-menu-toolbar-button .toolbarbutton-icon,
+	#ctraddon_bookmarks-button .toolbarbutton-icon,
+	#bookmarks-menu-button .toolbarbutton-icon,
+	#bookmarks-button .toolbarbutton-icon,
+	#bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon { 
+	  filter: url("data:image/svg+xml;utf8,\
+		<svg xmlns='http://www.w3.org/2000/svg'>\
+		  <filter id='matrix-cb' color-interpolation-filters='sRGB' filterUnits='objectBoundingBox' x='0' y='0' width='100%' height='100%'>\
+			<feColorMatrix type='saturate' in='SourceGraphic' values='0' result='A'/>\
+			<feColorMatrix type='matrix' in='A' values='0.38  0.3  0.3  0.0  0.0 0.3  0.38  0.3  0.0  0.15 0.3  0.3  0.38  0.0  0.3 0.0  0.0  0.0  1.0  0.0'/>\
+		  </filter>\
+		</svg>#matrix-cb") !important;
+	}
+
+	/* 0-saturation */
+	.searchbar-dropmarker-image,
+	.urlbar-history-dropmarker { 
+	  filter: url("data:image/svg+xml;utf8,\
+		<svg xmlns='http://www.w3.org/2000/svg'>\
+		  <filter id='desat-0' color-interpolation-filters='sRGB' filterUnits='objectBoundingBox' x='0' y='0' width='100%' height='100%'>\
+			<feColorMatrix type='saturate' in='SourceGraphic' values='0.0'/>\
+		  </filter>\
+		</svg>#desat-0") !important;
+	}
+	
+	/*Exclude CTRs star in feed buttons in location bar */
+	#urlbar-icons #feed-button .toolbarbutton-icon,
+	#urlbar-icons #bookmarks-menu-button .toolbarbutton-icon { 
+	  filter: none !important;
+	}
+
+}

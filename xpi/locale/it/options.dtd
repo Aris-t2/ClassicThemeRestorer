@@ -30,10 +30,11 @@
 <!ENTITY Ctr_tabs2			"Scheda con angoli arrotondati (stile alternativo)">
 <!ENTITY Ctr_tabs3			"Schede con angoli arrotondati (stile Aero)">
 <!ENTITY Ctr_tabforminfo	"L’aspetto delle schede è definito dal tema in uso.">
-<!ENTITY Ctr_tabsontop0		"Schede in alto (predefinito) - [CTR disattivata]">
-<!ENTITY Ctr_tabsontop1		"Schede in alto - CTR attivata - [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Schede in basso - CTR attivata - [tabsontop=false]">
-<!ENTITY Ctr_tabsontop3		"Schede in basso (v2) - CTR attivata - [tabsontop=false]">
+<!ENTITY Ctr_tabsontop0		"Schede in alto (predefinito)">
+<!ENTITY Ctr_tabsontop1		"Schede in alto --- attivata [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Schede in basso (v1) --- attivata [tabsontop=false]">
+<!ENTITY Ctr_tabsontop3		"Schede in basso (v2) --- attivata [tabsontop=false]">
+<!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
 <!ENTITY Ctr_tabsontopI1	"Aggiunge l’attributo [tabsontop=true/false] a">
 <!ENTITY Ctr_tabsintitlebar	"Schede nella barra del titolo (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(predefinita)">
@@ -46,6 +47,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
 <!ENTITY Ctr_emptyfavicon	"Nei siti che non hanno una favicon usa la vecchia favicon vuota">
 <!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tab">
+<!ENTITY Ctr_e10stab_notd	"E10s tabs: remove underline">
 <!ENTITY Ctr_closetab_0		"Pulsante di chiusura)">
 <!ENTITY Ctr_closetab_1		"Nella scheda attiva">
 <!ENTITY Ctr_closetab_2		"Nessun pulsante di chiusura schede">
@@ -62,6 +64,7 @@
 <!ENTITY Ctr_appbutton1		"Pulsante nella barra degli strumenti">
 <!ENTITY Ctr_appbutton1wt	"Pulsante nella barra degli strumenti (solo testo)">
 <!ENTITY Ctr_appbutton2		"Pulsante nella barra del titolo">
+<!ENTITY Ctr_appbutton2h	"Pulsante nella barra del titolo (hidden)">
 <!ENTITY Ctr_appbutton2io	"Pulsante nella barra del titolo (solo icona)">
 <!ENTITY Ctr_paneluibtweak	"Pulsante pannello menu arancione nella barra delle schede">
 <!ENTITY Ctr_appbuttonc_o	"Pulsante arancione (predefinito)">
@@ -91,9 +94,11 @@
 <!ENTITY Ctr_smallnavbut	"Pulsanti piccoli nella barra di navigazione">
 <!ENTITY Ctr_bfurlbarfix	"Correggi la curvatura della barra degli indirizzi per i pulsanti Avanti e Indietro mobili e i pulsanti piccoli">
 <!ENTITY Ctr_backforward	"Pulsante Indietro/Avanti mobile">
+<!ENTITY Ctr_nbcompact		"Reduce navigation toolbars height">
 <!ENTITY Ctr_hide_bf_popup	"Nascondi la cronologia tenendo premuto il pulsante Avanti/Indietro mobile">
 <!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"Replace page context menu icons with labels (back, forward, stop, reload, bookmark page)">
+<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
 <!ENTITY Ctr_wincontrols	"Angoli finestra mobili in modalità schermo intero">
 <!ENTITY Ctr_emptyfavicon2	"Sostituisci la favicon generica predefinita con un’icona a forma di foglio">
 <!ENTITY Ctr_mstatusbar		"Barra di stato mobile">
@@ -200,9 +205,12 @@
 <!ENTITY Ctr_altmenubarpos	"Posizione alternativa (sotto la barra del titolo)">
 <!ENTITY Ctr_menubarnofog	"Elimina l’effetto nebbia o il colore di sfondo (Windows AeroGlass e Windows 8)">
 
+<!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
 <!ENTITY Ctr_hidenavbar		"Nascondi barra di navigazione">
 <!ENTITY Ctr_nobookbarbg	"Rimuovi colore di sfondo dalla barra dei segnalibri">
 <!ENTITY Ctr_nonavbarbg		"Rimuovi colore di sfondo dalla barra di navigazione">
+<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
+<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
 <!ENTITY Ctr_nonavborder	"Aggiungi bordo superiore alla barra dei segnalibri">
 <!ENTITY Ctr_nonavtbborder	"Rimuovi i bordi alle barre degli strumenti posizionate in alto">
 <!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
@@ -226,6 +234,11 @@
 <!ENTITY Ctr_otherctroptns	"Other settings">
 <!ENTITY Ctr_cuibotbuttons	"Aggiungi pulsanti in modalità personalizzazione">
 <!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
+
+<!ENTITY Ctr_experttweaks	"Advanced">
+<!ENTITY Ctr_fx33layers		"Firefox 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
+<!ENTITY Ctr_fx34search		"Firefox 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
+<!ENTITY Ctr_fx34loop		"Firefox 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
 
 
 <!ENTITY Ctr_pw_settings	"Impostazioni">

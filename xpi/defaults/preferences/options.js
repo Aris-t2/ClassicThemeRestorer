@@ -5,6 +5,7 @@ pref("extensions.classicthemerestorer.ctabheightcb",false);
 pref("extensions.classicthemerestorer.ctabheight",28);
 pref("extensions.classicthemerestorer.ctabmwidth",100);
 pref("extensions.classicthemerestorer.ctabwidth",210);
+pref("extensions.classicthemerestorer.e10stab_notd",false);
 pref("extensions.classicthemerestorer.emptyfavicon",false);
 pref("extensions.classicthemerestorer.noemptypticon",false);
 pref("extensions.classicthemerestorer.closetab","closetab_default");
@@ -32,11 +33,12 @@ pref("extensions.classicthemerestorer.bfurlbarfix",false);
 pref("extensions.classicthemerestorer.bf_space",false);
 pref("extensions.classicthemerestorer.backforward",false);
 pref("extensions.classicthemerestorer.hide_bf_popup",false);
+pref("extensions.classicthemerestorer.nbcompact",false);
 pref("extensions.classicthemerestorer.statusbar",true);
 pref("extensions.classicthemerestorer.noconicons",false);
+pref("extensions.classicthemerestorer.svgfilters",false);
 pref("extensions.classicthemerestorer.combrelstop",false);
 pref("extensions.classicthemerestorer.activndicat",false);
-pref("extensions.classicthemerestorer.nbiconsize",'small');
 pref("extensions.classicthemerestorer.nbisizedelay",0);
 pref("extensions.classicthemerestorer.findbar","findbar_default");
 pref("extensions.classicthemerestorer.nav_txt_ico","icons");
@@ -79,6 +81,9 @@ pref("extensions.classicthemerestorer.padlockex",true);
 pref("extensions.classicthemerestorer.icopageinfo",false);
 
 // Toolbar settings
+pref("extensions.classicthemerestorer.aerocolors",false);
+pref("extensions.classicthemerestorer.nbiconsize",'small');
+
 pref("extensions.classicthemerestorer.nobookbarbg",false);
 pref("extensions.classicthemerestorer.hidenavbar",false);
 pref("extensions.classicthemerestorer.nonavbarbg",false);

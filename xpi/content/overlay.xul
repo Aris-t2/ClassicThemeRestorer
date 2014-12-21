@@ -75,6 +75,7 @@
 		  <toolbaritem id="ctraddon_statusbar"
 					   title="&Ctr_statusbar;"
 					   customizableui-areatype="toolbar"
+					   overflows="false"
 					   removable="true"/>
 		</toolbar>
 		<toolbar id="ctraddon_toolbar_dummy" customizable="false"
@@ -119,7 +120,6 @@
 	<toolbarbutton id="alltabs-button" removable="true"/>
 	<toolbarbutton id="webrtc-status-button" removable="true"/>
 	<toolbarbutton id="social-share-button" removable="true"/>
-	<toolbarbutton id="bookmarks-menu-button" overflows="false"/>
 	<toolbaritem id="social-toolbar-item" removable="true"/>
 
 	<toolbar id="TabsToolbar">
@@ -820,6 +820,7 @@
 	  <toolbaritem id="ctraddon_puib_separator"
                    title="&Ctr_puibseparator;"
                    customizableui-areatype="toolbar"
+				   overflows="false"
                    removable="true"/>
 				   
 	  <toolbaritem id="ctraddon_navigator-throbber"
@@ -828,6 +829,7 @@
 				   align="center"
 				   pack="center"
 				   onclick="classicthemerestorerjs.ctr.openAThrobberUrl();"
+				   overflows="false"
                    removable="true"/>
 	  
 	  <!--### creates movable back-forward buttons ###-->
@@ -885,7 +887,7 @@
   
 	  <!--### creates clone of fullscreen window control buttons ###-->
 	  <toolbaritem id="ctraddon_window-controls" class="chromeclass-toolbar-additional"
-                   removable="true" title="&Ctr_windowcontrols;">
+                   removable="true" overflows="false" title="&Ctr_windowcontrols;">
         <toolbarbutton id="minimize-button"
                        tooltiptext="&fullScreenMinimize.tooltip;"
                        oncommand="window.minimize();"/>

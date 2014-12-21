@@ -32,4 +32,10 @@
 	#ctraddon_forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon{
 	  transform: scaleX(-1);
 	}
+	
+	#nav-bar #urlbar-container,
+	#nav-bar #search-container{
+	  margin-top:1px;
+	  margin-bottom:1px;
+	}
 }
