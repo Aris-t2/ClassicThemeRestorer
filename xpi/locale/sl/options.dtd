@@ -21,7 +21,7 @@
 
 <!ENTITY Ctr_tnot			"(zavihki niso na vrhu)">
 
-<!ENTITY Ctr_tabcolors_t	"Barve zavihkov &amp; besedilo">
+<!ENTITY Ctr_tabcolors_t	"Barve zavihkov in besedilo">
 
 <!ENTITY Ctr_tabs			"Zavihki">
 <!ENTITY Ctr_tabs0			"Zaokroženi zavihki (Firefoxova privzeta nastavitev)">
@@ -34,7 +34,7 @@
 <!ENTITY Ctr_tabsontop1		"Zavihki na vrhu - nastavljeno [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Zavihki niso na vrhu - nastavljeno [tabsontop=false]">
 <!ENTITY Ctr_tabsontop3		"Zavihki niso na vrhu (v2) - nastavljeno [tabsontop=false]">
-<!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
+<!ENTITY Ctr_tabsontopW1	"v2 je samo za nekatere dodatke in celotne teme!">
 <!ENTITY Ctr_tabsontopI1	"Doda atribut [tabsontop=true/false] k">
 <!ENTITY Ctr_tabsintitlebar	"Nazivna vrstica Firefoxa (nastavitev about:config)">
 <!ENTITY Ctr_tabwidthdef	"(privzeto)">
@@ -47,7 +47,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Vrednosti pod 48 slikovnih točk bodo v večini premerov povzročile napake!">
 <!ENTITY Ctr_emptyfavicon	"Obnovi prazno ikono zaznamka (če je stran ne ponuja)">
 <!ENTITY Ctr_noemptypticon	"Odstrani prazno ikono zaznamka iz pripetih zavihkov">
-<!ENTITY Ctr_e10stab_notd	"E10s tabs: remove underline">
+<!ENTITY Ctr_e10stab_notd	"Zavihki E10s: podstrani podčrtanje">
 <!ENTITY Ctr_closetab_0		"Zapri zavihek">
 <!ENTITY Ctr_closetab_1		"Samo na dejavnem zavihku">
 <!ENTITY Ctr_closetab_2		"Nikjer">
@@ -64,8 +64,8 @@
 <!ENTITY Ctr_appbutton1		"Gumb na orodni vrstici">
 <!ENTITY Ctr_appbutton1wt	"Gumb na orodni vrstici (samo besedilo)">
 <!ENTITY Ctr_appbutton2		"Gumb na nazivni vrstici [Firefox]">
-<!ENTITY Ctr_appbutton2h	"Button on [Firefox] titlebar (hidden)">
-<!ENTITY Ctr_appbutton2io	"Gumb nanazivni vrstici [Firefox] (samo ikona)">
+<!ENTITY Ctr_appbutton2h	"Gumb na nazivni vrstici [Firefox] (skrit)">
+<!ENTITY Ctr_appbutton2io	"Gumb na nazivni vrstici [Firefox] (samo ikona)">
 <!ENTITY Ctr_paneluibtweak	"Oranžni gumb menija podokna na orodni vrstici zavihkov">
 <!ENTITY Ctr_appbuttonc_o	"Oranžna barva gumba (privzeto)">
 <!ENTITY Ctr_appbuttonc_a	"Modra barva gumba (Aurora)">
@@ -94,12 +94,12 @@
 <!ENTITY Ctr_smallnavbut	"Majhni gumbi na orodni vrstici za krmarjenje">
 <!ENTITY Ctr_bfurlbarfix	"Pritrdi polmer obrobe naslovne vrstice">
 <!ENTITY Ctr_backforward	"Premakljiva gumba Nazaj/Naprej">
-<!ENTITY Ctr_nbcompact		"Reduce navigation toolbars height">
+<!ENTITY Ctr_nbcompact		"Zmanjšaj višino orodne vrstice za krmarjenje">
 <!ENTITY Ctr_hide_bf_popup	"Skrij pojavni meni zgodovine gumba ob kliku miške">
 <!ENTITY Ctr_bf_space		"Zmanjšaj prostor med gumbi (če je možno)">
 <!ENTITY Ctr_noconicons		"Vsebinski meni strani: nadomesti ikone z oznakami (nazaj, naprej ...)">
-<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
-<!ENTITY Ctr_wincontrols	"Premakljivi nadzorne tipke za celozaslonsko okno">
+<!ENTITY Ctr_svgfilters		"Barve SVG za privzete ikone gumbov orodne vrstice">
+<!ENTITY Ctr_wincontrols	"Premakljive nadzorne tipke za celozaslonsko okno">
 <!ENTITY Ctr_emptyfavicon2	"Nadomesta splošna ikona zaznamka (prazna in pikčasta) z ikono zaznamka lista">
 <!ENTITY Ctr_mstatusbar		"Premakljivo podokno stanja">
 <!ENTITY Ctr_mstatusbars4e	"Podokno stanja nadzira 'Status-4-Evar'">
@@ -206,15 +206,15 @@
 <!ENTITY Ctr_menubarnofog	"Odstrani barvo ozadja/meglo (Windows AeroGlass/8)">
 
 <!ENTITY Ctr_aerocolors		"Blue Aero colors for toolbars (and tabs)">
-<!ENTITY Ctr_hidenavbar		"Orodna vrstica krmarjenja: skrij orodno vrstico">
+<!ENTITY Ctr_hidenavbar		"Orodna vrstica za krmarjenje: skrij orodno vrstico">
 <!ENTITY Ctr_nobookbarbg	"Orodna vrstica zaznamkov: odstrani barvo ozadja">
-<!ENTITY Ctr_nonavbarbg		"Orodna vrstica krmarjenja: odstrani barvo ozadja">
-<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
-<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
+<!ENTITY Ctr_nonavbarbg		"Orodna vrstica za krmarjenje: odstrani barvo ozadja">
+<!ENTITY Ctr_nonavbarbg1	"To vpliva na dodatne orodne vtrstice tega dodatka in druge orodne vrstice na vrhu.">
+<!ENTITY Ctr_nonavbarbg2	"To vpliva na vse orodne vrstice izbire Slim Chrome dodatka 'The Fox, Only Better'.">
 <!ENTITY Ctr_nonavborder	"Orodna vrstica zaznamkov: dodaj zgornjo obrobo orodni vrstici">
 <!ENTITY Ctr_nonavtbborder	"Zgornje orodne vrstice: odstrani obrobe orodnih vrstic">
 <!ENTITY Ctr_hidesbclose	"Stranske vrstice: skrij gumb Zapri stranske vrstice">
-<!ENTITY Ctr_chevronfix		"Orodna vrstica krmarjenja: skrij dvojno puščico ('chevron') na koncu orodne vrstice">
+<!ENTITY Ctr_chevronfix		"Orodna vrstica za krmarjenje: skrij dvojno puščico ('chevron') na koncu orodne vrstice">
 
 <!ENTITY Ctr_closeabarbut	"Skrij gumb Zapri vrstice dodatkov">
 <!ENTITY Ctr_highaddonsbar	"Povečaj višino">
@@ -235,10 +235,10 @@
 <!ENTITY Ctr_cuibotbuttons	"Dodatni gumbi v načinu 'prilagoditve'">
 <!ENTITY Ctr_bookmarkoinpw	"Vnos 'Odpri v novem zasebnem oknu' v vsebinskem meniju zaznamkov">
 
-<!ENTITY Ctr_experttweaks	"Advanced">
-<!ENTITY Ctr_fx33layers		"Firefox 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
-<!ENTITY Ctr_fx34search		"Firefox 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
+<!ENTITY Ctr_experttweaks	"Napredno">
+<!ENTITY Ctr_fx33layers		"Firefox 33+ je vpeljal 'nove značilnosti izrisa', ki na nekaterih sistemih povzročajo 'zamrznitev zavihkov'. Odznačitev te nastavitve bo rešila to težavo.">
+<!ENTITY Ctr_fx34search		"Firefox 34+ je vpeljal 'nov ui za iskanje'. Odznačitev te nastavitve povrne 'stari ui za iskanje'.">
+<!ENTITY Ctr_fx34loop		"Firefox 34+ je vpeljal značilnosti 'klicanja in pogovorov'. Odznačitev te nastavitve jih odstrani.">
 
 
 <!ENTITY Ctr_pw_settings	"Nastavitve">
@@ -249,7 +249,7 @@
 <!ENTITY Ctr_pw_set_import	"Uvozi nastavitve">
 
 <!ENTITY Ctr_special_font	"Nastavitve barve ozadja so samo za privzeto temo!">
-<!ENTITY Ctr_special_info	"Nekatere možnosti morda ne bodo povzročila vidnih sprememb v vseh primerih">
+<!ENTITY Ctr_special_info	"Nekatere možnosti v vseh primerih morda ne bodo povzročile vidnih sprememb">
 <!ENTITY Ctr_special_info2	"Nastavitve so narejene za Firefoxovo privzeto temo in morda ne bodo delovale z vsemi temami tretjih oseb!">
 <!ENTITY Ctr_support		"Forum za podporo">
 <!ENTITY Ctr_newversion		"Nova različica?">
