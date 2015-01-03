@@ -88,4 +88,14 @@
 	  margin:0px !important;
 	  padding:0px !important;
 	}
+	
+	#main-window #navigator-toolbox #nav-bar #PanelUI-menu-button .toolbarbutton-badge,
+	#main-window #navigator-toolbox #nav-bar #PanelUI-menu-button .toolbarbutton-badge-container,
+	#main-window #navigator-toolbox #nav-bar #loop-button .toolbarbutton-badge,
+	#main-window #navigator-toolbox #nav-bar #loop-button .toolbarbutton-badge-container,
+	#main-window #navigator-toolbox #nav-bar #loop-button-throttled .toolbarbutton-badge,
+	#main-window #navigator-toolbox #nav-bar #loop-button-throttled .toolbarbutton-badge-container{
+	  border:0px solid transparent !important;
+	  padding:0 !important;
+	}
 }

@@ -232,16 +232,23 @@ classicthemerestorerjs.ctr = {
 			classicthemerestorerjs.ctr.loadUnloadCSS('tabs_squared2',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('tabs_curved',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('tabs_curvedall',false);
-			
-			if (branch.getCharPref("tabs")!="tabs_default" && classicthemerestorerjs.ctr.fxdefaulttheme==true){
+
+			var devtheme=false;
+
+			try {
+			  if(Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
+				devtheme=true;
+			  }
+			} catch(e) {}
+
+			if (branch.getCharPref("tabs")!="tabs_default" && classicthemerestorerjs.ctr.fxdefaulttheme==true && devtheme==false){
 			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("tabs"),true);
 			}
-			
-			if (branch.getBoolPref("aerocolors") && classicthemerestorerjs.ctr.fxdefaulttheme==true) { 
-				classicthemerestorerjs.ctr.loadUnloadCSS("aerocolors",false);
-				classicthemerestorerjs.ctr.loadUnloadCSS("aerocolors",true);
-			}
 
+			if (branch.getBoolPref("aerocolors") && classicthemerestorerjs.ctr.fxdefaulttheme==true && devtheme==false) { 
+			  classicthemerestorerjs.ctr.loadUnloadCSS("aerocolors",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("aerocolors",true);
+			}
 		  
 		  break;
 		  
@@ -417,7 +424,16 @@ classicthemerestorerjs.ctr = {
 		  
 		  /*Aero Colors*/
 		  case "aerocolors":
-			if (branch.getBoolPref("aerocolors") && classicthemerestorerjs.ctr.fxdefaulttheme==true) {
+		 
+			var devtheme=false;
+
+			try {
+			  if(Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
+				devtheme=true;
+			  }
+			} catch(e) {}
+			
+			if (branch.getBoolPref("aerocolors") && classicthemerestorerjs.ctr.fxdefaulttheme==true && devtheme==false) {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("aerocolors",true);
 			  branch.setBoolPref("tabc_act_tb",false);
 			  if (branch.getBoolPref("tabcolor_act") && classicthemerestorerjs.ctr.fxdefaulttheme==true) {
@@ -716,6 +732,7 @@ classicthemerestorerjs.ctr = {
 			classicthemerestorerjs.ctr.loadUnloadCSS('iconsbig',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt2',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt3',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('txtonly',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",false);
 			classicthemerestorerjs.ctr.loadUnloadCSS("to_notf_vt",false);
@@ -737,6 +754,11 @@ classicthemerestorerjs.ctr = {
 				if (branch.getBoolPref("iat_notf_vt"))
 				  classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",true);
 			  break;
+			  case "iconstxt3":
+				classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt3',true);
+				if (branch.getBoolPref("iat_notf_vt"))
+				  classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",true);
+			  break;
 			  case "txtonly":
 				classicthemerestorerjs.ctr.loadUnloadCSS('txtonly',true);
 				if (branch.getBoolPref("iat_notf_vt"))
@@ -754,7 +776,7 @@ classicthemerestorerjs.ctr = {
 		  
 		  case "iat_notf_vt":
 			if (branch.getBoolPref("iat_notf_vt")) {
-			  if (branch.getCharPref("nav_txt_ico")=="iconstxt" || branch.getCharPref("nav_txt_ico")=="iconstxt2") 
+			  if (branch.getCharPref("nav_txt_ico")=="iconstxt" || branch.getCharPref("nav_txt_ico")=="iconstxt2" || branch.getCharPref("nav_txt_ico")=="iconstxt3") 
 			    classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",true);
 			  else if(branch.getCharPref("nav_txt_ico")=="txtonly")
 			    classicthemerestorerjs.ctr.loadUnloadCSS("to_notf_vt",true);
@@ -1214,6 +1236,11 @@ classicthemerestorerjs.ctr = {
 		  case "alt_newtabp":
 			if (branch.getBoolPref("alt_newtabp")) classicthemerestorerjs.ctr.loadUnloadCSS("alt_newtabp",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("alt_newtabp",false);
+		  break;
+		  
+		  case "noresizerxp":
+			if (branch.getBoolPref("noresizerxp")) classicthemerestorerjs.ctr.loadUnloadCSS("noresizerxp",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("noresizerxp",false);
 		  break;
 
 		  case "pmhidelabels":
@@ -2240,6 +2267,9 @@ classicthemerestorerjs.ctr = {
 			else if (enable==true && this.prefs.getCharPref("nav_txt_ico")=="iconstxt2"){
 				enable=false;
 			}
+			else if (enable==true && this.prefs.getCharPref("nav_txt_ico")=="iconstxt3"){
+				enable=false;
+			}
 	
 			manageCSS("smallnavbut.css");
 			
@@ -2291,6 +2321,23 @@ classicthemerestorerjs.ctr = {
 				enable=false;
 			}
 			manageCSS("mode_icons_and_text2.css");
+
+		break;
+		
+		// no 'small button' mode, if 'icons + text' mode is used
+		case "iconstxt3":
+			if(enable==true && this.prefs.getBoolPref("smallnavbut")==true){
+				enable=false;
+				manageCSS("smallnavbut.css");
+				enable=true;
+			}
+			if(enable==false && this.prefs.getBoolPref("smallnavbut")==true){
+				enable=true;
+				manageCSS("smallnavbut.css");
+				enable=false;
+			}
+			if (classicthemerestorerjs.ctr.osstring=="Darwin") manageCSS("mode_icons_and_text.css");
+			else manageCSS("mode_icons_and_text3.css");
 
 		break;
 		
@@ -2358,6 +2405,7 @@ classicthemerestorerjs.ctr = {
 		case "noemptypticon": 		manageCSS("empty_favicon_pt.css");		break;
 		case "hidezoomres": 		manageCSS("hide_zoomreset.css");		break;
 		case "alt_newtabp": 		manageCSS("alt_newtabpage.css");		break;
+		case "noresizerxp": 		manageCSS("no_resizer_xp.css");			break;
 		case "pmhidelabels": 		manageCSS("panelmenu_nolabels.css");	break;
 		case "menupopupscr": 		manageCSS("menupopupscrollbar.css");	break;
 		case "verifiedcolors": 		manageCSS("verifiedcolors.css");		break;
@@ -3765,6 +3813,7 @@ classicthemerestorerjs.ctr = {
 					case "iconsbig":	cuiicotextbut='#ctraddon_cui-icons-button {background:#bdbdbd !important;} #ctraddon_cui-iconstext-button {background:#fbfbfb !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;}'; break;
 					case "iconstxt":	cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#dadada !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;}'; break;
 					case "iconstxt2":	cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#bdbdbd !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;}'; break;
+					case "iconstxt3":	cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#ababab !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;}'; break;
 					case "txtonly":		cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#fbfbfb !important;} #ctraddon_cui-textonly-button {background:#dadada !important;}'; break;
 				}
 				
@@ -3832,6 +3881,9 @@ classicthemerestorerjs.ctr = {
 	  this.prefs.setCharPref(which,'iconstxt2');
 	} 
 	else if(this.prefs.getCharPref('nav_txt_ico')=='iconstxt2' && value=="iconstxt") {
+	  this.prefs.setCharPref(which,'iconstxt3');
+	}
+	else if(this.prefs.getCharPref('nav_txt_ico')=='iconstxt3' && value=="iconstxt") {
 	  this.prefs.setCharPref(which,'iconstxt');
 	}
 	else {

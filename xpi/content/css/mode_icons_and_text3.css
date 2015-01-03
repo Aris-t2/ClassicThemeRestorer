@@ -1,0 +1,202 @@
+@import url(chrome://ctraddon_os_special/skin/mode_icons_and_text_extra3.css);
+@import url(chrome://ctraddon_os_special/skin/back-forwardextra.css);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	/* navigation toolbar */
+	#nav-bar .toolbarbutton-1 .toolbarbutton-text,
+	#nav-bar .toolbarbutton-menubutton-dropmarker > image,
+	#nav-bar .toolbarbutton-menubutton-button .toolbarbutton-icon,
+	#nav-bar toolbarbutton[type="menu-button"] > .toolbarbutton-icon,
+	#nav-bar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#ctraddon_back-button):not(#ctraddon_forward-button):-moz-any(:hover,[checked],[open],[type="menu-button"]) > .toolbarbutton-icon,
+	#nav-bar .toolbarbutton-1[type="menu-button"] > .toolbarbutton-menubutton-dropmarker::before,
+	#nav-bar .toolbarbutton-1 > .toolbarbutton-icon,
+	#nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+	#nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+	  -moz-appearance: none !important;
+	  background: none !important;
+	  background-image: none !important;
+	  border-radius: 2.5px;
+	  border-color: transparent !important;
+	  box-shadow: none !important;
+	  transition-property: none !important;
+	  transition-duration: 0ms !important;
+	}
+	#nav-bar toolbaritem .toolbarbutton-1 .toolbarbutton-text,
+	#nav-bar .toolbarbutton-1:not([type="menu-button"]) .toolbarbutton-text,
+	#nav-bar .toolbarbutton-1[type="menu-button"] toolbarbutton .toolbarbutton-text{
+	  display: -moz-box !important;
+	  padding:0 !important;
+	}
+	#nav-bar toolbaritem .toolbarbutton-1:not([type="menu-button"]),
+	#nav-bar .toolbarbutton-1:not([type="menu-button"]),
+	#nav-bar .toolbarbutton-1[type="menu-button"] toolbarbutton{
+	  -moz-box-orient: vertical !important;
+	  min-width: 57px !important;
+	}
+	#nav-bar toolbaritem .toolbarbutton-1,
+	#nav-bar .toolbarbutton-1:not([type="menu-button"]),
+	#nav-bar .toolbarbutton-1[type="menu-button"]{
+	  padding:1px 2px !important;
+	  margin:1px 0 !important;
+	}
+
+	#nav-bar .toolbarbutton-1[type="menu-button"] toolbarbutton{
+	  padding:0px 0px !important;
+	  margin:0px 0 !important;
+	}
+	#nav-bar toolbaritem .toolbarbutton-1,
+	#nav-bar .toolbarbutton-1,
+	#nav-bar .toolbarbutton-1[type="menu-button"] toolbarbutton{
+	  -moz-appearance: toolbarbutton !important;
+	}
+
+	@media not all and (-moz-windows-theme:aero) {
+	  #nav-bar toolbaritem .toolbarbutton-1,
+	  #nav-bar .toolbarbutton-1{
+		border-top: 2px solid transparent !important;
+		border-right: 1px solid transparent !important;
+		border-left: 1px solid transparent !important;
+		border-bottom: 1px solid transparent !important;
+	  }
+	  #nav-bar toolbaritem .toolbarbutton-1:not([disabled]):hover,
+	  #nav-bar .toolbarbutton-1:not([disabled]):hover{
+		-moz-border-top-colors: transparent -moz-Dialog !important;
+		border-right: 1px solid -moz-Dialog !important;
+		border-left: 1px solid -moz-Dialog !important;
+		border-bottom: 1px solid -moz-Dialog !important;
+		background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.1)) !important;
+	  }
+	}
+
+	#nav-bar #urlbar toolbaritem .toolbarbutton-1 .toolbarbutton-text,
+	#nav-bar #urlbar .toolbarbutton-1:not([type="menu-button"]) .toolbarbutton-text,
+	#nav-bar #urlbar .toolbarbutton-1[type="menu-button"] toolbarbutton .toolbarbutton-text{
+	  display: none !important;
+	}
+	#nav-bar #urlbar toolbaritem .toolbarbutton-1:not([type="menu-button"]),
+	#nav-bar #urlbar .toolbarbutton-1:not([type="menu-button"]),
+	#nav-bar #urlbar .toolbarbutton-1[type="menu-button"] toolbarbutton{
+	  -moz-box-orient: unset !important;
+	  min-width: unset !important;
+	}
+	#nav-bar #urlbar toolbaritem .toolbarbutton-1,
+	#nav-bar #urlbar .toolbarbutton-1:not([type="menu-button"]),
+	#nav-bar #urlbar .toolbarbutton-1[type="menu-button"] toolbarbutton{
+	  padding: unset !important;
+	  margin: unset !important;
+	}
+	#nav-bar #urlbar toolbaritem .toolbarbutton-1,
+	#nav-bar #urlbar .toolbarbutton-1,
+	#nav-bar #urlbar .toolbarbutton-1[type="menu-button"] toolbarbutton{
+	  -moz-appearance: unset !important;
+	}
+
+	/*#nav-bar #PanelUI-menu-button .toolbarbutton-badge,
+	#nav-bar #PanelUI-menu-button .toolbarbutton-badge-container,
+	#nav-bar #loop-button .toolbarbutton-badge,
+	#nav-bar #loop-button .toolbarbutton-badge-container,
+	#nav-bar #loop-button-throttled .toolbarbutton-badge,
+	#nav-bar #loop-button-throttled .toolbarbutton-badge-container{
+	  -moz-appearance:none !important;
+	  background:none !important;
+	  border:0px !important;
+	  box-shadow:none !important;
+	}*/
+	#nav-bar .toolbarbutton-1 .toolbarbutton-badge,
+	#nav-bar .toolbarbutton-1 .toolbarbutton-badge-container{
+	  -moz-appearance:none !important;
+	  background:none !important;
+	  border:0px !important;
+	  box-shadow:none !important;
+	}
+	
+	@media not all and (-moz-windows-theme){
+		#nav-bar .toolbarbutton-1 .toolbarbutton-badge-container .toolbarbutton-icon{
+		  -moz-appearance:none !important;
+		  background:none !important;
+		  border:1px solid transparent !important;
+		  box-shadow:none !important;
+		}
+		
+	}
+	
+	/* other toolbar */
+	toolbar:not(#nav-bar):not(#TabsToolbar) toolbaritem .toolbarbutton-1 .toolbarbutton-text,
+	toolbar:not(#nav-bar):not(#TabsToolbar) .toolbarbutton-1:not([type="menu-button"]) .toolbarbutton-text,
+	toolbar:not(#nav-bar):not(#TabsToolbar) .toolbarbutton-1[type="menu-button"] toolbarbutton .toolbarbutton-text{
+	  display: -moz-box !important;
+	}
+	toolbar:not(#nav-bar):not(#TabsToolbar) toolbaritem .toolbarbutton-1:not([type="menu-button"]),
+	toolbar:not(#nav-bar):not(#TabsToolbar) .toolbarbutton-1:not([type="menu-button"]),
+	toolbar:not(#nav-bar):not(#TabsToolbar) .toolbarbutton-1[type="menu-button"] toolbarbutton{
+	  -moz-box-orient: vertical !important;
+	  min-width: 57px !important;
+	}
+
+	toolbar:not(#nav-bar):not(#TabsToolbar) #urlbar toolbaritem .toolbarbutton-1 .toolbarbutton-text,
+	toolbar:not(#nav-bar):not(#TabsToolbar) #urlbar .toolbarbutton-1:not([type="menu-button"]) .toolbarbutton-text,
+	toolbar:not(#nav-bar):not(#TabsToolbar) #urlbar .toolbarbutton-1[type="menu-button"] toolbarbutton .toolbarbutton-text{
+	  display: none !important;
+	}
+	toolbar:not(#nav-bar):not(#TabsToolbar) #urlbar toolbaritem .toolbarbutton-1:not([type="menu-button"]),
+	toolbar:not(#nav-bar):not(#TabsToolbar) #urlbar .toolbarbutton-1:not([type="menu-button"]),
+	toolbar:not(#nav-bar):not(#TabsToolbar) #urlbar .toolbarbutton-1[type="menu-button"] toolbarbutton{
+	  -moz-box-orient: unset !important;
+	  min-width: unset !important;
+	}
+	
+	/* make custom back-forward visible and hide urlbars back-forward item */
+	#ctraddon_back-forward-button {
+	  visibility: visible !important;
+	}	
+	#urlbar-container #back-button,
+	#urlbar-container #forward-button {
+	  visibility: collapse !important;
+	}
+	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper {
+	  clip-path: none !important;
+	}
+	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
+	  transition: none !important;
+	  transition-property: none !important;
+	  transition-delay: 0s !important;
+	}
+	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr) {
+	  margin-left: 0px !important;
+	}
+	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
+	  margin-left: -20px !important;
+	}
+
+	#ctraddon_back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
+	#ctraddon_forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon{
+	  transform: scaleX(-1);
+	}
+	
+	/* back forward button dropmarker */
+	toolbar #ctraddon_back-forward-dropmarker  .toolbarbutton-text {
+	  display: none !important;
+	  visibility: collapse !important;
+	}
+	#nav-bar #ctraddon_back-forward-dropmarker:not([type="menu-button"]),	
+	toolbar:not(#nav-bar):not(#TabsToolbar) #ctraddon_back-forward-dropmarker:not([type="menu-button"]){
+	  -moz-box-orient: vertical !important;
+	  min-width: unset !important;
+	}
+	/* hide menu button dropmarkers */
+	toolbar:not(#nav-bar):not(#TabsToolbar) .toolbarbutton-1[type="menu"] dropmarker,
+	#nav-bar .toolbarbutton-1[type="menu"] dropmarker{
+	  visibility: collapse !important;
+	}
+
+	/*Zoompage support*/
+	#nav-bar #zoompage-item .toolbarbutton-1:not([type="menu-button"]) .toolbarbutton-text,
+	toolbar:not(#nav-bar):not(#TabsToolbar) #zoompage-item .toolbarbutton-1:not([type="menu-button"]) .toolbarbutton-text{
+	  visibility: collapse !important;
+	}
+	#nav-bar #zoompage-item .toolbarbutton-1:not([type="menu-button"]),
+	toolbar:not(#nav-bar):not(#TabsToolbar) #zoompage-item .toolbarbutton-1:not([type="menu-button"]) {
+	  min-width: unset !important;
+	}
+}

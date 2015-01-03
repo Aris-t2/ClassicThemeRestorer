@@ -22,9 +22,11 @@
     <preferences>
 
 		<preference id="ctraddon_tabsintitlebar" name="browser.tabs.drawInTitlebar"					type="bool"		instantApply="true"/>
-		<preference id="ctraddon_tabhang" 	 	 name="layers.offmainthreadcomposition.enabled"		type="bool"		instantApply="true"/>
-		<preference id="ctraddon_oldsearch" 	 name="browser.search.showOneOffButtons"			type="bool"		instantApply="true"/>
-		<preference id="ctraddon_loopcall"		 name="loop.enabled"								type="bool"		instantApply="true"/>
+		<preference id="ctraddon_tabhang" 	 	name="layers.offmainthreadcomposition.enabled"		type="bool"		instantApply="true"/>
+		<preference id="ctraddon_oldsearch" 	name="browser.search.showOneOffButtons"				type="bool"		instantApply="true"/>
+		<preference id="ctraddon_loopcall"		name="loop.enabled"									type="bool"		instantApply="true"/>
+		<preference id="ctraddon_devtheme"		name="browser.devedition.theme.enabled"				type="bool"		instantApply="true"/>
+		<preference id="ctraddon_devthemebut"	name="browser.devedition.theme.showCustomizeButton"	type="bool"		instantApply="true"/>
 
 		<preference id="ctraddon_tabs"			name="extensions.classicthemerestorer.tabs" 		type="string"	instantApply="true"/>
 		<preference id="ctraddon_tabsontop"		name="extensions.classicthemerestorer.tabsontop" 	type="string"	instantApply="true"/>
@@ -159,6 +161,7 @@
 		<preference id="ctraddon_noemptypticon"	name="extensions.classicthemerestorer.noemptypticon" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hidezoomres"	name="extensions.classicthemerestorer.hidezoomres"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_alt_newtabp"	name="extensions.classicthemerestorer.alt_newtabp"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_noresizerxp"	name="extensions.classicthemerestorer.noresizerxp"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_pmhidelabels"	name="extensions.classicthemerestorer.pmhidelabels"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_menupopupscr"	name="extensions.classicthemerestorer.menupopupscr"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hideprivmask"	name="extensions.classicthemerestorer.hideprivmask"	 type="bool"	instantApply="true"/>
@@ -271,9 +274,10 @@
 		
 		<hbox>
 		  <checkbox label="&Ctr_tabminheight;"	preference="ctraddon_ctabheightcb" id="ctraddon_pw_tab_ctabheightcb"/>
-		  <textbox size="2" maxlength="2" preference="ctraddon_ctabheight" type="number" min="18" max="40" id="ctraddon_pw_tab_ctabheight"/>
+		  <textbox size="2" maxlength="2" preference="ctraddon_ctabheight" type="number" min="18" max="50" id="ctraddon_pw_tab_ctabheight"/>
 		  <label value="px"/>
 		</hbox>
+		<description id="ctraddon_pw_tabheightinfo" class="ctraddon_topic">&Ctr_tabheightinfo;</description>
 
 		<grid>
 		  <rows>
@@ -485,7 +489,7 @@
 					</row>
 				  </rows>
 				</grid>
-				<checkbox label="&Ctr_notabhov;"	preference="ctraddon_tabc_hov_unl"/>
+				<checkbox label="&Ctr_notabhov;"	preference="ctraddon_tabc_hov_unl" class="ctraddon_notabhovextra"/>
 			</vbox>
 
 		  </tabpanel>
@@ -521,7 +525,7 @@
 					</row>
 				  </rows>
 				</grid>
-				<checkbox label="&Ctr_notabhov;"	preference="ctraddon_tabc_hov_unr"/>
+				<checkbox label="&Ctr_notabhov;"	preference="ctraddon_tabc_hov_unr" class="ctraddon_notabhovextra"/>
 			</vbox>
 
 		  </tabpanel>
@@ -671,6 +675,7 @@
 		<checkbox label="&Ctr_menupopupscr;"	preference="ctraddon_menupopupscr"/>
 		<checkbox label="&Ctr_hidezoomres;"		preference="ctraddon_hidezoomres"/>
 		<checkbox label="&Ctr_alt_newtabp;"		preference="ctraddon_alt_newtabp"/>
+		<checkbox label="&Ctr_noresizerxp;"		preference="ctraddon_noresizerxp" id="ctraddon_pw_noresizerxp"/>
 	  </groupbox>
  
 	  <groupbox>
@@ -743,6 +748,7 @@
 				<menuitem value="iconsbig"	label="&Ctr_nav_txt_ico1;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconsbig')" id="ctraddon_pw_iconsbig"/>
 				<menuitem value="iconstxt"	label="&Ctr_nav_txt_ico2;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt')"/>
 				<menuitem value="iconstxt2"	label="&Ctr_nav_txt_ico2; v2" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt2')"/>
+				<menuitem value="iconstxt3"	label="&Ctr_nav_txt_ico2; v3" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt3')"/>
 				<menuitem value="txtonly"	label="&Ctr_nav_txt_ico3;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('txtonly')"/>
 				<description class="ctraddon_font1">&Ctr_nav_txt_exp;</description>
 				<menuitem value="full"		label="[mode='full']" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('full')"/>
@@ -895,6 +901,9 @@
 		<description class="ctraddonsuboption">&Ctr_fx34search;</description>
 		<checkbox label="about:config &gt;&gt; loop.enabled" preference="ctraddon_loopcall" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_loopcall"/>
 		<description class="ctraddonsuboption">&Ctr_fx34loop;</description>
+		<checkbox label="about:config &gt;&gt; browser.devedition.theme.enabled" preference="ctraddon_devtheme" oncommand="classicthemerestorerjso.ctr.resetPrefsForDevTheme()" id="ctraddon_pw_devtheme"/>
+		<checkbox label="about:config &gt;&gt; browser.devedition.theme.showCustomizeButton" preference="ctraddon_devthemebut" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_devthemeb" class="ctraddonsuboption"/>
+		<description class="ctraddonsuboption">&Ctr_fx35devtheme;</description>
 	  </groupbox>
 
 	</box>

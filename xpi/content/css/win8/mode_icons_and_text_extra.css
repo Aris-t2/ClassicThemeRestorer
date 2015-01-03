@@ -2,7 +2,23 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#nav-bar .toolbarbutton-1:not([type="menu-button"]):not([type="menu"]) .toolbarbutton-icon {
+	#nav-bar toolbaritem .toolbarbutton-1 .toolbarbutton-text,
+	#nav-bar .toolbarbutton-1:not([type="menu-button"]) .toolbarbutton-text,
+	#nav-bar .toolbarbutton-1[type="menu-button"] toolbarbutton .toolbarbutton-text{
+	  padding:0 !important;
+	}
+	#nav-bar toolbaritem .toolbarbutton-1,
+	#nav-bar .toolbarbutton-1:not([type="menu-button"]),
+	#nav-bar .toolbarbutton-1[type="menu-button"]{
+	  padding:1px 2px !important;
+	  margin:1px 0 !important;
+	}
+	#nav-bar .toolbarbutton-1[type="menu-button"] toolbarbutton{
+	  padding:0px 0px !important;
+	  margin:0px 0 !important;
+	}
+
+	/*#nav-bar .toolbarbutton-1:not([type="menu-button"]):not([type="menu"]) .toolbarbutton-icon {
 	  min-width: 20px !important;
 	  height: 20px !important;
 	  padding: 0px !important;
@@ -55,7 +71,7 @@
 	#navigator-toolbox #nav-bar #urlbar-container:-moz-locale-dir(rtl){
 	  margin-right: 24px !important;
 	}
-	
+*/
 	#ctraddon_addon-bar toolbarbutton .toolbarbutton-icon {
 	  max-height: 34px !important;
 	}

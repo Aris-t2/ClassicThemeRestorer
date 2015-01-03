@@ -104,6 +104,8 @@ classicthemerestorerjso.ctr = {
 
 	document.getElementById('ctraddon_pw_radiorestart').style.visibility = 'collapse';
 	
+	document.getElementById('ctraddon_pw_tabheightinfo').style.visibility = 'collapse';
+	
 	document.getElementById('ctraddon_pw_tabwidthinfo').style.visibility = 'collapse';
 	document.getElementById('ctraddon_pw_tabwidthinfo2').style.visibility = 'collapse';
 	document.getElementById('ctraddon_pw_tabwidthinfo3').style.visibility = 'collapse';
@@ -216,6 +218,12 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_noconicons').disabled = true;
 	  document.getElementById('ctraddon_pw_noconicons').style.visibility = 'collapse';
 	}
+	if (this.appversion < 35) {
+	  document.getElementById('ctraddon_pw_devtheme').disabled = true;
+	  document.getElementById('ctraddon_pw_devtheme').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_devthemeb').disabled = true;
+	  document.getElementById('ctraddon_pw_devthemeb').style.visibility = 'collapse';
+	}
 	
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get
@@ -286,6 +294,15 @@ classicthemerestorerjso.ctr = {
 			  document.getElementById('ctraddon_pw_tabwidthinfo3').style.visibility = 'visible';
 			else
 			  document.getElementById('ctraddon_pw_tabwidthinfo3').style.visibility = 'collapse';
+		  
+		  break;
+		  
+		  case "ctabheightcb":
+		  
+		    if(branch.getBoolPref("ctabheightcb"))
+			  document.getElementById('ctraddon_pw_tabheightinfo').style.visibility = 'visible';
+			else
+			  document.getElementById('ctraddon_pw_tabheightinfo').style.visibility = 'collapse';
 		  
 		  break;
 
@@ -374,6 +391,23 @@ classicthemerestorerjso.ctr = {
   needsBrowserRestart: function(){
 	this.needsRestart = true;
 	document.getElementById('ctraddon_pw_radiorestart').style.visibility = 'visible';
+  },
+  
+  resetPrefsForDevTheme: function(){
+	var currenttabs=this.prefs.getCharPref('tabs');
+	
+	// reset Tab appearance, but keep last knows preference
+	setTimeout(function(){
+	  classicthemerestorerjso.ctr.prefs.setCharPref('tabs','tabs_default');
+	},50);
+	setTimeout(function(){
+	  classicthemerestorerjso.ctr.prefs.setCharPref('tabs',currenttabs);
+	},100);
+	
+	// disable aeroblue toolbars preference
+	if(this.prefs.getBoolPref('aerocolors'))
+	  this.prefs.setBoolPref('aerocolors',false);
+
   },
   
   unsetTabColorsAndMore: function() {

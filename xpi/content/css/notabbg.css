@@ -2,6 +2,8 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul){
+	#main-window[defaultfxtheme="true"][devtoolstheme] #browser-panel,
+	#main-window[defaultfxtheme="true"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) #tabbrowser-tabs,
 	#main-window[defaultfxtheme="true"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme),
 	#main-window[defaultfxtheme="true"][tabsontop="false"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) {
 	  background: none !important;

@@ -41,9 +41,7 @@
     :-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, toolbar[id^=ctraddon_extra-bar], #vertical-toolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) {
        border: 1px solid transparent !important;
     }
-	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, toolbar[id^=ctraddon_extra-bar], #vertical-toolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not(#bookmarks-menu-button):not([disabled]):hover,
-	#ctraddon_comb_stopreload-button #urlbar-reload-button:not([disabled]):hover,
-	#ctraddon_comb_stopreload-button #urlbar-stop-button:not([disabled]):hover {
+	:-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, #ctraddon_addon-bar, toolbar[id^=ctraddon_extra-bar], #vertical-toolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not(#bookmarks-menu-button):not([disabled]):hover {
 	  border: 1px solid !important;
       background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.1)) !important;
       border-color: hsla(210,54%,20%,.15) hsla(210,54%,20%,.2) hsla(210,54%,20%,.25) !important;
@@ -150,16 +148,16 @@
 	}
 	
 	/* Main menu button & call button fix */
-	toolbar #PanelUI-menu-button .toolbarbutton-badge,
-	toolbar #PanelUI-menu-button .toolbarbutton-badge-container,
-	toolbar #loop-button .toolbarbutton-badge,
-	toolbar #loop-button .toolbarbutton-badge-container,
-	toolbar #loop-button-throttled .toolbarbutton-badge,
-	toolbar #loop-button-throttled .toolbarbutton-badge-container{
+	#nav-bar #PanelUI-menu-button .toolbarbutton-badge,
+	#nav-bar #PanelUI-menu-button .toolbarbutton-badge-container,
+	#nav-bar #loop-button .toolbarbutton-badge,
+	#nav-bar #loop-button .toolbarbutton-badge-container,
+	#nav-bar #loop-button-throttled .toolbarbutton-badge,
+	#nav-bar #loop-button-throttled .toolbarbutton-badge-container{
 	  -moz-appearance:none !important;
 	  background:none !important;
-	  border:0 !important;
-	  padding:0 !important;
+	  border:1px solid transparent !important;
+	  /*padding:0 !important;*/
 	  box-shadow:none !important;
 	}
 

@@ -1,4 +1,4 @@
-<!ENTITY Ctr_title			"Classic Theme Restorer">
+﻿<!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Barra de complementos">
 <!ENTITY Ctr_statusbar		"Barra de estado">
@@ -6,9 +6,9 @@
 <!ENTITY Ctr_space			"Espacio">
 <!ENTITY Ctr_separator		"Separador">
 <!ENTITY Ctr_puibseparator	"Separador de botones del Panel de Interfaz de Usuario">
-<!ENTITY Ctr_navthrobber	"Activity Indicator">
+<!ENTITY Ctr_navthrobber	"Indicador de actividad">
 <!ENTITY Ctr_sidebarbutton	"Barra lateral">
-<!ENTITY Ctr_windowcontrols	"Min/max/close (Fullscreen)">
+<!ENTITY Ctr_windowcontrols	"Min/max/cerrar (Pantalla completa)">
 <!ENTITY Ctr_rr				"¡Requiere reiniciar Firefox!">
 
 <!ENTITY Ctr_cuibuttons		"Botones">
@@ -31,23 +31,24 @@
 <!ENTITY Ctr_tabs3			"Pestañas curvadas (Aero alternativo)">
 <!ENTITY Ctr_tabforminfo	"La apariencia de la pestaña está controlada por el tema de decoración actual.">
 <!ENTITY Ctr_tabsontop0		"Pestañas arriba (por defecto)">
-<!ENTITY Ctr_tabsontop1		"Pestañas arriba --- establecido [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Pestañas no arriba (v1) --- establecido [tabsontop=false]">
-<!ENTITY Ctr_tabsontop3		"Pestañas no arriba (v2) --- establecido [tabsontop=false]">
-<!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
-<!ENTITY Ctr_tabsontopI1	"Añade el atributo [tabsontop=true/false] a">
+<!ENTITY Ctr_tabsontop1		"Pestañas arriba --- [tabsontop=true] establecido">
+<!ENTITY Ctr_tabsontop2		"Pestañas no arriba (v1) --- [tabsontop=false] establecido">
+<!ENTITY Ctr_tabsontop3		"Pestañas no arriba (v2) --- [tabsontop=false] establecido">
+<!ENTITY Ctr_tabsontopW1	"¡v2 es sólo para algunos complementos y temas completos!">
+<!ENTITY Ctr_tabsontopI1	"Se añade el atributo [tabsontop=true/false] a">
 <!ENTITY Ctr_tabsintitlebar	"Pestañas en la barra de título (browser.tabs.drawInTitlebar en about:config)">
 <!ENTITY Ctr_tabwidthdef	"(por defecto)">
 <!ENTITY Ctr_tabwidthcla	"(clásico)">
-<!ENTITY Ctr_tabminheight	"Height:">
+<!ENTITY Ctr_tabminheight	"Altura:">
+<!ENTITY Ctr_tabheightinfo	"Low values will cause glitches in maximized mode!">
 <!ENTITY Ctr_tabmaxwidth	"Ancho-máximo:">
 <!ENTITY Ctr_tabminwidth	"Ancho-mínimo:">
 <!ENTITY Ctr_tabwidthinfo	"Ancho-mínimo y Ancho-máximo están controlados por TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"Ancho-mínimo y Ancho-máximo están controlados por TabUtilities">
-<!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
+<!ENTITY Ctr_tabwidthinfo3	"¡Los valores por debajo de 48px causarán problemas en la mayoría de los casos!">
 <!ENTITY Ctr_emptyfavicon	"Restaurar favicon vacío (si un sitio no ofrece uno)">
 <!ENTITY Ctr_noemptypticon	"Eliminar favicon vacío en pestañas fijas">
-<!ENTITY Ctr_e10stab_notd	"E10s tabs: remove underline">
+<!ENTITY Ctr_e10stab_notd	"Pestañas E10s: Eliminar subrayado">
 <!ENTITY Ctr_closetab_0		"Botón de cierre de pestaña">
 <!ENTITY Ctr_closetab_1		"Sólo en la pestaña activa">
 <!ENTITY Ctr_closetab_2		"En ninguna parte">
@@ -64,7 +65,7 @@
 <!ENTITY Ctr_appbutton1		"Botón en la barra de herramientas">
 <!ENTITY Ctr_appbutton1wt	"Botón en la barra de herramientas (sólo texto)">
 <!ENTITY Ctr_appbutton2		"Botón en la barra de título [de Firefox]">
-<!ENTITY Ctr_appbutton2h	"Botón en la barra de título [de Firefox] (hidden)">
+<!ENTITY Ctr_appbutton2h	"Botón en la barra de título [de Firefox] (oculto)">
 <!ENTITY Ctr_appbutton2io	"Botón en la barra de título [de Firefox] (sólo icono)">
 <!ENTITY Ctr_paneluibtweak	"Botón de menú de panel naranja en la barra de pestañas">
 <!ENTITY Ctr_appbuttonc_o	"Color de botón naranja (por defecto)">
@@ -77,67 +78,68 @@
 <!ENTITY Ctr_appbuttonc_gr	"Color de botón gris">
 <!ENTITY Ctr_appbuttonc_pu	"Color de botón púrpura">
 <!ENTITY Ctr_appbuttonc_wh	"Color de botón blanco">
-<!ENTITY Ctr_appbuttonc_cu	"Custom button color">
+<!ENTITY Ctr_appbuttonc_cu	"Color de botón personalizado">
 <!ENTITY Ctr_appbuttonI1	"Se recomienda reiniciar">
 <!ENTITY Ctr_appbuttonI1e	"¡No es visible en la barra de título de SO de Windows, sólo en la barra de título de Firefox!">
 <!ENTITY Ctr_appbuttonI2	"¡Los colores del botón sólo son visibles en la barra de título y la barra de pestañas!">
-<!ENTITY Ctr_alttbappb		"Iconos alternativos">
+<!ENTITY Ctr_alttbappb		"Iconos alternativos sin flecha">
 <!ENTITY Ctr_appbutmhi		"Posición más alta (si está en la barra de pestañas)">
 <!ENTITY Ctr_appbutbdl		"Ocultar bordes y colores de fondo">
 <!ENTITY Ctr_dblclclosefx	"El doble clic cierra la ventana actual">
-<!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
-<!ENTITY Ctr_appbutonclab	"Title">
-<!ENTITY Ctr_appbutonclab2	"Add title or leave empty">
+<!ENTITY Ctr_appbclmmenus	"Menús pulsables dentro del menú de botón (Nueva pestaña, Imprimir...)">
+<!ENTITY Ctr_appbutonclab	"Título">
+<!ENTITY Ctr_appbutonclab2	"Añada un título o déjelo vacío">
 
-<!ENTITY Ctr_ui				"Interfaz de usuario general">
-<!ENTITY Ctr_nbiconsize0	"Establecer atributo de la barra de navegación">
+<!ENTITY Ctr_ui				"Interfaz general de usuario">
+<!ENTITY Ctr_nbiconsize0	"Establecer 'iconsize' (tamaño de icono) en la barra de navegación">
 <!ENTITY Ctr_smallnavbut	"Botones pequeños en la barra de navegación">
-<!ENTITY Ctr_bfurlbarfix 	"Fijar el radio del borde de las barras de URL">
-<!ENTITY Ctr_backforward	"Botón atrás-adelante movible">
-<!ENTITY Ctr_nbcompact		"Reduce navigation toolbars height">
-<!ENTITY Ctr_hide_bf_popup	"Ocultar el menú historial de los botones al pulsarlos con el ratón">
-<!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
-<!ENTITY Ctr_noconicons		"Reemplazar iconos de menú contextual de la página con etiquetas (atrás, adelante, parar, recargar, página de marcadores)">
-<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
-<!ENTITY Ctr_wincontrols	"Controles de ventana de pantalla completa movibles">
-<!ENTITY Ctr_emptyfavicon2	"Reemplazar favicon genérico (vació y punteado) con un favicon en blanco">
-<!ENTITY Ctr_mstatusbar		"Panel de barra de estado movible">
-<!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
-<!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
-<!ENTITY Ctr_mstatusbarpzt	"Status-bar panel is controlled by 'Puzzle Toolbars'">
-<!ENTITY Ctr_mstatusbarabr	"Status-bar panel is controlled by 'The Addon Bar (Restored)'">
+<!ENTITY Ctr_bfurlbarfix 	"Reparar radio del borde de las barras de URL">
+<!ENTITY Ctr_backforward	"Botones atrás-adelante móviles">
+<!ENTITY Ctr_nbcompact		"Reducir altura de las barras de navegación">
+<!ENTITY Ctr_hide_bf_popup	"Ocultar el menú historial de estos botones al pulsarlos con el ratón">
+<!ENTITY Ctr_bf_space		"Reducir espacio entre estos botones (si es posible)">
+<!ENTITY Ctr_noconicons		"Menú contextual de la página: Reemplazar iconos con etiquetas de texto (atrás, adelante...)">
+<!ENTITY Ctr_svgfilters		"Colores SVG para iconos de botones de barra de herramientas predeterminados">
+<!ENTITY Ctr_wincontrols	"Controles de ventana en pantalla completa móviles">
+<!ENTITY Ctr_emptyfavicon2	"Reemplazar favicon genérico (vacío y punteado) con uno de hoja en blanco">
+<!ENTITY Ctr_mstatusbar		"Mostrar panel de barra de estado móvil">
+<!ENTITY Ctr_mstatusbars4e	"El panel de barra de estado está controlado por 'Status-4-Evar'">
+<!ENTITY Ctr_mstatusbartpp	"El panel de barra de estado está controlado por 'ThePuzzlePiece'">
+<!ENTITY Ctr_mstatusbarpzt	"El panel de barra de estado está controlado por 'Puzzle Toolbars'">
+<!ENTITY Ctr_mstatusbarabr	"El panel de barra de estado está controlado por 'The Addon Bar (Restored)'">
 <!ENTITY Ctr_combrelstop	"Combinar botones parar-recargar">
 <!ENTITY Ctr_stoprel1		"Importante: ¡sitúe el botón recargar después del botón parar!">
-<!ENTITY Ctr_panelmenucol	"Menús de panel: color de fondo alternativo">
-<!ENTITY Ctr_hideprivmask	"Navegación privada: ocultar indicador de máscara">
-<!ENTITY Ctr_nbisizedelay	"ms delay in execution (1000 ms = 1 sec)">
-<!ENTITY Ctr_findbar		"Barra de búsqueda">
-<!ENTITY Ctr_findbar_def	"Posición por defecto">
+<!ENTITY Ctr_panelmenucol	"Menús de panel: Color de fondo alternativo">
+<!ENTITY Ctr_hideprivmask	"Navegación privada: Ocultar indicador de máscara">
+<!ENTITY Ctr_nbisizedelay	"ms de retardo en la ejecución (1000 ms = 1 seg)">
+<!ENTITY Ctr_findbar		"Posición de barra de búsqueda">
+<!ENTITY Ctr_findbar_def	"Abajo (predeterminada)">
 <!ENTITY Ctr_findbar_top	"Arriba">
 <!ENTITY Ctr_findbar_topa	"Arriba (alternativa)">
 <!ENTITY Ctr_findbar_bota	"Abajo (alternativa)">
-<!ENTITY Ctr_nav_txt_ico0	"Mostrar sólo iconos (por defecto)">
+<!ENTITY Ctr_nav_txt_ico0	"Mostrar sólo iconos (predeterminado)">
 <!ENTITY Ctr_nav_txt_ico1	"Mostrar iconos grandes">
 <!ENTITY Ctr_nav_txt_ico2	"Mostrar iconos y texto">
 <!ENTITY Ctr_nav_txt_ico3	"Mostrar sólo texto">
-<!ENTITY Ctr_nav_txt_exp	"Experimental attributes:">
-<!ENTITY Ctr_iat_notf_vt	"Exclude vertical toolbars">
-<!ENTITY Ctr_cpanelmenus	"Menús de panel: vista compacta (marcadores, historial, etc.)">
-<!ENTITY Ctr_hidezoomres	"Controles de zoom en la barra de herramientas: ocultar botón de restablecimiento del zoom">
-<!ENTITY Ctr_alt_newtabp	"New tab page: alternative appearance">
-<!ENTITY Ctr_pmhidelabels	"Menú de panel emergente: ocultar etiquetas de los botones">
-<!ENTITY Ctr_menupopupscr	"Menús emergentes: mostrar barras de desplazamiento en lugar de flechas">
+<!ENTITY Ctr_nav_txt_exp	"Atributos experimentales:">
+<!ENTITY Ctr_iat_notf_vt	"Excluir barras de herramientas verticales">
+<!ENTITY Ctr_cpanelmenus	"Menús de panel: Vista compacta (marcadores, historial, etc.)">
+<!ENTITY Ctr_hidezoomres	"Controles de zoom en la barra de herramientas: Ocultar botón de restablecimiento del zoom">
+<!ENTITY Ctr_alt_newtabp	"Página de nueva pestaña: Apariencia alternativa">
+<!ENTITY Ctr_noresizerxp	"Hide Resizer (Windows XP)">
+<!ENTITY Ctr_pmhidelabels	"Menú de panel emergente: Ocultar etiquetas de los botones">
+<!ENTITY Ctr_menupopupscr	"Menús emergentes: Mostrar barras de desplazamiento en lugar de flechas">
 
 <!ENTITY Ctr_fxmockup		"Prototipo (mockup) de Firefox">
 <!ENTITY Ctr_tabmokcolor	"Color blanco para botones de pestaña (cerrar, nueva, grupos, listar todas)">
 <!ENTITY Ctr_tabmokcolor2	"Color blanco y sombreado oscuro para el texto en pestañas no activas">
 <!ENTITY Ctr_tabmokcolor3	"Color blanco para separadores de pestañas">
-<!ENTITY Ctr_tabmokcolor4	"White color for empty dotted tab favicon">
+<!ENTITY Ctr_tabmokcolor4	"Color blanco para favicon de pestaña vacío y punteado">
 
-<!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
-<!ENTITY Ctr_navthrobber2	"Add url or leave empty">
+<!ENTITY Ctr_navthrobber1	"Hacer clic en el indicador de actividad abre la URL especificada:">
+<!ENTITY Ctr_navthrobber2	"Añada URL o déjelo vacío">
 
-<!ENTITY Ctr_tab_tf_info1	"Están soportados como entrada nombres de colores, códigos hexadecimales, y valores rgb(a) y hsl(a).">
+<!ENTITY Ctr_tab_tf_info1	"Están soportados como entradas nombres de colores, códigos hexadecimales, y valores rgb(a) y hsl(a).">
 <!ENTITY Ctr_tab_tf_info2	"¡Las entradas no serán validadas!">
 <!ENTITY Ctr_tabact_t		"activa">
 <!ENTITY Ctr_tabhov_t		"señalada">
@@ -148,73 +150,73 @@
 <!ENTITY Ctr_customsqtab1	"Fondo">
 <!ENTITY Ctr_ctext			"Texto">
 <!ENTITY Ctr_ctextsh		"Sombreado del texto">
-<!ENTITY Ctr_tabnor			"Pestaña (por defecto)">
-<!ENTITY Ctr_tabhov			"Pestaña (señalada)">
-<!ENTITY Ctr_tabact			"Pestaña (activa)">
-<!ENTITY Ctr_tabpen			"Pestaña (no cargada)">
-<!ENTITY Ctr_tabunr			"Pestaña (no leída)">
-<!ENTITY Ctr_ntabnor		"Nueva pestaña (por defecto)">
-<!ENTITY Ctr_ntabhov		"Nueva pestaña (señalada)">
+<!ENTITY Ctr_tabnor			"Pestaña por defecto">
+<!ENTITY Ctr_tabhov			"Pestaña señalada">
+<!ENTITY Ctr_tabact			"Pestaña activa">
+<!ENTITY Ctr_tabpen			"Pestaña no cargada">
+<!ENTITY Ctr_tabunr			"Pestaña no leída">
+<!ENTITY Ctr_ntabnor		"Nueva pestaña por defecto">
+<!ENTITY Ctr_ntabhov		"Nueva pestaña señalada">
 <!ENTITY Ctr_bold			"Negrita">
-<!ENTITY Ctr_italic			"Itálica">
-<!ENTITY Ctr_notabhov		"Enabled settings override 'hovered' settings">
-<!ENTITY Ctr_tabc_act_tb	"Background color on toolbars">
+<!ENTITY Ctr_italic			"Cursiva">
+<!ENTITY Ctr_notabhov		"Las configuraciones habilitadas se imponen a las configuraciones de pestaña 'señalada'">
+<!ENTITY Ctr_tabc_act_tb	"Color de fondo en barras de herramientas">
 
-<!ENTITY Ctr_urlbar			"La barra de URL">
+<!ENTITY Ctr_urlbar			"Barra de URL">
 <!ENTITY Ctr_starinurl		"Botón estrella de marcador">
-<!ENTITY Ctr_feedinurl		"Botón-de-suscripción (feeds)">
-<!ENTITY Ctr_hideurelstop	"Ocultar botones parar y recargar">
-<!ENTITY Ctr_urlbardropm	"Move dropmarker to urlbars end">
-<!ENTITY Ctr_hideprbutton	"Hide notification icon when a popup gets blocked">
-<!ENTITY Ctr_urlbar_ib		"Site Identity Button (identity box)">
-<!ENTITY Ctr_verifiedcolors	"Cuadro de identidad verde/azul para sitios web verificados">
+<!ENTITY Ctr_feedinurl		"Botón de suscripción (RSS feed)">
+<!ENTITY Ctr_hideurelstop	"Ocultar botones 'parar y recargar'">
+<!ENTITY Ctr_urlbardropm	"Mover flecha de desplegable al final de la barra de URL">
+<!ENTITY Ctr_hideprbutton	"Ocultar icono de notificación cuando una ventana emergente sea bloqueda">
+<!ENTITY Ctr_urlbar_ib		"Botón de identidad del sitio (cuadro de identidad)">
+<!ENTITY Ctr_verifiedcolors	"Color verde/azul para sitios con conexiones seguras de identidad verificada/no-verificada">
 <!ENTITY Ctr_faviconurl		"Favicon en la barra de URL">
 <!ENTITY Ctr_padlock_hid	"Candado (oculto)">
 <!ENTITY Ctr_padlock_def	"Candado (predeterminado)">
 <!ENTITY Ctr_padlock_cla	"Candado (clásico)">
 <!ENTITY Ctr_padlock_mod	"Candado (moderno)">
 <!ENTITY Ctr_padlock_ext	"Iconos de seguridad">
-<!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
+<!ENTITY Ctr_icopageinfo	"Hacer clic en el icono abre la ventana 'Información de la página'">
 
-<!ENTITY Ctr_menubar_items	"Menu items position">
-<!ENTITY Ctr_extrabar		"Additional Toolbars">
-<!ENTITY Ctr_extrabar0		"Additional Toolbar(s)">
+<!ENTITY Ctr_menubar_items	"Posición de elementos de menú">
+<!ENTITY Ctr_extrabar		"Barras de herramientas adicionales">
+<!ENTITY Ctr_extrabar0		"Barra(s) de herramientas adicional(es)">
 <!ENTITY Ctr_extrabar1		"Barra de herramientas adicional">
-<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
+<!ENTITY Ctr_extrabarinfo	"Cambiar entre los modos 'tabs on top' (pestañas arriba) y 'tabs not on top' (pestañas no arriba) aleatoriamente, altera el orden de las barras de herramientas adicionales. Firefox ha de reiniciarse para resolver el problema.">
 
 <!ENTITY Ctr_invicons		"Iconos invertidos">
 <!ENTITY Ctr_menubar		"Barra de menús">
 <!ENTITY Ctr_tabstoolbar	"Barra de pestañas">
 <!ENTITY Ctr_navbar			"Barra de navegación">
 <!ENTITY Ctr_bookbar		"Barra de marcadores">
-<!ENTITY Ctr_notoolbar		"Hidden (do not show menu items)">
+<!ENTITY Ctr_notoolbar		"Oculto (no mostrar elementos de menú)">
 
-<!ENTITY Ctr_mbarforceleft	"First element">
-<!ENTITY Ctr_mbarforceright	"Last element">
+<!ENTITY Ctr_mbarforceleft	"Primer elemento">
+<!ENTITY Ctr_mbarforceright	"Último elemento">
 
-<!ENTITY Ctr_toolbars		"Configuraciones de barra de herramientas">
-<!ENTITY Ctr_dblclnewtab	"El doble clic abre una 'nueva' pestaña (usando browser.newtab.url)">
+<!ENTITY Ctr_toolbars		"Barras de herramientas">
+<!ENTITY Ctr_dblclnewtab	"El doble clic abre una 'nueva' pestaña (browser.newtab.url en about:config)">
 <!ENTITY Ctr_hidetbwot		"Ocultar barra de pestañas con una sola pestaña">
-<!ENTITY Ctr_hidetbwote		"Reduce hiding delay on startup">
-<!ENTITY Ctr_notabfog		"Eliminar niebla de fondo (Windows 8/Aeroglass)">
-<!ENTITY Ctr_notabbg		"Eliminar color de fondo (Windows 8/AeroGlass)">
+<!ENTITY Ctr_hidetbwote		"Reducir retardo al ocultar en el inicio">
+<!ENTITY Ctr_notabfog		"Eliminar niebla de fondo (Windows Aeroglass/8)">
+<!ENTITY Ctr_notabbg		"Eliminar color de fondo (Windows AeroGlass/8)">
 <!ENTITY Ctr_hightabpos		"Reducir espacio sobre la barra de herramientas (si es posible)">
 <!ENTITY Ctr_alttabstb		"Color de fondo alternativo">
 
 <!ENTITY Ctr_altmenubar		"Añadir color de fondo (barra de título del SO)">
 <!ENTITY Ctr_altmenubarpos	"Posición alternativa (debajo de la barra de título de Firefox)">
-<!ENTITY Ctr_menubarnofog	"Eliminar color/niebla de fondo (Windows 8/Aeroglass)">
+<!ENTITY Ctr_menubarnofog	"Eliminar color de fondo/niebla (Windows Aeroglass/8)">
 
-<!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
+<!ENTITY Ctr_aerocolors		"Colores azul aero (celeste) para las barras de herramientas principales y pestañas">
 <!ENTITY Ctr_hidenavbar		"Ocultar barra de navegación">
-<!ENTITY Ctr_nobookbarbg	"Barra de marcadores: eliminar color de fondo">
-<!ENTITY Ctr_nonavbarbg		"Barra de navegación: eliminar color de fondo">
-<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
-<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
+<!ENTITY Ctr_nobookbarbg	"Barra de marcadores: Eliminar color de fondo">
+<!ENTITY Ctr_nonavbarbg		"Barra de navegación: Eliminar color de fondo">
+<!ENTITY Ctr_nonavbarbg1	"Afecta a las barras de herramientas adicionales de este complemento y otras barras de herramientas de la parte superior.">
+<!ENTITY Ctr_nonavbarbg2	"Afecta a todas las barras de herramientas en el 'Chrome fino' del complemento 'The Fox, Only Better'.">
 <!ENTITY Ctr_nonavborder	"Añadir borde superior a la barra de marcadores">
-<!ENTITY Ctr_nonavtbborder	"Barras de herramientas en la parte superior: eliminar bordes de barra de herramientas">
-<!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
-<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('chevron') at toolbars end">
+<!ENTITY Ctr_nonavtbborder	"Barras de herramientas en la parte superior: Eliminar bordes de barra de herramientas">
+<!ENTITY Ctr_hidesbclose	"Barras laterales: Ocultar botón cerrar de la barra lateral">
+<!ENTITY Ctr_chevronfix		"Barra de herramientas de navegación: Ocultar doble flecha (chevron) al final de las barras de herramientas">
 
 <!ENTITY Ctr_closeabarbut	"Ocultar botón cerrar de barras de complementos">
 <!ENTITY Ctr_highaddonsbar	"Incrementar altura">
@@ -229,32 +231,33 @@
 <!ENTITY Ctr_toolsitem		"Elemento en el menú Herramientas">
 <!ENTITY Ctr_appmenuitem	"Elemento en el menú de la aplicación">
 <!ENTITY Ctr_contextitem	"Elemento en el menú contextual de las barras de herramientas">
-<!ENTITY Ctr_puictrbutton	"Button in main panel menu">
+<!ENTITY Ctr_puictrbutton	"Botón en el menú del panel principal">
 
-<!ENTITY Ctr_otherctroptns	"Other settings">
+<!ENTITY Ctr_otherctroptns	"Otras configuraciones">
 <!ENTITY Ctr_cuibotbuttons	"Botones extra en el modo 'Personalizar'">
-<!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
+<!ENTITY Ctr_bookmarkoinpw	"Elemento 'Abrir en una nueva ventana privada' en el menú contextual de marcadores">
 
-<!ENTITY Ctr_experttweaks	"Advanced">
-<!ENTITY Ctr_fx33layers		"Firefox 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
-<!ENTITY Ctr_fx34search		"Firefox 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
+<!ENTITY Ctr_experttweaks	"Avanzadas">
+<!ENTITY Ctr_fx33layers		"Firefox 33+ introdujo 'nuevas características de renderizado' responsables en la actualidad de 'colgar pestañas' en algunos sistemas. Desmarcar esta preferencia resuelve el problema.">
+<!ENTITY Ctr_fx34search		"Firefox 34+ introdujo una 'nueva interfaz de usuario de búsqueda'. Desmarcando esta preferencia vuelve a la 'antigua interfaz de usuario de búsqueda'.">
+<!ENTITY Ctr_fx34loop		"Firefox 34+ introdujo características de 'llamada y conversación'. Desmarcar esta preferencia las retira.">
+<!ENTITY Ctr_fx35devtheme	"Firefox 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
 
 
 <!ENTITY Ctr_pw_settings	"Configuraciones">
 <!ENTITY Ctr_pw_set_reset	"Restaurar valores predeterminados">
 <!ENTITY Ctr_pw_set_predef	"Preajuste clásico">
-<!ENTITY Ctr_pw_set_preaus	"Firefox preset">
+<!ENTITY Ctr_pw_set_preaus	"Preajuste de Firefox">
 <!ENTITY Ctr_pw_set_export	"Exportar preferencias">
 <!ENTITY Ctr_pw_set_import	"Importar preferencias">
 
 <!ENTITY Ctr_special_font	"¡Las configuraciones de color de fondo son sólo para el tema de decoración predeterminado!">
 <!ENTITY Ctr_special_info	"¡Algunas opciones podrían no ofrecer cambios visuales en todos los casos!">
-<!ENTITY Ctr_special_info2	"Las configuraciones se realizan para el tema de decoración predeterminado de Firefox, y puede que no funcionen con todos los temas de terceros!">
+<!ENTITY Ctr_special_info2	"¡Las configuraciones se realizan para el tema de decoración predeterminado de Firefox, y puede que no funcionen con todos los temas de terceros!">
 <!ENTITY Ctr_support		"Foro de soporte">
 <!ENTITY Ctr_newversion		"¿Nueva versión?">
 
 <!ENTITY Ctr_addon-bar.accesskey	"C">
-<!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
+<!ENTITY Ctr_openInPrivateWindow	"Abrir en una nueva ventana privada">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
-<!ENTITY appMenuGettingStarted.label	"Getting started">
+<!ENTITY appMenuGettingStarted.label	"Comenzar">

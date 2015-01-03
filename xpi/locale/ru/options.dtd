@@ -40,10 +40,11 @@
 <!ENTITY Ctr_tabwidthdef	"(по умолчанию)">
 <!ENTITY Ctr_tabwidthcla	"(классич.)">
 <!ENTITY Ctr_tabminheight	"Высота:">
+<!ENTITY Ctr_tabheightinfo	"Низкое значение вызовет сбои в развёрнутом режиме!">
 <!ENTITY Ctr_tabmaxwidth	"Макс. ширина:">
 <!ENTITY Ctr_tabminwidth	"Мин. ширина:">
-<!ENTITY Ctr_tabwidthinfo	"Минимальная и максимальная ширина вкладок изменяются расширениями TabMixPlus">
-<!ENTITY Ctr_tabwidthinfo2	"Минимальная и максимальная ширина вкладок изменяются расширениями TabUtilities">
+<!ENTITY Ctr_tabwidthinfo	"Минимальная и максимальная ширина вкладок изменяется расширением TabMixPlus">
+<!ENTITY Ctr_tabwidthinfo2	"Минимальная и максимальная ширина вкладок изменяется расширением TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"Значение ниже 48px вызовет сбои в большинстве случаев!">
 <!ENTITY Ctr_emptyfavicon	"Восстановить пустой значок на вкладках">
 <!ENTITY Ctr_noemptypticon	"Удалить пустой значок из прикреплённой вкладки">
@@ -64,7 +65,7 @@
 <!ENTITY Ctr_appbutton1		"в панели инструментов">
 <!ENTITY Ctr_appbutton1wt	"в панели инструментов (только текст)">
 <!ENTITY Ctr_appbutton2		"в панели заголовка">
-<!ENTITY Ctr_appbutton2h	"в панели заголовка (hidden)">
+<!ENTITY Ctr_appbutton2h	"в панели заголовка (скрыта)">
 <!ENTITY Ctr_appbutton2io	"в панели заголовка (только значки)">
 <!ENTITY Ctr_paneluibtweak	"Оранжевая кнопка меню на панели вкладок">
 <!ENTITY Ctr_appbuttonc_o	"Оранжевая кнопка (по умолчанию)">
@@ -97,8 +98,8 @@
 <!ENTITY Ctr_nbcompact		"Уменьшить высоту панели навигации">
 <!ENTITY Ctr_hide_bf_popup	"Не показывать меню истории при нажатии мыши">
 <!ENTITY Ctr_bf_space		"Уменьшить расстояние между кнопками (если это возможно)">
-<!ENTITY Ctr_noconicons		"На странице, в контекстном меню, заменить значки метками (назад, вперёд, остановить, обновить, страница закладок)">
-<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
+<!ENTITY Ctr_noconicons		"Контекстное меню страницы: заменить значки надписями (Назад, Вперёд, Обновить...)">
+<!ENTITY Ctr_svgfilters		"SVG цвета для значков стандартной панели инструментов">
 <!ENTITY Ctr_wincontrols	"Подвижное управление полноэкранным режимом">
 <!ENTITY Ctr_emptyfavicon2	"Установить общий значок (пустой и пунктирный)">
 <!ENTITY Ctr_mstatusbar		"Подвижная строка состояния">
@@ -125,6 +126,7 @@
 <!ENTITY Ctr_cpanelmenus	"Компактная панель меню (закладки, история и т. д.)">
 <!ENTITY Ctr_hidezoomres	"Кнопки масштаба: скрыть сброс масштабирования">
 <!ENTITY Ctr_alt_newtabp	"Страница новой вкладки: альтернативный вид">
+<!ENTITY Ctr_noresizerxp	"Скрыть «Resizer» (Windows XP/2000)">
 <!ENTITY Ctr_pmhidelabels	"Панель меню: спрятать надписи на кнопках">
 <!ENTITY Ctr_menupopupscr	"Всплывающие окна меню: показывать полосы прокрутки вместо стрелки прокрутки">
 
@@ -157,7 +159,7 @@
 <!ENTITY Ctr_ntabhov		"Ожидающая новая вкладка">
 <!ENTITY Ctr_bold			"Полужирный">
 <!ENTITY Ctr_italic			"Курсив">
-<!ENTITY Ctr_notabhov		"Включение настройки не учитывает параметр 'в ожидании'">
+<!ENTITY Ctr_notabhov		"Включение настройки не учитывает параметр «в ожидании»">
 <!ENTITY Ctr_tabc_act_tb	"Цвет фона панели инструментов">
 
 <!ENTITY Ctr_urlbar			"Адресная строка">
@@ -205,16 +207,16 @@
 <!ENTITY Ctr_altmenubarpos	"Изменить расположение (ниже строки заголовка Firefox)">
 <!ENTITY Ctr_menubarnofog	"Убрать затуманивание/цвет фона (Windows AeroGlass/8)">
 
-<!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
+<!ENTITY Ctr_aerocolors		"Цвета Blue Aero для основных панелей и вкладок">
 <!ENTITY Ctr_hidenavbar		"Скрыть панель навигации">
 <!ENTITY Ctr_nobookbarbg	"Панель закладок: удалить цвет фона">
 <!ENTITY Ctr_nonavbarbg		"Панель навигации: удалить цвет фона">
-<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
-<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
+<!ENTITY Ctr_nonavbarbg1	"Параметр влияет на все дополнительные и верхние панели инструментов.">
+<!ENTITY Ctr_nonavbarbg2	"Параметр влияет на все панели Slim Chrome расширения «The Fox, Only Better».">
 <!ENTITY Ctr_nonavborder	"Панель закладок: добавить верхнюю границу для панели инструментов">
 <!ENTITY Ctr_nonavtbborder	"Популярные панели инструментов: удалить границы панелей инструментов">
 <!ENTITY Ctr_hidesbclose	"Боковые панели: скрыть кнопку «Закрыть» на боковой панели">
-<!ENTITY Ctr_chevronfix		"Панель навигации: скрыть двойную стрелку ('шеврон') в конце панели">
+<!ENTITY Ctr_chevronfix		"Панель навигации: скрыть двойную стрелку («шеврон») в конце панели">
 
 <!ENTITY Ctr_closeabarbut	"Скрыть кнопку закрытия">
 <!ENTITY Ctr_highaddonsbar	"Увеличить высоту">
@@ -239,6 +241,7 @@
 <!ENTITY Ctr_fx33layers		"С Firefox 33+ новые возможности визуализации, на некоторых системах вызывает ошибки с вкладками (нет реакции, вкладки заморожены). Отключение этой опции решает проблему.">
 <!ENTITY Ctr_fx34search		"С Firefox 34+ новая панель поиска. Отключение этой опции позволяет вернуть старую панель поиска.">
 <!ENTITY Ctr_fx34loop		"С Firefox 34+ добавлен клиент для связи в режиме реального времени. Отключение параметра удаляет эту функцию.">
+<!ENTITY Ctr_fx35devtheme	"С Firefox 35+ введена новая «Тема разработчика». Отключение параметра удаляет её и соответствующую кнопку в режиме «Настройка».">
 
 
 <!ENTITY Ctr_pw_settings	"Настройки">
