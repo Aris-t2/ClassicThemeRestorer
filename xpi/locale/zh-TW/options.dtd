@@ -6,9 +6,9 @@
 <!ENTITY Ctr_space			"空白">
 <!ENTITY Ctr_separator		"分隔線">
 <!ENTITY Ctr_puibseparator	"面板按鈕分隔線">
-<!ENTITY Ctr_navthrobber	"Activity Indicator">
+<!ENTITY Ctr_navthrobber	"進度指示器">
 <!ENTITY Ctr_sidebarbutton	"側邊欄">
-<!ENTITY Ctr_windowcontrols	"Min/max/close (Fullscreen)">
+<!ENTITY Ctr_windowcontrols	"最小化/最大化/關閉 (全螢幕)">
 <!ENTITY Ctr_rr				"需重啟 Firefox!">
 
 <!ENTITY Ctr_cuibuttons		"按鈕">
@@ -34,20 +34,20 @@
 <!ENTITY Ctr_tabsontop1		"分頁列置頂 --- 設定 [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"分頁列不置頂 (v1) --- 設定 [tabsontop=false]">
 <!ENTITY Ctr_tabsontop3		"分頁列不置頂 (v2) --- 設定 [tabsontop=false]">
-<!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
+<!ENTITY Ctr_tabsontopW1	"對於某些擴充套件和佈景主題，若 v1 無效，可嘗試 v2!">
 <!ENTITY Ctr_tabsontopI1	"加入 [tabsontop=true/false] 屬性到">
 <!ENTITY Ctr_tabsintitlebar	"分頁列併入標題列 (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(預設值)">
 <!ENTITY Ctr_tabwidthcla	"(經典傳統)">
-<!ENTITY Ctr_tabminheight	"Height:">
+<!ENTITY Ctr_tabminheight	"高度:">
 <!ENTITY Ctr_tabmaxwidth	"最大寬度:">
 <!ENTITY Ctr_tabminwidth	"最小寬度:">
-<!ENTITY Ctr_tabwidthinfo	"分頁的最小和最大寬度由 TabMixPlus 控制">
-<!ENTITY Ctr_tabwidthinfo2	"分頁的最小和最大寬度由 TabUtilities 控制">
-<!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
+<!ENTITY Ctr_tabwidthinfo	"分頁的最小和最大寬度由 Tab Mix Plus 控制">
+<!ENTITY Ctr_tabwidthinfo2	"分頁的最小和最大寬度由 Tab Utilities 控制">
+<!ENTITY Ctr_tabwidthinfo3	"小於 48px 的值有可能導致故障!">
 <!ENTITY Ctr_emptyfavicon	"開啟的網頁若未提供網站圖示，仍在該分頁顯示空圖示">
 <!ENTITY Ctr_noemptypticon	"從釘選分頁移除空圖示">
-<!ENTITY Ctr_e10stab_notd	"E10s tabs: remove underline">
+<!ENTITY Ctr_e10stab_notd	"e10s 分頁: 移除底線">
 <!ENTITY Ctr_closetab_0		"關閉按鈕">
 <!ENTITY Ctr_closetab_1		"僅在目前的分頁顯示關閉按鈕">
 <!ENTITY Ctr_closetab_2		"不顯示關閉按鈕">
@@ -55,7 +55,7 @@
 <!ENTITY Ctr_closetab_4		"在分頁列左端顯示關閉按鈕">
 <!ENTITY Ctr_closetab_5		"全部的分頁都顯示關閉按鈕 (強制)">
 <!ENTITY Ctr_closetab_hfot	"只有一個分頁時，則隱藏關閉按鈕">
-<!ENTITY Ctr_closealt		"換一個圖示">
+<!ENTITY Ctr_closealt		"換個圖示">
 <!ENTITY Ctr_closeonleft	"關閉按鈕置於分頁左側">
 <!ENTITY Ctr_close_wwltab	"關閉最後一個分頁時，也關閉視窗 (about:config)">
 
@@ -64,7 +64,7 @@
 <!ENTITY Ctr_appbutton1		"顯示在工具列">
 <!ENTITY Ctr_appbutton1wt	"顯示在工具列 (僅文字)">
 <!ENTITY Ctr_appbutton2		"顯示在標題列">
-<!ENTITY Ctr_appbutton2h	"顯示在標題列 (hidden)">
+<!ENTITY Ctr_appbutton2h	"顯示在標題列 (隱藏)">
 <!ENTITY Ctr_appbutton2io	"顯示在標題列 (僅圖示)">
 <!ENTITY Ctr_paneluibtweak	"橘色面板選單按鈕顯示在分頁列">
 <!ENTITY Ctr_appbuttonc_o	"橙色按鈕 (預設值)">
@@ -77,38 +77,38 @@
 <!ENTITY Ctr_appbuttonc_gr	"灰色按鈕">
 <!ENTITY Ctr_appbuttonc_pu	"紫色按鈕">
 <!ENTITY Ctr_appbuttonc_wh	"白色按鈕">
-<!ENTITY Ctr_appbuttonc_cu	"Custom button color">
+<!ENTITY Ctr_appbuttonc_cu	"自訂按鈕顏色">
 <!ENTITY Ctr_appbuttonI1	"建議重啟瀏覽器!">
 <!ENTITY Ctr_appbuttonI1e	"在作業系統標題列上不可見">
 <!ENTITY Ctr_appbuttonI2	"此項設定僅生效於標題列與分頁列!">
-<!ENTITY Ctr_alttbappb		"替代圖示">
+<!ENTITY Ctr_alttbappb		"換個圖示">
 <!ENTITY Ctr_appbutmhi		"提高位置 (當顯示於分頁列時)">
 <!ENTITY Ctr_appbutbdl		"隱藏邊框和背景顏色">
 <!ENTITY Ctr_dblclclosefx	"在標題列的火狐橙上連按兩下，則關閉目前的視窗">
-<!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
-<!ENTITY Ctr_appbutonclab	"Title">
-<!ENTITY Ctr_appbutonclab2	"Add title or leave empty">
+<!ENTITY Ctr_appbclmmenus	"火狐橙選單內顯示可點選式選單(新分頁, 列印...)">
+<!ENTITY Ctr_appbutonclab	"火狐橙顯示文字">
+<!ENTITY Ctr_appbutonclab2	"填入文字或留空">
 
 <!ENTITY Ctr_ui				"介面">
 <!ENTITY Ctr_nbiconsize0	"設定瀏覽工具列屬性">
 <!ENTITY Ctr_smallnavbut	"在瀏覽工具列使用小圖示按鈕">
 <!ENTITY Ctr_bfurlbarfix	"當「回到上一頁按鈕可移動」和「小圖示按鈕」模式下，修正網址列圓角半徑">
 <!ENTITY Ctr_backforward	"使「回到上一頁按鈕」可移動">
-<!ENTITY Ctr_nbcompact		"Reduce navigation toolbars height">
+<!ENTITY Ctr_nbcompact		"減少瀏覽工具列高度">
 <!ENTITY Ctr_hide_bf_popup	"當滑鼠長按時，不顯示分頁歷史瀏覽選單">
-<!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
+<!ENTITY Ctr_bf_space		"減少按鈕間距 (如有可能)">
 <!ENTITY Ctr_noconicons		"右鍵選單的「回到上一頁、前進下一頁、停止載入、重新載入、加入書籤」由橫排圖示換回縱排文字風格">
-<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
+<!ENTITY Ctr_svgfilters		"改變預設工具列按鈕圖示顏色">
 <!ENTITY Ctr_wincontrols	"可移動的全螢幕視窗控制項">
 <!ENTITY Ctr_emptyfavicon2	"以白紙圖示取代空圖示">
 <!ENTITY Ctr_mstatusbar		"使狀態列可移動">
-<!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
-<!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
-<!ENTITY Ctr_mstatusbarpzt	"Status-bar panel is controlled by 'Puzzle Toolbars'">
-<!ENTITY Ctr_mstatusbarabr	"Status-bar panel is controlled by 'The Addon Bar (Restored)'">
+<!ENTITY Ctr_mstatusbars4e	"狀態列由 Status-4-Evar 控制">
+<!ENTITY Ctr_mstatusbartpp	"狀態列由 The Puzzle Piece 控制">
+<!ENTITY Ctr_mstatusbarpzt	"狀態列由 Puzzle Toolbars 控制">
+<!ENTITY Ctr_mstatusbarabr	"狀態列由 The Addon Bar (Restored) 控制">
 <!ENTITY Ctr_combrelstop	"合併停止與重新載入按鈕">
 <!ENTITY Ctr_stoprel1		"工具列: 將重新載入按鈕放在停止按鈕之後!">
-<!ENTITY Ctr_panelmenucol	"面板選單: 換一個背景色彩">
+<!ENTITY Ctr_panelmenucol	"面板選單: 換個背景色彩">
 <!ENTITY Ctr_hideprivmask	"隱私瀏覽模式下，隱藏面具圖示">
 <!ENTITY Ctr_nbisizedelay	"ms delay in execution (1000 ms = 1 sec)">
 <!ENTITY Ctr_findbar		"尋找列位於">
@@ -120,11 +120,11 @@
 <!ENTITY Ctr_nav_txt_ico1	"顯示大圖示">
 <!ENTITY Ctr_nav_txt_ico2	"顯示圖示與文字">
 <!ENTITY Ctr_nav_txt_ico3	"僅顯示文字">
-<!ENTITY Ctr_nav_txt_exp	"Experimental attributes:">
-<!ENTITY Ctr_iat_notf_vt	"Exclude vertical toolbars">
+<!ENTITY Ctr_nav_txt_exp	"實驗屬性:">
+<!ENTITY Ctr_iat_notf_vt	"排除垂直工具列">
 <!ENTITY Ctr_cpanelmenus	"緊湊的面板選單(書籤、歷史等等.)">
 <!ENTITY Ctr_hidezoomres	"當縮放控制按鈕置於工具列上時，隱藏工具列上的縮放重設按鈕">
-<!ENTITY Ctr_alt_newtabp	"New tab page: alternative appearance">
+<!ENTITY Ctr_alt_newtabp	"新分頁(九宮頁面): 換個外觀">
 <!ENTITY Ctr_pmhidelabels	"面板選單: 隱藏按鈕文字標籤">
 <!ENTITY Ctr_menupopupscr	"彈出式選單: 用捲軸取代捲動箭頭">
 
@@ -132,10 +132,10 @@
 <!ENTITY Ctr_tabmokcolor	"白色分頁按鈕 (關閉、新增、分頁群組、列出所有分頁)">
 <!ENTITY Ctr_tabmokcolor2	"非目前的分頁，其字型使用白色文字，並加上文字陰影">
 <!ENTITY Ctr_tabmokcolor3	"白色分頁分隔線">
-<!ENTITY Ctr_tabmokcolor4	"White color for empty dotted tab favicon">
+<!ENTITY Ctr_tabmokcolor4	"為虛線空心分頁圖示著上白色">
 
-<!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
-<!ENTITY Ctr_navthrobber2	"Add url or leave empty">
+<!ENTITY Ctr_navthrobber1	"按下進度指示器，則開啟指定網址:">
+<!ENTITY Ctr_navthrobber2	"填入網址或留空">
 
 <!ENTITY Ctr_tab_tf_info1	"可使用色彩名稱, hexcodes, rgb(a) 和 hsl(a) 值.">
 <!ENTITY Ctr_tab_tf_info2	"沒有防呆機制（輸入無效值，不會有警告）!">
@@ -157,16 +157,16 @@
 <!ENTITY Ctr_ntabhov		"新分頁 (懸停)">
 <!ENTITY Ctr_bold			"粗體">
 <!ENTITY Ctr_italic			"斜體">
-<!ENTITY Ctr_notabhov		"Enabled settings override 'hovered' settings">
-<!ENTITY Ctr_tabc_act_tb	"Background color on toolbars">
+<!ENTITY Ctr_notabhov		"優先權高於「分頁(懸停)」的設定">
+<!ENTITY Ctr_tabc_act_tb	"將目前分頁的背景顏色套用到工具列上">
 
-<!ENTITY Ctr_urlbar			"Urlbar">
+<!ENTITY Ctr_urlbar			"網址列">
 <!ENTITY Ctr_starinurl		"星形書籤按鈕併入網址列">
 <!ENTITY Ctr_feedinurl		"網址列中顯示消息來源訂閱按鈕">
 <!ENTITY Ctr_hideurelstop	"隱藏網址列中的停止與重新載入按鈕">
-<!ENTITY Ctr_urlbardropm	"Move dropmarker to urlbars end">
-<!ENTITY Ctr_hideprbutton	"Hide notification icon when a popup gets blocked">
-<!ENTITY Ctr_urlbar_ib		"Site Identity Button (identity box)">
+<!ENTITY Ctr_urlbardropm	"移動下拉式三角按鈕到網址列末端">
+<!ENTITY Ctr_hideprbutton	"當彈出型廣告視窗被封鎖時，不顯示通知圖示">
+<!ENTITY Ctr_urlbar_ib		"網站識別鈕 (身份區塊)">
 <!ENTITY Ctr_verifiedcolors	"已驗證的網站識別鈕顯示為綠色/藍色">
 <!ENTITY Ctr_faviconurl		"網址列顯示網站圖示">
 <!ENTITY Ctr_padlock_hid	"鎖頭 (隱藏)">
@@ -174,53 +174,53 @@
 <!ENTITY Ctr_padlock_cla	"鎖頭 (經典風格)">
 <!ENTITY Ctr_padlock_mod	"鎖頭 (現代風格)">
 <!ENTITY Ctr_padlock_ext	"安全圖示">
-<!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
+<!ENTITY Ctr_icopageinfo	"按下圖示，則開啟「頁面資訊」視窗">
 
-<!ENTITY Ctr_menubar_items	"Menu items position">
-<!ENTITY Ctr_extrabar		"Additional Toolbars">
-<!ENTITY Ctr_extrabar0		"Additional Toolbar(s)">
+<!ENTITY Ctr_menubar_items	"選單列併入">
+<!ENTITY Ctr_extrabar		"新增工具列">
+<!ENTITY Ctr_extrabar0		"新增工具列">
 <!ENTITY Ctr_extrabar1		"新增工具列">
-<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
+<!ENTITY Ctr_extrabarinfo	"在「分頁列置頂」、「分頁列不置頂」兩模式間切換，會隨機排列「新增工具列」的順序。重啟 Firefox 方可解決這問題。">
 
 <!ENTITY Ctr_invicons		"圖示反相">
 <!ENTITY Ctr_menubar		"選單列">
 <!ENTITY Ctr_tabstoolbar	"分頁列">
 <!ENTITY Ctr_navbar			"瀏覽工具列">
 <!ENTITY Ctr_bookbar		"書籤列">
-<!ENTITY Ctr_notoolbar		"Hidden (do not show menu items)">
+<!ENTITY Ctr_notoolbar		"隱藏 (不顯示選單列)">
 
-<!ENTITY Ctr_mbarforceleft	"First element">
-<!ENTITY Ctr_mbarforceright	"Last element">
+<!ENTITY Ctr_mbarforceleft	"的左側">
+<!ENTITY Ctr_mbarforceright	"的右側">
 
 <!ENTITY Ctr_toolbars		"工具列">
 <!ENTITY Ctr_dblclnewtab	"在分頁列上連按兩下，則開啟新分頁(分頁網址由 browser.newtab.url 設定)">
 <!ENTITY Ctr_hidetbwot		"當只有一個分頁時，隱藏分頁工具列">
-<!ENTITY Ctr_hidetbwote		"Reduce hiding delay on startup">
+<!ENTITY Ctr_hidetbwote		"減少啟動時的隱藏延遲時間">
 <!ENTITY Ctr_notabfog		"移除背景模糊 (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_notabbg		"移除背景色彩 (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_hightabpos		"縮小分頁列上方空間 (如有可能)">
-<!ENTITY Ctr_alttabstb		"換一個背景色彩">
+<!ENTITY Ctr_alttabstb		"換個背景色彩">
 
 <!ENTITY Ctr_altmenubar		"加上背景色彩 (OS 標題列)">
-<!ENTITY Ctr_altmenubarpos	"換一個位置 (標題列下方)">
+<!ENTITY Ctr_altmenubarpos	"換個位置 (標題列下方)">
 <!ENTITY Ctr_menubarnofog	"移除背景色彩/模糊 (Windows AeroGlass / Win8)">
 
-<!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
+<!ENTITY Ctr_aerocolors		"將主工具列和分頁著上天藍色(Aero Blue)">
 <!ENTITY Ctr_hidenavbar		"隱藏瀏覽工具列">
 <!ENTITY Ctr_nobookbarbg	"書籤列: 移除背景色彩">
 <!ENTITY Ctr_nonavbarbg		"瀏覽工具列: 移除背景色彩">
-<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
-<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
+<!ENTITY Ctr_nonavbarbg1	"本套件的新增工具列與其他置頂的工具列都受影響。">
+<!ENTITY Ctr_nonavbarbg2	"「The Fox, Only Better」套件之精簡介面(Slim Chrome)的工具列都受影響。">
 <!ENTITY Ctr_nonavborder	"書籤列: 顯示上邊框">
 <!ENTITY Ctr_nonavtbborder	"上方工具列: 移除工具列邊框">
-<!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
-<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('chevron') at toolbars end">
+<!ENTITY Ctr_hidesbclose	"側邊欄: 隱藏側邊欄關閉按鈕">
+<!ENTITY Ctr_chevronfix		"瀏覽工具列: 隱藏工具列末端的雙右箭頭 (「更多工具...」按鈕)">
 
 <!ENTITY Ctr_closeabarbut	"隱藏附加元件關閉按鈕">
 <!ENTITY Ctr_highaddonsbar	"增加附加元件列高度">
 
 <!ENTITY Ctr_animation		"動畫">
-<!ENTITY Ctr_throbberalt	"換一個分頁載入圖示動畫 (進度指示器)">
+<!ENTITY Ctr_throbberalt	"換個分頁載入圖示動畫 (進度指示器)">
 <!ENTITY Ctr_bmanimation	"書籤加入的動畫">
 <!ENTITY Ctr_pananimation	"面板開啟的動畫">
 <!ENTITY Ctr_tabanimation	"分頁關閉/開啟的動畫 (about:config)">
@@ -229,22 +229,22 @@
 <!ENTITY Ctr_toolsitem		"工具選單中顯示 Classic Theme Restorer 項目">
 <!ENTITY Ctr_appmenuitem	"火狐橙選單中顯示 Classic Theme Restorer 項目">
 <!ENTITY Ctr_contextitem	"工具列右鍵選單中顯示 Classic Theme Restorer 項目">
-<!ENTITY Ctr_puictrbutton	"Button in main panel menu">
+<!ENTITY Ctr_puictrbutton	"面板選單中顯示 Classic Theme Restorer 按鈕">
 
-<!ENTITY Ctr_otherctroptns	"Other settings">
+<!ENTITY Ctr_otherctroptns	"其他設定">
 <!ENTITY Ctr_cuibotbuttons	"介面自訂模式中，更豐富的按鈕自訂選項">
-<!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
+<!ENTITY Ctr_bookmarkoinpw	"書籤右鍵選單中顯示「用新隱私視窗開啟」項目">
 
-<!ENTITY Ctr_experttweaks	"Advanced">
-<!ENTITY Ctr_fx33layers		"Firefox 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
-<!ENTITY Ctr_fx34search		"Firefox 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
+<!ENTITY Ctr_experttweaks	"進階">
+<!ENTITY Ctr_fx33layers		"Firefox 33+ 啟用了「OMTC」，目的是改善瀏覽器響應速度，但某些硬體組合環境下可能造成故障。取消勾選這個核取方塊 ，可解決相關問題。">
+<!ENTITY Ctr_fx34search		"Firefox 34+ 引入了「新搜尋列介面」。取消勾選這個核取方塊 ，則可恢復為「舊式搜尋列介面」。">
+<!ENTITY Ctr_fx34loop		"Firefox 34+ 實作了「Firefox Hello 即時通訊」功能。取消勾選這個核取方塊 ，則可移除這項功能。">
 
 
 <!ENTITY Ctr_pw_settings	"設定">
-<!ENTITY Ctr_pw_set_reset	"恢復預設值">
+<!ENTITY Ctr_pw_set_reset	"套件預設值">
 <!ENTITY Ctr_pw_set_predef	"經典設定值">
-<!ENTITY Ctr_pw_set_preaus	"Firefox preset">
+<!ENTITY Ctr_pw_set_preaus	"Firefox 預設值">
 <!ENTITY Ctr_pw_set_export	"匯出設定值">
 <!ENTITY Ctr_pw_set_import	"匯入設定值">
 
@@ -255,6 +255,6 @@
 <!ENTITY Ctr_newversion		"有新版本?">
 
 <!ENTITY Ctr_addon-bar.accesskey	"A">
-<!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
+<!ENTITY Ctr_openInPrivateWindow	"用新隱私視窗開啟">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
 <!ENTITY appMenuGettingStarted.label	"Getting started">
