@@ -299,6 +299,8 @@ classicthemerestorerjs.ctr = {
 			  } catch(e){}
 			}
 			
+			classicthemerestorerjs.ctr.loadUnloadCSS('cui_buttons',true);
+			
 		  break;
 		  
 		  case "ctabheightcb":
@@ -733,6 +735,7 @@ classicthemerestorerjs.ctr = {
 			classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt2',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt3',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt4',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('txtonly',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",false);
 			classicthemerestorerjs.ctr.loadUnloadCSS("to_notf_vt",false);
@@ -759,6 +762,11 @@ classicthemerestorerjs.ctr = {
 				if (branch.getBoolPref("iat_notf_vt"))
 				  classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",true);
 			  break;
+			  case "iconstxt4":
+				classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt4',true);
+				if (branch.getBoolPref("iat_notf_vt"))
+				  classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",true);
+			  break;
 			  case "txtonly":
 				classicthemerestorerjs.ctr.loadUnloadCSS('txtonly',true);
 				if (branch.getBoolPref("iat_notf_vt"))
@@ -776,7 +784,8 @@ classicthemerestorerjs.ctr = {
 		  
 		  case "iat_notf_vt":
 			if (branch.getBoolPref("iat_notf_vt")) {
-			  if (branch.getCharPref("nav_txt_ico")=="iconstxt" || branch.getCharPref("nav_txt_ico")=="iconstxt2" || branch.getCharPref("nav_txt_ico")=="iconstxt3") 
+			  if (branch.getCharPref("nav_txt_ico")=="iconstxt" || branch.getCharPref("nav_txt_ico")=="iconstxt2"
+					|| branch.getCharPref("nav_txt_ico")=="iconstxt3" || branch.getCharPref("nav_txt_ico")=="iconstxt4")
 			    classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",true);
 			  else if(branch.getCharPref("nav_txt_ico")=="txtonly")
 			    classicthemerestorerjs.ctr.loadUnloadCSS("to_notf_vt",true);
@@ -1708,15 +1717,6 @@ classicthemerestorerjs.ctr = {
 	  } catch(e){}
 	},300);
 	
-	// remove CTRs window controls 'extra items' on Linux and MacOSX
-	/*setTimeout(function(){
-	  try{
-		if(classicthemerestorerjs.ctr.osstring != "WINNT")
-		  classicthemerestorerjs.ctr.ctrGetId("ctraddon_window-controls")
-			.parentNode.removeChild(classicthemerestorerjs.ctr.ctrGetId("ctraddon_window-controls"));
-	  } catch(e){}
-	},300);*/
-	
 	//ColorfulTabs
 	setTimeout(function(){
 	  AddonManager.getAddonByID('{0545b830-f0aa-4d7e-8820-50a4629a56fe}', function(addon) {
@@ -2261,14 +2261,12 @@ classicthemerestorerjs.ctr = {
 		case "smallnavbut":
 			
 			// no small button mode when 'icons + text' mode is used
-			if (enable==true && this.prefs.getCharPref("nav_txt_ico")=="iconstxt"){
-				enable=false;
-			}
-			else if (enable==true && this.prefs.getCharPref("nav_txt_ico")=="iconstxt2"){
-				enable=false;
-			}
-			else if (enable==true && this.prefs.getCharPref("nav_txt_ico")=="iconstxt3"){
-				enable=false;
+			if (enable==true) {
+				var navtxticomode = this.prefs.getCharPref("nav_txt_ico");
+				if(navtxticomode=="iconstxt" || navtxticomode=="iconstxt2"
+					|| navtxticomode=="iconstxt3" || navtxticomode=="iconstxt4"){
+						enable=false;
+				}
 			}
 	
 			manageCSS("smallnavbut.css");
@@ -2338,6 +2336,23 @@ classicthemerestorerjs.ctr = {
 			}
 			if (classicthemerestorerjs.ctr.osstring=="Darwin") manageCSS("mode_icons_and_text.css");
 			else manageCSS("mode_icons_and_text3.css");
+
+		break;
+		
+		// no 'small button' mode, if 'icons + text' mode is used
+		case "iconstxt4":
+			if(enable==true && this.prefs.getBoolPref("smallnavbut")==true){
+				enable=false;
+				manageCSS("smallnavbut.css");
+				enable=true;
+			}
+			if(enable==false && this.prefs.getBoolPref("smallnavbut")==true){
+				enable=true;
+				manageCSS("smallnavbut.css");
+				enable=false;
+			}
+			if (classicthemerestorerjs.ctr.osstring=="Darwin") manageCSS("mode_icons_and_text2.css");
+			else manageCSS("mode_icons_and_text4.css");
 
 		break;
 		
@@ -2761,6 +2776,16 @@ classicthemerestorerjs.ctr = {
 			
 			if(enable==true && this.prefs.getBoolPref('ctabheightcb')){
 			
+				var linuxbutton='';
+				
+				if (classicthemerestorerjs.ctr.osstring!="Darwin" && classicthemerestorerjs.ctr.osstring!="WINNT") {
+					linuxbutton='\
+						#TabsToolbar toolbarbutton{\
+						  padding-top:0 !important;\
+						  padding-bottom:0 !important;\
+						}\
+					';
+				}
 			
 				this.tabheight=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
 					.tab-background-start[selected=true]::after,\
@@ -2783,6 +2808,7 @@ classicthemerestorerjs.ctr = {
 					#TabsToolbar .tabbrowser-tab{\
 					  height: '+this.prefs.getIntPref('ctabheight')+'px !important;\
 					}\
+					'+linuxbutton+'\
 				'), null, null);
 				
 				applyNewSheet(this.tabheight);
@@ -3801,6 +3827,7 @@ classicthemerestorerjs.ctr = {
 			
 				var cuismallnavbut='';
 				var cuiicotextbut='';
+				var cuitabsnontop='';
 			  
 				if (this.prefs.getBoolPref("smallnavbut")) {
 				  cuismallnavbut='#ctraddon_cui-smallnavbut-button1 {background:#fbfbfb !important;} #ctraddon_cui-smallnavbut-button2 {background:#dadada !important;}';
@@ -3813,13 +3840,21 @@ classicthemerestorerjs.ctr = {
 					case "iconsbig":	cuiicotextbut='#ctraddon_cui-icons-button {background:#bdbdbd !important;} #ctraddon_cui-iconstext-button {background:#fbfbfb !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;}'; break;
 					case "iconstxt":	cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#dadada !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;}'; break;
 					case "iconstxt2":	cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#bdbdbd !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;}'; break;
-					case "iconstxt3":	cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#ababab !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;}'; break;
+					case "iconstxt3":	cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#dadada !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button label { border-bottom: 1px dotted !important; margin-bottom: -1px !important; }'; break;
+					case "iconstxt4":	cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#bdbdbd !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button label { border-bottom: 1px dotted !important; margin-bottom: -1px !important; }'; break;
 					case "txtonly":		cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#fbfbfb !important;} #ctraddon_cui-textonly-button {background:#dadada !important;}'; break;
+				}
+				
+				switch (this.prefs.getCharPref("tabsontop")) {
+					case "unset":	cuitabsnontop='#ctraddon_cui-tabsnontop {background:#fbfbfb !important;}'; break;
+					case "false":	cuitabsnontop='#ctraddon_cui-tabsnontop {background:#dadada !important;}'; break;
+					case "false2":	cuitabsnontop='#ctraddon_cui-tabsnontop {background:#bdbdbd !important;}'; break;
 				}
 				
 				this.cuiButtonssheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
 					'+cuismallnavbut+'\
 					'+cuiicotextbut+'\
+					'+cuitabsnontop+'\
 				'), null, null);
 
 				applyNewSheet(this.cuiButtonssheet);
@@ -3884,12 +3919,27 @@ classicthemerestorerjs.ctr = {
 	  this.prefs.setCharPref(which,'iconstxt3');
 	}
 	else if(this.prefs.getCharPref('nav_txt_ico')=='iconstxt3' && value=="iconstxt") {
+	  this.prefs.setCharPref(which,'iconstxt4');
+	}
+	else if(this.prefs.getCharPref('nav_txt_ico')=='iconstxt4' && value=="iconstxt") {
 	  this.prefs.setCharPref(which,'iconstxt');
 	}
 	else {
 	  this.prefs.setCharPref(which,value);
 	}
 
+  },
+  
+  cuiPrefTabsNontop: function(){
+	if(this.prefs.getCharPref('tabsontop')=='unset') {
+	  this.prefs.setCharPref('tabsontop','false');
+	} 
+	else if(this.prefs.getCharPref('tabsontop')=='false') {
+	  this.prefs.setCharPref('tabsontop','false2');
+	}
+	else if(this.prefs.getCharPref('tabsontop')=='false2') {
+	  this.prefs.setCharPref('tabsontop','unset');
+	} 
   },
   
   openCTRPreferences: function(currentWindow) {

@@ -50,6 +50,8 @@
 			  <button label="&Ctr_cuiico;" id="ctraddon_cui-icons-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'icons');"/>
 			  <button label="&Ctr_cuiicotxt;" id="ctraddon_cui-iconstext-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'iconstxt');"/>
 			  <button label="&Ctr_cuitxt;" id="ctraddon_cui-textonly-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'txtonly');"/>
+			  <label value=" "/>
+			  <button label="&Ctr_cuitabsnontop;" id="ctraddon_cui-tabsnontop" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefTabsNontop();"/>
 			</row>
 		  </rows>
 		</grid>
@@ -858,7 +860,7 @@
 	  <toolbarbutton id="ctraddon_back-forward-dropmarker" type="menu" 
 			disabled="false"
 			label="&backCmd.label; &forwardCmd.label;"
-			class="toolbarbutton-1 chromeclass-toolbar-additional tabs-alltabs-button ctraddon-toolbarbutton"
+			class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
 			onbroadcast="if (this.disabled) this.disabled =
 			document.getElementById('Browser:Back').hasAttribute('disabled') &amp;&amp;
 			document.getElementById('Browser:Forward').hasAttribute('disabled');">

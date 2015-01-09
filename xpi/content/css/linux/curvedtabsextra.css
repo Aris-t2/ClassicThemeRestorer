@@ -25,4 +25,10 @@
 	  padding: 0px !important;
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png") !important;
 	}
+	
+	/* toolbar buttons should not increase tab height */
+	#TabsToolbar toolbarbutton{
+	  padding-top:0 !important;
+	  padding-bottom:0 !important;
+	}
 }

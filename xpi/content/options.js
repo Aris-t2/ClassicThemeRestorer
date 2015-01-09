@@ -223,6 +223,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_devtheme').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_devthemeb').disabled = true;
 	  document.getElementById('ctraddon_pw_devthemeb').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_devthemedescr').style.visibility = 'collapse';
 	}
 	
 	function PrefListener(branch_name, callback) {
@@ -355,6 +356,8 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_e10stab_notd').style.visibility = 'visible';
 	  }
 	} catch(e) {}
+	
+	this.hideThemeInfoForTabs();
 
   },
   
@@ -407,7 +410,25 @@ classicthemerestorerjso.ctr = {
 	// disable aeroblue toolbars preference
 	if(this.prefs.getBoolPref('aerocolors'))
 	  this.prefs.setBoolPref('aerocolors',false);
+  
+	this.hideThemeInfoForTabs();
 
+  },
+  
+  hideThemeInfoForTabs: function(){
+	setTimeout(function(){
+		try {
+		  if(Components.classes["@mozilla.org/preferences-service;1"]
+			.getService(Components.interfaces.nsIPrefService)
+				.getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
+			document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'visible';
+			document.getElementById('ctraddon_pw_tabmenulist').disabled = true;
+		  } else if(classicthemerestorerjso.ctr.fxdefaulttheme) {
+			  document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'collapse';
+			  document.getElementById('ctraddon_pw_tabmenulist').disabled = false;
+		  }
+		} catch(e) {}
+	},100);
   },
   
   unsetTabColorsAndMore: function() {

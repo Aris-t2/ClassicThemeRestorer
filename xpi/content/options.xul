@@ -242,6 +242,9 @@
 
 	  <groupbox>
 		<caption  label="&Ctr_tabs;" class="ctraddon_topic"/>
+		
+		<description id="ctraddon_pw_tabforminfo" class="ctraddon_topic">&Ctr_tabforminfo;</description>
+
 		<menulist preference="ctraddon_tabs" id="ctraddon_pw_tabmenulist">
 			<menupopup>
 				<menuitem value="tabs_default"	 label="&Ctr_tabs0;"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
@@ -252,8 +255,6 @@
 				<menuitem value="tabs_curvedall" label="&Ctr_tabs3;"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();" id="tabs_curvedall"/>
 			</menupopup>
 		</menulist>
-
-		<description id="ctraddon_pw_tabforminfo">&Ctr_tabforminfo;</description>
 
 		<menulist preference="ctraddon_tabsontop">
 			<menupopup>
@@ -749,6 +750,7 @@
 				<menuitem value="iconstxt"	label="&Ctr_nav_txt_ico2;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt')"/>
 				<menuitem value="iconstxt2"	label="&Ctr_nav_txt_ico2; v2" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt2')"/>
 				<menuitem value="iconstxt3"	label="&Ctr_nav_txt_ico2; v3" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt3')"/>
+				<menuitem value="iconstxt4"	label="&Ctr_nav_txt_ico2; v4" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt4')"/>
 				<menuitem value="txtonly"	label="&Ctr_nav_txt_ico3;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('txtonly')"/>
 				<description class="ctraddon_font1">&Ctr_nav_txt_exp;</description>
 				<menuitem value="full"		label="[mode='full']" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('full')"/>
@@ -903,7 +905,7 @@
 		<description class="ctraddonsuboption">&Ctr_fx34loop;</description>
 		<checkbox label="about:config &gt;&gt; browser.devedition.theme.enabled" preference="ctraddon_devtheme" oncommand="classicthemerestorerjso.ctr.resetPrefsForDevTheme()" id="ctraddon_pw_devtheme"/>
 		<checkbox label="about:config &gt;&gt; browser.devedition.theme.showCustomizeButton" preference="ctraddon_devthemebut" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_devthemeb" class="ctraddonsuboption"/>
-		<description class="ctraddonsuboption">&Ctr_fx35devtheme;</description>
+		<description class="ctraddonsuboption" id="ctraddon_pw_devthemedescr">&Ctr_fx35devtheme;</description>
 	  </groupbox>
 
 	</box>

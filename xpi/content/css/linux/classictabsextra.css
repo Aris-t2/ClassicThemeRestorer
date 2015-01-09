@@ -49,4 +49,10 @@
 	.tabbrowser-tab[selected="true"]:-moz-lwtheme {
 	  background-image: linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%) !important;
 	}
+	
+	/* toolbar buttons should not increase tab height */
+	#TabsToolbar toolbarbutton{
+	  padding-top:0 !important;
+	  padding-bottom:0 !important;
+	}
 }
