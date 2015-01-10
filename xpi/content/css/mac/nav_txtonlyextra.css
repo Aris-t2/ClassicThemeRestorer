@@ -33,11 +33,11 @@
 	  padding:0 !important;
 	}
 
-	toolbar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]) .toolbarbutton-text {
+	toolbar:not(#TabsToolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]) .toolbarbutton-text {
 	  border: 1px solid transparent;
 	}
 
-	toolbar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]):hover .toolbarbutton-text {
+	toolbar:not(#TabsToolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]):hover .toolbarbutton-text {
 	  border: 1px solid;
 	  background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.1));
 	  border-color: hsla(210,54%,20%,.15) hsla(210,54%,20%,.2) hsla(210,54%,20%,.25) !important;

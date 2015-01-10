@@ -4,10 +4,6 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#navigator-toolbox .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text,
-	#ctraddon_addon-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text	{
-	  display: -moz-box !important;
-	}
 	#navigator-toolbox #nav-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
       border: 1px solid transparent;
     }
@@ -15,13 +11,19 @@
 	 padding-top: 2px !important;
 	 padding-bottom: 2px !important;
 	}
-	#navigator-toolbox .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]),
+	
+	#navigator-toolbox toolbar:not(#TabsToolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text,
+	#ctraddon_addon-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text	{
+	  display: -moz-box !important;
+	}
+	
+	#navigator-toolbox toolbar:not(#TabsToolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]),
 	#ctraddon_addon-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
 	  -moz-box-orient: vertical !important;
 	}
-	#navigator-toolbox  toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
-	#ctraddon_addon-bar toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
-	#navigator-toolbox #TabsToolbar #ctraddon_appbutton .toolbarbutton-text {
+	
+	#navigator-toolbox toolbar:not(#TabsToolbar) toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
+	#ctraddon_addon-bar toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon {
 	  visibility: collapse !important;
 	}
 	
@@ -31,18 +33,24 @@
 	  visibility: visible !important;
 	}
 	
-	#navigator-toolbox #TabsToolbar #ctraddon_appbutton .toolbarbutton-icon{
+	/*#navigator-toolbox #TabsToolbar #ctraddon_appbutton .toolbarbutton-icon{
 	  visibility: visible !important;
-	}
-	.toolbarbutton-1[type="menu"] dropmarker{
+	}*/
+	#navigator-toolbox toolbar:not(#TabsToolbar) .toolbarbutton-1[type="menu"] dropmarker,
+	#ctraddon_addon-bar .toolbarbutton-1[type="menu"] dropmarker{
 	   visibility:collapse !important;
 	}
+	
+	#downloads-button .toolbarbutton-icon{
+	  margin: -4px !important;
+	}
+
 	/* make custom back-forward visible and hide back-forward on urlbar item */
 	#ctraddon_back-forward-button{
 	  visibility: visible !important;
 	}
-	#main-window #navigator-toolbox #nav-bar #urlbar-container #back-button,
-	#main-window #navigator-toolbox #nav-bar #urlbar-container #forward-button{
+	#main-window toolbox toolbar #urlbar-container #back-button,
+	#main-window toolbox toolbar #urlbar-container #forward-button{
 	  visibility: collapse !important;
 	}
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper {
@@ -56,10 +64,6 @@
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr),
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
 	  margin-left: 0px !important;
-	}
-
-	#downloads-button .toolbarbutton-icon{
-	  margin: -4px !important;
 	}
 	
 	/* support for star & feed buttons in urlbar */
@@ -89,8 +93,8 @@
 	  margin: -8px 4px !important;
 	}
 	
-	/*Vertical toolbar*/
-	#vertical-toolbar .toolbarbutton-1 .toolbarbutton-text	{
+	/* Vertical toolbar */
+	#vertical-toolbar .toolbarbutton-1 .toolbarbutton-text {
 	  display: -moz-box !important;
 	}
 	#vertical-toolbar .toolbarbutton-1 {

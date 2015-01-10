@@ -10,7 +10,7 @@
 				  0 1px hsla(210,54%,20%,.03),
 				  0 0 2px hsla(210,54%,20%,.1);
 	}
-	#navigator-toolbox .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
+	#navigator-toolbox toolbar:not(#TabsToolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
 	  padding: 2px 3px 3px 3px !important;
 	}
 	#navigator-toolbox #nav-bar  #bookmarks-menu-button .toolbarbutton-text{
