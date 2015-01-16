@@ -18,15 +18,15 @@
 	}
 	
 	.tabs-newtab-button:not(:-moz-lwtheme){
-	  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),
-						url(chrome://browser/skin/tabbrowser/tab-active-middle.png),
-						url(chrome://browser/skin/tabbrowser/tab-stroke-end.png) !important;
+	  background-image: url(chrome://classic_theme_restorer/content/images/ntab-end-r.png),
+						url(chrome://classic_theme_restorer/content/images/ntab-middle-r.png),
+						url(chrome://classic_theme_restorer/content/images/ntab-start-r.png) !important;
 	}
 
 	.tabs-newtab-button:not(:-moz-lwtheme):hover{
-	  background-image: url(chrome://classic_theme_restorer/content/images/ntab-hov-start.png),
-						url(chrome://classic_theme_restorer/content/images/ntab-hov-middle.png),
-						url(chrome://classic_theme_restorer/content/images/ntab-hov-end.png) !important;
+	  background-image: url(chrome://classic_theme_restorer/content/images/ntab-hov-end-r.png),
+						url(chrome://classic_theme_restorer/content/images/ntab-hov-middle-r.png),
+						url(chrome://classic_theme_restorer/content/images/ntab-hov-start-r.png) !important;
 	}
 
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,
@@ -100,20 +100,8 @@
 	  border-top: 1px solid #8b8b8b !important;
 	}
 
-	.tabbrowser-tab,
-	.tabbrowser-tab .tab-content,
-	.tabbrowser-tab progressmeter.tab-progress,
-	.tabs-newtab-button	{
+	.tabbrowser-tab .tab-background {
 	  transform: scale(-1, -1) !important;
-	}
-	.tabs-newtab-button	{
-	  z-index: 1 !important;
-	}
-	.tabbrowser-tab:not([selected=true]){
-	  z-index: 2 !important;
-	}
-	.tabbrowser-tab[selected=true]{
-	  z-index: 3 !important;
 	}
 	
 	/* remove ridiculous clipping */

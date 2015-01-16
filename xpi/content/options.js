@@ -45,6 +45,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_nonavborder').disabled = true;
 		document.getElementById('ctraddon_pw_nonavtbborder').disabled = true;
 		document.getElementById('ctraddon_pw_alttabstb').disabled = true;
+		document.getElementById('ctraddon_pw_alttabstb2').disabled = true;
 		document.getElementById('ctraddon_pw_verifiedcolors').disabled = true;
 		document.getElementById('ctraddon_pw_colors_ntab_t').disabled = true;
 		document.getElementById('ctraddon_pw_notabfog').disabled = true;
@@ -78,6 +79,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_mockupoptions').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_invertedicons').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_alttabstb').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_alttabstb2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_verifiedcolors').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_notabfog').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_notabbg').style.visibility = 'collapse';
@@ -322,6 +324,7 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwBFextra(this.prefs.getBoolPref("backforward"));
 	this.ctrpwSNextra(!this.prefs.getBoolPref('smallnavbut'));
 	this.ctrpwHidetbwotExtra(this.prefs.getBoolPref("hidetbwot"));
+	this.altTabsToolbarBgExtra(this.prefs.getBoolPref("alttabstb"));
 	this.ctrpwModeextra(this.prefs.getCharPref("nav_txt_ico"));
 
 	
@@ -476,6 +479,13 @@ classicthemerestorerjso.ctr = {
   ctrpwHidetbwotExtra: function(which) {
     if(which==true) which=false; else which=true;
     document.getElementById('ctraddon_pw_hidetbwote').disabled = which;
+  },
+  
+  altTabsToolbarBgExtra: function(which) {
+	if (this.fxdefaulttheme) {
+	  if(which==true) which=false; else which=true;
+      document.getElementById('ctraddon_pw_alttabstb2').disabled = which;
+	}
   },
   
   ctrpwTabcloseextra: function(which) {
@@ -861,6 +871,7 @@ classicthemerestorerjso.ctr = {
 	patterns[153]="cappbutc2:"+this.prefs.getCharPref("cappbutc2");
 	patterns[154]="svgfilters="+this.prefs.getBoolPref("svgfilters");
 	patterns[155]="aerocolors="+this.prefs.getBoolPref("aerocolors");
+	patterns[156]="addonbarfs="+this.prefs.getBoolPref("addonbarfs");
 
 	saveToFile(patterns);
 	  

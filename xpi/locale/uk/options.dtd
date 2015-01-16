@@ -41,7 +41,7 @@
 <!ENTITY Ctr_tabwidthdef	"(типово)">
 <!ENTITY Ctr_tabwidthcla	"(класичний)">
 <!ENTITY Ctr_tabminheight	"Висота:">
-<!ENTITY Ctr_tabheightinfo	"Low values will cause glitches in maximized mode!">
+<!ENTITY Ctr_tabheightinfo	"Низькі значення викличуть збої у розгорнутому режимі!">
 <!ENTITY Ctr_tabmaxwidth	"Макс.ширина:">
 <!ENTITY Ctr_tabminwidth	"Мін.ширина:">
 <!ENTITY Ctr_tabwidthinfo	"Мінімальна та максимальна ширина вкладок контролюються за допомогою TabMixPlus">
@@ -66,7 +66,7 @@
 <!ENTITY Ctr_appbutton1		"Кнопка на панелі">
 <!ENTITY Ctr_appbutton1wt	"Кнопка на панелі (тільки текст)">
 <!ENTITY Ctr_appbutton2		"Кнопка на [Firefox] панелі заголовку">
-<!ENTITY Ctr_appbutton2h	"Кнопка на [Firefox] панелі заголовку (hidden)">
+<!ENTITY Ctr_appbutton2h	"Кнопка на [Firefox] панелі заголовку (прихована)">
 <!ENTITY Ctr_appbutton2io	"Кнопка на [Firefox] панелі заголовку (тільки іконка)">
 <!ENTITY Ctr_paneluibtweak	"Оранжева кнопка меню на панелі вкладок">
 <!ENTITY Ctr_appbuttonc_o	"Оранжева кнопка (типово)">
@@ -127,7 +127,7 @@
 <!ENTITY Ctr_cpanelmenus	"Панель меню: компактний вигляд (закладки, історія тощо)">
 <!ENTITY Ctr_hidezoomres	"Управління масштабом на панелі: приховати кнопку скидання масштабу">
 <!ENTITY Ctr_alt_newtabp	"Сторінка нової вкладки: альтернативний вигляд">
-<!ENTITY Ctr_noresizerxp	"Hide Resizer (Windows XP)">
+<!ENTITY Ctr_noresizerxp	"Приховати «Індикатор зміни розміру» (Windows XP)">
 <!ENTITY Ctr_pmhidelabels	"Спливаюче вікно панелі меню: приховати написи на кнопках">
 <!ENTITY Ctr_menupopupscr	"Спливаючі вікна меню: показувати полоси прокручування замість стрілки прокручування">
 
@@ -203,6 +203,7 @@
 <!ENTITY Ctr_notabbg		"Прибрати колір тла (Windows AeroGlass/8)">
 <!ENTITY Ctr_hightabpos		"Зменшити простір над панеллю інструментів (якщо можливо)">
 <!ENTITY Ctr_alttabstb		"Альтернативний колір тла">
+<!ENTITY Ctr_alttabstb2		"In maximized mode (tabs on top)">
 
 <!ENTITY Ctr_altmenubar		"Додати колір тла (рядок заголовку Windows)">
 <!ENTITY Ctr_altmenubarpos	"Альтернативна позиція (нижче рядку заголовку Firefox)">
@@ -221,6 +222,7 @@
 
 <!ENTITY Ctr_closeabarbut	"Приховати кнопку закривання панелі додатків">
 <!ENTITY Ctr_highaddonsbar	"Збільшити висоту">
+<!ENTITY Ctr_addonbarfs		"У повноекранному режимі">
 
 <!ENTITY Ctr_animation		"Анімація">
 <!ENTITY Ctr_throbberalt	"Альтернативна анімація">
@@ -242,7 +244,7 @@
 <!ENTITY Ctr_fx33layers		"В Firefox 33+ введено «нові візуальні особливості», які в даний час відповідають за «зависання» вкладок на деяких системах. Вимкнення цього параметра вирішує цю проблему.">
 <!ENTITY Ctr_fx34search		"В Firefox 34+ введено «новий пошуковий інтерфейс». Вимкнення цього параметра поверне  «старий пошуковий інтерфейс».">
 <!ENTITY Ctr_fx34loop		"В Firefox 34+ введені особливості «виклику та сеансу зв’язку». Вимкнення цього параметру видалить їх.">
-<!ENTITY Ctr_fx35devtheme	"Firefox 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
+<!ENTITY Ctr_fx35devtheme	"В Firefox 35+ введено нову «тему» від розробника. Вимкнення цих налаштувань вимикає цю «тему» і її кнопку в ручному режимі налаштувань.">
 
 
 <!ENTITY Ctr_pw_settings	"Налаштування">

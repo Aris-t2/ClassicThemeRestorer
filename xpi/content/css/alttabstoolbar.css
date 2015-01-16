@@ -6,7 +6,7 @@
 		#main-window[defaultfxtheme="true"][tabsontop="false"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
 		  background: linear-gradient(to bottom,#aabccf 1px, #ffffff 1px,#d0d7ec,#e9ecfa) !important;
 		}
-		#main-window[defaultfxtheme="true"]:not([tabsontop="false"]) #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
+		#main-window[defaultfxtheme="true"]:not([tabsontop="false"])[sizemode="normal"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
 		  background: #dbeaf9 !important;
 		}
 	}
@@ -14,7 +14,7 @@
 		#main-window[defaultfxtheme="true"][tabsontop="false"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
 		  background: linear-gradient(to bottom,#808080 1px, #ffffff 1px,-moz-Dialog,-moz-Dialog) !important;
 		}
-		#main-window[defaultfxtheme="true"]:not([tabsontop="false"]) #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
+		#main-window[defaultfxtheme="true"]:not([tabsontop="false"])[sizemode="normal"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
 		  background: -moz-Dialog !important;
 		}
 	}
@@ -24,7 +24,7 @@
 		#main-window[defaultfxtheme="true"][tabsontop="false"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
 		  background: linear-gradient(to bottom,#a0a0a0 1px, #ffffff 1px,-moz-Dialog,-moz-Dialog) !important;
 		}
-		#main-window[defaultfxtheme="true"]:not([tabsontop="false"]) #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
+		#main-window[defaultfxtheme="true"]:not([tabsontop="false"])[sizemode="normal"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
 		  background: -moz-Dialog !important;
 		}
 		#main-window[defaultfxtheme="true"] #titlebar-buttonbox {

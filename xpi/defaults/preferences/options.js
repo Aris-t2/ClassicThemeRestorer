@@ -100,6 +100,7 @@ pref("extensions.classicthemerestorer.notabfog",false);
 pref("extensions.classicthemerestorer.notabbg",false);
 pref("extensions.classicthemerestorer.hightabpososx",false);
 pref("extensions.classicthemerestorer.alttabstb",false);
+pref("extensions.classicthemerestorer.alttabstb2",true);
 
 pref("extensions.classicthemerestorer.altmenubar",false);
 pref("extensions.classicthemerestorer.altmenubarpos",false);
@@ -108,6 +109,7 @@ pref("extensions.classicthemerestorer.menubarnofog",false);
 
 pref("extensions.classicthemerestorer.closeabarbut",false);
 pref("extensions.classicthemerestorer.highaddonsbar",false);
+pref("extensions.classicthemerestorer.addonbarfs",false);
 pref("extensions.classicthemerestorer.noaddonbarbg",false);
 
 pref("extensions.classicthemerestorer.am_extrabars",1);

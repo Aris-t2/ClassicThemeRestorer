@@ -27,9 +27,9 @@
 	  visibility: collapse !important;
 	}
 	
-	#navigator-toolbox #urlbar-go-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
-	#navigator-toolbox #urlbar-stop-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
-	#navigator-toolbox #urlbar-reload-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon {
+	#navigator-toolbox toolbar:not(#TabsToolbar) #urlbar-go-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
+	#navigator-toolbox toolbar:not(#TabsToolbar) #urlbar-stop-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
+	#navigator-toolbox toolbar:not(#TabsToolbar) #urlbar-reload-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon {
 	  visibility: visible !important;
 	}
 	
@@ -50,8 +50,9 @@
 	  visibility: visible !important;
 	}
 	#main-window toolbox toolbar #urlbar-container #back-button,
-	#main-window toolbox toolbar #urlbar-container #forward-button{
+	#main-window toolbox toolbar #urlbar-container #urlbar-wrapper #forward-button{
 	  visibility: collapse !important;
+	  display:none !important;
 	}
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper {
 	  clip-path: none !important;
@@ -67,31 +68,31 @@
 	}
 	
 	/* support for star & feed buttons in urlbar */
-	#nav-bar #urlbar-container #feed-button .toolbarbutton-text,
-	#nav-bar #urlbar-container #bookmarks-menu-button .toolbarbutton-text {
+	toolbox toolbar #urlbar-container #urlbar #feed-button .toolbarbutton-text,
+	toolbox toolbar #urlbar-container #urlbar #bookmarks-menu-button .toolbarbutton-text {
 	  display: none !important;
 	  visibility: collapse !important;
 	}
-	#navigator-toolbox  #nav-bar #urlbar-container #feed-button:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-icon,
-	#navigator-toolbox  #nav-bar #urlbar-container #bookmarks-menu-button:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-icon {
+	#main-window toolbox toolbar #urlbar-container #urlbar #feed-button:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-icon,
+	#main-window toolbox toolbar #urlbar-container #urlbar #bookmarks-menu-button:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-icon {
 	  visibility: visible !important;
 	}
-	#nav-bar #urlbar-container #feed-button,
-	#nav-bar #urlbar-container #bookmarks-menu-button {
+	toolbox toolbar #urlbar-container #urlbar #feed-button,
+	toolbox toolbar #urlbar-container #urlbar #bookmarks-menu-button {
 	  min-width: inherit !important;
 	}
-	#nav-bar #urlbar-container #feed-button:hover,
-	#nav-bar #urlbar-container #bookmarks-menu-button:hover{
+	toolbox toolbar #urlbar-container #urlbar #feed-button:hover,
+	toolbox toolbar #urlbar-container #urlbar #bookmarks-menu-button:hover{
 	  border: 0px solid transparent !important;
       background-image: linear-gradient(hsla(0,0%,100%,.0), hsla(0,0%,100%,.0)) !important;
       border-color: hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) !important;
       box-shadow: none !important;
 	  padding:0 !important;
 	}
-	#nav-bar #urlbar-container #feed-button .toolbarbutton-icon,
-	#nav-bar #urlbar-container #bookmarks-menu-button .toolbarbutton-icon {
+	/*toolbox toolbar #urlbar-container #urlbar #feed-button .toolbarbutton-icon,
+	toolbox toolbar #urlbar-container #urlbar #bookmarks-menu-button .toolbarbutton-icon {
 	  margin: -8px 4px !important;
-	}
+	}*/
 	
 	/* Vertical toolbar */
 	#vertical-toolbar .toolbarbutton-1 .toolbarbutton-text {

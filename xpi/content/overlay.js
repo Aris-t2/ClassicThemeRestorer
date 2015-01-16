@@ -1277,6 +1277,11 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("highaddonsbar")) classicthemerestorerjs.ctr.loadUnloadCSS("highaddonsbar",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("highaddonsbar",false);
 		  break;
+		  
+		  case "addonbarfs":
+			if (branch.getBoolPref("addonbarfs")) classicthemerestorerjs.ctr.loadUnloadCSS("addonbarfs",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("addonbarfs",false);
+		  break;
 
 
 		  case "throbberalt":
@@ -1409,8 +1414,21 @@ classicthemerestorerjs.ctr = {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("alttabstb",true);
 			  branch.setBoolPref("notabfog",false);
 			  branch.setBoolPref("notabbg",false);
+			  if (branch.getBoolPref("alttabstb2"))
+				  classicthemerestorerjs.ctr.loadUnloadCSS("alttabstb2",true);
 			}
-			else classicthemerestorerjs.ctr.loadUnloadCSS("alttabstb",false);
+			else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("alttabstb",false);
+			  if (branch.getBoolPref("alttabstb2"))
+				  classicthemerestorerjs.ctr.loadUnloadCSS("alttabstb2",false);
+			}
+		  break;
+		  
+		  case "alttabstb2":
+			if (branch.getBoolPref("alttabstb2") && branch.getBoolPref("alttabstb")
+				&& classicthemerestorerjs.ctr.fxdefaulttheme==true)
+					classicthemerestorerjs.ctr.loadUnloadCSS("alttabstb2",true);
+			else classicthemerestorerjs.ctr.loadUnloadCSS("alttabstb2",false);
 		  break;
 
 		  case "cpanelmenus":
@@ -1531,9 +1549,21 @@ classicthemerestorerjs.ctr = {
 	
 	ctrSettingsListener_forCTB.register(true);
 	
-	// MacOSX needs extra checks to not load CTRs tab styles for complete themes by accident
-	if (classicthemerestorerjs.ctr.osstring=="Darwin" && this.fxdefaulttheme==false){
-	  classicthemerestorerjs.ctr.prefs.setCharPref('tabs','tabs_default');
+	// MacOSX needs extra checks to not load CTRs tab styles for (complete) themes by accident
+	if (classicthemerestorerjs.ctr.osstring=="Darwin") {
+		if(this.fxdefaulttheme==false) {
+			classicthemerestorerjs.ctr.prefs.setCharPref('tabs','tabs_default');
+		} else if(this.fxdefaulttheme==true){
+			var devthemeosx=false;
+			try {
+			  if(Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
+			    devthemeosx=true;
+			  }
+			} catch(e) {}
+			  
+			if(devthemeosx==true)			
+			  classicthemerestorerjs.ctr.prefs.setCharPref('tabs','tabs_default');
+		}
 	}
 
   },
@@ -2412,8 +2442,10 @@ classicthemerestorerjs.ctr = {
 		case "hidesbclose": 		manageCSS("hidesidebarclose.css");		break;
 		case "chevronfix": 			manageCSS("chevronfix.css");			break;
 		case "highaddonsbar": 		manageCSS("higher_addonsbar.css");		break;
+		case "addonbarfs": 			manageCSS("addonbar_infullscreen.css");	break;
 		case "hightabpososx": 		manageCSS("higher_tabs_pos.css");		break;
 		case "alttabstb": 			manageCSS("alttabstoolbar.css");		break;
+		case "alttabstb2": 			manageCSS("alttabstoolbar2.css");		break;
 		
 		case "emptyfavicon": 		manageCSS("empty_favicon.css");			break;
 		case "emptyfavicon2": 		manageCSS("empty_favicon2.css");		break;
@@ -2890,7 +2922,8 @@ classicthemerestorerjs.ctr = {
 					if(classicthemerestorerjs.ctr.osstring=="Darwin") {
 					  if (classicthemerestorerjs.ctr.prefs.getCharPref("tabsontop")=='false'
 							|| classicthemerestorerjs.ctr.prefs.getCharPref("tabsontop")=='false2')
-						tb_color = this.prefs.getCharPref('ctabact1');
+						if (this.prefs.getCharPref('tabs')!='tabs_curved')
+						  tb_color = this.prefs.getCharPref('ctabact1');
 					}
 				
 					tabc_act_tb_sheet = '\
