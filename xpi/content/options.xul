@@ -25,6 +25,7 @@
 		<preference id="ctraddon_tabhang" 	 	name="layers.offmainthreadcomposition.enabled"		type="bool"		instantApply="true"/>
 		<preference id="ctraddon_oldsearch" 	name="browser.search.showOneOffButtons"				type="bool"		instantApply="true"/>
 		<preference id="ctraddon_loopcall"		name="loop.enabled"									type="bool"		instantApply="true"/>
+		<preference id="ctraddon_oldprefs" 		name="browser.preferences.inContent"				type="bool"		instantApply="true"/>
 		<preference id="ctraddon_devtheme"		name="browser.devedition.theme.enabled"				type="bool"		instantApply="true"/>
 		<preference id="ctraddon_devthemebut"	name="browser.devedition.theme.showCustomizeButton"	type="bool"		instantApply="true"/>
 
@@ -229,7 +230,7 @@
 	  <radio class="ctraddontab" value="ctraddon_toolbarsbox"	label="&Ctr_toolbars; (1)"/>
 	  <radio class="ctraddontab" value="ctraddon_toolbarsbox2"	label="&Ctr_toolbars; (2)"/>
 	  <radio class="ctraddontab" value="ctraddon_animationbox"	label="&Ctr_animation;"/>
-	  <radio class="ctraddontab" value="ctraddon_experttweaks"	label="&Ctr_experttweaks;"/>
+	  <radio class="ctraddontab" value="ctraddon_experttweaks"	label="&Ctr_experttweaks;" id="ctraddon_experttweakstab"/>
 	  <radio class="ctraddontab" value="ctraddon_ctraddonbox"	label="&Ctr_title;"/>
 	  <label value=""/>
 	  <description id="ctraddon_pw_radiorestart">&Ctr_rr;</description>
@@ -819,7 +820,7 @@
 	  <groupbox>
 	    <caption  label="&Ctr_tabstoolbar;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_dblclnewtab;"	preference="ctraddon_dblclnewtab" class="ctraddon_windowsonly"/>
-		<checkbox label="&Ctr_hidetbwot;"	preference="ctraddon_hidetbwot" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(true);} else {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(false);}"/>
+		<checkbox label="&Ctr_hidetbwot;"	preference="ctraddon_hidetbwot" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(true);} else {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(false);} classicthemerestorerjso.ctr.needsBrowserRestart();"/>
 		<checkbox label="&Ctr_hidetbwote;"	preference="ctraddon_hidetbwote" class="ctraddonsuboption" id="ctraddon_pw_hidetbwote"/>
 		<checkbox label="&Ctr_notabfog;"	preference="ctraddon_notabfog" class="ctraddon_windowsonly" id="ctraddon_pw_notabfog"/>
 		<checkbox label="&Ctr_notabbg;"		preference="ctraddon_notabbg" class="ctraddon_windowsonly" id="ctraddon_pw_notabbg"/>
@@ -901,12 +902,14 @@
 
 	  <groupbox>
 		<caption  label="&Ctr_experttweaks;" class="ctraddon_topic"/>
-		<checkbox label="about:config &gt;&gt; layers.offmainthreadcomposition.enabled" preference="ctraddon_tabhang" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
-		<description class="ctraddonsuboption">&Ctr_fx33layers;</description>
+		<checkbox label="about:config &gt;&gt; layers.offmainthreadcomposition.enabled" preference="ctraddon_tabhang" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_f33layers"/>
+		<description class="ctraddonsuboption" id="ctraddon_pw_f33layersdescr">&Ctr_fx33layers;</description>
 		<checkbox label="about:config &gt;&gt; browser.search.showOneOffButtons" preference="ctraddon_oldsearch" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_oldsearch"/>
-		<description class="ctraddonsuboption">&Ctr_fx34search;</description>
+		<description class="ctraddonsuboption" id="ctraddon_pw_oldsearchdescr">&Ctr_fx34search;</description>
 		<checkbox label="about:config &gt;&gt; loop.enabled" preference="ctraddon_loopcall" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_loopcall"/>
-		<description class="ctraddonsuboption">&Ctr_fx34loop;</description>
+		<description class="ctraddonsuboption" id="ctraddon_pw_loopcalldescr">&Ctr_fx34loop;</description>
+		<checkbox label="about:config &gt;&gt; browser.preferences.inContent" preference="ctraddon_oldprefs" id="ctraddon_pw_oldprefs"/>
+		<description class="ctraddonsuboption" id="ctraddon_pw_oldprefsdescr">&Ctr_fx36prefs;</description>
 		<checkbox label="about:config &gt;&gt; browser.devedition.theme.enabled" preference="ctraddon_devtheme" oncommand="classicthemerestorerjso.ctr.resetPrefsForDevTheme()" id="ctraddon_pw_devtheme"/>
 		<checkbox label="about:config &gt;&gt; browser.devedition.theme.showCustomizeButton" preference="ctraddon_devthemebut" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_devthemeb" class="ctraddonsuboption"/>
 		<description class="ctraddonsuboption" id="ctraddon_pw_devthemedescr">&Ctr_fx35devtheme;</description>

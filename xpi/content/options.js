@@ -220,12 +220,36 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_noconicons').disabled = true;
 	  document.getElementById('ctraddon_pw_noconicons').style.visibility = 'collapse';
 	}
+	if (this.appversion < 33) {
+	  document.getElementById('ctraddon_experttweakstab').style.visibility = 'collapse';
+	  
+	  document.getElementById('ctraddon_pw_f33layers').disabled = true;
+	  document.getElementById('ctraddon_pw_f33layers').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_f33layersdescr').disabled = true;
+	  document.getElementById('ctraddon_pw_f33layersdescr').style.visibility = 'collapse';
+	}
+	if (this.appversion < 34) {
+	  document.getElementById('ctraddon_pw_oldsearch').disabled = true;
+	  document.getElementById('ctraddon_pw_oldsearch').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_oldsearchdescr').disabled = true;
+	  document.getElementById('ctraddon_pw_oldsearchdescr').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_loopcall').disabled = true;
+	  document.getElementById('ctraddon_pw_loopcall').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_loopcalldescr').disabled = true;
+	  document.getElementById('ctraddon_pw_loopcalldescr').style.visibility = 'collapse';
+	}
 	if (this.appversion < 35) {
 	  document.getElementById('ctraddon_pw_devtheme').disabled = true;
 	  document.getElementById('ctraddon_pw_devtheme').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_devthemeb').disabled = true;
 	  document.getElementById('ctraddon_pw_devthemeb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_devthemedescr').style.visibility = 'collapse';
+	}
+	if (this.appversion < 36) {
+	  document.getElementById('ctraddon_pw_oldprefs').disabled = true;
+	  document.getElementById('ctraddon_pw_oldprefs').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_oldprefsdescr').disabled = true;
+	  document.getElementById('ctraddon_pw_oldprefsdescr').style.visibility = 'collapse';
 	}
 	
 	function PrefListener(branch_name, callback) {
@@ -872,6 +896,8 @@ classicthemerestorerjso.ctr = {
 	patterns[154]="svgfilters="+this.prefs.getBoolPref("svgfilters");
 	patterns[155]="aerocolors="+this.prefs.getBoolPref("aerocolors");
 	patterns[156]="addonbarfs="+this.prefs.getBoolPref("addonbarfs");
+	patterns[157]="alttabstb2="+this.prefs.getBoolPref("alttabstb2");
+	
 
 	saveToFile(patterns);
 	  

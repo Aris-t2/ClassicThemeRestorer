@@ -178,5 +178,12 @@
 		}
 	  }
 	}
+	
+	/*developer theme additions */
+	#main-window[sizemode="maximized"][developertheme="true"]:not([tabsontop="false"]) #tabbrowser-tabs,
+	#main-window[sizemode="maximized"][developertheme="true"]:not([tabsontop="false"]) #TabsToolbar,
+	#main-window[sizemode="maximized"][developertheme="true"] #browser-panel {
+	  background: unset !important;
+	}
 
 }
