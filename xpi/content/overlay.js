@@ -158,6 +158,39 @@ classicthemerestorerjs.ctr = {
 	  if (this._branch)
 		this._branch.removeObserver('', this);
 	};
+	
+	var ctrSettingsListener_forDevtheme = new PrefListener(
+	  "browser.devedition.theme.",
+	  function(branch, name) {
+		switch (name) {
+
+		  case "enabled":
+			if (branch.getBoolPref("enabled")) {
+			  if(classicthemerestorerjs.ctr.prefs.getBoolPref("nodevtheme")) {
+				branch.setBoolPref("enabled",false);
+			  }
+			  else{
+				if (classicthemerestorerjs.ctr.fxdefaulttheme){
+				  try{
+				    document.getElementById("main-window").setAttribute('developertheme',true);
+				  } catch(e){}
+				}
+			  }
+			}
+			else {
+			  if (classicthemerestorerjs.ctr.fxdefaulttheme){
+				try{
+				  document.getElementById("main-window").setAttribute('developertheme',false);
+				} catch(e){}
+			  }
+			}
+			
+		  break;
+		}
+	  }
+	);
+	
+	ctrSettingsListener_forDevtheme.register(true);
 
 	var ctrSettingsListener = new PrefListener(
 	  "extensions.classicthemerestorer.",
@@ -1506,6 +1539,17 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("bmarkoinpw")) classicthemerestorerjs.ctr.loadUnloadCSS("bmarkoinpw",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmarkoinpw",false);
 		  break;
+		  
+		  case "nodevtheme":
+			if (branch.getBoolPref("nodevtheme")) {
+			  	try{
+					if(Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService)
+						.getBranch("browser.devedition.theme.").getBoolPref("enabled"))
+					  Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService)
+						.getBranch("browser.devedition.theme.").setBoolPref("enabled",false)
+				} catch(e){}
+			}
+		  break;
 
 		}
 	  }
@@ -1530,35 +1574,6 @@ classicthemerestorerjs.ctr = {
 	);
 	
 	ctrSettingsListener_forCTB.register(true);
-	
-	
-	var ctrSettingsListener_forDevtheme = new PrefListener(
-	  "browser.devedition.theme.",
-	  function(branch, name) {
-		switch (name) {
-
-		  case "enabled":
-			if (branch.getBoolPref("enabled")) {
-			  if (classicthemerestorerjs.ctr.fxdefaulttheme){
-				try{
-				  document.getElementById("main-window").setAttribute('developertheme',true);
-				} catch(e){}
-			  }
-			}
-			else {
-			  if (classicthemerestorerjs.ctr.fxdefaulttheme){
-				try{
-				  document.getElementById("main-window").setAttribute('developertheme',false);
-				} catch(e){}
-			  }
-			}
-			
-		  break;
-		}
-	  }
-	);
-	
-	ctrSettingsListener_forDevtheme.register(true);
 	
 	// MacOSX needs extra checks to not load CTRs tab styles for (complete) themes by accident
 	if (classicthemerestorerjs.ctr.osstring=="Darwin") {

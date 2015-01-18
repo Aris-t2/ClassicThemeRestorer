@@ -28,6 +28,8 @@
 		<preference id="ctraddon_oldprefs" 		name="browser.preferences.inContent"				type="bool"		instantApply="true"/>
 		<preference id="ctraddon_devtheme"		name="browser.devedition.theme.enabled"				type="bool"		instantApply="true"/>
 		<preference id="ctraddon_devthemebut"	name="browser.devedition.theme.showCustomizeButton"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_nodevtheme"	name="extensions.classicthemerestorer.nodevtheme"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_tabinsertion"	name="browser.tabs.insertRelatedAfterCurrent"		type="bool"		instantApply="true"/>
 
 		<preference id="ctraddon_tabs"			name="extensions.classicthemerestorer.tabs" 		type="string"	instantApply="true"/>
 		<preference id="ctraddon_tabsontop"		name="extensions.classicthemerestorer.tabsontop" 	type="string"	instantApply="true"/>
@@ -273,6 +275,7 @@
 			</menupopup>
 		</menulist>
 		
+		<checkbox label="&Ctr_tabinsertion;"	preference="ctraddon_tabinsertion" id="ctraddon_pw_tab_tabinsertion"/>
 		<checkbox label="&Ctr_emptyfavicon;"	preference="ctraddon_emptyfavicon" id="ctraddon_pw_tab_emptyfavicon"/>
 		<checkbox label="&Ctr_noemptypticon;"	preference="ctraddon_noemptypticon" id="ctraddon_pw_tab_noemptypticon"/>
 		
@@ -880,24 +883,6 @@
 
 	</box>
 	
-	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_ctraddonbox">
-
-	  <groupbox>
-		<caption  label="&Ctr_title;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_toolsitem;"		preference="ctraddon_toolsitem" id="ctraddon_pw_toolsitem"/>
-		<checkbox label="&Ctr_appmenuitem;"		preference="ctraddon_appmenuitem" id="ctraddon_pw_appmenuitem"/>
-		<checkbox label="&Ctr_contextitem;"		preference="ctraddon_contextitem" id="ctraddon_pw_contextitem"/>
-		<checkbox label="&Ctr_puictrbutton;"	preference="ctraddon_puictrbutton" id="ctraddon_pw_puictrbutton"/>
-	  </groupbox>
-
-	  <groupbox>
-		<caption  label="&Ctr_otherctroptns;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_cuibotbuttons;"	preference="ctraddon_cuibuttons"/>
-		<checkbox label="&Ctr_bookmarkoinpw;"	preference="ctraddon_bmarkoinpw"/>
-	  </groupbox>
-
-	</box>
-	
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_experttweaks">
 
 	  <groupbox>
@@ -913,6 +898,25 @@
 		<checkbox label="about:config &gt;&gt; browser.devedition.theme.enabled" preference="ctraddon_devtheme" oncommand="classicthemerestorerjso.ctr.resetPrefsForDevTheme()" id="ctraddon_pw_devtheme"/>
 		<checkbox label="about:config &gt;&gt; browser.devedition.theme.showCustomizeButton" preference="ctraddon_devthemebut" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_devthemeb" class="ctraddonsuboption"/>
 		<description class="ctraddonsuboption" id="ctraddon_pw_devthemedescr">&Ctr_fx35devtheme;</description>
+	  </groupbox>
+
+	</box>
+
+	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_ctraddonbox">
+
+	  <groupbox>
+		<caption  label="&Ctr_title;" class="ctraddon_topic"/>
+		<checkbox label="&Ctr_toolsitem;"		preference="ctraddon_toolsitem" id="ctraddon_pw_toolsitem"/>
+		<checkbox label="&Ctr_appmenuitem;"		preference="ctraddon_appmenuitem" id="ctraddon_pw_appmenuitem"/>
+		<checkbox label="&Ctr_contextitem;"		preference="ctraddon_contextitem" id="ctraddon_pw_contextitem"/>
+		<checkbox label="&Ctr_puictrbutton;"	preference="ctraddon_puictrbutton" id="ctraddon_pw_puictrbutton"/>
+	  </groupbox>
+
+	  <groupbox>
+		<caption  label="&Ctr_otherctroptns;" class="ctraddon_topic"/>
+		<checkbox label="&Ctr_cuibotbuttons;"	preference="ctraddon_cuibuttons"/>
+		<checkbox label="&Ctr_bookmarkoinpw;"	preference="ctraddon_bmarkoinpw"/>
+		<checkbox label="&Ctr_nodevtheme;"		preference="ctraddon_nodevtheme" id="ctraddon_nodevtheme" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwDisableDevThemePrefsExtra(true);} else {classicthemerestorerjso.ctr.ctrpwDisableDevThemePrefsExtra(false);} classicthemerestorerjso.ctr.resetPrefsForDevTheme();"/>
 	  </groupbox>
 
 	</box>

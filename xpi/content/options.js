@@ -244,6 +244,8 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_devthemeb').disabled = true;
 	  document.getElementById('ctraddon_pw_devthemeb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_devthemedescr').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_nodevtheme').disabled = true;
+	  document.getElementById('ctraddon_nodevtheme').style.visibility = 'collapse';
 	}
 	if (this.appversion < 36) {
 	  document.getElementById('ctraddon_pw_oldprefs').disabled = true;
@@ -350,6 +352,7 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwHidetbwotExtra(this.prefs.getBoolPref("hidetbwot"));
 	this.altTabsToolbarBgExtra(this.prefs.getBoolPref("alttabstb"));
 	this.ctrpwModeextra(this.prefs.getCharPref("nav_txt_ico"));
+	this.ctrpwDisableDevThemePrefsExtra(this.prefs.getBoolPref("nodevtheme"));
 
 	
 	var closetab_value = this.prefs.getCharPref("closetab");
@@ -503,6 +506,13 @@ classicthemerestorerjso.ctr = {
   ctrpwHidetbwotExtra: function(which) {
     if(which==true) which=false; else which=true;
     document.getElementById('ctraddon_pw_hidetbwote').disabled = which;
+  },
+  
+  ctrpwDisableDevThemePrefsExtra: function(which) {
+	if (this.appversion >= 35) {
+	  document.getElementById('ctraddon_pw_devtheme').disabled = which;
+	  document.getElementById('ctraddon_pw_devthemeb').disabled = which;
+	}
   },
   
   altTabsToolbarBgExtra: function(which) {
@@ -897,6 +907,7 @@ classicthemerestorerjso.ctr = {
 	patterns[155]="aerocolors="+this.prefs.getBoolPref("aerocolors");
 	patterns[156]="addonbarfs="+this.prefs.getBoolPref("addonbarfs");
 	patterns[157]="alttabstb2="+this.prefs.getBoolPref("alttabstb2");
+	patterns[158]="nodevtheme="+this.prefs.getBoolPref("nodevtheme");
 	
 
 	saveToFile(patterns);
