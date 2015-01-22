@@ -65,14 +65,13 @@ classicthemerestorerjs.ctr = {
   moveStarIntoUrlbar:	false,
   moveFeedIntoUrlbar:	false,
 
-
   init: function() {
   
 	// remove default panel ui button in favour of CTRs movable duplicate
 	try{
 		document.getElementById("PanelUI-button").removeChild(document.getElementById("PanelUI-menu-button"));
 	} catch(e){}
-
+	
 	// adds a new global attribute 'defaultfxtheme' -> better parting css for default and non-default themes
 	try{
 		if (this.fxdefaulttheme){
@@ -1575,7 +1574,36 @@ classicthemerestorerjs.ctr = {
 	
 	ctrSettingsListener_forCTB.register(true);
 	
-	// MacOSX needs extra checks to not load CTRs tab styles for (complete) themes by accident
+	/*
+	// SettingSanity add-on uses 'defaultDrawInTitlebar' pref, that breaks the default
+	// 'drawInTitlebar' provided by Firefox and required by CTR. Basically it does not
+	// switch default pref back when it should. This fixes the problem.
+	var ctrSettingsListener_forSetSan = new PrefListener(
+	  "browser.tabs.",
+	  function(branch, name) {
+		switch (name) {
+		  case "drawInTitlebar":
+			if (branch.getBoolPref("drawInTitlebar")) {
+			  try {
+				if(branch.getBoolPref("defaultDrawInTitlebar")==false)
+				  branch.setBoolPref('defaultDrawInTitlebar',true);
+			  } catch(e) {}
+			}
+			else {
+			  try {
+				if(branch.getBoolPref("defaultDrawInTitlebar"))
+				  branch.setBoolPref('defaultDrawInTitlebar',false);
+			  } catch(e) {}
+			}
+		  break;
+		}
+	  }
+	);
+	
+	ctrSettingsListener_forSetSan.register(true);
+	*/
+
+	// MacOSX requires extra checks to not load CTRs tab styles for (complete) themes by accident
 	if (classicthemerestorerjs.ctr.osstring=="Darwin") {
 		if(this.fxdefaulttheme==false) {
 			classicthemerestorerjs.ctr.prefs.setCharPref('tabs','tabs_default');
@@ -2934,7 +2962,8 @@ classicthemerestorerjs.ctr = {
 						  box-shadow:none !important;\
 						  background: none !important;\
 						}\
-						toolbar:not(#TabsToolbar):not(#toolbar-menubar),\
+						#navigator-toolbox toolbar:not(#TabsToolbar):not(#toolbar-menubar),\
+						#browser-bottombox toolbar:not(#developer-toolbar):not(.devtools-tabbar),\
 						#main-window[defaultfxtheme="true"] #navigator-toolbox #TabsToolbar[tabsontop=false]:not(:-moz-lwtheme),\
 						#main-window[defaultfxtheme="true"][tabsontop=false]:not([tabsintitlebar]):not(:-moz-lwtheme) #toolbar-menubar,\
 						#TabsToolbar[tabsontop="false"]{\

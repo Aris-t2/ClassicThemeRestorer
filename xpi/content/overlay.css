@@ -100,13 +100,13 @@
 	#ctraddon_toolbar_dummy{
 	  -moz-appearance: none !important;
 	  -moz-box-ordinal-group: 999999 !important;
-	  visibility:hidden;
+	  visibility:hidden !important;
 	}
 	
 	/* ctr addonbar */
 	#ctraddon_addon-bar {
 	  -moz-appearance: none !important;
-	  -moz-box-ordinal-group: 99999 !important;
+	  -moz-box-ordinal-group: 100 !important;
 	  border: 0px !important;
 	}
 
@@ -454,6 +454,7 @@
 
 /* style/hide settings on CTRs options window */
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+	#ctraddon_pw_noresizerxp,
 	#ctraddon_combrelstopinfo,
 	#ctraddon_appbutton_list1,
 	#ctraddon_appbutton_list2{
@@ -746,6 +747,11 @@
 	#ctraddon_pw_throbberalt label{
 	  background:url('chrome://classic_theme_restorer/content/images/throbber-loading-alt.png') no-repeat left !important;
 	  -moz-padding-start:20px !important;
+	}
+	
+	/**/
+	.acprefdesc {
+	  font-size:95%;
 	}
 	
 	/*CTR icons*/

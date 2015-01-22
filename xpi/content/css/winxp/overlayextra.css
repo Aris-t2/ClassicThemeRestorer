@@ -204,6 +204,7 @@
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+	#ctraddon_pw_noresizerxp,
 	#ctraddon_appbutton_list1{
 	  visibility: visible !important;
 	}

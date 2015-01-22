@@ -103,11 +103,15 @@ classicthemerestorerjso.ctr = {
 	//pref e10s tabs
 	document.getElementById('ctraddon_pw_e10stab_notd').disabled = true;
 	document.getElementById('ctraddon_pw_e10stab_notd').style.visibility = 'collapse';
+	document.getElementById('ctraddon_pw_e10stabs').disabled = true;
+	document.getElementById('ctraddon_pw_e10stabs').style.visibility = 'collapse';
+	document.getElementById('ctraddon_pw_e10stabsdescr').style.visibility = 'collapse';
 
+	// radio restart label
 	document.getElementById('ctraddon_pw_radiorestart').style.visibility = 'collapse';
 	
+	// tab height/width
 	document.getElementById('ctraddon_pw_tabheightinfo').style.visibility = 'collapse';
-	
 	document.getElementById('ctraddon_pw_tabwidthinfo').style.visibility = 'collapse';
 	document.getElementById('ctraddon_pw_tabwidthinfo2').style.visibility = 'collapse';
 	document.getElementById('ctraddon_pw_tabwidthinfo3').style.visibility = 'collapse';
@@ -253,7 +257,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_oldprefsdescr').disabled = true;
 	  document.getElementById('ctraddon_pw_oldprefsdescr').style.visibility = 'collapse';
 	}
-	
+
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get
 	  // garbage collected.
@@ -384,6 +388,16 @@ classicthemerestorerjso.ctr = {
 					.getBranch("browser.tabs.remote.autostart.").getBoolPref("1")) {
 		document.getElementById('ctraddon_pw_e10stab_notd').disabled = false;
 		document.getElementById('ctraddon_pw_e10stab_notd').style.visibility = 'visible';
+	  }
+	} catch(e) {}
+	
+	try{
+	  if (Components.classes["@mozilla.org/preferences-service;1"]
+		.getService(Components.interfaces.nsIPrefService)
+			.getBranch("app.update.").getCharPref("channel")=='nightly') {
+		document.getElementById('ctraddon_pw_e10stabs').disabled = false;
+		document.getElementById('ctraddon_pw_e10stabs').style.visibility = 'visible';
+		document.getElementById('ctraddon_pw_e10stabsdescr').style.visibility = 'visible';
 	  }
 	} catch(e) {}
 	
