@@ -777,9 +777,10 @@ classicthemerestorerjso.ctr = {
 		}
 			
 			for (var i = 0; i < parjson.length ; i++) {						  
-				  try {								
-							setPrefValue(parjson[i].preference, parjson[i].value);
-						
+				  try {		
+				  	if(parjson[i].preference.match(/extensions.classicthemerestorer./g)){						
+						setPrefValue(parjson[i].preference, parjson[i].value);
+				  	}
 				  } catch(e) {
 						//Catch any nasty errors and output to dialogue
 						Components.utils.reportError(e);
