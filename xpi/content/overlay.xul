@@ -829,7 +829,7 @@
                    customizableui-areatype="toolbar"
 				   align="center"
 				   pack="center"
-				   onclick="classicthemerestorerjs.ctr.openAThrobberUrl();"
+				   onclick="if(event.button=='0') classicthemerestorerjs.ctr.openAThrobberUrl();"
 				   overflows="false"
                    removable="true"/>
 	  

@@ -232,7 +232,6 @@
 	  <radio class="ctraddontab" value="ctraddon_iconsbox"		label="&Ctr_urlbar;"/>
 	  <radio class="ctraddontab" value="ctraddon_toolbarsbox"	label="&Ctr_toolbars; (1)"/>
 	  <radio class="ctraddontab" value="ctraddon_toolbarsbox2"	label="&Ctr_toolbars; (2)"/>
-	  <radio class="ctraddontab" value="ctraddon_animationbox"	label="&Ctr_animation;"/>
 	  <radio class="ctraddontab" value="ctraddon_experttweaks"	label="&Ctr_experttweaks;" id="ctraddon_experttweakstab"/>
 	  <radio class="ctraddontab" value="ctraddon_ctraddonbox"	label="&Ctr_title;"/>
 	  <label value=""/>
@@ -279,6 +278,8 @@
 		<checkbox label="&Ctr_tabinsertion;"	preference="ctraddon_tabinsertion" id="ctraddon_pw_tab_tabinsertion"/>
 		<checkbox label="&Ctr_emptyfavicon;"	preference="ctraddon_emptyfavicon" id="ctraddon_pw_tab_emptyfavicon"/>
 		<checkbox label="&Ctr_noemptypticon;"	preference="ctraddon_noemptypticon" id="ctraddon_pw_tab_noemptypticon"/>
+		<checkbox label="&Ctr_throbberalt;"		preference="ctraddon_throbberalt" id="ctraddon_pw_throbberalt"/>
+		<checkbox label="&Ctr_e10stab_notd;" 	preference="ctraddon_e10stab_notd" id="ctraddon_pw_e10stab_notd"/>
 		
 		<hbox>
 		  <checkbox label="&Ctr_tabminheight;"	preference="ctraddon_ctabheightcb" id="ctraddon_pw_tab_ctabheightcb"/>
@@ -311,8 +312,6 @@
 		<description id="ctraddon_pw_tabwidthinfo"  class="ctraddon_topic">&Ctr_tabwidthinfo;</description>
 		<description id="ctraddon_pw_tabwidthinfo2" class="ctraddon_topic">&Ctr_tabwidthinfo2;</description>
 		<description id="ctraddon_pw_tabwidthinfo3" class="ctraddon_topic">&Ctr_tabwidthinfo3;</description>
-
-		<checkbox label="&Ctr_e10stab_notd;" 		  preference="ctraddon_e10stab_notd" id="ctraddon_pw_e10stab_notd"/>
 		
 		<description class="ctraddon_font1">&Ctr_closetab_0;</description>
 		<menulist preference="ctraddon_closetab" id="ctraddon_pw_closetab">
@@ -871,19 +870,6 @@
 
 	</box>
 	
-	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_animationbox">
-
-	  <groupbox>
-		<caption  label="&Ctr_animation;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_throbberalt;"		preference="ctraddon_throbberalt" id="ctraddon_pw_throbberalt"/>
-		<checkbox label="&Ctr_bmanimation;"		preference="ctraddon_bmanimation" id="ctraddon_pw_bmanimation"/>
-		<checkbox label="&Ctr_pananimation;"	preference="ctraddon_pananimation" id="ctraddon_pw_pananimation"/>
-		<checkbox label="&Ctr_tabanimation;"	preference="ctraddon_tabsanimate" tooltiptext="browser.tabs.animate"/>
-		<checkbox label="&Ctr_dlanimation;"		preference="ctraddon_dlanimate" tooltiptext="browser.download.animateNotifications"/>
-	  </groupbox>
-
-	</box>
-	
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_experttweaks">
 
 	  <groupbox>
@@ -894,7 +880,7 @@
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_oldsearchdescr">&Ctr_fx34search;</description>
 		<checkbox label="about:config &gt;&gt; loop.enabled" preference="ctraddon_loopcall" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_loopcall"/>
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_loopcalldescr">&Ctr_fx34loop;</description>
-		<checkbox label="about:config &gt;&gt; browser.preferences.inContent" preference="ctraddon_oldprefs" id="ctraddon_pw_oldprefs"/>
+		<checkbox label="about:config &gt;&gt; browser.preferences.inContent" preference="ctraddon_oldprefs" oncommand="classicthemerestorerjso.ctr.ctrShowE10sPrefForWindowPrefs()" id="ctraddon_pw_oldprefs"/>
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_oldprefsdescr">&Ctr_fx36prefs;</description>
 		<checkbox label="about:config &gt;&gt; browser.devedition.theme.enabled" preference="ctraddon_devtheme" oncommand="classicthemerestorerjso.ctr.resetPrefsForDevTheme()" id="ctraddon_pw_devtheme"/>
 		<checkbox label="about:config &gt;&gt; browser.devedition.theme.showCustomizeButton" preference="ctraddon_devthemebut" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_devthemeb" class="ctraddonsuboption"/>
@@ -907,6 +893,14 @@
 
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_ctraddonbox">
 
+	  <groupbox>
+		<caption  label="&Ctr_animation;" class="ctraddon_topic"/>
+		<checkbox label="&Ctr_bmanimation;"		preference="ctraddon_bmanimation" id="ctraddon_pw_bmanimation"/>
+		<checkbox label="&Ctr_pananimation;"	preference="ctraddon_pananimation" id="ctraddon_pw_pananimation"/>
+		<checkbox label="&Ctr_tabanimation;"	preference="ctraddon_tabsanimate" tooltiptext="browser.tabs.animate"/>
+		<checkbox label="&Ctr_dlanimation;"		preference="ctraddon_dlanimate" tooltiptext="browser.download.animateNotifications"/>
+	  </groupbox>
+	  
 	  <groupbox>
 		<caption  label="&Ctr_title;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_toolsitem;"		preference="ctraddon_toolsitem" id="ctraddon_pw_toolsitem"/>

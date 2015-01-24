@@ -37,17 +37,17 @@
 <!ENTITY Ctr_tabsontop3		"Pestañas no arriba (v2) --- [tabsontop=false] establecido">
 <!ENTITY Ctr_tabsontopW1	"¡v2 es sólo para algunos complementos y temas completos!">
 <!ENTITY Ctr_tabsontopI1	"Se añade el atributo [tabsontop=true/false] a">
-<!ENTITY Ctr_tabsintitlebar	"Pestañas en la barra de título (browser.tabs.drawInTitlebar en about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Pestañas en la barra de título (about:config >> browser.tabs.drawInTitlebar)">
 <!ENTITY Ctr_tabwidthdef	"(por defecto)">
 <!ENTITY Ctr_tabwidthcla	"(clásico)">
 <!ENTITY Ctr_tabminheight	"Altura:">
-<!ENTITY Ctr_tabheightinfo	"Low values will cause glitches in maximized mode!">
+<!ENTITY Ctr_tabheightinfo	"¡Valores bajos causarán problemas en modo maximizado!">
 <!ENTITY Ctr_tabmaxwidth	"Ancho-máximo:">
 <!ENTITY Ctr_tabminwidth	"Ancho-mínimo:">
 <!ENTITY Ctr_tabwidthinfo	"Ancho-mínimo y Ancho-máximo están controlados por TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"Ancho-mínimo y Ancho-máximo están controlados por TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"¡Los valores por debajo de 48px causarán problemas en la mayoría de los casos!">
-<!ENTITY Ctr_tabinsertion	"Insert related tab after current tab (about:config)">
+<!ENTITY Ctr_tabinsertion	"Insertar pestaña relacionada después de la pestaña actual (about:config >> browser.tabs.insertRelatedAfterCurrent)">
 <!ENTITY Ctr_emptyfavicon	"Restaurar favicon vacío (si un sitio no ofrece uno)">
 <!ENTITY Ctr_noemptypticon	"Eliminar favicon vacío en pestañas fijas">
 <!ENTITY Ctr_e10stab_notd	"Pestañas E10s: Eliminar subrayado">
@@ -60,7 +60,7 @@
 <!ENTITY Ctr_closetab_hfot	"Ocultar para una sola pestaña visible">
 <!ENTITY Ctr_closealt		"Icono alternativo">
 <!ENTITY Ctr_closeonleft	"Posición alternativa en la pestaña">
-<!ENTITY Ctr_close_wwltab	"Cerrar ventana con la última pestaña visible (browser.tabs.closeWindowWithLastTab en about:config)">
+<!ENTITY Ctr_close_wwltab	"Cerrar ventana con la última pestaña visible (about:config >> browser.tabs.closeWindowWithLastTab)">
 
 <!ENTITY Ctr_appbutton		"Botón de la aplicación">
 <!ENTITY Ctr_appbutton0		"Botón deshabilitado">
@@ -128,7 +128,7 @@
 <!ENTITY Ctr_cpanelmenus	"Menús de panel: Vista compacta (marcadores, historial, etc.)">
 <!ENTITY Ctr_hidezoomres	"Controles de zoom en la barra de herramientas: Ocultar botón de restablecimiento del zoom">
 <!ENTITY Ctr_alt_newtabp	"Página de nueva pestaña: Apariencia alternativa">
-<!ENTITY Ctr_noresizerxp	"Hide Resizer (Windows XP)">
+<!ENTITY Ctr_noresizerxp	"Ocultar redimensionador (Windows XP)">
 <!ENTITY Ctr_pmhidelabels	"Menú de panel emergente: Ocultar etiquetas de los botones">
 <!ENTITY Ctr_menupopupscr	"Menús emergentes: Mostrar barras de desplazamiento en lugar de flechas">
 
@@ -168,8 +168,8 @@
 <!ENTITY Ctr_starinurl		"Botón estrella de marcador">
 <!ENTITY Ctr_feedinurl		"Botón de suscripción (RSS feed)">
 <!ENTITY Ctr_hideurelstop	"Ocultar botones 'parar y recargar'">
-<!ENTITY Ctr_urlbardropm	"Mover flecha de desplegable al final de la barra de URL">
-<!ENTITY Ctr_hideprbutton	"Ocultar icono de notificación cuando una ventana emergente sea bloqueda">
+<!ENTITY Ctr_urlbardropm	"Mover flecha de despliegue al final de la barra de URL">
+<!ENTITY Ctr_hideprbutton	"Ocultar icono de notificación cuando una ventana emergente sea bloqueada">
 <!ENTITY Ctr_urlbar_ib		"Botón de identidad del sitio (cuadro de identidad)">
 <!ENTITY Ctr_verifiedcolors	"Color verde/azul para sitios con conexiones seguras de identidad verificada/no-verificada">
 <!ENTITY Ctr_faviconurl		"Favicon en la barra de URL">
@@ -197,14 +197,14 @@
 <!ENTITY Ctr_mbarforceright	"Último elemento">
 
 <!ENTITY Ctr_toolbars		"Barras de herramientas">
-<!ENTITY Ctr_dblclnewtab	"El doble clic abre una 'nueva' pestaña (browser.newtab.url en about:config)">
+<!ENTITY Ctr_dblclnewtab	"El doble clic abre una 'nueva' pestaña (about:config >> browser.newtab.url)">
 <!ENTITY Ctr_hidetbwot		"Ocultar barra de pestañas con una sola pestaña">
 <!ENTITY Ctr_hidetbwote		"Reducir retardo al ocultar en el inicio">
 <!ENTITY Ctr_notabfog		"Eliminar niebla de fondo (Windows Aeroglass/8)">
 <!ENTITY Ctr_notabbg		"Eliminar color de fondo (Windows AeroGlass/8)">
 <!ENTITY Ctr_hightabpos		"Reducir espacio sobre la barra de herramientas (si es posible)">
 <!ENTITY Ctr_alttabstb		"Color de fondo alternativo">
-<!ENTITY Ctr_alttabstb2		"In maximized mode (tabs on top)">
+<!ENTITY Ctr_alttabstb2		"En modo maximizado (pestañas arriba)">
 
 <!ENTITY Ctr_altmenubar		"Añadir color de fondo (barra de título del SO)">
 <!ENTITY Ctr_altmenubarpos	"Posición alternativa (debajo de la barra de título de Firefox)">
@@ -223,14 +223,14 @@
 
 <!ENTITY Ctr_closeabarbut	"Ocultar botón cerrar de barras de complementos">
 <!ENTITY Ctr_highaddonsbar	"Incrementar altura">
-<!ENTITY Ctr_addonbarfs		"In fullscreen mode">
+<!ENTITY Ctr_addonbarfs		"En modo pantalla completa">
 
 <!ENTITY Ctr_animation		"Animación">
 <!ENTITY Ctr_throbberalt	"Animación alternativa del icono de carga (throbber) de la pestaña">
 <!ENTITY Ctr_bmanimation	"Animación al añadir nuevos marcadores">
 <!ENTITY Ctr_pananimation	"Animación en la apertura de panel">
-<!ENTITY Ctr_tabanimation	"Animación en la apertura/cierre de pestañas (browser.tabs.animate en about:config)">
-<!ENTITY Ctr_dlanimation	"Animación de la 'notificación de descarga' (browser.download.animateNotifications en about:config)">
+<!ENTITY Ctr_tabanimation	"Animación en la apertura/cierre de pestañas (about:config >> browser.tabs.animate)">
+<!ENTITY Ctr_dlanimation	"Animación de la 'notificación de descarga' (about:config >> browser.download.animateNotifications)">
 
 <!ENTITY Ctr_toolsitem		"Elemento en el menú Herramientas">
 <!ENTITY Ctr_appmenuitem	"Elemento en el menú de la aplicación">
@@ -240,17 +240,17 @@
 <!ENTITY Ctr_otherctroptns	"Otras configuraciones">
 <!ENTITY Ctr_cuibotbuttons	"Botones extra en el modo 'Personalizar'">
 <!ENTITY Ctr_bookmarkoinpw	"Elemento 'Abrir en una nueva ventana privada' en el menú contextual de marcadores">
-<!ENTITY Ctr_nodevtheme		"Prevent 'Developer Theme' from being enabled">
+<!ENTITY Ctr_nodevtheme		"Prevenir que se habilite el 'tema de decoración de desarrollador'">
 
 <!ENTITY Ctr_experttweaks	"Avanzadas">
 <!ENTITY Ctr_fx33layers		"Firefox 33+ introdujo 'nuevas características de renderizado' responsables en la actualidad de 'colgar pestañas' en algunos sistemas. Desmarcar esta preferencia resuelve el problema.">
 <!ENTITY Ctr_fx34search		"Firefox 34+ introdujo una 'nueva interfaz de usuario de búsqueda'. Desmarcando esta preferencia vuelve a la 'antigua interfaz de usuario de búsqueda'.">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ introdujo características de 'llamada y conversación'. Desmarcar esta preferencia las retira.">
-<!ENTITY Ctr_fx35devtheme	"Firefox 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
-<!ENTITY Ctr_fx36prefs		"Firefox 36+ introduced preferences in a tab. Unchecking this preference restores the old preference window.">
+<!ENTITY Ctr_fx34loop		"Firefox 34+ introdujo características de 'llamada y conversación'. Desmarcar esto las retira.">
+<!ENTITY Ctr_fx35devtheme	"Firefox 35+ introdujo un nuevo 'tema de decoración de desarrollador'. Desmarcar estas preferencias deshabilita el 'tema de desarrollador' y su botón en el modo Personalizar.">
+<!ENTITY Ctr_fx36prefs		"Firefox 36+ introdujo las Opciones (about:preferences) en una pestaña. Desmarcar esta preferencia restaura la antigua ventana de Opciones.">
 
 
-<!ENTITY Ctr_pw_settings	"Configuraciones">
+<!ENTITY Ctr_pw_settings	"Configuración">
 <!ENTITY Ctr_pw_set_reset	"Restaurar valores predeterminados">
 <!ENTITY Ctr_pw_set_predef	"Preajuste clásico">
 <!ENTITY Ctr_pw_set_preaus	"Preajuste de Firefox">

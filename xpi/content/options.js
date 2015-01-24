@@ -193,8 +193,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_statusbar_abr_info').style.visibility = 'visible';
 	  }
 	});
-	
-	
+
 	AddonManager.getAddonByID('ClassicThemeRestorer@ArisT2Noia4dev', function(addon) {
 	
 	  if(classicthemerestorerjso.ctr.ctrVersioninWin==true) {
@@ -205,12 +204,11 @@ classicthemerestorerjso.ctr = {
 	  }
 	  
 	});
-	
-	
+
 	// disable bookmark animation checkbox, if 'star button in urlbar' is used
 	if (this.prefs.getBoolPref('starinurl')) document.getElementById('ctraddon_pw_bmanimation').disabled = true;
 	
-	// hide settings for unsupported Firefox versions 
+	// hide settings, if unsupported by Firefox version 
 	if (this.appversion < 31) {
 	  document.getElementById('ctraddon_pw_pananimation').disabled = true;
 	  document.getElementById('ctraddon_pw_pananimation').style.visibility = 'collapse';
@@ -357,6 +355,7 @@ classicthemerestorerjso.ctr = {
 	this.altTabsToolbarBgExtra(this.prefs.getBoolPref("alttabstb"));
 	this.ctrpwModeextra(this.prefs.getCharPref("nav_txt_ico"));
 	this.ctrpwDisableDevThemePrefsExtra(this.prefs.getBoolPref("nodevtheme"));
+	this.ctrShowE10sPrefForWindowPrefs();
 
 	
 	var closetab_value = this.prefs.getCharPref("closetab");
@@ -388,16 +387,6 @@ classicthemerestorerjso.ctr = {
 					.getBranch("browser.tabs.remote.autostart.").getBoolPref("1")) {
 		document.getElementById('ctraddon_pw_e10stab_notd').disabled = false;
 		document.getElementById('ctraddon_pw_e10stab_notd').style.visibility = 'visible';
-	  }
-	} catch(e) {}
-	
-	try{
-	  if (Components.classes["@mozilla.org/preferences-service;1"]
-		.getService(Components.interfaces.nsIPrefService)
-			.getBranch("app.update.").getCharPref("channel")=='nightly') {
-		document.getElementById('ctraddon_pw_e10stabs').disabled = false;
-		document.getElementById('ctraddon_pw_e10stabs').style.visibility = 'visible';
-		document.getElementById('ctraddon_pw_e10stabsdescr').style.visibility = 'visible';
 	  }
 	} catch(e) {}
 	
@@ -457,6 +446,27 @@ classicthemerestorerjso.ctr = {
   
 	this.hideThemeInfoForTabs();
 
+  },
+  
+  ctrShowE10sPrefForWindowPrefs: function() {
+	try{
+	setTimeout(function(){
+	  if(Components.classes["@mozilla.org/preferences-service;1"]
+		.getService(Components.interfaces.nsIPrefService)
+		  .getBranch("app.update.").getCharPref("channel")=='nightly'
+			&& Components.classes["@mozilla.org/preferences-service;1"]
+			  .getService(Components.interfaces.nsIPrefService)
+				.getBranch("browser.preferences.").getBoolPref("inContent")==false) {
+		document.getElementById('ctraddon_pw_e10stabs').disabled = false;
+		document.getElementById('ctraddon_pw_e10stabs').style.visibility = 'visible';
+		document.getElementById('ctraddon_pw_e10stabsdescr').style.visibility = 'visible';
+	  } else {
+		document.getElementById('ctraddon_pw_e10stabs').disabled = true;
+		document.getElementById('ctraddon_pw_e10stabs').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_e10stabsdescr').style.visibility = 'collapse';
+	  }
+	},100);
+	} catch(e) {}
   },
   
   hideThemeInfoForTabs: function(){
@@ -675,6 +685,10 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_feedinurl').disabled = false;
 		document.getElementById("ctraddon_pw_starinurl").style.listStyleImage="unset";
 		document.getElementById("ctraddon_pw_feedinurl").style.listStyleImage="unset";
+		
+		if (classicthemerestorerjso.ctr.prefs.getBoolPref('starinurl'))
+		  document.getElementById('ctraddon_pw_bmanimation').disabled = true;
+		else document.getElementById('ctraddon_pw_bmanimation').disabled = false;
 	},1350);
   },
   
@@ -922,7 +936,10 @@ classicthemerestorerjso.ctr = {
 	patterns[156]="addonbarfs="+this.prefs.getBoolPref("addonbarfs");
 	patterns[157]="alttabstb2="+this.prefs.getBoolPref("alttabstb2");
 	patterns[158]="nodevtheme="+this.prefs.getBoolPref("nodevtheme");
-	
+	patterns[159]="e10stab_notd="+this.prefs.getBoolPref("e10stab_notd");
+	patterns[160]="nbcompact="+this.prefs.getBoolPref("nbcompact");
+	patterns[161]="icopageinfo="+this.prefs.getBoolPref("icopageinfo");
+
 
 	saveToFile(patterns);
 	  

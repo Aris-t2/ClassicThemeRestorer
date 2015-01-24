@@ -105,7 +105,7 @@ classicthemerestorerjs.ctr = {
 		document.getElementById("main-window").setAttribute('ctraddon_version',addon.version);
 	  } catch(e){}
 	});
-
+	
 	// CTRs appbutton for Windows titlebar
 	this.createTitlebarButton();
 	
@@ -1347,7 +1347,7 @@ classicthemerestorerjs.ctr = {
 			
 			if (classicthemerestorerjs.ctr.prefs.getBoolPref("dblclnewtab")==true && classicthemerestorerjs.ctr.osstring=="WINNT") {
 			
-				document.getElementById("TabsToolbar").addEventListener("dblclick",  function openNewTabOnDoubleClick(e) {
+				document.getElementById("TabsToolbar").addEventListener("dblclick", function openNewTabOnDoubleClick(e) {
 				
 					// remove listener, if the preference got disabled in-between
 					if (classicthemerestorerjs.ctr.prefs.getBoolPref("dblclnewtab")==false) {
@@ -1939,20 +1939,28 @@ classicthemerestorerjs.ctr = {
 	
 	function faviconInUrlbar(){
 	 if(gBrowser.selectedTab.image) {
-	  document.getElementById("page-proxy-favicon").removeAttribute("blank");
-	  document.getElementById("page-proxy-favicon").setAttribute("src", gBrowser.selectedTab.image);
+	  try {
+		document.getElementById("page-proxy-favicon").removeAttribute("blank");
+		document.getElementById("page-proxy-favicon").setAttribute("src", gBrowser.selectedTab.image);
+	  } catch(e){}
 	 }
 	 else if(!gBrowser.selectedTab.image && classicthemerestorerjs.ctr.prefs.getBoolPref("emptyfavicon2")==true) {
-	  document.getElementById("page-proxy-favicon").setAttribute("blank", true);
-	  document.getElementById("page-proxy-favicon").setAttribute("src", "chrome://classic_theme_restorer/content/images/default_favicon.png");
+	  try {
+		document.getElementById("page-proxy-favicon").setAttribute("blank", true);
+		document.getElementById("page-proxy-favicon").setAttribute("src", "chrome://classic_theme_restorer/content/images/default_favicon.png");
+	  } catch(e){}
 	 }
 	 else if(!gBrowser.selectedTab.image && classicthemerestorerjs.ctr.prefs.getBoolPref("emptyfavicon")==true) {
-	  document.getElementById("page-proxy-favicon").setAttribute("blank", true);
-	  document.getElementById("page-proxy-favicon").setAttribute("src", "chrome://classic_theme_restorer/content/images/default_dot_favicon.png");
+	  try {
+		document.getElementById("page-proxy-favicon").setAttribute("blank", true);
+		document.getElementById("page-proxy-favicon").setAttribute("src", "chrome://classic_theme_restorer/content/images/default_dot_favicon.png");
+	  } catch(e){}
 	 }
 	 else if(!gBrowser.selectedTab.image && classicthemerestorerjs.ctr.prefs.getBoolPref("emptyfavicon2")==false && classicthemerestorerjs.ctr.prefs.getBoolPref("emptyfavicon")==false) {
-	  document.getElementById("page-proxy-favicon").setAttribute("blank", true);
-	  document.getElementById("page-proxy-favicon").removeAttribute("src");
+	  try {
+		document.getElementById("page-proxy-favicon").setAttribute("blank", true);
+		document.getElementById("page-proxy-favicon").removeAttribute("src");
+	  } catch(e){}
 	 }
 	}
 
