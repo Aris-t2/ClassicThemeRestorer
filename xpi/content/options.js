@@ -5,6 +5,9 @@ if (!classicthemerestorerjso.ctr) {classicthemerestorerjso.ctr = {};};
 Components.utils.import("resource://gre/modules/AddonManager.jsm");
 Components.utils.import("resource:///modules/CustomizableUI.jsm");
 
+//Make prefService Global or getChildList and getPrefType can't be accessed in e10s.
+var prefService = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
+
 classicthemerestorerjso.ctr = {
 
   prefs:			Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.classicthemerestorer."),
@@ -1033,7 +1036,6 @@ classicthemerestorerjso.ctr = {
     /* import CTR settings JSON*/
  importCTRpreferencesJSON: function() {
  
- 	var prefService = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
 	var stringBundle = Components.classes["@mozilla.org/intl/stringbundle;1"].getService(Components.interfaces.nsIStringBundleService)
 	                    .createBundle("chrome://classic_theme_restorer/locale/messages.file");
   
@@ -1106,7 +1108,6 @@ classicthemerestorerjso.ctr = {
   /* export CTR settings JSON */
   exportCTRpreferencesJSON: function() {
 
-	var prefService = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);                             
 	var preflist = prefService.getChildList("extensions.classicthemerestorer.");
 
 		let preferenceArray = {
