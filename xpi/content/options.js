@@ -1074,9 +1074,18 @@ classicthemerestorerjso.ctr = {
 						//Catch any nasty errors and output to dialogue
 						Components.utils.reportError(e);
 				  }
-			}		
-	
-   
+			}	
+
+		//Need to check if json is valid, If json not valid don't continue and show error.
+		function IsJsonValid(text) {
+			try {
+				JSON.parse(text);
+			} catch (e) {
+				return false;
+				}
+			return true;
+		}				
+	 
 	function loadFromFile() {
 
 	   const nsIFilePicker = Components.interfaces.nsIFilePicker;
@@ -1095,7 +1104,15 @@ classicthemerestorerjso.ctr = {
 		  var input = streamIO.read(stream.available());
 		  streamIO.close();
 		  stream.close();
-		  return JSON.parse(input);
+
+		 var text = input;
+		 		  
+		  if(!IsJsonValid(text)){
+			  alert(stringBundle.GetStringFromName("import.error"));
+			  return false;
+		  }else{
+			return JSON.parse(input);
+		  }
 	   }
 	   return null;
 	}
