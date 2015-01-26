@@ -936,6 +936,9 @@
 		<menuseparator/>
 		<menuitem label="&Ctr_pw_set_export;" id="ctr_pw_settings_export"	oncommand="classicthemerestorerjso.ctr.exportCTRpreferences();" class="menuitem-iconic"/>
 		<menuitem label="&Ctr_pw_set_import;" id="ctr_pw_settings_import"	oncommand="classicthemerestorerjso.ctr.importCTRpreferences();" class="menuitem-iconic"/>
+                <menuseparator/>		
+		<menuitem label="&Ctr_pw_set_export; JSON" id="ctr_pw_settings_export_json"	oncommand="classicthemerestorerjso.ctr.exportCTRpreferencesJSON();" class="menuitem-iconic"/>
+		<menuitem label="&Ctr_pw_set_import; JSON" id="ctr_pw_settings_import_json"	oncommand="classicthemerestorerjso.ctr.importCTRpreferencesJSON();" class="menuitem-iconic"/>	
 	</menupopup>
   </popupset>
   
