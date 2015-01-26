@@ -5,6 +5,10 @@ if (!classicthemerestorerjso.ctr) {classicthemerestorerjso.ctr = {};};
 Components.utils.import("resource://gre/modules/AddonManager.jsm");
 Components.utils.import("resource:///modules/CustomizableUI.jsm");
 
+// make ctraddon_prefService "global" or 'getChildList' and 'getPrefType' required
+// by import/export (json) functions can not be accessed in e10s.
+var ctraddon_prefService = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
+
 classicthemerestorerjso.ctr = {
 
   prefs:			Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.classicthemerestorer."),
@@ -208,7 +212,7 @@ classicthemerestorerjso.ctr = {
 	// disable bookmark animation checkbox, if 'star button in urlbar' is used
 	if (this.prefs.getBoolPref('starinurl')) document.getElementById('ctraddon_pw_bmanimation').disabled = true;
 	
-	// hide settings, if unsupported by Firefox version 
+	// hide settings, if unsupported by Firefox versions
 	if (this.appversion < 31) {
 	  document.getElementById('ctraddon_pw_pananimation').disabled = true;
 	  document.getElementById('ctraddon_pw_pananimation').style.visibility = 'collapse';
@@ -342,7 +346,6 @@ classicthemerestorerjso.ctr = {
 	);
 	
 	ctrSettingsListenerW_forCTR.register(true);
-	
 	
 	// update sub settings
 	this.ctrpwAppbuttonextra(this.prefs.getCharPref("appbutton"),false);
@@ -1046,13 +1049,175 @@ classicthemerestorerjso.ctr = {
 	
 	return true;
   },
+  
+    /* import CTR settings JSON*/
+ importCTRpreferencesJSON: function() {
+ 
+	var stringBundle = Components.classes["@mozilla.org/intl/stringbundle;1"]
+						.getService(Components.interfaces.nsIStringBundleService)
+							.createBundle("chrome://classic_theme_restorer/locale/messages.file");
+
+	var parjson = loadFromFile();
+
+	if (!parjson) return false;
+	
+	function setPrefValue(pref, val){
+
+	  switch (ctraddon_prefService.getPrefType(pref)){
+		case 32:	return ctraddon_prefService.setCharPref(pref, val);	break;
+		case 64:	return ctraddon_prefService.setIntPref(pref, val);	break;
+		case 128:	return ctraddon_prefService.setBoolPref(pref, val);	break;	
+	  }
+
+	}
+			
+	for (var i=0; i<parjson.length; i++) {					  
+	  try {
+
+		if(parjson[i].preference.match(/extensions.classicthemerestorer./g)){
+			setPrefValue(parjson[i].preference, parjson[i].value);
+		}
+
+	  } catch(e) {
+		//Catch any nasty errors and output to dialogue
+		Components.utils.reportError(e);
+	  }
+	}	
+
+	//Need to check if json is valid, If json not valid don't continue and show error.
+	function IsJsonValid(text) {
+
+	  try { JSON.parse(text); }
+	  catch (e) { return false; }
+	  return true;
+
+	}				
+	 
+	function loadFromFile() {
+
+	   const nsIFilePicker = Components.interfaces.nsIFilePicker;
+	   var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+	   var stream = Components.classes["@mozilla.org/network/file-input-stream;1"].createInstance(Components.interfaces.nsIFileInputStream);
+	   var streamIO = Components.classes["@mozilla.org/scriptableinputstream;1"].createInstance(Components.interfaces.nsIScriptableInputStream);
+
+	   fp.defaultExtension = "json";
+	   fp.defaultString = "CTRpreferences.json";
+	   fp.init(window, null, nsIFilePicker.modeOpen);
+	   fp.appendFilters(nsIFilePicker.filterAll);
+
+	   if (fp.show() != nsIFilePicker.returnCancel) {
+		  stream.init(fp.file, 0x01, parseInt("0444", 8), null);
+		  streamIO.init(stream);
+		  var input = streamIO.read(stream.available());
+		  streamIO.close();
+		  stream.close();
+
+		 var text = input;
+
+		  if(!IsJsonValid(text)){
+			  alert(stringBundle.GetStringFromName("import.error"));
+			  return false;
+		  } else{
+			return JSON.parse(input);
+		  }
+	   }
+	   return null;
+	}
+	
+	this.needsBrowserRestart();
+	
+	return true;
+  },
+  
+  /* export CTR settings JSON */
+  exportCTRpreferencesJSON: function() {
+
+	var preflist = ctraddon_prefService.getChildList("extensions.classicthemerestorer.");
+
+	let preferenceArray = {
+	  preference: [],
+	  value: []
+	};
+
+	//Preference Filter all preferences we don't want to export\import..
+	let blacklist = [
+	  "extensions.classicthemerestorer.pref_actindx",
+	  "extensions.classicthemerestorer.pref_actindx2",
+	  "extensions.classicthemerestorer.ctrreset"
+	];
+
+	function prefValue(pref){
+
+	  switch (ctraddon_prefService.getPrefType(pref)){
+		case 32:	return ctraddon_prefService.getCharPref(pref);	break;
+		case 64:	return ctraddon_prefService.getIntPref(pref);	break;
+		case 128:	return ctraddon_prefService.getBoolPref(pref);	break;	
+	  }
+
+	}
+
+	for (var i=0; i < preflist.length; i++) {
+
+	  try {
+		//Run Blacklist filter, Here we filter out all preferences we don't want exported|imported.
+		var index = preflist.indexOf(blacklist[i]);
+
+		if (index > -1) {
+		  preflist.splice(index, 1);
+		}
+
+		preferenceArray.preference.push({
+		  "preference" : preflist[i],
+		  "value" : prefValue(preflist[i])
+		});
+
+	  } catch(e) {
+		//Catch any nasty errors and output to dialogue
+		Components.utils.reportError(e);
+	  }
+
+	}
+
+	saveToFile(preferenceArray);
+	  
+	function saveToFile(patterns) {
+
+	  const nsIFilePicker = Components.interfaces.nsIFilePicker;
+	  var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+	  var stream = Components.classes["@mozilla.org/network/file-output-stream;1"].createInstance(Components.interfaces.nsIFileOutputStream);
+
+	  fp.init(window, null, nsIFilePicker.modeSave);
+	  fp.defaultExtension = "json";
+	  fp.defaultString = "CTRpreferences.json";
+	  fp.appendFilters(nsIFilePicker.filterAll);
+
+	  if (fp.show() != nsIFilePicker.returnCancel) {
+		let file = fp.file;
+		if (!/\.json$/.test(file.leafName.toLowerCase()))
+		  file.leafName += ".json";
+		if (file.exists())
+		  file.remove(true);
+		file.create(file.NORMAL_FILE_TYPE, parseInt("0666", 8));
+		stream.init(file, 0x02, 0x200, null);
+
+		var patternItems = JSON.stringify(patterns.preference);
+
+		stream.write(patternItems, patternItems.length)
+
+		stream.close();
+	  }
+	}
+
+	return true;
+
+  }, 
  
   onCtrPanelSelect: function() {
     let ctrAddonPrefBoxTab = document.getElementById("CtrRadioGroup");
     let selectedPanel = document.getElementById(ctrAddonPrefBoxTab.value);
     selectedPanel.parentNode.selectedPanel = selectedPanel;
 
-    for (let i = 0; i < ctrAddonPrefBoxTab.itemCount; i++) {
+    for (let i=0; i < ctrAddonPrefBoxTab.itemCount; i++) {
       let radioItem = ctrAddonPrefBoxTab.getItemAtIndex(i);
       let pane = document.getElementById(radioItem.value);
       pane.setAttribute("selected", (radioItem.selected)? "true" : "false");

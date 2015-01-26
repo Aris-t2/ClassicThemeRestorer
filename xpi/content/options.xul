@@ -646,6 +646,7 @@
 		<hbox>
 			<description id="ctraddon_pw_appbutonclab" class="ctraddon_windowsonly ctraddon_font1">&Ctr_appbutonclab;</description>
 			<textbox id="ctraddon_pw_appbuttontxt" class="ctraddon_windowsonly" preference="ctraddon_appbuttontxt" size="auto" flex="1" type="autocomplete" placeholder="&Ctr_appbutonclab2;" onkeydown="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+			<label value=""/>
 		</hbox>
 		
 	  </groupbox>
@@ -689,7 +690,11 @@
 	    <caption  label="&Ctr_navthrobber;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_navthrobber;"	preference="ctraddon_activndicat" id="ctraddon_pw_activitythrobber" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 	    <description>&Ctr_navthrobber1;</description>
-		<textbox id="ctraddon_pw_athrobberurlbox" preference="ctraddon_athrobberurl" size="auto" flex="1" type="autocomplete" placeholder="&Ctr_navthrobber2;"/>
+		<hbox>
+		  <label value=""/>
+		  <textbox id="ctraddon_pw_athrobberurlbox" preference="ctraddon_athrobberurl" size="auto" flex="1" type="autocomplete" placeholder="&Ctr_navthrobber2;"/>
+		  <label value=""/>
+		</hbox>
 	  </groupbox>
 
 	  <groupbox class="ctraddon_winmaconly" id="ctraddon_pw_mockupoptions">
@@ -934,8 +939,11 @@
 		<menuitem label="&Ctr_pw_set_predef;" id="ctr_pw_settings_classic"	oncommand="classicthemerestorerjso.ctr.classicCTRpreferences();" class="menuitem-iconic"/>
 		<menuitem label="&Ctr_pw_set_preaus;" id="ctr_pw_settings_austral"	oncommand="classicthemerestorerjso.ctr.australisCTRpreferences();" class="menuitem-iconic"/>
 		<menuseparator/>
-		<menuitem label="&Ctr_pw_set_export;" id="ctr_pw_settings_export"	oncommand="classicthemerestorerjso.ctr.exportCTRpreferences();" class="menuitem-iconic"/>
-		<menuitem label="&Ctr_pw_set_import;" id="ctr_pw_settings_import"	oncommand="classicthemerestorerjso.ctr.importCTRpreferences();" class="menuitem-iconic"/>
+		<menuitem label="&Ctr_pw_set_export; (txt)" id="ctr_pw_settings_export"	oncommand="classicthemerestorerjso.ctr.exportCTRpreferences();" class="menuitem-iconic"/>
+		<menuitem label="&Ctr_pw_set_import; (txt)" id="ctr_pw_settings_import"	oncommand="classicthemerestorerjso.ctr.importCTRpreferences();" class="menuitem-iconic"/>
+		<menuseparator/>
+		<menuitem label="&Ctr_pw_set_export; (JSON)" id="ctr_pw_settings_export_json"	oncommand="classicthemerestorerjso.ctr.exportCTRpreferencesJSON();" class="menuitem-iconic"/>
+		<menuitem label="&Ctr_pw_set_import; (JSON)" id="ctr_pw_settings_import_json"	oncommand="classicthemerestorerjso.ctr.importCTRpreferencesJSON();" class="menuitem-iconic"/>
 	</menupopup>
   </popupset>
   
