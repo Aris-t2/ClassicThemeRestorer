@@ -10,6 +10,10 @@
 
 Cu.import("resource:///modules/CustomizableUI.jsm");
 Cu.import("resource://gre/modules/AddonManager.jsm");
+//Import services
+Cu.import("resource://gre/modules/Services.jsm");
+//Query nsIPrefBranch see: Bug 1125570 | Bug 1083561
+Services.prefs.QueryInterface(Components.interfaces.nsIPrefBranch);
 
 if (typeof classicthemerestorerjs == "undefined") {var classicthemerestorerjs = {};};
 if (!classicthemerestorerjs.ctr) {classicthemerestorerjs.ctr = {};};
@@ -54,11 +58,11 @@ classicthemerestorerjs.ctr = {
   
   cuiButtonssheet:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
 
-  prefs:				Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("extensions.classicthemerestorer."),
+  prefs:				Services.prefs.getBranch("extensions.classicthemerestorer."),
   
-  fxdefaulttheme:		Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("general.skins.").getCharPref("selectedSkin") == 'classic/1.0',
+  fxdefaulttheme:		Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin") == 'classic/1.0',
   osstring:				Cc["@mozilla.org/xre/app-info;1"].getService(Ci.nsIXULRuntime).OS,
-  appversion:			parseInt(Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("extensions.").getCharPref("lastAppVersion")),
+  appversion:			parseInt(Services.prefs.getBranch("extensions.").getCharPref("lastAppVersion")),
   stringBundle:			Cc["@mozilla.org/intl/stringbundle;1"].getService(Ci.nsIStringBundleService).createBundle("chrome://classic_theme_restorer/locale/messages.file"),
   
   hideTTWithOneTab:		false,
@@ -78,7 +82,7 @@ classicthemerestorerjs.ctr = {
 		  document.getElementById("main-window").setAttribute('defaultfxtheme',true);
 		}
 		else {
-		  var thirdpartytheme = Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("general.skins.").getCharPref("selectedSkin");
+		  var thirdpartytheme = Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin");
 		  document.getElementById("main-window").setAttribute('currenttheme',thirdpartytheme);
 		  classicthemerestorerjs.ctr.loadUnloadCSS("thirdpartythemes",true);
 		}
@@ -131,9 +135,7 @@ classicthemerestorerjs.ctr = {
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get
 	  // garbage collected.
-	  var prefService = Cc["@mozilla.org/preferences-service;1"]
-		.getService(Ci.nsIPrefService);
-	  this._branch = prefService.getBranch(branch_name);
+	  this._branch = Services.prefs.getBranch(branch_name);
 	  this._branch.QueryInterface(Ci.nsIPrefBranch2);
 	  this._callback = callback;
 	}
@@ -210,15 +212,12 @@ classicthemerestorerjs.ctr = {
 				if (classicthemerestorerjs.ctr.osstring=="WINNT") CustomizableUI.addWidgetToArea("ctraddon_window-controls", CustomizableUI.AREA_NAVBAR);
 				CustomizableUI.addWidgetToArea("ctraddon_bookmarks-menu-toolbar-button", CustomizableUI.AREA_BOOKMARKS);						
 
-				var tabsintitlebar = Cc["@mozilla.org/preferences-service;1"]
-									  .getService(Ci.nsIPrefService)
-										.getBranch("browser.tabs.").getBoolPref("drawInTitlebar");
+				var tabsintitlebar = Services.prefs.getBranch("browser.tabs.").getBoolPref("drawInTitlebar");
 										
 				// TMPs/TUs colors for rounded tabs in Fx29+ are not compatible with CTRs (squared) tabs.
 				// This just disables TMPs/TUs non-compatible tab color options on first run (once).
 				try{
-				  var tmpprefs = Cc["@mozilla.org/preferences-service;1"]
-									.getService(Ci.nsIPrefService).getBranch("extensions.tabmix.");
+				  var tmpprefs = Services.prefs.getBranch("extensions.tabmix.");
 				  if(tmpprefs.getBoolPref("currentTab")) tmpprefs.setBoolPref("currentTab",false);
 				  if(tmpprefs.getBoolPref("unloadedTab")) tmpprefs.setBoolPref("unloadedTab",false);
 				  if(tmpprefs.getBoolPref("unreadTab")) tmpprefs.setBoolPref("unreadTab",false);
@@ -226,8 +225,7 @@ classicthemerestorerjs.ctr = {
 				} catch(e){}
 
 				try{
-				  var tuprefs = Cc["@mozilla.org/preferences-service;1"]
-									.getService(Ci.nsIPrefService).getBranch("extensions.tabutils.");
+				  var tuprefs = Services.prefs.getBranch("extensions.tabutils.");
 				  if(tuprefs.getBoolPref("highlightCurrent")) tuprefs.setBoolPref("highlightCurrent",false);
 				  if(tuprefs.getBoolPref("highlightRead")) tuprefs.setBoolPref("highlightRead",false);
 				  if(tuprefs.getBoolPref("highlightSelected")) tuprefs.setBoolPref("highlightSelected",false);
@@ -275,7 +273,7 @@ classicthemerestorerjs.ctr = {
 			var devtheme=false;
 
 			try {
-			  if(Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
+			  if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
 				devtheme=true;
 			  }
 			} catch(e) {}
@@ -362,24 +360,20 @@ classicthemerestorerjs.ctr = {
 		  
 		  case "closetab":
 		  
-			var def_tcw = Cc["@mozilla.org/preferences-service;1"]
-						  .getService(Ci.nsIPrefService)
-							.getBranch("browser.tabs.").getIntPref("tabClipWidth") == 140;
+			var def_tcw = Services.prefs.getBranch("browser.tabs.").getIntPref("tabClipWidth") == 140;
 
 			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_active',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_none',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_tb_end',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_tb_start',false);
 			if (def_tcw==false) {
-			  Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService)
-				.getBranch("browser.tabs.").setIntPref("tabClipWidth",140);
+			  Services.prefs.getBranch("browser.tabs.").setIntPref("tabClipWidth",140);
 			}
 			
 			if (branch.getCharPref("closetab")!="closetab_default"){
 			  
 			  if (branch.getCharPref("closetab")=="closetab_forced") {
-				Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService)
-				  .getBranch("browser.tabs.").setIntPref("tabClipWidth",1);
+				Services.prefs.getBranch("browser.tabs.").setIntPref("tabClipWidth",1);
 			  }
 			  else if (classicthemerestorerjs.ctr.appversion >= 31) {
 			    classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("closetab"),true);
@@ -469,7 +463,7 @@ classicthemerestorerjs.ctr = {
 			var devtheme=false;
 
 			try {
-			  if(Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
+			  if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
 				devtheme=true;
 			  }
 			} catch(e) {}
@@ -520,8 +514,7 @@ classicthemerestorerjs.ctr = {
 			var cstbb = false;
 			//if CTB add-on is installed and navbarbuttons option is not off
 			try {
-			  if(Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService)
-				  .getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
+			  if(Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
 			   cstbb = true;
 			} catch(e){}
 	
@@ -1542,10 +1535,8 @@ classicthemerestorerjs.ctr = {
 		  case "nodevtheme":
 			if (branch.getBoolPref("nodevtheme")) {
 			  	try{
-					if(Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService)
-						.getBranch("browser.devedition.theme.").getBoolPref("enabled"))
-					  Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService)
-						.getBranch("browser.devedition.theme.").setBoolPref("enabled",false)
+					if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref("enabled"))
+					  Services.prefs.getBranch("browser.devedition.theme.").setBoolPref("enabled",false)
 				} catch(e){}
 			}
 		  break;
@@ -1610,7 +1601,7 @@ classicthemerestorerjs.ctr = {
 		} else if(this.fxdefaulttheme==true){
 			var devthemeosx=false;
 			try {
-			  if(Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService).getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
+			  if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
 			    devthemeosx=true;
 			  }
 			} catch(e) {}
@@ -1850,8 +1841,7 @@ classicthemerestorerjs.ctr = {
 	
 	var cstbb = false;
 	try {
-	  if(Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService)
-		  .getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
+	  if(Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
 	   cstbb = true;
 	} catch(e){}
 
@@ -1885,8 +1875,7 @@ classicthemerestorerjs.ctr = {
 
 	function ctrTabClose(event){
 	
-	  var tabsintitlebar = Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefService)
-							.getBranch("browser.tabs.").getBoolPref("drawInTitlebar");
+	  var tabsintitlebar = Services.prefs.getBranch("browser.tabs.").getBoolPref("drawInTitlebar");
 					  
 	  if(gBrowser.tabContainer.tabbrowser.visibleTabs.length < 2) {
 		

@@ -5,15 +5,16 @@ if (!classicthemerestorerjso.ctr) {classicthemerestorerjso.ctr = {};};
 Components.utils.import("resource://gre/modules/AddonManager.jsm");
 Components.utils.import("resource:///modules/CustomizableUI.jsm");
 
-// make ctraddon_prefService "global" or 'getChildList' and 'getPrefType' required
-// by import/export (json) functions can not be accessed in e10s.
-var ctraddon_prefService = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
+//Import services use one service for preferences.
+Components.utils.import("resource://gre/modules/Services.jsm");
+//Query nsIPrefBranch see: Bug 1125570 | Bug 1083561
+Services.prefs.QueryInterface(Components.interfaces.nsIPrefBranch);
 
 classicthemerestorerjso.ctr = {
 
-  prefs:			Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.classicthemerestorer."),
-  fxdefaulttheme:	Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("general.skins.").getCharPref("selectedSkin") == 'classic/1.0',
-  appversion:		parseInt(Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.").getCharPref("lastAppVersion")),
+  prefs:			Services.prefs.getBranch("extensions.classicthemerestorer."),
+  fxdefaulttheme:	Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin") == 'classic/1.0',
+  appversion:		parseInt(Services.prefs.getBranch("extensions.").getCharPref("lastAppVersion")),
   oswindows:		Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS=="WINNT",
   needsRestart: 	false,
   ctrVersioninWin:  true,
@@ -263,9 +264,7 @@ classicthemerestorerjso.ctr = {
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get
 	  // garbage collected.
-	  var prefService = Components.classes["@mozilla.org/preferences-service;1"]
-		.getService(Components.interfaces.nsIPrefService);
-	  this._branch = prefService.getBranch(branch_name);
+	  this._branch = Services.prefs.getBranch(branch_name);
 	  this._branch.QueryInterface(Components.interfaces.nsIPrefBranch2);
 	  this._callback = callback;
 	}
@@ -382,12 +381,8 @@ classicthemerestorerjso.ctr = {
 	
 	// if e10s is used show CTRs option to disable tab underlining
 	try{
-	  if (Components.classes["@mozilla.org/preferences-service;1"]
-		.getService(Components.interfaces.nsIPrefService)
-			.getBranch("browser.tabs.remote.").getBoolPref("autostart") || 
-				Components.classes["@mozilla.org/preferences-service;1"]
-				.getService(Components.interfaces.nsIPrefService)
-					.getBranch("browser.tabs.remote.autostart.").getBoolPref("1")) {
+	  if (Services.prefs.getBranch("browser.tabs.remote.").getBoolPref("autostart") || 
+				Services.prefs.getBranch("browser.tabs.remote.autostart.").getBoolPref("1")) {
 		document.getElementById('ctraddon_pw_e10stab_notd').disabled = false;
 		document.getElementById('ctraddon_pw_e10stab_notd').style.visibility = 'visible';
 	  }
@@ -454,12 +449,8 @@ classicthemerestorerjso.ctr = {
   ctrShowE10sPrefForWindowPrefs: function() {
 	try{
 	setTimeout(function(){
-	  if(Components.classes["@mozilla.org/preferences-service;1"]
-		.getService(Components.interfaces.nsIPrefService)
-		  .getBranch("app.update.").getCharPref("channel")=='nightly'
-			&& Components.classes["@mozilla.org/preferences-service;1"]
-			  .getService(Components.interfaces.nsIPrefService)
-				.getBranch("browser.preferences.").getBoolPref("inContent")==false) {
+	  if(Services.prefs.getBranch("app.update.").getCharPref("channel")=='nightly'
+			&& Services.prefs.getBranch("browser.preferences.").getBoolPref("inContent")==false) {
 		document.getElementById('ctraddon_pw_e10stabs').disabled = false;
 		document.getElementById('ctraddon_pw_e10stabs').style.visibility = 'visible';
 		document.getElementById('ctraddon_pw_e10stabsdescr').style.visibility = 'visible';
@@ -475,9 +466,7 @@ classicthemerestorerjso.ctr = {
   hideThemeInfoForTabs: function(){
 	setTimeout(function(){
 		try {
-		  if(Components.classes["@mozilla.org/preferences-service;1"]
-			.getService(Components.interfaces.nsIPrefService)
-				.getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
+		  if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
 			document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'visible';
 			document.getElementById('ctraddon_pw_tabmenulist').disabled = true;
 		  } else if(classicthemerestorerjso.ctr.fxdefaulttheme) {
@@ -579,9 +568,7 @@ classicthemerestorerjso.ctr = {
  
   ctrpwAppbuttonextra: function(which,fromprefwindow) {
   
-  var tabsintitlebar = Components.classes["@mozilla.org/preferences-service;1"]
-						 .getService(Components.interfaces.nsIPrefService)
-						   .getBranch("browser.tabs.").getBoolPref("drawInTitlebar");
+  var tabsintitlebar = Services.prefs.getBranch("browser.tabs.").getBoolPref("drawInTitlebar");
   
 	if (which=="appbutton_v1" && this.fxdefaulttheme){
 	  document.getElementById('ctraddon_alt_abicons').disabled = false;
@@ -639,9 +626,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_appbclmmenus').disabled = false;
 	  
 	  if (tabsintitlebar==false && fromprefwindow==true) {
-		Components.classes["@mozilla.org/preferences-service;1"]
-		 .getService(Components.interfaces.nsIPrefService)
-		   .getBranch("browser.tabs.").setBoolPref("drawInTitlebar", true);
+		Services.prefs.getBranch("browser.tabs.").setBoolPref("drawInTitlebar", true);
 	  }
 	} else {
 	  document.getElementById('ctraddon_alt_abicons').disabled = true;
@@ -654,9 +639,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_appbclmmenus').disabled = false;
 	  
 	  if (tabsintitlebar==false && fromprefwindow==true) {
-		Components.classes["@mozilla.org/preferences-service;1"]
-		 .getService(Components.interfaces.nsIPrefService)
-		   .getBranch("browser.tabs.").setBoolPref("drawInTitlebar", true);
+		Services.prefs.getBranch("browser.tabs.").setBoolPref("drawInTitlebar", true);
 	  }
 	}
   },
@@ -701,9 +684,7 @@ classicthemerestorerjso.ctr = {
       preference.value = preference.defaultValue == null ? undefined : preference.defaultValue;
     }
 
-	var tabsintitlebar = Components.classes["@mozilla.org/preferences-service;1"]
-						  .getService(Components.interfaces.nsIPrefService)
-						    .getBranch("browser.tabs.").getBoolPref("drawInTitlebar");
+	var tabsintitlebar = Services.prefs.getBranch("browser.tabs.").getBoolPref("drawInTitlebar");
 										
 	if (this.oswindows && tabsintitlebar) {
 	  this.prefs.setCharPref("appbutton",'appbutton_v2');
@@ -1063,10 +1044,10 @@ classicthemerestorerjso.ctr = {
 	
 	function setPrefValue(pref, val){
 
-	  switch (ctraddon_prefService.getPrefType(pref)){
-		case 32:	return ctraddon_prefService.setCharPref(pref, val);	break;
-		case 64:	return ctraddon_prefService.setIntPref(pref, val);	break;
-		case 128:	return ctraddon_prefService.setBoolPref(pref, val);	break;	
+	  switch (Services.prefs.getPrefType(pref)){
+		case 32:	return Services.prefs.setCharPref(pref, val);	break;
+		case 64:	return Services.prefs.setIntPref(pref, val);	break;
+		case 128:	return Services.prefs.setBoolPref(pref, val);	break;	
 	  }
 
 	}
@@ -1132,7 +1113,7 @@ classicthemerestorerjso.ctr = {
   /* export CTR settings JSON */
   exportCTRpreferencesJSON: function() {
 
-	var preflist = ctraddon_prefService.getChildList("extensions.classicthemerestorer.");
+	var preflist = Services.prefs.getChildList("extensions.classicthemerestorer.");
 
 	let preferenceArray = {
 	  preference: [],
@@ -1148,10 +1129,10 @@ classicthemerestorerjso.ctr = {
 
 	function prefValue(pref){
 
-	  switch (ctraddon_prefService.getPrefType(pref)){
-		case 32:	return ctraddon_prefService.getCharPref(pref);	break;
-		case 64:	return ctraddon_prefService.getIntPref(pref);	break;
-		case 128:	return ctraddon_prefService.getBoolPref(pref);	break;	
+	  switch (Services.prefs.getPrefType(pref)){
+		case 32:	return Services.prefs.getCharPref(pref);	break;
+		case 64:	return Services.prefs.getIntPref(pref);	break;
+		case 128:	return Services.prefs.getBoolPref(pref);	break;	
 	  }
 
 	}
