@@ -382,7 +382,7 @@ classicthemerestorerjso.ctr = {
 	// if e10s is used show CTRs option to disable tab underlining
 	try{
 	  if (Services.prefs.getBranch("browser.tabs.remote.").getBoolPref("autostart") || 
-				Services.prefs.getBranch("browser.tabs.remote.autostart.").getBoolPref("1")) {
+			Services.prefs.getBranch("browser.tabs.remote.autostart.").getBoolPref("1")) {
 		document.getElementById('ctraddon_pw_e10stab_notd').disabled = false;
 		document.getElementById('ctraddon_pw_e10stab_notd').style.visibility = 'visible';
 	  }
@@ -959,7 +959,7 @@ classicthemerestorerjso.ctr = {
   },
   
   /* import CTR settings */
- importCTRpreferences: function() {
+  importCTRpreferences: function() {
  
 	var stringBundle = Components.classes["@mozilla.org/intl/stringbundle;1"].getService(Components.interfaces.nsIStringBundleService)
 	                    .createBundle("chrome://classic_theme_restorer/locale/messages.file");
@@ -1031,8 +1031,8 @@ classicthemerestorerjso.ctr = {
 	return true;
   },
   
-    /* import CTR settings JSON*/
- importCTRpreferencesJSON: function() {
+  /* import CTR settings JSON*/
+  importCTRpreferencesJSON: function() {
  
 	var stringBundle = Components.classes["@mozilla.org/intl/stringbundle;1"]
 						.getService(Components.interfaces.nsIStringBundleService)
