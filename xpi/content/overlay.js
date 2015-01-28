@@ -12,7 +12,7 @@ Cu.import("resource:///modules/CustomizableUI.jsm");
 Cu.import("resource://gre/modules/AddonManager.jsm");
 Cu.import("resource://gre/modules/Services.jsm");
 //Query nsIPrefBranch see: Bug 1125570 | Bug 1083561
-Services.prefs.QueryInterface(Components.interfaces.nsIPrefBranch);
+Services.prefs.QueryInterface(Ci.nsIPrefBranch);
 
 if (typeof classicthemerestorerjs == "undefined") {var classicthemerestorerjs = {};};
 if (!classicthemerestorerjs.ctr) {classicthemerestorerjs.ctr = {};};

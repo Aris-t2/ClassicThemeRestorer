@@ -6,8 +6,22 @@
 	  padding:0 !important;
 	}
 	
-	/*Nuvola support */
+	/* Nuvola support */
 	#main-window[currenttheme="Nuvola"] #ctraddon_ctr-button .toolbarbutton-icon{
 	  padding: 2px !important;
+	}
+	
+	/* LavaFox & BlackFox support */
+	#main-window[currenttheme^="LavaFox"] toolbar #urlbar-container #urlbar #urlbar-icons #feed-button,
+	#main-window[currenttheme^="BlackFox"] toolbar #urlbar-container #urlbar #urlbar-icons #feed-button {
+	  margin-top:-2px !important;
+	  margin-bottom:-2px !important;
+	}
+	#main-window[currenttheme^="LavaFox"] #ctraddon_navigator-throbber {
+	  background:url("chrome://global/skin/throbber/Throbber.png") center no-repeat !important;
+	}
+	#main-window[currenttheme^="LavaFox"] #ctraddon_navigator-throbber[busy="true"],
+	#main-window[currenttheme^="BlackFox"] #ctraddon_navigator-throbber[busy="true"] {
+	  background:url("chrome://global/skin/throbber/throbber-spin.png") center no-repeat !important;
 	}
 }

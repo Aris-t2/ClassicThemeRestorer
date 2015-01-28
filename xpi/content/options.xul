@@ -228,7 +228,8 @@
 	  <radio class="ctraddontab" value="ctraddon_tabsbox" 		label="&Ctr_tabs;"/>
 	  <radio class="ctraddontab" value="ctraddon_fontbox"    	label="&Ctr_tabcolors_t;" id="ctraddon_sqtabcolorstab"/>
 	  <radio class="ctraddontab" value="ctraddon_appbuttonbox" 	label="&Ctr_appbutton;"/>
-	  <radio class="ctraddontab" value="ctraddon_generaluibox"	label="&Ctr_ui;"/>
+	  <radio class="ctraddontab" value="ctraddon_generaluibox"	label="&Ctr_ui; (1)"/>
+	  <radio class="ctraddontab" value="ctraddon_generaluibox2"	label="&Ctr_ui; (2)"/>
 	  <radio class="ctraddontab" value="ctraddon_iconsbox"		label="&Ctr_urlbar;"/>
 	  <radio class="ctraddontab" value="ctraddon_toolbarsbox"	label="&Ctr_toolbars; (1)"/>
 	  <radio class="ctraddontab" value="ctraddon_toolbarsbox2"	label="&Ctr_toolbars; (2)"/>
@@ -685,7 +686,11 @@
 		<checkbox label="&Ctr_alt_newtabp;"		preference="ctraddon_alt_newtabp"/>
 		<checkbox label="&Ctr_noresizerxp;"		preference="ctraddon_noresizerxp" id="ctraddon_pw_noresizerxp"/>
 	  </groupbox>
- 
+
+	</box>
+
+	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_generaluibox2">
+
 	  <groupbox>
 	    <caption  label="&Ctr_navthrobber;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_navthrobber;"	preference="ctraddon_activndicat" id="ctraddon_pw_activitythrobber" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
@@ -697,8 +702,32 @@
 		</hbox>
 	  </groupbox>
 
+	  <groupbox id="ctraddon_pw_invertedicons">
+		<caption  label="&Ctr_invicons;" class="ctraddon_topic"/>
+		<grid>
+		  <rows>
+			<row>
+			  <checkbox label="&Ctr_menubar;"		preference="ctraddon_invicomenubar"/>
+			  <checkbox label="&Ctr_tabstoolbar;"	preference="ctraddon_invicotabsbar"/>
+			</row>
+			<row>
+			  <checkbox label="&Ctr_navbar;"		preference="ctraddon_inviconavbar"/>
+			  <checkbox label="&Ctr_bookbar;"		preference="ctraddon_invicobookbar"/>
+			</row>
+			<row>
+			  <checkbox label="&Ctr_addonbar;"		preference="ctraddon_invicoaddonbar"/>
+			  <checkbox label="&Ctr_extrabar0;"		preference="ctraddon_invicoextrabar"/>
+			</row>
+		  </rows>
+		</grid>
+	  </groupbox>
+
 	  <groupbox class="ctraddon_winmaconly" id="ctraddon_pw_mockupoptions">
 	    <caption  label="&Ctr_fxmockup;" class="ctraddon_topic"/>
+		<hbox>
+		  <image src="chrome://classic_theme_restorer/content/images/fx_mockup.png"/>
+		  <label value=""/>
+		</hbox>
 		<checkbox label="&Ctr_tabmokcolor;"		preference="ctraddon_tabmokcolor" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor"/>
 		<checkbox label="&Ctr_tabmokcolor2;"	preference="ctraddon_tabmokcolor2" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor2"/>
 		<checkbox label="&Ctr_tabmokcolor3;"	preference="ctraddon_tabmokcolor3" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor3"/>
@@ -852,26 +881,6 @@
 		<checkbox label="&Ctr_addonbarfs;"		preference="ctraddon_addonbarfs"/>
 		<checkbox label="&Ctr_notabbg;"			preference="ctraddon_noaddonbarbg" id="ctraddon_pw_noaddonbarbg"/>
 	  </groupbox>
-  
-	  <groupbox id="ctraddon_pw_invertedicons">
-		<caption  label="&Ctr_invicons;" class="ctraddon_topic"/>
-		<grid>
-		  <rows>
-			<row>
-			  <checkbox label="&Ctr_menubar;"		preference="ctraddon_invicomenubar"/>
-			  <checkbox label="&Ctr_tabstoolbar;"	preference="ctraddon_invicotabsbar"/>
-			</row>
-			<row>
-			  <checkbox label="&Ctr_navbar;"		preference="ctraddon_inviconavbar"/>
-			  <checkbox label="&Ctr_bookbar;"		preference="ctraddon_invicobookbar"/>
-			</row>
-			<row>
-			  <checkbox label="&Ctr_addonbar;"		preference="ctraddon_invicoaddonbar"/>
-			  <checkbox label="&Ctr_extrabar0;"		preference="ctraddon_invicoextrabar"/>
-			</row>
-		  </rows>
-		</grid>
-	  </groupbox>
 
 	</box>
 	
@@ -885,11 +894,11 @@
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_oldsearchdescr">&Ctr_fx34search;</description>
 		<checkbox label="about:config &gt;&gt; loop.enabled" preference="ctraddon_loopcall" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_loopcall"/>
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_loopcalldescr">&Ctr_fx34loop;</description>
+		<checkbox label="about:config &gt;&gt; browser.devedition.theme.enabled" preference="ctraddon_devtheme" oncommand="classicthemerestorerjso.ctr.resetPrefsForDevTheme()" id="ctraddon_pw_devtheme"/>
+		<checkbox label="about:config &gt;&gt; browser.devedition.theme.showCustomizeButton" preference="ctraddon_devthemebut" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_devthemeb"/>
+		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_devthemedescr">&Ctr_fx35devtheme;</description>
 		<checkbox label="about:config &gt;&gt; browser.preferences.inContent" preference="ctraddon_oldprefs" oncommand="classicthemerestorerjso.ctr.ctrShowE10sPrefForWindowPrefs()" id="ctraddon_pw_oldprefs"/>
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_oldprefsdescr">&Ctr_fx36prefs;</description>
-		<checkbox label="about:config &gt;&gt; browser.devedition.theme.enabled" preference="ctraddon_devtheme" oncommand="classicthemerestorerjso.ctr.resetPrefsForDevTheme()" id="ctraddon_pw_devtheme"/>
-		<checkbox label="about:config &gt;&gt; browser.devedition.theme.showCustomizeButton" preference="ctraddon_devthemebut" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_devthemeb" class="ctraddonsuboption"/>
-		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_devthemedescr">&Ctr_fx35devtheme;</description>
 		<checkbox label="about:config &gt;&gt; browser.tabs.remote.autostart" preference="ctraddon_e10stabs" id="ctraddon_pw_e10stabs" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_e10stabsdescr">E10S (multi-process) mode (Nightly channel)</description>
 	  </groupbox>
