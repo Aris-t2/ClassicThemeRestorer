@@ -6,9 +6,9 @@
 <!ENTITY Ctr_space			"空白">
 <!ENTITY Ctr_separator		"分隔符">
 <!ENTITY Ctr_puibseparator	"面板按钮分隔符">
-<!ENTITY Ctr_navthrobber	"Activity Indicator">
+<!ENTITY Ctr_navthrobber	"活动指示器">
 <!ENTITY Ctr_sidebarbutton	"侧边栏">
-<!ENTITY Ctr_windowcontrols	"Min/max/close (Fullscreen)">
+<!ENTITY Ctr_windowcontrols	"最小化/最大化/关闭 (全屏)">
 <!ENTITY Ctr_rr				"需要重启 Firefox!">
 
 <!ENTITY Ctr_cuibuttons		"按钮">
@@ -22,53 +22,53 @@
 
 <!ENTITY Ctr_tnot			"(标签栏不在顶部)">
 
-<!ENTITY Ctr_tabcolors_t	"自定义色彩">
+<!ENTITY Ctr_tabcolors_t	"标签页颜色与文本">
 
 <!ENTITY Ctr_tabs			"标签页">
-<!ENTITY Ctr_tabs0			"弧形标签页 (Australis 默认)">
+<!ENTITY Ctr_tabs0			"弧形标签页 (Firefox 默认)">
 <!ENTITY Ctr_tabs1			"方形标签页 (经典)">
 <!ENTITY Ctr_tabs1m			"方形标签页 (仿 Australis)">
-<!ENTITY Ctr_tabs2			"弧形标签页 (仿 Australis)">
-<!ENTITY Ctr_tabs3			"弧形标签页 (Aero 风格)">
+<!ENTITY Ctr_tabs2			"弧形标签页 (备选风格)">
+<!ENTITY Ctr_tabs3			"弧形标签页 (备选 Aero 风格)">
 <!ENTITY Ctr_tabforminfo	"标签页外观由当前的主题所控制">
 <!ENTITY Ctr_tabsontop0		"标签栏在顶部 (默认)">
-<!ENTITY Ctr_tabsontop1		"标签栏在顶部 --- 设置 [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"标签栏不在顶部 (v1) --- 设置 [tabsontop=false]">
-<!ENTITY Ctr_tabsontop3		"标签栏不在顶部 (v2) --- 设置 [tabsontop=false]">
-<!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
+<!ENTITY Ctr_tabsontop1		"标签栏在顶部 --- [tabsontop=true] 属性">
+<!ENTITY Ctr_tabsontop2		"标签栏不在顶部 (v1) --- [tabsontop=false] 属性">
+<!ENTITY Ctr_tabsontop3		"标签栏不在顶部 (v2) --- [tabsontop=false] 属性">
+<!ENTITY Ctr_tabsontopW1	"v2 仅适用于部分扩展与完整主题!">
 <!ENTITY Ctr_tabsontopI1	"添加属性 [tabsontop=true/false] 至">
-<!ENTITY Ctr_tabsintitlebar	"标签栏嵌入标题栏 (about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Firefox 标题栏 (about:config 选项)">
 <!ENTITY Ctr_tabwidthdef	"(默认)">
 <!ENTITY Ctr_tabwidthcla	"(经典)">
-<!ENTITY Ctr_tabminheight	"Height:">
-<!ENTITY Ctr_tabheightinfo	"Low values will cause glitches in maximized mode!">
+<!ENTITY Ctr_tabminheight	"高度:">
+<!ENTITY Ctr_tabheightinfo	"较小的值在最大化模式下可能出现问题!">
 <!ENTITY Ctr_tabmaxwidth	"最大宽度:">
 <!ENTITY Ctr_tabminwidth	"最小宽度:">
 <!ENTITY Ctr_tabwidthinfo	"标签页的最小宽度和最大宽度由 TabMixPlus 所控制">
 <!ENTITY Ctr_tabwidthinfo2	"标签页的最小宽度和最大宽度由 TabUtilities 所控制">
-<!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
-<!ENTITY Ctr_tabinsertion	"Insert related tab after current tab (about:config)">
+<!ENTITY Ctr_tabwidthinfo3	"小于48px的值在多数情况下可能出现问题!">
+<!ENTITY Ctr_tabinsertion	"在当前标签页后插入关联标签页 (about:config)">
 <!ENTITY Ctr_emptyfavicon	"使用空白网站小图标 (如果网站没有提供)">
-<!ENTITY Ctr_noemptypticon	"为固定的标签页移除小图标">
-<!ENTITY Ctr_e10stab_notd	"E10s tabs: remove underline">
+<!ENTITY Ctr_noemptypticon	"为固定的标签页移除空白小图标">
+<!ENTITY Ctr_e10stab_notd	"E10s 标签页: 移除下划线">
 <!ENTITY Ctr_closetab_0		"标签页关闭按钮">
 <!ENTITY Ctr_closetab_1		"只在激活的标签页中显示">
 <!ENTITY Ctr_closetab_2		"不显示">
-<!ENTITY Ctr_closetab_3		"在标签页栏末端">
-<!ENTITY Ctr_closetab_4		"在标签页栏始端">
-<!ENTITY Ctr_closetab_5		"在所有标签页中显示 (forced)">
-<!ENTITY Ctr_closetab_hfot	"隐藏一个可见标签页">
-<!ENTITY Ctr_closealt		"弧形图标">
-<!ENTITY Ctr_closeonleft	"标签弧形位置">
-<!ENTITY Ctr_close_wwltab	"关闭前一个可见标签页 (about:config)">
+<!ENTITY Ctr_closetab_3		"在标签页栏尾部">
+<!ENTITY Ctr_closetab_4		"在标签页栏头部">
+<!ENTITY Ctr_closetab_5		"在所有标签页上显示 (强制)">
+<!ENTITY Ctr_closetab_hfot	"仅一个可见标签页时隐藏">
+<!ENTITY Ctr_closealt		"红色关闭图标">
+<!ENTITY Ctr_closeonleft	"标签页上的备选位置">
+<!ENTITY Ctr_close_wwltab	"关闭最后一个可见标签页后关闭窗口 (about:config 选项)">
 
-<!ENTITY Ctr_appbutton		"火狐按钮">
-<!ENTITY Ctr_appbutton0		"不显示">
+<!ENTITY Ctr_appbutton		"应用程序按钮">
+<!ENTITY Ctr_appbutton0		"按钮已禁用">
 <!ENTITY Ctr_appbutton1		"在工具栏上显示">
-<!ENTITY Ctr_appbutton1wt	"在工具栏上显示 (纯文本)">
-<!ENTITY Ctr_appbutton2		"在标题栏上显示">
-<!ENTITY Ctr_appbutton2h	"在标题栏上显示 (hidden)">
-<!ENTITY Ctr_appbutton2io	"在标题栏上显示 (图标)">
+<!ENTITY Ctr_appbutton1wt	"在工具栏上显示 (仅文本)">
+<!ENTITY Ctr_appbutton2		"在 [Firefox] 标题栏上显示">
+<!ENTITY Ctr_appbutton2h	"在 [Firefox] 标题栏上显示 (隐藏)">
+<!ENTITY Ctr_appbutton2io	"在 [Firefox] 标题栏上显示 (仅图标)">
 <!ENTITY Ctr_paneluibtweak	"在标签页栏上显示橙色面板菜单按钮">
 <!ENTITY Ctr_appbuttonc_o	"橙色按钮 (默认)">
 <!ENTITY Ctr_appbuttonc_a	"蓝色按钮 (Aurora)">
@@ -80,70 +80,70 @@
 <!ENTITY Ctr_appbuttonc_gr	"灰色按钮">
 <!ENTITY Ctr_appbuttonc_pu	"紫色按钮">
 <!ENTITY Ctr_appbuttonc_wh	"白色按钮">
-<!ENTITY Ctr_appbuttonc_cu	"Custom button color">
-<!ENTITY Ctr_appbuttonI1	"重启浏览器后生效">
-<!ENTITY Ctr_appbuttonI1e	"在 OS 标题栏上不可见">
-<!ENTITY Ctr_appbuttonI2	"只在标题栏生效 以及标签页栏!">
-<!ENTITY Ctr_alttbappb		"替代图标">
-<!ENTITY Ctr_appbutmhi		"更高的位置 (在标签页栏上显示)">
+<!ENTITY Ctr_appbuttonc_cu	"自定义按钮颜色">
+<!ENTITY Ctr_appbuttonI1	"建议重启浏览器">
+<!ENTITY Ctr_appbuttonI1e	"在 Windows 系统标题栏上不可见，仅在 Firefox 标题栏上!">
+<!ENTITY Ctr_appbuttonI2	"按钮颜色只在标题栏与标签页栏上可见!">
+<!ENTITY Ctr_alttbappb		"备选的不带下拉三角图标">
+<!ENTITY Ctr_appbutmhi		"更高的位置 (如果在标签页栏上)">
 <!ENTITY Ctr_appbutbdl		"隐藏边框和背景色">
 <!ENTITY Ctr_dblclclosefx	"双击关闭当前窗口">
-<!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
-<!ENTITY Ctr_appbutonclab	"Title">
-<!ENTITY Ctr_appbutonclab2	"Add title or leave empty">
+<!ENTITY Ctr_appbclmmenus	"按钮菜单内的可点击菜单 (新建标签页, 打印...)">
+<!ENTITY Ctr_appbutonclab	"标题">
+<!ENTITY Ctr_appbutonclab2	"添加标题或放空">
 
-<!ENTITY Ctr_ui				"界面">
-<!ENTITY Ctr_nbiconsize0	"设置导航工具栏属性">
-<!ENTITY Ctr_smallnavbut	"在工具栏上使用小图标">
-<!ENTITY Ctr_bfurlbarfix	"当处于「后退」按钮可以移动和小图标显示模式时，修改地址栏圆弧半径">
+<!ENTITY Ctr_ui				"常规界面">
+<!ENTITY Ctr_nbiconsize0	"导航工具栏“iconsize”属性">
+<!ENTITY Ctr_smallnavbut	"在导航工具栏上使用小图标">
+<!ENTITY Ctr_bfurlbarfix	"修复地址栏圆弧半径">
 <!ENTITY Ctr_backforward	"使「后退」按钮可以移动">
-<!ENTITY Ctr_nbcompact		"Reduce navigation toolbars height">
-<!ENTITY Ctr_hide_bf_popup	"鼠标长按时隐藏历史菜单">
-<!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
-<!ENTITY Ctr_noconicons		"使用标签来替代菜单中的图标 (后退, 前进, 停止, 重新加载, 书签页面)">
-<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
-<!ENTITY Ctr_wincontrols	"使窗口控制按钮可以移动">
-<!ENTITY Ctr_emptyfavicon2	"使用空白页面的图标来取代常规图标(空白或没有的)">
+<!ENTITY Ctr_nbcompact		"降低导航工具栏高度">
+<!ENTITY Ctr_hide_bf_popup	"鼠标按下时隐藏历史菜单">
+<!ENTITY Ctr_bf_space		"减少按钮之间的空白 (如果可以)">
+<!ENTITY Ctr_noconicons		"页面右键菜单: 使用标签来替代图标 (后退, 前进...)">
+<!ENTITY Ctr_svgfilters		"默认工具栏图标使用的SVG颜色">
+<!ENTITY Ctr_wincontrols	"全屏窗口控制按钮可以移动">
+<!ENTITY Ctr_emptyfavicon2	"使用空白页面图标来代替常规图标(空白或虚线框)">
 <!ENTITY Ctr_mstatusbar		"使状态栏面板可以移动">
-<!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
-<!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
-<!ENTITY Ctr_mstatusbarpzt	"Status-bar panel is controlled by 'Puzzle Toolbars'">
-<!ENTITY Ctr_mstatusbarabr	"Status-bar panel is controlled by 'The Addon Bar (Restored)'">
-<!ENTITY Ctr_combrelstop	"合并停止和重新加载按钮">
-<!ENTITY Ctr_stoprel1		"工具栏: 将重新加载按钮放在停止按钮后面!">
-<!ENTITY Ctr_panelmenucol	"面板菜单: 替代的背景颜色">
+<!ENTITY Ctr_mstatusbars4e	"状态栏面板由“Status-4-Evar”所控制">
+<!ENTITY Ctr_mstatusbartpp	"状态栏面板由“ThePuzzlePiece”所控制">
+<!ENTITY Ctr_mstatusbarpzt	"状态栏面板由“Puzzle Toolbars”所控制">
+<!ENTITY Ctr_mstatusbarabr	"状态栏面板由“The Addon Bar (Restored)”所控制">
+<!ENTITY Ctr_combrelstop	"在工具栏上合并停止和重新载入按钮">
+<!ENTITY Ctr_stoprel1		"重要: 将重新载入按钮放在停止按钮后面!">
+<!ENTITY Ctr_panelmenucol	"面板菜单: 备选的背景颜色">
 <!ENTITY Ctr_hideprivmask	"隐私浏览: 隐藏面具标志">
-<!ENTITY Ctr_nbisizedelay	"ms delay in execution (1000 ms = 1 sec)">
-<!ENTITY Ctr_findbar		"查找栏">
-<!ENTITY Ctr_findbar_def	"默认位置">
-<!ENTITY Ctr_findbar_top	"在顶部">
-<!ENTITY Ctr_findbar_topa	"在顶部 (替代)">
-<!ENTITY Ctr_findbar_bota	"在顶部 (替代)">
+<!ENTITY Ctr_nbisizedelay	"执行时延迟的毫秒数 (1000 毫秒 = 1 秒)">
+<!ENTITY Ctr_findbar		"查找栏位置">
+<!ENTITY Ctr_findbar_def	"底部(默认)">
+<!ENTITY Ctr_findbar_top	"顶部">
+<!ENTITY Ctr_findbar_topa	"顶部 (备选的控件顺序)">
+<!ENTITY Ctr_findbar_bota	"底部 (备选的控件顺序)">
 <!ENTITY Ctr_nav_txt_ico0	"只显示图标 (默认)">
 <!ENTITY Ctr_nav_txt_ico1	"显示大图标">
 <!ENTITY Ctr_nav_txt_ico2	"显示图标和文本">
 <!ENTITY Ctr_nav_txt_ico3	"只显示文本">
-<!ENTITY Ctr_nav_txt_exp	"Experimental attributes:">
-<!ENTITY Ctr_iat_notf_vt	"Exclude vertical toolbars">
-<!ENTITY Ctr_cpanelmenus	"更紧凑的面板菜单 (书签、历史等等)">
+<!ENTITY Ctr_nav_txt_exp	"实验性属性:">
+<!ENTITY Ctr_iat_notf_vt	"排除竖直工具栏">
+<!ENTITY Ctr_cpanelmenus	"面板菜单: 更紧凑的视图 (书签、历史等等)">
 <!ENTITY Ctr_hidezoomres	"当缩放控制按钮在工具栏上时: 隐藏重置缩放按钮">
-<!ENTITY Ctr_alt_newtabp	"New tab page: alternative appearance">
-<!ENTITY Ctr_noresizerxp	"Hide Resizer (Windows XP)">
-<!ENTITY Ctr_pmhidelabels	"面板菜单: 隐藏按钮标签">
+<!ENTITY Ctr_alt_newtabp	"新标签页页面: 备选的外观">
+<!ENTITY Ctr_noresizerxp	"隐藏调整大小控件 (Windows XP)">
+<!ENTITY Ctr_pmhidelabels	"面板菜单: 隐藏按钮标签文本">
 <!ENTITY Ctr_menupopupscr	"弹出式菜单: 用滚动栏代替滚动箭头">
 
-<!ENTITY Ctr_fxmockup		"火狐样式">
+<!ENTITY Ctr_fxmockup		"Firefox 样式">
 <!ENTITY Ctr_tabmokcolor	"白色标签页按钮 (关闭, 新建, 分组, 显示所有)">
-<!ENTITY Ctr_tabmokcolor2	"在非激活标签页上使用白色文字以及添加文字阴影">
+<!ENTITY Ctr_tabmokcolor2	"在非激活标签页上使用白色文字并添加文字阴影">
 <!ENTITY Ctr_tabmokcolor3	"白色标签页分隔符">
-<!ENTITY Ctr_tabmokcolor4	"White color for empty dotted tab favicon">
+<!ENTITY Ctr_tabmokcolor4	"白色的空白虚线标签页网站图标">
 
-<!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
-<!ENTITY Ctr_navthrobber2	"Add url or leave empty">
+<!ENTITY Ctr_navthrobber1	"点击活动指示器打开指定网址:">
+<!ENTITY Ctr_navthrobber2	"添加网址或放空">
 
-<!ENTITY Ctr_tab_tf_info1	"可以使用颜色名称, hex 值, rgb(a) 以及 hsl(a) 值。">
-<!ENTITY Ctr_tab_tf_info2	"输入错误不会被提示！">
-<!ENTITY Ctr_tabact_t		"激活">
+<!ENTITY Ctr_tab_tf_info1	"可支持颜色名称, hex值, rgb(a) 以及 hsl(a) 值。">
+<!ENTITY Ctr_tab_tf_info2	"输入值不会进行校验！">
+<!ENTITY Ctr_tabact_t		"选中">
 <!ENTITY Ctr_tabhov_t		"悬停">
 <!ENTITY Ctr_tabnor_t		"默认">
 <!ENTITY Ctr_tabpen_t		"未加载">
@@ -152,118 +152,118 @@
 <!ENTITY Ctr_customsqtab1	"背景">
 <!ENTITY Ctr_ctext			"文本">
 <!ENTITY Ctr_ctextsh		"文本阴影">
-<!ENTITY Ctr_tabnor			"标签页 (默认)">
-<!ENTITY Ctr_tabhov			"标签页 (悬停)">
-<!ENTITY Ctr_tabact			"标签页 (激活)">
-<!ENTITY Ctr_tabpen			"标签页 (未加载)">
-<!ENTITY Ctr_tabunr			"标签页 (未读)">
-<!ENTITY Ctr_ntabnor		"新标签页 (默认)">
-<!ENTITY Ctr_ntabhov		"新标签页 (悬停)">
+<!ENTITY Ctr_tabnor			"默认标签页">
+<!ENTITY Ctr_tabhov			"悬停标签页">
+<!ENTITY Ctr_tabact			"选中标签页">
+<!ENTITY Ctr_tabpen			"未加载标签页">
+<!ENTITY Ctr_tabunr			"未读标签页">
+<!ENTITY Ctr_ntabnor		"默认新标签页">
+<!ENTITY Ctr_ntabhov		"悬停新标签页">
 <!ENTITY Ctr_bold			"加粗">
 <!ENTITY Ctr_italic			"斜体">
-<!ENTITY Ctr_notabhov		"Enabled settings override 'hovered' settings">
-<!ENTITY Ctr_tabc_act_tb	"Background color on toolbars">
+<!ENTITY Ctr_notabhov		"启用设置覆盖‘悬停’设置">
+<!ENTITY Ctr_tabc_act_tb	"工具栏使用背景色">
 
-<!ENTITY Ctr_urlbar			"Urlbar">
-<!ENTITY Ctr_starinurl		"收藏按钮嵌入地址栏">
-<!ENTITY Ctr_feedinurl		"Feed 按钮嵌入地址栏">
-<!ENTITY Ctr_hideurelstop	"隐藏地址栏中的停止和重新加载按钮">
-<!ENTITY Ctr_urlbardropm	"Move dropmarker to urlbars end">
-<!ENTITY Ctr_hideprbutton	"Hide notification icon when a popup gets blocked">
-<!ENTITY Ctr_urlbar_ib		"Site Identity Button (identity box)">
-<!ENTITY Ctr_verifiedcolors	"使用绿色/蓝色的身份盒子来显示被验证的网站">
-<!ENTITY Ctr_faviconurl		"在地址栏中显示网站小图标">
-<!ENTITY Ctr_padlock_hid	"加锁 (隐藏)">
-<!ENTITY Ctr_padlock_def	"加锁 (默认)">
-<!ENTITY Ctr_padlock_cla	"加锁 (经典)">
-<!ENTITY Ctr_padlock_mod	"加锁 (现代)">
+<!ENTITY Ctr_urlbar			"地址栏">
+<!ENTITY Ctr_starinurl		"五星按钮">
+<!ENTITY Ctr_feedinurl		"RSS源按钮">
+<!ENTITY Ctr_hideurelstop	"隐藏停止和重新载入按钮">
+<!ENTITY Ctr_urlbardropm	"下拉控件移动到地址栏尾部">
+<!ENTITY Ctr_hideprbutton	"当弹出窗口被阻止时隐藏通知图标">
+<!ENTITY Ctr_urlbar_ib		"网站身份标识按钮 (身份标识框)">
+<!ENTITY Ctr_verifiedcolors	"使用绿色/蓝色的身份标识框来显示被验证的网站和加密连接">
+<!ENTITY Ctr_faviconurl		"网站图标：当前网站图标">
+<!ENTITY Ctr_padlock_hid	"加密连接锁图标 (隐藏)">
+<!ENTITY Ctr_padlock_def	"加密连接锁图标 (默认)">
+<!ENTITY Ctr_padlock_cla	"加密连接锁图标 (经典)">
+<!ENTITY Ctr_padlock_mod	"加密连接锁图标 (现代)">
 <!ENTITY Ctr_padlock_ext	"安全图标">
-<!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
+<!ENTITY Ctr_icopageinfo	"点击图标打开“页面信息”窗口">
 
-<!ENTITY Ctr_menubar_items	"Menu items position">
-<!ENTITY Ctr_extrabar		"Additional Toolbars">
-<!ENTITY Ctr_extrabar0		"Additional Toolbar(s)">
-<!ENTITY Ctr_extrabar1		"新增工具栏">
-<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
+<!ENTITY Ctr_menubar_items	"菜单项目位置">
+<!ENTITY Ctr_extrabar		"附加工具栏">
+<!ENTITY Ctr_extrabar0		"附加工具栏">
+<!ENTITY Ctr_extrabar1		"附加工具栏">
+<!ENTITY Ctr_extrabarinfo	"在“标签页置顶”和“标签页不置顶”模式间切换会随机修改附加工具栏的顺序。需要重启 Firefox 来解决该问题。">
 
-<!ENTITY Ctr_invicons		"颠倒图标">
+<!ENTITY Ctr_invicons		"反转图标">
 <!ENTITY Ctr_menubar		"菜单栏">
-<!ENTITY Ctr_tabstoolbar	"标签页栏">
-<!ENTITY Ctr_navbar			"导航栏">
-<!ENTITY Ctr_bookbar		"书签栏">
-<!ENTITY Ctr_notoolbar		"Hidden (do not show menu items)">
+<!ENTITY Ctr_tabstoolbar	"标签页工具栏">
+<!ENTITY Ctr_navbar			"导航工具栏">
+<!ENTITY Ctr_bookbar		"书签工具栏">
+<!ENTITY Ctr_notoolbar		"隐藏 (不显示菜单项)">
 
-<!ENTITY Ctr_mbarforceleft	"First element">
-<!ENTITY Ctr_mbarforceright	"Last element">
+<!ENTITY Ctr_mbarforceleft	"第一个元素">
+<!ENTITY Ctr_mbarforceright	"最后一个元素">
 
 <!ENTITY Ctr_toolbars		"工具栏">
-<!ENTITY Ctr_dblclnewtab	"双击新建标签页 (在 browser.newtab.url 设置)">
+<!ENTITY Ctr_dblclnewtab	"双击新建标签页 (使用 browser.newtab.url 设置)">
 <!ENTITY Ctr_hidetbwot		"当只有一个标签页时隐藏标签页栏">
-<!ENTITY Ctr_hidetbwote		"Reduce hiding delay on startup">
-<!ENTITY Ctr_notabfog		"移除背景模糊 (Windows AeroGlass / Win8)">
-<!ENTITY Ctr_notabbg		"移除背景颜色 (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_hidetbwote		"启动时减少隐藏延迟">
+<!ENTITY Ctr_notabfog		"移除背景模糊 (Windows AeroGlass/8)">
+<!ENTITY Ctr_notabbg		"移除背景颜色 (Windows AeroGlass/8)">
 <!ENTITY Ctr_hightabpos		"减少工具栏上方空间 (如果可以)">
-<!ENTITY Ctr_alttabstb		"替代的背景颜色">
-<!ENTITY Ctr_alttabstb2		"In maximized mode (tabs on top)">
+<!ENTITY Ctr_alttabstb		"备选背景颜色">
+<!ENTITY Ctr_alttabstb2		"在最大化模式 (标签在顶部)">
 
-<!ENTITY Ctr_altmenubar		"添加背景颜色 (OS 标题栏)">
-<!ENTITY Ctr_altmenubarpos	"替代位置 (在 Firefox 标题栏下方)">
-<!ENTITY Ctr_menubarnofog	"移除背景颜色/模糊 (Windows AeroGlass / Win8)">
+<!ENTITY Ctr_altmenubar		"添加背景颜色 (操作系统标题栏)">
+<!ENTITY Ctr_altmenubarpos	"备选位置 (在 Firefox 标题栏下方)">
+<!ENTITY Ctr_menubarnofog	"移除背景颜色/模糊 (Windows AeroGlass/8)">
 
-<!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
-<!ENTITY Ctr_hidenavbar		"隐藏工具栏">
-<!ENTITY Ctr_nobookbarbg	"书签栏: 移除背景颜色">
-<!ENTITY Ctr_nonavbarbg		"导航栏: 移除背景颜色">
-<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
-<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
-<!ENTITY Ctr_nonavborder	"书签栏: 添加上边框">
+<!ENTITY Ctr_aerocolors		"主工具栏和标签页使用蓝色 Aero 颜色">
+<!ENTITY Ctr_hidenavbar		"导航工具栏: 隐藏工具栏">
+<!ENTITY Ctr_nobookbarbg	"书签工具栏: 移除背景颜色">
+<!ENTITY Ctr_nonavbarbg		"导航工具栏: 移除背景颜色">
+<!ENTITY Ctr_nonavbarbg1	"应用到该附加组件的附加工具栏和其它顶部工具栏。">
+<!ENTITY Ctr_nonavbarbg2	"应用到“The Fox, Only Better”附加组件的 Slim Chrome 中的所有工具栏。">
+<!ENTITY Ctr_nonavborder	"书签工具栏: 添加上边框">
 <!ENTITY Ctr_nonavtbborder	"顶部工具栏: 移除工具栏边框">
-<!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
-<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('chevron') at toolbars end">
+<!ENTITY Ctr_hidesbclose	"侧边栏: 隐藏侧边栏关闭按钮">
+<!ENTITY Ctr_chevronfix		"导航工具栏: 隐藏工具栏尾部的双箭头 ('chevron')">
 
 <!ENTITY Ctr_closeabarbut	"隐藏附加组件栏关闭按钮">
-<!ENTITY Ctr_highaddonsbar	"增加附加组件栏高度">
-<!ENTITY Ctr_addonbarfs		"In fullscreen mode">
+<!ENTITY Ctr_highaddonsbar	"增加高度">
+<!ENTITY Ctr_addonbarfs		"在全屏模式">
 
 <!ENTITY Ctr_animation		"动画">
-<!ENTITY Ctr_throbberalt	"使用替代的动画效果">
-<!ENTITY Ctr_bmanimation	"加入书签时显示动画">
-<!ENTITY Ctr_pananimation	"打开面板时显示动画">
-<!ENTITY Ctr_tabanimation	"打开/关闭标签页时显示动画 (about:config)">
-<!ENTITY Ctr_dlanimation	"'下载提醒' 显示动画 (about:config)">
+<!ENTITY Ctr_throbberalt	"使用备选的加载动画效果">
+<!ENTITY Ctr_bmanimation	"加入书签动画">
+<!ENTITY Ctr_pananimation	"打开面板动画">
+<!ENTITY Ctr_tabanimation	"打开/关闭标签页动画 (about:config 选项)">
+<!ENTITY Ctr_dlanimation	"“下载提醒”动画 (about:config 选项)">
 
-<!ENTITY Ctr_toolsitem		"在工具菜单中显示">
-<!ENTITY Ctr_appmenuitem	"在火狐按钮菜单中显示">
-<!ENTITY Ctr_contextitem	"在工具栏内容菜单上显示菜单项">
-<!ENTITY Ctr_puictrbutton	"Button in main panel menu">
+<!ENTITY Ctr_toolsitem		"在工具菜单中显示菜单项">
+<!ENTITY Ctr_appmenuitem	"在 Firefox 按钮菜单中显示菜单项">
+<!ENTITY Ctr_contextitem	"在工具栏右键菜单中显示菜单项">
+<!ENTITY Ctr_puictrbutton	"在主面板菜单中显示按钮">
 
-<!ENTITY Ctr_otherctroptns	"Other settings">
-<!ENTITY Ctr_cuibotbuttons	"在界面自定义模式中显示更多按钮">
-<!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
-<!ENTITY Ctr_nodevtheme		"Prevent 'Developer Theme' from being enabled">
+<!ENTITY Ctr_otherctroptns	"其它设置">
+<!ENTITY Ctr_cuibotbuttons	"在“定制”模式中显示额外的按钮">
+<!ENTITY Ctr_bookmarkoinpw	"书签右键菜单中显示“在新建隐私浏览窗口中打开”">
+<!ENTITY Ctr_nodevtheme		"阻止“开发者主题”被启用">
 
-<!ENTITY Ctr_experttweaks	"Advanced">
-<!ENTITY Ctr_fx33layers		"Firefox 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
-<!ENTITY Ctr_fx34search		"Firefox 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
-<!ENTITY Ctr_fx35devtheme	"Firefox 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
-<!ENTITY Ctr_fx36prefs		"Firefox 36+ introduced preferences in a tab. Unchecking this preference restores the old preference window.">
+<!ENTITY Ctr_experttweaks	"高级">
+<!ENTITY Ctr_fx33layers		"Firefox 33+ 引入“新渲染器功能”目前可能是某些系统“标签页卡死”的主要原因。不选中此项以解决该问题。">
+<!ENTITY Ctr_fx34search		"Firefox 34+ 引入“新搜索界面”。不选中此项以恢复“旧搜索界面”。">
+<!ENTITY Ctr_fx34loop		"Firefox 34+ 引入“呼叫和通话”功能。不选中此项以移除它们。">
+<!ENTITY Ctr_fx35devtheme	"Firefox 35+ 引入新的“开发者主题”。不选中此项以禁用“开发者主题”以及定制模式下它的一些按钮。">
+<!ENTITY Ctr_fx36prefs		"Firefox 36+ 引入在标签页中显示选项设置。不选中此项以使用旧选项窗口。">
 
 
 <!ENTITY Ctr_pw_settings	"设置">
 <!ENTITY Ctr_pw_set_reset	"恢复默认">
 <!ENTITY Ctr_pw_set_predef	"经典主题预设">
-<!ENTITY Ctr_pw_set_preaus	"Firefox preset">
-<!ENTITY Ctr_pw_set_export	"导出偏好设置">
-<!ENTITY Ctr_pw_set_import	"导入偏好设置">
+<!ENTITY Ctr_pw_set_preaus	"Firefox 预设">
+<!ENTITY Ctr_pw_set_export	"导出选项设置">
+<!ENTITY Ctr_pw_set_import	"导入选项设置">
 
 <!ENTITY Ctr_special_font	"只有默认主题才能设置背景颜色!">
-<!ENTITY Ctr_special_info	"一些视觉变化选项只会在当前的实例中起效!">
-<!ENTITY Ctr_special_info2	"有些设置只能在 Firefox 默认主题中生效，第三方主题可能无法起效!">
+<!ENTITY Ctr_special_info	"一些选项可能无法在所有情况下提供视觉变化!">
+<!ENTITY Ctr_special_info2	"有些设置只能在 Firefox 默认主题中生效，第三方主题可能无法生效!">
 <!ENTITY Ctr_support		"支持讨论区">
 <!ENTITY Ctr_newversion		"有新版本?">
 
 <!ENTITY Ctr_addon-bar.accesskey	"A">
-<!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
+<!ENTITY Ctr_openInPrivateWindow	"在新建隐私浏览窗口中打开">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
-<!ENTITY appMenuGettingStarted.label	"Getting started">
+<!ENTITY appMenuGettingStarted.label	"开始使用">
