@@ -450,6 +450,17 @@
 	toolbar #PanelUI-menu-button .toolbarbutton-badge-container image{
 	  min-width:18px;
 	}
+	
+	/* CTRs additional urlbar */
+	#extraurlbar_button {
+	  -moz-appearance: toolbarbutton !important;
+	}
+	#ctraddon_extraurlbar-close{
+	  -moz-appearance: none !important;
+	  background: none !important;
+	  border: 0 !important;
+	  min-width: 0px !important;
+	}
 }
 
 /* style/hide settings on CTRs options window */

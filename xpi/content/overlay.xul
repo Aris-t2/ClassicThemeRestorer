@@ -28,10 +28,12 @@
 
 	<commandset id="mainCommandSet">
 	   <command id="CtrExtension:ToggleCtrAddonBar" oncommand="classicthemerestorerjs.ctr.toggleCtrAddonBar();"/>
+	   <command id="CtrExtension:ToggleUrlExtraBar" oncommand="classicthemerestorerjs.ctr.toggleCtrUrlExtraBar();"/>
 	</commandset>
 	
 	<keyset id="mainKeyset">
 	  <key id="ctraddon_key_toggleCtrAddonBar" command="CtrExtension:ToggleCtrAddonBar" key="/" modifiers="accel"/>
+	  <key id="ctraddon_key_toggleCtrUrlExtraBar" command="CtrExtension:ToggleUrlExtraBar" key="w" modifiers="alt"/>
 	</keyset>
  
 	<!--### add new buttons to customizing area ###-->
@@ -73,6 +75,7 @@
 				 defaultset="ctraddon_addonbar-close,spring,ctraddon_statusbar">
 		  <toolbarbutton id="ctraddon_addonbar-close" removable="false"
 				    oncommand="classicthemerestorerjs.ctr.toggleCtrAddonBar();"/>
+					
 		  <toolbaritem id="ctraddon_statusbar"
 					   title="&Ctr_statusbar;"
 					   customizableui-areatype="toolbar"
@@ -85,6 +88,23 @@
 		  <!-- ### move PanelUI-menu-button dummy here to prevent glitches with CTRs movable button -->
           <toolbarbutton id="PanelUI-menu-button" removable="false" collapsed="true"/>
 		</toolbar>
+	</vbox>
+	
+	<vbox id="appcontent">
+
+		  <hbox id="ctraddon_urlextrabar" insertbefore="content" key="key_toggleCtrUrlExtraBar" collapsed="true">
+			<textbox id="ctraddon_extraurlbar_tb" flex="1" type="autocomplete"
+					  completeselectedindex="true"
+					  autocompletesearch="urlinline history"
+					  enablehistory="true"
+					  class="uri-element"
+					  onkeydown="if(event.keyCode == '13') {gBrowser.selectedTab=gBrowser.addTab(this.value); document.getElementById('ctraddon_urlextrabar').setAttribute('collapsed',true);}"/>
+			  <button id="extraurlbar_button" removable="false" class="toolbarbutton-1" label="Open"
+						oncommand="gBrowser.selectedTab=gBrowser.addTab(document.getElementById('ctraddon_extraurlbar_tb').value); document.getElementById('ctraddon_urlextrabar').setAttribute('collapsed',true);"/>
+			  <button id="ctraddon_extraurlbar-close" removable="false" class="close-icon"
+				    oncommand="classicthemerestorerjs.ctr.toggleCtrUrlExtraBar();"/>
+		  </hbox>
+
 	</vbox>
 	
 	<!--### add a CTR button to panel menu ###-->

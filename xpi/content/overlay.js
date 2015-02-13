@@ -2682,7 +2682,8 @@ classicthemerestorerjs.ctr = {
 						  box-shadow:unset !important;\
 						}\
 						#main-window[defaultfxtheme="true"][tabsontop="false"] #TabsToolbar:not(:-moz-lwtheme),\
-						#main-window[defaultfxtheme="true"] toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar):not(.devtools-tabbar):not(#developer-toolbar){\
+						#main-window[defaultfxtheme="true"] toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar):not(.devtools-tabbar):not(#developer-toolbar):not(#puzzleBars-urlbar-bar),\
+						#main-window[defaultfxtheme="true"] #ctraddon_urlextrabar:not(:-moz-lwtheme){\
 						  background-image:unset !important;\
 						  background-color:#dbeaf9 !important;\
 						}\
@@ -2959,7 +2960,8 @@ classicthemerestorerjs.ctr = {
 						  box-shadow:none !important;\
 						  background: none !important;\
 						}\
-						#navigator-toolbox toolbar:not(#TabsToolbar):not(#toolbar-menubar),\
+						#navigator-toolbox toolbar:not(#TabsToolbar):not(#toolbar-menubar):not(#puzzleBars-urlbar-bar),\
+						#main-window[defaultfxtheme="true"] #ctraddon_urlextrabar:not(:-moz-lwtheme),\
 						#browser-bottombox toolbar:not(#developer-toolbar):not(.devtools-tabbar),\
 						#main-window[defaultfxtheme="true"] #navigator-toolbox #TabsToolbar[tabsontop=false]:not(:-moz-lwtheme),\
 						#main-window[defaultfxtheme="true"][tabsontop=false]:not([tabsintitlebar]):not(:-moz-lwtheme) #toolbar-menubar,\
@@ -4023,6 +4025,20 @@ classicthemerestorerjs.ctr = {
     
 	let ctrAddonBar = document.getElementById("ctraddon_addon-bar");
     setToolbarVisibility(ctrAddonBar, ctrAddonBar.collapsed);
+  
+  },
+  
+  toggleCtrUrlExtraBar: function() {
+    
+	if(document.getElementById("ctraddon_urlextrabar").getAttribute("collapsed")=="true") {
+	  document.getElementById("ctraddon_urlextrabar").setAttribute("collapsed",false);
+	  
+	  setTimeout(function(){
+		document.getElementById('ctraddon_extraurlbar_tb').focus();
+	  },100);
+	  
+	}
+	else document.getElementById("ctraddon_urlextrabar").setAttribute("collapsed",true);
   
   }
   

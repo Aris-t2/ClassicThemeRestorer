@@ -6,9 +6,9 @@
 <!ENTITY Ctr_space			"Spazio">
 <!ENTITY Ctr_separator		"Separatore">
 <!ENTITY Ctr_puibseparator	"Pannello di separazione pulsanti">
-<!ENTITY Ctr_navthrobber	"Activity Indicator">
-<!ENTITY Ctr_sidebarbutton	"Sidebar">
-<!ENTITY Ctr_windowcontrols	"Min/max/close (Fullscreen)">
+<!ENTITY Ctr_navthrobber	"Indicatore di attività">
+<!ENTITY Ctr_sidebarbutton	"Barra laterale">
+<!ENTITY Ctr_windowcontrols	"Min/max/chiudi (A tutto schermo)">
 <!ENTITY Ctr_rr				"Riavviare Firefox!">
 
 <!ENTITY Ctr_cuibuttons		"Pulsanti">
@@ -35,39 +35,39 @@
 <!ENTITY Ctr_tabsontop1		"Schede in alto --- attivata [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Schede in basso (v1) --- attivata [tabsontop=false]">
 <!ENTITY Ctr_tabsontop3		"Schede in basso (v2) --- attivata [tabsontop=false]">
-<!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
+<!ENTITY Ctr_tabsontopW1	"v2 è solo per alcuni componenti aggiuntivi e temi completi!">
 <!ENTITY Ctr_tabsontopI1	"Aggiunge l’attributo [tabsontop=true/false] a">
 <!ENTITY Ctr_tabsintitlebar	"Schede nella barra del titolo (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(predefinita)">
 <!ENTITY Ctr_tabwidthcla	"(stile classico)">
-<!ENTITY Ctr_tabminheight	"Height:">
-<!ENTITY Ctr_tabheightinfo	"Low values will cause glitches in maximized mode!">
+<!ENTITY Ctr_tabminheight	"Altezza:">
+<!ENTITY Ctr_tabheightinfo	"I valori bassi provocheranno anomalie nella finestra ingrandita!">
 <!ENTITY Ctr_tabmaxwidth	"Larghezza massima:">
 <!ENTITY Ctr_tabminwidth	"Larghezza minima:">
 <!ENTITY Ctr_tabwidthinfo	"La larghezza minima e massima delle schede è definita da TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"La larghezza minima e massima delle schede è definita da TabUtilities">
-<!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
-<!ENTITY Ctr_tabinsertion	"Insert related tab after current tab (about:config)">
+<!ENTITY Ctr_tabwidthinfo3	"I valori inferiori a 48px provocheranno anomalie nella maggior parte dei casi!">
+<!ENTITY Ctr_tabinsertion	"Inserisci la scheda relativa dopo la scheda corrente (about:config)">
 <!ENTITY Ctr_emptyfavicon	"Nei siti che non hanno una favicon usa la vecchia favicon vuota">
-<!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tab">
-<!ENTITY Ctr_e10stab_notd	"E10s tabs: remove underline">
+<!ENTITY Ctr_noemptypticon	"Rimuovi la favicon vuota dalla scheda bloccata">
+<!ENTITY Ctr_e10stab_notd	"Schede E10s: rimuovi la sottolineatura">
 <!ENTITY Ctr_closetab_0		"Pulsante di chiusura)">
 <!ENTITY Ctr_closetab_1		"Nella scheda attiva">
 <!ENTITY Ctr_closetab_2		"Nessun pulsante di chiusura schede">
 <!ENTITY Ctr_closetab_3		"A destra della barra delle schede">
 <!ENTITY Ctr_closetab_4		"A sinistra della barra delle schede">
 <!ENTITY Ctr_closetab_5		"In tutte le schede (forzato)">
-<!ENTITY Ctr_closetab_hfot	"Hide for one visible tab">
-<!ENTITY Ctr_closealt		"Alternative icon">
-<!ENTITY Ctr_closeonleft	"Alternative position on tab">
-<!ENTITY Ctr_close_wwltab	"Close window with last visible tab (about:config)">
+<!ENTITY Ctr_closetab_hfot	"Nascondi per la scheda in vista">
+<!ENTITY Ctr_closealt		"Icona alternativa">
+<!ENTITY Ctr_closeonleft	"Posizione alternativa sulla scheda">
+<!ENTITY Ctr_close_wwltab	"Chiudi la finestra con l'ultima scheda visibile (about:config)">
 
 <!ENTITY Ctr_appbutton		"Pulsante applicazione">
 <!ENTITY Ctr_appbutton0		"Nessun pulsante">
 <!ENTITY Ctr_appbutton1		"Pulsante nella barra degli strumenti">
 <!ENTITY Ctr_appbutton1wt	"Pulsante nella barra degli strumenti (solo testo)">
 <!ENTITY Ctr_appbutton2		"Pulsante nella barra del titolo">
-<!ENTITY Ctr_appbutton2h	"Pulsante nella barra del titolo (hidden)">
+<!ENTITY Ctr_appbutton2h	"Pulsante nella barra del titolo (nascosto)">
 <!ENTITY Ctr_appbutton2io	"Pulsante nella barra del titolo (solo icona)">
 <!ENTITY Ctr_paneluibtweak	"Pulsante pannello menu arancione nella barra delle schede">
 <!ENTITY Ctr_appbuttonc_o	"Pulsante arancione (predefinito)">
@@ -80,7 +80,7 @@
 <!ENTITY Ctr_appbuttonc_gr	"Pulsante grigio">
 <!ENTITY Ctr_appbuttonc_pu	"Pulsante viola">
 <!ENTITY Ctr_appbuttonc_wh	"Pulsante bianco">
-<!ENTITY Ctr_appbuttonc_cu	"Custom button color">
+<!ENTITY Ctr_appbuttonc_cu	"Colore personalizzato">
 <!ENTITY Ctr_appbuttonI1	"riavvio consigliato">
 <!ENTITY Ctr_appbuttonI1e	"non visibile nella barra del titolo di sistema">
 <!ENTITY Ctr_appbuttonI2	"Colorato solo nella barra del titolo e nella barra delle schede.">
@@ -88,32 +88,32 @@
 <!ENTITY Ctr_appbutmhi		"In cima a tutto (se nella barra delle schede)">
 <!ENTITY Ctr_appbutbdl		"Nascondi bordi e colori di sfondo">
 <!ENTITY Ctr_dblclclosefx	"Doppio clic per chiudere la finestra corrente">
-<!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
-<!ENTITY Ctr_appbutonclab	"Title">
-<!ENTITY Ctr_appbutonclab2	"Add title or leave empty">
+<!ENTITY Ctr_appbclmmenus	"Menu cliccabili interni al pulsante Menu (Nuova scheda, Stampa...)">
+<!ENTITY Ctr_appbutonclab	"Titolo">
+<!ENTITY Ctr_appbutonclab2	"Aggiungi titolo o lascia vuoto">
 
 <!ENTITY Ctr_ui				"Interfaccia base">
 <!ENTITY Ctr_nbiconsize0	"Imposta attributo alla barra di navigazione">
 <!ENTITY Ctr_smallnavbut	"Pulsanti piccoli nella barra di navigazione">
 <!ENTITY Ctr_bfurlbarfix	"Correggi la curvatura della barra degli indirizzi per i pulsanti Avanti e Indietro mobili e i pulsanti piccoli">
 <!ENTITY Ctr_backforward	"Pulsante Indietro/Avanti mobile">
-<!ENTITY Ctr_nbcompact		"Reduce navigation toolbars height">
+<!ENTITY Ctr_nbcompact		"Riduci l'altezza delle barre di navigazione">
 <!ENTITY Ctr_hide_bf_popup	"Nascondi la cronologia tenendo premuto il pulsante Avanti/Indietro mobile">
-<!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
-<!ENTITY Ctr_noconicons		"Replace page context menu icons with labels (back, forward, stop, reload, bookmark page)">
-<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
+<!ENTITY Ctr_bf_space		"Riduci lo spazio tra i pulsanti (se possibile)">
+<!ENTITY Ctr_noconicons		"Sostituisce le icone del menu contestuale con etichette (indietro, avanti, stop, ricarica, seganlibro)">
+<!ENTITY Ctr_svgfilters		"Colori SVG per le icone dei pulsanti della barra strumenti">
 <!ENTITY Ctr_wincontrols	"Angoli finestra mobili in modalità schermo intero">
 <!ENTITY Ctr_emptyfavicon2	"Sostituisci la favicon generica predefinita con un’icona a forma di foglio">
 <!ENTITY Ctr_mstatusbar		"Barra di stato mobile">
-<!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
-<!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
-<!ENTITY Ctr_mstatusbarpzt	"Status-bar panel is controlled by 'Puzzle Toolbars'">
-<!ENTITY Ctr_mstatusbarabr	"Status-bar panel is controlled by 'The Addon Bar (Restored)'">
+<!ENTITY Ctr_mstatusbars4e	"La barra di stato è controllata da 'Status-4-Evar'">
+<!ENTITY Ctr_mstatusbartpp	"La barra di stato è controllata da 'ThePuzzlePiece'">
+<!ENTITY Ctr_mstatusbarpzt	"La barra di stato è controllata da 'Puzzle Toolbars'">
+<!ENTITY Ctr_mstatusbarabr	"La barra di stato è controllata da 'The Addon Bar (Restored)'">
 <!ENTITY Ctr_combrelstop	"Unisci i pulsanti Stop e Ricarica">
 <!ENTITY Ctr_stoprel1		"Importante: disporre il pulsante Ricarica a destra del pulsante Stop!">
 <!ENTITY Ctr_panelmenucol	"Colore di sfondo alternativo per i menu">
 <!ENTITY Ctr_hideprivmask	"Nascondi indicatore modalità di Navigazione anonima">
-<!ENTITY Ctr_nbisizedelay	"ms delay in execution (1000 ms = 1 sec)">
+<!ENTITY Ctr_nbisizedelay	"ritardo esecuzione in ms (1000 ms = 1 sec)">
 <!ENTITY Ctr_findbar		"Barra di ricerca nel testo">
 <!ENTITY Ctr_findbar_def	"Posizione predefinita">
 <!ENTITY Ctr_findbar_top	"In alto">
@@ -123,23 +123,23 @@
 <!ENTITY Ctr_nav_txt_ico1	"Utilizza icone grandi">
 <!ENTITY Ctr_nav_txt_ico2	"Utilizza icone e testo">
 <!ENTITY Ctr_nav_txt_ico3	"Utilizza solo testo">
-<!ENTITY Ctr_nav_txt_exp	"Experimental attributes:">
-<!ENTITY Ctr_iat_notf_vt	"Exclude vertical toolbars">
+<!ENTITY Ctr_nav_txt_exp	"Attributi sperimentali:">
+<!ENTITY Ctr_iat_notf_vt	"Escludi le barre degli strumenti verticali">
 <!ENTITY Ctr_cpanelmenus	"Pannello menu unificato (Segnalibri, Cronologia, ecc..)">
 <!ENTITY Ctr_hidezoomres	"Nascondi il pulsante per ripristinare il livello di zoom dalla barra degli strumenti">
-<!ENTITY Ctr_alt_newtabp	"New tab page: alternative appearance">
-<!ENTITY Ctr_noresizerxp	"Hide Resizer (Windows XP)">
-<!ENTITY Ctr_pmhidelabels	"Mostra solo icone nel pannello menu">
+<!ENTITY Ctr_alt_newtabp	"Nuova scheda: aspetto alternativo">
+<!ENTITY Ctr_noresizerxp	"Nascondi il ridimensionatore (Windows XP)">
+<!ENTITY Ctr_pmhidelabels	"Mostra solo le icone nel pannello menu">
 <!ENTITY Ctr_menupopupscr	"Utilizza barra di scorrimento al posto delle frecce nei menu di popup">
 
 <!ENTITY Ctr_fxmockup		"Mockup">
 <!ENTITY Ctr_tabmokcolor	"Utilizza il colore bianco per i pulsanti delle schede (Chiudi, Nuova, Gruppi, Mostra tutte)">
 <!ENTITY Ctr_tabmokcolor2	"Utilizza testo bianco con ombreggiatura scura nelle schede non attive">
 <!ENTITY Ctr_tabmokcolor3	"Utilizza separatori bianchi nella barra delle schede">
-<!ENTITY Ctr_tabmokcolor4	"White color for empty dotted tab favicon">
+<!ENTITY Ctr_tabmokcolor4	"Colore bianco per la favicon punteggiata vuota">
 
-<!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
-<!ENTITY Ctr_navthrobber2	"Add url or leave empty">
+<!ENTITY Ctr_navthrobber1	"Cliccando l'indicatore di attività si apre l'url specificato:">
+<!ENTITY Ctr_navthrobber2	"Aggiungi url o lascia vuoto">
 
 <!ENTITY Ctr_tab_tf_info1	"È possibile usare nomi di colori (in inglese), valori esadecimali e i formati rgb(a) e hsl(a).">
 <!ENTITY Ctr_tab_tf_info2	"Nessuna validazione dell’input.">
@@ -161,15 +161,15 @@
 <!ENTITY Ctr_ntabhov		"Nuova scheda al passaggio del mouse">
 <!ENTITY Ctr_bold			"Grassetto">
 <!ENTITY Ctr_italic			"Corsivo">
-<!ENTITY Ctr_notabhov		"Enabled settings override 'hovered' settings">
+<!ENTITY Ctr_notabhov		"Le impostazioni attivate prevalgono sulle impostazioni 'al volo'">
 <!ENTITY Ctr_tabc_act_tb	"Background color on toolbars">
 
-<!ENTITY Ctr_urlbar			"Urlbar">
+<!ENTITY Ctr_urlbar			"Barra degli indirizzi">
 <!ENTITY Ctr_starinurl		"Stella nella barra degli indirizzi">
-<!ENTITY Ctr_feedinurl		"Feed-button in urlbar">
+<!ENTITY Ctr_feedinurl		"Pulsante dei feed nella barra degli indirizzi">
 <!ENTITY Ctr_hideurelstop	"Nascondi pulsanti Stop e Ricarica nella barra degli indirizzi">
-<!ENTITY Ctr_urlbardropm	"Move dropmarker to urlbars end">
-<!ENTITY Ctr_hideprbutton	"Hide notification icon when a popup gets blocked">
+<!ENTITY Ctr_urlbardropm	"Sposta il pulsante Avanti/Indietro all'estremità della barra degli indirizzi">
+<!ENTITY Ctr_hideprbutton	"Nascondi l'icona di notifica quando un popup viene bloccato">
 <!ENTITY Ctr_urlbar_ib		"Site Identity Button (identity box)">
 <!ENTITY Ctr_verifiedcolors	"Indicatore connessioni sicure blu o verde per i siti verificati">
 <!ENTITY Ctr_faviconurl		"Favicon nella barra degli indirizzi">
@@ -178,52 +178,52 @@
 <!ENTITY Ctr_padlock_cla	"Lucchetto (classico)">
 <!ENTITY Ctr_padlock_mod	"Lucchetto (moderno)">
 <!ENTITY Ctr_padlock_ext	"Icone connessioni sicure">
-<!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
+<!ENTITY Ctr_icopageinfo	"Il clic sull'icona apre le 'Informazioni sulla pagina'">
 
-<!ENTITY Ctr_menubar_items	"Menu items position">
-<!ENTITY Ctr_extrabar		"Additional Toolbars">
-<!ENTITY Ctr_extrabar0		"Additional Toolbar(s)">
+<!ENTITY Ctr_menubar_items	"Posizione delle voci del menu">
+<!ENTITY Ctr_extrabar		"Barre degli strumenti aggiuntive">
+<!ENTITY Ctr_extrabar0		"Barre degli strumenti aggiuntive">
 <!ENTITY Ctr_extrabar1		"Barra degli strumenti aggiuntiva">
-<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
+<!ENTITY Ctr_extrabarinfo	"La commutazione tra la modalità 'schede in alto' e 'schede in basso' altera in modo casuale l'ordine delle barre degli strumenti aggiuntive. Si deve riavviare Firefox per risolvere questo problema.">
 
 <!ENTITY Ctr_invicons		"Icone invertite">
 <!ENTITY Ctr_menubar		"Barra dei menu">
 <!ENTITY Ctr_tabstoolbar	"Barra delle schede">
 <!ENTITY Ctr_navbar			"Barra di navigazione">
 <!ENTITY Ctr_bookbar		"Barra dei segnalibri">
-<!ENTITY Ctr_notoolbar		"Hidden (do not show menu items)">
+<!ENTITY Ctr_notoolbar		"Nascondi (non mostrare le voci del menu)">
 
-<!ENTITY Ctr_mbarforceleft	"First element">
-<!ENTITY Ctr_mbarforceright	"Last element">
+<!ENTITY Ctr_mbarforceleft	"Primo elemento">
+<!ENTITY Ctr_mbarforceright	"Ultimo elemento">
 
 <!ENTITY Ctr_toolbars		"Barra degli strumenti">
 <!ENTITY Ctr_dblclnewtab	"Doppio clic del mouse per aprire una nuova scheda">
 <!ENTITY Ctr_hidetbwot		"Nascondi la barra delle schede quando è aperta una sola scheda">
-<!ENTITY Ctr_hidetbwote		"Reduce hiding delay on startup">
+<!ENTITY Ctr_hidetbwote		"Riduci il ritardo di scomparsa all'avvio">
 <!ENTITY Ctr_notabfog		"Disattiva l’effetto nebbia (Windows AeroGlass e Win8)">
 <!ENTITY Ctr_notabbg		"Rimuovi colore di sfondo (Windows AeroGlass e Win8)">
 <!ENTITY Ctr_hightabpos		"Quando possibile, riduci lo spazio sopra">
 <!ENTITY Ctr_alttabstb		"Colore di sfondo alternativo">
-<!ENTITY Ctr_alttabstb2		"In maximized mode (tabs on top)">
+<!ENTITY Ctr_alttabstb2		"Nella finestra ingrandita (schede in alto)">
 
 <!ENTITY Ctr_altmenubar		"Aggiungi colore di sfondo (Barra del titolo di sistema)">
 <!ENTITY Ctr_altmenubarpos	"Posizione alternativa (sotto la barra del titolo)">
 <!ENTITY Ctr_menubarnofog	"Elimina l’effetto nebbia o il colore di sfondo (Windows AeroGlass e Windows 8)">
 
-<!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
-<!ENTITY Ctr_hidenavbar		"Nascondi barra di navigazione">
+<!ENTITY Ctr_aerocolors		"Colori Blue Aero per le barre degli strumenti e le schede principali">
+<!ENTITY Ctr_hidenavbar		"Nascondi la barra di navigazione">
 <!ENTITY Ctr_nobookbarbg	"Rimuovi colore di sfondo dalla barra dei segnalibri">
 <!ENTITY Ctr_nonavbarbg		"Rimuovi colore di sfondo dalla barra di navigazione">
-<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
+<!ENTITY Ctr_nonavbarbg1	"Ha effetto sulle barre di questo componente aggiuntivo e su altre barre in alto.">
 <!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
 <!ENTITY Ctr_nonavborder	"Aggiungi bordo superiore alla barra dei segnalibri">
 <!ENTITY Ctr_nonavtbborder	"Rimuovi i bordi alle barre degli strumenti posizionate in alto">
-<!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
-<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('chevron') at toolbars end">
+<!ENTITY Ctr_hidesbclose	"Barre laterali: nascondi il pulsante di chiusura della barra laterale">
+<!ENTITY Ctr_chevronfix		"Barra di navigazione: nascondi la doppia freccia ('chevron') all'estremità delle barre">
 
-<!ENTITY Ctr_closeabarbut	"Nascondi pulsante di chiusura">
+<!ENTITY Ctr_closeabarbut	"Nascondi il pulsante di chiusura">
 <!ENTITY Ctr_highaddonsbar	"Aumenta l’altezza">
-<!ENTITY Ctr_addonbarfs		"In fullscreen mode">
+<!ENTITY Ctr_addonbarfs		"In modalità tutto schermo">
 
 <!ENTITY Ctr_animation		"Icone animate">
 <!ENTITY Ctr_throbberalt	"Throbber di caricamento scheda alternativo">
@@ -235,19 +235,19 @@
 <!ENTITY Ctr_toolsitem		"Aggiungi voci al menu Strumenti">
 <!ENTITY Ctr_appmenuitem	"Aggiungi voci nel menu del pulsante app">
 <!ENTITY Ctr_contextitem	"Voci nel menu contestuale delle barre degli strumenti">
-<!ENTITY Ctr_puictrbutton	"Button in main panel menu">
+<!ENTITY Ctr_puictrbutton	"Pulsante nel pannello del menu principale">
 
-<!ENTITY Ctr_otherctroptns	"Other settings">
+<!ENTITY Ctr_otherctroptns	"Altre impostazioni">
 <!ENTITY Ctr_cuibotbuttons	"Aggiungi pulsanti in modalità personalizzazione">
-<!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
-<!ENTITY Ctr_nodevtheme		"Prevent 'Developer Theme' from being enabled">
+<!ENTITY Ctr_bookmarkoinpw	"Voce 'Apri in una nuova finestra anonima' nel menu contestuale dei segnlibri">
+<!ENTITY Ctr_nodevtheme		"Impedisci l'attivazione del 'Developer Theme'">
 
-<!ENTITY Ctr_experttweaks	"Advanced">
-<!ENTITY Ctr_fx33layers		"Firefox 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
-<!ENTITY Ctr_fx34search		"Firefox 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
-<!ENTITY Ctr_fx35devtheme	"Firefox 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
-<!ENTITY Ctr_fx36prefs		"Firefox 36+ introduced preferences in a tab. Unchecking this preference restores the old preference window.">
+<!ENTITY Ctr_experttweaks	"Avanzate">
+<!ENTITY Ctr_fx33layers		"Firefox 33+ ha introdotto nuove funzioni di rendering che sono responsabili del blocco delle schede in alcuni sistemi. Deselezionare questa opzione per risolvere il problema.">
+<!ENTITY Ctr_fx34search		"Firefox 34+ ha introdotto una nuova barra di ricerca. Deselezionare questa opzione per ripristinare la barra precedente.">
+<!ENTITY Ctr_fx34loop		"Firefox 34+ ha introdotto le funzioni di chiamata e conversazione. Deselezionare questa opzione per rimuoverle.">
+<!ENTITY Ctr_fx35devtheme	"Firefox 35+ ha introdotto un nuovo 'developer theme'. Deselezionare questa opzione per disattivare il 'developer theme' e il suo pulsante nella modalità di personalizzazione.">
+<!ENTITY Ctr_fx36prefs		"Firefox 36+ ha introdotto le preferenze in una scheda. Deselezionare questa opzione per ripristinare la finestra delle preferenze classica.">
 
 
 <!ENTITY Ctr_pw_settings	"Impostazioni">
@@ -264,6 +264,6 @@
 <!ENTITY Ctr_newversion		"È disponibile una nuova versione?">
 
 <!ENTITY Ctr_addon-bar.accesskey	"B">
-<!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
+<!ENTITY Ctr_openInPrivateWindow	"Apri in una nuova finestra anonima">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
-<!ENTITY appMenuGettingStarted.label	"Getting started">
+<!ENTITY appMenuGettingStarted.label	"Inizio">

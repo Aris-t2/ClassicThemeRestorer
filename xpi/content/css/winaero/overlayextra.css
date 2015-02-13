@@ -325,7 +325,17 @@
     #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
       -moz-box-align: center !important;
     }
+	
+	/**/
+	@media all and (-moz-windows-theme:aero) {
+	  #main-window[defaultfxtheme="true"] #ctraddon_urlextrabar:not(:-moz-lwtheme) {
+		background-color: #dbeaf9;
+	  }
+	}
 
+	  #main-window[defaultfxtheme="true"] #ctraddon_urlextrabar:not(:-moz-lwtheme) {
+		border-bottom: 1px solid rgba(0,0,0,.15) !important;
+	  }
 }
 
 .ctraddon_nonwindows,

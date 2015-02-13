@@ -751,22 +751,22 @@ classicthemerestorerjso.ctr = {
 
 	let preferenceArray = [];
 		 
-	//Add filter header
+	// Add filter header
 	preferenceArray.push("CTR_Preferences__DO_NOT_EDIT__'='->booleans__':'->strings__'~'->integers");	
 
-		//Preference Filter all preferences we don't want to export\import..
+		// Exclude all preferences we don't want to export/import.
 		let blacklist = [
 		  "extensions.classicthemerestorer.pref_actindx",
 		  "extensions.classicthemerestorer.pref_actindx2",
 		  "extensions.classicthemerestorer.ctrreset"
 		];
 
-	//Filter preference type and return its value.
+	// Filter preference type and return its value.
 	function prefValue(pref){
 
 	  switch (Services.prefs.getPrefType(pref)){
 		case 32:	return Services.prefs.getCharPref(pref);	break;
-		case 64:	return Services.prefs.getIntPref(pref);	break;
+		case 64:	return Services.prefs.getIntPref(pref);		break;
 		case 128:	return Services.prefs.getBoolPref(pref);	break;	
 	  }
 
@@ -786,29 +786,29 @@ classicthemerestorerjso.ctr = {
 	for (var i=0; i < preflist.length; i++) {
 
 	  try {
-		//Run Blacklist filter, Here we filter out all preferences we don't want exported|imported.
+		// Run Blacklist filter. Exclude all preferences we don't want to export/import.
 		var index = preflist.indexOf(blacklist[i]);
 
 		if (index > -1) {
 		  preflist.splice(index, 1);
 		}
 
-		//Filter extensions.classicthemerestorer.
+		// Filter extensions.classicthemerestorer.*
 		var sliceNdice = preflist[i].replace("extensions.classicthemerestorer.", "");
 		
-		//Populate array	
+		// Populate array	
 		preferenceArray.push(
 		  sliceNdice+prefType(preflist[i])+prefValue(preflist[i]) 
 		);
 
 	  } catch(e) {
-		//Catch any nasty errors and output to dialogue
+		// Report errors to console
 		Components.utils.reportError(e);
 	  }
 
 	}	  
 	  
-	//Use new less bulky export for text.
+	// Use new less bulky export for text.
 	saveToFile(preferenceArray);
 	  
 	function saveToFile(patterns) {
@@ -944,12 +944,12 @@ classicthemerestorerjso.ctr = {
 		}
 
 	  } catch(e) {
-		//Catch any nasty errors and output to dialogue
+		// Report errors to console
 		Components.utils.reportError(e);
 	  }
 	}	
 
-	//Need to check if json is valid, If json not valid don't continue and show error.
+	// Need to check if json is valid. If json not valid. don't continue and show error.
 	function IsJsonValid(text) {
 
 	  try { JSON.parse(text); }
@@ -1004,7 +1004,7 @@ classicthemerestorerjso.ctr = {
 	  value: []
 	};
 
-	//Preference Filter all preferences we don't want to export\import..
+	// Exclude all preferences we don't want to export/import.
 	let blacklist = [
 	  "extensions.classicthemerestorer.pref_actindx",
 	  "extensions.classicthemerestorer.pref_actindx2",
@@ -1015,7 +1015,7 @@ classicthemerestorerjso.ctr = {
 
 	  switch (Services.prefs.getPrefType(pref)){
 		case 32:	return Services.prefs.getCharPref(pref);	break;
-		case 64:	return Services.prefs.getIntPref(pref);	break;
+		case 64:	return Services.prefs.getIntPref(pref);		break;
 		case 128:	return Services.prefs.getBoolPref(pref);	break;	
 	  }
 
@@ -1024,7 +1024,7 @@ classicthemerestorerjso.ctr = {
 	for (var i=0; i < preflist.length; i++) {
 
 	  try {
-		//Run Blacklist filter, Here we filter out all preferences we don't want exported|imported.
+		// 'Blacklist' filter. Exclude all preferences we don't want to export/import.
 		var index = preflist.indexOf(blacklist[i]);
 
 		if (index > -1) {
@@ -1037,7 +1037,7 @@ classicthemerestorerjso.ctr = {
 		});
 
 	  } catch(e) {
-		//Catch any nasty errors and output to dialogue
+		// Report errors to console
 		Components.utils.reportError(e);
 	  }
 
