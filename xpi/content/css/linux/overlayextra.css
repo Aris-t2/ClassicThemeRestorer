@@ -105,6 +105,30 @@
 	#ctraddon_addon-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button .toolbarbutton-icon  {
       margin:-2px 0 !important;
 	}
+	
+	/* extraurlbar close button */
+	#ctraddon_extraurlbar-close	{
+	  -moz-image-region: rect(0, 64px, 16px, 48px);
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png");
+	}
+	
+	#main-window:-moz-lwtheme-brighttext #ctraddon_extraurlbar-close{
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/close2.png");
+	}
+
+	#ctraddon_extraurlbar-close:hover,
+	#ctraddon_extraurlbar-close:hover[selected="true"] {
+	  -moz-image-region: rect(0, 32px, 16px, 16px);
+	}
+
+	#ctraddon_extraurlbar-close:hover:active,
+	#ctraddon_extraurlbar-close:hover:active[selected="true"] {
+	  -moz-image-region: rect(0, 48px, 16px, 32px);
+	}
+
+	#ctraddon_extraurlbar-close[selected="true"] {
+	  -moz-image-region: rect(0, 16px, 16px, 0);
+	}
 
 }
 

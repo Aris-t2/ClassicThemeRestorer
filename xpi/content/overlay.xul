@@ -33,7 +33,6 @@
 	
 	<keyset id="mainKeyset">
 	  <key id="ctraddon_key_toggleCtrAddonBar" command="CtrExtension:ToggleCtrAddonBar" key="/" modifiers="accel"/>
-	  <key id="ctraddon_key_toggleCtrUrlExtraBar" command="CtrExtension:ToggleUrlExtraBar" key="w" modifiers="alt"/>
 	</keyset>
  
 	<!--### add new buttons to customizing area ###-->
@@ -92,18 +91,19 @@
 	
 	<vbox id="appcontent">
 
-		  <hbox id="ctraddon_urlextrabar" insertbefore="content" key="key_toggleCtrUrlExtraBar" collapsed="true">
-			<textbox id="ctraddon_extraurlbar_tb" flex="1" type="autocomplete"
-					  completeselectedindex="true"
-					  autocompletesearch="urlinline history"
-					  enablehistory="true"
-					  class="uri-element"
-					  onkeydown="if(event.keyCode == '13') {gBrowser.selectedTab=gBrowser.addTab(this.value); document.getElementById('ctraddon_urlextrabar').setAttribute('collapsed',true);}"/>
-			  <button id="extraurlbar_button" removable="false" class="toolbarbutton-1" label="Open"
-						oncommand="gBrowser.selectedTab=gBrowser.addTab(document.getElementById('ctraddon_extraurlbar_tb').value); document.getElementById('ctraddon_urlextrabar').setAttribute('collapsed',true);"/>
-			  <button id="ctraddon_extraurlbar-close" removable="false" class="close-icon"
-				    oncommand="classicthemerestorerjs.ctr.toggleCtrUrlExtraBar();"/>
-		  </hbox>
+	  <hbox id="ctraddon_urlextrabar" insertbefore="content" collapsed="true">
+		<textbox id="ctraddon_extraurlbar_tb" flex="1" type="autocomplete"
+				  completeselectedindex="true"
+				  placeholder="&urlbar.placeholder2;"
+				  autocompletesearch="urlinline history"
+				  enablehistory="true"
+				  class="uri-element"
+				  onkeydown="if(event.keyCode == '13') {gBrowser.selectedTab=gBrowser.addTab(this.value); document.getElementById('ctraddon_urlextrabar').setAttribute('collapsed',true);}"/>
+		  <button id="ctr_extraurlbar_button" removable="false" class="toolbarbutton-1"
+					oncommand="gBrowser.selectedTab=gBrowser.addTab(document.getElementById('ctraddon_extraurlbar_tb').value); document.getElementById('ctraddon_urlextrabar').setAttribute('collapsed',true);"/>
+		  <button id="ctraddon_extraurlbar-close" removable="false" class="ctr_extraurlbar_button-close close-icon"
+			    oncommand="classicthemerestorerjs.ctr.toggleCtrUrlExtraBar();"/>
+	  </hbox>
 
 	</vbox>
 	

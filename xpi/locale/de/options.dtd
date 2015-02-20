@@ -35,8 +35,8 @@
 <!ENTITY Ctr_tabsontop1		"Tabs oben --- '[tabsontop=true]' Attribut gesetzt">
 <!ENTITY Ctr_tabsontop2		"Tabs unten (v1) --- '[tabsontop=false]' Attribut gesetzt">
 <!ENTITY Ctr_tabsontop3		"Tabs unten (v2) --- '[tabsontop=false]' Attribut gesetzt">
-<!ENTITY Ctr_tabsontopW1	"v2 ist nur für einige Add-ons und vollständige Themen gedacht!">
-<!ENTITY Ctr_tabsontopI1	"Setzt Attribut [tabsontop=true/false] für">
+<!ENTITY Ctr_tabsontopW1	"v2 ist nur für einige Add-ons und vollständige Themen sinnvoll!">
+<!ENTITY Ctr_tabsontopI1	"[tabsontop=true/false] Attribut wird gesetzt für">
 <!ENTITY Ctr_tabsintitlebar	"Firefox Titelleiste (about:config Einstellung)">
 <!ENTITY Ctr_tabwidthdef	"(Standard)">
 <!ENTITY Ctr_tabwidthcla	"(klassisch)">
@@ -69,7 +69,7 @@
 <!ENTITY Ctr_appbutton2		"Auf der Firefox Titelleiste">
 <!ENTITY Ctr_appbutton2h	"Auf der Firefox Titelleiste (versteckt)">
 <!ENTITY Ctr_appbutton2io	"Auf der Firefox Titelleiste (nur Symbol)">
-<!ENTITY Ctr_paneluibtweak	"Orangene Menüschaltfläche auf der Tableiste">
+<!ENTITY Ctr_paneluibtweak	"Orange Menüschaltfläche auf der Tableiste">
 <!ENTITY Ctr_appbuttonc_o	"Farbe: orange (Standard)">
 <!ENTITY Ctr_appbuttonc_a	"Farbe: blau (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Farbe: schwarz (Nightly)">
@@ -88,7 +88,7 @@
 <!ENTITY Ctr_appbutmhi		"Höhere Position (wenn auf der Tableiste)">
 <!ENTITY Ctr_appbutbdl		"Entferne Ränder und Hintergrundfarbe">
 <!ENTITY Ctr_dblclclosefx	"Doppelklick schließt aktuelles Fenster">
-<!ENTITY Ctr_appbclmmenus	"Klickbare Menüs im Firefox-Menü (Neuer Tab, Drucken...)">
+<!ENTITY Ctr_appbclmmenus	"Klickbare Menüs im 'Firefox-Menü' (Neuer Tab, Drucken...)">
 <!ENTITY Ctr_appbutonclab	"Titel">
 <!ENTITY Ctr_appbutonclab2	"Titel eintragen oder leer lassen">
 
@@ -101,7 +101,7 @@
 <!ENTITY Ctr_hide_bf_popup	"Verstecke Chronik-Aufklappmenü bei gedrückter Maustaste">
 <!ENTITY Ctr_bf_space		"Reduziere Zwischenraum (falls möglich)">
 <!ENTITY Ctr_noconicons		"Seitenkontextmenü: ersetze Symbole durch Namen (Zurück, Vor...)">
-<!ENTITY Ctr_svgfilters		"SVG Farben für Symbole von Standard-Schaltflächen">
+<!ENTITY Ctr_svgfilters		"SVG Farben für Symbole von 'Standard-Schaltflächen'">
 <!ENTITY Ctr_wincontrols	"Verschiebbare Fenster-Schaltflächen im Vollbild-Modus">
 <!ENTITY Ctr_emptyfavicon2	"Leeres Lesezeichensymbol durch Papierblattsymbol ersetzen">
 <!ENTITY Ctr_mstatusbar		"Statusbereich: sichtbar und verschiebbar">
@@ -112,7 +112,7 @@
 <!ENTITY Ctr_combrelstop	"'Stopp' &amp; 'Neu laden': kombiniere Leistenschaltflächen">
 <!ENTITY Ctr_stoprel1		"Reihenfolge beachten: 'Stopp' muss vor 'Neu laden' sein!">
 <!ENTITY Ctr_panelmenucol	"Alternative Hintergrundfarbe für das 'Panel-Aufklappmenü'">
-<!ENTITY Ctr_hideprivmask	"Privater Modus: entferne 'Masken-Symbole' von den Leisten">
+<!ENTITY Ctr_hideprivmask	"Privater Modus: keine 'Masken-Symbole' auf Leisten anzeigen">
 <!ENTITY Ctr_nbisizedelay	"ms Ausführungsverzögerung (1000 ms = 1 Sekunde)">
 <!ENTITY Ctr_findbar		"Position der Suchleiste">
 <!ENTITY Ctr_findbar_def	"Unten (Standard)">
@@ -129,6 +129,7 @@
 <!ENTITY Ctr_hidezoomres	"Zoom-Schaltflächen auf Leisten: verstecke Schaltfläche 'Normalgröße'">
 <!ENTITY Ctr_alt_newtabp	"Seite 'Neuer Tab': alternative Darstellung">
 <!ENTITY Ctr_noresizerxp	"'Resizer' verstecken (Windows XP/2000)">
+<!ENTITY Ctr_extraurlkeycb	"Öffne weitere Adressleiste (Cmd/Strg+">
 <!ENTITY Ctr_pmhidelabels	"Menüschaltflächen-Aufklappmenü: verstecke Schaltflächen-Text">
 <!ENTITY Ctr_menupopupscr	"Aufklappmenüs: ersetze Navigationspfeile durch Bildlaufleisten">
 
@@ -136,13 +137,13 @@
 <!ENTITY Ctr_tabmokcolor	"Weiße Schaltflächen (Neu, Schließen, Gruppen, Listen)">
 <!ENTITY Ctr_tabmokcolor2	"Weißer Tabtext und dunkler Schatten für nicht aktive Tabs">
 <!ENTITY Ctr_tabmokcolor3	"Weiße Trennlinien zwischen den Tabs">
-<!ENTITY Ctr_tabmokcolor4	"Weißes leeres Lesezeichensymbol auf Tabs">
+<!ENTITY Ctr_tabmokcolor4	"Weißes leeres Lesezeichensymbol für Tabs">
 
 <!ENTITY Ctr_navthrobber1	"Ein Klick auf die Aktivitätsanzeige öffnet folgende Adresse:">
 <!ENTITY Ctr_navthrobber2	"Adresse eintragen oder leer lassen">
 
 <!ENTITY Ctr_tab_tf_info1	"Textfelder akzeptieren Farbnamen sowie RGB(A), HSL(A) und hexadezimale Eingaben.">
-<!ENTITY Ctr_tab_tf_info2	"Eingegebene Werte werden nicht überprüft!">
+<!ENTITY Ctr_tab_tf_info2	"Eingegebene Werte werden nicht auf Korrektheit überprüft!">
 <!ENTITY Ctr_tabact_t		"aktiv">
 <!ENTITY Ctr_tabhov_t		"hover">
 <!ENTITY Ctr_tabnor_t		"normal">
@@ -184,7 +185,7 @@
 <!ENTITY Ctr_extrabar		"Extraleisten">
 <!ENTITY Ctr_extrabar0		"Extraleiste(n)">
 <!ENTITY Ctr_extrabar1		"Extraleiste">
-<!ENTITY Ctr_extrabarinfo	"Der Wechsel zwischen 'Tabs oben' und 'Tabs unten' kann die Reihenfolge der Extraleisten zufällig ändern. Ein Firefox-Neustart stellt die richtige Reihenfolge wieder her.">
+<!ENTITY Ctr_extrabarinfo	"Der Wechsel zwischen 'Tabs oben' und 'Tabs unten' kann die Reihenfolge der Extraleisten ändern. Ein Firefox-Neustart stellt die richtige Reihenfolge wieder her.">
 
 <!ENTITY Ctr_invicons		"Invertierte Symbole">
 <!ENTITY Ctr_menubar		"Menüleiste">
@@ -214,10 +215,10 @@
 <!ENTITY Ctr_hidenavbar		"Navigationsleiste verstecken">
 <!ENTITY Ctr_nobookbarbg	"Lesezeichenleiste: Hintergrundfarbe entfernen">
 <!ENTITY Ctr_nonavbarbg		"Navigationsleiste: Hintergrundfarbe entfernen">
-<!ENTITY Ctr_nonavbarbg1	"Einstellung hat Auswirkung auf alle Extraleisten und andere obere Leisten.">
+<!ENTITY Ctr_nonavbarbg1	"Einstellung hat Auswirkung auf alle Extraleisten und 'andere' obere Leisten.">
 <!ENTITY Ctr_nonavbarbg2	"Einstellung hat Auswirkung auf alle Leisten in der 'Slim'-Darstellung der Erweiterung 'The Fox, only better'.">
-<!ENTITY Ctr_nonavborder	"Lesezeichenleiste: Oberen Rand hinzufügen">
-<!ENTITY Ctr_nonavtbborder	"Obere Leisten: Ränder entfernen">
+<!ENTITY Ctr_nonavborder	"Lesezeichenleiste: Oberen Leistenrand anzeigen">
+<!ENTITY Ctr_nonavtbborder	"Obere Leisten: Leistenränder nicht anzeigen">
 <!ENTITY Ctr_hidesbclose	"Seitenleisten: Verstecke 'Schließen'-Schaltfläche">
 <!ENTITY Ctr_chevronfix		"Navigationsleiste: Doppelpfeil am Ende der Leiste nicht anzeigen">
 
@@ -243,11 +244,11 @@
 <!ENTITY Ctr_nodevtheme		"Verhindere die Aktivierung des 'Entwickler Themas'">
 
 <!ENTITY Ctr_experttweaks	"Erweitert">
-<!ENTITY Ctr_fx33layers		"Mit Firefox 33+ wurden neue 'Render-Funktionen' eingeführt, die zurzeit für 'nicht reagierende und einfrierende Tabs' auf einigen Systemen sorgen. Das Deaktivieren dieser Option löst das Problem.">
+<!ENTITY Ctr_fx33layers		"Mit Firefox 33+ wurden neue 'Render-Funktionen' eingeführt, die zurzeit für 'nicht reagierende und einfrierende Tabs' auf einigen Systemen sorgen. Das Deaktivieren dieser Option kann das Problem lösen.">
 <!ENTITY Ctr_fx34search		"Mit Firefox 34+ wurde eine neue 'Suchoberfläche' eingeführt. Das Deaktivieren dieser Option stellt die 'alte Suchoberfläche' wieder her.">
 <!ENTITY Ctr_fx34loop		"Mit Firefox 34+ wurden 'Anruf- und Konversations-Funktionen' eingeführt. Das Deaktivieren dieser Option entfernt diese Funktionen.">
-<!ENTITY Ctr_fx35devtheme	"Mit Firefox 35+ wurde ein neues 'Entwickler-Thema' eingeführt. Das Deaktivieren dieser Optionen enfernt es und die zugehörige Schaltfläche im 'Anpassen' Modus.">
-<!ENTITY Ctr_fx36prefs		"Mit Firefox 36+ wurden 'Einstellungen im Tab' eingeführt. Das Deaktivieren dieser Option stellt das alte Einstellungsfenster wieder her.">
+<!ENTITY Ctr_fx35devtheme	"Mit Firefox 35+ wurde ein neues 'Entwickler-Thema' eingeführt. Das Deaktivieren dieser Optionen stellt das 'Standard-Thema' wieder her und entfernt die zugehörige Schaltfläche im Modus 'Anpassen'.">
+<!ENTITY Ctr_fx36prefs		"Mit Firefox 36+ wurden 'Einstellungen im Tab' eingeführt. Das Deaktivieren dieser Option stellt das 'alte' Einstellungsfenster wieder her.">
 
 
 <!ENTITY Ctr_pw_settings	"Einstellungen">
@@ -267,3 +268,8 @@
 <!ENTITY Ctr_openInPrivateWindow	"In neuem privaten Fenster öffnen">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
 <!ENTITY appMenuGettingStarted.label	"Erste Schritte">
+
+<!-- Fallback entities. Leave empty! -->
+<!ENTITY openCmd.commandkey			"">
+<!ENTITY urlbar.accesskey			"">
+<!ENTITY urlbar.placeholder2		"">

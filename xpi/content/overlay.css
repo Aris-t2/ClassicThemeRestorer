@@ -452,9 +452,14 @@
 	}
 	
 	/* CTRs additional urlbar */
-	#extraurlbar_button {
-	  -moz-appearance: toolbarbutton !important;
+	#ctr_extraurlbar_button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/extraulbar_go.png");
+	  opacity: 0.8;
 	}
+	#ctr_extraurlbar_button:hover {
+	  opacity: 1.0;
+	}
+	#ctr_extraurlbar_button,
 	#ctraddon_extraurlbar-close{
 	  -moz-appearance: none !important;
 	  background: none !important;

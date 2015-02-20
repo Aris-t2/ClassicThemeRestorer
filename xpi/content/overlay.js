@@ -108,7 +108,7 @@ classicthemerestorerjs.ctr = {
 		document.getElementById("main-window").setAttribute('ctraddon_version',addon.version);
 	  } catch(e){}
 	});
-	
+
 	// CTRs appbutton for Windows titlebar
 	this.createTitlebarButton();
 	
@@ -129,6 +129,9 @@ classicthemerestorerjs.ctr = {
 	
 	// style CTRs 'customize-ui' option buttons
 	this.loadUnloadCSS('cui_buttons',true);
+	
+	// CTRs extra add-on bar keys
+	this.CTRextraLocationBarKeyset();
 
 	// CTR Preferences listener
 	function PrefListener(branch_name, callback) {
@@ -2022,6 +2025,22 @@ classicthemerestorerjs.ctr = {
 			this.prefs.setCharPref('nav_txt_ico','icons');
 		}
 	}
+  },
+  
+  // CTRs extra add-on bar keys
+  CTRextraLocationBarKeyset: function() {
+	setTimeout(function(){
+	  try{
+		if(classicthemerestorerjs.ctr.prefs.getBoolPref('extraurlkeycb')) {
+		  document.getElementById("focusURLBar").setAttribute("command",'CtrExtension:ToggleUrlExtraBar');
+		}
+	  } catch(e){}
+	  try{
+		if(classicthemerestorerjs.ctr.prefs.getBoolPref('extraurlkeycb')) {
+		  document.getElementById("focusURLBar2").setAttribute("command",'CtrExtension:ToggleUrlExtraBar');
+		}
+	  } catch(e){}
+	},1000);
   },
   
   updateTabWidth: function() {
