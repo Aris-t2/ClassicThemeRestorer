@@ -341,6 +341,16 @@ classicthemerestorerjs.ctr = {
 			classicthemerestorerjs.ctr.loadUnloadCSS('cui_buttons',true);
 			
 		  break;
+
+		  case "personanoshadow":
+			try {
+					if (branch.getBoolPref("personanoshadow")){
+							classicthemerestorerjs.ctr.loadUnloadCSS("persona_no_shadow",true);
+					} else {
+						classicthemerestorerjs.ctr.loadUnloadCSS("persona_no_shadow",false);
+					}	
+				} catch(e){}		  
+		  break;
 		  
 		  case "ctabheightcb":
 			if (branch.getBoolPref("ctabheightcb")) classicthemerestorerjs.ctr.loadUnloadCSS("ctabheight",true);
@@ -2542,6 +2552,7 @@ classicthemerestorerjs.ctr = {
 		case "bmarkoinpw":			manageCSS("ctraddon_bmark_oinpw.css");	break;
 		
 		case "spaces_extra": 		manageCSS("spaces_extra.css");			break;
+		case "persona_no_shadow": 		manageCSS("personanoshadow.css");	break;
 		
 		case "thirdpartythemes": 	manageCSS("thirdpartythemes.css");		break;
 		

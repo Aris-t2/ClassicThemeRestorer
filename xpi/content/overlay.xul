@@ -156,14 +156,14 @@
 	<!--### CTR entry in menubars 'Tools' menu popup ###-->
 	<menupopup id="menu_ToolsPopup">
 	  <menuitem oncommand="classicthemerestorerjs.ctr.openCTRPreferences();"
-		label="Classic Theme Restorer"
+		label="&Ctr_title;"
 		class="menuitem-iconic"
 		id="ctraddon_tools_menu_entry"/>
 	</menupopup>
 	
 	<menupopup id="toolbar-context-menu">
 	  <menuitem oncommand="classicthemerestorerjs.ctr.openCTRPreferences();"
-		label="Classic Theme Restorer"
+		label="&Ctr_title;"
 		class="menuitem-iconic"
 		id="ctraddon_context_menu_entry"/>
 	</menupopup>
@@ -569,7 +569,7 @@
 							label="&viewCustomizeToolbar.label;"/>
 				  <menuseparator id="ctraddon_appmenu_sep" collapsed="true"/>
 				  <menuitem oncommand="classicthemerestorerjs.ctr.openCTRPreferences();"
-							label="Classic Theme Restorer"
+							label="&Ctr_title;"
 							class="menuitem-iconic"
 							id="ctraddon_appmenu_ctr"/>
 			  </menupopup>
@@ -596,7 +596,7 @@
 							label="&viewCustomizeToolbar.label;"/>
 				  <menuseparator id="ctraddon_appmenu_sep2" collapsed="true"/>
 				  <menuitem oncommand="classicthemerestorerjs.ctr.openCTRPreferences();"
-							label="Classic Theme Restorer"
+							label="&Ctr_title;"
 							class="menuitem-iconic"
 							id="ctraddon_appmenu_ctr2"/>
 			  </menupopup>
@@ -674,7 +674,7 @@
                      persist="class"
                      removable="true"
                      type="menu"
-                     label="Firefox"
+                     label="&brandShortName;"
 					 popup="appmenu-popup"
 					 onmousedown="classicthemerestorerjs.ctr.openCtrAppmenuPopup();">
 	  </toolbarbutton>
@@ -810,7 +810,7 @@
 					 persist="class"
 					 cui-areatype="toolbar"
 					 oncommand="classicthemerestorerjs.ctr.openCTRPreferences();"
-                     tooltiptext="Classic Theme Restorer"/>
+                     tooltiptext="&Ctr_title;"/>
 
 	  <!--### creates a bookmarks sidebar button ###-->
 	  <toolbarbutton id="ctraddon_bookmarks-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
