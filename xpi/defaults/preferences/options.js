@@ -203,3 +203,6 @@ pref("extensions.classicthemerestorer.tabc_hov_unl",false);
 
 // first run/reset preference
 pref("extensions.classicthemerestorer.ctrreset",true);
+
+//No text shadow on persona themes.
+pref("extensions.classicthemerestorer.personanoshadow", false);
