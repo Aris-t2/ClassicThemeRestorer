@@ -1,5 +1,8 @@
+# %S will be replaced by browsers short name automatically
 popup.title=Classic Theme Restorer
-popup.msg.restart=変更を有効にするためにはFirefoxを再起動する必要があります。\今すぐ再起動しますか？
+popup.msg.restart=変更を有効にするためには%Sを再起動する必要があります。\今すぐ再起動しますか？
+popup.msg.cctrrestarturlbar=Location bars last position could break browser ui and had to be reset.\n%S has to be restarted.\n\nRestart now?
+popup.msg.cctrrestartfoxtab=Foxtab add-on corrupts browser ui and has to be disabled.\n%S has to be restarted and the toolbar configuration has to be reset.\n\nRestart now?
 import.error=エラー：誤りが見つかったかファイルが修正されています。\nインポートされませんでした。
 ctr_extrabar=追加のツールバー
 ctr_actthrobber=Activity Indicator

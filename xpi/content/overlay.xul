@@ -98,11 +98,11 @@
 				  autocompletesearch="urlinline history"
 				  enablehistory="true"
 				  class="uri-element"
-				  onkeydown="if(event.keyCode == '13') {gBrowser.selectedTab=gBrowser.addTab(this.value); document.getElementById('ctraddon_urlextrabar').setAttribute('collapsed',true);}"/>
+				  onkeydown="if(event.keyCode == '13') {gBrowser.selectedTab=gBrowser.addTab(this.value); document.getElementById('ctraddon_urlextrabar').setAttribute('collapsed',true);} else if(event.keyCode == '27') {document.getElementById('ctraddon_urlextrabar').setAttribute('collapsed',true);}"/>
 		  <button id="ctr_extraurlbar_button" removable="false" class="toolbarbutton-1"
 					oncommand="gBrowser.selectedTab=gBrowser.addTab(document.getElementById('ctraddon_extraurlbar_tb').value); document.getElementById('ctraddon_urlextrabar').setAttribute('collapsed',true);"/>
 		  <button id="ctraddon_extraurlbar-close" removable="false" class="ctr_extraurlbar_button-close close-icon"
-			    oncommand="classicthemerestorerjs.ctr.toggleCtrUrlExtraBar();"/>
+			    oncommand="document.getElementById('ctraddon_urlextrabar').setAttribute('collapsed',true);"/>
 	  </hbox>
 
 	</vbox>
@@ -112,7 +112,7 @@
 	  <toolbarbutton id="ctraddon_PanelUI-CTR-button"
 					 insertbefore="PanelUI-help"
 					 oncommand="classicthemerestorerjs.ctr.openCTRPreferences();"
-					 tooltiptext="Classic Theme Restorer"/>
+					 tooltiptext="&Ctr_title;"/>
 	  <toolbarseparator insertbefore="PanelUI-help" id="ctraddon_PanelUI-CTR-button-separator"/>
 	</hbox>
 	
@@ -156,14 +156,14 @@
 	<!--### CTR entry in menubars 'Tools' menu popup ###-->
 	<menupopup id="menu_ToolsPopup">
 	  <menuitem oncommand="classicthemerestorerjs.ctr.openCTRPreferences();"
-		label="Classic Theme Restorer"
+		label="&Ctr_title;"
 		class="menuitem-iconic"
 		id="ctraddon_tools_menu_entry"/>
 	</menupopup>
 	
 	<menupopup id="toolbar-context-menu">
 	  <menuitem oncommand="classicthemerestorerjs.ctr.openCTRPreferences();"
-		label="Classic Theme Restorer"
+		label="&Ctr_title;"
 		class="menuitem-iconic"
 		id="ctraddon_context_menu_entry"/>
 	</menupopup>
@@ -569,7 +569,7 @@
 							label="&viewCustomizeToolbar.label;"/>
 				  <menuseparator id="ctraddon_appmenu_sep" collapsed="true"/>
 				  <menuitem oncommand="classicthemerestorerjs.ctr.openCTRPreferences();"
-							label="Classic Theme Restorer"
+							label="&Ctr_title;"
 							class="menuitem-iconic"
 							id="ctraddon_appmenu_ctr"/>
 			  </menupopup>
@@ -596,7 +596,7 @@
 							label="&viewCustomizeToolbar.label;"/>
 				  <menuseparator id="ctraddon_appmenu_sep2" collapsed="true"/>
 				  <menuitem oncommand="classicthemerestorerjs.ctr.openCTRPreferences();"
-							label="Classic Theme Restorer"
+							label="&Ctr_title;"
 							class="menuitem-iconic"
 							id="ctraddon_appmenu_ctr2"/>
 			  </menupopup>
@@ -674,7 +674,7 @@
                      persist="class"
                      removable="true"
                      type="menu"
-                     label="Firefox"
+                     label="&brandShortName;"
 					 popup="appmenu-popup"
 					 onmousedown="classicthemerestorerjs.ctr.openCtrAppmenuPopup();">
 	  </toolbarbutton>
@@ -810,7 +810,7 @@
 					 persist="class"
 					 cui-areatype="toolbar"
 					 oncommand="classicthemerestorerjs.ctr.openCTRPreferences();"
-                     tooltiptext="Classic Theme Restorer"/>
+                     tooltiptext="&Ctr_title;"/>
 
 	  <!--### creates a bookmarks sidebar button ###-->
 	  <toolbarbutton id="ctraddon_bookmarks-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"

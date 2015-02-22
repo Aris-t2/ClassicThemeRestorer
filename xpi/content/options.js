@@ -402,11 +402,17 @@ classicthemerestorerjso.ctr = {
 	var promptSvc  	 = Components.classes["@mozilla.org/embedcomp/prompt-service;1"].getService(Components.interfaces.nsIPromptService);
 	var stringBundle = Components.classes["@mozilla.org/intl/stringbundle;1"].getService(Components.interfaces.nsIStringBundleService)
 						.createBundle("chrome://classic_theme_restorer/locale/messages.file");
+						
+	var brandName	 = '';
+
+	try {
+	  brandName = Services.strings.createBundle("chrome://branding/locale/brand.properties").GetStringFromName("brandShortName");
+	} catch(e) {}
 
 	if (this.needsRestart &&
 		promptSvc.confirm(null,
 			stringBundle.GetStringFromName("popup.title"),
-			stringBundle.GetStringFromName("popup.msg.restart")
+			stringBundle.formatStringFromName("popup.msg.restart", [brandName], 1)
 		)) {
 		observerSvc.notifyObservers(cancelQuit, "quit-application-requested", "restart");
 		if(cancelQuit.data) { // The quit request has been cancelled.

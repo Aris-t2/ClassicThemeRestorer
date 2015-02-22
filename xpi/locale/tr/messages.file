@@ -1,5 +1,8 @@
+# %S will be replaced by browsers short name automatically
 popup.title=Klasik Arayüz Getirici
-popup.msg.restart=Değişikliklerin geçerli olması için Firefox yeniden başlatılmalı.\nYeniden başlatılsın mı?
+popup.msg.restart=Değişikliklerin geçerli olması için %S yeniden başlatılmalı.\nYeniden başlatılsın mı?
+popup.msg.cctrrestarturlbar=Location bars last position could break browser ui and had to be reset.\n%S has to be restarted.\n\nRestart now?
+popup.msg.cctrrestartfoxtab=Foxtab add-on corrupts browser ui and has to be disabled.\n%S has to be restarted and the toolbar configuration has to be reset.\n\nRestart now?
 import.error=ERROR: Yanlış ve ya değiştirilmiş bir dosya bulundu!\nHiçbirşey aktarılamadı!
 ctr_extrabar=Ek Araç Çubuğu
 ctr_actthrobber=Etkinlik Göstergesi

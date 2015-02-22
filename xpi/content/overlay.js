@@ -102,12 +102,15 @@ classicthemerestorerjs.ctr = {
 		if (this.appversion >= 34) document.getElementById("main-window").setAttribute('fx34plus',true);
 	} catch(e){}
 	
-	// add CTR version number to mainwindow, so other add-ons/theme can better destinguish between versions
+	// add CTR version number to '#main-window' node, so other add-ons/themes can easier distinguish between versions
 	AddonManager.getAddonByID('ClassicThemeRestorer@ArisT2Noia4dev', function(addon) {
 	  try{
 		document.getElementById("main-window").setAttribute('ctraddon_version',addon.version);
 	  } catch(e){}
 	});
+	
+	// reset urlbar-container position, if urlbar gets stuck in customization area
+	this.checkUrlbarContainerPosition();
 
 	// CTRs appbutton for Windows titlebar
 	this.createTitlebarButton();
@@ -132,6 +135,14 @@ classicthemerestorerjs.ctr = {
 	
 	// CTRs extra add-on bar keys
 	this.CTRextraLocationBarKeyset();
+	
+	// add a CTR reset command to customizeable uis resotre button, so CTRs configuration gets also reset
+	setTimeout(function(){
+	  try{
+		  var oldoncomattr = document.getElementById("customization-reset-button").getAttribute("oncommand");
+		  document.getElementById("customization-reset-button").setAttribute("oncommand",oldoncomattr+'classicthemerestorerjs.ctr.resetCTRtoolbarConf();');
+	  } catch(e){}
+	},1000);
 
 	// CTR Preferences listener
 	function PrefListener(branch_name, callback) {
@@ -1219,6 +1230,11 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("hidesbclose",false);
 		  break;
 		  
+		  case "notextshadow":
+			if (branch.getBoolPref("notextshadow")) classicthemerestorerjs.ctr.loadUnloadCSS("notextshadow",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("notextshadow",false);
+		  break;
+		  
 		  case "chevronfix":
 			if (branch.getBoolPref("chevronfix")) classicthemerestorerjs.ctr.loadUnloadCSS("chevronfix",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("chevronfix",false);
@@ -1638,6 +1654,53 @@ classicthemerestorerjs.ctr = {
    }
   },
   
+  // Resets urlbar-container position, if it gets stuck in customization area.
+  checkUrlbarContainerPosition: function() {
+	setTimeout(function(){
+	  try{
+		if(CustomizableUI.getPlacementOfWidget("urlbar-container")==null
+			|| CustomizableUI.getAreaType(CustomizableUI.getPlacementOfWidget("urlbar-container").area) != "toolbar") {
+		  CustomizableUI.addWidgetToArea("urlbar-container", CustomizableUI.AREA_NAVBAR);
+		  classicthemerestorerjs.ctr.confirmCTRRestart("ctrurlbarcheck");
+		}
+	  } catch(e){}
+	},1000);
+  },
+  
+  // a browser restart may be required for some cases (not related to any CTR preferences)
+  confirmCTRRestart: function(reason_string) {
+
+	var app			= Components.classes["@mozilla.org/toolkit/app-startup;1"].getService(Components.interfaces.nsIAppStartup);
+	var cancelQuit	= Components.classes["@mozilla.org/supports-PRBool;1"].createInstance(Components.interfaces.nsISupportsPRBool);
+	var observerSvc	= Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
+	var promptSvc	= Components.classes["@mozilla.org/embedcomp/prompt-service;1"].getService(Components.interfaces.nsIPromptService);
+
+	var brandName	= '';
+	
+	try {
+	  brandName = Services.strings.createBundle("chrome://branding/locale/brand.properties").GetStringFromName("brandShortName");
+	} catch(e) {}
+						
+	var displayedmessage = '';
+	
+	if(reason_string=="ctrurlbarcheck")
+	  displayedmessage = classicthemerestorerjs.ctr.stringBundle.formatStringFromName("popup.msg.cctrrestarturlbar", [brandName], 1);
+	else if(reason_string=="foxtabissue")
+	  displayedmessage = classicthemerestorerjs.ctr.stringBundle.formatStringFromName("popup.msg.cctrrestartfoxtab", [brandName], 1);
+
+	if (promptSvc.confirm(null,
+			classicthemerestorerjs.ctr.stringBundle.GetStringFromName("popup.title"),
+			displayedmessage
+		)) {
+		observerSvc.notifyObservers(cancelQuit, "quit-application-requested", "restart");
+		if(cancelQuit.data) { // The quit request has been cancelled.
+			return false;
+		};
+		app.quit(app.eAttemptQuit | app.eRestart);
+	}
+	
+  },
+  
   // Appbutton in titlebar
   createTitlebarButton: function() {
   
@@ -1749,6 +1812,17 @@ classicthemerestorerjs.ctr = {
   },
   
   addonCompatibilityImprovements: function() {
+	  
+	// FoxTab add-on breaks Firefox UI since Fx29, even without any other add-ons installed
+	AddonManager.getAddonByID('{ef4e370e-d9f0-4e00-b93e-a4f274cfdd5a}', function(addon) {
+	  if (!addon.userDisabled) {
+        
+		classicthemerestorerjs.ctr.confirmCTRRestart("foxtabissue");
+		addon.userDisabled = true;
+		
+      }
+	});
+
 	// 'ThePuzzlePiece'/'PuzzleToolbars' add-on: check to not enable CTRs space/separator styles while add-on is enabled
 	var TPPListener = {
 	   onEnabled: function(addon) {
@@ -1806,6 +1880,14 @@ classicthemerestorerjs.ctr = {
 		 
 	   }
 	  });
+	},300);
+
+	// Developer Edition
+	setTimeout(function(){
+	  try{
+		if(document.getElementById("main-window").getAttribute("title_normal")=="Firefox Developer Edition")
+		  classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton').setAttribute("label","DevFox");
+	  } catch(e){}
 	},300);
 
   },
@@ -2487,6 +2569,7 @@ classicthemerestorerjs.ctr = {
 		case "nonavborder": 		manageCSS("nonavborder.css");			break;
 		case "nonavtbborder": 		manageCSS("nonavtbborder.css");			break;
 		case "hidesbclose": 		manageCSS("hidesidebarclose.css");		break;
+		case "notextshadow": 		manageCSS("notextshadow.css");			break;
 		case "chevronfix": 			manageCSS("chevronfix.css");			break;
 		case "highaddonsbar": 		manageCSS("higher_addonsbar.css");		break;
 		case "addonbarfs": 			manageCSS("addonbar_infullscreen.css");	break;
@@ -4047,18 +4130,63 @@ classicthemerestorerjs.ctr = {
   
   },
   
-  toggleCtrUrlExtraBar: function() {
-    
-	if(document.getElementById("ctraddon_urlextrabar").getAttribute("collapsed")=="true") {
-	  document.getElementById("ctraddon_urlextrabar").setAttribute("collapsed",false);
+  // reset CTRs toolbar configuration
+  resetCTRtoolbarConf: function() {
 	  
-	  setTimeout(function(){
-		document.getElementById('ctraddon_extraurlbar_tb').focus();
-	  },100);
-	  
-	}
-	else document.getElementById("ctraddon_urlextrabar").setAttribute("collapsed",true);
+	// make CTRs add-on bar and bookmarks toolbar are visible
+	setTimeout(function(){
+	  try{
+		setToolbarVisibility(document.getElementById("ctraddon_addon-bar"), true);
+		setToolbarVisibility(document.getElementById("PersonalToolbar"), true);
+	  }catch(e){}
+	},1000);
+
+	// move CTRs toolbar items to toolbars
+	setTimeout(function(){
+	  try{
+		CustomizableUI.addWidgetToArea("ctraddon_back-forward-button", CustomizableUI.AREA_NAVBAR);
+		CustomizableUI.addWidgetToArea("ctraddon_appbutton", CustomizableUI.AREA_NAVBAR);
+		CustomizableUI.addWidgetToArea("ctraddon_puib_separator", CustomizableUI.AREA_NAVBAR);
+		CustomizableUI.addWidgetToArea("ctraddon_panelui-button", CustomizableUI.AREA_NAVBAR);
+		if (classicthemerestorerjs.ctr.osstring=="WINNT") CustomizableUI.addWidgetToArea("ctraddon_window-controls", CustomizableUI.AREA_NAVBAR);
+		CustomizableUI.addWidgetToArea("ctraddon_bookmarks-menu-toolbar-button", CustomizableUI.AREA_BOOKMARKS);
+
+		if (classicthemerestorerjs.ctr.osstring=="WINNT" && Services.prefs.getBranch("browser.tabs.").getBoolPref("drawInTitlebar")) {
+		  classicthemerestorerjs.ctr.prefs.setCharPref("appbutton",'appbutton_v2');
+		}
+
+	  } catch(e){}
+	},1000); 
+
+	// set position of some toolbar items
+	setTimeout(function(){
+	  try{
+		CustomizableUI.moveWidgetWithinArea("ctraddon_back-forward-button",0);
+		CustomizableUI.moveWidgetWithinArea("ctraddon_appbutton",0);
+	  }catch(e){}
+	},1100);
+
+  },
   
+  toggleCtrUrlExtraBar: function() {
+    try{
+		if(document.getElementById("ctraddon_urlextrabar").getAttribute("collapsed")=="true") {
+		  document.getElementById("ctraddon_urlextrabar").setAttribute("collapsed",false);
+		  
+		  setTimeout(function(){
+			document.getElementById('ctraddon_extraurlbar_tb').focus();
+		  },100);
+		  
+		}
+		else if(document.getElementById("ctraddon_extraurlbar_tb").getAttribute("focused")=="true"){
+		  document.getElementById("ctraddon_urlextrabar").setAttribute("collapsed",true);
+		}
+		else {
+		  setTimeout(function(){
+			document.getElementById('ctraddon_extraurlbar_tb').focus();
+		  },100);
+		}
+	} catch(e){}
   }
   
 };

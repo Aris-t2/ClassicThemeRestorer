@@ -162,6 +162,7 @@
 		<preference id="ctraddon_nonavborder"	name="extensions.classicthemerestorer.nonavborder" 	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_nonavtbborder"	name="extensions.classicthemerestorer.nonavtbborder" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hidesbclose"	name="extensions.classicthemerestorer.hidesbclose"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_notextshadow"	name="extensions.classicthemerestorer.notextshadow"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_chevronfix"	name="extensions.classicthemerestorer.chevronfix"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_alttabstb"		name="extensions.classicthemerestorer.alttabstb" 	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_alttabstb2"	name="extensions.classicthemerestorer.alttabstb2" 	 type="bool"	instantApply="true"/>
@@ -352,7 +353,9 @@
 	  <description class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_squared2">&Ctr_tabs1m;</description>
 	  <description class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curved">&Ctr_tabs2;</description>
 	  <description class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curvedaero">&Ctr_tabs3;</description>
-	  <description>&Ctr_tab_tf_info1; &Ctr_tab_tf_info2;</description>
+	  <description>&Ctr_tab_tf_info1;</description>
+	  <description>// blue // #0000ff // rgba(0,0,255,0.8) // hsla(240,100%,50%,0.8) //</description>
+	  <description>&Ctr_tab_tf_info2;</description>
 	  <label value=""/>
 
 	  <tabbox>
@@ -860,6 +863,7 @@
 		<checkbox label="&Ctr_nonavborder; &Ctr_tnot;"	 preference="ctraddon_nonavborder" class="ctraddon_windowsonly" id="ctraddon_pw_nonavborder"/>
 		<checkbox label="&Ctr_nonavtbborder; &Ctr_tnot;" preference="ctraddon_nonavtbborder" id="ctraddon_pw_nonavtbborder"/>
 		<checkbox label="&Ctr_hidesbclose;"				 preference="ctraddon_hidesbclose"/>
+		<checkbox label="&Ctr_notextshadow;"			 preference="ctraddon_notextshadow"/>
 	  </groupbox>
 
 	  <groupbox>

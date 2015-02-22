@@ -1,5 +1,8 @@
+# %S will be replaced by browsers short name automatically
 popup.title=Classic Theme Restorer
-popup.msg.restart=Firefox skal genstartes før ændringerne kan træde i kraft.\nVil du genstarte nu?
+popup.msg.restart=%S skal genstartes før ændringerne kan træde i kraft.\nVil du genstarte nu?
+popup.msg.cctrrestarturlbar=Location bars last position could break browser ui and had to be reset.\n%S has to be restarted.\n\nRestart now?
+popup.msg.cctrrestartfoxtab=Foxtab add-on corrupts browser ui and has to be disabled.\n%S has to be restarted and the toolbar configuration has to be reset.\n\nRestart now?
 import.error=FEJL: Fandt forkert eller ændret fil!\nIntet kunne importeres!
 ctr_extrabar=Yderligere værktøjslinje
 ctr_actthrobber=Aktivitetsindikator
