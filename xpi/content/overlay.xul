@@ -136,6 +136,8 @@
 	<image id="page-proxy-favicon"
 	  onclick="if(classicthemerestorerjs.ctr.prefs.getBoolPref('icopageinfo')) gIdentityHandler.handleMoreInfoClick(event); else PageProxyClickHandler(event);"/>
 
+	<button id="customization-reset-button" onclick="if (event.button=='0') classicthemerestorerjs.ctr.resetCTRtoolbarConf();"/>
+
 	<!--### moveable urlbar & buttons ###-->
 	<toolbaritem id="urlbar-container" style="min-width:200px !important;" removable="true"/>
 	<toolbarbutton id="alltabs-button" removable="true"/>
