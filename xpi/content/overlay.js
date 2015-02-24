@@ -109,9 +109,6 @@ classicthemerestorerjs.ctr = {
 	  } catch(e){}
 	});
 
-	// reset urlbar-container position, if urlbar gets stuck in customization area
-	this.checkUrlbarContainerPosition();
-
 	// CTRs appbutton for Windows titlebar
 	this.createTitlebarButton();
 	
@@ -1644,57 +1641,6 @@ classicthemerestorerjs.ctr = {
 	  window.clearTimeout(timeoutID);
 	}
    }
-  },
-  
-  // Moves location bar back to navigation toolbar, if it gets stuck in customization area.
-  checkUrlbarContainerPosition: function() {
-	  
-	window.addEventListener("DOMContentLoaded", function checkUrlbarContainerPos(event){
-		window.removeEventListener("DOMContentLoaded", checkUrlbarContainerPos, false);
-
-		setTimeout(function(){
-		  try{
-			if(CustomizableUI.getPlacementOfWidget("urlbar-container")==null
-				|| CustomizableUI.getPlacementOfWidget("urlbar-container").area == "PanelUI-contents") {
-			  CustomizableUI.addWidgetToArea("urlbar-container", CustomizableUI.AREA_NAVBAR);
-			  classicthemerestorerjs.ctr.confirmCTRRestart("ctrurlbarcheck");
-			}
-		  } catch(e){}
-		},3500);
-
-	},false);
-  },
-  
-  // a browser restart may be required for some cases (not related to any CTR preferences)
-  confirmCTRRestart: function(reason_string) {
-
-	var app			= Components.classes["@mozilla.org/toolkit/app-startup;1"].getService(Components.interfaces.nsIAppStartup);
-	var cancelQuit	= Components.classes["@mozilla.org/supports-PRBool;1"].createInstance(Components.interfaces.nsISupportsPRBool);
-	var observerSvc	= Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
-	var promptSvc	= Components.classes["@mozilla.org/embedcomp/prompt-service;1"].getService(Components.interfaces.nsIPromptService);
-
-	var brandName	= '';
-	
-	try {
-	  brandName = Services.strings.createBundle("chrome://branding/locale/brand.properties").GetStringFromName("brandShortName");
-	} catch(e) {}
-						
-	var displayedmessage = '';
-	
-	if(reason_string=="ctrurlbarcheck")
-	  displayedmessage = classicthemerestorerjs.ctr.stringBundle.formatStringFromName("popup.msg.cctrrestarturlbar", [brandName], 1);
-
-	if (promptSvc.confirm(null,
-			classicthemerestorerjs.ctr.stringBundle.GetStringFromName("popup.title"),
-			displayedmessage
-		)) {
-		observerSvc.notifyObservers(cancelQuit, "quit-application-requested", "restart");
-		if(cancelQuit.data) { // The quit request has been cancelled.
-			return false;
-		};
-		app.quit(app.eAttemptQuit | app.eRestart);
-	}
-	
   },
   
   // Appbutton in titlebar

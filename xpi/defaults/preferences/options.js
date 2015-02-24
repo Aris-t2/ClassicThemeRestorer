@@ -68,8 +68,6 @@ pref("extensions.classicthemerestorer.invicoaddonbar",false);
 
 pref("extensions.classicthemerestorer.athrobberurl","");
 
-pref("extensions.classicthemerestorer.extraurlkeycb",false);
-
 // Urlbar
 pref("extensions.classicthemerestorer.starinurl",false);
 pref("extensions.classicthemerestorer.feedinurl",false);
@@ -82,6 +80,8 @@ pref("extensions.classicthemerestorer.faviconurl",false);
 pref("extensions.classicthemerestorer.padlock","padlock_default");
 pref("extensions.classicthemerestorer.padlockex",true);
 pref("extensions.classicthemerestorer.icopageinfo",false);
+
+pref("extensions.classicthemerestorer.extraurlkeycb",false);
 
 // Toolbar settings
 pref("extensions.classicthemerestorer.aerocolors",false);

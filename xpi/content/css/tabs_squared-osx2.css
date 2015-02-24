@@ -280,6 +280,11 @@
 	  -moz-margin-start:0px !important;
 	}
 	
+	/* pinned tabs fix (Fx38+) */
+	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-content[pinned] {
+	  -moz-padding-end: 0px !important;
+	}
+	
 	/* TabUtilities workaround */
 	#PinnedTabsBarItems {
 	  -moz-margin-start:-14px !important;

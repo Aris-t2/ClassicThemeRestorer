@@ -276,6 +276,11 @@
  	.tabbrowser-tab[pinned]:not([locked]):not([pinned]) image{
 	  -moz-margin-start:0px !important;
 	}
+	
+	/* pinned tabs fix (Fx38+) */
+	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-content[pinned] {
+	  -moz-padding-end: 0px !important;
+	}
 
 	/* remove ridiculous clipping */
 	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive],:not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
