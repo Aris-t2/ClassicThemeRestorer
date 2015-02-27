@@ -267,7 +267,31 @@
 	/*Jetpacks toggle & action buttons support*/
 	#nav-bar toolbarbutton[id^="action-button-"] .toolbarbutton-icon,
 	#nav-bar toolbarbutton[id^="toggle-button-"] .toolbarbutton-icon {
+	  width:16px !important;
+	}
+
+	#main-window:not([fx36plus="true"]) #nav-bar toolbarbutton[id^="action-button-"] .toolbarbutton-icon,
+	#main-window:not([fx36plus="true"]) #nav-bar toolbarbutton[id^="toggle-button-"] .toolbarbutton-icon {
 	  width:22px !important;
+	}
+
+	#nav-bar toolbarbutton .toolbarbutton-badge,
+	#nav-bar toolbarbutton .toolbarbutton-badge-container {
+	  background: none !important;
+	  box-shadow: none !important;
+	  border: 0 !important;
+	  padding: 0 !important;
+	  margin: 0 !important;
+	}
+	
+	/*Feedly Notifier support*/
+	#nav-bar toolbaritem[id="widget:jid1-BOjn8b0IM7kH2w@jetpack-main-widget"] {
+      min-width:0px !important;
+      width:22px !important;
+      min-height:0px !important;
+      height:16px !important;
+	  padding: 0 !important;
+	  margin: 1px !important;
 	}
 
 	/* The Fox, only better add-on support*/

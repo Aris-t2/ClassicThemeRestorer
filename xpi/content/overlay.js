@@ -102,6 +102,11 @@ classicthemerestorerjs.ctr = {
 		if (this.appversion >= 34) document.getElementById("main-window").setAttribute('fx34plus',true);
 	} catch(e){}
 	
+	// add a new global attribute 'fx34plus' -> better parting css between versions
+	try{
+		if (this.appversion >= 36) document.getElementById("main-window").setAttribute('fx36plus',true);
+	} catch(e){}
+	
 	// add CTR version number to '#main-window' node, so other add-ons/themes can easier distinguish between versions
 	AddonManager.getAddonByID('ClassicThemeRestorer@ArisT2Noia4dev', function(addon) {
 	  try{
@@ -1903,15 +1908,10 @@ classicthemerestorerjs.ctr = {
 		  document.getElementById("TabsToolbar").collapsed = true;
 		
 		  if(classicthemerestorerjs.ctr.osstring=="WINNT" && tabsintitlebar==true){ // Windows
-			  if (classicthemerestorerjs.ctr.prefs.getCharPref("tabs")=="tabs_squared" &&
-				document.getElementById("toolbar-menubar").getAttribute("autohide") == "true"
+			if (document.getElementById("toolbar-menubar").getAttribute("autohide") == "true"
 				&& document.getElementById("toolbar-menubar").getAttribute("inactive") == "true") {
-				  document.getElementById("toolbar-menubar").style.marginBottom="26px";
-			  } else if (classicthemerestorerjs.ctr.prefs.getCharPref("tabs")=="tabs_squaredc2" &&
-				document.getElementById("toolbar-menubar").getAttribute("autohide") == "true"
-				&& document.getElementById("toolbar-menubar").getAttribute("inactive") == "true") {
-				  document.getElementById("toolbar-menubar").style.marginBottom="24px";
-			  } else document.getElementById("toolbar-menubar").style.marginBottom="unset";
+			  document.getElementById("toolbar-menubar").style.marginBottom="26px";
+			} else document.getElementById("toolbar-menubar").style.marginBottom="unset";
 		  } else if(classicthemerestorerjs.ctr.osstring=="Darwin" && tabsintitlebar==true) { // MacOSX
 			  document.getElementById("titlebar").style.paddingBottom="28px";
 		  } else {} //Linux does not need special treatment
@@ -1923,9 +1923,11 @@ classicthemerestorerjs.ctr = {
 		else
 		  document.getElementById("TabsToolbar").collapsed = false;
 		
-		document.getElementById("toolbar-menubar").style.marginBottom="unset";
-		
-		if(classicthemerestorerjs.ctr.osstring=="Darwin") document.getElementById("titlebar").style.paddingBottom="unset";
+		if(classicthemerestorerjs.ctr.osstring=="WINNT") 
+		  document.getElementById("toolbar-menubar").style.marginBottom="unset";		
+		else if(classicthemerestorerjs.ctr.osstring=="Darwin")
+		  document.getElementById("titlebar").style.paddingBottom="unset";
+	    else {} //Linux does not need special treatment
 	  }
 
 	}
