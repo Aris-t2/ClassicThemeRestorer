@@ -2,10 +2,14 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#nav-bar-customization-target > *:not(#urlbar-container):not(#search-container),
+	#nav-bar-customization-target,
 	#nav-bar-overflow-button {
 	  margin-top:-6px !important;
 	  margin-bottom:-6px !important;
 	}
-
+	#nav-bar-customization-target #urlbar-container,
+	#nav-bar-customization-target #search-container {
+	  margin-top:7px !important;
+	  margin-bottom:7px !important;
+	}
 }

@@ -24,7 +24,11 @@ classicthemerestorerjso.ctr = {
 	// adds a new global attribute 'defaultfxtheme' -> better parting css for default and non-default themes
 	try{
 		if (this.fxdefaulttheme) document.getElementById("ClassicTRoptionsPane").setAttribute('defaultfxtheme',true);
-		  else document.getElementById("ClassicTRoptionsPane").removeAttribute('defaultfxtheme');
+		  else {
+			var thirdpartytheme = Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin");
+			if(thirdpartytheme=="Tangerinefox" || thirdpartytheme=="Tangofox")
+			  this.fxdefaulttheme=true;
+		  }
 	} catch(e){}
 	
 	// restore last selected categories/tabs
@@ -510,24 +514,53 @@ classicthemerestorerjso.ctr = {
   },
   
   ctrpwBFextra: function(which) {
-    if(which==true) which=false; else which=true;
+	var itemvis = 'collapse';
+	
+    if(which==true) {
+	  which=false;
+	  itemvis = 'visible';
+	} else {
+	  which=true;
+	  itemvis = 'collapse';
+	}
+	
     document.getElementById('ctraddon_pw_hide_bf_popup').disabled = which;
 	document.getElementById('ctraddon_pw_bf_space').disabled = which;
+	document.getElementById('ctraddon_pw_hide_bf_popup').style.visibility = itemvis;
+	document.getElementById('ctraddon_pw_bf_space').style.visibility = itemvis;
 	if(classicthemerestorerjso.ctr.prefs.getBoolPref('smallnavbut')==false){
 	  document.getElementById('ctraddon_pw_nbcompact').disabled = which;
+	  document.getElementById('ctraddon_pw_nbcompact').style.visibility = itemvis;
 	}
   },
   
    ctrpwSNextra: function(which) {
     if(classicthemerestorerjso.ctr.prefs.getBoolPref('backforward')){
-      if(which==true) which=false; else which=true;
+	  var itemvis = 'collapse';
+	
+      if(which==true) {
+		which=false; itemvis = 'visible';
+	  } else {
+		which=true; itemvis = 'collapse';
+	  }
 	  document.getElementById('ctraddon_pw_nbcompact').disabled = which;
+	  document.getElementById('ctraddon_pw_nbcompact').style.visibility = itemvis;
 	}
   },
   
   ctrpwHidetbwotExtra: function(which) {
-    if(which==true) which=false; else which=true;
+	var itemvis = 'collapse';
+	
+    if(which==true) {
+	  which=false; itemvis = 'visible';
+	} else {
+	  which=true; itemvis = 'collapse';
+	}
+	
     document.getElementById('ctraddon_pw_hidetbwote').disabled = which;
+	document.getElementById('ctraddon_pw_hidetbwote2').disabled = which;
+	document.getElementById('ctraddon_pw_hidetbwote').style.visibility = itemvis;
+	document.getElementById('ctraddon_pw_hidetbwote2').style.visibility = itemvis;
   },
   
   ctrpwDisableDevThemePrefsExtra: function(which) {
@@ -539,8 +572,15 @@ classicthemerestorerjso.ctr = {
   
   altTabsToolbarBgExtra: function(which) {
 	if (this.fxdefaulttheme) {
-	  if(which==true) which=false; else which=true;
+	
+	  var itemvis = 'collapse';
+      if(which==true) {
+		which=false; itemvis = 'visible';
+	  } else {
+		which=true; itemvis = 'collapse';
+	  }
       document.getElementById('ctraddon_pw_alttabstb2').disabled = which;
+	  document.getElementById('ctraddon_pw_alttabstb2').style.visibility = itemvis;
 	}
   },
   

@@ -204,6 +204,7 @@
 		<preference id="ctraddon_dblclnewtab"	name="extensions.classicthemerestorer.dblclnewtab"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hidetbwot"		name="extensions.classicthemerestorer.hidetbwot"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hidetbwote"	name="extensions.classicthemerestorer.hidetbwote"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_hidetbwote2"	name="extensions.classicthemerestorer.hidetbwote2"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_faviconurl"	name="extensions.classicthemerestorer.faviconurl"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_padlock"		name="extensions.classicthemerestorer.padlock"	 	 type="string"	instantApply="true"/>
 		<preference id="ctraddon_padlockex"		name="extensions.classicthemerestorer.padlockex"	 type="bool"	instantApply="true"/>
@@ -354,7 +355,7 @@
 	  <description class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curved">&Ctr_tabs2;</description>
 	  <description class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curvedaero">&Ctr_tabs3;</description>
 	  <description>&Ctr_tab_tf_info1;</description>
-	  <description>// blue // #0000ff // rgba(0,0,255,0.8) // hsla(240,100%,50%,0.8) //</description>
+	  <description>|| blue | #0000ff | rgba(0,0,255,0.8) | hsla(240,100%,50%,0.8) ||</description>
 	  <description>&Ctr_tab_tf_info2;</description>
 	  <label value=""/>
 
@@ -871,6 +872,7 @@
 		<checkbox label="&Ctr_dblclnewtab;"	preference="ctraddon_dblclnewtab" class="ctraddon_windowsonly"/>
 		<checkbox label="&Ctr_hidetbwot;"	preference="ctraddon_hidetbwot" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(true);} else {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(false);} classicthemerestorerjso.ctr.needsBrowserRestart();"/>
 		<checkbox label="&Ctr_hidetbwote;"	preference="ctraddon_hidetbwote" class="ctraddonsuboption" id="ctraddon_pw_hidetbwote"/>
+		<checkbox label="&Ctr_hidetbwote2;"	preference="ctraddon_hidetbwote2" class="ctraddonsuboption ctraddon_winmaconly" id="ctraddon_pw_hidetbwote2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
 		<checkbox label="&Ctr_notabfog;"	preference="ctraddon_notabfog" class="ctraddon_windowsonly" id="ctraddon_pw_notabfog"/>
 		<checkbox label="&Ctr_notabbg;"		preference="ctraddon_notabbg" class="ctraddon_windowsonly" id="ctraddon_pw_notabbg"/>
 		<checkbox label="&Ctr_hightabpos;"	preference="ctraddon_hightabpososx"/>
@@ -900,17 +902,27 @@
 
 	  <groupbox>
 		<caption  label="&Ctr_experttweaks;" class="ctraddon_topic"/>
+		<description class="ctraddon_font1">&Ctr_e_omtc;</description>
 		<checkbox label="about:config &gt;&gt; layers.offmainthreadcomposition.enabled" preference="ctraddon_tabhang" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_f33layers"/>
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_f33layersdescr">&Ctr_fx33layers;</description>
+		
+		<description class="ctraddon_font1">&Ctr_e_searchui;</description>
 		<checkbox label="about:config &gt;&gt; browser.search.showOneOffButtons" preference="ctraddon_oldsearch" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_oldsearch"/>
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_oldsearchdescr">&Ctr_fx34search;</description>
+		
+		<description class="ctraddon_font1">&Ctr_e_loop;</description>
 		<checkbox label="about:config &gt;&gt; loop.enabled" preference="ctraddon_loopcall" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_loopcall"/>
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_loopcalldescr">&Ctr_fx34loop;</description>
+		
+		<description class="ctraddon_font1">&Ctr_e_deved;</description>
 		<checkbox label="about:config &gt;&gt; browser.devedition.theme.enabled" preference="ctraddon_devtheme" oncommand="classicthemerestorerjso.ctr.resetPrefsForDevTheme()" id="ctraddon_pw_devtheme"/>
 		<checkbox label="about:config &gt;&gt; browser.devedition.theme.showCustomizeButton" preference="ctraddon_devthemebut" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_devthemeb"/>
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_devthemedescr">&Ctr_fx35devtheme;</description>
+		
+		<description class="ctraddon_font1">&Ctr_e_prefsui;</description>
 		<checkbox label="about:config &gt;&gt; browser.preferences.inContent" preference="ctraddon_oldprefs" oncommand="classicthemerestorerjso.ctr.ctrShowE10sPrefForWindowPrefs()" id="ctraddon_pw_oldprefs"/>
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_oldprefsdescr">&Ctr_fx36prefs;</description>
+		
 		<checkbox label="about:config &gt;&gt; browser.tabs.remote.autostart" preference="ctraddon_e10stabs" id="ctraddon_pw_e10stabs" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_e10stabsdescr">E10S (multi-process) mode (Nightly channel)</description>
 	  </groupbox>

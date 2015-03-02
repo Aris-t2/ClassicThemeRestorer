@@ -99,6 +99,7 @@ pref("extensions.classicthemerestorer.chevronfix",false);
 pref("extensions.classicthemerestorer.dblclnewtab",false);
 pref("extensions.classicthemerestorer.hidetbwot",false);
 pref("extensions.classicthemerestorer.hidetbwote",true);
+pref("extensions.classicthemerestorer.hidetbwote2",true);
 pref("extensions.classicthemerestorer.notabfog",false);
 pref("extensions.classicthemerestorer.notabbg",false);
 pref("extensions.classicthemerestorer.hightabpososx",false);

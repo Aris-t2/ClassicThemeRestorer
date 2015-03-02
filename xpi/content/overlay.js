@@ -84,6 +84,9 @@ classicthemerestorerjs.ctr = {
 		  var thirdpartytheme = Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin");
 		  document.getElementById("main-window").setAttribute('currenttheme',thirdpartytheme);
 		  classicthemerestorerjs.ctr.loadUnloadCSS("thirdpartythemes",true);
+		  
+		  if(thirdpartytheme=="Tangerinefox" || thirdpartytheme=="Tangofox")
+			this.fxdefaulttheme=true;
 		}
 	} catch(e){}
 	
@@ -519,16 +522,22 @@ classicthemerestorerjs.ctr = {
 		  case "smallnavbut":
 		  
 			var cstbb = false;
-			//if CTB add-on is installed and navbarbuttons option is not off
+			//if CTB add-on is installed and navbar buttons option is not off
 			try {
 			  if(Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
 			   cstbb = true;
 			} catch(e){}
 	
-			if (branch.getBoolPref("smallnavbut") && classicthemerestorerjs.ctr.fxdefaulttheme==true && cstbb==false) {			
-				classicthemerestorerjs.ctr.loadUnloadCSS("smallnavbut",true);
+			if(branch.getBoolPref("smallnavbut") && classicthemerestorerjs.ctr.fxdefaulttheme==true && cstbb==false) {			
+			  classicthemerestorerjs.ctr.loadUnloadCSS("smallnavbut",true);
+			  if(branch.getBoolPref("nbcompact"))
+			    classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
 			}
-			else  classicthemerestorerjs.ctr.loadUnloadCSS("smallnavbut",false);
+			else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("smallnavbut",false);
+			  if(branch.getBoolPref("nbcompact"))
+			    classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
+			}
 			
 			classicthemerestorerjs.ctr.checkAppbuttonOnNavbar();
 
@@ -543,7 +552,7 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("backforward")) {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("backforward",true);
 			  
-			  if (branch.getBoolPref("nbcompact") && classicthemerestorerjs.ctr.osstring!="Darwin"){
+			  if (branch.getBoolPref("nbcompact") && classicthemerestorerjs.ctr.osstring!="Darwin" && branch.getBoolPref("smallnavbut")==false){
 				classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
 			  }
 			}
@@ -557,7 +566,7 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "nbcompact":
-			if (branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && classicthemerestorerjs.ctr.osstring!="Darwin" && classicthemerestorerjs.ctr.fxdefaulttheme==true)
+			if (branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && classicthemerestorerjs.ctr.osstring!="Darwin"&& branch.getBoolPref("smallnavbut")==false && classicthemerestorerjs.ctr.fxdefaulttheme==true)
 			  classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
 			else classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
 		  break;
@@ -1901,11 +1910,14 @@ classicthemerestorerjs.ctr = {
 					  
 	  if(gBrowser.tabContainer.tabbrowser.visibleTabs.length < 2) {
 		
-		// optianally reduces delay on startup (because it can cause glitches with Windows Classic visual style)
+		// optionally reduces delay on startup (because it can cause glitches with Windows Classic visual style)
 		if(classicthemerestorerjs.ctr.prefs.getBoolPref("hidetbwote"))
 		  document.getElementById("TabsToolbar").style.visibility = 'collapse';
 		else
 		  document.getElementById("TabsToolbar").collapsed = true;
+		
+		// correct titlebar appearance, if the user wants it (not required for all visual styles)
+		if(classicthemerestorerjs.ctr.prefs.getBoolPref("hidetbwote2")) {
 		
 		  if(classicthemerestorerjs.ctr.osstring=="WINNT" && tabsintitlebar==true){ // Windows
 			if (document.getElementById("toolbar-menubar").getAttribute("autohide") == "true"
@@ -1915,6 +1927,8 @@ classicthemerestorerjs.ctr = {
 		  } else if(classicthemerestorerjs.ctr.osstring=="Darwin" && tabsintitlebar==true) { // MacOSX
 			  document.getElementById("titlebar").style.paddingBottom="28px";
 		  } else {} //Linux does not need special treatment
+		
+		}
 	  }
 	  else {
 		
@@ -1923,11 +1937,15 @@ classicthemerestorerjs.ctr = {
 		else
 		  document.getElementById("TabsToolbar").collapsed = false;
 		
-		if(classicthemerestorerjs.ctr.osstring=="WINNT") 
-		  document.getElementById("toolbar-menubar").style.marginBottom="unset";		
-		else if(classicthemerestorerjs.ctr.osstring=="Darwin")
-		  document.getElementById("titlebar").style.paddingBottom="unset";
-	    else {} //Linux does not need special treatment
+		if(classicthemerestorerjs.ctr.prefs.getBoolPref("hidetbwote2")) {
+			
+		  if(classicthemerestorerjs.ctr.osstring=="WINNT") 
+			document.getElementById("toolbar-menubar").style.marginBottom="unset";		
+		  else if(classicthemerestorerjs.ctr.osstring=="Darwin")
+			document.getElementById("titlebar").style.paddingBottom="unset";
+	      else {} //Linux does not need special treatment
+		
+	    }
 	  }
 
 	}
@@ -1937,37 +1955,36 @@ classicthemerestorerjs.ctr = {
   // replace default icons with tab-favicons
   favIconinUrlbarCTR: function() {
 
-	window.addEventListener("DOMContentLoaded", faviconInUrlbar, false);
-	window.addEventListener("load", faviconInUrlbar, false);
-	window.addEventListener("TabAttrModified", faviconInUrlbar, false);
+	gBrowser.tabContainer.addEventListener("TabAttrModified", faviconInUrlbar, false);
 	
 	// Using additional 'setInterval' prevents some sites with empty or slow
 	// loading tab icons from cheating a blank space into urlbars favicon area.
-	setInterval(function() { faviconInUrlbar();	}, 500);
+	setInterval(function() { faviconInUrlbar();	}, 1000);
 	
 	function faviconInUrlbar(){
+	 
+	 var ppfavicon     = document.getElementById("page-proxy-favicon");
+	 var emptyfavicon1 = classicthemerestorerjs.ctr.prefs.getBoolPref("emptyfavicon");
+	 var emptyfavicon2 = classicthemerestorerjs.ctr.prefs.getBoolPref("emptyfavicon2");
+	 
 	 if(gBrowser.selectedTab.image) {
 	  try {
-		document.getElementById("page-proxy-favicon").removeAttribute("blank");
-		document.getElementById("page-proxy-favicon").setAttribute("src", gBrowser.selectedTab.image);
+		ppfavicon.setAttribute("src", gBrowser.selectedTab.image);
 	  } catch(e){}
 	 }
-	 else if(!gBrowser.selectedTab.image && classicthemerestorerjs.ctr.prefs.getBoolPref("emptyfavicon2")==true) {
+	 else if(emptyfavicon1) {
 	  try {
-		document.getElementById("page-proxy-favicon").setAttribute("blank", true);
-		document.getElementById("page-proxy-favicon").setAttribute("src", "chrome://classic_theme_restorer/content/images/default_favicon.png");
+		ppfavicon.setAttribute("src", "chrome://classic_theme_restorer/content/images/default_dot_favicon.png");
 	  } catch(e){}
 	 }
-	 else if(!gBrowser.selectedTab.image && classicthemerestorerjs.ctr.prefs.getBoolPref("emptyfavicon")==true) {
+	 else if(emptyfavicon2) {
 	  try {
-		document.getElementById("page-proxy-favicon").setAttribute("blank", true);
-		document.getElementById("page-proxy-favicon").setAttribute("src", "chrome://classic_theme_restorer/content/images/default_dot_favicon.png");
+		ppfavicon.setAttribute("src", "chrome://classic_theme_restorer/content/images/default_favicon.png");
 	  } catch(e){}
 	 }
-	 else if(!gBrowser.selectedTab.image && classicthemerestorerjs.ctr.prefs.getBoolPref("emptyfavicon2")==false && classicthemerestorerjs.ctr.prefs.getBoolPref("emptyfavicon")==false) {
+	 else if(emptyfavicon1==false && emptyfavicon2==false) {
 	  try {
-		document.getElementById("page-proxy-favicon").setAttribute("blank", true);
-		document.getElementById("page-proxy-favicon").removeAttribute("src");
+		ppfavicon.removeAttribute("src");
 	  } catch(e){}
 	 }
 	}
