@@ -1303,6 +1303,16 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("alt_newtabp",false);
 		  break;
 		  
+		  case "bmbutpanelm":
+			if (branch.getBoolPref("bmbutpanelm")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbutpanelm",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbutpanelm",false);
+		  break;
+		  
+		  case "bmbutnotext":
+			if (branch.getBoolPref("bmbutnotext")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbutnotext",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbutnotext",false);
+		  break;
+
 		  case "noresizerxp":
 			if (branch.getBoolPref("noresizerxp")) classicthemerestorerjs.ctr.loadUnloadCSS("noresizerxp",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("noresizerxp",false);
@@ -2533,6 +2543,8 @@ classicthemerestorerjs.ctr = {
 		case "noemptypticon": 		manageCSS("empty_favicon_pt.css");		break;
 		case "hidezoomres": 		manageCSS("hide_zoomreset.css");		break;
 		case "alt_newtabp": 		manageCSS("alt_newtabpage.css");		break;
+		case "bmbutpanelm": 		manageCSS("bmbut_pmenu.css");			break;
+		case "bmbutnotext": 		manageCSS("bmbut_no_label.css");		break;
 		case "noresizerxp": 		manageCSS("no_resizer_xp.css");			break;
 		case "pmhidelabels": 		manageCSS("panelmenu_nolabels.css");	break;
 		case "menupopupscr": 		manageCSS("menupopupscrollbar.css");	break;

@@ -107,6 +107,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_special_info2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_special_font').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'collapse';
+		document.getElementById('ctraddon_coltabsinfo').style.visibility = 'collapse';
 	};
 	
 	//pref e10s tabs
@@ -151,6 +152,13 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_tabwidthinfo').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabwidthinfo2').style.visibility = 'visible';
 		document.getElementById('ctraddon_pw_tabwidthinfo3').style.visibility = 'collapse';
+	  }
+	});
+	
+	//Colorful Tabs add-on extra info
+	AddonManager.getAddonByID('{0545b830-f0aa-4d7e-8820-50a4629a56fe}', function(addon) {
+	  if(addon && addon.isActive) {
+		document.getElementById('ctraddon_coltabsinfo').style.visibility = 'visible';
 	  }
 	});
 	

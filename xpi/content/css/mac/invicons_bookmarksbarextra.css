@@ -34,8 +34,8 @@
 		list-style-image: url("chrome://browser/skin/Toolbar-inverted@2x.png") !important;
 	  }
 
-	  #PersonalToolbar #loop-call-button > .toolbarbutton-badge-container {
-		list-style-image: url("chrome://browser/skin/loop/toolbar-inverted@2x.png") !important;
+	  #PersonalToolbar  toolbarbutton[id^="loop-"]:not([cui-areatype="menu-panel"]):not([state="error"]):not([state="action"]):not([state="active"]) > .toolbarbutton-badge-container {
+		list-style-image: url(chrome://browser/skin/loop/toolbar-inverted@2x.png) !important;
 	  }
 
 	  #PersonalToolbar #ctraddon_back-button > .toolbarbutton-icon {

@@ -725,6 +725,13 @@
 	  min-height:16px !important;
 	}
 	
+	#ctraddon_pw_bmbutpanelm label,
+	#ctraddon_pw_bmbutnotext label {
+	  background:url('chrome://classic_theme_restorer/content/images/bookmarks.png') no-repeat left !important;
+	  -moz-padding-start:20px !important;
+	  min-height:16px !important;
+	}
+
 	#ctraddon_pw_noresizerxp label {
 	  background:url('chrome://classic_theme_restorer/content/images/resizer.png') no-repeat left !important;
 	  -moz-padding-start:20px !important;

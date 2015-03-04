@@ -56,7 +56,7 @@
 	#PersonalToolbar #ctraddon_history-menu-toolbar-button:not([cui-areatype="menu-panel"]){
 	  -moz-image-region: rect(0, 180px, 18px, 162px) !important;
 	}
-	#PersonalToolbar #loop-call-button:not([cui-areatype="menu-panel"]) > .toolbarbutton-badge-container {
+	#PersonalToolbar toolbarbutton[id^="loop-"]:not([cui-areatype="menu-panel"]):not([state="error"]):not([state="action"]):not([state="active"]) > .toolbarbutton-badge-container {
 	  list-style-image: url(chrome://browser/skin/loop/toolbar-inverted.png) !important;
 	}
   }

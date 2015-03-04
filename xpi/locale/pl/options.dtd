@@ -31,6 +31,7 @@
 <!ENTITY Ctr_tabs2			"Karty zaokrąglone (alternatywne)">
 <!ENTITY Ctr_tabs3			"Karty zaokrąglone (alternatywne Aero)">
 <!ENTITY Ctr_tabforminfo	"Wygląd karty jest kontrolowany przez obecny styl.">
+<!ENTITY Ctr_coltabsinfo	"Wygląd karty nie jest w pełni kompatybilny z dodatkiem 'ColorfulTabs'!">
 <!ENTITY Ctr_tabsontop0		"Karty na górze (domyślne)">
 <!ENTITY Ctr_tabsontop1		"Karty na górze --- atrybut [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Karty nie na górze (v1) --- atrybut [tabsontop=false]">
@@ -128,6 +129,8 @@
 <!ENTITY Ctr_cpanelmenus	"Menu panelu: widok kompaktowy (zakładki, historia itp.)">
 <!ENTITY Ctr_hidezoomres	"Kontrolki powiększenia na pasku narzędzi: ukryj przycisk resetu powiększenia">
 <!ENTITY Ctr_alt_newtabp	"Strona nowej karty: wygląd alternatywny">
+<!ENTITY Ctr_bmbutpanelm	"Bookmarks menu button: panel menu appearance">
+<!ENTITY Ctr_bmbutnotext	"Bookmarks menu button: hide label on bookmarks bar">
 <!ENTITY Ctr_noresizerxp	"Usuń zmieniacz rozmiaru (Windows XP)">
 <!ENTITY Ctr_extraurlkeycb	"Otwórz dodatkowy pasek adresu (Cmd/Ctrl+">
 <!ENTITY Ctr_pmhidelabels	"Wyskakujące okno menu panelu: ukryj etykiety przycisku">
@@ -201,7 +204,7 @@
 <!ENTITY Ctr_dblclnewtab	"Podwójne kliknięcie otwiera 'nową' kartę (używa browser.newtab.url)">
 <!ENTITY Ctr_hidetbwot		"Ukryj pasek kart z jedną kartą">
 <!ENTITY Ctr_hidetbwote		"Zmniejsz opóźnienie ukrywania przy uruchamianiu">
-<!ENTITY Ctr_hidetbwote2	"Keep titlebar (tabs on top)">
+<!ENTITY Ctr_hidetbwote2	"Zachowaj pasek tytułu (karty na górze)">
 <!ENTITY Ctr_notabfog		"Usuń mgłę tła (Windows AeroGlass/8)">
 <!ENTITY Ctr_notabbg		"Usuń kolor tła (Windows AeroGlass/8)">
 <!ENTITY Ctr_hightabpos		"Zredukuj przestrzeń powyżej paska narzędzi (jeżeli możliwe)">
@@ -243,20 +246,20 @@
 <!ENTITY Ctr_otherctroptns	"Inne ustawienia">
 <!ENTITY Ctr_cuibotbuttons	"Dodatkowe przyciski w trybie 'dostosowywania'">
 <!ENTITY Ctr_bookmarkoinpw	"Pozycja 'Otwórz w nowym oknie prywatnym' w menu kontekstowym zakładek">
-<!ENTITY Ctr_nodevtheme		"Zapobiegaj włączeniu 'motywu twórcy'">
+<!ENTITY Ctr_nodevtheme		"Zapobiegaj włączeniu 'motywu dewelopera'">
 
 
 <!ENTITY Ctr_experttweaks	"Poprawki eksperckie">
 <!ENTITY Ctr_fx33layers		"Firefox 33+ wprowadził 'nowe funkcje renderowania' odpowiedzialne obecnie za 'zawieszanie się kart' w niektórych systemach. Odznaczenie tego ustawienia rozwiązuje ten problem.">
 <!ENTITY Ctr_fx34search		"Firefox 34+ wprowadził 'nowy interfejs wyszukiwania'. Odznaczenie tego ustawienia przywraca 'stary interfejs wyszukiwania'.">
 <!ENTITY Ctr_fx34loop		"Firefox 34+ wprowadził funkcje 'dzwonienia i konwersacji'. Odznaczenie tego ustawienia usunie je.">
-<!ENTITY Ctr_fx35devtheme	"Firefox 35+ wprowadził nowy 'motyw twórcy'. Odznaczenie tych ustawień wyłącza 'motyw twórcy' oraz jego przycisk w trybie dostosowywania.">
+<!ENTITY Ctr_fx35devtheme	"Firefox 35+ wprowadził nowy 'motyw dewelopera'. Odznaczenie tych ustawień wyłącza 'motyw dewelopera' oraz jego przycisk w trybie dostosowywania.">
 <!ENTITY Ctr_fx36prefs		"Firefox 36+ wprowadził opcje w karcie. Odznaczenie tego ustawienia przywraca stare okno opcji.">
-<!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
-<!ENTITY Ctr_e_searchui		"Search appearance">
-<!ENTITY Ctr_e_loop			"Calling and conversation">
-<!ENTITY Ctr_e_deved		"Developer Edition Theme">
-<!ENTITY Ctr_e_prefsui		"Preferences in tab">
+<!ENTITY Ctr_e_omtc			"Problem z OMTC/zawieszonymi kartami">
+<!ENTITY Ctr_e_searchui		"Wygląd wyszukiwania">
+<!ENTITY Ctr_e_loop			"Dzwonienie i konwersacja">
+<!ENTITY Ctr_e_deved		"Motyw Edycji Deweloperskiej">
+<!ENTITY Ctr_e_prefsui		"Ustawienia w karcie">
 
 
 <!ENTITY Ctr_pw_settings	"Ustawienia">
