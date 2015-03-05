@@ -274,7 +274,7 @@
 	}
 	
 	/* pinned tabs fix (Fx38+) */
-	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-content[pinned] {
+	#main-window[fx38plus="true"] #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-content[pinned] {
 	  -moz-padding-end: 0px !important;
 	}
 	

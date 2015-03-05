@@ -105,9 +105,14 @@ classicthemerestorerjs.ctr = {
 		if (this.appversion >= 34) document.getElementById("main-window").setAttribute('fx34plus',true);
 	} catch(e){}
 	
-	// add a new global attribute 'fx34plus' -> better parting css between versions
+	// add a new global attribute 'fx36plus' -> better parting css between versions
 	try{
 		if (this.appversion >= 36) document.getElementById("main-window").setAttribute('fx36plus',true);
+	} catch(e){}
+	
+	// add a new global attribute 'fx38plus' -> better parting css between versions
+	try{
+		if (this.appversion >= 38) document.getElementById("main-window").setAttribute('fx38plus',true);
 	} catch(e){}
 	
 	// add CTR version number to '#main-window' node, so other add-ons/themes can easier distinguish between versions

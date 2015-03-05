@@ -56,11 +56,10 @@
 
 	@media not all and (-moz-windows-classic) {
 	
-		#TabsToolbar:not([currentset*="tabbrowser-tabs,new-tab-button"]):not([orient="vertical"]) .tabs-newtab-button + .tabs-newtab-button{
+		#TabsToolbar[currentset*="tabbrowser-tabs,tabmixScrollBox"]:not([orient="vertical"]) .tabs-newtab-button + .tabs-newtab-button{
 		  -moz-margin-start: 0px !important;
 		}
-
-		#TabsToolbar:not([currentset*="tabbrowser-tabs,new-tab-button"]):not([orient="vertical"]) .tabs-newtab-button{
+		#TabsToolbar[currentset*="tabbrowser-tabs,tabmixScrollBox"]:not([orient="vertical"]) .tabs-newtab-button{
 		  -moz-margin-end: 0px !important;
 		}
 		#TabsToolbar:not([currentset*="tabbrowser-tabs,new-tab-button"]):not([orient="vertical"]) #tabbrowser-tabs:not([overflow]) {
