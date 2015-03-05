@@ -9,56 +9,54 @@
 	#context-bookmarkpage image{
 	  display:none !important;
 	}
-	#context-back:before,
-	#context-forward:before,
-	#context-reload:before,
-	#context-stop:before,
-	#context-bookmarkpage:before{
-	  content: attr(aria-label) !important;
+	#context-back label,
+	#context-forward label,
+	#context-reload label,
+	#context-stop label,
+	#context-bookmarkpage label{
+	  display: inline !important;
 	}
+
 	#context-navigation{
 	  -moz-box-orient: vertical !important;
 	}
-	#context-navigation > .menuitem-iconic {
-	  -moz-box-pack: start !important;
-	}
 
-	#context-back:before,
-	#context-forward:before,
-	#context-reload:before,
-	#context-stop:before,
-	#context-bookmarkpage:before{
-	  -moz-margin-start:32px !important;
+	#context-back label,
+	#context-forward label,
+	#context-reload label,
+	#context-stop label,
+	#context-bookmarkpage label{
+      -moz-margin-start:15px !important; /* 32 -17 */
 	}
 
 	/*Windows screen dpi value of 105%*/
 	@media (min-resolution: 101dpi) {
-		#context-back:before,
-		#context-forward:before,
-		#context-reload:before,
-		#context-stop:before,
-		#context-bookmarkpage:before{
-		  -moz-margin-start:30px !important;
+		#context-back label,
+		#context-forward label,
+		#context-reload label,
+		#context-stop label,
+		#context-bookmarkpage label{
+		  -moz-margin-start:13px !important;
 		}
 	}
 	/*Windows screen dpi value of 115%/125%/150%*/
 	@media (min-resolution: 110dpi) {
-		#context-back:before,
-		#context-forward:before,
-		#context-reload:before,
-		#context-stop:before,
-		#context-bookmarkpage:before{
-		  -moz-margin-start:28px !important;
+		#context-back label,
+		#context-forward label,
+		#context-reload label,
+		#context-stop label,
+		#context-bookmarkpage label{
+		  -moz-margin-start:11px !important;
 		}
 	}
 	/*Windows screen dpi value of 200%*/
 	@media (min-resolution: 192dpi) {
-		#context-back:before,
-		#context-forward:before,
-		#context-reload:before,
-		#context-stop:before,
-		#context-bookmarkpage:before{
-		  -moz-margin-start:25px !important;
+		#context-back label,
+		#context-forward label,
+		#context-reload label,
+		#context-stop label,
+		#context-bookmarkpage label{
+		  -moz-margin-start:8px !important;
 		}
 	}
 

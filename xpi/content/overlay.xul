@@ -121,6 +121,12 @@
 	  <menuseparator id="ctraddon_connavsep" insertbefore="context-bookmarkpage"/>
 	</menugroup>
 	
+	<menuitem id="context-back" label="&backCmd.label;" accesskey="&backCmd.accesskey;"/>
+	<menuitem id="context-forward" label="&forwardCmd.label;" accesskey="&forwardCmd.accesskey;"/>
+	<menuitem id="context-reload" label="&reloadCmd.label;" accesskey="&reloadCmd.accesskey;"/>
+	<menuitem id="context-stop" label="&stopCmd.label;" accesskey="&stopCmd.accesskey;"/>
+	<menuitem id="context-bookmarkpage" label="&bookmarkThisPageCmd.label;" accesskey="&bookmarkPageCmd2.accesskey;"/>
+	
 	<!--### add a menuitem to bookmarks context menu to open a bookmark in a new private window ###-->
 	<menugroup id="placesContext">
 	  <menuitem id="ctraddon_placesContext_openInPrivatewindow"

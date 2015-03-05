@@ -2748,15 +2748,16 @@ classicthemerestorerjs.ctr = {
 						}\
 						#main-window[defaultfxtheme="true"][tabsontop="false"] #TabsToolbar:not(:-moz-lwtheme),\
 						#main-window[defaultfxtheme="true"] :not(#theFoxOnlyBetter-slimChrome-toolbars) > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar):not(.devtools-tabbar):not(#developer-toolbar):not(#puzzleBars-urlbar-bar):not(#theFoxOnlyBetter-skyLights-container):not(#theFoxOnlyBetter-slimChrome-slimmer),\
-						/* The Fox, Only Better\'s Slim Chrome toolbars; apply the color to the toolbar container rather than to the toolbars themselves */\
 						#main-window[defaultfxtheme="true"] #theFoxOnlyBetter-slimChrome-container > *:not(#theFoxOnlyBetter-slimChrome-toolbars-bottom):not(:-moz-lwtheme),\
 						#main-window[defaultfxtheme="true"] #ctraddon_urlextrabar:not(:-moz-lwtheme){\
 						  background-image:unset !important;\
 						  background-color:#dbeaf9 !important;\
 						}\
-						/* The Fox, Only Better\'s Slim Chrome toolbars; the extra -slimmer[...] selector is so this only apllies when the nav-bar is also hidden automatically, no need for the gradient otherwise as it will be in the nav-bar itself */\
 						#main-window[defaultfxtheme="true"] #theFoxOnlyBetter-slimChrome-slimmer:not([collapsed]) ~ #theFoxOnlyBetter-slimChrome-container > *:not(#theFoxOnlyBetter-slimChrome-toolbars-bottom):not(:-moz-lwtheme){\
 						  background-image: -moz-linear-gradient(#eaf2fb 0px, #dbeaf9 36px, #dbeaf9) !important;\
+						}\
+						#main-window[defaultfxtheme="true"] #theFoxOnlyBetter-slimChrome-slimmer:not([collapsed]) {\
+						  background: #eaf2fb !important;\
 						}\
 						/* location bar / search bar borders */\
 						#main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme),\
