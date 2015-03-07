@@ -1974,7 +1974,19 @@ classicthemerestorerjs.ctr = {
   // replace default icons with tab-favicons
   favIconinUrlbarCTR: function() {
 
-	gBrowser.tabContainer.addEventListener("TabAttrModified", faviconInUrlbar, false);
+	// Some add-ons like 'Profile Switcher' interfere with gBrowser usage on second window.
+	// As result event listener fails to listen for "TabAttrModified" event.
+	// Waiting until dom content is loaded fixes this problem.
+	window.addEventListener("DOMContentLoaded", function _favIconinUrlbarCTR(){
+	  var mainWindow = window.QueryInterface(Components.interfaces.nsIInterfaceRequestor)
+                       .getInterface(Components.interfaces.nsIWebNavigation)
+                       .QueryInterface(Components.interfaces.nsIDocShellTreeItem)
+                       .rootTreeItem
+                       .QueryInterface(Components.interfaces.nsIInterfaceRequestor)
+                       .getInterface(Components.interfaces.nsIDOMWindow);
+					   
+	  mainWindow.gBrowser.tabContainer.addEventListener("TabAttrModified", faviconInUrlbar, false);
+	}, false);
 	
 	// Using additional 'setInterval' prevents some sites with empty or slow
 	// loading tab icons from cheating a blank space into urlbars favicon area.

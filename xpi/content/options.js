@@ -27,8 +27,11 @@ classicthemerestorerjso.ctr = {
 		if (this.fxdefaulttheme) document.getElementById("ClassicTRoptionsPane").setAttribute('defaultfxtheme',true);
 		  else {
 			var thirdpartytheme = Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin");
-			if(thirdpartytheme=="Tangerinefox" || thirdpartytheme=="Tangofox")
+			if(thirdpartytheme=="Tangerinefox" || thirdpartytheme=="Tangofox") {
 			  this.fxdefaulttheme=true;
+			  document.getElementById("ClassicTRoptionsPane").setAttribute('defaultfxtheme',true);
+			}
+		  
 		  }
 	} catch(e){}
 	
