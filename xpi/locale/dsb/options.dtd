@@ -63,6 +63,9 @@
 <!ENTITY Ctr_closeonleft	"Alternatiwna pozicija na rejtarku">
 <!ENTITY Ctr_close_wwltab	"Wokno ze slědnym widobnym rejtarkom zacyniś (about:config)">
 
+<!ENTITY Ctr_hctpinfotab	"Some tab variations are not compatible to 'Hide Caption Titlebar Plus' add-on.">
+<!ENTITY Ctr_hctpinfoab		"Button on titlebar is not compatible to 'Hide Caption Titlebar Plus' add-on.">
+
 <!ENTITY Ctr_appbutton		"Nałožeński tłocašk">
 <!ENTITY Ctr_appbutton0		"Tłocašk znjemóžnjony">
 <!ENTITY Ctr_appbutton1		"Tłocašk na symbolowej rědce">
@@ -280,11 +283,11 @@
 <!ENTITY appMenuGettingStarted.label	"Prědne kšace">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
-<!ENTITY backCmd.accesskey            "B">
-<!ENTITY forwardCmd.accesskey         "F">
-<!ENTITY reloadCmd.accesskey          "R">
-<!ENTITY stopCmd.accesskey            "S">
-<!ENTITY bookmarkPageCmd2.accesskey   "m">
+<!ENTITY backCmd.accesskey            "S">
+<!ENTITY forwardCmd.accesskey         "D">
+<!ENTITY reloadCmd.accesskey          "Z">
+<!ENTITY stopCmd.accesskey            "t">
+<!ENTITY bookmarkPageCmd2.accesskey   "c">
 
 <!-- Fallback entities. Leave empty! -->
 <!ENTITY openCmd.commandkey			"">

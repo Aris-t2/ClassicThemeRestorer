@@ -63,6 +63,9 @@
 <!ENTITY Ctr_closeonleft	"Alternatiwna pozicija na rajtarku">
 <!ENTITY Ctr_close_wwltab	"Wokno z poslednim widźomnym rajtarkom začinić (about:config)">
 
+<!ENTITY Ctr_hctpinfotab	"Some tab variations are not compatible to 'Hide Caption Titlebar Plus' add-on.">
+<!ENTITY Ctr_hctpinfoab		"Button on titlebar is not compatible to 'Hide Caption Titlebar Plus' add-on.">
+
 <!ENTITY Ctr_appbutton		"Nałoženske tłóčatko">
 <!ENTITY Ctr_appbutton0		"Tłóčatko znjemóžnjeny">
 <!ENTITY Ctr_appbutton1		"Tłóčatko na symbolowej lajsće">
@@ -280,11 +283,11 @@
 <!ENTITY appMenuGettingStarted.label	"Prěnje kroki">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
-<!ENTITY backCmd.accesskey            "B">
-<!ENTITY forwardCmd.accesskey         "F">
-<!ENTITY reloadCmd.accesskey          "R">
+<!ENTITY backCmd.accesskey            "W">
+<!ENTITY forwardCmd.accesskey         "D">
+<!ENTITY reloadCmd.accesskey          "Z">
 <!ENTITY stopCmd.accesskey            "S">
-<!ENTITY bookmarkPageCmd2.accesskey   "m">
+<!ENTITY bookmarkPageCmd2.accesskey   "T">
 
 <!-- Fallback entities. Leave empty! -->
 <!ENTITY openCmd.commandkey			"">

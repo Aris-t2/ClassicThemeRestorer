@@ -18,6 +18,7 @@ classicthemerestorerjso.ctr = {
   oswindows:		Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS=="WINNT",
   needsRestart: 	false,
   ctrVersioninWin:  true,
+  tmp_tu_active:	false,
 
   initprefwindow: function() {
   
@@ -126,9 +127,16 @@ classicthemerestorerjso.ctr = {
 	document.getElementById('ctraddon_pw_tabwidthinfo2').style.visibility = 'collapse';
 	document.getElementById('ctraddon_pw_tabwidthinfo3').style.visibility = 'collapse';
 	
+	// HCTP add-on extra labels
+	document.getElementById('ctraddon_hctpinfotab').style.visibility = 'collapse';
+	document.getElementById('ctraddon_hctpinfoab').style.visibility = 'collapse';
+	
 	// extra checks to not enable tab width settings while 'TabMixPlus' or 'TabUtilities' is enabled
 	AddonManager.getAddonByID('{dc572301-7619-498c-a57d-39143191b318}', function(addon) {
 	  if(addon && addon.isActive) {
+		  
+		classicthemerestorerjso.ctr.tmp_tu_active = true;
+		
 	  	document.getElementById('ctraddon_pw_tabMinWidth').disabled = true;
 		document.getElementById('ctraddon_pw_tabMaxWidth').disabled = true;
 		document.getElementById('ctraddon_pw_tabMinWidth_L1').disabled = true;
@@ -143,6 +151,9 @@ classicthemerestorerjso.ctr = {
 	
 	AddonManager.getAddonByID('tabutils@ithinc.cn', function(addon) {
 	  if(addon && addon.isActive) {
+
+		classicthemerestorerjso.ctr.tmp_tu_active = true;
+
 		document.getElementById('ctraddon_pw_tabMinWidth').disabled = true;
 		document.getElementById('ctraddon_pw_tabMaxWidth').disabled = true;
 		document.getElementById('ctraddon_pw_tabMinWidth_L1').disabled = true;
@@ -221,6 +232,29 @@ classicthemerestorerjso.ctr = {
 	  }
 	  
 	});
+	
+	//HCTP add-on extra info
+	AddonManager.getAddonByID('hidecaptionplus-dp@dummy.addons.mozilla.org', function(addon) {
+	  if(addon && addon.isActive) {
+		document.getElementById('ctraddon_hctpinfotab').style.visibility = 'visible';
+		document.getElementById('ctraddon_hctpinfoab').style.visibility = 'visible';
+	  }
+	});
+	var HCTPListener = {
+	   onEnabled: function(addon) {
+		  if(addon.id == 'hidecaptionplus-dp@dummy.addons.mozilla.org') {
+			document.getElementById('ctraddon_hctpinfotab').style.visibility = 'visible';
+			document.getElementById('ctraddon_hctpinfoab').style.visibility = 'visible';
+		  }
+	   },
+	   onDisabled: function(addon) {
+		  if(addon.id == 'hidecaptionplus-dp@dummy.addons.mozilla.org') {
+			document.getElementById('ctraddon_hctpinfotab').style.visibility = 'collapse';
+			document.getElementById('ctraddon_hctpinfoab').style.visibility = 'collapse';
+		  }
+	   }
+	};
+	AddonManager.addAddonListener(HCTPListener);
 
 	// disable bookmark animation checkbox, if 'star button in urlbar' is used
 	if (this.prefs.getBoolPref('starinurl')) document.getElementById('ctraddon_pw_bmanimation').disabled = true;
@@ -755,7 +789,7 @@ classicthemerestorerjso.ctr = {
   classicCTRpreferences: function() {
 	this.resetCTRpreferences();
 	
-	this.prefs.setIntPref("ctabwidth",250);
+	if(this.ctr.tmp_tu_active==false) this.prefs.setIntPref("ctabwidth",250);
 	this.prefs.setBoolPref("panelmenucol",true);
 	this.prefs.setBoolPref("verifiedcolors",true);
 	this.prefs.setCharPref("findbar",'findbar_bottoma');
@@ -774,7 +808,7 @@ classicthemerestorerjso.ctr = {
 		classicthemerestorerjso.ctr.prefs.setBoolPref("feedinurl",true);
 	},1350);
 	
-	if (this.oswindows) this.prefs.setBoolPref("dblclnewtab",true);
+	if (this.oswindows && this.ctr.tmp_tu_active==false) this.prefs.setBoolPref("dblclnewtab",true);
 	
 	this.needsBrowserRestart();
 

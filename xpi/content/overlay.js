@@ -83,10 +83,14 @@ classicthemerestorerjs.ctr = {
 		else {
 		  var thirdpartytheme = Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin");
 		  document.getElementById("main-window").setAttribute('currenttheme',thirdpartytheme);
-		  classicthemerestorerjs.ctr.loadUnloadCSS("thirdpartythemes",true);
-		  
-		  if(thirdpartytheme=="Tangerinefox" || thirdpartytheme=="Tangofox")
+	  
+		  // these themes = default theme + different toolbar button icons
+		  if(thirdpartytheme=="Tangerinefox" || thirdpartytheme=="Tangofox") {
 			this.fxdefaulttheme=true;
+			document.getElementById("main-window").setAttribute('defaultfxtheme',true);
+		  }
+		  
+		  classicthemerestorerjs.ctr.loadUnloadCSS("thirdpartythemes",true);
 		}
 	} catch(e){}
 	
