@@ -383,6 +383,7 @@ classicthemerestorerjs.ctr = {
 
 			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_active',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_none',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_forced',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_tb_end',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_tb_start',false);
 			if (def_tcw==false) {
@@ -393,6 +394,7 @@ classicthemerestorerjs.ctr = {
 			  
 			  if (branch.getCharPref("closetab")=="closetab_forced") {
 				Services.prefs.getBranch("browser.tabs.").setIntPref("tabClipWidth",1);
+				classicthemerestorerjs.ctr.loadUnloadCSS('closetab_forced',true);
 			  }
 			  else if (classicthemerestorerjs.ctr.appversion >= 31) {
 			    classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("closetab"),true);
@@ -553,8 +555,25 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "hidenavbar":	  
-			if (branch.getBoolPref("hidenavbar")) classicthemerestorerjs.ctr.loadUnloadCSS("hidenavbar",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("hidenavbar",false);
+			if (branch.getBoolPref("hidenavbar")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("hidenavbar",true);
+			  
+			  setTimeout(function(){
+				try{
+				  document.getElementById("toggle_nav-bar").setAttribute("checked",false);
+				}catch(e){}
+			  },1500);
+
+			}
+			else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("hidenavbar",false);
+			  
+			  setTimeout(function(){
+				try{
+				  document.getElementById("toggle_nav-bar").setAttribute("checked",true);
+				}catch(e){}
+			  },1500);
+			}
 		  break;
 		  
 		  case "backforward":
@@ -1119,6 +1138,14 @@ classicthemerestorerjs.ctr = {
 			  },400);
 			} else classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_pen",false);
 			
+			if(classicthemerestorerjs.ctr.prefs.getBoolPref("tabfbold_hov"))
+			  classicthemerestorerjs.ctr.loadUnloadCSS("tabfbold_hov",true);
+			else classicthemerestorerjs.ctr.loadUnloadCSS("tabfbold_hov",false);
+				
+			if(classicthemerestorerjs.ctr.prefs.getBoolPref("tabfita_hov"))
+			  classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_hov",true);
+			else classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_hov",false);
+			
 		  break;
 		  
 		  /* exclude hover settings from unread tab */
@@ -1157,6 +1184,14 @@ classicthemerestorerjs.ctr = {
 				classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_unr",true);
 			  },400);
 			} else classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_unr",false);
+			
+			if(classicthemerestorerjs.ctr.prefs.getBoolPref("tabfbold_hov"))
+			  classicthemerestorerjs.ctr.loadUnloadCSS("tabfbold_hov",true);
+			else classicthemerestorerjs.ctr.loadUnloadCSS("tabfbold_hov",false);
+				
+			if(classicthemerestorerjs.ctr.prefs.getBoolPref("tabfita_hov"))
+			  classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_hov",true);
+			else classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_hov",false);
 
 		  break;
 		  
@@ -2387,6 +2422,7 @@ classicthemerestorerjs.ctr = {
 		
 		case "closetab_active": 		manageCSS("closetab_active.css");  		break;
 		case "closetab_none": 			manageCSS("closetab_none.css");  		break;
+		case "closetab_forced": 		manageCSS("closetab_forced.css");  		break;
 		case "closetab_tb_end": 		manageCSS("closetab_tb_end.css");  		break;
 		case "closetab_tb_start": 		manageCSS("closetab_tb_start.css");  	break;
 
@@ -3761,7 +3797,7 @@ classicthemerestorerjs.ctr = {
 			if(enable==true){
 				
 				this.tabboldsheet_def=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab:not([selected=true]):not(:hover) .tab-text {\
+					.tabbrowser-tab:not([selected=true]):not(:hover):not([pending]):not([unread]) .tab-text {\
 					  font-weight: bold !important;\
 					}\
 				'), null, null);
@@ -3794,11 +3830,38 @@ classicthemerestorerjs.ctr = {
 			
 			if(enable==true){
 				
-				this.tabboldsheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab:not([selected=true]):hover .tab-text {\
-					  font-weight: bold !important;\
-					}\
-				'), null, null);
+				if(this.prefs.getBoolPref('tabc_hov_unr') && this.prefs.getBoolPref('tabc_hov_unl')){
+					
+					this.tabboldsheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+						.tabbrowser-tab:not([selected=true]):not([pending]):not([unread]):hover .tab-text {\
+						  font-weight: bold !important;\
+						}\
+					'), null, null);
+
+				} else if(this.prefs.getBoolPref('tabc_hov_unr')){
+					
+					this.tabboldsheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+						.tabbrowser-tab:not([selected=true]):not([unread]):hover .tab-text {\
+						  font-weight: bold !important;\
+						}\
+					'), null, null);
+
+				} else if(this.prefs.getBoolPref('tabc_hov_unl')){
+					
+					this.tabboldsheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+						.tabbrowser-tab:not([selected=true]):not([pending]):hover .tab-text {\
+						  font-weight: bold !important;\
+						}\
+					'), null, null);
+
+				} else {
+				
+					this.tabboldsheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+						.tabbrowser-tab:not([selected=true]):hover .tab-text {\
+						  font-weight: bold !important;\
+						}\
+					'), null, null);
+				}
 
 				applyNewSheet(this.tabboldsheet_hov);
 			}
@@ -3872,7 +3935,7 @@ classicthemerestorerjs.ctr = {
 			if(enable==true){
 				
 				this.tabitasheet_def=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab:not([selected=true]):not(:hover) .tab-text {\
+					.tabbrowser-tab:not([selected=true]):not(:hover):not([pending]):not([unread]) .tab-text {\
 					  font-style: italic !important;\
 					}\
 				'), null, null);
@@ -3905,11 +3968,31 @@ classicthemerestorerjs.ctr = {
 			
 			if(enable==true){
 				
-				this.tabitasheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab:not([selected=true]):hover .tab-text {\
-					  font-style: italic !important;\
-					}\
-				'), null, null);
+				if(this.prefs.getBoolPref('tabc_hov_unr') && this.prefs.getBoolPref('tabc_hov_unl')){
+					this.tabitasheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+						.tabbrowser-tab:not([selected=true]):not([pending]):not([unread]):hover .tab-text {\
+						  font-style: italic !important;\
+						}\
+					'), null, null);
+				} else if(this.prefs.getBoolPref('tabc_hov_unr')){
+					this.tabitasheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+						.tabbrowser-tab:not([selected=true]):not([unread]):hover .tab-text {\
+						  font-style: italic !important;\
+						}\
+					'), null, null);
+				} else if(this.prefs.getBoolPref('tabc_hov_unl')){
+					this.tabitasheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+						.tabbrowser-tab:not([selected=true]):not([pending]):hover .tab-text {\
+						  font-style: italic !important;\
+						}\
+					'), null, null);
+				} else {
+					this.tabitasheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+						.tabbrowser-tab:not([selected=true]):hover .tab-text {\
+						  font-style: italic !important;\
+						}\
+					'), null, null);
+				}
 
 				applyNewSheet(this.tabitasheet_hov);
 			}
@@ -4118,6 +4201,23 @@ classicthemerestorerjs.ctr = {
     
 	let ctrAddonBar = document.getElementById("ctraddon_addon-bar");
     setToolbarVisibility(ctrAddonBar, ctrAddonBar.collapsed);
+  
+  },
+  
+  toggleCtrNavBar: function() {
+    
+	if(classicthemerestorerjs.ctr.prefs.getBoolPref("hidenavbar")) {
+      classicthemerestorerjs.ctr.prefs.setBoolPref("hidenavbar",false);
+	  try{
+	    document.getElementById("toggle_nav-bar").setAttribute("checked",true);
+	  }catch(e){}
+	}
+    else {
+	  classicthemerestorerjs.ctr.prefs.setBoolPref("hidenavbar",true);
+	  try{
+		document.getElementById("toggle_nav-bar").setAttribute("checked",false);
+	  }catch(e){}
+	}
   
   },
   

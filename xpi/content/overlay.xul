@@ -127,6 +127,15 @@
 	<menuitem id="context-stop" label="&stopCmd.label;" accesskey="&stopCmd.accesskey;"/>
 	<menuitem id="context-bookmarkpage" label="&bookmarkThisPageCmd.label;" accesskey="&bookmarkPageCmd2.accesskey;"/>
 	
+	<menupopup id="toolbar-context-menu">
+	  <menuitem id="toggle_nav-bar"
+                label="&navbarCmd.label;"
+                toolbarid="nav-bar"
+				oncommand="classicthemerestorerjs.ctr.toggleCtrNavBar();"
+				type="checkbox"
+				insertbefore="viewToolbarsMenuSeparator"/>
+	</menupopup>
+	
 	<!--### add a menuitem to bookmarks context menu to open a bookmark in a new private window ###-->
 	<menugroup id="placesContext">
 	  <menuitem id="ctraddon_placesContext_openInPrivatewindow"
