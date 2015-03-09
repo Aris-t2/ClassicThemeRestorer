@@ -8,7 +8,7 @@
 	  visibility: collapse !important;
 	}
 	/* prevent TMp form hiding it, if CTRs option is active*/
-	#tabbrowser-tabs .tabbrowser-tab[selected="true"] .tab-close-button {
+	#tabbrowser-tabs .tabbrowser-tab[selected="true"]:not([pinned]):not([protected]) .tab-close-button {
 	  visibility: visible !important;
 	  display: block !important;
 	}
