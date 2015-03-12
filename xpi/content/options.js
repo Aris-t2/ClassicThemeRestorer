@@ -498,6 +498,7 @@ classicthemerestorerjso.ctr = {
 	  this.prefs.setBoolPref('aerocolors',false);
   
 	this.hideThemeInfoForTabs();
+	this.unsetTabColorsAndMore();
 
   },
   
@@ -792,7 +793,7 @@ classicthemerestorerjso.ctr = {
   classicCTRpreferences: function() {
 	this.resetCTRpreferences();
 	
-	if(this.ctr.tmp_tu_active==false) this.prefs.setIntPref("ctabwidth",250);
+	if(classicthemerestorerjso.ctr.tmp_tu_active==false) classicthemerestorerjso.ctr.prefs.setIntPref("ctabwidth",250);
 	this.prefs.setBoolPref("panelmenucol",true);
 	this.prefs.setBoolPref("verifiedcolors",true);
 	this.prefs.setCharPref("findbar",'findbar_bottoma');
@@ -811,7 +812,8 @@ classicthemerestorerjso.ctr = {
 		classicthemerestorerjso.ctr.prefs.setBoolPref("feedinurl",true);
 	},1350);
 	
-	if (this.oswindows && this.ctr.tmp_tu_active==false) this.prefs.setBoolPref("dblclnewtab",true);
+	if (this.oswindows && classicthemerestorerjso.ctr.tmp_tu_active==false)
+		classicthemerestorerjso.ctr.prefs.setBoolPref("dblclnewtab",true);
 	
 	this.needsBrowserRestart();
 

@@ -2110,6 +2110,18 @@ classicthemerestorerjs.ctr = {
 
   // disable preferences which are not usable with third party themes  
   disableSettingsforThemes: function() {
+	
+	try {
+	  if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
+		this.prefs.setBoolPref('tabcolor_def',false);
+		this.prefs.setBoolPref('tabcolor_act',false);
+		this.prefs.setBoolPref('tabcolor_unr',false);
+		this.prefs.setBoolPref('tabcolor_pen',false);
+		this.prefs.setBoolPref('tabcolor_hov',false);
+		this.prefs.setBoolPref('ntabcolor_def',false);
+		this.prefs.setBoolPref('ntabcolor_hov',false);
+	  }
+	} catch(e) {}
 
 	if (!this.fxdefaulttheme) {
 		this.prefs.setBoolPref('tabcolor_def',false);
