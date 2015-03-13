@@ -1,3 +1,13 @@
+<!-- LOCALIZATION NOTE (<!ENTITY % brandDTD) must not be edited as it  
+	   controls the use of (&brandShortName;) this gets replaced at run time
+	   with the browsers name, This item can not be edited or errors may occur.
+-->
+<!-- Do not edit -->
+<!ENTITY % brandDTD
+    SYSTEM "chrome://branding/locale/brand.dtd">
+  %brandDTD;
+<!-- Do not edit above this message--> 
+
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Barra de Complementos">
@@ -9,7 +19,7 @@
 <!ENTITY Ctr_navthrobber	"Indicador de Atividade">
 <!ENTITY Ctr_sidebarbutton	"Barra Lateral">
 <!ENTITY Ctr_windowcontrols	"Mínimo/Máximo/Fechar (Tela Cheia)">
-<!ENTITY Ctr_rr				"Reinicie o Firefox!">
+<!ENTITY Ctr_rr				"Reinicie o &brandShortName;!">
 
 <!ENTITY Ctr_cuibuttons		"Botões">
 <!ENTITY Ctr_cuibutnormal	"Normais">
@@ -38,7 +48,7 @@
 <!ENTITY Ctr_tabsontop3		"Abas Embaixo (v2) --- Definida [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"v2 é Só para Alguns Complementos e Temas Completos!">
 <!ENTITY Ctr_tabsontopI1	"Adicionar Atributos [tabsontop=true/false] para">
-<!ENTITY Ctr_tabsintitlebar	"Barra de Título do Firefox (about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Barra de Título do &brandShortName; (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(Padrão)">
 <!ENTITY Ctr_tabwidthcla	"(Clássica)">
 <!ENTITY Ctr_tabminheight	"Altura:">
@@ -70,9 +80,9 @@
 <!ENTITY Ctr_appbutton0		"Botão Desativado">
 <!ENTITY Ctr_appbutton1		"Botão na Barra de Ferramentas">
 <!ENTITY Ctr_appbutton1wt	"Botão na Barra de Ferramentas (Só o Texto)">
-<!ENTITY Ctr_appbutton2		"Botão na Barra de Título [Firefox]">
-<!ENTITY Ctr_appbutton2h	"Botão na Barra de Título [Firefox] (Oculto)">
-<!ENTITY Ctr_appbutton2io	"Botão na Barra de Título [Firefox] (Só o Ícone)">
+<!ENTITY Ctr_appbutton2		"Botão na Barra de Título [&brandShortName;]">
+<!ENTITY Ctr_appbutton2h	"Botão na Barra de Título [&brandShortName;] (Oculto)">
+<!ENTITY Ctr_appbutton2io	"Botão na Barra de Título [&brandShortName;] (Só o Ícone)">
 <!ENTITY Ctr_paneluibtweak	"Botão do Menu do Painel na Barra de Abas na Cor Laranja">
 <!ENTITY Ctr_appbuttonc_o	"Botão Laranja (Padrão)">
 <!ENTITY Ctr_appbuttonc_a	"Botão Azul (Aurora)">
@@ -139,7 +149,7 @@
 <!ENTITY Ctr_pmhidelabels	"Menu do Painel: Ocultar Rótulos do Botão">
 <!ENTITY Ctr_menupopupscr	"Pop-ups do Menu: Exibir Barras de Rolagem em vez das Setas de Rolagem">
 
-<!ENTITY Ctr_fxmockup		"Modelo do Firefox">
+<!ENTITY Ctr_fxmockup		"Modelo do &brandShortName;">
 <!ENTITY Ctr_tabmokcolor	"Botões da Aba na Cor Branca (Fechar, Nova, Grupos, Listar Tudo)">
 <!ENTITY Ctr_tabmokcolor2	"Texto na Cor Branca e Sombra Escura nas Abas Inativas">
 <!ENTITY Ctr_tabmokcolor3	"Separadores para as Abas na Cor Branca">
@@ -191,7 +201,7 @@
 <!ENTITY Ctr_extrabar		"Barras de Ferramentas Adicionais">
 <!ENTITY Ctr_extrabar0		"Barra(s) de Ferramenta(s) Adicional(is)">
 <!ENTITY Ctr_extrabar1		"Barra de Ferramentas Adicional">
-<!ENTITY Ctr_extrabarinfo	"Alternar Entre os Modos 'Abas no Topo' e 'Abas Embaixo', Alterará Aleatoriamente a Ordem das Barras de Ferramentas Adicionais. O Firefox Precisa ser Reiniciado para Resolver este Problema.">
+<!ENTITY Ctr_extrabarinfo	"Alternar Entre os Modos 'Abas no Topo' e 'Abas Embaixo', Alterará Aleatoriamente a Ordem das Barras de Ferramentas Adicionais. O &brandShortName; Precisa ser Reiniciado para Resolver este Problema.">
 
 <!ENTITY Ctr_invicons		"Ícones Invertidos">
 <!ENTITY Ctr_menubar		"Barra de Menus">
@@ -252,11 +262,11 @@
 <!ENTITY Ctr_nodevtheme		"Evitar Habilitar o 'Tema do Desenvolvedor'">
 
 <!ENTITY Ctr_experttweaks	"Avançado">
-<!ENTITY Ctr_fx33layers		"O Firefox 33+ Introduziu 'Novos Recursos de Renderização', Atualmente Responsáveis por 'Suspender Abas' em Alguns Sistemas. Desmarque esta Opção para Resolver este Problema.">
-<!ENTITY Ctr_fx34search		"O Firefox 34+ Introduziu uma 'Nova Interface de Usuário de Pesquisa'. Desmarque esta Opção para Retornar à 'Antiga Interface de Usuário de Pesquisa'.">
-<!ENTITY Ctr_fx34loop		"O Firefox 34+ Introduziu Recursos de 'Chamada e Conversação'. Desmarque esta Opção para Removê-los.">
-<!ENTITY Ctr_fx35devtheme	"O Firefox 35+ Introduziu um Novo 'Tema do Desenvolvedor'. Desmarque estas Opções para Desabilitar o 'Tema do Desenvolvedor' e o seu Botão em Modo de Personalização.">
-<!ENTITY Ctr_fx36prefs		"O Firefox 36+ Introduziu as Preferências em uma Nova Aba. Desmarque esta Opção para Retornar à Antiga Janela de Preferências.">
+<!ENTITY Ctr_fx33layers		"O &brandShortName; 33+ Introduziu 'Novos Recursos de Renderização', Atualmente Responsáveis por 'Suspender Abas' em Alguns Sistemas. Desmarque esta Opção para Resolver este Problema.">
+<!ENTITY Ctr_fx34search		"O &brandShortName; 34+ Introduziu uma 'Nova Interface de Usuário de Pesquisa'. Desmarque esta Opção para Retornar à 'Antiga Interface de Usuário de Pesquisa'.">
+<!ENTITY Ctr_fx34loop		"O &brandShortName; 34+ Introduziu Recursos de 'Chamada e Conversação'. Desmarque esta Opção para Removê-los.">
+<!ENTITY Ctr_fx35devtheme	"O &brandShortName; 35+ Introduziu um Novo 'Tema do Desenvolvedor'. Desmarque estas Opções para Desabilitar o 'Tema do Desenvolvedor' e o seu Botão em Modo de Personalização.">
+<!ENTITY Ctr_fx36prefs		"O &brandShortName; 36+ Introduziu as Preferências em uma Nova Aba. Desmarque esta Opção para Retornar à Antiga Janela de Preferências.">
 <!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
 <!ENTITY Ctr_e_searchui		"Search appearance">
 <!ENTITY Ctr_e_loop			"Calling and conversation">
@@ -267,13 +277,13 @@
 <!ENTITY Ctr_pw_settings	"Configurações">
 <!ENTITY Ctr_pw_set_reset	"Restaurar aos Padrões">
 <!ENTITY Ctr_pw_set_predef	"Pré-configurações Clássicas">
-<!ENTITY Ctr_pw_set_preaus	"Pré-configurações do Firefox">
+<!ENTITY Ctr_pw_set_preaus	"Pré-configurações do &brandShortName;">
 <!ENTITY Ctr_pw_set_export	"Exportar as Preferências">
 <!ENTITY Ctr_pw_set_import	"Importar as Preferências">
 
 <!ENTITY Ctr_special_font	"As Configurações da Cor do Fundo são Só para o Tema Padrão!">
 <!ENTITY Ctr_special_info	"Algumas Opções Podem Oferecer Alterações Visuais Só em Certos Casos!">
-<!ENTITY Ctr_special_info2	"As Configurações são Feitas para o Tema Padrão do Firefox, e Podem Não Funcionar com Temas de Terceiros!">
+<!ENTITY Ctr_special_info2	"As Configurações são Feitas para o Tema Padrão do &brandShortName;, e Podem Não Funcionar com Temas de Terceiros!">
 <!ENTITY Ctr_support		"Forum de Suporte">
 <!ENTITY Ctr_newversion		"Há uma Nova Versão?">
 

@@ -1,3 +1,13 @@
+<!-- LOCALIZATION NOTE (<!ENTITY % brandDTD) must not be edited as it  
+	   controls the use of (&brandShortName;) this gets replaced at run time
+	   with the browsers name, This item can not be edited or errors may occur.
+-->
+<!-- Do not edit -->
+<!ENTITY % brandDTD
+    SYSTEM "chrome://branding/locale/brand.dtd">
+  %brandDTD;
+<!-- Do not edit above this message--> 
+
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Eklenti Çubuğu">
@@ -25,7 +35,7 @@
 <!ENTITY Ctr_tabcolors_t	"Özel Renkler">
 
 <!ENTITY Ctr_tabs			"Sekmeler">
-<!ENTITY Ctr_tabs0			"Kavisli Sekmeler (Firefox varsayılanı)">
+<!ENTITY Ctr_tabs0			"Kavisli Sekmeler (&brandShortName; varsayılanı)">
 <!ENTITY Ctr_tabs1			"Köşeli Sekmeler (Klasik)">
 <!ENTITY Ctr_tabs1m			"Kareli Sekmeler (Australize)">
 <!ENTITY Ctr_tabs2			"Kavisli Sekmeler (Alternatif)">
@@ -38,7 +48,7 @@
 <!ENTITY Ctr_tabsontop3		"Sekmeler Tepede Değil - ayarla [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"v2 sadece bazı eklentiler ve tam temalar içindir!">
 <!ENTITY Ctr_tabsontopI1	"Öznitelik Ekler [tabsontop=true/false] to">
-<!ENTITY Ctr_tabsintitlebar	"Firefox başlık çubuğu (about:config)">
+<!ENTITY Ctr_tabsintitlebar	"&brandShortName; başlık çubuğu (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(varsayılan)">
 <!ENTITY Ctr_tabwidthcla	"(klasik)">
 <!ENTITY Ctr_tabminheight	"Yükseklik:">
@@ -66,13 +76,13 @@
 <!ENTITY Ctr_hctpinfotab	"Some tab variations are not compatible to 'Hide Caption Titlebar Plus' add-on.">
 <!ENTITY Ctr_hctpinfoab		"Button on titlebar is not compatible to 'Hide Caption Titlebar Plus' add-on.">
 
-<!ENTITY Ctr_appbutton		"Firefox Butonu">
+<!ENTITY Ctr_appbutton		"&brandShortName; Butonu">
 <!ENTITY Ctr_appbutton0		"Buton devre-dışı">
 <!ENTITY Ctr_appbutton1		"Araç çubuğunda buton">
 <!ENTITY Ctr_appbutton1wt	"Araç çubuğunda buton (sadece yazı)">
-<!ENTITY Ctr_appbutton2		"[Firefox] başlığında buton">
-<!ENTITY Ctr_appbutton2h	"Button on [Firefox] titlebar (hidden)">
-<!ENTITY Ctr_appbutton2io	"[Firefox] başlığında buton (sadece ikon)">
+<!ENTITY Ctr_appbutton2		"[&brandShortName;] başlığında buton">
+<!ENTITY Ctr_appbutton2h	"Button on [&brandShortName;] titlebar (hidden)">
+<!ENTITY Ctr_appbutton2io	"[&brandShortName;] başlığında buton (sadece ikon)">
 <!ENTITY Ctr_paneluibtweak	"Sekme çubuğunda turuncu panel menü butonu">
 <!ENTITY Ctr_appbuttonc_o	"Turuncu renk butonu">
 <!ENTITY Ctr_appbuttonc_a	"Mavi renk butonu (Aurora)">
@@ -139,7 +149,7 @@
 <!ENTITY Ctr_pmhidelabels	"Panel menu uyarısı: buton etikeitini gizle">
 <!ENTITY Ctr_menupopupscr	"Menu uyarısı: kaydırma okları yerine kaydırma çubuklarını göster">
 
-<!ENTITY Ctr_fxmockup		"Firefox Taklit Modeli">
+<!ENTITY Ctr_fxmockup		"&brandShortName; Taklit Modeli">
 <!ENTITY Ctr_tabmokcolor	"Sekme butonları için beyaz renk (kapat, yeni, gruplar, tümünü listele)">
 <!ENTITY Ctr_tabmokcolor2	"Yazılar ve aktif olmayan sekmeler için beyaz renk ve karanlık gölge">
 <!ENTITY Ctr_tabmokcolor3	"Sekme ayırıcıları için Beyaz renk kullan">
@@ -191,7 +201,7 @@
 <!ENTITY Ctr_extrabar		"Ek Araç Çubuğu">
 <!ENTITY Ctr_extrabar0		"Ek Araç Çubuk(ları)">
 <!ENTITY Ctr_extrabar1		"Ek Araç Çubuğu">
-<!ENTITY Ctr_extrabarinfo	"'Sekmeler yukarıda' ve 'Sekmeler yukarıda olmadığı' modlar arası değişmek, bazen araç çubuklarını bozabilir. Firefox bu sorunu çözmek için yeniden başlatılması gerekir.">
+<!ENTITY Ctr_extrabarinfo	"'Sekmeler yukarıda' ve 'Sekmeler yukarıda olmadığı' modlar arası değişmek, bazen araç çubuklarını bozabilir. &brandShortName; bu sorunu çözmek için yeniden başlatılması gerekir.">
 
 <!ENTITY Ctr_invicons		"Ters çevrilmiş simgeleri">
 <!ENTITY Ctr_menubar		"Menu çubuğu">
@@ -215,7 +225,7 @@
 <!ENTITY Ctr_alttabstb2		"In maximized mode (tabs on top)">
 
 <!ENTITY Ctr_altmenubar		"Arkaplan rengi ekle (OS başlıkçubuğunda)">
-<!ENTITY Ctr_altmenubarpos	"Alternatif pozisyon (Firefox başlık çubuğunda altında)">
+<!ENTITY Ctr_altmenubarpos	"Alternatif pozisyon (&brandShortName; başlık çubuğunda altında)">
 <!ENTITY Ctr_menubarnofog	"Arkaplan bulanıklığı/rengi kaldır (Windows AeroGlass/8)">
 
 <!ENTITY Ctr_aerocolors		"Blue Aero colors for toolbars (and tabs)">
@@ -252,11 +262,11 @@
 <!ENTITY Ctr_nodevtheme		"Prevent 'Developer Theme' from being enabled">
 
 <!ENTITY Ctr_experttweaks	"Gelişmiş">
-<!ENTITY Ctr_fx33layers		"Firefox 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
-<!ENTITY Ctr_fx34search		"Firefox 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
-<!ENTITY Ctr_fx35devtheme	"Firefox 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
-<!ENTITY Ctr_fx36prefs		"Firefox 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
+<!ENTITY Ctr_fx33layers		"&brandShortName; 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
+<!ENTITY Ctr_fx34search		"&brandShortName; 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
+<!ENTITY Ctr_fx34loop		"&brandShortName; 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
+<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
+<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
 <!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
 <!ENTITY Ctr_e_searchui		"Search appearance">
 <!ENTITY Ctr_e_loop			"Calling and conversation">
@@ -267,13 +277,13 @@
 <!ENTITY Ctr_pw_settings	"Ayarlar">
 <!ENTITY Ctr_pw_set_reset	"Sıfırla">
 <!ENTITY Ctr_pw_set_predef	"Klasik ön-tanımlı">
-<!ENTITY Ctr_pw_set_preaus	"Firefox ön-tanımlı">
+<!ENTITY Ctr_pw_set_preaus	"&brandShortName; ön-tanımlı">
 <!ENTITY Ctr_pw_set_export	"Tercihleri dışa Aktar">
 <!ENTITY Ctr_pw_set_import	"Tercihleri içe Aktar">
 
 <!ENTITY Ctr_special_font	"Arka plan renk ayarları varsayılan tema içindir!">
 <!ENTITY Ctr_special_info	"Bazı seçenekler, yalnızca belirli durumlarda görsel değişiklikler yapabilir!">
-<!ENTITY Ctr_special_info2	"Ayarlar Firefox varsayılan teması için yapılmıştır ve diğer üçüncü parti temalar ile çalışmayabilir!">
+<!ENTITY Ctr_special_info2	"Ayarlar &brandShortName; varsayılan teması için yapılmıştır ve diğer üçüncü parti temalar ile çalışmayabilir!">
 <!ENTITY Ctr_support		"Destek Forumu">
 <!ENTITY Ctr_newversion		"Yeni versiyon?">
 

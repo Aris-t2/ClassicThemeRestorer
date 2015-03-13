@@ -1,3 +1,13 @@
+<!-- LOCALIZATION NOTE (<!ENTITY % brandDTD) must not be edited as it  
+	   controls the use of (&brandShortName;) this gets replaced at run time
+	   with the browsers name, This item can not be edited or errors may occur.
+-->
+<!-- Do not edit -->
+<!ENTITY % brandDTD
+    SYSTEM "chrome://branding/locale/brand.dtd">
+  %brandDTD;
+<!-- Do not edit above this message--> 
+
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"附加组件栏">
@@ -9,7 +19,7 @@
 <!ENTITY Ctr_navthrobber	"活动指示器">
 <!ENTITY Ctr_sidebarbutton	"侧边栏">
 <!ENTITY Ctr_windowcontrols	"最小化/最大化/关闭 (全屏)">
-<!ENTITY Ctr_rr				"需要重启 Firefox!">
+<!ENTITY Ctr_rr				"需要重启 &brandShortName;!">
 
 <!ENTITY Ctr_cuibuttons		"按钮">
 <!ENTITY Ctr_cuibutnormal	"标准">
@@ -25,7 +35,7 @@
 <!ENTITY Ctr_tabcolors_t	"标签页颜色与文本">
 
 <!ENTITY Ctr_tabs			"标签页">
-<!ENTITY Ctr_tabs0			"弧形标签页 (Firefox 默认)">
+<!ENTITY Ctr_tabs0			"弧形标签页 (&brandShortName; 默认)">
 <!ENTITY Ctr_tabs1			"方形标签页 (经典)">
 <!ENTITY Ctr_tabs1m			"方形标签页 (仿 Australis)">
 <!ENTITY Ctr_tabs2			"弧形标签页 (备选风格)">
@@ -38,7 +48,7 @@
 <!ENTITY Ctr_tabsontop3		"标签栏不在顶部 (v2) --- [tabsontop=false] 属性">
 <!ENTITY Ctr_tabsontopW1	"v2 仅适用于部分扩展与完整主题!">
 <!ENTITY Ctr_tabsontopI1	"添加属性 [tabsontop=true/false] 至">
-<!ENTITY Ctr_tabsintitlebar	"Firefox 标题栏 (about:config 选项)">
+<!ENTITY Ctr_tabsintitlebar	"&brandShortName; 标题栏 (about:config 选项)">
 <!ENTITY Ctr_tabwidthdef	"(默认)">
 <!ENTITY Ctr_tabwidthcla	"(经典)">
 <!ENTITY Ctr_tabminheight	"高度:">
@@ -70,9 +80,9 @@
 <!ENTITY Ctr_appbutton0		"按钮已禁用">
 <!ENTITY Ctr_appbutton1		"在工具栏上显示">
 <!ENTITY Ctr_appbutton1wt	"在工具栏上显示 (仅文本)">
-<!ENTITY Ctr_appbutton2		"在 [Firefox] 标题栏上显示">
-<!ENTITY Ctr_appbutton2h	"在 [Firefox] 标题栏上显示 (隐藏)">
-<!ENTITY Ctr_appbutton2io	"在 [Firefox] 标题栏上显示 (仅图标)">
+<!ENTITY Ctr_appbutton2		"在 [&brandShortName;] 标题栏上显示">
+<!ENTITY Ctr_appbutton2h	"在 [&brandShortName;] 标题栏上显示 (隐藏)">
+<!ENTITY Ctr_appbutton2io	"在 [&brandShortName;] 标题栏上显示 (仅图标)">
 <!ENTITY Ctr_paneluibtweak	"在标签页栏上显示橙色面板菜单按钮">
 <!ENTITY Ctr_appbuttonc_o	"橙色按钮 (默认)">
 <!ENTITY Ctr_appbuttonc_a	"蓝色按钮 (Aurora)">
@@ -86,7 +96,7 @@
 <!ENTITY Ctr_appbuttonc_wh	"白色按钮">
 <!ENTITY Ctr_appbuttonc_cu	"自定义按钮颜色">
 <!ENTITY Ctr_appbuttonI1	"建议重启浏览器">
-<!ENTITY Ctr_appbuttonI1e	"在 Windows 系统标题栏上不可见，仅在 Firefox 标题栏上!">
+<!ENTITY Ctr_appbuttonI1e	"在 Windows 系统标题栏上不可见，仅在 &brandShortName; 标题栏上!">
 <!ENTITY Ctr_appbuttonI2	"按钮颜色只在标题栏与标签页栏上可见!">
 <!ENTITY Ctr_alttbappb		"备选的不带下拉三角图标">
 <!ENTITY Ctr_appbutmhi		"更高的位置 (如果在标签页栏上)">
@@ -139,7 +149,7 @@
 <!ENTITY Ctr_pmhidelabels	"面板菜单: 隐藏按钮标签文本">
 <!ENTITY Ctr_menupopupscr	"弹出式菜单: 用滚动栏代替滚动箭头">
 
-<!ENTITY Ctr_fxmockup		"Firefox 样式">
+<!ENTITY Ctr_fxmockup		"&brandShortName; 样式">
 <!ENTITY Ctr_tabmokcolor	"白色标签页按钮 (关闭, 新建, 分组, 显示所有)">
 <!ENTITY Ctr_tabmokcolor2	"在非激活标签页上使用白色文字并添加文字阴影">
 <!ENTITY Ctr_tabmokcolor3	"白色标签页分隔符">
@@ -191,7 +201,7 @@
 <!ENTITY Ctr_extrabar		"附加工具栏">
 <!ENTITY Ctr_extrabar0		"附加工具栏">
 <!ENTITY Ctr_extrabar1		"附加工具栏">
-<!ENTITY Ctr_extrabarinfo	"在“标签页置顶”和“标签页不置顶”模式间切换会随机修改附加工具栏的顺序。需要重启 Firefox 来解决该问题。">
+<!ENTITY Ctr_extrabarinfo	"在“标签页置顶”和“标签页不置顶”模式间切换会随机修改附加工具栏的顺序。需要重启 &brandShortName; 来解决该问题。">
 
 <!ENTITY Ctr_invicons		"反转图标">
 <!ENTITY Ctr_menubar		"菜单栏">
@@ -215,7 +225,7 @@
 <!ENTITY Ctr_alttabstb2		"在最大化模式 (标签在顶部)">
 
 <!ENTITY Ctr_altmenubar		"添加背景颜色 (操作系统标题栏)">
-<!ENTITY Ctr_altmenubarpos	"备选位置 (在 Firefox 标题栏下方)">
+<!ENTITY Ctr_altmenubarpos	"备选位置 (在 &brandShortName; 标题栏下方)">
 <!ENTITY Ctr_menubarnofog	"移除背景颜色/模糊 (Windows AeroGlass/8)">
 
 <!ENTITY Ctr_aerocolors		"主工具栏和标签页使用蓝色 Aero 颜色">
@@ -242,7 +252,7 @@
 <!ENTITY Ctr_dlanimation	"“下载提醒”动画 (about:config 选项)">
 
 <!ENTITY Ctr_toolsitem		"在工具菜单中显示菜单项">
-<!ENTITY Ctr_appmenuitem	"在 Firefox 按钮菜单中显示菜单项">
+<!ENTITY Ctr_appmenuitem	"在 &brandShortName; 按钮菜单中显示菜单项">
 <!ENTITY Ctr_contextitem	"在工具栏右键菜单中显示菜单项">
 <!ENTITY Ctr_puictrbutton	"在主面板菜单中显示按钮">
 
@@ -252,11 +262,11 @@
 <!ENTITY Ctr_nodevtheme		"阻止“开发者主题”被启用">
 
 <!ENTITY Ctr_experttweaks	"高级">
-<!ENTITY Ctr_fx33layers		"Firefox 33+ 引入“新渲染器功能”目前可能是某些系统“标签页卡死”的主要原因。不选中此项以解决该问题。">
-<!ENTITY Ctr_fx34search		"Firefox 34+ 引入“新搜索界面”。不选中此项以恢复“旧搜索界面”。">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ 引入“呼叫和通话”功能。不选中此项以移除它们。">
-<!ENTITY Ctr_fx35devtheme	"Firefox 35+ 引入新的“开发者主题”。不选中此项以禁用“开发者主题”以及定制模式下它的一些按钮。">
-<!ENTITY Ctr_fx36prefs		"Firefox 36+ 引入在标签页中显示选项设置。不选中此项以使用旧选项窗口。">
+<!ENTITY Ctr_fx33layers		"&brandShortName; 33+ 引入“新渲染器功能”目前可能是某些系统“标签页卡死”的主要原因。不选中此项以解决该问题。">
+<!ENTITY Ctr_fx34search		"&brandShortName; 34+ 引入“新搜索界面”。不选中此项以恢复“旧搜索界面”。">
+<!ENTITY Ctr_fx34loop		"&brandShortName; 34+ 引入“呼叫和通话”功能。不选中此项以移除它们。">
+<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ 引入新的“开发者主题”。不选中此项以禁用“开发者主题”以及定制模式下它的一些按钮。">
+<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ 引入在标签页中显示选项设置。不选中此项以使用旧选项窗口。">
 <!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
 <!ENTITY Ctr_e_searchui		"Search appearance">
 <!ENTITY Ctr_e_loop			"Calling and conversation">
@@ -267,13 +277,13 @@
 <!ENTITY Ctr_pw_settings	"设置">
 <!ENTITY Ctr_pw_set_reset	"恢复默认">
 <!ENTITY Ctr_pw_set_predef	"经典主题预设">
-<!ENTITY Ctr_pw_set_preaus	"Firefox 预设">
+<!ENTITY Ctr_pw_set_preaus	"&brandShortName; 预设">
 <!ENTITY Ctr_pw_set_export	"导出选项设置">
 <!ENTITY Ctr_pw_set_import	"导入选项设置">
 
 <!ENTITY Ctr_special_font	"只有默认主题才能设置背景颜色!">
 <!ENTITY Ctr_special_info	"一些选项可能无法在所有情况下提供视觉变化!">
-<!ENTITY Ctr_special_info2	"有些设置只能在 Firefox 默认主题中生效，第三方主题可能无法生效!">
+<!ENTITY Ctr_special_info2	"有些设置只能在 &brandShortName; 默认主题中生效，第三方主题可能无法生效!">
 <!ENTITY Ctr_support		"支持讨论区">
 <!ENTITY Ctr_newversion		"有新版本?">
 
