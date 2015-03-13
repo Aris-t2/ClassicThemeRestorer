@@ -1,3 +1,13 @@
+<!-- LOCALIZATION NOTE (<!ENTITY % brandDTD) must not be edited as it  
+	   controls the use of (&brandShortName;) this gets replaced at run time
+	   with the browsers name, This item can not be edited or errors may occur.
+-->
+<!-- Do not edit -->
+<!ENTITY % brandDTD
+    SYSTEM "chrome://branding/locale/brand.dtd">
+  %brandDTD;
+<!-- Do not edit above this message--> 
+
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"附加元件列">
@@ -9,7 +19,7 @@
 <!ENTITY Ctr_navthrobber	"進度指示器">
 <!ENTITY Ctr_sidebarbutton	"側邊欄">
 <!ENTITY Ctr_windowcontrols	"最小化/最大化/關閉 (全螢幕)">
-<!ENTITY Ctr_rr				"需重啟 Firefox!">
+<!ENTITY Ctr_rr				"需重啟 &brandShortName;!">
 
 <!ENTITY Ctr_cuibuttons		"按鈕">
 <!ENTITY Ctr_cuibutnormal	"標準圖示">
@@ -139,7 +149,7 @@
 <!ENTITY Ctr_pmhidelabels	"面板選單: 隱藏按鈕文字標籤">
 <!ENTITY Ctr_menupopupscr	"彈出式選單: 用捲軸取代捲動箭頭">
 
-<!ENTITY Ctr_fxmockup		"Firefox 樣式">
+<!ENTITY Ctr_fxmockup		"&brandShortName; 樣式">
 <!ENTITY Ctr_tabmokcolor	"白色分頁按鈕 (關閉、新增、分頁群組、列出所有分頁)">
 <!ENTITY Ctr_tabmokcolor2	"非目前的分頁，其字型使用白色文字，並加上文字陰影">
 <!ENTITY Ctr_tabmokcolor3	"白色分頁分隔線">
@@ -191,7 +201,7 @@
 <!ENTITY Ctr_extrabar		"新增工具列">
 <!ENTITY Ctr_extrabar0		"新增工具列">
 <!ENTITY Ctr_extrabar1		"新增工具列">
-<!ENTITY Ctr_extrabarinfo	"在「分頁列置頂」、「分頁列不置頂」兩模式間切換，會隨機排列「新增工具列」的順序。重啟 Firefox 方可解決這問題。">
+<!ENTITY Ctr_extrabarinfo	"在「分頁列置頂」、「分頁列不置頂」兩模式間切換，會隨機排列「新增工具列」的順序。重啟 &brandShortName; 方可解決這問題。">
 
 <!ENTITY Ctr_invicons		"圖示反相">
 <!ENTITY Ctr_menubar		"選單列">
@@ -252,11 +262,11 @@
 <!ENTITY Ctr_nodevtheme		"Prevent 'Developer Theme' from being enabled">
 
 <!ENTITY Ctr_experttweaks	"進階">
-<!ENTITY Ctr_fx33layers		"Firefox 33+ 啟用了「OMTC」，目的是改善瀏覽器響應速度，但某些硬體組合環境下可能造成故障。取消勾選這個核取方塊 ，可解決相關問題。">
-<!ENTITY Ctr_fx34search		"Firefox 34+ 引入了「新搜尋列介面」。取消勾選這個核取方塊 ，則可恢復為「舊式搜尋列介面」。">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ 實作了「Firefox Hello 即時通訊」功能。取消勾選這個核取方塊 ，則可移除這項功能。">
-<!ENTITY Ctr_fx35devtheme	"Firefox 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
-<!ENTITY Ctr_fx36prefs		"Firefox 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
+<!ENTITY Ctr_fx33layers		"&brandShortName; 33+ 啟用了「OMTC」，目的是改善瀏覽器響應速度，但某些硬體組合環境下可能造成故障。取消勾選這個核取方塊 ，可解決相關問題。">
+<!ENTITY Ctr_fx34search		"&brandShortName; 34+ 引入了「新搜尋列介面」。取消勾選這個核取方塊 ，則可恢復為「舊式搜尋列介面」。">
+<!ENTITY Ctr_fx34loop		"&brandShortName; 34+ 實作了「&brandShortName; Hello 即時通訊」功能。取消勾選這個核取方塊 ，則可移除這項功能。">
+<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
+<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
 <!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
 <!ENTITY Ctr_e_searchui		"Search appearance">
 <!ENTITY Ctr_e_loop			"Calling and conversation">
@@ -267,13 +277,13 @@
 <!ENTITY Ctr_pw_settings	"設定">
 <!ENTITY Ctr_pw_set_reset	"套件預設值">
 <!ENTITY Ctr_pw_set_predef	"經典設定值">
-<!ENTITY Ctr_pw_set_preaus	"Firefox 預設值">
+<!ENTITY Ctr_pw_set_preaus	"&brandShortName; 預設值">
 <!ENTITY Ctr_pw_set_export	"匯出設定值">
 <!ENTITY Ctr_pw_set_import	"匯入設定值">
 
 <!ENTITY Ctr_special_font	"背景色彩設定僅生效於預設佈景主題!">
 <!ENTITY Ctr_special_info	"部份選項僅在某些情況下提供視覺上的變化!">
-<!ENTITY Ctr_special_info2	"設定僅在 Firefox 的預設佈景主題下測試，因此可能不生效於第三方佈景主題!">
+<!ENTITY Ctr_special_info2	"設定僅在 &brandShortName; 的預設佈景主題下測試，因此可能不生效於第三方佈景主題!">
 <!ENTITY Ctr_support		"技術支援討論區">
 <!ENTITY Ctr_newversion		"有新版本?">
 

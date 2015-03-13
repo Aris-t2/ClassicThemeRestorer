@@ -1,3 +1,13 @@
+<!-- LOCALIZATION NOTE (<!ENTITY % brandDTD) must not be edited as it  
+	   controls the use of (&brandShortName;) this gets replaced at run time
+	   with the browsers name, This item can not be edited or errors may occur.
+-->
+<!-- Do not edit -->
+<!ENTITY % brandDTD
+    SYSTEM "chrome://branding/locale/brand.dtd">
+  %brandDTD;
+<!-- Do not edit above this message--> 
+
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Addonleiste">
@@ -25,7 +35,7 @@
 <!ENTITY Ctr_tabcolors_t	"Tab Farben / Zeichensatz">
 
 <!ENTITY Ctr_tabs			"Tabs">
-<!ENTITY Ctr_tabs0			"Gerundete Tabs (Firefox-Standard)">
+<!ENTITY Ctr_tabs0			"Gerundete Tabs (&brandShortName;-Standard)">
 <!ENTITY Ctr_tabs1			"Quadratische Tabs (klassisch)">
 <!ENTITY Ctr_tabs1m			"Quadratische Tabs (australisiert)">
 <!ENTITY Ctr_tabs2			"Gerundete Tabs (alternativ)">
@@ -38,7 +48,7 @@
 <!ENTITY Ctr_tabsontop3		"Tabs unten (v2) --- '[tabsontop=false]' Attribut gesetzt">
 <!ENTITY Ctr_tabsontopW1	"v2 ist nur für einige Add-ons und vollständige Themen sinnvoll!">
 <!ENTITY Ctr_tabsontopI1	"[tabsontop=true/false] Attribut wird gesetzt für">
-<!ENTITY Ctr_tabsintitlebar	"Firefox Titelleiste (about:config Einstellung)">
+<!ENTITY Ctr_tabsintitlebar	"&brandShortName; Titelleiste (about:config Einstellung)">
 <!ENTITY Ctr_tabwidthdef	"(Standard)">
 <!ENTITY Ctr_tabwidthcla	"(klassisch)">
 <!ENTITY Ctr_tabminheight	"Höhe:">
@@ -66,13 +76,13 @@
 <!ENTITY Ctr_hctpinfotab	"Einige Tabvarianten sind nicht kompatibel zu 'Hide Caption Titlebar Plus'.">
 <!ENTITY Ctr_hctpinfoab		"Die Titelleisten-Schaltfläche ist nicht kompatibel zu 'Hide Caption Titlebar Plus'.">
 
-<!ENTITY Ctr_appbutton		"Firefox-Schaltfläche">
+<!ENTITY Ctr_appbutton		"&brandShortName;-Schaltfläche">
 <!ENTITY Ctr_appbutton0		"Deaktiviert">
 <!ENTITY Ctr_appbutton1		"Auf den Symbolleisten">
 <!ENTITY Ctr_appbutton1wt	"Auf den Symbolleisten (nur Text)">
-<!ENTITY Ctr_appbutton2		"Auf der Firefox Titelleiste">
-<!ENTITY Ctr_appbutton2h	"Auf der Firefox Titelleiste (versteckt)">
-<!ENTITY Ctr_appbutton2io	"Auf der Firefox Titelleiste (nur Symbol)">
+<!ENTITY Ctr_appbutton2		"Auf der &brandShortName; Titelleiste">
+<!ENTITY Ctr_appbutton2h	"Auf der &brandShortName; Titelleiste (versteckt)">
+<!ENTITY Ctr_appbutton2io	"Auf der &brandShortName; Titelleiste (nur Symbol)">
 <!ENTITY Ctr_paneluibtweak	"Orange Menüschaltfläche auf der Tableiste">
 <!ENTITY Ctr_appbuttonc_o	"Farbe: orange (Standard)">
 <!ENTITY Ctr_appbuttonc_a	"Farbe: blau (Aurora)">
@@ -86,13 +96,13 @@
 <!ENTITY Ctr_appbuttonc_wh	"Farbe: weiß">
 <!ENTITY Ctr_appbuttonc_cu	"Farbe: eigene Definition">
 <!ENTITY Ctr_appbuttonI1	"Nach einer Änderung wird ein Neustart empfohlen.">
-<!ENTITY Ctr_appbuttonI1e	"Die Firefox-Schaltfläche ist auf der Windows Titelleiste nicht sichtbar!">
+<!ENTITY Ctr_appbuttonI1e	"Die &brandShortName;-Schaltfläche ist auf der Windows Titelleiste nicht sichtbar!">
 <!ENTITY Ctr_appbuttonI2	"Die Farbe ist nur auf der Titelleiste und der Tableiste sichtbar!">
 <!ENTITY Ctr_alttbappb		"Alternative Symbole">
 <!ENTITY Ctr_appbutmhi		"Höhere Position (wenn auf der Tableiste)">
 <!ENTITY Ctr_appbutbdl		"Entferne Ränder und Hintergrundfarbe">
 <!ENTITY Ctr_dblclclosefx	"Doppelklick schließt aktuelles Fenster">
-<!ENTITY Ctr_appbclmmenus	"Klickbare Menüs im 'Firefox-Menü' (Neuer Tab, Drucken...)">
+<!ENTITY Ctr_appbclmmenus	"Klickbare Menüs im '&brandShortName;-Menü' (Neuer Tab, Drucken...)">
 <!ENTITY Ctr_appbutonclab	"Titel">
 <!ENTITY Ctr_appbutonclab2	"Titel eintragen oder leer lassen">
 
@@ -139,7 +149,7 @@
 <!ENTITY Ctr_pmhidelabels	"Menüschaltflächen-Aufklappmenü: verstecke Schaltflächen-Text">
 <!ENTITY Ctr_menupopupscr	"Aufklappmenüs: ersetze Navigationspfeile durch Bildlaufleisten">
 
-<!ENTITY Ctr_fxmockup		"Firefox Entwürfe">
+<!ENTITY Ctr_fxmockup		"&brandShortName; Entwürfe">
 <!ENTITY Ctr_tabmokcolor	"Weiße Schaltflächen (Neu, Schließen, Gruppen, Listen)">
 <!ENTITY Ctr_tabmokcolor2	"Weißer Tabtext und dunkler Schatten für nicht aktive Tabs">
 <!ENTITY Ctr_tabmokcolor3	"Weiße Trennlinien zwischen den Tabs">
@@ -191,7 +201,7 @@
 <!ENTITY Ctr_extrabar		"Extraleisten">
 <!ENTITY Ctr_extrabar0		"Extraleiste(n)">
 <!ENTITY Ctr_extrabar1		"Extraleiste">
-<!ENTITY Ctr_extrabarinfo	"Der Wechsel zwischen 'Tabs oben' und 'Tabs unten' kann die Reihenfolge der Extraleisten ändern. Ein Firefox-Neustart stellt die richtige Reihenfolge wieder her.">
+<!ENTITY Ctr_extrabarinfo	"Der Wechsel zwischen 'Tabs oben' und 'Tabs unten' kann die Reihenfolge der Extraleisten ändern. Ein &brandShortName;-Neustart stellt die richtige Reihenfolge wieder her.">
 
 <!ENTITY Ctr_invicons		"Invertierte Symbole">
 <!ENTITY Ctr_menubar		"Menüleiste">
@@ -215,7 +225,7 @@
 <!ENTITY Ctr_alttabstb2		"Im maximierten Fenster (Tabs oben)">
 
 <!ENTITY Ctr_altmenubar		"Hintergrundfarbe hinzufügen ('System Titelleiste')">
-<!ENTITY Ctr_altmenubarpos	"Alternative Position (unter der Firefox Titelleiste)">
+<!ENTITY Ctr_altmenubarpos	"Alternative Position (unter der &brandShortName; Titelleiste)">
 <!ENTITY Ctr_menubarnofog	"Hintergrundfarbe/-nebel entfernen (Windows AeroGlass / Win8)">
 
 <!ENTITY Ctr_aerocolors		"Blaue 'Aero' Farben für Leisten (und Tabs)">
@@ -242,7 +252,7 @@
 <!ENTITY Ctr_dlanimation	"'Download gestartet und beendet' (about:config Einstellung)">
 
 <!ENTITY Ctr_toolsitem		"Eintrag im Menü 'Extras'">
-<!ENTITY Ctr_appmenuitem	"Eintrag im Einstellungsuntermenü der Firefox-Schaltfläche">
+<!ENTITY Ctr_appmenuitem	"Eintrag im Einstellungsuntermenü der &brandShortName;-Schaltfläche">
 <!ENTITY Ctr_contextitem	"Eintrag im Leisten-Kontextmenü">
 <!ENTITY Ctr_puictrbutton	"Eintrag in der Hauptmenüschaltfläche">
 
@@ -252,11 +262,11 @@
 <!ENTITY Ctr_nodevtheme		"Verhindere die Aktivierung des 'Entwickler Themas'">
 
 <!ENTITY Ctr_experttweaks	"Erweitert">
-<!ENTITY Ctr_fx33layers		"Mit Firefox 33+ wurden neue 'Render-Funktionen' eingeführt, die zurzeit für 'nicht reagierende und einfrierende Tabs' auf einigen Systemen sorgen. Das Deaktivieren dieser Option kann das Problem lösen.">
-<!ENTITY Ctr_fx34search		"Mit Firefox 34+ wurde eine neue 'Suchoberfläche' eingeführt. Das Deaktivieren dieser Option stellt die 'alte Suchoberfläche' wieder her.">
-<!ENTITY Ctr_fx34loop		"Mit Firefox 34+ wurden 'Anruf- und Konversations-Funktionen' eingeführt. Das Deaktivieren dieser Option entfernt diese Funktionen.">
-<!ENTITY Ctr_fx35devtheme	"Mit Firefox 35+ wurde ein neues 'Entwickler-Thema' eingeführt. Das Deaktivieren dieser Optionen stellt das 'Standard-Thema' wieder her und entfernt die zugehörige Schaltfläche im Modus 'Anpassen'.">
-<!ENTITY Ctr_fx36prefs		"Mit Firefox 36+ wurden 'Einstellungen im Tab' eingeführt. Das Deaktivieren dieser Option stellt das 'alte' Einstellungsfenster wieder her.">
+<!ENTITY Ctr_fx33layers		"Mit &brandShortName; 33+ wurden neue 'Render-Funktionen' eingeführt, die zurzeit für 'nicht reagierende und einfrierende Tabs' auf einigen Systemen sorgen. Das Deaktivieren dieser Option kann das Problem lösen.">
+<!ENTITY Ctr_fx34search		"Mit &brandShortName; 34+ wurde eine neue 'Suchoberfläche' eingeführt. Das Deaktivieren dieser Option stellt die 'alte Suchoberfläche' wieder her.">
+<!ENTITY Ctr_fx34loop		"Mit &brandShortName; 34+ wurden 'Anruf- und Konversations-Funktionen' eingeführt. Das Deaktivieren dieser Option entfernt diese Funktionen.">
+<!ENTITY Ctr_fx35devtheme	"Mit &brandShortName; 35+ wurde ein neues 'Entwickler-Thema' eingeführt. Das Deaktivieren dieser Optionen stellt das 'Standard-Thema' wieder her und entfernt die zugehörige Schaltfläche im Modus 'Anpassen'.">
+<!ENTITY Ctr_fx36prefs		"Mit &brandShortName; 36+ wurden 'Einstellungen im Tab' eingeführt. Das Deaktivieren dieser Option stellt das 'alte' Einstellungsfenster wieder her.">
 <!ENTITY Ctr_e_omtc			"OMTC / Problem mit 'einfrierenden Tabs'">
 <!ENTITY Ctr_e_searchui		"Suchoberfläche">
 <!ENTITY Ctr_e_loop			"Anruf- und Konversations-Funktionen">
@@ -267,7 +277,7 @@
 <!ENTITY Ctr_pw_settings	"Einstellungen">
 <!ENTITY Ctr_pw_set_reset	"Standard wiederherstellen">
 <!ENTITY Ctr_pw_set_predef	"Klassische Vorgabe">
-<!ENTITY Ctr_pw_set_preaus	"Firefox Vorgabe">
+<!ENTITY Ctr_pw_set_preaus	"&brandShortName; Vorgabe">
 <!ENTITY Ctr_pw_set_export	"Exportiere Einstellungen">
 <!ENTITY Ctr_pw_set_import	"Importiere Einstellungen">
 

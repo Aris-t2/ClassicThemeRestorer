@@ -1,4 +1,14 @@
-<!ENTITY brandShortName				"Firefox">
+<!-- LOCALIZATION NOTE (<!ENTITY % brandDTD) must not be edited as it  
+	   controls the use of (&brandShortName;) this gets replaced at run time
+	   with the browsers name, This item can not be edited or errors may occur.
+-->
+<!-- Do not edit -->
+<!ENTITY % brandDTD
+    SYSTEM "chrome://branding/locale/brand.dtd">
+  %brandDTD;
+<!-- Do not edit above this message--> 
+
+<!ENTITY brandShortName				"&brandShortName;">
 <!ENTITY appmenu.tooltip			"Open menu">
 <!ENTITY tabCmd.label				"New Tab">
 <!ENTITY tabCmd.accesskey			"T">
@@ -50,7 +60,7 @@
 <!ENTITY quitApplicationCmdWin.accesskey	"x">
 <!ENTITY quitApplicationCmd.label		"Quit">
 <!ENTITY quitApplicationCmd.accesskey	"Q">
-<!ENTITY quitApplicationCmdMac.label	"Quit Firefox">
+<!ENTITY quitApplicationCmdMac.label	"Quit &brandShortName;">
 <!ENTITY quitApplicationCmd.accesskey	"Q">
 <!ENTITY bookmarksMenu.label			"Bookmarks">
 <!ENTITY showAllBookmarks2.label		"Show All Bookmarks">
@@ -76,12 +86,12 @@
 <!ENTITY viewCustomizeToolbar.label		"Customize…">
 <!ENTITY viewCustomizeToolbar.accesskey	"C">
 <!ENTITY helpMenuWin.label				"Help">
-<!ENTITY productHelp.label				"Firefox Help">
+<!ENTITY productHelp.label				"&brandShortName; Help">
 <!ENTITY appMenuGettingStarted.label	"Getting started">
 <!ENTITY productHelp.accesskey			"H">
 <!ENTITY helpKeyboardShortcuts.label	"Keyboard Shortcuts">
 <!ENTITY helpKeyboardShortcuts.accesskey	"K">
-<!ENTITY healthReport.label				"Firefox Health Report">
+<!ENTITY healthReport.label				"&brandShortName; Health Report">
 <!ENTITY healthReport.accesskey			"e">
 <!ENTITY helpTroubleshootingInfo.accesskey	"T">
 <!ENTITY helpTroubleshootingInfo.label	"Troubleshooting Information">
@@ -90,7 +100,7 @@
 <!ENTITY helpSafeMode.accesskey			"R">
 <!ENTITY helpSafeMode.label				"Restart with Add-ons Disabled…">
 <!ENTITY aboutProduct.accesskey			"A">
-<!ENTITY aboutProduct.label				"About Firefox">
+<!ENTITY aboutProduct.label				"About &brandShortName;">
 <!ENTITY bookmarksMenuButton.label		"Bookmarks">
 <!ENTITY bookmarksButton.tooltip		"Display your bookmarks">
 <!ENTITY viewBookmarksToolbar.label		"View Bookmarks Toolbar">
