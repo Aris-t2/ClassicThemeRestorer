@@ -445,10 +445,8 @@ classicthemerestorerjso.ctr = {
      when preference window gets closed */
   unloadprefwindow: function() {
 
-	var app        	 = Services.startup;
 	var cancelQuit   = Components.classes["@mozilla.org/supports-PRBool;1"].createInstance(Components.interfaces.nsISupportsPRBool);
 	var observerSvc  = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
-	var promptSvc  	 = Services.prompt;
 	var stringBundle = Services.strings.createBundle("chrome://classic_theme_restorer/locale/messages.file");
 						
 	var brandName	 = '';
@@ -458,7 +456,7 @@ classicthemerestorerjso.ctr = {
 	} catch(e) {}
 
 	if (this.needsRestart &&
-		promptSvc.confirm(null,
+		Services.prompt.confirm(null,
 			stringBundle.GetStringFromName("popup.title"),
 			stringBundle.formatStringFromName("popup.msg.restart", [brandName], 1)
 		)) {
@@ -466,7 +464,7 @@ classicthemerestorerjso.ctr = {
 		if(cancelQuit.data) { // The quit request has been cancelled.
 			return false;
 		};
-		app.quit(app.eAttemptQuit | app.eRestart);
+		Services.startup.quit(Services.startup.eRestart | Services.startup.eAttemptQuit);
 	}
 	
 	// save last selected categories/tabs
