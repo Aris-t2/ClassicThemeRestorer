@@ -15,7 +15,7 @@ classicthemerestorerjso.ctr = {
   prefs:			Services.prefs.getBranch("extensions.classicthemerestorer."),
   fxdefaulttheme:	Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin") == 'classic/1.0',
   appversion:		parseInt(Services.prefs.getBranch("extensions.").getCharPref("lastAppVersion")),
-  oswindows:		Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULRuntime).OS=="WINNT",
+  oswindows:		Services.appinfo.OS=="WINNT",
   needsRestart: 	false,
   ctrVersioninWin:  true,
   tmp_tu_active:	false,
@@ -445,12 +445,11 @@ classicthemerestorerjso.ctr = {
      when preference window gets closed */
   unloadprefwindow: function() {
 
-	var app        	 = Components.classes["@mozilla.org/toolkit/app-startup;1"].getService(Components.interfaces.nsIAppStartup);
+	var app        	 = Services.startup;
 	var cancelQuit   = Components.classes["@mozilla.org/supports-PRBool;1"].createInstance(Components.interfaces.nsISupportsPRBool);
 	var observerSvc  = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
-	var promptSvc  	 = Components.classes["@mozilla.org/embedcomp/prompt-service;1"].getService(Components.interfaces.nsIPromptService);
-	var stringBundle = Components.classes["@mozilla.org/intl/stringbundle;1"].getService(Components.interfaces.nsIStringBundleService)
-						.createBundle("chrome://classic_theme_restorer/locale/messages.file");
+	var promptSvc  	 = Services.prompt;
+	var stringBundle = Services.strings.createBundle("chrome://classic_theme_restorer/locale/messages.file");
 						
 	var brandName	 = '';
 
@@ -938,8 +937,7 @@ classicthemerestorerjso.ctr = {
   /* import CTR settings */
   importCTRpreferences: function() {
  
-	var stringBundle = Components.classes["@mozilla.org/intl/stringbundle;1"].getService(Components.interfaces.nsIStringBundleService)
-	                    .createBundle("chrome://classic_theme_restorer/locale/messages.file");
+	var stringBundle = Services.strings.createBundle("chrome://classic_theme_restorer/locale/messages.file");
   
 	var pattern = loadFromFile();
 
@@ -1011,9 +1009,7 @@ classicthemerestorerjso.ctr = {
   /* import CTR settings JSON*/
   importCTRpreferencesJSON: function() {
  
-	var stringBundle = Components.classes["@mozilla.org/intl/stringbundle;1"]
-						.getService(Components.interfaces.nsIStringBundleService)
-							.createBundle("chrome://classic_theme_restorer/locale/messages.file");
+	var stringBundle = Services.strings.createBundle("chrome://classic_theme_restorer/locale/messages.file");
 
 	var parjson = loadFromFile();
 
