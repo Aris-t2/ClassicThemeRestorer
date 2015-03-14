@@ -1,7 +1,7 @@
 <!ENTITY % brandDTD
-    SYSTEM "chrome://classic_theme_restorer/content/overlay_bname.dtd">
+    SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
   %brandDTD;
-<!-- Do not edit above this line and do not edit the variable '&browserName;' inside translated strings -->
+<!-- Do not edit above this line and do not edit the variable '&brandShortName;' inside translated strings -->
 
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
@@ -14,7 +14,7 @@
 <!ENTITY Ctr_navthrobber	"Wozjewjenje aktiwity">
 <!ENTITY Ctr_sidebarbutton	"Bočnica">
 <!ENTITY Ctr_windowcontrols	"Min./maks./začinić (połna wobrazowka)">
-<!ENTITY Ctr_rr				"Startujće &browserName; znowa!">
+<!ENTITY Ctr_rr				"Startujće &brandShortName; znowa!">
 
 <!ENTITY Ctr_cuibuttons		"Tłóčatka">
 <!ENTITY Ctr_cuibutnormal	"Normalny">
@@ -43,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Rajtarki nic horjeka (v2) --- stajće [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"v2 je jenož za někotre přidatki a dospołne drasty!">
 <!ENTITY Ctr_tabsontopI1	"Přidawa atribut [tabsontop=true/false] na">
-<!ENTITY Ctr_tabsintitlebar	"Titulna lajsta &browserName; (about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Titulna lajsta &brandShortName; (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(standard)">
 <!ENTITY Ctr_tabwidthcla	"(klasiski)">
 <!ENTITY Ctr_tabminheight	"Wysokosć:">
@@ -75,9 +75,9 @@
 <!ENTITY Ctr_appbutton0		"Tłóčatko znjemóžnjeny">
 <!ENTITY Ctr_appbutton1		"Tłóčatko na symbolowej lajsće">
 <!ENTITY Ctr_appbutton1wt	"Tłóčatko na symbolowej lajsće (jenož tekst)">
-<!ENTITY Ctr_appbutton2		"Tłóčatko na titulnej lajsće [&browserName;]">
-<!ENTITY Ctr_appbutton2h	"Tłóčatko na titulnej lajsće [&browserName;] (schowane)">
-<!ENTITY Ctr_appbutton2io	"Tłóčatko na titulnej lajsće [&browserName;] (jenož symbol)">
+<!ENTITY Ctr_appbutton2		"Tłóčatko na titulnej lajsće [&brandShortName;]">
+<!ENTITY Ctr_appbutton2h	"Tłóčatko na titulnej lajsće [&brandShortName;] (schowane)">
+<!ENTITY Ctr_appbutton2io	"Tłóčatko na titulnej lajsće [&brandShortName;] (jenož symbol)">
 <!ENTITY Ctr_paneluibtweak	"Oranžowe menijowe tłóčatko na rajtarkowej lajsće">
 <!ENTITY Ctr_appbuttonc_o	"Tłóčatkowa barba: Oranžowy (standard)">
 <!ENTITY Ctr_appbuttonc_a	"Tłóčatkowa barba: Módry (Aurora)">
@@ -91,7 +91,7 @@
 <!ENTITY Ctr_appbuttonc_wh	"Tłóčatkowa barba: Běły">
 <!ENTITY Ctr_appbuttonc_cu	"Swójska tłóčatkowa barba">
 <!ENTITY Ctr_appbuttonI1	"Nowy start doporučeny">
-<!ENTITY Ctr_appbuttonI1e	"Njeje widźomny w titulnej lajsće Windows, jenož w titulnej lajsće &browserName;!">
+<!ENTITY Ctr_appbuttonI1e	"Njeje widźomny w titulnej lajsće Windows, jenož w titulnej lajsće &brandShortName;!">
 <!ENTITY Ctr_appbuttonI2	"Tłóčatkowe barby su jenož widźomne na titulnej lajsće a rajtarkowej lajsće!">
 <!ENTITY Ctr_alttbappb		"Alternatiwne symbole">
 <!ENTITY Ctr_appbutmhi		"Wyša pozicija (jeli je na rajtarkowej lajsće)">
@@ -144,7 +144,7 @@
 <!ENTITY Ctr_pmhidelabels	"Pólny meni: Tekst tłóčatkow schować">
 <!ENTITY Ctr_menupopupscr	"Wuskakowace menije: suwanske lajsty město suwanskich šipkow pokazać">
 
-<!ENTITY Ctr_fxmockup		"Naćisk &browserName;">
+<!ENTITY Ctr_fxmockup		"Naćisk &brandShortName;">
 <!ENTITY Ctr_tabmokcolor	"Běła barba za rajtarkowe tłóčatka (začinić, nowy, skupiny, wšě nalistować)">
 <!ENTITY Ctr_tabmokcolor2	"Běła barba a ćmowy sćin za tekst na njeaktiwnych rajtarkach">
 <!ENTITY Ctr_tabmokcolor3	"Běła barba za rajtarkowe dźělatka">
@@ -196,7 +196,7 @@
 <!ENTITY Ctr_extrabar		"Přidatne symbolowe lajsty">
 <!ENTITY Ctr_extrabar0		"Přidatne symbolowe lajsty">
 <!ENTITY Ctr_extrabar1		"Přidatna symbolowa lajsta">
-<!ENTITY Ctr_extrabarinfo	"Přešaltowanje mjez 'rajtarki horjeka' a 'rajtarki deleka' měnja připadnje porjad přidatnych symbolowych lajstow. &browserName; dyrbi so znowa startować, zo by so tutón problem rozrisał.">
+<!ENTITY Ctr_extrabarinfo	"Přešaltowanje mjez 'rajtarki horjeka' a 'rajtarki deleka' měnja připadnje porjad přidatnych symbolowych lajstow. &brandShortName; dyrbi so znowa startować, zo by so tutón problem rozrisał.">
 
 <!ENTITY Ctr_invicons		"Inwertowane symbole">
 <!ENTITY Ctr_menubar		"Menijowa lajsta">
@@ -220,7 +220,7 @@
 <!ENTITY Ctr_alttabstb2		"W maksiměrowanym napohledźe (rajtarki horjeka)">
 
 <!ENTITY Ctr_altmenubar		"Pozadkowu barbu přidać (titulna lajsta dźěłoweho systema)">
-<!ENTITY Ctr_altmenubarpos	"Alternatiwna pozicijia (pod titulnej lajstu &browserName;)">
+<!ENTITY Ctr_altmenubarpos	"Alternatiwna pozicijia (pod titulnej lajstu &brandShortName;)">
 <!ENTITY Ctr_menubarnofog	"Pozadkowu barbu/młu wotstronić (Windows AeroGlass / Win8)">
 
 <!ENTITY Ctr_aerocolors		"Barby 'Blue Aero' za hłowne lajsty a rajtarki">
@@ -257,11 +257,11 @@
 <!ENTITY Ctr_nodevtheme		"Zmóžnjenju 'wuwiwarskeje drasty' zadźěwać">
 
 <!ENTITY Ctr_experttweaks	"Rozšěrjene">
-<!ENTITY Ctr_fx33layers		"&browserName; 33+ je 'nowe rysowanske funkcije' zawjedł, kotrež su tuchwilu zamołwite za 'njereagowace rajtarki' na někotrych systemach. Znjemóžnjenje tutoho nastajenja tutón problem rozrisa.">
-<!ENTITY Ctr_fx34search		"&browserName; 34+ je 'nowy pytanski powjerch' zawjedł. Znjemóžnjenje tutoho nastajenja 'stary pytanski powjerch' wobnowi.">
-<!ENTITY Ctr_fx34loop		"&browserName; 34+ je 'zawołanske a konwersaciske' funkcije zawjedł. Znjemóžnjenje tutoho nastajenja je wotstroni.">
-<!ENTITY Ctr_fx35devtheme	"&browserName; 35+ je nowu 'wuwiwarsku drastu' zawjedł. Znjemóžnjenje tutych nastajenjow znjemóžni 'wuwiwarsku drastu' a jeje tłóčatko w přiměrjenskim modusu.">
-<!ENTITY Ctr_fx36prefs		"&browserName; 36+ je 'nastajenja w rajtarku' zawjedł. Znjemóžnjenje tutoho nastajenja stare wokno nastajenjow wobnowi.">
+<!ENTITY Ctr_fx33layers		"&brandShortName; 33+ je 'nowe rysowanske funkcije' zawjedł, kotrež su tuchwilu zamołwite za 'njereagowace rajtarki' na někotrych systemach. Znjemóžnjenje tutoho nastajenja tutón problem rozrisa.">
+<!ENTITY Ctr_fx34search		"&brandShortName; 34+ je 'nowy pytanski powjerch' zawjedł. Znjemóžnjenje tutoho nastajenja 'stary pytanski powjerch' wobnowi.">
+<!ENTITY Ctr_fx34loop		"&brandShortName; 34+ je 'zawołanske a konwersaciske' funkcije zawjedł. Znjemóžnjenje tutoho nastajenja je wotstroni.">
+<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ je nowu 'wuwiwarsku drastu' zawjedł. Znjemóžnjenje tutych nastajenjow znjemóžni 'wuwiwarsku drastu' a jeje tłóčatko w přiměrjenskim modusu.">
+<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ je 'nastajenja w rajtarku' zawjedł. Znjemóžnjenje tutoho nastajenja stare wokno nastajenjow wobnowi.">
 <!ENTITY Ctr_e_omtc			"OMTC / problem z wisacymi rajtarkami">
 <!ENTITY Ctr_e_searchui		"Pytanski powjerch">
 <!ENTITY Ctr_e_loop			"Zawołanje a konwersacija">
@@ -272,7 +272,7 @@
 <!ENTITY Ctr_pw_settings	"Nastajenja">
 <!ENTITY Ctr_pw_set_reset	"Standard wobnowić">
 <!ENTITY Ctr_pw_set_predef	"Klasiske standardne hódnoty">
-<!ENTITY Ctr_pw_set_preaus	"Standard &browserName;">
+<!ENTITY Ctr_pw_set_preaus	"Standard &brandShortName;">
 <!ENTITY Ctr_pw_set_export	"Nastajenja eksportować">
 <!ENTITY Ctr_pw_set_import	"Nastajenja importować">
 

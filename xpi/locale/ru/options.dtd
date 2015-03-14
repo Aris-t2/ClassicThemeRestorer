@@ -1,7 +1,7 @@
 <!ENTITY % brandDTD
-    SYSTEM "chrome://classic_theme_restorer/content/overlay_bname.dtd">
+    SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
   %brandDTD;
-<!-- Do not edit above this line and do not edit the variable '&browserName;' inside translated strings -->
+<!-- Do not edit above this line and do not edit the variable '&brandShortName;' inside translated strings -->
 
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
@@ -14,7 +14,7 @@
 <!ENTITY Ctr_navthrobber	"Индикатор активности">
 <!ENTITY Ctr_sidebarbutton	"Боковая панель">
 <!ENTITY Ctr_windowcontrols	"Мин/макс/закрыть (Полноэкранный)">
-<!ENTITY Ctr_rr				"Перезапустите &browserName;!">
+<!ENTITY Ctr_rr				"Перезапустите &brandShortName;!">
 
 <!ENTITY Ctr_cuibuttons		"Кнопки:">
 <!ENTITY Ctr_cuibutnormal	"Обычные">
@@ -144,7 +144,7 @@
 <!ENTITY Ctr_pmhidelabels	"Панель меню: спрятать надписи на кнопках">
 <!ENTITY Ctr_menupopupscr	"Всплывающие окна меню: показывать полосы прокрутки вместо стрелки прокрутки">
 
-<!ENTITY Ctr_fxmockup		"Другие настройки для &browserName;">
+<!ENTITY Ctr_fxmockup		"Другие настройки для &brandShortName;">
 <!ENTITY Ctr_tabmokcolor	"Белый цвет для кнопок вкладок (закрыть, новая, группы, список всех)">
 <!ENTITY Ctr_tabmokcolor2	"Белый цвет и тёмная тень для текста на неактивной вкладке">
 <!ENTITY Ctr_tabmokcolor3	"Белый цвет для разделителей на панели вкладок">
@@ -196,7 +196,7 @@
 <!ENTITY Ctr_extrabar		"Дополнительные панели инструментов">
 <!ENTITY Ctr_extrabar0		"Дополнительная панель(и)">
 <!ENTITY Ctr_extrabar1		"Дополнительная панель">
-<!ENTITY Ctr_extrabarinfo	"Переключение между режимами «Вкладки вверху» и «Вкладки не вверху» меняет расположение дополнительных панелей. Чтобы решить эту проблему, &browserName; должен быть перезапущен.">
+<!ENTITY Ctr_extrabarinfo	"Переключение между режимами «Вкладки вверху» и «Вкладки не вверху» меняет расположение дополнительных панелей. Чтобы решить эту проблему, &brandShortName; должен быть перезапущен.">
 
 <!ENTITY Ctr_invicons		"Перекрашенные наоборот значки">
 <!ENTITY Ctr_menubar		"Панель меню">
@@ -220,7 +220,7 @@
 <!ENTITY Ctr_alttabstb2		"В развернутом режиме (вкладки сверху)">
 
 <!ENTITY Ctr_altmenubar		"Добавить цвет фона в строку заголовка операционной системы">
-<!ENTITY Ctr_altmenubarpos	"Изменить расположение (ниже строки заголовка &browserName;)">
+<!ENTITY Ctr_altmenubarpos	"Изменить расположение (ниже строки заголовка &brandShortName;)">
 <!ENTITY Ctr_menubarnofog	"Убрать затуманивание/цвет фона (Windows AeroGlass/8)">
 
 <!ENTITY Ctr_aerocolors		"Цвета Blue Aero для основных панелей и вкладок">
@@ -257,11 +257,11 @@
 <!ENTITY Ctr_nodevtheme		"Предотвращение активации «Тема разработчика»">
 
 <!ENTITY Ctr_experttweaks	"Продвинутые">
-<!ENTITY Ctr_fx33layers		"С &browserName; 33+ новые возможности визуализации, на некоторых системах вызывает ошибки с вкладками (нет реакции, вкладки заморожены). Отключение этой опции решает проблему.">
-<!ENTITY Ctr_fx34search		"С &browserName; 34+ новая панель поиска. Отключение этой опции позволяет вернуть старую панель поиска.">
-<!ENTITY Ctr_fx34loop		"С &browserName; 34+ добавлен клиент для связи в режиме реального времени. Отключение параметра удаляет эту функцию.">
-<!ENTITY Ctr_fx35devtheme	"С &browserName; 35+ введена новая «Тема разработчика». Отключение параметра удаляет её и соответствующую кнопку в режиме «Настройка».">
-<!ENTITY Ctr_fx36prefs		"&browserName; 36+ настройки в новой вкладке. Если снять этот параметр, то восстанавливает старое окно настроек.">
+<!ENTITY Ctr_fx33layers		"С &brandShortName; 33+ новые возможности визуализации, на некоторых системах вызывает ошибки с вкладками (нет реакции, вкладки заморожены). Отключение этой опции решает проблему.">
+<!ENTITY Ctr_fx34search		"С &brandShortName; 34+ новая панель поиска. Отключение этой опции позволяет вернуть старую панель поиска.">
+<!ENTITY Ctr_fx34loop		"С &brandShortName; 34+ добавлен клиент для связи в режиме реального времени. Отключение параметра удаляет эту функцию.">
+<!ENTITY Ctr_fx35devtheme	"С &brandShortName; 35+ введена новая «Тема разработчика». Отключение параметра удаляет её и соответствующую кнопку в режиме «Настройка».">
+<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ настройки в новой вкладке. Если снять этот параметр, то восстанавливает старое окно настроек.">
 <!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
 <!ENTITY Ctr_e_searchui		"Search appearance">
 <!ENTITY Ctr_e_loop			"Calling and conversation">
@@ -272,13 +272,13 @@
 <!ENTITY Ctr_pw_settings	"Настройки">
 <!ENTITY Ctr_pw_set_reset	"Сбросить настройки">
 <!ENTITY Ctr_pw_set_predef	"Классические предустановки">
-<!ENTITY Ctr_pw_set_preaus	"&browserName; предустановки">
+<!ENTITY Ctr_pw_set_preaus	"&brandShortName; предустановки">
 <!ENTITY Ctr_pw_set_export	"Экспорт настроек">
 <!ENTITY Ctr_pw_set_import	"Импорт настроек">
 
 <!ENTITY Ctr_special_font	"Настройки цвета фона — только для темы по умолчанию!">
 <!ENTITY Ctr_special_info	"Некоторые параметры могут предложить визуальные изменения только в определённых случаях!">
-<!ENTITY Ctr_special_info2	"Настройки сделаны для темы &browserName; по умолчанию и не могут работать со всеми сторонними темами!">
+<!ENTITY Ctr_special_info2	"Настройки сделаны для темы &brandShortName; по умолчанию и не могут работать со всеми сторонними темами!">
 <!ENTITY Ctr_support		"Форум поддержки">
 <!ENTITY Ctr_newversion		"Новая версия?">
 

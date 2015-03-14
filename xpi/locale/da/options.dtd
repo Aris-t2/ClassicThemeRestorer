@@ -1,7 +1,7 @@
 <!ENTITY % brandDTD
-    SYSTEM "chrome://classic_theme_restorer/content/overlay_bname.dtd">
+    SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
   %brandDTD;
-<!-- Do not edit above this line and do not edit the variable '&browserName;' inside translated strings -->
+<!-- Do not edit above this line and do not edit the variable '&brandShortName;' inside translated strings -->
 
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
@@ -30,7 +30,7 @@
 <!ENTITY Ctr_tabcolors_t	"Faneblade farver &amp; tekst">
 
 <!ENTITY Ctr_tabs			"Faneblade">
-<!ENTITY Ctr_tabs0			"Afrundede faneblade (&browserName; standard)">
+<!ENTITY Ctr_tabs0			"Afrundede faneblade (&brandShortName; standard)">
 <!ENTITY Ctr_tabs1			"Firkantede faneblade (klassisk)">
 <!ENTITY Ctr_tabs1m			"Firkantede faneblade (australisifiseret)">
 <!ENTITY Ctr_tabs2			"Afrundede faneblade (alternativ)">
@@ -43,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Faneblade skal ikke være øverst (v2) --- [tabsontop=false] attribut">
 <!ENTITY Ctr_tabsontopW1	"v2 er kun til nogle tilføjelser og komplette temaer!">
 <!ENTITY Ctr_tabsontopI1	"Attributten [tabsontop=true/false] bliver tilføjet">
-<!ENTITY Ctr_tabsintitlebar	"&browserName; i titellinjen (about:config)">
+<!ENTITY Ctr_tabsintitlebar	"&brandShortName; i titellinjen (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(standard)">
 <!ENTITY Ctr_tabwidthcla	"(klassisk)">
 <!ENTITY Ctr_tabminheight	"Højde:">
@@ -71,13 +71,13 @@
 <!ENTITY Ctr_hctpinfotab	"Some tab variations are not compatible to 'Hide Caption Titlebar Plus' add-on.">
 <!ENTITY Ctr_hctpinfoab		"Button on titlebar is not compatible to 'Hide Caption Titlebar Plus' add-on.">
 
-<!ENTITY Ctr_appbutton		"&browserName;-menuknap">
+<!ENTITY Ctr_appbutton		"&brandShortName;-menuknap">
 <!ENTITY Ctr_appbutton0		"Deaktiver knap">
 <!ENTITY Ctr_appbutton1		"Knap på værktøjslinje">
 <!ENTITY Ctr_appbutton1wt	"Knap på værktøjslinje (kun tekst)">
-<!ENTITY Ctr_appbutton2		"Knap på [&browserName;] titellinje">
-<!ENTITY Ctr_appbutton2h	"Knap på [&browserName;] titellinje (skjul)">
-<!ENTITY Ctr_appbutton2io	"Knap på [&browserName;] titellinje (kun ikon)">
+<!ENTITY Ctr_appbutton2		"Knap på [&brandShortName;] titellinje">
+<!ENTITY Ctr_appbutton2h	"Knap på [&brandShortName;] titellinje (skjul)">
+<!ENTITY Ctr_appbutton2io	"Knap på [&brandShortName;] titellinje (kun ikon)">
 <!ENTITY Ctr_paneluibtweak	"Orange panelmenu knap på fanebladslinjen">
 <!ENTITY Ctr_appbuttonc_o	"Orange knap (standard)">
 <!ENTITY Ctr_appbuttonc_a	"Blå knap (Aurora)">
@@ -91,7 +91,7 @@
 <!ENTITY Ctr_appbuttonc_wh	"Hvid knap">
 <!ENTITY Ctr_appbuttonc_cu	"Tilpas knap">
 <!ENTITY Ctr_appbuttonI1	"Genstart anbefales">
-<!ENTITY Ctr_appbuttonI1e	"Ikke synlig i Windows OS titellinjen, kun i &browserName; titellinjen!">
+<!ENTITY Ctr_appbuttonI1e	"Ikke synlig i Windows OS titellinjen, kun i &brandShortName; titellinjen!">
 <!ENTITY Ctr_appbuttonI2	"Farverne på knapperne er kun synlige i titellinjen og fanebladslinjen!">
 <!ENTITY Ctr_alttbappb		"Alternative ikoner uden rullemenu-pil">
 <!ENTITY Ctr_appbutmhi		"Højere placering (hvis på fanebladslinje)">
@@ -144,7 +144,7 @@
 <!ENTITY Ctr_pmhidelabels	"Panelmenu popup: skjul mærkater på knapper">
 <!ENTITY Ctr_menupopupscr	"Menupopups: vis rullepaneler i stedet for rullepile">
 
-<!ENTITY Ctr_fxmockup		"&browserName; model">
+<!ENTITY Ctr_fxmockup		"&brandShortName; model">
 <!ENTITY Ctr_tabmokcolor	"Hvid farve til fanebladsknapper (luk, nyt, grupper, list alle)">
 <!ENTITY Ctr_tabmokcolor2	"Hvid farve og sort skygge til tekst på ikke-aktive faneblade">
 <!ENTITY Ctr_tabmokcolor3	"Hvid farve til fanebladesseparatorer">
@@ -196,7 +196,7 @@
 <!ENTITY Ctr_extrabar		"Yderligere værktøjslinjer">
 <!ENTITY Ctr_extrabar0		"Yderligere værktøjslinje(r)">
 <!ENTITY Ctr_extrabar1		"Yderligere værktøjslinje">
-<!ENTITY Ctr_extrabarinfo	"Skifte mellem 'faneblade øverst' og 'faneblade skal ikke være øverst' ændre tilfældigt på rækkefølgen af yderligere værktøjslinjer. &browserName; skal genstartes for at løse dette problem.">
+<!ENTITY Ctr_extrabarinfo	"Skifte mellem 'faneblade øverst' og 'faneblade skal ikke være øverst' ændre tilfældigt på rækkefølgen af yderligere værktøjslinjer. &brandShortName; skal genstartes for at løse dette problem.">
 
 <!ENTITY Ctr_invicons		"Omvendt farvede ikoner">
 <!ENTITY Ctr_menubar		"Menulinje">
@@ -220,7 +220,7 @@
 <!ENTITY Ctr_alttabstb2		"In maximized mode (tabs on top)">
 
 <!ENTITY Ctr_altmenubar		"Tilføj baggrundsfarve (OS titellinje)">
-<!ENTITY Ctr_altmenubarpos	"Alternativ placering (under &browserName; titellinje)">
+<!ENTITY Ctr_altmenubarpos	"Alternativ placering (under &brandShortName; titellinje)">
 <!ENTITY Ctr_menubarnofog	"Fjern baggrundsfarve/tåge (Windows AeroGlass/8)">
 
 <!ENTITY Ctr_aerocolors		"Blå Aero farver til værktøjslinjer (og faneblade)">
@@ -257,11 +257,11 @@
 <!ENTITY Ctr_nodevtheme		"Prevent 'Developer Theme' from being enabled">
 
 <!ENTITY Ctr_experttweaks	"Avanceret">
-<!ENTITY Ctr_fx33layers		"&browserName; 33+ introducerede 'nye renderingsfunktioner' som i øjeblikket er skyld i 'faneblade som hænger' på nogle systemer. Fjern markeringen for at rette problem.">
-<!ENTITY Ctr_fx34search		"&browserName; 34+ introducerede 'en ny brugerflade til søgning'. Fjern markeringen for at vende tilbage til den 'gamle brugerflade'.">
-<!ENTITY Ctr_fx34loop		"&browserName; 34+ introducerede 'opkald og samtaler'. Fjern markeringen ved denne indstilling for at fjerne funktionen.">
-<!ENTITY Ctr_fx35devtheme	"&browserName; 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
-<!ENTITY Ctr_fx36prefs		"&browserName; 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
+<!ENTITY Ctr_fx33layers		"&brandShortName; 33+ introducerede 'nye renderingsfunktioner' som i øjeblikket er skyld i 'faneblade som hænger' på nogle systemer. Fjern markeringen for at rette problem.">
+<!ENTITY Ctr_fx34search		"&brandShortName; 34+ introducerede 'en ny brugerflade til søgning'. Fjern markeringen for at vende tilbage til den 'gamle brugerflade'.">
+<!ENTITY Ctr_fx34loop		"&brandShortName; 34+ introducerede 'opkald og samtaler'. Fjern markeringen ved denne indstilling for at fjerne funktionen.">
+<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
+<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
 <!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
 <!ENTITY Ctr_e_searchui		"Search appearance">
 <!ENTITY Ctr_e_loop			"Calling and conversation">
@@ -272,13 +272,13 @@
 <!ENTITY Ctr_pw_settings	"Indstillinger">
 <!ENTITY Ctr_pw_set_reset	"Gendan standard">
 <!ENTITY Ctr_pw_set_predef	"Klassisk opsætning">
-<!ENTITY Ctr_pw_set_preaus	"&browserName; opsætning">
+<!ENTITY Ctr_pw_set_preaus	"&brandShortName; opsætning">
 <!ENTITY Ctr_pw_set_export	"Eksporter indstillinger">
 <!ENTITY Ctr_pw_set_import	"Importer indstillinger">
 
 <!ENTITY Ctr_special_font	"Indstillinger til baggrundsfarve gælder kun til standard tema!">
 <!ENTITY Ctr_special_info	"Nogle valgmuligheder giver måske ikke altid synlige ændringer">
-<!ENTITY Ctr_special_info2	"Indstillinger foretages til &browserName; standard tema og virker måske ikke med alle tredjeparts temaer!">
+<!ENTITY Ctr_special_info2	"Indstillinger foretages til &brandShortName; standard tema og virker måske ikke med alle tredjeparts temaer!">
 <!ENTITY Ctr_support		"Supportforum">
 <!ENTITY Ctr_newversion		"Ny version?">
 
