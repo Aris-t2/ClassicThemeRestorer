@@ -1,3 +1,8 @@
+<!ENTITY % brandDTD
+    SYSTEM "chrome://classic_theme_restorer/content/overlay_bname.dtd">
+  %brandDTD;
+<!-- Do not edit above this line and do not edit the variable '&browserName;' inside translated strings -->
+
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Lišta doplňků">
@@ -9,7 +14,7 @@
 <!ENTITY Ctr_navthrobber	"Activity Indicator">
 <!ENTITY Ctr_sidebarbutton	"Postranní lišta">
 <!ENTITY Ctr_windowcontrols	"Min/max/zavřít (Fullscreen)">
-<!ENTITY Ctr_rr				"Restartujte Firefox!">
+<!ENTITY Ctr_rr				"Restartujte &browserName;!">
 
 <!ENTITY Ctr_cuibuttons		"Tlačítka">
 <!ENTITY Ctr_cuibutnormal	"Normální">
@@ -38,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Panely pod adresním řádkem (v2) --- nastaveno [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
 <!ENTITY Ctr_tabsontopI1	"Přidává atribut [tabsontop=true/false] pro">
-<!ENTITY Ctr_tabsintitlebar	"Záhlaví okna Firefox (předvolba about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Záhlaví okna &browserName; (předvolba about:config)">
 <!ENTITY Ctr_tabwidthdef	"(výchozí)">
 <!ENTITY Ctr_tabwidthcla	"(klasický)">
 <!ENTITY Ctr_tabminheight	"Height:">
@@ -70,9 +75,9 @@
 <!ENTITY Ctr_appbutton0		"Tlačítko zakázáno">
 <!ENTITY Ctr_appbutton1		"Tlačítko na nástrojové liště">
 <!ENTITY Ctr_appbutton1wt	"Tlačítko na nástrojové liště (pouze text)">
-<!ENTITY Ctr_appbutton2		"Tlačítko v záhlaví okna [Firefox]">
-<!ENTITY Ctr_appbutton2h	"Tlačítko v záhlaví okna [Firefox] (hidden)">
-<!ENTITY Ctr_appbutton2io	"Tlačítko v záhlaví okna [Firefox] (pouze ikona)">
+<!ENTITY Ctr_appbutton2		"Tlačítko v záhlaví okna [&browserName;]">
+<!ENTITY Ctr_appbutton2h	"Tlačítko v záhlaví okna [&browserName;] (hidden)">
+<!ENTITY Ctr_appbutton2io	"Tlačítko v záhlaví okna [&browserName;] (pouze ikona)">
 <!ENTITY Ctr_paneluibtweak	"Oranžový panel jako tlačítko na liště s panely">
 <!ENTITY Ctr_appbuttonc_o	"Oranžové tlačítko (výchozí)">
 <!ENTITY Ctr_appbuttonc_a	"Modré tlačítko (Aurora)">
@@ -86,7 +91,7 @@
 <!ENTITY Ctr_appbuttonc_wh	"Bíle tlačítko">
 <!ENTITY Ctr_appbuttonc_cu	"Custom button color">
 <!ENTITY Ctr_appbuttonI1	"Doporučený restart">
-<!ENTITY Ctr_appbuttonI1e	"Není viditelné v záhlaví okna Windows OS, pouze v záhlaví okna Firefoxu!">
+<!ENTITY Ctr_appbuttonI1e	"Není viditelné v záhlaví okna Windows OS, pouze v záhlaví okna &browserName;u!">
 <!ENTITY Ctr_appbuttonI2	"Barva tlačítka jsou viditelné pouze v záhlaví okna nebo liště s panely!">
 <!ENTITY Ctr_alttbappb		"Alternativní ikony">
 <!ENTITY Ctr_appbutmhi		"Vyšší umístění (pokud na liště s panely)">
@@ -139,7 +144,7 @@
 <!ENTITY Ctr_pmhidelabels	"Tlačítko nabídky: skrýt texty u ikon">
 <!ENTITY Ctr_menupopupscr	"Nabídky: zobrazit rolovací lištu místo šipek">
 
-<!ENTITY Ctr_fxmockup		"Firefox Mockup">
+<!ENTITY Ctr_fxmockup		"&browserName; Mockup">
 <!ENTITY Ctr_tabmokcolor	"Bílá barva pro tlačítka panelu (zavřít, nový, skupiny, seznam všech)">
 <!ENTITY Ctr_tabmokcolor2	"Bílá barva a tmavý stín pro text na neaktivních panelech">
 <!ENTITY Ctr_tabmokcolor3	"Bílá barva pro oddělovače panelů">
@@ -191,7 +196,7 @@
 <!ENTITY Ctr_extrabar		"Additional Toolbars">
 <!ENTITY Ctr_extrabar0		"Additional Toolbar(s)">
 <!ENTITY Ctr_extrabar1		"Přídavná lišta">
-<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
+<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. &browserName; has to be restarted to solve this issue.">
 
 <!ENTITY Ctr_invicons		"Invertované ikony">
 <!ENTITY Ctr_menubar		"Hlavní nabídka">
@@ -215,7 +220,7 @@
 <!ENTITY Ctr_alttabstb2		"In maximized mode (tabs on top)">
 
 <!ENTITY Ctr_altmenubar		"Přidat barvu pozadí (lišta záhlaví OS)">
-<!ENTITY Ctr_altmenubarpos	"Alternativní umístění (pod lištou záhlaví Firefox)">
+<!ENTITY Ctr_altmenubarpos	"Alternativní umístění (pod lištou záhlaví &browserName;)">
 <!ENTITY Ctr_menubarnofog	"Odstranit barevné/zamlžené pozadí (Windows AeroGlass/8)">
 
 <!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
@@ -252,11 +257,11 @@
 <!ENTITY Ctr_nodevtheme		"Prevent 'Developer Theme' from being enabled">
 
 <!ENTITY Ctr_experttweaks	"Advanced">
-<!ENTITY Ctr_fx33layers		"Firefox 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
-<!ENTITY Ctr_fx34search		"Firefox 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
-<!ENTITY Ctr_fx35devtheme	"Firefox 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
-<!ENTITY Ctr_fx36prefs		"Firefox 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
+<!ENTITY Ctr_fx33layers		"&browserName; 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
+<!ENTITY Ctr_fx34search		"&browserName; 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
+<!ENTITY Ctr_fx34loop		"&browserName; 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
+<!ENTITY Ctr_fx35devtheme	"&browserName; 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
+<!ENTITY Ctr_fx36prefs		"&browserName; 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
 <!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
 <!ENTITY Ctr_e_searchui		"Search appearance">
 <!ENTITY Ctr_e_loop			"Calling and conversation">
@@ -267,13 +272,13 @@
 <!ENTITY Ctr_pw_settings	"Možnosti">
 <!ENTITY Ctr_pw_set_reset	"Obnovit výchozí">
 <!ENTITY Ctr_pw_set_predef	"Nastavit klasické">
-<!ENTITY Ctr_pw_set_preaus	"Firefox preset">
+<!ENTITY Ctr_pw_set_preaus	"&browserName; preset">
 <!ENTITY Ctr_pw_set_export	"Exportovat nastavení">
 <!ENTITY Ctr_pw_set_import	"Importovat nastavení">
 
 <!ENTITY Ctr_special_font	"Nastavení pozadí ovlivní pouze výchoz vzhled!">
 <!ENTITY Ctr_special_info	"Některé volby nemusí v některých případech vzhled vůbec ovlivnit">
-<!ENTITY Ctr_special_info2	"Možnosti jsou pro výchozí vzhled Firefoxu a nemusí fungovat s jinými nainstalovanými vzhledy!">
+<!ENTITY Ctr_special_info2	"Možnosti jsou pro výchozí vzhled &browserName;u a nemusí fungovat s jinými nainstalovanými vzhledy!">
 <!ENTITY Ctr_support		"Fórum podpory">
 <!ENTITY Ctr_newversion		"Nová verze?">
 

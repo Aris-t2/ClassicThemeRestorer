@@ -1,3 +1,8 @@
+<!ENTITY % brandDTD
+    SYSTEM "chrome://classic_theme_restorer/content/overlay_bname.dtd">
+  %brandDTD;
+<!-- Do not edit above this line and do not edit the variable '&browserName;' inside translated strings -->
+
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Rědka dodankow">
@@ -9,7 +14,7 @@
 <!ENTITY Ctr_navthrobber	"Pokazka aktiwity">
 <!ENTITY Ctr_sidebarbutton	"Bócnica">
 <!ENTITY Ctr_windowcontrols	"Min./maks./zacyniś (połna wobrazowka)">
-<!ENTITY Ctr_rr				"Startujśo Firefox znowego!">
+<!ENTITY Ctr_rr				"Startujśo &browserName; znowego!">
 
 <!ENTITY Ctr_cuibuttons		"Tłocaški">
 <!ENTITY Ctr_cuibutnormal	"Normalny">
@@ -38,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Rejtarki nic górjejce (v2) --- stajśo [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"v2 jo jano za někotare dodanki a dopołne drastwy!">
 <!ENTITY Ctr_tabsontopI1	"Pśidawa atribut [tabsontop=true/false] na">
-<!ENTITY Ctr_tabsintitlebar	"Titelowa rědka Firefox (about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Titelowa rědka &browserName; (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(standard)">
 <!ENTITY Ctr_tabwidthcla	"(klasiski)">
 <!ENTITY Ctr_tabminheight	"Wusokosć:">
@@ -70,9 +75,9 @@
 <!ENTITY Ctr_appbutton0		"Tłocašk znjemóžnjony">
 <!ENTITY Ctr_appbutton1		"Tłocašk na symbolowej rědce">
 <!ENTITY Ctr_appbutton1wt	"Tłocašk na symbolowej rědce (jano tekst)">
-<!ENTITY Ctr_appbutton2		"Tłocašk na titelowej rědce [Firefox]">
+<!ENTITY Ctr_appbutton2		"Tłocašk na titelowej rědce [&browserName;]">
 <!ENTITY Ctr_appbutton2h	"Tłocašk na titelowej rědce (schowany)">
-<!ENTITY Ctr_appbutton2io	"Tłocašk na titelowej rědce [Firefox] (jano symbol)">
+<!ENTITY Ctr_appbutton2io	"Tłocašk na titelowej rědce [&browserName;] (jano symbol)">
 <!ENTITY Ctr_paneluibtweak	"Oranžowy menijowy tłocašk na rejtarkowej rědce">
 <!ENTITY Ctr_appbuttonc_o	"Tłocaškowa barwa: Oranžowy (standard)">
 <!ENTITY Ctr_appbuttonc_a	"Tłocaškkowa barwa: Módry (Aurora)">
@@ -139,7 +144,7 @@
 <!ENTITY Ctr_pmhidelabels	"Pólowy meni: Tekst tłocaškow schowaś">
 <!ENTITY Ctr_menupopupscr	"Wuskokujuce menije: suwate rědki město suwatych šypkow pokazaś">
 
-<!ENTITY Ctr_fxmockup		"Nacerjenje Firefox">
+<!ENTITY Ctr_fxmockup		"Nacerjenje &browserName;">
 <!ENTITY Ctr_tabmokcolor	"Běła barwa za rejtarkowe tłocaški (zacyniś, nowy, kupki, wšykne nalicyś)">
 <!ENTITY Ctr_tabmokcolor2	"Běła barwa a śamna wóseń za tekst na njeaktiwnych rejtarkach">
 <!ENTITY Ctr_tabmokcolor3	"Běła barwa za rejtarkowe źěleńske smužki">
@@ -191,7 +196,7 @@
 <!ENTITY Ctr_extrabar		"Pśidatne symbolowe rědki">
 <!ENTITY Ctr_extrabar0		"Pśidatne symbolowe rědki">
 <!ENTITY Ctr_extrabar1		"Pśidatna symbolowa rědka">
-<!ENTITY Ctr_extrabarinfo	"Pśešaltowanje mjazy 'rejtarki górjejce' a 'rejtarki dołojce' móžo rěd pśidatnych rědkow pśipadnje změniś. Firefox musy se znowego startowaś, aby toś ten problem rozwězał.">
+<!ENTITY Ctr_extrabarinfo	"Pśešaltowanje mjazy 'rejtarki górjejce' a 'rejtarki dołojce' móžo rěd pśidatnych rědkow pśipadnje změniś. &browserName; musy se znowego startowaś, aby toś ten problem rozwězał.">
 
 <!ENTITY Ctr_invicons		"Inwertěrowane symbole">
 <!ENTITY Ctr_menubar		"Menijowa rědka">
@@ -215,7 +220,7 @@
 <!ENTITY Ctr_alttabstb2		"W maksiměrowanem naglěźe (rejtarki górjejce)">
 
 <!ENTITY Ctr_altmenubar		"Slězynowu barwu pśidaś (titelowa rědka źěłowego systema)">
-<!ENTITY Ctr_altmenubarpos	"Alternatiwna pozicija (pód titeloweju rědku Firefox)">
+<!ENTITY Ctr_altmenubarpos	"Alternatiwna pozicija (pód titeloweju rědku &browserName;)">
 <!ENTITY Ctr_menubarnofog	"Slězynowu barwu/młu wótpóraś (Windows AeroGlass / Win8)">
 
 <!ENTITY Ctr_aerocolors		"Barwy 'Blue Aero' za głowne rědki a rejtarki">
@@ -252,11 +257,11 @@
 <!ENTITY Ctr_nodevtheme		"Zmóžnjenjeju 'wuwijarskeje drastwy' zajźowaś">
 
 <!ENTITY Ctr_experttweaks	"Rozšyrjone">
-<!ENTITY Ctr_fx33layers		"Firefox 33+ jo 'nowe kresleńske funkcije' zawjadł, kótarež su tuchylu zagronite za 'njereagěrujuce rejtarki' na někotarych systemach. Gaž znjemóžnijośo toś to nastajenje, rozwěžośo toś ten problem.">
-<!ENTITY Ctr_fx34search		"Firefox 34+ jo 'nowy pytański pówjerch' zawjadł. Gaž znjemóžnijośo toś to nastajenje, wótnowijośo 'stary pytański pówjerch'.">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ jo 'telefoněrowańske a konwersaciske' funkcije zawjadł. Gaž znjemóžnijośo toś to nastajenje, se wótpóraju.">
-<!ENTITY Ctr_fx35devtheme	"Firefox 35+ jo nowu 'wuwijarsku drastwu' zawjadł. Gaž znjemóžnijośo toś te nastajenja, se 'wuwijarska drastwa' a jeje tłocašk w pśiměrjeńskem modusu znjemóžnjatej.">
-<!ENTITY Ctr_fx36prefs		"Firefox 36+ jo 'nastajenja w rejtarku' zawjadł. Gaž znjemóžnijośo toś to nastajenje, se stare wokno nastajenjow wótnowijo..">
+<!ENTITY Ctr_fx33layers		"&browserName; 33+ jo 'nowe kresleńske funkcije' zawjadł, kótarež su tuchylu zagronite za 'njereagěrujuce rejtarki' na někotarych systemach. Gaž znjemóžnijośo toś to nastajenje, rozwěžośo toś ten problem.">
+<!ENTITY Ctr_fx34search		"&browserName; 34+ jo 'nowy pytański pówjerch' zawjadł. Gaž znjemóžnijośo toś to nastajenje, wótnowijośo 'stary pytański pówjerch'.">
+<!ENTITY Ctr_fx34loop		"&browserName; 34+ jo 'telefoněrowańske a konwersaciske' funkcije zawjadł. Gaž znjemóžnijośo toś to nastajenje, se wótpóraju.">
+<!ENTITY Ctr_fx35devtheme	"&browserName; 35+ jo nowu 'wuwijarsku drastwu' zawjadł. Gaž znjemóžnijośo toś te nastajenja, se 'wuwijarska drastwa' a jeje tłocašk w pśiměrjeńskem modusu znjemóžnjatej.">
+<!ENTITY Ctr_fx36prefs		"&browserName; 36+ jo 'nastajenja w rejtarku' zawjadł. Gaž znjemóžnijośo toś to nastajenje, se stare wokno nastajenjow wótnowijo..">
 <!ENTITY Ctr_e_omtc			"OMTC / problem z wisecymi rejtarkami">
 <!ENTITY Ctr_e_searchui		"Pytański pówjerch">
 <!ENTITY Ctr_e_loop			"Telefoněrowanje a konwersacija">
@@ -267,7 +272,7 @@
 <!ENTITY Ctr_pw_settings	"Nastajenja">
 <!ENTITY Ctr_pw_set_reset	"Standard wótnowiś">
 <!ENTITY Ctr_pw_set_predef	"Klasiske standardne gódnoty">
-<!ENTITY Ctr_pw_set_preaus	"Standard Firefox">
+<!ENTITY Ctr_pw_set_preaus	"Standard &browserName;">
 <!ENTITY Ctr_pw_set_export	"Nastajenja eksportěrowaś">
 <!ENTITY Ctr_pw_set_import	"Nastajenja importěrowaś">
 

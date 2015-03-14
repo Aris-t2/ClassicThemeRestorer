@@ -1,3 +1,8 @@
+<!ENTITY % brandDTD
+    SYSTEM "chrome://classic_theme_restorer/content/overlay_bname.dtd">
+  %brandDTD;
+<!-- Do not edit above this line and do not edit the variable '&browserName;' inside translated strings -->
+
 <!ENTITY Ctr_title			"Επαναφορέας κλασικού θέματος">
 
 <!ENTITY Ctr_addonbar		"Εργαλειοθήκη πρόσθετων">
@@ -9,7 +14,7 @@
 <!ENTITY Ctr_navthrobber	"Ενδείκτης δραστηριότητας">
 <!ENTITY Ctr_sidebarbutton	"(Πλευρική στήλη)">
 <!ENTITY Ctr_windowcontrols	"Ελαχιστοποίηση/επαναφορά/κλείσιμο (Πλήρης οθόνη)">
-<!ENTITY Ctr_rr				"Επανεκκινήστε τον Firefox!">
+<!ENTITY Ctr_rr				"Επανεκκινήστε τον &browserName;!">
 
 <!ENTITY Ctr_cuibuttons		"Κουμπιά">
 <!ENTITY Ctr_cuibutnormal	"Κανονικά">
@@ -25,7 +30,7 @@
 <!ENTITY Ctr_tabcolors_t	"Χρώματα καρτελών &amp; κειμένου">
 
 <!ENTITY Ctr_tabs			"Καρτέλες">
-<!ENTITY Ctr_tabs0			"Καμπυλόγραμμες καρτέλες (προεπιλογή Firefox)">
+<!ENTITY Ctr_tabs0			"Καμπυλόγραμμες καρτέλες (προεπιλογή &browserName;)">
 <!ENTITY Ctr_tabs1			"Τετραγωνισμένες καρτέλες (κλασική τεχνοτροπία)">
 <!ENTITY Ctr_tabs1m			"Τετραγωνισμένες καρτέλες (τεχνοτροπία Australis)">
 <!ENTITY Ctr_tabs2			"Καμπυλόγραμμες καρτέλες (εναλλακτική τεχνοτροπία)">
@@ -38,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Καρτέλες όχι στο πάνω μέρος (v2) --- ορισμός χαρακτηριστικού [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"Η v2 είναι για ορισμένες επεκτάσεις και πλήρη θέματα μόνο!">
 <!ENTITY Ctr_tabsontopI1	"Προσθέτει χαρακτηριστικό [tabsontop=true/false] σε">
-<!ENTITY Ctr_tabsintitlebar	"Γραμμή τίτλου Firefox (προτίμηση about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Γραμμή τίτλου &browserName; (προτίμηση about:config)">
 <!ENTITY Ctr_tabwidthdef	"(προεπιλογή)">
 <!ENTITY Ctr_tabwidthcla	"(κλασικό)">
 <!ENTITY Ctr_tabminheight	"Ύψος:">
@@ -70,9 +75,9 @@
 <!ENTITY Ctr_appbutton0		"Απενεργοποιημένο">
 <!ENTITY Ctr_appbutton1		"Στην εργαλειοθήκη">
 <!ENTITY Ctr_appbutton1wt	"Στην εργαλειοθήκη (μόνο κείμενο)">
-<!ENTITY Ctr_appbutton2		"Στη γραμμή τίτλου [Firefox]">
-<!ENTITY Ctr_appbutton2h	"Στη γραμμή τίτλου [Firefox] (σε απόκρυψη)">
-<!ENTITY Ctr_appbutton2io	"Στη γραμμή τίτλου [Firefox] (μόνο εικονίδιο)">
+<!ENTITY Ctr_appbutton2		"Στη γραμμή τίτλου [&browserName;]">
+<!ENTITY Ctr_appbutton2h	"Στη γραμμή τίτλου [&browserName;] (σε απόκρυψη)">
+<!ENTITY Ctr_appbutton2io	"Στη γραμμή τίτλου [&browserName;] (μόνο εικονίδιο)">
 <!ENTITY Ctr_paneluibtweak	"Πορτοκαλί κουμπί μενού πίνακα στην εργαλειοθήκη καρτελών">
 <!ENTITY Ctr_appbuttonc_o	"Πορτοκαλί χρώμα κουμπιού (προεπιλογή)">
 <!ENTITY Ctr_appbuttonc_a	"Μπλε χρώμα κουμπιού (Aurora)">
@@ -86,7 +91,7 @@
 <!ENTITY Ctr_appbuttonc_wh	"Άσπρο χρώμα κουμπιού">
 <!ENTITY Ctr_appbuttonc_cu	"Προσαρμοσμένο χρώμα κουμπιού">
 <!ENTITY Ctr_appbuttonI1	"Συνιστάται επανεκκίνηση">
-<!ENTITY Ctr_appbuttonI1e	"Δεν είναι ορατό στη γραμμή τίτλου του Λ.Σ. Windows, μόνο στη γραμμή τίτλου του Firefox!">
+<!ENTITY Ctr_appbuttonI1e	"Δεν είναι ορατό στη γραμμή τίτλου του Λ.Σ. Windows, μόνο στη γραμμή τίτλου του &browserName;!">
 <!ENTITY Ctr_appbuttonI2	"Τα χρώματα του κουμπιού είναι ορατά μόνο στη γραμμή τίτλου και στην εργαλειοθήκη καρτελών!">
 <!ENTITY Ctr_alttbappb		"Εναλλακτικά εικονίδια χωρίς δείκτη ανάπτυξης">
 <!ENTITY Ctr_appbutmhi		"Υψηλότερη θέση (εάν είναι στην εργαλειοθήκη καρτελών)">
@@ -139,7 +144,7 @@
 <!ENTITY Ctr_pmhidelabels	"Μενού πίνακα: απόκρυψη ετικετών κουμπιών">
 <!ENTITY Ctr_menupopupscr	"Αναδυόμενα μενού: εμφάνιση γραμμών κύλισης αντί για βέλη κύλισης">
 
-<!ENTITY Ctr_fxmockup		"Μακέτα Firefox">
+<!ENTITY Ctr_fxmockup		"Μακέτα &browserName;">
 <!ENTITY Ctr_tabmokcolor	"Άσπρο χρώμα κουμπιών καρτελών (κλείσιμο, νέα, ομάδες, λίστα όλων)">
 <!ENTITY Ctr_tabmokcolor2	"Άσπρο χρώμα και σκοτεινή σκιά κειμένου μη ενεργών καρτελών">
 <!ENTITY Ctr_tabmokcolor3	"Άσπρο χρώμα διαχωριστικών καρτελών">
@@ -191,7 +196,7 @@
 <!ENTITY Ctr_extrabar		"Επιπρόσθετες εργαλειοθήκες">
 <!ENTITY Ctr_extrabar0		"Επιπρόσθετη/ες εργαλειοθήκη/ες">
 <!ENTITY Ctr_extrabar1		"Επιπρόσθετη εργαλειοθήκη">
-<!ENTITY Ctr_extrabarinfo	"Η εναλλαγή λειτουργιών «Καρτέλες στο πάνω μέρος» και «Καρτέλες όχι στο πάνω μέρος», αλλάζει τυχαία τη σειρά των επιπρόσθετων εργαλειοθηκών. Ο Firefox πρέπει να επανεκκινηθεί για αντιμετώπιση αυτού του θέματος.">
+<!ENTITY Ctr_extrabarinfo	"Η εναλλαγή λειτουργιών «Καρτέλες στο πάνω μέρος» και «Καρτέλες όχι στο πάνω μέρος», αλλάζει τυχαία τη σειρά των επιπρόσθετων εργαλειοθηκών. Ο &browserName; πρέπει να επανεκκινηθεί για αντιμετώπιση αυτού του θέματος.">
 
 <!ENTITY Ctr_invicons		"Ανεστραμμένα εικονίδια">
 <!ENTITY Ctr_menubar		"Εργαλειοθήκη μενού">
@@ -215,7 +220,7 @@
 <!ENTITY Ctr_alttabstb2		"Σε λειτουργία μεγιστοποίησης (καρτέλες στο πάνω μέρος)">
 
 <!ENTITY Ctr_altmenubar		"Προσθήκη χρώματος φόντου (γραμμή τίτλου Λ.Σ.)">
-<!ENTITY Ctr_altmenubarpos	"Εναλλακτική θέση (παρακάτω από τη γραμμή τίτλου του Firefox)">
+<!ENTITY Ctr_altmenubarpos	"Εναλλακτική θέση (παρακάτω από τη γραμμή τίτλου του &browserName;)">
 <!ENTITY Ctr_menubarnofog	"Αφαίρεση χρώματος/ομίχλης φόντου (Windows AeroGlass/8)">
 
 <!ENTITY Ctr_aerocolors		"Μπλε χρώματα «Aero» για βασικές εργαλειοθήκες και καρτέλες">
@@ -252,11 +257,11 @@
 <!ENTITY Ctr_nodevtheme		"Prevent 'Developer Theme' from being enabled">
 
 <!ENTITY Ctr_experttweaks	"Προηγμένες">
-<!ENTITY Ctr_fx33layers		"Ο Firefox 33+ εισήγαγε «νέα χαρακτηριστικά απόδοσης», τρεχόντως υπεύθυνα για το «κρέμασμα καρτελών» σε ορισμένα συστήματα. Αποεπιλέγοντας αυτή την προτίμηση επιλύεται αυτό το ζήτημα.">
-<!ENTITY Ctr_fx34search		"Ο Firefox 34+ εισήγαγε μία «νέα διεπαφή αναζήτησης». Αποεπιλέγοντας αυτή την προτίμηση επαναφέρεται η προηγούμενη διεπαφή.">
-<!ENTITY Ctr_fx34loop		"Ο Firefox 34+ εισήγαγε δυνατότητες «κλήσης και συνομιλίας». Αποεπιλέγοντας αυτή την προτίμηση αφαιρούνται αυτές οι δυνατότητες.">
-<!ENTITY Ctr_fx35devtheme	"Ο Firefox 35+ εισήγαγε ένα νέο «Θέμα δημιουργού». Αποεπιλέγοντας αυτές τις προτιμήσεις απενεργοποιούνται το «Θέμα δημιουργού» και το κουμπί του στη λειτουργία προσαρμογής.">
-<!ENTITY Ctr_fx36prefs		"Ο Firefox 36+ εισήγαγε προβολή επιλογών σε καρτέλα. Αποεπιλέγοντας αυτή την προτίμηση επαναφέρεται το παλιό παράθυρο επιλογών.">
+<!ENTITY Ctr_fx33layers		"Ο &browserName; 33+ εισήγαγε «νέα χαρακτηριστικά απόδοσης», τρεχόντως υπεύθυνα για το «κρέμασμα καρτελών» σε ορισμένα συστήματα. Αποεπιλέγοντας αυτή την προτίμηση επιλύεται αυτό το ζήτημα.">
+<!ENTITY Ctr_fx34search		"Ο &browserName; 34+ εισήγαγε μία «νέα διεπαφή αναζήτησης». Αποεπιλέγοντας αυτή την προτίμηση επαναφέρεται η προηγούμενη διεπαφή.">
+<!ENTITY Ctr_fx34loop		"Ο &browserName; 34+ εισήγαγε δυνατότητες «κλήσης και συνομιλίας». Αποεπιλέγοντας αυτή την προτίμηση αφαιρούνται αυτές οι δυνατότητες.">
+<!ENTITY Ctr_fx35devtheme	"Ο &browserName; 35+ εισήγαγε ένα νέο «Θέμα δημιουργού». Αποεπιλέγοντας αυτές τις προτιμήσεις απενεργοποιούνται το «Θέμα δημιουργού» και το κουμπί του στη λειτουργία προσαρμογής.">
+<!ENTITY Ctr_fx36prefs		"Ο &browserName; 36+ εισήγαγε προβολή επιλογών σε καρτέλα. Αποεπιλέγοντας αυτή την προτίμηση επαναφέρεται το παλιό παράθυρο επιλογών.">
 <!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
 <!ENTITY Ctr_e_searchui		"Search appearance">
 <!ENTITY Ctr_e_loop			"Calling and conversation">
@@ -267,13 +272,13 @@
 <!ENTITY Ctr_pw_settings	"Ρυθμίσεις">
 <!ENTITY Ctr_pw_set_reset	"Επαναφορά προεπιλογών">
 <!ENTITY Ctr_pw_set_predef	"Προκαθορισμένες κλασικές">
-<!ENTITY Ctr_pw_set_preaus	"Προκαθορισμένες Firefox">
+<!ENTITY Ctr_pw_set_preaus	"Προκαθορισμένες &browserName;">
 <!ENTITY Ctr_pw_set_export	"Εξαγωγή προτιμήσεων">
 <!ENTITY Ctr_pw_set_import	"Εισαγωγή προτιμήσεων">
 
 <!ENTITY Ctr_special_font	"Οι ρυθμίσεις χρώματος φόντου είναι για το προεπιλεγμένο θέμα μόνο!">
 <!ENTITY Ctr_special_info	"Ορισμένες επιλογές ενδέχεται να μην προσφέρουν ορατές αλλαγές σε όλες τις περιπτώσεις">
-<!ENTITY Ctr_special_info2	"Οι ρυθμίσεις έχουν σχεδιαστεί για το προεπιλεγμένο θέμα του Firefox και ενδέχεται να μη λειτουργούν με όλα τα θέματα τρίτων!">
+<!ENTITY Ctr_special_info2	"Οι ρυθμίσεις έχουν σχεδιαστεί για το προεπιλεγμένο θέμα του &browserName; και ενδέχεται να μη λειτουργούν με όλα τα θέματα τρίτων!">
 <!ENTITY Ctr_support		"Φόρουμ υποστήριξης">
 <!ENTITY Ctr_newversion		"Νέα έκδοση;">
 

@@ -1,3 +1,8 @@
+<!ENTITY % brandDTD
+    SYSTEM "chrome://classic_theme_restorer/content/overlay_bname.dtd">
+  %brandDTD;
+<!-- Do not edit above this line and do not edit the variable '&browserName;' inside translated strings -->
+
 <!ENTITY Ctr_title 			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Barra dei componenti aggiuntivi">
@@ -9,7 +14,7 @@
 <!ENTITY Ctr_navthrobber	"Indicatore di attività">
 <!ENTITY Ctr_sidebarbutton	"Barra laterale">
 <!ENTITY Ctr_windowcontrols	"Min/max/chiudi (A tutto schermo)">
-<!ENTITY Ctr_rr				"Riavviare Firefox!">
+<!ENTITY Ctr_rr				"Riavviare &browserName;!">
 
 <!ENTITY Ctr_cuibuttons		"Pulsanti">
 <!ENTITY Ctr_cuibutnormal	"Normali">
@@ -191,7 +196,7 @@
 <!ENTITY Ctr_extrabar		"Barre degli strumenti aggiuntive">
 <!ENTITY Ctr_extrabar0		"Barre degli strumenti aggiuntive">
 <!ENTITY Ctr_extrabar1		"Barra degli strumenti aggiuntiva">
-<!ENTITY Ctr_extrabarinfo	"La commutazione tra la modalità 'schede in alto' e 'schede in basso' altera in modo casuale l'ordine delle barre degli strumenti aggiuntive. Si deve riavviare Firefox per risolvere questo problema.">
+<!ENTITY Ctr_extrabarinfo	"La commutazione tra la modalità 'schede in alto' e 'schede in basso' altera in modo casuale l'ordine delle barre degli strumenti aggiuntive. Si deve riavviare &browserName; per risolvere questo problema.">
 
 <!ENTITY Ctr_invicons		"Icone invertite">
 <!ENTITY Ctr_menubar		"Barra dei menu">
@@ -252,11 +257,11 @@
 <!ENTITY Ctr_nodevtheme		"Impedisci l'attivazione del 'Developer Theme'">
 
 <!ENTITY Ctr_experttweaks	"Avanzate">
-<!ENTITY Ctr_fx33layers		"Firefox 33+ ha introdotto nuove funzioni di rendering che sono responsabili del blocco delle schede in alcuni sistemi. Deselezionare questa opzione per risolvere il problema.">
-<!ENTITY Ctr_fx34search		"Firefox 34+ ha introdotto una nuova barra di ricerca. Deselezionare questa opzione per ripristinare la barra precedente.">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ ha introdotto le funzioni di chiamata e conversazione. Deselezionare questa opzione per rimuoverle.">
-<!ENTITY Ctr_fx35devtheme	"Firefox 35+ ha introdotto un nuovo 'developer theme'. Deselezionare questa opzione per disattivare il 'developer theme' e il suo pulsante nella modalità di personalizzazione.">
-<!ENTITY Ctr_fx36prefs		"Firefox 36+ ha introdotto le preferenze in una scheda. Deselezionare questa opzione per ripristinare la finestra delle preferenze classica.">
+<!ENTITY Ctr_fx33layers		"&browserName; 33+ ha introdotto nuove funzioni di rendering che sono responsabili del blocco delle schede in alcuni sistemi. Deselezionare questa opzione per risolvere il problema.">
+<!ENTITY Ctr_fx34search		"&browserName; 34+ ha introdotto una nuova barra di ricerca. Deselezionare questa opzione per ripristinare la barra precedente.">
+<!ENTITY Ctr_fx34loop		"&browserName; 34+ ha introdotto le funzioni di chiamata e conversazione. Deselezionare questa opzione per rimuoverle.">
+<!ENTITY Ctr_fx35devtheme	"&browserName; 35+ ha introdotto un nuovo 'developer theme'. Deselezionare questa opzione per disattivare il 'developer theme' e il suo pulsante nella modalità di personalizzazione.">
+<!ENTITY Ctr_fx36prefs		"&browserName; 36+ ha introdotto le preferenze in una scheda. Deselezionare questa opzione per ripristinare la finestra delle preferenze classica.">
 <!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
 <!ENTITY Ctr_e_searchui		"Search appearance">
 <!ENTITY Ctr_e_loop			"Calling and conversation">
@@ -267,7 +272,7 @@
 <!ENTITY Ctr_pw_settings	"Impostazioni">
 <!ENTITY Ctr_pw_set_reset	"Ripristina predefinite">
 <!ENTITY Ctr_pw_set_predef	"Preset classico">
-<!ENTITY Ctr_pw_set_preaus	"Preset Firefox">
+<!ENTITY Ctr_pw_set_preaus	"Preset &browserName;">
 <!ENTITY Ctr_pw_set_export	"Esporta preferenze">
 <!ENTITY Ctr_pw_set_import	"Importa preferenze">
 

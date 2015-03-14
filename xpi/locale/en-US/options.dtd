@@ -1,3 +1,8 @@
+<!ENTITY % brandDTD
+    SYSTEM "chrome://classic_theme_restorer/content/overlay_bname.dtd">
+  %brandDTD;
+<!-- Do not edit above this line and do not edit the variable '&browserName;' inside translated strings -->
+
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Add-on Bar">
@@ -25,7 +30,7 @@
 <!ENTITY Ctr_tabcolors_t	"Tab colors &amp; text">
 
 <!ENTITY Ctr_tabs			"Tabs">
-<!ENTITY Ctr_tabs0			"Curved tabs (Firefox default)">
+<!ENTITY Ctr_tabs0			"Curved tabs (&browserName; default)">
 <!ENTITY Ctr_tabs1			"Squared tabs (classic)">
 <!ENTITY Ctr_tabs1m			"Squared tabs (australized)">
 <!ENTITY Ctr_tabs2			"Curved tabs (alternative)">
@@ -38,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Tabs not on top (v2) --- [tabsontop=false] attribute">
 <!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
 <!ENTITY Ctr_tabsontopI1	"Attribute [tabsontop=true/false] gets added to">
-<!ENTITY Ctr_tabsintitlebar	"Firefox titlebar (about:config preference)">
+<!ENTITY Ctr_tabsintitlebar	"&browserName; titlebar (about:config preference)">
 <!ENTITY Ctr_tabwidthdef	"(default)">
 <!ENTITY Ctr_tabwidthcla	"(classic)">
 <!ENTITY Ctr_tabminheight	"Height:">
@@ -70,9 +75,9 @@
 <!ENTITY Ctr_appbutton0		"Button disabled">
 <!ENTITY Ctr_appbutton1		"Button on toolbar">
 <!ENTITY Ctr_appbutton1wt	"Button on toolbar (text only)">
-<!ENTITY Ctr_appbutton2		"Button on [Firefox] titlebar">
-<!ENTITY Ctr_appbutton2h	"Button on [Firefox] titlebar (hidden)">
-<!ENTITY Ctr_appbutton2io	"Button on [Firefox] titlebar (icon only)">
+<!ENTITY Ctr_appbutton2		"Button on [&browserName;] titlebar">
+<!ENTITY Ctr_appbutton2h	"Button on [&browserName;] titlebar (hidden)">
+<!ENTITY Ctr_appbutton2io	"Button on [&browserName;] titlebar (icon only)">
 <!ENTITY Ctr_paneluibtweak	"Orange panel menu button on tabs toolbar">
 <!ENTITY Ctr_appbuttonc_o	"Orange button color (default)">
 <!ENTITY Ctr_appbuttonc_a	"Blue button color (Aurora)">
@@ -86,7 +91,7 @@
 <!ENTITY Ctr_appbuttonc_wh	"White button color">
 <!ENTITY Ctr_appbuttonc_cu	"Custom button color">
 <!ENTITY Ctr_appbuttonI1	"Restart recommended">
-<!ENTITY Ctr_appbuttonI1e	"Not visible on Windows OS titlebar, only on Firefox titlebar!">
+<!ENTITY Ctr_appbuttonI1e	"Not visible on Windows OS titlebar, only on &browserName; titlebar!">
 <!ENTITY Ctr_appbuttonI2	"Button colors are only visible on titlebar and tabs toolbar!">
 <!ENTITY Ctr_alttbappb		"Alternative icons without dropmarker">
 <!ENTITY Ctr_appbutmhi		"Higher position (if on tabs toolbar)">
@@ -139,7 +144,7 @@
 <!ENTITY Ctr_pmhidelabels	"Panel menu popup: hide button labels">
 <!ENTITY Ctr_menupopupscr	"Menupopups: show scrollbars instead of scroll arrows">
 
-<!ENTITY Ctr_fxmockup		"Firefox Mockup">
+<!ENTITY Ctr_fxmockup		"&browserName; Mockup">
 <!ENTITY Ctr_tabmokcolor	"White color for tab buttons (close, new, groups, list all)">
 <!ENTITY Ctr_tabmokcolor2	"White color and dark shadow for text on non-active tabs">
 <!ENTITY Ctr_tabmokcolor3	"White color for tab separators">
@@ -191,7 +196,7 @@
 <!ENTITY Ctr_extrabar		"Additional Toolbars">
 <!ENTITY Ctr_extrabar0		"Additional Toolbar(s)">
 <!ENTITY Ctr_extrabar1		"Additional Toolbar">
-<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
+<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. &browserName; has to be restarted to solve this issue.">
 
 <!ENTITY Ctr_invicons		"Inverted icons">
 <!ENTITY Ctr_menubar		"Menubar">
@@ -215,7 +220,7 @@
 <!ENTITY Ctr_alttabstb2		"In maximized mode (tabs on top)">
 
 <!ENTITY Ctr_altmenubar		"Add background color (OS titlebar)">
-<!ENTITY Ctr_altmenubarpos	"Alternative position (below Firefox titlebar)">
+<!ENTITY Ctr_altmenubarpos	"Alternative position (below &browserName; titlebar)">
 <!ENTITY Ctr_menubarnofog	"Remove background color/fog (Windows AeroGlass/8)">
 
 <!ENTITY Ctr_aerocolors		"Blue Aero colors for toolbars (and tabs)">
@@ -252,11 +257,11 @@
 <!ENTITY Ctr_nodevtheme		"Prevent 'Developer Theme' from being enabled">
 
 <!ENTITY Ctr_experttweaks	"Advanced">
-<!ENTITY Ctr_fx33layers		"Firefox 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
-<!ENTITY Ctr_fx34search		"Firefox 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
-<!ENTITY Ctr_fx35devtheme	"Firefox 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
-<!ENTITY Ctr_fx36prefs		"Firefox 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
+<!ENTITY Ctr_fx33layers		"&browserName; 33+ introduced 'new render features' currently responsible for 'hanging tabs' on some systems. Unchecking this preference resolves this issue.">
+<!ENTITY Ctr_fx34search		"&browserName; 34+ introduced a 'new seach ui'. Unchecking this preference returns the 'old seach ui'.">
+<!ENTITY Ctr_fx34loop		"&browserName; 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
+<!ENTITY Ctr_fx35devtheme	"&browserName; 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
+<!ENTITY Ctr_fx36prefs		"&browserName; 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
 <!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
 <!ENTITY Ctr_e_searchui		"Search appearance">
 <!ENTITY Ctr_e_loop			"Calling and conversation">
@@ -267,13 +272,13 @@
 <!ENTITY Ctr_pw_settings	"Settings">
 <!ENTITY Ctr_pw_set_reset	"Restore defaults">
 <!ENTITY Ctr_pw_set_predef	"Classic preset">
-<!ENTITY Ctr_pw_set_preaus	"Firefox preset">
+<!ENTITY Ctr_pw_set_preaus	"&browserName; preset">
 <!ENTITY Ctr_pw_set_export	"Export preferences">
 <!ENTITY Ctr_pw_set_import	"Import preferences">
 
 <!ENTITY Ctr_special_font	"Background color settings are for default theme only!">
 <!ENTITY Ctr_special_info	"Some options may not offer visible changes in all cases">
-<!ENTITY Ctr_special_info2	"Settings are made for Firefox default theme and may not work with all third party themes!">
+<!ENTITY Ctr_special_info2	"Settings are made for &browserName; default theme and may not work with all third party themes!">
 <!ENTITY Ctr_support		"Support Forum">
 <!ENTITY Ctr_newversion		"New version?">
 

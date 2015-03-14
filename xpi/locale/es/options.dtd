@@ -1,4 +1,9 @@
-﻿<!ENTITY Ctr_title			"Classic Theme Restorer">
+﻿<!ENTITY % brandDTD
+    SYSTEM "chrome://classic_theme_restorer/content/overlay_bname.dtd">
+  %brandDTD;
+<!-- Do not edit above this line and do not edit the variable '&browserName;' inside translated strings -->
+
+<!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Barra de complementos">
 <!ENTITY Ctr_statusbar		"Barra de estado">
@@ -9,7 +14,7 @@
 <!ENTITY Ctr_navthrobber	"Indicador de actividad">
 <!ENTITY Ctr_sidebarbutton	"Barra lateral">
 <!ENTITY Ctr_windowcontrols	"Min/max/cerrar (Pantalla completa)">
-<!ENTITY Ctr_rr				"¡Requiere reiniciar Firefox!">
+<!ENTITY Ctr_rr				"¡Requiere reiniciar &browserName;!">
 
 <!ENTITY Ctr_cuibuttons		"Botones">
 <!ENTITY Ctr_cuibutnormal	"Normal">
@@ -70,9 +75,9 @@
 <!ENTITY Ctr_appbutton0		"Botón deshabilitado">
 <!ENTITY Ctr_appbutton1		"Botón en la barra de herramientas">
 <!ENTITY Ctr_appbutton1wt	"Botón en la barra de herramientas (sólo texto)">
-<!ENTITY Ctr_appbutton2		"Botón en la barra de título [de Firefox]">
-<!ENTITY Ctr_appbutton2h	"Botón en la barra de título [de Firefox] (oculto)">
-<!ENTITY Ctr_appbutton2io	"Botón en la barra de título [de Firefox] (sólo icono)">
+<!ENTITY Ctr_appbutton2		"Botón en la barra de título [de &browserName;]">
+<!ENTITY Ctr_appbutton2h	"Botón en la barra de título [de &browserName;] (oculto)">
+<!ENTITY Ctr_appbutton2io	"Botón en la barra de título [de &browserName;] (sólo icono)">
 <!ENTITY Ctr_paneluibtweak	"Botón de menú de panel naranja en la barra de pestañas">
 <!ENTITY Ctr_appbuttonc_o	"Color de botón naranja (predeterminado)">
 <!ENTITY Ctr_appbuttonc_a	"Color de botón azul (Aurora)">
@@ -86,7 +91,7 @@
 <!ENTITY Ctr_appbuttonc_wh	"Color de botón blanco">
 <!ENTITY Ctr_appbuttonc_cu	"Color de botón personalizado">
 <!ENTITY Ctr_appbuttonI1	"Se recomienda reiniciar">
-<!ENTITY Ctr_appbuttonI1e	"¡No es visible en la barra de título de SO de Windows, sólo en la barra de título de Firefox!">
+<!ENTITY Ctr_appbuttonI1e	"¡No es visible en la barra de título de SO de Windows, sólo en la barra de título de &browserName;!">
 <!ENTITY Ctr_appbuttonI2	"¡Los colores del botón sólo son visibles en la barra de título y la barra de pestañas!">
 <!ENTITY Ctr_alttbappb		"Iconos alternativos sin flecha">
 <!ENTITY Ctr_appbutmhi		"Posición más alta (si está en la barra de pestañas)">
@@ -139,7 +144,7 @@
 <!ENTITY Ctr_pmhidelabels	"Menú de panel emergente: Ocultar etiquetas de los botones">
 <!ENTITY Ctr_menupopupscr	"Menús emergentes: Mostrar barras de desplazamiento en lugar de flechas">
 
-<!ENTITY Ctr_fxmockup		"Prototipo (mockup) de Firefox">
+<!ENTITY Ctr_fxmockup		"Prototipo (mockup) de &browserName;">
 <!ENTITY Ctr_tabmokcolor	"Color blanco para botones de pestaña (cerrar, nueva, grupos, listar todas)">
 <!ENTITY Ctr_tabmokcolor2	"Color blanco y sombreado oscuro para el texto en pestañas no activas">
 <!ENTITY Ctr_tabmokcolor3	"Color blanco para separadores de pestañas">
@@ -191,7 +196,7 @@
 <!ENTITY Ctr_extrabar		"Barras de herramientas adicionales">
 <!ENTITY Ctr_extrabar0		"Barra(s) de herramientas adicional(es)">
 <!ENTITY Ctr_extrabar1		"Barra de herramientas adicional">
-<!ENTITY Ctr_extrabarinfo	"Cambiar entre los modos 'tabs on top' (pestañas arriba) y 'tabs not on top' (pestañas no arriba) aleatoriamente, altera el orden de las barras de herramientas adicionales. Firefox ha de reiniciarse para resolver el problema.">
+<!ENTITY Ctr_extrabarinfo	"Cambiar entre los modos 'tabs on top' (pestañas arriba) y 'tabs not on top' (pestañas no arriba) aleatoriamente, altera el orden de las barras de herramientas adicionales. &browserName; ha de reiniciarse para resolver el problema.">
 
 <!ENTITY Ctr_invicons		"Iconos invertidos">
 <!ENTITY Ctr_menubar		"Barra de menús">
@@ -215,7 +220,7 @@
 <!ENTITY Ctr_alttabstb2		"En modo maximizado (pestañas arriba)">
 
 <!ENTITY Ctr_altmenubar		"Añadir color de fondo (barra de título del SO)">
-<!ENTITY Ctr_altmenubarpos	"Posición alternativa (debajo de la barra de título de Firefox)">
+<!ENTITY Ctr_altmenubarpos	"Posición alternativa (debajo de la barra de título de &browserName;)">
 <!ENTITY Ctr_menubarnofog	"Eliminar color de fondo/niebla (Windows Aeroglass/8)">
 
 <!ENTITY Ctr_aerocolors		"Colores azul aero (celeste) para las barras de herramientas principales y pestañas">
@@ -252,11 +257,11 @@
 <!ENTITY Ctr_nodevtheme		"Prevenir que se habilite el 'tema de decoración de desarrollador'">
 
 <!ENTITY Ctr_experttweaks	"Avanzadas">
-<!ENTITY Ctr_fx33layers		"Firefox 33+ introdujo 'nuevas características de renderizado' responsables en la actualidad de 'colgar pestañas' en algunos sistemas. Desmarcar esta preferencia resuelve el problema.">
-<!ENTITY Ctr_fx34search		"Firefox 34+ introdujo una 'nueva interfaz de usuario de búsqueda'. Desmarcando esta preferencia vuelve a la 'antigua interfaz de usuario de búsqueda'.">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ introdujo características de 'llamada y conversación'. Desmarcar esto las retira.">
-<!ENTITY Ctr_fx35devtheme	"Firefox 35+ introdujo un nuevo 'tema de decoración de desarrollador'. Desmarcar estas preferencias deshabilita el 'tema de desarrollador' y su botón en el modo Personalizar.">
-<!ENTITY Ctr_fx36prefs		"Firefox 36+ introdujo las Opciones (about:preferences) en una pestaña. Desmarcar esta preferencia restaura la antigua ventana de Opciones.">
+<!ENTITY Ctr_fx33layers		"&browserName; 33+ introdujo 'nuevas características de renderizado' responsables en la actualidad de 'colgar pestañas' en algunos sistemas. Desmarcar esta preferencia resuelve el problema.">
+<!ENTITY Ctr_fx34search		"&browserName; 34+ introdujo una 'nueva interfaz de usuario de búsqueda'. Desmarcando esta preferencia vuelve a la 'antigua interfaz de usuario de búsqueda'.">
+<!ENTITY Ctr_fx34loop		"&browserName; 34+ introdujo características de 'llamada y conversación'. Desmarcar esto las retira.">
+<!ENTITY Ctr_fx35devtheme	"&browserName; 35+ introdujo un nuevo 'tema de decoración de desarrollador'. Desmarcar estas preferencias deshabilita el 'tema de desarrollador' y su botón en el modo Personalizar.">
+<!ENTITY Ctr_fx36prefs		"&browserName; 36+ introdujo las Opciones (about:preferences) en una pestaña. Desmarcar esta preferencia restaura la antigua ventana de Opciones.">
 <!ENTITY Ctr_e_omtc			"OMTC / problema de cuelgue de pestañas">
 <!ENTITY Ctr_e_searchui		"Aspecto de la búsqueda">
 <!ENTITY Ctr_e_loop			"Llamada y conversación">
@@ -267,13 +272,13 @@
 <!ENTITY Ctr_pw_settings	"Configuración">
 <!ENTITY Ctr_pw_set_reset	"Restaurar valores predeterminados">
 <!ENTITY Ctr_pw_set_predef	"Preajuste clásico">
-<!ENTITY Ctr_pw_set_preaus	"Preajuste de Firefox">
+<!ENTITY Ctr_pw_set_preaus	"Preajuste de &browserName;">
 <!ENTITY Ctr_pw_set_export	"Exportar preferencias">
 <!ENTITY Ctr_pw_set_import	"Importar preferencias">
 
 <!ENTITY Ctr_special_font	"¡Las configuraciones de color de fondo son sólo para el tema de decoración predeterminado!">
 <!ENTITY Ctr_special_info	"¡Algunas opciones podrían no ofrecer cambios visuales en todos los casos!">
-<!ENTITY Ctr_special_info2	"¡Las configuraciones se realizan para el tema de decoración predeterminado de Firefox, y puede que no funcionen con todos los temas de terceros!">
+<!ENTITY Ctr_special_info2	"¡Las configuraciones se realizan para el tema de decoración predeterminado de &browserName;, y puede que no funcionen con todos los temas de terceros!">
 <!ENTITY Ctr_support		"Foro de soporte">
 <!ENTITY Ctr_newversion		"¿Nueva versión?">
 

@@ -1,3 +1,8 @@
+<!ENTITY % brandDTD
+    SYSTEM "chrome://classic_theme_restorer/content/overlay_bname.dtd">
+  %brandDTD;
+<!-- Do not edit above this line and do not edit the variable '&browserName;' inside translated strings -->
+
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Barre des modules">
@@ -9,7 +14,7 @@
 <!ENTITY Ctr_navthrobber	"Indicateur d'activité">
 <!ENTITY Ctr_sidebarbutton	"Panneau latéral">
 <!ENTITY Ctr_windowcontrols	"Réduire/Restaurer/Fermer (Plein écran)">
-<!ENTITY Ctr_rr				"Redémarrer Firefox!">
+<!ENTITY Ctr_rr				"Redémarrer &browserName;!">
 
 <!ENTITY Ctr_cuibuttons		"Boutons">
 <!ENTITY Ctr_cuibutnormal	"Taille normale">
@@ -38,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Onglets position basse (v2) --- réglage [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
 <!ENTITY Ctr_tabsontopI1	"L'attribut [tabsontop=true/false] est assigné à">
-<!ENTITY Ctr_tabsintitlebar	"Barre de titre Firefox (about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Barre de titre &browserName; (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(défaut)">
 <!ENTITY Ctr_tabwidthcla	"(classique)">
 <!ENTITY Ctr_tabminheight	"Hauteur :">
@@ -70,9 +75,9 @@
 <!ENTITY Ctr_appbutton0		"Bouton désactivé">
 <!ENTITY Ctr_appbutton1		"Bouton sur une barre d'outils">
 <!ENTITY Ctr_appbutton1wt	"Bouton sur une barre d'outils (texte seul)">
-<!ENTITY Ctr_appbutton2		"Bouton sur la barre de titre [Firefox]">
-<!ENTITY Ctr_appbutton2h	"Bouton sur la barre de titre [Firefox] (hidden)">
-<!ENTITY Ctr_appbutton2io	"Bouton sur la barre de titre [Firefox] (icône seule)">
+<!ENTITY Ctr_appbutton2		"Bouton sur la barre de titre [&browserName;]">
+<!ENTITY Ctr_appbutton2h	"Bouton sur la barre de titre [&browserName;] (hidden)">
+<!ENTITY Ctr_appbutton2io	"Bouton sur la barre de titre [&browserName;] (icône seule)">
 <!ENTITY Ctr_paneluibtweak	"Bouton orange sur la barre d'onglets">
 <!ENTITY Ctr_appbuttonc_o	"Bouton orange (par défaut)">
 <!ENTITY Ctr_appbuttonc_a	"Bouton bleu (Aurora)">
@@ -139,7 +144,7 @@
 <!ENTITY Ctr_pmhidelabels	"Panneau menu : icônes seules">
 <!ENTITY Ctr_menupopupscr	"Menus pop-up : afficher des ascenseurs au lieu des flèches de défilement">
 
-<!ENTITY Ctr_fxmockup		"Firefox Mockup">
+<!ENTITY Ctr_fxmockup		"&browserName; Mockup">
 <!ENTITY Ctr_tabmokcolor	"Boutons des onglets de couleur blanche (fermer, nouveau, groupes, tout lister)">
 <!ENTITY Ctr_tabmokcolor2	"Texte des onglets de couleur blanche + ombre noire pour les onglets non actifs">
 <!ENTITY Ctr_tabmokcolor3	"Séparateurs de couleur blanche sur la barre d'onglets">
@@ -191,7 +196,7 @@
 <!ENTITY Ctr_extrabar		"Barres d'outils supplémentaires">
 <!ENTITY Ctr_extrabar0		"Barre(s) d'outil(s) supplémentaire(s)">
 <!ENTITY Ctr_extrabar1		"Barre d'outils supplémentaire">
-<!ENTITY Ctr_extrabarinfo	"En basculant entre 'onglets en haut' et 'onglets position basse' l'ordre des barres d'outils peut de temps en temps être altéré. Firefox doit être redémarré pour remédier à ce problème.">
+<!ENTITY Ctr_extrabarinfo	"En basculant entre 'onglets en haut' et 'onglets position basse' l'ordre des barres d'outils peut de temps en temps être altéré. &browserName; doit être redémarré pour remédier à ce problème.">
 
 <!ENTITY Ctr_invicons		"Icônes inversées">
 <!ENTITY Ctr_menubar		"Barre de menus">
@@ -215,7 +220,7 @@
 <!ENTITY Ctr_alttabstb2		"In maximized mode (tabs on top)">
 
 <!ENTITY Ctr_altmenubar		"Ajouter un arrière-plan (barre de titre de l'OS visible)">
-<!ENTITY Ctr_altmenubarpos	"Position alternative (sous la barre de titre Firefox)">
+<!ENTITY Ctr_altmenubarpos	"Position alternative (sous la barre de titre &browserName;)">
 <!ENTITY Ctr_menubarnofog	"Enlever l'effet de flou/l'arrière-plan des éléments (Windows AeroGlass / Win8)">
 
 <!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
@@ -252,11 +257,11 @@
 <!ENTITY Ctr_nodevtheme		"Prevent 'Developer Theme' from being enabled">
 
 <!ENTITY Ctr_experttweaks	"Expert">
-<!ENTITY Ctr_fx33layers		"Firefox 33+ introduit de nouvelles possibilités de rendu responsables actuellement de bugs avec les onglets sur certains systèmes (pas de réaction, onglets gelés). Ce problème est résolu en décochant cette option.">
-<!ENTITY Ctr_fx34search		"Firefox 34+ introduit une nouvelle barre de recherche. Si cette option est décochée, l'ancienne barre de recherche est activée.">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ introduit la possibilité d'inviter quelqu'un à discuter. Cette possibilité est desactivée en décochant cette option.">
-<!ENTITY Ctr_fx35devtheme	"Firefox 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
-<!ENTITY Ctr_fx36prefs		"Firefox 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
+<!ENTITY Ctr_fx33layers		"&browserName; 33+ introduit de nouvelles possibilités de rendu responsables actuellement de bugs avec les onglets sur certains systèmes (pas de réaction, onglets gelés). Ce problème est résolu en décochant cette option.">
+<!ENTITY Ctr_fx34search		"&browserName; 34+ introduit une nouvelle barre de recherche. Si cette option est décochée, l'ancienne barre de recherche est activée.">
+<!ENTITY Ctr_fx34loop		"&browserName; 34+ introduit la possibilité d'inviter quelqu'un à discuter. Cette possibilité est desactivée en décochant cette option.">
+<!ENTITY Ctr_fx35devtheme	"&browserName; 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
+<!ENTITY Ctr_fx36prefs		"&browserName; 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
 <!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
 <!ENTITY Ctr_e_searchui		"Search appearance">
 <!ENTITY Ctr_e_loop			"Calling and conversation">
@@ -267,7 +272,7 @@
 <!ENTITY Ctr_pw_settings	"Réglages">
 <!ENTITY Ctr_pw_set_reset	"Restaurer les réglages par défaut">
 <!ENTITY Ctr_pw_set_predef	"Préréglage classique">
-<!ENTITY Ctr_pw_set_preaus	"Préréglage Firefox">
+<!ENTITY Ctr_pw_set_preaus	"Préréglage &browserName;">
 <!ENTITY Ctr_pw_set_export	"Exporter les préférences">
 <!ENTITY Ctr_pw_set_import	"Importer les préférences">
 

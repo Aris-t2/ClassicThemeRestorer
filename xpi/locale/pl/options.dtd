@@ -1,4 +1,9 @@
-﻿<!ENTITY Ctr_title			"Classic Theme Restorer">
+﻿<!ENTITY % brandDTD
+    SYSTEM "chrome://classic_theme_restorer/content/overlay_bname.dtd">
+  %brandDTD;
+<!-- Do not edit above this line and do not edit the variable '&browserName;' inside translated strings -->
+
+<!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Pasek dodatków">
 <!ENTITY Ctr_statusbar		"Pasek statusu">
@@ -70,9 +75,9 @@
 <!ENTITY Ctr_appbutton0		"Przycisk wyłączony">
 <!ENTITY Ctr_appbutton1		"Przycisk na pasku narzędzi">
 <!ENTITY Ctr_appbutton1wt	"Przycisk na pasku narzędzi (tylko tekst)">
-<!ENTITY Ctr_appbutton2		"Przycisk na pasku narzędzi [Firefox]">
-<!ENTITY Ctr_appbutton2h	"Przycisk na pasku narzędzi [Firefox] (ukryty)">
-<!ENTITY Ctr_appbutton2io	"Przycisk na pasku narzędzi [Firefox] (tylko ikona)">
+<!ENTITY Ctr_appbutton2		"Przycisk na pasku narzędzi [&browserName;]">
+<!ENTITY Ctr_appbutton2h	"Przycisk na pasku narzędzi [&browserName;] (ukryty)">
+<!ENTITY Ctr_appbutton2io	"Przycisk na pasku narzędzi [&browserName;] (tylko ikona)">
 <!ENTITY Ctr_paneluibtweak	"Pomarańczowy przycisk menu panelu na pasku kart">
 <!ENTITY Ctr_appbuttonc_o	"Pomarańczowy kolor przycisku (domyślny)">
 <!ENTITY Ctr_appbuttonc_a	"Błękitny kolor przycisku (Aurora)">
@@ -191,7 +196,7 @@
 <!ENTITY Ctr_extrabar		"Dodatkowe paski narzędzi">
 <!ENTITY Ctr_extrabar0		"Dodatkowy pasek (dodatkowe paski) narzędzi">
 <!ENTITY Ctr_extrabar1		"Dodatkowy pasek narzędzi">
-<!ENTITY Ctr_extrabarinfo	"Przełączanie pomiędzy trybami 'karty na górze' a 'karty nie na górze' losowo zmienia układ dodatkowych pasków narzędzi. Firefox musi zostać zrestartowany, aby rozwiązać ten problem.">
+<!ENTITY Ctr_extrabarinfo	"Przełączanie pomiędzy trybami 'karty na górze' a 'karty nie na górze' losowo zmienia układ dodatkowych pasków narzędzi. &browserName; musi zostać zrestartowany, aby rozwiązać ten problem.">
 
 <!ENTITY Ctr_invicons		"Odwrócone kolory ikon">
 <!ENTITY Ctr_menubar		"Pasek menu">
@@ -253,11 +258,11 @@
 
 
 <!ENTITY Ctr_experttweaks	"Poprawki eksperckie">
-<!ENTITY Ctr_fx33layers		"Firefox 33+ wprowadził 'nowe funkcje renderowania' odpowiedzialne obecnie za 'zawieszanie się kart' w niektórych systemach. Odznaczenie tego ustawienia rozwiązuje ten problem.">
-<!ENTITY Ctr_fx34search		"Firefox 34+ wprowadził 'nowy interfejs wyszukiwania'. Odznaczenie tego ustawienia przywraca 'stary interfejs wyszukiwania'.">
-<!ENTITY Ctr_fx34loop		"Firefox 34+ wprowadził funkcje 'dzwonienia i konwersacji'. Odznaczenie tego ustawienia usunie je.">
-<!ENTITY Ctr_fx35devtheme	"Firefox 35+ wprowadził nowy 'motyw dewelopera'. Odznaczenie tych ustawień wyłącza 'motyw dewelopera' oraz jego przycisk w trybie dostosowywania.">
-<!ENTITY Ctr_fx36prefs		"Firefox 36+ wprowadził opcje w karcie. Odznaczenie tego ustawienia przywraca stare okno opcji.">
+<!ENTITY Ctr_fx33layers		"&browserName; 33+ wprowadził 'nowe funkcje renderowania' odpowiedzialne obecnie za 'zawieszanie się kart' w niektórych systemach. Odznaczenie tego ustawienia rozwiązuje ten problem.">
+<!ENTITY Ctr_fx34search		"&browserName; 34+ wprowadził 'nowy interfejs wyszukiwania'. Odznaczenie tego ustawienia przywraca 'stary interfejs wyszukiwania'.">
+<!ENTITY Ctr_fx34loop		"&browserName; 34+ wprowadził funkcje 'dzwonienia i konwersacji'. Odznaczenie tego ustawienia usunie je.">
+<!ENTITY Ctr_fx35devtheme	"&browserName; 35+ wprowadził nowy 'motyw dewelopera'. Odznaczenie tych ustawień wyłącza 'motyw dewelopera' oraz jego przycisk w trybie dostosowywania.">
+<!ENTITY Ctr_fx36prefs		"&browserName; 36+ wprowadził opcje w karcie. Odznaczenie tego ustawienia przywraca stare okno opcji.">
 <!ENTITY Ctr_e_omtc			"Problem z OMTC/zawieszonymi kartami">
 <!ENTITY Ctr_e_searchui		"Wygląd wyszukiwania">
 <!ENTITY Ctr_e_loop			"Dzwonienie i konwersacja">
