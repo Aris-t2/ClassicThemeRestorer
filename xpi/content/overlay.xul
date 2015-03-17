@@ -39,22 +39,16 @@
 	<hbox id="customization-container">
 	  <vbox id="customization-palette-container">
 		 <hbox id="ctraddon_cuibuttonsbox" ordinal="1000" collapsed="true">
-			<grid>
-			  <rows>
-				<row>
-				  <button label="&Ctr_cuibuttons;" id="ctraddon_cuibuttons_main" class="ctraddon_cuibutlabel customizationmode-button"/>
-				  <button label="&Ctr_cuibutnormal;" id="ctraddon_cui-smallnavbut-button1" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',false);"/>
-				  <button label="&Ctr_cuibutsmall;" id="ctraddon_cui-smallnavbut-button2" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',true);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',true);"/>
-				  <label value=" "/>
-				  <button label="&Ctr_cuimode;" class="ctraddon_cuibutlabel customizationmode-button"/>
-				  <button label="&Ctr_cuiico;" id="ctraddon_cui-icons-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'icons');"/>
-				  <button label="&Ctr_cuiicotxt;" id="ctraddon_cui-iconstext-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'iconstxt');"/>
-				  <button label="&Ctr_cuitxt;" id="ctraddon_cui-textonly-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'txtonly');"/>
-				  <label value=" "/>
-				  <button label="&Ctr_cuitabsnontop;" id="ctraddon_cui-tabsnontop" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefTabsNontop();"/>
-				</row>
-			  </rows>
-			</grid>
+			<button label="&Ctr_cuibuttons;" id="ctraddon_cuibuttons_main" class="ctraddon_cuibutlabel customizationmode-button"/>
+			<button label="&Ctr_cuibutnormal;" id="ctraddon_cui-smallnavbut-button1" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',false);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',false);"/>
+			<button label="&Ctr_cuibutsmall;" id="ctraddon_cui-smallnavbut-button2" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.prefs.setBoolPref('smallnavbut',true);classicthemerestorerjs.ctr.prefs.setBoolPref('bfurlbarfix',true);"/>
+			<button label="&Ctr_cuimode;" class="ctraddon_cuibutlabel customizationmode-button"/>
+			<button label="&Ctr_cuiico;" id="ctraddon_cui-icons-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'icons');"/>
+			<button label="&Ctr_cuiicotxt;" id="ctraddon_cui-iconstext-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'iconstxt');"/>
+			<button label="&Ctr_cuitxt;" id="ctraddon_cui-textonly-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'txtonly');"/>
+			<spacer id="ctraddon_cui_spacer"/>
+			<button label="&Ctr_cuitabsnontop;" id="ctraddon_cui-tabsnontop" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefTabsNontop();"/>
+			<button label="&Ctr_extrabar;" id="ctraddon_cui-addtoolbars" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.additionalToolbars();"/>
 		 </hbox>
 	  </vbox>
 	</hbox>

@@ -1231,6 +1231,11 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("menubarnofog",false);
 		  break;
 		  
+		  case "menubarfs":
+			if (branch.getBoolPref("menubarfs") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("menubarfs",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("menubarfs",false);
+		  break;
+		  
 		  case "noaddonbarbg":
 			if (branch.getBoolPref("noaddonbarbg") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("noaddonbarbg",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("noaddonbarbg",false);
@@ -2591,6 +2596,7 @@ classicthemerestorerjs.ctr = {
 		case "altmenubarpos": 		manageCSS("menubar_altpos.css");		break;
 		case "altmenubarpos2": 		manageCSS("menubar_altpos2.css");		break;
 		case "menubarnofog": 		manageCSS("menubar_nofog.css");			break;
+		case "menubarfs": 			manageCSS("menubar_infullscreen.css");	break;
 		case "noaddonbarbg": 		manageCSS("noaddonbarbg.css");			break;
 		case "notabfog": 			manageCSS("notabfog.css");				break;
 		case "notabbg": 			manageCSS("notabbg.css");				break;
@@ -4206,6 +4212,16 @@ classicthemerestorerjs.ctr = {
 		}
 		window.open(aAddon.optionsURL,'', 'chrome').focus();
 	});
+  },
+  
+  // open prefwindow and specific category
+  additionalToolbars: function(){
+	classicthemerestorerjs.ctr.prefs.setIntPref('pref_actindx',6);
+	
+	setTimeout(function(){
+	  classicthemerestorerjs.ctr.openCTRPreferences();
+	},100);
+	
   },
 	
   // hides/shows CTRs add-on bar

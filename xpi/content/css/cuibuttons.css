@@ -8,7 +8,7 @@
 	
 	#main-window[defaultfxtheme="true"] #ctraddon_cuibuttonsbox{
 	  background-color: #ececec;
-      padding: 0 15px 13px 15px;
+      padding: 0 10px 13px 10px;
 	  margin-top:-8px;
 	}
 
@@ -79,8 +79,7 @@
 	}
 	
 	.customizationmode-button:hover{
-	  border-top: 1px solid #89b3d4 !important;
-	  border-bottom: 1px solid #89b3d4 !important;
+	  box-shadow: 0px 0px 0px 1px #89b3d4 inset !important;
 	}
 	
 	.ctraddon_cuibutlabel,
@@ -94,6 +93,15 @@
 	  box-shadow: none !important;
 	  padding-left:0 !important;
 	  padding-right:0 !important;
+	}
+	
+	#ctraddon_cuibuttonsbox{
+	  display: flex;
+	  flex-shrink: 0;
+	  flex-wrap: wrap;
+	}
+	#ctraddon_cui_spacer {
+	  flex: 1 1 auto;
 	}
 	
 }

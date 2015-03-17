@@ -67,11 +67,11 @@
 	}
 
 	/* CTRs Back-forward dropmarker */
-	#ctraddon_back-forward-dropmarker  > .toolbarbutton-icon{
+	#ctraddon_back-forward-dropmarker {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/toolbarbutton-dropdown-arrow.png");
 	}
 
-	#ctraddon_back-forward-dropmarker:-moz-lwtheme-brighttext > .toolbarbutton-icon {
+	#ctraddon_back-forward-dropmarker:-moz-lwtheme-brighttext {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/toolbarbutton-dropdown-arrow-inverted.png");
 	}
 	#ctraddon_back-forward-dropmarker > .toolbarbutton-icon {
@@ -156,18 +156,18 @@
 	}
 	
 	/* appbutton menu on toolbars */
-	#ctraddon_appbutton > .toolbarbutton-icon {
-	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton.png");
+	#ctraddon_appbutton {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-inv.png");
 	}
 	
-	#nav-bar #ctraddon_appbutton > .toolbarbutton-icon{
+	#main-window[defaultfxtheme="true"] #nav-bar #ctraddon_appbutton > .toolbarbutton-icon{
 	  margin-left: -3px;
 	  margin-right: -3px;
 	}
 	
-	* #ctraddon_appbutton dropmarker,
-	* #ctraddon_appbutton > .toolbarbutton-menu-dropmarker,
-	* #ctraddon_appbutton > .toolbarbutton-menubutton-dropmarker{
+	#ctraddon_appbutton dropmarker,
+	#ctraddon_appbutton > .toolbarbutton-menu-dropmarker,
+	#ctraddon_appbutton > .toolbarbutton-menubutton-dropmarker{
 	  list-style-image: none !important;
 	  display: none !important;
 	  visibility:collapse !important;
@@ -442,13 +442,6 @@
 	#main-window:not([fx34plus="true"]) #appmenu_webide,
 	#main-window[fx34plus="true"] #appmenu_devAppMgr {
 	  visibility: collapse !important;
-	}
-	
-	/* temp fix for Mozillas broken icons */
-	toolbar #loop-button .toolbarbutton-badge-container image,
-	toolbar #loop-button-throttled .toolbarbutton-badge-container image,
-	toolbar #PanelUI-menu-button .toolbarbutton-badge-container image{
-	  min-width:18px;
 	}
 	
 	/* CTRs additional urlbar */

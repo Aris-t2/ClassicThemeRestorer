@@ -15,8 +15,13 @@
 	  visibility: collapse !important;
 	}
 
-	#main-window:not([customizing]) #PersonalToolbar:not(:-moz-lwtheme)  {
+	#main-window:not([customizing]) #PersonalToolbar:not(:-moz-lwtheme),
+	#main-window:not([customizing]) toolbar[id^=ctraddon_extra-bar]:not([collapsed="true"]):not(:-moz-lwtheme) {
 	  background-image: linear-gradient(rgba(253, 253, 253, 0.5), rgba(255, 255, 255, 0));
+	}
+	#main-window:not([customizing]) toolbar[id^=ctraddon_extra-bar]:not([collapsed="true"]) ~ toolbar[id^=ctraddon_extra-bar]:not([collapsed="true"]):not(:-moz-lwtheme),
+	#main-window:not([customizing]) toolbar[id^=ctraddon_extra-bar]:not([collapsed="true"]) ~ #PersonalToolbar:not(:-moz-lwtheme)  {
+	  background-image: none;
 	}
 	
 	#main-window:not([customizing])[tabsontop="false"] #nav-bar{

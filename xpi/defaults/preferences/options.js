@@ -111,6 +111,7 @@ pref("extensions.classicthemerestorer.alttabstb2",true);
 pref("extensions.classicthemerestorer.altmenubar",false);
 pref("extensions.classicthemerestorer.altmenubarpos",false);
 pref("extensions.classicthemerestorer.altmenubarpos2",false);
+pref("extensions.classicthemerestorer.menubarfs",false);
 pref("extensions.classicthemerestorer.menubarnofog",false);
 
 pref("extensions.classicthemerestorer.closeabarbut",false);
