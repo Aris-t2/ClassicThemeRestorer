@@ -660,7 +660,7 @@ classicthemerestorerjso.ctr = {
   var tabsintitlebar = Services.prefs.getBranch("browser.tabs.").getBoolPref("drawInTitlebar");
   
 	if (which=="appbutton_v1" && this.fxdefaulttheme){
-	  document.getElementById('ctraddon_alt_abicons').disabled = false;
+	  document.getElementById('ctraddon_altabico_list').disabled = false;
 	  document.getElementById('ctraddon_abhigher').disabled = false;
 	  document.getElementById('ctraddon_appbutbdl').disabled = false;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = false;
@@ -669,7 +669,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_appbuttontxt').disabled = true;
 	  document.getElementById('ctraddon_appbclmmenus').disabled = false;
 	} else if (which=="appbutton_v1wt" && this.fxdefaulttheme){
-	  document.getElementById('ctraddon_alt_abicons').disabled = true;
+	  document.getElementById('ctraddon_altabico_list').disabled = true;
 	  document.getElementById('ctraddon_abhigher').disabled = false;
 	  document.getElementById('ctraddon_appbutbdl').disabled = false;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = false;
@@ -678,7 +678,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_appbuttontxt').disabled = true;
 	  document.getElementById('ctraddon_appbclmmenus').disabled = false;
 	} else if (which=="appbutton_v1" && !this.fxdefaulttheme){
-	  document.getElementById('ctraddon_alt_abicons').disabled = false;
+	  document.getElementById('ctraddon_altabico_list').disabled = false;
 	  document.getElementById('ctraddon_abhigher').disabled = true;
 	  document.getElementById('ctraddon_appbutbdl').disabled = false;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = false;
@@ -687,7 +687,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_appbuttontxt').disabled = true;
 	  document.getElementById('ctraddon_appbclmmenus').disabled = false;
 	} else if (which=="appbutton_v1wt" && !this.fxdefaulttheme){
-	  document.getElementById('ctraddon_alt_abicons').disabled = false;
+	  document.getElementById('ctraddon_altabico_list').disabled = false;
 	  document.getElementById('ctraddon_abhigher').disabled = true;
 	  document.getElementById('ctraddon_appbutbdl').disabled = false;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = false;
@@ -696,7 +696,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_appbuttontxt').disabled = true;
 	  document.getElementById('ctraddon_appbclmmenus').disabled = false;
 	} else if (which=="appbutton_off" || which=="appbutton_pm" || which=="appbutton_v2h"){
-	  document.getElementById('ctraddon_alt_abicons').disabled = true;
+	  document.getElementById('ctraddon_altabico_list').disabled = true;
 	  document.getElementById('ctraddon_abhigher').disabled = true;
 	  document.getElementById('ctraddon_appbutbdl').disabled = true;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = true;
@@ -705,7 +705,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_appbuttontxt').disabled = true;
 	  document.getElementById('ctraddon_appbclmmenus').disabled = true;
 	} else if (which=="appbutton_v2io" || which=="appbutton_v2io2") {
-	  document.getElementById('ctraddon_alt_abicons').disabled = true;
+	  document.getElementById('ctraddon_altabico_list').disabled = true;
 	  document.getElementById('ctraddon_abhigher').disabled = true;
 	  document.getElementById('ctraddon_appbutbdl').disabled = false;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = false;
@@ -718,7 +718,7 @@ classicthemerestorerjso.ctr = {
 		Services.prefs.getBranch("browser.tabs.").setBoolPref("drawInTitlebar", true);
 	  }
 	} else {
-	  document.getElementById('ctraddon_alt_abicons').disabled = true;
+	  document.getElementById('ctraddon_altabico_list').disabled = true;
 	  document.getElementById('ctraddon_abhigher').disabled = true;
 	  document.getElementById('ctraddon_appbutbdl').disabled = false;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = false;

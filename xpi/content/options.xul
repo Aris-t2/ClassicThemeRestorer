@@ -57,7 +57,7 @@
 
 		<preference id="ctraddon_appbutton"		name="extensions.classicthemerestorer.appbutton" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_appbuttonc"	name="extensions.classicthemerestorer.appbuttonc" 	type="string"	instantApply="true"/>
-		<preference id="ctraddon_alttbappb"		name="extensions.classicthemerestorer.alttbappb" 	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_altabico"		name="extensions.classicthemerestorer.altabico" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_appbutmhi"		name="extensions.classicthemerestorer.appbutmhi" 	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_appbutbdl"		name="extensions.classicthemerestorer.appbutbdl" 	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_appbuttontxt"	name="extensions.classicthemerestorer.appbuttontxt" type="string"	instantApply="true"/>
@@ -656,8 +656,13 @@
 		</hbox>
 		
 		<description>&Ctr_appbuttonI2;</description>
-		
-		<checkbox label="&Ctr_alttbappb;"	 preference="ctraddon_alttbappb" id="ctraddon_alt_abicons"/>
+
+		<radiogroup preference="ctraddon_altabico" id="ctraddon_altabico_list" orient="horizontal" value="">
+			<radio label="" value="altabico_white" 		id="ctraddon_altabico_white"/>
+			<radio label="" value="altabico_dark" 		id="ctraddon_altabico_dark"/>
+			<radio label="" value="altabico_white_nd" 	id="ctraddon_altabico_white_nd"/>
+			<radio label="" value="altabico_dark_nd" 	id="ctraddon_altabico_dark_nd"/>
+		</radiogroup> 
 		<checkbox label="&Ctr_appbutmhi;"	 preference="ctraddon_appbutmhi" id="ctraddon_abhigher" class="ctraddon_windowsonly"/>
 		<checkbox label="&Ctr_appbutbdl;"	 preference="ctraddon_appbutbdl" id="ctraddon_appbutbdl"/>
 		<checkbox label="&Ctr_dblclclosefx;" preference="ctraddon_dblclclosefx" id="ctraddon_dblclclosefx" class="ctraddon_windowsonly"/>

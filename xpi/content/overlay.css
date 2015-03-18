@@ -156,23 +156,23 @@
 	}
 	
 	/* appbutton menu on toolbars */
-	#ctraddon_appbutton {
-	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-inv.png");
+	#ctraddon_appbutton > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton.png");
 	}
 	
-	#main-window[defaultfxtheme="true"] #nav-bar #ctraddon_appbutton > .toolbarbutton-icon{
+	#nav-bar #ctraddon_appbutton > .toolbarbutton-icon{
 	  margin-left: -3px;
 	  margin-right: -3px;
 	}
 	
-	#ctraddon_appbutton dropmarker,
-	#ctraddon_appbutton > .toolbarbutton-menu-dropmarker,
-	#ctraddon_appbutton > .toolbarbutton-menubutton-dropmarker{
+	* #ctraddon_appbutton dropmarker,
+	* #ctraddon_appbutton > .toolbarbutton-menu-dropmarker,
+	* #ctraddon_appbutton > .toolbarbutton-menubutton-dropmarker{
 	  list-style-image: none !important;
 	  display: none !important;
 	  visibility:collapse !important;
 	}
-	
+
 	/* style appbutton*/
 	#TabsToolbar #ctraddon_appbutton{
 	  -moz-appearance:none !important;
@@ -625,6 +625,19 @@
 	
 	/* additional icons for some preference*/
 	
+	#ctraddon_altabico_white{
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton.png");
+	}
+	#ctraddon_altabico_dark{
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton2.png");
+	}
+	#ctraddon_altabico_white_nd{
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-inv.png");
+	}
+	#ctraddon_altabico_dark_nd{
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-dark.png");
+	}
+	
 	#ctraddon_pw_tab_emptyfavicon label,
 	#ctraddon_pw_tab_noemptypticon label {
 	  background:url('chrome://classic_theme_restorer/content/images/default_dot_favicon.png') no-repeat left !important;
@@ -639,7 +652,8 @@
 	  min-height:16px !important;
 	}
 	
-	#ctraddon_alt_abicons label {
+	#ctraddon_alt_abicons label,
+	#ctraddon_alt_abicons2 label {
 	  background:url('chrome://classic_theme_restorer/content/images/appbutton-dark.png') no-repeat left !important;
 	  -moz-padding-start:20px !important;
 	  min-height:16px !important;

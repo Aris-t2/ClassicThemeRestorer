@@ -460,9 +460,15 @@ classicthemerestorerjs.ctr = {
 			if (branch.getCharPref("appbuttonc")=="appbuttonc_custom") classicthemerestorerjs.ctr.loadUnloadCSS("appbuttonc_custom",true);
 		  break;
 		  
-		  case "alttbappb":
-			if (branch.getBoolPref("alttbappb")) classicthemerestorerjs.ctr.loadUnloadCSS("alttbappb",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("alttbappb",false);
+		  case "altabico":
+			classicthemerestorerjs.ctr.loadUnloadCSS('altabico_dark',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('altabico_white_nd',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('altabico_dark_nd',false);
+		
+			if (branch.getCharPref("altabico")!="altabico_white"){
+			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("altabico"),true);
+			}
+
 		  break;
 		  
 		  case "appbutmhi":
@@ -2569,7 +2575,9 @@ classicthemerestorerjs.ctr = {
 		case "appbuttonc_purple":	manageCSS("appbutton_purple.css");		break;
 		case "appbuttonc_white":	manageCSS("appbutton_white.css");		break;
 
-		case "alttbappb": 			manageCSS("alt_appbutton_icons.css");	break;
+		case "altabico_dark": 		manageCSS("alt_appbutton_icons.css");	break;
+		case "altabico_white_nd": 	manageCSS("alt_appbutton_icons2.css");	break;
+		case "altabico_dark_nd": 	manageCSS("alt_appbutton_icons3.css");	break;
 		case "appbutmhi": 			manageCSS("appbuthigherposition.css");  break;
 		case "appbutbdl": 			manageCSS("appbutton_borderless.css");  break;
 		

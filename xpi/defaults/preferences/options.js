@@ -16,7 +16,7 @@ pref("extensions.classicthemerestorer.closealt",false);
 //Appbutton settings
 pref("extensions.classicthemerestorer.appbutton",'appbutton_v1');
 pref("extensions.classicthemerestorer.appbuttonc",'appbuttonc_orange');
-pref("extensions.classicthemerestorer.alttbappb",false);
+pref("extensions.classicthemerestorer.altabico",'altabico_white');
 pref("extensions.classicthemerestorer.appbutmhi",false);
 pref("extensions.classicthemerestorer.appbutbdl",false);
 pref("extensions.classicthemerestorer.dblclclosefx",false);

@@ -55,7 +55,7 @@
 	  -moz-image-region: rect(0, 108px, 18px, 90px);
 	}
 	
-	#main-window[defaultfxtheme="true"] #nav-bar :-moz-any(#ctraddon_bookmarks-menu-toolbar-button,#ctraddon_appbutton,#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_ctr-button) > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] #nav-bar :-moz-any(#ctraddon_appbutton, #ctraddon_history-menu-toolbar-button, #ctraddon_bookmarks-menu-toolbar-button, #ctraddon_bookmarks-menu-toolbar-button,#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_ctr-button) > .toolbarbutton-icon {
 	  padding: 2px 6px !important;
 	}
 
