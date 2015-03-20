@@ -2,13 +2,13 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#TabsToolbar {
+	#main-window:not([tabsontop="false"]) #TabsToolbar:not([tabsontop="false"]) {
 	  margin-top:0px !important;
 	}
-	#main-window[sizemode="normal"] #titlebar-placeholder-on-TabsToolbar-for-captions-buttons{
+	#main-window[sizemode="normal"]:not([tabsontop="false"]) #titlebar-placeholder-on-TabsToolbar-for-captions-buttons{
 	  -moz-margin-start: 0px !important;
 	}
-	#main-window[sizemode="maximized"] #titlebar-placeholder-on-TabsToolbar-for-captions-buttons{
+	#main-window[sizemode="maximized"]:not([tabsontop="false"]) #titlebar-placeholder-on-TabsToolbar-for-captions-buttons{
 	  -moz-margin-start: 2px !important;
 	}
 }

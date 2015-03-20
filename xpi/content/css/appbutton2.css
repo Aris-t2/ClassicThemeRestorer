@@ -72,15 +72,18 @@
 		@media not all and (-moz-windows-compositor) {
 			#main-window[tabsintitlebar][sizemode="normal"]  #ctraddon_appbutton2{
 			  margin-top:0px !important;
-			  margin: 0px 0 10px 1px !important;
+			  /*margin: 0px 0 10px 1px !important;*/
+			  margin: 0px 0 4px 1px !important;
 			}
 			#main-window[tabsintitlebar][sizemode="maximized"]  #ctraddon_appbutton2{
 			  margin-top:-1px !important;
-			  margin: -2px 0 2px 0px !important;
+			  margin: 0px 0 2px 0px !important;
+			  /*margin: -2px 0 2px 0px !important;*/
 			}
 			#main-window[sizemode="normal"] > #titlebar:-moz-lwtheme #ctraddon_appbutton2{
 			  margin-top:1px !important;
-			  margin: -1px 0 8px 1px !important;
+			  margin: -1px 0 4px 1px !important;
+			  /*margin: -1px 0 8px 1px !important;*/
 			}
 		}
 		

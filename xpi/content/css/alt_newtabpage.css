@@ -2,11 +2,83 @@
 	
 	#newtab-intro-what,
 	#newtab-search-form{
-		display:none !important;
+		display: none !important;
 	}
 	.newtab-cell,
 	.newtab-link{ 
 	  border-radius: 0px !important;
+	}
+	
+	#newtab-scrollbox[page-disabled="true"] #newtab-customize-button,
+	#newtab-scrollbox[page-disabled="true"] .newtab-customize {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_page-off.png), 0, 16, 16, 0) !important;
+	  background-size: 16px !important;
+	  height: 16px !important;
+	  width: 16px !important;
+	}
+	
+	#newtab-scrollbox:not([page-disabled="true"]) #newtab-customize-button,
+	#newtab-scrollbox:not([page-disabled="true"]) .newtab-customize,
+	#newtab-scrollbox:not([page-disabled="true"]) #newtab-customize-button:-moz-any(:hover, :active, [active]),
+	#newtab-scrollbox[page-disabled="true"] #newtab-customize-button:-moz-any(:hover, :active, [active]) {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_page-on.png), 0, 16, 16, 0) !important;
+	  background-size: 16px !important;
+	  height: 16px !important;
+	  width: 16px !important;
+	}
+	
+	.newtab-control-pin,
+	.newtab-site[pinned] .newtab-control-pin:hover:active {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_page-pin1.png), 0, 16, 16, 0) !important;
+	  background-size: 16px !important;
+	  height: 16px !important;
+	  width: 16px !important;
+	}
+
+	.newtab-control-pin:hover,
+	.newtab-site[pinned] .newtab-control-pin:hover {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_page-pin3.png), 0, 16, 16, 0) !important;
+	  background-size: 16px !important;
+	  height: 16px !important;
+	  width: 16px !important;
+	}
+
+	.newtab-control-pin:hover:active,
+	.newtab-site[pinned] .newtab-control-pin {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_page-pin2.png), 0, 16, 16, 0) !important;
+	  background-size: 16px !important;
+	  height: 16px !important;
+	  width: 16px !important;
+	}
+
+	.newtab-control-block {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_page-close1.png), 0, 16, 16, 0) !important;
+	  background-size: 16px !important;
+	  height: 16px !important;
+	  width: 16px !important;
+	}
+
+	.newtab-control-block:hover {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_page-close2.png), 0, 16, 16, 0) !important;
+	  background-size: 16px !important;
+	  height: 16px !important;
+	  width: 16px !important;
+	}
+
+	.newtab-control-block:hover:active {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_page-close3.png), 0, 16, 16, 0) !important;
+	  background-size: 16px !important;
+	  height: 16px !important;
+	  width: 16px !important;
+	}
+	
+	#newtab-customize-button {
+	  margin-top: 5px !important;
+	  -moz-margin-end: 5px !important;
+	}
+	
+	#newtab-customize-enhanced {
+	  display: none;
 	}
 
 }
