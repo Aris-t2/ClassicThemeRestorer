@@ -1,8 +1,9 @@
+@import url(chrome://ctraddon_os_special/skin/bmbut_pmenu_extra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#ctraddon_BMB_bookmarksPopup {
+	#ctraddon_BMB_bookmarksPopup{
 	  -moz-appearance: none !important;
 	  -moz-binding: url("chrome://browser/content/places/menu.xml#places-popup-arrow") !important;
 	  background: transparent !important;
@@ -13,8 +14,13 @@
 	  transition-property: transform, opacity !important;
 	  transition-duration: 0.15s !important;
 	  transition-timing-function: ease-out !important;
+	  padding: 0px !important;
 	}
-
+	
+	#ctraddon_BMB_bookmarksPopup .popup-internal-box {
+	  padding: 0 4px !important;
+	}
+	
 	#ctraddon_BMB_bookmarksPopup[animate="open"] {
 	  transform: none !important;
 	  opacity: 1.0 !important;
@@ -72,10 +78,18 @@
 	#BMB_bookmarksShowAll + menuseparator {
 	  display:none !important;
 	}
-	
-	#ctraddon_BMB_bookmarksPopup > menu:not([_moz-menuactive]),
-	#ctraddon_BMB_bookmarksPopup > menuitem:not([_moz-menuactive]) {
-	  -moz-appearance:none !important;
+
+	#ctraddon_BMB_bookmarksPopup menupopup[placespopup=true] {
+	  -moz-appearance: none !important;
+	  border: none !important;
+	  padding: 0px !important;
+	  border-radius: 3.5px !important;
 	}
-	
+
+	#ctraddon_BMB_bookmarksPopup menupopup[placespopup=true] > hbox {
+	  box-shadow: 0 0 4px rgba(0,0,0,0.2) !important;
+	  border-radius: 3.5px !important;
+	  padding: 4px 2px !important;
+	}
+
 }

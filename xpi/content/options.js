@@ -264,7 +264,6 @@ classicthemerestorerjso.ctr = {
 	
 	// hide settings, if unsupported by Firefox versions
 	if (this.appversion < 31) {
-	  document.getElementById('ctraddon_pw_pananimation').disabled = true;
 	  document.getElementById('ctraddon_pw_pananimation').style.visibility = 'collapse';
 	  
 	  document.getElementById('ctraddon_closetab_pw_act').style.visibility = 'collapse';
@@ -273,41 +272,24 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_closetab_pw_end').style.visibility = 'collapse';
 	}
 	if (this.appversion < 32) {
-	  document.getElementById('ctraddon_pw_noconicons').disabled = true;
 	  document.getElementById('ctraddon_pw_noconicons').style.visibility = 'collapse';
 	}
 	if (this.appversion < 33) {
 	  document.getElementById('ctraddon_experttweakstab').style.visibility = 'collapse';
-	  
-	  document.getElementById('ctraddon_pw_f33layers').disabled = true;
-	  document.getElementById('ctraddon_pw_f33layers').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_f33layersdescr').disabled = true;
-	  document.getElementById('ctraddon_pw_f33layersdescr').style.visibility = 'collapse';
 	}
 	if (this.appversion < 34) {
-	  document.getElementById('ctraddon_pw_oldsearch').disabled = true;
-	  document.getElementById('ctraddon_pw_oldsearch').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_oldsearchdescr').disabled = true;
-	  document.getElementById('ctraddon_pw_oldsearchdescr').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_loopcall').disabled = true;
-	  document.getElementById('ctraddon_pw_loopcall').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_loopcalldescr').disabled = true;
-	  document.getElementById('ctraddon_pw_loopcalldescr').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_oldsearchgb').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_loopcallgb').style.visibility = 'collapse';
 	}
 	if (this.appversion < 35) {
-	  document.getElementById('ctraddon_pw_devtheme').disabled = true;
-	  document.getElementById('ctraddon_pw_devtheme').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_devthemeb').disabled = true;
-	  document.getElementById('ctraddon_pw_devthemeb').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_devthemedescr').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_nodevtheme').disabled = true;
+	  document.getElementById('ctraddon_pw_devthemegb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_nodevtheme').style.visibility = 'collapse';
 	}
 	if (this.appversion < 36) {
-	  document.getElementById('ctraddon_pw_oldprefs').disabled = true;
-	  document.getElementById('ctraddon_pw_oldprefs').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_oldprefsdescr').disabled = true;
-	  document.getElementById('ctraddon_pw_oldprefsdescr').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_oldprefsgb').style.visibility = 'collapse';
+	}
+	if (this.appversion < 38) {
+	  document.getElementById('ctraddon_pw_readermodegb').style.visibility = 'collapse';
 	}
 
 	function PrefListener(branch_name, callback) {

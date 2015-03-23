@@ -18,9 +18,7 @@
 	}
 	
 	#newtab-scrollbox:not([page-disabled="true"]) #newtab-customize-button,
-	#newtab-scrollbox:not([page-disabled="true"]) .newtab-customize,
-	#newtab-scrollbox:not([page-disabled="true"]) #newtab-customize-button:-moz-any(:hover, :active, [active]),
-	#newtab-scrollbox[page-disabled="true"] #newtab-customize-button:-moz-any(:hover, :active, [active]) {
+	#newtab-scrollbox:not([page-disabled="true"]) .newtab-customize {
 	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_page-on.png), 0, 16, 16, 0) !important;
 	  background-size: 16px !important;
 	  height: 16px !important;
@@ -77,8 +75,19 @@
 	  -moz-margin-end: 5px !important;
 	}
 	
+	#newtab-customize-button::-moz-focus-inner {
+      border: 0;
+	}
+	
 	#newtab-customize-enhanced {
 	  display: none;
+	}
+	
+	#newtab-customize-button {
+	  opacity: 0.7;
+	}
+	#newtab-customize-button:-moz-any(:hover, :active, [active]) {
+	  opacity: 1.0;
 	}
 
 }

@@ -1359,8 +1359,17 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "bmbutpanelm":
-			if (branch.getBoolPref("bmbutpanelm")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbutpanelm",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbutpanelm",false);
+			if (branch.getBoolPref("bmbutpanelm")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("bmbutpanelm",true);
+			}
+			else classicthemerestorerjs.ctr.loadUnloadCSS("bmbutpanelm",false);
+			  
+			if (branch.getBoolPref("panelmenucol")) {
+			  branch.setBoolPref("panelmenucol",false);
+			  setTimeout(function(){
+				branch.setBoolPref("panelmenucol",true);
+			  },100);
+			}
 		  break;
 		  
 		  case "bmbutnotext":
@@ -1530,8 +1539,14 @@ classicthemerestorerjs.ctr = {
 		  break;
 
 		  case "panelmenucol":
-			if (branch.getBoolPref("panelmenucol") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("panelmenucol",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("panelmenucol",false);
+			if (branch.getBoolPref("panelmenucol") && classicthemerestorerjs.ctr.fxdefaulttheme==true && branch.getBoolPref("bmbutpanelm")==false) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("panelmenucol",true);
+			} else if (branch.getBoolPref("panelmenucol") && classicthemerestorerjs.ctr.fxdefaulttheme==true && branch.getBoolPref("bmbutpanelm")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("panelmenucol2",true);
+			} else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("panelmenucol",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("panelmenucol2",false);
+			}
 		  break;
 		  
 		  //inv icons START
@@ -2599,6 +2614,7 @@ classicthemerestorerjs.ctr = {
 		case "urlbardropm": 		manageCSS("urlbar_dropm.css"); 			break;
 		case "combrelstop":			manageCSS("combrelstop.css");			break;
 		case "panelmenucol": 		manageCSS("panelmenucolor.css");		break;
+		case "panelmenucol2": 		manageCSS("panelmenucolor2.css");		break;
 
 		case "altmenubar": 			manageCSS("menubar.css");				break;
 		case "altmenubarpos": 		manageCSS("menubar_altpos.css");		break;
