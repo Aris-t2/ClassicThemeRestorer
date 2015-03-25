@@ -9,6 +9,10 @@
 	  border-radius: 0px !important;
 	}
 	
+	.newtab-cell {
+	  margin: 20px 10px 20px !important;
+	}
+	
 	#newtab-scrollbox[page-disabled="true"] #newtab-customize-button,
 	#newtab-scrollbox[page-disabled="true"] .newtab-customize {
 	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_page-off.png), 0, 16, 16, 0) !important;
@@ -80,6 +84,10 @@
       border: 0;
 	}
 	
+	#newtab-customize-panel,
+	.newtab-suggested-bounds,
+	.newtab-suggested,
+	.newtab-sponsored,
 	#newtab-customize-enhanced {
 	  display: none;
 	}

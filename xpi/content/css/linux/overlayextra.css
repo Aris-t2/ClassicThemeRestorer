@@ -133,6 +133,15 @@
 	#ctraddon_extraurlbar-close[selected="true"] {
 	  -moz-image-region: rect(0, 16px, 16px, 0);
 	}
+	
+	/* Temporal fix for bug https://bugzilla.mozilla.org/show_bug.cgi?id=1138050 */
+	toolbar:not(#nav-bar):not(#TabsToolbar) toolbarbutton[id^="toggle-button-"] .toolbarbutton-badge-container image,
+	toolbar:not(#nav-bar):not(#TabsToolbar) toolbarbutton[id^="action-button-"] .toolbarbutton-badge-container image {
+	  width: 16px !important;
+	  height: 16px !important;
+	  padding: 0 !important;
+	  margin: 0 !important;
+	}
 
 }
 
