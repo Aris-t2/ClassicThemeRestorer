@@ -85,11 +85,17 @@
 	  padding: 0px !important;
 	  border-radius: 3.5px !important;
 	}
-
+	
 	#ctraddon_BMB_bookmarksPopup menupopup[placespopup=true] > hbox {
 	  box-shadow: 0 0 4px rgba(0,0,0,0.2) !important;
 	  border-radius: 3.5px !important;
 	  padding: 4px 2px !important;
+	}
+	
+	#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_subscribeToPageSubmenuMenupopup {
+	  -moz-appearance: none !important;
+	  padding: 4px 2px !important;
+	  border-radius: 3.5px !important;
 	}
 
 }

@@ -2,7 +2,8 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 	
-	#ctraddon_BMB_bookmarksPopup menupopup[placespopup=true] > hbox {
+	#ctraddon_BMB_bookmarksPopup menupopup[placespopup=true] > hbox,
+	#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_subscribeToPageSubmenuMenupopup {
 	  background: -moz-dialog !important;
 	}
 }

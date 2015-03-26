@@ -4,7 +4,8 @@
 	.panel-arrowcontent,
 	.panel-subviews,
 	#BMB_bookmarksPopup menupopup box,
-	#ctraddon_BMB_bookmarksPopup menupopup[placespopup=true] > hbox {
+	#ctraddon_BMB_bookmarksPopup menupopup[placespopup=true] > hbox,
+	#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_subscribeToPageSubmenuMenupopup {
 	  background: linear-gradient(white, -moz-dialog 30px) !important;    
 	}
 }

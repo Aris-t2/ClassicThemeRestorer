@@ -22,20 +22,17 @@
 	  -moz-box-orient: vertical !important;
 	}
 	
-	#navigator-toolbox toolbar:not(#TabsToolbar) toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
-	#ctraddon_addon-bar toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon {
+	#navigator-toolbox toolbar:not(#TabsToolbar) toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon,
+	#ctraddon_addon-bar toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon {
 	  visibility: collapse !important;
 	}
 	
-	#navigator-toolbox toolbar:not(#TabsToolbar) #urlbar-go-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
-	#navigator-toolbox toolbar:not(#TabsToolbar) #urlbar-stop-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon,
-	#navigator-toolbox toolbar:not(#TabsToolbar) #urlbar-reload-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton) .toolbarbutton-icon {
+	#navigator-toolbox toolbar:not(#TabsToolbar) #urlbar-go-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon,
+	#navigator-toolbox toolbar:not(#TabsToolbar) #urlbar-stop-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon,
+	#navigator-toolbox toolbar:not(#TabsToolbar) #urlbar-reload-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon {
 	  visibility: visible !important;
 	}
 	
-	/*#navigator-toolbox #TabsToolbar #ctraddon_appbutton .toolbarbutton-icon{
-	  visibility: visible !important;
-	}*/
 	#navigator-toolbox toolbar:not(#TabsToolbar) .toolbarbutton-1[type="menu"] dropmarker,
 	#ctraddon_addon-bar .toolbarbutton-1[type="menu"] dropmarker{
 	   visibility:collapse !important;
@@ -89,10 +86,6 @@
       box-shadow: none !important;
 	  padding:0 !important;
 	}
-	/*toolbox toolbar #urlbar-container #urlbar #feed-button .toolbarbutton-icon,
-	toolbox toolbar #urlbar-container #urlbar #bookmarks-menu-button .toolbarbutton-icon {
-	  margin: -8px 4px !important;
-	}*/
 	
 	/* Vertical toolbar */
 	#vertical-toolbar .toolbarbutton-1 .toolbarbutton-text {

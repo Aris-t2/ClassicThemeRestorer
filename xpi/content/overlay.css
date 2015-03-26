@@ -733,7 +733,7 @@
 	}
 	
 	#ctraddon_pw_alt_newtabp label {
-	  background:url('chrome://classic_theme_restorer/content/images/newtab_page-on.png') no-repeat left !important;
+	  background: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_controls.png), 0, 160, 16, 144) no-repeat left !important;
 	  -moz-padding-start:20px !important;
 	  min-height:16px !important;
 	}
