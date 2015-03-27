@@ -90,6 +90,10 @@
 	  opacity: 1.0;
 	}
 	
+	#newtab-margin-bottom {
+	  -moz-box-flex: 1 !important;
+	}
+	
 	.newtab-control-pin,
 	.newtab-control-block {
 	  border: 1px white solid !important;
