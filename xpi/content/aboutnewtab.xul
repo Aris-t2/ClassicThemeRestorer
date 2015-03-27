@@ -7,13 +7,13 @@
 	- If newtab page is active, deactivate it.
 	- If newtab page is deactivated, activate it.
 	- Always make sure 'enhanced' newtab page stays disabled.
+	- Remove buttons 'active' attribute: not needed in this mode.
 	All this only happens, if the corresponding 'alternative new tab page' option
 	is enabled on CTRs options window. It is disabled by default and does not interfere
 	with newtab page.  
   -->
   
   <input id="newtab-customize-button" onclick="ctraddon_toggle_newtab_page()"/>
-
   
   <script>
 	Cu.import("resource://gre/modules/Services.jsm");
@@ -32,6 +32,13 @@
 
 		} catch(e){}
 	  }
+
+	  setTimeout(function(){
+		try{
+		  if(document.getElementById("newtab-customize-button").hasAttribute('active'))
+			document.getElementById("newtab-customize-button").removeAttribute('active');
+		}catch(e){}
+	  },200);
 	
 	}
   </script>
