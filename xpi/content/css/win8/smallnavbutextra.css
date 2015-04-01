@@ -231,11 +231,13 @@
 
 	#nav-bar toolbarbutton .toolbarbutton-badge,
 	#nav-bar toolbarbutton .toolbarbutton-badge-container {
-	  background: none !important;
 	  box-shadow: none !important;
 	  border: 0 !important;
 	  padding: 0 !important;
 	  margin: 0 !important;
+	}
+	#nav-bar toolbarbutton .toolbarbutton-badge-container {
+	  background: none !important;
 	}
 	
 	/*Feedly Notifier support*/

@@ -168,6 +168,7 @@
 		<preference id="ctraddon_hidesbclose"	name="extensions.classicthemerestorer.hidesbclose"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_notextshadow"	name="extensions.classicthemerestorer.notextshadow"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_chevronfix"	name="extensions.classicthemerestorer.chevronfix"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_tbsep_winc"	name="extensions.classicthemerestorer.tbsep_winc"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_alttabstb"		name="extensions.classicthemerestorer.alttabstb" 	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_alttabstb2"	name="extensions.classicthemerestorer.alttabstb2" 	 type="bool"	instantApply="true"/>
 		
@@ -270,6 +271,7 @@
 		<menulist preference="ctraddon_tabs" id="ctraddon_pw_tabmenulist">
 			<menupopup>
 				<menuitem value="tabs_default"	 label="&Ctr_tabs0;"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
+				<!--menuitem value="tabs_devtabs"	 label="dev"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();" id="ctraddon_pw_tabs_devtabs"/-->
 				<menuitem value="tabs_squared"	 label="&Ctr_tabs1;"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
 				<menuitem value="tabs_squaredc2" label="&Ctr_tabs1; (v2)"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
 				<menuitem value="tabs_squared2"	 label="&Ctr_tabs1m;" oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
@@ -874,6 +876,7 @@
 		<checkbox label="&Ctr_aerocolors;"				 preference="ctraddon_aerocolors" id="ctraddon_pw_aerocolors"/>
 		<checkbox label="&Ctr_hidenavbar;"				 preference="ctraddon_hidenavbar"/>
 		<checkbox label="&Ctr_chevronfix;"				 preference="ctraddon_chevronfix"/>
+		<checkbox label="&Ctr_tbsep_winc; &Ctr_tnot;"	 preference="ctraddon_tbsep_winc" id="ctraddon_pw_tbsep_winc" class="ctraddon_windowsonly"/>
 		<checkbox label="&Ctr_nonavbarbg;"	 			 preference="ctraddon_nonavbarbg" id="ctraddon_pw_nonavbarbg"/>
 		<description id="ctraddon_pw_nonavbarbg1" class="ctraddonsuboption">&Ctr_nonavbarbg1;</description>
 		<description id="ctraddon_pw_nonavbarbg2" class="ctraddonsuboption">&Ctr_nonavbarbg2;</description>
@@ -889,6 +892,7 @@
 		<checkbox label="&Ctr_dblclnewtab;"	preference="ctraddon_dblclnewtab" class="ctraddon_windowsonly"/>
 		<checkbox label="&Ctr_hidetbwot;"	preference="ctraddon_hidetbwot" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(true);} else {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(false);} classicthemerestorerjso.ctr.needsBrowserRestart();"/>
 		<checkbox label="&Ctr_hidetbwote;"	preference="ctraddon_hidetbwote" class="ctraddonsuboption" id="ctraddon_pw_hidetbwote"/>
+		<description id="ctraddon_pw_hidetbwote_winc" class="ctraddonsuboption2 ctraddon_windowsonly">&Ctr_hidetbwote_i;</description>
 		<checkbox label="&Ctr_hidetbwote2;"	preference="ctraddon_hidetbwote2" class="ctraddonsuboption ctraddon_winmaconly" id="ctraddon_pw_hidetbwote2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
 		<checkbox label="&Ctr_notabfog;"	preference="ctraddon_notabfog" class="ctraddon_windowsonly" id="ctraddon_pw_notabfog"/>
 		<checkbox label="&Ctr_notabbg;"		preference="ctraddon_notabbg" class="ctraddon_windowsonly" id="ctraddon_pw_notabbg"/>
@@ -982,7 +986,7 @@
 	  <groupbox>
 		<caption  label="&Ctr_otherctroptns;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_cuibotbuttons;"	preference="ctraddon_cuibuttons"/>
-		<checkbox label="&Ctr_bookmarkoinpw;"	preference="ctraddon_bmarkoinpw"/>
+		<checkbox label="&Ctr_bookmarkoinpw;"	preference="ctraddon_bmarkoinpw" id="ctraddon_pw_bmarkoinpw"/>
 	  </groupbox>
 
 	</box>

@@ -1,0 +1,12 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+  
+  @media all and (-moz-windows-classic) {
+	#main-window[defaultfxtheme="true"] #navigator-toolbox toolbar:not(#toolbar-menubar):not(#nav-bar):not(#addon-bar) {
+	  border-top: 2px solid !important;
+	  -moz-border-top-colors: #8d9294 #e6e4e0 !important;
+	}
+  }
+
+}

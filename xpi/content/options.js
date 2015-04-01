@@ -70,6 +70,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_nbcompact').disabled = true;
 		document.getElementById('ctraddon_pw_tabc_act_tb').disabled = true;
 		document.getElementById('ctraddon_pw_aerocolors').disabled = true;
+		document.getElementById('ctraddon_pw_tbsep_winc').disabled = true;
 
 		document.getElementById('ctraddon_abhigher').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_smallnavbut').style.visibility = 'collapse';
@@ -107,6 +108,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_nbcompact').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabc_act_tb').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_aerocolors').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_tbsep_winc').style.visibility = 'collapse';
 	} else {
 		document.getElementById('ctraddon_pw_special_info2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_special_font').style.visibility = 'collapse';
@@ -262,7 +264,7 @@ classicthemerestorerjso.ctr = {
 	// disable bookmark animation checkbox, if 'star button in urlbar' is used
 	if (this.prefs.getBoolPref('starinurl')) document.getElementById('ctraddon_pw_bmanimation').disabled = true;
 	
-	// hide settings, if unsupported by Firefox versions
+	// hide settings, if unsupported by Firefox version
 	if (this.appversion < 31) {
 	  document.getElementById('ctraddon_pw_pananimation').style.visibility = 'collapse';
 	  
@@ -290,6 +292,9 @@ classicthemerestorerjso.ctr = {
 	}
 	if (this.appversion < 38) {
 	  document.getElementById('ctraddon_pw_readermodegb').style.visibility = 'collapse';
+	}
+	if (this.appversion > 37) {
+	  document.getElementById('ctraddon_pw_bmarkoinpw').style.visibility = 'collapse';
 	}
 
 	function PrefListener(branch_name, callback) {
@@ -462,7 +467,6 @@ classicthemerestorerjso.ctr = {
   },
   
   resetPrefsForDevTheme: function(){
-	/*var currenttabs=this.prefs.getCharPref('tabs');*/
 	
 	// reset Tab appearance, but keep last knows preference
 	setTimeout(function(){
@@ -472,7 +476,7 @@ classicthemerestorerjso.ctr = {
 	  classicthemerestorerjso.ctr.prefs.setCharPref('tabs','tabs_squared');
 	},100);
 	
-	// disable aeroblue toolbars preference
+	// disable Aero (blue) toolbars preference
 	if(this.prefs.getBoolPref('aerocolors'))
 	  this.prefs.setBoolPref('aerocolors',false);
   
@@ -585,6 +589,7 @@ classicthemerestorerjso.ctr = {
     document.getElementById('ctraddon_pw_hidetbwote').disabled = which;
 	document.getElementById('ctraddon_pw_hidetbwote2').disabled = which;
 	document.getElementById('ctraddon_pw_hidetbwote').style.visibility = itemvis;
+	document.getElementById('ctraddon_pw_hidetbwote_winc').style.visibility = itemvis;
 	document.getElementById('ctraddon_pw_hidetbwote2').style.visibility = itemvis;
   },
   

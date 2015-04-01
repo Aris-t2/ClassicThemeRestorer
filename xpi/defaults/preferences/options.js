@@ -97,6 +97,7 @@ pref("extensions.classicthemerestorer.nonavtbborder",false);
 pref("extensions.classicthemerestorer.hidesbclose",false);
 pref("extensions.classicthemerestorer.notextshadow",false);
 pref("extensions.classicthemerestorer.chevronfix",false);
+pref("extensions.classicthemerestorer.tbsep_winc",false);
 
 pref("extensions.classicthemerestorer.dblclnewtab",false);
 pref("extensions.classicthemerestorer.hidetbwot",false);

@@ -135,7 +135,7 @@
 	  <menuitem id="ctraddon_placesContext_openInPrivatewindow"
                 label="&Ctr_openInPrivateWindow;"
                 accesskey="&Ctr_openInPrivateWindow.accesskey;"
-				oncommand="openLinkIn(document.getElementById('placesContext').triggerNode._placesNode.uri, 'window', {private: true});"
+				oncommand="classicthemerestorerjs.ctr.openInPrWin();"
 				selectiontype="single"
 				selection="link"
 				insertbefore="placesContext_openSeparator"/>

@@ -23,6 +23,42 @@
 	.tab-background-end[selected=true]:-moz-locale-dir(ltr)::after{
 	  content:none !important;
 	}
+	
+	.tab-background-middle {
+	  border-left-width: 0 !important;
+	  border-right-width: 0 !important;
+	  margin: 0 !important;
+	}
+
+	.tab-background,
+	.tabs-newtab-button {
+	  -moz-margin-end: 0 !important;
+	  -moz-margin-start: 0 !important;
+	}
+
+	.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
+	  -moz-padding-end: 0 !important;
+	  -moz-padding-start: 0 !important;
+	}
+
+	.tab-background-start::after,
+	.tab-background-start::before,
+	.tab-background-start[visuallyselected=true]::after,
+	.tab-background-start[visuallyselected=true]::before,
+	.tab-background-start,
+	.tab-background-end,
+	.tab-background-end::after,
+	.tab-background-end::before,
+	.tab-background-end[visuallyselected=true]::after,
+	.tab-background-end[visuallyselected=true]::before {
+	  width: 0 !important;
+	}
+
+	.tab-background-start,.tab-background-end,
+	.tab-background-start[visuallyselected=true]::after,
+	.tab-background-end[visuallyselected=true]::after {
+	  -moz-margin-start: 0 !important;
+	}
 
 	.tabs-newtab-button {
 	  -moz-margin-start: 0px !important;

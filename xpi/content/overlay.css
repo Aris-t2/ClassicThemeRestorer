@@ -65,7 +65,7 @@
 	  background-color: hsla(210,4%,10%,.12);
 	  box-shadow: 0 1px 0 hsla(210,4%,10%,.05) inset;
 	}
-
+	
 	/* CTRs Back-forward dropmarker */
 	#ctraddon_back-forward-dropmarker {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/toolbarbutton-dropdown-arrow.png");
@@ -423,6 +423,12 @@
 	  -moz-margin-end:0px !important;
 	}
 	
+	/* adjust panel menu button on nav-bar */
+	#main-window[defaultfxtheme="true"] #nav-bar #PanelUI-menu-button {
+	  -moz-padding-start: 2px !important;
+	  -moz-padding-end: 2px !important;
+	}
+	
 	/*temporal fix*/
 	#fireproxy-toolbaritem-menulist-proxytype .menulist-dropmarker{
 	  background:none !important;
@@ -489,7 +495,8 @@
 	.ntabhovcolorbox,
 	#ntabcolorbox,
 	#ntabhovcolorbox,
-	#ClassicTRoptionsPane[defaultfxtheme="true"] #ctraddon_pw_colors_ntab_t{
+	#ClassicTRoptionsPane[defaultfxtheme="true"] #ctraddon_pw_colors_ntab_t,
+	#ctraddon_pw_tabs_devtabs{
 	  visibility: collapse;
 	}
 	
@@ -532,6 +539,9 @@
 	
 	.ctraddonsuboption{
 	  -moz-padding-start:21px;
+	}
+	.ctraddonsuboption2{
+	  -moz-padding-start:39px;
 	}
 	
 	#ClassicTRoptionsPane[defaultfxtheme="true"] .ctraddontabs{
@@ -806,6 +816,13 @@
 	  background:url('chrome://classic_theme_restorer/content/images/appmenu_ctr.png') no-repeat left !important;
 	  -moz-padding-start:20px !important;
 	  min-height:18px !important;
+	}
+	
+	@media not all and (-moz-windows-classic) {
+	  #ctraddon_pw_tbsep_winc,
+	  #ctraddon_pw_hidetbwote_winc {
+		visibility: collapse !important;
+	  }
 	}
 	
 }

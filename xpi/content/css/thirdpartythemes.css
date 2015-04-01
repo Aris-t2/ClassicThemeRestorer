@@ -24,4 +24,33 @@
 	#main-window[currenttheme^="BlackFox"] #ctraddon_navigator-throbber[busy="true"] {
 	  background:url("chrome://global/skin/throbber/throbber-spin.png") center no-repeat !important;
 	}
+	
+	/* Support for Alfred Kaysers Themes 'Walnut, Walnut2, Littlefox, Nautipolis, Metal, Microfox & Bricks' */
+	#main-window[currenttheme="walnut"] toolbar #ctraddon_back-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="walnut"] toolbar #ctraddon_forward-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="walnut2"] toolbar #ctraddon_back-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="walnut2"] toolbar #ctraddon_forward-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="littlefox"] toolbar #ctraddon_back-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="littlefox"] toolbar #ctraddon_forward-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="nautipolis"] toolbar #ctraddon_back-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="nautipolis"] toolbar #ctraddon_forward-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="metal"] toolbar #ctraddon_back-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="metal"] toolbar #ctraddon_forward-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="microfox"] toolbar #ctraddon_back-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="microfox"] toolbar #ctraddon_forward-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="bricks"] toolbar #ctraddon_back-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="bricks"] toolbar #ctraddon_forward-button .toolbarbutton-multiline-text {
+	  display: none !important;
+	}
+	
+	#main-window[currenttheme="walnut"] #ctraddon_appbutton2 > label,
+	#main-window[currenttheme="walnut2"] #ctraddon_appbutton2 > label,
+	#main-window[currenttheme="littlefox"] #ctraddon_appbutton2 > label,
+	#main-window[currenttheme="nautipolis"] #ctraddon_appbutton2 > label,
+	#main-window[currenttheme="metal"] #ctraddon_appbutton2 > label,
+	#main-window[currenttheme="microfox"] #ctraddon_appbutton2 > label,
+	#main-window[currenttheme="bricks"] #ctraddon_appbutton2 > label{
+	  margin: unset !important;
+	  -moz-margin-end: -26px !important;
+	}
 }

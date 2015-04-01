@@ -88,6 +88,11 @@
 	  visibility: visible !important;
 	}
 	
+	/* move reading list button to the left */
+	/*#readinglist-addremove-button {
+	  -moz-box-ordinal-group: 0;
+	}*/
+	
 	/**/
 	#urlbar-icons #bookmarks-menu-button .toolbarbutton-icon { 
 	  filter: none !important;
