@@ -30,15 +30,9 @@
 	  margin: 0 !important;
 	}
 
-	.tab-background,
-	.tabs-newtab-button {
+	.tab-background{
 	  -moz-margin-end: 0 !important;
 	  -moz-margin-start: 0 !important;
-	}
-
-	.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
-	  -moz-padding-end: 0 !important;
-	  -moz-padding-start: 0 !important;
 	}
 
 	.tab-background-start::after,
@@ -318,11 +312,7 @@
 	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive],:not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
 	  clip-path: none !important;
 	}
-	
-	/*ColorfulTabs extension*/
-	#navigator-toolbox[tabsontop="false"] #colorfulTabsStack {
-	  margin-top: -1px !important;
-	}
+
 	/* Private Tab extension */
 	.tabs-newtab-button + .tabs-newtab-button {
 	  -moz-margin-start: 15px !important;
@@ -330,13 +320,20 @@
 	#TabsToolbar #privateTab-afterTabs-openNewPrivateTab image{
 	  margin-top:-1px !important;
 	}
-	/* TMP progress tweak */
-	#main-window[tabmix_lwt="true"] .tabbrowser-tab progressmeter.tab-progress,
-	#main-window[tabmix_lwt="false"] .tabbrowser-tab progressmeter.tab-progress {
+	/* TabMixPlus extras */
+	#TabsToolbar[currentset*="tabmixScrollBox"]  .tabbrowser-tab progressmeter.tab-progress,
+	#TabsToolbar[currentset*="tabmixScrollBox"]  .tabbrowser-tab progressmeter.tab-progress {
 	  margin-top: 2.5px !important;
 	  height: 3px !important;
 	}
+	#TabsToolbar[currentset*="tabmixScrollBox"] #tabbrowser-tabs .tabbrowser-tab[selected] .tab-stack .tab-background {
+	  background:none !important;
+	}
+
 	/* ColorfulTabs tweak*/
+	#navigator-toolbox[tabsontop="false"] #colorfulTabsStack {
+	  margin-top: -1px !important;
+	}
 	#main-window[colorfultabs="true"] #TabsToolbar .tabbrowser-tab{
 	  border-top:0 !important;
 	  border-left:0 !important;
