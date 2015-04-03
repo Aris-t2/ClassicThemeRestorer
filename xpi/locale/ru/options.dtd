@@ -36,7 +36,7 @@
 <!ENTITY Ctr_tabs2			"Изогнутые (другие)">
 <!ENTITY Ctr_tabs3			"Изогнутые (другие, Aero)">
 <!ENTITY Ctr_tabforminfo	"Вид вкладки задаётся текущей темой.">
-<!ENTITY Ctr_coltabsinfo	"Tab appearance is not fully compatible to 'ColorfulTabs' add-on!">
+<!ENTITY Ctr_coltabsinfo	"Вид вкладки не полностью совместим с дополнением 'ColorfulTabs'">
 <!ENTITY Ctr_tabsontop0		"Вкладки вверху (по умолчанию)">
 <!ENTITY Ctr_tabsontop1		"Вкладки вверху --- [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Вкладки не вверху (v1) --- [tabsontop=false]">
@@ -68,8 +68,8 @@
 <!ENTITY Ctr_closeonleft	"Альтернативная позиция на вкладке">
 <!ENTITY Ctr_close_wwltab	"Закрыть окно при закрытии последней вкладки (about:config)">
 
-<!ENTITY Ctr_hctpinfotab	"Some tab variations are not compatible to 'Hide Caption Titlebar Plus' add-on.">
-<!ENTITY Ctr_hctpinfoab		"Button on titlebar is not compatible to 'Hide Caption Titlebar Plus' add-on.">
+<!ENTITY Ctr_hctpinfotab	"Некоторые вариации вкладки не совместимы с дополнением 'Hide Caption Titlebar Plus'.">
+<!ENTITY Ctr_hctpinfoab		"Кнопка в заголовке не совместимы с дополнением 'Hide Caption Titlebar Plus'.">
 
 <!ENTITY Ctr_appbutton		"Кнопка приложения">
 <!ENTITY Ctr_appbutton0		"отключена">
@@ -136,10 +136,10 @@
 <!ENTITY Ctr_cpanelmenus	"Компактная панель меню (закладки, история и т. д.)">
 <!ENTITY Ctr_hidezoomres	"Кнопки масштаба: скрыть сброс масштабирования">
 <!ENTITY Ctr_alt_newtabp	"Страница новой вкладки: альтернативный вид">
-<!ENTITY Ctr_bmbutpanelm	"Bookmarks menu button: panel menu appearance">
-<!ENTITY Ctr_bmbutnotext	"Bookmarks menu button: hide label on bookmarks bar">
+<!ENTITY Ctr_bmbutpanelm	"Кнопка меню Закладки: панель меню внешний вид">
+<!ENTITY Ctr_bmbutnotext	"Кнопка меню Закладки: спрятать ярлык на панель закладок">
 <!ENTITY Ctr_noresizerxp	"Скрыть «Resizer» (Windows XP/2000)">
-<!ENTITY Ctr_extraurlkeycb	"Open additional location bar (Cmd/Ctrl+">
+<!ENTITY Ctr_extraurlkeycb	"Открыть дополнения в адресной строке (Cmd/Ctrl+">
 <!ENTITY Ctr_pmhidelabels	"Панель меню: спрятать надписи на кнопках">
 <!ENTITY Ctr_menupopupscr	"Всплывающие окна меню: показывать полосы прокрутки вместо стрелки прокрутки">
 
@@ -211,8 +211,8 @@
 <!ENTITY Ctr_dblclnewtab	"Двойной клик открывает новую вкладку">
 <!ENTITY Ctr_hidetbwot		"Скрывать панель вкладок при одной вкладке">
 <!ENTITY Ctr_hidetbwote		"Уменьшить задержки сокрытия при запуске">
-<!ENTITY Ctr_hidetbwote_i	"Could cause glitches on tabs toolbar">
-<!ENTITY Ctr_hidetbwote2	"Keep titlebar (tabs on top)">
+<!ENTITY Ctr_hidetbwote_i	"Может вызвать сбои на вкладке панели инструментов">
+<!ENTITY Ctr_hidetbwote2	"Держать заголовок (вкладки сверху)">
 <!ENTITY Ctr_notabfog		"Отключить затуманивание фона панели вкладок (Windows AeroGlass/8)">
 <!ENTITY Ctr_notabbg		"Удалить цвет фона (Windows AeroGlass/8)">
 <!ENTITY Ctr_hightabpos		"Уменьшить пространство над панелью инструментов (если возможно)">
@@ -232,9 +232,9 @@
 <!ENTITY Ctr_nonavborder	"Панель закладок: добавить верхнюю границу для панели инструментов">
 <!ENTITY Ctr_nonavtbborder	"Популярные панели инструментов: удалить границы панелей инструментов">
 <!ENTITY Ctr_hidesbclose	"Боковые панели: скрыть кнопку «Закрыть» на боковой панели">
-<!ENTITY Ctr_notextshadow	"Toolbars: hide shadow for toolbar text and tab text">
+<!ENTITY Ctr_notextshadow	"Панели инструментов: скрыть тень для текста на панели инструментов и вкладках">
 <!ENTITY Ctr_chevronfix		"Панель навигации: скрыть двойную стрелку («шеврон») в конце панели">
-<!ENTITY Ctr_tbsep_winc		"Top toolbars: additional toolbar separators">
+<!ENTITY Ctr_tbsep_winc		"Популярные панели инструментов: дополнительные сепараторы панели инструментов">
 
 <!ENTITY Ctr_closeabarbut	"Скрыть кнопку закрытия">
 <!ENTITY Ctr_highaddonsbar	"Увеличить высоту">
@@ -263,13 +263,13 @@
 <!ENTITY Ctr_fx34loop		"С &brandShortName; 34+ добавлен клиент для связи в режиме реального времени. Отключение параметра удаляет эту функцию.">
 <!ENTITY Ctr_fx35devtheme	"С &brandShortName; 35+ введена новая «Тема разработчика». Отключение параметра удаляет её и соответствующую кнопку в режиме «Настройка».">
 <!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ настройки в новой вкладке. Если снять этот параметр, то восстанавливает старое окно настроек.">
-<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ introduced a new 'reader mode'. Unchecking these preferences disables it and removes its icon from location bar.">
+<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ представила новую функцию "режим чтения". Отключив его, удалиться его значок из адресной строки.">
 <!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
-<!ENTITY Ctr_e_searchui		"Search appearance">
-<!ENTITY Ctr_e_loop			"Calling and conversation">
-<!ENTITY Ctr_e_deved		"Developer Edition Theme">
-<!ENTITY Ctr_e_prefsui		"Preferences in tab">
-<!ENTITY Ctr_e_readermode	"Reader mode">
+<!ENTITY Ctr_e_searchui		"Внешний вид поиска">
+<!ENTITY Ctr_e_loop			"Вызов и разговор">
+<!ENTITY Ctr_e_deved		"Тема Разработчик">
+<!ENTITY Ctr_e_prefsui		"Настройки во вкладке">
+<!ENTITY Ctr_e_readermode	"Режим чтения">
 
 
 <!ENTITY Ctr_pw_settings	"Настройки">
