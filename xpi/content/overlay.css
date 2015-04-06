@@ -446,8 +446,22 @@
 	
 	/* hide unsupported menuitems items */
 	#main-window:not([fx34plus="true"]) #appmenu_webide,
-	#main-window[fx34plus="true"] #appmenu_devAppMgr {
+	#main-window[fx34plus="true"] #appmenu_devAppMgr,
+	#main-window:not([fx38plus="true"]) #appmenu_BMB_readingList,
+	#main-window:not([fx38plus="true"]) #ctraddon_BMB_readingList {
 	  visibility: collapse !important;
+	}
+	
+	/*iconize some menu items*/
+	#appmenu_BMB_readingList,
+	#ctraddon_BMB_readingList {
+	  list-style-image: url("chrome://browser/skin/readinglist/readinglist-icon.svg");
+	  -moz-image-region: auto;
+	}
+	
+	#ctraddon_BMB_bookmarksToolbar {
+	  list-style-image: url("chrome://browser/skin/places/bookmarksToolbar.png");
+	  -moz-image-region: auto;
 	}
 	
 	/* CTRs additional urlbar */

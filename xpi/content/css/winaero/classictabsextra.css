@@ -108,12 +108,7 @@
 		.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {
 		  background-image: linear-gradient(to top, #868d94 0px, transparent 1px),linear-gradient(to top,#d0dce8,#dce7f3,#e5effa);
 		}
-		
-		.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover),
-		.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover{
-		  color:black !important;
-		}
-		
+	
 		.tabs-newtab-button:not(:-moz-lwtheme) {
 		  background-image: linear-gradient(to top, #868d94 0px, transparent 1px),linear-gradient(to top,#b4c0cc,#c8d4e1,#d1deec) !important;
 		}
@@ -157,11 +152,6 @@
 							linear-gradient(-moz-dialog, -moz-dialog);
 		}
 
-		.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover),
-		.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover{
-		  color:black !important;
-		}
-
 		.tabs-newtab-button:not(:-moz-lwtheme) {
 		  background-image: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px), linear-gradient(transparent, hsla(0,0%,45%,.1) 1px, hsla(0,0%,32%,.2) 80%, hsla(0,0%,0%,.2)),
 							linear-gradient(-moz-dialog, -moz-dialog) !important;
@@ -190,5 +180,12 @@
 		}
 
     }
+	
+	@media all and (-moz-windows-classic) {
+		.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover),
+		.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover{
+		  color: black !important;
+		}
+	}
 	
 }
