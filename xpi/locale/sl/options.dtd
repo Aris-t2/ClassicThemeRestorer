@@ -36,7 +36,7 @@
 <!ENTITY Ctr_tabs2			"Zaokroženi zavihki (nadomestni)">
 <!ENTITY Ctr_tabs3			"Zaokroženi zavihki (nadomestni Aero)">
 <!ENTITY Ctr_tabforminfo	"Videz zavihkov nadzira trenutna tema.">
-<!ENTITY Ctr_coltabsinfo	"Tab appearance is not fully compatible to 'ColorfulTabs' add-on!">
+<!ENTITY Ctr_coltabsinfo	"Videz zavihkov ni v celoti združljiv z dodatkom 'ColorfulTabs'!">
 <!ENTITY Ctr_tabsontop0		"Zavihki na vrhu (privzeto)">
 <!ENTITY Ctr_tabsontop1		"Zavihki na vrhu --- atribut [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Zavihki niso na vrhu (v1) --- atribut [tabsontop=false]">
@@ -68,8 +68,8 @@
 <!ENTITY Ctr_closeonleft	"Nadomestni položaj na zavihku">
 <!ENTITY Ctr_close_wwltab	"Zapri okno z nazadje vidnim zavihkom (nastavitev about:config)">
 
-<!ENTITY Ctr_hctpinfotab	"Some tab variations are not compatible to 'Hide Caption Titlebar Plus' add-on.">
-<!ENTITY Ctr_hctpinfoab		"Button on titlebar is not compatible to 'Hide Caption Titlebar Plus' add-on.">
+<!ENTITY Ctr_hctpinfotab	"Nekatere različice niso združljive z dodatkom 'Hide Caption Titlebar Plus'.">
+<!ENTITY Ctr_hctpinfoab		"Gumb na nazivni vrstici ni združljiv z dodatkom 'Hide Caption Titlebar Plus'.">
 
 <!ENTITY Ctr_appbutton		"Programski gumb">
 <!ENTITY Ctr_appbutton0		"Gumb je onemogočen">
@@ -136,10 +136,10 @@
 <!ENTITY Ctr_cpanelmenus	"Ploščasti meniji: strnjen pogled (zaznamki, zgodovina itd.)">
 <!ENTITY Ctr_hidezoomres	"Nadzorni gumbi za povečavo na orodni vrstici: skrij gumb za ponastavitev povečave">
 <!ENTITY Ctr_alt_newtabp	"Stran novega zavihka: nadomestni videz">
-<!ENTITY Ctr_bmbutpanelm	"Bookmarks menu button: panel menu appearance">
-<!ENTITY Ctr_bmbutnotext	"Bookmarks menu button: hide label on bookmarks bar">
+<!ENTITY Ctr_bmbutpanelm	"Gumb menija zaznamkov: videz ploščastega menija">
+<!ENTITY Ctr_bmbutnotext	"Gumb menija zaznamkov: skrij oznako na vrstici zaznamkov">
 <!ENTITY Ctr_noresizerxp	"Skrij spremenilnik velikosti (Windows XP)">
-<!ENTITY Ctr_extraurlkeycb	"Open additional location bar (Cmd/Ctrl+">
+<!ENTITY Ctr_extraurlkeycb	"Odpri dodatno naslovno vrstico (Cmd/Ctrl+">
 <!ENTITY Ctr_pmhidelabels	"Pojavno okno ploščastega menija: skrij oznake gumbov">
 <!ENTITY Ctr_menupopupscr	"Pojavna okna menijev: prikaži drsnike namesto drsnih puščic">
 
@@ -211,8 +211,8 @@
 <!ENTITY Ctr_dblclnewtab	"Dvojni klik odpre 'nov' zavihek (z uporabo nastavitve browser.newtab.url)">
 <!ENTITY Ctr_hidetbwot		"Skrij orodno vrstico zavihkov okna s samo enim zavihkom">
 <!ENTITY Ctr_hidetbwote		"Zmanjšaj zakasnitev skritja ob zagonu">
-<!ENTITY Ctr_hidetbwote_i	"Could cause glitches on tabs toolbar">
-<!ENTITY Ctr_hidetbwote2	"Keep titlebar (tabs on top)">
+<!ENTITY Ctr_hidetbwote_i	"Lahko povzroči napake na vrstici zavihkov">
+<!ENTITY Ctr_hidetbwote2	"Ohrani nazivno vrstico (zavihki na vrhu)">
 <!ENTITY Ctr_notabfog		"Odstrani meglo ozadja (Windows AeroGlass/8)">
 <!ENTITY Ctr_notabbg		"Odstrani barvo ozadja (Windows AeroGlass/8)">
 <!ENTITY Ctr_hightabpos		"Zmanjšaj prostor nad orodno vrstico (če je možno)">
@@ -232,9 +232,9 @@
 <!ENTITY Ctr_nonavborder	"Orodna vrstica zaznamkov: dodaj zgornjo obrobo orodni vrstici">
 <!ENTITY Ctr_nonavtbborder	"Orodne vrstice na vrhu: odstrani obrobe orodnih vrstic">
 <!ENTITY Ctr_hidesbclose	"Stranske vrstice: skrij gumb Zapri stranske vrstice">
-<!ENTITY Ctr_notextshadow	"Toolbars: hide shadow for toolbar text and tab text">
+<!ENTITY Ctr_notextshadow	"Orodne vrstice: skrij senco besedila orodnih vrstic in zavihkov">
 <!ENTITY Ctr_chevronfix		"Orodna vrstica za krmarjenje: skrij dvojno puščico ('chevron') na koncu orodne vrstice">
-<!ENTITY Ctr_tbsep_winc		"Top toolbars: additional toolbar separators">
+<!ENTITY Ctr_tbsep_winc		"Zgornje orodne vrstice: dodatna ločila orodnih vrstic">
 
 <!ENTITY Ctr_closeabarbut	"Skrij gumb Zapri vrstice dodatkov">
 <!ENTITY Ctr_highaddonsbar	"Povečaj višino">
@@ -263,13 +263,13 @@
 <!ENTITY Ctr_fx34loop		"&brandShortName; 34+ je vpeljal možnosti 'klicanja in pogovorov'. Odznačitev te nastavitve jih odstrani.">
 <!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ je vpeljal novo temo 'Developer theme'. Odznačitev teh nastavitev to temo in pripadajoči gumb v načinu prilagoditve onemogoči.">
 <!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ je vpeljal nastavitve v zavihku. Odznačitev te nastavitve obnovi staro okno nastavitev.">
-<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ introduced a new 'reader mode'. Unchecking these preferences disables it and removes its icon from location bar.">
+<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ je vpeljal nov 'način za branje'. Odznačitev teh nastavitev ga onemogoči in odstrani njegovo ikono iz naslovne vrstice.">
 <!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
-<!ENTITY Ctr_e_searchui		"Search appearance">
-<!ENTITY Ctr_e_loop			"Calling and conversation">
-<!ENTITY Ctr_e_deved		"Developer Edition Theme">
-<!ENTITY Ctr_e_prefsui		"Preferences in tab">
-<!ENTITY Ctr_e_readermode	"Reader mode">
+<!ENTITY Ctr_e_searchui		"Videz iskanja">
+<!ENTITY Ctr_e_loop			"Klicanje in pogovori">
+<!ENTITY Ctr_e_deved		"Tema Developer Edition">
+<!ENTITY Ctr_e_prefsui		"Nastavitve v zavihku">
+<!ENTITY Ctr_e_readermode	"Način za branje">
 
 
 <!ENTITY Ctr_pw_settings	"Nastavitve">
