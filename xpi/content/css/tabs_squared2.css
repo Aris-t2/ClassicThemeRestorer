@@ -6,7 +6,25 @@
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_appbutton{
 	  margin-left:-2px !important;
 	}
-	
+
+	.tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+	.tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before ,
+	.tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+	.tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before,
+	.tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr)::after,
+	.tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl)::after,
+	.tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr)::after,
+	.tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl)::after,
+	.tab-background-middle[visuallyselected=true],
+	.tab-background-middle[visuallyselected=true]:-moz-lwtheme,
+	.tab-background-start[visuallyselected=true]:-moz-lwtheme::before,
+	.tab-background-end[visuallyselected=true]:-moz-lwtheme::before,
+	.tabbrowser-tab:hover > .tab-stack > .tab-background:not([visuallyselected=true]),
+	.tabbrowser-tab[pinned][titlechanged]:not([visuallyselected="true"]) > .tab-stack > .tab-content,
+	#tabbrowser-tabs::before {
+	  background-image: none !important;
+	}
+
 	.tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-background-middle:not([selected=true]),
 	.tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-background-start:not([selected=true]),
 	.tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-background-end:not([selected=true]),

@@ -3,6 +3,14 @@
 	#main-window #navigator-toolbox #TabsToolbar .tabs-newtab-button:hover {
 	  background-size: 100% !important;
 	}
+	/* AeroGlass transparency for titlebar and tabs toolbar + dev theme  */
+	/*
+	@media all and (-moz-windows-glass) {
+	  #main-window[sizemode="normal"] {
+		background: transparent !important;
+	  }
+	}
+	*/
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {

@@ -283,9 +283,8 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_oldsearchgb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_loopcallgb').style.visibility = 'collapse';
 	}
-	if (this.appversion < 35) {
+	if (this.appversion < 35 || this.appversion > 39.9) {
 	  document.getElementById('ctraddon_pw_devthemegb').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_nodevtheme').style.visibility = 'collapse';
 	}
 	if (this.appversion < 36) {
 	  document.getElementById('ctraddon_pw_oldprefsgb').style.visibility = 'collapse';
@@ -479,10 +478,19 @@ classicthemerestorerjso.ctr = {
 	// disable Aero (blue) toolbars preference
 	if(this.prefs.getBoolPref('aerocolors'))
 	  this.prefs.setBoolPref('aerocolors',false);
-  
+ 
 	this.hideThemeInfoForTabs();
 	this.unsetTabColorsAndMore();
 
+  },
+  
+  //only reset prefs for dev theme, if it is enabled
+  resetPrefsForDevTheme2: function(){
+	try {
+	  if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
+		classicthemerestorerjso.ctr.resetPrefsForDevTheme();
+	  }
+	} catch(e) {}
   },
   
   ctrShowE10sPrefForWindowPrefs: function() {

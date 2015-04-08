@@ -25,6 +25,24 @@
 	  -moz-margin-start: 0 !important;
 	}
 
+	.tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+	.tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before ,
+	.tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+	.tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before,
+	.tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr)::after,
+	.tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl)::after,
+	.tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr)::after,
+	.tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl)::after,
+	.tab-background-middle[visuallyselected=true],
+	.tab-background-middle[visuallyselected=true]:-moz-lwtheme,
+	.tab-background-start[visuallyselected=true]:-moz-lwtheme::before,
+	.tab-background-end[visuallyselected=true]:-moz-lwtheme::before,
+	.tabbrowser-tab:hover > .tab-stack > .tab-background:not([visuallyselected=true]),
+	.tabbrowser-tab[pinned][titlechanged]:not([visuallyselected="true"]) > .tab-stack > .tab-content,
+	#tabbrowser-tabs::before {
+	  background-image: none !important;
+	}
+
 	.tab-background-start::after,
 	.tab-background-start::before,
 	.tab-background-start[visuallyselected=true]::after,

@@ -60,6 +60,7 @@ classicthemerestorerjs.ctr = {
   prefs:				Services.prefs.getBranch("extensions.classicthemerestorer."),
   
   fxdefaulttheme:		Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin") == 'classic/1.0',
+  fxdevelopertheme:		false,
   osstring:				Services.appinfo.OS,
   appversion:			parseInt(Services.prefs.getBranch("extensions.").getCharPref("lastAppVersion")),
   stringBundle:			Services.strings.createBundle("chrome://classic_theme_restorer/locale/messages.file"),
@@ -67,6 +68,8 @@ classicthemerestorerjs.ctr = {
   hideTTWithOneTab:		false,
   moveStarIntoUrlbar:	false,
   moveFeedIntoUrlbar:	false,
+  
+  devthemeinterval: 	null,
 
   init: function() {
   
@@ -185,23 +188,39 @@ classicthemerestorerjs.ctr = {
 		switch (name) {
 
 		  case "enabled":
-			if (branch.getBoolPref("enabled")) {
-			  if(classicthemerestorerjs.ctr.prefs.getBoolPref("nodevtheme")) {
+			if (branch.getBoolPref("enabled") && classicthemerestorerjs.ctr.appversion < 40) {
+			  if(classicthemerestorerjs.ctr.prefs.getBoolPref("nodevtheme") && classicthemerestorerjs.ctr.appversion < 40) {
 				branch.setBoolPref("enabled",false);
 			  }
 			  else{
 				if (classicthemerestorerjs.ctr.fxdefaulttheme){
-				  try{
-				    document.getElementById("main-window").setAttribute('developertheme',true);
-				  } catch(e){}
+					try{
+				      document.getElementById("main-window").setAttribute('developertheme',true);
+					} catch(e){}
+					
+					classicthemerestorerjs.ctr.fxdevelopertheme=true;
+				  
+					setTimeout(function(){
+					  classicthemerestorerjs.ctr.prefs.setCharPref('tabs','tabs_default');
+					},50);
+					setTimeout(function(){
+					  classicthemerestorerjs.ctr.prefs.setCharPref('tabs','tabs_squared');
+					},100);
+				  
+					if(classicthemerestorerjs.ctr.prefs.getBoolPref('aerocolors'))
+					  classicthemerestorerjs.ctr.prefs.setBoolPref('aerocolors',false);
+				  
 				}
 			  }
 			}
 			else {
-			  if (classicthemerestorerjs.ctr.fxdefaulttheme){
+			  if (classicthemerestorerjs.ctr.fxdefaulttheme && classicthemerestorerjs.ctr.appversion < 40){
 				try{
 				  document.getElementById("main-window").setAttribute('developertheme',false);
 				} catch(e){}
+				
+				classicthemerestorerjs.ctr.fxdevelopertheme=false;
+				
 			  }
 			}
 			
@@ -211,6 +230,75 @@ classicthemerestorerjs.ctr = {
 	);
 	
 	ctrSettingsListener_forDevtheme.register(true);
+
+	// DevEdition tweaks for Fx 40+
+	// This ugly hack is required to keep track of dev edition theme preference
+	// thanks to horrible implementation of "lightweightThemes.selectedThemeID" pref,
+	// which gets removed once default theme is enabled again.
+	var ctrSettingsListener_forDevtheme2 = new PrefListener(
+	  "lightweightThemes.",
+	  function(branch, name) {
+		switch (name) {
+
+		  case "selectedThemeID":
+			try{
+			  if (branch.getCharPref("selectedThemeID")=='firefox-devedition@mozilla.org') {
+			  
+				classicthemerestorerjs.ctr.fxdevelopertheme=true;
+			  
+				if (classicthemerestorerjs.ctr.fxdefaulttheme){
+				  try{
+					document.getElementById("main-window").setAttribute('developertheme',true);
+				  } catch(e){}
+				}
+
+				setTimeout(function(){
+				  classicthemerestorerjs.ctr.prefs.setCharPref('tabs','tabs_default');
+				},50);
+				setTimeout(function(){
+				  classicthemerestorerjs.ctr.prefs.setCharPref('tabs','tabs_squared');
+				},100);
+			  
+				if(classicthemerestorerjs.ctr.prefs.getBoolPref('aerocolors'))
+				  classicthemerestorerjs.ctr.prefs.setBoolPref('aerocolors',false);
+			
+				classicthemerestorerjs.ctr.devthemeinterval = setInterval(function(){
+			  
+				  let selectedThemeID = null;
+				  try {
+					selectedThemeID = Services.prefs.getBranch("lightweightThemes.").getCharPref("selectedThemeID");
+				  } catch (e) {}
+				  
+				  if (selectedThemeID=='firefox-devedition@mozilla.org') {
+					document.getElementById("main-window").setAttribute('developertheme',true);
+				  } else {
+					document.getElementById("main-window").setAttribute('developertheme',false);
+					//this is required to stop interval once it is not needed any more
+					clearInterval(classicthemerestorerjs.ctr.devthemeinterval);
+					
+					classicthemerestorerjs.ctr.fxdevelopertheme=false;
+					
+					setTimeout(function(){
+					  classicthemerestorerjs.ctr.prefs.setCharPref('tabs','tabs_default');
+					},50);
+					setTimeout(function(){
+					  classicthemerestorerjs.ctr.prefs.setCharPref('tabs','tabs_squared');
+					},100);
+				  }
+				  
+				},1000);
+
+			  }
+			
+			} catch(e){}
+
+		  break;
+		}
+	  }
+	);
+	
+	ctrSettingsListener_forDevtheme2.register(true);
+	
 
 	var ctrSettingsListener = new PrefListener(
 	  "extensions.classicthemerestorer.",
@@ -297,6 +385,8 @@ classicthemerestorerjs.ctr = {
 				devtheme=true;
 			  }
 			} catch(e) {}
+			
+			if(classicthemerestorerjs.ctr.fxdevelopertheme==true) devtheme=true;
 
 			if (branch.getCharPref("tabs")!="tabs_default" && classicthemerestorerjs.ctr.fxdefaulttheme==true && devtheme==false){
 			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("tabs"),true);
@@ -499,6 +589,8 @@ classicthemerestorerjs.ctr = {
 				devtheme=true;
 			  }
 			} catch(e) {}
+			
+			if(classicthemerestorerjs.ctr.fxdevelopertheme==true) devtheme=true;
 	
 			if (branch.getBoolPref("aerocolors") && classicthemerestorerjs.ctr.fxdefaulttheme==true && devtheme==false) {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("aerocolors",true);
@@ -1671,7 +1763,7 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "nodevtheme":
-			if (branch.getBoolPref("nodevtheme")) {
+			if (branch.getBoolPref("nodevtheme") && classicthemerestorerjs.ctr.appversion < 40) {
 			  	try{
 					if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref("enabled"))
 					  Services.prefs.getBranch("browser.devedition.theme.").setBoolPref("enabled",false)
@@ -1744,6 +1836,8 @@ classicthemerestorerjs.ctr = {
 			    devthemeosx=true;
 			  }
 			} catch(e) {}
+			
+			if(classicthemerestorerjs.ctr.fxdevelopertheme==true) devthemeosx=true;
 		  
 			if(devthemeosx==true)			
 			  classicthemerestorerjs.ctr.prefs.setCharPref('tabs','tabs_default');
