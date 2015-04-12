@@ -87,5 +87,11 @@
 	#TabsToolbar[multibar]:-moz-lwtheme  {
 	  margin-bottom: -2px !important;
 	}
+	
+	/* colorize tabs toolbar for developer edition theme */
+	#main-window[developertheme="true"][defaultfxtheme="true"][tabsontop="false"] #navigator-toolbox::after,
+	#main-window[developertheme="true"][defaultfxtheme="true"][tabsontop="false"] #TabsToolbar{
+		background-color:var(--chrome-secondary-background-color) !important;
+	}
 
 }

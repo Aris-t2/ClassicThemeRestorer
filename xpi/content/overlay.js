@@ -122,6 +122,11 @@ classicthemerestorerjs.ctr = {
 		if (this.appversion >= 38) document.getElementById("main-window").setAttribute('fx38plus',true);
 	} catch(e){}
 	
+	// add a new global attribute 'fx40plus' -> better parting css between versions
+	try{
+		if (this.appversion >= 40) document.getElementById("main-window").setAttribute('fx40plus',true);
+	} catch(e){}
+	
 	// add CTR version number to '#main-window' node, so other add-ons/themes can easier distinguish between versions
 	AddonManager.getAddonByID('ClassicThemeRestorer@ArisT2Noia4dev', function(addon) {
 	  try{
@@ -249,6 +254,9 @@ classicthemerestorerjs.ctr = {
 				if (classicthemerestorerjs.ctr.fxdefaulttheme){
 				  try{
 					document.getElementById("main-window").setAttribute('developertheme',true);
+					// remove ugly white color on titlebar and tabs toolbar (why its even there?)
+					if (classicthemerestorerjs.ctr.osstring=="WINNT")
+					  document.getElementById("main-window").setAttribute('style','');
 				  } catch(e){}
 				}
 
@@ -271,6 +279,9 @@ classicthemerestorerjs.ctr = {
 				  
 				  if (selectedThemeID=='firefox-devedition@mozilla.org') {
 					document.getElementById("main-window").setAttribute('developertheme',true);
+					// remove ugly white color on titlebar and tabs toolbar (why its even there?)
+					if (classicthemerestorerjs.ctr.osstring=="WINNT")
+					  document.getElementById("main-window").setAttribute('style','');
 				  } else {
 					document.getElementById("main-window").setAttribute('developertheme',false);
 					//this is required to stop interval once it is not needed any more
