@@ -55,4 +55,10 @@
 	  padding-top:0 !important;
 	  padding-bottom:0 !important;
 	}
+	
+	#TabsToolbar #tabbrowser-tabs .tabs-newtab-button:-moz-lwtheme,
+	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:-moz-lwtheme,
+	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab[pinned]:-moz-lwtheme{
+	  background-size: calc(100% - 1px) calc(100% - 4px) !important;
+	}
 }

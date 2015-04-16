@@ -158,6 +158,9 @@ classicthemerestorerjs.ctr = {
 	// CTRs extra add-on bar keys
 	this.CTRextraLocationBarKeyset();
 	
+	// skip print buttons print preview
+	this.CTRextraSkipPrintPreview();
+	
 	// CTR Preferences listener
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get
@@ -235,7 +238,7 @@ classicthemerestorerjs.ctr = {
 	);
 	
 	ctrSettingsListener_forDevtheme.register(true);
-
+	
 	// DevEdition tweaks for Fx 40+
 	// This ugly hack is required to keep track of dev edition theme preference
 	// thanks to horrible implementation of "lightweightThemes.selectedThemeID" pref,
@@ -1508,7 +1511,7 @@ classicthemerestorerjs.ctr = {
 			  branch.setBoolPref("panelmenucol",false);
 			  setTimeout(function(){
 				branch.setBoolPref("panelmenucol",true);
-			  },100);
+			  },1000);
 			}
 		  break;
 		  
@@ -1787,7 +1790,7 @@ classicthemerestorerjs.ctr = {
 	);
 
 	ctrSettingsListener.register(true);
-	
+
 	var ctrSettingsListener_forCTB = new PrefListener(
 	  "extensions.cstbb-extension.",
 	  function(branch, name) {
@@ -1854,6 +1857,22 @@ classicthemerestorerjs.ctr = {
 			  classicthemerestorerjs.ctr.prefs.setCharPref('tabs','tabs_default');
 		}
 	}
+	
+	// Remove current windows preference listeners once the window gets closed
+	// to prevent memory leaks and other issues in a multi window environment.
+	window.addEventListener("unload", function unregisterCTRListeners(event){
+		
+		//console.log("unregistered!"); // log stuff for testing
+		
+		ctrSettingsListener.unregister();
+		ctrSettingsListener_forCTB.unregister();
+		ctrSettingsListener_forDevtheme.unregister();
+		ctrSettingsListener_forDevtheme2.unregister();
+		//ctrSettingsListener_forSetSan.unregister();
+		
+		window.removeEventListener("unload", unregisterCTRListeners, false);
+		
+	},false);
 
   },
 
@@ -2322,9 +2341,28 @@ classicthemerestorerjs.ctr = {
 	},1000);
   },
   
+  // skip print buttons print preview
+  CTRextraSkipPrintPreview: function() {
+	setTimeout(function(){
+	  try{
+		if(classicthemerestorerjs.ctr.prefs.getBoolPref('skipprintpr')) {
+		  document.getElementById("print-button").setAttribute("command",'cmd_print');
+		  document.getElementById("print-button").removeAttribute("oncommand");
+		}
+	  } catch(e){}
+	},1000);
+	setTimeout(function(){
+	  try{
+		if(classicthemerestorerjs.ctr.prefs.getBoolPref('skipprintpr')) {
+		  document.getElementById("print-button").setAttribute("command",'cmd_print');
+		  document.getElementById("print-button").removeAttribute("oncommand");
+		}
+	  } catch(e){}
+	},5000);
+  },
+  
   updateTabWidth: function() {
   	window.addEventListener("DOMWindowCreated", function load(event){
-		//window.removeEventListener("DOMWindowCreated", load, false);
 		classicthemerestorerjs.ctr._updateTabWidth();  
 	},false);
   },

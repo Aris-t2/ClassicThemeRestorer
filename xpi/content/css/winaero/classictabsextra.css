@@ -188,4 +188,10 @@
 		}
 	}
 	
+	#TabsToolbar #tabbrowser-tabs .tabs-newtab-button:-moz-lwtheme,
+	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:-moz-lwtheme,
+	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab[pinned]:-moz-lwtheme{
+	  background-size: calc(100% - 1px) calc(100% - 4px) !important;
+	}
+	
 }

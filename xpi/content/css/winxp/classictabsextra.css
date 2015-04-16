@@ -138,5 +138,11 @@
 	  background-image: linear-gradient(hsla(0,0%,100%,.4), hsla(0,0%,75%,.4) 80%),
 						radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,1) 3%, rgba(186,221,251,.75) 40%, rgba(127,179,255,.5) 80%, rgba(127,179,255,.25));
 	}
+	
+	#TabsToolbar #tabbrowser-tabs .tabs-newtab-button:-moz-lwtheme,
+	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:-moz-lwtheme,
+	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab[pinned]:-moz-lwtheme{
+	  background-size: calc(100% - 1px) calc(100% - 4px) !important;
+	}
 
 }

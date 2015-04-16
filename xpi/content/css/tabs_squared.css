@@ -184,31 +184,31 @@
 	  color: inherit !important;
 	}
 	
-	.tabs-newtab-button:-moz-lwtheme,
+	/*.tabs-newtab-button:-moz-lwtheme,
 	.tabbrowser-tab:-moz-lwtheme,
 	.tabbrowser-tab[pinned]:-moz-lwtheme{
-	  background-size: calc(100% - 1px) calc(100% - 4px) !important;
-	}
+	  background-size: calc(100% - 1px) calc(100% - 3px) !important;
+	}*/
 	
-	@media all and (-moz-windows-glass) {
+	/*@media all and (-moz-windows-glass) {
 		.tabs-newtab-button:-moz-lwtheme,
 		.tabbrowser-tab:-moz-lwtheme,
 		.tabbrowser-tab[pinned]:-moz-lwtheme{
 		  background-size: calc(100% - 1px) calc(100% - 3px) !important;
 		}
-	}
+	}*/
 
 	.tabs-newtab-button:-moz-lwtheme{
 	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.5) 50%) !important;
 	}
 	
-	@media all and (-moz-windows-glass) {
+	/*@media all and (-moz-windows-glass) {
 		.tabs-newtab-button:-moz-lwtheme,		
 		.tabbrowser-tab:-moz-lwtheme,
 		.tabbrowser-tab[pinned]:-moz-lwtheme {
 		  background-size: calc(100% - 1px) calc(100% - 4px) !important;
 		}
-	}
+	}*/
 
 	.tabbrowser-tab:not([selected=true]):hover:-moz-lwtheme-brighttext,
 	.tabs-newtab-button:-moz-lwtheme-brighttext:hover {
@@ -252,8 +252,6 @@
 
 	.tabbrowser-tab[pinned]{
 	  min-width: 32px !important;
-	  /*width: 32px !important;
-	  max-width: 32px !important;*/
 	  background-position: 0px 2px !important;
 	  background-size: calc(100% - 0px) calc(100% - 1px) !important;
 	}
