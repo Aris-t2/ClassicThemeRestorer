@@ -2346,19 +2346,11 @@ classicthemerestorerjs.ctr = {
 	setTimeout(function(){
 	  try{
 		if(classicthemerestorerjs.ctr.prefs.getBoolPref('skipprintpr')) {
-		  document.getElementById("print-button").setAttribute("command",'cmd_print');
-		  document.getElementById("print-button").removeAttribute("oncommand");
+		  classicthemerestorerjs.ctr.ctrGetId("print-button").setAttribute("command",'cmd_print');
+		  classicthemerestorerjs.ctr.ctrGetId("print-button").removeAttribute("oncommand");
 		}
 	  } catch(e){}
 	},1000);
-	setTimeout(function(){
-	  try{
-		if(classicthemerestorerjs.ctr.prefs.getBoolPref('skipprintpr')) {
-		  document.getElementById("print-button").setAttribute("command",'cmd_print');
-		  document.getElementById("print-button").removeAttribute("oncommand");
-		}
-	  } catch(e){}
-	},5000);
   },
   
   updateTabWidth: function() {
@@ -2388,12 +2380,7 @@ classicthemerestorerjs.ctr = {
 		document.styleSheets[1].cssRules[ruleEndPosition].style.maxWidth=""+maxWidthValue+"px";
 	  } catch(e){}
 	}
-	
-	/* logging */
-	/*try {
-		var style_rules = document.styleSheets[1].cssRules;
-		console.log(style_rules);
-	} catch(e) {}*/
+
   },
 
   // adds busy attribute to activity throbber
