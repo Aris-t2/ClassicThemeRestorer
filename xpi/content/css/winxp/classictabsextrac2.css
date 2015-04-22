@@ -111,6 +111,11 @@
 	.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
 	  -moz-padding-start: 3px !important;
 	}
+	@media all and (-moz-windows-classic) {
+		#TabsToolbar[currentset*="tabbrowser-tabs,tabmixScrollBox"]:not([orient="vertical"]) .tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
+		  -moz-padding-end: 3px !important;
+		}
+	}
 		
 	.tabs-newtab-button{
 	  margin-right:-12px !important;

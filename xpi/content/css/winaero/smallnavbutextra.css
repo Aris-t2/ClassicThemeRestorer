@@ -61,6 +61,9 @@
 		background: unset !important;
 		box-shadow: unset !important;
 	  }
+	  #nav-bar #urlbar-icons .toolbarbutton-1 {
+		-moz-appearance: none !important;
+	  }
 	}
 	
 	#navigator-toolbox #nav-bar:not([tabsontop="false"]) .toolbarbutton-1 > .toolbarbutton-menubutton-button,
@@ -348,5 +351,17 @@
 	#nav-bar #zoompage-zoomout-n image{
 	  padding:0px !important;
 	}
-
+	
+	/* toolbar menu button inside urlbar icons container */
+	#urlbar-icons toolbarbutton[type="menu"],
+	#urlbar-icons toolbarbutton[type="menu"] .toolbarbutton-icon {
+	  -moz-appearance: none !important;
+	  padding-top: unset !important;
+	  padding-bottom: unset !important;
+	  margin-top: unset !important;
+	  margin-bottom: unset !important;
+	  border: unset !important;
+	  box-shadow: unset !important;
+	  background: unset !important;
+	}
 }

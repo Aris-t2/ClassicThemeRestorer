@@ -798,6 +798,8 @@ classicthemerestorerjso.ctr = {
 	this.prefs.setBoolPref("pananimation",true);
 	this.prefs.setBoolPref("noconicons",true);
 	this.prefs.setBoolPref("alt_newtabp",true);
+	this.prefs.setBoolPref("skipprintpr",true);
+	this.prefs.setBoolPref("tbconmenu",true);
 	
 	setTimeout(function(){
 		classicthemerestorerjso.ctr.prefs.setBoolPref("starinurl",true);
