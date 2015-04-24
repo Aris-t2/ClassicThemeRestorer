@@ -233,7 +233,9 @@
 	  padding:0px !important;
 	}
 	
-	/* toolbar menu button inside urlbar icons container */
+	/* special buttons inside urlbars boxes */
+	#urlbar #notification-popup-box + box toolbarbutton,
+	#urlbar #notification-popup-box + box toolbarbutton .toolbarbutton-icon,
 	#urlbar-icons toolbarbutton[type="menu"],
 	#urlbar-icons toolbarbutton[type="menu"] .toolbarbutton-icon {
 	  -moz-appearance: none !important;

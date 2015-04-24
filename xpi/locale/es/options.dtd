@@ -138,8 +138,8 @@
 <!ENTITY Ctr_alt_newtabp	"Página de nueva pestaña: Apariencia alternativa">
 <!ENTITY Ctr_bmbutpanelm	"Botón de menú Marcadores: Aspecto del panel de menú">
 <!ENTITY Ctr_bmbutnotext	"Botón de menú Marcadores: Ocultar etiqueta en la barra de marcadores">
-<!ENTITY Ctr_skipprintpr	"Print button: skip print preview">
-<!ENTITY Ctr_tbconmenu		"Toolbar context menu: hide 'move to menu', 'remove from toolbar', 'reload/bookmark all tabs' and 'undo close tab'">
+<!ENTITY Ctr_skipprintpr	"Botón Imprimir: Omitir previsualización de la impresión">
+<!ENTITY Ctr_tbconmenu		"Menú contextual de barra de herramientas: Ocultar 'Mover al menú', 'Eliminar de la barra de herramientas', 'Recargar todas las pestañas', 'Añadir pestañas a marcadores...' y 'Deshacer el cierre de la última pestaña'">
 <!ENTITY Ctr_noresizerxp	"Ocultar redimensionador (Windows XP)">
 <!ENTITY Ctr_extraurlkeycb	"Abrir barra de direcciones adicional (Cmd/Ctrl+">
 <!ENTITY Ctr_pmhidelabels	"Menú de panel emergente: Ocultar etiquetas de los botones">
@@ -213,7 +213,7 @@
 <!ENTITY Ctr_dblclnewtab	"El doble clic abre una 'nueva' pestaña (about:config >> browser.newtab.url)">
 <!ENTITY Ctr_hidetbwot		"Ocultar barra de pestañas con una sola pestaña">
 <!ENTITY Ctr_hidetbwote		"Reducir retardo al ocultar en el inicio">
-<!ENTITY Ctr_hidetbwote_i	"Could cause glitches on tabs toolbar">
+<!ENTITY Ctr_hidetbwote_i	"Podría causar fallos en la barra de herramientas de pestañas">
 <!ENTITY Ctr_hidetbwote2	"Conservar barra de título (pestañas arriba)">
 <!ENTITY Ctr_notabfog		"Eliminar niebla de fondo (Windows Aeroglass/8)">
 <!ENTITY Ctr_notabbg		"Eliminar color de fondo (Windows AeroGlass/8)">
@@ -236,7 +236,7 @@
 <!ENTITY Ctr_hidesbclose	"Barras laterales: Ocultar botón cerrar de la barra lateral">
 <!ENTITY Ctr_notextshadow	"Barras de herramientas: Ocultar sombra para texto de barra de herramientas y texto de pestaña">
 <!ENTITY Ctr_chevronfix		"Barra de herramientas de navegación: Ocultar doble flecha (chevron) al final de las barras de herramientas">
-<!ENTITY Ctr_tbsep_winc		"Top toolbars: additional toolbar separators">
+<!ENTITY Ctr_tbsep_winc		"Barras de herramientas en la parte superior: Separadores adcionales de barra de herramientas">
 
 <!ENTITY Ctr_closeabarbut	"Ocultar botón cerrar de barras de complementos">
 <!ENTITY Ctr_highaddonsbar	"Incrementar altura">
@@ -265,13 +265,13 @@
 <!ENTITY Ctr_fx34loop		"&brandShortName; 34+ introdujo características de 'llamada y conversación'. Desmarcar esto las retira.">
 <!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ introdujo un nuevo 'tema de decoración de desarrollador'. Desmarcar estas preferencias deshabilita el 'tema de desarrollador' y su botón en el modo Personalizar.">
 <!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ introdujo las Opciones (about:preferences) en una pestaña. Desmarcar esta preferencia restaura la antigua ventana de Opciones.">
-<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ introduced a new 'reader mode'. Unchecking these preferences disables it and removes its icon from location bar.">
-<!ENTITY Ctr_e_omtc			"OMTC / problema de cuelgue de pestañas">
+<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ introdujo un nuevo modo 'reader' (lector). Desmarcar estas preferencias lo deshabilita y elimina su icono de la barra de direcciones.">
+<!ENTITY Ctr_e_omtc			"OMTC / ¡¡¡ problema de cuelgue de pestañas !!!">
 <!ENTITY Ctr_e_searchui		"Aspecto de la búsqueda">
 <!ENTITY Ctr_e_loop			"Llamada y conversación">
 <!ENTITY Ctr_e_deved		"Tema de decoración de la edición de desarrollador">
 <!ENTITY Ctr_e_prefsui		"Preferencias en la pestaña">
-<!ENTITY Ctr_e_readermode	"Reader mode">
+<!ENTITY Ctr_e_readermode	"Modo reader - lista de lectura">
 
 
 <!ENTITY Ctr_pw_settings	"Configuración">

@@ -36,7 +36,7 @@
 <!ENTITY Ctr_tabs2			"Изогнутые (другие)">
 <!ENTITY Ctr_tabs3			"Изогнутые (другие, Aero)">
 <!ENTITY Ctr_tabforminfo	"Вид вкладки задаётся текущей темой.">
-<!ENTITY Ctr_coltabsinfo	"Вид вкладки не полностью совместим с дополнением 'ColorfulTabs'">
+<!ENTITY Ctr_coltabsinfo	"Вид вкладки не полностью совместим с расширением 'ColorfulTabs'!">
 <!ENTITY Ctr_tabsontop0		"Вкладки вверху (по умолчанию)">
 <!ENTITY Ctr_tabsontop1		"Вкладки вверху --- [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Вкладки не вверху (v1) --- [tabsontop=false]">
@@ -53,7 +53,7 @@
 <!ENTITY Ctr_tabwidthinfo	"Минимальная и максимальная ширина вкладок изменяется расширением TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"Минимальная и максимальная ширина вкладок изменяется расширением TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"Значение ниже 48px вызовет сбои в большинстве случаев!">
-<!ENTITY Ctr_tabinsertion	"Вставить соответствующую вкладку после текущей вкладке (about:config)">
+<!ENTITY Ctr_tabinsertion	"Открывать связанную вкладку после текущей вкладки (about:config)">
 <!ENTITY Ctr_emptyfavicon	"Восстановить пустой значок на вкладках">
 <!ENTITY Ctr_noemptypticon	"Удалить пустой значок из прикреплённой вкладки">
 <!ENTITY Ctr_e10stab_notd	"E10s вкладки: удалить подчёркивание">
@@ -68,8 +68,8 @@
 <!ENTITY Ctr_closeonleft	"Альтернативная позиция на вкладке">
 <!ENTITY Ctr_close_wwltab	"Закрыть окно при закрытии последней вкладки (about:config)">
 
-<!ENTITY Ctr_hctpinfotab	"Некоторые вариации вкладки не совместимы с дополнением 'Hide Caption Titlebar Plus'.">
-<!ENTITY Ctr_hctpinfoab		"Кнопка в заголовке не совместимы с дополнением 'Hide Caption Titlebar Plus'.">
+<!ENTITY Ctr_hctpinfotab	"Некоторые разновидности вкладок не совместимы с расширением 'Hide Caption Titlebar Plus'.">
+<!ENTITY Ctr_hctpinfoab		"Кнопка в заголовке не совместима с расширением 'Hide Caption Titlebar Plus'.">
 
 <!ENTITY Ctr_appbutton		"Кнопка приложения">
 <!ENTITY Ctr_appbutton0		"отключена">
@@ -109,7 +109,7 @@
 <!ENTITY Ctr_hide_bf_popup	"Не показывать меню истории при нажатии мыши">
 <!ENTITY Ctr_bf_space		"Уменьшить расстояние между кнопками (если это возможно)">
 <!ENTITY Ctr_noconicons		"Контекстное меню страницы: заменить значки надписями (Назад, Вперёд, Обновить...)">
-<!ENTITY Ctr_svgfilters		"SVG цвета для значков стандартной панели инструментов">
+<!ENTITY Ctr_svgfilters		"SVG цвета для стандартных значков панели инструментов">
 <!ENTITY Ctr_wincontrols	"Подвижное управление полноэкранным режимом">
 <!ENTITY Ctr_emptyfavicon2	"Установить общий значок (пустой и пунктирный)">
 <!ENTITY Ctr_mstatusbar		"Подвижная строка состояния">
@@ -136,12 +136,12 @@
 <!ENTITY Ctr_cpanelmenus	"Компактная панель меню (закладки, история и т. д.)">
 <!ENTITY Ctr_hidezoomres	"Кнопки масштаба: скрыть сброс масштабирования">
 <!ENTITY Ctr_alt_newtabp	"Страница новой вкладки: альтернативный вид">
-<!ENTITY Ctr_bmbutpanelm	"Кнопка меню Закладки: панель меню внешний вид">
-<!ENTITY Ctr_bmbutnotext	"Кнопка меню Закладки: спрятать ярлык на панель закладок">
-<!ENTITY Ctr_skipprintpr	"Print button: skip print preview">
-<!ENTITY Ctr_tbconmenu		"Toolbar context menu: hide 'move to menu', 'remove from toolbar', 'reload/bookmark all tabs' and 'undo close tab'">
+<!ENTITY Ctr_bmbutpanelm	"Кнопка меню Закладки: вид панели меню">
+<!ENTITY Ctr_bmbutnotext	"Кнопка меню Закладки: скрыть текст на панели закладок">
+<!ENTITY Ctr_skipprintpr	"Кнопка печати: пропустить предварительный просмотр">
+<!ENTITY Ctr_tbconmenu		"Контекстное меню панели инструментов: скрыть «Переместить в меню», «Удалить с панели инструментов», «Обновить/В закладки все вкладки», «Восстановить закрытую вкладку»">
 <!ENTITY Ctr_noresizerxp	"Скрыть «Resizer» (Windows XP/2000)">
-<!ENTITY Ctr_extraurlkeycb	"Открыть дополнения в адресной строке (Cmd/Ctrl+">
+<!ENTITY Ctr_extraurlkeycb	"Открыть дополнительную панель адреса (Cmd/Ctrl+">
 <!ENTITY Ctr_pmhidelabels	"Панель меню: спрятать надписи на кнопках">
 <!ENTITY Ctr_menupopupscr	"Всплывающие окна меню: показывать полосы прокрутки вместо стрелки прокрутки">
 
@@ -213,13 +213,13 @@
 <!ENTITY Ctr_dblclnewtab	"Двойной клик открывает новую вкладку">
 <!ENTITY Ctr_hidetbwot		"Скрывать панель вкладок при одной вкладке">
 <!ENTITY Ctr_hidetbwote		"Уменьшить задержки сокрытия при запуске">
-<!ENTITY Ctr_hidetbwote_i	"Может вызвать сбои на вкладке панели инструментов">
-<!ENTITY Ctr_hidetbwote2	"Держать заголовок (вкладки сверху)">
+<!ENTITY Ctr_hidetbwote_i	"Может привести к неисправностям на панели вкладок">
+<!ENTITY Ctr_hidetbwote2	"Удерживать панель заголовка (вкладки вверху)">
 <!ENTITY Ctr_notabfog		"Отключить затуманивание фона панели вкладок (Windows AeroGlass/8)">
 <!ENTITY Ctr_notabbg		"Удалить цвет фона (Windows AeroGlass/8)">
 <!ENTITY Ctr_hightabpos		"Уменьшить пространство над панелью инструментов (если возможно)">
 <!ENTITY Ctr_alttabstb		"Альтернативный цвет фона">
-<!ENTITY Ctr_alttabstb2		"В развернутом режиме (вкладки сверху)">
+<!ENTITY Ctr_alttabstb2		"В развёрнутом режиме (вкладки вверху)">
 
 <!ENTITY Ctr_altmenubar		"Добавить цвет фона в строку заголовка операционной системы">
 <!ENTITY Ctr_altmenubarpos	"Изменить расположение (ниже строки заголовка &brandShortName;)">
@@ -232,11 +232,11 @@
 <!ENTITY Ctr_nonavbarbg1	"Параметр влияет на все дополнительные и верхние панели инструментов.">
 <!ENTITY Ctr_nonavbarbg2	"Параметр влияет на все панели Slim Chrome расширения «The Fox, Only Better».">
 <!ENTITY Ctr_nonavborder	"Панель закладок: добавить верхнюю границу для панели инструментов">
-<!ENTITY Ctr_nonavtbborder	"Популярные панели инструментов: удалить границы панелей инструментов">
+<!ENTITY Ctr_nonavtbborder	"Верхние панели: убрать границы панелей">
 <!ENTITY Ctr_hidesbclose	"Боковые панели: скрыть кнопку «Закрыть» на боковой панели">
-<!ENTITY Ctr_notextshadow	"Панели инструментов: скрыть тень для текста на панели инструментов и вкладках">
+<!ENTITY Ctr_notextshadow	"Панели: скрыть тень от текста на панели инструментов и на вкладках">
 <!ENTITY Ctr_chevronfix		"Панель навигации: скрыть двойную стрелку («шеврон») в конце панели">
-<!ENTITY Ctr_tbsep_winc		"Популярные панели инструментов: дополнительные сепараторы панели инструментов">
+<!ENTITY Ctr_tbsep_winc		"Верхние панели: дополнительные разделители панелей">
 
 <!ENTITY Ctr_closeabarbut	"Скрыть кнопку закрытия">
 <!ENTITY Ctr_highaddonsbar	"Увеличить высоту">
@@ -260,16 +260,16 @@
 <!ENTITY Ctr_nodevtheme		"Предотвращение активации «Тема разработчика»">
 
 <!ENTITY Ctr_experttweaks	"Продвинутые">
-<!ENTITY Ctr_fx33layers		"С &brandShortName; 33+ новые возможности визуализации, на некоторых системах вызывает ошибки с вкладками (нет реакции, вкладки заморожены). Отключение этой опции решает проблему.">
-<!ENTITY Ctr_fx34search		"С &brandShortName; 34+ новая панель поиска. Отключение этой опции позволяет вернуть старую панель поиска.">
-<!ENTITY Ctr_fx34loop		"С &brandShortName; 34+ добавлен клиент для связи в режиме реального времени. Отключение параметра удаляет эту функцию.">
-<!ENTITY Ctr_fx35devtheme	"С &brandShortName; 35+ введена новая «Тема разработчика». Отключение параметра удаляет её и соответствующую кнопку в режиме «Настройка».">
-<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ настройки в новой вкладке. Если снять этот параметр, то восстанавливает старое окно настроек.">
-<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ представила новую функцию «режим чтения». Отключив его, удалиться его значок из адресной строки.">
-<!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
+<!ENTITY Ctr_fx33layers		"&brandShortName; 33+ новые возможности визуализации, на некоторых системах вызывает ошибки с вкладками (нет реакции, вкладки заморожены). Отключение этой опции решает проблему.">
+<!ENTITY Ctr_fx34search		"&brandShortName; 34+ новая панель поиска. Отключение этой опции позволяет вернуть старую панель поиска.">
+<!ENTITY Ctr_fx34loop		"&brandShortName; 34+ добавлен клиент для связи в режиме реального времени. Отключение параметра удаляет эту функцию.">
+<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ введена новая «Тема разработчика». Отключение параметра удаляет её и соответствующую кнопку в режиме «Настройка».">
+<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ настройки в новой вкладке. Отключение этого параметра восстанавливает старое окно настроек.">
+<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ представила новую функцию «режим чтения». Отключение этого параметра отключает этот режим и удаляет значок из адресной строки.">
+<!ENTITY Ctr_e_omtc			"OMTC / проблемы зависших вкладок">
 <!ENTITY Ctr_e_searchui		"Внешний вид поиска">
 <!ENTITY Ctr_e_loop			"Вызов и разговор">
-<!ENTITY Ctr_e_deved		"Тема Разработчик">
+<!ENTITY Ctr_e_deved		"Тема разработчика">
 <!ENTITY Ctr_e_prefsui		"Настройки во вкладке">
 <!ENTITY Ctr_e_readermode	"Режим чтения">
 
@@ -294,7 +294,7 @@
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey            "Н">
-<!ENTITY forwardCmd.accesskey         "в">
+<!ENTITY forwardCmd.accesskey         "В">
 <!ENTITY reloadCmd.accesskey          "н">
 <!ENTITY stopCmd.accesskey            "т">
 <!ENTITY bookmarkPageCmd2.accesskey   "б">
