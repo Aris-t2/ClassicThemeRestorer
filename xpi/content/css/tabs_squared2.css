@@ -145,14 +145,14 @@
 	}
 	
 	.tabs-newtab-button{
-	  border-width: 0px 3px 1px !important;
-	  border-image: url(chrome://classic_theme_restorer/content/images/tab_empty.png) 0 3 0 fill repeat stretch !important;
+	  border-width: 5px 3px 6px !important;
+	  border-image: url(chrome://classic_theme_restorer/content/images/tab_empty.png) 5 3 6 fill repeat round !important;
 	  border-style: solid !important;
 	}   
 	
 	.tabs-newtab-button:hover{
-	  border-width: 0px 3px 1px !important;
-	  border-image: url(chrome://classic_theme_restorer/content/images/tab.png) 0 3 0 fill repeat stretch !important;
+	  border-width: 5px 3px 6px !important;
+	  border-image: url(chrome://classic_theme_restorer/content/images/tab.png) 5 3 6 fill repeat round !important;
 	  border-style: solid !important;
 	} 
 	
