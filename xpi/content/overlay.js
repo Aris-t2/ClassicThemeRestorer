@@ -1887,19 +1887,30 @@ classicthemerestorerjs.ctr = {
   },
    
   // show backForwardMenu popup for CTRs movable back/forward buttons 'mouse hold event'
-  ctrBackMenuShow: function(anchorElem) {
+  ctrBackMenuShow: function(anchorElem,event) {
   
    if(this.prefs.getBoolPref("hide_bf_popup")==false) {
 	var timeoutID;
 	
-	timeoutID = window.setTimeout(
-	  function(){
+	// mouse pointers current Y position
+	var positionY = event.clientY;
+	
+	timeoutID = window.setTimeout(function(){
+	  document.getElementById("backForwardMenu").openPopupAtScreen(anchorElem.boxObject.screenX, anchorElem.boxObject.screenY+anchorElem.boxObject.height-1, false);
+	}, 500);
+		
+	anchorElem.onmouseleave = function(event) {
+	  window.clearTimeout(timeoutID);
+	  
+	  // if mouse pointer position changes vertically, display popup menu without timeout
+	  if(event.clientY > positionY+5) {
 		document.getElementById("backForwardMenu").openPopupAtScreen(anchorElem.boxObject.screenX, anchorElem.boxObject.screenY+anchorElem.boxObject.height-1, false);
-	  }, 700);
-
+	  }
+	}
 	anchorElem.onmouseup = function() {
 	  window.clearTimeout(timeoutID);
 	}
+
    }
   },
   
