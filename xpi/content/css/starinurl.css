@@ -88,10 +88,10 @@
 	  visibility: visible !important;
 	}
 	
-	/* move reading list button to the left */
-	/*#readinglist-addremove-button {
-	  -moz-box-ordinal-group: 0;
-	}*/
+	/*Fx40+ support*/
+	#main-window[fx40plus="true"] #nav-bar #urlbar-icons :-moz-any(#bookmarks-menu-button):-moz-any([cui-areatype="toolbar"],:not([cui-areatype])) > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
+	  width: unset !important;;
+	}
 	
 	/**/
 	#urlbar-icons #bookmarks-menu-button .toolbarbutton-icon { 
