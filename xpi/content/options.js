@@ -54,7 +54,6 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_tabmokcolor4').disabled = true;
 		document.getElementById('ctraddon_pw_panelmenucolor').disabled = true;
 		document.getElementById('ctraddon_pw_nobookbarbg').disabled = true;
-		document.getElementById('ctraddon_pw_nonavbarbg').disabled = true;
 		document.getElementById('ctraddon_pw_nonavborder').disabled = true;
 		document.getElementById('ctraddon_pw_nonavtbborder').disabled = true;
 		document.getElementById('ctraddon_pw_alttabstb').disabled = true;
@@ -98,6 +97,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_notabfog').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_notabbg').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_nonavbarbg').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_nonavbarbg1').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_nonavborder').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_nonavtbborder').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_nobookbarbg').style.visibility = 'collapse';
@@ -113,7 +113,6 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_special_info2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_special_font').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'collapse';
-		document.getElementById('ctraddon_coltabsinfo').style.visibility = 'collapse';
 	};
 	
 	//pref e10s tabs
@@ -122,6 +121,9 @@ classicthemerestorerjso.ctr = {
 	document.getElementById('ctraddon_pw_e10stabs').disabled = true;
 	document.getElementById('ctraddon_pw_e10stabs').style.visibility = 'collapse';
 	document.getElementById('ctraddon_pw_e10stabsdescr').style.visibility = 'collapse';
+	
+	//ColorfulTabs info label
+	document.getElementById('ctraddon_coltabsinfo').style.visibility = 'collapse';
 
 	// radio restart label
 	document.getElementById('ctraddon_pw_radiorestart').style.visibility = 'collapse';
@@ -828,6 +830,23 @@ classicthemerestorerjso.ctr = {
 	
 	this.needsBrowserRestart();
 
+  },
+  
+  enableSyncCTRprefs: function() {
+	
+	var preflist = Services.prefs.getChildList("extensions.classicthemerestorer.");
+	
+	try {
+	  for (var i=0; i < preflist.length; i++) {
+		Services.prefs.getBranch("services.sync.prefs.sync.").setBoolPref(preflist[i],'true');
+	  }
+	} catch(e) {}
+  },
+  
+  disableSyncCTRprefs: function() {
+	try {
+	  Services.prefs.getBranch("services.sync.prefs.sync.extensions.classicthemerestorer.").deleteBranch("");
+	} catch(e) {}
   },
 
   /* export CTR settings Text */

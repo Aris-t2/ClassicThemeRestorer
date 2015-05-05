@@ -711,8 +711,12 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "nbcompact":
-			if (branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && classicthemerestorerjs.ctr.osstring!="Darwin"&& branch.getBoolPref("smallnavbut")==false && classicthemerestorerjs.ctr.fxdefaulttheme==true)
+			if (branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && classicthemerestorerjs.ctr.osstring!="Darwin"&& branch.getBoolPref("smallnavbut")==false && classicthemerestorerjs.ctr.fxdefaulttheme==true){
 			  classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
+			  console.log(branch.getCharPref("nav_txt_ico").indexOf('iconstxt'));
+			  if (branch.getCharPref("nav_txt_ico").indexOf('iconstxt')!=-1)
+				branch.setCharPref("nav_txt_ico",'icons');
+			}
 			else classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
 		  break;
 
@@ -968,26 +972,36 @@ classicthemerestorerjs.ctr = {
 				classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt',true);
 				if (branch.getBoolPref("iat_notf_vt"))
 				  classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",true);
+			    if (branch.getBoolPref("nbcompact"))
+				  branch.setBoolPref("nbcompact",false);
 			  break;
 			  case "iconstxt2":
 				classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt2',true);
 				if (branch.getBoolPref("iat_notf_vt"))
 				  classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",true);
+			    if (branch.getBoolPref("nbcompact"))
+				  branch.setBoolPref("nbcompact",false);
 			  break;
 			  case "iconstxt3":
 				classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt3',true);
 				if (branch.getBoolPref("iat_notf_vt"))
 				  classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",true);
+			    if (branch.getBoolPref("nbcompact"))
+				  branch.setBoolPref("nbcompact",false);
 			  break;
 			  case "iconstxt4":
 				classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt4',true);
 				if (branch.getBoolPref("iat_notf_vt"))
 				  classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",true);
+			    if (branch.getBoolPref("nbcompact"))
+				  branch.setBoolPref("nbcompact",false);
 			  break;
 			  case "txtonly":
 				classicthemerestorerjs.ctr.loadUnloadCSS('txtonly',true);
 				if (branch.getBoolPref("iat_notf_vt"))
 				  classicthemerestorerjs.ctr.loadUnloadCSS("to_notf_vt",true);
+			    if (branch.getBoolPref("nbcompact"))
+				  branch.setBoolPref("nbcompact",false);
 			  break;
 			  case "text":
 				classicthemerestorerjs.ctr.setCTRModeAttributes('text');
