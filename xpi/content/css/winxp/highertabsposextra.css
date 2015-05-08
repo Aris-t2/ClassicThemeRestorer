@@ -5,7 +5,7 @@
 	#main-window:not([tabsontop="false"]) #TabsToolbar:not([tabsontop="false"]):not(:-moz-lwtheme) {
 	  margin-top:0px !important;
 	}
-	#main-window:not([tabsontop="false"]) #TabsToolbar:not([tabsontop="false"]):-moz-lwtheme {
+	#main-window[sizemode="normal"]:not([tabsontop="false"]) #TabsToolbar:not([tabsontop="false"]):-moz-lwtheme {
 	  margin-top:2px !important;
 	}
 	#main-window[sizemode="normal"]:not([tabsontop="false"]) #titlebar-placeholder-on-TabsToolbar-for-captions-buttons{

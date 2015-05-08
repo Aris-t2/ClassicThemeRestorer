@@ -36,6 +36,7 @@
 		<preference id="ctraddon_devthemebut"	name="browser.devedition.theme.showCustomizeButton"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_readermode"	name="reader.parse-on-load.enabled"					type="bool"		instantApply="true"/>
 		<preference id="ctraddon_readermode2"	name="browser.readinglist.enabled"					type="bool"		instantApply="true"/>
+		<preference id="ctraddon_pocket"		name="browser.pocket.enabled"						type="bool"		instantApply="true"/>
 		<preference id="ctraddon_nodevtheme"	name="extensions.classicthemerestorer.nodevtheme"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_tabinsertion"	name="browser.tabs.insertRelatedAfterCurrent"		type="bool"		instantApply="true"/>
 		<preference id="ctraddon_e10stabs"		name="browser.tabs.remote.autostart"				type="bool"		instantApply="true"/>
@@ -75,6 +76,7 @@
 		<preference id="ctraddon_backforward"	name="extensions.classicthemerestorer.backforward"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_noconicons"	name="extensions.classicthemerestorer.noconicons"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_alt_newtabp"	name="extensions.classicthemerestorer.alt_newtabp"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_alt_addonsp"	name="extensions.classicthemerestorer.alt_addonsp"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_svgfilters"	name="extensions.classicthemerestorer.svgfilters"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_wincontrols"	name="extensions.classicthemerestorer.wincontrols"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_hideprbutton"	name="extensions.classicthemerestorer.hideprbutton"	type="bool"		instantApply="true"/>
@@ -719,6 +721,7 @@
 		<checkbox label="&Ctr_skipprintpr;"		preference="ctraddon_skipprintpr" id="ctraddon_pw_skipprintpr" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<checkbox label="&Ctr_tbconmenu;"		preference="ctraddon_tbconmenu"	  id="ctraddon_pw_tbconmenu"/>
 		<checkbox label="&Ctr_noresizerxp;"		preference="ctraddon_noresizerxp" id="ctraddon_pw_noresizerxp"/>
+		<checkbox label="&Ctr_alt_addonsp;"		preference="ctraddon_alt_addonsp" id="ctraddon_pw_alt_addonsp"/>
 	  </groupbox>
 
 	</box>
@@ -966,6 +969,13 @@
 		<checkbox label="about:config &gt;&gt; browser.readinglist.enabled" preference="ctraddon_readermode2" id="ctraddon_pw_readermode2"/>
 		<description class="ctraddonsuboption acprefdesc">&Ctr_fx38reader;</description>
 	  </groupbox>
+
+	  <groupbox id="ctraddon_pw_pocketgb">
+		<caption  label="&Ctr_e_pocket;" class="ctraddon_topic"/>
+		<checkbox label="about:config &gt;&gt; browser.pocket.enabled" preference="ctraddon_pocket" id="ctraddon_pw_pocket" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+		<description class="ctraddonsuboption acprefdesc">&Ctr_fx40pocket;</description>
+	  </groupbox>  
+	  
 
 	</box>
 
