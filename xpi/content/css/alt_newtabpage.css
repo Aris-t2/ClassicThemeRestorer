@@ -1,5 +1,5 @@
 @-moz-document url(about:newtab) {
-	
+
 	#newtab-intro-what,
 	#newtab-search-form,
 	#newtab-customize-enhanced,
@@ -10,14 +10,19 @@
 	  display: none !important;
 	}
 	.newtab-cell,
-	.newtab-link{ 
+	.newtab-link,
+	.newtab-thumbnail { 
 	  border-radius: 0px !important;
 	}
 	
-	.newtab-cell {
+	#newtab-window:not([fx40plus="true"]) .newtab-cell {
 	  margin: 20px 10px 20px !important;
 	}
 	
+	#newtab-window[fx40plus="true"] .newtab-cell {
+	  margin: 20px 10px 0px !important;
+	}
+
 	#newtab-customize-button,
 	.newtab-customize,
 	.newtab-control-pin,
@@ -79,8 +84,10 @@
 	}
 	
 	.newtab-control::-moz-focus-inner,
-	#newtab-customize-button::-moz-focus-inner {
-      border: 0;
+	#newtab-customize-button::-moz-focus-inner,
+	.newtab-control,
+	#newtab-customize-button{
+	  border: 0 !important;
 	}
 	
 	#newtab-customize-button {
@@ -90,6 +97,7 @@
 	  opacity: 1.0;
 	}
 	
+	#newtab-margin-top,
 	#newtab-margin-bottom {
 	  -moz-box-flex: 1 !important;
 	}
@@ -101,4 +109,9 @@
 	  width: 18px !important;
    }
 
+}
+
+/* remove overlay on top of new tab page */
+#newtab-window #newtab-customize-overlay {
+  display: none !important;
 }
