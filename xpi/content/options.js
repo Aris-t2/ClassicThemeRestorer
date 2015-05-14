@@ -839,8 +839,20 @@ classicthemerestorerjso.ctr = {
 	
 	var preflist = Services.prefs.getChildList("extensions.classicthemerestorer.");
 	
+		// Exclude all preferences we don't want to synced.
+		let blacklist = [
+		  "extensions.classicthemerestorer.pref_actindx",
+		  "extensions.classicthemerestorer.pref_actindx2",
+		  "extensions.classicthemerestorer.ctrreset"
+		];
+	
 	try {
 	  for (var i=0; i < preflist.length; i++) {
+		var index = preflist.indexOf(blacklist[i]);
+
+		if (index > -1) {
+		  preflist.splice(index, 1);
+		}
 		Services.prefs.getBranch("services.sync.prefs.sync.").setBoolPref(preflist[i],'true');
 	  }
 	} catch(e) {}
