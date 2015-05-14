@@ -178,9 +178,9 @@
 	  -moz-image-region: rect(0px, 256px, 32px, 224px) !important;
 	}
 
-	#nav-bar #pocket-button[cui-areatype="toolbar"] {
-	  list-style-image: url("chrome://browser/skin/menuPanel.png") !important;
-	  -moz-image-region: rect(0px, 992px, 32px, 960px) !important;
+	#nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
+	  -moz-image-region: rect(0px, 286px, 32px, 256px) !important;
 	}
 
 	/* fixes bug with tabview buttons wrong panel icon */
