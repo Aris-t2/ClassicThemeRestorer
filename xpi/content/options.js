@@ -19,6 +19,12 @@ classicthemerestorerjso.ctr = {
   needsRestart: 	false,
   ctrVersioninWin:  true,
   tmp_tu_active:	false,
+  // Exclude all preferences we don't want to synced or export/import.
+  blacklist: [
+	"extensions.classicthemerestorer.pref_actindx",
+	"extensions.classicthemerestorer.pref_actindx2",
+	"extensions.classicthemerestorer.ctrreset"
+	],
 
   initprefwindow: function() {
   
@@ -838,9 +844,14 @@ classicthemerestorerjso.ctr = {
   enableSyncCTRprefs: function() {
 	
 	var preflist = Services.prefs.getChildList("extensions.classicthemerestorer.");
-	
+
 	try {
 	  for (var i=0; i < preflist.length; i++) {
+		var index = preflist.indexOf(this.blacklist[i]);
+
+		if (index > -1) {
+		  preflist.splice(index, 1);
+		}
 		Services.prefs.getBranch("services.sync.prefs.sync.").setBoolPref(preflist[i],'true');
 	  }
 	} catch(e) {}
@@ -862,13 +873,6 @@ classicthemerestorerjso.ctr = {
 		 
 	// Add filter header
 	preferenceArray.push("CTR_Preferences__DO_NOT_EDIT__'='->booleans__':'->strings__'~'->integers");	
-
-		// Exclude all preferences we don't want to export/import.
-		let blacklist = [
-		  "extensions.classicthemerestorer.pref_actindx",
-		  "extensions.classicthemerestorer.pref_actindx2",
-		  "extensions.classicthemerestorer.ctrreset"
-		];
 
 	// Filter preference type and return its value.
 	function prefValue(pref){
@@ -896,7 +900,7 @@ classicthemerestorerjso.ctr = {
 
 	  try {
 		// Run Blacklist filter. Exclude all preferences we don't want to export/import.
-		var index = preflist.indexOf(blacklist[i]);
+		var index = preflist.indexOf(this.blacklist[i]);
 
 		if (index > -1) {
 		  preflist.splice(index, 1);
@@ -1110,13 +1114,6 @@ classicthemerestorerjso.ctr = {
 	  value: []
 	};
 
-	// Exclude all preferences we don't want to export/import.
-	let blacklist = [
-	  "extensions.classicthemerestorer.pref_actindx",
-	  "extensions.classicthemerestorer.pref_actindx2",
-	  "extensions.classicthemerestorer.ctrreset"
-	];
-
 	function prefValue(pref){
 
 	  switch (Services.prefs.getPrefType(pref)){
@@ -1131,7 +1128,7 @@ classicthemerestorerjso.ctr = {
 
 	  try {
 		// 'Blacklist' filter. Exclude all preferences we don't want to export/import.
-		var index = preflist.indexOf(blacklist[i]);
+		var index = preflist.indexOf(this.blacklist[i]);
 
 		if (index > -1) {
 		  preflist.splice(index, 1);
