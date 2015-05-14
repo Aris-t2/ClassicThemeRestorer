@@ -299,13 +299,12 @@ classicthemerestorerjso.ctr = {
 	}
 	if (this.appversion < 38) {
 	  document.getElementById('ctraddon_pw_readermodegb').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_pocketgb').style.visibility = 'collapse';
 	}
 	if (this.appversion > 37) {
 	  document.getElementById('ctraddon_pw_bmarkoinpw').style.visibility = 'collapse';
 	}
-	if (this.appversion < 40) {
-	  document.getElementById('ctraddon_pw_pocketgb').style.visibility = 'collapse';
-	}
+
 
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get
@@ -844,7 +843,7 @@ classicthemerestorerjso.ctr = {
   enableSyncCTRprefs: function() {
 	
 	var preflist = Services.prefs.getChildList("extensions.classicthemerestorer.");
-
+	
 	try {
 	  for (var i=0; i < preflist.length; i++) {
 		var index = preflist.indexOf(this.blacklist[i]);
@@ -1113,6 +1112,7 @@ classicthemerestorerjso.ctr = {
 	  preference: [],
 	  value: []
 	};
+
 
 	function prefValue(pref){
 
