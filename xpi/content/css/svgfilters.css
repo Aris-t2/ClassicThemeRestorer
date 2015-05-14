@@ -20,7 +20,7 @@
 	}
 
 	/*Red*/
-	#pocket-button .toolbarbutton-icon,
+	#pocket-button:not([open]) .toolbarbutton-icon,
 	#PanelUI-quit:not(:hover) .toolbarbutton-icon,
 	#web-apps-button .toolbarbutton-icon,
 	#e10s-button .toolbarbutton-icon,
