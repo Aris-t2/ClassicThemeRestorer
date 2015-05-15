@@ -251,7 +251,12 @@ classicthemerestorerjs.ctr = {
 		  case "selectedThemeID":
 			try{
 			  if (branch.getCharPref("selectedThemeID")=='firefox-devedition@mozilla.org') {
-			  
+			    
+				try{
+				  if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled'))
+					Services.prefs.getBranch("browser.devedition.theme.").setBoolPref('enabled',false)
+				} catch(e){}
+				
 				classicthemerestorerjs.ctr.fxdevelopertheme=true;
 			  
 				if (classicthemerestorerjs.ctr.fxdefaulttheme){
@@ -274,7 +279,11 @@ classicthemerestorerjs.ctr = {
 				  classicthemerestorerjs.ctr.prefs.setBoolPref('aerocolors',false);
 			
 				classicthemerestorerjs.ctr.devthemeinterval = setInterval(function(){
-			  
+				  try{
+					if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled'))
+					  Services.prefs.getBranch("browser.devedition.theme.").setBoolPref('enabled',false)
+				  } catch(e){}
+				  
 				  let selectedThemeID = null;
 				  try {
 					selectedThemeID = Services.prefs.getBranch("lightweightThemes.").getCharPref("selectedThemeID");

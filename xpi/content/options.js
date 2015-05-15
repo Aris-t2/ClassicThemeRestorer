@@ -41,6 +41,12 @@ classicthemerestorerjso.ctr = {
 		  }
 	} catch(e){}
 	
+	try{
+	  if (this.appversion >= 40)
+		if(Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org')
+		  this.fxdefaulttheme=false;
+	} catch(e){}
+	
 	// restore last selected categories/tabs
 	document.getElementById("CtrRadioGroup").selectedIndex = this.prefs.getIntPref('pref_actindx');
 	document.getElementById("ctraddon_tabcolor_tabs").selectedIndex = this.prefs.getIntPref('pref_actindx2');
