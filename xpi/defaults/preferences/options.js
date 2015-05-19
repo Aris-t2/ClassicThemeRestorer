@@ -142,6 +142,7 @@ pref("extensions.classicthemerestorer.puictrbutton",false);
 pref("extensions.classicthemerestorer.cuibuttons",true);
 pref("extensions.classicthemerestorer.bmarkoinpw",false);
 pref("extensions.classicthemerestorer.nodevtheme",false);
+pref("extensions.classicthemerestorer.nodevtheme2",false);
 pref("extensions.classicthemerestorer.pref_actindx",3);
 pref("extensions.classicthemerestorer.pref_actindx2",0);
 

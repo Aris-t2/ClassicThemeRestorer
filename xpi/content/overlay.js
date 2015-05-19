@@ -161,6 +161,9 @@ classicthemerestorerjs.ctr = {
 	// skip print buttons print preview
 	this.CTRextraSkipPrintPreview();
 	
+	// prevent developer theme from being enabled in Fx40+
+	this.PreventDevThemeEnabling();
+
 	// CTR Preferences listener
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get
@@ -250,8 +253,10 @@ classicthemerestorerjs.ctr = {
 
 		  case "selectedThemeID":
 			try{
-			  if (branch.getCharPref("selectedThemeID")=='firefox-devedition@mozilla.org') {
-			    
+			  if (branch.getCharPref("selectedThemeID")=='firefox-devedition@mozilla.org' 
+				&& classicthemerestorerjs.ctr.prefs.getBoolPref("nodevtheme2")==false) {
+				
+				
 				try{
 				  if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled'))
 					Services.prefs.getBranch("browser.devedition.theme.").setBoolPref('enabled',false)
@@ -262,9 +267,6 @@ classicthemerestorerjs.ctr = {
 				if (classicthemerestorerjs.ctr.fxdefaulttheme){
 				  try{
 					document.getElementById("main-window").setAttribute('developertheme',true);
-					// remove ugly white color on titlebar and tabs toolbar (why its even there?)
-					if (classicthemerestorerjs.ctr.osstring=="WINNT")
-					  document.getElementById("main-window").setAttribute('style','');
 				  } catch(e){}
 				}
 
@@ -279,6 +281,7 @@ classicthemerestorerjs.ctr = {
 				  classicthemerestorerjs.ctr.prefs.setBoolPref('aerocolors',false);
 			
 				classicthemerestorerjs.ctr.devthemeinterval = setInterval(function(){
+				
 				  try{
 					if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled'))
 					  Services.prefs.getBranch("browser.devedition.theme.").setBoolPref('enabled',false)
@@ -291,9 +294,6 @@ classicthemerestorerjs.ctr = {
 				  
 				  if (selectedThemeID=='firefox-devedition@mozilla.org') {
 					document.getElementById("main-window").setAttribute('developertheme',true);
-					// remove ugly white color on titlebar and tabs toolbar (why its even there?)
-					if (classicthemerestorerjs.ctr.osstring=="WINNT")
-					  document.getElementById("main-window").setAttribute('style','');
 				  } else {
 					document.getElementById("main-window").setAttribute('developertheme',false);
 					//this is required to stop interval once it is not needed any more
@@ -310,8 +310,9 @@ classicthemerestorerjs.ctr = {
 				  }
 				  
 				},1000);
-
+				
 			  }
+
 			
 			} catch(e){}
 
@@ -1900,7 +1901,7 @@ classicthemerestorerjs.ctr = {
 		ctrSettingsListener.unregister();
 		ctrSettingsListener_forCTB.unregister();
 		ctrSettingsListener_forDevtheme.unregister();
-		ctrSettingsListener_forDevtheme2.unregister();
+		//ctrSettingsListener_forDevtheme2.unregister();
 		//ctrSettingsListener_forSetSan.unregister();
 		
 		window.removeEventListener("unload", unregisterCTRListeners, false);
@@ -2401,6 +2402,22 @@ classicthemerestorerjs.ctr = {
 		}
 	  } catch(e){}
 	},1000);
+  },
+  
+  // prevent developer theme from being enabled in Fx40+
+  PreventDevThemeEnabling: function(){
+	if(classicthemerestorerjs.ctr.prefs.getBoolPref("nodevtheme2") && classicthemerestorerjs.ctr.appversion >= 40) {
+
+	  try {
+		if (Services.prefs.getBranch("lightweightThemes.").getCharPref("selectedThemeID")=='firefox-devedition@mozilla.org') {
+		  Components.utils.import("resource://gre/modules/LightweightThemeManager.jsm");
+		  LightweightThemeManager.themeChanged(null);
+		  Services.prefs.getBranch("lightweightThemes.").deleteBranch("selectedThemeID");
+		}
+	  } catch(e) {}
+	  
+	  classicthemerestorerjs.ctr.loadUnloadCSS("nodevtheme2",true);
+	}
   },
   
   updateTabWidth: function() {
@@ -2907,6 +2924,8 @@ classicthemerestorerjs.ctr = {
 		
 		case "cuibuttons":			manageCSS("cuibuttons.css");			break;
 		case "bmarkoinpw":			manageCSS("ctraddon_bmark_oinpw.css");	break;
+		
+		case "nodevtheme2":			manageCSS("no_devtheme.css");			break;
 		
 		case "spaces_extra": 		manageCSS("spaces_extra.css");			break;
 		

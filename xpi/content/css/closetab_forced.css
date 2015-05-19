@@ -6,4 +6,9 @@
 	  visibility: visible !important;
 	  display: block !important;
 	}
+	
+	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:not([pinned]):not([protected])[faviconized="true"] .tab-close-button {
+	  visibility: collapse !important;
+	  display: none !important;
+	}
 }

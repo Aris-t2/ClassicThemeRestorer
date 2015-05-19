@@ -184,10 +184,17 @@
 	}
 	
 	/*developer theme additions */
-	#main-window[sizemode="maximized"][developertheme="true"]:not([tabsontop="false"]) #tabbrowser-tabs,
-	#main-window[sizemode="maximized"][developertheme="true"]:not([tabsontop="false"]) #TabsToolbar,
+	#main-window[sizemode="maximized"][developertheme="true"] #TabsToolbar,
+	#main-window[sizemode="maximized"][developertheme="true"] #tabbrowser-tabs,
 	#main-window[sizemode="maximized"][developertheme="true"] #browser-panel {
 	  background: unset !important;
+	}
+
+	#main-window[sizemode="maximized"][developertheme="true"][devtoolstheme="dark"]:not([tabsontop="false"]){
+	  background: #1c2126 !important;
+	}
+	#main-window[sizemode="maximized"][developertheme="true"][devtoolstheme="light"]:not([tabsontop="false"]) {
+	  background: #e3e4e6 !important;
 	}
 
 }

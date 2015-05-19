@@ -38,6 +38,7 @@
 		<preference id="ctraddon_readermode2"	name="browser.readinglist.enabled"					type="bool"		instantApply="true"/>
 		<preference id="ctraddon_pocket"		name="browser.pocket.enabled"						type="bool"		instantApply="true"/>
 		<preference id="ctraddon_nodevtheme"	name="extensions.classicthemerestorer.nodevtheme"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_nodevtheme2"	name="extensions.classicthemerestorer.nodevtheme2"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_tabinsertion"	name="browser.tabs.insertRelatedAfterCurrent"		type="bool"		instantApply="true"/>
 		<preference id="ctraddon_e10stabs"		name="browser.tabs.remote.autostart"				type="bool"		instantApply="true"/>
 
@@ -952,7 +953,8 @@
 		<checkbox label="about:config &gt;&gt; browser.devedition.theme.enabled" preference="ctraddon_devtheme" oncommand="classicthemerestorerjso.ctr.resetPrefsForDevTheme()" id="ctraddon_pw_devtheme"/>
 		<checkbox label="about:config &gt;&gt; browser.devedition.theme.showCustomizeButton" preference="ctraddon_devthemebut" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_devthemeb"/>
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_devthemedescr">&Ctr_fx35devtheme;</description>
-		<checkbox label="&Ctr_nodevtheme;"		preference="ctraddon_nodevtheme" id="ctraddon_nodevtheme" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwDisableDevThemePrefsExtra(true);} else {classicthemerestorerjso.ctr.ctrpwDisableDevThemePrefsExtra(false);} classicthemerestorerjso.ctr.resetPrefsForDevTheme2();"/>
+		<checkbox label="&Ctr_nodevtheme;"		preference="ctraddon_nodevtheme" id="ctraddon_pw_nodevtheme1" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwDisableDevThemePrefsExtra(true);} else {classicthemerestorerjso.ctr.ctrpwDisableDevThemePrefsExtra(false);} classicthemerestorerjso.ctr.resetPrefsForDevTheme2();"/>
+		<checkbox label="&Ctr_nodevtheme;"		preference="ctraddon_nodevtheme2" id="ctraddon_pw_nodevtheme2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 	  </groupbox>
 
 	  <groupbox id="ctraddon_pw_oldprefsgb">

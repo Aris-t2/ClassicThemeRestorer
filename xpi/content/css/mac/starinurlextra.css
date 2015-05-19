@@ -43,6 +43,7 @@
 		  list-style-image: url("chrome://classic_theme_restorer/content/images/star-icons@2x.png");
 		  -moz-image-region: rect(0, 32px, 32px, 0);
 		  opacity: 1.0 !important;
+		  max-width: 18px !important;
 		}
 		#urlbar-icons #bookmarks-menu-button:hover .toolbarbutton-icon {
 		  list-style-image: url("chrome://classic_theme_restorer/content/images/star-icons@2x.png");
