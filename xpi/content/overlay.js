@@ -2416,6 +2416,12 @@ classicthemerestorerjs.ctr = {
 		}
 	  } catch(e) {}
 	  
+	  //temporal fix for Aurora/DevEdition (this pref should not even exist anymore)
+	  try{
+		if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled'))
+		  Services.prefs.getBranch("browser.devedition.theme.").setBoolPref('enabled',false)
+	  } catch(e){}
+	  
 	  classicthemerestorerjs.ctr.loadUnloadCSS("nodevtheme2",true);
 	}
   },

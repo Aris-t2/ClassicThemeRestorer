@@ -205,6 +205,12 @@
 	  padding-left: 8px !important;
 	  padding-right: 8px !important;
 	}
+
+	/*Faviconise tab add-on */
+	#tabbrowser-tabs .tabbrowser-tab[faviconized="true"] .tab-icon-image{
+	  -moz-margin-start:-12px !important;
+	  -moz-margin-end:-14px !important;
+	}
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {

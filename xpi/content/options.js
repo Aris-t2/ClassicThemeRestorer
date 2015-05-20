@@ -537,18 +537,33 @@ classicthemerestorerjso.ctr = {
   
   hideThemeInfoForTabs: function(){
 	setTimeout(function(){
-		try {
-		  if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
-			document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'visible';
-			document.getElementById('ctraddon_pw_tabmenulist').disabled = true;
-		  } else if(classicthemerestorerjso.ctr.fxdefaulttheme) {
-			  document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'collapse';
-			  document.getElementById('ctraddon_pw_tabmenulist').disabled = false;
+		//try {
+		  if(classicthemerestorerjso.ctr.appversion < 40) {
+			try {
+			  if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
+				document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'visible';
+				document.getElementById('ctraddon_pw_tabmenulist').disabled = true;
+			  } else if(classicthemerestorerjso.ctr.fxdefaulttheme) {
+				document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'collapse';
+				document.getElementById('ctraddon_pw_tabmenulist').disabled = false;
+			  }
+			} catch(e) {}
+		  } else {
+			  try {
+				if(Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org'){
+				  document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'visible';
+				  document.getElementById('ctraddon_pw_tabmenulist').disabled = true;
+				} else if(classicthemerestorerjso.ctr.fxdefaulttheme) {
+				  document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'collapse';
+				  document.getElementById('ctraddon_pw_tabmenulist').disabled = false;
+				}
+			  } catch(e) {}
+			  
 		  }
-		} catch(e) {}
+		//} catch(e) {}
 	},100);
   },
-  
+
   unsetTabColorsAndMore: function() {
 	this.prefs.setBoolPref('tabcolor_def',false);
 	this.prefs.setBoolPref('tabcolor_act',false);
