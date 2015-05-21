@@ -410,14 +410,9 @@
 					  oncommand="gSyncUI.openSetup()"
 					  class="menuitem-iconic"/>
 			<menuitem id="appmenu-quit"
-					  class="menuitem-iconic ctraddon_windowsonly ctraddon_fx37item"
-					  label="&quitApplicationCmdWin.label;"
-					  accesskey="&quitApplicationCmdWin.accesskey;"
-					  command="cmd_quitApplication"/>
-			<menuitem id="appmenu-quit"
-					  class="menuitem-iconic ctraddon_windowsonly ctraddon_fx38item"
-					  label="&quitApplicationCmdWin2.label;"
-					  accesskey="&quitApplicationCmdWin2.accesskey;"
+					  class="menuitem-iconic ctraddon_windowsonly"
+					  label="&quitApplicationCmdWin.label;&quitApplicationCmdWin2.label;"
+					  accesskey="&quitApplicationCmdWin.accesskey;&quitApplicationCmdWin2.accesskey;"
 					  command="cmd_quitApplication"/>
 			<menuitem id="appmenu-quit"
 					  class="menuitem-iconic ctraddon_linuxonly"
@@ -641,41 +636,27 @@
 								{openHelpLink('firefox-help');document.getElementById('appmenu-popup').hidePopup();}"
 					class="menu-iconic">
 			  <menupopup id="appmenu_helpMenupopup" onpopupshowing="buildHelpMenu();">
-				<menuitem id="appmenu_openHelp" class="ctraddon_fx37item"
+				<menuitem id="appmenu_openHelp"
 						  oncommand="openHelpLink('firefox-help')"
 						  onclick="checkForMiddleClick(this, event);"
-						  label="&productHelp.label;"
-						  accesskey="&productHelp.accesskey;"/>
-				<menuitem id="appmenu_openHelp"  class="ctraddon_fx38item"
-						  oncommand="openHelpLink('firefox-help')"
-						  onclick="checkForMiddleClick(this, event);"
-						  label="&productHelp2.label;"
-						  accesskey="&productHelp2.accesskey;"/>
+						  label="&productHelp.label;&productHelp2.label;"
+						  accesskey="&productHelp.accesskey;&productHelp2.accesskey;"/>
 				<menuitem id="appmenu_gettingStarted"
 						  label="&appMenuGettingStarted.label;"
 						  oncommand="gBrowser.loadOneTab('https://www.mozilla.org/firefox/central/', {inBackground: false});"
 						  onclick="checkForMiddleClick(this, event);"/>
-				<menuitem id="appmenu_openTour" class="ctraddon_fx37item"
+				<menuitem id="appmenu_openTour"
 						  oncommand="openTourPage();"
-						  label="&helpShowTour.label;"
-						  accesskey="&helpShowTour.accesskey;"/>
-				<menuitem id="appmenu_openTour" class="ctraddon_fx38item"
-						  oncommand="openTourPage();"
-						  label="&helpShowTour2.label;"
-						  accesskey="&helpShowTour2.accesskey;"/>
+						  label="&helpShowTour.label;&helpShowTour2.label;"
+						  accesskey="&helpShowTour.accesskey;&helpShowTour2.accesskey;"/>
 				<menuitem id="appmenu_keyboardShortcuts"
 						  oncommand="openHelpLink('keyboard-shortcuts')"
 						  onclick="checkForMiddleClick(this, event);"
 						  label="&helpKeyboardShortcuts.label;"
 						  accesskey="&helpKeyboardShortcuts.accesskey;"/>
-				<menuitem id="appmenu_healthReport" class="ctraddon_fx37item"
-						  label="&healthReport.label;"
-						  accesskey="&healthReport.accesskey;"
-						  oncommand="openHealthReport()"
-						  onclick="checkForMiddleClick(this, event);"/>
-				<menuitem id="appmenu_healthReport" class="ctraddon_fx38item"
-						  label="&healthReport2.label;"
-						  accesskey="&healthReport2.accesskey;"
+				<menuitem id="appmenu_healthReport"
+						  label="&healthReport.label;&healthReport2.label;"
+						  accesskey="&healthReport.accesskey;&healthReport2.accesskey;"
 						  oncommand="openHealthReport()"
 						  onclick="checkForMiddleClick(this, event);"/>
 				<menuitem id="appmenu_troubleshootingInfo"
@@ -694,13 +675,9 @@
 						  label="&helpSafeMode.label;"
 						  oncommand="safeModeRestart();"/>
 				<menuseparator/>
-				<menuitem id="appmenu_about" class="ctraddon_fx37item"
-						  accesskey="&aboutProduct.accesskey;"
-						  label="&aboutProduct.label;"
-						  oncommand="openAboutDialog();"/>
-				<menuitem id="appmenu_about" class="ctraddon_fx38item"
-						  accesskey="&aboutProduct2.accesskey;"
-						  label="&aboutProduct2.label;"
+				<menuitem id="appmenu_about"
+						  accesskey="&aboutProduct.accesskey;&aboutProduct2.accesskey;"
+						  label="&aboutProduct.label;&aboutProduct2.label;"
 						  oncommand="openAboutDialog();"/>
 			  </menupopup>
 			</menu>

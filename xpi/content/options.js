@@ -1081,7 +1081,7 @@ classicthemerestorerjso.ctr = {
 		if(parjson[i].preference.match(/extensions.classicthemerestorer./g)){
 			//To import previously generated preference export.
 			setPrefValue(parjson[i].preference, parjson[i].value);
-		}else{
+		} else{
 			setPrefValue('extensions.classicthemerestorer.' + parjson[i].preference, parjson[i].value);
 		}
 
