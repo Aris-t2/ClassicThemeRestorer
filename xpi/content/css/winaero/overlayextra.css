@@ -351,13 +351,6 @@
 	#main-window[defaultfxtheme="true"] #ctraddon_urlextrabar:not(:-moz-lwtheme) {
 	  border-bottom: 1px solid rgba(0,0,0,.15) !important;
 	}
-	
-	/* hide unsuppurted items from appmenu */
-	#main-window:not([fx38plus="true"]) .ctraddon_fx38item,
-	#main-window[fx38plus="true"] .ctraddon_fx37item{
-	  visibility: collapse !important;
-	  display: none !important;
-	}
 
 }
 

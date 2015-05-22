@@ -3,21 +3,12 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	.tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([selected=true]),
-	.tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]),
 	.tabs-newtab-button:not(:-moz-lwtheme) {
 	  background-position: left bottom, 30px bottom, right bottom;
 	  background-repeat: no-repeat;
 	  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;
 	}
-
-	.tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([selected=true]),
-	.tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]){
-	  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start.png),
-						url(chrome://browser/skin/tabbrowser/tab-background-middle.png),
-						url(chrome://browser/skin/tabbrowser/tab-background-end.png) !important;
-	}
-
+	
 	.tabs-newtab-button:not(:-moz-lwtheme){
 	  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start.png),
 						url(chrome://browser/skin/tabbrowser/tab-background-middle.png),
@@ -29,33 +20,83 @@
 						url(chrome://classic_theme_restorer/content/images/ntab-hov-middle.png),
 						url(chrome://classic_theme_restorer/content/images/ntab-hov-end.png) !important;
 	}
-
 	
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start:-moz-locale-dir(ltr),
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl),
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end:-moz-locale-dir(rtl) {
-	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;
-	}
-	
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end:-moz-locale-dir(ltr),
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl),
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start:-moz-locale-dir(rtl)	{
-	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;
-	}
-
 	#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
 	.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
 	#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
 	  background-image: none !important;
 	}
+	
+	/* tab appearance from Fx 29-39 */
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([selected=true]),
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]) {
+	  background-position: left bottom, 30px bottom, right bottom;
+	  background-repeat: no-repeat;
+	  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;
+	}
+
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([selected=true]),
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]){
+	  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start.png),
+						url(chrome://browser/skin/tabbrowser/tab-background-middle.png),
+						url(chrome://browser/skin/tabbrowser/tab-background-end.png) !important;
+	}
+
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start:-moz-locale-dir(ltr),
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl),
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end:-moz-locale-dir(rtl) {
+	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;
+	}
+	
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end:-moz-locale-dir(ltr),
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl),
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start:-moz-locale-dir(rtl)	{
+	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;
+	}
 
 	/* remove ridiculous clipping */
-	#main-window[tabsintitlebar][sizemode="maximized"] .tab-background-middle:not([selected=true]),
-	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive], :not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
+	#main-window:not([fx40plus="true"])[tabsintitlebar][sizemode="maximized"] .tab-background-middle:not([selected=true]),
+	#main-window:not([fx40plus="true"])[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive], :not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
 	  clip-path: none !important;
 	}
+	
+	/* tab appearance from Fx 40+ */
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([visuallyselected=true]),
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([visuallyselected=true]) {
+	  background-position: left bottom, 30px bottom, right bottom;
+	  background-repeat: no-repeat;
+	  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;
+	}
+
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([visuallyselected=true]),
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([visuallyselected=true]){
+	  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start.png),
+						url(chrome://browser/skin/tabbrowser/tab-background-middle.png),
+						url(chrome://browser/skin/tabbrowser/tab-background-end.png) !important;
+	}
+
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):hover .tab-background-start:-moz-locale-dir(ltr),
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl),
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):hover .tab-background-end:-moz-locale-dir(rtl) {
+	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;
+	}
+	
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):hover .tab-background-end:-moz-locale-dir(ltr),
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl),
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):hover .tab-background-start:-moz-locale-dir(rtl)	{
+	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;
+	}
+
+	/* remove ridiculous clipping */
+	#main-window[fx40plus="true"][tabsintitlebar][sizemode="maximized"] .tab-background-middle:not([visuallyselected=true]),
+	#main-window[fx40plus="true"][tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive], :not([autohide])) + #TabsToolbar .tab-background-middle:not([visuallyselected=true]) {
+	  clip-path: none !important;
+	}
+	
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {

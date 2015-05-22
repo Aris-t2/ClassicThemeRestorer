@@ -204,13 +204,6 @@
      -moz-box-align: center !important;
     }
 	
-	/* hide unsuppurted items from appmenu */
-	#main-window:not([fx38plus="true"]) .ctraddon_fx38item,
-	#main-window[fx38plus="true"] .ctraddon_fx37item{
-	  visibility: collapse !important;
-	  display: none !important;
-	}
-
 }
 
 .ctraddon_nonwindows,
