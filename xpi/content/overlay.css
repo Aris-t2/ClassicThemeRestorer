@@ -647,6 +647,17 @@
 	  text-align:center;
 	  background: yellow;
 	}
+
+	.acprefdesc {
+	  font-size:95%;
+	}
+	
+	@media not all and (-moz-windows-classic) {
+	  #ctraddon_pw_tbsep_winc,
+	  #ctraddon_pw_hidetbwote_winc {
+		visibility: collapse !important;
+	  }
+	}
 	
 	/* additional icons for some preference*/
 	
@@ -663,144 +674,148 @@
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-dark.png");
 	}
 	
+	/* -mox-padding-start is useless in this case, because Firefox does not allow something like 
+	   #itemid:-moz-locale-dir(rtl) for background-position on preference windows anyway.
+	   At least 'padding-left' does not create an empty space in front of ootion labels on rtl locales
+	*/
+	
 	#ctraddon_pw_tab_emptyfavicon label,
 	#ctraddon_pw_tab_noemptypticon label {
 	  background:url('chrome://classic_theme_restorer/content/images/default_dot_favicon.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	  min-height:16px !important;
 	}
 	
 	#ctraddon_pw_closealt label{
 	  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/close_alt.png'),
 				  0, 16, 16, 0) no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	  min-height:16px !important;
 	}
 	
 	#ctraddon_alt_abicons label,
 	#ctraddon_alt_abicons2 label {
 	  background:url('chrome://classic_theme_restorer/content/images/appbutton-dark.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	  min-height:16px !important;
 	}
 	
 	#ctraddon_pw_backforward label{
 	  background:url('chrome://classic_theme_restorer/content/images/back-forward.png') no-repeat left !important;
-	  -moz-padding-start:36px !important;
+	  padding-left:36px !important;
 	  min-height:16px !important;
 	}
 	
 	#ctraddon_pw_hideprivmask label {
 	  background:url('chrome://classic_theme_restorer/content/images/appmenu_private.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	  min-height:16px !important;
 	}
 
 	#ctraddon_pw_stopreload label {
 	  background:url('chrome://classic_theme_restorer/content/images/stop_mac.png') no-repeat left,
 				 url('chrome://classic_theme_restorer/content/images/reload_mac.png') no-repeat 4% 50% !important;
-	  -moz-padding-start:36px !important;
+	  padding-left:36px !important;
 	  min-height:16px !important;
 	}
 	
 	#ctraddon_wincontrols label{
 	  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/windowControls.png'),
 					16, 49, 32, 0) no-repeat left !important;
-	  -moz-padding-start:52px !important;
+	  padding-left:52px !important;
 	  min-height:16px !important;
 	}
 	
 	#ctraddon_pw_emptyfavicon2 label {
 	  background:url('chrome://classic_theme_restorer/content/images/default_favicon.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	  min-height:16px !important;
 	}
 
 	#ctraddon_pw_activitythrobber label {
 	  background:url('chrome://classic_theme_restorer/content/images/throbber_notloading.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	  min-height:16px !important;
 	}
 	
 	#ctraddon_pw_hideurelstop label{
 	  background:url('chrome://classic_theme_restorer/content/images/stop_mac.png') no-repeat left,
 				 url('chrome://classic_theme_restorer/content/images/reload_mac.png') no-repeat 4% 50% !important;
-	  -moz-padding-start:36px !important;
+	  padding-left:36px !important;
 	  min-height:16px !important;
 	}
 
 	#ctraddon_pw_urlbardropm label{
 	  background:url('chrome://classic_theme_restorer/content/images/pw_urlbar_dropmarker.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	}
 	#ctraddon_pw_urlbarpblocked label{
 	  background:url('chrome://classic_theme_restorer/content/images/pw_urlbar_popup_blocked.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	  min-height:16px !important;
 	}
 
 	#ctraddon_pw_oldsearch label {
 	  background:url('chrome://classic_theme_restorer/content/images/newsearch.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	  min-height:16px !important;
 	}
 
 	#ctraddon_pw_loopcall label {
 	  background:url('chrome://classic_theme_restorer/content/images/loopcall.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	  min-height:16px !important;
 	}
 
 	#ctraddon_pw_oldprefs label {
 	  background:url('chrome://classic_theme_restorer/content/images/prefs_incontent.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	  min-height:16px !important;
 	}
 	
 	#ctraddon_pw_alt_newtabp label {
 	  background: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_controls.png), 0, 160, 16, 144) no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	  min-height:16px !important;
 	}
 	
 	#ctraddon_pw_bmbutpanelm label,
 	#ctraddon_pw_bmbutnotext label {
 	  background:url('chrome://classic_theme_restorer/content/images/bookmarks.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	  min-height:16px !important;
 	}
 
 	#ctraddon_pw_skipprintpr label {
 	  background:url('chrome://classic_theme_restorer/content/images/appmenu_print.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	  min-height:16px !important;
 	}
 
 	#ctraddon_pw_noresizerxp label {
 	  background:url('chrome://classic_theme_restorer/content/images/resizer.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	  min-height:16px !important;
 	}
 	
 	#ctraddon_pw_readermode label,
 	#ctraddon_pw_readermode2 label {
 	  background:url('chrome://classic_theme_restorer/content/images/reader-mode.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	  min-height:16px !important;
 	}
 	
 	#ctraddon_pw_pocket label {
 	  background:url('chrome://classic_theme_restorer/content/images/pocket.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	  min-height:16px !important;
 	}
-	
 	
 	/* Padlock icons */
 	#ctraddon_pw_padlock_default label{
 	  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/padlock_default1.png'),
 				  0, 16, 16, 0) no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	}
 	#ctraddon_padlock_list[value="padlock_default"] {
 	 list-style-image:url('chrome://classic_theme_restorer/content/images/padlock_default1.png');
@@ -808,48 +823,36 @@
 	}
 	#ctraddon_pw_padlock_classic label{
 	  background:url('chrome://classic_theme_restorer/content/images/padlock_classic.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	}
 	#ctraddon_padlock_list[value="padlock_classic"] {
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/padlock_classic.png');
 	}
 	#ctraddon_pw_padlock_modern label{
 	  background:url('chrome://classic_theme_restorer/content/images/padlock_modern.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	}
 	#ctraddon_padlock_list[value="padlock_modern"] {
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/padlock_modern.png');
 	}
 	#ctraddon_pw_padlock_none label{
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	}
 
 	/**/
 	#ctraddon_pw_throbberalt label{
 	  background:url('chrome://classic_theme_restorer/content/images/throbber-loading-alt.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	}
-	
-	/**/
-	.acprefdesc {
-	  font-size:95%;
-	}
-	
+
 	/*CTR icons*/
 	#ctraddon_pw_toolsitem label,
 	#ctraddon_pw_appmenuitem label,
 	#ctraddon_pw_contextitem label,
 	#ctraddon_pw_puictrbutton label{
 	  background:url('chrome://classic_theme_restorer/content/images/appmenu_ctr.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
+	  padding-left:20px !important;
 	  min-height:18px !important;
-	}
-	
-	@media not all and (-moz-windows-classic) {
-	  #ctraddon_pw_tbsep_winc,
-	  #ctraddon_pw_hidetbwote_winc {
-		visibility: collapse !important;
-	  }
 	}
 	
 }

@@ -42,6 +42,11 @@
 	  border-bottom: 1px solid hsla(209,67%,12%,0.25) !important;
 	}
 	
+	/* add missing line for Fx38+ */
+	#main-window[defaultfxtheme="true"][fx38plus="true"][tabsontop="false"] #TabsToolbar:-moz-lwtheme {
+	  border-bottom: 1px solid hsla(209,67%,12%,0.25) !important;
+	}
+	
 	/* for LavaFox themes */
 	#main-window[currenttheme^="LavaFox"][tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
 	  margin-top: 0px !important;
