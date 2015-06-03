@@ -39,7 +39,7 @@
 	#main-window[defaultfxtheme="true"] .searchbar-textbox:-moz-lwtheme {
 	  border-color: rgba(0,0,0,.32) !important;
 	}
-	}
+
 	@media (-moz-windows-default-theme) {
 	  #main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme),
 	  #main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme) {

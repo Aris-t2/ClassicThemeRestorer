@@ -37,7 +37,6 @@
 		<preference id="ctraddon_readermode"	name="reader.parse-on-load.enabled"					type="bool"		instantApply="true"/>
 		<preference id="ctraddon_readermode2"	name="browser.readinglist.enabled"					type="bool"		instantApply="true"/>
 		<preference id="ctraddon_pocket"		name="browser.pocket.enabled"						type="bool"		instantApply="true"/>
-		<preference id="ctraddon_nodevtheme"	name="extensions.classicthemerestorer.nodevtheme"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_nodevtheme2"	name="extensions.classicthemerestorer.nodevtheme2"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_tabinsertion"	name="browser.tabs.insertRelatedAfterCurrent"		type="bool"		instantApply="true"/>
 		<preference id="ctraddon_e10stabs"		name="browser.tabs.remote.autostart"				type="bool"		instantApply="true"/>
@@ -50,7 +49,7 @@
 		
 		<preference id="ctraddon_tabwidth"		name="extensions.classicthemerestorer.ctabwidth"	type="int"		instantApply="true"/>
 		<preference id="ctraddon_tabmwidth"		name="extensions.classicthemerestorer.ctabmwidth"	type="int"		instantApply="true"/>
-		<preference id="ctraddon_e10stab_notd"	name="extensions.classicthemerestorer.e10stab_notd"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_tabclipwidth"	name="browser.tabs.tabClipWidth"					type="int"		instantApply="true"/>
 		<preference id="ctraddon_closetab"		name="extensions.classicthemerestorer.closetab" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_closetabhfl"	name="extensions.classicthemerestorer.closetabhfl"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_closealt"		name="extensions.classicthemerestorer.closealt"		type="bool"		instantApply="true"/>
@@ -276,7 +275,6 @@
 		<menulist preference="ctraddon_tabs" id="ctraddon_pw_tabmenulist">
 			<menupopup>
 				<menuitem value="tabs_default"	 label="&Ctr_tabs0;"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
-				<!--menuitem value="tabs_devtabs"	 label="dev"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();" id="ctraddon_pw_tabs_devtabs"/-->
 				<menuitem value="tabs_squared"	 label="&Ctr_tabs1;"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
 				<menuitem value="tabs_squaredc2" label="&Ctr_tabs1; (v2)"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
 				<menuitem value="tabs_squared2"	 label="&Ctr_tabs1m;" oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
@@ -303,7 +301,6 @@
 		<checkbox label="&Ctr_emptyfavicon;"	preference="ctraddon_emptyfavicon" id="ctraddon_pw_tab_emptyfavicon"/>
 		<checkbox label="&Ctr_noemptypticon;"	preference="ctraddon_noemptypticon" id="ctraddon_pw_tab_noemptypticon"/>
 		<checkbox label="&Ctr_throbberalt;"		preference="ctraddon_throbberalt" id="ctraddon_pw_throbberalt"/>
-		<checkbox label="&Ctr_e10stab_notd;" 	preference="ctraddon_e10stab_notd" id="ctraddon_pw_e10stab_notd"/>
 		
 		<hbox>
 		  <checkbox label="&Ctr_tabminheight;"	preference="ctraddon_ctabheightcb" id="ctraddon_pw_tab_ctabheightcb"/>
@@ -311,6 +308,10 @@
 		  <label value="px"/>
 		</hbox>
 		<description id="ctraddon_pw_tabheightinfo" class="ctraddon_topic">&Ctr_tabheightinfo;</description>
+
+		<description id="ctraddon_pw_tabwidthinfo"  class="ctraddon_topic">&Ctr_tabwidthinfo;</description>
+		<description id="ctraddon_pw_tabwidthinfo2" class="ctraddon_topic">&Ctr_tabwidthinfo2;</description>
+		<description id="ctraddon_pw_tabwidthinfo3" class="ctraddon_topic">&Ctr_tabwidthinfo3;</description>
 
 		<grid>
 		  <rows>
@@ -330,12 +331,16 @@
 				</hbox>
 				<label value="210px &Ctr_tabwidthdef; / 250px &Ctr_tabwidthcla;" id="ctraddon_pw_tabMaxWidth_L2"/>
 			</row>
+			<row>
+				<label value="&Ctr_tabclipwidth;" id="ctraddon_pw_tabClipWidth_L1"/>
+				<hbox>
+					<textbox id="ctraddon_pw_tabClipWidth" size="3" maxlength="3" preference="ctraddon_tabclipwidth" type="number"  oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" onkeydown="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+					<label value="px"/>
+				</hbox>
+				<label value="140px &Ctr_tabwidthdef;" id="ctraddon_pw_tabClipWidth_L2"/>
+			</row>
 		  </rows>
 		</grid>
-
-		<description id="ctraddon_pw_tabwidthinfo"  class="ctraddon_topic">&Ctr_tabwidthinfo;</description>
-		<description id="ctraddon_pw_tabwidthinfo2" class="ctraddon_topic">&Ctr_tabwidthinfo2;</description>
-		<description id="ctraddon_pw_tabwidthinfo3" class="ctraddon_topic">&Ctr_tabwidthinfo3;</description>
 		
 		<description class="ctraddon_font1">&Ctr_closetab_0;</description>
 		<menulist preference="ctraddon_closetab" id="ctraddon_pw_closetab">
@@ -347,7 +352,7 @@
 				<menuitem value="closetab_tb_start"	label="&Ctr_closetab_4;" id="ctraddon_closetab_pw_sta" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
 				<menuitem value="closetab_tb_end"	label="&Ctr_closetab_3;" id="ctraddon_closetab_pw_end" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
 				<label value=" "/>
-				<description class="ctraddon_font1">* &Ctr_appbuttonI1;</description>
+				<description class="ctraddon_font1">* &Ctr_tabclipwidthI;</description>
 			</menupopup>
 		</menulist>
 		<checkbox label="&Ctr_closetab_hfot;" preference="ctraddon_closetabhfl" id="ctraddon_pw_closetabhfl"/>
@@ -668,8 +673,10 @@
 
 		<radiogroup preference="ctraddon_altabico" id="ctraddon_altabico_list" orient="horizontal" value="">
 			<radio label="" value="altabico_white" 		id="ctraddon_altabico_white"/>
+			<radio label="" value="altabico_grey" 		id="ctraddon_altabico_grey"/>
 			<radio label="" value="altabico_dark" 		id="ctraddon_altabico_dark"/>
 			<radio label="" value="altabico_white_nd" 	id="ctraddon_altabico_white_nd"/>
+			<radio label="" value="altabico_grey_nd" 	id="ctraddon_altabico_grey_nd"/>
 			<radio label="" value="altabico_dark_nd" 	id="ctraddon_altabico_dark_nd"/>
 		</radiogroup> 
 		<checkbox label="&Ctr_appbutmhi;"	 preference="ctraddon_appbutmhi" id="ctraddon_abhigher" class="ctraddon_windowsonly"/>
@@ -953,13 +960,12 @@
 		<checkbox label="about:config &gt;&gt; browser.devedition.theme.enabled" preference="ctraddon_devtheme" oncommand="classicthemerestorerjso.ctr.resetPrefsForDevTheme()" id="ctraddon_pw_devtheme"/>
 		<checkbox label="about:config &gt;&gt; browser.devedition.theme.showCustomizeButton" preference="ctraddon_devthemebut" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_devthemeb"/>
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_devthemedescr">&Ctr_fx35devtheme;</description>
-		<checkbox label="&Ctr_nodevtheme;"		preference="ctraddon_nodevtheme" id="ctraddon_pw_nodevtheme1" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwDisableDevThemePrefsExtra(true);} else {classicthemerestorerjso.ctr.ctrpwDisableDevThemePrefsExtra(false);} classicthemerestorerjso.ctr.resetPrefsForDevTheme2();"/>
 		<checkbox label="&Ctr_nodevtheme;"		preference="ctraddon_nodevtheme2" id="ctraddon_pw_nodevtheme2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 	  </groupbox>
 
 	  <groupbox id="ctraddon_pw_oldprefsgb">
 		<caption  label="&Ctr_e_prefsui;" class="ctraddon_topic"/>
-		<checkbox label="about:config &gt;&gt; browser.preferences.inContent" preference="ctraddon_oldprefs" oncommand="classicthemerestorerjso.ctr.ctrShowE10sPrefForWindowPrefs()" id="ctraddon_pw_oldprefs"/>
+		<checkbox label="about:config &gt;&gt; browser.preferences.inContent" preference="ctraddon_oldprefs" id="ctraddon_pw_oldprefs"/>
 		<description class="ctraddonsuboption acprefdesc">&Ctr_fx36prefs;</description>
 		<checkbox label="about:config &gt;&gt; browser.tabs.remote.autostart" preference="ctraddon_e10stabs" id="ctraddon_pw_e10stabs" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_e10stabsdescr">E10S (multi-process) mode (Nightly channel)</description>

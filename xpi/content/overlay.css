@@ -531,7 +531,8 @@
 	
 	#ctraddon_pw_tab_ctabheight,
 	#ctraddon_pw_tabMinWidth,
-	#ctraddon_pw_tabMaxWidth{
+	#ctraddon_pw_tabMaxWidth,
+	#ctraddon_pw_tabClipWidth{
 	  width:60px !important;
 	  max-width:80px !important;
 	}
@@ -667,11 +668,17 @@
 	#ctraddon_altabico_dark{
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton2.png");
 	}
+	#ctraddon_altabico_grey{
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton3.png");
+	}
 	#ctraddon_altabico_white_nd{
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-inv.png");
 	}
 	#ctraddon_altabico_dark_nd{
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-dark.png");
+	}
+	#ctraddon_altabico_grey_nd{
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-grey.png");
 	}
 	
 	/* -mox-padding-start is useless in this case, because Firefox does not allow something like 

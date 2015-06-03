@@ -36,27 +36,29 @@
 <!ENTITY Ctr_tabs2			"Onglets arrondis (alternatifs)">
 <!ENTITY Ctr_tabs3			"Onglets arrondis (alternatifs Aero)">
 <!ENTITY Ctr_tabforminfo	"L'aspect des onglets est controlé par le thème actuel.">
-<!ENTITY Ctr_coltabsinfo	"Tab appearance is not fully compatible to 'ColorfulTabs' add-on!">
+<!ENTITY Ctr_coltabsinfo	"L'aspect des onglets n'est pas complètement compatible avec le module 'ColorfulTabs'!">
 <!ENTITY Ctr_tabsontop0		"Onglets en haut (par défaut)">
 <!ENTITY Ctr_tabsontop1		"Onglets en haut --- réglage [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Onglets position basse (v1) --- réglage [tabsontop=false]">
 <!ENTITY Ctr_tabsontop3		"Onglets position basse (v2) --- réglage [tabsontop=false]">
-<!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
+<!ENTITY Ctr_tabsontopW1	"v2 n'est valable uniquement que pour certains modules et les thèmes complets!">
 <!ENTITY Ctr_tabsontopI1	"L'attribut [tabsontop=true/false] est assigné à">
 <!ENTITY Ctr_tabsintitlebar	"Barre de titre &brandShortName; (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(défaut)">
 <!ENTITY Ctr_tabwidthcla	"(classique)">
 <!ENTITY Ctr_tabminheight	"Hauteur :">
-<!ENTITY Ctr_tabheightinfo	"Low values will cause glitches in maximized mode!">
+<!ENTITY Ctr_tabheightinfo	"Des valeurs basses causent des problèmes en mode maximisé!">
 <!ENTITY Ctr_tabmaxwidth	"Largeur maximale :">
 <!ENTITY Ctr_tabminwidth	"Largeur minimale :">
+<!ENTITY Ctr_tabclipwidth	"Clip-width:">
+<!ENTITY Ctr_tabclipwidthI	"Set 'clip width' to '1' manually!">
 <!ENTITY Ctr_tabwidthinfo	"Onglets : les largeurs mini et maxi sont controlées par TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"Onglets : les largeurs mini et maxi sont controlées par TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"Les valeurs en dessous de 48px causent des problèmes dans la majorité des cas!">
-<!ENTITY Ctr_tabinsertion	"Insert related tab after current tab (about:config)">
+<!ENTITY Ctr_tabinsertion	"Insérer l'onglet connexe après l'onglet actuel (about:config)">
 <!ENTITY Ctr_emptyfavicon	"Restaurer le favicon vide sur les onglets (sites ne possédant pas de favicon)">
 <!ENTITY Ctr_noemptypticon	"Enlever les favicons vides des onglets épinglés">
-<!ENTITY Ctr_e10stab_notd	"E10s tabs: remove underline">
+<!ENTITY Ctr_e10stab_notd	"Onglets E10s : enlever le soulignage">
 <!ENTITY Ctr_closetab_0		"Bouton de fermeture">
 <!ENTITY Ctr_closetab_1		"Onglet actif uniquement">
 <!ENTITY Ctr_closetab_2		"Aucun">
@@ -68,8 +70,8 @@
 <!ENTITY Ctr_closeonleft	"Position alternative sur l'onglet">
 <!ENTITY Ctr_close_wwltab	"Fermer la fenêtre lorsque je ferme le dernier onglet (about:config)">
 
-<!ENTITY Ctr_hctpinfotab	"Some tab variations are not compatible to 'Hide Caption Titlebar Plus' add-on.">
-<!ENTITY Ctr_hctpinfoab		"Button on titlebar is not compatible to 'Hide Caption Titlebar Plus' add-on.">
+<!ENTITY Ctr_hctpinfotab	"Certaines variations d'onglets ne sont pas compatibles avec le module 'Hide Caption Titlebar Plus'.">
+<!ENTITY Ctr_hctpinfoab		"'Bouton sur la barre de titre' n'est pas compatible avec le module 'Hide Caption Titlebar Plus'.">
 
 <!ENTITY Ctr_appbutton		"Bouton d'applications">
 <!ENTITY Ctr_appbutton0		"Bouton désactivé">
@@ -109,7 +111,7 @@
 <!ENTITY Ctr_hide_bf_popup	"Masquer le menu historique lors du clic droit">
 <!ENTITY Ctr_bf_space		"Réduire l'espace entre les boutons (si possible)">
 <!ENTITY Ctr_noconicons		"Remplacer les icônes du menu contextuel de la page par du texte (Page précédente, Page suivante, Arrêter/Actualiser, Marquer cette page)">
-<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
+<!ENTITY Ctr_svgfilters		"Couleurs SVG pour les icônes par défaut de la barre d'outils">
 <!ENTITY Ctr_wincontrols	"Plein écran : boutons déplaçables">
 <!ENTITY Ctr_emptyfavicon2	"Remplacer le favicon générique (vide avec pointillés) par un favicon avec l'aspect d'une feuille de papier">
 <!ENTITY Ctr_mstatusbar		"Barre d'état déplaçable">
@@ -135,14 +137,14 @@
 <!ENTITY Ctr_iat_notf_vt	"Exclure les barres d'outils verticales">
 <!ENTITY Ctr_cpanelmenus	"Compacter les panneaux (marque-pages, historique, etc)">
 <!ENTITY Ctr_hidezoomres	"Boutons de zoom (si sur une barre d'outils) : Masquer le bouton 'Réinitialiser le niveau de zoom'">
-<!ENTITY Ctr_alt_newtabp	"Page 'Nouvel onglet' : apparance alternative">
-<!ENTITY Ctr_alt_addonsp	"Add-ons 'more info' page: alternative appearance">
-<!ENTITY Ctr_bmbutpanelm	"Bookmarks menu button: panel menu appearance">
-<!ENTITY Ctr_bmbutnotext	"Bookmarks menu button: hide label on bookmarks bar">
-<!ENTITY Ctr_skipprintpr	"Print button: skip print preview">
-<!ENTITY Ctr_tbconmenu		"Toolbar context menu: hide 'move to menu', 'remove from toolbar', 'reload/bookmark all tabs' and 'undo close tab'">
-<!ENTITY Ctr_noresizerxp	"Hide Resizer (Windows XP)">
-<!ENTITY Ctr_extraurlkeycb	"Open additional location bar (Cmd/Ctrl+">
+<!ENTITY Ctr_alt_newtabp	"Page 'Nouvel onglet' : apparence alternative">
+<!ENTITY Ctr_alt_addonsp	"Page 'Plus d'infos' des modules : apparence alternative">
+<!ENTITY Ctr_bmbutpanelm	"Bouton Marque-pages : apparence Panneau menu">
+<!ENTITY Ctr_bmbutnotext	"Bouton Marque-pages : cacher 'Marque-pages' sur la barre personnelle">
+<!ENTITY Ctr_skipprintpr	"Bouton imprimer : enlever l'aperçu avant impression">
+<!ENTITY Ctr_tbconmenu		"Menu contextuel des barres d'outils : enlever 'Déplacer vers le menu', 'Retirer de la barre d'outils', 'Actualiser/Marquer tous les onglets' and 'Annuler la fermeture de l'onglet'">
+<!ENTITY Ctr_noresizerxp	"Cacher le redimenssionnement (Windows XP)">
+<!ENTITY Ctr_extraurlkeycb	"Ouvrir la barre d'adresse additionelle (Cmd/Ctrl+">
 <!ENTITY Ctr_pmhidelabels	"Panneau menu : icônes seules">
 <!ENTITY Ctr_menupopupscr	"Menus pop-up : afficher des ascenseurs au lieu des flèches de défilement">
 
@@ -215,33 +217,33 @@
 <!ENTITY Ctr_hidetbwot		"Masquer la barre d'onglets quand un seul onglet est ouvert">
 <!ENTITY Ctr_hidetbwote		"Diminuer le délai pour masquer la barre au démarrage">
 <!ENTITY Ctr_hidetbwote_i	"Could cause glitches on tabs toolbar">
-<!ENTITY Ctr_hidetbwote2	"Keep titlebar (tabs on top)">
+<!ENTITY Ctr_hidetbwote2	"Conserver la barre de titre (onglets en haut)">
 <!ENTITY Ctr_notabfog		"Enlever l'effet de flou (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_notabbg		"Enlever l'arrière-plan (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_hightabpos		"Réduire l'espace supérieur (si possible)">
 <!ENTITY Ctr_alttabstb		"Arrière plan alternatif">
-<!ENTITY Ctr_alttabstb2		"In maximized mode (tabs on top)">
+<!ENTITY Ctr_alttabstb2		"En mode maximisé (onglets en haut)">
 
 <!ENTITY Ctr_altmenubar		"Ajouter un arrière-plan (barre de titre de l'OS visible)">
 <!ENTITY Ctr_altmenubarpos	"Position alternative (sous la barre de titre &brandShortName;)">
 <!ENTITY Ctr_menubarnofog	"Enlever l'effet de flou/l'arrière-plan des éléments (Windows AeroGlass / Win8)">
 
-<!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
+<!ENTITY Ctr_aerocolors		"Couleur Bleue Aero pour les barres d'outils principales et les onglets">
 <!ENTITY Ctr_hidenavbar		"Masquer la barre de navigation">
 <!ENTITY Ctr_nobookbarbg	"Barre personnelle : enlever l'arrière-plan">
 <!ENTITY Ctr_nonavbarbg		"Barre de navigation : enlever l'arrière-plan">
-<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
-<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
+<!ENTITY Ctr_nonavbarbg1	"Les barres d'outils additionnelles et autres barres supérieures créées par les modules sont affectées.">
+<!ENTITY Ctr_nonavbarbg2	"Toutes les barres d'outils en mode Slim Chrome du module 'The Fox, Only Better' sont affectées.">
 <!ENTITY Ctr_nonavborder	"Barre personnelle : ajouter une bordure en haut de la barre">
 <!ENTITY Ctr_nonavtbborder	"Barres d'outils supérieures : enlever les bordures">
 <!ENTITY Ctr_hidesbclose	"Panneaux latéraux : masquer le bouton de fermeture">
-<!ENTITY Ctr_notextshadow	"Toolbars: hide shadow for toolbar text and tab text">
+<!ENTITY Ctr_notextshadow	"Barres d'outils : masquer l'ombre du texte des barres d'outils et des onglets">
 <!ENTITY Ctr_chevronfix		"Barre de navigation : masquer le chevron à la fin de la barre">
-<!ENTITY Ctr_tbsep_winc		"Top toolbars: additional toolbar separators">
+<!ENTITY Ctr_tbsep_winc		"Barres d'outils supérieures : séparateurs additionnels">
 
 <!ENTITY Ctr_closeabarbut	"Masquer le bouton de fermeture">
 <!ENTITY Ctr_highaddonsbar	"Augmenter la hauteur">
-<!ENTITY Ctr_addonbarfs		"In fullscreen mode">
+<!ENTITY Ctr_addonbarfs		"En mode plein écran">
 
 <!ENTITY Ctr_animation		"Animation">
 <!ENTITY Ctr_throbberalt	"Icône animée alternative pour le chargement des onglets">
@@ -258,23 +260,23 @@
 <!ENTITY Ctr_otherctroptns	"Autres options">
 <!ENTITY Ctr_cuibotbuttons	"Boutons d'options en mode personnalisation">
 <!ENTITY Ctr_bookmarkoinpw	"'Ouvrir dans une nouvelle fenêtre de navigation privée' dans le menu contextuel des marque-pages">
-<!ENTITY Ctr_nodevtheme		"Prevent 'Developer Theme' from being enabled">
+<!ENTITY Ctr_nodevtheme		"Empêcher l'application du thème 'Developer Edition'">
 
 <!ENTITY Ctr_experttweaks	"Expert">
 <!ENTITY Ctr_fx33layers		"&brandShortName; 33+ introduit de nouvelles possibilités de rendu responsables actuellement de bugs avec les onglets sur certains systèmes (pas de réaction, onglets gelés). Ce problème est résolu en décochant cette option.">
 <!ENTITY Ctr_fx34search		"&brandShortName; 34+ introduit une nouvelle barre de recherche. Si cette option est décochée, l'ancienne barre de recherche est activée.">
 <!ENTITY Ctr_fx34loop		"&brandShortName; 34+ introduit la possibilité d'inviter quelqu'un à discuter. Cette possibilité est desactivée en décochant cette option.">
-<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ introduced a new 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
-<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
-<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ introduced a new 'reader mode'. Unchecking these preferences disables it and removes its icon from location bar.">
-<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ introduced the 'Pocket' feature. Unchecking this preference disables it and removes its button from the toolbars.">
-<!ENTITY Ctr_fx38pocket2	"Note: Moving 'Pocket'-button to 'customizing palette' before disabling this preference also removes 'Pocket' entries in bookmarks and reader menus.">
-<!ENTITY Ctr_e_omtc			"OMTC / hanging tabs issue">
-<!ENTITY Ctr_e_searchui		"Search appearance">
-<!ENTITY Ctr_e_loop			"Calling and conversation">
-<!ENTITY Ctr_e_deved		"Developer Edition Theme">
-<!ENTITY Ctr_e_prefsui		"Preferences in tab">
-<!ENTITY Ctr_e_readermode	"Reader mode">
+<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ introduit un nouveau thème 'Developer Edition'. Si cette option est décochée, le thème 'Developer Edition' est desactivé ainsi que son bouton dans la fenêtre de personnalisation.">
+<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ introduit les 'Préférences dans un onglet'. Si cette option est décochée, l'ancienne fenêtre des préférences est restaurée.">
+<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ introduit un nouveau 'Mode lecture'. Si cette option est décochée, ce mode est desactivé et son icône est retirée de la barre d'adresse.">
+<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ introduit le support natif de 'Pocket'. Si cette option est décochée, 'Pocket' est desactivé et son bouton retiré des barres d'outils.">
+<!ENTITY Ctr_fx38pocket2	"Note: Déplacer le bouton 'Pocket' vers la 'fenêtre de personnalisation' avant de desactiver cette option, permet également d'enlever 'Pocket' des marques pages et du menu de lecture.">
+<!ENTITY Ctr_e_omtc			"OMTC / Problème avec onglets">
+<!ENTITY Ctr_e_searchui		"Apparence de recherche">
+<!ENTITY Ctr_e_loop			"Appel et conversation">
+<!ENTITY Ctr_e_deved		"Thème Developer Edition">
+<!ENTITY Ctr_e_prefsui		"Préférences dans un onglet">
+<!ENTITY Ctr_e_readermode	"Mode lecture">
 <!ENTITY Ctr_e_pocket		"Pocket">
 
 
@@ -284,8 +286,8 @@
 <!ENTITY Ctr_pw_set_preaus	"Préréglage &brandShortName;">
 <!ENTITY Ctr_pw_set_export	"Exporter les préférences">
 <!ENTITY Ctr_pw_set_import	"Importer les préférences">
-<!ENTITY Ctr_pw_set_syncon	"Add to Sync">
-<!ENTITY Ctr_pw_set_syncoff	"Remove from Sync">
+<!ENTITY Ctr_pw_set_syncon	"Ajouter à Sync">
+<!ENTITY Ctr_pw_set_syncoff	"Enlever de Sync">
 
 <!ENTITY Ctr_special_font	"La configuration de la couleur de fond est réservée au thème par défaut!">
 <!ENTITY Ctr_special_info	"Certaines options ne fonctionnent que dans certains cas!">
