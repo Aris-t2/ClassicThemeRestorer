@@ -163,7 +163,10 @@ classicthemerestorerjs.ctr = {
 	
 	// prevent developer theme from being enabled in Fx40+
 	this.PreventDevThemeEnabling();
-
+	
+	// prevent accidental location bar removal by using context menu 
+	this.removeContextItemsFromLocationbarContext();
+	
 	// CTR Preferences listener
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get
@@ -2384,6 +2387,35 @@ classicthemerestorerjs.ctr = {
 	  
 	  classicthemerestorerjs.ctr.loadUnloadCSS("nodevtheme2",true);
 	}
+  },
+  
+  // prevent accidental location bar removal by using context menu 
+  removeContextItemsFromLocationbarContext: function(){
+
+	var mov_urlbar_container = classicthemerestorerjs.ctr.ctrGetId("urlbar-container");
+	var mov_urlbar_wrapper = classicthemerestorerjs.ctr.ctrGetId("urlbar-wrapper")
+	
+	classicthemerestorerjs.ctr.ctrGetId("urlbar-container").addEventListener("mousedown", function openContextMenuPopup(event) {
+
+	  if(event.button==2 && event.target.parentNode.parentNode == mov_urlbar_container
+		|| event.target.parentNode.parentNode.parentNode == mov_urlbar_container
+		|| event.target.parentNode.parentNode == mov_urlbar_wrapper
+		|| event.target.parentNode.parentNode.parentNode == mov_urlbar_wrapper) {
+		
+		var toolbarcontext_popup = classicthemerestorerjs.ctr.ctrGetId('toolbar-context-menu');
+		
+		toolbarcontext_popup.addEventListener("popupshown", function onCtrToolbarContextPopupShown(){
+			toolbarcontext_popup.firstChild.setAttribute("disabled", "true");
+			toolbarcontext_popup.firstChild.nextSibling.setAttribute("disabled", "true");
+			
+			toolbarcontext_popup.removeEventListener("popupshown", onCtrToolbarContextPopupShown, false);
+			
+		}, false);
+		
+	  }
+
+	}, false);
+	  
   },
   
   // tab width stuff
