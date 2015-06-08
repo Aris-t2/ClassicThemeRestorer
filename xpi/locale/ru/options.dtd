@@ -50,8 +50,8 @@
 <!ENTITY Ctr_tabheightinfo	"Низкое значение вызовет сбои в развёрнутом режиме!">
 <!ENTITY Ctr_tabmaxwidth	"Макс. ширина:">
 <!ENTITY Ctr_tabminwidth	"Мин. ширина:">
-<!ENTITY Ctr_tabclipwidth	"Clip-width:">
-<!ENTITY Ctr_tabclipwidthI	"Set 'clip width' to '1' manually!">
+<!ENTITY Ctr_tabclipwidth	"Ширина обрезки:">
+<!ENTITY Ctr_tabclipwidthI	"Установите вручную «Ширина обрезки» на «1»!">
 <!ENTITY Ctr_tabwidthinfo	"Минимальная и максимальная ширина вкладок изменяется расширением TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"Минимальная и максимальная ширина вкладок изменяется расширением TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"Значение ниже 48px вызовет сбои в большинстве случаев!">
@@ -258,7 +258,7 @@
 <!ENTITY Ctr_puictrbutton	"Кнопка в главном меню панели">
 
 <!ENTITY Ctr_otherctroptns	"Другие настройки">
-<!ENTITY Ctr_cuibotbuttons	"Дополнительные кнопки в режиме «Настройка»">
+<!ENTITY Ctr_cuibotbuttons	"Дополнительные кнопки на странице «Настройка &brandShortName;»">
 <!ENTITY Ctr_bookmarkoinpw	"«Открыть в новом приватном окне» в контекстном меню закладок">
 <!ENTITY Ctr_nodevtheme		"Предотвращение активации «Тема разработчика»">
 
@@ -268,11 +268,11 @@
 <!ENTITY Ctr_fx34loop		"&brandShortName; 34+ добавлен клиент для связи в режиме реального времени. Отключение параметра удаляет эту функцию.">
 <!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ введена новая «Тема разработчика». Отключение параметра удаляет её и соответствующую кнопку в режиме «Настройка».">
 <!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ настройки в новой вкладке. Отключение этого параметра восстанавливает старое окно настроек.">
-<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ представила новую функцию «режим чтения». Отключение этого параметра отключает этот режим и удаляет значок из адресной строки.">
-<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ представила функцию «Pocket». Отключение этого параметра отключает этот режим и удаляет кнопку из панели инструментов.">
-<!ENTITY Ctr_fx38pocket2	"Note: Moving 'Pocket'-button to 'customizing palette' before disabling this preference also removes 'Pocket' entries in bookmarks and reader menus.">
+<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ представила новую функцию «режим чтения». Отключение этого параметра выключает этот режим и удаляет значок из адресной строки.">
+<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ представила функцию «Pocket». Отключение параметра удаляет эту функцию и кнопку на панели инструментов.">
+<!ENTITY Ctr_fx38pocket2	"Примечание: перед отключением этой опции переместите кнопку «Pocket» на страницу «Настройка &brandShortName;», т.к. удаляются надписи «Pocket» в закладках и режиме чтения.">
 <!ENTITY Ctr_e_omtc			"OMTC / проблемы зависших вкладок">
-<!ENTITY Ctr_e_searchui		"Внешний вид поиска">
+<!ENTITY Ctr_e_searchui		"Вид панели поиска">
 <!ENTITY Ctr_e_loop			"Вызов и разговор">
 <!ENTITY Ctr_e_deved		"Тема разработчика">
 <!ENTITY Ctr_e_prefsui		"Настройки во вкладке">
