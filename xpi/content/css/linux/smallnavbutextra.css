@@ -189,4 +189,12 @@
 	  background: unset !important;
 	}
 
+	/*Tile tabs tweaks*/
+	#navigator-toolbox #nav-bar #tiletabs-buttonmenu .toolbarbutton-menubutton-button image {
+      margin-right: unset !important;
+      padding-right: unset !important;
+	  padding: 0 !important;
+	  -moz-margin-start: 1px !important;
+	}
+
 }
