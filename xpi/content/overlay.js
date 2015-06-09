@@ -3467,30 +3467,6 @@ classicthemerestorerjs.ctr = {
 						  background-color: transparent !important;\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+'), none !important;\
 						}\
-						/* TabMixPlus fix */\
-						#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive], :not([autohide])) + #TabsToolbar[currentset*="tabmixScrollBox"] .tab-background-middle[selected=true] {\
-						  clip-path: none !important;\
-						}\
-						#main-window #navigator-toolbox #TabsToolbar[currentset*="tabmixScrollBox"]:not(:-moz-lwtheme) .tab-background-start[selected=true]:-moz-locale-dir(ltr),\
-						#main-window #navigator-toolbox #TabsToolbar[currentset*="tabmixScrollBox"]:not(:-moz-lwtheme) .tab-background-end[selected=true]:-moz-locale-dir(rtl) {\
-						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
-						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
-						}\
-						#main-window #navigator-toolbox #TabsToolbar[currentset*="tabmixScrollBox"]:not(:-moz-lwtheme) .tab-background-end[selected=true]:-moz-locale-dir(ltr),\
-						#main-window #navigator-toolbox #TabsToolbar[currentset*="tabmixScrollBox"]:not(:-moz-lwtheme) .tab-background-start[selected=true]:-moz-locale-dir(rtl) {\
-						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
-						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
-						}\
-						#main-window #navigator-toolbox #TabsToolbar[currentset*="tabmixScrollBox"]:-moz-lwtheme .tab-background-start[selected=true]:-moz-locale-dir(ltr),\
-						#main-window #navigator-toolbox #TabsToolbar[currentset*="tabmixScrollBox"]:-moz-lwtheme .tab-background-end[selected=true]:-moz-locale-dir(rtl) {\
-						  background: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
-						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
-						}\
-						#main-window #navigator-toolbox #TabsToolbar[currentset*="tabmixScrollBox"]:-moz-lwtheme .tab-background-end[selected=true]:-moz-locale-dir(ltr),\
-						#main-window #navigator-toolbox #TabsToolbar[currentset*="tabmixScrollBox"]:-moz-lwtheme .tab-background-start[selected=true]:-moz-locale-dir(rtl) {\
-						  background: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
-						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
-						}\
 						'+tabc_act_tb_sheet+'\
 					'), null, null);
 				
@@ -3547,30 +3523,6 @@ classicthemerestorerjs.ctr = {
 						#main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme .tab-background-middle[selected=true] {\
 						  background-color: transparent !important;\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+'), none !important;\
-						}\
-						/* TabMixPlus fix */\
-						#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive], :not([autohide])) + #TabsToolbar[currentset*="tabmixScrollBox"] .tab-background-middle[selected=true] {\
-						  clip-path: none !important;\
-						}\
-						#main-window #navigator-toolbox #TabsToolbar[currentset*="tabmixScrollBox"]:not(:-moz-lwtheme) .tab-background-start[selected=true]:-moz-locale-dir(ltr),\
-						#main-window #navigator-toolbox #TabsToolbar[currentset*="tabmixScrollBox"]:not(:-moz-lwtheme) .tab-background-end[selected=true]:-moz-locale-dir(rtl) {\
-						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
-						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
-						}\
-						#main-window #navigator-toolbox #TabsToolbar[currentset*="tabmixScrollBox"]:not(:-moz-lwtheme) .tab-background-end[selected=true]:-moz-locale-dir(ltr),\
-						#main-window #navigator-toolbox #TabsToolbar[currentset*="tabmixScrollBox"]:not(:-moz-lwtheme) .tab-background-start[selected=true]:-moz-locale-dir(rtl) {\
-						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
-						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
-						}\
-						#main-window #navigator-toolbox #TabsToolbar[currentset*="tabmixScrollBox"]:-moz-lwtheme .tab-background-start[selected=true]:-moz-locale-dir(ltr),\
-						#main-window #navigator-toolbox #TabsToolbar[currentset*="tabmixScrollBox"]:-moz-lwtheme .tab-background-end[selected=true]:-moz-locale-dir(rtl) {\
-						  background: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
-						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
-						}\
-						#main-window #navigator-toolbox #TabsToolbar[currentset*="tabmixScrollBox"]:-moz-lwtheme .tab-background-end[selected=true]:-moz-locale-dir(ltr),\
-						#main-window #navigator-toolbox #TabsToolbar[currentset*="tabmixScrollBox"]:-moz-lwtheme .tab-background-start[selected=true]:-moz-locale-dir(rtl) {\
-						  background: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
-						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
 						'+tabc_act_tb_sheet+'\
 					'), null, null);
