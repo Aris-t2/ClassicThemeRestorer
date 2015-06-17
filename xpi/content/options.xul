@@ -85,6 +85,7 @@
 		<preference id="ctraddon_feedinurl"		name="extensions.classicthemerestorer.feedinurl"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_statusbar"		name="extensions.classicthemerestorer.statusbar"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_hideurelstop"	name="extensions.classicthemerestorer.hideurelstop"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_hideurlgo"		name="extensions.classicthemerestorer.hideurlgo"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_urlbardropm"	name="extensions.classicthemerestorer.urlbardropm"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_combrelstop"	name="extensions.classicthemerestorer.combrelstop"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_panelmenucol"	name="extensions.classicthemerestorer.panelmenucol"	type="bool"		instantApply="true"/>
@@ -788,6 +789,7 @@
 		<checkbox label="&Ctr_starinurl;" preference="ctraddon_starinurl" id="ctraddon_pw_starinurl" oncommand="classicthemerestorerjso.ctr.ctrpwStarFeedDelay()"/>
 		<checkbox label="&Ctr_feedinurl;" preference="ctraddon_feedinurl" id="ctraddon_pw_feedinurl" oncommand="classicthemerestorerjso.ctr.ctrpwStarFeedDelay()"/>
 		<checkbox label="&Ctr_hideurelstop;" preference="ctraddon_hideurelstop" id="ctraddon_pw_hideurelstop"/>
+		<checkbox label="&Ctr_hideurlgo;" preference="ctraddon_hideurlgo" id="ctraddon_pw_hideurlgo"/>
 		<checkbox label="&Ctr_urlbardropm;"	 preference="ctraddon_urlbardropm"  id="ctraddon_pw_urlbardropm"/>
 		<checkbox label="&Ctr_hideprbutton;" preference="ctraddon_hideprbutton" id="ctraddon_pw_urlbarpblocked"/>
 		<checkbox label="&Ctr_extraurlkeycb;&openCmd.commandkey; &amp; Alt+&urlbar.accesskey; [Windows/Linux])"	preference="ctraddon_extraurlkeycb" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>

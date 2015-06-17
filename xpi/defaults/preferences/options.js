@@ -77,6 +77,7 @@ pref("extensions.classicthemerestorer.athrobberurl","");
 pref("extensions.classicthemerestorer.starinurl",false);
 pref("extensions.classicthemerestorer.feedinurl",false);
 pref("extensions.classicthemerestorer.hideurelstop",false);
+pref("extensions.classicthemerestorer.hideurlgo",false);
 pref("extensions.classicthemerestorer.hideprbutton",false);
 pref("extensions.classicthemerestorer.urlbardropm",false);
 

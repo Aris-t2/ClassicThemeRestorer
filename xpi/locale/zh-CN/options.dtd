@@ -184,6 +184,7 @@
 <!ENTITY Ctr_starinurl		"五星按钮">
 <!ENTITY Ctr_feedinurl		"RSS源按钮">
 <!ENTITY Ctr_hideurelstop	"隐藏停止和重新载入按钮">
+<!ENTITY Ctr_hideurlgo		"Hide 'go' button">
 <!ENTITY Ctr_urlbardropm	"下拉控件移动到地址栏尾部">
 <!ENTITY Ctr_hideprbutton	"当弹出窗口被阻止时隐藏通知图标">
 <!ENTITY Ctr_urlbar_ib		"网站身份标识按钮 (身份标识框)">
@@ -238,7 +239,7 @@
 <!ENTITY Ctr_nonavtbborder	"顶部工具栏: 移除工具栏边框">
 <!ENTITY Ctr_hidesbclose	"侧边栏: 隐藏侧边栏关闭按钮">
 <!ENTITY Ctr_notextshadow	"工具栏: 隐藏工具栏文本与标签页文本的阴影">
-<!ENTITY Ctr_chevronfix		"导航工具栏: 隐藏工具栏尾部的双箭头 ('chevron')">
+<!ENTITY Ctr_chevronfix		"导航工具栏: 隐藏工具栏尾部的双箭头 ('More Tools')">
 <!ENTITY Ctr_tbsep_winc		"顶部工具栏: 附加的工具栏分隔符">
 
 <!ENTITY Ctr_closeabarbut	"隐藏附加组件栏关闭按钮">
@@ -299,6 +300,7 @@
 <!ENTITY Ctr_openInPrivateWindow	"在新建隐私浏览窗口中打开">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
 <!ENTITY appMenuGettingStarted.label	"开始使用">
+<!ENTITY goCmd.label		"Go">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey            "B">

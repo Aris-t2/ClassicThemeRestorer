@@ -184,6 +184,7 @@
 <!ENTITY Ctr_starinurl		"URL バーにスターボタンを表示する">
 <!ENTITY Ctr_feedinurl		"URL バーにフィードボタンを表示する">
 <!ENTITY Ctr_hideurelstop	"URL バーの中止&amp;再読み込みボタンを隠す">
+<!ENTITY Ctr_hideurlgo		"Hide 'go' button">
 <!ENTITY Ctr_urlbardropm	"Move dropmarker to urlbars end">
 <!ENTITY Ctr_hideprbutton	"Hide notification icon when a popup gets blocked">
 <!ENTITY Ctr_urlbar_ib		"Site Identity Button (identity box)">
@@ -238,7 +239,7 @@
 <!ENTITY Ctr_nonavtbborder	"ツールバー: 上ボーダーを取り除く">
 <!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
 <!ENTITY Ctr_notextshadow	"Toolbars: hide shadow for toolbar text and tab text">
-<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('chevron') at toolbars end">
+<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('More Tools') at toolbars end">
 <!ENTITY Ctr_tbsep_winc		"Top toolbars: additional toolbar separators">
 
 <!ENTITY Ctr_closeabarbut	"アドオンバーの閉じるボタンを隠す">
@@ -299,6 +300,7 @@
 <!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
 <!ENTITY appMenuGettingStarted.label	"Getting started">
+<!ENTITY goCmd.label		"Go">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey            "B">

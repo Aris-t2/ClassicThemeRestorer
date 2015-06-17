@@ -369,7 +369,8 @@
 	  border-right:0 !important;
 	}
 	
-	/*Faviconise tab add-on */
+	/*Faviconize tab add-on */
+	#tabbrowser-tabs .tabbrowser-tab[faviconized="true"] .tab-throbber,
 	#tabbrowser-tabs .tabbrowser-tab[faviconized="true"] .tab-icon-image{
 	  -moz-margin-start:2px !important;
 	  -moz-margin-end:1px !important;

@@ -6,7 +6,7 @@
 	#main-window {
 	  min-width: 300px !important;
 	}
-
+	
 	.ctrprefs{
 	  -moz-margin-start:26px !important;
 	}
@@ -280,7 +280,7 @@
 	  width:0px;
 	  max-width:0px;
 	}
-
+	
 	/* palette items */
 	#customization-palette #ctraddon_back-forward-dropmarker {
 	  background:url("chrome://classic_theme_restorer/content/images/toolbarbutton-dropdown-arrow.png") center no-repeat;
@@ -338,6 +338,14 @@
 	toolbarpaletteitem[place="palette"] > #ctraddon_reload-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 64px, 32px, 32px);
 	  list-style-image: url(chrome://browser/skin/menuPanel.png);
+	}
+
+	#main-window[defaultfxtheme="true"] #ctraddon_go-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+	#main-window[defaultfxtheme="true"] toolbarpaletteitem[place="palette"] > #ctraddon_go-button > .toolbarbutton-icon,
+	#ctraddon_go-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+	toolbarpaletteitem[place="palette"] > #ctraddon_go-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 96px, 32px, 64px);
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel3.png);
 	}
 
 	#main-window[defaultfxtheme="true"] #ctraddon_history-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
@@ -749,6 +757,12 @@
 	  background:url('chrome://classic_theme_restorer/content/images/stop_mac.png') no-repeat left,
 				 url('chrome://classic_theme_restorer/content/images/reload_mac.png') no-repeat 4% 50% !important;
 	  padding-left:36px !important;
+	  min-height:16px !important;
+	}
+	
+	#ctraddon_pw_hideurlgo label {
+	  background:url('chrome://classic_theme_restorer/content/images/urlgo.png') no-repeat left !important;
+	  padding-left:20px !important;
 	  min-height:16px !important;
 	}
 

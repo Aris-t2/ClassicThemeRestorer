@@ -918,6 +918,11 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("hideurelstop")) classicthemerestorerjs.ctr.loadUnloadCSS("hideurelstop",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("hideurelstop",false);
 		  break;
+		  
+		  case "hideurlgo":
+			if (branch.getBoolPref("hideurlgo")) classicthemerestorerjs.ctr.loadUnloadCSS("hideurlgo",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("hideurlgo",false);
+		  break;
 
 		  case "urlbardropm":
 			if (branch.getBoolPref("urlbardropm")) classicthemerestorerjs.ctr.loadUnloadCSS("urlbardropm",true);
@@ -2846,6 +2851,7 @@ classicthemerestorerjs.ctr = {
 		case "feedinurl":			manageCSS("feedinurl.css");				break;
 		case "statusbar": 			manageCSS("statusbar.css"); 			break;
 		case "hideurelstop": 		manageCSS("hideurlbarrelstop.css"); 	break;
+		case "hideurlgo": 			manageCSS("hideurlbargo.css"); 			break;
 		case "urlbardropm": 		manageCSS("urlbar_dropm.css"); 			break;
 		case "combrelstop":			manageCSS("combrelstop.css");			break;
 		case "panelmenucol": 		manageCSS("panelmenucolor.css");		break;

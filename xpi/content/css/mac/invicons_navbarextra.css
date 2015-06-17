@@ -30,7 +30,7 @@
 		background-image: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted@2x.png"), 0, 396, 36, 360) !important;
 	  }
 	 
-	  #nav-bar :-moz-any(#ctraddon_back-button, #ctraddon_forward-button, #ctraddon_bookmarks-menu-toolbar-button, #ctraddon_bookmarks-button, #ctraddon_history-button, #ctraddon_history-menu-toolbar-button, #ctraddon_reload-button, #ctraddon_stop-button) > .toolbarbutton-icon  {
+	  #nav-bar :-moz-any(#ctraddon_back-button, #ctraddon_forward-button, #ctraddon_bookmarks-menu-toolbar-button, #ctraddon_bookmarks-button, #ctraddon_history-button, #ctraddon_history-menu-toolbar-button, #ctraddon_reload-button, #ctraddon_stop-button,#ctraddon_go-button) > .toolbarbutton-icon  {
 		list-style-image: url("chrome://browser/skin/Toolbar-inverted@2x.png") !important;
 	  }
 
@@ -46,11 +46,13 @@
 		-moz-image-region: rect(36px, 108px, 72px, 72px) !important;
 	  }
 
-	  #nav-bar #ctraddon_forward-button > .toolbarbutton-icon {
+	  #nav-bar #ctraddon_forward-button > .toolbarbutton-icon,
+	  #nav-bar #ctraddon_go-button > .toolbarbutton-icon {
 		-moz-image-region: rect(0, 144px, 36px, 108px) !important;
 	  }
 
-	  #nav-bar #ctraddon_forward-button:hover:active:not([disabled="true"]) > .toolbarbutton-icon {
+	  #nav-bar #ctraddon_forward-button:hover:active:not([disabled="true"]) > .toolbarbutton-icon,
+	  #nav-bar #ctraddon_go-button:hover:active:not([disabled="true"]) > .toolbarbutton-icon {
 		-moz-image-region: rect(36px, 144px, 72px, 108px) !important;
 	  }
 		  
@@ -58,7 +60,7 @@
 	  #nav-bar #ctraddon_bookmarks-menu-toolbar-button > .toolbarbutton-icon {
 		-moz-image-region: rect(0, 288px, 36px, 252px) !important;
 	  }
-		  
+
 	  #nav-bar #ctraddon_bookmarks-button:hover:active:not([disabled="true"]) > .toolbarbutton-icon,
 	  #nav-bar #ctraddon_bookmarks-menu-toolbar-button:hover:active:not([disabled="true"]) > .toolbarbutton-icon {
 		-moz-image-region: rect(36px, 288px, 72px, 252px) !important;
@@ -88,7 +90,7 @@
 	  #nav-bar #ctraddon_stop-button:hover:active:not([disabled="true"]) > .toolbarbutton-icon {
 		-moz-image-region: rect(36px, 216px, 72px, 180px) !important;
 	  }
-	  #nav-bar :-moz-any(#ctraddon_back-button, #ctraddon_forward-button, #ctraddon_bookmarks-menu-toolbar-button, #ctraddon_bookmarks-button, #ctraddon_history-button,#ctraddon_history-menu-toolbar-button, #ctraddon_reload-button, #ctraddon_stop-button) > .toolbarbutton-icon {
+	  #nav-bar :-moz-any(#ctraddon_back-button, #ctraddon_forward-button, #ctraddon_bookmarks-menu-toolbar-button, #ctraddon_bookmarks-button, #ctraddon_history-button,#ctraddon_history-menu-toolbar-button, #ctraddon_reload-button, #ctraddon_stop-button,#ctraddon_go-button) > .toolbarbutton-icon {
 		width: 18px !important;
 	  }
 

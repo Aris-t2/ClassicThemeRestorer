@@ -946,6 +946,12 @@
                      label="&stopCmd.label;" removable="true"
                      command="Browser:Stop"
                      tooltiptext="&stopButton.tooltip;"/>
+					 
+      <!--### creates a movable go button ###-->
+	  <toolbarbutton id="ctraddon_go-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
+                     label="&goCmd.label;" removable="true"
+                     onclick="gURLBar.handleCommand(event);"
+                     tooltiptext="&goEndCap.tooltip;"/>
   
 	  <!--### creates clone of fullscreen window control buttons ###-->
 	  <toolbaritem id="ctraddon_window-controls" class="chromeclass-toolbar-additional"
