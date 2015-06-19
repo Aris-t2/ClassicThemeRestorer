@@ -50,8 +50,8 @@
 <!ENTITY Ctr_tabheightinfo	"Nizke vrednosti bodo v razpetem načinu povzročile napake!">
 <!ENTITY Ctr_tabmaxwidth	"Največja širina:">
 <!ENTITY Ctr_tabminwidth	"Najmanjša širina:">
-<!ENTITY Ctr_tabclipwidth	"Clip-width:">
-<!ENTITY Ctr_tabclipwidthI	"Set 'clip width' to '1' manually!">
+<!ENTITY Ctr_tabclipwidth	"Širina izreza:">
+<!ENTITY Ctr_tabclipwidthI	"Ročno nastavi 'širino izreza' na '1'!">
 <!ENTITY Ctr_tabwidthinfo	"Širino zavihkov nadzira TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"Širino zavihkov nadzira TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"Vrednosti pod 48 slikovnih točk bodo v večini premerov povzročile napake!">
@@ -138,8 +138,8 @@
 <!ENTITY Ctr_cpanelmenus	"Ploščasti meniji: strnjen pogled (zaznamki, zgodovina itd.)">
 <!ENTITY Ctr_hidezoomres	"Nadzorni gumbi za povečavo na orodni vrstici: skrij gumb za ponastavitev povečave">
 <!ENTITY Ctr_alt_newtabp	"Stran novega zavihka: nadomestni videz">
-<!ENTITY Ctr_alt_addonsp	"Add-ons 'more info' page: alternative appearance">
-<!ENTITY Ctr_addonversion	"Add-ons page: display add-on version">
+<!ENTITY Ctr_alt_addonsp	"Stran dodatkov 'Več': nadomestni videz">
+<!ENTITY Ctr_addonversion	"Stran dodatkov: prikaži različico dodatka">
 <!ENTITY Ctr_bmbutpanelm	"Gumb menija zaznamkov: videz ploščastega menija">
 <!ENTITY Ctr_bmbutnotext	"Gumb menija zaznamkov: skrij oznako na vrstici zaznamkov">
 <!ENTITY Ctr_skipprintpr	"Gumb Natisni: preskoči predogled tiskanja">
@@ -185,7 +185,7 @@
 <!ENTITY Ctr_starinurl		"Gumb Zvezdica">
 <!ENTITY Ctr_feedinurl		"Gumb vira RSS">
 <!ENTITY Ctr_hideurelstop	"Skrij gumba 'Ustavi in Ponovno naloži'">
-<!ENTITY Ctr_hideurlgo		"Hide 'go' button">
+<!ENTITY Ctr_hideurlgo		"Skrij gumb 'pojdi'">
 <!ENTITY Ctr_urlbardropm	"Premakni spustno puščico na konec naslovne vrstice">
 <!ENTITY Ctr_hideprbutton	"Skrij ikono obvestil ob blokiranju pojavnega okna">
 <!ENTITY Ctr_urlbar_ib		"Gumb identitete strani (polje indentitete)">
@@ -271,8 +271,8 @@
 <!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ je vpeljal novo temo 'Developer theme'. Odznačitev teh nastavitev to temo in pripadajoči gumb v načinu prilagoditve onemogoči.">
 <!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ je vpeljal nastavitve v zavihku. Odznačitev te nastavitve obnovi staro okno nastavitev.">
 <!ENTITY Ctr_fx38reader		"&brandShortName; 38+ je vpeljal nov 'način za branje'. Odznačitev teh nastavitev ga onemogoči in odstrani njegovo ikono iz naslovne vrstice.">
-<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ introduced the 'Pocket' feature. Unchecking this preference disables it and removes its button from the toolbars.">
-<!ENTITY Ctr_fx38pocket2	"Note: Moving 'Pocket'-button to 'customizing palette' before disabling this preference also removes 'Pocket' entries in bookmarks and reader menus.">
+<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ je vpeljal storitev 'Pocket'. Odznačitev te nastavitve jo onemogoči in iz orodnih vrstic odstrani njen gumb.">
+<!ENTITY Ctr_fx38pocket2	"Opomba: Premikanje gumba 'Pocket' v 'paleto za prilagoditev' pred onemogočanjem te nastavitve odstani tudi vnose 'Pocket' v menijih zaznamkov in bralnika.">
 <!ENTITY Ctr_e_omtc			"OMTC / težava z zamrznjenim zavihkom">
 <!ENTITY Ctr_e_searchui		"Videz iskanja">
 <!ENTITY Ctr_e_loop			"Klicanje in pogovori">
@@ -288,8 +288,8 @@
 <!ENTITY Ctr_pw_set_preaus	"&brandShortName;ove prednastavljene nastavitve">
 <!ENTITY Ctr_pw_set_export	"Izvozi nastavitve">
 <!ENTITY Ctr_pw_set_import	"Uvozi nastavitve">
-<!ENTITY Ctr_pw_set_syncon	"Add to Sync">
-<!ENTITY Ctr_pw_set_syncoff	"Remove from Sync">
+<!ENTITY Ctr_pw_set_syncon	"Dodaj v Sync">
+<!ENTITY Ctr_pw_set_syncoff	"Odstrani iz Synca">
 
 <!ENTITY Ctr_special_font	"Nastavitve barve ozadja so samo za privzeto temo!">
 <!ENTITY Ctr_special_info	"Nekatere možnosti v vseh primerih morda ne bodo povzročile vidnih sprememb">
@@ -301,7 +301,7 @@
 <!ENTITY Ctr_openInPrivateWindow "Odpri v novem Zasebnem oknu">
 <!ENTITY Ctr_openInPrivateWindow.accesskey "Z">
 <!ENTITY appMenuGettingStarted.label "Začetek">
-<!ENTITY goCmd.label		"Go">
+<!ENTITY goCmd.label		"Pojdi">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey            "N">
