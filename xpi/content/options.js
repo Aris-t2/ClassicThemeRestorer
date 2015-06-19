@@ -316,7 +316,9 @@ classicthemerestorerjso.ctr = {
 	if (this.appversion < 40) {
 	  document.getElementById('ctraddon_pw_nodevtheme2').style.visibility = 'collapse';
 	}
-
+	if (this.appversion < 41) {
+	  document.getElementById('ctraddon_pw_addonversion').style.visibility = 'collapse';
+	}
 
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get

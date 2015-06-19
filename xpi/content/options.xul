@@ -76,6 +76,7 @@
 		<preference id="ctraddon_backforward"	name="extensions.classicthemerestorer.backforward"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_noconicons"	name="extensions.classicthemerestorer.noconicons"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_alt_newtabp"	name="extensions.classicthemerestorer.alt_newtabp"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_addonversion"	name="extensions.classicthemerestorer.addonversion"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_alt_addonsp"	name="extensions.classicthemerestorer.alt_addonsp"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_svgfilters"	name="extensions.classicthemerestorer.svgfilters"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_wincontrols"	name="extensions.classicthemerestorer.wincontrols"	type="bool"		instantApply="true"/>
@@ -731,6 +732,7 @@
 		<checkbox label="&Ctr_tbconmenu;"		preference="ctraddon_tbconmenu"	  id="ctraddon_pw_tbconmenu"/>
 		<checkbox label="&Ctr_noresizerxp;"		preference="ctraddon_noresizerxp" id="ctraddon_pw_noresizerxp"/>
 		<checkbox label="&Ctr_alt_addonsp;"		preference="ctraddon_alt_addonsp" id="ctraddon_pw_alt_addonsp"/>
+		<checkbox label="&Ctr_addonversion;"	preference="ctraddon_addonversion" id="ctraddon_pw_addonversion"/>
 	  </groupbox>
 
 	</box>

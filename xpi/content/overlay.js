@@ -1513,6 +1513,11 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("alt_addonsp",false);
 		  break;
 
+		  case "addonversion":
+			if (branch.getBoolPref("addonversion")) classicthemerestorerjs.ctr.loadUnloadCSS("addonversion",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("addonversion",false);
+		  break;
+
 		  case "bmbutpanelm":
 			if (branch.getBoolPref("bmbutpanelm")) {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("bmbutpanelm",true);
@@ -2885,6 +2890,7 @@ classicthemerestorerjs.ctr = {
 		case "hidezoomres": 		manageCSS("hide_zoomreset.css");		break;
 		case "alt_newtabp": 		manageCSS("alt_newtabpage.css");		break;
 		case "alt_addonsp": 		manageCSS("alt_addonspage.css");		break;
+		case "addonversion": 		manageCSS("addonversion.css");			break;
 		case "bmbutpanelm": 		manageCSS("bmbut_pmenu.css");			break;
 		case "bmbutnotext": 		manageCSS("bmbut_no_label.css");		break;
 		case "tbconmenu": 			manageCSS("tbconmenu.css");				break;
