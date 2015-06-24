@@ -47,11 +47,11 @@
 <!ENTITY Ctr_tabwidthdef	"(predeterminado)">
 <!ENTITY Ctr_tabwidthcla	"(clásico)">
 <!ENTITY Ctr_tabminheight	"Altura:">
-<!ENTITY Ctr_tabheightinfo	"¡Valores bajos causarán problemas en modo maximizado!">
+<!ENTITY Ctr_tabheightinfo	"¡Valores de altura bajos causarán problemas en modo maximizado!">
 <!ENTITY Ctr_tabmaxwidth	"Ancho-máximo:">
 <!ENTITY Ctr_tabminwidth	"Ancho-mínimo:">
-<!ENTITY Ctr_tabclipwidth	"Clip-width:">
-<!ENTITY Ctr_tabclipwidthI	"Set 'clip width' to '1' manually!">
+<!ENTITY Ctr_tabclipwidth	"Ancho-umbral:">
+<!ENTITY Ctr_tabclipwidthI	"¡Establezca manualmente el 'ancho umbral' a '1' como precaución!">
 <!ENTITY Ctr_tabwidthinfo	"Ancho-mínimo y Ancho-máximo están controlados por TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"Ancho-mínimo y Ancho-máximo están controlados por TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"¡Los valores por debajo de 48px causarán problemas en la mayoría de los casos!">
@@ -68,9 +68,9 @@
 <!ENTITY Ctr_closetab_hfot	"Ocultar para una sola pestaña visible">
 <!ENTITY Ctr_closealt		"Icono alternativo">
 <!ENTITY Ctr_closeonleft	"Posición alternativa en la pestaña">
-<!ENTITY Ctr_close_wwltab	"Cerrar ventana con la última pestaña visible (about:config >> browser.tabs.closeWindowWithLastTab)">
+<!ENTITY Ctr_close_wwltab	"Cerrar ventana con la última pestaña (about:config >> browser.tabs.closeWindowWithLastTab)">
 
-<!ENTITY Ctr_hctpinfotab	"Algunas variaciones de las pestañas no son compatibles con el complemento 'Hide Caption Titlebar Plus'.">
+<!ENTITY Ctr_hctpinfotab	"Algunas variaciones no son compatibles con el complemento 'Hide Caption Titlebar Plus'.">
 <!ENTITY Ctr_hctpinfoab		"El botón en la barra de título no es compatible con el complemento 'Hide Caption Titlebar Plus'.">
 
 <!ENTITY Ctr_appbutton		"Botón de la aplicación">
@@ -138,8 +138,8 @@
 <!ENTITY Ctr_cpanelmenus	"Menús de panel: Vista compacta (marcadores, historial, etc.)">
 <!ENTITY Ctr_hidezoomres	"Controles de zoom en la barra de herramientas: Ocultar botón de restablecimiento del zoom">
 <!ENTITY Ctr_alt_newtabp	"Página de nueva pestaña: Apariencia alternativa">
-<!ENTITY Ctr_alt_addonsp	"Add-ons 'more info' page: alternative appearance">
-<!ENTITY Ctr_addonversion	"Add-ons page: display add-on version">
+<!ENTITY Ctr_alt_addonsp	"Página 'más información' de los complementos: Apariencia alternativa">
+<!ENTITY Ctr_addonversion	"Página de complementos: Mostrar la versión del complemento">
 <!ENTITY Ctr_bmbutpanelm	"Botón de menú Marcadores: Aspecto del panel de menú">
 <!ENTITY Ctr_bmbutnotext	"Botón de menú Marcadores: Ocultar etiqueta en la barra de marcadores">
 <!ENTITY Ctr_skipprintpr	"Botón Imprimir: Omitir previsualización de la impresión">
@@ -185,7 +185,7 @@
 <!ENTITY Ctr_starinurl		"Botón estrella de marcador">
 <!ENTITY Ctr_feedinurl		"Botón de suscripción (RSS feed)">
 <!ENTITY Ctr_hideurelstop	"Ocultar botones 'parar y recargar'">
-<!ENTITY Ctr_hideurlgo		"Hide 'go' button">
+<!ENTITY Ctr_hideurlgo		"Ocultar botón 'ir'">
 <!ENTITY Ctr_urlbardropm	"Mover flecha de despliegue al final de la barra de URL">
 <!ENTITY Ctr_hideprbutton	"Ocultar icono de notificación cuando una ventana emergente sea bloqueada">
 <!ENTITY Ctr_urlbar_ib		"Botón de identidad del sitio (cuadro de identidad)">
@@ -271,8 +271,8 @@
 <!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ introdujo un nuevo 'tema de decoración de desarrollador'. Desmarcar estas preferencias deshabilita el 'tema de desarrollador' y su botón en el modo Personalizar.">
 <!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ introdujo las Opciones (about:preferences) en una pestaña. Desmarcar esta preferencia restaura la antigua ventana de Opciones.">
 <!ENTITY Ctr_fx38reader		"&brandShortName; 38+ introdujo un nuevo modo 'reader' (lector). Desmarcar estas preferencias lo deshabilita y elimina su icono de la barra de direcciones.">
-<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ introduced the 'Pocket' feature. Unchecking this preference disables it and removes its button from the toolbars.">
-<!ENTITY Ctr_fx38pocket2	"Note: Moving 'Pocket'-button to 'customizing palette' before disabling this preference also removes 'Pocket' entries in bookmarks and reader menus.">
+<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ introdujo el servicio online 'Pocket' (bolsillo). Desmarcar esta preferencia lo deshabilita y elimina su botón de las barras de herramientas.">
+<!ENTITY Ctr_fx38pocket2	"Nota: Mover el botón-'Pocket' a la 'paleta de personalización' antes de deshabilitar esta preferencia, elimina también las entradas 'Pocket' en los marcadores y menús del modo lector.">
 <!ENTITY Ctr_e_omtc			"OMTC / ¡¡¡ problema de cuelgue de pestañas !!!">
 <!ENTITY Ctr_e_searchui		"Aspecto de la búsqueda">
 <!ENTITY Ctr_e_loop			"Llamada y conversación">
@@ -288,8 +288,8 @@
 <!ENTITY Ctr_pw_set_preaus	"Preajuste de &brandShortName;">
 <!ENTITY Ctr_pw_set_export	"Exportar preferencias">
 <!ENTITY Ctr_pw_set_import	"Importar preferencias">
-<!ENTITY Ctr_pw_set_syncon	"Add to Sync">
-<!ENTITY Ctr_pw_set_syncoff	"Remove from Sync">
+<!ENTITY Ctr_pw_set_syncon	"Añadir a sincronización">
+<!ENTITY Ctr_pw_set_syncoff	"Eliminar de la sincronización">
 
 <!ENTITY Ctr_special_font	"¡Las configuraciones de color de fondo son sólo para el tema de decoración predeterminado!">
 <!ENTITY Ctr_special_info	"¡Algunas opciones podrían no ofrecer cambios visuales en todos los casos!">
@@ -301,7 +301,7 @@
 <!ENTITY Ctr_openInPrivateWindow	"Abrir en una nueva ventana privada">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
 <!ENTITY appMenuGettingStarted.label	"Comenzar">
-<!ENTITY goCmd.label		"Go">
+<!ENTITY goCmd.label		"Ir">
 
 <!-- For page context entries. Have to be adjusted for every locale! a-s-r-p-m -->
 <!ENTITY backCmd.accesskey            "n">
