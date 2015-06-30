@@ -74,6 +74,9 @@ pref("extensions.classicthemerestorer.invicoaddonbar",false);
 
 pref("extensions.classicthemerestorer.athrobberurl","");
 
+pref("extensions.classicthemerestorer.anewtaburlcb",false);
+pref("extensions.classicthemerestorer.anewtaburl","about:newtab");
+
 // Urlbar
 pref("extensions.classicthemerestorer.starinurl",false);
 pref("extensions.classicthemerestorer.feedinurl",false);

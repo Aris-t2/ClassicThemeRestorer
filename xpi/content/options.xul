@@ -210,6 +210,8 @@
 		
 		<preference id="ctraddon_mbarposition"	name="extensions.classicthemerestorer.mbarposition"	 type="string"	instantApply="true"/>
 		<preference id="ctraddon_athrobberurl"	name="extensions.classicthemerestorer.athrobberurl"	 type="string"	instantApply="true"/>
+		<preference id="ctraddon_anewtaburlcb"	name="extensions.classicthemerestorer.anewtaburlcb"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_anewtaburl"	name="extensions.classicthemerestorer.anewtaburl"	 type="string"	instantApply="true"/>
 		<preference id="ctraddon_mbarforceleft"	name="extensions.classicthemerestorer.mbarforceleft" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_mbarforceright" name="extensions.classicthemerestorer.mbarforceright" type="bool"	instantApply="true"/>
 
@@ -746,6 +748,16 @@
 		<hbox>
 		  <label value=""/>
 		  <textbox id="ctraddon_pw_athrobberurlbox" preference="ctraddon_athrobberurl" size="auto" flex="1" type="autocomplete" placeholder="&Ctr_navthrobber2;"/>
+		  <label value=""/>
+		</hbox>
+	  </groupbox>
+	  
+	  <groupbox id="ctraddon_pw_anewtaburlgbox">
+	    <caption  label="&Ctr_anewtaburl;" class="ctraddon_topic"/>
+		<checkbox label="&Ctr_anewtaburlcb;"	preference="ctraddon_anewtaburlcb" id="ctraddon_pw_anewtaburlcb"/>
+		<hbox>
+		  <label value=""/>
+		  <textbox id="ctraddon_pw_anewtaburlbox" preference="ctraddon_anewtaburl" size="auto" flex="1" type="autocomplete" placeholder=""/>
 		  <label value=""/>
 		</hbox>
 	  </groupbox>
