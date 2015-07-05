@@ -683,11 +683,20 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_appbutonclab').disabled = true;
 	  document.getElementById('ctraddon_pw_appbuttontxt').disabled = true;
 	  document.getElementById('ctraddon_appbclmmenus').disabled = false;
-	} else if (which=="appbutton_off" || which=="appbutton_pm" || which=="appbutton_v2h"){
+	} else if (which=="appbutton_off" || which=="appbutton_v2h"){
 	  document.getElementById('ctraddon_altabico_list').disabled = true;
 	  document.getElementById('ctraddon_abhigher').disabled = true;
 	  document.getElementById('ctraddon_appbutbdl').disabled = true;
 	  document.getElementById('ctraddon_appbutcolor_list').disabled = true;
+	  document.getElementById('ctraddon_dblclclosefx').disabled = true;
+	  document.getElementById('ctraddon_pw_appbutonclab').disabled = true;
+	  document.getElementById('ctraddon_pw_appbuttontxt').disabled = true;
+	  document.getElementById('ctraddon_appbclmmenus').disabled = true;
+	} else if (which=="appbutton_pm"){
+	  document.getElementById('ctraddon_altabico_list').disabled = true;
+	  document.getElementById('ctraddon_abhigher').disabled = true;
+	  document.getElementById('ctraddon_appbutbdl').disabled = true;
+	  document.getElementById('ctraddon_appbutcolor_list').disabled = false;
 	  document.getElementById('ctraddon_dblclclosefx').disabled = true;
 	  document.getElementById('ctraddon_pw_appbutonclab').disabled = true;
 	  document.getElementById('ctraddon_pw_appbuttontxt').disabled = true;

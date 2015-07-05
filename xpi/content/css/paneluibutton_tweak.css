@@ -87,5 +87,26 @@
 	  margin-bottom:24px !important;
 	  border-radius: 0 0 4px 4px !important;
 	}
+	
+	#main-window[tabsintitlebar][sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button{
+	  margin-top:0px !important;
+	}
+
+}
+
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+
+	#ctraddon_pw_appbuttonc_aurora,
+	#ctraddon_pw_appbuttonc_nightly,
+	#ctraddon_pw_appbuttonc_transp,
+	#ctraddon_pw_appbuttonc_palemo,
+	#ctraddon_pw_appbuttonc_red,
+	#ctraddon_pw_appbuttonc_green,
+	#ctraddon_pw_appbuttonc_gray,
+	#ctraddon_pw_appbuttonc_purple,
+	#ctraddon_pw_appbuttonc_white{
+	  visibility: collapse !important;
+	  display: none !important;
+	}
 
 }

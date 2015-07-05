@@ -531,6 +531,8 @@ classicthemerestorerjs.ctr = {
 			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("appbutton"),true);
 			  classicthemerestorerjs.ctr.checkAppbuttonOnNavbar();
 			}
+			
+			if (branch.getCharPref("appbuttonc")=="appbuttonc_custom") classicthemerestorerjs.ctr.loadUnloadCSS("appbuttonc_custom",true);
 
 		  break;
 		  
@@ -3213,8 +3215,37 @@ classicthemerestorerjs.ctr = {
 		case "appbuttonc_custom":
 		
 			removeOldSheet(this.appbutton_color);
+			if(enable==true && this.prefs.getCharPref('appbuttonc')=='appbuttonc_custom' && this.prefs.getCharPref('appbutton')=='appbutton_pm') {
 			
-			if(enable==true && this.prefs.getCharPref('appbuttonc')=='appbuttonc_custom') {
+				this.appbutton_color=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);\
+					@-moz-document url(chrome://browser/content/browser.xul) {\
+						#navigator-toolbox #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button {\
+						  background: linear-gradient('+this.prefs.getCharPref('cappbutc1')+', '+this.prefs.getCharPref('cappbutc2')+' 95%) !important;\
+						  border-color: rgba(83,42,6,.9) !important;\
+						  box-shadow: 0 1px 0 rgba(255,255,255,.25) inset,\
+									  0 0 0 1px rgba(255,255,255,.25) inset !important;\
+						}\
+						#navigator-toolbox #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button:hover:not(:active):not([open]){\
+						  background-image: radial-gradient(farthest-side at center bottom, hsla(210,48%,90%,.5) 10%, hsla(210,48%,90%,0) 70%),\
+																radial-gradient(farthest-side at center bottom, hsla(211,70%,83%,.5), hsla(211,70%,83%,0)),\
+																linear-gradient('+this.prefs.getCharPref('cappbutc1')+', '+this.prefs.getCharPref('cappbutc2')+' 95%) !important;\
+						  border-color: rgba(83,42,6,.9) !important;\
+						  box-shadow: 0 1px 0 rgba(255,255,255,.1) inset,\
+									  0 0 2px 1px rgba(250,234,169,.7) inset,\
+									  0 -1px 0 rgba(250,234,169,.5) inset !important;\
+						}\
+						#navigator-toolbox #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button:hover:active,\
+						#TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button[open]{\
+						  background-image: linear-gradient('+this.prefs.getCharPref('cappbutc1')+', '+this.prefs.getCharPref('cappbutc2')+' 95%) !important;\
+						  box-shadow: 0 2px 3px rgba(0,0,0,.4) inset,\
+									  0 1px 1px rgba(0,0,0,.2) inset !important;\
+						}\
+				'), null, null);
+			
+				applyNewSheet(this.appbutton_color);
+			
+			} else if(enable==true && this.prefs.getCharPref('appbuttonc')=='appbuttonc_custom') {
 			
 				this.appbutton_color=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
 					@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);\
@@ -3943,7 +3974,7 @@ classicthemerestorerjs.ctr = {
 			if(enable==true){
 	
 				this.tabtxtcsheet_def=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):not(:hover) .tab-text {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):not(:hover) .tab-label {\
 					  color: '+this.prefs.getCharPref('ctabt')+' !important;\
 					}\
 				'), null, null);
@@ -3960,7 +3991,7 @@ classicthemerestorerjs.ctr = {
 			if(enable==true){
 	
 				this.tabtxtcsheet_act=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[selected="true"] .tab-text {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[selected="true"] .tab-label {\
 					  color: '+this.prefs.getCharPref('ctabactt')+' !important;\
 					}\
 				'), null, null);
@@ -3977,7 +4008,7 @@ classicthemerestorerjs.ctr = {
 			if(enable==true){
 	
 				this.tabtxtcsheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):hover .tab-text {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):hover .tab-label {\
 					  color: '+this.prefs.getCharPref('ctabhovt')+' !important;\
 					}\
 				'), null, null);
@@ -3996,15 +4027,15 @@ classicthemerestorerjs.ctr = {
 			  if(this.prefs.getBoolPref('tabc_hov_unl')){
 	
 				this.tabtxtcsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):hover .tab-text,\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) .tab-text {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):hover .tab-label,\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) .tab-label {\
 					  color: '+this.prefs.getCharPref('ctabpent')+' !important;\
 					}\
 				'), null, null);
 				
 			  } else {
 				this.tabtxtcsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) .tab-text {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) .tab-label {\
 					  color: '+this.prefs.getCharPref('ctabpent')+' !important;\
 					}\
 				'), null, null);
@@ -4024,8 +4055,8 @@ classicthemerestorerjs.ctr = {
 			  if(this.prefs.getBoolPref('tabc_hov_unr')){
 	
 				this.tabtxtcsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):hover .tab-text,\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):not(:hover) .tab-text {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):hover .tab-label,\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):not(:hover) .tab-label {\
 					  color: '+this.prefs.getCharPref('ctabunrt')+' !important;\
 					}\
 				'), null, null);
@@ -4033,7 +4064,7 @@ classicthemerestorerjs.ctr = {
 			  } else {
 	
 				this.tabtxtcsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):not(:hover) .tab-text {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):not(:hover) .tab-label {\
 					  color: '+this.prefs.getCharPref('ctabunrt')+' !important;\
 					}\
 				'), null, null);
@@ -4052,7 +4083,7 @@ classicthemerestorerjs.ctr = {
 			if(enable==true){
 				
 				this.tabtxtshsheet_def=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):not(:hover) .tab-text {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):not(:hover) .tab-label {\
 					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabtsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabtsh')+' !important;\
 					}\
 				'), null, null);
@@ -4069,7 +4100,7 @@ classicthemerestorerjs.ctr = {
 			if(enable==true){
 				
 				this.tabtxtshsheet_act=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[selected="true"] .tab-text {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[selected="true"] .tab-label {\
 					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabacttsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabacttsh')+' !important;\
 					}\
 				'), null, null);
@@ -4086,7 +4117,7 @@ classicthemerestorerjs.ctr = {
 			if(enable==true){
 				
 				this.tabtxtshsheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):hover .tab-text {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected="true"]):hover .tab-label {\
 					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabhovtsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabhovtsh')+' !important;\
 					}\
 				'), null, null);
@@ -4105,8 +4136,8 @@ classicthemerestorerjs.ctr = {
 			  if(this.prefs.getBoolPref('tabc_hov_unl')){
 			
 				this.tabtxtshsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):hover .tab-text,\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) .tab-text {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):hover .tab-label,\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) .tab-label {\
 					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabpentsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabpentsh')+' !important;\
 					}\
 				'), null, null);
@@ -4114,7 +4145,7 @@ classicthemerestorerjs.ctr = {
 			  } else {
 			  
 				this.tabtxtshsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) .tab-text {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:not([selected="true"]):not(:hover) .tab-label {\
 					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabpentsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabpentsh')+' !important;\
 					}\
 				'), null, null);
@@ -4135,8 +4166,8 @@ classicthemerestorerjs.ctr = {
 			  if(this.prefs.getBoolPref('tabc_hov_unr')){
 				
 				this.tabtxtshsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):hover .tab-text,\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):not(:hover) .tab-text {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):hover .tab-label,\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):not(:hover) .tab-label {\
 					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabunrtsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabunrtsh')+' !important;\
 					}\
 				'), null, null);
@@ -4144,7 +4175,7 @@ classicthemerestorerjs.ctr = {
 			  } else {
 			  
 				this.tabtxtshsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):not(:hover) .tab-text {\
+					#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:not([selected="true"]):not(:hover) .tab-label {\
 					  text-shadow: 0px 1px 0px '+this.prefs.getCharPref('ctabunrtsh')+',0px 1px 4px '+this.prefs.getCharPref('ctabunrtsh')+' !important;\
 					}\
 				'), null, null);
@@ -4163,7 +4194,7 @@ classicthemerestorerjs.ctr = {
 			if(enable==true){
 				
 				this.tabboldsheet_def=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab:not([selected=true]):not(:hover):not([pending]):not([unread]) .tab-text {\
+					.tabbrowser-tab:not([selected=true]):not(:hover):not([pending]):not([unread]) .tab-label {\
 					  font-weight: bold !important;\
 					}\
 				'), null, null);
@@ -4180,7 +4211,7 @@ classicthemerestorerjs.ctr = {
 			if(enable==true){
 				
 				this.tabboldsheet_act=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab[selected=true] .tab-text {\
+					.tabbrowser-tab[selected=true] .tab-label {\
 					  font-weight: bold !important;\
 					}\
 				'), null, null);
@@ -4199,7 +4230,7 @@ classicthemerestorerjs.ctr = {
 				if(this.prefs.getBoolPref('tabc_hov_unr') && this.prefs.getBoolPref('tabc_hov_unl')){
 					
 					this.tabboldsheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						.tabbrowser-tab:not([selected=true]):not([pending]):not([unread]):hover .tab-text {\
+						.tabbrowser-tab:not([selected=true]):not([pending]):not([unread]):hover .tab-label {\
 						  font-weight: bold !important;\
 						}\
 					'), null, null);
@@ -4207,7 +4238,7 @@ classicthemerestorerjs.ctr = {
 				} else if(this.prefs.getBoolPref('tabc_hov_unr')){
 					
 					this.tabboldsheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						.tabbrowser-tab:not([selected=true]):not([unread]):hover .tab-text {\
+						.tabbrowser-tab:not([selected=true]):not([unread]):hover .tab-label {\
 						  font-weight: bold !important;\
 						}\
 					'), null, null);
@@ -4215,7 +4246,7 @@ classicthemerestorerjs.ctr = {
 				} else if(this.prefs.getBoolPref('tabc_hov_unl')){
 					
 					this.tabboldsheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						.tabbrowser-tab:not([selected=true]):not([pending]):hover .tab-text {\
+						.tabbrowser-tab:not([selected=true]):not([pending]):hover .tab-label {\
 						  font-weight: bold !important;\
 						}\
 					'), null, null);
@@ -4223,7 +4254,7 @@ classicthemerestorerjs.ctr = {
 				} else {
 				
 					this.tabboldsheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						.tabbrowser-tab:not([selected=true]):hover .tab-text {\
+						.tabbrowser-tab:not([selected=true]):hover .tab-label {\
 						  font-weight: bold !important;\
 						}\
 					'), null, null);
@@ -4243,8 +4274,8 @@ classicthemerestorerjs.ctr = {
 			  if(this.prefs.getBoolPref('tabc_hov_unr')){
 
 				this.tabboldsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab[pending]:not([selected=true]):hover .tab-text,\
-					.tabbrowser-tab[pending]:not([selected=true]):not(:hover) .tab-text {\
+					.tabbrowser-tab[pending]:not([selected=true]):hover .tab-label,\
+					.tabbrowser-tab[pending]:not([selected=true]):not(:hover) .tab-label {\
 					  font-weight: bold !important;\
 					}\
 				'), null, null);
@@ -4252,7 +4283,7 @@ classicthemerestorerjs.ctr = {
 			  } else {
 
 				this.tabboldsheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab[pending]:not([selected=true]):not(:hover) .tab-text {\
+					.tabbrowser-tab[pending]:not([selected=true]):not(:hover) .tab-label {\
 					  font-weight: bold !important;\
 					}\
 				'), null, null);
@@ -4273,8 +4304,8 @@ classicthemerestorerjs.ctr = {
 			  if(this.prefs.getBoolPref('tabc_hov_unr')){
 
 				this.tabboldsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab[unread]:not([selected=true]):hover .tab-text,\
-					.tabbrowser-tab[unread]:not([selected=true]):not(:hover) .tab-text {\
+					.tabbrowser-tab[unread]:not([selected=true]):hover .tab-label,\
+					.tabbrowser-tab[unread]:not([selected=true]):not(:hover) .tab-label {\
 					  font-weight: bold !important;\
 					}\
 				'), null, null);
@@ -4282,7 +4313,7 @@ classicthemerestorerjs.ctr = {
 			  } else {
 
 				this.tabboldsheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab[unread]:not([selected=true]):not(:hover) .tab-text {\
+					.tabbrowser-tab[unread]:not([selected=true]):not(:hover) .tab-label {\
 					  font-weight: bold !important;\
 					}\
 				'), null, null);
@@ -4301,7 +4332,7 @@ classicthemerestorerjs.ctr = {
 			if(enable==true){
 				
 				this.tabitasheet_def=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab:not([selected=true]):not(:hover):not([pending]):not([unread]) .tab-text {\
+					.tabbrowser-tab:not([selected=true]):not(:hover):not([pending]):not([unread]) .tab-label {\
 					  font-style: italic !important;\
 					}\
 				'), null, null);
@@ -4318,7 +4349,7 @@ classicthemerestorerjs.ctr = {
 			if(enable==true){
 				
 				this.tabitasheet_act=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab[selected=true] .tab-text {\
+					.tabbrowser-tab[selected=true] .tab-label {\
 					  font-style: italic !important;\
 					}\
 				'), null, null);
@@ -4336,25 +4367,25 @@ classicthemerestorerjs.ctr = {
 				
 				if(this.prefs.getBoolPref('tabc_hov_unr') && this.prefs.getBoolPref('tabc_hov_unl')){
 					this.tabitasheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						.tabbrowser-tab:not([selected=true]):not([pending]):not([unread]):hover .tab-text {\
+						.tabbrowser-tab:not([selected=true]):not([pending]):not([unread]):hover .tab-label {\
 						  font-style: italic !important;\
 						}\
 					'), null, null);
 				} else if(this.prefs.getBoolPref('tabc_hov_unr')){
 					this.tabitasheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						.tabbrowser-tab:not([selected=true]):not([unread]):hover .tab-text {\
+						.tabbrowser-tab:not([selected=true]):not([unread]):hover .tab-label {\
 						  font-style: italic !important;\
 						}\
 					'), null, null);
 				} else if(this.prefs.getBoolPref('tabc_hov_unl')){
 					this.tabitasheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						.tabbrowser-tab:not([selected=true]):not([pending]):hover .tab-text {\
+						.tabbrowser-tab:not([selected=true]):not([pending]):hover .tab-label {\
 						  font-style: italic !important;\
 						}\
 					'), null, null);
 				} else {
 					this.tabitasheet_hov=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						.tabbrowser-tab:not([selected=true]):hover .tab-text {\
+						.tabbrowser-tab:not([selected=true]):hover .tab-label {\
 						  font-style: italic !important;\
 						}\
 					'), null, null);
@@ -4374,8 +4405,8 @@ classicthemerestorerjs.ctr = {
 			  if(this.prefs.getBoolPref('tabc_hov_unr')){
 
 				this.tabitasheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab[pending]:not([selected=true]):hover .tab-text,\
-					.tabbrowser-tab[pending]:not([selected=true]):not(:hover) .tab-text {\
+					.tabbrowser-tab[pending]:not([selected=true]):hover .tab-label,\
+					.tabbrowser-tab[pending]:not([selected=true]):not(:hover) .tab-label {\
 					  font-style: italic !important;\
 					}\
 				'), null, null);
@@ -4383,7 +4414,7 @@ classicthemerestorerjs.ctr = {
 			  } else {
 
 				this.tabitasheet_pen=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab[pending]:not([selected=true]):not(:hover) .tab-text {\
+					.tabbrowser-tab[pending]:not([selected=true]):not(:hover) .tab-label {\
 					  font-style: italic !important;\
 					}\
 				'), null, null);
@@ -4404,8 +4435,8 @@ classicthemerestorerjs.ctr = {
 			  if(this.prefs.getBoolPref('tabc_hov_unr')){
 
 				this.tabitasheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab[unread]:not([selected=true]):hover .tab-text,\
-					.tabbrowser-tab[unread]:not([selected=true]):not(:hover) .tab-text {\
+					.tabbrowser-tab[unread]:not([selected=true]):hover .tab-label,\
+					.tabbrowser-tab[unread]:not([selected=true]):not(:hover) .tab-label {\
 					  font-style: italic !important;\
 					}\
 				'), null, null);
@@ -4413,7 +4444,7 @@ classicthemerestorerjs.ctr = {
 			  } else {
 
 				this.tabitasheet_unr=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					.tabbrowser-tab[unread]:not([selected=true]):not(:hover) .tab-text {\
+					.tabbrowser-tab[unread]:not([selected=true]):not(:hover) .tab-label {\
 					  font-style: italic !important;\
 					}\
 				'), null, null);

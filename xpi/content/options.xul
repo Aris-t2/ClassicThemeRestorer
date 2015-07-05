@@ -652,17 +652,17 @@
 
 		<menulist preference="ctraddon_appbuttonc" id="ctraddon_appbutcolor_list">
 			<menupopup>
-				<menuitem value="appbuttonc_orange"	 label="&Ctr_appbuttonc_o;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_orange')"/>
-				<menuitem value="appbuttonc_aurora"	 label="&Ctr_appbuttonc_a;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_aurora')"/>
-				<menuitem value="appbuttonc_nightly" label="&Ctr_appbuttonc_n;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_nightly')"/>
-				<menuitem value="appbuttonc_transp"  label="&Ctr_appbuttonc_t;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_transp')"/>
-				<menuitem value="appbuttonc_palemo"  label="&Ctr_appbuttonc_p;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_palemo')"/>
-				<menuitem value="appbuttonc_red"	 label="&Ctr_appbuttonc_r;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_red')"/>
-				<menuitem value="appbuttonc_green"	 label="&Ctr_appbuttonc_g;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_green')"/>
-				<menuitem value="appbuttonc_gray"	 label="&Ctr_appbuttonc_gr;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_gray')"/>
-				<menuitem value="appbuttonc_purple"	 label="&Ctr_appbuttonc_pu;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_purple')"/>
-				<menuitem value="appbuttonc_white"	 label="&Ctr_appbuttonc_wh;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_white')"/>
-				<menuitem value="appbuttonc_custom"	 label="&Ctr_appbuttonc_cu;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_custom')"/>
+				<menuitem value="appbuttonc_orange"	 label="&Ctr_appbuttonc_o;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_orange')" id="ctraddon_pw_appbuttonc_orange"/>
+				<menuitem value="appbuttonc_aurora"	 label="&Ctr_appbuttonc_a;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_aurora')" id="ctraddon_pw_appbuttonc_aurora"/>
+				<menuitem value="appbuttonc_nightly" label="&Ctr_appbuttonc_n;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_nightly')" id="ctraddon_pw_appbuttonc_nightly"/>
+				<menuitem value="appbuttonc_transp"  label="&Ctr_appbuttonc_t;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_transp')" id="ctraddon_pw_appbuttonc_transp"/>
+				<menuitem value="appbuttonc_palemo"  label="&Ctr_appbuttonc_p;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_palemo')" id="ctraddon_pw_appbuttonc_palemo"/>
+				<menuitem value="appbuttonc_red"	 label="&Ctr_appbuttonc_r;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_red')" id="ctraddon_pw_appbuttonc_red"/>
+				<menuitem value="appbuttonc_green"	 label="&Ctr_appbuttonc_g;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_green')" id="ctraddon_pw_appbuttonc_green"/>
+				<menuitem value="appbuttonc_gray"	 label="&Ctr_appbuttonc_gr;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_gray')" id="ctraddon_pw_appbuttonc_gray"/>
+				<menuitem value="appbuttonc_purple"	 label="&Ctr_appbuttonc_pu;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_purple')" id="ctraddon_pw_appbuttonc_purple"/>
+				<menuitem value="appbuttonc_white"	 label="&Ctr_appbuttonc_wh;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_white')" id="ctraddon_pw_appbuttonc_white"/>
+				<menuitem value="appbuttonc_custom"	 label="&Ctr_appbuttonc_cu;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_custom')" id="ctraddon_pw_appbuttonc_custom"/>
 			</menupopup>
 		</menulist>
 		
