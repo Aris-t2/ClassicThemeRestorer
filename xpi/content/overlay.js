@@ -203,7 +203,19 @@ classicthemerestorerjs.ctr = {
 		switch (name) {
 
 		  case "enabled":
-			if (branch.getBoolPref("enabled") && classicthemerestorerjs.ctr.appversion < 40) {
+		  
+		    // developer edition wrongly sets this pref although the lw-theme way to handle
+			// dev theme is used for a while now
+			
+			if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("nodevtheme2"))
+				branch.setBoolPref("enabled",false);
+			else if(document.getElementById("main-window").getAttribute("title_normal")=="Firefox Developer Edition")
+				branch.setBoolPref("enabled",false);
+			else if(document.getElementById("main-window").getAttribute("title_normal")=="Nightly")
+				branch.setBoolPref("enabled",false);
+
+			
+			if (branch.getBoolPref("enabled") && classicthemerestorerjs.ctr.appversion < 41) {
 				if (classicthemerestorerjs.ctr.fxdefaulttheme){
 					try{
 				      document.getElementById("main-window").setAttribute('developertheme',true);
@@ -224,7 +236,7 @@ classicthemerestorerjs.ctr = {
 				}
 			}
 			else {
-			  if (classicthemerestorerjs.ctr.fxdefaulttheme && classicthemerestorerjs.ctr.appversion < 40){
+			  if (classicthemerestorerjs.ctr.fxdefaulttheme && classicthemerestorerjs.ctr.appversion < 41){
 				try{
 				  document.getElementById("main-window").setAttribute('developertheme',false);
 				} catch(e){}
@@ -2409,9 +2421,9 @@ classicthemerestorerjs.ctr = {
 	},1000);
   },
   
-  // prevent developer theme from being enabled in Fx40+
+  // prevent developer theme from being enabled on Fx Nightly
   PreventDevThemeEnabling: function(){
-	if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("nodevtheme2") && classicthemerestorerjs.ctr.appversion >= 40) {
+	if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("nodevtheme2") && classicthemerestorerjs.ctr.appversion >= 41) {
 
 	  try {
 		if (Services.prefs.getBranch("lightweightThemes.").getCharPref("selectedThemeID")=='firefox-devedition@mozilla.org') {
@@ -3236,7 +3248,7 @@ classicthemerestorerjs.ctr = {
 									  0 -1px 0 rgba(250,234,169,.5) inset !important;\
 						}\
 						#navigator-toolbox #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button:hover:active,\
-						#TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button[open]{\
+						#navigator-toolbox #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button[open]{\
 						  background-image: linear-gradient('+this.prefs.getCharPref('cappbutc1')+', '+this.prefs.getCharPref('cappbutc2')+' 95%) !important;\
 						  box-shadow: 0 2px 3px rgba(0,0,0,.4) inset,\
 									  0 1px 1px rgba(0,0,0,.2) inset !important;\

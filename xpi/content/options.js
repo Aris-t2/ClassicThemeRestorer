@@ -500,7 +500,7 @@ classicthemerestorerjso.ctr = {
   hideThemeInfoForTabs: function(){
 	setTimeout(function(){
 		//try {
-		  if(classicthemerestorerjso.ctr.appversion < 40) {
+		  if(classicthemerestorerjso.ctr.appversion < 41) {
 			try {
 			  if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
 				document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'visible';
