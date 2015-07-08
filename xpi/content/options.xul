@@ -689,8 +689,8 @@
 		<checkbox label="&Ctr_appbclmmenus;" preference="ctraddon_appbclmmenus" id="ctraddon_appbclmmenus"/>
 	    
 		<hbox>
-			<description id="ctraddon_pw_appbutonclab" class="ctraddon_windowsonly ctraddon_font1">&Ctr_appbutonclab;</description>
-			<textbox id="ctraddon_pw_appbuttontxt" class="ctraddon_windowsonly" preference="ctraddon_appbuttontxt" size="auto" flex="1" type="autocomplete" placeholder="&Ctr_appbutonclab2;" onkeydown="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+			<description id="ctraddon_pw_appbutonclab" class="ctraddon_font1">&Ctr_appbutonclab;</description>
+			<textbox id="ctraddon_pw_appbuttontxt" preference="ctraddon_appbuttontxt" size="auto" flex="1" type="autocomplete" placeholder="&Ctr_appbutonclab2;" onkeydown="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 			<label value=""/>
 		</hbox>
 		
