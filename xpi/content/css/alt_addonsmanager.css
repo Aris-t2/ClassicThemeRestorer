@@ -1,0 +1,158 @@
+@-moz-document url(about:addons) {
+
+	/* main colors addons-page */
+	#addons-page {
+	  background: linear-gradient(to bottom right, #f5f5f5,-moz-Dialog,#f5f5f5,-moz-Dialog) !important;
+	}
+
+	@media (-moz-os-version: windows-win7), (-moz-os-version: windows-vista){
+	  @media (-moz-windows-theme:aero) {
+	    #addons-page {
+		  background: linear-gradient(to bottom right, #edf6ff,#dbeaf9,#edf6ff,#dbeaf9) !important;
+	    }
+	  }
+	}
+
+	#addons-page #nav-header,
+	#addons-page #categories,
+	#addons-page .main-content{
+	  background-color: transparent !important;
+	}
+
+	#addons-page #list-view #addon-list-empty .alert,
+	#addons-page #detail-view,
+	#addons-page #addon-list{
+	  background-color: white !important;
+	}
+
+	/* main colors category items */
+	#addons-page button.sorter[checked="true"],
+	#addons-page #categories .category[selected]{
+	  background-color: white !important;
+	  color: black !important;
+	}
+
+	#addons-page button.sorter:not([checked="true"]):hover,
+	#addons-page #categories .category:not([selected]):hover{
+	  background-color: Highlight !important;
+	  color: HighlightText !important;
+	}
+
+	#addons-page button.sorter:not([checked="true"]):not(:hover),
+	#addons-page #categories .category:not([selected]):not(:hover){
+	  color: black !important;
+	}
+
+	/* dimensions / positioning */
+	#addons-page .main-content{
+	  padding: 0 !important;
+	  margin: 0 !important;
+	}
+	
+	#addons-page #addon-list {
+	  -moz-margin-start: -1px !important;
+	}
+
+	#addons-page #addon-list .scrollbox-innerbox{
+	  -moz-margin-end: -46px !important;
+	}
+
+	#addons-page #detail-view,
+	#addons-page #userstyle-sorting,
+	#addons-page .global-warning-container,
+	#addons-page .global-info-container{
+	  -moz-margin-start: 0px !important;
+	  -moz-margin-end: 1px !important;
+	}
+
+	#addons-page .detail-view-container {
+	  -moz-margin-start: 10px !important;
+	}
+
+	#addons-page #view-port{
+	  -moz-margin-end: 4px !important;
+	}
+
+	#addons-page #header{
+	  padding: 2px 0 !important;
+	  margin: 0 !important;
+	}
+
+	/* buttons / menulists */
+	#addons-page #header button,
+	#addons-page #header #header-utils-btn,
+	#addons-page #list-view .global-info button,
+	#addons-page #list-view .discover-button,
+	#addons-page .status-control-wrapper button,
+	#addons-page #userstyle-sorting button{
+	  padding:2px !important;
+	  height: unset !important;
+	  font-size: 90% !important;
+	}
+	
+	#addons-page #list-view menulist{
+	  padding:0px !important;
+	  height: 26px !important;
+	  font-size: 90% !important;
+	}
+
+	#addons-page #header button,
+	#addons-page #header #header-utils-btn,
+	#addons-page #list-view .global-info button:not(.button-link),
+	#addons-page #list-view .discover-button,
+	#addons-page #list-view menulist,
+	#addons-page .status-control-wrapper button,
+	#addons-page #userstyle-sorting .addon-control{
+	  background-image: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.20),rgba(0,0,0,0.01)) !important;
+	}
+
+	#addons-page #header-utils-btn{
+	  padding: 2px !important;
+	  height: unset !important;
+	}
+
+	#addons-page #header-search{
+	  padding: 1px !important;
+	  height: unset !important;
+	}
+	
+	/* addon entry */
+	#addons-page .main-content .addon[active="false"]{
+	  opacity: .8 !important;
+	}
+
+	#addons-page .addon .name-container,
+	#addons-page #addon-list .name-container {
+	  font-size: 130% !important;
+	}
+	#addons-page #addon-list .warning,
+	#addons-page #addon-list .pending,
+	#addons-page #addon-list .error{
+	  font-size: 90% !important;
+	}
+	
+	/* detail view */
+	#detail-view button:not(.button-link):not(.text-link),
+	#detail-view menulist{
+	  padding:0px !important;
+	  height: 26px !important;
+	  font-size: 90% !important;
+	  background-image: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.20),rgba(0,0,0,0.01)) !important;
+	}
+	
+	#detail-view label{
+	  font-size: 90% !important;
+	}
+
+	#detail-view .creator-link{
+	  font-size: 110% !important;
+	}
+	
+	#detail-view checkbox image,
+	#detail-view radio image {
+	  width: 16px !important;
+	  height: 16px !important;
+	  margin: 0 !important;
+	}
+
+}

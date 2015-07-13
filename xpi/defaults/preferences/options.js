@@ -50,6 +50,7 @@ pref("extensions.classicthemerestorer.cpanelmenus",false);
 pref("extensions.classicthemerestorer.hidezoomres",false);
 pref("extensions.classicthemerestorer.alt_newtabp",false);
 pref("extensions.classicthemerestorer.addonversion",false);
+pref("extensions.classicthemerestorer.alt_addonsm",false);
 pref("extensions.classicthemerestorer.alt_addonsp",false);
 pref("extensions.classicthemerestorer.bmbutpanelm",false);
 pref("extensions.classicthemerestorer.bmbutnotext",false);

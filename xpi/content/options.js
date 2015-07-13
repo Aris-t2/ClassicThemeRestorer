@@ -82,6 +82,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_tabc_act_tb').disabled = true;
 		document.getElementById('ctraddon_pw_aerocolors').disabled = true;
 		document.getElementById('ctraddon_pw_tbsep_winc').disabled = true;
+		document.getElementById('ctraddon_pw_alt_addonsm').disabled = true;
 
 		document.getElementById('ctraddon_abhigher').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_smallnavbut').style.visibility = 'collapse';
@@ -121,6 +122,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_tabc_act_tb').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_aerocolors').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tbsep_winc').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_alt_addonsm').style.visibility = 'collapse';
 	} else {
 		document.getElementById('ctraddon_pw_special_info2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_special_font').style.visibility = 'collapse';
@@ -316,6 +318,7 @@ classicthemerestorerjso.ctr = {
 	if (this.appversion < 40) {
 	  /*document.getElementById('ctraddon_pw_nodevtheme2').style.visibility = 'collapse';*/
 	  document.getElementById('ctraddon_pw_addonversion').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_alt_addonsm').style.visibility = 'collapse';
 	}
 	if (this.appversion < 41) {
 	  document.getElementById('ctraddon_pw_anewtaburlgbox').style.visibility = 'collapse';
