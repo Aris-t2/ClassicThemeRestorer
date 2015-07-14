@@ -49,7 +49,6 @@
 		
 		<preference id="ctraddon_tabwidth"		name="extensions.classicthemerestorer.ctabwidth"	type="int"		instantApply="true"/>
 		<preference id="ctraddon_tabmwidth"		name="extensions.classicthemerestorer.ctabmwidth"	type="int"		instantApply="true"/>
-		<preference id="ctraddon_tabclipwidth"	name="browser.tabs.tabClipWidth"					type="int"		instantApply="true"/>
 		<preference id="ctraddon_closetab"		name="extensions.classicthemerestorer.closetab" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_closetabhfl"	name="extensions.classicthemerestorer.closetabhfl"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_closealt"		name="extensions.classicthemerestorer.closealt"		type="bool"		instantApply="true"/>
@@ -336,14 +335,6 @@
 				</hbox>
 				<label value="210px &Ctr_tabwidthdef; / 250px &Ctr_tabwidthcla;" id="ctraddon_pw_tabMaxWidth_L2"/>
 			</row>
-			<row>
-				<label value="&Ctr_tabclipwidth;" id="ctraddon_pw_tabClipWidth_L1"/>
-				<hbox>
-					<textbox id="ctraddon_pw_tabClipWidth" size="3" maxlength="3" preference="ctraddon_tabclipwidth" type="number"  oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" onkeydown="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
-					<label value="px"/>
-				</hbox>
-				<label value="140px &Ctr_tabwidthdef;" id="ctraddon_pw_tabClipWidth_L2"/>
-			</row>
 		  </rows>
 		</grid>
 		
@@ -351,13 +342,11 @@
 		<menulist preference="ctraddon_closetab" id="ctraddon_pw_closetab">
 			<menupopup>
 				<menuitem value="closetab_default"	label="&Ctr_tabwidthdef;" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
-				<menuitem value="closetab_forced"	label="&Ctr_closetab_5; *" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
+				<menuitem value="closetab_forced"	label="&Ctr_closetab_5;" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
 				<menuitem value="closetab_active"	label="&Ctr_closetab_1;" id="ctraddon_closetab_pw_act" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
 				<menuitem value="closetab_none"		label="&Ctr_closetab_2;" id="ctraddon_closetab_pw_non" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(true);"/>
 				<menuitem value="closetab_tb_start"	label="&Ctr_closetab_4;" id="ctraddon_closetab_pw_sta" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
 				<menuitem value="closetab_tb_end"	label="&Ctr_closetab_3;" id="ctraddon_closetab_pw_end" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
-				<label value=" "/>
-				<description class="ctraddon_font1">* &Ctr_tabclipwidthI;</description>
 			</menupopup>
 		</menulist>
 		<checkbox label="&Ctr_closetab_hfot;" preference="ctraddon_closetabhfl" id="ctraddon_pw_closetabhfl"/>

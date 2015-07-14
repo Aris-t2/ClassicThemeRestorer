@@ -1,3 +1,5 @@
+@import url(chrome://ctraddon_os_special/skin/alt_addonsmanagerextra.css);
+
 @-moz-document url(about:addons) {
 
 	/* main colors addons-page */
@@ -20,8 +22,11 @@
 	}
 
 	#addons-page #list-view #addon-list-empty .alert,
+	#addons-page #updates-list-empty .alert,
 	#addons-page #detail-view,
-	#addons-page #addon-list{
+	#addons-page #addon-list,
+	#addons-page #search-list,
+	#addons-page #updates-list{
 	  background-color: white !important;
 	}
 
@@ -49,10 +54,15 @@
 	  margin: 0 !important;
 	}
 	
+	#addons-page #header-search .textbox-input-box{
+	  height: 18px !important;
+	}
+	
 	#addons-page #addon-list {
 	  -moz-margin-start: -1px !important;
 	}
-
+	
+	#addons-page #updates-list .scrollbox-innerbox,
 	#addons-page #addon-list .scrollbox-innerbox{
 	  -moz-margin-end: -46px !important;
 	}
@@ -84,25 +94,26 @@
 	#addons-page #list-view .global-info button,
 	#addons-page #list-view .discover-button,
 	#addons-page .status-control-wrapper button,
-	#addons-page #userstyle-sorting button{
+	#addons-page #userstyle-sorting button,
+	#addons-page #update-actions button,
+	#addons-page #updates-list-empty button,
+	#addons-page .relnotes-toggle,
+	#list-view menulist{
 	  padding:2px !important;
 	  height: unset !important;
 	  font-size: 90% !important;
 	}
 	
-	#addons-page #list-view menulist{
-	  padding:0px !important;
-	  height: 26px !important;
-	  font-size: 90% !important;
-	}
-
-	#addons-page #header button,
+	#addons-page #header button:not(.button-link),
 	#addons-page #header #header-utils-btn,
 	#addons-page #list-view .global-info button:not(.button-link),
 	#addons-page #list-view .discover-button,
 	#addons-page #list-view menulist,
 	#addons-page .status-control-wrapper button,
-	#addons-page #userstyle-sorting .addon-control{
+	#addons-page #userstyle-sorting .addon-control,
+	#addons-page #update-actions button,
+	#addons-page #updates-list-empty button,
+	#addons-page .relnotes-toggle:hover{
 	  background-image: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.20),rgba(0,0,0,0.01)) !important;
 	}
 
@@ -111,12 +122,18 @@
 	  height: unset !important;
 	}
 
+	#addons-page button.sorter{
+	  padding:2px !important;
+	  min-height: 26px !important;
+		height: unset !important;
+	}
+
 	#addons-page #header-search{
 	  padding: 1px !important;
 	  height: unset !important;
 	}
 	
-	/* addon entry */
+	/* add-on entry */
 	#addons-page .main-content .addon[active="false"]{
 	  opacity: .8 !important;
 	}
@@ -125,6 +142,7 @@
 	#addons-page #addon-list .name-container {
 	  font-size: 130% !important;
 	}
+	.sort-controls,
 	#addons-page #addon-list .warning,
 	#addons-page #addon-list .pending,
 	#addons-page #addon-list .error{
@@ -134,10 +152,18 @@
 	/* detail view */
 	#detail-view button:not(.button-link):not(.text-link),
 	#detail-view menulist{
-	  padding:0px !important;
-	  height: 26px !important;
+	  padding:2px !important;
+	  height: unset !important;
 	  font-size: 90% !important;
 	  background-image: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.20),rgba(0,0,0,0.01)) !important;
+	}
+	
+	#detail-view colorpicker[type="button"]{
+	  padding:2px !important;
+	  min-height: 26px !important;
+	  min-width: 40px !important;
+	  height:auto !important;
+	  width: auto !important;
 	}
 	
 	#detail-view label{
@@ -148,8 +174,9 @@
 	  font-size: 110% !important;
 	}
 	
-	#detail-view checkbox image,
-	#detail-view radio image {
+	/* checkbox and radio items */
+	#addons-page checkbox image,
+	#addons-page radio image {
 	  width: 16px !important;
 	  height: 16px !important;
 	  margin: 0 !important;

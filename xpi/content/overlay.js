@@ -3167,7 +3167,7 @@ classicthemerestorerjs.ctr = {
 					@-moz-document url(chrome://browser/content/browser.xul) {\
 						/* Toolbars */\
 						#main-window[defaultfxtheme="true"] :not(#theFoxOnlyBetter-slimChrome-toolbars) > #nav-bar:not(:-moz-lwtheme){\
-						  background-image: -moz-linear-gradient(#eaf2fb,#dbeaf9) !important;\
+						  background-image: linear-gradient(#eaf2fb,#dbeaf9) !important;\
 						  box-shadow:unset !important;\
 						}\
 						#main-window[defaultfxtheme="true"][tabsontop="false"] #TabsToolbar:not(:-moz-lwtheme),\
@@ -3178,7 +3178,7 @@ classicthemerestorerjs.ctr = {
 						  background-color:#dbeaf9 !important;\
 						}\
 						#main-window[defaultfxtheme="true"] #theFoxOnlyBetter-slimChrome-slimmer:not([collapsed]) ~ #theFoxOnlyBetter-slimChrome-container > *:not(#theFoxOnlyBetter-slimChrome-toolbars-bottom):not(:-moz-lwtheme){\
-						  background-image: -moz-linear-gradient(#eaf2fb 0px, #dbeaf9 36px, #dbeaf9) !important;\
+						  background-image: linear-gradient(#eaf2fb 0px, #dbeaf9 36px, #dbeaf9) !important;\
 						}\
 						#main-window[defaultfxtheme="true"] #theFoxOnlyBetter-slimChrome-slimmer:not([collapsed]) {\
 						  background: #eaf2fb !important;\
