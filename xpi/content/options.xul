@@ -28,7 +28,6 @@
     <preferences>
 
 		<preference id="ctraddon_tabsintitlebar" name="browser.tabs.drawInTitlebar"					type="bool"		instantApply="true"/>
-		<preference id="ctraddon_tabhang" 	 	name="layers.offmainthreadcomposition.enabled"		type="bool"		instantApply="true"/>
 		<preference id="ctraddon_oldsearch" 	name="browser.search.showOneOffButtons"				type="bool"		instantApply="true"/>
 		<preference id="ctraddon_loopcall"		name="loop.enabled"									type="bool"		instantApply="true"/>
 		<preference id="ctraddon_oldprefs" 		name="browser.preferences.inContent"				type="bool"		instantApply="true"/>
@@ -943,12 +942,6 @@
 	</box>
 	
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_experttweaks">
-
-	  <groupbox id="ctraddon_pw_f33layersgb">
-		<caption  label="&Ctr_e_omtc;" class="ctraddon_topic"/>
-		<checkbox label="about:config &gt;&gt; layers.offmainthreadcomposition.enabled" preference="ctraddon_tabhang" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_f33layers"/>
-		<description class="ctraddonsuboption acprefdesc">&Ctr_fx33layers;</description>
-	  </groupbox>
 
 	  <groupbox id="ctraddon_pw_oldsearchgb">
 		<caption  label="&Ctr_e_searchui;" class="ctraddon_topic"/>
