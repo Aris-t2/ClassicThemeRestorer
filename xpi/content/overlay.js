@@ -66,7 +66,7 @@ classicthemerestorerjs.ctr = {
   appversion:			parseInt(Services.prefs.getBranch("extensions.").getCharPref("lastAppVersion")),
   stringBundle:			Services.strings.createBundle("chrome://classic_theme_restorer/locale/messages.file"),
   
-  hideTTWithOneTab:		false,
+  fullscreeduration:	false,
   moveStarIntoUrlbar:	false,
   moveFeedIntoUrlbar:	false,
   
@@ -1644,7 +1644,26 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("pananimation",true);
 		  break;
 		  // end reverse...
-	  
+
+		  case "fsaduration":
+		    if(classicthemerestorerjs.ctr.appversion >= 42) {
+				if (branch.getBoolPref("fsaduration")) {
+				  if (classicthemerestorerjs.ctr.fullscreeduration == true) {
+					try {
+					  Services.prefs.getBranch("full-screen-api.transition-duration.").setCharPref('enter','400 400');
+					  Services.prefs.getBranch("full-screen-api.transition-duration.").setCharPref('leave','400 400');
+					} catch(e){}
+				  }
+				} else {
+				  classicthemerestorerjs.ctr.fullscreeduration = true;
+				  try {
+					Services.prefs.getBranch("full-screen-api.transition-duration.").setCharPref('enter','0 0');
+					Services.prefs.getBranch("full-screen-api.transition-duration.").setCharPref('leave','0 0');
+				  } catch(e){}
+				}
+			}
+		  break;
+
 		  case "anewtaburlcb": case "anewtaburl":
 
 		    if (branch.getBoolPref("anewtaburlcb") && classicthemerestorerjs.ctr.appversion >= 41) {

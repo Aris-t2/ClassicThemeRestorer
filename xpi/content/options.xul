@@ -230,6 +230,8 @@
 		<preference id="ctraddon_pananimation"	name="extensions.classicthemerestorer.pananimation"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_tabsanimate"	name="browser.tabs.animate"							type="bool"		instantApply="true"/>
 		<preference id="ctraddon_dlanimate"		name="browser.download.animateNotifications"		type="bool"		instantApply="true"/>
+		<preference id="ctraddon_fsanimation"	name="browser.fullscreen.animate"					type="bool"		instantApply="true"/>
+		<preference id="ctraddon_fsaduration"	name="extensions.classicthemerestorer.fsaduration"	type="bool"		instantApply="true"/>
 
 		<preference id="ctraddon_closeabarbut"	name="extensions.classicthemerestorer.closeabarbut"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_toolsitem"		name="extensions.classicthemerestorer.toolsitem"	type="bool"		instantApply="true"/>
@@ -996,6 +998,8 @@
 		<checkbox label="&Ctr_pananimation;"	preference="ctraddon_pananimation" id="ctraddon_pw_pananimation"/>
 		<checkbox label="&Ctr_tabanimation;"	preference="ctraddon_tabsanimate" tooltiptext="browser.tabs.animate"/>
 		<checkbox label="&Ctr_dlanimation;"		preference="ctraddon_dlanimate" tooltiptext="browser.download.animateNotifications"/>
+		<checkbox label="&Ctr_fsanimation;"		preference="ctraddon_fsanimation" id="ctraddon_pw_fsanimation"/>
+		<checkbox label="&Ctr_fsaduration;"		preference="ctraddon_fsaduration" id="ctraddon_pw_fsaduration"/>
 	  </groupbox>
 	  
 	  <groupbox>

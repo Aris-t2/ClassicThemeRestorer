@@ -134,7 +134,8 @@
 	  transition: none !important;
 	}
 
-	#nav-bar #loop-call-button[cui-areatype="toolbar"] > .toolbarbutton-badge-container  image {
+	#nav-bar #loop-call-button[cui-areatype="toolbar"] > .toolbarbutton-badge-container image,
+	#nav-bar #loop-button[cui-areatype="toolbar"] > .toolbarbutton-badge-stack image {
 	  min-width:30px !important;
 	  height:30px !important;
 	}

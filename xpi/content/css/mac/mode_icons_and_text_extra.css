@@ -94,7 +94,9 @@
 	#main-window #navigator-toolbox #nav-bar #loop-button .toolbarbutton-badge,
 	#main-window #navigator-toolbox #nav-bar #loop-button .toolbarbutton-badge-container,
 	#main-window #navigator-toolbox #nav-bar #loop-button-throttled .toolbarbutton-badge,
-	#main-window #navigator-toolbox #nav-bar #loop-button-throttled .toolbarbutton-badge-container{
+	#main-window #navigator-toolbox #nav-bar #loop-button-throttled .toolbarbutton-badge-container,
+	#main-window #navigator-toolbox #nav-bar #PanelUI-menu-button > .toolbarbutton-badge-stack,
+	#main-window #navigator-toolbox #nav-bar #loop-button > .toolbarbutton-badge-stack {
 	  border:0px solid transparent !important;
 	  padding:0 !important;
 	}

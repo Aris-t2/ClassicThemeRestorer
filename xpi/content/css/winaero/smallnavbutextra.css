@@ -343,13 +343,15 @@
 	}
 
 	#nav-bar toolbarbutton .toolbarbutton-badge,
-	#nav-bar toolbarbutton .toolbarbutton-badge-container {
+	#nav-bar toolbarbutton .toolbarbutton-badge-container,
+	#nav-bar toolbarbutton .toolbarbutton-badge-stack {
 	  box-shadow: none !important;
 	  border: 0 !important;
 	  padding: 0 !important;
 	  margin: 0 !important;
 	}
-	#nav-bar toolbarbutton .toolbarbutton-badge-container {
+	#nav-bar toolbarbutton .toolbarbutton-badge-container,
+	#nav-bar toolbarbutton .toolbarbutton-badge-stack {
 	  background: none !important;
 	}
 	

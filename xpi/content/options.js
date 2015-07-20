@@ -19,7 +19,7 @@ classicthemerestorerjso.ctr = {
   needsRestart: 	false,
   ctrVersioninWin:  true,
   tmp_tu_active:	false,
-  // Exclude all preferences we don't want to synced or export/import.
+  // Exclude all preferences we don't want to sync, export or import.
   blacklist: [
 	"extensions.classicthemerestorer.pref_actindx",
 	"extensions.classicthemerestorer.pref_actindx2",
@@ -77,7 +77,6 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_noaddonbarbg').disabled = true;
 		document.getElementById('ctraddon_pw_noconicons').disabled = true;
 		document.getElementById('ctraddon_pw_closeonleft').disabled = true;
-		//document.getElementById('ctraddon_pw_closealt').disabled = true;
 		document.getElementById('ctraddon_pw_nbcompact').disabled = true;
 		document.getElementById('ctraddon_pw_tabc_act_tb').disabled = true;
 		document.getElementById('ctraddon_pw_aerocolors').disabled = true;
@@ -117,7 +116,6 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_noaddonbarbg').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_noconicons').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_closeonleft').style.visibility = 'collapse';
-		//document.getElementById('ctraddon_pw_closealt').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_nbcompact').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabc_act_tb').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_aerocolors').style.visibility = 'collapse';
@@ -310,18 +308,16 @@ classicthemerestorerjso.ctr = {
 	if (this.appversion > 37) {
 	  document.getElementById('ctraddon_pw_bmarkoinpw').style.visibility = 'collapse';
 	}
-	if (this.appversion > 40) {
-	  /*document.getElementById('ctraddon_pw_devtheme').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_devthemeb').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_devthemedescr').style.visibility = 'collapse';*/
-	}
 	if (this.appversion < 40) {
-	  /*document.getElementById('ctraddon_pw_nodevtheme2').style.visibility = 'collapse';*/
 	  document.getElementById('ctraddon_pw_addonversion').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_alt_addonsm').style.visibility = 'collapse';
 	}
 	if (this.appversion < 41) {
 	  document.getElementById('ctraddon_pw_anewtaburlgbox').style.visibility = 'collapse';
+	}
+
+	if (this.appversion < 42) {
+	  document.getElementById('ctraddon_pw_fsaduration').style.visibility = 'collapse';
 	}
 
 	function PrefListener(branch_name, callback) {

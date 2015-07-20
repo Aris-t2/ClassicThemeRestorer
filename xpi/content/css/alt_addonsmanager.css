@@ -28,6 +28,10 @@
 	#addons-page #updates-list{
 	  background-color: white !important;
 	}
+	
+	#addons-page .alert {
+	  box-shadow: 2px 2px 2px rgba(200,200,200,0.5) !important;
+	}
 
 	/* main colors category items */
 	#addons-page button.sorter[checked="true"],
