@@ -222,6 +222,7 @@
 	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive],:not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
 	  clip-path: none !important;
 	}
+
 	/* TabMixPlus pinned tabs: icon size fix*/
     #main-window[tabmix_lwt="true"] .tabbrowser-tab[pinned]:not(:-moz-lwtheme) .tab-icon-image,
     #main-window[tabmix_lwt="true"] .tabbrowser-tab[pinned]:not(:-moz-lwtheme) .tab-throbber,

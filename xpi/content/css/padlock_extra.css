@@ -17,6 +17,54 @@
 	  -moz-padding-start: 18px !important;
 	}
 	
+	/*#main-window:not([fx42plus="true"]) #urlbar .chromeUI #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
+					0, 16, 16, 0) no-repeat center left !important;
+	}
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .chromeUI #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
+					0, 16, 16, 0) no-repeat center right !important;
+	}
+
+	#main-window:not([fx42plus="true"]) #urlbar .chromeUI #page-proxy-favicon[pageproxystate="valid"]:hover {
+	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
+					0, 32, 16, 16) no-repeat center left !important;
+	}
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .chromeUI #page-proxy-favicon[pageproxystate="valid"]:hover {
+	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
+					0, 32, 16, 16) no-repeat center right !important;
+	}
+
+	#main-window:not([fx42plus="true"]) #urlbar .chromeUI #page-proxy-favicon[pageproxystate="valid"]:hover:active {
+	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
+					0, 48, 16, 32) no-repeat center left !important;
+	}
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .chromeUI #page-proxy-favicon[pageproxystate="valid"]:hover:active {
+	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
+					0, 48, 16, 32) no-repeat center right !important;
+	}
+
+	#main-window:not([fx42plus="true"]) #urlbar *[open=true].chromeUI #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
+					0, 48, 16, 32) no-repeat center left !important;
+	}
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) *[open=true].chromeUI #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
+					0, 48, 16, 32) no-repeat center right !important;
+	}
+	
+	#main-window[fx42plus="true"] #urlbar .chromeUI #page-proxy-favicon[pageproxystate="valid"],
+	#main-window[fx42plus="true"] #urlbar *[open=true].chromeUI #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.svg"),
+					0, 32, 32, 0) no-repeat center left !important;
+	}
+	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .chromeUI #page-proxy-favicon[pageproxystate="valid"],	
+	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) *[open=true].chromeUI #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.svg"),
+					0, 32, 32 0) no-repeat center right !important;
+	}*/
+	
+	/*start*/
 	#urlbar .chromeUI #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
 					0, 16, 16, 0) no-repeat center left !important;
@@ -52,7 +100,8 @@
 	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
 					0, 48, 16, 32) no-repeat center right !important;
 	}
-	
+	/*end*/
+
 	#urlbar .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-active.png"),
 					0, 16, 16, 0) no-repeat center left !important;

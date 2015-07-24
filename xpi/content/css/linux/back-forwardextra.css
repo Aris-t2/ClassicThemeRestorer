@@ -25,6 +25,10 @@
 	  -moz-padding-start: 2px !important;
 	  transition: none !important;
 	}
+	
+	#main-window[fx42plus="true"][defaultfxtheme="true"] #nav-bar #notification-popup-box[hidden] + * {
+	  -moz-padding-start: 5px !important;
+	}
 
 	* #notification-popup-box:not([hidden]) {
 	  padding-left:2px !important;
@@ -33,6 +37,10 @@
 	}
 	
 	/* urlbar border tweaks */
+	#main-window[fx42plus="true"][defaultfxtheme="true"] #urlbar {
+	  min-height: 24px;
+	}
+
 	#main-window[defaultfxtheme="true"] * #urlbar,
 	#main-window[defaultfxtheme="true"] #nav-bar .searchbar-textbox {
 	  border: 1px solid ThreeDShadow !important;

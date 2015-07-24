@@ -99,6 +99,10 @@
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	}
 	
+	#TabsToolbar .close-icon > .toolbarbutton-icon {
+	  width: 16px !important;
+	}
+	
 	/*TabUtilities autoreload extra*/
 	.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover,
 	.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover[selected="true"] {

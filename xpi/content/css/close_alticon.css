@@ -21,6 +21,11 @@
 	}
 	
 	#main-window #navigator-toolbox #TabsToolbar #tabbrowser-tabs .tabbrowser-tab:not([selected]):not(:hover) .tab-close-button{
-	  opacity:.7 !important;
+	  opacity: .7 !important;
 	}
+
+	#TabsToolbar .close-icon > .toolbarbutton-icon {
+	  width: 16px !important;
+	}
+
 }

@@ -6,5 +6,9 @@
 	#main-window .tabbrowser-arrowscrollbox > .scrollbutton-down {
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/tab-arrow-left-inverted.png) !important;
 	}
+	
+	#TabsToolbar .close-icon > .toolbarbutton-icon {
+	  width: 16px!important;
+	}
 
 }

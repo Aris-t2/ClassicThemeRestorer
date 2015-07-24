@@ -168,6 +168,12 @@
 	}
 
 	/* Tabs Toolbar */
+	/*.tab-background-start[visuallyselected=true]::after,
+	.tab-background-start[visuallyselected=true]::before,
+	.tab-background-start,
+	.tab-background-end,
+	.tab-background-end[visuallyselected=true]::after,
+	.tab-background-end[visuallyselected=true]::before,*/
 	#tabbrowser-tabs{
 	  min-height: 0px !important;
 	}
@@ -203,6 +209,11 @@
 	/* remove ridiculous clipping */
 	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive],:not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
 	  clip-path: none !important;
+	}
+	
+	/* fix crash icons position */
+	.tabbrowser-tab[crashed] .tab-icon-overlay {
+	  margin-top:0px !important;
 	}
 	
 	/* TMP support */

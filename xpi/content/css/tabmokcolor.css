@@ -20,11 +20,11 @@
 	  -moz-image-region: rect(0, 18px, 18px, 0) !important;
 	}
 
-	#main-window .tabbrowser-tab:not([protected]):not([pinned]) .tab-close-button:not(:-moz-any(:hover,:-moz-lwtheme,[selected="true"])),
+	/*#main-window .tabbrowser-tab:not([protected]):not([pinned]) .tab-close-button:not(:-moz-any(:hover,:-moz-lwtheme,[selected="true"])),
 	.tabbrowser-tab:not([protected]):not([pinned]) .tab-close-button:not(:hover):not([selected="true"]):-moz-lwtheme-brighttext {
 	  background-image: url(chrome://classic_theme_restorer/content/images/tab-close.png) !important;
 	  -moz-image-region: rect(0, 64px, 16px, 48px) !important;
-	}
+	}*/
 
 	/* Tab close button */
 	#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([protected]):not([pinned]) .tab-close-button,
@@ -57,7 +57,7 @@
 	}
 
 	#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([protected]):not([pinned]) .tab-close-button[selected="true"] {
-	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
-	} 
+	  -moz-image-region: rect(0, 16px, 16px, 0) !important;	
+	}
   
 }

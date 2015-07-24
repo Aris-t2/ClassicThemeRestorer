@@ -1,10 +1,17 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
-	#main-window[inFullscreen] #browser-bottombox{
-		min-height: 1pt !important;
+	#main-window[inFullscreen]:not([inDOMFullscreen]) #browser-bottombox:hover #ctraddon_addon-bar{
+	  visibility: visible !important;
 	}
-	#main-window[inFullscreen] #browser-bottombox:hover #ctraddon_addon-bar{
-		visibility: visible !important;
+
+	#main-window[inFullscreen]:not([inDOMFullscreen]) #browser-bottombox:before{
+      content: '' !important;
+      display: -moz-box !important;
+      position: fixed !important;
+      bottom: 0 !important;
+      height: 1px !important;
+      width: 100% !important;
+      background: none !important;
 	}
 }

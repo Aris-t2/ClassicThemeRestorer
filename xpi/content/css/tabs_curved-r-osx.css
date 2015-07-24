@@ -159,6 +159,7 @@
 	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive], :not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
 	  clip-path: none !important;
 	}
+
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {

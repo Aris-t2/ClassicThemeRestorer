@@ -21,6 +21,15 @@
 	#newtab-window[fx40plus="true"] .newtab-cell {
 	  margin: 20px 10px 0px !important;
 	}
+	
+	html .newtab-cell {
+	  margin: 20px 10px 0px !important;
+	}
+	
+	html #newtab-grid {
+	  min-height: unset !important;
+	  max-height: unset !important;
+	}
 
 	#newtab-customize-button,
 	.newtab-customize,
@@ -67,11 +76,13 @@
 	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_controls.png), 0, 144, 16, 128) !important;
 	}
 	
+	html #newtab-customize-button,
 	#newtab-scrollbox:not([page-disabled="true"]) #newtab-customize-button,
 	#newtab-scrollbox:not([page-disabled="true"]) .newtab-customize {
 	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_controls.png), 0, 160, 16, 144) !important;
 	}
 	
+	html #newtab-customize-button:-moz-any(:hover, :active, [active]),
 	#newtab-scrollbox[page-disabled="true"] #newtab-customize-button,
 	#newtab-scrollbox[page-disabled="true"] .newtab-customize {
 	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_controls.png), 0, 176, 16, 160) !important;

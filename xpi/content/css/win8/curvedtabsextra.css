@@ -40,5 +40,9 @@
 						url(chrome://classic_theme_restorer/content/images/nt_win8_middle_hov.png),
 						url(chrome://classic_theme_restorer/content/images/nt_win8_end_hov.png) !important;
 	}
+	
+	#TabsToolbar .close-icon > .toolbarbutton-icon {
+	  width: 16px !important;
+	}
 
 }

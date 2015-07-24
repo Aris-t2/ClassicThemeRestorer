@@ -11,6 +11,10 @@
 	  transition: none !important;
 	}
 	
+	#main-window[fx42plus="true"] #nav-bar #notification-popup-box[hidden] + * {
+	  -moz-padding-start: 5px !important;
+	}
+	
 	#nav-bar #notification-popup-box:not([hidden]) {
 	  padding-left:2px !important;
 	  padding-right:2px !important;
@@ -209,6 +213,10 @@
 	}
 
 	/* START: urlbar border tweaking (default theme does not provide left urlbar border) */
+	#main-window[fx42plus="true"][defaultfxtheme="true"] #urlbar {
+	  min-height: 24px;
+	}
+
 	#main-window[defaultfxtheme="true"] #urlbar,
 	#main-window[defaultfxtheme="true"] .searchbar-textbox {
 	  border: 1px solid ThreeDShadow !important;
@@ -280,6 +288,14 @@
 	  padding: 0 !important;
 	  margin: 0 !important;
 	}
+
+	#navigator-toolbox #nav-bar toolbarbutton .toolbarbutton-badge-stack {
+	  padding-right: 1px !important;
+      padding-left: 1px !important;
+	  margin-right: 2px !important;
+      margin-left: 2px !important;
+	}
+
 	#nav-bar toolbarbutton .toolbarbutton-badge-container,
 	#nav-bar toolbarbutton .toolbarbutton-badge-stack {
 	  background: none !important;

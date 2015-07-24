@@ -67,7 +67,7 @@
 				 accesskey="&Ctr_addon-bar.accesskey;"
 				 key="key_toggleCtrAddonBar"
 				 defaultset="ctraddon_addonbar-close,spring,ctraddon_statusbar">
-		  <toolbarbutton id="ctraddon_addonbar-close" removable="false"
+		  <toolbarbutton id="ctraddon_addonbar-close" removable="false" class="close-icon"
 				    oncommand="classicthemerestorerjs.ctr.toggleCtrAddonBar();"/>
 					
 		  <toolbaritem id="ctraddon_statusbar"
@@ -710,7 +710,8 @@
                      persist="class"
                      removable="true"
                      type="menu"
-                     label="&historyButton.label;">
+                     label="&historyButton.label;"
+					 tooltiptext="&historyButton.label;">
 				  <menupopup id="ctraddon_history_historyMenupopup"
 							 placespopup="true"
 							 oncommand="this.parentNode._placesView._onCommand(event);"
