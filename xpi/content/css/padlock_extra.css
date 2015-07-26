@@ -13,11 +13,11 @@
 	#urlbar .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"],
 	#urlbar .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"],
 	#urlbar .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"] {
-	  width:34px !important;
+	  width: 34px !important;
 	  -moz-padding-start: 18px !important;
 	}
 	
-	/*#main-window:not([fx42plus="true"]) #urlbar .chromeUI #page-proxy-favicon[pageproxystate="valid"] {
+	#main-window:not([fx42plus="true"]) #urlbar .chromeUI #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
 					0, 16, 16, 0) no-repeat center left !important;
 	}
@@ -53,161 +53,159 @@
 					0, 48, 16, 32) no-repeat center right !important;
 	}
 	
+	#main-window:not([fx42plus="true"]) #urlbar .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-active.png"),
+					0, 16, 16, 0) no-repeat center left !important;
+	}
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-active.png"),
+					0, 16, 16, 0) no-repeat center right !important;
+	}
+
+	#main-window:not([fx42plus="true"]) #urlbar .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"]:hover {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-active.png"),
+					0, 32, 16, 16) no-repeat center left !important;
+	}
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"]:hover {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-active.png"),
+					0, 32, 16, 16) no-repeat center right !important;
+	}
+
+	#main-window:not([fx42plus="true"]) #urlbar .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"]:hover:active {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-active.png"),
+					0, 48, 16, 32) no-repeat center left !important;
+	}
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"]:hover:active {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-active.png"),
+					0, 48, 16, 32) no-repeat center right !important;
+	}
+
+	#main-window:not([fx42plus="true"]) #urlbar *[open=true].mixedActiveContent #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-active.png"),
+					0, 48, 16, 32) no-repeat center left !important;
+	}
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) *[open=true].mixedActiveContent #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-active.png"),
+					0, 48, 16, 32) no-repeat center right !important;
+	}
+	
+	#main-window:not([fx42plus="true"]) #main-window:not([fx42plus="true"]) #urlbar .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+					0, 16, 16, 0) no-repeat center left !important;
+	}
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+					0, 16, 16, 0) no-repeat center right !important;
+	}
+
+	#main-window:not([fx42plus="true"]) #urlbar .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"]:hover {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+					0, 32, 16, 16) no-repeat center left !important;
+	}
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"]:hover {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+					0, 32, 16, 16) no-repeat center right !important;
+	}
+
+	#main-window:not([fx42plus="true"]) #urlbar .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"]:hover:active {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+					0, 48, 16, 32) no-repeat center left !important;
+	}
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"]:hover:active {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+					0, 48, 16, 32) no-repeat center right !important;
+	}
+
+	#main-window:not([fx42plus="true"]) #urlbar *[open=true].mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+					0, 48, 16, 32) no-repeat center left !important;
+	}
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) *[open=true].mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+					0, 48, 16, 32) no-repeat center right !important;
+	}
+
+	#main-window:not([fx42plus="true"]) #urlbar .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+					0, 16, 16, 0) no-repeat center left !important;
+	}
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+					0, 16, 16, 0) no-repeat center right !important;
+	}
+
+	#main-window:not([fx42plus="true"]) #urlbar .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"]:hover {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+					0, 32, 16, 16) no-repeat center left !important;
+	}
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"]:hover {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+					0, 32, 16, 16) no-repeat center right !important;
+	}
+
+	#main-window:not([fx42plus="true"]) #urlbar .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"]:hover:active {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+					0, 48, 16, 32) no-repeat center left !important;
+	}
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"]:hover:active {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+					0, 48, 16, 32) no-repeat center right !important;
+	}
+
+	#main-window:not([fx42plus="true"]) #urlbar *[open=true].mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+					0, 48, 16, 32) no-repeat center left !important;
+	}
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) *[open=true].mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+					0, 48, 16, 32) no-repeat center right !important;
+	}
+
 	#main-window[fx42plus="true"] #urlbar .chromeUI #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar *[open=true].chromeUI #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.svg"),
 					0, 32, 32, 0) no-repeat center left !important;
+	  background-size: 16px 16px !important;
 	}
 	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .chromeUI #page-proxy-favicon[pageproxystate="valid"],	
 	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) *[open=true].chromeUI #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.svg"),
-					0, 32, 32 0) no-repeat center right !important;
-	}*/
-	
-	/*start*/
-	#urlbar .chromeUI #page-proxy-favicon[pageproxystate="valid"] {
-	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
+					0, 32, 32, 0) no-repeat center right !important;
+	  background-size: 16px 16px !important;
+	}
+
+	#main-window[fx42plus="true"] #urlbar .mixedActiveContent > #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://browser/skin/identity-mixed-active-loaded.svg"),
 					0, 16, 16, 0) no-repeat center left !important;
 	}
-	#urlbar:-moz-locale-dir(rtl) .chromeUI #page-proxy-favicon[pageproxystate="valid"] {
-	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
+
+	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .mixedActiveContent > #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://browser/skin/identity-mixed-active-loaded.svg"),
 					0, 16, 16, 0) no-repeat center right !important;
 	}
 
-	#urlbar .chromeUI #page-proxy-favicon[pageproxystate="valid"]:hover {
-	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
-					0, 32, 16, 16) no-repeat center left !important;
-	}
-	#urlbar:-moz-locale-dir(rtl) .chromeUI #page-proxy-favicon[pageproxystate="valid"]:hover {
-	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
-					0, 32, 16, 16) no-repeat center right !important;
-	}
-
-	#urlbar .chromeUI #page-proxy-favicon[pageproxystate="valid"]:hover:active {
-	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
-					0, 48, 16, 32) no-repeat center left !important;
-	}
-	#urlbar:-moz-locale-dir(rtl) .chromeUI #page-proxy-favicon[pageproxystate="valid"]:hover:active {
-	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
-					0, 48, 16, 32) no-repeat center right !important;
-	}
-
-	#urlbar *[open=true].chromeUI #page-proxy-favicon[pageproxystate="valid"] {
-	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
-					0, 48, 16, 32) no-repeat center left !important;
-	}
-	#urlbar:-moz-locale-dir(rtl) *[open=true].chromeUI #page-proxy-favicon[pageproxystate="valid"] {
-	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
-					0, 48, 16, 32) no-repeat center right !important;
-	}
-	/*end*/
-
-	#urlbar .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"] {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-active.png"),
+	#main-window[fx42plus="true"] #urlbar .weakCipher > #page-proxy-favicon[pageproxystate="valid"],
+	#main-window[fx42plus="true"] #urlbar .mixedDisplayContent > #page-proxy-favicon[pageproxystate="valid"],
+	#main-window[fx42plus="true"] #urlbar .mixedDisplayContentLoadedActiveBlocked > #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://browser/skin/identity-mixed-passive-loaded.svg"),
 					0, 16, 16, 0) no-repeat center left !important;
 	}
-	#urlbar:-moz-locale-dir(rtl) .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"] {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-active.png"),
+
+	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .weakCipher > #page-proxy-favicon[pageproxystate="valid"],
+	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .mixedDisplayContent > #page-proxy-favicon[pageproxystate="valid"],
+	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .mixedDisplayContentLoadedActiveBlocked > #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://browser/skin/identity-mixed-passive-loaded.svg"),
 					0, 16, 16, 0) no-repeat center right !important;
 	}
 
-	#urlbar .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"]:hover {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-active.png"),
-					0, 32, 16, 16) no-repeat center left !important;
-	}
-	#urlbar:-moz-locale-dir(rtl) .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"]:hover {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-active.png"),
-					0, 32, 16, 16) no-repeat center right !important;
-	}
-
-	#urlbar .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"]:hover:active {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-active.png"),
-					0, 48, 16, 32) no-repeat center left !important;
-	}
-	#urlbar:-moz-locale-dir(rtl) .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"]:hover:active {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-active.png"),
-					0, 48, 16, 32) no-repeat center right !important;
-	}
-
-	#urlbar *[open=true].mixedActiveContent #page-proxy-favicon[pageproxystate="valid"] {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-active.png"),
-					0, 48, 16, 32) no-repeat center left !important;
-	}
-	#urlbar:-moz-locale-dir(rtl) *[open=true].mixedActiveContent #page-proxy-favicon[pageproxystate="valid"] {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-active.png"),
-					0, 48, 16, 32) no-repeat center right !important;
-	}
-	
-	#urlbar .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"] {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+	#main-window[fx42plus="true"] #urlbar .mixedActiveBlocked > #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://browser/skin/identity-mixed-active-blocked.svg"),
 					0, 16, 16, 0) no-repeat center left !important;
 	}
-	#urlbar:-moz-locale-dir(rtl) .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"] {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
+
+	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .mixedActiveBlocked > #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://browser/skin/identity-mixed-active-blocked.svg"),
 					0, 16, 16, 0) no-repeat center right !important;
 	}
 
-	#urlbar .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"]:hover {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
-					0, 32, 16, 16) no-repeat center left !important;
-	}
-	#urlbar:-moz-locale-dir(rtl) .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"]:hover {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
-					0, 32, 16, 16) no-repeat center right !important;
-	}
-
-	#urlbar .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"]:hover:active {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
-					0, 48, 16, 32) no-repeat center left !important;
-	}
-	#urlbar:-moz-locale-dir(rtl) .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"]:hover:active {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
-					0, 48, 16, 32) no-repeat center right !important;
-	}
-
-	#urlbar *[open=true].mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"] {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
-					0, 48, 16, 32) no-repeat center left !important;
-	}
-	#urlbar:-moz-locale-dir(rtl) *[open=true].mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"] {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
-					0, 48, 16, 32) no-repeat center right !important;
-	}
-
-	#urlbar .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"] {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
-					0, 16, 16, 0) no-repeat center left !important;
-	}
-	#urlbar:-moz-locale-dir(rtl) .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"] {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
-					0, 16, 16, 0) no-repeat center right !important;
-	}
-
-	#urlbar .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"]:hover {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
-					0, 32, 16, 16) no-repeat center left !important;
-	}
-	#urlbar:-moz-locale-dir(rtl) .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"]:hover {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
-					0, 32, 16, 16) no-repeat center right !important;
-	}
-
-	#urlbar .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"]:hover:active {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
-					0, 48, 16, 32) no-repeat center left !important;
-	}
-	#urlbar:-moz-locale-dir(rtl) .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"]:hover:active {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
-					0, 48, 16, 32) no-repeat center right !important;
-	}
-
-	#urlbar *[open=true].mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"] {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
-					0, 48, 16, 32) no-repeat center left !important;
-	}
-	#urlbar:-moz-locale-dir(rtl) *[open=true].mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"] {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
-					0, 48, 16, 32) no-repeat center right !important;
-	}
-	
 }

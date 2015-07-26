@@ -3,86 +3,98 @@
 
 	#identity-popup.verifiedDomain,
 	#identity-popup.verifiedIdentity {
-	  -moz-margin-start:-29px !important;
+	  -moz-margin-start: -29px !important;
 	}
 
 	/* provides the padlock icon for secure connections */
 	#urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"],
 	#urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
-	  width:34px !important;
+	  width: 34px !important;
 	  -moz-padding-start: 18px !important;
 	}
 	
-	#urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
+	#main-window:not([fx42plus="true"]) #urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/padlock_default1.png"),
 					0, 16, 16, 0) no-repeat center left !important;
 	}
-	#urlbar:-moz-locale-dir(rtl) .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/padlock_default1.png"),
 					0, 16, 16, 0) no-repeat center right !important;
 	}
 
-	#urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"]:hover {
+	#main-window:not([fx42plus="true"]) #urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"]:hover {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/padlock_default1.png"),
 					0, 32, 16, 16) no-repeat center left !important;
 	}
-	#urlbar:-moz-locale-dir(rtl) .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"]:hover {
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"]:hover {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/padlock_default1.png"),
 					0, 32, 16, 16) no-repeat center right !important;
 	}
 
-	#urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"]:hover:active {
+	#main-window:not([fx42plus="true"]) #urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"]:hover:active {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/padlock_default1.png"),
 					0, 48, 16, 32) no-repeat center left !important;
 	}
-	#urlbar:-moz-locale-dir(rtl) .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"]:hover:active {
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"]:hover:active {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/padlock_default1.png"),
 					0, 48, 16, 32) no-repeat center right !important;
 	}
 
-	#urlbar *[open=true].verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
+	#main-window:not([fx42plus="true"]) #urlbar *[open=true].verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/padlock_default1.png"),
 					0, 48, 16, 32) no-repeat center left !important;
 	}
-	#urlbar:-moz-locale-dir(rtl) *[open=true].verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) *[open=true].verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/padlock_default1.png"),
 					0, 48, 16, 32) no-repeat center right !important;
 	}
 	
-	#urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"] {
+	#main-window:not([fx42plus="true"]) #urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/padlock_default2.png"),
 					0, 16, 16, 0) no-repeat center left !important;
 	}
-	#urlbar:-moz-locale-dir(rtl) .verifiedDomain #page-proxy-favicon[pageproxystate="valid"] {
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .verifiedDomain #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/padlock_default2.png"),
 					0, 16, 16, 0) no-repeat center right !important;
 	}
 	
-	#urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"]:hover {
+	#main-window:not([fx42plus="true"]) #urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"]:hover {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/padlock_default2.png"),
 					0, 32, 16, 16) no-repeat center left !important;
 	}
-	#urlbar:-moz-locale-dir(rtl) .verifiedDomain #page-proxy-favicon[pageproxystate="valid"]:hover {
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .verifiedDomain #page-proxy-favicon[pageproxystate="valid"]:hover {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/padlock_default2.png"),
 					0, 32, 16, 16) no-repeat center right !important;
 	}
 	
-	#urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"]:hover:active {
+	#main-window:not([fx42plus="true"]) #urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"]:hover:active {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/padlock_default2.png"),
 					0, 48, 16, 32) no-repeat center left !important;
 	}
-	#urlbar:-moz-locale-dir(rtl) .verifiedDomain #page-proxy-favicon[pageproxystate="valid"]:hover:active {
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .verifiedDomain #page-proxy-favicon[pageproxystate="valid"]:hover:active {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/padlock_default2.png"),
 					0, 48, 16, 32) no-repeat center right !important;
 	}
 	
-	#urlbar *[open=true].verifiedDomain #page-proxy-favicon[pageproxystate="valid"] {
+	#main-window:not([fx42plus="true"]) #urlbar *[open=true].verifiedDomain #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/padlock_default2.png"),
 					0, 48, 16, 32) no-repeat center left !important;
 	}
-	#urlbar:-moz-locale-dir(rtl) *[open=true].verifiedDomain #page-proxy-favicon[pageproxystate="valid"] {
+	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) *[open=true].verifiedDomain #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/padlock_default2.png"),
 					0, 48, 16, 32) no-repeat center right !important;
+	}	
+	
+	#main-window[fx42plus="true"] #urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"],
+	#main-window[fx42plus="true"] #urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://browser/skin/identity-secure.svg"),
+					0, 16, 16, 0) no-repeat center left !important;
 	}
 	
+	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .verifiedDomain #page-proxy-favicon[pageproxystate="valid"],
+	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
+	  background: -moz-image-rect(url("chrome://browser/skin/identity-secure.svg"),
+					0, 16, 16, 0) no-repeat center right !important;
+	}
+
 }
