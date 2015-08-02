@@ -187,7 +187,7 @@
 	@media (-moz-os-version: windows-win10) {
 	  #main-window[sizemode="normal"] #ctraddon_appbutton2{
 		margin-top:1px !important;
-		margin: 1px 0 2px 0px !important;
+		margin: 1px 0 0px 0px !important;
 	  }
 				
 	  #main-window[sizemode="maximized"] #ctraddon_appbutton2{
@@ -207,8 +207,8 @@
 		min-height: 10px !important;
 		height: 10px !important;
 		max-height: 10px !important;
-		margin-top: -5px !important;
-		margin-bottom: -5px !important;
+		margin-top: -4px !important;
+		margin-bottom: -4px !important;
 	  }
 	}
 	

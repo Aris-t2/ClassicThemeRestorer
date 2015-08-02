@@ -679,12 +679,50 @@
 	  min-height:16px !important;
 	}
 	
-	#ctraddon_pw_closealt label{
+	/* Tab close - pref icons */
+	#ctraddon_closeicon_red label{
+	  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/close_alt.png'),
+				  0, 16, 16, 0) no-repeat left !important;
+	  padding-left:20px !important;
+	}
+	#ctraddon_pw_closeicon[value="closeicon_red"] {
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/close_alt.png');
+	  -moz-image-region: rect(0px, 16px, 16px, 0px);
+	}
+	#ctraddon_closeicon_w7 label{
+	  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/close.png'),
+				  0, 16, 16, 0) no-repeat left !important;
+	  padding-left:20px !important;
+	}
+	#ctraddon_pw_closeicon[value="closeicon_w7"] {
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/close.png');
+	  -moz-image-region: rect(0px, 16px, 16px, 0px);
+	}
+	#ctraddon_closeicon_w10 label{
+	  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/close_w10.png'),
+				  0, 20, 20, 0) no-repeat left !important;
+	  padding-left:20px !important;
+	}
+	#ctraddon_pw_closeicon[value="closeicon_w10"] {
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/close_w10.png');
+	  -moz-image-region: rect(0px, 20px, 20px, 0px);
+	}
+	#ctraddon_closeicon_w10i label{
+	  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/close_w10i.png'),
+				  0, 20, 20, 0) no-repeat left !important;
+	  padding-left:20px !important;
+	}
+	#ctraddon_pw_closeicon[value="closeicon_w10i"] {
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/close_w10i.png');
+	  -moz-image-region: rect(0px, 20px, 20px, 0px);
+	}
+	
+	/*#ctraddon_pw_closealt label{
 	  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/close_alt.png'),
 				  0, 16, 16, 0) no-repeat left !important;
 	  padding-left:20px !important;
 	  min-height:16px !important;
-	}
+	}*/
 	
 	#ctraddon_alt_abicons label,
 	#ctraddon_alt_abicons2 label {

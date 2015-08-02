@@ -3,7 +3,7 @@
 @-moz-document url(chrome://browser/content/browser.xul){
 
 	/* tab colors */
-	.tabs-newtab-button:not(:-moz-lwtheme),
+	/*.tabs-newtab-button:not(:-moz-lwtheme),
 	.tabbrowser-tab:not(:-moz-lwtheme) .tab-content {
 	  background-image: linear-gradient(transparent, hsla(0,0%,45%,.1) 1px, hsla(0,0%,32%,.2) 80%, hsla(0,0%,0%,.2)),
 						linear-gradient(-moz-dialog, -moz-dialog) !important;
@@ -12,16 +12,22 @@
 	.tabbrowser-tab:not([selected]):hover:not(:-moz-lwtheme) .tab-content {
 	  background-image: linear-gradient(hsla(0,0%,100%,.3) 1px, hsla(0,0%,75%,.2) 80%, hsla(0,0%,60%,.2)),
 						linear-gradient(-moz-dialog, -moz-dialog) !important;
-	}
+	}*/
 	.tabbrowser-tab[selected]:not(:-moz-lwtheme) .tab-content {
 	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.4) 50%),
 						linear-gradient(-moz-dialog, -moz-dialog) !important;
 	}
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover),
+	/*.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover),
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover {
 	  color:black !important;
-	}
+	}*/
 	
+	.tabs-newtab-button:not(:-moz-lwtheme):not(#privateTab-afterTabs-openNewPrivateTab),
+	#TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
+	  list-style-image: url(chrome://browser/skin/tabbrowser/newtab.png) !important;
+	}
+
+
 	/* tab colors lightweight theme */
 	.tabbrowser-tab[selected]:-moz-lwtheme .tab-content {
 	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.46) 50%) !important;
@@ -39,37 +45,22 @@
 	  -moz-border-image: none !important;
 	  margin: 0 0 5px 0 !important;
 	}
-
+	
     /* lightweight theme tweaks*/
 	#navigator-toolbox #TabsToolbar:-moz-lwtheme{
 	  box-shadow:none !important;
-	  border-bottom: 1px solid transparent !important;
 	}
 	#navigator-toolbox #nav-bar:-moz-lwtheme{
       box-shadow:none !important;
 	  border-top: 1px solid transparent !important;
 	}
 	
-	/* Windows 10 tweaks */
-	@media (-moz-os-version: windows-win10) {
-	  #main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme,
-	  #main-window[defaultfxtheme="true"][fx32plus="true"] #TabsToolbar:not(:-moz-lwtheme),	
-	  #main-window[defaultfxtheme="true"][fx32plus="true"] #TabsToolbar:-moz-lwtheme {
-		border-bottom: 0 !important;
-	  }
-	}
-	
 	/* other */
-	#TabsToolbar:not(:-moz-lwtheme){
-	  box-shadow:none !important;
-	  border-bottom: 1px solid transparent !important;
-	}
-
 	#navigator-toolbox #nav-bar:not(:-moz-lwtheme){
 	  box-shadow:none !important;
 	  border-top: 1px solid transparent !important;
 	}
-	
+
 	/* Tabs toolbar tab close button (Fx31+) */
 	#ctraddon_tabs-closebutton{
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
@@ -108,10 +99,6 @@
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	}
 	
-	#TabsToolbar .close-icon > .toolbarbutton-icon {
-	  width: 16px !important;
-	}
-	
 	/*TabUtilities autoreload extra*/
 	.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover,
 	.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover[selected="true"] {
@@ -123,6 +110,11 @@
 
 	.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
 	  -moz-padding-start: 3px !important;
+	}
+	@media all and (-moz-windows-classic) {
+		#TabsToolbar[currentset*="tabbrowser-tabs,tabmixScrollBox"]:not([orient="vertical"]) .tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
+		  -moz-padding-end: 3px !important;
+		}
 	}
 		
 	.tabs-newtab-button{
@@ -138,5 +130,17 @@
 	  -moz-margin-end:-15px !important;
 	}
 	/**/
+	
+	/* TMP tweaks */
+	@media all and (-moz-windows-glass) {
+		#navigator-toolbox #TabsToolbar[multibar][tabsontop="false"]:not(:-moz-lwtheme)  {
+		  margin-bottom: -1px !important;
+		}
+	}
+	@media not all and (-moz-windows-glass) {
+		#navigator-toolbox #TabsToolbar[multibar][tabsontop="false"]:not(:-moz-lwtheme)  {
+		  margin-bottom: 0px !important;
+		}
+	}
 
 }

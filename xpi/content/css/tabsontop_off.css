@@ -93,5 +93,12 @@
 	#main-window[developertheme="true"][defaultfxtheme="true"][tabsontop="false"] #TabsToolbar{
 		background-color:var(--chrome-secondary-background-color) !important;
 	}
+	
+	/* Windows 10 tweaks */
+	@media (-moz-os-version: windows-win10) {
+	  #TabsToolbar:not([multibar]):-moz-lwtheme  {
+		margin-bottom: -1px !important;
+	  }
+	}
 
 }

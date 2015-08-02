@@ -42,7 +42,7 @@
 
 		<preference id="ctraddon_tabs"			name="extensions.classicthemerestorer.tabs" 		type="string"	instantApply="true"/>
 		<preference id="ctraddon_tabsontop"		name="extensions.classicthemerestorer.tabsontop" 	type="string"	instantApply="true"/>
-		
+		<preference id="ctraddon_square_edges"	name="extensions.classicthemerestorer.square_edges" type="bool"		instantApply="true"/>
 		<preference id="ctraddon_ctabheightcb"	name="extensions.classicthemerestorer.ctabheightcb"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_ctabheight"	name="extensions.classicthemerestorer.ctabheight"	type="int"		instantApply="true"/>
 		
@@ -50,7 +50,7 @@
 		<preference id="ctraddon_tabmwidth"		name="extensions.classicthemerestorer.ctabmwidth"	type="int"		instantApply="true"/>
 		<preference id="ctraddon_closetab"		name="extensions.classicthemerestorer.closetab" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_closetabhfl"	name="extensions.classicthemerestorer.closetabhfl"	type="bool"		instantApply="true"/>
-		<preference id="ctraddon_closealt"		name="extensions.classicthemerestorer.closealt"		type="bool"		instantApply="true"/>
+		<preference id="ctraddon_closeicon"		name="extensions.classicthemerestorer.closeicon"	type="string"	instantApply="true"/>
 		<preference id="ctraddon_closeonleft"	name="extensions.classicthemerestorer.closeonleft"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_closewwltab"	name="browser.tabs.closeWindowWithLastTab"			type="bool"		instantApply="true"/>
 		
@@ -279,12 +279,13 @@
 
 		<menulist preference="ctraddon_tabs" id="ctraddon_pw_tabmenulist">
 			<menupopup>
-				<menuitem value="tabs_default"	 label="&Ctr_tabs0;"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
-				<menuitem value="tabs_squared"	 label="&Ctr_tabs1;"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
-				<menuitem value="tabs_squaredc2" label="&Ctr_tabs1; (v2)"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
-				<menuitem value="tabs_squared2"	 label="&Ctr_tabs1m;" oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
-				<menuitem value="tabs_curved" 	 label="&Ctr_tabs2;"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();"/>
-				<menuitem value="tabs_curvedall" label="&Ctr_tabs3;"  oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore();" id="tabs_curvedall"/>
+				<menuitem value="tabs_default"	 label="&Ctr_tabs0;"		oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore(); classicthemerestorerjso.ctr.currentTabAppearance('tabs_default');"/>
+				<menuitem value="tabs_squared"	 label="&Ctr_tabs1;"		oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore(); classicthemerestorerjso.ctr.currentTabAppearance('tabs_squared');"/>
+				<menuitem value="tabs_squaredc2" label="&Ctr_tabs1; (v2)"	oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore(); classicthemerestorerjso.ctr.currentTabAppearance('tabs_squaredc2');"/>
+				<menuitem value="tabs_squared2"	 label="&Ctr_tabs1m;"		oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore(); classicthemerestorerjso.ctr.currentTabAppearance('tabs_squared2');"/>
+				<menuitem value="tabs_squared2c2" label="&Ctr_tabs1m; (v2)"	oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore(); classicthemerestorerjso.ctr.currentTabAppearance('tabs_squared2c2');"/>
+				<menuitem value="tabs_curved" 	 label="&Ctr_tabs2;"		oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore(); classicthemerestorerjso.ctr.currentTabAppearance('tabs_curved');"/>
+				<menuitem value="tabs_curvedall" label="&Ctr_tabs3;"		oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore(); classicthemerestorerjso.ctr.currentTabAppearance('tabs_curvedall');" id="tabs_curvedall"/>
 			</menupopup>
 		</menulist>
 
@@ -302,6 +303,7 @@
 			</menupopup>
 		</menulist>
 		
+		<checkbox label="&Ctr_square_edges;"	preference="ctraddon_square_edges" id="ctraddon_pw_square_edges"/>
 		<checkbox label="&Ctr_tabinsertion;"	preference="ctraddon_tabinsertion" id="ctraddon_pw_tab_tabinsertion"/>
 		<checkbox label="&Ctr_emptyfavicon;"	preference="ctraddon_emptyfavicon" id="ctraddon_pw_tab_emptyfavicon"/>
 		<checkbox label="&Ctr_noemptypticon;"	preference="ctraddon_noemptypticon" id="ctraddon_pw_tab_noemptypticon"/>
@@ -352,7 +354,17 @@
 		</menulist>
 		<checkbox label="&Ctr_closetab_hfot;" preference="ctraddon_closetabhfl" id="ctraddon_pw_closetabhfl"/>
 		<checkbox label="&Ctr_closeonleft;" preference="ctraddon_closeonleft" id="ctraddon_pw_closeonleft"/>
-		<checkbox label="&Ctr_closealt;" preference="ctraddon_closealt" id="ctraddon_pw_closealt"/>
+		
+		<menulist preference="ctraddon_closeicon" id="ctraddon_pw_closeicon">
+			<menupopup>
+				<menuitem value="closeicon_default"	label="&Ctr_closei_def;"	id="ctraddon_closeicon_def"/>
+				<menuitem value="closeicon_red"		label="&Ctr_closei_red;"	id="ctraddon_closeicon_red"/>
+				<menuitem value="closeicon_w7"		label="&Ctr_closei_w7;"		id="ctraddon_closeicon_w7"/>
+				<menuitem value="closeicon_w10"		label="&Ctr_closei_w10;"	id="ctraddon_closeicon_w10"/>
+				<menuitem value="closeicon_w10i"	label="&Ctr_closei_w10i;"	id="ctraddon_closeicon_w10i"/>
+			</menupopup>
+		</menulist>
+
 		<checkbox label="&Ctr_close_wwltab;" preference="ctraddon_closewwltab" tooltiptext="browser.tabs.closeWindowWithLastTab"/>
 
 	  </groupbox>

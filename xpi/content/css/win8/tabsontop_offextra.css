@@ -46,6 +46,14 @@
 	  border-bottom: 1px solid hsla(209,67%,12%,0.25) !important;
 	}
 	
+	/* Windows 10 tweaks */
+	@media (-moz-os-version: windows-win10) {
+	  #main-window[defaultfxtheme="true"][fx32plus="true"][tabsontop="false"] #TabsToolbar:not(:-moz-lwtheme),	
+	  #main-window[defaultfxtheme="true"][fx32plus="true"][tabsontop="false"] #TabsToolbar:-moz-lwtheme {
+		border-bottom: 0 !important;
+	  }
+	}
+	
 	/* for LavaFox themes */
 	#main-window[currenttheme^="LavaFox"][tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
 	  margin-top: 0px !important;

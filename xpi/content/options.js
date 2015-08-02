@@ -121,6 +121,8 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_aerocolors').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tbsep_winc').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_alt_addonsm').style.visibility = 'collapse';
+		
+		document.getElementById('ctraddon_pw_devthemegb').style.visibility = 'collapse';
 	} else {
 		document.getElementById('ctraddon_pw_special_info2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_special_font').style.visibility = 'collapse';
@@ -415,6 +417,7 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwHidetbwotExtra(this.prefs.getBoolPref("hidetbwot"));
 	this.altTabsToolbarBgExtra(this.prefs.getBoolPref("alttabstb"));
 	this.ctrpwModeextra(this.prefs.getCharPref("nav_txt_ico"));
+	this.currentTabAppearance(this.prefs.getCharPref("tabs"));
 	
 	var closetab_value = this.prefs.getCharPref("closetab");
   
@@ -622,7 +625,7 @@ classicthemerestorerjso.ctr = {
   },
   
   ctrpwTabcloseextra2: function(which) {
-	document.getElementById('ctraddon_pw_closealt').disabled = which;
+	document.getElementById('ctraddon_pw_closeicon').disabled = which;
   },
   
   ctrMovStatusextra: function() {
@@ -737,6 +740,17 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_cappbutc2cp').disabled = true;
 	}
   
+  },
+  
+  currentTabAppearance: function(which) {
+	
+	if(which=="tabs_squaredc2" || which=="tabs_squared2c2") {
+	  document.getElementById('ctraddon_pw_square_edges').disabled = false;
+	  document.getElementById('ctraddon_pw_square_edges').style.visibility = 'visible';
+	} else {
+	  document.getElementById('ctraddon_pw_square_edges').disabled = true;
+	  document.getElementById('ctraddon_pw_square_edges').style.visibility = 'collapse';
+	}
   },
   
   ctrpwStarFeedDelay: function(){

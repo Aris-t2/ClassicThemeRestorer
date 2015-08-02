@@ -2,6 +2,7 @@
 pref("extensions.classicthemerestorer.tabs","tabs_squared");
 pref("extensions.classicthemerestorer.tabsontop",'unset');
 pref("extensions.classicthemerestorer.ctabheightcb",false);
+pref("extensions.classicthemerestorer.square_edges",false);
 pref("extensions.classicthemerestorer.ctabheight",28);
 pref("extensions.classicthemerestorer.ctabmwidth",100);
 pref("extensions.classicthemerestorer.ctabwidth",210);
@@ -11,7 +12,7 @@ pref("extensions.classicthemerestorer.noemptypticon",false);
 pref("extensions.classicthemerestorer.closetab","closetab_default");
 pref("extensions.classicthemerestorer.closetabhfl",false);
 pref("extensions.classicthemerestorer.closeonleft",false);
-pref("extensions.classicthemerestorer.closealt",false);
+pref("extensions.classicthemerestorer.closeicon",'closeicon_default');
 
 //Appbutton settings
 pref("extensions.classicthemerestorer.appbutton",'appbutton_v1');

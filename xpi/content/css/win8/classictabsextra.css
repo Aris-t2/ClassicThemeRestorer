@@ -135,6 +135,13 @@
 	  border-bottom: 1px solid transparent !important;
 	}
 	
+	/* Windows 10 tweaks */
+	@media (-moz-os-version: windows-win10) {
+	  #main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme{
+		border-bottom: 0 !important;
+	  }
+	}
+	
 	#TabsToolbar #tabbrowser-tabs .tabs-newtab-button:-moz-lwtheme,
 	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:-moz-lwtheme,
 	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab[pinned]:-moz-lwtheme{

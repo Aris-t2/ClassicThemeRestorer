@@ -55,6 +55,16 @@
 	#tabbrowser-tabs .tab-drop-indicator {
 	  margin-bottom:0px !important;
 	}
+	
+	/* Windows 10 tweaks */
+	@media (-moz-os-version: windows-win10) {
+	  #main-window[defaultfxtheme="true"][fx32plus="true"][tabsontop="false"] #TabsToolbar:not(:-moz-lwtheme) {
+		margin-bottom: -1px !important;
+	  }
+	  #main-window[defaultfxtheme="true"][fx32plus="true"][tabsontop="false"] #TabsToolbar:-moz-lwtheme {
+		margin-bottom: -2px !important;
+	  }
+	}
 
 	/* Personas support */
 	#nav-bar:-moz-lwtheme {
