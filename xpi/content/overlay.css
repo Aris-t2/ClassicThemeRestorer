@@ -650,21 +650,32 @@
 	
 	#ctraddon_altabico_white{
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton.png");
+	  -moz-margin-end:0;
 	}
 	#ctraddon_altabico_dark{
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton2.png");
+	  margin-left: 0;
+	  margin-right: 0;
 	}
 	#ctraddon_altabico_grey{
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton3.png");
+	  margin-left: 0;
+	  margin-right: 0;
 	}
 	#ctraddon_altabico_white_nd{
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-inv.png");
+	  margin-left: 0;
+	  margin-right: 0;
 	}
 	#ctraddon_altabico_dark_nd{
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-dark.png");
+	  margin-left: 0;
+	  margin-right: 0;
 	}
 	#ctraddon_altabico_grey_nd{
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-grey.png");
+	  margin-left: 0;
+	  margin-right: 0;
 	}
 	
 	/* -mox-padding-start is useless in this case, because Firefox does not allow something like 
@@ -680,49 +691,37 @@
 	}
 	
 	/* Tab close - pref icons */
-	#ctraddon_closeicon_red label{
-	  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/close_alt.png'),
-				  0, 16, 16, 0) no-repeat left !important;
-	  padding-left:20px !important;
+	#ctraddon_closeicon_def {
+	  -moz-margin-end:0;
 	}
-	#ctraddon_pw_closeicon[value="closeicon_red"] {
+	#ctraddon_closeicon_red {
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/close_alt.png');
-	  -moz-image-region: rect(0px, 16px, 16px, 0px);
+	  -moz-image-region: rect(0px, 32px, 16px, 0px);
+	  margin-left: 0;
+	  margin-right: 0;
 	}
-	#ctraddon_closeicon_w7 label{
-	  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/close.png'),
-				  0, 16, 16, 0) no-repeat left !important;
-	  padding-left:20px !important;
-	}
-	#ctraddon_pw_closeicon[value="closeicon_w7"] {
+	#ctraddon_closeicon_w7{
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/close.png');
-	  -moz-image-region: rect(0px, 16px, 16px, 0px);
+	  -moz-image-region: rect(0px, 32px, 16px, 0px);
+	  margin-left: 0;
+	  margin-right: 0;
 	}
-	#ctraddon_closeicon_w10 label{
-	  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/close_w10.png'),
-				  0, 20, 20, 0) no-repeat left !important;
-	  padding-left:20px !important;
-	}
-	#ctraddon_pw_closeicon[value="closeicon_w10"] {
+	#ctraddon_closeicon_w10 {
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/close_w10.png');
-	  -moz-image-region: rect(0px, 20px, 20px, 0px);
+	  -moz-image-region: rect(0px, 40px, 20px, 0px);
+	  margin-left: 0;
+	  margin-right: 0;
 	}
-	#ctraddon_closeicon_w10i label{
-	  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/close_w10i.png'),
-				  0, 20, 20, 0) no-repeat left !important;
-	  padding-left:20px !important;
-	}
-	#ctraddon_pw_closeicon[value="closeicon_w10i"] {
+	#ctraddon_closeicon_w10i {
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/close_w10i.png');
-	  -moz-image-region: rect(0px, 20px, 20px, 0px);
+	  -moz-image-region: rect(0px, 40px, 20px, 0px);
+	  margin-left: 0;
+	  margin-right: 0;
 	}
-	
-	/*#ctraddon_pw_closealt label{
-	  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/close_alt.png'),
-				  0, 16, 16, 0) no-repeat left !important;
-	  padding-left:20px !important;
-	  min-height:16px !important;
-	}*/
+	#ctraddon_closeicon_w10 image, #ctraddon_closeicon_w10i image {
+	  width: 32px;
+	}
+	/**/
 	
 	#ctraddon_alt_abicons label,
 	#ctraddon_alt_abicons2 label {
@@ -899,5 +898,15 @@
 	  padding-left:20px !important;
 	  min-height:18px !important;
 	}
+	
+	#ctraddon_pw_toolsitem:-moz-locale-dir(rtl) label,
+	#ctraddon_pw_appmenuitem:-moz-locale-dir(rtl) label,
+	#ctraddon_pw_contextitem:-moz-locale-dir(rtl) label,
+	#ctraddon_pw_puictrbutton:-moz-locale-dir(rtl) label{
+	  background:url('chrome://classic_theme_restorer/content/images/appmenu_ctr.png') no-repeat right !important;
+	  padding-right:20px !important;
+	  min-height:18px !important;
+	}
+	
 	
 }

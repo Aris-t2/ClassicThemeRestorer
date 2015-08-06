@@ -195,6 +195,11 @@
 		margin: 0px 0 6px 0px !important;
 	  }
 	  
+	  #main-window[fx40plus="true"][sizemode="maximized"] #ctraddon_appbutton2{
+		margin-top:-3px !important;
+		margin: -3px 0 6px -2px !important;
+	  }
+	  
 	  #main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] #toolbar-menubar ~ #TabsToolbar,
 	  #main-window[tabsintitlebar][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar,
 	  #main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar {

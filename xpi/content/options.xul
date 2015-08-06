@@ -355,16 +355,14 @@
 		<checkbox label="&Ctr_closetab_hfot;" preference="ctraddon_closetabhfl" id="ctraddon_pw_closetabhfl"/>
 		<checkbox label="&Ctr_closeonleft;" preference="ctraddon_closeonleft" id="ctraddon_pw_closeonleft"/>
 		
-		<menulist preference="ctraddon_closeicon" id="ctraddon_pw_closeicon">
-			<menupopup>
-				<menuitem value="closeicon_default"	label="&Ctr_closei_def;"	id="ctraddon_closeicon_def"/>
-				<menuitem value="closeicon_red"		label="&Ctr_closei_red;"	id="ctraddon_closeicon_red"/>
-				<menuitem value="closeicon_w7"		label="&Ctr_closei_w7;"		id="ctraddon_closeicon_w7"/>
-				<menuitem value="closeicon_w10"		label="&Ctr_closei_w10;"	id="ctraddon_closeicon_w10"/>
-				<menuitem value="closeicon_w10i"	label="&Ctr_closei_w10i;"	id="ctraddon_closeicon_w10i"/>
-			</menupopup>
-		</menulist>
-
+		<radiogroup preference="ctraddon_closeicon" id="ctraddon_pw_closeicon" orient="horizontal" value="">
+			<radio value="closeicon_default" label="&Ctr_closei_def;" id="ctraddon_closeicon_def"/>
+			<radio value="closeicon_red"	label=""	id="ctraddon_closeicon_red"/>
+			<radio value="closeicon_w7"		label=""	id="ctraddon_closeicon_w7"/>
+			<radio value="closeicon_w10"	label=""	id="ctraddon_closeicon_w10"/>
+			<radio value="closeicon_w10i"	label=""	id="ctraddon_closeicon_w10i"/>
+		</radiogroup>
+		
 		<checkbox label="&Ctr_close_wwltab;" preference="ctraddon_closewwltab" tooltiptext="browser.tabs.closeWindowWithLastTab"/>
 
 	  </groupbox>

@@ -1,4 +1,4 @@
-@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+/*@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);*/
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	#nav-bar #notification-popup-box + *{
@@ -279,6 +279,12 @@
 		  min-height: 24px !important;
 		  height: 24px !important;
 		}
+		
+		#searchbar .autocomplete-textbox,
+		#urlbar .autocomplete-textbox {
+		  font-size:90% !important;
+		}
+
 	}
 	/* END: urlbar border tweaking (default theme does not provide left urlbar border) */
 
