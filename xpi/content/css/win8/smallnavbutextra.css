@@ -274,6 +274,14 @@
 	/* Windows 10 tweaks */
 	@media (-moz-os-version: windows-win10) {
 
+		#main-window[fx40plus="true"]:not([fx42plus="true"])[defaultfxtheme="true"] #notification-popup-box[hidden] + * {
+		  -moz-padding-start: 0px !important;
+		}
+	
+		#main-window[fx42plus="true"][defaultfxtheme="true"] #nav-bar #notification-popup-box[hidden] + * {
+		  -moz-padding-start: 4px !important;
+		}
+
 		#urlbar-wrapper, #urlbar,
 		.searchbar-textbox{
 		  min-height: 24px !important;
@@ -282,7 +290,30 @@
 		
 		#searchbar .autocomplete-textbox,
 		#urlbar .autocomplete-textbox {
-		  font-size:90% !important;
+		  font-size:97% !important;
+		}
+
+		#urlbar{
+		  padding-top: unset !important;
+		  padding-bottom: unset !important;
+		}
+		#searchbar .searchbar-search-button {
+		  margin-top:unset !important;
+		  margin-bottom:unset !important;
+		  padding-top: unset !important;
+		  padding-bottom: unset !important;
+		}
+		
+		#urlbar[pageproxystate="valid"] .verifiedDomain,
+		#urlbar[pageproxystate="valid"] .verifiedIdentity {
+		  background: unset !important;
+		}
+		
+		#urlbar[pageproxystate="valid"] .verifiedIdentity,
+		#urlbar[pageproxystate="valid"] .verifiedDomain {
+		  /*margin-top: 1px !important;
+		  margin-bottom: 1px !important;
+		  -moz-margin-start: 1px !important;*/
 		}
 
 	}

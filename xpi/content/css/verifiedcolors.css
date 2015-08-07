@@ -3,7 +3,7 @@
 
 	/* Restore classic colors for verified identity and verified domain */
 	
-	#urlbar[pageproxystate="valid"] .verifiedDomain {
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedDomain {
 	  background: linear-gradient(hsl(215,60%,92%), hsl(215,58%,88%)) !important;
 	  box-shadow: 0 1px 0 hsla(215,54%,33%,.05) inset !important;
 	  -moz-border-end-color: hsla(215,54%,33%,.2) !important;
@@ -11,18 +11,18 @@
 	  -moz-margin-end:2px !important;
 	}
 
-	#urlbar[pageproxystate="valid"] .verifiedDomain:hover {
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedDomain:hover {
 	  background: linear-gradient(hsl(215,85%,85%), hsl(215,70%,68%)) !important;
 	}
 
-	#urlbar[pageproxystate="valid"] .verifiedDomain[open="true"],
-	#urlbar[pageproxystate="valid"] .verifiedDomain:hover:active {
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedDomain[open="true"],
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedDomain:hover:active {
 	  background: linear-gradient(hsl(215,80%,80%), hsl(215,67%,65%)) !important;
 	  box-shadow: 0 1px 1px hsla(215,54%,33%,.7) inset,
 				  0 1px 3px 1px hsla(215,54%,33%,.5) inset !important;
 	}
 
-	#urlbar[pageproxystate="valid"] .verifiedIdentity {
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedIdentity {
 	  background: linear-gradient(hsl(91,70%,90%), hsl(93,60%,81%)) !important;
 	  box-shadow: 0 1px 0 hsla(92,81%,16%,.05) inset !important;
 	  -moz-border-end-color: hsla(92,81%,16%,.2) !important;
@@ -30,19 +30,19 @@
 	  font-weight:bold !important;
 	}
 
-	#urlbar[pageproxystate="valid"] .verifiedIdentity:hover {
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedIdentity:hover {
 	  background: linear-gradient(hsl(92,69%,77%), hsl(92,44%,51%)) !important;
 	}
 
-	#urlbar[pageproxystate="valid"] .verifiedIdentity[open="true"],
-	#urlbar[pageproxystate="valid"] .verifiedIdentity:hover:active {
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedIdentity[open="true"],
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedIdentity:hover:active {
 	  background: linear-gradient(hsl(92,65%,70%), hsl(92,40%,48%)) !important;
 	  box-shadow: 0 1px 1px hsla(92,81%,16%,.6) inset,
 				  0 1px 3px 1px hsla(92,81%,16%,.5) inset !important;
 	}
 	
-	#urlbar[pageproxystate="valid"] .verifiedDomain,
-	#urlbar[pageproxystate="valid"] .verifiedIdentity {
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedDomain,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedIdentity {
 	  -moz-border-end: 1px solid;
 	}
 
