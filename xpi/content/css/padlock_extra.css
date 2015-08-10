@@ -89,7 +89,7 @@
 					0, 48, 16, 32) no-repeat center right !important;
 	}
 	
-	#main-window:not([fx42plus="true"]) #main-window:not([fx42plus="true"]) #urlbar .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"] {
+	#main-window:not([fx42plus="true"]) #urlbar .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/identity-icons-https-mixed-display.png"),
 					0, 16, 16, 0) no-repeat center left !important;
 	}
@@ -173,17 +173,21 @@
 					0, 32, 32, 0) no-repeat center right !important;
 	  background-size: 16px 16px !important;
 	}
-
+	
+	#main-window[fx42plus="true"] #urlbar .mixedActiveContent > #identity-icons > #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar .mixedActiveContent > #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://browser/skin/identity-mixed-active-loaded.svg"),
 					0, 16, 16, 0) no-repeat center left !important;
 	}
-
+	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .mixedActiveContent > #identity-icons > #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .mixedActiveContent > #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://browser/skin/identity-mixed-active-loaded.svg"),
 					0, 16, 16, 0) no-repeat center right !important;
 	}
 
+	#main-window[fx42plus="true"] #urlbar .weakCipher > #identity-icons > #page-proxy-favicon[pageproxystate="valid"],
+	#main-window[fx42plus="true"] #urlbar .mixedDisplayContent > #identity-icons > #page-proxy-favicon[pageproxystate="valid"],
+	#main-window[fx42plus="true"] #urlbar .mixedDisplayContentLoadedActiveBlocked > #identity-icons > #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar .weakCipher > #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar .mixedDisplayContent > #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar .mixedDisplayContentLoadedActiveBlocked > #page-proxy-favicon[pageproxystate="valid"] {
@@ -191,18 +195,21 @@
 					0, 16, 16, 0) no-repeat center left !important;
 	}
 
+	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .weakCipher > #identity-icons > #page-proxy-favicon[pageproxystate="valid"],
+	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .mixedDisplayContent > #identity-icons > #page-proxy-favicon[pageproxystate="valid"],
+	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .mixedDisplayContentLoadedActiveBlocked > #identity-icons > #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .weakCipher > #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .mixedDisplayContent > #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .mixedDisplayContentLoadedActiveBlocked > #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://browser/skin/identity-mixed-passive-loaded.svg"),
 					0, 16, 16, 0) no-repeat center right !important;
 	}
-
+	#main-window[fx42plus="true"] #urlbar .mixedActiveBlocked > #identity-icons > #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar .mixedActiveBlocked > #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://browser/skin/identity-mixed-active-blocked.svg"),
 					0, 16, 16, 0) no-repeat center left !important;
 	}
-
+	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .mixedActiveBlocked > #identity-icons > #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .mixedActiveBlocked > #page-proxy-favicon[pageproxystate="valid"] {
 	  background: -moz-image-rect(url("chrome://browser/skin/identity-mixed-active-blocked.svg"),
 					0, 16, 16, 0) no-repeat center right !important;
