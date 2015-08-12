@@ -127,6 +127,10 @@
 	  #main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme{
 		border-bottom: 0 !important;
 	  }
+	  #main-window[fx40plus="true"] #navigator-toolbox #nav-bar:not([tabsontop="false"]):not(:-moz-lwtheme){
+		border-top: 1px solid rgba(0,0,0,.2) !important;
+        margin-top: -2px !important;
+	  }
 	  #TabsToolbar:not([multibar]):-moz-lwtheme  {
 		margin-bottom: -1px !important;
 	  }

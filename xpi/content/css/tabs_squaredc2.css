@@ -201,6 +201,30 @@
 	  position:unset !important;
 	}
 	
+	/* Pinned tabs & TabMixPlus/TabUtilities locked/protected tabs support */	
+	.tabbrowser-tab:not([pinned]) .tab-close-button{
+	  -moz-margin-end:-5px !important;
+	  -moz-margin-start:0px !important;
+	}
+	.tabbrowser-tab:not([pinned]):not([locked]) .tab-throbber,
+	.tabbrowser-tab:not([pinned]) .tab-icon-image{
+	  -moz-margin-start:-3px !important;
+	  -moz-margin-end:3px !important;
+	}
+	.tabbrowser-tab:not([pinned])[locked] .tab-throbber{
+	  -moz-margin-start:-3px !important;
+	  -moz-margin-end:-13px !important;
+	}
+  
+ 	.tabbrowser-tab[pinned]:not([locked]):not([pinned]) image{
+	  -moz-margin-start:0px !important;
+	}
+	
+	/* pinned tabs fix (Fx38+) */
+	#main-window[fx38plus="true"] #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-content[pinned] {
+	  -moz-padding-end: 0px !important;
+	}
+	
 	/**/
 	#TabsToolbar #ctraddon_appbutton{
 	  margin-bottom:-1px !important;

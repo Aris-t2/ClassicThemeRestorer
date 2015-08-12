@@ -8,6 +8,13 @@
 	  background-clip: padding-box !important;
 	}
 	
+	@media (-moz-os-version: windows-win10) {
+	  #main-window[defaultfxtheme="true"][tabsontop="false"][sizemode="normal"] #TabsToolbar:not(:-moz-lwtheme) {
+		border-left: 0px !important;
+		border-right: 0px !important;
+	  }
+	}
+	
 	#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{
 	  margin-top: 3px !important;
 	  margin-bottom: 3px !important;

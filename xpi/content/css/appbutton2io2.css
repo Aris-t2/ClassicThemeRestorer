@@ -32,6 +32,12 @@
 	  -moz-appearance: none !important;
       margin: -1px -34px 0 -26px !important;
 	}
+	
+	@media (-moz-os-version: windows-win10) {
+		#ctraddon_appbutton2 > .toolbarbutton-icon {
+		  padding: 1px 9px !important;
+		}
+	}
 
 	#ctraddon_appbutton2 > .toolbarbutton-menu-dropmarker{
       visibility: collapse !important;

@@ -67,7 +67,14 @@
 
 	#navigator-toolbox #nav-bar:not(:-moz-lwtheme){
 	  box-shadow:none !important;
-	  border-top: 1px solid transparent !important;
+	  /*border-top: 1px solid transparent !important;*/
+	}
+	
+	@media (-moz-os-version: windows-win10) {
+	  #main-window[fx40plus="true"] #navigator-toolbox #nav-bar:not(:-moz-lwtheme){
+		box-shadow:none !important;
+		border-top: 1px solid rgba(0,0,0,.2) !important; 
+	  }
 	}
 	
 	/* Tabs toolbar tab close button (Fx31+) */

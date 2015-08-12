@@ -649,6 +649,8 @@ classicthemerestorerjso.ctr = {
  
   ctrpwAppbuttonextra: function(which,fromprefwindow) {
 
+  var tabsintitlebar = Services.prefs.getBranch("browser.tabs.").getBoolPref("drawInTitlebar");
+
 	if (which=="appbutton_v1" && this.fxdefaulttheme){
 	  document.getElementById('ctraddon_altabico_list').disabled = false;
 	  document.getElementById('ctraddon_abhigher').disabled = false;
@@ -712,7 +714,11 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_appbutonclab').disabled = true;
 	  document.getElementById('ctraddon_pw_appbuttontxt').disabled = true;
 	  document.getElementById('ctraddon_appbclmmenus').disabled = false;
-	  
+
+	  if (tabsintitlebar==false && fromprefwindow==true) {
+		Services.prefs.getBranch("browser.tabs.").setBoolPref("drawInTitlebar", true);
+	  }
+
 	} else {
 	  document.getElementById('ctraddon_altabico_list').disabled = true;
 	  document.getElementById('ctraddon_abhigher').disabled = true;
@@ -722,6 +728,10 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_appbutonclab').disabled = false;
 	  document.getElementById('ctraddon_pw_appbuttontxt').disabled = false;
 	  document.getElementById('ctraddon_appbclmmenus').disabled = false;
+
+	  if (tabsintitlebar==false && fromprefwindow==true) {
+		Services.prefs.getBranch("browser.tabs.").setBoolPref("drawInTitlebar", true);
+	  }
 
 	}
   },
