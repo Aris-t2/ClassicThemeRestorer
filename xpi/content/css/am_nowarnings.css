@@ -1,0 +1,14 @@
+@-moz-document url(about:addons) {
+
+	richlistitem[type=extension] .warning,
+	#detail-view[type=extension] .warning,
+	.global-warning-container {
+	  display: none;
+	}
+   
+	richlistitem[type=extension],
+	#detail-view[type=extension] {
+	  background-image: none !important;
+	}
+
+}

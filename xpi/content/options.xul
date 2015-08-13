@@ -32,9 +32,7 @@
 		<preference id="ctraddon_loopcall"		name="loop.enabled"									type="bool"		instantApply="true"/>
 		<preference id="ctraddon_oldprefs" 		name="browser.preferences.inContent"				type="bool"		instantApply="true"/>
 		<preference id="ctraddon_devtheme"		name="browser.devedition.theme.enabled"				type="bool"		instantApply="true"/>
-		<preference id="ctraddon_devthemebut"	name="browser.devedition.theme.showCustomizeButton"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_readermode"	name="reader.parse-on-load.enabled"					type="bool"		instantApply="true"/>
-		<preference id="ctraddon_readermode2"	name="browser.readinglist.enabled"					type="bool"		instantApply="true"/>
 		<preference id="ctraddon_pocket"		name="browser.pocket.enabled"						type="bool"		instantApply="true"/>
 		<preference id="ctraddon_nodevtheme2"	name="extensions.classicthemerestorer.nodevtheme2"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_tabinsertion"	name="browser.tabs.insertRelatedAfterCurrent"		type="bool"		instantApply="true"/>
@@ -75,6 +73,7 @@
 		<preference id="ctraddon_noconicons"	name="extensions.classicthemerestorer.noconicons"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_alt_newtabp"	name="extensions.classicthemerestorer.alt_newtabp"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_addonversion"	name="extensions.classicthemerestorer.addonversion"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_am_nowarning"	name="extensions.classicthemerestorer.am_nowarning"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_alt_addonsp"	name="extensions.classicthemerestorer.alt_addonsp"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_alt_addonsm"	name="extensions.classicthemerestorer.alt_addonsm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_svgfilters"	name="extensions.classicthemerestorer.svgfilters"	type="bool"		instantApply="true"/>
@@ -165,6 +164,7 @@
 		<preference id="ctraddon_notabfog"		name="extensions.classicthemerestorer.notabfog" 	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_notabbg"		name="extensions.classicthemerestorer.notabbg" 	 	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_nobookbarbg"	name="extensions.classicthemerestorer.nobookbarbg" 	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_bookbarfs"		name="extensions.classicthemerestorer.bookbarfs" 	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_nonavbarbg"	name="extensions.classicthemerestorer.nonavbarbg" 	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_nonavborder"	name="extensions.classicthemerestorer.nonavborder" 	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_nonavtbborder"	name="extensions.classicthemerestorer.nonavtbborder" type="bool"	instantApply="true"/>
@@ -249,11 +249,13 @@
   <radiogroup id="CtrRadioGroup" class="ctraddontabs" orient="vertical" flex="1"
 	value="ctraddon_tabsbox" oncommand="classicthemerestorerjso.ctr.onCtrPanelSelect();">
 
-	  <radio class="ctraddontab" value="ctraddon_tabsbox" 		label="&Ctr_tabs;"/>
+	  <radio class="ctraddontab" value="ctraddon_tabsbox" 		label="&Ctr_tabs; (1)"/>
+	  <radio class="ctraddontab" value="ctraddon_tabsbox2" 		label="&Ctr_tabs; (2)"/>
 	  <radio class="ctraddontab" value="ctraddon_fontbox"    	label="&Ctr_tabcolors_t;" id="ctraddon_sqtabcolorstab"/>
 	  <radio class="ctraddontab" value="ctraddon_appbuttonbox" 	label="&Ctr_appbutton;"/>
 	  <radio class="ctraddontab" value="ctraddon_generaluibox"	label="&Ctr_ui; (1)"/>
 	  <radio class="ctraddontab" value="ctraddon_generaluibox2"	label="&Ctr_ui; (2)"/>
+	  <radio class="ctraddontab" value="ctraddon_addonmngrbox"	label="&Ctr_addonmanager;"/>
 	  <radio class="ctraddontab" value="ctraddon_iconsbox"		label="&Ctr_urlbar;"/>
 	  <radio class="ctraddontab" value="ctraddon_toolbarsbox"	label="&Ctr_toolbars; (1)"/>
 	  <radio class="ctraddontab" value="ctraddon_toolbarsbox2"	label="&Ctr_toolbars; (2)"/>
@@ -341,7 +343,34 @@
 		  </rows>
 		</grid>
 		
-		<description class="ctraddon_font1">&Ctr_closetab_0;</description>
+	  </groupbox>
+	  
+	  <groupbox>
+	    <caption  label="&Ctr_tabstoolbar;" class="ctraddon_topic"/>
+		<checkbox label="&Ctr_dblclnewtab;"	preference="ctraddon_dblclnewtab" class="ctraddon_windowsonly"/>
+		<checkbox label="&Ctr_hidetbwot;"	preference="ctraddon_hidetbwot" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(true);} else {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(false);} classicthemerestorerjso.ctr.needsBrowserRestart();"/>
+		<checkbox label="&Ctr_hidetbwote;"	preference="ctraddon_hidetbwote" class="ctraddonsuboption" id="ctraddon_pw_hidetbwote"/>
+		<description id="ctraddon_pw_hidetbwote_winc" class="ctraddonsuboption2 ctraddon_windowsonly">&Ctr_hidetbwote_i;</description>
+		<checkbox label="&Ctr_hidetbwote2;"	preference="ctraddon_hidetbwote2" class="ctraddonsuboption ctraddon_winmaconly" id="ctraddon_pw_hidetbwote2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
+		<checkbox label="&Ctr_hightabpos;"	preference="ctraddon_hightabpososx"/>
+	  </groupbox>
+	  
+	  <groupbox id="ctraddon_pw_anewtaburlgbox">
+	    <caption  label="&Ctr_anewtaburl;" class="ctraddon_topic"/>
+		<checkbox label="&Ctr_anewtaburlcb;"	preference="ctraddon_anewtaburlcb" id="ctraddon_pw_anewtaburlcb"/>
+		<hbox>
+		  <label value=""/>
+		  <textbox id="ctraddon_pw_anewtaburlbox" preference="ctraddon_anewtaburl" size="auto" flex="1" type="autocomplete" placeholder=""/>
+		  <label value=""/>
+		</hbox>
+	  </groupbox>
+
+	</box>
+	
+	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_tabsbox2">
+
+	  <groupbox>
+		<caption  label="&Ctr_closetab_0;" class="ctraddon_topic"/>
 		<menulist preference="ctraddon_closetab" id="ctraddon_pw_closetab">
 			<menupopup>
 				<menuitem value="closetab_default"	label="&Ctr_tabwidthdef;" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
@@ -365,6 +394,18 @@
 		
 		<checkbox label="&Ctr_close_wwltab;" preference="ctraddon_closewwltab" tooltiptext="browser.tabs.closeWindowWithLastTab"/>
 
+	  </groupbox>
+
+	  <groupbox class="ctraddon_winmaconly" id="ctraddon_pw_mockupoptions">
+	    <caption  label="&Ctr_fxmockup;" class="ctraddon_topic"/>
+		<hbox>
+		  <image src="chrome://classic_theme_restorer/content/images/fx_mockup.png"/>
+		  <label value=""/>
+		</hbox>
+		<checkbox label="&Ctr_tabmokcolor;"		preference="ctraddon_tabmokcolor" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor"/>
+		<checkbox label="&Ctr_tabmokcolor2;"	preference="ctraddon_tabmokcolor2" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor2"/>
+		<checkbox label="&Ctr_tabmokcolor3;"	preference="ctraddon_tabmokcolor3" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor3"/>
+		<checkbox label="&Ctr_tabmokcolor4;"	preference="ctraddon_tabmokcolor4" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor4"/>
 	  </groupbox>
 
 	</box>
@@ -718,7 +759,7 @@
 		<checkbox label="&Ctr_noconicons;"		preference="ctraddon_noconicons" id="ctraddon_pw_noconicons"/>
 		<checkbox label="&Ctr_alt_newtabp;"		preference="ctraddon_alt_newtabp" id="ctraddon_pw_alt_newtabp"/>
 		<checkbox label="&Ctr_svgfilters;"		preference="ctraddon_svgfilters" id="ctraddon_pw_svgfilters"/>
-		<checkbox label="&Ctr_hideprivmask;"	preference="ctraddon_hideprivmask" id="ctraddon_pw_hideprivmask"/>
+		
 		<checkbox label="&Ctr_combrelstop;"		preference="ctraddon_combrelstop" id="ctraddon_pw_stopreload"/>
 		<description class="ctraddonsuboption">&Ctr_stoprel1;</description>
 
@@ -726,23 +767,13 @@
 		<checkbox label="&Ctr_emptyfavicon2;"	preference="ctraddon_emptyfavicon2" id="ctraddon_pw_emptyfavicon2" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwTabEmptyFavicon(true);} else {classicthemerestorerjso.ctr.ctrpwTabEmptyFavicon(false);}"/>
 		<checkbox label="&Ctr_panelmenucol;"	preference="ctraddon_panelmenucol" id="ctraddon_pw_panelmenucolor"/>
 		<checkbox label="&Ctr_cpanelmenus;"		preference="ctraddon_cpanelmenus"/>
-		<checkbox label="&Ctr_pmhidelabels;"	preference="ctraddon_pmhidelabels"/>
 		<checkbox label="&Ctr_menupopupscr;"	preference="ctraddon_menupopupscr"/>
-		<checkbox label="&Ctr_hidezoomres;"		preference="ctraddon_hidezoomres"/>
 		<checkbox label="&Ctr_bmbutpanelm;"		preference="ctraddon_bmbutpanelm" id="ctraddon_pw_bmbutpanelm"/>
-		<checkbox label="&Ctr_bmbutnotext;"		preference="ctraddon_bmbutnotext" id="ctraddon_pw_bmbutnotext"/>
 		<checkbox label="&Ctr_skipprintpr;"		preference="ctraddon_skipprintpr" id="ctraddon_pw_skipprintpr" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<checkbox label="&Ctr_tbconmenu;"		preference="ctraddon_tbconmenu"	  id="ctraddon_pw_tbconmenu"/>
-		<checkbox label="&Ctr_noresizerxp;"		preference="ctraddon_noresizerxp" id="ctraddon_pw_noresizerxp"/>
-		<checkbox label="&Ctr_alt_addonsp;"		preference="ctraddon_alt_addonsp" id="ctraddon_pw_alt_addonsp"/>
-		<checkbox label="&Ctr_alt_addonsm;"		preference="ctraddon_alt_addonsm" id="ctraddon_pw_alt_addonsm"/>
-		<checkbox label="&Ctr_addonversion;"	preference="ctraddon_addonversion" id="ctraddon_pw_addonversion"/>
+		
 	  </groupbox>
-
-	</box>
-
-	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_generaluibox2">
-
+	  
 	  <groupbox>
 	    <caption  label="&Ctr_navthrobber;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_navthrobber;"	preference="ctraddon_activndicat" id="ctraddon_pw_activitythrobber" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
@@ -753,17 +784,25 @@
 		  <label value=""/>
 		</hbox>
 	  </groupbox>
-	  
-	  <groupbox id="ctraddon_pw_anewtaburlgbox">
-	    <caption  label="&Ctr_anewtaburl;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_anewtaburlcb;"	preference="ctraddon_anewtaburlcb" id="ctraddon_pw_anewtaburlcb"/>
-		<hbox>
-		  <label value=""/>
-		  <textbox id="ctraddon_pw_anewtaburlbox" preference="ctraddon_anewtaburl" size="auto" flex="1" type="autocomplete" placeholder=""/>
-		  <label value=""/>
-		</hbox>
-	  </groupbox>
 
+	</box>
+	
+	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_generaluibox2">
+
+	  <groupbox>
+	    <caption  label="&Ctr_ui;" class="ctraddon_topic"/>
+		<checkbox label="&Ctr_hidenavbar;"		preference="ctraddon_hidenavbar"/>
+		<checkbox label="&Ctr_chevronfix;"		preference="ctraddon_chevronfix"/>
+		<checkbox label="&Ctr_hideprivmask;"	preference="ctraddon_hideprivmask" id="ctraddon_pw_hideprivmask"/>
+		<checkbox label="&Ctr_hidesbclose;"		preference="ctraddon_hidesbclose"/>
+		<checkbox label="&Ctr_closeabarbut;"	preference="ctraddon_closeabarbut"/>
+		<checkbox label="&Ctr_notextshadow;"	preference="ctraddon_notextshadow"/>
+		<checkbox label="&Ctr_pmhidelabels;"	preference="ctraddon_pmhidelabels"/>
+		<checkbox label="&Ctr_hidezoomres;"		preference="ctraddon_hidezoomres"/>
+		<checkbox label="&Ctr_bmbutnotext;"		preference="ctraddon_bmbutnotext" id="ctraddon_pw_bmbutnotext"/>
+		<checkbox label="&Ctr_noresizerxp;"		preference="ctraddon_noresizerxp" id="ctraddon_pw_noresizerxp"/>
+	  </groupbox>
+	  
 	  <groupbox id="ctraddon_pw_invertedicons">
 		<caption  label="&Ctr_invicons;" class="ctraddon_topic"/>
 		<grid>
@@ -783,17 +822,24 @@
 		  </rows>
 		</grid>
 	  </groupbox>
+	  
+	</box>
+	
+	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_addonmngrbox">
 
-	  <groupbox class="ctraddon_winmaconly" id="ctraddon_pw_mockupoptions">
-	    <caption  label="&Ctr_fxmockup;" class="ctraddon_topic"/>
+	  <groupbox>
+		<caption  label="&Ctr_addonmanager;" class="ctraddon_topic"/>
+		<checkbox label="&Ctr_alt_addonsm;"		preference="ctraddon_alt_addonsm" id="ctraddon_pw_alt_addonsm"/>
+		<checkbox label="&Ctr_addonversion;"	preference="ctraddon_addonversion" id="ctraddon_pw_addonversion"/>
+		<checkbox label="&Ctr_am_nowarning;"	preference="ctraddon_am_nowarning" id="ctraddon_pw_am_nowarning"/>
+		<checkbox label="&Ctr_alt_addonsp;"		preference="ctraddon_alt_addonsp" id="ctraddon_pw_alt_addonsp"/>
+	  </groupbox>
+	  
+	  <groupbox>
 		<hbox>
-		  <image src="chrome://classic_theme_restorer/content/images/fx_mockup.png"/>
+		  <image src="chrome://classic_theme_restorer/content/images/addonmanager.png"/>
 		  <label value=""/>
 		</hbox>
-		<checkbox label="&Ctr_tabmokcolor;"		preference="ctraddon_tabmokcolor" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor"/>
-		<checkbox label="&Ctr_tabmokcolor2;"	preference="ctraddon_tabmokcolor2" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor2"/>
-		<checkbox label="&Ctr_tabmokcolor3;"	preference="ctraddon_tabmokcolor3" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor3"/>
-		<checkbox label="&Ctr_tabmokcolor4;"	preference="ctraddon_tabmokcolor4" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor4"/>
 	  </groupbox>
 
 	</box>
@@ -907,29 +953,20 @@
 	  <groupbox>
 	    <caption  label="&Ctr_toolbars;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_aerocolors;"				 preference="ctraddon_aerocolors" id="ctraddon_pw_aerocolors"/>
-		<checkbox label="&Ctr_hidenavbar;"				 preference="ctraddon_hidenavbar"/>
-		<checkbox label="&Ctr_chevronfix;"				 preference="ctraddon_chevronfix"/>
 		<checkbox label="&Ctr_tbsep_winc; &Ctr_tnot;"	 preference="ctraddon_tbsep_winc" id="ctraddon_pw_tbsep_winc" class="ctraddon_windowsonly"/>
 		<checkbox label="&Ctr_nonavbarbg;"	 			 preference="ctraddon_nonavbarbg" id="ctraddon_pw_nonavbarbg"/>
 		<description id="ctraddon_pw_nonavbarbg1" class="ctraddonsuboption">&Ctr_nonavbarbg1;</description>
 		<description id="ctraddon_pw_nonavbarbg2" class="ctraddonsuboption">&Ctr_nonavbarbg2;</description>
 		<checkbox label="&Ctr_nobookbarbg;"	 			 preference="ctraddon_nobookbarbg" id="ctraddon_pw_nobookbarbg"/>
+		<checkbox label="&Ctr_bookbarfs;"	 			 preference="ctraddon_bookbarfs" id="ctraddon_pw_bookbarfs"/>
 		<checkbox label="&Ctr_nonavborder; &Ctr_tnot;"	 preference="ctraddon_nonavborder" class="ctraddon_windowsonly" id="ctraddon_pw_nonavborder"/>
 		<checkbox label="&Ctr_nonavtbborder; &Ctr_tnot;" preference="ctraddon_nonavtbborder" id="ctraddon_pw_nonavtbborder"/>
-		<checkbox label="&Ctr_hidesbclose;"				 preference="ctraddon_hidesbclose"/>
-		<checkbox label="&Ctr_notextshadow;"			 preference="ctraddon_notextshadow"/>
 	  </groupbox>
 
 	  <groupbox>
 	    <caption  label="&Ctr_tabstoolbar;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_dblclnewtab;"	preference="ctraddon_dblclnewtab" class="ctraddon_windowsonly"/>
-		<checkbox label="&Ctr_hidetbwot;"	preference="ctraddon_hidetbwot" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(true);} else {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(false);} classicthemerestorerjso.ctr.needsBrowserRestart();"/>
-		<checkbox label="&Ctr_hidetbwote;"	preference="ctraddon_hidetbwote" class="ctraddonsuboption" id="ctraddon_pw_hidetbwote"/>
-		<description id="ctraddon_pw_hidetbwote_winc" class="ctraddonsuboption2 ctraddon_windowsonly">&Ctr_hidetbwote_i;</description>
-		<checkbox label="&Ctr_hidetbwote2;"	preference="ctraddon_hidetbwote2" class="ctraddonsuboption ctraddon_winmaconly" id="ctraddon_pw_hidetbwote2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
 		<checkbox label="&Ctr_notabfog;"	preference="ctraddon_notabfog" class="ctraddon_windowsonly" id="ctraddon_pw_notabfog"/>
 		<checkbox label="&Ctr_notabbg;"		preference="ctraddon_notabbg" class="ctraddon_windowsonly" id="ctraddon_pw_notabbg"/>
-		<checkbox label="&Ctr_hightabpos;"	preference="ctraddon_hightabpososx"/>
 		<checkbox label="&Ctr_alttabstb;"	preference="ctraddon_alttabstb" id="ctraddon_pw_alttabstb" class="ctraddon_winlinonly" oncommand="if(this.checked) {classicthemerestorerjso.ctr.altTabsToolbarBgExtra(true);} else {classicthemerestorerjso.ctr.altTabsToolbarBgExtra(false);}"/>
 		<checkbox label="&Ctr_alttabstb2;"	preference="ctraddon_alttabstb2" id="ctraddon_pw_alttabstb2" class="ctraddon_winlinonly ctraddonsuboption"/>
 	  </groupbox>
@@ -945,7 +982,6 @@
 
 	  <groupbox>
 	    <caption  label="&Ctr_addonbar;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_closeabarbut;"	preference="ctraddon_closeabarbut"/>
 		<checkbox label="&Ctr_highaddonsbar;"	preference="ctraddon_highaddonsbar"/>
 		<checkbox label="&Ctr_addonbarfs;"		preference="ctraddon_addonbarfs"/>
 		<checkbox label="&Ctr_notabbg;"			preference="ctraddon_noaddonbarbg" id="ctraddon_pw_noaddonbarbg"/>
@@ -970,7 +1006,6 @@
 	  <groupbox id="ctraddon_pw_devthemegb">
 		<caption  label="&Ctr_e_deved;" class="ctraddon_topic"/>
 		<checkbox label="about:config &gt;&gt; browser.devedition.theme.enabled" preference="ctraddon_devtheme" oncommand="classicthemerestorerjso.ctr.resetPrefsForDevTheme()" id="ctraddon_pw_devtheme"/>
-		<checkbox label="about:config &gt;&gt; browser.devedition.theme.showCustomizeButton" preference="ctraddon_devthemebut" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" id="ctraddon_pw_devthemeb"/>
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_devthemedescr">&Ctr_fx35devtheme;</description>
 		<checkbox label="&Ctr_nodevtheme;"		preference="ctraddon_nodevtheme2" id="ctraddon_pw_nodevtheme2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 	  </groupbox>
@@ -986,7 +1021,6 @@
 	  <groupbox id="ctraddon_pw_readermodegb">
 		<caption  label="&Ctr_e_readermode;" class="ctraddon_topic"/>
 		<checkbox label="about:config &gt;&gt; reader.parse-on-load.enabled" preference="ctraddon_readermode" id="ctraddon_pw_readermode"/>
-		<checkbox label="about:config &gt;&gt; browser.readinglist.enabled" preference="ctraddon_readermode2" id="ctraddon_pw_readermode2"/>
 		<description class="ctraddonsuboption acprefdesc">&Ctr_fx38reader;</description>
 	  </groupbox>
 

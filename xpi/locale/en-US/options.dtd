@@ -137,8 +137,10 @@
 <!ENTITY Ctr_cpanelmenus	"Panel menus: compact view (bookmarks, history etc.)">
 <!ENTITY Ctr_hidezoomres	"Zoom controls on toolbar: hide zoom-reset button">
 <!ENTITY Ctr_alt_newtabp	"New tab page: alternative appearance">
-<!ENTITY Ctr_alt_addonsp	"Add-ons 'more info' page: alternative appearance">
+<!ENTITY Ctr_addonmanager	"Add-on manager">
+<!ENTITY Ctr_alt_addonsp	"Add-ons 'more info' page: alternative order">
 <!ENTITY Ctr_alt_addonsm	"Add-on manager: alternative appearance">
+<!ENTITY Ctr_am_nowarning	"Add-on managers add-on lists: hide warnings">
 <!ENTITY Ctr_addonversion	"Add-on managers add-on lists: show add-on version">
 <!ENTITY Ctr_bmbutpanelm	"Bookmarks menu button: panel menu appearance">
 <!ENTITY Ctr_bmbutnotext	"Bookmarks menu button: hide label on bookmarks bar">
@@ -235,6 +237,7 @@
 <!ENTITY Ctr_aerocolors		"Blue Aero colors for toolbars (and tabs)">
 <!ENTITY Ctr_hidenavbar		"Navigation toolbar: hide toolbar">
 <!ENTITY Ctr_nobookbarbg	"Bookmarks toolbar: remove background color">
+<!ENTITY Ctr_bookbarfs		"Bookmarks toolbar: in fullscreen mode">
 <!ENTITY Ctr_nonavbarbg		"Navigation toolbar: remove background color">
 <!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
 <!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
@@ -245,7 +248,7 @@
 <!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('More Tools') at toolbars end">
 <!ENTITY Ctr_tbsep_winc		"Top toolbars: additional toolbar separators">
 
-<!ENTITY Ctr_closeabarbut	"Hide add-on bars close button">
+<!ENTITY Ctr_closeabarbut	"Add-on bar: hide close button">
 <!ENTITY Ctr_highaddonsbar	"Increase height">
 <!ENTITY Ctr_addonbarfs		"In fullscreen mode">
 
@@ -271,11 +274,11 @@
 <!ENTITY Ctr_experttweaks	"Advanced">
 <!ENTITY Ctr_fx34search		"&brandShortName; 34+ introduced a 'new search ui'. Unchecking this preference returns the 'old search ui'.">
 <!ENTITY Ctr_fx34loop		"&brandShortName; 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
-<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ introduced the 'developer theme'. Unchecking these preferences disables the 'developer theme' and its button in customizing mode.">
+<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ introduced the 'developer theme'. Unchecking this preference disables the 'developer theme'.">
 <!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
-<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ introduced a 'reader mode'. Unchecking these preferences disables it and removes its icon from location bar.">
+<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ introduced a 'reader mode'. Unchecking this preference disables it and removes its icon from location bar.">
 <!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ introduced the 'Pocket' feature. Unchecking this preference disables it and removes its button from the toolbars.">
-<!ENTITY Ctr_fx38pocket2	"Note: Moving 'Pocket'-button to 'customizing palette' before disabling this preference also removes 'Pocket' entries in bookmarks and reader menus.">
+<!ENTITY Ctr_fx38pocket2	"Note: Moving 'Pocket'-button to 'customizing palette' before disabling this preference also removes 'Pocket' entries from bookmarks and reader menus.">
 <!ENTITY Ctr_e_searchui		"Search appearance">
 <!ENTITY Ctr_e_loop			"Calling and conversation">
 <!ENTITY Ctr_e_deved		"Developer Edition Theme">
@@ -294,7 +297,7 @@
 <!ENTITY Ctr_pw_set_syncoff	"Remove from Sync">
 
 <!ENTITY Ctr_special_font	"Background color settings are for default theme only!">
-<!ENTITY Ctr_special_info	"Some options may not offer visible changes in all cases">
+<!ENTITY Ctr_special_info	"Some options may not always offer visible changes">
 <!ENTITY Ctr_special_info2	"Settings are made for &brandShortName; default theme and may not work with all third party themes!">
 <!ENTITY Ctr_support		"Support Forum">
 <!ENTITY Ctr_newversion		"New version?">

@@ -279,5 +279,11 @@
 	#nav-bar #ctraddon_ctr-button[cui-areatype="toolbar"] > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/palette_ctr.png") !important;
 	}
+	
+    #nav-bar * .toolbarbutton-icon,
+	#nav-bar *,
+	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper {
+	  clip-path: none !important;
+	}
 
 }

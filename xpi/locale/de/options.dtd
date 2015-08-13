@@ -137,8 +137,10 @@
 <!ENTITY Ctr_cpanelmenus	"Kompakte 'Panel-Aufklappmenüs' (Lesezeichen, Chronik etc.)">
 <!ENTITY Ctr_hidezoomres	"Zoom-Schaltflächen auf Leisten: verstecke Schaltfläche 'Normalgröße'">
 <!ENTITY Ctr_alt_newtabp	"Seite 'Neuer Tab': alternative Darstellung">
+<!ENTITY Ctr_addonmanager	"Add-on Manager">
 <!ENTITY Ctr_alt_addonsp	"Add-on-Seite 'Mehr Info': alternative Anordnung">
-<!ENTITY Ctr_alt_addonsm	"Add-ons Manager: alternative Darstellung">
+<!ENTITY Ctr_alt_addonsm	"Add-on Manager: alternative Darstellung">
+<!ENTITY Ctr_am_nowarning	"Add-on 'Übersicht': Warnungen ausblenden">
 <!ENTITY Ctr_addonversion	"Add-on 'Übersicht': Versionsnummer von Add-ons anzeigen">
 <!ENTITY Ctr_bmbutpanelm	"Lesezeichen-Menüschaltfläche: 'Panel-Aufklappmenü'-Darstellung">
 <!ENTITY Ctr_bmbutnotext	"Lesezeichen-Menüschaltfläche: Text auf der Lesezeichenleiste verstecken">
@@ -235,6 +237,7 @@
 <!ENTITY Ctr_aerocolors		"Blaue 'Aero' Farben für Leisten (und Tabs)">
 <!ENTITY Ctr_hidenavbar		"Navigationsleiste verstecken">
 <!ENTITY Ctr_nobookbarbg	"Lesezeichenleiste: Hintergrundfarbe entfernen">
+<!ENTITY Ctr_bookbarfs		"Lesezeichenleiste: im 'Vollbild'-Modus">
 <!ENTITY Ctr_nonavbarbg		"Navigationsleiste: Hintergrundfarbe entfernen">
 <!ENTITY Ctr_nonavbarbg1	"Einstellung hat Auswirkung auf alle Extraleisten und 'andere' obere Leisten.">
 <!ENTITY Ctr_nonavbarbg2	"Einstellung hat Auswirkung auf alle Leisten in der 'Slim'-Darstellung der Erweiterung 'The Fox, only better'.">
@@ -245,7 +248,7 @@
 <!ENTITY Ctr_chevronfix		"Navigationsleiste: Doppelpfeil am Ende der Leiste nicht anzeigen">
 <!ENTITY Ctr_tbsep_winc		"Obere Leisten: weitere Leistentrennlinien">
 
-<!ENTITY Ctr_closeabarbut	"Entferne 'Schließen'-Schaltfläche">
+<!ENTITY Ctr_closeabarbut	"Addonleiste: entferne 'Schließen'-Schaltfläche">
 <!ENTITY Ctr_highaddonsbar	"Alternative Leistenhöhe">
 <!ENTITY Ctr_addonbarfs		"Im 'Vollbild'-Modus">
 
@@ -271,9 +274,9 @@
 <!ENTITY Ctr_experttweaks	"Erweitert">
 <!ENTITY Ctr_fx34search		"Mit &brandShortName; 34+ wurde eine neue 'Suchoberfläche' eingeführt. Das Deaktivieren dieser Option stellt die 'alte Suchoberfläche' wieder her.">
 <!ENTITY Ctr_fx34loop		"Mit &brandShortName; 34+ wurden 'Anruf- und Konversations-Funktionen' eingeführt. Das Deaktivieren dieser Option entfernt diese Funktionen.">
-<!ENTITY Ctr_fx35devtheme	"Mit &brandShortName; 35+ wurde ein neues 'Entwickler-Thema' eingeführt. Das Deaktivieren dieser Optionen stellt das 'Standard-Thema' wieder her und entfernt die zugehörige Schaltfläche im Modus 'Anpassen'.">
+<!ENTITY Ctr_fx35devtheme	"Mit &brandShortName; 35+ wurde ein neues 'Entwickler-Thema' eingeführt. Das Deaktivieren dieser Option stellt das 'Standard-Thema' wieder her.">
 <!ENTITY Ctr_fx36prefs		"Mit &brandShortName; 36+ wurden 'Einstellungen im Tab' eingeführt. Das Deaktivieren dieser Option stellt das 'alte' Einstellungsfenster wieder her.">
-<!ENTITY Ctr_fx38reader		"Mit &brandShortName; 38+ wurde ein neuer 'Lese-Modus' eingeführt. Das Deaktivieren dieser Optionen deaktiviert diesen Modus und entfernt die zugehörige Schaltfläche von der Adressleiste.">
+<!ENTITY Ctr_fx38reader		"Mit &brandShortName; 38+ wurde ein neuer 'Lese-Modus' eingeführt. Das Deaktivieren dieser Option deaktiviert diesen Modus und entfernt die zugehörige Schaltfläche von der Adressleiste.">
 <!ENTITY Ctr_fx38pocket		"Mit &brandShortName; 38.0.5+ wurde die 'Pocket'-Funktion eingeführt. Das Deaktivieren dieser Option entfernt diese Funktion und deren Leisten-Schaltfläche.">
 <!ENTITY Ctr_fx38pocket2	"Info: Das Verschieben der 'Pocket'-Schaltfläche zu den nicht verwendeten Schaltflächen im 'Anpassen Modus' vor der Deaktivierung dieser Option, entfernt zusätzlich die 'Pocket'-Einträge aus den Lesezeichen- und 'Lese'-Bereichen.">
 <!ENTITY Ctr_e_searchui		"Suchoberfläche">

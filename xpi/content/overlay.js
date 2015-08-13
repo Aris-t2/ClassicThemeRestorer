@@ -1478,7 +1478,12 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("nobookbarbg") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("nobookbarbg",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("nobookbarbg",false);
 		  break;
-		  
+
+		  case "bookbarfs":
+			if (branch.getBoolPref("bookbarfs") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("bookbarfs",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("bookbarfs",false);
+		  break;
+
 		  case "nonavbarbg":
 			if (branch.getBoolPref("nonavbarbg") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("nonavbarbg",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("nonavbarbg",false);
@@ -1578,6 +1583,11 @@ classicthemerestorerjs.ctr = {
 		  case "alt_newtabp":
 			if (branch.getBoolPref("alt_newtabp")) classicthemerestorerjs.ctr.loadUnloadCSS("alt_newtabp",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("alt_newtabp",false);
+		  break;
+
+		  case "am_nowarning":
+			if (branch.getBoolPref("am_nowarning")) classicthemerestorerjs.ctr.loadUnloadCSS("am_nowarning",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("am_nowarning",false);
 		  break;
 
 		  case "alt_addonsp":
@@ -3000,6 +3010,7 @@ classicthemerestorerjs.ctr = {
 		case "notabfog": 			manageCSS("notabfog.css");				break;
 		case "notabbg": 			manageCSS("notabbg.css");				break;
 		case "nobookbarbg": 		manageCSS("nobookbarbg.css");			break;
+		case "bookbarfs": 			manageCSS("bmbar_infullscreen.css");	break;
 		case "nonavbarbg": 			manageCSS("nonavbarbg.css");			break;
 		case "nonavborder": 		manageCSS("nonavborder.css");			break;
 		case "nonavtbborder": 		manageCSS("nonavtbborder.css");			break;
@@ -3018,6 +3029,7 @@ classicthemerestorerjs.ctr = {
 		case "noemptypticon": 		manageCSS("empty_favicon_pt.css");		break;
 		case "hidezoomres": 		manageCSS("hide_zoomreset.css");		break;
 		case "alt_newtabp": 		manageCSS("alt_newtabpage.css");		break;
+		case "am_nowarning":		manageCSS("am_nowarnings.css");			break;
 		case "alt_addonsp": 		manageCSS("alt_addonspage.css");		break;
 		case "alt_addonsm": 		manageCSS("alt_addonsmanager.css");		break;
 		case "addonversion": 		manageCSS("addonversion.css");			break;

@@ -51,6 +51,8 @@
 	  visibility: collapse !important;
 	  display:none !important;
 	}
+    #nav-bar * .toolbarbutton-icon,
+	#nav-bar *,
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper {
 	  clip-path: none !important;
 	}
