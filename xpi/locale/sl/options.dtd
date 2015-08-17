@@ -52,8 +52,8 @@
 <!ENTITY Ctr_tabminwidth	"Najmanjša širina:">
 <!ENTITY Ctr_tabwidthinfo	"Širino zavihkov nadzira TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"Širino zavihkov nadzira TabUtilities">
-<!ENTITY Ctr_tabwidthinfo3	"Vrednosti pod 48 slikovnih točk bodo v večini premerov povzročile napake!">
-<!ENTITY Ctr_square_edges	"Squared top corners">
+<!ENTITY Ctr_tabwidthinfo3	"Vrednosti pod 48 sl. točk bodo v večini premerov povzročile napake!">
+<!ENTITY Ctr_square_edges	"Kvadratasti zgornji koti">
 <!ENTITY Ctr_tabinsertion	"Vstavi odprti zavihek poleg trenutnega (nastavitev about:config)">
 <!ENTITY Ctr_emptyfavicon	"Obnovi prazno zaznamko (če je stran ne dobavi)">
 <!ENTITY Ctr_noemptypticon	"Odstrani prazno zaznamko iz pripetih zavihkov">
@@ -65,7 +65,7 @@
 <!ENTITY Ctr_closetab_4		"Na začetku orodne vrstice zavihkov">
 <!ENTITY Ctr_closetab_5		"Na vseh zavihkih (vsiljeno)">
 <!ENTITY Ctr_closetab_hfot	"Skrij ob enem odprtem zavihku">
-<!ENTITY Ctr_closei_def		"Default icons">
+<!ENTITY Ctr_closei_def		"Privzete ikone">
 <!ENTITY Ctr_closeonleft	"Nadomestni položaj na zavihku">
 <!ENTITY Ctr_close_wwltab	"Zapri okno z nazadje vidnim zavihkom (nastavitev about:config)">
 
@@ -95,13 +95,14 @@
 <!ENTITY Ctr_appbuttonI1e	"Ni viden na orodni vrstici OS-a Windows, samo na orodni vrstici &brandShortName;a!">
 <!ENTITY Ctr_appbuttonI2	"Barve gumba so vidne samo na nazivni vrstici in vrstici zavihkov!">
 <!ENTITY Ctr_appbutmhi		"Višji položaj (če se nahaja na orodni vrstici zavihkov)">
+<!ENTITY Ctr_appbautocol	"Set default / Aurora / Nightly color automatically">
 <!ENTITY Ctr_appbutbdl		"Skrij obrobe in barve ozadja">
 <!ENTITY Ctr_dblclclosefx	"Dvojni klik zapre trenutno okno">
 <!ENTITY Ctr_appbclmmenus	"Klikljivi meniji v meniju gumba (Nov zavihek, Natisni ...)">
 <!ENTITY Ctr_appbutonclab	"Naziv">
 <!ENTITY Ctr_appbutonclab2	"Dodajte naziv ali pustite prazno">
 
-<!ENTITY Ctr_ui				"Splošen UI">
+<!ENTITY Ctr_ui				"Splošen up.vmesnik">
 <!ENTITY Ctr_nbiconsize0	"Atribut orodne vrstice za krmarjenje 'iconsize'">
 <!ENTITY Ctr_smallnavbut	"Majhni gumbi na orodni vrstici za krmarjenje">
 <!ENTITY Ctr_bfurlbarfix	"Pritrdi polmer obrobe naslovne vrstice">
@@ -137,10 +138,10 @@
 <!ENTITY Ctr_cpanelmenus	"Ploščasti meniji: strnjen pogled (zaznamki, zgodovina itd.)">
 <!ENTITY Ctr_hidezoomres	"Nadzorni gumbi za povečavo na orodni vrstici: skrij gumb za ponastavitev povečave">
 <!ENTITY Ctr_alt_newtabp	"Stran novega zavihka: nadomestni videz">
-<!ENTITY Ctr_addonmanager	"Add-on manager">
+<!ENTITY Ctr_addonmanager	"Upravitelj dodatkov">
 <!ENTITY Ctr_alt_addonsp	"Stran dodatkov 'Več': nadomestni videz">
-<!ENTITY Ctr_alt_addonsm	"Add-on manager: alternative appearance">
-<!ENTITY Ctr_am_nowarning	"Add-on managers add-on lists: hide warnings">
+<!ENTITY Ctr_alt_addonsm	"Upravitelj dodatkov: nadomestni videz">
+<!ENTITY Ctr_am_nowarning	"Seznami dodatkov Upravitelja dodatkov: skrij opozorila">
 <!ENTITY Ctr_addonversion	"Stran dodatkov: prikaži različico dodatka">
 <!ENTITY Ctr_bmbutpanelm	"Gumb menija zaznamkov: videz ploščastega menija">
 <!ENTITY Ctr_bmbutnotext	"Gumb menija zaznamkov: skrij oznako na vrstici zaznamkov">
@@ -235,6 +236,7 @@
 <!ENTITY Ctr_menubarnofog	"Odstrani barvo ozadja/meglo (Windows AeroGlass/8)">
 
 <!ENTITY Ctr_aerocolors		"Modre barve Aero za orodne vrstice (in zavihke)">
+<!ENTITY Ctr_transpttbw10	"Title/menu/tabs toolbar: remove background color (Windows 10)">
 <!ENTITY Ctr_hidenavbar		"Orodna vrstica za krmarjenje: skrij orodno vrstico">
 <!ENTITY Ctr_nobookbarbg	"Orodna vrstica zaznamkov: odstrani barvo ozadja">
 <!ENTITY Ctr_bookbarfs		"Orodna vrstica zaznamkov: v celozaslonskem načinu">
@@ -245,7 +247,7 @@
 <!ENTITY Ctr_nonavtbborder	"Orodne vrstice na vrhu: odstrani obrobe orodnih vrstic">
 <!ENTITY Ctr_hidesbclose	"Stranske vrstice: skrij gumb Zapri stranske vrstice">
 <!ENTITY Ctr_notextshadow	"Orodne vrstice: skrij senco besedila orodnih vrstic in zavihkov">
-<!ENTITY Ctr_chevronfix		"Orodna vrstica za krmarjenje: skrij dvojno puščico ('More Tools') na koncu orodne vrstice">
+<!ENTITY Ctr_chevronfix		"Orodna vrstica za krmarjenje: skrij dvojno puščico ('Več orodij') na koncu orodne vrstice">
 <!ENTITY Ctr_tbsep_winc		"Zgornje orodne vrstice: dodatna ločila orodnih vrstic">
 
 <!ENTITY Ctr_closeabarbut	"Skrij gumb Zapri vrstice dodatkov">
@@ -272,7 +274,7 @@
 <!ENTITY Ctr_nodevtheme		"Prepreči namestitev teme 'Developer Theme'">
 
 <!ENTITY Ctr_experttweaks	"Napredno">
-<!ENTITY Ctr_fx34search		"&brandShortName; 34+ je vpeljal 'nov ui za iskanje'. Odznačitev te nastavitve povrne 'stari ui za iskanje'.">
+<!ENTITY Ctr_fx34search		"&brandShortName; 34+ je vpeljal 'nov up. vmesnik za iskanje'. Odznačitev te nastavitve povrne 'stari up. vmesnik za iskanje'.">
 <!ENTITY Ctr_fx34loop		"&brandShortName; 34+ je vpeljal možnosti 'klicanja in pogovorov'. Odznačitev te nastavitve jih odstrani.">
 <!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ je vpeljal novo temo 'Developer theme'. Odznačitev teh nastavitev to temo in pripadajoči gumb v načinu prilagoditve onemogoči.">
 <!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ je vpeljal nastavitve v zavihku. Odznačitev te nastavitve obnovi staro okno nastavitev.">
@@ -285,6 +287,8 @@
 <!ENTITY Ctr_e_prefsui		"Nastavitve v zavihku">
 <!ENTITY Ctr_e_readermode	"Način za branje">
 <!ENTITY Ctr_e_pocket		"Pocket">
+<!ENTITY Ctr_e_tabsaudioico	"Audio playing icon on tabs">
+<!ENTITY Ctr_fx42tabsaudico	"&brandShortName; 42+: Unchecking this preference removes 'audio playing icon' from tabs.">
 
 
 <!ENTITY Ctr_pw_settings	"Nastavitve">

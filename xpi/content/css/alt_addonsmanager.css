@@ -184,5 +184,11 @@
 	  height: 16px !important;
 	  margin: 0 !important;
 	}
+	
+	/* remove navigation buttons */
+	#nav-header #back-btn,
+	#nav-header #forward-btn {
+	  visibility: hidden !important;
+	}
 
 }

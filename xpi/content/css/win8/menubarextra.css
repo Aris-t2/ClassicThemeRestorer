@@ -35,5 +35,24 @@
       border-right: 1px solid hsla(209,67%,12%,0.35) !important;
       background-clip: padding-box !important;
 	}
+	
+	
+	@media (-moz-os-version: windows-win10) {
+		
+	  #main-window:not([tabsintitlebar])[tabsontop='false'] #toolbar-menubar:not([inactive="true"]),
+      #main-window:not([tabsintitlebar])[tabsontop='false'] #toolbar-menubar[autohide="false"] {
+	    border-top: 0 !important;
+	    border-top-left-radius: 0 !important;
+	    border-top-right-radius: 0 !important;
+	  }
+		
+	  #main-window:not([tabsintitlebar])[tabsontop='false'][sizemode="normal"] #toolbar-menubar:not([inactive="true"]),
+      #main-window:not([tabsintitlebar])[tabsontop='false'][sizemode="normal"] #toolbar-menubar[autohide="false"],
+	  #main-window[sizemode=normal]:not([tabsintitlebar])[tabsontop='false'] #navigator-toolbox #TabsToolbar {
+		border-left: 0 !important;
+		border-right: 0 !important;
+	  }
+
+	}
 
 }

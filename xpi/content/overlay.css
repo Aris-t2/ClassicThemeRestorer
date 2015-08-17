@@ -30,12 +30,18 @@
 	#ctraddon_connavsep {
 	  visibility:collapse;
 	}
+	
+	/* hide PanelUI-button completely */
+	#nav-bar > #PanelUI-button {
+	  display: none;
+	}
 
 	/* PanelUI-CTR-button */
 	#ctraddon_PanelUI-CTR-button,
 	#ctraddon_PanelUI-CTR-button-separator{
 	  visibility: collapse;
 	}
+
 	
 	#ctraddon_PanelUI-CTR-button {
 	  margin: 0;
@@ -646,6 +652,12 @@
 	  }
 	}
 	
+	@media not all and (-moz-os-version: windows-win10) {
+	  #ctraddon_pw_transpttbw10 {
+		visibility: collapse;
+	  }
+	}
+	
 	/* additional icons for some preference*/
 	
 	#ctraddon_altabico_white{
@@ -696,31 +708,66 @@
 	}
 	#ctraddon_closeicon_red {
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/close_alt.png');
-	  -moz-image-region: rect(0px, 32px, 16px, 0px);
-	  margin-left: 0;
-	  margin-right: 0;
+	  -moz-image-region: rect(0px, 16px, 16px, 0px);
 	}
 	#ctraddon_closeicon_w7{
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/close.png');
-	  -moz-image-region: rect(0px, 32px, 16px, 0px);
-	  margin-left: 0;
-	  margin-right: 0;
+	  -moz-image-region: rect(0px, 16px, 16px, 0px);
+	}
+	#ctraddon_closeicon_w8{
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/close2.png');
+	  -moz-image-region: rect(0px, 16px, 16px, 0px);
 	}
 	#ctraddon_closeicon_w10 {
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/close_w10.png');
-	  -moz-image-region: rect(0px, 40px, 20px, 0px);
-	  margin-left: 0;
-	  margin-right: 0;
+	  -moz-image-region: rect(0px, 20px, 20px, 0px);
 	}
 	#ctraddon_closeicon_w10i {
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/close_w10i.png');
-	  -moz-image-region: rect(0px, 40px, 20px, 0px);
-	  margin-left: 0;
-	  margin-right: 0;
+	  -moz-image-region: rect(0px, 20px, 20px, 0px);
 	}
-	#ctraddon_closeicon_w10 image, #ctraddon_closeicon_w10i image {
-	  width: 32px;
+	#ctraddon_closeicon_w10red {
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/close_w10red.png');
+	  -moz-image-region: rect(0px, 20px, 20px, 0px);
 	}
+	
+	#ctraddon_closeicon_red:hover,
+	#ctraddon_closeicon_w7:hover,
+	#ctraddon_closeicon_w8:hover {
+	  -moz-image-region: rect(0px, 32px, 16px, 16px);
+	}
+	#ctraddon_closeicon_red:active,
+	#ctraddon_closeicon_w7:active,
+	#ctraddon_closeicon_w8:active {
+	  -moz-image-region: rect(0px, 48px, 16px, 32px);
+	}
+	#ctraddon_closeicon_w10:hover,
+	#ctraddon_closeicon_w10i:hover,
+	#ctraddon_closeicon_w10red:hover {
+	  -moz-image-region: rect(0px, 40px, 20px, 20px);
+	}
+	#ctraddon_closeicon_w10:active,
+	#ctraddon_closeicon_w10i:active,
+	#ctraddon_closeicon_w10red:active {
+	  -moz-image-region: rect(0px, 60px, 20px, 40px);
+	}
+
+	#ctraddon_closeicon_w10 image,
+	#ctraddon_closeicon_w10i image,
+	#ctraddon_closeicon_w10red image {
+	  width: 20px;
+	}
+
+	#ctraddon_closeicon_red,
+	#ctraddon_closeicon_w7,
+	#ctraddon_closeicon_w8,
+	#ctraddon_closeicon_w10,
+	#ctraddon_closeicon_w10i,
+	#ctraddon_closeicon_w10red {
+	  margin-left: -1px;
+	  margin-right: -1px;
+	}
+
 	/**/
 	
 	#ctraddon_alt_abicons label,
@@ -884,6 +931,10 @@
 	  padding-left:20px !important;
 	}
 
+	#ctraddon_pw_tabsaudioico label{
+	  background:url('chrome://classic_theme_restorer/content/images/tabaudio.png') no-repeat left !important;
+	  padding-left:20px !important;
+	}
 	/**/
 	#ctraddon_pw_throbberalt label{
 	  background:url('chrome://classic_theme_restorer/content/images/throbber-loading-alt.png') no-repeat left !important;

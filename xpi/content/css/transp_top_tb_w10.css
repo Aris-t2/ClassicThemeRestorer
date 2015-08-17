@@ -1,0 +1,17 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@-moz-document url(chrome://browser/content/browser.xul) {
+  /* allows titlebar colors for Fx titlebar/tabs toolbar */
+  @media (-moz-os-version: windows-win10) {
+    #main-window[fx40plus="true"]:not([customizing]){
+      background-color: transparent !important;
+    }
+	
+	/* allows titlebar colors for caption buttons for non OS default visual styles */
+	@media not all and (-moz-windows-theme:aero) {
+      #main-window[fx40plus="true"]:not([customizing]) .titlebar-button{
+		background-color: transparent !important;
+      }
+	}
+  }
+}
+

@@ -542,8 +542,10 @@ classicthemerestorerjs.ctr = {
 			
 			classicthemerestorerjs.ctr.loadUnloadCSS('closeicon_red',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closeicon_w7',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('closeicon_w8',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closeicon_w10',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closeicon_w10i',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('closeicon_w10red',false);
 			  
 			if (branch.getCharPref("closeicon")!="closeicon_default"){
 			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("closeicon"),true);
@@ -621,6 +623,26 @@ classicthemerestorerjs.ctr = {
 			if (branch.getCharPref("appbuttonc")!="off"){
 			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("appbuttonc"),true);
 			}
+		  break;
+		  
+		  case "appbautocol":
+		  
+		    if (branch.getBoolPref("appbautocol")) {
+		      var buttontitle = "Firefox";
+			
+			  try{
+				// make sure appbutton gets correct title
+				buttontitle = document.getElementById("main-window").getAttribute("title_normal");
+				if(buttontitle=="Firefox Developer Edition" || buttontitle=="DevFox" || buttontitle=="Aurora") {
+				  branch.setCharPref("appbuttonc",'appbuttonc_aurora')
+				} else if(buttontitle=="Nightly") {
+				  branch.setCharPref("appbuttonc",'appbuttonc_nightly')
+				} else branch.setCharPref("appbuttonc",'appbuttonc_orange')
+					
+			  } catch(e){}
+			
+			}
+
 		  break;
 		  
 		  case "cappbutc1": case "cappbutc2":
@@ -1482,6 +1504,11 @@ classicthemerestorerjs.ctr = {
 		  case "bookbarfs":
 			if (branch.getBoolPref("bookbarfs") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("bookbarfs",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("bookbarfs",false);
+		  break;
+		  
+		  case "transpttbw10":
+			if (branch.getBoolPref("transpttbw10") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("transpttbw10",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("transpttbw10",false);
 		  break;
 
 		  case "nonavbarbg":
@@ -2845,8 +2872,10 @@ classicthemerestorerjs.ctr = {
 		
 		case "closeicon_red": 			manageCSS("close_icon_red.css");  		break;
 		case "closeicon_w7": 			manageCSS("close_icon_w7.css");  		break;
+		case "closeicon_w8": 			manageCSS("close_icon_w8.css");  		break;
 		case "closeicon_w10": 			manageCSS("close_icon_w10.css");  		break;
 		case "closeicon_w10i": 			manageCSS("close_icon_w10i.css");  		break;
+		case "closeicon_w10red": 		manageCSS("close_icon_w10red.css");  	break;
 		
 		case "closeonleft":
 		
@@ -3011,6 +3040,7 @@ classicthemerestorerjs.ctr = {
 		case "notabbg": 			manageCSS("notabbg.css");				break;
 		case "nobookbarbg": 		manageCSS("nobookbarbg.css");			break;
 		case "bookbarfs": 			manageCSS("bmbar_infullscreen.css");	break;
+		case "transpttbw10": 		manageCSS("transp_top_tb_w10.css");		break;
 		case "nonavbarbg": 			manageCSS("nonavbarbg.css");			break;
 		case "nonavborder": 		manageCSS("nonavborder.css");			break;
 		case "nonavtbborder": 		manageCSS("nonavtbborder.css");			break;

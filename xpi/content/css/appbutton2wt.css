@@ -33,6 +33,12 @@
 		  margin-top: 0px !important;
 		  padding-top: 2px !important;
 		}
+		
+		@media not all and (-moz-windows-theme:aero) {
+		  #main-window[tabsintitlebar][sizemode="normal"] #TabsToolbar .titlebar-placeholder{
+			visibility:collapse !important;
+		  }
+		}
 	}
 
 	#ctraddon_appbutton2 > .toolbarbutton-menu-dropmarker,

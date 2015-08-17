@@ -486,19 +486,6 @@
 							   onpopupshowing="if (!this.parentNode._placesView)
 												 new PlacesMenu(event, 'place:folder=TOOLBAR');"/>
 				  </menu>
-				  <menu id="appmenu_BMB_readingList"
-						class="menu-iconic bookmark-item"
-						label="&readingList.label;"
-						container="true">
-					  <observes element="readingListSidebar" attribute="hidden"/>
-					  <menupopup id="appmenu_BMB_readingListPopup"
-								 placespopup="true"
-								 onpopupshowing="ReadingListUI.onReadingListPopupShowing(this);">
-						<menuitem id="appmenu_BMB_viewReadingListSidebar"
-								  oncommand="SidebarUI.show('readingListSidebar');"
-								  label="&readingList.showSidebar.label;"/>
-					  </menupopup>
-				  </menu>
 				  <menuseparator/>
 				  <!-- Bookmarks menu items -->
 				  <menuseparator builder="end"
@@ -818,19 +805,6 @@
                        context="placesContext"
                        onpopupshowing="if (!this.parentNode._placesView)
                                          new PlacesMenu(event, 'place:folder=TOOLBAR');"/>
-          </menu>
-          <menu id="ctraddon_BMB_readingList"
-                class="menu-iconic bookmark-item"
-                label="&readingList.label;"
-                container="true">
-              <observes element="readingListSidebar" attribute="hidden"/>
-              <menupopup id="ctraddon_BMB_readingListPopup"
-                         placespopup="true"
-                         onpopupshowing="ReadingListUI.onReadingListPopupShowing(this);">
-                <menuitem id="ctraddon_BMB_viewReadingListSidebar"
-                          oncommand="SidebarUI.show('readingListSidebar');"
-                          label="&readingList.showSidebar.label;"/>
-              </menupopup>
           </menu>
           <menuseparator/>
 

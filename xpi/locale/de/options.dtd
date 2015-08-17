@@ -94,7 +94,8 @@
 <!ENTITY Ctr_appbuttonI1	"Nach einer Änderung wird ein Neustart empfohlen.">
 <!ENTITY Ctr_appbuttonI1e	"Die &brandShortName;-Schaltfläche ist auf der Windows Titelleiste nicht sichtbar!">
 <!ENTITY Ctr_appbuttonI2	"Die Farbe ist nur auf der Titelleiste und der Tableiste sichtbar!">
-<!ENTITY Ctr_appbutmhi		"Höhere Position (wenn auf der Tableiste)">
+<!ENTITY Ctr_appbutmhi		"Höhere Position (falls auf der Tableiste)">
+<!ENTITY Ctr_appbautocol	"Setze Standard / Aurora / Nightly Farben automatisch">
 <!ENTITY Ctr_appbutbdl		"Entferne Ränder und Hintergrundfarbe">
 <!ENTITY Ctr_dblclclosefx	"Doppelklick schließt aktuelles Fenster">
 <!ENTITY Ctr_appbclmmenus	"Klickbare Menüs im '&brandShortName;-Menü' (Neuer Tab, Drucken...)">
@@ -235,6 +236,7 @@
 <!ENTITY Ctr_menubarnofog	"Hintergrundfarbe/-nebel entfernen (Windows AeroGlass / Win8)">
 
 <!ENTITY Ctr_aerocolors		"Blaue 'Aero' Farben für Leisten (und Tabs)">
+<!ENTITY Ctr_transpttbw10	"Titel/Menu/Tabs Leiste: Hintergrundfarbe entfernen (Windows 10)">
 <!ENTITY Ctr_hidenavbar		"Navigationsleiste verstecken">
 <!ENTITY Ctr_nobookbarbg	"Lesezeichenleiste: Hintergrundfarbe entfernen">
 <!ENTITY Ctr_bookbarfs		"Lesezeichenleiste: im 'Vollbild'-Modus">
@@ -272,12 +274,12 @@
 <!ENTITY Ctr_nodevtheme		"Aktivierung des 'Entwickler-Themas' unterbinden">
 
 <!ENTITY Ctr_experttweaks	"Erweitert">
-<!ENTITY Ctr_fx34search		"Mit &brandShortName; 34+ wurde eine neue 'Suchoberfläche' eingeführt. Das Deaktivieren dieser Option stellt die 'alte Suchoberfläche' wieder her.">
-<!ENTITY Ctr_fx34loop		"Mit &brandShortName; 34+ wurden 'Anruf- und Konversations-Funktionen' eingeführt. Das Deaktivieren dieser Option entfernt diese Funktionen.">
-<!ENTITY Ctr_fx35devtheme	"Mit &brandShortName; 35+ wurde ein neues 'Entwickler-Thema' eingeführt. Das Deaktivieren dieser Option stellt das 'Standard-Thema' wieder her.">
-<!ENTITY Ctr_fx36prefs		"Mit &brandShortName; 36+ wurden 'Einstellungen im Tab' eingeführt. Das Deaktivieren dieser Option stellt das 'alte' Einstellungsfenster wieder her.">
-<!ENTITY Ctr_fx38reader		"Mit &brandShortName; 38+ wurde ein neuer 'Lese-Modus' eingeführt. Das Deaktivieren dieser Option deaktiviert diesen Modus und entfernt die zugehörige Schaltfläche von der Adressleiste.">
-<!ENTITY Ctr_fx38pocket		"Mit &brandShortName; 38.0.5+ wurde die 'Pocket'-Funktion eingeführt. Das Deaktivieren dieser Option entfernt diese Funktion und deren Leisten-Schaltfläche.">
+<!ENTITY Ctr_fx34search		"&brandShortName; 34+: Das Deaktivieren dieser Option ersetzt die neue 'Suchoberfläche' durch die alte.">
+<!ENTITY Ctr_fx34loop		"&brandShortName; 34+: Das Deaktivieren dieser Option entfernt die 'Anruf- und Konversations-Funktionen'.">
+<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+: Das Deaktivieren dieser Option deaktiviert das 'Entwickler-Thema'.">
+<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+: Das Deaktivieren dieser Option stellt das 'alte' Einstellungsfenster wieder her.">
+<!ENTITY Ctr_fx38reader		"&brandShortName; 38+: Das Deaktivieren dieser Option deaktiviert den 'Lese-Modus' und entfernt die zugehörige Schaltfläche von der Adressleiste.">
+<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+: Das Deaktivieren dieser Option entfernt die 'Pocket'-Funktion und deren Leisten-Schaltfläche.">
 <!ENTITY Ctr_fx38pocket2	"Info: Das Verschieben der 'Pocket'-Schaltfläche zu den nicht verwendeten Schaltflächen im 'Anpassen Modus' vor der Deaktivierung dieser Option, entfernt zusätzlich die 'Pocket'-Einträge aus den Lesezeichen- und 'Lese'-Bereichen.">
 <!ENTITY Ctr_e_searchui		"Suchoberfläche">
 <!ENTITY Ctr_e_loop			"Anruf- und Konversations-Funktionen">
@@ -285,6 +287,8 @@
 <!ENTITY Ctr_e_prefsui		"Einstellungen im Tab">
 <!ENTITY Ctr_e_readermode	"Lese-Modus">
 <!ENTITY Ctr_e_pocket		"Pocket">
+<!ENTITY Ctr_e_tabsaudioico	"Audio-Abspiel-Symbol auf Tabs">
+<!ENTITY Ctr_fx42tabsaudico	"&brandShortName; 42+: Das Deaktivieren dieser Option entfernt das 'Audio-Abspiel-Symbol' von den Tabs.">
 
 
 <!ENTITY Ctr_pw_settings	"Einstellungen">

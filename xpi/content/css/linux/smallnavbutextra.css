@@ -63,7 +63,7 @@
 	
 	#main-window[fx42plus="true"] #nav-bar #notification-popup-box[hidden] + * {
 	  -moz-padding-start: 1px !important;
-	  -moz-padding-start: 3px !important;
+	  -moz-padding-end: 3px !important;
 	}
 
     #nav-bar * .toolbarbutton-icon,

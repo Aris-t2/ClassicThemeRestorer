@@ -95,6 +95,7 @@
 <!ENTITY Ctr_appbuttonI1e	"Not visible on Windows OS titlebar, only on &brandShortName; titlebar!">
 <!ENTITY Ctr_appbuttonI2	"Button colors are only visible on titlebar and tabs toolbar!">
 <!ENTITY Ctr_appbutmhi		"Higher position (if on tabs toolbar)">
+<!ENTITY Ctr_appbautocol	"Set default / Aurora / Nightly color automatically">
 <!ENTITY Ctr_appbutbdl		"Hide borders and background colors">
 <!ENTITY Ctr_dblclclosefx	"Double click closes current window">
 <!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
@@ -235,6 +236,7 @@
 <!ENTITY Ctr_menubarnofog	"Remove background color/fog (Windows AeroGlass/8)">
 
 <!ENTITY Ctr_aerocolors		"Blue Aero colors for toolbars (and tabs)">
+<!ENTITY Ctr_transpttbw10	"Title/menu/tabs toolbar: remove background color (Windows 10)">
 <!ENTITY Ctr_hidenavbar		"Navigation toolbar: hide toolbar">
 <!ENTITY Ctr_nobookbarbg	"Bookmarks toolbar: remove background color">
 <!ENTITY Ctr_bookbarfs		"Bookmarks toolbar: in fullscreen mode">
@@ -272,19 +274,21 @@
 <!ENTITY Ctr_nodevtheme		"Prevent 'Developer Edition Theme' from being enabled">
 
 <!ENTITY Ctr_experttweaks	"Advanced">
-<!ENTITY Ctr_fx34search		"&brandShortName; 34+ introduced a 'new search ui'. Unchecking this preference returns the 'old search ui'.">
-<!ENTITY Ctr_fx34loop		"&brandShortName; 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
-<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ introduced the 'developer theme'. Unchecking this preference disables the 'developer theme'.">
-<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
-<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ introduced a 'reader mode'. Unchecking this preference disables it and removes its icon from location bar.">
-<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ introduced the 'Pocket' feature. Unchecking this preference disables it and removes its button from the toolbars.">
+<!ENTITY Ctr_fx34search		"&brandShortName; 34+: Unchecking this preference removes the 'new search appearance' and returns the old one.">
+<!ENTITY Ctr_fx34loop		"&brandShortName; 34+: Unchecking this preference removes 'calling and conversation' features.">
+<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+: Unchecking this preference disables the 'developer theme'.">
+<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+: Unchecking this preference restores the old preference window.">
+<!ENTITY Ctr_fx38reader		"&brandShortName; 38+: Unchecking this preference disables the 'reader mode' and removes its icon from location bar.">
+<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+: Unchecking this preference disables the 'Pocket' feature and removes its button from the toolbars.">
 <!ENTITY Ctr_fx38pocket2	"Note: Moving 'Pocket'-button to 'customizing palette' before disabling this preference also removes 'Pocket' entries from bookmarks and reader menus.">
 <!ENTITY Ctr_e_searchui		"Search appearance">
-<!ENTITY Ctr_e_loop			"Calling and conversation">
+<!ENTITY Ctr_e_loop			"Calling and conversation / Loop">
 <!ENTITY Ctr_e_deved		"Developer Edition Theme">
 <!ENTITY Ctr_e_prefsui		"Preferences in tab">
 <!ENTITY Ctr_e_readermode	"Reader mode">
 <!ENTITY Ctr_e_pocket		"Pocket">
+<!ENTITY Ctr_e_tabsaudioico	"Audio playing icon on tabs">
+<!ENTITY Ctr_fx42tabsaudico	"&brandShortName; 42+: Unchecking this preference removes 'audio playing icon' from tabs.">
 
 
 <!ENTITY Ctr_pw_settings	"Settings">

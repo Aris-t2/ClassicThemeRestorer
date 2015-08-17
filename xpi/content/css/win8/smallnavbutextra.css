@@ -11,9 +11,10 @@
 	  transition: none !important;
 	}
 	
-	#main-window[fx42plus="true"] #nav-bar #notification-popup-box[hidden] + * {
+	#main-window[fx42plus="true"][defaultfxtheme="true"] * #nav-bar #notification-popup-box[hidden] + *,
+	#main-window[fx42plus="true"] * #nav-bar #notification-popup-box[hidden] + * {
 	  -moz-padding-start: 1px !important;
-	  -moz-padding-start: 3px !important;
+	  -moz-padding-end: 3px !important;
 	}
 
 	#nav-bar #notification-popup-box:not([hidden]) {
@@ -314,13 +315,6 @@
 		#urlbar[pageproxystate="valid"] .verifiedDomain,
 		#urlbar[pageproxystate="valid"] .verifiedIdentity {
 		  background: unset !important;
-		}
-		
-		#urlbar[pageproxystate="valid"] .verifiedIdentity,
-		#urlbar[pageproxystate="valid"] .verifiedDomain {
-		  /*margin-top: 1px !important;
-		  margin-bottom: 1px !important;
-		  -moz-margin-start: 1px !important;*/
 		}
 
 	}
