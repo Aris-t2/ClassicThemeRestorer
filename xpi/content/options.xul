@@ -203,8 +203,8 @@
 
 		<preference id="ctraddon_tabmokcolor"	name="extensions.classicthemerestorer.tabmokcolor" 	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_tabmokcolor2"	name="extensions.classicthemerestorer.tabmokcolor2"  type="bool"	instantApply="true"/>
-		<preference id="ctraddon_tabmokcolor3"	name="extensions.classicthemerestorer.tabmokcolor3"  type="bool"	instantApply="true"/>
 		<preference id="ctraddon_tabmokcolor4"	name="extensions.classicthemerestorer.tabmokcolor4"  type="bool"	instantApply="true"/>
+		<preference id="ctraddon_tabseparator"	name="extensions.classicthemerestorer.tabseparator"  type="string"	instantApply="true"/>
 		
 		<preference id="ctraddon_aerocolors"	name="extensions.classicthemerestorer.aerocolors"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_transpttbw10"	name="extensions.classicthemerestorer.transpttbw10"	type="bool"		instantApply="true"/>
@@ -229,7 +229,7 @@
 		<preference id="ctraddon_appbclmmenus"	name="extensions.classicthemerestorer.appbclmmenus"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_appbautocol"	name="extensions.classicthemerestorer.appbautocol"	 type="bool"	instantApply="true"/>
 
-		<preference id="ctraddon_throbberalt"	name="extensions.classicthemerestorer.throbberalt" 	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_tabthrobber"	name="extensions.classicthemerestorer.tabthrobber" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_bmanimation"	name="extensions.classicthemerestorer.bmanimation"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_pananimation"	name="extensions.classicthemerestorer.pananimation"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_tabsanimate"	name="browser.tabs.animate"							type="bool"		instantApply="true"/>
@@ -313,7 +313,11 @@
 		<checkbox label="&Ctr_tabinsertion;"	preference="ctraddon_tabinsertion" id="ctraddon_pw_tab_tabinsertion"/>
 		<checkbox label="&Ctr_emptyfavicon;"	preference="ctraddon_emptyfavicon" id="ctraddon_pw_tab_emptyfavicon"/>
 		<checkbox label="&Ctr_noemptypticon;"	preference="ctraddon_noemptypticon" id="ctraddon_pw_tab_noemptypticon"/>
-		<checkbox label="&Ctr_throbberalt;"		preference="ctraddon_throbberalt" id="ctraddon_pw_throbberalt"/>
+		<radiogroup preference="ctraddon_tabthrobber" id="ctraddon_pw_tabthrobber" orient="horizontal" value="">
+			<radio value="throbber_default" label="&Ctr_tabthrobber;" id="ctraddon_closeicon_def"/>
+			<radio value="throbber_alt"		label=""	id="ctraddon_pw_tabthrobber_alt"/>
+			<radio value="throbber_fx39"	label=""	id="ctraddon_pw_tabthrobber_f39"/>
+		</radiogroup>
 		
 		<hbox>
 		  <checkbox label="&Ctr_tabminheight;"	preference="ctraddon_ctabheightcb" id="ctraddon_pw_tab_ctabheightcb"/>
@@ -359,6 +363,10 @@
 		<checkbox label="&Ctr_hightabpos;"	preference="ctraddon_hightabpososx"/>
 	  </groupbox>
 	  
+	</box>
+	
+	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_tabsbox2">
+
 	  <groupbox id="ctraddon_pw_anewtaburlgbox">
 	    <caption  label="&Ctr_anewtaburl;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_anewtaburlcb;"	preference="ctraddon_anewtaburlcb" id="ctraddon_pw_anewtaburlcb"/>
@@ -368,11 +376,7 @@
 		  <label value=""/>
 		</hbox>
 	  </groupbox>
-
-	</box>
-	
-	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_tabsbox2">
-
+	  
 	  <groupbox>
 		<caption  label="&Ctr_closetab_0;" class="ctraddon_topic"/>
 		<menulist preference="ctraddon_closetab" id="ctraddon_pw_closetab">
@@ -398,20 +402,30 @@
 			<radio value="closeicon_w10red"	label=""	id="ctraddon_closeicon_w10red"/>
 		</radiogroup>
 		
-		<checkbox label="&Ctr_close_wwltab;" preference="ctraddon_closewwltab" tooltiptext="browser.tabs.closeWindowWithLastTab"/>
-
+		<checkbox label="&Ctr_close_wwltab;"	preference="ctraddon_closewwltab" tooltiptext="browser.tabs.closeWindowWithLastTab"/>
+		
 	  </groupbox>
 
 	  <groupbox class="ctraddon_winmaconly" id="ctraddon_pw_mockupoptions">
 	    <caption  label="&Ctr_fxmockup;" class="ctraddon_topic"/>
+		
+		<radiogroup preference="ctraddon_tabseparator" id="ctraddon_pw_tabseparator" orient="horizontal" value="">
+			<radio value="tabsep_default"    label="&Ctr_tabsep_def;" id="ctraddon_tabsep_def"/>
+			<radio value="tabsep_black"		 label=""	id="ctraddon_tabsep_black"/>
+			<radio value="tabsep_white"		 label=""	id="ctraddon_tabsep_white"/>
+			<radio value="tabsep_black_sol"  label=""	id="ctraddon_tabsep_black_sol"/>
+			<radio value="tabsep_white_sol"  label=""	id="ctraddon_tabsep_white_sol"/>
+			<radio value="tabsep_black_sol2" label=""	id="ctraddon_tabsep_black_sol2"/>
+			<radio value="tabsep_white_sol2" label=""	id="ctraddon_tabsep_white_sol2"/>
+		</radiogroup>
+		
+		<checkbox label="&Ctr_tabmokcolor;"		preference="ctraddon_tabmokcolor" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor"/>
+		<checkbox label="&Ctr_tabmokcolor2;"	preference="ctraddon_tabmokcolor2" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor2"/>
+		<checkbox label="&Ctr_tabmokcolor4;"	preference="ctraddon_tabmokcolor4" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor4"/>
 		<hbox>
 		  <image src="chrome://classic_theme_restorer/content/images/fx_mockup.png"/>
 		  <label value=""/>
 		</hbox>
-		<checkbox label="&Ctr_tabmokcolor;"		preference="ctraddon_tabmokcolor" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor"/>
-		<checkbox label="&Ctr_tabmokcolor2;"	preference="ctraddon_tabmokcolor2" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor2"/>
-		<checkbox label="&Ctr_tabmokcolor3;"	preference="ctraddon_tabmokcolor3" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor3"/>
-		<checkbox label="&Ctr_tabmokcolor4;"	preference="ctraddon_tabmokcolor4" class="ctraddon_winmaconly" id="ctraddon_pw_tabmokcolor4"/>
 	  </groupbox>
 
 	</box>

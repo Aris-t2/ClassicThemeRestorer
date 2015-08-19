@@ -1053,7 +1053,20 @@ classicthemerestorerjs.ctr = {
 			switch (branch.getCharPref("nav_txt_ico")) {
 
 			  case "iconsbig":
-				classicthemerestorerjs.ctr.loadUnloadCSS('iconsbig',true);
+
+				  var cstbb_used = false;
+				  
+				  try{
+					if(Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off" &&
+					  Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_light") {
+						cstbb_used = true;
+					}
+				  } catch(e) {}
+					
+				  if(cstbb_used==false){
+					classicthemerestorerjs.ctr.loadUnloadCSS('iconsbig',true);
+				  }
+			
 			  break;
 			  case "iconstxt":
 				classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt',true);
@@ -1552,6 +1565,21 @@ classicthemerestorerjs.ctr = {
 			else classicthemerestorerjs.ctr.loadUnloadCSS("tbsep_winc",false);
 		  break;
 		  
+		  case "tabseparator":
+		  
+			classicthemerestorerjs.ctr.loadUnloadCSS('tabsep_black',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('tabsep_white',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('tabsep_black_sol',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('tabsep_white_sol',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('tabsep_black_sol2',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('tabsep_white_sol2',false);
+			
+			if (branch.getCharPref("tabseparator")!="tabsep_default" && classicthemerestorerjs.ctr.fxdefaulttheme==true){
+			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("tabseparator"),true);
+			}
+
+		  break;
+		  
 		  case "tabmokcolor":
 			if (branch.getBoolPref("tabmokcolor") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("tabmokcolor",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("tabmokcolor",false);
@@ -1560,11 +1588,6 @@ classicthemerestorerjs.ctr = {
 		  case "tabmokcolor2":
 			if (branch.getBoolPref("tabmokcolor2") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("tabmokcolor2",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("tabmokcolor2",false);
-		  break;
-
-		  case "tabmokcolor3":
-			if (branch.getBoolPref("tabmokcolor3") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("tabmokcolor3",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("tabmokcolor3",false);
 		  break;
 
 		  case "tabmokcolor4":
@@ -1692,11 +1715,16 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("addonbarfs")) classicthemerestorerjs.ctr.loadUnloadCSS("addonbarfs",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("addonbarfs",false);
 		  break;
+	  
+		  case "tabthrobber":
+		  
+			classicthemerestorerjs.ctr.loadUnloadCSS('throbber_alt',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('throbber_f39',false);
+			
+			if (branch.getCharPref("tabthrobber")!="throbber_default"){
+			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("tabthrobber"),true);
+			}
 
-
-		  case "throbberalt":
-			if (branch.getBoolPref("throbberalt")) classicthemerestorerjs.ctr.loadUnloadCSS("throbberalt",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("throbberalt",false);
 		  break;
 		  
 		  // reverse option to match other animation preference labels
@@ -1971,6 +1999,12 @@ classicthemerestorerjs.ctr = {
 			  Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('smallnavbut',false);
 			}
 			classicthemerestorerjs.ctr.checkAppbuttonOnNavbar();
+			
+			if(Services.prefs.getBranch("extensions.classicthemerestorer.").getCharPref("nav_txt_ico")=="iconsbig"){
+			  if (branch.getCharPref("navbarbuttons")!="nabbuttons_off" && branch.getCharPref("navbarbuttons")!="nabbuttons_light") {
+				Services.prefs.getBranch("extensions.classicthemerestorer.").setCharPref('nav_txt_ico','icons');
+			  }
+			}
 			
 		  break;
 		}
@@ -2985,9 +3019,11 @@ classicthemerestorerjs.ctr = {
 		case "txtonly":				manageCSS("mode_txtonly.css");			break;
 		
 		case "iconsbig":
-			
-			if(this.fxdefaulttheme) manageCSS("mode_icons_big.css");
-		
+
+			if(this.fxdefaulttheme){
+				manageCSS("mode_icons_big.css");
+			}
+
 		break;
 		
 		case "appbuttonc_orange":	manageCSS("appbutton_orange.css");		break;
@@ -3080,10 +3116,16 @@ classicthemerestorerjs.ctr = {
 		case "invicoextrabar": 		manageCSS("invicons_extrabar.css");		break;
 		case "invicobookbar": 		manageCSS("invicons_bookmarksbar.css");	break;
 		case "invicoaddonbar": 		manageCSS("invicons_addonbar.css");		break;
-
+		
+		case "tabsep_black": 		manageCSS("tab_sep.css");				break;
+		case "tabsep_white": 		manageCSS("tab_sep-inv.css");			break;
+		case "tabsep_black_sol": 	manageCSS("tab_sep_solid.css");			break;
+		case "tabsep_white_sol": 	manageCSS("tab_sep_solid-inv.css");		break;
+		case "tabsep_black_sol2": 	manageCSS("tab_sep_solid2.css");		break;
+		case "tabsep_white_sol2": 	manageCSS("tab_sep_solid-inv2.css"); 	break;
+		
 		case "tabmokcolor": 		manageCSS("tabmokcolor.css");			break;
 		case "tabmokcolor2": 		manageCSS("tabmokcolor2.css");			break;
-		case "tabmokcolor3": 		manageCSS("tabmokcolor3.css");			break;
 		case "tabmokcolor4": 		manageCSS("tabmokcolor4.css");			break;
 		
 		case "padlock_default": 	manageCSS("padlock_default.css");		break;
@@ -3094,7 +3136,8 @@ classicthemerestorerjs.ctr = {
 		case "padlock2_modern":		manageCSS("padlock2_modern.css");		break;
 		case "padlock2_none":		manageCSS("padlock2_none.css");			break;
 		
-		case "throbberalt": 		manageCSS("throbberalt.css");			break;
+		case "throbber_alt": 		manageCSS("throbberalt.css");			break;
+		case "throbber_fx39": 		manageCSS("throbberalt2.css");			break;
 		case "bmanimation": 		manageCSS("hidebmanimation.css");		break;
 		case "pananimation": 		manageCSS("hidepanelanimation.css");	break;
 		case "cpanelmenus": 		manageCSS("compactpanelmenus.css");		break;
@@ -3120,10 +3163,20 @@ classicthemerestorerjs.ctr = {
 			
 			if(enable==true) {
 			
+				var aero_color_addonsm = '';
+				
+				if (this.prefs.getBoolPref("alt_addonsm")) {
+					aero_color_addonsm = '\
+						#addons-page {\
+						  background: linear-gradient(to bottom right, #edf6ff,#dbeaf9,#edf6ff,#dbeaf9) !important;\
+						}\
+					';
+				}
+				
 				var aero_color_tabs = '';
 				
 				if(this.prefs.getCharPref('tabs')=='tabs_squared'){
-					aero_color_tabs  = '\
+					aero_color_tabs = '\
 						#main-window[defaultfxtheme="true"] #tabbrowser-tabs:not(:-moz-lwtheme) .tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {\
 						  background-image: linear-gradient(to top,#eaf2fb,#eef5fc,#fbfdff);\
 						}\
@@ -3358,6 +3411,7 @@ classicthemerestorerjs.ctr = {
 						}\
 					}\
 					'+aero_color_tabs+'\
+					'+aero_color_addonsm+'\
 				'), null, null);
 			
 				applyNewSheet(this.aerocolors);

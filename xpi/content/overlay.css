@@ -608,9 +608,9 @@
 	}
 	
 	.ctraddontabpanel {
-	  height:380px;
+	  height:400px;
 	  max-height:450px;
-	  min-width:480px;
+	  min-width:500px;
 	  width:480px;
 	  max-width:800px;
 	  overflow-x:auto;
@@ -767,9 +767,52 @@
 	  margin-left: -1px;
 	  margin-right: -1px;
 	}
+	
+	/* tab separator settings */
+	#ctraddon_tabsep_def {
+	  -moz-margin-end:0;
+	}
+	#ctraddon_tabsep_black{
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator.png');
+      -moz-image-region: rect(0px, 3px, 24px, 0px);
+	}
+	#ctraddon_tabsep_white{
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator-inv.png');
+      -moz-image-region: rect(0px, 3px, 24px, 0px);
+	}
+	#ctraddon_tabsep_black_sol{
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator_solid.png');
+	  -moz-image-region: rect(0px, 1px, 18px, 0px);
+	}
+	#ctraddon_tabsep_white_sol {
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator_solid-inv.png');
+	  -moz-image-region: rect(0px, 1px, 18px, 0px);
+	}
+	#ctraddon_tabsep_black_sol2{
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator_solid.png');
+	  -moz-image-region: rect(0px, 1px, 24px, 0px);
+	}
+	#ctraddon_tabsep_white_sol2 {
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator_solid-inv.png');
+	  -moz-image-region: rect(0px, 1px, 24px, 0px);
+	}
+	#ctraddon_tabsep_black,
+	#ctraddon_tabsep_white,
+	#ctraddon_tabsep_black_sol,
+	#ctraddon_tabsep_white_sol,
+	#ctraddon_tabsep_black_sol2,
+	#ctraddon_tabsep_white_sol2{
+	  margin-left: -1px;
+	  margin-right: -1px;
+	}
 
 	/**/
-	
+	#ClassicTRoptionsPane[defaultfxtheme="true"] #ctraddon_pw_closeicon,	
+	#ClassicTRoptionsPane[defaultfxtheme="true"] #ctraddon_pw_tabseparator {
+	  background: #dfdfdf;
+	}
+
+	/**/
 	#ctraddon_alt_abicons label,
 	#ctraddon_alt_abicons2 label {
 	  background:url('chrome://classic_theme_restorer/content/images/appbutton-dark.png') no-repeat left !important;
@@ -935,10 +978,22 @@
 	  background:url('chrome://classic_theme_restorer/content/images/tabaudio.png') no-repeat left !important;
 	  padding-left:20px !important;
 	}
-	/**/
-	#ctraddon_pw_throbberalt label{
-	  background:url('chrome://classic_theme_restorer/content/images/throbber-loading-alt.png') no-repeat left !important;
-	  padding-left:20px !important;
+	
+	/* tab throbber */
+	#ctraddon_closeicon_def {
+	  -moz-margin-end:0;
+	}
+	#ctraddon_pw_tabthrobber_alt {
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/throbber-loading-alt.png');
+	}
+	#ctraddon_pw_tabthrobber_f39{
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/throbber-loading-fx39.png');
+	}
+
+	#ctraddon_pw_tabthrobber_alt,
+	#ctraddon_pw_tabthrobber_f39 {
+	  margin-left: -1px;
+	  margin-right: -1px;
 	}
 
 	/*CTR icons*/

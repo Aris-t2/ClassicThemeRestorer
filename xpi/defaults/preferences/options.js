@@ -81,6 +81,8 @@ pref("extensions.classicthemerestorer.athrobberurl","");
 pref("extensions.classicthemerestorer.anewtaburlcb",false);
 pref("extensions.classicthemerestorer.anewtaburl","about:newtab");
 
+pref("extensions.classicthemerestorer.tabseparator","tabsep_default");
+
 // Urlbar
 pref("extensions.classicthemerestorer.starinurl",false);
 pref("extensions.classicthemerestorer.feedinurl",false);
@@ -141,7 +143,7 @@ pref("extensions.classicthemerestorer.mbarforceleft",false);
 pref("extensions.classicthemerestorer.mbarforceright",false);
 
 // Animation
-pref("extensions.classicthemerestorer.throbberalt",false);
+pref("extensions.classicthemerestorer.tabthrobber","throbber_default");
 pref("extensions.classicthemerestorer.bmanimation",true);
 pref("extensions.classicthemerestorer.pananimation",true);
 pref("extensions.classicthemerestorer.fsaduration",true);
