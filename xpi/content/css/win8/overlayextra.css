@@ -424,4 +424,9 @@
 	  -moz-padding-start:20px !important;
 	  min-height:16px !important;
 	}
+	
+	#ClassicTRoptionsPane[fx40plus="true"] #ctraddon_pw_bfurlbarfix {
+	  display: none !important;
+	  visibility: collapse !important;
+	}
 }

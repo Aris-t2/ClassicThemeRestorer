@@ -109,6 +109,36 @@
 		border-color: Highlight !important;
 	  }
 	}
+	@media (-moz-os-version: windows-win10) {
+		#main-window[defaultfxtheme="true"] #urlbar,
+		#main-window[defaultfxtheme="true"] .searchbar-textbox {
+		  border: 1px solid hsl(0,0%,90%) !important;
+		}
+		@media (-moz-windows-default-theme) {
+		  #main-window[defaultfxtheme="true"] #urlbar,
+		  #main-window[defaultfxtheme="true"] .searchbar-textbox {
+			border-color: hsl(0,0%,90%) !important;
+		  }
+		}
+		#main-window[defaultfxtheme="true"] #urlbar:-moz-lwtheme,
+		#main-window[defaultfxtheme="true"] .searchbar-textbox:-moz-lwtheme {
+		  border-color: rgba(0,0,0,.32) !important;
+		}
+		@media (-moz-windows-default-theme) {
+		  #main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme),
+		  #main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme) {
+			border-color: hsl(0,0%,90%) !important;
+		  }
+		  #main-window[defaultfxtheme="true"] #urlbar:hover:not(:-moz-lwtheme),
+		  #main-window[defaultfxtheme="true"] .searchbar-textbox:hover:not(:-moz-lwtheme) {
+			border-color: hsl(0,0%,80%) !important;
+		  }
+		  #main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme)[focused],
+		  #main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme)[focused] {
+			border-color: Highlight !important;
+		  }
+		}
+	}
 	/* END: urlbar border tweaking (default theme does not provide left urlbar border) */
 
 

@@ -2,6 +2,7 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
+  @media (-moz-os-version: windows-win8) {
 	#urlbar:-moz-locale-dir(ltr) {
 	  border-top-left-radius: 2px !important;
 	  border-bottom-left-radius: 2px !important;
@@ -11,5 +12,5 @@
 	  border-top-right-radius: 2px !important;
 	  border-bottom-right-radius: 2px !important;
 	}
-
+  }
 }

@@ -42,9 +42,12 @@ classicthemerestorerjso.ctr = {
 	} catch(e){}
 	
 	try{
-	  if (this.appversion >= 40)
-		if(Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org')
+	  if (this.appversion >= 40) {
+		if(Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org') {
 		  this.fxdefaulttheme=false;
+		}
+		document.getElementById("ClassicTRoptionsPane").setAttribute('fx40plus',true);
+	  }
 	} catch(e){}
 	
 	// restore last selected categories/tabs

@@ -16,6 +16,12 @@
 	  -moz-padding-start: 1px !important;
 	  -moz-padding-end: 3px !important;
 	}
+	
+	#main-window[fx43plus="true"][defaultfxtheme="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + *,
+	#main-window[fx43plus="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + * {
+	  -moz-padding-start: 4px !important;
+	  -moz-padding-end: 3px !important;
+	}
 
 	#nav-bar #notification-popup-box:not([hidden]) {
 	  padding-left:2px !important;
