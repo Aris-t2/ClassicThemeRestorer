@@ -21,42 +21,42 @@ if (!classicthemerestorerjs.ctr) {classicthemerestorerjs.ctr = {};};
 classicthemerestorerjs.ctr = {
  
   // initialize custom sheets for tab color settings
-  ctabsheet_def:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  ctabsheet_act:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  ctabsheet_hov:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  ctabsheet_pen:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  ctabsheet_unr:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  cntabsheet_def:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  cntabsheet_hov:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtcsheet_def:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtcsheet_act:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtcsheet_hov:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtcsheet_pen:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtcsheet_unr:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtshsheet_def:	Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtshsheet_act:	Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtshsheet_hov:	Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtshsheet_pen:	Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabtxtshsheet_unr:	Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  ctabsheet_def:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  ctabsheet_act:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  ctabsheet_hov:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  ctabsheet_pen:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  ctabsheet_unr:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  cntabsheet_def:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  cntabsheet_hov:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtcsheet_def:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtcsheet_act:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtcsheet_hov:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtcsheet_pen:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtcsheet_unr:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtshsheet_def:	Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtshsheet_act:	Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtshsheet_hov:	Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtshsheet_pen:	Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabtxtshsheet_unr:	Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
-  tabboldsheet_def:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabboldsheet_act:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabboldsheet_hov:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabboldsheet_pen:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabboldsheet_unr:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabitasheet_def:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabitasheet_act:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabitasheet_hov:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabitasheet_pen:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  tabitasheet_unr:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabboldsheet_def:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabboldsheet_act:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabboldsheet_hov:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabboldsheet_pen:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabboldsheet_unr:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabitasheet_def:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabitasheet_act:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabitasheet_hov:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabitasheet_pen:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabitasheet_unr:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
-  aerocolors:			Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  aerocolors:			Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
-  tabheight:			Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  tabheight:			Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
-  appbutton_color:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  appbutton_color:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
-  cuiButtonssheet:		Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService).newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  cuiButtonssheet:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
 
   prefs:				Services.prefs.getBranch("extensions.classicthemerestorer."),
   
@@ -2736,7 +2736,7 @@ classicthemerestorerjs.ctr = {
   /* enable/disable css sheets*/
   loadUnloadCSS: function(which,enable) {
 	
-	const ios = Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService);
+	const ios = Services.io;
 	
 	switch (which) {
 	
@@ -4728,7 +4728,7 @@ classicthemerestorerjs.ctr = {
 	function manageCSS(file) {
 
 		const sss = Cc["@mozilla.org/content/style-sheet-service;1"].getService(Ci.nsIStyleSheetService);
-		const ios = Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService);
+		const ios = Services.io;
 
 		let uri = ios.newURI("chrome://classic_theme_restorer/content/css/" + file,null,null);
 		

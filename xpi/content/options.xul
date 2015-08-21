@@ -39,6 +39,7 @@
 		<preference id="ctraddon_tabinsertion"	name="browser.tabs.insertRelatedAfterCurrent"		type="bool"		instantApply="true"/>
 		<preference id="ctraddon_e10stabs"		name="browser.tabs.remote.autostart"				type="bool"		instantApply="true"/>
 		<preference id="ctraddon_tabsaudioico"	name="browser.tabs.showAudioPlayingIcon"			type="bool"		instantApply="true"/>
+		<preference id="ctraddon_xpinstallui"	name="xpinstall.customConfirmationUI"				type="bool"		instantApply="true" inverted="true"/>
 
 		<preference id="ctraddon_tabs"			name="extensions.classicthemerestorer.tabs" 		type="string"	instantApply="true"/>
 		<preference id="ctraddon_tabsontop"		name="extensions.classicthemerestorer.tabsontop" 	type="string"	instantApply="true"/>
@@ -854,6 +855,7 @@
 		<checkbox label="&Ctr_addonversion;"	preference="ctraddon_addonversion" id="ctraddon_pw_addonversion"/>
 		<checkbox label="&Ctr_am_nowarning;"	preference="ctraddon_am_nowarning" id="ctraddon_pw_am_nowarning"/>
 		<checkbox label="&Ctr_alt_addonsp;"		preference="ctraddon_alt_addonsp" id="ctraddon_pw_alt_addonsp"/>
+		<checkbox label="&Ctr_xpinstallui;"		preference="ctraddon_xpinstallui" id="ctraddon_pw_xpinstallui"/>
 	  </groupbox>
 	  
 	  <groupbox>

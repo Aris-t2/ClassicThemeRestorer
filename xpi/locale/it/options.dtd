@@ -1,4 +1,4 @@
-<!ENTITY % overlayDTD
+﻿<!ENTITY % overlayDTD
     SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
   %overlayDTD;
 <!-- Do not edit above this line and do not edit the variable '&brandShortName;' inside translated strings -->
@@ -36,7 +36,7 @@
 <!ENTITY Ctr_tabs2			"Scheda con angoli arrotondati (stile alternativo)">
 <!ENTITY Ctr_tabs3			"Schede con angoli arrotondati (stile Aero)">
 <!ENTITY Ctr_tabforminfo	"L’aspetto delle schede è definito dal tema in uso.">
-<!ENTITY Ctr_coltabsinfo	"Tab appearance is not fully compatible to 'ColorfulTabs' add-on!">
+<!ENTITY Ctr_coltabsinfo	"L’aspetto delle schede non è del tutto compatibile con il componente aggiuntivo 'ColorfulTabs'!">
 <!ENTITY Ctr_tabsontop0		"Schede in alto (predefinito)">
 <!ENTITY Ctr_tabsontop1		"Schede in alto --- attivata [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Schede in basso (v1) --- attivata [tabsontop=false]">
@@ -53,7 +53,7 @@
 <!ENTITY Ctr_tabwidthinfo	"La larghezza minima e massima delle schede è definita da TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"La larghezza minima e massima delle schede è definita da TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"I valori inferiori a 48px provocheranno anomalie nella maggior parte dei casi!">
-<!ENTITY Ctr_square_edges	"Squared top corners">
+<!ENTITY Ctr_square_edges	"Angoli superiori spigolosi">
 <!ENTITY Ctr_tabinsertion	"Inserisci la scheda relativa dopo la scheda corrente (about:config)">
 <!ENTITY Ctr_emptyfavicon	"Nei siti che non hanno una favicon usa la vecchia favicon vuota">
 <!ENTITY Ctr_noemptypticon	"Rimuovi la favicon vuota dalla scheda bloccata">
@@ -65,12 +65,12 @@
 <!ENTITY Ctr_closetab_4		"A sinistra della barra delle schede">
 <!ENTITY Ctr_closetab_5		"In tutte le schede (forzato)">
 <!ENTITY Ctr_closetab_hfot	"Nascondi per la scheda in vista">
-<!ENTITY Ctr_closei_def		"Default icons">
+<!ENTITY Ctr_closei_def		"Icone predefinite">
 <!ENTITY Ctr_closeonleft	"Posizione alternativa sulla scheda">
 <!ENTITY Ctr_close_wwltab	"Chiudi la finestra con l'ultima scheda visibile (about:config)">
 
-<!ENTITY Ctr_hctpinfotab	"Some tab variations are not compatible to 'Hide Caption Titlebar Plus' add-on.">
-<!ENTITY Ctr_hctpinfoab		"Button on titlebar is not compatible to 'Hide Caption Titlebar Plus' add-on.">
+<!ENTITY Ctr_hctpinfotab	"Alcune modifiche alle schede non sono compatibili con il componente aggiuntivo 'Hide Caption Titlebar Plus'.">
+<!ENTITY Ctr_hctpinfoab		"Il pulsante nella barra del titolo non è compatibile con il componente aggiuntivo 'Hide Caption Titlebar Plus'.">
 
 <!ENTITY Ctr_appbutton		"Pulsante applicazione">
 <!ENTITY Ctr_appbutton0		"Nessun pulsante">
@@ -95,7 +95,7 @@
 <!ENTITY Ctr_appbuttonI1e	"non visibile nella barra del titolo di sistema">
 <!ENTITY Ctr_appbuttonI2	"Colorato solo nella barra del titolo e nella barra delle schede.">
 <!ENTITY Ctr_appbutmhi		"In cima a tutto (se nella barra delle schede)">
-<!ENTITY Ctr_appbautocol	"Set default / Aurora / Nightly color automatically">
+<!ENTITY Ctr_appbautocol	"Imposta in automatico i colori default / Aurora / Nightly">
 <!ENTITY Ctr_appbutbdl		"Nascondi bordi e colori di sfondo">
 <!ENTITY Ctr_dblclclosefx	"Doppio clic per chiudere la finestra corrente">
 <!ENTITY Ctr_appbclmmenus	"Menu cliccabili interni al pulsante Menu (Nuova scheda, Stampa...)">
@@ -138,30 +138,31 @@
 <!ENTITY Ctr_cpanelmenus	"Pannello menu unificato (Segnalibri, Cronologia, ecc..)">
 <!ENTITY Ctr_hidezoomres	"Nascondi il pulsante per ripristinare il livello di zoom dalla barra degli strumenti">
 <!ENTITY Ctr_alt_newtabp	"Nuova scheda: aspetto alternativo">
-<!ENTITY Ctr_addonmanager	"Add-on manager">
-<!ENTITY Ctr_alt_addonsp	"Add-ons 'more info' page: alternative appearance">
-<!ENTITY Ctr_alt_addonsm	"Add-on manager: alternative appearance">
-<!ENTITY Ctr_am_nowarning	"Add-on managers add-on lists: hide warnings">
-<!ENTITY Ctr_addonversion	"Add-on managers add-on lists: show add-on version">
-<!ENTITY Ctr_bmbutpanelm	"Bookmarks menu button: panel menu appearance">
-<!ENTITY Ctr_bmbutnotext	"Bookmarks menu button: hide label on bookmarks bar">
-<!ENTITY Ctr_skipprintpr	"Print button: skip print preview">
-<!ENTITY Ctr_tbconmenu		"Toolbar context menu: hide 'move to menu', 'remove from toolbar', 'reload/bookmark all tabs' and 'undo close tab'">
+<!ENTITY Ctr_addonmanager	"Gestione componenti aggiuntivi">
+<!ENTITY Ctr_alt_addonsp	"Pagina 'Altro' dei componenti aggiuntivi: aspetto alternativo">
+<!ENTITY Ctr_alt_addonsm	"Gestione componenti aggiuntivi: aspetto alternativo">
+<!ENTITY Ctr_am_nowarning	"Elenchi dei componenti aggiuntivi del gestore: nascondi avvisi">
+<!ENTITY Ctr_addonversion	"Elenchi dei componenti aggiuntivi del gestore: mostra versione del componente">
+<!ENTITY Ctr_xpinstallui	"Add-on manager: old add-on install window (about:config preference)">
+<!ENTITY Ctr_bmbutpanelm	"Menu del pulsante segnalibri: aspetto del menu a pannello">
+<!ENTITY Ctr_bmbutnotext	"Menu del pulsante segnalibri: nascondi etichetta della barra dei segnalibri">
+<!ENTITY Ctr_skipprintpr	"Pulsante stampa: salta l'anteprima di stampa">
+<!ENTITY Ctr_tbconmenu		"Menu contestuale della barra degli strumenti: nascondi 'Sposta nel menu', 'Rimuovi dalla barra degli strumenti', 'Ricarica/ tutte le schede nei segnalibri' e 'Riapri scheda chiusa'">
 <!ENTITY Ctr_noresizerxp	"Nascondi il ridimensionatore (Windows XP)">
-<!ENTITY Ctr_extraurlkeycb	"Open additional location bar (Cmd/Ctrl+">
+<!ENTITY Ctr_extraurlkeycb	"Apri una barra degli indirizzi supplementare (Cmd/Ctrl+)">
 <!ENTITY Ctr_pmhidelabels	"Mostra solo le icone nel pannello menu">
 <!ENTITY Ctr_menupopupscr	"Utilizza barra di scorrimento al posto delle frecce nei menu di popup">
 
-<!ENTITY Ctr_tabsep_def		"Default tab separators">
+<!ENTITY Ctr_tabsep_def		"Separatori schede predefiniti">
 <!ENTITY Ctr_fxmockup		"Mockup">
 <!ENTITY Ctr_tabmokcolor	"Utilizza il colore bianco per i pulsanti delle schede (Chiudi, Nuova, Gruppi, Mostra tutte)">
 <!ENTITY Ctr_tabmokcolor2	"Utilizza testo bianco con ombreggiatura scura nelle schede non attive">
 <!ENTITY Ctr_tabmokcolor4	"Colore bianco per la favicon punteggiata vuota">
 
 <!ENTITY Ctr_navthrobber1	"Cliccando l'indicatore di attività si apre l'url specificato:">
-<!ENTITY Ctr_navthrobber2	"Aggiungi url o lascia vuoto">
-<!ENTITY Ctr_anewtaburl		"New tab page url">
-<!ENTITY Ctr_anewtaburlcb	"Custom new tab page url (default: 'about:newtab')">
+<!ENTITY Ctr_navthrobber2	"Aggiungi URL o lascia vuoto">
+<!ENTITY Ctr_anewtaburl		"URL della pagina di una nuova scheda">
+<!ENTITY Ctr_anewtaburlcb	"URL personalizzato della pagina di una nuova scheda (default: 'about:newtab')">
 
 <!ENTITY Ctr_tab_tf_info1	"È possibile usare nomi di colori (in inglese), valori esadecimali e i formati rgb(a) e hsl(a).">
 <!ENTITY Ctr_tab_tf_info2	"Nessuna validazione dell’input.">
@@ -184,16 +185,16 @@
 <!ENTITY Ctr_bold			"Grassetto">
 <!ENTITY Ctr_italic			"Corsivo">
 <!ENTITY Ctr_notabhov		"Le impostazioni attivate prevalgono sulle impostazioni 'al volo'">
-<!ENTITY Ctr_tabc_act_tb	"Background color on toolbars">
+<!ENTITY Ctr_tabc_act_tb	"Colore di sfondo delle barre degli strumenti">
 
 <!ENTITY Ctr_urlbar			"Barra degli indirizzi">
 <!ENTITY Ctr_starinurl		"Stella nella barra degli indirizzi">
 <!ENTITY Ctr_feedinurl		"Pulsante dei feed nella barra degli indirizzi">
 <!ENTITY Ctr_hideurelstop	"Nascondi pulsanti Stop e Ricarica nella barra degli indirizzi">
-<!ENTITY Ctr_hideurlgo		"Hide 'go' button">
+<!ENTITY Ctr_hideurlgo		"Nascondi il pulsante 'Vai'">
 <!ENTITY Ctr_urlbardropm	"Sposta il pulsante Avanti/Indietro all'estremità della barra degli indirizzi">
 <!ENTITY Ctr_hideprbutton	"Nascondi l'icona di notifica quando un popup viene bloccato">
-<!ENTITY Ctr_urlbar_ib		"Site Identity Button (identity box)">
+<!ENTITY Ctr_urlbar_ib		"Pulsante delle connessioni sicure (riquadro di verifica)">
 <!ENTITY Ctr_verifiedcolors	"Indicatore connessioni sicure blu o verde per i siti verificati">
 <!ENTITY Ctr_faviconurl		"Favicon nella barra degli indirizzi">
 <!ENTITY Ctr_padlock_hid	"Lucchetto (nascosto))">
@@ -223,8 +224,8 @@
 <!ENTITY Ctr_dblclnewtab	"Doppio clic del mouse per aprire una nuova scheda">
 <!ENTITY Ctr_hidetbwot		"Nascondi la barra delle schede quando è aperta una sola scheda">
 <!ENTITY Ctr_hidetbwote		"Riduci il ritardo di scomparsa all'avvio">
-<!ENTITY Ctr_hidetbwote_i	"Could cause glitches on tabs toolbar">
-<!ENTITY Ctr_hidetbwote2	"Keep titlebar (tabs on top)">
+<!ENTITY Ctr_hidetbwote_i	"Potrebbe causare anomalie nella barra delle schede">
+<!ENTITY Ctr_hidetbwote2	"Mantieni la barra del titolo (schede in alto)">
 <!ENTITY Ctr_notabfog		"Disattiva l’effetto nebbia (Windows AeroGlass e Win8)">
 <!ENTITY Ctr_notabbg		"Rimuovi colore di sfondo (Windows AeroGlass e Win8)">
 <!ENTITY Ctr_hightabpos		"Quando possibile, riduci lo spazio sopra">
@@ -236,32 +237,32 @@
 <!ENTITY Ctr_menubarnofog	"Elimina l’effetto nebbia o il colore di sfondo (Windows AeroGlass e Windows 8)">
 
 <!ENTITY Ctr_aerocolors		"Colori Blue Aero per le barre degli strumenti e le schede principali">
-<!ENTITY Ctr_transpttbw10	"Title/menu/tabs toolbar: remove background color (Windows 10)">
+<!ENTITY Ctr_transpttbw10	"Barre del titolo/menu/schede: rimuovi il colore di sfondo (Windows 10)">
 <!ENTITY Ctr_hidenavbar		"Nascondi la barra di navigazione">
 <!ENTITY Ctr_nobookbarbg	"Rimuovi colore di sfondo dalla barra dei segnalibri">
-<!ENTITY Ctr_bookbarfs		"Bookmarks toolbar: In modalità tutto schermo">
+<!ENTITY Ctr_bookbarfs		"Barra dei segnalibri: in modalità tutto schermo">
 <!ENTITY Ctr_nonavbarbg		"Rimuovi colore di sfondo dalla barra di navigazione">
 <!ENTITY Ctr_nonavbarbg1	"Ha effetto sulle barre di questo componente aggiuntivo e su altre barre in alto.">
-<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
+<!ENTITY Ctr_nonavbarbg2	"Vengono influenzate tutte le barre del componente 'The Fox, Only Better' di Slim Chrome.">
 <!ENTITY Ctr_nonavborder	"Aggiungi bordo superiore alla barra dei segnalibri">
 <!ENTITY Ctr_nonavtbborder	"Rimuovi i bordi alle barre degli strumenti posizionate in alto">
 <!ENTITY Ctr_hidesbclose	"Barre laterali: nascondi il pulsante di chiusura della barra laterale">
-<!ENTITY Ctr_notextshadow	"Toolbars: hide shadow for toolbar text and tab text">
+<!ENTITY Ctr_notextshadow	"Barre degli strumenti: nascondi ombreggiatura del testo delle barre e delle schede">
 <!ENTITY Ctr_chevronfix		"Barra di navigazione: nascondi la doppia freccia ('More Tools') all'estremità delle barre">
-<!ENTITY Ctr_tbsep_winc		"Top toolbars: additional toolbar separators">
+<!ENTITY Ctr_tbsep_winc		"Barre degli strumenti in alto: separatori supplementari delle barre">
 
 <!ENTITY Ctr_closeabarbut	"Nascondi il pulsante di chiusura">
 <!ENTITY Ctr_highaddonsbar	"Aumenta l’altezza">
 <!ENTITY Ctr_addonbarfs		"In modalità tutto schermo">
 
 <!ENTITY Ctr_animation		"Icone animate">
-<!ENTITY Ctr_tabthrobber	"Default loading image">
+<!ENTITY Ctr_tabthrobber	"Immagine di caricamento predefinita">
 <!ENTITY Ctr_bmanimation	"Icona animata durante l’aggiunta ai segnalibri">
 <!ENTITY Ctr_pananimation	"Icona animata durante l’apertura di un pannello">
 <!ENTITY Ctr_tabanimation	"Icona animata per l’apertura o chiusura di una scheda (about:config)">
 <!ENTITY Ctr_dlanimation	"Icona animata avviso download (about:config)">
-<!ENTITY Ctr_fsanimation	"Fullscreen animations (about:config preference)">
-<!ENTITY Ctr_fsaduration	"Fullscreen animations for HTML5 content (about:config preferences)">
+<!ENTITY Ctr_fsanimation	"Animazioni a schermo intero (preferenza in about:config)">
+<!ENTITY Ctr_fsaduration	"Animazioni a schermo intero per il contenuto HTML5 (preferenze in about:config)">
 
 <!ENTITY Ctr_toolsitem		"Aggiungi voci al menu Strumenti">
 <!ENTITY Ctr_appmenuitem	"Aggiungi voci nel menu del pulsante app">
@@ -278,9 +279,9 @@
 <!ENTITY Ctr_fx34loop		"&brandShortName; 34+ ha introdotto le funzioni di chiamata e conversazione. Deselezionare questa opzione per rimuoverle.">
 <!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ ha introdotto un nuovo 'developer theme'. Deselezionare questa opzione per disattivare il 'developer theme' e il suo pulsante nella modalità di personalizzazione.">
 <!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ ha introdotto le preferenze in una scheda. Deselezionare questa opzione per ripristinare la finestra delle preferenze classica.">
-<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ introduced a new 'reader mode'. Unchecking this preference disables it and removes its icon from location bar.">
-<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ introduced the 'Pocket' feature. Unchecking this preference disables it and removes its button from the toolbars.">
-<!ENTITY Ctr_fx38pocket2	"Note: Moving 'Pocket'-button to 'customizing palette' before disabling this preference also removes 'Pocket' entries in bookmarks and reader menus.">
+<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ ha introdotto una nuova 'Modalità lettura'. Deselezionare questa opzione per disattivarla e rimuovere l'icona dalla barra degli indirizzi.">
+<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ ha introdotto la funzione 'Pocket'. Deselezionare questa opzione per disattivarla e rimuovere il pulsante dalle barre.">
+<!ENTITY Ctr_fx38pocket2	"Nota: muovendo il pulsante 'Pocket' nella personalizzazione prima di disattivare questa opzione, Pocket viene rimosso dai segnalibri e dal menu di lettura.">
 <!ENTITY Ctr_e_searchui		"Search appearance">
 <!ENTITY Ctr_e_loop			"Calling and conversation">
 <!ENTITY Ctr_e_deved		"Developer Edition Theme">
@@ -288,7 +289,7 @@
 <!ENTITY Ctr_e_readermode	"Reader mode">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Audio playing icon on tabs">
-<!ENTITY Ctr_fx42tabsaudico	"&brandShortName; 42+: Unchecking this preference removes 'audio playing icon' from tabs.">
+<!ENTITY Ctr_fx42tabsaudico	"&brandShortName; 42+: Deselezionare questa opzione per rimuovere l'icona di riproduzione audio dalle schede.">
 
 
 <!ENTITY Ctr_pw_settings	"Impostazioni">
@@ -297,8 +298,8 @@
 <!ENTITY Ctr_pw_set_preaus	"Preset &brandShortName;">
 <!ENTITY Ctr_pw_set_export	"Esporta preferenze">
 <!ENTITY Ctr_pw_set_import	"Importa preferenze">
-<!ENTITY Ctr_pw_set_syncon	"Add to Sync">
-<!ENTITY Ctr_pw_set_syncoff	"Remove from Sync">
+<!ENTITY Ctr_pw_set_syncon	"Aggiungi a Sync">
+<!ENTITY Ctr_pw_set_syncoff	"Rimuovi da Sync">
 
 <!ENTITY Ctr_special_font	"La modifica del colore di sfondo si applica solo utilizzando il tema predefinito!">
 <!ENTITY Ctr_special_info	"Alcune opzioni si applicano solo in casi particolari">
@@ -310,7 +311,7 @@
 <!ENTITY Ctr_openInPrivateWindow	"Apri in una nuova finestra anonima">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
 <!ENTITY appMenuGettingStarted.label	"Inizio">
-<!ENTITY goCmd.label		"Go">
+<!ENTITY goCmd.label		"Vai">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey            "I">
