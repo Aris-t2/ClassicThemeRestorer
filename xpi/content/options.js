@@ -122,8 +122,10 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_aerocolors').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tbsep_winc').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_alt_addonsm').style.visibility = 'collapse';
-		
+		document.getElementById('ctraddon_pw_transpttbw10').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_tabstoolbargroup').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_devthemegb').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_hightabpososx').style.visibility = 'collapse';
 	} else {
 		document.getElementById('ctraddon_pw_special_info2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_special_font').style.visibility = 'collapse';
@@ -828,6 +830,7 @@ classicthemerestorerjso.ctr = {
 	this.prefs.setBoolPref("alt_newtabp",true);
 	this.prefs.setBoolPref("skipprintpr",true);
 	this.prefs.setBoolPref("tbconmenu",true);
+	if(this.appversion >= 40) this.prefs.setBoolPref("alt_addonsm",true);
 	
 	setTimeout(function(){
 		Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref("starinurl",true);

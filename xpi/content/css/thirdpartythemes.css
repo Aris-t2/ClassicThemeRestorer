@@ -53,4 +53,21 @@
 	  margin: unset !important;
 	  -moz-margin-end: -26px !important;
 	}
+	
+	/*Qute5*/
+	@media (-moz-os-version: windows-win10) {
+	  #main-window[currenttheme^="Qute"][fx40plus="true"][sizemode="normal"] #ctraddon_appbutton2{
+		margin-bottom: -2px !important;
+	  }
+
+	  #main-window[currenttheme^="Qute"][fx40plus="true"][sizemode="maximized"] #ctraddon_appbutton2{
+		margin-bottom: 2px !important;
+	  
+    }
+	  #main-window[currenttheme^="Qute"][sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox #titlebar-min,
+	  #main-window[currenttheme^="Qute"][sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox #titlebar-max,
+	  #main-window[currenttheme^="Qute"][sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox #titlebar-close {
+		padding-top: 0px !important;
+	  }
+	}
 }
