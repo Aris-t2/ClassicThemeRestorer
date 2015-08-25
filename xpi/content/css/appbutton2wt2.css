@@ -15,7 +15,20 @@
 	  -moz-appearance: none !important;
       margin: 0 -34px 0 -26px !important;
 	}
-	
+
+	@media (-moz-os-version: windows-win8) {
+		#ctraddon_appbutton2:-moz-locale-dir(ltr) > label{
+		  -moz-appearance: none !important;
+		  margin: -4px -26px 0 -34px !important;
+		  padding-top: 4px !important;
+		}
+		#ctraddon_appbutton2:-moz-locale-dir(rtl) > label{
+		  -moz-appearance: none !important;
+		  margin: -4px -34px 0 -26px !important;
+		  padding-top: 4px !important;
+		}
+	}
+
 	@media (-moz-os-version: windows-win10) {
 		#ctraddon_appbutton2:-moz-locale-dir(ltr) > label{
 		  -moz-appearance: none !important;

@@ -15,4 +15,9 @@
 	  border-right: none !important;
 	}
 
+	@media (-moz-os-version: windows-win10) {
+	  #main-window[fx40plus="true"][tabsontop="false"] #navigator-toolbox #nav-bar:not(:-moz-lwtheme){
+		border-top: unset !important; 
+	  }
+	}
 }

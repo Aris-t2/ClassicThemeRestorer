@@ -280,5 +280,10 @@
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper {
 	  clip-path: none !important;
 	}
+	
+	/* experimental support for buttons, that are not part of toolbarbutton-1 class by default */
+	#nav-bar #nav-bar-customization-target > toolbarbutton:not(.toolbarbutton-1) .toolbarbutton-icon {
+	  min-width: 32px !important;
+	}
 
 }

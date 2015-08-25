@@ -10,15 +10,9 @@
 	  -moz-padding-start: 2px !important;
 	  transition: none !important;
 	}
-	
+
 	#main-window[fx42plus="true"][defaultfxtheme="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + *,
 	#main-window[fx42plus="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + * {
-	  -moz-padding-start: 1px !important;
-	  -moz-padding-end: 3px !important;
-	}
-	
-	#main-window[fx43plus="true"][defaultfxtheme="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + *,
-	#main-window[fx43plus="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + * {
 	  -moz-padding-start: 4px !important;
 	  -moz-padding-end: 3px !important;
 	}

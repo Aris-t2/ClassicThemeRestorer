@@ -32,7 +32,13 @@
 	  -moz-appearance: none !important;
       margin: -1px -34px 0 -26px !important;
 	}
-	
+
+	@media (-moz-os-version: windows-win8) {
+		#main-window[tabsintitlebar][sizemode="maximized"] #ctraddon_appbutton2 > .toolbarbutton-icon {
+		  padding: 1px 9px !important;
+		}
+	}
+
 	@media (-moz-os-version: windows-win10) {
 		#ctraddon_appbutton2 > .toolbarbutton-icon {
 		  padding: 1px 9px !important;

@@ -54,20 +54,30 @@
 	  -moz-margin-end: -26px !important;
 	}
 	
-	/*Qute5*/
+	/* Qute 4 & 5 complete themes */
 	@media (-moz-os-version: windows-win10) {
 	  #main-window[currenttheme^="Qute"][fx40plus="true"][sizemode="normal"] #ctraddon_appbutton2{
-		margin-bottom: -2px !important;
+		margin-bottom: 0px !important;
 	  }
-
 	  #main-window[currenttheme^="Qute"][fx40plus="true"][sizemode="maximized"] #ctraddon_appbutton2{
 		margin-bottom: 2px !important;
-	  
-    }
-	  #main-window[currenttheme^="Qute"][sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox #titlebar-min,
-	  #main-window[currenttheme^="Qute"][sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox #titlebar-max,
-	  #main-window[currenttheme^="Qute"][sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox #titlebar-close {
+      }
+	  #main-window[currenttheme^="Qute"][sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox toolbarbutton{
 		padding-top: 0px !important;
+	  }
+	  @media not all and (-moz-windows-theme:aero) {
+		#main-window[currenttheme^="Qute"][sizemode="normal"]:not([inFullscreen]) #titlebar #titlebar-buttonbox toolbarbutton{
+		  padding-top: 0px !important;
+		  padding-bottom: 0px !important;
+		}
+		#main-window[currenttheme^="Qute"][sizemode="normal"]:not([inFullscreen]) #titlebar #titlebar-buttonbox toolbarbutton image{
+		  margin-top: -2px !important;
+		}
+		#main-window[currenttheme^="Qute"][tabsintitlebar][chromehidden~="menubar"][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] * #toolbar-menubar ~ #TabsToolbar,
+		#main-window[currenttheme^="Qute"][tabsintitlebar][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] * #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar,
+		#main-window[currenttheme^="Qute"][tabsintitlebar][sizemode="normal"]:not([inFullscreen]) * #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar {
+		  padding-top: 18px !important;
+		}
 	  }
 	}
 }

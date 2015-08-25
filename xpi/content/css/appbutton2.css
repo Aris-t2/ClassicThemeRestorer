@@ -182,12 +182,30 @@
 		}
 	  }
 	}
-	
+
+	/* Windows 8 tweaks */
+	@media (-moz-os-version: windows-win8) {
+	  #main-window[sizemode="normal"] #ctraddon_appbutton2{
+		margin-top:0px !important;
+		margin: 0 0 0 0 !important;
+	  }
+				
+	  #main-window[sizemode="maximized"] #ctraddon_appbutton2{
+		margin-top:-1px !important;
+		margin: -1px 0 0px 0px !important;
+	  }
+	  
+	  #main-window[fx40plus="true"][sizemode="maximized"] #ctraddon_appbutton2{
+		margin-top:0px !important;
+		margin: 0px 0 -3px -2px !important;
+	  }
+	}
+
 	/* Windows 10 tweaks */
 	@media (-moz-os-version: windows-win10) {
 	  #main-window[sizemode="normal"] #ctraddon_appbutton2{
 		margin-top:0px !important;
-		margin: 0 0 0 0 !important;
+		margin: 0 0 2px 0 !important;
 	  }
 				
 	  #main-window[sizemode="maximized"] #ctraddon_appbutton2{
@@ -206,24 +224,19 @@
 		padding-top: 2px !important;
 	  }
 
-	  #main-window[sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox #titlebar-min image,
-	  #main-window[sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox #titlebar-max image,
-	  #main-window[sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox #titlebar-close image {
+	  #main-window[sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox toolbarbutton image {
 		margin-bottom: -4px !important;
 	  }
-	  #main-window[sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox #titlebar-min,
-	  #main-window[sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox #titlebar-max,
-	  #main-window[sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox #titlebar-close {
-		margin-bottom: -4px !important;
-		padding-top: 10px !important;
-		padding-bottom: 6px !important;
+	  #main-window[sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox toolbarbutton {
+		padding-top: 8px !important;
+		padding-bottom: 8px !important;
 	  }
 	  
 	  @media not all and (-moz-windows-theme:aero) {
 		
 		#main-window[sizemode="normal"] #titlebar #titlebar-content #ctraddon_appbutton2{
 		  margin-top:0px !important;
-		  margin: 0px 0 0px 0px !important;
+		  margin: 0px 0 1px 0px !important;
 		}
 		
 		#main-window[sizemode="maximized"] #titlebar #titlebar-content #ctraddon_appbutton2{
@@ -231,20 +244,6 @@
 		  margin: -1px 0 6px -2px !important;
 		}
 			
-		#main-window[sizemode="normal"]:not([inFullscreen]) * #titlebar-buttonbox #titlebar-min image,
-		#main-window[sizemode="normal"]:not([inFullscreen]) * #titlebar-buttonbox #titlebar-max image,
-		#main-window[sizemode="normal"]:not([inFullscreen]) * #titlebar-buttonbox #titlebar-close image {
-		  margin-bottom: -4px !important;
-		}
-		
-		#main-window[sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox #titlebar-min,
-		#main-window[sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox #titlebar-max,
-		#main-window[sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox #titlebar-close {
-		  margin-bottom: -2px !important;
-		  padding-top: 10px !important;
-		  padding-bottom: 6px !important;
-		}
-
 		#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] #toolbar-menubar ~ #TabsToolbar,
 		#main-window[tabsintitlebar][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar,
 		#main-window[tabsintitlebar][sizemode="normal"]:not([inFullscreen]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar {
