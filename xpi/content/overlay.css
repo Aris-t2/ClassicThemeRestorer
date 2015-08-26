@@ -611,8 +611,8 @@
 	}
 	
 	.ctraddontabpanel {
-	  height:420px;
-	  max-height:470px;
+	  height:430px;
+	  max-height:480px;
 	  min-width:500px;
 	  width:480px;
 	  max-width:800px;
@@ -705,75 +705,103 @@
 	  min-height:16px !important;
 	}
 	
-	/* Tab close - pref icons */
-	#ctraddon_closeicon_def {
-	  -moz-margin-end:0;
+	/* Tab/General close - pref icons */
+	#ctraddon_closeicon_def, #ctraddon_closeicong_def {
+	  -moz-margin-end:-1px;
 	}
-	#ctraddon_closeicon_red {
+	#ctraddon_closeicon_red, #ctraddon_closeicong_red {
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/close_alt.png');
 	  -moz-image-region: rect(0px, 16px, 16px, 0px);
 	}
-	#ctraddon_closeicon_w7{
+	#ctraddon_closeicon_w7, #ctraddon_closeicong_w7{
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/close.png');
 	  -moz-image-region: rect(0px, 16px, 16px, 0px);
 	}
-	#ctraddon_closeicon_w8{
+	#ctraddon_closeicon_w8, #ctraddon_closeicong_w8{
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/close2.png');
 	  -moz-image-region: rect(0px, 16px, 16px, 0px);
 	}
-	#ctraddon_closeicon_w10 {
+	#ctraddon_closeicon_w10, #ctraddon_closeicong_w10 {
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/close_w10.png');
 	  -moz-image-region: rect(0px, 20px, 20px, 0px);
 	}
-	#ctraddon_closeicon_w10i {
+	#ctraddon_closeicon_w10i, #ctraddon_closeicong_w10i {
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/close_w10i.png');
 	  -moz-image-region: rect(0px, 20px, 20px, 0px);
 	}
-	#ctraddon_closeicon_w10red {
+	#ctraddon_closeicon_w10red, #ctraddon_closeicong_w10red {
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/close_w10red.png');
 	  -moz-image-region: rect(0px, 20px, 20px, 0px);
 	}
+	#ctraddon_closeicon_gc, #ctraddon_closeicong_gc{
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/close_gc.png');
+	  -moz-image-region: rect(0px, 16px, 16px, 0px);
+	}
 	
-	#ctraddon_closeicon_red:hover,
-	#ctraddon_closeicon_w7:hover,
-	#ctraddon_closeicon_w8:hover {
+	#ctraddon_closeicon_red:hover, #ctraddon_closeicong_red:hover,
+	#ctraddon_closeicon_w7:hover, #ctraddon_closeicong_w7:hover,
+	#ctraddon_closeicon_w8:hover, #ctraddon_closeicong_w8:hover,
+	#ctraddon_closeicon_gc:hover, #ctraddon_closeicong_gc:hover {
 	  -moz-image-region: rect(0px, 32px, 16px, 16px);
 	}
-	#ctraddon_closeicon_red:active,
-	#ctraddon_closeicon_w7:active,
-	#ctraddon_closeicon_w8:active {
+	#ctraddon_closeicon_red:active, #ctraddon_closeicong_red:active,
+	#ctraddon_closeicon_w7:active, #ctraddon_closeicong_w7:active,
+	#ctraddon_closeicon_w8:active, #ctraddon_closeicong_w8:active,
+	#ctraddon_closeicon_gc:active, #ctraddon_closeicong_gc:active{
 	  -moz-image-region: rect(0px, 48px, 16px, 32px);
 	}
-	#ctraddon_closeicon_w10:hover,
-	#ctraddon_closeicon_w10i:hover,
-	#ctraddon_closeicon_w10red:hover {
+	#ctraddon_closeicon_w10:hover, #ctraddon_closeicong_w10:hover,
+	#ctraddon_closeicon_w10i:hover, #ctraddon_closeicong_w10i:hover,
+	#ctraddon_closeicon_w10red:hover, #ctraddon_closeicong_w10red:hover {
 	  -moz-image-region: rect(0px, 40px, 20px, 20px);
 	}
-	#ctraddon_closeicon_w10:active,
-	#ctraddon_closeicon_w10i:active,
-	#ctraddon_closeicon_w10red:active {
+	#ctraddon_closeicon_w10:active, #ctraddon_closeicong_w10:active,
+	#ctraddon_closeicon_w10i:active, #ctraddon_closeicong_w10i:active,
+	#ctraddon_closeicon_w10red:active, #ctraddon_closeicong_w10red:active {
 	  -moz-image-region: rect(0px, 60px, 20px, 40px);
 	}
-
-	#ctraddon_closeicon_w10 image,
-	#ctraddon_closeicon_w10i image,
-	#ctraddon_closeicon_w10red image {
-	  width: 16px;
-	}
-
-	#ctraddon_closeicon_red,
-	#ctraddon_closeicon_w7,
-	#ctraddon_closeicon_w8,
-	#ctraddon_closeicon_w10,
-	#ctraddon_closeicon_w10i,
-	#ctraddon_closeicon_w10red {
-	  margin-left: -1px;
-	  margin-right: -1px;
-	}
 	
+	#ctraddon_pw_closeicon radio image ,
+	#ctraddon_pw_closeicong radio image {
+	  width: 22px;
+	  padding: 2px 2px;
+	}
+
+	#ctraddon_closeicon_red, #ctraddon_closeicong_red,
+	#ctraddon_closeicon_w7, #ctraddon_closeicong_w7,
+	#ctraddon_closeicon_w8, #ctraddon_closeicong_w8,
+	#ctraddon_closeicon_w10, #ctraddon_closeicong_w10,
+	#ctraddon_closeicon_w10i, #ctraddon_closeicong_w10i,
+	#ctraddon_closeicon_w10red, #ctraddon_closeicong_w10red,
+	#ctraddon_closeicon_gc, #ctraddon_closeicong_gc {
+	  margin-left: -4px;
+	  margin-right: -4px;
+	}
+
+	#ctraddon_pw_closeicon radio .radio-check-box1,
+	#ctraddon_pw_closeicon #ctraddon_closeicon_def image,
+	#ctraddon_pw_closeicong radio .radio-check-box1,
+	#ctraddon_pw_closeicong #ctraddon_closeicong_def image {
+	  display: none;
+	}
+	#ctraddon_pw_closeicon #ctraddon_closeicon_def:not([selected="true"]) label,
+	#ctraddon_pw_closeicon radio:not([selected="true"]) image,
+	#ctraddon_pw_closeicong #ctraddon_closeicong_def:not([selected="true"]) label,
+	#ctraddon_pw_closeicong radio:not([selected="true"]) image{
+	  border: 1px solid transparent;
+	}
+	#ctraddon_pw_closeicon #ctraddon_closeicon_def[selected="true"] label,
+	#ctraddon_pw_closeicon radio[selected="true"] image,
+	#ctraddon_pw_closeicon #ctraddon_closeicon_def:not([selected="true"]):hover label,
+	#ctraddon_pw_closeicong #ctraddon_closeicong_def[selected="true"] label,
+	#ctraddon_pw_closeicong radio[selected="true"] image,
+	#ctraddon_pw_closeicong #ctraddon_closeicong_def:not([selected="true"]):hover label {
+	  border: 1px solid Highlight;
+	}
+
 	/* tab separator settings */
 	#ctraddon_tabsep_def {
-	  -moz-margin-end:0;
+	  -moz-margin-end:-4px;
 	}
 	#ctraddon_tabsep_black{
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator.png');
@@ -805,12 +833,31 @@
 	#ctraddon_tabsep_white_sol,
 	#ctraddon_tabsep_black_sol2,
 	#ctraddon_tabsep_white_sol2{
-	  margin-left: -1px;
-	  margin-right: -1px;
+	  margin-left: -4px;
+	  margin-right: -4px;
 	}
-
+	
+	#ctraddon_pw_tabseparator radio .radio-check-box1,
+	#ctraddon_pw_tabseparator #ctraddon_tabsep_def image {
+	  display: none;
+	}
+	#ctraddon_pw_tabseparator #ctraddon_tabsep_def:not([selected="true"]) label,
+	#ctraddon_pw_tabseparator radio:not([selected="true"]) image{
+	  border: 1px solid transparent;
+	}
+	#ctraddon_pw_tabseparator #ctraddon_tabsep_def[selected="true"] label,
+	#ctraddon_pw_tabseparator radio[selected="true"] image,
+	#ctraddon_pw_tabseparator #ctraddon_tabsep_def:not([selected="true"]):hover label,
+	#ctraddon_pw_tabseparator radio:not([selected="true"]):hover image {
+	  border: 1px solid Highlight;
+	}
+	#ctraddon_pw_tabseparator radio image {
+	  padding: 1px 6px;
+	}
+	
 	/**/
-	#ClassicTRoptionsPane[defaultfxtheme="true"] #ctraddon_pw_closeicon,	
+	#ClassicTRoptionsPane[defaultfxtheme="true"] #ctraddon_pw_closeicon,
+	#ClassicTRoptionsPane[defaultfxtheme="true"] #ctraddon_pw_closeicong,
 	#ClassicTRoptionsPane[defaultfxtheme="true"] #ctraddon_pw_tabseparator {
 	  background: #dfdfdf;
 	}

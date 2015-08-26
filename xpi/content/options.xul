@@ -96,6 +96,7 @@
 		<preference id="ctraddon_findbar"		name="extensions.classicthemerestorer.findbar"		type="string"	instantApply="true"/>
 		<preference id="ctraddon_nav_txt_ico"	name="extensions.classicthemerestorer.nav_txt_ico" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_iat_notf_vt"	name="extensions.classicthemerestorer.iat_notf_vt"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_closeicong"	name="extensions.classicthemerestorer.closeicong"	type="string"	instantApply="true"/>
 
 		<preference id="ctraddon_ctab1"			name="extensions.classicthemerestorer.ctab1"		type="string"	instantApply="true"/>
 		<preference id="ctraddon_ctab2"			name="extensions.classicthemerestorer.ctab2"		type="string"	instantApply="true"/>
@@ -392,7 +393,8 @@
 		</menulist>
 		<checkbox label="&Ctr_closetab_hfot;" preference="ctraddon_closetabhfl" id="ctraddon_pw_closetabhfl"/>
 		<checkbox label="&Ctr_closeonleft;" preference="ctraddon_closeonleft" id="ctraddon_pw_closeonleft"/>
-		
+		<checkbox label="&Ctr_close_wwltab;"	preference="ctraddon_closewwltab" tooltiptext="browser.tabs.closeWindowWithLastTab"/>
+
 		<radiogroup preference="ctraddon_closeicon" id="ctraddon_pw_closeicon" orient="horizontal" value="">
 			<radio value="closeicon_default" label="&Ctr_closei_def;" id="ctraddon_closeicon_def"/>
 			<radio value="closeicon_red"	label=""	id="ctraddon_closeicon_red"/>
@@ -401,10 +403,9 @@
 			<radio value="closeicon_w10"	label=""	id="ctraddon_closeicon_w10"/>
 			<radio value="closeicon_w10i"	label=""	id="ctraddon_closeicon_w10i"/>
 			<radio value="closeicon_w10red"	label=""	id="ctraddon_closeicon_w10red"/>
+			<radio value="closeicon_gc"		label=""	id="ctraddon_closeicon_gc"/>
 		</radiogroup>
-		
-		<checkbox label="&Ctr_close_wwltab;"	preference="ctraddon_closewwltab" tooltiptext="browser.tabs.closeWindowWithLastTab"/>
-		
+
 	  </groupbox>
 
 	  <groupbox class="ctraddon_winmaconly" id="ctraddon_pw_mockupoptions">
@@ -793,7 +794,19 @@
 		<checkbox label="&Ctr_bmbutpanelm;"		preference="ctraddon_bmbutpanelm" id="ctraddon_pw_bmbutpanelm"/>
 		<checkbox label="&Ctr_skipprintpr;"		preference="ctraddon_skipprintpr" id="ctraddon_pw_skipprintpr" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<checkbox label="&Ctr_tbconmenu;"		preference="ctraddon_tbconmenu"	  id="ctraddon_pw_tbconmenu"/>
-		
+
+		<description class="ctraddon_font1">&Ctr_closegeneral;</description>
+		<radiogroup preference="ctraddon_closeicong" id="ctraddon_pw_closeicong" orient="horizontal" value="">
+			<radio value="closeicong_default" label="&Ctr_closei_def;" id="ctraddon_closeicong_def"/>
+			<radio value="closeicong_red"	  label=""	id="ctraddon_closeicong_red"/>
+			<radio value="closeicong_w7"	  label=""	id="ctraddon_closeicong_w7"/>
+			<radio value="closeicong_w8"	  label=""	id="ctraddon_closeicong_w8"/>
+			<radio value="closeicong_w10"	  label=""	id="ctraddon_closeicong_w10"/>
+			<radio value="closeicong_w10i"	  label=""	id="ctraddon_closeicong_w10i"/>
+			<radio value="closeicong_w10red"  label=""	id="ctraddon_closeicong_w10red"/>
+			<radio value="closeicong_gc"	  label=""	id="ctraddon_closeicong_gc"/>
+		</radiogroup>
+
 	  </groupbox>
 	  
 	  <groupbox>
