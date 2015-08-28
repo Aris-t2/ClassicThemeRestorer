@@ -126,6 +126,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_tabstoolbargroup').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_devthemegb').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_hightabpososx').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_altoptionsp').style.visibility = 'collapse';
 	} else {
 		document.getElementById('ctraddon_pw_special_info2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_special_font').style.visibility = 'collapse';
@@ -830,7 +831,10 @@ classicthemerestorerjso.ctr = {
 	this.prefs.setBoolPref("alt_newtabp",true);
 	this.prefs.setBoolPref("skipprintpr",true);
 	this.prefs.setBoolPref("tbconmenu",true);
-	if(this.appversion >= 40) this.prefs.setBoolPref("alt_addonsm",true);
+	if(this.appversion >= 40) { 
+	  this.prefs.setBoolPref("alt_addonsm",true);
+	  this.prefs.setBoolPref("addonversion",true);
+	}
 	
 	setTimeout(function(){
 		Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref("starinurl",true);

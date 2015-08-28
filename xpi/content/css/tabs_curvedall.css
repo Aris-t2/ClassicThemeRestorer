@@ -82,6 +82,7 @@
 	.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before:not(:-moz-lwtheme),
 	#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after:not(:-moz-lwtheme) {
 	  background-image: none !important;
+	  background-color: unset !important;
 	}
 
     .tabs-newtab-button:not(:-moz-lwtheme) {

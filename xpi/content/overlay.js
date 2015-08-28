@@ -828,7 +828,12 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("noconicons") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("noconicons",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("noconicons",false);
 		  break;
-		  
+
+		  case "altoptionsp":
+			if (branch.getBoolPref("altoptionsp") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("altoptionsp",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("altoptionsp",false);
+		  break;
+
 		  case "svgfilters":
 			if (branch.getBoolPref("svgfilters")) classicthemerestorerjs.ctr.loadUnloadCSS("svgfilters",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("svgfilters",false);
@@ -3080,6 +3085,7 @@ classicthemerestorerjs.ctr = {
 		case "backforward":			manageCSS("back-forward.css");			break;
 		case "nbcompact":			manageCSS("navbar_compact.css");		break;
 		case "noconicons": 			manageCSS("nocontexticons.css");		break;
+		case "altoptionsp": 		manageCSS("alt_optionspage.css");		break;
 		case "svgfilters": 			manageCSS("svgfilters.css");			break;
 		case "iat_notf_vt": 		manageCSS("mode_iat_no_vt.css");		break;
 		case "to_notf_vt": 			manageCSS("mode_to_no_vt.css");			break;
@@ -3203,6 +3209,19 @@ classicthemerestorerjs.ctr = {
 						}\
 					';
 				}
+				
+				var aero_color_optionsp = '';
+				
+				if (this.prefs.getBoolPref("altoptionsp")) {
+					aero_color_optionsp = '\
+					  @-moz-document url(about:preferences),url-prefix(about:preferences){\
+						page, #dialogBox .groupbox-title {\
+						  background: linear-gradient(to bottom right, #edf6ff,#dbeaf9,#edf6ff,#dbeaf9) !important;\
+						}\
+					  }\
+					';
+				}
+				
 				
 				var aero_color_tabs = '';
 				
@@ -3443,6 +3462,7 @@ classicthemerestorerjs.ctr = {
 					}\
 					'+aero_color_tabs+'\
 					'+aero_color_addonsm+'\
+					'+aero_color_optionsp+'\
 				'), null, null);
 			
 				applyNewSheet(this.aerocolors);
