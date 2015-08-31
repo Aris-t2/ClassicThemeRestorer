@@ -113,11 +113,9 @@
 		}
 		#main-window[defaultfxtheme="true"][fx40plus="true"] #nav-bar :-moz-any(#ctraddon_history-button,/*#ctraddon_history-menu-toolbar-button,*/#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button) .toolbarbutton-icon {
 		  width: 32px !important;
-		  /*height: 24px !important;*/
 		}
 		#main-window[defaultfxtheme="true"][fx40plus="true"] #nav-bar #ctraddon_history-menu-toolbar-button .toolbarbutton-icon {
 		  width: 40px !important;
-		  /*height: 24px !important;*/
 		}
 		#main-window[defaultfxtheme="true"][fx40plus="true"] toolbar:not(#nav-bar) :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button) .toolbarbutton-icon {
 		  width: 18px !important;

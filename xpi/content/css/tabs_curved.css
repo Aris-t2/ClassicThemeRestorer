@@ -28,7 +28,7 @@
 	  background-color: unset !important;
 	}
 	
-	/* tab appearance from Fx 29-39 */
+	/* tab appearance Fx 29-39 */
 	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([selected=true]),
 	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]) {
 	  background-position: left bottom, 30px bottom, right bottom;
@@ -63,7 +63,7 @@
 	  clip-path: none !important;
 	}
 	
-	/* tab appearance from Fx 40+ */
+	/* tab appearance Fx 40+ */
 	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([visuallyselected=true]),
 	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([visuallyselected=true]) {
 	  background-position: left bottom, 30px bottom, right bottom;
@@ -76,6 +76,19 @@
 	  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start.png),
 						url(chrome://browser/skin/tabbrowser/tab-background-middle.png),
 						url(chrome://browser/skin/tabbrowser/tab-background-end.png) !important;
+	}
+	
+	@media  (-moz-os-version: windows-xp),
+			(-moz-os-version: windows-vista),
+			(-moz-os-version: windows-win7),
+			(-moz-os-version: windows-win8),
+			(-moz-os-version: windows-win10){
+		#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([visuallyselected=true]),
+		#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([visuallyselected=true]){
+		  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start-preWin10.png),
+							url(chrome://browser/skin/tabbrowser/tab-background-middle-preWin10.png),
+							url(chrome://browser/skin/tabbrowser/tab-background-end-preWin10.png) !important;
+		}
 	}
 
 	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),

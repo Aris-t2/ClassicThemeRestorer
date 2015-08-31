@@ -807,6 +807,14 @@
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator.png');
       -moz-image-region: rect(0px, 3px, 24px, 0px);
 	}
+	#ctraddon_tabsep_luna{
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator-luna-blue.png');
+      -moz-image-region: rect(0px, 3px, 24px, 0px);
+	}
+	#ctraddon_tabsep_xp{
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator-XP.png');
+      -moz-image-region: rect(0px, 3px, 24px, 0px);
+	}
 	#ctraddon_tabsep_white{
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator-inv.png');
       -moz-image-region: rect(0px, 3px, 24px, 0px);
@@ -829,6 +837,8 @@
 	}
 	#ctraddon_tabsep_black,
 	#ctraddon_tabsep_white,
+	#ctraddon_tabsep_luna,
+	#ctraddon_tabsep_xp,
 	#ctraddon_tabsep_black_sol,
 	#ctraddon_tabsep_white_sol,
 	#ctraddon_tabsep_black_sol2,

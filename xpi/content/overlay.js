@@ -1596,6 +1596,8 @@ classicthemerestorerjs.ctr = {
 		  
 			classicthemerestorerjs.ctr.loadUnloadCSS('tabsep_black',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('tabsep_white',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('tabsep_luna',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('tabsep_xp',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('tabsep_black_sol',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('tabsep_white_sol',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('tabsep_black_sol2',false);
@@ -3155,6 +3157,8 @@ classicthemerestorerjs.ctr = {
 		case "invicoaddonbar": 		manageCSS("invicons_addonbar.css");		break;
 		
 		case "tabsep_black": 		manageCSS("tab_sep.css");				break;
+		case "tabsep_luna": 		manageCSS("tab_sep_luna.css");			break;
+		case "tabsep_xp": 			manageCSS("tab_sep_xp.css");			break;
 		case "tabsep_white": 		manageCSS("tab_sep-inv.css");			break;
 		case "tabsep_black_sol": 	manageCSS("tab_sep_solid.css");			break;
 		case "tabsep_white_sol": 	manageCSS("tab_sep_solid-inv.css");		break;
