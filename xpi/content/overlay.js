@@ -1,19 +1,16 @@
 "use strict";
+(function(global) {
 /*
-	There are a few "timeouts" on this document. In almost all cases they are needed to
-	make sure a 'get' call looks only for items already in DOM. 
- 
-	Components.classes: Cc
-	Components.interfaces: Ci
-	Components.utils: Cu
+ There are a few "timeouts" on this document. In almost all cases they are needed to
+ make sure a 'get' call looks only for items already in DOM.
 */
 
-Cu.import("resource:///modules/CustomizableUI.jsm");
-Cu.import("resource://gre/modules/AddonManager.jsm");
-Cu.import("resource://gre/modules/Services.jsm");
+var Cc = Components.classes, Ci = Components.interfaces, Cu = Components.utils;
 
-//Query nsIPrefBranch see: Bug 1125570 | Bug 1083561
-Services.prefs.QueryInterface(Ci.nsIPrefBranch);
+var {CustomizableUI} = Cu.import("resource:///modules/CustomizableUI.jsm", {});
+var {AddonManager} = Cu.import("resource://gre/modules/AddonManager.jsm", {});
+var {Services} = Cu.import("resource://gre/modules/Services.jsm", {});
+
 
 if (typeof classicthemerestorerjs == "undefined") {var classicthemerestorerjs = {};};
 if (!classicthemerestorerjs.ctr) {classicthemerestorerjs.ctr = {};};
@@ -1796,14 +1793,14 @@ classicthemerestorerjs.ctr = {
 				if (newURL=='') newURL='about:newtab';
 				
 				try{
-					Cu.import("resource:///modules/NewTabURL.jsm");
+					var {NewTabURL} = Cu.import("resource:///modules/NewTabURL.jsm", {});
 					NewTabURL.override(newURL);
 				} catch(e){}
 
 				
 			} else if (classicthemerestorerjs.ctr.appversion >= 41) {
 				try{
-				  Cu.import("resource:///modules/NewTabURL.jsm");
+				  var {NewTabURL} = Cu.import("resource:///modules/NewTabURL.jsm", {});
 				  NewTabURL.reset();
 				} catch(e){}
 			}
@@ -2450,12 +2447,12 @@ classicthemerestorerjs.ctr = {
 	// As result event listener fails to listen for "TabAttrModified" event.
 	// Waiting until dom content is loaded fixes this problem.
 	window.addEventListener("DOMContentLoaded", function _favIconinUrlbarCTR(){
-	  var mainWindow = window.QueryInterface(Components.interfaces.nsIInterfaceRequestor)
-                       .getInterface(Components.interfaces.nsIWebNavigation)
-                       .QueryInterface(Components.interfaces.nsIDocShellTreeItem)
+	  var mainWindow = window.QueryInterface(Ci.nsIInterfaceRequestor)
+                       .getInterface(Ci.nsIWebNavigation)
+                       .QueryInterface(Ci.nsIDocShellTreeItem)
                        .rootTreeItem
-                       .QueryInterface(Components.interfaces.nsIInterfaceRequestor)
-                       .getInterface(Components.interfaces.nsIDOMWindow);
+                       .QueryInterface(Ci.nsIInterfaceRequestor)
+                       .getInterface(Ci.nsIDOMWindow);
 					   
 	  mainWindow.gBrowser.tabContainer.addEventListener("TabAttrModified", faviconInUrlbar, false);
 	}, false);
@@ -2609,7 +2606,7 @@ classicthemerestorerjs.ctr = {
 
 	  try {
 		if (Services.prefs.getBranch("lightweightThemes.").getCharPref("selectedThemeID")=='firefox-devedition@mozilla.org') {
-		  Components.utils.import("resource://gre/modules/LightweightThemeManager.jsm");
+		 var {LightweightThemeManager} = Cu.import("resource://gre/modules/LightweightThemeManager.jsm", {});
 		  LightweightThemeManager.themeChanged(null);
 		  Services.prefs.getBranch("lightweightThemes.").deleteBranch("selectedThemeID");
 		}
@@ -4969,3 +4966,7 @@ classicthemerestorerjs.ctr = {
 };
 
 classicthemerestorerjs.ctr.init();
+
+  // Make classicthemerestorerjs a global variable
+  global.classicthemerestorerjs = classicthemerestorerjs;
+}(this));

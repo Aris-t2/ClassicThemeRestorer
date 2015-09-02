@@ -1,14 +1,15 @@
 "use strict";
+(function(global) {
 if (typeof classicthemerestorerjso == "undefined") {var classicthemerestorerjso = {};};
 if (!classicthemerestorerjso.ctr) {classicthemerestorerjso.ctr = {};};
 
-Components.utils.import("resource://gre/modules/AddonManager.jsm");
-Components.utils.import("resource:///modules/CustomizableUI.jsm");
+var Cc = Components.classes, Ci = Components.interfaces, Cu = Components.utils;
+
+var {CustomizableUI} = Cu.import("resource:///modules/CustomizableUI.jsm", {});
+var {AddonManager} = Cu.import("resource://gre/modules/AddonManager.jsm", {});
 
 //Import services use one service for preferences.
-Components.utils.import("resource://gre/modules/Services.jsm");
-//Query nsIPrefBranch see: Bug 1125570 | Bug 1083561
-Services.prefs.QueryInterface(Components.interfaces.nsIPrefBranch);
+var {Services} = Cu.import("resource://gre/modules/Services.jsm", {});
 
 classicthemerestorerjso.ctr = {
 
@@ -337,7 +338,7 @@ classicthemerestorerjso.ctr = {
 	  // Keeping a reference to the observed preference branch or it will get
 	  // garbage collected.
 	  this._branch = Services.prefs.getBranch(branch_name);
-	  this._branch.QueryInterface(Components.interfaces.nsIPrefBranch2);
+	  this._branch.QueryInterface(Ci.nsIPrefBranch2);
 	  this._callback = callback;
 	}
 
@@ -457,8 +458,8 @@ classicthemerestorerjso.ctr = {
      when preference window gets closed */
   unloadprefwindow: function() {
 
-	var cancelQuit   = Components.classes["@mozilla.org/supports-PRBool;1"].createInstance(Components.interfaces.nsISupportsPRBool);
-	var observerSvc  = Components.classes["@mozilla.org/observer-service;1"].getService(Components.interfaces.nsIObserverService);
+	var cancelQuit   = Cc["@mozilla.org/supports-PRBool;1"].createInstance(Ci.nsISupportsPRBool);
+	var observerSvc  = Cc["@mozilla.org/observer-service;1"].getService(Ci.nsIObserverService);
 	var stringBundle = Services.strings.createBundle("chrome://classic_theme_restorer/locale/messages.file");
 						
 	var brandName	 = '';
@@ -940,7 +941,7 @@ classicthemerestorerjso.ctr = {
 
 	  } catch(e) {
 		// Report errors to console
-		Components.utils.reportError(e);
+		Cu.reportError(e);
 	  }
 
 	}	  
@@ -950,9 +951,9 @@ classicthemerestorerjso.ctr = {
 	  
 	function saveToFile(patterns) {
 
-	  const nsIFilePicker = Components.interfaces.nsIFilePicker;
-	  var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
-	  var stream = Components.classes["@mozilla.org/network/file-output-stream;1"].createInstance(Components.interfaces.nsIFileOutputStream);
+	  const nsIFilePicker = Ci.nsIFilePicker;
+	  var fp = Cc["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+	  var stream = Cc["@mozilla.org/network/file-output-stream;1"].createInstance(Ci.nsIFileOutputStream);
 
 	  fp.init(window, null, nsIFilePicker.modeSave);
 	  fp.defaultExtension = "txt";
@@ -1023,10 +1024,10 @@ classicthemerestorerjso.ctr = {
 	   
 	function loadFromFile() {
 
-	   const nsIFilePicker = Components.interfaces.nsIFilePicker;
-	   var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
-	   var stream = Components.classes["@mozilla.org/network/file-input-stream;1"].createInstance(Components.interfaces.nsIFileInputStream);
-	   var streamIO = Components.classes["@mozilla.org/scriptableinputstream;1"].createInstance(Components.interfaces.nsIScriptableInputStream);
+	   const nsIFilePicker = Ci.nsIFilePicker;
+	   var fp = Cc["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+	   var stream = Cc["@mozilla.org/network/file-input-stream;1"].createInstance(Ci.nsIFileInputStream);
+	   var streamIO = Cc["@mozilla.org/scriptableinputstream;1"].createInstance(Ci.nsIScriptableInputStream);
 
 	   fp.defaultExtension = "txt";
 	   fp.defaultString = "CTRpreferences.txt";
@@ -1082,7 +1083,7 @@ classicthemerestorerjso.ctr = {
 
 	  } catch(e) {
 		// Report errors to console
-		Components.utils.reportError(e);
+		Cu.reportError(e);
 	  }
 	}	
 
@@ -1097,10 +1098,10 @@ classicthemerestorerjso.ctr = {
 	 
 	function loadFromFile() {
 
-	   const nsIFilePicker = Components.interfaces.nsIFilePicker;
-	   var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
-	   var stream = Components.classes["@mozilla.org/network/file-input-stream;1"].createInstance(Components.interfaces.nsIFileInputStream);
-	   var streamIO = Components.classes["@mozilla.org/scriptableinputstream;1"].createInstance(Components.interfaces.nsIScriptableInputStream);
+	   const nsIFilePicker = Ci.nsIFilePicker;
+	   var fp = Cc["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+	   var stream = Cc["@mozilla.org/network/file-input-stream;1"].createInstance(Ci.nsIFileInputStream);
+	   var streamIO = Cc["@mozilla.org/scriptableinputstream;1"].createInstance(Ci.nsIScriptableInputStream);
 
 	   fp.defaultExtension = "json";
 	   fp.defaultString = "CTRpreferences.json";
@@ -1169,7 +1170,7 @@ classicthemerestorerjso.ctr = {
 
 	  } catch(e) {
 		// Report errors to console
-		Components.utils.reportError(e);
+		Cu.reportError(e);
 	  }
 
 	}
@@ -1178,9 +1179,9 @@ classicthemerestorerjso.ctr = {
 	  
 	function saveToFile(patterns) {
 
-	  const nsIFilePicker = Components.interfaces.nsIFilePicker;
-	  var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
-	  var stream = Components.classes["@mozilla.org/network/file-output-stream;1"].createInstance(Components.interfaces.nsIFileOutputStream);
+	  const nsIFilePicker = Ci.nsIFilePicker;
+	  var fp = Cc["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+	  var stream = Cc["@mozilla.org/network/file-output-stream;1"].createInstance(Ci.nsIFileOutputStream);
 
 	  fp.init(window, null, nsIFilePicker.modeSave);
 	  fp.defaultExtension = "json";
@@ -1221,3 +1222,8 @@ classicthemerestorerjso.ctr = {
   }
   
 };
+
+
+  // Make classicthemerestorerjso a global variable
+  global.classicthemerestorerjso = classicthemerestorerjso;
+}(this));
