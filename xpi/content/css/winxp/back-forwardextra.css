@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul){
+/*@-moz-document url(chrome://browser/content/browser.xul){*/
 
 	#main-window:not([defaultfxtheme="true"]) #notification-popup-box[hidden] + *,
 	#main-window:not([defaultfxtheme="true"]) #notification-popup-box + .notification-anchor-icon {
@@ -66,4 +66,4 @@
 	#main-window[fx31="true"] #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
 	  margin-left: 8px !important;
 	}
-}
+/*}*/

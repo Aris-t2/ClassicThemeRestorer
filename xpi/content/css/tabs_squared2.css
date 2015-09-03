@@ -1,7 +1,7 @@
 @import url(chrome://ctraddon_os_special/skin/classictabsextra2.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul){
+/*@-moz-document url(chrome://browser/content/browser.xul){*/
 	
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_appbutton{
 	  margin-left:-2px !important;
@@ -400,14 +400,14 @@
 	  -moz-margin-start:2px !important;
 	  -moz-margin-end:1px !important;
 	}
-}
+/*}
 
-@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
-	#ctraddon_ccap_t_squared2{
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {*/
+	#ClassicTRoptionsPane #ctraddon_ccap_t_squared2{
 	  visibility: visible !important;
 	}
 	
-	#ctraddon_ccap_t_default{
+	#ClassicTRoptionsPane #ctraddon_ccap_t_default{
 	  visibility: collapse !important;
 	}
-}
+/*}*/

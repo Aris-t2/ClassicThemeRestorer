@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
 
 	#main-window[tabsintitlebar][sizemode="normal"]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_appbutton{
 	  margin-top:-16px !important;
@@ -28,4 +28,4 @@
 	  border-radius: 0 0 0 0 !important;
 	}
 
-}
+/*}*/

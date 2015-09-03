@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
 	
 	#ctraddon_bookmarks-menu-toolbar-button,
 	#ctraddon_bookmarks-button {
@@ -391,7 +391,7 @@
 	  }
 	}
 
-}
+/*}*/
 
 .ctraddon_nonwindows,
 .ctraddon_linuxonly,
@@ -399,25 +399,25 @@
   visibility: collapse !important;
 }
 
-@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
-	#ctraddon_appbutton_list1{
+/*@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {*/
+	#ClassicTRoptionsPane #ctraddon_appbutton_list1{
 	  visibility: visible !important;
 	}
-	#tabs_curvedall,
-	#ctraddon_appbutton_list2{
+	#ClassicTRoptionsPane #tabs_curvedall,
+	#ClassicTRoptionsPane #ctraddon_appbutton_list2{
 	  visibility: collapse !important;
 	  display:none !important;
 	}
-	#ctraddon_pw_okbutton{
+	#ClassicTRoptionsPane #ctraddon_pw_okbutton{
 	  display: inline !important;
 	}
-	#ctraddon_pw_starinurl label{
+	#ClassicTRoptionsPane #ctraddon_pw_starinurl label{
 	  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/starbutton1.png'),
 				  0, 72, 18, 36) no-repeat left !important;
 	  -moz-padding-start:20px !important;
 	  min-height:16px !important;
 	}
-	#ctraddon_pw_feedinurl label{
+	#ClassicTRoptionsPane #ctraddon_pw_feedinurl label{
 	  background:url('chrome://classic_theme_restorer/content/images/feedinurlbar.png') no-repeat left !important;
 	  -moz-padding-start:20px !important;
 	  min-height:16px !important;
@@ -427,4 +427,4 @@
 	  display: none !important;
 	  visibility: collapse !important;
 	}
-}
+/*}*/

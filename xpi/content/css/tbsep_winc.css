@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
   
   @media all and (-moz-windows-classic) {
 	#main-window[defaultfxtheme="true"] #navigator-toolbox toolbar:not(#toolbar-menubar):not(#nav-bar):not(#addon-bar) {
@@ -9,4 +9,4 @@
 	}
   }
 
-}
+/*}*/

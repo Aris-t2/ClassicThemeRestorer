@@ -1,5 +1,5 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
 
 	#identity-popup.verifiedDomain,
 	#identity-popup.verifiedIdentity {
@@ -97,4 +97,4 @@
 					0, 16, 16, 0) no-repeat center right !important;
 	}
 
-}
+/*}*/

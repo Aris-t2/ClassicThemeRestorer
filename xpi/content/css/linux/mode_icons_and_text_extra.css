@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
 
 	#nav-bar .toolbarbutton-1:not([type="menu-button"]) .toolbarbutton-icon {
 	  min-width: 18px !important;
@@ -59,4 +59,4 @@
 	  box-shadow:none !important;
 	}
 
-}
+/*}*/

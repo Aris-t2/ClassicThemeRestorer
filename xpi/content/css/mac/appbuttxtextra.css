@@ -1,8 +1,8 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
 
 	#TabsToolbar #ctraddon_appbutton .toolbarbutton-text {
 	  padding:3px 4px !important;
 	}
-}
+/*}*/

@@ -2,7 +2,7 @@
 @import url(chrome://ctraddon_os_special/skin/back-forwardextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
 	/* navigation toolbar */
 	#nav-bar .toolbarbutton-1 .toolbarbutton-text,
 	#nav-bar .toolbarbutton-menubutton-dropmarker > image,
@@ -191,4 +191,4 @@
 	toolbar:not(#nav-bar):not(#TabsToolbar) #zoompage-item .toolbarbutton-1:not([type="menu-button"]) {
 	  min-width: unset !important;
 	}
-}
+/*}*/

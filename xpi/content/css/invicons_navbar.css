@@ -1,7 +1,7 @@
 @import url(chrome://ctraddon_os_special/skin/invicons_navbarextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
   @media not all and (min-resolution: 2dppx) {
 	
 	#nav-bar :-moz-any(#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_bookmarks-menu-toolbar-button,#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_go-button) .toolbarbutton-icon,
@@ -139,4 +139,4 @@
 	  }
   }
   
-}
+/*}*/

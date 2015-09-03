@@ -1,26 +1,12 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul){
+/*@-moz-document url(chrome://browser/content/browser.xul){*/
 
 	/* tab colors */
-	/*.tabs-newtab-button:not(:-moz-lwtheme),
-	.tabbrowser-tab:not(:-moz-lwtheme) .tab-content {
-	  background-image: linear-gradient(transparent, hsla(0,0%,45%,.1) 1px, hsla(0,0%,32%,.2) 80%, hsla(0,0%,0%,.2)),
-						linear-gradient(-moz-dialog, -moz-dialog) !important;
-	}
-	.tabs-newtab-button:hover:not(:-moz-lwtheme),
-	.tabbrowser-tab:not([selected]):hover:not(:-moz-lwtheme) .tab-content {
-	  background-image: linear-gradient(hsla(0,0%,100%,.3) 1px, hsla(0,0%,75%,.2) 80%, hsla(0,0%,60%,.2)),
-						linear-gradient(-moz-dialog, -moz-dialog) !important;
-	}*/
 	.tabbrowser-tab[selected]:not(:-moz-lwtheme) .tab-content {
 	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.4) 50%),
 						linear-gradient(-moz-dialog, -moz-dialog) !important;
 	}
-	/*.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover),
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover {
-	  color:black !important;
-	}*/
 	
 	.tabs-newtab-button:not(:-moz-lwtheme):not(#privateTab-afterTabs-openNewPrivateTab),
 	#TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
@@ -143,4 +129,4 @@
 		}
 	}
 
-}
+/*}*/

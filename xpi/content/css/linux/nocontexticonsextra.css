@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
 
 	#context-back image,
 	#context-forward image,
@@ -30,4 +30,4 @@
       -moz-margin-start:4px !important; /* 21 -17 */
 	}
 
-}
+/*}*/

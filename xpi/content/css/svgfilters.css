@@ -2,7 +2,7 @@
 	Taken with permission from 'Patrick Dimpseys' "SVG Colors Theme v0.4"
 */
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
 
 	/*Blue*/
 	#ctraddon_navigator-throbber,
@@ -189,4 +189,4 @@
 	  filter: none !important;
 	}
 
-}
+/*}*/

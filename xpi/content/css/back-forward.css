@@ -1,7 +1,7 @@
 @import url(chrome://ctraddon_os_special/skin/back-forwardextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
 
 	#ctraddon_back-forward-button{
 	  visibility: visible !important;
@@ -38,4 +38,4 @@
 	  margin-top:1px;
 	  margin-bottom:1px;
 	}
-}
+/*}*/

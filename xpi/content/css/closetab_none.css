@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
 	/* hide TMPs close button on tabs toolbar, because this CTR option forces close button
 	*  to be hidden everywhere. Don't hide 'protected' tabs close button, because its used
 	*  to display a protected icon instead of close icon in that case.
@@ -11,10 +11,10 @@
 	#TabsToolbar #tabmix-tabs-closebutton{
 	  visibility: collapse !important;
 	}
-}
+/*}
 
-@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {*/
 	#ctraddon_pw_alw_tabclose{
 	  visibility: collapse !important;
 	}
-}
+/*}*/

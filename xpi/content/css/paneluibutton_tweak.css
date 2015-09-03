@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
 
 	#TabsToolbar #ctraddon_appbutton,
 	#main-window #titlebar #ctraddon_appbutton2{
@@ -109,9 +109,9 @@
 	  border-radius: 0 4px 0 0 !important;
 	}
 
-}
+/*}
 
-@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {*/
 
 	#ctraddon_pw_appbuttonc_aurora,
 	#ctraddon_pw_appbuttonc_nightly,
@@ -126,4 +126,4 @@
 	  display: none !important;
 	}
 
-}
+/*}*/

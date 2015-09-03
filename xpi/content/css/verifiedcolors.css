@@ -1,5 +1,5 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
 
 	/* Restore classic colors for verified identity and verified domain */
 	
@@ -46,4 +46,4 @@
 	  -moz-border-end: 1px solid;
 	}
 
-}
+/*}*/

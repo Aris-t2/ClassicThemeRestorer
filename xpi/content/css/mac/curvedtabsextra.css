@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul){
+/*@-moz-document url(chrome://browser/content/browser.xul){*/
 	
 	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,
 	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,
@@ -30,4 +30,4 @@
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover{
 	  color: black !important;
 	}
-}
+/*}*/

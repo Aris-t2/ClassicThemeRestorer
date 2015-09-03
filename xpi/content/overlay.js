@@ -814,7 +814,7 @@ classicthemerestorerjs.ctr = {
 		  case "nbcompact":
 			if (branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && classicthemerestorerjs.ctr.osstring!="Darwin"&& branch.getBoolPref("smallnavbut")==false && classicthemerestorerjs.ctr.fxdefaulttheme==true){
 			  classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
-			  console.log(branch.getCharPref("nav_txt_ico").indexOf('iconstxt'));
+			  /*console.log(branch.getCharPref("nav_txt_ico").indexOf('iconstxt'));*/
 			  if (branch.getCharPref("nav_txt_ico").indexOf('iconstxt')!=-1)
 				branch.setCharPref("nav_txt_ico",'icons');
 			}
@@ -3374,7 +3374,6 @@ classicthemerestorerjs.ctr = {
 			
 				this.aerocolors=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
 					@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);\
-					@-moz-document url(chrome://browser/content/browser.xul) {\
 						/* Toolbars */\
 						#main-window[defaultfxtheme="true"] :not(#theFoxOnlyBetter-slimChrome-toolbars) > #nav-bar:not(:-moz-lwtheme){\
 						  background-image: linear-gradient(#eaf2fb,#dbeaf9) !important;\
@@ -3460,7 +3459,6 @@ classicthemerestorerjs.ctr = {
 							  border-bottom: none !important;\
 							}\
 						}\
-					}\
 					'+aero_color_tabs+'\
 					'+aero_color_addonsm+'\
 					'+aero_color_optionsp+'\
@@ -3478,7 +3476,6 @@ classicthemerestorerjs.ctr = {
 			
 				this.appbutton_color=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
 					@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);\
-					@-moz-document url(chrome://browser/content/browser.xul) {\
 						#navigator-toolbox #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button {\
 						  background: linear-gradient('+this.prefs.getCharPref('cappbutc1')+', '+this.prefs.getCharPref('cappbutc2')+' 95%) !important;\
 						  border-color: rgba(83,42,6,.9) !important;\
@@ -3508,7 +3505,6 @@ classicthemerestorerjs.ctr = {
 			
 				this.appbutton_color=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
 					@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);\
-					@-moz-document url(chrome://browser/content/browser.xul) {\
 						#ctraddon_appbutton2:not(:hover):not(:active):not([open]){\
 						  background-image: linear-gradient('+this.prefs.getCharPref('cappbutc1')+', '+this.prefs.getCharPref('cappbutc2')+' 95%) !important;\
 						  border-color: hsla(210,59%,13%,.9) !important;\
@@ -3560,7 +3556,6 @@ classicthemerestorerjs.ctr = {
 						#main-window[privatebrowsingmode=temporary]  #ctraddon_appbutton2[open] {\
 						  background-image: linear-gradient(rgb(144,20,207), rgb(95,0,158) 95%) !important;\
 						}\
-					}\
 				'), null, null);
 			
 				applyNewSheet(this.appbutton_color);

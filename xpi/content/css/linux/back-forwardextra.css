@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul){
+/*@-moz-document url(chrome://browser/content/browser.xul){*/
 
 	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar > #notification-popup-box[hidden] + *,
 	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar,
@@ -56,4 +56,4 @@
 	  margin-left: 4px !important; /* for both ltr and rtl */
 	}
 
-}
+/*}*/

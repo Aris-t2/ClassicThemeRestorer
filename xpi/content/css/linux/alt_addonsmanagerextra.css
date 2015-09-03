@@ -1,4 +1,4 @@
-@-moz-document url(about:addons) {
+/*@-moz-document url(about:addons) {*/
 
 	/* fix issue where menulists on Linux become too big */
 	#addons-page #detail-view menulist,
@@ -7,4 +7,4 @@
 	  height: 26px !important;
 	}
 
-}
+/*}*/

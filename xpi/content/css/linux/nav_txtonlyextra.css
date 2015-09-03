@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul){
+/*@-moz-document url(chrome://browser/content/browser.xul){*/
 
 	#navigator-toolbox #nav-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]):hover .toolbarbutton-text {
 	  border: 1px solid transparent !important;
@@ -20,4 +20,4 @@
 	  font-size: 12px !important;
 	}
 
-}
+/*}*/

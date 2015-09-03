@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
 	.tabbrowser-tab .tab-close-button {
 	  visibility: collapse !important;
 	}
@@ -21,10 +21,10 @@
 	  -moz-margin-start: 0px !important;
 	}
 
-}
+/*}*/
 
-@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+/*@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {*/
 	#ctraddon_pw_alw_tabclose{
 	  visibility: collapse !important;
 	}
-}
+/*}*/

@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul){
+/*@-moz-document url(chrome://browser/content/browser.xul){*/
 
 	.tabs-newtab-button:not(:-moz-lwtheme) {
 	  background-position: left bottom, 30px bottom, right bottom;
@@ -161,18 +161,18 @@
 	  clip-path: none !important;
 	}
 
-}
+/*}
 
-@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
-	.tabcolorbox,
-	.tabhovcolorbox,
-	.tabpencolorbox,
-	.tabunrcolorbox,
-	#ctraddon_ccap_t_curved{
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {*/
+	#ClassicTRoptionsPane .tabcolorbox,
+	#ClassicTRoptionsPane .tabhovcolorbox,
+	#ClassicTRoptionsPane .tabpencolorbox,
+	#ClassicTRoptionsPane .tabunrcolorbox,
+	#ClassicTRoptionsPane #ctraddon_ccap_t_curved{
 	  visibility: visible !important;
 	}
 	
-	#ctraddon_ccap_t_default{
+	#ClassicTRoptionsPane #ctraddon_ccap_t_default{
 	  visibility: collapse !important;
 	}
-}
+/*}*/

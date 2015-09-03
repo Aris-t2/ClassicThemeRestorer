@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
 	#main-window:not([customizing]):not([tabsontop="false"]) #nav-bar{
 	  min-height:2px !important;
 	  height:2px !important;
@@ -29,4 +29,4 @@
 	  height:0px !important;
 	  max-height:0px !important;
 	}
-}
+/*}*/

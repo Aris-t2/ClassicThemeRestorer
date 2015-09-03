@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
 			   
 	/* spaces, flexible spaces, separators on toolbars in customizing mode */
 	/* on palette */
@@ -69,4 +69,4 @@
       padding-top: 38px !important;
 	}
 
-}
+/*}*/

@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
 
 	toolbar #ctraddon_appbutton,
 	#main-window:not([tabsintitlebar]) #ctraddon_appbutton2,
@@ -268,4 +268,4 @@
 	  background: #e3e4e6 !important;
 	}
 
-}
+/*}*/

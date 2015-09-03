@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul){
+/*@-moz-document url(chrome://browser/content/browser.xul){*/
 
 	#main-window[defaultfxtheme="true"][tabsontop="false"][sizemode="normal"] #TabsToolbar:not(:-moz-lwtheme) {
 	  border-left: 1px solid hsla(209,67%,12%,0.35) !important;
@@ -69,4 +69,4 @@
 	  margin-top: 8px !important;
 	}
 
-}
+/*}*/

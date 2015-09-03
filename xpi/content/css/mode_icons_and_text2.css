@@ -1,7 +1,7 @@
 @import url(chrome://classic_theme_restorer/content/css/mode_icons_and_text.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul) {
+/*@-moz-document url(chrome://browser/content/browser.xul) {*/
 
 	toolbox :-moz-any(#toolbar-menubar, #nav-bar, #PersonalToolbar, toolbar[id^=ctraddon_extra-bar], #vertical-toolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
 	  min-width: 0px !important;
@@ -9,4 +9,4 @@
 	toolbox #ctraddon_addon-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([type="menu-button"]) {
 	  min-width: 57px !important;
 	}
-}
+/*}*/
