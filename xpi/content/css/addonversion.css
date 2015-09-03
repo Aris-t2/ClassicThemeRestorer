@@ -3,7 +3,7 @@
 		Nightly builds (Fx41+) for no valid reason!
 	*/
 	
-	.addon:not([type="userstyle"])[status="installed"]	{
+	.addon:not([type="userstyle"]):not([pending="uninstall"])[status="installed"]	{
 	  -moz-binding: url("chrome://classic_theme_restorer/content/addonversion.xml#addon-generic") !important;
 	}
 
