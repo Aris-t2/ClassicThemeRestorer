@@ -1,7 +1,7 @@
 @import url(appbutton2.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul) {*/
+@-moz-document url(chrome://browser/content/browser.xul) {
 
 	#ctraddon_appbutton2{
 	  width: 95px !important;
@@ -132,4 +132,4 @@
 	 -moz-margin-start: 97px !important;
 	}
 
-/*}*/
+}

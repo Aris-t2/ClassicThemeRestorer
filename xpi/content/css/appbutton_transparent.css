@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul) {*/
+@-moz-document url(chrome://browser/content/browser.xul) {
 
 	#ctraddon_appbutton2:not(:hover):not(:active):not([open]){
 	  background-image: linear-gradient(rgba(255,255,255,.0), rgba(255,255,255,.0)) !important;
@@ -56,4 +56,4 @@
 	  background-image: linear-gradient(rgba(144,20,207,.4), rgba(95,0,158,.4) 95%) !important;
 	}
 
-/*}*/
+}

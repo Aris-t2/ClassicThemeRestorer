@@ -1,6 +1,7 @@
+/*AGENT_SHEET*/
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul) {*/
+@-moz-document url(chrome://browser/content/browser.xul) {
 	#nav-bar :-moz-any(#back-button, #forward-button)[cui-areatype="toolbar"] {
 	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
@@ -113,4 +114,4 @@
 	  height:36px !important;
 	}
 
-/*}*/
+}

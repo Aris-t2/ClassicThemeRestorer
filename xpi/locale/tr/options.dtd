@@ -111,7 +111,7 @@
 <!ENTITY Ctr_hide_bf_popup	"Geçmiş menüsü butonunu gizlemek için Fare tuşuna basın">
 <!ENTITY Ctr_bf_space		"Düğmeleri arası boşluğu azaltın (mümkünse)">
 <!ENTITY Ctr_noconicons		"Etiketlerle sayfa içerik menüsü simgelerini değiştirin (geri, ileri, dur, yenile, yerimleri sayfaıs)">
-<!ENTITY Ctr_altoptionsp	"Options page: alternative appearance">
+<!ENTITY Ctr_altoptionsp	"Options page (about:preferences): alternative appearance">
 <!ENTITY Ctr_svgfilters		"Araç çubuğu düğmeleri için SVG renkleri kullan">
 <!ENTITY Ctr_wincontrols	"Hareketli tam ekran penceresi kontrolleri">
 <!ENTITY Ctr_emptyfavicon2	"Genel(boş noktalı) faviconu kağıt görünümlü favicon ile değiştir">
@@ -138,13 +138,13 @@
 <!ENTITY Ctr_iat_notf_vt	"Değil dikey araç çubukları için değil">
 <!ENTITY Ctr_cpanelmenus	"Panel menu: tümleşik görünüm (yerimleri, geçmiş vb.)">
 <!ENTITY Ctr_hidezoomres	"Araç çubuğunda zoom kontrolü: zoom-reset butonu gizle">
-<!ENTITY Ctr_alt_newtabp	"Yeni sekme sayfası: alternatif görünüm">
+<!ENTITY Ctr_alt_newtabp	"Yeni sekme sayfası (about:newtab): alternatif görünüm">
 <!ENTITY Ctr_addonmanager	"Add-on manager">
 <!ENTITY Ctr_alt_addonsp	"Eklentiler için 'daha fazla bilgi' sayfası: alternatif görünüm">
-<!ENTITY Ctr_alt_addonsm	"Add-on manager: alternative appearance">
-<!ENTITY Ctr_am_nowarning	"Add-on managers add-on lists: hide warnings">
-<!ENTITY Ctr_addonversion	"Add-on managers add-on lists: show add-on version">
-<!ENTITY Ctr_xpinstallui	"Add-on manager: old add-on install window (about:config preference)">
+<!ENTITY Ctr_alt_addonsm	"Alternative appearance">
+<!ENTITY Ctr_am_nowarning	"Add-on lists: hide warnings">
+<!ENTITY Ctr_addonversion	"Add-on lists: show add-on version">
+<!ENTITY Ctr_xpinstallui	"Old add-on install window (about:config preference)">
 <!ENTITY Ctr_bmbutpanelm	"Yer imleri menü düğmesi: panel menu görünümü">
 <!ENTITY Ctr_bmbutnotext	"Yer imleri menü düğmesi: bar üzerinde etiketi gizle">
 <!ENTITY Ctr_skipprintpr	"Yazdır Butonu: baskı önizlemeyi atla">
@@ -277,12 +277,13 @@
 <!ENTITY Ctr_nodevtheme		"Prevent 'Developer Theme' from being enabled">
 
 <!ENTITY Ctr_experttweaks	"Gelişmiş">
-<!ENTITY Ctr_fx34search		"&brandShortName; 34+ introduced a 'new search ui'. Unchecking this preference returns the 'old search ui'.">
-<!ENTITY Ctr_fx34loop		"&brandShortName; 34+ introduced 'calling and conversation' features. Unchecking this preference removes them.">
-<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ introduced a new 'developer theme'. Unchecking this preference disables the 'developer theme'.">
-<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ introduced 'preferences in tab'. Unchecking this preference restores the old preference window.">
-<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ introduced a new 'reader mode'. Unchecking this preference disables it and removes its icon from location bar.">
-<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ introduced the 'Pocket' feature. Unchecking this preference disables it and removes its button from the toolbars.">
+<!ENTITY Ctr_fx34search		"Unchecking this preference removes the 'new search appearance' and returns the old one.">
+<!ENTITY Ctr_fx34loop		"Unchecking this preference removes 'calling and conversation' features.">
+<!ENTITY Ctr_fx35devtheme	"Unchecking this preference disables the 'developer theme'.">
+<!ENTITY Ctr_fx36prefs		"Unchecking this preference restores the old preference window.">
+<!ENTITY Ctr_fx36prefs2		"Note: Old preference window does not contain all recently added browser preferences!">
+<!ENTITY Ctr_fx38reader		"Unchecking this preference disables the 'reader mode' and removes its icon from location bar.">
+<!ENTITY Ctr_fx38pocket		"Unchecking this preference disables the 'Pocket' feature and removes 'Pocket' button from toolbars.">
 <!ENTITY Ctr_fx38pocket2	"Note: Moving 'Pocket'-button to 'customizing palette' before disabling this preference also removes 'Pocket' entries from bookmarks and reader menus.">
 <!ENTITY Ctr_e_searchui		"Arama görünümü">
 <!ENTITY Ctr_e_loop			"Arama ve konuşma">
@@ -291,7 +292,7 @@
 <!ENTITY Ctr_e_readermode	"Okuyucu Modu">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Audio playing icon on tabs">
-<!ENTITY Ctr_fx42tabsaudico	"&brandShortName; 42+: Unchecking this preference removes 'audio playing icon' from tabs.">
+<!ENTITY Ctr_fx42tabsaudico	"Unchecking this preference removes 'audio playing icon' from tabs.">
 
 
 <!ENTITY Ctr_pw_settings	"Ayarlar">

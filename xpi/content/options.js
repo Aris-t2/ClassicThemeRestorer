@@ -747,6 +747,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_appbutonclab').disabled = false;
 	  document.getElementById('ctraddon_pw_appbuttontxt').disabled = false;
 	  document.getElementById('ctraddon_appbclmmenus').disabled = false;
+	  document.getElementById('ctraddon_pw_appbautocol').disabled = false;
 
 	  if (tabsintitlebar==false && fromprefwindow==true) {
 		Services.prefs.getBranch("browser.tabs.").setBoolPref("drawInTitlebar", true);

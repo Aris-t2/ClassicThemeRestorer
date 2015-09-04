@@ -79,7 +79,7 @@
 <!ENTITY Ctr_appbutton2		"Auf der &brandShortName; Titelleiste">
 <!ENTITY Ctr_appbutton2h	"Auf der &brandShortName; Titelleiste (versteckt)">
 <!ENTITY Ctr_appbutton2io	"Auf der &brandShortName; Titelleiste (nur Symbol)">
-<!ENTITY Ctr_paneluibtweak	"Orange Menüschaltfläche auf der Tableiste">
+<!ENTITY Ctr_paneluibtweak	"Visualisiere Menüschaltfläche als &brandShortName;-Schaltfläche auf der Tableiste">
 <!ENTITY Ctr_appbuttonc_o	"Farbe: orange (Standard)">
 <!ENTITY Ctr_appbuttonc_a	"Farbe: blau (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Farbe: schwarz (Nightly)">
@@ -95,7 +95,7 @@
 <!ENTITY Ctr_appbuttonI1e	"Die &brandShortName;-Schaltfläche ist auf der Windows Titelleiste nicht sichtbar!">
 <!ENTITY Ctr_appbuttonI2	"Die Farbe ist nur auf der Titelleiste und der Tableiste sichtbar!">
 <!ENTITY Ctr_appbutmhi		"Höhere Position (falls auf der Tableiste)">
-<!ENTITY Ctr_appbautocol	"Setze Standard / Aurora / Nightly Farben automatisch">
+<!ENTITY Ctr_appbautocol	"Setze Browserkanalfarben automatisch (standard/Aurora/Nightly)">
 <!ENTITY Ctr_appbutbdl		"Entferne Ränder und Hintergrundfarbe">
 <!ENTITY Ctr_dblclclosefx	"Doppelklick schließt aktuelles Fenster">
 <!ENTITY Ctr_appbclmmenus	"Klickbare Menüs im '&brandShortName;-Menü' (Neuer Tab, Drucken...)">
@@ -111,7 +111,7 @@
 <!ENTITY Ctr_hide_bf_popup	"Verstecke Chronik-Aufklappmenü bei gedrückter Maustaste">
 <!ENTITY Ctr_bf_space		"Reduziere Zwischenraum (falls möglich)">
 <!ENTITY Ctr_noconicons		"Seitenkontextmenü: ersetze Symbole durch Namen (Zurück, Vor...)">
-<!ENTITY Ctr_altoptionsp	"Einstellungsseite: alternative Darstellung">
+<!ENTITY Ctr_altoptionsp	"Einstellungsseite (about:preferences): alternative Darstellung">
 <!ENTITY Ctr_svgfilters		"SVG Farben für Symbole von 'Standard-Schaltflächen'">
 <!ENTITY Ctr_wincontrols	"Verschiebbare Fenster-Schaltflächen im Vollbild-Modus">
 <!ENTITY Ctr_emptyfavicon2	"Leeres Lesezeichensymbol durch Papierblattsymbol ersetzen">
@@ -138,13 +138,13 @@
 <!ENTITY Ctr_iat_notf_vt	"Vertikale Leisten ausschließen">
 <!ENTITY Ctr_cpanelmenus	"Kompakte 'Panel-Aufklappmenüs' (Lesezeichen, Chronik etc.)">
 <!ENTITY Ctr_hidezoomres	"Zoom-Schaltflächen auf Leisten: verstecke Schaltfläche 'Normalgröße'">
-<!ENTITY Ctr_alt_newtabp	"Seite 'Neuer Tab': alternative Darstellung">
+<!ENTITY Ctr_alt_newtabp	"Seite 'Neuer Tab' (about:newtab): alternative Darstellung">
 <!ENTITY Ctr_addonmanager	"Add-on Manager">
-<!ENTITY Ctr_alt_addonsp	"Add-on-Seite 'Mehr Info': alternative Anordnung">
-<!ENTITY Ctr_alt_addonsm	"Add-on Manager: alternative Darstellung">
+<!ENTITY Ctr_alt_addonsp	"'Mehr Info'-Seite: alternative Anordnung">
+<!ENTITY Ctr_alt_addonsm	"Alternative Darstellung">
 <!ENTITY Ctr_am_nowarning	"Add-on 'Übersicht': Warnungen ausblenden">
 <!ENTITY Ctr_addonversion	"Add-on 'Übersicht': Versionsnummer von Add-ons anzeigen">
-<!ENTITY Ctr_xpinstallui	"Add-on Manager: altes Add-on Installationsfenster (about:config Einstellung)">
+<!ENTITY Ctr_xpinstallui	"Altes Add-on Installationsfenster (about:config Einstellung)">
 <!ENTITY Ctr_bmbutpanelm	"Lesezeichen-Menüschaltfläche: 'Panel-Aufklappmenü'-Darstellung">
 <!ENTITY Ctr_bmbutnotext	"Lesezeichen-Menüschaltfläche: Text auf der Lesezeichenleiste verstecken">
 <!ENTITY Ctr_skipprintpr	"Drucken-Schaltfläche: Druckvorschau überspringen">
@@ -223,7 +223,7 @@
 <!ENTITY Ctr_mbarforceright	"Letztes Element">
 
 <!ENTITY Ctr_toolbars		"Leisten">
-<!ENTITY Ctr_dblclnewtab	"Doppelklick öffnet einen neuen Tab (und beachtet 'browser.newtab.url')">
+<!ENTITY Ctr_dblclnewtab	"Doppelklick öffnet einen neuen Tab">
 <!ENTITY Ctr_hidetbwot		"Verstecke Tableiste mit nur einem sichtbaren Tab">
 <!ENTITY Ctr_hidetbwote		"Verzögerung beim Start reduzieren">
 <!ENTITY Ctr_hidetbwote_i	"Hintergrundfarbe der Tableiste könnte fehlerhaft sein">
@@ -235,18 +235,18 @@
 <!ENTITY Ctr_alttabstb2		"Im maximierten Fenster (Tabs oben)">
 
 <!ENTITY Ctr_altmenubar		"Hintergrundfarbe hinzufügen ('System Titelleiste')">
-<!ENTITY Ctr_altmenubarpos	"Alternative Position (unter der &brandShortName; Titelleiste)">
+<!ENTITY Ctr_altmenubarpos	"alternative Position (unter der &brandShortName; Titelleiste)">
 <!ENTITY Ctr_menubarnofog	"Hintergrundfarbe/-nebel entfernen (Windows AeroGlass / Win8)">
 
 <!ENTITY Ctr_aerocolors		"Blaue 'Aero' Farben für Leisten (und Tabs)">
-<!ENTITY Ctr_transpttbw10	"Titel/Menu/Tabs Leiste: Hintergrundfarbe entfernen (Windows 10)">
-<!ENTITY Ctr_hidenavbar		"Navigationsleiste verstecken">
-<!ENTITY Ctr_nobookbarbg	"Lesezeichenleiste: Hintergrundfarbe entfernen">
-<!ENTITY Ctr_bookbarfs		"Lesezeichenleiste: im 'Vollbild'-Modus">
-<!ENTITY Ctr_nonavbarbg		"Navigationsleiste: Hintergrundfarbe entfernen">
+<!ENTITY Ctr_transpttbw10	"Titel/Menu/Tabs Leiste: Hintergrundfarbe entfernen">
+<!ENTITY Ctr_hidenavbar		"Leiste verstecken">
+<!ENTITY Ctr_nobookbarbg	"Hintergrundfarbe entfernen">
+<!ENTITY Ctr_bookbarfs		"Im 'Vollbild'-Modus">
+<!ENTITY Ctr_nonavbarbg		"Hintergrundfarbe entfernen">
 <!ENTITY Ctr_nonavbarbg1	"Einstellung hat Auswirkung auf alle Extraleisten und 'andere' obere Leisten.">
 <!ENTITY Ctr_nonavbarbg2	"Einstellung hat Auswirkung auf alle Leisten in der 'Slim'-Darstellung der Erweiterung 'The Fox, only better'.">
-<!ENTITY Ctr_nonavborder	"Lesezeichenleiste: Oberen Leistenrand anzeigen">
+<!ENTITY Ctr_nonavborder	"Oberen Leistenrand hinzufügen/anzeigen">
 <!ENTITY Ctr_nonavtbborder	"Obere Leisten: Leistenränder nicht anzeigen">
 <!ENTITY Ctr_hidesbclose	"Seitenleisten: Verstecke 'Schließen'-Schaltfläche">
 <!ENTITY Ctr_notextshadow	"Leisten: Schatten für Leistentext (und Tabtext) nicht anzeigen">
@@ -277,12 +277,13 @@
 <!ENTITY Ctr_nodevtheme		"Aktivierung des 'Entwickler-Themas' unterbinden">
 
 <!ENTITY Ctr_experttweaks	"Erweitert">
-<!ENTITY Ctr_fx34search		"&brandShortName; 34+: Das Deaktivieren dieser Option ersetzt die neue 'Suchoberfläche' durch die alte.">
-<!ENTITY Ctr_fx34loop		"&brandShortName; 34+: Das Deaktivieren dieser Option entfernt die 'Anruf- und Konversations-Funktionen'.">
-<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+: Das Deaktivieren dieser Option deaktiviert das 'Entwickler-Thema'.">
-<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+: Das Deaktivieren dieser Option stellt das 'alte' Einstellungsfenster wieder her.">
-<!ENTITY Ctr_fx38reader		"&brandShortName; 38+: Das Deaktivieren dieser Option deaktiviert den 'Lese-Modus' und entfernt die zugehörige Schaltfläche von der Adressleiste.">
-<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+: Das Deaktivieren dieser Option entfernt die 'Pocket'-Funktion und deren Leisten-Schaltfläche.">
+<!ENTITY Ctr_fx34search		"Das Deaktivieren dieser Option ersetzt die neue 'Suchoberfläche' durch die alte.">
+<!ENTITY Ctr_fx34loop		"Das Deaktivieren dieser Option entfernt die 'Anruf- und Konversations-Funktionen'.">
+<!ENTITY Ctr_fx35devtheme	"Das Deaktivieren dieser Option deaktiviert das 'Entwickler-Thema'.">
+<!ENTITY Ctr_fx36prefs		"Das Deaktivieren dieser Option stellt das 'alte' Einstellungsfenster wieder her.">
+<!ENTITY Ctr_fx36prefs2		"Info: Einige neue Einstellungen werden auf dem alten Einstellungsfenster nicht angezeigt!">
+<!ENTITY Ctr_fx38reader		"Das Deaktivieren dieser Option deaktiviert den 'Lese-Modus' und entfernt die zugehörige Schaltfläche von der Adressleiste.">
+<!ENTITY Ctr_fx38pocket		"Das Deaktivieren dieser Option entfernt die 'Pocket'-Funktion und deren Leisten-Schaltfläche.">
 <!ENTITY Ctr_fx38pocket2	"Info: Das Verschieben der 'Pocket'-Schaltfläche zu den nicht verwendeten Schaltflächen im 'Anpassen Modus' vor der Deaktivierung dieser Option, entfernt zusätzlich die 'Pocket'-Einträge aus den Lesezeichen- und 'Lese'-Bereichen.">
 <!ENTITY Ctr_e_searchui		"Suchoberfläche">
 <!ENTITY Ctr_e_loop			"Anruf- und Konversations-Funktionen">
@@ -291,7 +292,7 @@
 <!ENTITY Ctr_e_readermode	"Lese-Modus">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Audio-Abspiel-Symbol auf Tabs">
-<!ENTITY Ctr_fx42tabsaudico	"&brandShortName; 42+: Das Deaktivieren dieser Option entfernt das 'Audio-Abspiel-Symbol' von den Tabs.">
+<!ENTITY Ctr_fx42tabsaudico	"Das Deaktivieren dieser Option entfernt das 'Audio-Abspiel-Symbol' von den Tabs.">
 
 
 <!ENTITY Ctr_pw_settings	"Einstellungen">

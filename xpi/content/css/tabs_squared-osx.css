@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul){*/
+@-moz-document url(chrome://browser/content/browser.xul){
 
 	.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
 	  -moz-padding-end: 22px !important;
@@ -377,23 +377,23 @@
 	  -moz-margin-start:2px !important;
 	  -moz-margin-end:1px !important;
 	}
-/*}
+}
 
-@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {*/
-	#ClassicTRoptionsPane .tabcolorbox,
-	#ClassicTRoptionsPane .tabhovcolorbox,
-	#ClassicTRoptionsPane .tabpencolorbox,
-	#ClassicTRoptionsPane .tabunrcolorbox,
-	#ClassicTRoptionsPane .ntabcolorbox,
-	#ClassicTRoptionsPane .ntabhovcolorbox,
-	#ClassicTRoptionsPane #ntabcolorbox,
-	#ClassicTRoptionsPane #ntabhovcolorbox,
-	#ClassicTRoptionsPane #ctraddon_ccap_t_squared,
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+	.tabcolorbox,
+	.tabhovcolorbox,
+	.tabpencolorbox,
+	.tabunrcolorbox,
+	.ntabcolorbox,
+	.ntabhovcolorbox,
+	#ntabcolorbox,
+	#ntabhovcolorbox,
+	#ctraddon_ccap_t_squared,
 	#ClassicTRoptionsPane[defaultfxtheme="true"] #ctraddon_pw_colors_ntab_t{
 	  visibility: visible !important;
 	}
 	
-	#ClassicTRoptionsPane #ctraddon_ccap_t_default{
+	#ctraddon_ccap_t_default{
 	  visibility: collapse !important;
 	}
-/*}*/
+}

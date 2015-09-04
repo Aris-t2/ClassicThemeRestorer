@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul) {*/
+@-moz-document url(chrome://browser/content/browser.xul) {
 
 	#main-window #navigator-toolbox #nav-bar * #ctraddon_back-button {
 	  -moz-margin-end:-1px !important;
@@ -19,4 +19,4 @@
 	  -moz-padding-start:2px !important;
 	}
 
-/*}*/
+}

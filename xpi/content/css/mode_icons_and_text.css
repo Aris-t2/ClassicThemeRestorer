@@ -2,7 +2,7 @@
 @import url(chrome://ctraddon_os_special/skin/mode_icons_and_text_extra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul) {*/
+@-moz-document url(chrome://browser/content/browser.xul) {
 
 	#nav-bar .toolbarbutton-1 .toolbarbutton-text,
 	#nav-bar .toolbarbutton-menubutton-dropmarker > image,
@@ -159,4 +159,4 @@
 	  box-shadow:none !important;
 	}
 
-/*}*/
+}

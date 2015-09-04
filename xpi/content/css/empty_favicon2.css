@@ -1,11 +1,11 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul),
+@-moz-document url(chrome://browser/content/browser.xul),
 	       url(chrome://browser/content/places/places.xul),
 	       url(chrome://browser/content/history/history-panel.xul),
 	       url(chrome://browser/content/bookmarks/bookmarksPanel.xul),
 	       url(chrome://browser/content/preferences/aboutPermissions.xul),
-	       url(about:permissions) {*/
+	       url(about:permissions) {
 
   #TabsToolbar .tabbrowser-tab:not([pinned]) .tab-icon-image:not([src]) {
 	display: inline !important;
@@ -143,4 +143,4 @@
 	-moz-image-region: rect(16px, 32px, 32px, 16px) !important;
   }
 
-/*}*/
+}

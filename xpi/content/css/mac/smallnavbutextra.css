@@ -1,5 +1,5 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
-/*@-moz-document url(chrome://browser/content/browser.xul) {*/
+@-moz-document url(chrome://browser/content/browser.xul) {
 
 	#nav-bar .toolbarbutton-1:not([type="menu-button"]),
 	#nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button,
@@ -264,4 +264,4 @@
 	  padding: 0 !important;
 	  -moz-margin-start: 1px !important;
 	}
-/*}*/
+}

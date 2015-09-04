@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul) {*/
+@-moz-document url(chrome://browser/content/browser.xul) {
 	.browserContainer > findbar{
 	  -moz-box-ordinal-group: 10 !important;
 	}
@@ -10,4 +10,4 @@
 	.findbar-container spacer {
 	  visibility: collapse !important;
 	}
-/*}*/
+}

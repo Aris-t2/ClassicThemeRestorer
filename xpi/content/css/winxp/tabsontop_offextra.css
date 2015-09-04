@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul){*/
+@-moz-document url(chrome://browser/content/browser.xul){
 
 	#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{
 	  margin-top: 4px !important;
@@ -54,4 +54,4 @@
 	#main-window[currenttheme^="LavaFox"][tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #navigator-toolbox #toolbar-menubar[autohide="true"][inactive="true"]{
 	  margin-top: 8px !important;
 	}
-/*}*/
+}

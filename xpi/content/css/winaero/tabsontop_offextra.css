@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul){*/
+@-moz-document url(chrome://browser/content/browser.xul){
 
 	@media not all and (-moz-windows-glass) {
 		#main-window:not([tabsintitlebar])[tabsontop="false"][sizemode="maximized"] #TabsToolbar .tabbrowser-tabs,
@@ -106,4 +106,4 @@
 	  margin-top: 8px !important;
 	}
 
-/*}*/
+}

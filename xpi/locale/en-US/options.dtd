@@ -10,7 +10,7 @@
 <!ENTITY Ctr_flexspace		"Flexible space">
 <!ENTITY Ctr_space			"Space">
 <!ENTITY Ctr_separator		"Separator">
-<!ENTITY Ctr_puibseparator	"Separator (for panel menu)">
+<!ENTITY Ctr_puibseparator	"Separator (for main panel menu button)">
 <!ENTITY Ctr_navthrobber	"Activity Indicator">
 <!ENTITY Ctr_sidebarbutton	"(Sidebar)">
 <!ENTITY Ctr_windowcontrols	"Min/max/close (Fullscreen)">
@@ -79,7 +79,7 @@
 <!ENTITY Ctr_appbutton2		"Button on [&brandShortName;] titlebar">
 <!ENTITY Ctr_appbutton2h	"Button on [&brandShortName;] titlebar (hidden)">
 <!ENTITY Ctr_appbutton2io	"Button on [&brandShortName;] titlebar (icon only)">
-<!ENTITY Ctr_paneluibtweak	"Orange panel menu button on tabs toolbar">
+<!ENTITY Ctr_paneluibtweak	"Display main panel menu button as appbutton when on tabs toolbar">
 <!ENTITY Ctr_appbuttonc_o	"Orange button color (default)">
 <!ENTITY Ctr_appbuttonc_a	"Blue button color (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Black button color (Nightly)">
@@ -95,7 +95,7 @@
 <!ENTITY Ctr_appbuttonI1e	"Not visible on Windows OS titlebar, only on &brandShortName; titlebar!">
 <!ENTITY Ctr_appbuttonI2	"Button colors are only visible on titlebar and tabs toolbar!">
 <!ENTITY Ctr_appbutmhi		"Higher position (if on tabs toolbar)">
-<!ENTITY Ctr_appbautocol	"Set default / Aurora / Nightly color automatically">
+<!ENTITY Ctr_appbautocol	"Automatically set browser channel color (default/Aurora/Nightly)">
 <!ENTITY Ctr_appbutbdl		"Hide borders and background colors">
 <!ENTITY Ctr_dblclclosefx	"Double click closes current window">
 <!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
@@ -111,7 +111,7 @@
 <!ENTITY Ctr_hide_bf_popup	"Hide buttons history popup menu on mouse press">
 <!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"Page context menu: replace icons with labels (back, forward...)">
-<!ENTITY Ctr_altoptionsp	"Options page: alternative appearance">
+<!ENTITY Ctr_altoptionsp	"Options page (about:preferences): alternative appearance">
 <!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
 <!ENTITY Ctr_wincontrols	"Movable fullscreen window controls">
 <!ENTITY Ctr_emptyfavicon2	"Replace generic (empty and dotted) favicon with sheet favicon">
@@ -122,7 +122,7 @@
 <!ENTITY Ctr_mstatusbarabr	"Status-bar panel is controlled by 'The Addon Bar (Restored)'">
 <!ENTITY Ctr_combrelstop	"Stop &amp; reload: combine buttons on toolbar">
 <!ENTITY Ctr_stoprel1		"Important: position reload button after stop button!">
-<!ENTITY Ctr_panelmenucol	"Panel menus: alternative background color">
+<!ENTITY Ctr_panelmenucol	"Panel menu popups: alternative background color">
 <!ENTITY Ctr_hideprivmask	"Private browsing: hide mask indicator">
 <!ENTITY Ctr_nbisizedelay	"ms delay in execution (1000 ms = 1 sec)">
 <!ENTITY Ctr_findbar		"Findbar position">
@@ -136,23 +136,23 @@
 <!ENTITY Ctr_nav_txt_ico3	"Show text only">
 <!ENTITY Ctr_nav_txt_exp	"Experimental attributes:">
 <!ENTITY Ctr_iat_notf_vt	"Exclude vertical toolbars">
-<!ENTITY Ctr_cpanelmenus	"Panel menus: compact view (bookmarks, history etc.)">
+<!ENTITY Ctr_cpanelmenus	"Panel menu popups (bookmarks, history etc.): compact view">
 <!ENTITY Ctr_hidezoomres	"Zoom controls on toolbar: hide zoom-reset button">
-<!ENTITY Ctr_alt_newtabp	"New tab page: alternative appearance">
+<!ENTITY Ctr_alt_newtabp	"New tab page (about:newtab): alternative appearance">
 <!ENTITY Ctr_addonmanager	"Add-on manager">
-<!ENTITY Ctr_alt_addonsp	"Add-ons 'more info' page: alternative order">
-<!ENTITY Ctr_alt_addonsm	"Add-on manager: alternative appearance">
-<!ENTITY Ctr_am_nowarning	"Add-on managers add-on lists: hide warnings">
-<!ENTITY Ctr_addonversion	"Add-on managers add-on lists: show add-on version">
-<!ENTITY Ctr_xpinstallui	"Add-on manager: old add-on install window (about:config preference)">
-<!ENTITY Ctr_bmbutpanelm	"Bookmarks menu button: panel menu appearance">
+<!ENTITY Ctr_alt_addonsp	"'More info' page: alternative order">
+<!ENTITY Ctr_alt_addonsm	"Alternative appearance">
+<!ENTITY Ctr_am_nowarning	"Add-on lists: hide warnings">
+<!ENTITY Ctr_addonversion	"Add-on lists: show add-on version">
+<!ENTITY Ctr_xpinstallui	"Old add-on install window (about:config preference)">
+<!ENTITY Ctr_bmbutpanelm	"Bookmarks menu button: panel menu popup appearance">
 <!ENTITY Ctr_bmbutnotext	"Bookmarks menu button: hide label on bookmarks bar">
 <!ENTITY Ctr_skipprintpr	"Print button: skip print preview">
 <!ENTITY Ctr_tbconmenu		"Toolbar context menu: hide 'move to menu', 'remove from toolbar', 'reload/bookmark all tabs' and 'undo close tab'">
 <!ENTITY Ctr_noresizerxp	"Hide Resizer (Windows XP)">
 <!ENTITY Ctr_extraurlkeycb	"Open additional location bar (Cmd/Ctrl+">
-<!ENTITY Ctr_pmhidelabels	"Panel menu popup: hide button labels">
-<!ENTITY Ctr_menupopupscr	"Menupopups: show scrollbars instead of scroll arrows">
+<!ENTITY Ctr_pmhidelabels	"Main panel menu popup: hide button labels">
+<!ENTITY Ctr_menupopupscr	"Menu popups: show scrollbars instead of scroll arrows">
 <!ENTITY Ctr_closegeneral	"General close icons">
 
 <!ENTITY Ctr_tabsep_def		"Default tab separators">
@@ -223,7 +223,7 @@
 <!ENTITY Ctr_mbarforceright	"Last element">
 
 <!ENTITY Ctr_toolbars		"Toolbars">
-<!ENTITY Ctr_dblclnewtab	"Double click opens a 'new' tab (using browser.newtab.url)">
+<!ENTITY Ctr_dblclnewtab	"Double click opens a 'new' tab">
 <!ENTITY Ctr_hidetbwot		"Hide tabs toolbar with only one visible tab">
 <!ENTITY Ctr_hidetbwote		"Reduce hiding delay on startup">
 <!ENTITY Ctr_hidetbwote_i	"Could cause glitches on tabs toolbar">
@@ -235,18 +235,18 @@
 <!ENTITY Ctr_alttabstb2		"In maximized mode (tabs on top)">
 
 <!ENTITY Ctr_altmenubar		"Add background color (OS titlebar)">
-<!ENTITY Ctr_altmenubarpos	"Alternative position (below &brandShortName; titlebar)">
+<!ENTITY Ctr_altmenubarpos	"alternative position (below &brandShortName; titlebar)">
 <!ENTITY Ctr_menubarnofog	"Remove background color/fog (Windows AeroGlass/8)">
 
 <!ENTITY Ctr_aerocolors		"Blue Aero colors for toolbars (and tabs)">
-<!ENTITY Ctr_transpttbw10	"Title/menu/tabs toolbar: remove background color (Windows 10)">
-<!ENTITY Ctr_hidenavbar		"Navigation toolbar: hide toolbar">
-<!ENTITY Ctr_nobookbarbg	"Bookmarks toolbar: remove background color">
-<!ENTITY Ctr_bookbarfs		"Bookmarks toolbar: in fullscreen mode">
-<!ENTITY Ctr_nonavbarbg		"Navigation toolbar: remove background color">
+<!ENTITY Ctr_transpttbw10	"Title/menu/tabs toolbar: remove background color">
+<!ENTITY Ctr_hidenavbar		"Hide toolbar">
+<!ENTITY Ctr_nobookbarbg	"Remove background color">
+<!ENTITY Ctr_bookbarfs		"In fullscreen mode">
+<!ENTITY Ctr_nonavbarbg		"Remove background color">
 <!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
 <!ENTITY Ctr_nonavbarbg2	"All toolbars in 'The Fox, Only Better' add-on's Slim Chrome are affected.">
-<!ENTITY Ctr_nonavborder	"Bookmarks toolbar: add top border to toolbar">
+<!ENTITY Ctr_nonavborder	"Add top border to toolbar">
 <!ENTITY Ctr_nonavtbborder	"Top toolbars: remove toolbar borders">
 <!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
 <!ENTITY Ctr_notextshadow	"Toolbars: hide shadow for toolbar text and tab text">
@@ -277,12 +277,13 @@
 <!ENTITY Ctr_nodevtheme		"Prevent 'Developer Edition Theme' from being enabled">
 
 <!ENTITY Ctr_experttweaks	"Advanced">
-<!ENTITY Ctr_fx34search		"&brandShortName; 34+: Unchecking this preference removes the 'new search appearance' and returns the old one.">
-<!ENTITY Ctr_fx34loop		"&brandShortName; 34+: Unchecking this preference removes 'calling and conversation' features.">
-<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+: Unchecking this preference disables the 'developer theme'.">
-<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+: Unchecking this preference restores the old preference window.">
-<!ENTITY Ctr_fx38reader		"&brandShortName; 38+: Unchecking this preference disables the 'reader mode' and removes its icon from location bar.">
-<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+: Unchecking this preference disables the 'Pocket' feature and removes its button from the toolbars.">
+<!ENTITY Ctr_fx34search		"Unchecking this preference removes the 'new search appearance' and returns the old one.">
+<!ENTITY Ctr_fx34loop		"Unchecking this preference removes 'calling and conversation' features.">
+<!ENTITY Ctr_fx35devtheme	"Unchecking this preference disables the 'developer theme'.">
+<!ENTITY Ctr_fx36prefs		"Unchecking this preference restores the old preference window.">
+<!ENTITY Ctr_fx36prefs2		"Note: Old preference window does not contain all recently added browser preferences!">
+<!ENTITY Ctr_fx38reader		"Unchecking this preference disables the 'reader mode' and removes its icon from location bar.">
+<!ENTITY Ctr_fx38pocket		"Unchecking this preference disables the 'Pocket' feature and removes 'Pocket' button from toolbars.">
 <!ENTITY Ctr_fx38pocket2	"Note: Moving 'Pocket'-button to 'customizing palette' before disabling this preference also removes 'Pocket' entries from bookmarks and reader menus.">
 <!ENTITY Ctr_e_searchui		"Search appearance">
 <!ENTITY Ctr_e_loop			"Calling and conversation / Loop">
@@ -291,7 +292,7 @@
 <!ENTITY Ctr_e_readermode	"Reader mode">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Audio playing icon on tabs">
-<!ENTITY Ctr_fx42tabsaudico	"&brandShortName; 42+: Unchecking this preference removes 'audio playing icon' from tabs.">
+<!ENTITY Ctr_fx42tabsaudico	"Unchecking this preference removes 'audio playing icon' from tabs.">
 
 
 <!ENTITY Ctr_pw_settings	"Settings">

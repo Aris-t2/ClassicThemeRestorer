@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul){*/
+@-moz-document url(chrome://browser/content/browser.xul){
 
 	#titlebar-placeholder-on-TabsToolbar-for-captions-buttons{
 	  -moz-margin-start: 0px !important;
@@ -45,4 +45,4 @@
 	  width: 16px !important;
 	}
 
-/*}*/
+}

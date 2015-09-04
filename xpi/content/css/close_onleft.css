@@ -1,5 +1,5 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
-/*@-moz-document url(chrome://browser/content/browser.xul){*/
+@-moz-document url(chrome://browser/content/browser.xul){
 
 	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:not([pinned]) .tab-close-button {
 	  -moz-box-ordinal-group: 0 !important;
@@ -7,4 +7,4 @@
 	  -moz-margin-end:4px !important;
 	}
 
-/*}*/
+}

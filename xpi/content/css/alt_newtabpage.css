@@ -1,4 +1,4 @@
-/*@-moz-document url(about:newtab) {*/
+@-moz-document url(about:newtab) {
 
 	#newtab-intro-what,
 	#newtab-search-form,
@@ -119,7 +119,7 @@
 	  width: 18px !important;
    }
 
-/*}*/
+}
 
 /* remove overlay on top of new tab page */
 #newtab-window #newtab-customize-overlay {

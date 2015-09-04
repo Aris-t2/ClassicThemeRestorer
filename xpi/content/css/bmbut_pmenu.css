@@ -1,7 +1,7 @@
 @import url(chrome://ctraddon_os_special/skin/bmbut_pmenu_extra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul) {*/
+@-moz-document url(chrome://browser/content/browser.xul) {
 
 	#ctraddon_BMB_bookmarksPopup{
 	  -moz-appearance: none !important;
@@ -98,4 +98,4 @@
 	  border-radius: 3.5px !important;
 	}
 
-/*}*/
+}

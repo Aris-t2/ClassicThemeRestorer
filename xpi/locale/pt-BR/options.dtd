@@ -111,7 +111,7 @@
 <!ENTITY Ctr_hide_bf_popup	"Ocultar o Menu Histórico ao Pressionar o Mouse">
 <!ENTITY Ctr_bf_space		"Reduzir o Espaço Entre os Botões (Se Possível)">
 <!ENTITY Ctr_noconicons		"Substituir os Ícones do Menu de Contexto da Página por Rótulos (Voltar, Avançar, Parar, Recarregar, Página de Favoritos)">
-<!ENTITY Ctr_altoptionsp	"Options page: alternative appearance">
+<!ENTITY Ctr_altoptionsp	"Options page (about:preferences): alternative appearance">
 <!ENTITY Ctr_svgfilters		"Cores SVG para os Ícones dos Botões da Barra de Ferramentas Padrão">
 <!ENTITY Ctr_wincontrols	"Controles Móveis da Janela em Tela Cheia">
 <!ENTITY Ctr_emptyfavicon2	"Substituir o Favicon Genérico (Vazio e Pontilhado) Pelo Favicon de Folha">
@@ -138,13 +138,13 @@
 <!ENTITY Ctr_iat_notf_vt	"Excluir Barras de Ferramentas Verticais">
 <!ENTITY Ctr_cpanelmenus	"Menus do Painel Compacto (Favoritos, Histórico, etc.)">
 <!ENTITY Ctr_hidezoomres	"Controles de Ampliação na Barra de Ferramentas: Ocultar o Botão Redefinir Ampliação">
-<!ENTITY Ctr_alt_newtabp	"Página Nova Aba: Aparência Alternativa">
+<!ENTITY Ctr_alt_newtabp	"Página Nova Aba (about:newtab): Aparência Alternativa">
 <!ENTITY Ctr_addonmanager	"Add-on manager">
-<!ENTITY Ctr_alt_addonsp	"Add-ons 'more info' page: alternative appearance">
-<!ENTITY Ctr_alt_addonsm	"Add-on manager: alternative appearance">
-<!ENTITY Ctr_am_nowarning	"Add-on managers add-on lists: hide warnings">
-<!ENTITY Ctr_addonversion	"Add-on managers add-on lists: show add-on version">
-<!ENTITY Ctr_xpinstallui	"Add-on manager: old add-on install window (about:config preference)">
+<!ENTITY Ctr_alt_addonsp	"'More info' page: alternative order">
+<!ENTITY Ctr_alt_addonsm	"Alternative appearance">
+<!ENTITY Ctr_am_nowarning	"Add-on lists: hide warnings">
+<!ENTITY Ctr_addonversion	"Add-on lists: show add-on version">
+<!ENTITY Ctr_xpinstallui	"Old add-on install window (about:config preference)">
 <!ENTITY Ctr_bmbutpanelm	"Bookmarks menu button: panel menu appearance">
 <!ENTITY Ctr_bmbutnotext	"Bookmarks menu button: hide label on bookmarks bar">
 <!ENTITY Ctr_skipprintpr	"Print button: skip print preview">
@@ -281,8 +281,9 @@
 <!ENTITY Ctr_fx34loop		"O &brandShortName; 34+ Introduziu Recursos de 'Chamada e Conversação'. Desmarque esta Opção para Removê-los.">
 <!ENTITY Ctr_fx35devtheme	"O &brandShortName; 35+ Introduziu um Novo 'Tema do Desenvolvedor'. Desmarque estas Opções para Desabilitar o 'Tema do Desenvolvedor' e o seu Botão em Modo de Personalização.">
 <!ENTITY Ctr_fx36prefs		"O &brandShortName; 36+ Introduziu as Preferências em uma Nova Aba. Desmarque esta Opção para Retornar à Antiga Janela de Preferências.">
-<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ introduced a new 'reader mode'. Unchecking this preference disables it and removes its icon from location bar.">
-<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ introduced the 'Pocket' feature. Unchecking this preference disables it and removes its button from the toolbars.">
+<!ENTITY Ctr_fx36prefs2		"Note: Old preference window does not contain all recently added browser preferences!">
+<!ENTITY Ctr_fx38reader		"Unchecking this preference disables the 'reader mode' and removes its icon from location bar.">
+<!ENTITY Ctr_fx38pocket		"Unchecking this preference disables the 'Pocket' feature and removes 'Pocket' button from toolbars.">
 <!ENTITY Ctr_fx38pocket2	"Note: Moving 'Pocket'-button to 'customizing palette' before disabling this preference also removes 'Pocket' entries in bookmarks and reader menus.">
 <!ENTITY Ctr_e_searchui		"Search appearance">
 <!ENTITY Ctr_e_loop			"Calling and conversation">
@@ -291,7 +292,7 @@
 <!ENTITY Ctr_e_readermode	"Reader mode">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Audio playing icon on tabs">
-<!ENTITY Ctr_fx42tabsaudico	"&brandShortName; 42+: Unchecking this preference removes 'audio playing icon' from tabs.">
+<!ENTITY Ctr_fx42tabsaudico	"Unchecking this preference removes 'audio playing icon' from tabs.">
 
 
 <!ENTITY Ctr_pw_settings	"Configurações">

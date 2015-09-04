@@ -1,7 +1,7 @@
 @import url(chrome://ctraddon_os_special/skin/tabmokcolorextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul) {*/
+@-moz-document url(chrome://browser/content/browser.xul) {
   
 	#main-window .tabs-newtab-button,
 	#main-window #TabsToolbar > #new-tab-button,
@@ -60,4 +60,4 @@
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;	
 	}
   
-/*}*/
+}

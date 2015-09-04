@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul) {*/
+@-moz-document url(chrome://browser/content/browser.xul) {
 
 	#main-window:not([privatebrowsingmode=temporary]) #titlebar #ctraddon_appbutton2,
 	#main-window:not([privatebrowsingmode=temporary]) #navigator-toolbox #TabsToolbar #ctraddon_appbutton{
@@ -71,4 +71,4 @@
 	  background-image: linear-gradient(rgba(144,20,207,.4), rgba(95,0,158,.4) 95%) !important;
 	}
 
-/*}*/
+}

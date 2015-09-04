@@ -111,7 +111,7 @@
 <!ENTITY Ctr_hide_bf_popup	"Не показывать меню истории при нажатии мыши">
 <!ENTITY Ctr_bf_space		"Уменьшить расстояние между кнопками (если это возможно)">
 <!ENTITY Ctr_noconicons		"Контекстное меню страницы: заменить значки надписями (Назад, Вперёд, Обновить…)">
-<!ENTITY Ctr_altoptionsp	"Options page: alternative appearance">
+<!ENTITY Ctr_altoptionsp	"Options page (about:preferences): alternative appearance">
 <!ENTITY Ctr_svgfilters		"SVG цвета для стандартных значков панели инструментов">
 <!ENTITY Ctr_wincontrols	"Подвижное управление полноэкранным режимом">
 <!ENTITY Ctr_emptyfavicon2	"Установить общий значок (пустой и пунктирный)">
@@ -138,13 +138,13 @@
 <!ENTITY Ctr_iat_notf_vt	"Исключить вертикальные панели инструментов">
 <!ENTITY Ctr_cpanelmenus	"Компактная панель меню (закладки, история и т. д.)">
 <!ENTITY Ctr_hidezoomres	"Кнопки масштаба: скрыть сброс масштабирования">
-<!ENTITY Ctr_alt_newtabp	"Страница новой вкладки: альтернативный вид">
+<!ENTITY Ctr_alt_newtabp	"Страница новой вкладки (about:newtab): альтернативный вид">
 <!ENTITY Ctr_addonmanager	"Add-on manager">
 <!ENTITY Ctr_alt_addonsp	"Страница дополнений «Подробнее»: альтернативный вид">
-<!ENTITY Ctr_alt_addonsm	"Add-on manager: alternative appearance">
-<!ENTITY Ctr_am_nowarning	"Add-on managers add-on lists: hide warnings">
-<!ENTITY Ctr_addonversion	"Add-on managers add-on lists: show add-on version">
-<!ENTITY Ctr_xpinstallui	"Add-on manager: old add-on install window (about:config preference)">
+<!ENTITY Ctr_alt_addonsm	"Alternative appearance">
+<!ENTITY Ctr_am_nowarning	"Add-on lists: hide warnings">
+<!ENTITY Ctr_addonversion	"Add-on lists: show add-on version">
+<!ENTITY Ctr_xpinstallui	"Old add-on install window (about:config preference)">
 <!ENTITY Ctr_bmbutpanelm	"Кнопка меню закладок: вид панели меню">
 <!ENTITY Ctr_bmbutnotext	"Кнопка меню закладок: скрыть текст на панели закладок">
 <!ENTITY Ctr_skipprintpr	"Кнопка печати: пропускать предварительный просмотр">
@@ -281,6 +281,7 @@
 <!ENTITY Ctr_fx34loop		"&brandShortName; 34+ добавлен клиент для связи в режиме реального времени. Отключение параметра удаляет эту функцию.">
 <!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ введена новая «Тема разработчика». Отключение параметра удаляет её и соответствующую кнопку в режиме «Настройка».">
 <!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ настройки в новой вкладке. Отключение этого параметра восстанавливает старое окно настроек.">
+<!ENTITY Ctr_fx36prefs2		"Note: Old preference window does not contain all recently added browser preferences!">
 <!ENTITY Ctr_fx38reader		"&brandShortName; 38+ представила новую функцию «режим чтения». Отключение этого параметра выключает этот режим и удаляет значок из адресной строки.">
 <!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ представила функцию «Pocket». Отключение параметра удаляет эту функцию и кнопку на панели инструментов.">
 <!ENTITY Ctr_fx38pocket2	"Примечание: Перемещение кнопки «Pocket» на страницу «Настройка &brandShortName;» перед отключением этой опции также удаляет надписи «Pocket» в закладках и режиме чтения.">
@@ -291,7 +292,7 @@
 <!ENTITY Ctr_e_readermode	"Режим чтения">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Audio playing icon on tabs">
-<!ENTITY Ctr_fx42tabsaudico	"&brandShortName; 42+: Unchecking this preference removes 'audio playing icon' from tabs.">
+<!ENTITY Ctr_fx42tabsaudico	"Unchecking this preference removes 'audio playing icon' from tabs.">
 
 
 <!ENTITY Ctr_pw_settings	"Настройки">

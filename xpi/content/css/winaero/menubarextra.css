@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul) {*/
+@-moz-document url(chrome://browser/content/browser.xul) {
 
 	@media all and (-moz-windows-theme:aero) {
 	  #main-window:not([tabsintitlebar])[tabsontop='false'] #toolbar-menubar:not([inactive="true"]),
@@ -57,4 +57,4 @@
 
 	}
 
-/*}*/
+}

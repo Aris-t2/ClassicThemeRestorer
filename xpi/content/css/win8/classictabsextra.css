@@ -1,6 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul){*/
+@-moz-document url(chrome://browser/content/browser.xul){
 
 	/* Tabs toolbar tab close button (Fx31+) */
 	#ctraddon_tabs-closebutton{
@@ -152,4 +152,4 @@
 	  background-size: calc(100% - 1px) calc(100% - 3px) !important;
 	}
 	
-/*}*/
+}

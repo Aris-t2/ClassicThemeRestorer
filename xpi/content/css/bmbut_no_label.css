@@ -1,8 +1,8 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul) {*/
+@-moz-document url(chrome://browser/content/browser.xul) {
 
 	#navigator-toolbox #PersonalToolbar #ctraddon_bookmarks-menu-toolbar-button .toolbarbutton-text {
 	  display: none !important;
 	}
-/*}*/
+}

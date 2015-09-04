@@ -111,7 +111,7 @@
 <!ENTITY Ctr_hide_bf_popup	"Masquer le menu historique lors du clic droit">
 <!ENTITY Ctr_bf_space		"Réduire l'espace entre les boutons (si possible)">
 <!ENTITY Ctr_noconicons		"Remplacer les icônes du menu contextuel de la page par du texte (Page précédente, Page suivante, Arrêter/Actualiser, Marquer cette page)">
-<!ENTITY Ctr_altoptionsp	"Options page: alternative appearance">
+<!ENTITY Ctr_altoptionsp	"Options page (about:preferences): alternative appearance">
 <!ENTITY Ctr_svgfilters		"Couleurs SVG pour les icônes par défaut de la barre d'outils">
 <!ENTITY Ctr_wincontrols	"Plein écran : boutons déplaçables">
 <!ENTITY Ctr_emptyfavicon2	"Remplacer le favicon générique (vide avec pointillés) par un favicon avec l'aspect d'une feuille de papier">
@@ -138,13 +138,13 @@
 <!ENTITY Ctr_iat_notf_vt	"Exclure les barres d'outils verticales">
 <!ENTITY Ctr_cpanelmenus	"Compacter les panneaux (marque-pages, historique, etc)">
 <!ENTITY Ctr_hidezoomres	"Boutons de zoom (si sur une barre d'outils) : Masquer le bouton 'Réinitialiser le niveau de zoom'">
-<!ENTITY Ctr_alt_newtabp	"Page 'Nouvel onglet' : apparence alternative">
+<!ENTITY Ctr_alt_newtabp	"Page 'Nouvel onglet' (about:newtab) : apparence alternative">
 <!ENTITY Ctr_addonmanager	"Add-on manager">
 <!ENTITY Ctr_alt_addonsp	"Page 'Plus d'infos' des modules : apparence alternative">
-<!ENTITY Ctr_alt_addonsm	"Add-on manager: alternative appearance">
-<!ENTITY Ctr_am_nowarning	"Add-on managers add-on lists: hide warnings">
-<!ENTITY Ctr_addonversion	"Add-on managers add-on lists: show add-on version">
-<!ENTITY Ctr_xpinstallui	"Add-on manager: old add-on install window (about:config preference)">
+<!ENTITY Ctr_alt_addonsm	"Alternative appearance">
+<!ENTITY Ctr_am_nowarning	"Add-on lists: hide warnings">
+<!ENTITY Ctr_addonversion	"Add-on lists: show add-on version">
+<!ENTITY Ctr_xpinstallui	"Old add-on install window (about:config preference)">
 <!ENTITY Ctr_bmbutpanelm	"Bouton Marque-pages : apparence Panneau menu">
 <!ENTITY Ctr_bmbutnotext	"Bouton Marque-pages : cacher 'Marque-pages' sur la barre personnelle">
 <!ENTITY Ctr_skipprintpr	"Bouton imprimer : enlever l'aperçu avant impression">
@@ -281,6 +281,7 @@
 <!ENTITY Ctr_fx34loop		"&brandShortName; 34+ introduit la possibilité d'inviter quelqu'un à discuter. Cette possibilité est desactivée en décochant cette option.">
 <!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ introduit un nouveau thème 'Developer Edition'. Si cette option est décochée, le thème 'Developer Edition' est desactivé ainsi que son bouton dans la fenêtre de personnalisation.">
 <!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ introduit les 'Préférences dans un onglet'. Si cette option est décochée, l'ancienne fenêtre des préférences est restaurée.">
+<!ENTITY Ctr_fx36prefs2		"Note: Old preference window does not contain all recently added browser preferences!">
 <!ENTITY Ctr_fx38reader		"&brandShortName; 38+ introduit un nouveau 'Mode lecture'. Si cette option est décochée, ce mode est desactivé et son icône est retirée de la barre d'adresse.">
 <!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ introduit le support natif de 'Pocket'. Si cette option est décochée, 'Pocket' est desactivé et son bouton retiré des barres d'outils.">
 <!ENTITY Ctr_fx38pocket2	"Note: Déplacer le bouton 'Pocket' vers la 'fenêtre de personnalisation' avant de desactiver cette option, permet également d'enlever 'Pocket' des marques pages et du menu de lecture.">
@@ -291,7 +292,7 @@
 <!ENTITY Ctr_e_readermode	"Mode lecture">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Audio playing icon on tabs">
-<!ENTITY Ctr_fx42tabsaudico	"&brandShortName; 42+: Unchecking this preference removes 'audio playing icon' from tabs.">
+<!ENTITY Ctr_fx42tabsaudico	"Unchecking this preference removes 'audio playing icon' from tabs.">
 
 
 <!ENTITY Ctr_pw_settings	"Réglages">

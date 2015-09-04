@@ -1,7 +1,7 @@
 @import url(chrome://ctraddon_os_special/skin/nocontexticonsextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul) {*/
+@-moz-document url(chrome://browser/content/browser.xul) {
 
   #context-navigation{
 	-moz-appearance:none !important;
@@ -16,4 +16,4 @@
     visibility:visible !important;
   }
 
-/*}*/
+}

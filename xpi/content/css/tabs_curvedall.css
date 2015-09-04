@@ -1,6 +1,7 @@
+/*AGENT_SHEET*/
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-/*@-moz-document url(chrome://browser/content/browser.xul){*/
+@-moz-document url(chrome://browser/content/browser.xul){
 
 	#titlebar-placeholder-on-TabsToolbar-for-captions-buttons{
 	  -moz-margin-start: 0px !important;
@@ -237,20 +238,20 @@
 	  -moz-margin-start:-12px !important;
 	  -moz-margin-end:-14px !important;
 	}
-/*}
+}
 
-@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {*/
-	#ClassicTRoptionsPane .tabcolorbox,
-	#ClassicTRoptionsPane .tabhovcolorbox,
-	#ClassicTRoptionsPane .tabactcolorbox,
-	#ClassicTRoptionsPane #ntabcolorbox,
-	#ClassicTRoptionsPane #ntabhovcolorbox,
-	#ClassicTRoptionsPane #ctraddon_customsqtab_cb,
-	#ClassicTRoptionsPane #ctraddon_ccap_t_default{
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+	.tabcolorbox,
+	.tabhovcolorbox,
+	.tabactcolorbox,
+	#ntabcolorbox,
+	#ntabhovcolorbox,
+	#ctraddon_customsqtab_cb,
+	#ctraddon_ccap_t_default{
 	  visibility: collapse !important;
 	}
 	
-	#ClassicTRoptionsPane #ctraddon_ccap_t_curvedaero{
+	#ctraddon_ccap_t_curvedaero{
 	  visibility: visible !important;
 	}
-/*}*/
+}

@@ -5,10 +5,10 @@
 	}
 
 }
-/*@-moz-document url(chrome://browser/content/browser.xul) {*/
+@-moz-document url(chrome://browser/content/browser.xul) {
 
 	#customization-lwtheme-menu *[label="Developer Edition"]{
 	  display:none !important;
 	}
 
-/*}*/
+}
