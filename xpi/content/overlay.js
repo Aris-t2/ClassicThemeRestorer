@@ -68,6 +68,9 @@ classicthemerestorerjs.ctr = {
   moveFeedIntoUrlbar:	false,
   
   devthemeinterval: 	null,
+ 
+  activityObserver: 	new MutationObserver(function() {}), // define empty, (CTR) global observer
+  activityObserverOn:	false, // activity observer is always disabled, when a window get initialized
 
   init: function() {
   
@@ -141,7 +144,7 @@ classicthemerestorerjs.ctr = {
 		document.getElementById("main-window").setAttribute('ctraddon_version',addon.version);
 	  } catch(e){}
 	});
-
+	
 	// CTRs appbutton for Windows titlebar
 	this.createTitlebarButton();
 	
@@ -843,17 +846,17 @@ classicthemerestorerjs.ctr = {
 		  
 		  case "activndicat":
 			if (branch.getBoolPref('activndicat')) {
-			  setTimeout(function(){
+				classicthemerestorerjs.ctr.loadUnloadCSS("navthrobber",true);
+				classicthemerestorerjs.ctr.activityObserverOn = true;
 			    classicthemerestorerjs.ctr.restoreActivityThrobber();
-			  },100);
 			}
-			else
-			  setTimeout(function(){
-				try{
-				  classicthemerestorerjs.ctr.ctrGetId("ctraddon_navigator-throbber")
-					.parentNode.removeChild(classicthemerestorerjs.ctr.ctrGetId("ctraddon_navigator-throbber"));
-				} catch(e){}
-			  },300);
+			else {
+			  if(classicthemerestorerjs.ctr.activityObserverOn == true){
+				classicthemerestorerjs.ctr.loadUnloadCSS("navthrobber",false);
+				classicthemerestorerjs.ctr.activityObserverOn = false;
+				classicthemerestorerjs.ctr.restoreActivityThrobber();
+			  } else classicthemerestorerjs.ctr.activityObserver.disconnect();
+			}
 		  break;
 
 		  case "hideprbutton":
@@ -1040,6 +1043,11 @@ classicthemerestorerjs.ctr = {
 		  case "hideurlgo":
 			if (branch.getBoolPref("hideurlgo")) classicthemerestorerjs.ctr.loadUnloadCSS("hideurlgo",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("hideurlgo",false);
+		  break;
+
+		  case "hideurlsrg":
+			if (branch.getBoolPref("hideurlsrg")) classicthemerestorerjs.ctr.loadUnloadCSS("hideurlsrg",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("hideurlsrg",false);
 		  break;
 
 		  case "urlbardropm":
@@ -1487,7 +1495,7 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "altmenubarpos":
-			if (branch.getBoolPref("altmenubarpos")) {
+			if (branch.getBoolPref("altmenubarpos") && classicthemerestorerjs.ctr.osstring=="WINNT") {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("altmenubarpos",true);
 			  branch.setBoolPref("altmenubarpos2",false);
 			}
@@ -1495,7 +1503,7 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "altmenubarpos2":
-			if (branch.getBoolPref("altmenubarpos2")) {
+			if (branch.getBoolPref("altmenubarpos2") && classicthemerestorerjs.ctr.osstring=="WINNT") {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("altmenubarpos2",true);
 			  branch.setBoolPref("altmenubarpos",false);
 			}
@@ -1544,8 +1552,21 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "transpttbw10":
-			if (branch.getBoolPref("transpttbw10") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("transpttbw10",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("transpttbw10",false);
+			if (branch.getBoolPref("transpttbw10") && classicthemerestorerjs.ctr.fxdefaulttheme==true) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("transpttbw10",true);
+			  
+			  if (branch.getBoolPref("transptcw10"))
+				classicthemerestorerjs.ctr.loadUnloadCSS("transptcw10",true);
+			}
+			else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("transpttbw10",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("transptcw10",false);
+			}
+		  break;
+		  
+		  case "transptcw10":
+			if (branch.getBoolPref("transptcw10") && branch.getBoolPref("transpttbw10") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("transptcw10",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("transptcw10",false);
 		  break;
 
 		  case "nonavbarbg":
@@ -2678,38 +2699,54 @@ classicthemerestorerjs.ctr = {
 
   // adds busy attribute to activity throbber
   restoreActivityThrobber: function(){
-
+	
+	// disconnect observer, if it is already running
+	classicthemerestorerjs.ctr.activityObserver.disconnect();
+	
 	// check, if tab attributes got modified
-	var activityObserver = new MutationObserver(function(mutations) {
+	classicthemerestorerjs.ctr.activityObserver = new MutationObserver(function(mutations) {
 	  mutations.forEach(function(mutation) {
 		ctrActivityThrobber();
 	  });
 	});
-	
-	// needed once after the option gets enabled
-	activityObserver.observe(gBrowser.selectedTab, { attributes: true, attributeFilter: ['busy'] });
+
+	// enable observer
+	if(classicthemerestorerjs.ctr.activityObserverOn==true)
+	  classicthemerestorerjs.ctr.activityObserver.observe(gBrowser.selectedTab, { attributes: true, attributeFilter: ['busy'] });
 	
 	// if tab is busy, add 'busy' attribute to 'ctraddon_navigator-throbber'
 	function ctrActivityThrobber(){
-	  if(gBrowser.selectedTab.hasAttribute('busy')) {
-		try{
-		  if(document.getElementById('ctraddon_navigator-throbber').hasAttribute('busy')==false)
-		    document.getElementById('ctraddon_navigator-throbber').setAttribute('busy','true');
-		}catch(e){}
-	  }
-	  else {
-	    try{
-		  if(document.getElementById('ctraddon_navigator-throbber').hasAttribute('busy'))
-		    document.getElementById('ctraddon_navigator-throbber').removeAttribute('busy');
-		}catch(e){}
-	  }
-	  activityObserver.observe(gBrowser.selectedTab, { attributes: true, attributeFilter: ['busy'] });
+		if(classicthemerestorerjs.ctr.activityObserverOn==true){
+		  var navthrobber = document.getElementById('ctraddon_navigator-throbber');
+		  
+		  if(gBrowser.selectedTab.hasAttribute('busy')) {
+			try{
+			  if(navthrobber!=null) {
+				if(navthrobber.hasAttribute('busy')==false) navthrobber.setAttribute('busy','true');
+			  }
+			}catch(e){}
+		  }
+		  else {
+			try{
+			  if(navthrobber!=null) {
+				if(navthrobber.hasAttribute('busy')) navthrobber.removeAttribute('busy');
+			  }
+			}catch(e){}
+		  }
+		  classicthemerestorerjs.ctr.activityObserver.observe(gBrowser.selectedTab, { attributes: true, attributeFilter: ['busy'] });
+		}
 	}
 	
 	// listen to tab changes
-	window.addEventListener('TabSelect', ctrActivityThrobber, false);
-	window.addEventListener('TabOpen', ctrActivityThrobber, false);
-	window.addEventListener('load', ctrActivityThrobber, false);
+	if(classicthemerestorerjs.ctr.activityObserverOn==true){
+	  window.addEventListener('TabSelect', ctrActivityThrobber, false);
+	  window.addEventListener('TabOpen', ctrActivityThrobber, false);
+	  window.addEventListener('load', ctrActivityThrobber, false);
+	} else {
+	  window.removeEventListener('TabSelect', ctrActivityThrobber, false);
+	  window.removeEventListener('TabOpen', ctrActivityThrobber, false);
+	  window.removeEventListener('load', ctrActivityThrobber, false);
+	}
 
   },
   
@@ -3091,12 +3128,14 @@ classicthemerestorerjs.ctr = {
 		case "mbarforceleft": 		manageCSS("menuitems_forceleft.css");	break;
 		case "mbarforceright": 		manageCSS("menuitems_forceright.css");	break;
 		case "wincontrols": 		manageCSS("windowcontrols.css");		break;
+		case "navthrobber": 		manageCSS("navthrobber.css");			break;
 		case "hideprbutton": 		manageCSS("hidepagereportbutton.css");	break;
 		case "starinurl":			manageCSS("starinurl.css");				break;
 		case "feedinurl":			manageCSS("feedinurl.css");				break;
 		case "statusbar": 			manageCSS("statusbar.css"); 			break;
 		case "hideurelstop": 		manageCSS("hideurlbarrelstop.css"); 	break;
 		case "hideurlgo": 			manageCSS("hideurlbargo.css"); 			break;
+		case "hideurlsrg": 			manageCSS("hideurlbarrelstopgo.css"); 	break;
 		case "urlbardropm": 		manageCSS("urlbar_dropm.css"); 			break;
 		case "combrelstop":			manageCSS("combrelstop.css");			break;
 		case "panelmenucol": 		manageCSS("panelmenucolor.css");		break;
@@ -3113,6 +3152,7 @@ classicthemerestorerjs.ctr = {
 		case "nobookbarbg": 		manageCSS("nobookbarbg.css");			break;
 		case "bookbarfs": 			manageCSS("bmbar_infullscreen.css");	break;
 		case "transpttbw10": 		manageCSS("transp_top_tb_w10.css");		break;
+		case "transptcw10": 		manageCSS("transp_top_c_w10.css");		break;
 		case "nonavbarbg": 			manageCSS("nonavbarbg.css");			break;
 		case "nonavborder": 		manageCSS("nonavborder.css");			break;
 		case "nonavtbborder": 		manageCSS("nonavtbborder.css");			break;
@@ -3176,6 +3216,7 @@ classicthemerestorerjs.ctr = {
 		
 		case "throbber_alt": 		manageCSS("throbberalt.css");			break;
 		case "throbber_fx39": 		manageCSS("throbberalt2.css");			break;
+		case "throbber_nav": 		manageCSS("throbberalt3.css");			break;
 		case "bmanimation": 		manageCSS("hidebmanimation.css");		break;
 		case "pananimation": 		manageCSS("hidepanelanimation.css");	break;
 		case "cpanelmenus": 		manageCSS("compactpanelmenus.css");		break;

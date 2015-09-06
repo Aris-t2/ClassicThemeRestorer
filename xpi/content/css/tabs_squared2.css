@@ -239,13 +239,13 @@
 	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.5) 50%) !important;
 	}
 
-	@media all and (-moz-windows-glass) {
+	/*@media all and (-moz-windows-glass) {
 		.tabs-newtab-button:-moz-lwtheme,		
 		.tabbrowser-tab:-moz-lwtheme,
 		.tabbrowser-tab[pinned]:-moz-lwtheme {
 		  background-size: calc(100% - 1px) calc(100% - 4px) !important;
 		}
-	}
+	}*/
 	
 	.tabs-newtab-button:-moz-lwtheme,
 	.tabbrowser-tab:not([selected="true"]):-moz-lwtheme {

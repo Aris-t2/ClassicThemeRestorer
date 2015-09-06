@@ -90,6 +90,7 @@ pref("extensions.classicthemerestorer.starinurl",false);
 pref("extensions.classicthemerestorer.feedinurl",false);
 pref("extensions.classicthemerestorer.hideurelstop",false);
 pref("extensions.classicthemerestorer.hideurlgo",false);
+pref("extensions.classicthemerestorer.hideurlsrg",false);
 pref("extensions.classicthemerestorer.hideprbutton",false);
 pref("extensions.classicthemerestorer.urlbardropm",false);
 
@@ -104,6 +105,7 @@ pref("extensions.classicthemerestorer.extraurlkeycb",false);
 // Toolbar settings
 pref("extensions.classicthemerestorer.aerocolors",false);
 pref("extensions.classicthemerestorer.transpttbw10",false);
+pref("extensions.classicthemerestorer.transptcw10",false);
 pref("extensions.classicthemerestorer.nbiconsize",'small');
 
 pref("extensions.classicthemerestorer.nobookbarbg",false);

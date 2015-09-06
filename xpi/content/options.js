@@ -328,6 +328,7 @@ classicthemerestorerjso.ctr = {
 	if (this.appversion < 42) {
 	  document.getElementById('ctraddon_pw_fsaduration').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_tabsaudioicogb').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_hideurlsrg').style.visibility = 'collapse';
 	}
 	
 	if (this.appversion >= 42) {
@@ -430,6 +431,7 @@ classicthemerestorerjso.ctr = {
 	this.altTabsToolbarBgExtra(this.prefs.getBoolPref("alttabstb"));
 	this.ctrpwModeextra(this.prefs.getCharPref("nav_txt_ico"));
 	this.currentTabAppearance(this.prefs.getCharPref("tabs"));
+	this.ctrpwTranspTbW10(this.prefs.getBoolPref("transpttbw10"));
 	
 	var closetab_value = this.prefs.getCharPref("closetab");
   
@@ -615,6 +617,19 @@ classicthemerestorerjso.ctr = {
 	document.getElementById('ctraddon_pw_hidetbwote').style.visibility = itemvis;
 	document.getElementById('ctraddon_pw_hidetbwote_winc').style.visibility = itemvis;
 	document.getElementById('ctraddon_pw_hidetbwote2').style.visibility = itemvis;
+  },
+  
+  ctrpwTranspTbW10: function(which) {
+	var itemvis = 'collapse';
+	
+    if(which==true) {
+	  which=false; itemvis = 'visible';
+	} else {
+	  which=true; itemvis = 'collapse';
+	}
+	
+    document.getElementById('ctraddon_pw_transptcw10').disabled = which;
+	document.getElementById('ctraddon_pw_transptcw10').style.visibility = itemvis;
   },
  
   altTabsToolbarBgExtra: function(which) {

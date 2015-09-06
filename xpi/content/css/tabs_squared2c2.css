@@ -92,24 +92,6 @@
 	  width: 28px!important;
 	}
 	
-	/* tab colors lightweight theme */
-	.tabs-newtab-button:-moz-lwtheme-darktext,
-	.tabbrowser-tab:-moz-lwtheme-darktext .tab-content {
-	  background-image: linear-gradient(hsla(0,0%,60%,.5), hsla(0,0%,45%,.5) 80%) !important;
-	}
-	.tabs-newtab-button:hover:-moz-lwtheme-darktext,
-	.tabbrowser-tab:not([selected]):hover:-moz-lwtheme-darktext .tab-content {
-	  background-image: linear-gradient(hsla(0,0%,80%,.5), hsla(0,0%,60%,.5) 80%) !important;
-	}
-
-	.tabs-newtab-button:-moz-lwtheme-brighttext,
-	.tabbrowser-tab:-moz-lwtheme-brighttext .tab-content {
-	  background-image: linear-gradient(hsla(0,0%,40%,.6), hsla(0,0%,30%,.6) 80%) !important;
-	}
-	.tabs-newtab-button:hover:-moz-lwtheme-brighttext,
-	.tabbrowser-tab:not([selected]):hover:-moz-lwtheme-brighttext .tab-content {
-	  background-image: linear-gradient(hsla(0,0%,60%,.6), hsla(0,0%,45%,.6) 80%) !important;
-	}
 	/* titlechanged pinned tabs */
 	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]) .tab-content{
 	  background-size: 100% 100% !important;
@@ -140,17 +122,38 @@
 	  border-left: 1px solid rgba(0,0,0,.4) !important; 
 	  border-right: 1px solid rgba(0,0,0,.4) !important;
 	}
-	.tabs-newtab-button:-moz-lwtheme-darktext ,
-	.tabbrowser-tab .tab-content:-moz-lwtheme-darktext {
+	.tabs-newtab-button[selected]:-moz-lwtheme-darktext ,
+	.tabbrowser-tab[selected] .tab-content:-moz-lwtheme-darktext {
 	  border-top: 1px solid rgba(0,0,0,.2) !important;
 	  border-left: 1px solid rgba(0,0,0,.2) !important; 
 	  border-right: 1px solid rgba(0,0,0,.2) !important; 
 	}
-	.tabs-newtab-button:-moz-lwtheme-brighttext ,
-	.tabbrowser-tab .tab-content:-moz-lwtheme-brighttext {
+	.tabs-newtab-button[selected]:-moz-lwtheme-brighttext ,
+	.tabbrowser-tab[selected] .tab-content:-moz-lwtheme-brighttext {
 	  border-top: 1px solid rgba(255,255,255,.6) !important;
 	  border-left: 1px solid rgba(255,255,255,.2) !important; 
 	  border-right: 1px solid rgba(255,255,255,.2) !important; 
+	}
+	.tabs-newtab-button:hover:-moz-lwtheme-darktext ,
+	.tabbrowser-tab:hover .tab-content:-moz-lwtheme-darktext {
+	  border-top: 1px solid rgba(0,0,0,.2) !important;
+	  border-left: 1px solid rgba(0,0,0,.2) !important; 
+	  border-right: 1px solid rgba(0,0,0,.2) !important; 
+	}
+	.tabs-newtab-button:hover:-moz-lwtheme-brighttext ,
+	.tabbrowser-tab:hover .tab-content:-moz-lwtheme-brighttext {
+	  border-top: 1px solid rgba(255,255,255,.6) !important;
+	  border-left: 1px solid rgba(255,255,255,.2) !important; 
+	  border-right: 1px solid rgba(255,255,255,.2) !important; 
+	}
+
+	.tabs-newtab-button:not([selected]):not(:hover):-moz-lwtheme-darktext ,
+	.tabbrowser-tab:not([selected]):not(:hover) .tab-content:-moz-lwtheme-darktext,
+	.tabs-newtab-button:not([selected]):not(:hover):-moz-lwtheme-brighttext ,
+	.tabbrowser-tab:not([selected]):not(:hover) .tab-content:-moz-lwtheme-brighttext {
+	  border-top: 1px solid rgba(255,255,255,.0) !important;
+	  border-left: 1px solid rgba(255,255,255,.0) !important; 
+	  border-right: 1px solid rgba(255,255,255,.0) !important; 
 	}
 
 	.tabs-newtab-button,

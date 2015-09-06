@@ -1,6 +1,7 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 @-moz-document url(chrome://browser/content/browser.xul) {
-  /* allows titlebar colors for Fx titlebar/tabs toolbar */
+
+  /* allows OS titlebar colors for Fx title/menu/tabs toolbar */
   @media (-moz-os-version: windows-win10) {
     #main-window[fx40plus="true"]:not([customizing]){
       background-color: transparent !important;

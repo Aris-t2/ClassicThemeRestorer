@@ -9,5 +9,8 @@
 	#detail-desc-container {
 	  -moz-box-ordinal-group: 11 !important;
 	}
+	.addon[name="Default"][type="theme"]{
+	  -moz-box-ordinal-group: 0 !important;
+	}
 
 }
