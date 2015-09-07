@@ -1,0 +1,45 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+#ClassicTRoptionsPane .ctraddon_maconly,
+#ClassicTRoptionsPane .ctraddon_windowsonly{
+  visibility: collapse !important;
+}
+
+#ctraddon_appbutton_list2{
+  visibility: visible !important;
+}
+
+#ctraddon_pw_menubarnofog,
+#ctraddon_pw_altmenubar,
+#ctraddon_tabs_in_titlebar,
+.ctraddon_winmaconly,
+#ctraddon_appbutton_list1{
+  visibility: collapse !important;
+  display:none !important;
+}
+#ctraddon_pw_okbutton{
+  display: inline !important;
+}
+
+#ctraddon_pw_cappbutc1,
+#ctraddon_pw_cappbutc2 {
+  width:170px !important;
+}
+
+#ClassicTRoptionsPane #ctraddon_pw_tabMinWidth,
+#ClassicTRoptionsPane #ctraddon_pw_tabMaxWidth,
+#ClassicTRoptionsPane #ctraddon_pw_tabClipWidth{
+  width:70px !important;
+  max-width:90px !important;
+}
+#ctraddon_pw_starinurl label{
+  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/starbutton1lin.png'),
+  0, 72, 18, 36) no-repeat left !important;
+  -moz-padding-start:20px !important;
+  min-height:16px !important;
+}
+#ctraddon_pw_feedinurl label{
+  background:url('chrome://classic_theme_restorer/content/images/feedinurlbar_lin.png') no-repeat left !important;
+  -moz-padding-start:20px !important;
+  min-height:16px !important;
+}

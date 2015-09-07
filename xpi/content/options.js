@@ -321,6 +321,15 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_alt_addonsm').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_transpttbw10').style.visibility = 'collapse';
 	}
+	
+	if (this.appversion >= 40) {
+	  document.getElementById('ctraddon_pw_devthemegb').style.visibility = 'collapse';
+	}
+	
+	if (this.appversion >= 40 && this.appversion < 42) {
+	  document.getElementById('ctraddon_pw_nodevtheme2').style.visibility = 'collapse';
+	}
+
 	if (this.appversion < 41) {
 	  document.getElementById('ctraddon_pw_anewtaburlgbox').style.visibility = 'collapse';
 	}
@@ -330,10 +339,15 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_tabsaudioicogb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_hideurlsrg').style.visibility = 'collapse';
 	}
-	
+
 	if (this.appversion >= 42) {
 	  document.getElementById('ctraddon_pw_readermode2').style.visibility = 'collapse';
 	}
+
+	if (this.appversion >= 43) {
+	  document.getElementById('ctraddon_pw_oldsearchgb').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_oldprefsgb').style.visibility = 'collapse';
+	}	
 
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get

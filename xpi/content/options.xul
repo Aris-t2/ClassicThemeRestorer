@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
-<?xml-stylesheet href="chrome://classic_theme_restorer/content/overlay.css" type="text/css"?>
+<?xml-stylesheet href="chrome://classic_theme_restorer/content/overlay_prefs.css" type="text/css"?>
 
 <!DOCTYPE overlay [
   <!ENTITY % browserDTD SYSTEM "chrome://browser/locale/browser.dtd">
@@ -1065,7 +1065,6 @@
 		<caption  label="&Ctr_e_deved;" class="ctraddon_topic"/>
 		<checkbox label="about:config &gt;&gt; browser.devedition.theme.enabled" preference="ctraddon_devtheme" oncommand="classicthemerestorerjso.ctr.resetPrefsForDevTheme()" id="ctraddon_pw_devtheme"/>
 		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_devthemedescr">&Ctr_fx35devtheme;</description>
-		<checkbox label="&Ctr_nodevtheme;"		preference="ctraddon_nodevtheme2" id="ctraddon_pw_nodevtheme2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 	  </groupbox>
 
 	  <groupbox id="ctraddon_pw_oldprefsgb">
@@ -1097,8 +1096,6 @@
 		<description class="ctraddonsuboption acprefdesc">&Ctr_fx42tabsaudico;</description>
 	  </groupbox>
 	  
-	  
-
 	</box>
 
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_ctraddonbox">
@@ -1124,6 +1121,7 @@
 	  <groupbox>
 		<caption  label="&Ctr_otherctroptns;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_cuibotbuttons;"	preference="ctraddon_cuibuttons"/>
+		<checkbox label="&Ctr_nodevtheme;"		preference="ctraddon_nodevtheme2" id="ctraddon_pw_nodevtheme2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<checkbox label="&Ctr_bookmarkoinpw;"	preference="ctraddon_bmarkoinpw" id="ctraddon_pw_bmarkoinpw"/>
 	  </groupbox>
 

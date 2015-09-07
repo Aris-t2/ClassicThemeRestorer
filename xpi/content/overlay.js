@@ -225,7 +225,7 @@ classicthemerestorerjs.ctr = {
 				branch.setBoolPref("enabled",false);
 
 			
-			if (branch.getBoolPref("enabled") && classicthemerestorerjs.ctr.appversion < 41) {
+			if (branch.getBoolPref("enabled") && classicthemerestorerjs.ctr.appversion < 40) {
 				if (classicthemerestorerjs.ctr.fxdefaulttheme){
 					try{
 				      document.getElementById("main-window").setAttribute('developertheme',true);
@@ -246,7 +246,7 @@ classicthemerestorerjs.ctr = {
 				}
 			}
 			else {
-			  if (classicthemerestorerjs.ctr.fxdefaulttheme && classicthemerestorerjs.ctr.appversion < 41){
+			  if (classicthemerestorerjs.ctr.fxdefaulttheme && classicthemerestorerjs.ctr.appversion < 40){
 				try{
 				  document.getElementById("main-window").setAttribute('developertheme',false);
 				} catch(e){}

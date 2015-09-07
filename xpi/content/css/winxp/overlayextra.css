@@ -1,7 +1,5 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-@-moz-document url(chrome://browser/content/browser.xul) {
-
 	#ctraddon_bookmarks-menu-toolbar-button,
 	#ctraddon_bookmarks-button{
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks_linux.png");
@@ -272,37 +270,10 @@
     #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
      -moz-box-align: center !important;
     }
-	
-}
 
-.ctraddon_nonwindows,
-.ctraddon_linuxonly,
-.ctraddon_maconly{
-  visibility: collapse !important;
-}
 
-@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
-	#ctraddon_pw_noresizerxp,
-	#ctraddon_appbutton_list1{
-	  visibility: visible !important;
-	}
-	#ctraddon_pw_menubarnofog,
-	#ctraddon_pw_altmenubar,
-	#ctraddon_appbutton_list2{
+	#main-window .ctraddon_nonwindows,
+	#main-window .ctraddon_linuxonly,
+	#main-window .ctraddon_maconly{
 	  visibility: collapse !important;
-	  display:none !important;
 	}
-	#ctraddon_pw_okbutton{
-	  display: inline !important;
-	}
-	#ctraddon_pw_starinurl label{
-	  background:url('chrome://classic_theme_restorer/content/images/appmenu_bookmarks.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
-	  min-height:16px !important;
-	}
-	#ctraddon_pw_feedinurl label{
-	  background:url('chrome://classic_theme_restorer/content/images/feedinurlbar.png') no-repeat left !important;
-	  -moz-padding-start:20px !important;
-	  min-height:16px !important;
-	}
-}
