@@ -333,12 +333,12 @@ classicthemerestorerjso.ctr = {
 
 	if (this.appversion < 41) {
 	  document.getElementById('ctraddon_pw_anewtaburlgbox').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_hideurlsrg').style.visibility = 'collapse';
 	}
 
 	if (this.appversion < 42) {
 	  document.getElementById('ctraddon_pw_fsaduration').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_tabsaudioicogb').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_hideurlsrg').style.visibility = 'collapse';
 	}
 
 	if (this.appversion >= 42) {
