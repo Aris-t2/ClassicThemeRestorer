@@ -122,6 +122,9 @@
 	<menuitem id="context-stop" label="&stopCmd.label;" accesskey="&stopCmd.accesskey;"/>
 	<menuitem id="context-bookmarkpage" label="&bookmarkThisPageCmd.label;" accesskey="&bookmarkPageCmd2.accesskey;"/>
 	
+	<menuitem id="menu_preferences" oncommand="if(classicthemerestorerjs.ctr.prefs.getBoolPref('altoptionsw'))
+		classicthemerestorerjs.ctr.openContentPrefsInWin(); else openPreferences();"/>
+	
 	<menupopup id="toolbar-context-menu">
 	  <menuitem id="toggle_nav-bar"
                 label="&navbarCmd.label;"
@@ -568,13 +571,17 @@
 					onclick="if(classicthemerestorerjs.ctr.prefs.getBoolPref('appbclmmenus')
 								&amp;&amp; event.button=='0'
 								&amp;&amp; event.originalTarget.getAttribute('splitmenu')=='true')
-								{openPreferences();document.getElementById('appmenu-popup').hidePopup();}"
+								{if(classicthemerestorerjs.ctr.prefs.getBoolPref('altoptionsw'))
+									classicthemerestorerjs.ctr.openContentPrefsInWin();
+									   else openPreferences();document.getElementById('appmenu-popup').hidePopup();}"
 					class="menu-iconic ctraddon_windowsonly">
-			  <menupopup id="appmenu_customizeMenu">					  
+			  <menupopup id="appmenu_customizeMenu">  
 				  <menuitem id="appmenu_preferences"
 							label="&preferencesCmd2.label;"
 							accesskey="&preferencesCmd2.accesskey;"
-							oncommand="openPreferences();"/>
+							oncommand="if(classicthemerestorerjs.ctr.prefs.getBoolPref('altoptionsw'))
+										 classicthemerestorerjs.ctr.openContentPrefsInWin();
+									   else openPreferences();"/>
 				  <menuseparator/>
 				  <menuitem command="cmd_CustomizeToolbars"
 							accesskey="&viewCustomizeToolbar.accesskey;"
@@ -594,14 +601,18 @@
 					onclick="if(classicthemerestorerjs.ctr.prefs.getBoolPref('appbclmmenus')
 								&amp;&amp; event.button=='0'
 								&amp;&amp; event.originalTarget.getAttribute('splitmenu')=='true')
-								{openPreferences();document.getElementById('appmenu-popup').hidePopup();}"
+								{if(classicthemerestorerjs.ctr.prefs.getBoolPref('altoptionsw'))
+									classicthemerestorerjs.ctr.openContentPrefsInWin();
+									   else openPreferences();document.getElementById('appmenu-popup').hidePopup();}"
 					class="menu-iconic ctraddon_nonwindows">
 			  <menupopup id="appmenu_customizeMenu">					  
 				  <menuitem id="appmenu_preferencesUnix"
 							label="&preferencesCmdUnix.label;"
 							class="ctraddon_nonwindows"
 							accesskey="&preferencesCmdUnix.accesskey;"
-							oncommand="openPreferences();"/>
+							oncommand="if(classicthemerestorerjs.ctr.prefs.getBoolPref('altoptionsw'))
+										 classicthemerestorerjs.ctr.openContentPrefsInWin();
+									   else openPreferences();"/>
 				  <menuseparator/>
 				  <menuitem command="cmd_CustomizeToolbars"
 							accesskey="&viewCustomizeToolbar.accesskey;"

@@ -39,6 +39,7 @@ pref("extensions.classicthemerestorer.nbcompact",false);
 pref("extensions.classicthemerestorer.statusbar",true);
 pref("extensions.classicthemerestorer.noconicons",false);
 pref("extensions.classicthemerestorer.altoptionsp",false);
+pref("extensions.classicthemerestorer.altoptionsw",false);
 pref("extensions.classicthemerestorer.svgfilters",false);
 pref("extensions.classicthemerestorer.combrelstop",false);
 pref("extensions.classicthemerestorer.activndicat",false);

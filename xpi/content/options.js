@@ -312,6 +312,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_readermodegb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_pocketgb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_readermode2').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_altoptionsw').style.visibility = 'collapse';
 	}
 	if (this.appversion > 37) {
 	  document.getElementById('ctraddon_pw_bmarkoinpw').style.visibility = 'collapse';
