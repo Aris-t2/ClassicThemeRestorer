@@ -834,12 +834,18 @@ classicthemerestorerjso.ctr = {
   resetCTRpreferences: function() {
     var preferences = document.getElementsByTagName("preference");
     for (let preference of preferences) {
-      preference.value = preference.defaultValue == null ? undefined : preference.defaultValue;
+      if(preference.name.indexOf("extensions.classicthemerestorer.")!=-1)
+		preference.value = preference.defaultValue == null ? undefined : preference.defaultValue;
     }
 	
 	this.initprefwindow();
 	
 	this.ctrpwStarFeedDelay();
+	
+	var tabsintitlebar = Services.prefs.getBranch("browser.tabs.").getBoolPref("drawInTitlebar");
+	if (this.oswindows && tabsintitlebar) {
+	  this.prefs.setCharPref("appbutton",'appbutton_v2');
+	}
 	
 	this.needsBrowserRestart();
   },
@@ -863,9 +869,19 @@ classicthemerestorerjso.ctr = {
 	this.prefs.setBoolPref("alt_newtabp",true);
 	this.prefs.setBoolPref("skipprintpr",true);
 	this.prefs.setBoolPref("tbconmenu",true);
+	this.prefs.setBoolPref("activndicat",true);
+	this.prefs.setBoolPref("tbconmenu",true);
+
+	if(this.appversion >= 38) { 
+	  this.prefs.setBoolPref("altoptionsp",true);
+	  this.prefs.setBoolPref("altoptionsw",true);
+	}
 	if(this.appversion >= 40) { 
 	  this.prefs.setBoolPref("alt_addonsm",true);
 	  this.prefs.setBoolPref("addonversion",true);
+	}
+	if(this.appversion >= 41) { 
+	  this.prefs.setBoolPref("hideurlsrg",true);
 	}
 	
 	setTimeout(function(){
