@@ -375,6 +375,11 @@
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/palette_ctr.png);
 	}
 	
+	/**/
+	#ctraddon_go-button:-moz-locale-dir(rtl) .toolbarbutton-icon {
+	  -moz-transform:rotate(180deg);
+	}
+	
 	/* CTRs activity throbber */
 	#ctraddon_navigator-throbber {
 	  background:url("chrome://classic_theme_restorer/content/images/throbber_notloading.png") center no-repeat;
