@@ -111,11 +111,11 @@
 <!ENTITY Ctr_hide_bf_popup	"Hiirega klõpsates peida nupu ajaloo hüpikmenüü">
 <!ENTITY Ctr_bf_space		"Vähenda nuppudevahelist tühimikku (kui võimalik)">
 <!ENTITY Ctr_noconicons		"Lehe kontekstimenüü: asenda ikoonid tekstiga (tagasi, edasi...)">
-<!ENTITY Ctr_altoptionsp	"Options page (about:preferences): alternative appearance">
-<!ENTITY Ctr_altoptionsw	"Open options page (about:preferences) in a window">
+<!ENTITY Ctr_altoptionsp	"Sätete leht (about:preferences): alternatiivne välimus">
+<!ENTITY Ctr_altoptionsw	"Ava sätete leht (about:preferences) aknas">
 <!ENTITY Ctr_svgfilters		"Kasuta vaikimisi tööriistariba nuppude jaoks SVG-värve">
 <!ENTITY Ctr_wincontrols	"Teisaldatavad akna juhtelemendid täisekraani režiimis">
-<!ENTITY Ctr_emptyfavicon2	"Asenda üldine (tühi ja punktiiriga) lehe ikoon lehekülje ikooniga">
+<!ENTITY Ctr_emptyfavicon2	"Asenda üldine (tühi ja punktiiriga) lehe ikoon lehe kujutisega">
 <!ENTITY Ctr_mstatusbar		"Teisaldatav olekupaneel">
 <!ENTITY Ctr_mstatusbars4e	"Olekuriba paneeli kontrollib 'Status-4-Evar'">
 <!ENTITY Ctr_mstatusbartpp	"Olekuriba paneeli kontrollib 'ThePuzzlePiece'">
@@ -125,7 +125,7 @@
 <!ENTITY Ctr_stoprel1		"Tähtis: paiguta uuestilaadimise nupp peatamise nupu järele!">
 <!ENTITY Ctr_panelmenucol	"Paneelimenüüd: alternatiivne taustavärv">
 <!ENTITY Ctr_hideprivmask	"Privaatne veebilehitsemine: peida maski kujutis">
-<!ENTITY Ctr_nbisizedelay	"millisekundiline viivitus täitmisel (1000 ms = 1 sec)">
+<!ENTITY Ctr_nbisizedelay	"millisekundiline viivitus täitmisel (1000 ms = 1 sek)">
 <!ENTITY Ctr_findbar		"Otsinguriba asukoht">
 <!ENTITY Ctr_findbar_def	"All (vaikimisi)">
 <!ENTITY Ctr_findbar_top	"Üleval">
@@ -154,13 +154,13 @@
 <!ENTITY Ctr_extraurlkeycb	"Ava lisa-aadressiriba (Cmd/Ctrl+">
 <!ENTITY Ctr_pmhidelabels	"Paneelimenüü hüpik: peida nupu sildid">
 <!ENTITY Ctr_menupopupscr	"Menüühüpikud: näita kerimisnoolte asemel kerimisribasid">
-<!ENTITY Ctr_closegeneral	"General close icons">
+<!ENTITY Ctr_closegeneral	"Üldised sulgemise ikoonid">
 
 <!ENTITY Ctr_tabsep_def		"Vaikimisi kaartide eraldajad">
 <!ENTITY Ctr_fxmockup		"&brandShortName;i visand">
 <!ENTITY Ctr_tabmokcolor	"Valget värvi kaardi nupud (sulge, uus, grupid, kõik kaardid)">
 <!ENTITY Ctr_tabmokcolor2	"Valget värvi tekst ja tume vari mitte-aktiivsetel kaartidel">
-<!ENTITY Ctr_tabmokcolor4	"Valget värvi tühi punkriitiga kaardi lehe ikoon">
+<!ENTITY Ctr_tabmokcolor4	"Valget värvi tühi punktiiriga kaardi lehe ikoon">
 
 <!ENTITY Ctr_navthrobber1	"Aktiivsuse näidikul klõpsamine avab uuel kaardil selle aadressi:">
 <!ENTITY Ctr_navthrobber2	"Sisesta URL või jäta tühjaks">
@@ -195,7 +195,7 @@
 <!ENTITY Ctr_feedinurl		"RSS voo nupp">
 <!ENTITY Ctr_hideurelstop	"Peida 'peata &amp; laadi uuesti' nupud">
 <!ENTITY Ctr_hideurlgo		"Peida 'mine' nupp">
-<!ENTITY Ctr_hideurlsrg		"Hide 'reload, stop &amp; go' button separators &amp; spaces">
+<!ENTITY Ctr_hideurlsrg		"Peida nuppude 'laadi uuesti, peata &amp; mine' eraldajad &amp; vahed">
 <!ENTITY Ctr_urlbardropm	"Teisalda rippmenüü avamise nupp aadressiriba lõppu">
 <!ENTITY Ctr_hideprbutton	"Peida blokeeritud hüpikakende teavitusikoon">
 <!ENTITY Ctr_urlbar_ib		"Saidi identiteedi nupp (identiteedi kast)">
@@ -226,7 +226,7 @@
 <!ENTITY Ctr_mbarforceright	"Viimane element">
 
 <!ENTITY Ctr_toolbars		"Tööriistaribad">
-<!ENTITY Ctr_dblclnewtab	"Topeltklõpsamine avab kaardi 'uus' (kasutades eelistust browser.newtab.url)">
+<!ENTITY Ctr_dblclnewtab	"Topeltklõpsamine avab kaardi 'uus' (eelistus browser.newtab.url)">
 <!ENTITY Ctr_hidetbwot		"Ainult ühe nähtava kaardi korral peida kaartide riba">
 <!ENTITY Ctr_hidetbwote		"Vähenda peitmise viivitust käivitumisel">
 <!ENTITY Ctr_hidetbwote_i	"Võib põhjustada kaartide riba tõrkeid">
@@ -243,7 +243,7 @@
 
 <!ENTITY Ctr_aerocolors		"Sinised Aero värvid tööriistaribadel (ja kaartidel)">
 <!ENTITY Ctr_transpttbw10	"Tiitli-/menüü-/kaartide riba: eemalda taustavärv">
-<!ENTITY Ctr_transptcw10	"Hide default OS min/max/close buttons">
+<!ENTITY Ctr_transptcw10	"Peida vaikimisi op-süsteemi min/max/sulge nupud">
 <!ENTITY Ctr_hidenavbar		"Aadressiriba: peida tööriistariba">
 <!ENTITY Ctr_nobookbarbg	"Järjehoidjate riba: eemalda taustavärv">
 <!ENTITY Ctr_bookbarfs		"Järjehoidjate riba: täisekraani režiimis">
@@ -253,7 +253,7 @@
 <!ENTITY Ctr_nonavborder	"Järjehoidjate riba: lisa ribale ülemine piirjoon">
 <!ENTITY Ctr_nonavtbborder	"Ülemised tööriistaribad: eemalda tööriistariba piirjooned">
 <!ENTITY Ctr_hidesbclose	"Külgribad: peida külgriba sulgemise nupp">
-<!ENTITY Ctr_notextshadow	"Toolbars: hide shadow for toolbar text and tab text">
+<!ENTITY Ctr_notextshadow	"Tööriistaribad: peida tööriistariba teksti ja kaardi teksti vari">
 <!ENTITY Ctr_chevronfix		"Aadressiriba: peida topeltnool ('Veel tööriistu') tööriistariba lõpus">
 <!ENTITY Ctr_tbsep_winc		"Ülemised tööriistaribad: lisa-tööriistariba eraldajad">
 
@@ -268,10 +268,10 @@
 <!ENTITY Ctr_tabanimation	"Kaardi sulgemise/avamise animatsioon (about:config eelistus)">
 <!ENTITY Ctr_dlanimation	"'Allalaadimise teavituse' animatsioon (about:config eelistus)">
 <!ENTITY Ctr_fsanimation	"Täisekraani animatsioonid (about:config eelistus)">
-<!ENTITY Ctr_fsaduration	"HTML5 sisu animatsioonid täisekraani režiimis (about:config eelistus)">
+<!ENTITY Ctr_fsaduration	"HTML5-sisu animatsioonid täisekraani režiimis (about:config eelistus)">
 
 <!ENTITY Ctr_toolsitem		"Menüükirje tööriistade menüüs">
-<!ENTITY Ctr_appmenuitem	"Menüükirje rakendusenupu menüüs">
+<!ENTITY Ctr_appmenuitem	"Menüükirje rakenduse menüünupu menüüs">
 <!ENTITY Ctr_contextitem	"Menüükirje tööriistaribade kontekstimenüüs">
 <!ENTITY Ctr_puictrbutton	"Nupp peamise paneeli menüüs">
 
@@ -285,10 +285,10 @@
 <!ENTITY Ctr_fx34loop		"Sellelt eelistuselt märke eemaldamine eemaldab 'helistamise ja vestluse' funktsioonid.">
 <!ENTITY Ctr_fx35devtheme	"Sellelt eelistuselt märke eemaldamine keelab 'arendaja välimuse'.">
 <!ENTITY Ctr_fx36prefs		"Sellest eelistuselt märke eemaldamine taastab vana eelistuste akna.">
-<!ENTITY Ctr_fx36prefs2		"Note: Old preference window does not contain all recently added browser preferences!">
+<!ENTITY Ctr_fx36prefs2		"Märkus: Vana eelistuste aken ei sisalda kõiki hiljuti lisatud brauseri eelistusi!">
 <!ENTITY Ctr_fx38reader		"Sellelt eelistuselt märke eemaldamine keelab 'lugemisnimekirja' funktsiooni ja eemaldab aadressiribalt selle ikooni.">
-<!ENTITY Ctr_fx38pocket		"Unchecking this preference disables the 'Pocket' feature and removes its button from the toolbars.">
-<!ENTITY Ctr_fx38pocket2	"Note: Moving 'Pocket'-button to 'customizing palette' before disabling this preference also removes 'Pocket' entries from bookmarks and reader menus.">
+<!ENTITY Ctr_fx38pocket		"Sellelt eelistuselt märke eemaldamine keelab 'Pocket' funktsiooni ja eemaldab selle nupu tööriistaribadelt.">
+<!ENTITY Ctr_fx38pocket2	"Märkus: Enne selle eelistuse keelamist 'Pocket'-nupu 'kohandamise aknasse' teisaldamine eemaldab järjehoidjate ja lugemisnimekirja menüüdest ka kirjed 'Pocket'.">
 <!ENTITY Ctr_e_searchui		"Otsingu välimus">
 <!ENTITY Ctr_e_loop			"Helistamine ja vestlus / Loop">
 <!ENTITY Ctr_e_deved		"Arendaja väljalaske välimus">
