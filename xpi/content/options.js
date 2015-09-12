@@ -447,6 +447,7 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwModeextra(this.prefs.getCharPref("nav_txt_ico"));
 	this.currentTabAppearance(this.prefs.getCharPref("tabs"));
 	this.ctrpwTranspTbW10(this.prefs.getBoolPref("transpttbw10"));
+	this.ctrpwNavBarPadding(this.prefs.getBoolPref("navbarpad"));
 	
 	var closetab_value = this.prefs.getCharPref("closetab");
   
@@ -645,6 +646,19 @@ classicthemerestorerjso.ctr = {
 	
     document.getElementById('ctraddon_pw_transptcw10').disabled = which;
 	document.getElementById('ctraddon_pw_transptcw10').style.visibility = itemvis;
+  },
+  
+  ctrpwNavBarPadding: function(which) {
+	var itemvis = 'collapse';
+	
+    if(which==true) {
+	  which=false; itemvis = 'visible';
+	} else {
+	  which=true; itemvis = 'collapse';
+	}
+	
+    document.getElementById('ctraddon_pw_navbarpad_lr').disabled = which;
+	document.getElementById('ctraddon_pw_navbarpad_lr').style.visibility = itemvis;
   },
  
   altTabsToolbarBgExtra: function(which) {

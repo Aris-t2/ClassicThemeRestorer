@@ -4,7 +4,10 @@
 	#urlbar-go-button,
 	#urlbar-reload-button,
 	#urlbar-stop-button {
-	  padding: 0 2px !important;
+	  padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      -moz-padding-start: 3px !important;
+      -moz-padding-end: 4px !important;
 	  margin-inline-start: unset !important;
 	  border-inline-start: unset !important;
 	  border-image: unset !important;

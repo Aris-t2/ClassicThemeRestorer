@@ -146,6 +146,9 @@ pref("extensions.classicthemerestorer.mbarposition","toolbar-menubar");
 pref("extensions.classicthemerestorer.mbarpositionl","toolbar-menubar");
 pref("extensions.classicthemerestorer.mbarforceleft",false);
 pref("extensions.classicthemerestorer.mbarforceright",false);
+pref("extensions.classicthemerestorer.navbarpad",false);
+pref("extensions.classicthemerestorer.navbarpad_l",3);
+pref("extensions.classicthemerestorer.navbarpad_r",3);
 
 // Animation
 pref("extensions.classicthemerestorer.tabthrobber","throbber_default");

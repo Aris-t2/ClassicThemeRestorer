@@ -51,6 +51,8 @@ classicthemerestorerjs.ctr = {
   
   tabheight:			Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
+  navbarpadding:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  
   appbutton_color:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
   cuiButtonssheet:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
@@ -799,6 +801,13 @@ classicthemerestorerjs.ctr = {
 			}
 		  break;
 		  
+		  case "navbarpad": case "navbarpad_l": case "navbarpad_r":
+		    if (branch.getBoolPref("navbarpad")) 
+			  classicthemerestorerjs.ctr.loadUnloadCSS("navbarpad",true);
+		    else
+			  classicthemerestorerjs.ctr.loadUnloadCSS("navbarpad",false);
+		  break;
+
 		  case "backforward":
 			if (branch.getBoolPref("backforward")) {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("backforward",true);
@@ -4780,6 +4789,23 @@ classicthemerestorerjs.ctr = {
 
 		break;
 		
+		case "navbarpad":
+			removeOldSheet(this.navbarpadding);
+			
+			if(enable==true && this.prefs.getBoolPref('navbarpad')){
+		
+				this.navbarpadding=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					#main-window:not([customizing]) #nav-bar-customization-target {\
+					  padding-left: '+this.prefs.getIntPref('navbarpad_l')+'px !important;\
+					  padding-right: '+this.prefs.getIntPref('navbarpad_r')+'px !important;\
+					}\
+				'), null, null);
+				
+				applyNewSheet(this.navbarpadding);
+			}
+		
+		break;
+		
 		case "cui_buttons":
 		
 			removeOldSheet(this.cuiButtonssheet);
@@ -4919,7 +4945,7 @@ classicthemerestorerjs.ctr = {
 
   // open prefwindow and specific category
   additionalToolbars: function(){
-	Services.prefs.getBranch("extensions.classicthemerestorer.").setIntPref('pref_actindx',6);
+	Services.prefs.getBranch("extensions.classicthemerestorer.").setIntPref('pref_actindx',8);
 	
 	setTimeout(function(){
 	  classicthemerestorerjs.ctr.openCTRPreferences();
