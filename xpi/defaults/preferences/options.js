@@ -13,6 +13,7 @@ pref("extensions.classicthemerestorer.closetab","closetab_default");
 pref("extensions.classicthemerestorer.closetabhfl",false);
 pref("extensions.classicthemerestorer.closeonleft",false);
 pref("extensions.classicthemerestorer.closeicon",'closeicon_default');
+pref("extensions.classicthemerestorer.tttitlebar",false);
 
 //Appbutton settings
 pref("extensions.classicthemerestorer.appbutton",'appbutton_v1');
