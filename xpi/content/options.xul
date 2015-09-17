@@ -898,6 +898,9 @@
 	  <groupbox>
 	    <caption  label="&Ctr_urlbar;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_starinurl;"	preference="ctraddon_starinurl" id="ctraddon_pw_starinurl" oncommand="classicthemerestorerjso.ctr.ctrpwStarFeedDelay()"/>
+		<hbox class="ctraddonsuboption" id="ctraddon_starinurl_infobox">
+		  <description id="ctraddon_starinurl_info" class="ctraddonsuboption">&Ctr_starinurlinfo;</description>
+		</hbox>
 		<checkbox label="&Ctr_feedinurl;"	preference="ctraddon_feedinurl" id="ctraddon_pw_feedinurl" oncommand="classicthemerestorerjso.ctr.ctrpwStarFeedDelay()"/>
 		<checkbox label="&Ctr_hideurelstop;" preference="ctraddon_hideurelstop" id="ctraddon_pw_hideurelstop"/>
 		<checkbox label="&Ctr_hideurlgo;"	preference="ctraddon_hideurlgo" id="ctraddon_pw_hideurlgo"/>

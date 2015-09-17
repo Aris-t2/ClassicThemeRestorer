@@ -36,7 +36,7 @@
 <!ENTITY Ctr_tabs2			"弧形分頁 (非傳統風格)">
 <!ENTITY Ctr_tabs3			"弧形分頁 (Aero 風格)">
 <!ENTITY Ctr_tabforminfo	"分頁外觀由目前的佈景主題控制">
-<!ENTITY Ctr_coltabsinfo	"Tab appearance is not fully compatible to 'ColorfulTabs' add-on!">
+<!ENTITY Ctr_coltabsinfo	"分頁外觀設定並不完全相容於 ColorfulTabs 擴充套件!">
 <!ENTITY Ctr_tabsontop0		"分頁列置頂 (預設值)">
 <!ENTITY Ctr_tabsontop1		"分頁列置頂 --- 設定 [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"分頁列不置頂 (v1) --- 設定 [tabsontop=false]">
@@ -47,15 +47,15 @@
 <!ENTITY Ctr_tabwidthdef	"(預設值)">
 <!ENTITY Ctr_tabwidthcla	"(經典傳統)">
 <!ENTITY Ctr_tabminheight	"高度:">
-<!ENTITY Ctr_tabheightinfo	"Low values will cause glitches in maximized mode!">
+<!ENTITY Ctr_tabheightinfo	"在視窗最大化模式下，過小的值可能導致故障!">
 <!ENTITY Ctr_tabmaxwidth	"最大寬度:">
 <!ENTITY Ctr_tabminwidth	"最小寬度:">
 <!ENTITY Ctr_tabwidthinfo	"分頁的最小和最大寬度由 Tab Mix Plus 控制">
 <!ENTITY Ctr_tabwidthinfo2	"分頁的最小和最大寬度由 Tab Utilities 控制">
 <!ENTITY Ctr_tabwidthinfo3	"小於 48px 的值有可能導致故障!">
-<!ENTITY Ctr_square_edges	"Squared top corners">
-<!ENTITY Ctr_tttitlebar		"Tab title in &brandShortName; titlebar">
-<!ENTITY Ctr_tabinsertion	"Insert related tab after current tab (about:config)">
+<!ENTITY Ctr_square_edges	"使分頁標籤四角為嚴格直角">
+<!ENTITY Ctr_tttitlebar		"將分頁標題文字顯示於 &brandShortName; 標題列">
+<!ENTITY Ctr_tabinsertion	"在網頁上點選連結時，將新分頁開啟於目前分頁的旁邊，即把預設行為 [a][b][c][1][2][3] 改為 [a][1][2][3][b][c] (about:config)"><!-- about:config?filter=browser.tabs.insertRelatedAfterCurrent -->
 <!ENTITY Ctr_emptyfavicon	"開啟的網頁若未提供網站圖示，仍在該分頁顯示空圖示">
 <!ENTITY Ctr_noemptypticon	"從釘選分頁移除空圖示">
 <!ENTITY Ctr_e10stab_notd	"e10s 分頁: 移除底線">
@@ -66,12 +66,12 @@
 <!ENTITY Ctr_closetab_4		"在分頁列左端顯示關閉按鈕">
 <!ENTITY Ctr_closetab_5		"全部的分頁都顯示關閉按鈕 (強制)">
 <!ENTITY Ctr_closetab_hfot	"只有一個分頁時，則隱藏關閉按鈕">
-<!ENTITY Ctr_closei_def		"Default icons">
+<!ENTITY Ctr_closei_def		"預設圖示">
 <!ENTITY Ctr_closeonleft	"關閉按鈕置於分頁左側">
 <!ENTITY Ctr_close_wwltab	"關閉最後一個分頁時，也關閉視窗 (about:config)">
 
-<!ENTITY Ctr_hctpinfotab	"Some tab variations are not compatible to 'Hide Caption Titlebar Plus' add-on.">
-<!ENTITY Ctr_hctpinfoab		"Button on titlebar is not compatible to 'Hide Caption Titlebar Plus' add-on.">
+<!ENTITY Ctr_hctpinfotab	"一些分頁設定不相容於 Hide Caption Titlebar Plus 擴充套件。">
+<!ENTITY Ctr_hctpinfoab		"「顯示在標題列」設定不相容於 Hide Caption Titlebar Plus 擴充套件。">
 
 <!ENTITY Ctr_appbutton		"應用程式按鈕 (火狐橙按鈕)">
 <!ENTITY Ctr_appbutton0		"不顯示">
@@ -96,7 +96,7 @@
 <!ENTITY Ctr_appbuttonI1e	"在作業系統標題列上不可見">
 <!ENTITY Ctr_appbuttonI2	"此項設定僅生效於標題列與分頁列!">
 <!ENTITY Ctr_appbutmhi		"提高位置 (當顯示於分頁列時)">
-<!ENTITY Ctr_appbautocol	"Set default / Aurora / Nightly color automatically">
+<!ENTITY Ctr_appbautocol	"依據 default / Aurora / Nightly 的版本，自動設定顏色">
 <!ENTITY Ctr_appbutbdl		"隱藏邊框和背景顏色">
 <!ENTITY Ctr_dblclclosefx	"在標題列的火狐橙上連按兩下，則關閉目前的視窗">
 <!ENTITY Ctr_appbclmmenus	"火狐橙選單內顯示可點選式選單(新分頁, 列印...)">
@@ -112,8 +112,8 @@
 <!ENTITY Ctr_hide_bf_popup	"當滑鼠長按時，不顯示分頁歷史瀏覽選單">
 <!ENTITY Ctr_bf_space		"減少按鈕間距 (如有可能)">
 <!ENTITY Ctr_noconicons		"右鍵選單的「回到上一頁、前進下一頁、停止載入、重新載入、加入書籤」由橫排圖示換回縱排文字風格">
-<!ENTITY Ctr_altoptionsp	"Options page (about:preferences): alternative appearance">
-<!ENTITY Ctr_altoptionsw	"Open options page (about:preferences) in a window">
+<!ENTITY Ctr_altoptionsp	"選項頁 (about:preferences): 換個外觀">
+<!ENTITY Ctr_altoptionsw	"用傳統式的彈出新視窗來開啟選項頁 (about:preferences)">
 <!ENTITY Ctr_svgfilters		"改變預設工具列按鈕圖示顏色">
 <!ENTITY Ctr_wincontrols	"可移動的全螢幕視窗控制項">
 <!ENTITY Ctr_emptyfavicon2	"以白紙圖示取代空圖示">
@@ -141,23 +141,23 @@
 <!ENTITY Ctr_cpanelmenus	"緊湊的面板選單(書籤、歷史等等.)">
 <!ENTITY Ctr_hidezoomres	"當縮放控制按鈕置於工具列上時，隱藏工具列上的縮放重設按鈕">
 <!ENTITY Ctr_alt_newtabp	"新分頁(九宮頁面) (about:newtab): 換個外觀">
-<!ENTITY Ctr_addonmanager	"Add-on manager">
-<!ENTITY Ctr_alt_addonsp	"'More info' page: alternative order">
-<!ENTITY Ctr_alt_addonsm	"Alternative appearance">
-<!ENTITY Ctr_am_nowarning	"Add-on lists: hide warnings">
-<!ENTITY Ctr_addonversion	"Add-on lists: show add-on version">
-<!ENTITY Ctr_xpinstallui	"Old add-on install window (about:config preference)">
-<!ENTITY Ctr_bmbutpanelm	"Bookmarks menu button: panel menu appearance">
-<!ENTITY Ctr_bmbutnotext	"Bookmarks menu button: hide label on bookmarks bar">
-<!ENTITY Ctr_skipprintpr	"Print button: skip print preview">
-<!ENTITY Ctr_tbconmenu		"Toolbar context menu: hide 'move to menu', 'remove from toolbar', 'reload/bookmark all tabs' and 'undo close tab'">
-<!ENTITY Ctr_noresizerxp	"Hide Resizer (Windows XP)">
-<!ENTITY Ctr_extraurlkeycb	"Open additional location bar (Cmd/Ctrl+">
+<!ENTITY Ctr_addonmanager	"附加元件管理員">
+<!ENTITY Ctr_alt_addonsp	"「更多資訊」頁面: 換個項目順序">
+<!ENTITY Ctr_alt_addonsm	"換個外觀">
+<!ENTITY Ctr_am_nowarning	"附加元件清單: 隱藏警告">
+<!ENTITY Ctr_addonversion	"附加元件清單: 顯示附加元件版本號">
+<!ENTITY Ctr_xpinstallui	"使用傳統彈出式的附加元件安裝視窗 (about:config)">
+<!ENTITY Ctr_bmbutpanelm	"書籤選單按鈕: 書籤選單使用和面板選單同風格的外觀">
+<!ENTITY Ctr_bmbutnotext	"書籤選單按鈕: 當此按鈕位於書籤列時，隱藏按鈕文字標籤">
+<!ENTITY Ctr_skipprintpr	"列印按鈕: 跳過列印預覽">
+<!ENTITY Ctr_tbconmenu		"工具列右鍵選單: 隱藏 「移動至選單」、「自工具列移除」、「重新載入所有分頁」、「將所有分頁加入書籤」和「復原已關閉分頁」項目">
+<!ENTITY Ctr_noresizerxp	"隱藏視窗大小調整器 (Windows XP)">
+<!ENTITY Ctr_extraurlkeycb	"開啟附加網址列 (Cmd/Ctrl+">
 <!ENTITY Ctr_pmhidelabels	"面板選單: 隱藏按鈕文字標籤">
 <!ENTITY Ctr_menupopupscr	"彈出式選單: 用捲軸取代捲動箭頭">
-<!ENTITY Ctr_closegeneral	"General close icons">
+<!ENTITY Ctr_closegeneral	"一般關閉圖示">
 
-<!ENTITY Ctr_tabsep_def		"Default tab separators">
+<!ENTITY Ctr_tabsep_def		"預設分頁分隔線">
 <!ENTITY Ctr_fxmockup		"&brandShortName; 樣式">
 <!ENTITY Ctr_tabmokcolor	"白色分頁按鈕 (關閉、新增、分頁群組、列出所有分頁)">
 <!ENTITY Ctr_tabmokcolor2	"非目前的分頁，其字型使用白色文字，並加上文字陰影">
@@ -165,8 +165,8 @@
 
 <!ENTITY Ctr_navthrobber1	"按下進度指示器，則開啟指定網址:">
 <!ENTITY Ctr_navthrobber2	"填入網址或留空">
-<!ENTITY Ctr_anewtaburl		"New tab page url">
-<!ENTITY Ctr_anewtaburlcb	"Custom new tab page url (default: 'about:newtab')">
+<!ENTITY Ctr_anewtaburl		"新分頁網址">
+<!ENTITY Ctr_anewtaburlcb	"自訂新分頁網址 (預設值: 「about:newtab」)">
 
 <!ENTITY Ctr_tab_tf_info1	"可使用色彩名稱, hexcodes, rgb(a) 和 hsl(a) 值.">
 <!ENTITY Ctr_tab_tf_info2	"沒有防呆機制（輸入無效值，不會有警告）!">
@@ -193,10 +193,11 @@
 
 <!ENTITY Ctr_urlbar			"網址列">
 <!ENTITY Ctr_starinurl		"星形書籤按鈕併入網址列">
+<!ENTITY Ctr_starinurlinfo	"Default bookmarks menu button gets hidden">
 <!ENTITY Ctr_feedinurl		"網址列中顯示消息來源訂閱按鈕">
 <!ENTITY Ctr_hideurelstop	"隱藏網址列中的停止與重新載入按鈕">
-<!ENTITY Ctr_hideurlgo		"Hide 'go' button">
-<!ENTITY Ctr_hideurlsrg		"Hide 'reload, stop &amp; go' button separators &amp; spaces">
+<!ENTITY Ctr_hideurlgo		"隱藏「衝」按鈕">
+<!ENTITY Ctr_hideurlsrg		"隱藏「重新載入、停止載入、衝」按鈕兩側的分隔線和空白">
 <!ENTITY Ctr_urlbardropm	"移動下拉式三角按鈕到網址列末端">
 <!ENTITY Ctr_hideprbutton	"當彈出型廣告視窗被封鎖時，不顯示通知圖示">
 <!ENTITY Ctr_urlbar_ib		"網站識別鈕 (身份區塊)">
@@ -230,49 +231,49 @@
 <!ENTITY Ctr_dblclnewtab	"在分頁列上連按兩下，則開啟新分頁(分頁網址由 browser.newtab.url 設定)">
 <!ENTITY Ctr_hidetbwot		"當只有一個分頁時，隱藏分頁工具列">
 <!ENTITY Ctr_hidetbwote		"減少啟動時的隱藏延遲時間">
-<!ENTITY Ctr_hidetbwote_i	"Could cause glitches on tabs toolbar">
-<!ENTITY Ctr_hidetbwote2	"Keep titlebar (tabs on top)">
+<!ENTITY Ctr_hidetbwote_i	"可能導致分頁工具列故障">
+<!ENTITY Ctr_hidetbwote2	"保留標題列 (分頁列置頂)">
 <!ENTITY Ctr_notabfog		"移除背景模糊 (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_notabbg		"移除背景色彩 (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_hightabpos		"縮小分頁列上方空間 (如有可能)">
 <!ENTITY Ctr_alttabstb		"換個背景色彩">
-<!ENTITY Ctr_alttabstb2		"In maximized mode (tabs on top)">
+<!ENTITY Ctr_alttabstb2		"在視窗最大化模式下 (分頁列置頂)">
 
 <!ENTITY Ctr_altmenubar		"加上背景色彩 (OS 標題列)">
 <!ENTITY Ctr_altmenubarpos	"換個位置 (標題列下方)">
 <!ENTITY Ctr_menubarnofog	"移除背景色彩/模糊 (Windows AeroGlass / Win8)">
 
 <!ENTITY Ctr_aerocolors		"將主工具列和分頁著上天藍色(Aero Blue)">
-<!ENTITY Ctr_transpttbw10	"Title/menu/tabs toolbar: remove background color">
-<!ENTITY Ctr_transptcw10	"Hide default OS min/max/close buttons">
+<!ENTITY Ctr_transpttbw10	"標題列/選單列/分頁列: 移除背景色彩">
+<!ENTITY Ctr_transptcw10	"隱藏作業系統預設的 最小化/最大化/關閉 按鈕">
 <!ENTITY Ctr_hidenavbar		"隱藏瀏覽工具列">
-<!ENTITY Ctr_navbarpad		"Additional left and right padding">
-<!ENTITY Ctr_navbarpad_l	"Left: ">
-<!ENTITY Ctr_navbarpad_r	"Right: ">
+<!ENTITY Ctr_navbarpad		"增加左右邊距">
+<!ENTITY Ctr_navbarpad_l	"左: ">
+<!ENTITY Ctr_navbarpad_r	"右: ">
 <!ENTITY Ctr_nobookbarbg	"書籤列: 移除背景色彩">
-<!ENTITY Ctr_bookbarfs		"書籤列: in fullscreen mode">
+<!ENTITY Ctr_bookbarfs		"書籤列: 全螢幕模式下懸停顯示">
 <!ENTITY Ctr_nonavbarbg		"瀏覽工具列: 移除背景色彩">
 <!ENTITY Ctr_nonavbarbg1	"本套件的新增工具列與其他置頂的工具列都受影響。">
-<!ENTITY Ctr_nonavbarbg2	"「Beyond Australis」套件之精簡介面(Slim Chrome)的工具列都受影響。">
+<!ENTITY Ctr_nonavbarbg2	"「Beyond Australis」(原名：Beyond Austalis)套件之精簡介面(Slim Chrome)的工具列都受影響。">
 <!ENTITY Ctr_nonavborder	"書籤列: 顯示上邊框">
-<!ENTITY Ctr_nonavtbborder	"上方工具列: 移除工具列邊框">
+<!ENTITY Ctr_nonavtbborder	"頂部工具列: 移除工具列邊框">
 <!ENTITY Ctr_hidesbclose	"側邊欄: 隱藏側邊欄關閉按鈕">
-<!ENTITY Ctr_notextshadow	"Toolbars: hide shadow for toolbar text and tab text">
+<!ENTITY Ctr_notextshadow	"工具列: 隱藏工具列和分頁的文字陰影">
 <!ENTITY Ctr_chevronfix		"瀏覽工具列: 隱藏工具列末端的雙右箭頭 (「更多工具...」按鈕)">
-<!ENTITY Ctr_tbsep_winc		"Top toolbars: additional toolbar separators">
+<!ENTITY Ctr_tbsep_winc		"頂部工具列: 加上工具列分隔線">
 
 <!ENTITY Ctr_closeabarbut	"隱藏附加元件關閉按鈕">
 <!ENTITY Ctr_highaddonsbar	"增加附加元件列高度">
-<!ENTITY Ctr_addonbarfs		"In fullscreen mode">
+<!ENTITY Ctr_addonbarfs		"全螢幕模式下懸停顯示">
 
 <!ENTITY Ctr_animation		"動畫">
-<!ENTITY Ctr_tabthrobber	"Default loading image">
+<!ENTITY Ctr_tabthrobber	"預設分頁載入圖示動畫 (進度指示器)">
 <!ENTITY Ctr_bmanimation	"書籤加入的動畫">
 <!ENTITY Ctr_pananimation	"面板開啟的動畫">
 <!ENTITY Ctr_tabanimation	"分頁關閉/開啟的動畫 (about:config)">
-<!ENTITY Ctr_dlanimation	"「下載通知」 動畫 (about:config)">
-<!ENTITY Ctr_fsanimation	"Fullscreen animations (about:config preference)">
-<!ENTITY Ctr_fsaduration	"Fullscreen animations for HTML5 content (about:config preferences)">
+<!ENTITY Ctr_dlanimation	"「下載通知」動畫 (about:config)">
+<!ENTITY Ctr_fsanimation	"全螢幕模式動畫 (about:config)">
+<!ENTITY Ctr_fsaduration	"HTML5 內容的全螢幕模式動畫 (about:config)"><!-- full-screen-api.transition-duration.* -->
 
 <!ENTITY Ctr_toolsitem		"工具選單中顯示 Classic Theme Restorer 項目">
 <!ENTITY Ctr_appmenuitem	"火狐橙選單中顯示 Classic Theme Restorer 項目">
@@ -282,25 +283,25 @@
 <!ENTITY Ctr_otherctroptns	"其他設定">
 <!ENTITY Ctr_cuibotbuttons	"介面自訂模式中，更豐富的按鈕自訂選項">
 <!ENTITY Ctr_bookmarkoinpw	"書籤右鍵選單中顯示「用新隱私視窗開啟」項目">
-<!ENTITY Ctr_nodevtheme		"Prevent 'Developer Theme' from being enabled">
+<!ENTITY Ctr_nodevtheme		"停用「Developer 佈景主題」">
 
 <!ENTITY Ctr_experttweaks	"進階">
 <!ENTITY Ctr_fx34search		"&brandShortName; 34+ 引入了「新搜尋列介面」。取消勾選這個核取方塊 ，則可恢復為「舊式搜尋列介面」。">
 <!ENTITY Ctr_fx34loop		"&brandShortName; 34+ 實作了「&brandShortName; Hello 即時通訊」功能。取消勾選這個核取方塊 ，則可移除這項功能。">
-<!ENTITY Ctr_fx35devtheme	"Unchecking this preference disables the 'developer theme'.">
+<!ENTITY Ctr_fx35devtheme	"取消勾選這個核取方塊 ，則可停用「Developer 佈景主題」。">
 <!ENTITY Ctr_fx36prefs		"Unchecking this preference restores the old preference window.">
 <!ENTITY Ctr_fx36prefs2		"Note: Old preference window does not contain all recently added browser preferences!">
-<!ENTITY Ctr_fx38reader		"Unchecking this preference disables the 'reader mode' and removes its icon from location bar.">
-<!ENTITY Ctr_fx38pocket		"Unchecking this preference disables the 'Pocket' feature and removes 'Pocket' button from toolbars.">
-<!ENTITY Ctr_fx38pocket2	"Note: Moving 'Pocket'-button to 'customizing palette' before disabling this preference also removes 'Pocket' entries from bookmarks and reader menus.">
-<!ENTITY Ctr_e_searchui		"Search appearance">
-<!ENTITY Ctr_e_loop			"Calling and conversation / Loop">
-<!ENTITY Ctr_e_deved		"Developer Edition Theme">
-<!ENTITY Ctr_e_prefsui		"Preferences in tab">
-<!ENTITY Ctr_e_readermode	"Reader mode">
+<!ENTITY Ctr_fx38reader		"取消勾選這個核取方塊 ，則可停用「閱讀模式」，並將其按鈕從網址列移除。">
+<!ENTITY Ctr_fx38pocket		"取消勾選這個核取方塊 ，則可停用「Pocket」功能，並將「Pocket」按鈕從工具列移除。">
+<!ENTITY Ctr_fx38pocket2	"註: 若「Pocket」按鈕在自訂模式面板中，同樣會被移除。">
+<!ENTITY Ctr_e_searchui		"搜尋列介面">
+<!ENTITY Ctr_e_loop			"Hello 即時通訊">
+<!ENTITY Ctr_e_deved		"Developer Edition 佈景主題">
+<!ENTITY Ctr_e_prefsui		"選項視窗 / 選項分頁">
+<!ENTITY Ctr_e_readermode	"閱讀模式">
 <!ENTITY Ctr_e_pocket		"Pocket">
-<!ENTITY Ctr_e_tabsaudioico	"Audio playing icon on tabs">
-<!ENTITY Ctr_fx42tabsaudico	"Unchecking this preference removes 'audio playing icon' from tabs.">
+<!ENTITY Ctr_e_tabsaudioico	"分頁靜音按鈕">
+<!ENTITY Ctr_fx42tabsaudico	"取消勾選這個核取方塊 ，則可移除「分頁靜音按鈕」。">
 
 
 <!ENTITY Ctr_pw_settings	"設定">
@@ -309,8 +310,8 @@
 <!ENTITY Ctr_pw_set_preaus	"&brandShortName; 預設值">
 <!ENTITY Ctr_pw_set_export	"匯出設定值">
 <!ENTITY Ctr_pw_set_import	"匯入設定值">
-<!ENTITY Ctr_pw_set_syncon	"Add to Sync">
-<!ENTITY Ctr_pw_set_syncoff	"Remove from Sync">
+<!ENTITY Ctr_pw_set_syncon	"新增至 Sync">
+<!ENTITY Ctr_pw_set_syncoff	"從 Sync 移除">
 
 <!ENTITY Ctr_special_font	"背景色彩設定僅生效於預設佈景主題!">
 <!ENTITY Ctr_special_info	"部份選項僅在某些情況下提供視覺上的變化!">

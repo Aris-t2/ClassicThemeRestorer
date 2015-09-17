@@ -6,4 +6,7 @@
 	#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_subscribeToPageSubmenuMenupopup {
 	  background: -moz-dialog !important;
 	}
+	#ctraddon_BMB_bookmarksPopup *:not([disabled]) label{ 
+	  color: black !important;
+	}
 }

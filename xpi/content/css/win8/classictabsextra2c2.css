@@ -4,8 +4,8 @@
 
 	/* tab colors */
 	.tabbrowser-tab[selected]:not(:-moz-lwtheme) .tab-content {
-	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.4) 50%),
-						linear-gradient(-moz-dialog, -moz-dialog) !important;
+	  background-image: linear-gradient(rgba(255,255,255,.0) 1px, rgba(255,255,255,.7) 1px, rgba(255,255,255,.4) 50%),
+	  linear-gradient(rgba(255,255,255,.0) 1px, -moz-dialog 1px, -moz-dialog) !important;
 	}
 	
 	/* tab colors lightweight theme */

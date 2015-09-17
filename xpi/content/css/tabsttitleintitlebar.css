@@ -6,6 +6,15 @@
 	  -moz-appearance: none !important;
 	  padding: unset !important;
 	  margin: unset !important;
+	  border: unset !important;
+	  box-shadow: unset !important;
+	}
+	
+	@media  (-moz-os-version: windows-xp),
+			(-moz-os-version: windows-win10) {
+		#ctraddon_titlebartitle {
+		  margin-top: -5px !important;
+		}
 	}
 
 	/* make sure a visible menubar does not cause trouble */

@@ -292,34 +292,31 @@ radio.ctraddontab .radio-check-box1 {
   width: 16px;
 }
 
-#ctraddon_closeicon_red, #ctraddon_closeicong_red,
-#ctraddon_closeicon_w7, #ctraddon_closeicong_w7,
-#ctraddon_closeicon_w8, #ctraddon_closeicong_w8,
-#ctraddon_closeicon_w10, #ctraddon_closeicong_w10,
-#ctraddon_closeicon_w10i, #ctraddon_closeicong_w10i,
-#ctraddon_closeicon_w10red, #ctraddon_closeicong_w10red,
-#ctraddon_closeicon_gc, #ctraddon_closeicong_gc {
-  -moz-margin-start: -3px;
-  -moz-margin-end: -4px;
-}
-
+#ctraddon_pw_closeicon .radio-spacer-box,
 #ctraddon_pw_closeicon radio .radio-check-box1,
 #ctraddon_pw_closeicon #ctraddon_closeicon_def image,
+#ctraddon_pw_closeicong .radio-spacer-box,
 #ctraddon_pw_closeicong radio .radio-check-box1,
 #ctraddon_pw_closeicong #ctraddon_closeicong_def image {
   display: none;
 }
 
+#ctraddon_pw_closeicon radio:not([selected="true"]) .radio-label-center-box,
+#ctraddon_pw_closeicong radio:not([selected="true"]) .radio-label-center-box,
 #ctraddon_pw_closeicon radio:not([selected="true"]) .radio-label-box,
 #ctraddon_pw_closeicong radio:not([selected="true"]) .radio-label-box{
   border: 1px solid transparent;
 }
 
+#ctraddon_pw_closeicon radio[selected="true"] .radio-label-center-box,
+#ctraddon_pw_closeicon radio:not([selected="true"]):hover .radio-label-center-box,
 #ctraddon_pw_closeicon radio[selected="true"] .radio-label-box,
 #ctraddon_pw_closeicon radio:not([selected="true"]):hover .radio-label-box,
+#ctraddon_pw_closeicong radio[selected="true"] .radio-label-center-box,
+#ctraddon_pw_closeicong radio:not([selected="true"]):hover .radio-label-center-box,
 #ctraddon_pw_closeicong radio[selected="true"] .radio-label-box,
 #ctraddon_pw_closeicong radio:not([selected="true"]):hover .radio-label-box {
-  border: 1px solid Highlight;
+  border: 1px solid Highlight !important;
 }
 
 /* tab separator settings */
@@ -358,27 +355,19 @@ radio.ctraddontab .radio-check-box1 {
   list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator_solid-inv.png');
   -moz-image-region: rect(0px, 1px, 24px, 0px);
 }
-#ctraddon_tabsep_black,
-#ctraddon_tabsep_white,
-#ctraddon_tabsep_luna,
-#ctraddon_tabsep_xp,
-#ctraddon_tabsep_black_sol,
-#ctraddon_tabsep_white_sol,
-#ctraddon_tabsep_black_sol2,
-#ctraddon_tabsep_white_sol2{
-  -moz-margin-start: -3px;
-  -moz-margin-end: -4px;
-}
 
+#ctraddon_pw_tabseparator radio .radio-spacer-box,
 #ctraddon_pw_tabseparator radio .radio-check-box1,
 #ctraddon_pw_tabseparator #ctraddon_tabsep_def image {
   display: none;
 }
-
+#ctraddon_pw_tabseparator radio:not([selected="true"]) .radio-label-center-box,
 #ctraddon_pw_tabseparator radio:not([selected="true"]) .radio-label-box{
   border: 1px solid transparent;
 }
 
+#ctraddon_pw_tabseparator radio[selected="true"] .radio-label-center-box,
+#ctraddon_pw_tabseparator radio:not([selected="true"]):hover .radio-label-center-box,
 #ctraddon_pw_tabseparator radio[selected="true"] .radio-label-box,
 #ctraddon_pw_tabseparator radio:not([selected="true"]):hover .radio-label-box {
   border: 1px solid Highlight;
@@ -409,7 +398,7 @@ radio.ctraddontab .radio-check-box1 {
 }
 
 #ctraddon_pw_hideprivmask label {
-  background:url('chrome://classic_theme_restorer/content/images/appmenu_private.png') no-repeat left !important;
+  background:url('chrome://classic_theme_restorer/content/images/private_mode.png') no-repeat left !important;
   padding-left:20px !important;
   min-height:16px !important;
 }
@@ -437,6 +426,11 @@ radio.ctraddontab .radio-check-box1 {
   background:url('chrome://classic_theme_restorer/content/images/throbber_loading.png') no-repeat left !important;
   padding-left:20px !important;
   min-height:16px !important;
+}
+
+#ctraddon_starinurl_info {
+  background:url('chrome://classic_theme_restorer/content/images/bookmarksbutton_default.png') no-repeat left !important;
+  padding-left:36px !important;
 }
 
 #ctraddon_pw_hideurelstop label{
@@ -553,24 +547,19 @@ radio.ctraddontab .radio-check-box1 {
   list-style-image:url('chrome://classic_theme_restorer/content/images/padlock_modern.png');
 }
 
-#ctraddon_pw_padlock_default,
-#ctraddon_pw_padlock_classic,
-#ctraddon_pw_padlock_modern,
-#ctraddon_pw_padlock_none{
-  margin-left: -3px;
-  margin-right: -3px;
-}
-
+#ctraddon_padlock_radio radio .radio-spacer-box,
 #ctraddon_padlock_radio radio .radio-check-box1 {
   display: none;
 }
 #ctraddon_padlock_radio #ctraddon_pw_padlock_none image {
   visibility: hidden;
 }
-
+#ctraddon_padlock_radio radio:not([selected="true"]).radio-label-center-box,
 #ctraddon_padlock_radio radio:not([selected="true"]).radio-label-box {
   border: 1px solid transparent;
 }
+#ctraddon_padlock_radio radio[selected="true"] .radio-label-center-box,
+#ctraddon_padlock_radio radio:not([selected="true"]):hover .radio-label-center-box,
 #ctraddon_padlock_radio radio[selected="true"] .radio-label-box,
 #ctraddon_padlock_radio radio:not([selected="true"]):hover .radio-label-box{
   border: 1px solid Highlight;

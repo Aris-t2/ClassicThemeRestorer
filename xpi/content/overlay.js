@@ -62,7 +62,7 @@ classicthemerestorerjs.ctr = {
   fxdefaulttheme:		Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin") == 'classic/1.0',
   fxdevelopertheme:		false,
   osstring:				Services.appinfo.OS,
-  appversion:			parseInt(Services.prefs.getBranch("extensions.").getCharPref("lastAppVersion")),
+  appversion:			parseInt(Services.appinfo.version),
   stringBundle:			Services.strings.createBundle("chrome://classic_theme_restorer/locale/messages.file"),
   
   fullscreeduration:	false,
@@ -1446,11 +1446,11 @@ classicthemerestorerjs.ctr = {
 			  },400);
 			} else classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_pen",false);
 			
-			if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("tabfbold_hov"))
+			if(branch.getBoolPref("tabfbold_hov"))
 			  classicthemerestorerjs.ctr.loadUnloadCSS("tabfbold_hov",true);
 			else classicthemerestorerjs.ctr.loadUnloadCSS("tabfbold_hov",false);
 				
-			if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("tabfita_hov"))
+			if(branch.getBoolPref("tabfita_hov"))
 			  classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_hov",true);
 			else classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_hov",false);
 			
@@ -1493,11 +1493,11 @@ classicthemerestorerjs.ctr = {
 			  },400);
 			} else classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_unr",false);
 			
-			if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("tabfbold_hov"))
+			if(branch.getBoolPref("tabfbold_hov"))
 			  classicthemerestorerjs.ctr.loadUnloadCSS("tabfbold_hov",true);
 			else classicthemerestorerjs.ctr.loadUnloadCSS("tabfbold_hov",false);
 				
-			if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("tabfita_hov"))
+			if(branch.getBoolPref("tabfita_hov"))
 			  classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_hov",true);
 			else classicthemerestorerjs.ctr.loadUnloadCSS("tabfita_hov",false);
 
@@ -1684,11 +1684,19 @@ classicthemerestorerjs.ctr = {
 		  case "emptyfavicon":
 			if (branch.getBoolPref("emptyfavicon")) classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",false);
+			
+			if (branch.getBoolPref("faviconurl")) {classicthemerestorerjs.ctr.favIconinUrlbarCTR();}
 		  break;
 		  
 		  case "emptyfavicon2":
-			if (branch.getBoolPref("emptyfavicon2")) classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon2",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon2",false);
+			if (branch.getBoolPref("emptyfavicon2")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon2",true);
+			  if (branch.getBoolPref("emptyfavicon")) { branch.setBoolPref("emptyfavicon",false);}
+			} else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon2",false);
+			}
+
+			if (branch.getBoolPref("faviconurl")) {classicthemerestorerjs.ctr.favIconinUrlbarCTR();}
 		  break;
 		  
 		  case "noemptypticon":
@@ -1854,7 +1862,7 @@ classicthemerestorerjs.ctr = {
 
 		  case "dblclnewtab":
 			
-			if (Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("dblclnewtab")==true && classicthemerestorerjs.ctr.osstring=="WINNT") {
+			if (branch.getBoolPref("dblclnewtab")==true && classicthemerestorerjs.ctr.osstring=="WINNT") {
 			
 				document.getElementById("TabsToolbar").addEventListener("dblclick", function openNewTabOnDoubleClick(e) {
 				
@@ -1886,19 +1894,18 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "hidetbwot":
-			if (Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hidetbwot"))
+			if (branch.getBoolPref("hidetbwot"))
 		      classicthemerestorerjs.ctr.hideTabsToolbarWithOneTab();
 		  break;
 
 		  case "faviconurl": case "padlockex":
-			if (Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("faviconurl"))
-		      classicthemerestorerjs.ctr.favIconinUrlbarCTR();
+			if (branch.getBoolPref("faviconurl")) classicthemerestorerjs.ctr.favIconinUrlbarCTR();
 		  break;
 		  
 		  case "padlock":
-			if (Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("faviconurl"))
+			if (branch.getBoolPref("faviconurl"))
 		      classicthemerestorerjs.ctr.favIconinUrlbarCTR();
-			else if (Services.prefs.getBranch("extensions.classicthemerestorer.").getCharPref("padlock")!="padlock_default"){
+			else if (branch.getCharPref("padlock")!="padlock_default"){
 
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_default',false);
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_classic',false);
@@ -1907,11 +1914,11 @@ classicthemerestorerjs.ctr = {
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_classic',false);
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_modern',false);
 
-				if (Services.prefs.getBranch("extensions.classicthemerestorer.").getCharPref("padlock")=="padlock_none")
+				if (branch.getCharPref("padlock")=="padlock_none")
 					classicthemerestorerjs.ctr.loadUnloadCSS("padlock2_none",true);
-				if (Services.prefs.getBranch("extensions.classicthemerestorer.").getCharPref("padlock")=="padlock_classic")
+				if (branch.getCharPref("padlock")=="padlock_classic")
 					classicthemerestorerjs.ctr.loadUnloadCSS("padlock2_classic",true);
-				if (Services.prefs.getBranch("extensions.classicthemerestorer.").getCharPref("padlock")=="padlock_modern")
+				if (branch.getCharPref("padlock")=="padlock_modern")
 					classicthemerestorerjs.ctr.loadUnloadCSS("padlock2_modern",true);
 
 			} else {
@@ -2545,8 +2552,17 @@ classicthemerestorerjs.ctr = {
 	  classicthemerestorerjs.ctr.loadUnloadCSS(Services.prefs.getBranch("extensions.classicthemerestorer.").getCharPref("padlock"),true);
 	}
 	
-	if (Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("padlockex")) classicthemerestorerjs.ctr.loadUnloadCSS("padlock_extra",true);
-	  else classicthemerestorerjs.ctr.loadUnloadCSS("padlock_extra",false);
+	if (Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("padlockex")){
+	  classicthemerestorerjs.ctr.loadUnloadCSS("padlock_extra",true);
+	  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("emptyfavicon")==false
+		&& Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("emptyfavicon2")==false)
+		  classicthemerestorerjs.ctr.loadUnloadCSS("padlock_extra2",true);
+	  else classicthemerestorerjs.ctr.loadUnloadCSS("padlock_extra2",false);
+	}
+	else {
+	  classicthemerestorerjs.ctr.loadUnloadCSS("padlock_extra",false);
+	  classicthemerestorerjs.ctr.loadUnloadCSS("padlock_extra2",false);
+	}
   
   },
   
@@ -2590,18 +2606,6 @@ classicthemerestorerjs.ctr = {
   // disable preferences which are not usable with third party themes  
   disableSettingsforThemes: function() {
 	
-	/*try {
-	  if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
-		this.prefs.setBoolPref('tabcolor_def',false);
-		this.prefs.setBoolPref('tabcolor_act',false);
-		this.prefs.setBoolPref('tabcolor_unr',false);
-		this.prefs.setBoolPref('tabcolor_pen',false);
-		this.prefs.setBoolPref('tabcolor_hov',false);
-		this.prefs.setBoolPref('ntabcolor_def',false);
-		this.prefs.setBoolPref('ntabcolor_hov',false);
-	  }
-	} catch(e) {}*/
-
 	if (!this.fxdefaulttheme) {
 		this.prefs.setBoolPref('tabcolor_def',false);
 		this.prefs.setBoolPref('tabcolor_act',false);
@@ -3274,6 +3278,7 @@ classicthemerestorerjs.ctr = {
 		case "padlock_classic": 	manageCSS("padlock_classic.css");		break;
 		case "padlock_modern":		manageCSS("padlock_modern.css");		break;
 		case "padlock_extra":		manageCSS("padlock_extra.css");			break;
+		case "padlock_extra2":		manageCSS("padlock_extra2.css");		break;
 		case "padlock2_classic": 	manageCSS("padlock2_classic.css");		break;
 		case "padlock2_modern":		manageCSS("padlock2_modern.css");		break;
 		case "padlock2_none":		manageCSS("padlock2_none.css");			break;

@@ -1,8 +1,8 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 *:not(#TabsToolbar):not(.tab-content) > .close-icon{
-  -moz-image-region: rect(0, 16px, 16px, 0) !important;
   list-style-image: url("chrome://classic_theme_restorer/content/images/close2.png") !important;
+  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 }
 *:not(#TabsToolbar):not(.tab-content) > .close-icon:hover{
   -moz-image-region: rect(0, 32px, 16px, 16px) !important;
