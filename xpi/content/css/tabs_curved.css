@@ -10,9 +10,21 @@
 	}
 	
 	.tabs-newtab-button:not(:-moz-lwtheme){
-	  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start.png),
-						url(chrome://browser/skin/tabbrowser/tab-background-middle.png),
-						url(chrome://browser/skin/tabbrowser/tab-background-end.png) !important;
+	  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start-preWin10.png),
+						url(chrome://browser/skin/tabbrowser/tab-background-middle-preWin10.png),
+						url(chrome://browser/skin/tabbrowser/tab-background-end-preWin10.png) !important;
+	}
+	
+	@media  (-moz-os-version: windows-xp),
+			(-moz-os-version: windows-vista),
+			(-moz-os-version: windows-win7),
+			(-moz-os-version: windows-win8),
+			(-moz-os-version: windows-win10){
+		.tabs-newtab-button:not(:-moz-lwtheme){
+		  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start-preWin10.png),
+							url(chrome://browser/skin/tabbrowser/tab-background-middle-preWin10.png),
+							url(chrome://browser/skin/tabbrowser/tab-background-end-preWin10.png) !important;
+		}
 	}
 
 	.tabs-newtab-button:not(:-moz-lwtheme):hover{
@@ -78,16 +90,16 @@
 						url(chrome://browser/skin/tabbrowser/tab-background-end.png) !important;
 	}
 	
-	@media  (-moz-os-version: windows-xp),
-			(-moz-os-version: windows-vista),
-			(-moz-os-version: windows-win7),
-			(-moz-os-version: windows-win8),
-			(-moz-os-version: windows-win10){
+	@media  (-moz-os-version: windows-win10){
 		#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([visuallyselected=true]),
-		#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([visuallyselected=true]){
+		#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([visuallyselected=true]),
+		#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme) > .tab-stack > .tab-background[visuallyselected=true]{
 		  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start-preWin10.png),
 							url(chrome://browser/skin/tabbrowser/tab-background-middle-preWin10.png),
 							url(chrome://browser/skin/tabbrowser/tab-background-end-preWin10.png) !important;
+		  background-position: left bottom, 30px bottom, right bottom !important;
+		  background-repeat: no-repeat !important;
+		  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100% !important;
 		}
 	}
 

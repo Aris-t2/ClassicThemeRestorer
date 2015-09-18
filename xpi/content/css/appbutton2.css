@@ -251,6 +251,11 @@
 		}
 
 	  }
+	  
+	  /*tweak tabs title in Firefox titlebar positiom*/
+	  #main-window[sizemode="maximized"] #ctraddon_titlebartitle {
+		margin-top: -10px !important;
+	  }
 
 	}
 	
