@@ -1,13 +1,13 @@
-@-moz-document url(about:addons) {
+@-moz-document url-prefix(chrome://mozapps/content/extensions/extensions.xul), url-prefix(about:addons) {
 
-	richlistitem[type=extension] .warning,
-	#detail-view[type=extension] .warning,
+	.addon .warning,
+	#detail-view .warning,
 	.global-warning-container {
 	  display: none;
 	}
    
-	richlistitem[type=extension],
-	#detail-view[type=extension] {
+	.addon,
+	#detail-view {
 	  background-image: none !important;
 	}
 

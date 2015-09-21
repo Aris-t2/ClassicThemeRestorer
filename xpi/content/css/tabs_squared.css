@@ -164,6 +164,14 @@
 	  border-style: solid !important;
 	}
 	
+	@media all and (-moz-windows-classic) {
+		.tabs-newtab-button:not(:-moz-lwtheme){
+		  border-width: 5px 3px 6px !important;
+		  border-image: url(chrome://classic_theme_restorer/content/images/taba.png) 5 3 6 fill repeat round !important;
+		  border-style: solid !important;
+		}
+	}
+	
 	.tabs-newtab-button:-moz-lwtheme{
 	  border-width: 5px 3px 6px !important;
 	  border-image: url(chrome://classic_theme_restorer/content/images/taba.png) 5 3 6 fill repeat round !important;

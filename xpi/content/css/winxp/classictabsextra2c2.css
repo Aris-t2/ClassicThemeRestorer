@@ -46,6 +46,9 @@
 	  box-shadow:none !important;
 	  border-top: 1px solid transparent !important;
 	}
+	#TabsToolbar:not([tabsontop="false"]):not(:-moz-lwtheme) {
+	  margin-bottom:0px !important;
+	}
 
 	/* Tabs toolbar tab close button (Fx31+) */
 	#ctraddon_tabs-closebutton{

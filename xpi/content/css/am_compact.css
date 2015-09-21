@@ -1,55 +1,4 @@
-@import url(chrome://ctraddon_os_special/skin/alt_addonsmanagerextra.css);
-
 @-moz-document url-prefix(chrome://mozapps/content/extensions/extensions.xul), url-prefix(about:addons) {
-
-	/* main colors addons-page */
-	#addons-page {
-	  background: linear-gradient(to bottom right, #f5f5f5,-moz-Dialog,#f5f5f5,-moz-Dialog) !important;
-	}
-
-	@media (-moz-os-version: windows-win7), (-moz-os-version: windows-vista){
-	  @media (-moz-windows-theme:aero) {
-	    #addons-page {
-		  background: linear-gradient(to bottom right, #edf6ff,#dbeaf9,#edf6ff,#dbeaf9) !important;
-	    }
-	  }
-	}
-
-	#addons-page #nav-header,
-	#addons-page #categories,
-	#addons-page .main-content{
-	  background-color: transparent !important;
-	}
-
-	#addons-page .alert,
-	#addons-page #detail-view,
-	#addons-page #addon-list,
-	#addons-page #search-list,
-	#addons-page #updates-list{
-	  background-color: white !important;
-	}
-	
-	#addons-page .alert {
-	  box-shadow: 2px 2px 2px rgba(200,200,200,0.5) !important;
-	}
-
-	/* main colors category items */
-	#addons-page button.sorter[checked="true"],
-	#addons-page #categories .category[selected]{
-	  background-color: white !important;
-	  color: black !important;
-	}
-
-	#addons-page button.sorter:not([checked="true"]):hover,
-	#addons-page #categories .category:not([selected]):hover{
-	  background-color: Highlight !important;
-	  color: HighlightText !important;
-	}
-
-	#addons-page button.sorter:not([checked="true"]):not(:hover),
-	#addons-page #categories .category:not([selected]):not(:hover){
-	  color: black !important;
-	}
 
 	/* dimensions / positioning */
 	#addons-page .main-content{
@@ -106,19 +55,6 @@
 	  height: unset !important;
 	  font-size: 90% !important;
 	}
-	
-	#addons-page #header button:not(.button-link),
-	#addons-page #header #header-utils-btn,
-	#addons-page #list-view .global-info button:not(.button-link),
-	#addons-page #list-view .discover-button,
-	#addons-page #list-view menulist,
-	#addons-page .status-control-wrapper button,
-	#addons-page #userstyle-sorting .addon-control,
-	#addons-page #update-actions button,
-	#addons-page #updates-list-empty button,
-	#addons-page .relnotes-toggle:hover{
-	  background-image: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.20),rgba(0,0,0,0.01)) !important;
-	}
 
 	#addons-page #header-utils-btn{
 	  padding: 2px !important;
@@ -136,16 +72,6 @@
 	  height: unset !important;
 	}
 	
-	/* search */
-	#search-filter {
-	  font-size: 90% !important;
-	}
-	
-	/* add-on entry */
-	#addons-page .main-content .addon[active="false"]{
-	  opacity: .8 !important;
-	}
-
 	#addons-page .addon .name-container,
 	#addons-page #addon-list .name-container {
 	  font-size: 130% !important;
@@ -156,7 +82,12 @@
 	#addons-page #addon-list .error{
 	  font-size: 90% !important;
 	}
-	
+
+	/* search */
+	#search-filter {
+	  font-size: 90% !important;
+	}
+
 	/* detail view */
 	#detail-view button:not(.button-link):not(.text-link),
 	#detail-view menulist{
@@ -189,11 +120,77 @@
 	  height: 16px !important;
 	  margin: 0 !important;
 	}
+
+	/********************/
+	.addon{
+	  padding-top: unset !important;
+	  padding-bottom: unset !important;
+	}
+	.addon .warning,
+	.addon .error,
+	.addon .pending,
+	.addon .icon-container {
+	  padding: unset !important;
+	  margin: unset !important;
+	  min-width: unset !important;
+	  width: unset !important;
+	  min-height: unset !important;
+	  height: unset !important;
+	}
+
+	.addon .icon {
+	  width: 20px !important;
+	}
 	
-	/* remove navigation buttons */
-	#nav-header #back-btn,
-	#nav-header #forward-btn {
-	  visibility: hidden !important;
+	.addon .warning-icon,
+	.addon .error-icon,
+	.addon .pending-icon {
+	  width: 14px !important;
+	  height: 14px !important;
+	}
+
+	.addon .content-inner-container{
+	  -moz-box-orient: horizontal !important;
+	}
+	#updates-list .addon .content-inner-container{
+	  -moz-box-orient: vertical !important;
+	}
+
+	.addon .name-container .name,
+	.addon .name-container .version,
+	.addon .name-container .disabled-postfix,
+	.addon .name-container .update-postfix {
+	  font-size:85% !important;
+	  -moz-margin-end: 0 !important;
+	}
+
+	.addon .update-available button,
+	.addon .control-container button,
+	.addon .control-container menulist {
+	  margin-top: 1px !important;
+	  margin-bottom: 1px !important;
+	  -moz-margin-start: 1px !important;
+	  -moz-margin-end: 0px !important;
+	}
+	
+	.addon .warning .button-box,
+	.addon .pending .button-box,
+	.addon .content-inner-container,
+	.addon .description-container .button-link,
+	.addon .update-available .button-box,
+	.addon .control-container .button-box,
+	.addon .control-container menulist .menulist-label-box {
+	  padding: unset !important;
+	  margin: unset !important;
+	}
+
+	.description-container spacer {
+	  display: none !important;
+	}
+
+	.description-container .button-link .button-box {
+	  -moz-padding-start: 0px !important;
+	  -moz-padding-end: 2px !important;
 	}
 
 }

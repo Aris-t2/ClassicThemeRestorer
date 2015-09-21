@@ -1719,6 +1719,12 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("am_nowarning",false);
 		  break;
 
+		  case "am_compact":
+			if (branch.getBoolPref("am_compact") && classicthemerestorerjs.ctr.appversion >= 40
+				&& classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("am_compact",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("am_compact",false);
+		  break;
+
 		  case "alt_addonsp":
 			if (branch.getBoolPref("alt_addonsp")) classicthemerestorerjs.ctr.loadUnloadCSS("alt_addonsp",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("alt_addonsp",false);
@@ -3240,6 +3246,7 @@ classicthemerestorerjs.ctr = {
 		case "hidezoomres": 		manageCSS("hide_zoomreset.css");		break;
 		case "alt_newtabp": 		manageCSS("alt_newtabpage.css");		break;
 		case "am_nowarning":		manageCSS("am_nowarnings.css");			break;
+		case "am_compact":			manageCSS("am_compact.css");			break;
 		case "alt_addonsp": 		manageCSS("alt_addonspage.css");		break;
 		case "alt_addonsm": 		manageCSS("alt_addonsmanager.css");		break;
 		case "addonversion": 		manageCSS("addonversion.css");			break;

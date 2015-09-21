@@ -179,14 +179,14 @@
 	  border-width: 5px 3px 6px !important;
 	  border-image: url(chrome://classic_theme_restorer/content/images/tab_empty.png) 5 3 6 fill repeat round !important;
 	  border-style: solid !important;
-	}   
+	}
 	
 	.tabs-newtab-button:hover{
 	  border-width: 5px 3px 6px !important;
-	  border-image: url(chrome://classic_theme_restorer/content/images/tab.png) 5 3 6 fill repeat round !important;
+	  border-image: url(chrome://classic_theme_restorer/content/images/taba.png) 5 3 6 fill repeat round !important;
 	  border-style: solid !important;
-	} 
-	
+	}
+
 	.tabbrowser-tab[selected="true"] > .tab-stack > .tab-content	{
       border-image: url("chrome://classic_theme_restorer/content/images/taba.png") 3 3 0 fill repeat stretch !important;
       border-style: solid !important;
@@ -266,6 +266,10 @@
 	#navigator-toolbox #nav-bar:-moz-lwtheme{
 	  border-top: 1px solid transparent !important;
 	}
+	
+	/*#TabsToolbar:not(:-moz-lwtheme) {
+	  margin-bottom:0px !important;
+	}*/
 	
 	@media all and (-moz-windows-theme:aero) {
 	  #TabsToolbar{
