@@ -30,7 +30,7 @@
 <!ENTITY Ctr_tabcolors_t	"Kolory karty i tekstu">
 
 <!ENTITY Ctr_tabs			"Karty">
-<!ENTITY Ctr_tabs0			"Karty zaokrąglone (domyślne w Australis)">
+<!ENTITY Ctr_tabs0			"Karty zaokrąglone (&brandShortName; domyślne)">
 <!ENTITY Ctr_tabs1			"Karty prostokątne (klasyczne)">
 <!ENTITY Ctr_tabs1m			"Karty prostokątne (w stylu Australis)">
 <!ENTITY Ctr_tabs2			"Karty zaokrąglone (alternatywne)">
@@ -43,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Karty nie na górze (v2) --- atrybut [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"v2 jest tylko dla niektórych dodatków i kompletnych motywów!">
 <!ENTITY Ctr_tabsontopI1	"Dodaje atrybut [tabsontop=true/false] do:">
-<!ENTITY Ctr_tabsintitlebar	"Pasek tytułu Firefoksa (ustawienie about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Pasek tytułu &brandShortName; (ustawienie about:config)">
 <!ENTITY Ctr_tabwidthdef	"(domyślne)">
 <!ENTITY Ctr_tabwidthcla	"(klasyczne)">
 <!ENTITY Ctr_tabminheight	"Wysokość:">
@@ -93,10 +93,10 @@
 <!ENTITY Ctr_appbuttonc_wh	"Biały kolor przycisku">
 <!ENTITY Ctr_appbuttonc_cu	"Niestandardowy kolor przycisku">
 <!ENTITY Ctr_appbuttonI1	"Zalecany restart">
-<!ENTITY Ctr_appbuttonI1e	"Niewidoczny na systemowym pasku tytułu, tylko na pasku tytułu Firefoksa!">
+<!ENTITY Ctr_appbuttonI1e	"Niewidoczny na systemowym pasku tytułu, tylko na pasku tytułu &brandShortName;!">
 <!ENTITY Ctr_appbuttonI2	"Kolory przycisku są tylko widoczne na pasku tytułu oraz pasku kart!">
 <!ENTITY Ctr_appbutmhi		"Wyższa pozycja (jeżeli na pasku kart)">
-<!ENTITY Ctr_appbautocol	"Ustaw automatycznie kolor domyślny / Aurora / Nightly">
+<!ENTITY Ctr_appbautocol	"Ustaw automatycznie kolor kanału przeglądarki (domyślny/Aurora/Nightly)">
 <!ENTITY Ctr_appbutbdl		"Ukryj kolory obramowań i tła">
 <!ENTITY Ctr_dblclclosefx	"Podwójne kliknięcie zamyka bieżące okno">
 <!ENTITY Ctr_appbclmmenus	"Klikalne menu wewnątrz menu przycisku (Nowa karta, Drukuj...)">
@@ -144,10 +144,10 @@
 <!ENTITY Ctr_addonmanager	"Menedżer dodatków">
 <!ENTITY Ctr_alt_addonsp	"Strona dodatków 'więcej informacji': alternatywny wygląd">
 <!ENTITY Ctr_alt_addonsm	"Menedżer dodatków: alternatywny wygląd">
-<!ENTITY Ctr_am_nowarning	"Listy dodatków menedżera dodatków: ukryj ostrzeżenia">
-<!ENTITY Ctr_am_compact		"Add-on lists: compact view">
-<!ENTITY Ctr_addonversion	"Listy dodatków menedżera dodatków: wyświetl wersję dodatku">
-<!ENTITY Ctr_xpinstallui	"Menedżer dodatków: stare okno instalacji dodatku (ustawienie about:config)">
+<!ENTITY Ctr_am_nowarning	"Listy dodatków: ukryj ostrzeżenia">
+<!ENTITY Ctr_am_compact		"Listy dodatków: widok kompaktowy">
+<!ENTITY Ctr_addonversion	"Listy dodatków: wyświetl wersję dodatku">
+<!ENTITY Ctr_xpinstallui	"Stare okno instalacji dodatku (ustawienie about:config)">
 <!ENTITY Ctr_bmbutpanelm	"Przycisk menu zakładek: wygląd menu panelu">
 <!ENTITY Ctr_bmbutnotext	"Przycisk menu zakładek: ukryj etykietę na pasku zakładek">
 <!ENTITY Ctr_skipprintpr	"Przycisk drukowania: pomiń podgląd wydruku">
@@ -159,7 +159,7 @@
 <!ENTITY Ctr_closegeneral	"Ogólne ikony zamykania">
 
 <!ENTITY Ctr_tabsep_def		"Domyślne separatory kart">
-<!ENTITY Ctr_fxmockup		"Makieta Firefoksa">
+<!ENTITY Ctr_fxmockup		"Makieta &brandShortName;">
 <!ENTITY Ctr_tabmokcolor	"Biały kolor przycisków karty (zamknij, nowa, grupy, lista wszystkich)">
 <!ENTITY Ctr_tabmokcolor2	"Biały kolor i ciemny cień tekstu na nieaktywnych kartach">
 <!ENTITY Ctr_tabmokcolor4	"Biały kolor pustej i wykropkowanej ikony ulubionych na karcie">
@@ -201,7 +201,7 @@
 <!ENTITY Ctr_hideurlsrg		"Ukryj seperatory przycisków 'odśwież, zatrzymaj i przejdź' oraz odstępy">
 <!ENTITY Ctr_urlbardropm	"Przenieś znacznik rozwinięcia na koniec paska adresu">
 <!ENTITY Ctr_hideprbutton	"Ukryj przycisk informujący o zablokowanym wyskakującym oknie">
-<!ENTITY Ctr_urlbar_ib		"Pole tożsamości paska adresu">
+<!ENTITY Ctr_urlbar_ib		"Przycisk tożsamości witryny (pole tożsamości">
 <!ENTITY Ctr_verifiedcolors	"Zielone i niebieskie pole tożsamości dla zweryfikowanych stron">
 <!ENTITY Ctr_faviconurl		"Ikona ulubionych: ikona bieżącej strony">
 <!ENTITY Ctr_padlock		"Ikona kłódki">
@@ -223,13 +223,13 @@
 <!ENTITY Ctr_tabstoolbar	"Pasek kart">
 <!ENTITY Ctr_navbar			"Pasek nawigacji">
 <!ENTITY Ctr_bookbar		"Pasek zakładek">
-<!ENTITY Ctr_notoolbar		"Brak paska narzędzi">
+<!ENTITY Ctr_notoolbar		"Ukryty (nie pokazuj elementów menu)">
 
 <!ENTITY Ctr_mbarforceleft	"Pierwszy element">
 <!ENTITY Ctr_mbarforceright	"Ostatni element">
 
 <!ENTITY Ctr_toolbars		"Ustawienia paska narzędzi">
-<!ENTITY Ctr_dblclnewtab	"Podwójne kliknięcie otwiera 'nową' kartę (używa browser.newtab.url)">
+<!ENTITY Ctr_dblclnewtab	"Podwójne kliknięcie otwiera 'nową' kartę">
 <!ENTITY Ctr_hidetbwot		"Ukryj pasek kart z jedną kartą">
 <!ENTITY Ctr_hidetbwote		"Zmniejsz opóźnienie ukrywania przy uruchamianiu">
 <!ENTITY Ctr_hidetbwote_i	"Może powodować usterki kart paska narzędzi">
@@ -241,10 +241,10 @@
 <!ENTITY Ctr_alttabstb2		"W trybie zmaksymalizowanym (karty na górze)">
 
 <!ENTITY Ctr_altmenubar		"Dodaj kolor tła (systemowy pasek tytuły)">
-<!ENTITY Ctr_altmenubarpos	"Alternatywna pozycja (poniżej paska tytułu Firefoksa)">
+<!ENTITY Ctr_altmenubarpos	"Alternatywna pozycja (poniżej paska tytułu &brandShortName;)">
 <!ENTITY Ctr_menubarnofog	"Usuń kolor tła i mgłę (Windows AeroGlass/8)">
 
-<!ENTITY Ctr_aerocolors		"Niebieskie kolory Aero głównych pasków narzędzi i kart">
+<!ENTITY Ctr_aerocolors		"Niebieskie kolory Aero głównych pasków narzędzi (i kart)">
 <!ENTITY Ctr_transpttbw10	"Pasek tytułu/menu/kart: usuń kolor tła">
 <!ENTITY Ctr_transptcw10	"Ukryj domyślne przyciski systemowe: minimalizuj, maksymalizuj, zamknij">
 <!ENTITY Ctr_hidenavbar		"Pasek nawigacji: ukryj pasek narzędzi">
@@ -284,17 +284,17 @@
 <!ENTITY Ctr_otherctroptns	"Inne ustawienia">
 <!ENTITY Ctr_cuibotbuttons	"Dodatkowe przyciski w trybie 'dostosowywania'">
 <!ENTITY Ctr_bookmarkoinpw	"Pozycja 'Otwórz w nowym oknie prywatnym' w menu kontekstowym zakładek">
-<!ENTITY Ctr_nodevtheme		"Zapobiegaj włączeniu 'motywu dewelopera'">
+<!ENTITY Ctr_nodevtheme		"Zapobiegaj włączeniu 'Motyw Edycji Deweloperskiej'">
 
 
 <!ENTITY Ctr_experttweaks	"Poprawki eksperckie">
-<!ENTITY Ctr_fx34search		"&brandShortName; 34+ wprowadził 'nowy interfejs wyszukiwania'. Odznaczenie tego ustawienia przywraca 'stary interfejs wyszukiwania'.">
-<!ENTITY Ctr_fx34loop		"&brandShortName; 34+ wprowadził funkcje 'dzwonienia i konwersacji'. Odznaczenie tego ustawienia usunie je.">
-<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ wprowadził nowy 'motyw dewelopera'. Odznaczenie tych ustawień wyłącza 'motyw dewelopera' oraz jego przycisk w trybie dostosowywania.">
-<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ wprowadził opcje w karcie. Odznaczenie tego ustawienia przywraca stare okno opcji.">
+<!ENTITY Ctr_fx34search		"Odznaczenie tego ustawienia usuwa 'nowy wygląd wyszukiwania' i przywraca stary.">
+<!ENTITY Ctr_fx34loop		"Odznaczenie tego ustawienia usuwa funkcje 'dzwonienia i konwersacji'.">
+<!ENTITY Ctr_fx35devtheme	"Odznaczenie tych ustawień wyłącza 'Motyw Edycji Deweloperskiej'.">
+<!ENTITY Ctr_fx36prefs		"Odznaczenie tego ustawienia przywraca stare okno opcji.">
 <!ENTITY Ctr_fx36prefs2		"Uwaga: Stare okno opcji nie zawiera wszystkich ostatnio dodanych ustawień przeglądarki!">
-<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ wprowadził nowy 'tryb czytnika'. Odznaczenie tych ustawień wyłączy go oraz usunie jego ikonę z paska adresu.">
-<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ wprowadził funkcję 'Pocket'. Odznaczenie tego ustawienia wyłączy ją oraz usunie jej ikonę z pasków narzędzi.">
+<!ENTITY Ctr_fx38reader		"Odznaczenie tych ustawienia wyłącza 'tryb czytnika' oraz usuwa jego ikonę z paska adresu.">
+<!ENTITY Ctr_fx38pocket		"Odznaczenie tego ustawienia wyłącza funkcję 'Pocket' oraz usuwa jej ikonę z pasków narzędzi.">
 <!ENTITY Ctr_fx38pocket2	"Uwaga: Przesunięcie przycisku 'Pocket' do 'palety dostosowywania' przed zablokowaniem tego ustawienia usunie także elementy 'Pocket' w zakładkach i menu czytnika.">
 <!ENTITY Ctr_e_searchui		"Wygląd wyszukiwania">
 <!ENTITY Ctr_e_loop			"Dzwonienie i konwersacja">
@@ -309,7 +309,7 @@
 <!ENTITY Ctr_pw_settings	"Ustawienia">
 <!ENTITY Ctr_pw_set_reset	"Przywróć domyślne">
 <!ENTITY Ctr_pw_set_predef	"Ustawienia klasyczne">
-<!ENTITY Ctr_pw_set_preaus	"Ustawienia Firefoksa">
+<!ENTITY Ctr_pw_set_preaus	"Ustawienia &brandShortName;">
 <!ENTITY Ctr_pw_set_export	"Eksportuj ustawienia">
 <!ENTITY Ctr_pw_set_import	"Importuj ustawienia">
 <!ENTITY Ctr_pw_set_syncon	"Dodaj do Sync">
@@ -317,7 +317,7 @@
 
 <!ENTITY Ctr_special_font	"Ustawienia koloru tła są tylko dla domyślnego stylu!">
 <!ENTITY Ctr_special_info	"Niektóre opcje mogą nie oferować widocznych zmian we wszystkich przypadkach">
-<!ENTITY Ctr_special_info2	"Ustawienia są stworzone dla domyślnego stylu Firefoksa i mogą nie działać z innymi stylami!">
+<!ENTITY Ctr_special_info2	"Ustawienia są stworzone dla domyślnego stylu &brandShortName; i mogą nie działać z innymi stylami!">
 <!ENTITY Ctr_support		"Forum wsparcia">
 <!ENTITY Ctr_newversion		"Nowa wersja?">
 
@@ -334,7 +334,7 @@
 <!ENTITY stopCmd.accesskey            "Z">
 <!ENTITY bookmarkPageCmd2.accesskey   "D">
 
-<!-- Fallback entities. Leave empty! -->
+<!-- Fallback entities. Do not change! -->
 <!ENTITY openCmd.commandkey			"">
 <!ENTITY urlbar.accesskey			"">
 <!ENTITY urlbar.placeholder2		"">

@@ -52,6 +52,7 @@
 	#addons-page .relnotes-toggle,
 	#list-view menulist{
 	  padding:2px !important;
+	  min-height: unset !important;
 	  height: unset !important;
 	  font-size: 90% !important;
 	}
@@ -139,7 +140,10 @@
 	}
 
 	.addon .icon {
-	  width: 20px !important;
+	  min-width: unset !important;
+	  min-height: unset !important;
+	  width: 21px !important;
+	  height: 21px !important;
 	}
 	
 	.addon .warning-icon,
@@ -147,6 +151,7 @@
 	.addon .pending-icon {
 	  width: 14px !important;
 	  height: 14px !important;
+	  -moz-margin-start: 4px !important;
 	}
 
 	.addon .content-inner-container{
@@ -161,6 +166,7 @@
 	.addon .name-container .disabled-postfix,
 	.addon .name-container .update-postfix {
 	  font-size:85% !important;
+	  -moz-margin-start: 4px !important;
 	  -moz-margin-end: 0 !important;
 	}
 

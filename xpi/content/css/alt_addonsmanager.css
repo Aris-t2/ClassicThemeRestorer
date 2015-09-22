@@ -103,6 +103,7 @@
 	#addons-page .relnotes-toggle,
 	#list-view menulist{
 	  padding:2px !important;
+	  min-height: unset !important;
 	  height: unset !important;
 	  font-size: 90% !important;
 	}
@@ -128,7 +129,7 @@
 	#addons-page button.sorter{
 	  padding:2px !important;
 	  min-height: 26px !important;
-		height: unset !important;
+	  height: unset !important;
 	}
 
 	#addons-page #header-search{
@@ -161,6 +162,7 @@
 	#detail-view button:not(.button-link):not(.text-link),
 	#detail-view menulist{
 	  padding:2px !important;
+	  min-height: unset !important;
 	  height: unset !important;
 	  font-size: 90% !important;
 	  background-image: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.20),rgba(0,0,0,0.01)) !important;
