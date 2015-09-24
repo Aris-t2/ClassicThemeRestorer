@@ -880,7 +880,11 @@ classicthemerestorerjs.ctr = {
 				classicthemerestorerjs.ctr.loadUnloadCSS("navthrobber",false);
 				classicthemerestorerjs.ctr.activityObserverOn = false;
 				classicthemerestorerjs.ctr.restoreActivityThrobber();
-			  } else classicthemerestorerjs.ctr.activityObserver.disconnect();
+			  } else {
+				try{
+				  classicthemerestorerjs.ctr.activityObserver.disconnect();
+				}catch(e){}
+			  }
 			}
 		  break;
 
@@ -2778,7 +2782,9 @@ classicthemerestorerjs.ctr = {
   restoreActivityThrobber: function(){
 	
 	// disconnect observer, if it is already running
-	classicthemerestorerjs.ctr.activityObserver.disconnect();
+	try{
+	  classicthemerestorerjs.ctr.activityObserver.disconnect();
+	}catch(e){}
 	
 	// check, if tab attributes got modified
 	classicthemerestorerjs.ctr.activityObserver = new MutationObserver(function(mutations) {
@@ -2788,13 +2794,21 @@ classicthemerestorerjs.ctr = {
 	});
 
 	// enable observer
-	if(classicthemerestorerjs.ctr.activityObserverOn==true)
-	  classicthemerestorerjs.ctr.activityObserver.observe(gBrowser.selectedTab, { attributes: true, attributeFilter: ['busy'] });
+	if(classicthemerestorerjs.ctr.activityObserverOn==true) {
+	  try{
+		classicthemerestorerjs.ctr.activityObserver.observe(gBrowser.selectedTab, { attributes: true, attributeFilter: ['busy'] });
+	  }catch(e){}
+	}
 	
 	// if tab is busy, add 'busy' attribute to 'ctraddon_navigator-throbber'
 	function ctrActivityThrobber(){
 		if(classicthemerestorerjs.ctr.activityObserverOn==true){
-		  var navthrobber = document.getElementById('ctraddon_navigator-throbber');
+
+		  var navthrobber = null;
+
+		  try{
+		    navthrobber = document.getElementById('ctraddon_navigator-throbber');
+		  }catch(e){}
 		  
 		  if(gBrowser.selectedTab.hasAttribute('busy')) {
 			try{
@@ -2810,7 +2824,9 @@ classicthemerestorerjs.ctr = {
 			  }
 			}catch(e){}
 		  }
-		  classicthemerestorerjs.ctr.activityObserver.observe(gBrowser.selectedTab, { attributes: true, attributeFilter: ['busy'] });
+		  try{
+		    classicthemerestorerjs.ctr.activityObserver.observe(gBrowser.selectedTab, { attributes: true, attributeFilter: ['busy'] });
+		  }catch(e){}
 		}
 	}
 	
