@@ -68,6 +68,7 @@ classicthemerestorerjs.ctr = {
   fullscreeduration:	false,
   moveStarIntoUrlbar:	false,
   moveFeedIntoUrlbar:	false,
+  altnewtabpageOn:		false,
   
   devthemeinterval: 	null,
   ctrcontentprefswin: 	null,
@@ -1855,13 +1856,17 @@ classicthemerestorerjs.ctr = {
 					var {NewTabURL} = Cu.import("resource:///modules/NewTabURL.jsm", {});
 					NewTabURL.override(newURL);
 				} catch(e){}
+				
+				classicthemerestorerjs.ctr.altnewtabpageOn = true;
 
 				
-			} else if (classicthemerestorerjs.ctr.appversion >= 41) {
+			} else if (classicthemerestorerjs.ctr.appversion >= 41 && classicthemerestorerjs.ctr.altnewtabpageOn==true) {
 				try{
 				  var {NewTabURL} = Cu.import("resource:///modules/NewTabURL.jsm", {});
 				  NewTabURL.reset();
 				} catch(e){}
+				
+				classicthemerestorerjs.ctr.altnewtabpageOn = false;
 			}
 
 		  break;

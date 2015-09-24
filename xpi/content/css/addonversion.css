@@ -4,5 +4,9 @@
 	.addon:not([type="userstyle"]):not([pending="uninstall"])[status="installed"]	{
 	  -moz-binding: url("chrome://classic_theme_restorer/content/addonversion.xml#addon-generic") !important;
 	}
+	
+	.addon:not([type="userstyle"]):not([pending="uninstall"])[status="installed"] .name-container .version {
+	  visibility: visible !important;
+	}
 
 }
