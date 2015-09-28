@@ -126,7 +126,7 @@
 <!ENTITY Ctr_stoprel1		"Important: position reload button after stop button!">
 <!ENTITY Ctr_panelmenucol	"Panel menu popups: alternative background color">
 <!ENTITY Ctr_hideprivmask	"Private browsing: hide mask indicator">
-<!ENTITY Ctr_nbisizedelay	"ms startup delay (1000 ms = 1 sec)">
+<!ENTITY Ctr_nbisizedelay	"ms - initialization delay on browser startup (1000 ms = 1 sec)">
 <!ENTITY Ctr_findbar		"Findbar position">
 <!ENTITY Ctr_findbar_def	"Bottom (default)">
 <!ENTITY Ctr_findbar_top	"Top">
@@ -141,11 +141,13 @@
 <!ENTITY Ctr_cpanelmenus	"Panel menu popups (bookmarks, history etc.): compact view">
 <!ENTITY Ctr_hidezoomres	"Zoom controls on toolbar: hide zoom-reset button">
 <!ENTITY Ctr_alt_newtabp	"New tab page (about:newtab): alternative appearance">
+<!ENTITY Ctr_ctroldsearch	"Old search (experimental)">
 <!ENTITY Ctr_addonmanager	"Add-on manager">
 <!ENTITY Ctr_alt_addonsp	"'More info' page: alternative order">
 <!ENTITY Ctr_alt_addonsm	"Alternative appearance">
 <!ENTITY Ctr_am_nowarning	"Add-on lists: hide warnings">
 <!ENTITY Ctr_am_compact		"Add-on lists: compact view">
+<!ENTITY Ctr_am_compact2	"Compact view +">
 <!ENTITY Ctr_addonversion	"Add-on lists: show add-on version">
 <!ENTITY Ctr_xpinstallui	"Old add-on install window (about:config preference)">
 <!ENTITY Ctr_bmbutpanelm	"Bookmarks menu button: panel menu popup appearance">
@@ -249,8 +251,8 @@
 <!ENTITY Ctr_transptcw10	"Hide default OS min/max/close buttons">
 <!ENTITY Ctr_hidenavbar		"Hide toolbar">
 <!ENTITY Ctr_navbarpad		"Additional left and right padding">
-<!ENTITY Ctr_navbarpad_l	"Left: ">
-<!ENTITY Ctr_navbarpad_r	"Right: ">
+<!ENTITY Ctr_navbarpad_l	"Left:">
+<!ENTITY Ctr_navbarpad_r	"Right:">
 <!ENTITY Ctr_nobookbarbg	"Remove background color">
 <!ENTITY Ctr_bookbarfs		"In fullscreen mode">
 <!ENTITY Ctr_nonavbarbg		"Remove background color">

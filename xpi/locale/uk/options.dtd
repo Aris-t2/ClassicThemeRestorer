@@ -54,7 +54,7 @@
 <!ENTITY Ctr_tabwidthinfo2	"Мінімальна та максимальна ширина вкладок контролюються за допомогою TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"Значення нижче 48пікс викличе збої в більшості випадків!">
 <!ENTITY Ctr_square_edges	"Квадратні верхні кути">
-<!ENTITY Ctr_tttitlebar		"Tab title in &brandShortName; titlebar">
+<!ENTITY Ctr_tttitlebar		"Заголовок вкладки на панелі заголовку &brandShortName;">
 <!ENTITY Ctr_tabinsertion	"Вставити відповідну вкладку після поточної вкладки (about:config)">
 <!ENTITY Ctr_emptyfavicon	"Відновити порожній значок сайту (якщо сайт не пропонує його)">
 <!ENTITY Ctr_noemptypticon	"Прибрати порожній значок адреси з прикріпленої вкладки">
@@ -112,8 +112,8 @@
 <!ENTITY Ctr_hide_bf_popup	"Приховати меню історії при натисканні миші">
 <!ENTITY Ctr_bf_space		"Зменшити відстань між кнопками (якщо це можливо)">
 <!ENTITY Ctr_noconicons		"Замінити іконки контекстного меню сторінки написами (назад, вперед, стоп, перезавантажити, сторінка закладок)">
-<!ENTITY Ctr_altoptionsp	"Options page (about:preferences): alternative appearance">
-<!ENTITY Ctr_altoptionsw	"Open options page (about:preferences) in a window">
+<!ENTITY Ctr_altoptionsp	"Сторінка «Налаштування» (about:preferences): альтернативний вигляд">
+<!ENTITY Ctr_altoptionsw	"Відкрити сторінку налаштувань (about:preferences) у новому вікні">
 <!ENTITY Ctr_svgfilters		"SVG кольори для типових іконок кнопок панелі інструментів">
 <!ENTITY Ctr_wincontrols	"Рухоме управління повноекранним режимом">
 <!ENTITY Ctr_emptyfavicon2	"Замінити загальний значок сайту (порожній і пунктирний)">
@@ -141,12 +141,14 @@
 <!ENTITY Ctr_cpanelmenus	"Панель меню: компактний вигляд (закладки, історія тощо)">
 <!ENTITY Ctr_hidezoomres	"Управління масштабом на панелі: приховати кнопку скидання масштабу">
 <!ENTITY Ctr_alt_newtabp	"Сторінка нової вкладки (about:newtab): альтернативний вигляд">
+<!ENTITY Ctr_ctroldsearch	"Old search (experimental)">
 <!ENTITY Ctr_addonmanager	"Менеджер додатків">
 <!ENTITY Ctr_alt_addonsp	"Сторінка «Детальніше» в Додатках: альтернативний вигляд">
 <!ENTITY Ctr_alt_addonsm	"Менеджер додатків: альтернативний вигляд">
-<!ENTITY Ctr_am_nowarning	"Списки додатків у Менеджері додатків: приховати попередження">
-<!ENTITY Ctr_am_compact		"Add-on lists: compact view">
-<!ENTITY Ctr_addonversion	"Списки додатків у Менеджері додатків: показати версію додатка">
+<!ENTITY Ctr_am_nowarning	"Список додатків у Менеджері додатків: приховати попередження">
+<!ENTITY Ctr_am_compact		"Список додатків: компактний вигляд">
+<!ENTITY Ctr_am_compact2	"Компактний вигляд +">
+<!ENTITY Ctr_addonversion	"Список додатків у Менеджері додатків: показати версію додатка">
 <!ENTITY Ctr_xpinstallui	"Менеджер додатків: старе вікно встановлення додатків (about:config preference)">
 <!ENTITY Ctr_bmbutpanelm	"Кнопка меню закладок: вигляд меню панелі">
 <!ENTITY Ctr_bmbutnotext	"Кнопка меню закладок: приховати ярлик на панелі закладок">
@@ -194,11 +196,11 @@
 
 <!ENTITY Ctr_urlbar			"Панель рядку адреси">
 <!ENTITY Ctr_starinurl		"Зірка">
-<!ENTITY Ctr_starinurlinfo	"Default bookmarks menu button gets hidden">
+<!ENTITY Ctr_starinurlinfo	"Кнопка меню закладок за замовчуванням буде прихованою">
 <!ENTITY Ctr_feedinurl		"Кнопка RSS">
 <!ENTITY Ctr_hideurelstop	"Приховати кнопку «Зупинити та Перезавантажити»">
 <!ENTITY Ctr_hideurlgo		"Приховати кнопку «Перейти»">
-<!ENTITY Ctr_hideurlsrg		"Hide 'reload, stop &amp; go' button separators &amp; spaces">
+<!ENTITY Ctr_hideurlsrg		"Приховати розділювачі та пробіли кнопок «перезавантажити, зупинити та перейти»">
 <!ENTITY Ctr_urlbardropm	"Перемістити маркер-трикутник в кінець рядку адреси">
 <!ENTITY Ctr_hideprbutton	"Приховати інфо кнопку «спливаюче вікно блоковано»">
 <!ENTITY Ctr_urlbar_ib		"Індикатори справжності панелі рядку адреси">
@@ -246,11 +248,11 @@
 
 <!ENTITY Ctr_aerocolors		"Кольори Blue Aero для основних панелей і вкладок">
 <!ENTITY Ctr_transpttbw10	"Панель заголовку/меню/вкладок: прибрати колір тла">
-<!ENTITY Ctr_transptcw10	"Hide default OS min/max/close buttons">
+<!ENTITY Ctr_transptcw10	"Приховати типові OС кнопки мін/макс/закрити">
 <!ENTITY Ctr_hidenavbar		"Панель навігації: приховати панель">
-<!ENTITY Ctr_navbarpad		"Additional left and right padding">
-<!ENTITY Ctr_navbarpad_l	"Left: ">
-<!ENTITY Ctr_navbarpad_r	"Right: ">
+<!ENTITY Ctr_navbarpad		"Додаткові лівий та правий відступи">
+<!ENTITY Ctr_navbarpad_l	"Зліва:">
+<!ENTITY Ctr_navbarpad_r	"Зправа:">
 <!ENTITY Ctr_nobookbarbg	"Панель закладок: прибрати колір тла">
 <!ENTITY Ctr_bookbarfs		"Панель закладок: у повноекранному режимі">
 <!ENTITY Ctr_nonavbarbg		"Панель навігації: прибрати колір тла">
@@ -293,14 +295,14 @@
 <!ENTITY Ctr_fx36prefs		"В &brandShortName; 36+ введено нове налаштування у вкладці. Вимкнення цього пункту відновлює вікно зі старими налаштуванням.">
 <!ENTITY Ctr_fx36prefs2		"Note: Old preference window does not contain all recently added browser preferences!">
 <!ENTITY Ctr_fx38reader		"В &brandShortName; 38+ введено новий «режим читання». Вимкнення цього пункту вимикає цей режим та прибирає його іконку з панелі навігації.">
-<!ENTITY Ctr_fx38pocket		"В &brandShortName; 38.0.5+ введено режим «Pocket». Вимкнення цього пункту вимикає цей режим та усуває його кнопку з панелей.">
-<!ENTITY Ctr_fx38pocket2	"Примітка: Переміщення кнопки «Pocket» на сторінку «Пристосувати &brandShortName;» перед вимкненням цього налаштування також усуває написи «Pocket» в закладках і меню читання.">
+<!ENTITY Ctr_fx38pocket		"В &brandShortName; 38.0.5+ введено режим «Кишеня». Вимкнення цього пункту вимикає цей режим та усуває його кнопку з панелей.">
+<!ENTITY Ctr_fx38pocket2	"Примітка: Переміщення кнопки «Кишеня» на сторінку «Пристосувати &brandShortName;» перед вимкненням цього налаштування також усуває написи «Кишеня» в закладках і меню читання.">
 <!ENTITY Ctr_e_searchui		"Вигляд панелі Пошук">
 <!ENTITY Ctr_e_loop			"Виклик та сеанс зв’язку">
 <!ENTITY Ctr_e_deved		"Тема від розробника">
 <!ENTITY Ctr_e_prefsui		"Налаштування у вкладці">
 <!ENTITY Ctr_e_readermode	"Режим читання">
-<!ENTITY Ctr_e_pocket		"Pocket">
+<!ENTITY Ctr_e_pocket		"Кишеня">
 <!ENTITY Ctr_e_tabsaudioico	"Іконка аудіовідтворення на вкладках">
 <!ENTITY Ctr_fx42tabsaudico	"Вимкнення цього налаштування усуває «іконку аудіовідтворення» з вкладок.">
 
@@ -324,7 +326,7 @@
 <!ENTITY Ctr_openInPrivateWindow	"Відкрити в новому приватному вікні">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
 <!ENTITY appMenuGettingStarted.label	"Початок роботи">
-<!ENTITY goCmd.label		"Go">
+<!ENTITY goCmd.label		"Перейти">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey            "Н">

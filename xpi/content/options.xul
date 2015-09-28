@@ -72,13 +72,16 @@
 		<preference id="ctraddon_smallnavbut"	name="extensions.classicthemerestorer.smallnavbut"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_hide_bf_popup"	name="extensions.classicthemerestorer.hide_bf_popup" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_nbcompact"		name="extensions.classicthemerestorer.nbcompact"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_nbcompact"		name="extensions.classicthemerestorer.nbcompact"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_hidenavbar"	name="extensions.classicthemerestorer.hidenavbar"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_backforward"	name="extensions.classicthemerestorer.backforward"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_noconicons"	name="extensions.classicthemerestorer.noconicons"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_alt_newtabp"	name="extensions.classicthemerestorer.alt_newtabp"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_ctroldsearch"	name="extensions.classicthemerestorer.ctroldsearch"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_addonversion"	name="extensions.classicthemerestorer.addonversion"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_am_nowarning"	name="extensions.classicthemerestorer.am_nowarning"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_am_compact"	name="extensions.classicthemerestorer.am_compact"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_am_compact2"	name="extensions.classicthemerestorer.am_compact2"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_alt_addonsp"	name="extensions.classicthemerestorer.alt_addonsp"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_alt_addonsm"	name="extensions.classicthemerestorer.alt_addonsm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_altoptionsp"	name="extensions.classicthemerestorer.altoptionsp"	type="bool"		instantApply="true"/>
@@ -332,7 +335,7 @@
 			<radio value="throbber_nav"		label=""	id="ctraddon_pw_tabthrobber_nav"/>
 		</radiogroup>
 		
-		<hbox>
+		<hbox align="center">
 		  <checkbox label="&Ctr_tabminheight;"	preference="ctraddon_ctabheightcb" id="ctraddon_pw_tab_ctabheightcb"/>
 		  <textbox size="2" maxlength="2" preference="ctraddon_ctabheight" type="number" min="18" max="50" id="ctraddon_pw_tab_ctabheight"/>
 		  <label value="px"/>
@@ -345,17 +348,17 @@
 
 		<grid>
 		  <rows>
-			<row>
+			<row align="center">
 				<label value="&Ctr_tabminwidth;" id="ctraddon_pw_tabMinWidth_L1"/>
-				<hbox>
+				<hbox align="center">
 					<textbox id="ctraddon_pw_tabMinWidth" size="3" maxlength="3" preference="ctraddon_tabmwidth" type="number"/>
 					<label value="px"/>
 				</hbox>
 				<label value="100px &Ctr_tabwidthdef;" id="ctraddon_pw_tabMinWidth_L2"/>
 			</row>
-			<row>
+			<row align="center">
 				<label value="&Ctr_tabmaxwidth;" id="ctraddon_pw_tabMaxWidth_L1"/>
-				<hbox>
+				<hbox align="center">
 					<textbox id="ctraddon_pw_tabMaxWidth" size="3" maxlength="3" preference="ctraddon_tabwidth" type="number"/>
 					<label value="px"/>
 				</hbox>
@@ -795,6 +798,7 @@
 		
 		<checkbox label="&Ctr_noconicons;"		preference="ctraddon_noconicons" id="ctraddon_pw_noconicons"/>
 		<checkbox label="&Ctr_alt_newtabp;"		preference="ctraddon_alt_newtabp" id="ctraddon_pw_alt_newtabp"/>
+		<checkbox label="&Ctr_ctroldsearch;"	preference="ctraddon_ctroldsearch" id="ctraddon_pw_ctroldsearch"/>
 		<checkbox label="&Ctr_altoptionsp;"		preference="ctraddon_altoptionsp" id="ctraddon_pw_altoptionsp"/>
 		<checkbox label="&Ctr_altoptionsw;"		preference="ctraddon_altoptionsw" id="ctraddon_pw_altoptionsw"/>
 		<checkbox label="&Ctr_svgfilters;"		preference="ctraddon_svgfilters" id="ctraddon_pw_svgfilters"/>
@@ -881,7 +885,8 @@
 		<checkbox label="&Ctr_alt_addonsm;"		preference="ctraddon_alt_addonsm" id="ctraddon_pw_alt_addonsm"/>
 		<checkbox label="&Ctr_addonversion;"	preference="ctraddon_addonversion" id="ctraddon_pw_addonversion"/>
 		<checkbox label="&Ctr_am_nowarning;"	preference="ctraddon_am_nowarning" id="ctraddon_pw_am_nowarning"/>
-		<checkbox label="&Ctr_am_compact;"		preference="ctraddon_am_compact" id="ctraddon_pw_am_compact"/>
+		<checkbox label="&Ctr_am_compact;"		preference="ctraddon_am_compact" id="ctraddon_pw_am_compact" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwCompactAddonList(true);} else {classicthemerestorerjso.ctr.ctrpwCompactAddonList(false);}"/>
+		<checkbox label="&Ctr_am_compact2;"		preference="ctraddon_am_compact2" id="ctraddon_pw_am_compact2" class="ctraddonsuboption"/>
 		<checkbox label="&Ctr_alt_addonsp;"		preference="ctraddon_alt_addonsp" id="ctraddon_pw_alt_addonsp"/>
 		<checkbox label="&Ctr_xpinstallui;"		preference="ctraddon_xpinstallui" id="ctraddon_pw_xpinstallui"/>
 	  </groupbox>
@@ -955,7 +960,7 @@
 
 	  <groupbox>
 		<caption  label="&Ctr_extrabar;" class="ctraddon_topic"/>
-		<hbox>
+		<hbox align="center">
 		  <textbox id="ctraddon_pw_am_extrabars" size="2" maxlength="2" preference="ctraddon_am_extrabars" type="number" min="0" max="20"  onchange="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		  <description>&Ctr_extrabar0;</description>
 		</hbox>
@@ -970,7 +975,7 @@
 				<menuitem value="large"	label="#nav-bar[iconsize='large']"/>
 			</menupopup>
 		</menulist>
-		<hbox>
+		<hbox align="center">
 		  <textbox id="ctraddon_pw_nbisizedelay" size="4" maxlength="4" preference="ctraddon_nbisizedelay" type="number" min="0" max="9999"/>
 		  <label value="&Ctr_nbisizedelay;"/>
 		</hbox>
@@ -1036,10 +1041,10 @@
 	    <caption  label="&Ctr_navbar;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_hidenavbar;"				 preference="ctraddon_hidenavbar"/>
 		<checkbox label="&Ctr_navbarpad;"				 preference="ctraddon_navbarpad" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwNavBarPadding(true);} else {classicthemerestorerjso.ctr.ctrpwNavBarPadding(false);}"/>
-		<hbox class="ctraddonsuboption"  id="ctraddon_pw_navbarpad_lr">
-		  <label value="&Ctr_navbarpad_l;"/>
+		<hbox class="ctraddonsuboption"  id="ctraddon_pw_navbarpad_lr" align="center">
+		  <label value="&Ctr_navbarpad_l; "/>
 		  <textbox size="3" maxlength="3" preference="ctraddon_navbarpad_l" type="number" min="0" max="500"/>
-		  <label value="px  &Ctr_navbarpad_r;"/>
+		  <label value="px  -  &Ctr_navbarpad_r; "/>
 		  <textbox size="3" maxlength="3" preference="ctraddon_navbarpad_r" type="number" min="0" max="500"/>
 		  <label value="px"/>
 		</hbox>

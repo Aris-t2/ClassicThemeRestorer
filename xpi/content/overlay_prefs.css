@@ -489,6 +489,12 @@ radio.ctraddontab .radio-check-box1 {
   min-height:16px !important;
 }
 
+#ctraddon_pw_ctroldsearch label {
+  background: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/search-glass.png), 0, 16, 16, 0) no-repeat left !important;
+  padding-left:20px !important;
+  min-height:16px !important;
+}
+
 #ctraddon_pw_bmbutpanelm label,
 #ctraddon_pw_bmbutnotext label {
   background:url('chrome://classic_theme_restorer/content/images/bookmarks.png') no-repeat left !important;
@@ -512,7 +518,8 @@ radio.ctraddontab .radio-check-box1 {
 #ctraddon_pw_alt_addonsp label,
 #ctraddon_pw_addonversion label,
 #ctraddon_pw_am_nowarning label,
-#ctraddon_pw_am_compact label {
+#ctraddon_pw_am_compact label,
+#ctraddon_pw_am_compact2 label {
   background:url('chrome://classic_theme_restorer/content/images/appmenu_addons_lin.png') no-repeat left !important;
   padding-left:20px !important;
   min-height:16px !important;
@@ -540,7 +547,7 @@ radio.ctraddontab .radio-check-box1 {
 /* Padlock icons */
 #ctraddon_pw_padlock_default{
   list-style-image:url('chrome://classic_theme_restorer/content/images/padlock_default1.png');
-      -moz-image-region: rect(0px, 16px, 16px, 0px);
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
 }
 #ctraddon_pw_padlock_classic{
   list-style-image:url('chrome://classic_theme_restorer/content/images/padlock_classic.png');

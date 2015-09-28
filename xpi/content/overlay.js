@@ -1718,6 +1718,11 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("alt_newtabp")) classicthemerestorerjs.ctr.loadUnloadCSS("alt_newtabp",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("alt_newtabp",false);
 		  break;
+		  
+		  case "ctroldsearch":
+			if (branch.getBoolPref("ctroldsearch") && classicthemerestorerjs.ctr.appversion >= 43) classicthemerestorerjs.ctr.loadUnloadCSS("ctroldsearch",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("ctroldsearch",false);
+		  break;
 
 		  case "am_nowarning":
 			if (branch.getBoolPref("am_nowarning")) classicthemerestorerjs.ctr.loadUnloadCSS("am_nowarning",true);
@@ -1726,8 +1731,21 @@ classicthemerestorerjs.ctr = {
 
 		  case "am_compact":
 			if (branch.getBoolPref("am_compact") && classicthemerestorerjs.ctr.appversion >= 40
-				&& classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("am_compact",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("am_compact",false);
+			  && classicthemerestorerjs.ctr.fxdefaulttheme==true) {
+				classicthemerestorerjs.ctr.loadUnloadCSS("am_compact",true);
+				if (branch.getBoolPref("am_compact2"))
+				  classicthemerestorerjs.ctr.loadUnloadCSS("am_compact2",true);
+			}
+			else { 
+			  classicthemerestorerjs.ctr.loadUnloadCSS("am_compact",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("am_compact2",false);
+			}
+		  break;
+
+		  case "am_compact2":
+			if (branch.getBoolPref("am_compact") && branch.getBoolPref("am_compact2") && classicthemerestorerjs.ctr.appversion >= 40
+				&& classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("am_compact2",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("am_compact2",false);
 		  break;
 
 		  case "alt_addonsp":
@@ -3266,8 +3284,10 @@ classicthemerestorerjs.ctr = {
 		case "noemptypticon": 		manageCSS("empty_favicon_pt.css");		break;
 		case "hidezoomres": 		manageCSS("hide_zoomreset.css");		break;
 		case "alt_newtabp": 		manageCSS("alt_newtabpage.css");		break;
+		case "ctroldsearch": 		manageCSS("oldsearch.css");				break;
 		case "am_nowarning":		manageCSS("am_nowarnings.css");			break;
 		case "am_compact":			manageCSS("am_compact.css");			break;
+		case "am_compact2":			manageCSS("am_compact2.css");			break;
 		case "alt_addonsp": 		manageCSS("alt_addonspage.css");		break;
 		case "alt_addonsm": 		manageCSS("alt_addonsmanager.css");		break;
 		case "addonversion": 		manageCSS("addonversion.css");			break;
