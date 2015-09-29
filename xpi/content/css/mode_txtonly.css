@@ -72,8 +72,8 @@
 	  display: none !important;
 	  visibility: collapse !important;
 	}
-	#main-window toolbox toolbar #urlbar-container #urlbar #feed-button:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-icon,
-	#main-window toolbox toolbar #urlbar-container #urlbar #bookmarks-menu-button:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-icon {
+	#main-window toolbox toolbar #urlbar-container #urlbar #feed-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon,
+	#main-window toolbox toolbar #urlbar-container #urlbar #bookmarks-menu-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon {
 	  visibility: visible !important;
 	}
 	toolbox toolbar #urlbar-container #urlbar #feed-button,

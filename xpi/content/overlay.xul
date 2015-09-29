@@ -64,7 +64,7 @@
 				 toolbarname="&Ctr_addonbar;"
 				 lockiconsize="true"
 				 accesskey="&Ctr_addon-bar.accesskey;"
-				 key="key_toggleCtrAddonBar"
+				 key="ctraddon_key_toggleCtrAddonBar"
 				 defaultset="ctraddon_addonbar-close,spring,ctraddon_statusbar">
 		  <toolbarbutton id="ctraddon_addonbar-close" removable="false" class="close-icon"
 				    oncommand="classicthemerestorerjs.ctr.toggleCtrAddonBar();"/>

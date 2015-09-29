@@ -971,8 +971,8 @@
 		<caption  label="&Ctr_nbiconsize0;" class="ctraddon_topic"/>
 		<menulist preference="ctraddon_nbiconsize">
 			<menupopup>
-				<menuitem value="small"	label="#nav-bar[iconsize='small'] &Ctr_tabwidthdef;"/>
-				<menuitem value="large"	label="#nav-bar[iconsize='large']"/>
+				<menuitem value="small"	label="#nav-bar[iconsize='small'] - &Ctr_navsmallicons; &Ctr_tabwidthdef;"/>
+				<menuitem value="large"	label="#nav-bar[iconsize='large'] - &Ctr_navlargeicons;"/>
 			</menupopup>
 		</menulist>
 		<hbox align="center">

@@ -243,6 +243,27 @@ classicthemerestorerjso.ctr = {
 	};
 	AddonManager.addAddonListener(TFOBListener);
 	
+	// NoiaButtons
+	var NBOListener = {
+	   onEnabled: function(addon) {
+		  if(addon.id == 'NoiaButtons@ArisT2_Noia4dev') { 
+		    document.getElementById('ctraddon_pw_smallnavbut').disabled = true;
+		  }
+	   },
+	   onDisabled: function(addon) {
+		  document.getElementById('ctraddon_pw_smallnavbut').disabled = false;
+	   }
+	};
+	AddonManager.addAddonListener(NBOListener);
+	
+	AddonManager.getAddonByID('NoiaButtons@ArisT2_Noia4dev', function(addon) {
+	  if(addon && addon.isActive) {
+		document.getElementById('ctraddon_pw_smallnavbut').disabled = true;
+	  } else{
+		document.getElementById('ctraddon_pw_smallnavbut').disabled = false;
+	  }
+	});
+	
 	AddonManager.getAddonByID('the-addon-bar@GeekInTraining-GiT', function(addon) {
 	  if(addon && addon.isActive) {
 		document.getElementById('ctraddon_pw_statusbar').disabled = true;

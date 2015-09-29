@@ -2357,6 +2357,26 @@ classicthemerestorerjs.ctr = {
 	   if(addon && addon.isActive) { classicthemerestorerjs.ctr.loadUnloadCSS("spaces_extra",false); }
 	    else { classicthemerestorerjs.ctr.loadUnloadCSS("spaces_extra",true); }
 	});
+	
+	// NoiaButtons
+	var NBListener = {
+	   onEnabled: function(addon) {
+		  if(addon.id == 'NoiaButtons@ArisT2_Noia4dev') { 
+		  
+		    if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("smallnavbut"))
+			  Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref("smallnavbut",false);
+
+		  }
+	   }
+	};
+	AddonManager.addAddonListener(NBListener);
+	
+	AddonManager.getAddonByID('NoiaButtons@ArisT2_Noia4dev', function(addon) {
+	  if(addon && addon.isActive) {
+		if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("smallnavbut"))
+		  Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref("smallnavbut",false);
+	  }
+	});
 
 	// ShowIP add-on fix
 	setTimeout(function(){
