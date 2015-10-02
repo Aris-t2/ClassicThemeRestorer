@@ -168,8 +168,7 @@
 		<preference id="ctraddon_addonbarfs"	name="extensions.classicthemerestorer.addonbarfs"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hightabpososx"	name="extensions.classicthemerestorer.hightabpososx" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_altmenubar"	name="extensions.classicthemerestorer.altmenubar" 	 type="bool"	instantApply="true"/>
-		<preference id="ctraddon_altmenubarpos"	name="extensions.classicthemerestorer.altmenubarpos" type="bool"	instantApply="true"/>
-		<preference id="ctraddon_altmenubarpos2" name="extensions.classicthemerestorer.altmenubarpos2" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_altmbarpos"	name="extensions.classicthemerestorer.altmbarpos"	 type="string"	instantApply="true"/>
 		<preference id="ctraddon_menubarnofog"	name="extensions.classicthemerestorer.menubarnofog"  type="bool"	instantApply="true"/>
 		<preference id="ctraddon_menubarfs"		name="extensions.classicthemerestorer.menubarfs"  	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_noaddonbarbg"	name="extensions.classicthemerestorer.noaddonbarbg"  type="bool"	instantApply="true"/>
@@ -977,7 +976,7 @@
 		</menulist>
 		<hbox align="center">
 		  <textbox id="ctraddon_pw_nbisizedelay" size="4" maxlength="4" preference="ctraddon_nbisizedelay" type="number" min="0" max="9999"/>
-		  <label value="&Ctr_nbisizedelay;"/>
+		  <description>&Ctr_nbisizedelay;</description>
 		</hbox>
 	  </groupbox>
 
@@ -1015,10 +1014,13 @@
 
 	  <groupbox class="ctraddon_windowsonly">
 		<caption  label="&Ctr_menubar; - &Ctr_altmenubarpos;" class="ctraddon_topic"/>
-		<hbox>
-			<checkbox label="v1" preference="ctraddon_altmenubarpos" id="ctraddon_pw_altmenubarpos"/>
-			<checkbox label="v2" preference="ctraddon_altmenubarpos2" id="ctraddon_pw_altmenubarpos2"/>
-		</hbox>
+		<menulist preference="ctraddon_altmbarpos">
+			<menupopup>
+				<menuitem value="altmbarpos0" label="&Ctr_tabwidthdef;"/>
+				<menuitem value="altmbarpos1" label="&Ctr_altmenubarpos2; v1" id="ctraddon_pw_altmenubarpos"/>
+				<menuitem value="altmbarpos2" label="&Ctr_altmenubarpos2; v2" id="ctraddon_pw_altmenubarpos2"/>
+			</menupopup>
+		</menulist>
 	  </groupbox>
 
 	</box>

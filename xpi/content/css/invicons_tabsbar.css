@@ -92,7 +92,8 @@
 		  list-style-image: url("chrome://browser/skin/syncProgress-toolbar-inverted@2x.png") !important;
 		}
 		#main-window[fx40plus="true"] #TabsToolbar #downloads-button:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon {
-		  background-image: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted@2x.png"), 0, 396, 36, 360) !important;
+		  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted@2x.png"), 0, 396, 36, 360) center no-repeat !important;
+		  background-size: 18px !important;
 		}
 		#main-window[fx40plus="true"] #TabsToolbar #downloads-button[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
 		  background-image: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted@2x.png"), 36, 396, 72, 360) !important;
@@ -139,7 +140,6 @@
 		#main-window[fx40plus="true"] #TabsToolbar #ctraddon_bookmarks-menu-toolbar-button .toolbarbutton-icon {
 		  width: 18px !important;
 		}
-		#main-window[fx40plus="true"] #TabsToolbar #downloads-button .toolbarbutton-icon,
 		#main-window[fx40plus="true"] #TabsToolbar #ctraddon_bookmarks-button .toolbarbutton-icon {
 		  width: 18px !important;
 		}

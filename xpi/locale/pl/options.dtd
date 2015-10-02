@@ -126,14 +126,14 @@
 <!ENTITY Ctr_stoprel1		"Ważne: umieść przycisk odświeżania za przyciskiem zatrzymania!">
 <!ENTITY Ctr_panelmenucol	"Menu panelu: alternatywny kolor tła">
 <!ENTITY Ctr_hideprivmask	"Prywatne przeglądanie: ukryj wskaźnik-maskę">
-<!ENTITY Ctr_navsmallicons	"Small icons">
-<!ENTITY Ctr_navlargeicons	"Large icons">
+<!ENTITY Ctr_navsmallicons	"Małe ikony">
+<!ENTITY Ctr_navlargeicons	"Duże ikony">
 <!ENTITY Ctr_nbisizedelay	"ms opóźnienia wykonania (1000 ms = 1 s)">
-<!ENTITY Ctr_findbar		"Pasek wyszukiwania">
-<!ENTITY Ctr_findbar_def	"Pozycja domyślna">
-<!ENTITY Ctr_findbar_top	"Pozycja na górze">
-<!ENTITY Ctr_findbar_topa	"Alternatywna pozycja na górze">
-<!ENTITY Ctr_findbar_bota	"Alternatywna pozycja na dole">
+<!ENTITY Ctr_findbar		"Pozycja paska wyszukiwania">
+<!ENTITY Ctr_findbar_def	"Dolna (domyślna)">
+<!ENTITY Ctr_findbar_top	"Górna">
+<!ENTITY Ctr_findbar_topa	"Górna (alternatywna kolejność zawartości)">
+<!ENTITY Ctr_findbar_bota	"Dolna (alternatywna kolejność zawartości)">
 <!ENTITY Ctr_nav_txt_ico0	"Pokaż tylko ikony (domyślne)">
 <!ENTITY Ctr_nav_txt_ico1	"Pokaż duże ikony">
 <!ENTITY Ctr_nav_txt_ico2	"Pokaż ikony i tekst">
@@ -143,10 +143,10 @@
 <!ENTITY Ctr_cpanelmenus	"Menu panelu: widok kompaktowy (zakładki, historia itp.)">
 <!ENTITY Ctr_hidezoomres	"Kontrolki powiększenia na pasku narzędzi: ukryj przycisk resetu powiększenia">
 <!ENTITY Ctr_alt_newtabp	"Strona nowej karty (about:newtab): alternatywny wygląd">
-<!ENTITY Ctr_ctroldsearch	"Old search (experimental)">
+<!ENTITY Ctr_ctroldsearch	"Stara wyszukiwarka (eksperymentalna)">
 <!ENTITY Ctr_addonmanager	"Menedżer dodatków">
-<!ENTITY Ctr_alt_addonsp	"Strona dodatków 'więcej informacji': alternatywny wygląd">
-<!ENTITY Ctr_alt_addonsm	"Menedżer dodatków: alternatywny wygląd">
+<!ENTITY Ctr_alt_addonsp	"Strona 'więcej informacji': alternatywny wygląd">
+<!ENTITY Ctr_alt_addonsm	"Alternatywny wygląd">
 <!ENTITY Ctr_am_nowarning	"Listy dodatków: ukryj ostrzeżenia">
 <!ENTITY Ctr_am_compact		"Listy dodatków: widok kompaktowy">
 <!ENTITY Ctr_am_compact2	"Widok kompaktowy +">
@@ -184,13 +184,13 @@
 <!ENTITY Ctr_customsqtab1	"Tło">
 <!ENTITY Ctr_ctext			"Tekst">
 <!ENTITY Ctr_ctextsh		"Cień tekstu">
-<!ENTITY Ctr_tabnor			"Karta (domyślna)">
-<!ENTITY Ctr_tabhov			"Karta (najechana)">
-<!ENTITY Ctr_tabact			"Karta (aktywna)">
-<!ENTITY Ctr_tabpen			"Karta (wyładowana)">
-<!ENTITY Ctr_tabunr			"Karta (nieprzeczytana)">
-<!ENTITY Ctr_ntabnor		"Nowa karta (domyślna)">
-<!ENTITY Ctr_ntabhov		"Nowa karta (najechana)">
+<!ENTITY Ctr_tabnor			"Karta domyślna">
+<!ENTITY Ctr_tabhov			"Karta najechana">
+<!ENTITY Ctr_tabact			"Karta wybrana">
+<!ENTITY Ctr_tabpen			"Karta wyładowana">
+<!ENTITY Ctr_tabunr			"Karta nieprzeczytana">
+<!ENTITY Ctr_ntabnor		"Nowa karta domyślna">
+<!ENTITY Ctr_ntabhov		"Nowa karta najechana">
 <!ENTITY Ctr_bold			"Pogrubiona">
 <!ENTITY Ctr_italic			"Kursywa">
 <!ENTITY Ctr_notabhov		"Włączone ustawienia nie uwzględniają ustawień 'najechania'">
@@ -202,13 +202,13 @@
 <!ENTITY Ctr_feedinurl		"Przycisk RSS">
 <!ENTITY Ctr_hideurelstop	"Ukryj przyciski zatrzymania i odświeżania">
 <!ENTITY Ctr_hideurlgo		"Ukryj przycisk 'Przejdź'">
-<!ENTITY Ctr_hideurlsrg		"Ukryj seperatory przycisków 'odśwież, zatrzymaj i przejdź' oraz odstępy">
+<!ENTITY Ctr_hideurlsrg		"Ukryj separatory przycisków 'odśwież, zatrzymaj i przejdź' oraz odstępy">
 <!ENTITY Ctr_urlbardropm	"Przenieś znacznik rozwinięcia na koniec paska adresu">
 <!ENTITY Ctr_hideprbutton	"Ukryj przycisk informujący o zablokowanym wyskakującym oknie">
 <!ENTITY Ctr_urlbar_ib		"Przycisk tożsamości witryny (pole tożsamości">
 <!ENTITY Ctr_verifiedcolors	"Zielone i niebieskie pole tożsamości dla zweryfikowanych stron">
 <!ENTITY Ctr_faviconurl		"Ikona ulubionych: ikona bieżącej strony">
-<!ENTITY Ctr_padlock		"Ikona kłódki">
+<!ENTITY Ctr_padlock		"Ikona kłódki dla bezpiecznych połączeń">
 <!ENTITY Ctr_padlock_hid	"Ukryta">
 <!ENTITY Ctr_padlock_def	"Domyślna">
 <!ENTITY Ctr_padlock_cla	"Klasyczna">
@@ -232,9 +232,9 @@
 <!ENTITY Ctr_mbarforceleft	"Pierwszy element">
 <!ENTITY Ctr_mbarforceright	"Ostatni element">
 
-<!ENTITY Ctr_toolbars		"Ustawienia paska narzędzi">
+<!ENTITY Ctr_toolbars		"Paski narzędzi">
 <!ENTITY Ctr_dblclnewtab	"Podwójne kliknięcie otwiera 'nową' kartę">
-<!ENTITY Ctr_hidetbwot		"Ukryj pasek kart z jedną kartą">
+<!ENTITY Ctr_hidetbwot		"Ukryj pasek kart z widoczną tylko jedną kartą">
 <!ENTITY Ctr_hidetbwote		"Zmniejsz opóźnienie ukrywania przy uruchamianiu">
 <!ENTITY Ctr_hidetbwote_i	"Może powodować usterki kart paska narzędzi">
 <!ENTITY Ctr_hidetbwote2	"Zachowaj pasek tytułu (karty na górze)">
@@ -245,10 +245,11 @@
 <!ENTITY Ctr_alttabstb2		"W trybie zmaksymalizowanym (karty na górze)">
 
 <!ENTITY Ctr_altmenubar		"Dodaj kolor tła (systemowy pasek tytuły)">
-<!ENTITY Ctr_altmenubarpos	"Alternatywna pozycja (poniżej paska tytułu &brandShortName;)">
+<!ENTITY Ctr_altmenubarpos	"Alternatywna pozycja">
+<!ENTITY Ctr_altmenubarpos2	"Poniżej paska tytułu &brandShortName;">
 <!ENTITY Ctr_menubarnofog	"Usuń kolor tła i mgłę (Windows AeroGlass/8)">
 
-<!ENTITY Ctr_aerocolors		"Niebieskie kolory Aero głównych pasków narzędzi (i kart)">
+<!ENTITY Ctr_aerocolors		"Niebieskie kolory Aero pasków narzędzi (i kart)">
 <!ENTITY Ctr_transpttbw10	"Pasek tytułu/menu/kart: usuń kolor tła">
 <!ENTITY Ctr_transptcw10	"Ukryj domyślne przyciski systemowe: minimalizuj, maksymalizuj, zamknij">
 <!ENTITY Ctr_hidenavbar		"Pasek nawigacji: ukryj pasek narzędzi">
@@ -267,7 +268,7 @@
 <!ENTITY Ctr_chevronfix		"Pasek nawigacji: ukryj podwójną strzałkę ('szewron') na końcu paska">
 <!ENTITY Ctr_tbsep_winc		"Górne paski: dodatkowe separatory paska narzędzi">
 
-<!ENTITY Ctr_closeabarbut	"Usuń przycisk zamknięcia paska dodatków">
+<!ENTITY Ctr_closeabarbut	"Pasek dodatków: Usuń przycisk zamknięcia">
 <!ENTITY Ctr_highaddonsbar	"Zwiększ wysokość">
 <!ENTITY Ctr_addonbarfs		"W trybie pełnoekranowym">
 
@@ -291,7 +292,7 @@
 <!ENTITY Ctr_nodevtheme		"Zapobiegaj włączeniu 'Motyw Edycji Deweloperskiej'">
 
 
-<!ENTITY Ctr_experttweaks	"Poprawki eksperckie">
+<!ENTITY Ctr_experttweaks	"Zaawansowane">
 <!ENTITY Ctr_fx34search		"Odznaczenie tego ustawienia usuwa 'nowy wygląd wyszukiwania' i przywraca stary.">
 <!ENTITY Ctr_fx34loop		"Odznaczenie tego ustawienia usuwa funkcje 'dzwonienia i konwersacji'.">
 <!ENTITY Ctr_fx35devtheme	"Odznaczenie tych ustawień wyłącza 'Motyw Edycji Deweloperskiej'.">
@@ -301,7 +302,7 @@
 <!ENTITY Ctr_fx38pocket		"Odznaczenie tego ustawienia wyłącza funkcję 'Pocket' oraz usuwa jej ikonę z pasków narzędzi.">
 <!ENTITY Ctr_fx38pocket2	"Uwaga: Przesunięcie przycisku 'Pocket' do 'palety dostosowywania' przed zablokowaniem tego ustawienia usunie także elementy 'Pocket' w zakładkach i menu czytnika.">
 <!ENTITY Ctr_e_searchui		"Wygląd wyszukiwania">
-<!ENTITY Ctr_e_loop			"Dzwonienie i konwersacja">
+<!ENTITY Ctr_e_loop			"Dzwonienie i konwersacja / Loop">
 <!ENTITY Ctr_e_deved		"Motyw Edycji Deweloperskiej">
 <!ENTITY Ctr_e_prefsui		"Ustawienia w karcie">
 <!ENTITY Ctr_e_readermode	"Tryb czytnika">
