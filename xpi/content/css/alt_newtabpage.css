@@ -122,6 +122,7 @@
 }
 
 /* remove overlay on top of new tab page */
+#newtab-customize-overlay,
 #newtab-window #newtab-customize-overlay {
   display: none !important;
 }
