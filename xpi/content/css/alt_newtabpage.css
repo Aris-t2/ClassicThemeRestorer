@@ -1,5 +1,6 @@
 @-moz-document url(about:newtab) {
 
+	html #newtab-customize-overlay,
 	#newtab-intro-what,
 	#newtab-search-form,
 	#newtab-margin-undo-container,
@@ -8,24 +9,22 @@
 	.newtab-sponsored {
 	  display: none !important;
 	}
+
 	.newtab-cell,
 	.newtab-link,
 	.newtab-thumbnail { 
 	  border-radius: 0px !important;
 	}
-	
+
 	#newtab-window:not([fx40plus="true"]) .newtab-cell {
 	  margin: 20px 10px 20px !important;
 	}
-	
+
+	html .newtab-cell,
 	#newtab-window[fx40plus="true"] .newtab-cell {
 	  margin: 20px 10px 0px !important;
 	}
-	
-	html .newtab-cell {
-	  margin: 20px 10px 0px !important;
-	}
-	
+
 	html #newtab-grid {
 	  min-height: unset !important;
 	  max-height: unset !important;

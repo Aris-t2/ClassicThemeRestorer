@@ -1919,8 +1919,12 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "hidetbwot":
-			if (branch.getBoolPref("hidetbwot"))
-		      classicthemerestorerjs.ctr.hideTabsToolbarWithOneTab();
+			if (branch.getBoolPref("hidetbwot")) {
+		      classicthemerestorerjs.ctr.loadUnloadCSS("hidetbwotextra",true);
+			  classicthemerestorerjs.ctr.hideTabsToolbarWithOneTab();
+			} else {
+			 classicthemerestorerjs.ctr.loadUnloadCSS("hidetbwotextra",false);
+			}
 		  break;
 
 		  case "faviconurl": case "padlockex":
@@ -3285,6 +3289,7 @@ classicthemerestorerjs.ctr = {
 		case "hightabpososx": 		manageCSS("higher_tabs_pos.css");		break;
 		case "alttabstb": 			manageCSS("alttabstoolbar.css");		break;
 		case "alttabstb2": 			manageCSS("alttabstoolbar2.css");		break;
+		case "hidetbwotextra": 		manageCSS("hidetbwot_extra.css");		break;
 		
 		case "emptyfavicon": 		manageCSS("empty_favicon.css");			break;
 		case "emptyfavicon2": 		manageCSS("empty_favicon2.css");		break;

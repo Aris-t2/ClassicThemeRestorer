@@ -275,7 +275,7 @@
         <parameter name="uri"/>
         <body><![CDATA[
           if (uri) {
-            uri = this.PlacesUtils.getImageURLForResolution(window, uri);
+            //uri = this.PlacesUtils.getImageURLForResolution(window, uri);
           }
           element.setAttribute("src", uri);
         ]]></body>
