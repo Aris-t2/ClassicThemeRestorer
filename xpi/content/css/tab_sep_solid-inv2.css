@@ -12,11 +12,11 @@
       opacity:1.0 !important;
 	}
 	
-	#main-window[fx43plus="true"]  #navigator-toolbox #TabsToolbar #tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
-	#main-window[fx43plus="true"]  #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([visuallyselected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
-	#main-window[fx43plus="true"]  #navigator-toolbox #TabsToolbar #tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([visuallyselected]):not([beforehovered]):not(:hover)::after,
-	#main-window[fx43plus="true"]  #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
-	#main-window[fx43plus="true"]  #navigator-toolbox #TabsToolbar #tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
+	#main-window[fx42plus="true"]  #navigator-toolbox #TabsToolbar #tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
+	#main-window[fx42plus="true"]  #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([visuallyselected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
+	#main-window[fx42plus="true"]  #navigator-toolbox #TabsToolbar #tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([visuallyselected]):not([beforehovered]):not(:hover)::after,
+	#main-window[fx42plus="true"]  #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
+	#main-window[fx42plus="true"]  #navigator-toolbox #TabsToolbar #tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
 	  background-color: unset !important;
 	  margin-top: unset !important;
 	  margin-bottom: unset !important;
