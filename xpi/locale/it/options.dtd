@@ -1,4 +1,4 @@
-﻿<!ENTITY % overlayDTD
+<!ENTITY % overlayDTD
     SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
   %overlayDTD;
 <!-- Do not edit above this line and do not edit the variable '&brandShortName;' inside translated strings -->
@@ -11,9 +11,9 @@
 <!ENTITY Ctr_space			"Spazio">
 <!ENTITY Ctr_separator		"Separatore">
 <!ENTITY Ctr_puibseparator	"Pannello di separazione pulsanti">
-<!ENTITY Ctr_navthrobber	"Indicatore di attività">
+<!ENTITY Ctr_navthrobber	"Indicatore attività">
 <!ENTITY Ctr_sidebarbutton	"Barra laterale">
-<!ENTITY Ctr_windowcontrols	"Min/max/chiudi (A tutto schermo)">
+<!ENTITY Ctr_windowcontrols	"Pulsanti controllo finestra (A tutto schermo)">
 <!ENTITY Ctr_rr				"Riavviare &brandShortName;!">
 
 <!ENTITY Ctr_cuibuttons		"Pulsanti">
@@ -27,21 +27,21 @@
 
 <!ENTITY Ctr_tnot			"(schede in basso)">
 
-<!ENTITY Ctr_tabcolors_t	"Colori personalizzati">
+<!ENTITY Ctr_tabcolors_t	"Colori e testo schede">
 
 <!ENTITY Ctr_tabs			"Schede">
-<!ENTITY Ctr_tabs0			"Schede con angoli arrotondati (predefinito in Australis)">
+<!ENTITY Ctr_tabs0			"Schede con angoli arrotondati (predefinito in &brandShortName;)">
 <!ENTITY Ctr_tabs1			"Schede con angoli spigolosi (stile classico)">
 <!ENTITY Ctr_tabs1m			"Schede con angoli spigolosi (effetto Australis)">
 <!ENTITY Ctr_tabs2			"Scheda con angoli arrotondati (stile alternativo)">
 <!ENTITY Ctr_tabs3			"Schede con angoli arrotondati (stile Aero)">
 <!ENTITY Ctr_tabforminfo	"L’aspetto delle schede è definito dal tema in uso.">
-<!ENTITY Ctr_coltabsinfo	"L’aspetto delle schede non è del tutto compatibile con il componente aggiuntivo 'ColorfulTabs'!">
+<!ENTITY Ctr_coltabsinfo	"L’aspetto delle schede non è del tutto compatibile con il componente aggiuntivo 'ColorfulTabs'.">
 <!ENTITY Ctr_tabsontop0		"Schede in alto (predefinito)">
 <!ENTITY Ctr_tabsontop1		"Schede in alto --- attivata [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Schede in basso (v1) --- attivata [tabsontop=false]">
 <!ENTITY Ctr_tabsontop3		"Schede in basso (v2) --- attivata [tabsontop=false]">
-<!ENTITY Ctr_tabsontopW1	"v2 è solo per alcuni componenti aggiuntivi e temi completi!">
+<!ENTITY Ctr_tabsontopW1	"La versione v2 è solo per alcuni componenti aggiuntivi e temi completi!">
 <!ENTITY Ctr_tabsontopI1	"Aggiunge l’attributo [tabsontop=true/false] a">
 <!ENTITY Ctr_tabsintitlebar	"Schede nella barra del titolo (about:config)">
 <!ENTITY Ctr_tabwidthdef	"(predefinita)">
@@ -52,9 +52,9 @@
 <!ENTITY Ctr_tabminwidth	"Larghezza minima:">
 <!ENTITY Ctr_tabwidthinfo	"La larghezza minima e massima delle schede è definita da TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"La larghezza minima e massima delle schede è definita da TabUtilities">
-<!ENTITY Ctr_tabwidthinfo3	"I valori inferiori a 48px provocheranno anomalie nella maggior parte dei casi!">
+<!ENTITY Ctr_tabwidthinfo3	"Valori inferiori a 48px provocheranno anomalie nella maggior parte dei casi!">
 <!ENTITY Ctr_square_edges	"Angoli superiori spigolosi">
-<!ENTITY Ctr_tttitlebar		"Tab title in &brandShortName; titlebar">
+<!ENTITY Ctr_tttitlebar		"Titolo scheda nella barra del titolo di &brandShortName;">
 <!ENTITY Ctr_tabinsertion	"Inserisci la scheda relativa dopo la scheda corrente (about:config)">
 <!ENTITY Ctr_emptyfavicon	"Nei siti che non hanno una favicon usa la vecchia favicon vuota">
 <!ENTITY Ctr_noemptypticon	"Rimuovi la favicon vuota dalla scheda bloccata">
@@ -65,10 +65,10 @@
 <!ENTITY Ctr_closetab_3		"A destra della barra delle schede">
 <!ENTITY Ctr_closetab_4		"A sinistra della barra delle schede">
 <!ENTITY Ctr_closetab_5		"In tutte le schede (forzato)">
-<!ENTITY Ctr_closetab_hfot	"Nascondi per la scheda in vista">
+<!ENTITY Ctr_closetab_hfot	"Nascondi quando c’è una sola scheda aperta">
 <!ENTITY Ctr_closei_def		"Icone predefinite">
 <!ENTITY Ctr_closeonleft	"Posizione alternativa sulla scheda">
-<!ENTITY Ctr_close_wwltab	"Chiudi la finestra con l'ultima scheda visibile (about:config)">
+<!ENTITY Ctr_close_wwltab	"Chiudendo l’ultima scheda chiudi la finestra (about:config)">
 
 <!ENTITY Ctr_hctpinfotab	"Alcune modifiche alle schede non sono compatibili con il componente aggiuntivo 'Hide Caption Titlebar Plus'.">
 <!ENTITY Ctr_hctpinfoab		"Il pulsante nella barra del titolo non è compatibile con il componente aggiuntivo 'Hide Caption Titlebar Plus'.">
@@ -80,7 +80,7 @@
 <!ENTITY Ctr_appbutton2		"Pulsante nella barra del titolo">
 <!ENTITY Ctr_appbutton2h	"Pulsante nella barra del titolo (nascosto)">
 <!ENTITY Ctr_appbutton2io	"Pulsante nella barra del titolo (solo icona)">
-<!ENTITY Ctr_paneluibtweak	"Pulsante pannello menu arancione nella barra delle schede">
+<!ENTITY Ctr_paneluibtweak	"Stile pulsante per il pannello dei menu quando è nella barra delle schede">
 <!ENTITY Ctr_appbuttonc_o	"Pulsante arancione (predefinito)">
 <!ENTITY Ctr_appbuttonc_a	"Pulsante blu (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Pulsante nero (Nightly)">
@@ -93,43 +93,43 @@
 <!ENTITY Ctr_appbuttonc_wh	"Pulsante bianco">
 <!ENTITY Ctr_appbuttonc_cu	"Colore personalizzato">
 <!ENTITY Ctr_appbuttonI1	"riavvio consigliato">
-<!ENTITY Ctr_appbuttonI1e	"non visibile nella barra del titolo di sistema">
+<!ENTITY Ctr_appbuttonI1e	"Visibile solo nella barra del titolo di &brandShortName; e non in quella di Windows.">
 <!ENTITY Ctr_appbuttonI2	"Colorato solo nella barra del titolo e nella barra delle schede.">
 <!ENTITY Ctr_appbutmhi		"In cima a tutto (se nella barra delle schede)">
 <!ENTITY Ctr_appbautocol	"Imposta in automatico i colori default / Aurora / Nightly">
 <!ENTITY Ctr_appbutbdl		"Nascondi bordi e colori di sfondo">
 <!ENTITY Ctr_dblclclosefx	"Doppio clic per chiudere la finestra corrente">
-<!ENTITY Ctr_appbclmmenus	"Menu cliccabili interni al pulsante Menu (Nuova scheda, Stampa...)">
+<!ENTITY Ctr_appbclmmenus	"Menu cliccabili interni al pulsante Menu (Nuova scheda, Stampa…)">
 <!ENTITY Ctr_appbutonclab	"Titolo">
 <!ENTITY Ctr_appbutonclab2	"Aggiungi titolo o lascia vuoto">
 
 <!ENTITY Ctr_ui				"Interfaccia base">
 <!ENTITY Ctr_nbiconsize0	"Imposta attributo alla barra di navigazione">
 <!ENTITY Ctr_smallnavbut	"Pulsanti piccoli nella barra di navigazione">
-<!ENTITY Ctr_bfurlbarfix	"Correggi la curvatura della barra degli indirizzi per i pulsanti Avanti e Indietro mobili e i pulsanti piccoli">
+<!ENTITY Ctr_bfurlbarfix	"Correggi la curvatura della barra degli indirizzi">
 <!ENTITY Ctr_backforward	"Pulsante Indietro/Avanti mobile">
-<!ENTITY Ctr_nbcompact		"Riduci l'altezza delle barre di navigazione">
+<!ENTITY Ctr_nbcompact		"Riduci l’altezza delle barre di navigazione">
 <!ENTITY Ctr_hide_bf_popup	"Nascondi la cronologia tenendo premuto il pulsante Avanti/Indietro mobile">
 <!ENTITY Ctr_bf_space		"Riduci lo spazio tra i pulsanti (se possibile)">
-<!ENTITY Ctr_noconicons		"Sostituisce le icone del menu contestuale con etichette (indietro, avanti, stop, ricarica, seganlibro)">
-<!ENTITY Ctr_altoptionsp	"Options page (about:preferences): alternative appearance">
-<!ENTITY Ctr_altoptionsw	"Open options page (about:preferences) in a window">
+<!ENTITY Ctr_noconicons		"Sostituisce le icone del menu contestuale con etichette (indietro, avanti, stop, ricarica, segnalibro)">
+<!ENTITY Ctr_altoptionsp	"Aspetto alternativo per la pagina Opzioni (about:preferences)">
+<!ENTITY Ctr_altoptionsw	"Aprire la pagina Opzioni (about:preferences) in una finestra">
 <!ENTITY Ctr_svgfilters		"Colori SVG per le icone dei pulsanti della barra strumenti">
 <!ENTITY Ctr_wincontrols	"Angoli finestra mobili in modalità schermo intero">
 <!ENTITY Ctr_emptyfavicon2	"Sostituisci la favicon generica predefinita con un’icona a forma di foglio">
 <!ENTITY Ctr_mstatusbar		"Barra di stato mobile">
-<!ENTITY Ctr_mstatusbars4e	"La barra di stato è controllata da 'Status-4-Evar'">
-<!ENTITY Ctr_mstatusbartpp	"La barra di stato è controllata da 'ThePuzzlePiece'">
-<!ENTITY Ctr_mstatusbarpzt	"La barra di stato è controllata da 'Puzzle Toolbars'">
-<!ENTITY Ctr_mstatusbarabr	"La barra di stato è controllata da 'The Addon Bar (Restored)'">
+<!ENTITY Ctr_mstatusbars4e	"La barra di stato è gestita da 'Status-4-Evar'">
+<!ENTITY Ctr_mstatusbartpp	"La barra di stato è gestita da 'ThePuzzlePiece'">
+<!ENTITY Ctr_mstatusbarpzt	"La barra di stato è gestita da 'Puzzle Toolbars'">
+<!ENTITY Ctr_mstatusbarabr	"La barra di stato è gestita da 'The Addon Bar (Restored)'">
 <!ENTITY Ctr_combrelstop	"Unisci i pulsanti Stop e Ricarica">
 <!ENTITY Ctr_stoprel1		"Importante: disporre il pulsante Ricarica a destra del pulsante Stop!">
 <!ENTITY Ctr_panelmenucol	"Colore di sfondo alternativo per i menu">
 <!ENTITY Ctr_hideprivmask	"Nascondi indicatore modalità di Navigazione anonima">
-<!ENTITY Ctr_navsmallicons	"Small icons">
-<!ENTITY Ctr_navlargeicons	"Large icons">
+<!ENTITY Ctr_navsmallicons	"Icone piccole">
+<!ENTITY Ctr_navlargeicons	"Icone grandi">
 <!ENTITY Ctr_nbisizedelay	"ritardo esecuzione in ms (1000 ms = 1 sec)">
-<!ENTITY Ctr_findbar		"Barra di ricerca nel testo">
+<!ENTITY Ctr_findbar		"Posizione della barra di ricerca nel testo">
 <!ENTITY Ctr_findbar_def	"Posizione predefinita">
 <!ENTITY Ctr_findbar_top	"In alto">
 <!ENTITY Ctr_findbar_topa	"In alto (stile alternativo)">
@@ -140,38 +140,38 @@
 <!ENTITY Ctr_nav_txt_ico3	"Utilizza solo testo">
 <!ENTITY Ctr_nav_txt_exp	"Attributi sperimentali:">
 <!ENTITY Ctr_iat_notf_vt	"Escludi le barre degli strumenti verticali">
-<!ENTITY Ctr_cpanelmenus	"Pannello menu unificato (Segnalibri, Cronologia, ecc..)">
+<!ENTITY Ctr_cpanelmenus	"Pannello menu unificato (Segnalibri, Cronologia, ecc.)">
 <!ENTITY Ctr_hidezoomres	"Nascondi il pulsante per ripristinare il livello di zoom dalla barra degli strumenti">
 <!ENTITY Ctr_alt_newtabp	"Nuova scheda (about:newtab): aspetto alternativo">
-<!ENTITY Ctr_ctroldsearch	"Old search (experimental)">
+<!ENTITY Ctr_ctroldsearch	"Ricerca vecchio stile (sperimentale)">
 <!ENTITY Ctr_addonmanager	"Gestione componenti aggiuntivi">
 <!ENTITY Ctr_alt_addonsp	"Pagina 'Altro' dei componenti aggiuntivi: aspetto alternativo">
 <!ENTITY Ctr_alt_addonsm	"Gestione componenti aggiuntivi: aspetto alternativo">
-<!ENTITY Ctr_am_nowarning	"Elenchi dei componenti aggiuntivi del gestore: nascondi avvisi">
-<!ENTITY Ctr_am_compact		"Add-on lists: compact view">
-<!ENTITY Ctr_am_compact2	"Compact view +">
-<!ENTITY Ctr_addonversion	"Elenchi dei componenti aggiuntivi del gestore: mostra versione del componente">
-<!ENTITY Ctr_xpinstallui	"Add-on manager: old add-on install window (about:config preference)">
+<!ENTITY Ctr_am_nowarning	"Informazioni sui componenti aggiuntivi: nascondi avvisi">
+<!ENTITY Ctr_am_compact		"Informazioni sui componenti aggiuntivi: visualizzazione compatta">
+<!ENTITY Ctr_am_compact2	"visualizzazione compatta plus">
+<!ENTITY Ctr_addonversion	"Informazioni sui componenti aggiuntivi: mostra versione del componente">
+<!ENTITY Ctr_xpinstallui	"Stile classico per la finestra di installazione dei componenti aggiuntivi (about:config)">
 <!ENTITY Ctr_bmbutpanelm	"Menu del pulsante segnalibri: aspetto del menu a pannello">
 <!ENTITY Ctr_bmbutnotext	"Menu del pulsante segnalibri: nascondi etichetta della barra dei segnalibri">
-<!ENTITY Ctr_skipprintpr	"Pulsante stampa: salta l'anteprima di stampa">
+<!ENTITY Ctr_skipprintpr	"Pulsante stampa: salta l’anteprima di stampa">
 <!ENTITY Ctr_tbconmenu		"Menu contestuale della barra degli strumenti: nascondi 'Sposta nel menu', 'Rimuovi dalla barra degli strumenti', 'Ricarica/ tutte le schede nei segnalibri' e 'Riapri scheda chiusa'">
 <!ENTITY Ctr_noresizerxp	"Nascondi il ridimensionatore (Windows XP)">
 <!ENTITY Ctr_extraurlkeycb	"Apri una barra degli indirizzi supplementare (Cmd/Ctrl+)">
 <!ENTITY Ctr_pmhidelabels	"Mostra solo le icone nel pannello menu">
-<!ENTITY Ctr_menupopupscr	"Utilizza barra di scorrimento al posto delle frecce nei menu di popup">
-<!ENTITY Ctr_closegeneral	"General close icons">
+<!ENTITY Ctr_menupopupscr	"Utilizza barra di scorrimento al posto delle frecce nei popup di menu">
+<!ENTITY Ctr_closegeneral	"Icone generiche di chiusura">
 
 <!ENTITY Ctr_tabsep_def		"Separatori schede predefiniti">
-<!ENTITY Ctr_fxmockup		"Mockup">
+<!ENTITY Ctr_fxmockup		"Mockup &brandShortName;">
 <!ENTITY Ctr_tabmokcolor	"Utilizza il colore bianco per i pulsanti delle schede (Chiudi, Nuova, Gruppi, Mostra tutte)">
 <!ENTITY Ctr_tabmokcolor2	"Utilizza testo bianco con ombreggiatura scura nelle schede non attive">
 <!ENTITY Ctr_tabmokcolor4	"Colore bianco per la favicon punteggiata vuota">
 
-<!ENTITY Ctr_navthrobber1	"Cliccando l'indicatore di attività si apre l'url specificato:">
+<!ENTITY Ctr_navthrobber1	"Cliccando l’indicatore di attività si apre l’url specificato:">
 <!ENTITY Ctr_navthrobber2	"Aggiungi URL o lascia vuoto">
-<!ENTITY Ctr_anewtaburl		"URL della pagina di una nuova scheda">
-<!ENTITY Ctr_anewtaburlcb	"URL personalizzato della pagina di una nuova scheda (default: 'about:newtab')">
+<!ENTITY Ctr_anewtaburl		"URL della pagina Nuova scheda">
+<!ENTITY Ctr_anewtaburlcb	"URL personalizzato della pagina Nuova scheda (predefinito: 'about:newtab')">
 
 <!ENTITY Ctr_tab_tf_info1	"È possibile usare nomi di colori (in inglese), valori esadecimali e i formati rgb(a) e hsl(a).">
 <!ENTITY Ctr_tab_tf_info2	"Nessuna validazione dell’input.">
@@ -198,29 +198,29 @@
 
 <!ENTITY Ctr_urlbar			"Barra degli indirizzi">
 <!ENTITY Ctr_starinurl		"Stella nella barra degli indirizzi">
-<!ENTITY Ctr_starinurlinfo	"Default bookmarks menu button gets hidden">
+<!ENTITY Ctr_starinurlinfo	"Il pulsante segnalibri viene nascosto">
 <!ENTITY Ctr_feedinurl		"Pulsante dei feed nella barra degli indirizzi">
 <!ENTITY Ctr_hideurelstop	"Nascondi pulsanti Stop e Ricarica nella barra degli indirizzi">
 <!ENTITY Ctr_hideurlgo		"Nascondi il pulsante 'Vai'">
-<!ENTITY Ctr_hideurlsrg		"Hide 'reload, stop &amp; go' button separators &amp; spaces">
-<!ENTITY Ctr_urlbardropm	"Sposta il pulsante Avanti/Indietro all'estremità della barra degli indirizzi">
-<!ENTITY Ctr_hideprbutton	"Nascondi l'icona di notifica quando un popup viene bloccato">
+<!ENTITY Ctr_hideurlsrg		"Nascondi spazio e separatori dai pulsanti Stop, Ricarica e Vai">
+<!ENTITY Ctr_urlbardropm	"Sposta il pulsante Avanti/Indietro all’estremità della barra degli indirizzi">
+<!ENTITY Ctr_hideprbutton	"Nascondi l’icona di notifica quando un popup viene bloccato">
 <!ENTITY Ctr_urlbar_ib		"Pulsante delle connessioni sicure (riquadro di verifica)">
 <!ENTITY Ctr_verifiedcolors	"Indicatore connessioni sicure blu o verde per i siti verificati">
 <!ENTITY Ctr_faviconurl		"Favicon nella barra degli indirizzi">
-<!ENTITY Ctr_padlock		"Lucchetto">
+<!ENTITY Ctr_padlock		"Lucchetto connessioni sicure">
 <!ENTITY Ctr_padlock_hid	"nascosto">
 <!ENTITY Ctr_padlock_def	"predefinito">
 <!ENTITY Ctr_padlock_cla	"classico">
 <!ENTITY Ctr_padlock_mod	"moderno">
 <!ENTITY Ctr_padlock_ext	"Icone connessioni sicure">
-<!ENTITY Ctr_icopageinfo	"Il clic sull'icona apre le 'Informazioni sulla pagina'">
+<!ENTITY Ctr_icopageinfo	"Cliccando sull’icona vengono visualizzate le 'Informazioni sulla pagina'">
 
 <!ENTITY Ctr_menubar_items	"Posizione delle voci del menu">
 <!ENTITY Ctr_extrabar		"Barre degli strumenti aggiuntive">
 <!ENTITY Ctr_extrabar0		"Barre degli strumenti aggiuntive">
 <!ENTITY Ctr_extrabar1		"Barra degli strumenti aggiuntiva">
-<!ENTITY Ctr_extrabarinfo	"La commutazione tra la modalità 'schede in alto' e 'schede in basso' altera in modo casuale l'ordine delle barre degli strumenti aggiuntive. Si deve riavviare &brandShortName; per risolvere questo problema.">
+<!ENTITY Ctr_extrabarinfo	"La commutazione tra la modalità 'schede in alto' e 'schede in basso' altera in modo casuale l’ordine delle barre degli strumenti aggiuntive. È necessario riavviare &brandShortName; per risolvere questo problema.">
 
 <!ENTITY Ctr_invicons		"Icone invertite">
 <!ENTITY Ctr_menubar		"Barra dei menu">
@@ -232,54 +232,54 @@
 <!ENTITY Ctr_mbarforceleft	"Primo elemento">
 <!ENTITY Ctr_mbarforceright	"Ultimo elemento">
 
-<!ENTITY Ctr_toolbars		"Barra degli strumenti">
+<!ENTITY Ctr_toolbars		"Barre degli strumenti">
 <!ENTITY Ctr_dblclnewtab	"Doppio clic del mouse per aprire una nuova scheda">
 <!ENTITY Ctr_hidetbwot		"Nascondi la barra delle schede quando è aperta una sola scheda">
-<!ENTITY Ctr_hidetbwote		"Riduci il ritardo di scomparsa all'avvio">
+<!ENTITY Ctr_hidetbwote		"Velocizza la scomparsa della barra all’avvio">
 <!ENTITY Ctr_hidetbwote_i	"Potrebbe causare anomalie nella barra delle schede">
 <!ENTITY Ctr_hidetbwote2	"Mantieni la barra del titolo (schede in alto)">
 <!ENTITY Ctr_notabfog		"Disattiva l’effetto nebbia (Windows AeroGlass e Win8)">
 <!ENTITY Ctr_notabbg		"Rimuovi colore di sfondo (Windows AeroGlass e Win8)">
-<!ENTITY Ctr_hightabpos		"Quando possibile, riduci lo spazio sopra">
+<!ENTITY Ctr_hightabpos		"Quando possibile, riduci lo spazio sopra le barre ">
 <!ENTITY Ctr_alttabstb		"Colore di sfondo alternativo">
-<!ENTITY Ctr_alttabstb2		"Nella finestra ingrandita (schede in alto)">
+<!ENTITY Ctr_alttabstb2		"Finestra ingrandita (schede in alto)">
 
 <!ENTITY Ctr_altmenubar		"Aggiungi colore di sfondo (Barra del titolo di sistema)">
 <!ENTITY Ctr_altmenubarpos	"Posizione alternativa">
 <!ENTITY Ctr_altmenubarpos2	"Sotto la barra del titolo (&brandShortName;)">
 <!ENTITY Ctr_menubarnofog	"Elimina l’effetto nebbia o il colore di sfondo (Windows AeroGlass e Windows 8)">
 
-<!ENTITY Ctr_aerocolors		"Colori Blue Aero per le barre degli strumenti e le schede principali">
+<!ENTITY Ctr_aerocolors		"Colori Blu Aero per le barre degli strumenti e le schede">
 <!ENTITY Ctr_transpttbw10	"Barre del titolo/menu/schede: rimuovi il colore di sfondo">
-<!ENTITY Ctr_transptcw10	"Hide default OS min/max/close buttons">
+<!ENTITY Ctr_transptcw10	"Nascondi i pulsanti di controllo finestra di sistema">
 <!ENTITY Ctr_hidenavbar		"Nascondi la barra di navigazione">
-<!ENTITY Ctr_navbarpad		"Additional left and right padding">
-<!ENTITY Ctr_navbarpad_l	"Left:">
-<!ENTITY Ctr_navbarpad_r	"Right:">
+<!ENTITY Ctr_navbarpad		"Padding aggiuntivo">
+<!ENTITY Ctr_navbarpad_l	"A sinistra:">
+<!ENTITY Ctr_navbarpad_r	"A destra:">
 <!ENTITY Ctr_nobookbarbg	"Rimuovi colore di sfondo dalla barra dei segnalibri">
-<!ENTITY Ctr_bookbarfs		"Barra dei segnalibri: in modalità tutto schermo">
+<!ENTITY Ctr_bookbarfs		"Barra dei segnalibri: in modalità 'A tutto schermo'">
 <!ENTITY Ctr_nonavbarbg		"Rimuovi colore di sfondo dalla barra di navigazione">
-<!ENTITY Ctr_nonavbarbg1	"Ha effetto sulle barre di questo componente aggiuntivo e su altre barre in alto.">
-<!ENTITY Ctr_nonavbarbg2	"Vengono influenzate tutte le barre del componente 'Beyond Australis' di Slim Chrome.">
+<!ENTITY Ctr_nonavbarbg1	"Ha effetto sulla barra aggiuntiva di CTR e su altre barre posizionate in alto.">
+<!ENTITY Ctr_nonavbarbg2	"Ha effetto su tutte le barre del componente 'Beyond Australis' di Slim Chrome.">
 <!ENTITY Ctr_nonavborder	"Aggiungi bordo superiore alla barra dei segnalibri">
 <!ENTITY Ctr_nonavtbborder	"Rimuovi i bordi alle barre degli strumenti posizionate in alto">
-<!ENTITY Ctr_hidesbclose	"Barre laterali: nascondi il pulsante di chiusura della barra laterale">
+<!ENTITY Ctr_hidesbclose	"Barre laterali: nascondi il pulsante di chiusura">
 <!ENTITY Ctr_notextshadow	"Barre degli strumenti: nascondi ombreggiatura del testo delle barre e delle schede">
-<!ENTITY Ctr_chevronfix		"Barra di navigazione: nascondi la doppia freccia ('More Tools') all'estremità delle barre">
-<!ENTITY Ctr_tbsep_winc		"Barre degli strumenti in alto: separatori supplementari delle barre">
+<!ENTITY Ctr_chevronfix		"Barra di navigazione: nascondi la doppia freccia ('Altri strumenti') all’estremità">
+<!ENTITY Ctr_tbsep_winc		"Barre degli strumenti in alto: separatori supplementari">
 
-<!ENTITY Ctr_closeabarbut	"Nascondi il pulsante di chiusura">
+<!ENTITY Ctr_closeabarbut	"Barra dei componenti aggiuntivi: nascondi il pulsante di chiusura">
 <!ENTITY Ctr_highaddonsbar	"Aumenta l’altezza">
 <!ENTITY Ctr_addonbarfs		"In modalità tutto schermo">
 
 <!ENTITY Ctr_animation		"Icone animate">
 <!ENTITY Ctr_tabthrobber	"Immagine di caricamento predefinita">
-<!ENTITY Ctr_bmanimation	"Icona animata durante l’aggiunta ai segnalibri">
-<!ENTITY Ctr_pananimation	"Icona animata durante l’apertura di un pannello">
-<!ENTITY Ctr_tabanimation	"Icona animata per l’apertura o chiusura di una scheda (about:config)">
+<!ENTITY Ctr_bmanimation	"Icona animata all’aggiunta di un segnalibro">
+<!ENTITY Ctr_pananimation	"Icona animata all’apertura di un pannello">
+<!ENTITY Ctr_tabanimation	"Icona animata all’apertura o alla chiusura di una scheda (about:config)">
 <!ENTITY Ctr_dlanimation	"Icona animata avviso download (about:config)">
-<!ENTITY Ctr_fsanimation	"Animazioni a schermo intero (preferenza in about:config)">
-<!ENTITY Ctr_fsaduration	"Animazioni a schermo intero per il contenuto HTML5 (preferenze in about:config)">
+<!ENTITY Ctr_fsanimation	"Icona animata all’attivazione della modalità 'A tutto schermo' (about:config)">
+<!ENTITY Ctr_fsaduration	"Icona animata per la modalità 'A tutto schermo' degli elementi HTML5 (about:config)">
 
 <!ENTITY Ctr_toolsitem		"Aggiungi voci al menu Strumenti">
 <!ENTITY Ctr_appmenuitem	"Aggiungi voci nel menu del pulsante app">
@@ -288,32 +288,32 @@
 
 <!ENTITY Ctr_otherctroptns	"Altre impostazioni">
 <!ENTITY Ctr_cuibotbuttons	"Aggiungi pulsanti in modalità personalizzazione">
-<!ENTITY Ctr_bookmarkoinpw	"Voce 'Apri in una nuova finestra anonima' nel menu contestuale dei segnlibri">
-<!ENTITY Ctr_nodevtheme		"Impedisci l'attivazione del 'Developer Theme'">
+<!ENTITY Ctr_bookmarkoinpw	"Voce 'Apri in una nuova finestra anonima' nel menu contestuale dei segnalibri">
+<!ENTITY Ctr_nodevtheme		"Impedisci l’attivazione del 'Developer Theme'">
 
 <!ENTITY Ctr_experttweaks	"Avanzate">
-<!ENTITY Ctr_fx34search		"&brandShortName; 34+ ha introdotto una nuova barra di ricerca. Deselezionare questa opzione per ripristinare la barra precedente.">
-<!ENTITY Ctr_fx34loop		"&brandShortName; 34+ ha introdotto le funzioni di chiamata e conversazione. Deselezionare questa opzione per rimuoverle.">
-<!ENTITY Ctr_fx35devtheme	"&brandShortName; 35+ ha introdotto un nuovo 'developer theme'. Deselezionare questa opzione per disattivare il 'developer theme' e il suo pulsante nella modalità di personalizzazione.">
-<!ENTITY Ctr_fx36prefs		"&brandShortName; 36+ ha introdotto le preferenze in una scheda. Deselezionare questa opzione per ripristinare la finestra delle preferenze classica.">
-<!ENTITY Ctr_fx36prefs2		"Note: Old preference window does not contain all recently added browser preferences!">
-<!ENTITY Ctr_fx38reader		"&brandShortName; 38+ ha introdotto una nuova 'Modalità lettura'. Deselezionare questa opzione per disattivarla e rimuovere l'icona dalla barra degli indirizzi.">
-<!ENTITY Ctr_fx38pocket		"&brandShortName; 38.0.5+ ha introdotto la funzione 'Pocket'. Deselezionare questa opzione per disattivarla e rimuovere il pulsante dalle barre.">
+<!ENTITY Ctr_fx34search		"Deselezionando questa preferenza viene ripristinato lo stile classico per la barra di ricerca.">
+<!ENTITY Ctr_fx34loop		"Deselezionando questa preferenza vengono rimosse le funzioni di chiamata e conversazione (Firefox Hello).">
+<!ENTITY Ctr_fx35devtheme	"Deselezionando questa preferenza viene disattivato il 'Developer Theme'.">
+<!ENTITY Ctr_fx36prefs		"Deselezionando questa preferenza viene ripristinata la finestra Opzioni classica.">
+<!ENTITY Ctr_fx36prefs2		"Nota: la finestra Opzioni classica non include tutte le preferenze introdotte nelle ultime versioni.">
+<!ENTITY Ctr_fx38reader		"Deselezionando questa preferenza viene disattivata la modalità lettura e viene eliminata l’icona dalla barra degli indirizzi.">
+<!ENTITY Ctr_fx38pocket		"Deselezionando questa preferenza viene disattivata la funzione Pocket e rimossa l’icona dalle barre degli strumenti.">
 <!ENTITY Ctr_fx38pocket2	"Nota: muovendo il pulsante 'Pocket' nella personalizzazione prima di disattivare questa opzione, Pocket viene rimosso dai segnalibri e dal menu di lettura.">
-<!ENTITY Ctr_e_searchui		"Search appearance">
-<!ENTITY Ctr_e_loop			"Calling and conversation">
-<!ENTITY Ctr_e_deved		"Developer Edition Theme">
-<!ENTITY Ctr_e_prefsui		"Preferences in tab">
-<!ENTITY Ctr_e_readermode	"Reader mode">
+<!ENTITY Ctr_e_searchui		"Aspetto barra di ricerca">
+<!ENTITY Ctr_e_loop			"Chiamate e conversazioni (Hello)">
+<!ENTITY Ctr_e_deved		"Tema Developer Edition">
+<!ENTITY Ctr_e_prefsui		"Preferenze in una scheda">
+<!ENTITY Ctr_e_readermode	"Modalità lettura">
 <!ENTITY Ctr_e_pocket		"Pocket">
-<!ENTITY Ctr_e_tabsaudioico	"Audio playing icon on tabs">
-<!ENTITY Ctr_fx42tabsaudico	"Deselezionare questa opzione per rimuovere l'icona di riproduzione audio dalle schede.">
+<!ENTITY Ctr_e_tabsaudioico	"Icone autoparlanti nelle schede">
+<!ENTITY Ctr_fx42tabsaudico	"Deselezionando questa preferenza vengono rimosse le icone degli autoparlanti nelle schede che stanno riproducendo dei suoni.">
 
 
 <!ENTITY Ctr_pw_settings	"Impostazioni">
 <!ENTITY Ctr_pw_set_reset	"Ripristina predefinite">
 <!ENTITY Ctr_pw_set_predef	"Preset classico">
-<!ENTITY Ctr_pw_set_preaus	"Preset &brandShortName;">
+<!ENTITY Ctr_pw_set_preaus	"Preset di &brandShortName;">
 <!ENTITY Ctr_pw_set_export	"Esporta preferenze">
 <!ENTITY Ctr_pw_set_import	"Importa preferenze">
 <!ENTITY Ctr_pw_set_syncon	"Aggiungi a Sync">
@@ -328,7 +328,7 @@
 <!ENTITY Ctr_addon-bar.accesskey	"B">
 <!ENTITY Ctr_openInPrivateWindow	"Apri in una nuova finestra anonima">
 <!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
-<!ENTITY appMenuGettingStarted.label	"Inizio">
+<!ENTITY appMenuGettingStarted.label	"Primi passi">
 <!ENTITY goCmd.label		"Vai">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->

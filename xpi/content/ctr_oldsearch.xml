@@ -2,10 +2,10 @@
 
 <!--
 	This is a duplicate of default 'search.xml' taken from Firefox 41.
-    A few tweaks like removing checks for deprecated boolean preferences had
-	do be removed for this to work on Firefox 43+. Additionally the button
-	'open-engine-manager' points to default in-content search prefrences.
-	All < ! - -  ### - - > comments got removed to reduce file size.
+    A few checks for deprecated boolean preferences had to be removed
+	for this to work on Firefox 43+. Additionally 'open-engine-manager' 
+	button points to default in-content search preferences.
+	All "< ! - -  ### - - >" comments got removed to reduce file size.
 -->
 
 <!DOCTYPE bindings [
@@ -435,6 +435,14 @@
           var textValue = textBox.value;
 
           var where = "current";
+		  
+		  Components.utils.import("resource://gre/modules/Services.jsm", {})
+		  
+		  // force search to open in a new tab, if the corresponding browser preference it active
+		  try {
+			if(Services.prefs.getBranch("browser.search.").getBoolPref("openintab"))
+			  where = "tab";
+		  } catch(e) {}
 
           // Open ctrl/cmd clicks on one-off buttons in a new background tab.
           if (aEvent && aEvent.originalTarget.getAttribute("anonid") == "search-go-button") {
@@ -449,7 +457,7 @@
                                                    aEvent.ctrlKey))
               where = "tab-background";
           }
-
+		  
           let selection = this.telemetrySearchDetails;
           this.doSearch(textValue, where, aEngine);
 
