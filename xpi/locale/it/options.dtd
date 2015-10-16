@@ -1,4 +1,4 @@
-<!ENTITY % overlayDTD
+﻿<!ENTITY % overlayDTD
     SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
   %overlayDTD;
 <!-- Do not edit above this line and do not edit the variable '&brandShortName;' inside translated strings -->
@@ -47,7 +47,7 @@
 <!ENTITY Ctr_tabwidthdef	"(predefinita)">
 <!ENTITY Ctr_tabwidthcla	"(stile classico)">
 <!ENTITY Ctr_tabminheight	"Altezza:">
-<!ENTITY Ctr_tabheightinfo	"I valori bassi provocheranno anomalie nella finestra ingrandita!">
+<!ENTITY Ctr_tabheightinfo	"Valori bassi provocheranno anomalie nella finestra ingrandita!">
 <!ENTITY Ctr_tabmaxwidth	"Larghezza massima:">
 <!ENTITY Ctr_tabminwidth	"Larghezza minima:">
 <!ENTITY Ctr_tabwidthinfo	"La larghezza minima e massima delle schede è definita da TabMixPlus">
@@ -59,7 +59,7 @@
 <!ENTITY Ctr_emptyfavicon	"Nei siti che non hanno una favicon usa la vecchia favicon vuota">
 <!ENTITY Ctr_noemptypticon	"Rimuovi la favicon vuota dalla scheda bloccata">
 <!ENTITY Ctr_e10stab_notd	"Schede E10s: rimuovi la sottolineatura">
-<!ENTITY Ctr_closetab_0		"Pulsante di chiusura)">
+<!ENTITY Ctr_closetab_0		"Pulsante di chiusura">
 <!ENTITY Ctr_closetab_1		"Nella scheda attiva">
 <!ENTITY Ctr_closetab_2		"Nessun pulsante di chiusura schede">
 <!ENTITY Ctr_closetab_3		"A destra della barra delle schede">
@@ -106,7 +106,7 @@
 <!ENTITY Ctr_ui				"Interfaccia base">
 <!ENTITY Ctr_nbiconsize0	"Imposta attributo alla barra di navigazione">
 <!ENTITY Ctr_smallnavbut	"Pulsanti piccoli nella barra di navigazione">
-<!ENTITY Ctr_bfurlbarfix	"Correggi la curvatura della barra degli indirizzi">
+<!ENTITY Ctr_bfurlbarfix	"Correggi la curvatura della barra degli indirizzi ">
 <!ENTITY Ctr_backforward	"Pulsante Indietro/Avanti mobile">
 <!ENTITY Ctr_nbcompact		"Riduci l’altezza delle barre di navigazione">
 <!ENTITY Ctr_hide_bf_popup	"Nascondi la cronologia tenendo premuto il pulsante Avanti/Indietro mobile">
@@ -200,7 +200,7 @@
 <!ENTITY Ctr_starinurl		"Stella nella barra degli indirizzi">
 <!ENTITY Ctr_starinurlinfo	"Il pulsante segnalibri viene nascosto">
 <!ENTITY Ctr_feedinurl		"Pulsante dei feed nella barra degli indirizzi">
-<!ENTITY Ctr_hideurelstop	"Nascondi pulsanti Stop e Ricarica nella barra degli indirizzi">
+<!ENTITY Ctr_hideurelstop	"Nascondi i pulsanti Stop e Ricarica nella barra degli indirizzi">
 <!ENTITY Ctr_hideurlgo		"Nascondi il pulsante 'Vai'">
 <!ENTITY Ctr_hideurlsrg		"Nascondi spazio e separatori dai pulsanti Stop, Ricarica e Vai">
 <!ENTITY Ctr_urlbardropm	"Sposta il pulsante Avanti/Indietro all’estremità della barra degli indirizzi">
@@ -253,7 +253,7 @@
 <!ENTITY Ctr_transpttbw10	"Barre del titolo/menu/schede: rimuovi il colore di sfondo">
 <!ENTITY Ctr_transptcw10	"Nascondi i pulsanti di controllo finestra di sistema">
 <!ENTITY Ctr_hidenavbar		"Nascondi la barra di navigazione">
-<!ENTITY Ctr_navbarpad		"Padding aggiuntivo">
+<!ENTITY Ctr_navbarpad		"Spaziatura supplementare">
 <!ENTITY Ctr_navbarpad_l	"A sinistra:">
 <!ENTITY Ctr_navbarpad_r	"A destra:">
 <!ENTITY Ctr_nobookbarbg	"Rimuovi colore di sfondo dalla barra dei segnalibri">
@@ -265,7 +265,7 @@
 <!ENTITY Ctr_nonavtbborder	"Rimuovi i bordi alle barre degli strumenti posizionate in alto">
 <!ENTITY Ctr_hidesbclose	"Barre laterali: nascondi il pulsante di chiusura">
 <!ENTITY Ctr_notextshadow	"Barre degli strumenti: nascondi ombreggiatura del testo delle barre e delle schede">
-<!ENTITY Ctr_chevronfix		"Barra di navigazione: nascondi la doppia freccia ('Altri strumenti') all’estremità">
+<!ENTITY Ctr_chevronfix		"Barra di navigazione: nascondi la doppia freccia ('Altri strumenti') all’estremità ">
 <!ENTITY Ctr_tbsep_winc		"Barre degli strumenti in alto: separatori supplementari">
 
 <!ENTITY Ctr_closeabarbut	"Barra dei componenti aggiuntivi: nascondi il pulsante di chiusura">
@@ -306,8 +306,8 @@
 <!ENTITY Ctr_e_prefsui		"Preferenze in una scheda">
 <!ENTITY Ctr_e_readermode	"Modalità lettura">
 <!ENTITY Ctr_e_pocket		"Pocket">
-<!ENTITY Ctr_e_tabsaudioico	"Icone autoparlanti nelle schede">
-<!ENTITY Ctr_fx42tabsaudico	"Deselezionando questa preferenza vengono rimosse le icone degli autoparlanti nelle schede che stanno riproducendo dei suoni.">
+<!ENTITY Ctr_e_tabsaudioico	"Icone altoparlanti nelle schede">
+<!ENTITY Ctr_fx42tabsaudico	"Deselezionando questa preferenza vengono rimosse le icone degli altoparlanti nelle schede che stanno riproducendo dei suoni.">
 
 
 <!ENTITY Ctr_pw_settings	"Impostazioni">

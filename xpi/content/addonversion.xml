@@ -13,8 +13,7 @@
           xmlns="http://www.mozilla.org/xbl"
           xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
           xmlns:xbl="http://www.mozilla.org/xbl">
-
-
+ 
   <!-- Addon - generic - A normal addon item, or an update to one -->
   <binding id="addon-generic"
            extends="chrome://mozapps/content/extensions/extensions.xml#addon-base">
@@ -24,14 +23,14 @@
         <xul:image class="warning-icon"/>
         <xul:label anonid="warning" flex="1"/>
         <xul:label anonid="warning-link" class="text-link"/>
-        <xul:button anonid="warning-btn" class="button-link"/>
+        <xul:button anonid="warning-btn" class="button-link" hidden="true"/>
         <xul:spacer flex="5000"/> <!-- Necessary to allow the message to wrap -->
       </xul:hbox>
       <xul:hbox anonid="error-container"
                 class="error">
         <xul:image class="error-icon"/>
         <xul:label anonid="error" flex="1"/>
-        <xul:label anonid="error-link" class="text-link"/>
+        <xul:label anonid="error-link" class="text-link" hidden="true"/>
         <xul:spacer flex="5000"/> <!-- Necessary to allow the message to wrap -->
       </xul:hbox>
       <xul:hbox anonid="pending-container"
@@ -56,8 +55,8 @@
           <xul:hbox class="basicinfo-container">
               <xul:hbox class="name-container">
                 <xul:label anonid="name" class="name" crop="end" flex="1"
-                           xbl:inherits="value=name,tooltiptext=name"/>
-                <xul:label anonid="version" class="version"/>
+                           tooltip="addonitem-tooltip" xbl:inherits="value=name,tooltiptext=name"/>
+				<xul:label anonid="version" class="version"/>
                 <xul:label class="disabled-postfix" value="&addon.disabled.postfix;"/>
                 <xul:label class="update-postfix" value="&addon.update.postfix;"/>
                 <xul:spacer flex="5000"/> <!-- Necessary to make the name crop -->
@@ -374,7 +373,7 @@
           else
             this._icon.src = "";
 
-          if (shouldShowVersionNumber(this.mAddon))
+		  if (shouldShowVersionNumber(this.mAddon))
             this._version.value = this.mAddon.version;
           else
             this._version.hidden = true;
@@ -446,6 +445,245 @@
 
       <method name="_updateState">
         <body><![CDATA[
+		
+		Components.utils.import("resource://gre/modules/Services.jsm", {})
+		var appversion = parseInt(Services.appinfo.version);
+		  
+		if(appversion >= '42') {
+		  
+		  var SIGNING_REQUIRED = true;
+		  
+		  try {
+			SIGNING_REQUIRED = Services.prefs.getBranch("xpinstall.signatures.").getBoolPref("required");
+		  } catch(e) {}
+		
+          if (this.parentNode.selectedItem == this)
+            gViewController.updateCommands();
+
+          var pending = this.mAddon.pendingOperations;
+          if (pending != AddonManager.PENDING_NONE) {
+            this.removeAttribute("notification");
+
+            var pending = null;
+            const PENDING_OPERATIONS = ["enable", "disable", "install",
+                                        "uninstall", "upgrade"];
+            for (let op of PENDING_OPERATIONS) {
+              if (this.isPending(op))
+                pending = op;
+            }
+
+            this.setAttribute("pending", pending);
+            this._pending.textContent = gStrings.ext.formatStringFromName(
+              "notification." + pending,
+              [this.mAddon.name, gStrings.brandShortName], 2
+            );
+          } else {
+            this.removeAttribute("pending");
+
+            var isUpgrade = this.hasAttribute("upgrade");
+            var install = this._installStatus.mInstall;
+
+            if (install && install.state == AddonManager.STATE_DOWNLOAD_FAILED) {
+              this.setAttribute("notification", "warning");
+              this._warning.textContent = gStrings.ext.formatStringFromName(
+                "notification.downloadError",
+                [this.mAddon.name], 1
+              );
+              this._warningBtn.label = gStrings.ext.GetStringFromName("notification.downloadError.retry");
+              this._warningBtn.tooltipText = gStrings.ext.GetStringFromName("notification.downloadError.retry.tooltip");
+              this._warningBtn.setAttribute("oncommand", "document.getBindingParent(this).retryInstall();");
+              this._warningBtn.hidden = false;
+              this._warningLink.hidden = true;
+            } else if (install && install.state == AddonManager.STATE_INSTALL_FAILED) {
+              this.setAttribute("notification", "warning");
+              this._warning.textContent = gStrings.ext.formatStringFromName(
+                "notification.installError",
+                [this.mAddon.name], 1
+              );
+              this._warningBtn.label = gStrings.ext.GetStringFromName("notification.installError.retry");
+              this._warningBtn.tooltipText = gStrings.ext.GetStringFromName("notification.downloadError.retry.tooltip");
+              this._warningBtn.setAttribute("oncommand", "document.getBindingParent(this).retryInstall();");
+              this._warningBtn.hidden = false;
+              this._warningLink.hidden = true;
+            } else if (!isUpgrade && this.mAddon.blocklistState == Ci.nsIBlocklistService.STATE_BLOCKED) {
+              this.setAttribute("notification", "error");
+              this._error.textContent = gStrings.ext.formatStringFromName(
+                "notification.blocked",
+                [this.mAddon.name], 1
+              );
+              this._errorLink.value = gStrings.ext.GetStringFromName("notification.blocked.link");
+              this._errorLink.href = this.mAddon.blocklistURL;
+              this._errorLink.hidden = false;
+            } else if (!isUpgrade && !isCorrectlySigned(this.mAddon) && SIGNING_REQUIRED) {
+              this.setAttribute("notification", "error");
+              this._error.textContent = gStrings.ext.formatStringFromName(
+                "notification.unsignedAndDisabled", [this.mAddon.name, gStrings.brandShortName], 2
+              );
+              this._errorLink.value = gStrings.ext.GetStringFromName("notification.unsigned.link");
+              this._errorLink.href = Services.urlFormatter.formatURLPref("app.support.baseURL") + "unsigned-addons";
+              this._errorLink.hidden = false;
+            } else if ((!isUpgrade && !this.mAddon.isCompatible) && (AddonManager.checkCompatibility
+            || (this.mAddon.blocklistState != Ci.nsIBlocklistService.STATE_SOFTBLOCKED))) {
+              this.setAttribute("notification", "warning");
+              this._warning.textContent = gStrings.ext.formatStringFromName(
+                "notification.incompatible",
+                [this.mAddon.name, gStrings.brandShortName, gStrings.appVersion], 3
+              );
+              this._warningLink.hidden = true;
+              this._warningBtn.hidden = true;
+            } else if (!isUpgrade && !isCorrectlySigned(this.mAddon)) {
+              this.setAttribute("notification", "warning");
+              this._warning.textContent = gStrings.ext.formatStringFromName(
+                "notification.unsigned", [this.mAddon.name, gStrings.brandShortName], 2
+              );
+              this._warningLink.value = gStrings.ext.GetStringFromName("notification.unsigned.link");
+              this._warningLink.href = Services.urlFormatter.formatURLPref("app.support.baseURL") + "unsigned-addons";
+              this._warningLink.hidden = false;
+            } else if (!isUpgrade && this.mAddon.blocklistState == Ci.nsIBlocklistService.STATE_SOFTBLOCKED) {
+              this.setAttribute("notification", "warning");
+              this._warning.textContent = gStrings.ext.formatStringFromName(
+                "notification.softblocked",
+                [this.mAddon.name], 1
+              );
+              this._warningLink.value = gStrings.ext.GetStringFromName("notification.softblocked.link");
+              this._warningLink.href = this.mAddon.blocklistURL;
+              this._warningLink.hidden = false;
+              this._warningBtn.hidden = true;
+            } else if (!isUpgrade && this.mAddon.blocklistState == Ci.nsIBlocklistService.STATE_OUTDATED) {
+              this.setAttribute("notification", "warning");
+              this._warning.textContent = gStrings.ext.formatStringFromName(
+                "notification.outdated",
+                [this.mAddon.name], 1
+              );
+              this._warningLink.value = gStrings.ext.GetStringFromName("notification.outdated.link");
+              this._warningLink.href = Services.urlFormatter.formatURLPref("plugins.update.url");
+              this._warningLink.hidden = false;
+              this._warningBtn.hidden = true;
+            } else if (!isUpgrade && this.mAddon.blocklistState == Ci.nsIBlocklistService.STATE_VULNERABLE_UPDATE_AVAILABLE) {
+              this.setAttribute("notification", "error");
+              this._error.textContent = gStrings.ext.formatStringFromName(
+                "notification.vulnerableUpdatable",
+                [this.mAddon.name], 1
+              );
+              this._errorLink.value = gStrings.ext.GetStringFromName("notification.vulnerableUpdatable.link");
+              this._errorLink.href = this.mAddon.blocklistURL;
+              this._errorLink.hidden = false;
+            } else if (!isUpgrade && this.mAddon.blocklistState == Ci.nsIBlocklistService.STATE_VULNERABLE_NO_UPDATE) {
+              this.setAttribute("notification", "error");
+              this._error.textContent = gStrings.ext.formatStringFromName(
+                "notification.vulnerableNoUpdate",
+                [this.mAddon.name], 1
+              );
+              this._errorLink.value = gStrings.ext.GetStringFromName("notification.vulnerableNoUpdate.link");
+              this._errorLink.href = this.mAddon.blocklistURL;
+              this._errorLink.hidden = false;
+            } else if (this.mAddon.isGMPlugin && !this.mAddon.isInstalled &&
+                       this.mAddon.isActive) {
+              this.setAttribute("notification", "warning");
+              this._warning.textContent =
+                gStrings.ext.formatStringFromName("notification.gmpPending",
+                                                  [this.mAddon.name], 1);
+            } else {
+              this.removeAttribute("notification");
+            }
+          }
+
+          this._preferencesBtn.hidden = (!this.mAddon.optionsURL) ||
+                                        this.mAddon.optionsType == AddonManager.OPTIONS_TYPE_INLINE_INFO;
+
+          let addonType = AddonManager.addonTypes[this.mAddon.type];
+          if (addonType.flags & AddonManager.TYPE_SUPPORTS_ASK_TO_ACTIVATE) {
+            this._enableBtn.disabled = true;
+            this._disableBtn.disabled = true;
+            this._askToActivateMenuitem.disabled = !this.hasPermission("ask_to_activate");
+            this._alwaysActivateMenuitem.disabled = !this.hasPermission("enable");
+            this._neverActivateMenuitem.disabled = !this.hasPermission("disable");
+            if (!this.mAddon.isActive) {
+              this._stateMenulist.selectedItem = this._neverActivateMenuitem;
+            } else if (this.mAddon.userDisabled == AddonManager.STATE_ASK_TO_ACTIVATE) {
+              this._stateMenulist.selectedItem = this._askToActivateMenuitem;
+            } else {
+              this._stateMenulist.selectedItem = this._alwaysActivateMenuitem;
+            }
+            let hasActivatePermission =
+              ["ask_to_activate", "enable", "disable"].some(perm => this.hasPermission(perm));
+            this._stateMenulist.disabled = !hasActivatePermission;
+            this._stateMenulist.hidden = false;
+            this._stateMenulist.classList.add('no-auto-hide');
+          } else {
+            this._stateMenulist.hidden = true;
+            if (this.hasPermission("enable")) {
+              this._enableBtn.hidden = false;
+              let tooltip = gViewController.commands["cmd_enableItem"]
+                                           .getTooltip(this.mAddon);
+              this._enableBtn.setAttribute("tooltiptext", tooltip);
+            } else {
+              this._enableBtn.hidden = true;
+            }
+
+            if (this.hasPermission("disable")) {
+              this._disableBtn.hidden = false;
+              let tooltip = gViewController.commands["cmd_disableItem"]
+                                           .getTooltip(this.mAddon);
+              this._disableBtn.setAttribute("tooltiptext", tooltip);
+            } else {
+              this._disableBtn.hidden = true;
+            }
+          }
+
+          if (this.hasPermission("uninstall")) {
+            this._removeBtn.hidden = false;
+            let tooltip = gViewController.commands["cmd_uninstallItem"]
+                                         .getTooltip(this.mAddon);
+            this._removeBtn.setAttribute("tooltiptext", tooltip);
+          } else {
+            this._removeBtn.hidden = true;
+          }
+
+          this.setAttribute("active", this.mAddon.isActive);
+
+          var showProgress = this.mAddon.purchaseURL || (this.mAddon.install &&
+                             this.mAddon.install.state != AddonManager.STATE_INSTALLED);
+          this._showStatus(showProgress ? "progress" : "none");
+
+          let debuggable = this.mAddon.isDebuggable &&
+                           Services.prefs.getBoolPref('devtools.chrome.enabled') &&
+                           Services.prefs.getBoolPref('devtools.debugger.remote-enabled');
+
+          this._debugBtn.disabled = this._debugBtn.hidden = !debuggable
+
+          if (this.mAddon.type == "experiment") {
+            this.removeAttribute("notification");
+            let prefix = "experiment.";
+            let active = this.mAddon.isActive;
+
+            if (!showProgress) {
+              let stateKey = prefix + "state." + (active ? "active" : "complete");
+              this._experimentState.value = gStrings.ext.GetStringFromName(stateKey);
+
+              let now = Date.now();
+              let end = this.endDate;
+              let days = Math.abs(end - now) / (24 * 60 * 60 * 1000);
+
+              let timeKey = prefix + "time.";
+              let timeMessage;
+
+              if (days < 1) {
+                timeKey += (active ? "endsToday" : "endedToday");
+                timeMessage = gStrings.ext.GetStringFromName(timeKey);
+              } else {
+                timeKey += (active ? "daysRemaining" : "daysPassed");
+                days = Math.round(days);
+                let timeString = gStrings.ext.GetStringFromName(timeKey);
+                timeMessage = PluralForm.get(days, timeString)
+                                        .replace("#1", days);
+              }
+
+              this._experimentTime.value = timeMessage;
+            }
+          }
+		} else {
+
           if (this.parentNode.selectedItem == this)
             gViewController.updateCommands();
 
@@ -667,6 +905,8 @@
               this._experimentTime.value = timeMessage;
             }
           }
+		
+		}
         ]]></body>
       </method>
 
@@ -967,7 +1207,7 @@
 
           this.mManualUpdate = aInstall;
           this._showStatus("update-available");
-          this._updateUpgradeInfo();
+		  this._updateUpgradeInfo();
         ]]></body>
       </method>
 
