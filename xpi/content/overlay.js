@@ -5094,7 +5094,9 @@ classicthemerestorerjs.ctr = {
   openContentPrefsInWin: function() {
 	 
 	try{classicthemerestorerjs.ctr.ctrcontentprefswin.close();} catch(e){}
-	classicthemerestorerjs.ctr.ctrcontentprefswin = window.open('about:preferences', 'about:preferences', 'width=800,height=660,resizable=yes');
+	if (classicthemerestorerjs.ctr.fxdefaulttheme) {
+	  classicthemerestorerjs.ctr.ctrcontentprefswin = window.open('about:preferences', 'about:preferences', 'width=800,height=660,resizable=yes');
+	} else openPreferences();
 
   },
   

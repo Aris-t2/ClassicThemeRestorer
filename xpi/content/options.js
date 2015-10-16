@@ -132,6 +132,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_tttitlebar').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_am_compact').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_am_compact2').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_altoptionsw').style.visibility = 'collapse';
 	} else {
 		document.getElementById('ctraddon_pw_special_info2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_special_font').style.visibility = 'collapse';
