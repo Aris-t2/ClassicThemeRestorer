@@ -56,7 +56,11 @@
 	  padding: 0 !important;
 	  margin: 0 !important;
 	}
-	
+
+	#addons-page #header-search{
+	  min-height: unset !important;
+	}
+
 	#addons-page #header-search .textbox-input-box{
 	  height: 18px !important;
 	}
@@ -101,7 +105,8 @@
 	#addons-page #update-actions button,
 	#addons-page #updates-list-empty button,
 	#addons-page .relnotes-toggle,
-	#list-view menulist{
+	#list-view menulist,
+	#updates-list menulist{
 	  padding:2px !important;
 	  min-height: unset !important;
 	  height: unset !important;
@@ -113,6 +118,7 @@
 	#addons-page #list-view .global-info button:not(.button-link),
 	#addons-page #list-view .discover-button,
 	#addons-page #list-view menulist,
+	#addons-page #updates-list menulist,
 	#addons-page .status-control-wrapper button,
 	#addons-page #userstyle-sorting .addon-control,
 	#addons-page #update-actions button,

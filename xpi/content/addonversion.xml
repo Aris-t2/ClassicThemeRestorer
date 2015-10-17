@@ -969,6 +969,9 @@
           }
 
           function handleResponse(aEvent) {
+		  
+		    var XMLURI_PARSE_ERROR = "http://www.mozilla.org/newlayout/xml/parsererror.xml";
+			
             var req = aEvent.target;
             var ct = req.getResponseHeader("content-type");
             if ((!ct || ct.indexOf("text/html") < 0) &&
@@ -990,6 +993,8 @@
           dataReq.addEventListener("load", handleResponse, false);
           dataReq.addEventListener("error", handleError, false);
           dataReq.send(null);
+		  
+		  var UPDATES_RELEASENOTES_TRANSFORMFILE = "chrome://mozapps/content/extensions/updateinfo.xsl";
 
           var styleReq = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
                               .createInstance(Components.interfaces.nsIXMLHttpRequest);
