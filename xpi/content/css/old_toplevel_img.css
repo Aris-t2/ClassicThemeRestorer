@@ -1,16 +1,14 @@
 @media not print {
 
-  body {
-    color: unset !important;
+  html > head:first-child + body:last-child {
     background-image: unset !important;
   }
 
-  img.transparent {
+  html > head:first-child + body:last-child > img.transparent:first-child:last-child {
     background: unset !important;
-    color: unset !important;
   }
 
-  img {
+  html > head:first-child + body:last-child > img:first-child:last-child {
     text-align: unset !important;
     margin: unset !important;
     top: 8px !important;
