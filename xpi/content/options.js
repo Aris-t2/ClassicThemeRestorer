@@ -380,7 +380,12 @@ classicthemerestorerjso.ctr = {
 
 	if (this.appversion >= 43) {
 	  document.getElementById('ctraddon_pw_oldsearchgb').style.visibility = 'collapse';
-	}	
+	}
+
+	if (this.appversion < 44) {
+	  document.getElementById('ctraddon_pw_altalertbox').style.visibility = 'collapse';
+	}
+
 
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get

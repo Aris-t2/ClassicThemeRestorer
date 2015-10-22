@@ -1,0 +1,22 @@
+@media not print {
+
+  body {
+    color: unset !important;
+    background-image: unset !important;
+  }
+
+  img.transparent {
+    background: unset !important;
+    color: unset !important;
+  }
+
+  img {
+    text-align: unset !important;
+    margin: unset !important;
+    top: 8px !important;
+    right: 8px !important;
+    bottom: 8px !important;
+    left: 8px !important;
+  }
+
+}

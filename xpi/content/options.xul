@@ -88,6 +88,8 @@
 		<preference id="ctraddon_altoptionsw"	name="extensions.classicthemerestorer.altoptionsw"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_svgfilters"	name="extensions.classicthemerestorer.svgfilters"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_wincontrols"	name="extensions.classicthemerestorer.wincontrols"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_oldtoplevimg"	name="extensions.classicthemerestorer.oldtoplevimg"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_altalertbox"	name="extensions.classicthemerestorer.altalertbox"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_hideprbutton"	name="extensions.classicthemerestorer.hideprbutton"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_extraurlkeycb"	name="extensions.classicthemerestorer.extraurlkeycb" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_starinurl"		name="extensions.classicthemerestorer.starinurl"	type="bool"		instantApply="true"/>
@@ -806,6 +808,8 @@
 		<description class="ctraddonsuboption">&Ctr_stoprel1;</description>
 
 		<checkbox label="&Ctr_wincontrols;"		preference="ctraddon_wincontrols" id="ctraddon_wincontrols"/>
+		<checkbox label="&Ctr_oldtoplevimg;"	preference="ctraddon_oldtoplevimg" id="ctraddon_pw_oldtoplevimg"/>
+		<checkbox label="&Ctr_altalertbox;"		preference="ctraddon_altalertbox" id="ctraddon_pw_altalertbox"/>
 		<checkbox label="&Ctr_emptyfavicon2;"	preference="ctraddon_emptyfavicon2" id="ctraddon_pw_emptyfavicon2" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwTabEmptyFavicon(true);} else {classicthemerestorerjso.ctr.ctrpwTabEmptyFavicon(false);}"/>
 		<checkbox label="&Ctr_panelmenucol;"	preference="ctraddon_panelmenucol" id="ctraddon_pw_panelmenucolor"/>
 		<checkbox label="&Ctr_cpanelmenus;"		preference="ctraddon_cpanelmenus"/>

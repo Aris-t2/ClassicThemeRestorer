@@ -7,6 +7,11 @@
 	  border-top: 2px solid !important;
 	  -moz-border-top-colors: #8d9294 #e6e4e0 !important;
 	}
+  
+	#main-window[defaultfxtheme="true"][tabsontop="false"] #navigator-toolbox #nav-bar:not(:-moz-lwtheme){
+	  border-top: 2px solid !important;
+	  -moz-border-top-colors: #8d9294 #e6e4e0 !important;
+	}
   }
 
 }

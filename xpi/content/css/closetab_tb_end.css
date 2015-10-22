@@ -17,6 +17,10 @@
 	  padding: 0px !important;
 	}
 	
+	#main-window #navigator-toolbox  #TabsToolbar[currentset*="tabbrowser-tabs,tabmixScrollBox"] #ctraddon_tabs-closebutton{
+	  -moz-margin-end: 0px !important;
+	}
+	
 	#titlebar-placeholder-on-TabsToolbar-for-captions-buttons{
 	  -moz-margin-start: 0px !important;
 	}

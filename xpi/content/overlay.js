@@ -867,6 +867,18 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("wincontrols")) classicthemerestorerjs.ctr.loadUnloadCSS("wincontrols",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("wincontrols",false);
 		  break;
+
+		  case "altalertbox":
+			if (branch.getBoolPref("altalertbox")
+				&& classicthemerestorerjs.ctr.fxdefaulttheme==true
+				&& classicthemerestorerjs.ctr.appversion >= 44) classicthemerestorerjs.ctr.loadUnloadCSS("altalertbox",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("altalertbox",false);
+		  break;
+
+		  case "oldtoplevimg":
+			if (branch.getBoolPref("oldtoplevimg")) classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg",false);
+		  break;
 		  
 		  case "activndicat":
 			if (branch.getBoolPref('activndicat')) {
@@ -3252,6 +3264,8 @@ classicthemerestorerjs.ctr = {
 		case "mbarforceleft": 		manageCSS("menuitems_forceleft.css");	break;
 		case "mbarforceright": 		manageCSS("menuitems_forceright.css");	break;
 		case "wincontrols": 		manageCSS("windowcontrols.css");		break;
+		case "oldtoplevimg": 		manageCSS("old_toplevel_img.css");		break;
+		case "altalertbox": 		manageCSS("alt_alertboxfx44.css");		break;
 		case "navthrobber": 		manageCSS("navthrobber.css");			break;
 		case "hideprbutton": 		manageCSS("hidepagereportbutton.css");	break;
 		case "starinurl":			manageCSS("starinurl.css");				break;
