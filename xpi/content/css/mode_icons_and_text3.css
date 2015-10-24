@@ -68,6 +68,17 @@
 		background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.1)) !important;
 	  }
 	}
+	
+	@media all and (-moz-windows-classic) {
+	  #nav-bar toolbaritem .toolbarbutton-1:not([disabled]):hover,
+	  #nav-bar .toolbarbutton-1:not([disabled]):hover{
+		-moz-border-top-colors: transparent white !important;
+		border-right: 1px solid #808080 !important;
+		border-left: 1px solid white !important;
+		border-bottom: 1px solid #808080 !important;
+		background-image: unset !important;
+	  }
+	}
 
 	#nav-bar #urlbar toolbaritem .toolbarbutton-1 .toolbarbutton-text,
 	#nav-bar #urlbar .toolbarbutton-1:not([type="menu-button"]) .toolbarbutton-text,
