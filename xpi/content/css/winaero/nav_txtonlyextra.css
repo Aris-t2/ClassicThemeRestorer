@@ -10,6 +10,30 @@
 				  0 1px hsla(210,54%,20%,.03),
 				  0 0 2px hsla(210,54%,20%,.1);
 	}
+	
+	@media all and (-moz-windows-classic) {
+	  #navigator-toolbox #nav-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]):hover .toolbarbutton-text{
+		border-top: 1px solid white !important;
+		border-right: 1px solid #808080 !important;
+		border-left: 1px solid white !important;
+		border-bottom: 1px solid #808080 !important;
+		background-image: unset !important;
+		background: unset !important;
+		box-shadow: unset !important;
+	  }
+	  #navigator-toolbox #nav-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([disabled])[checked] .toolbarbutton-text,
+	  #navigator-toolbox #nav-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([disabled])[open] .toolbarbutton-text,
+	  #navigator-toolbox #nav-bar .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button):not([disabled]):active .toolbarbutton-text{
+		border-top: 1px solid #808080 !important;
+		border-right: 1px solid white !important;
+		border-left: 1px solid #808080 !important;
+		border-bottom: 1px solid white !important;
+		background-image: unset !important;
+		background: unset !important;
+		box-shadow: unset !important;
+	  }
+	}
+
 	#navigator-toolbox toolbar:not(#TabsToolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
 	  padding: 2px 3px 3px 3px !important;
 	}

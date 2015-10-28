@@ -481,3 +481,8 @@
 	  border: 0 !important;
 	  min-width: 0px !important;
 	}
+	
+	/* Fx44+ fix */
+	#main-window[fx44plus="true"] #PersonalToolbar toolbarbutton[id^="ctraddon_"] > .toolbarbutton-icon{
+	  max-width: unset !important;
+	}

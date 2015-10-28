@@ -2,11 +2,6 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @-moz-document url(chrome://browser/content/browser.xul){
  
-  /*#navigator-toolbox #nav-bar #nav-bar-customization-target > *:not(#urlbar-container):not(#search-container){
-	margin-top:unset !important;
-	margin-bottom:unset !important;
-  }*/
-
   #restman-button{
 	margin-top:1px !important;
 	margin-bottom:1px !important;

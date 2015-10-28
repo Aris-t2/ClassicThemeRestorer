@@ -78,6 +78,18 @@
 		border-bottom: 1px solid #808080 !important;
 		background-image: unset !important;
 	  }
+	  #nav-bar toolbaritem .toolbarbutton-1:not([disabled])[checked],
+	  #nav-bar .toolbarbutton-1:not([disabled])[checked],
+	  #nav-bar toolbaritem .toolbarbutton-1:not([disabled])[open],
+	  #nav-bar .toolbarbutton-1:not([disabled])[open],
+	  #nav-bar toolbaritem .toolbarbutton-1:not([disabled]):active,
+	  #nav-bar .toolbarbutton-1:not([disabled]):active{
+		-moz-border-top-colors: transparent #808080 !important;
+		border-right: 1px solid white !important;
+		border-left: 1px solid #808080 !important;
+		border-bottom: 1px solid white !important;
+		background-image: unset !important;
+	  }
 	}
 
 	#nav-bar #urlbar toolbaritem .toolbarbutton-1 .toolbarbutton-text,

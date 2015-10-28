@@ -26,7 +26,7 @@
 	#ctraddon_addon-bar toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon {
 	  visibility: collapse !important;
 	}
-	
+
 	#navigator-toolbox toolbar:not(#TabsToolbar) #urlbar-go-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon,
 	#navigator-toolbox toolbar:not(#TabsToolbar) #urlbar-stop-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon,
 	#navigator-toolbox toolbar:not(#TabsToolbar) #urlbar-reload-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon {
@@ -113,4 +113,5 @@
 	toolbar .toolbarbutton-badge-stack {
 	  display: none !important;
 	}
+	
 }
