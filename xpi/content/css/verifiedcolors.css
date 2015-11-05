@@ -44,6 +44,7 @@
 	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedDomain,
 	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedIdentity {
 	  -moz-border-end: 1px solid;
+	  border-image-source: none !important;
 	}
 
 }

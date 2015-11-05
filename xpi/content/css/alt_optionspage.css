@@ -118,10 +118,17 @@
 	/* buttons / menulists */
 	button:not(.button-link):not(.close-icon),
 	menulist{
-	  padding:2px !important;
+	  min-height: unset !important;
 	  height: unset !important;
 	  font-size: 90% !important;
 	  background-image: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.20),rgba(0,0,0,0.01)) !important;
+	}
+	
+	button:not(.button-link):not(.close-icon){
+	  padding:0px !important;
+	}
+	menulist{
+	  padding:2px !important;
 	}
 	
 	/* checkbox and radio items */
@@ -147,10 +154,17 @@
 
 *[subdialog="true"] button:not(.button-link),
 *[subdialog="true"] menulist{
-  padding:2px !important;
+  min-height: unset !important;
   height: unset !important;
   font-size: 90% !important;
   background-image: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.20),rgba(0,0,0,0.01)) !important;
+}
+
+*[subdialog="true"] button:not(.button-link):not(.close-icon){
+  padding:0px !important;
+}
+*[subdialog="true"] menulist{
+  padding:2px !important;
 }
 
 *[subdialog="true"] checkbox image,

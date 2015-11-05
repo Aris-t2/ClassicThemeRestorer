@@ -3,7 +3,7 @@
 #alertNotification {
   padding: 0px !important;
   padding-inline-start: 0px !important;
-  /*background-color: -moz-Dialog !important;*/
+  padding-inline-end: 0px !important;
   background: linear-gradient(white, -moz-dialog 30px) !important;
 }
 
@@ -14,8 +14,8 @@
 
 #alertBox {
   border: 1px solid threedshadow !important;
-  border-radius: 3px !important;
-  /*background-color: -moz-Dialog !important;*/
+  border-radius: 2px !important;
+  padding: 0 4px 4px 4px !important;
   background: linear-gradient(white, -moz-dialog 30px) !important;
 }
 
@@ -30,5 +30,5 @@
 }
 
 #alertNotification .alertTitle {
-  font-size: 110% !important;
+  font-size: 115% !important;
 }

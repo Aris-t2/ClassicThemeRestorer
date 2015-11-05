@@ -2,13 +2,19 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 	
 	#main-window:not([fx42plus="true"]) #urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"],
-	#main-window:not([fx42plus="true"]) #urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
+	#main-window:not([fx42plus="true"]) #urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"]{
 	  list-style-image: url(chrome://branding/content/identity-icons-brand.png) !important;
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	}
 	
 	#main-window[fx42plus="true"] #urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"],
-	#main-window[fx42plus="true"] #urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
+	#main-window[fx42plus="true"] #urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"],
+	#main-window[fx42plus="true"] #urlbar .insecureLoginForms #page-proxy-favicon[pageproxystate="valid"],
+	#main-window[fx42plus="true"] #urlbar .mixedActiveContent #page-proxy-favicon[pageproxystate="valid"],
+	#main-window[fx42plus="true"] #urlbar .weakCipher #page-proxy-favicon[pageproxystate="valid"],
+	#main-window[fx42plus="true"] #urlbar .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"],
+	#main-window[fx42plus="true"] #urlbar .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"],
+	#main-window[fx42plus="true"] #urlbar .mixedActiveBlocked #page-proxy-favicon[pageproxystate="valid"]	{
 	  list-style-image: url(chrome://branding/content/identity-icons-brand.svg) !important;
 	  -moz-image-region: rect(0, 32px, 32px, 0) !important;
 	}
