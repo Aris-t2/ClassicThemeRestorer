@@ -136,10 +136,10 @@ radio.ctraddontab .radio-check-box1 {
 }
 
 .ctraddontabpanel {
-  height:480px;
-  max-height:540px;
+  height:500px;
+  max-height:600px;
   min-width:500px;
-  width:480px;
+  width:500px;
   max-width:800px;
   overflow-x:auto;
   overflow-y:auto;
@@ -457,6 +457,12 @@ radio.ctraddontab .radio-check-box1 {
   background:url('chrome://classic_theme_restorer/content/images/pw_urlbar_dropmarker.png') no-repeat left !important;
   padding-left:20px !important;
 }
+
+#ctraddon_pw_altreaderico label{
+  background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/reader.png'), 0, 16, 16, 0) no-repeat left !important;
+  padding-left:20px !important;
+}
+
 #ctraddon_pw_urlbarpblocked label{
   background:url('chrome://classic_theme_restorer/content/images/pw_urlbar_popup_blocked.png') no-repeat left !important;
   padding-left:20px !important;

@@ -99,6 +99,7 @@
 		<preference id="ctraddon_hideurlgo"		name="extensions.classicthemerestorer.hideurlgo"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_hideurlsrg"	name="extensions.classicthemerestorer.hideurlsrg"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_urlbardropm"	name="extensions.classicthemerestorer.urlbardropm"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_altreaderico"	name="extensions.classicthemerestorer.altreaderico"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_combrelstop"	name="extensions.classicthemerestorer.combrelstop"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_panelmenucol"	name="extensions.classicthemerestorer.panelmenucol"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_activndicat"	name="extensions.classicthemerestorer.activndicat"	type="bool"		instantApply="true"/>
@@ -917,6 +918,7 @@
 		<checkbox label="&Ctr_hideurlgo;"	preference="ctraddon_hideurlgo" id="ctraddon_pw_hideurlgo"/>
 		<checkbox label="&Ctr_hideurlsrg;"	preference="ctraddon_hideurlsrg" id="ctraddon_pw_hideurlsrg"/>
 		<checkbox label="&Ctr_urlbardropm;"	preference="ctraddon_urlbardropm"  id="ctraddon_pw_urlbardropm"/>
+		<checkbox label="&Ctr_altreaderico;" preference="ctraddon_altreaderico"  id="ctraddon_pw_altreaderico"/>
 		<checkbox label="&Ctr_hideprbutton;" preference="ctraddon_hideprbutton" id="ctraddon_pw_urlbarpblocked"/>
 		<checkbox label="&Ctr_extraurlkeycb;&openCmd.commandkey; &amp; Alt+&urlbar.accesskey; [Windows/Linux])"	preference="ctraddon_extraurlkeycb" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 	  </groupbox>
