@@ -367,6 +367,7 @@ classicthemerestorerjso.ctr = {
 	if (this.appversion < 42) {
 	  document.getElementById('ctraddon_pw_fsaduration').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_tabsaudioicogb').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_ib_nohovcolor').style.visibility = 'collapse';
 	}
 
 	if (this.appversion >= 42) {

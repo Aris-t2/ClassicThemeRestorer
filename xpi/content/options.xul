@@ -102,6 +102,7 @@
 		<preference id="ctraddon_combrelstop"	name="extensions.classicthemerestorer.combrelstop"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_panelmenucol"	name="extensions.classicthemerestorer.panelmenucol"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_activndicat"	name="extensions.classicthemerestorer.activndicat"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_ib_nohovcolor"	name="extensions.classicthemerestorer.ib_nohovcolor" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_verifiedcolors" name="extensions.classicthemerestorer.verifiedcolors" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_findbar"		name="extensions.classicthemerestorer.findbar"		type="string"	instantApply="true"/>
 		<preference id="ctraddon_nav_txt_ico"	name="extensions.classicthemerestorer.nav_txt_ico" 	type="string"	instantApply="true"/>
@@ -926,6 +927,7 @@
 		<checkbox label="&Ctr_faviconurl;"	preference="ctraddon_faviconurl" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwFaviconextra(true);} else {classicthemerestorerjso.ctr.ctrpwFaviconextra(false);} classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<checkbox label="&Ctr_padlock_ext;"		preference="ctraddon_padlockex" id="ctraddon_padlock_extra"/>
 		<checkbox label="&Ctr_icopageinfo;"		preference="ctraddon_icopageinfo"/>
+		<checkbox label="&Ctr_ib_nohovcolor;"	preference="ctraddon_ib_nohovcolor" id="ctraddon_pw_ib_nohovcolor"/>
 		<checkbox label="&Ctr_verifiedcolors;"	preference="ctraddon_verifiedcolors" id="ctraddon_pw_verifiedcolors"/>
 
 		<description class="ctraddon_font1">&Ctr_padlock;</description>
@@ -1200,9 +1202,9 @@
   
   <hbox align="center" flex="1" style="padding-top:5px;">
     <button label="&Ctr_pw_settings;" popup="ctr_pw_settingsPopup"/>
-	<button label="Classic Toolbar Buttons" class="ctraddon_windowsonly" onclick="if(event.button == 0) { window.close(); window.opener.openURL('https://addons.mozilla.org/addon/cstbb/versions/'); };"	/>
+	<button label="Classic Toolbar Buttons" class="ctraddon_windowsonly" onclick="if(event.button == 0) { window.close(); window.opener.openURL('https://addons.mozilla.org/addon/cstbb/versions/'); };"/>
 	<spacer flex="1" />
-	<button label="&Ctr_support;" id="ctraddon_support" onclick="if(event.button == 0) { window.close(); window.opener.openURL('http://forums.mozillazine.org/viewtopic.php?t=2827985');	};"/>
+	<button label="&Ctr_support;" id="ctraddon_support" onclick="if(event.button == 0) { window.close(); window.opener.openURL('http://forums.mozillazine.org/viewtopic.php?t=2827985'); };"/>
 	<button label="&Ctr_newversion;" id="ctraddon_newversion" onclick="if(event.button == 0) { window.close(); window.opener.openURL('https://addons.mozilla.org/addon/classicthemerestorer/versions/'); };"/>
 	<button dlgtype="accept" id="ctraddon_pw_okbutton"/>
   </hbox> 

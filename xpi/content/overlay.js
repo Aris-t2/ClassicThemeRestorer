@@ -1811,6 +1811,11 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("menupopupscr")) classicthemerestorerjs.ctr.loadUnloadCSS("menupopupscr",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("menupopupscr",false);
 		  break;
+
+		  case "ib_nohovcolor":
+			if (branch.getBoolPref("ib_nohovcolor") && classicthemerestorerjs.ctr.fxdefaulttheme==true && classicthemerestorerjs.ctr.appversion >= 42) classicthemerestorerjs.ctr.loadUnloadCSS("ib_nohovcolor",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("ib_nohovcolor",false);
+		  break;
 		  
 		  case "verifiedcolors":
 			if (branch.getBoolPref("verifiedcolors") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("verifiedcolors",true);
@@ -3328,6 +3333,7 @@ classicthemerestorerjs.ctr = {
 		case "noresizerxp": 		manageCSS("no_resizer_xp.css");			break;
 		case "pmhidelabels": 		manageCSS("panelmenu_nolabels.css");	break;
 		case "menupopupscr": 		manageCSS("menupopupscrollbar.css");	break;
+		case "ib_nohovcolor": 		manageCSS("ib_nohovcolor.css");			break;
 		case "verifiedcolors": 		manageCSS("verifiedcolors.css");		break;
 		case "hideprivmask": 		manageCSS("hideprivatemask.css");		break;
 		case "bfurlbarfix": 		manageCSS("bf_urlbarfix.css");			break;
@@ -5114,7 +5120,9 @@ classicthemerestorerjs.ctr = {
 	 
 	try{classicthemerestorerjs.ctr.ctrcontentprefswin.close();} catch(e){}
 	if (classicthemerestorerjs.ctr.fxdefaulttheme) {
-	  classicthemerestorerjs.ctr.ctrcontentprefswin = window.open('about:preferences', 'about:preferences', 'width=800,height=660,resizable=yes');
+	  var w = (screen.availWidth-800)/2;
+	  var h = (screen.availHeight-660)/2;
+	  classicthemerestorerjs.ctr.ctrcontentprefswin = window.open('about:preferences', 'about:preferences', 'width=800,height=660,top='+h+',left='+w+',resizable=yes');
 	} else openPreferences();
 
   },
