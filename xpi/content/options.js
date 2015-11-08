@@ -128,11 +128,10 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_tabstoolbargroup').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_devthemegb').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_hightabpososx').style.visibility = 'collapse';
-		document.getElementById('ctraddon_pw_altoptionsp').style.visibility = 'collapse';
+		document.getElementById('ctraddon_altoptions_box').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tttitlebar').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_am_compact').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_am_compact2').style.visibility = 'collapse';
-		document.getElementById('ctraddon_pw_altoptionsw').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_ib_nohovcolor').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_altreaderico').style.visibility = 'collapse';
 	} else {
@@ -339,8 +338,7 @@ classicthemerestorerjso.ctr = {
 	if (this.appversion < 38) {
 	  document.getElementById('ctraddon_pw_readermodegb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_pocketgb').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_readermode2').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_altoptionsw').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_altoptions_box').style.visibility = 'collapse';
 	}
 	if (this.appversion > 37) {
 	  document.getElementById('ctraddon_pw_bmarkoinpw').style.visibility = 'collapse';
@@ -942,8 +940,7 @@ classicthemerestorerjso.ctr = {
 	this.prefs.setBoolPref("tbconmenu",true);
 
 	if(this.appversion >= 38) { 
-	  this.prefs.setBoolPref("altoptionsp",true);
-	  this.prefs.setBoolPref("altoptionsw",true);
+	  this.prefs.setCharPref("altoptions",'options_win_alt');
 	}
 	if(this.appversion >= 40) { 
 	  this.prefs.setBoolPref("alt_addonsm",true);

@@ -1,0 +1,317 @@
+@-moz-document url(about:preferences),url-prefix(about:preferences){
+ 	
+	page,
+	#dialogBox .groupbox-title {
+	  background: white !important;
+	}
+
+	#categories {
+	  background: transparent !important;
+	}
+
+	#dialogFrame,
+	.main-content{
+	  background-color: -moz-Dialog !important;
+	}
+	
+	.groupbox-body {
+	  padding: 0 6px 6px 6px !important;
+	}
+	
+	/* main colors category items */
+	#categories .category[selected]{
+	  background-color: #c1d2ee !important;
+	  border-inline-start-color: #c1d2ee !important;
+	  color: black !important;
+	}
+
+	#categories .category:not([selected]):hover{
+	  background-color: #e0e8f6 !important;
+	  color: black !important;
+	}
+
+	#categories .category:not([selected]):not(:hover){
+	  color: black !important;
+	}
+	#categories .category {
+	  transition-duration: unset !important;
+	}
+	
+	/* groupbox */
+	groupbox{
+	  -moz-appearance: groupbox !important;
+	}
+
+	groupbox caption {
+	  background-color: -moz-Dialog !important;
+	  -moz-margin-start: 6px !important;
+	}
+	
+	/* category icons */
+	#category-search .category-icon {
+	  list-style-image: url("chrome://browser/skin/search-pref.png") !important;
+	  -moz-image-region: rect(0, 32px, 32px, 0) !important;
+	}
+	#category-general .category-icon {
+	  list-style-image: url("chrome://browser/skin/preferences/Options.png") !important;
+	  -moz-image-region: rect(0, 32px, 32px, 0) !important;
+	}
+	#category-content .category-icon {
+	  list-style-image: url("chrome://browser/skin/preferences/Options.png") !important; 
+	  -moz-image-region: rect(0, 96px, 32px, 64px) !important;
+	}
+	#category-application .category-icon {
+	  list-style-image: url("chrome://browser/skin/preferences/Options.png") !important;
+	  -moz-image-region: rect(0, 128px, 32px, 96px) !important;
+	}
+	#category-privacy .category-icon {
+	  list-style-image: url("chrome://browser/skin/preferences/Options.png") !important; 
+	  -moz-image-region: rect(0, 160px, 32px, 128px) !important;
+	}
+	#category-security .category-icon {
+	  list-style-image: url("chrome://browser/skin/preferences/Options.png") !important;
+	  -moz-image-region: rect(0, 192px, 32px, 160px) !important;
+	}
+	#category-sync .category-icon {
+	  list-style-image: url("chrome://browser/skin/preferences/Options-sync.png") !important;
+	  -moz-image-region: rect(0, 32px, 32px, 0) !important;
+	}
+	#category-advanced .category-icon {
+	  list-style-image: url("chrome://browser/skin/preferences/Options.png") !important; 
+	  -moz-image-region: rect(0, 224px, 32px, 192px) !important;
+	}
+	#categories .category .category-icon {
+	  height: 32px !important;
+	  width: 32px !important;
+	}
+
+	/* alignment and text/font appearance */
+	#mainPrefPane {
+	  color: black !important;
+	  -moz-padding-start: 0px !important;
+	  margin-top: -35px !important;
+	  -moz-margin-start: -40px !important;
+	}
+	
+	#mainPrefPane textbox {
+	  font-size:70% !important;
+	}
+	
+	textbox {
+	  min-height: 24px !important;
+	}
+
+	description,
+	.main-content label{
+	  font-size:80% !important;
+	}
+	
+	.main-content {
+	  margin-top: 20px !important;
+	  margin-bottom: 20px !important;
+	}
+
+	.header label {
+	  font-weight: bold !important;
+	  font-size: 120% !important;
+	  padding-bottom: 0 !important;
+	}
+
+	.header:not(#header-advanced){
+	  margin-bottom: 0px !important;
+	}
+
+	#advancedPrefs #tabsElement tab {
+	  min-height: 30px !important;
+	}
+
+	/* treechildren*/
+	#handlersView richlistitem,
+	#engineList treechildren::-moz-tree-row,
+	#blocklistsTree treechildren::-moz-tree-row {
+	  min-height: 24px !important;
+	}
+	
+	treecols,
+	treecol {
+	  min-height: unset !important;
+	  height: 24px !important;
+	}
+	
+	/* buttons / menulists */
+	button:not(.button-link):not(.close-icon):not(.spinbuttons-button),
+	menulist{
+	  min-height: unset !important;
+	  height: unset !important;
+	  font-size: 90% !important;
+	}
+	
+	button:not(.button-link):not(.close-icon):not(.spinbuttons-button){
+	  -moz-appearance: button !important;
+	}
+	menulist{
+	  -moz-appearance: menulist !important;
+	}
+	
+	/* checkbox and radio items */
+	checkbox .checkbox-check {
+	  -moz-appearance: checkbox  !important;
+	  box-shadow: unset !important;
+	  padding: unset !important;
+	  margin: unset !important;
+	}
+
+	radio .radio-check {
+	  -moz-appearance: radio !important;
+	  box-shadow: unset !important;
+	  padding: unset !important;
+	  margin: unset !important;
+	}
+
+	radio,
+	checkbox {
+	  padding: unset !important;
+	  margin: unset !important;
+	}
+	#categories .box-inherit {
+	  -moz-box-orient: horizontal !important;
+	  position: fixed !important;
+	  top:0px !important;
+	  background: inherit !important;
+	}
+	
+	#category-search[hidden="true"],
+	#mainPrefPane .header {
+	  display: none !important;
+	}
+
+	#mainPrefPane {
+	  padding-top: 10px !important;
+	}
+
+	vbox.main-content {
+	  margin-top: 60px !important;
+	  min-width: unset !important;
+	  margin-bottom: 0px !important;
+	  border-top: 1px solid #848484 !important;
+	}
+
+	richlistitem.category {
+	  -moz-box-orient: vertical !important;
+	  padding-top: 4px !important;
+	  min-width: auto !important;
+	  width: auto !important;
+	}
+	  
+	richlistitem .category-icon {
+	  padding-top: 0px !important;
+	}
+	  
+	richlistitem.category > * {
+	  padding-left: unset !important;
+	  padding-right: unset !important;
+	  visibility: visible !important;
+	  
+	}
+	 
+	@media (max-width: 800px) {
+	  richlistitem.category > .category-name {
+		display: block !important;
+	  }
+	}
+
+	richlistitem.category > .category-name {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+	  font-size:104% !important;
+	}
+	
+	#categories .category{
+	  padding-inline-start: 10px !important;
+	  padding-inline-end: 10px !important;
+	  border-inline-start-width: 0px !important;
+	}
+	
+	groupbox {
+	  margin-top: 0 !important;
+	  margin-bottom: 0 !important;
+	}
+	
+	/* advanced category tabs */
+	#advancedPrefs #tabsElement tab:not([selected]):not(:hover),
+	#advancedPrefs #tabsElement {
+	  background-color: white !important;
+	}
+
+	#advancedPrefs #tabsElement tab[selected] {
+	  background-color: #c1d2ee !important;
+	  border-bottom-color: #c1d2ee !important;
+	}
+
+	#advancedPrefs #tabsElement tab:not([selected]):hover {
+	  background-color: #e0e8f6 !important;
+	}
+
+	#advancedPrefs #tabsElement tab,
+	#advancedPrefs #tabsElement {
+	  min-height: unset !important;
+	}
+	
+}
+
+/* preference sub windows */
+
+*[subdialog="true"] button:not(.button-link):not(.spinbuttons-button),
+*[subdialog="true"] menulist{
+  min-height: unset !important;
+  height: unset !important;
+  font-size: 90% !important;
+}
+
+*[subdialog="true"] button:not(.button-link):not(.close-icon):not(.spinbuttons-button){
+  -moz-appearance: button !important;
+}
+*[subdialog="true"] menulist{
+  -moz-appearance: menulist !important;
+}
+
+*[subdialog="true"] checkbox .checkbox-check {
+  -moz-appearance: checkbox  !important;
+  box-shadow: unset !important;
+  padding: unset !important;
+  margin: unset !important;
+}
+
+*[subdialog="true"] radio .radio-check {
+  -moz-appearance: radio !important;
+  box-shadow: unset !important;
+  padding: unset !important;
+  margin: unset !important;
+}
+
+*[subdialog="true"] radio,
+*[subdialog="true"] checkbox {
+  padding: unset !important;
+  margin: unset !important;
+}
+
+*[subdialog="true"] > vbox,
+*[subdialog="true"] > hbox,
+*[subdialog="true"] .prefWindow-dlgbuttons,
+*[subdialog="true"] prefpane,
+*[subdialog="true"] .contentPane,
+*[subdialog="true"] .dialog-content-box,
+*[subdialog="true"] .largeDialogContainer{
+  background-color: -moz-Dialog !important;
+  color: black !important;
+}
+
+*[subdialog="true"] textbox {
+  min-height: 24px !important;
+}
+
+*[subdialog="true"] treecols,
+*[subdialog="true"] treecol {
+  min-height: unset !important;
+  height: 26px !important;
+}

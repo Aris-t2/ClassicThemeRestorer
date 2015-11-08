@@ -84,8 +84,7 @@
 		<preference id="ctraddon_am_compact2"	name="extensions.classicthemerestorer.am_compact2"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_alt_addonsp"	name="extensions.classicthemerestorer.alt_addonsp"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_alt_addonsm"	name="extensions.classicthemerestorer.alt_addonsm"	 type="bool"	instantApply="true"/>
-		<preference id="ctraddon_altoptionsp"	name="extensions.classicthemerestorer.altoptionsp"	type="bool"		instantApply="true"/>
-		<preference id="ctraddon_altoptionsw"	name="extensions.classicthemerestorer.altoptionsw"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_altoptions"	name="extensions.classicthemerestorer.altoptions"	type="string"	instantApply="true"/>
 		<preference id="ctraddon_svgfilters"	name="extensions.classicthemerestorer.svgfilters"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_wincontrols"	name="extensions.classicthemerestorer.wincontrols"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_oldtoplevimg"	name="extensions.classicthemerestorer.oldtoplevimg"	type="bool"		instantApply="true"/>
@@ -802,10 +801,20 @@
 		<checkbox label="&Ctr_noconicons;"		preference="ctraddon_noconicons" id="ctraddon_pw_noconicons"/>
 		<checkbox label="&Ctr_alt_newtabp;"		preference="ctraddon_alt_newtabp" id="ctraddon_pw_alt_newtabp"/>
 		<checkbox label="&Ctr_ctroldsearch;"	preference="ctraddon_ctroldsearch" id="ctraddon_pw_ctroldsearch"/>
-		<checkbox label="&Ctr_altoptionsp;"		preference="ctraddon_altoptionsp" id="ctraddon_pw_altoptionsp"/>
-		<checkbox label="&Ctr_altoptionsw;"		preference="ctraddon_altoptionsw" id="ctraddon_pw_altoptionsw"/>
-		<checkbox label="&Ctr_svgfilters;"		preference="ctraddon_svgfilters" id="ctraddon_pw_svgfilters"/>
 		
+		<hbox  id="ctraddon_altoptions_box">
+		  <image id="ctraddon_altoptions_image"/>
+		  <menulist preference="ctraddon_altoptions" id="ctraddon_altoptions_list">
+			<menupopup>
+				<menuitem value="options_default"	label="&Ctr_altoptionsd;" id="ctraddon_pw_altoptions_default"/>
+				<menuitem value="options_alt"	 	label="&Ctr_altoptionsp;" id="ctraddon_pw_options_alt"/>
+				<menuitem value="options_win"		label="&Ctr_altoptionsw;" id="ctraddon_pw_options_win"/>
+				<menuitem value="options_win_alt"	label="&Ctr_altoptionsw; (v2)" id="ctraddon_pw_options_win_alt"/>
+			</menupopup>
+		  </menulist>
+		</hbox>
+
+		<checkbox label="&Ctr_svgfilters;"		preference="ctraddon_svgfilters" id="ctraddon_pw_svgfilters"/>
 		<checkbox label="&Ctr_combrelstop;"		preference="ctraddon_combrelstop" id="ctraddon_pw_stopreload"/>
 		<description class="ctraddonsuboption">&Ctr_stoprel1;</description>
 

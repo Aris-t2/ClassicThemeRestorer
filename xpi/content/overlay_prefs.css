@@ -481,8 +481,15 @@ radio.ctraddontab .radio-check-box1 {
   min-height:16px !important;
 }
 
-#ctraddon_pw_altoptionsp label,
-#ctraddon_pw_altoptionsw label,
+#ctraddon_altoptions_image{
+  background:url('chrome://classic_theme_restorer/content/images/prefs_incontent.png') no-repeat left  !important;
+  padding-left:20px !important;
+  min-height:16px !important;
+}
+#ctraddon_altoptions_box {
+  -moz-padding-start:8px !important;
+}
+
 #ctraddon_pw_oldprefs label {
   background:url('chrome://classic_theme_restorer/content/images/prefs_incontent.png') no-repeat left !important;
   padding-left:20px !important;

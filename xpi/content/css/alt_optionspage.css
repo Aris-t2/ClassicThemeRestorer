@@ -90,7 +90,12 @@
 	#mainPrefPane textbox {
 	  font-size:80% !important;
 	}
+	
+	textbox {
+	  min-height: 24px !important;
+	}
 
+	description,
 	.main-content label{
 	  font-size:90% !important;
 	}
@@ -114,7 +119,20 @@
 	#advancedPrefs #tabsElement tab {
 	  min-height: 30px !important;
 	}	
+
+	/* treechildren*/
+	#handlersView richlistitem,
+	#engineList treechildren::-moz-tree-row,
+	#blocklistsTree treechildren::-moz-tree-row {
+	  min-height: 24px !important;
+	}
 	
+	treecols,
+	treecol {
+	  min-height: unset !important;
+	  height: 24px !important;
+	}
+
 	/* buttons / menulists */
 	button:not(.button-link):not(.close-icon),
 	menulist{
@@ -183,6 +201,8 @@
   outline: unset !important;
 }
 
+*[subdialog="true"] > vbox,
+*[subdialog="true"] > hbox,
 *[subdialog="true"] .prefWindow-dlgbuttons,
 *[subdialog="true"] prefpane,
 *[subdialog="true"] .contentPane,
@@ -190,4 +210,14 @@
 *[subdialog="true"] .largeDialogContainer{
   background-color: white !important;
   color: black !important;
+}
+
+*[subdialog="true"] textbox {
+  min-height: 24px !important;
+}
+
+*[subdialog="true"] treecols,
+*[subdialog="true"] treecol {
+  min-height: unset !important;
+  height: 26px !important;
 }
