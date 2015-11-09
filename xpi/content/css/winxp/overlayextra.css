@@ -56,7 +56,7 @@
 	  -moz-image-region: rect(0, 108px, 18px, 90px);
 	}
 
-	#main-window[defaultfxtheme="true"] #nav-bar :-moz-any(#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_ctr-button,#ctraddon_go-button) > .toolbarbutton-icon{
+	#main-window[defaultfxtheme="true"] #nav-bar :-moz-any(#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_ctr-button,#ctraddon_go-button,#ctraddon_preferences-button) > .toolbarbutton-icon{
 	  padding: 2px 6px !important;
 	}
 
@@ -94,15 +94,13 @@
 		#main-window[defaultfxtheme="true"][fx40plus="true"] #ctraddon_stop-button {
 		  -moz-image-region: rect(0, 216px, 36px, 180px);
 		}
-		#main-window[defaultfxtheme="true"][fx40plus="true"] #nav-bar :-moz-any(#ctraddon_history-button,/*#ctraddon_history-menu-toolbar-button,*/#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button) .toolbarbutton-icon {
+		#main-window[defaultfxtheme="true"][fx40plus="true"] #nav-bar :-moz-any(#ctraddon_history-button,/*#ctraddon_history-menu-toolbar-button,*/#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button,#ctraddon_preferences-button) .toolbarbutton-icon {
 		  width: 32px !important;
-		  /*height: 24px !important;*/
 		}
 		#main-window[defaultfxtheme="true"][fx40plus="true"] #nav-bar #ctraddon_history-menu-toolbar-button .toolbarbutton-icon {
 		  width: 40px !important;
-		  /*height: 24px !important;*/
 		}
-		#main-window[defaultfxtheme="true"][fx40plus="true"] toolbar:not(#nav-bar) :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button) .toolbarbutton-icon {
+		#main-window[defaultfxtheme="true"][fx40plus="true"] toolbar:not(#nav-bar) :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button,#ctraddon_preferences-button) .toolbarbutton-icon {
 		  width: 18px !important;
 		  height: 18px !important;
 		}
@@ -116,6 +114,68 @@
 	  padding-top: 2px;
 	  padding-bottom: 2px;
 	}
+	
+	/* prefwindow button clone */
+	
+	#ctraddon_preferences-button {
+	  list-style-image: url("chrome://browser/skin/Toolbar.png");
+	}
+
+	toolbar[brighttext] #ctraddon_preferences-button {
+	  list-style-image: url(chrome://browser/skin/Toolbar-inverted.png);
+	}
+
+	#ctraddon_preferences-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 468px, 18px, 450px);
+	}
+
+	@media (min-resolution: 1.1dppx) {
+	  #ctraddon_preferences-button {
+		list-style-image: url("chrome://browser/skin/Toolbar@2x.png");
+	  }
+
+	  toolbar[brighttext] #ctraddon_preferences-button {
+		list-style-image: url("chrome://browser/skin/Toolbar-inverted@2x.png");
+	  }
+	  #ctraddon_preferences-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 936px, 36px, 900px);
+	  }
+	}
+
+	@media not all and (min-resolution: 1.1dppx) {
+
+	  #ctraddon_preferences-button[cui-areatype="menu-panel"],
+	  toolbarpaletteitem[place="palette"] > #ctraddon_preferences-button {
+		list-style-image: var(--menupanel-list-style-image);
+	  }
+	  
+	  #ctraddon_preferences-button[cui-areatype="menu-panel"],
+	  toolbarpaletteitem[place="palette"] > #ctraddon_preferences-button {
+		-moz-image-region: rect(0px, 768px, 32px, 736px);
+	  }
+	 
+	}
+
+	/* Menu panel and palette styles */
+	@media (min-resolution: 1.1dppx) {
+	  #ctraddon_preferences-button[cui-areatype="menu-panel"],
+	  toolbarpaletteitem[place="palette"] > #ctraddon_preferences-button {
+		list-style-image: var(--menupanel-list-style-image-2x);
+	  }
+	  
+	  #ctraddon_preferences-button[cui-areatype="menu-panel"],
+	  toolbarpaletteitem[place="palette"] > #ctraddon_preferences-button {
+		-moz-image-region: rect(0px, 1536px, 64px, 1472px);
+	  }
+	}
+
+	@media (-moz-windows-theme: luna-silver) and (max-resolution: 1dppx) {
+	  #ctraddon_preferences-button {
+		list-style-image: url("chrome://browser/skin/Toolbar-lunaSilver.png");
+	  }
+	}
+	
+	/**/
 	
 	#appmenu-popup #appmenu_newPrivateWindow{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_private_xp.png");

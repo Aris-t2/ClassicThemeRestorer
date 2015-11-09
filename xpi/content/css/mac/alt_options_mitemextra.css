@@ -1,0 +1,16 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+  #ctraddon_toolsmenu_preferencesUnix {
+	visibility: visible !important;
+	display: inline !important;
+  }
+  
+  #ctraddon_toolsmenu_preferencesWindows {
+	visibility: collapse !important;
+	display: none !important;
+  }
+
+	
+}

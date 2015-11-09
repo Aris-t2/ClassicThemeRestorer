@@ -59,4 +59,8 @@
 	  margin-bottom: 0 !important;
 	}
 	
+	#categories + vbox > #mainPrefPane + hbox {
+	  margin-bottom: -20px !important;
+	}
+	
 }

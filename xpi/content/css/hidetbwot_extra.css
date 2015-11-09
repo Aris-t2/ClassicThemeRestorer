@@ -1,7 +1,8 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	#main-window[inDOMFullscreen] #TabsToolbar {
+	#main-window[inDOMFullscreen] #TabsToolbar,
+	#navigator-toolbox[collapsed="true"] #TabsToolbar {
 	  visibility: collapse !important;
 	}
 

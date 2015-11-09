@@ -167,8 +167,18 @@
 					 removable="false"/>
 	</toolbar>
 	
-	<!--### CTR entry in menubars 'Tools' menu popup ###-->
+	<!--### Entries in menubars 'Tools' menu popup ###-->
 	<menupopup id="menu_ToolsPopup">
+	  <menuitem id="ctraddon_toolsmenu_preferencesWindows"
+				label="&preferencesCmd2.label; (Window)"
+				accesskey="&preferencesCmd2.accesskey;"
+				oncommand="if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt')
+							 classicthemerestorerjs.ctr.openContentPrefsInWin();  else openPreferences();"/>
+	  <menuitem id="ctraddon_toolsmenu_preferencesUnix"
+				label="&preferencesCmdUnix.label; (Window)"
+				accesskey="&preferencesCmdUnix.accesskey;"
+				oncommand="if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt')
+						 classicthemerestorerjs.ctr.openContentPrefsInWin(); else openPreferences();"/>
 	  <menuitem oncommand="classicthemerestorerjs.ctr.openCTRPreferences();"
 		label="&Ctr_title;"
 		class="menuitem-iconic"
@@ -952,6 +962,13 @@
                        tooltiptext="&fullScreenClose.tooltip;"
                        oncommand="BrowserTryToCloseWindow();"/>
       </toolbaritem>
+ 
+      <!--### creates a movable go button ###-->
+	  <toolbarbutton id="ctraddon_preferences-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
+                     label="&preferencesCmd2.label; (Window)" removable="true"
+					 oncommand="if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt')
+							 classicthemerestorerjs.ctr.openContentPrefsInWin();  else openPreferences();"
+                     tooltiptext="&preferencesCmd2.label; (Window)"/>
 	  
 	  <!--### restores spaces, flexible spaces and separators ###-->
       <toolbarspring 	id="spring"		class="ctraddon_flexspaces"	label="&Ctr_flexspace;"	customizableui-areatype="toolbar" removable="true" flex="1"/>

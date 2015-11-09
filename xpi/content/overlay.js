@@ -146,7 +146,7 @@ classicthemerestorerjs.ctr = {
 	try{
 		if (this.appversion >= 44) document.getElementById("main-window").setAttribute('fx44plus',true);
 	} catch(e){}
-	
+
 	// add CTR version number to '#main-window' node, so other add-ons/themes can easier distinguish between versions
 	AddonManager.getAddonByID('ClassicThemeRestorer@ArisT2Noia4dev', function(addon) {
 	  try{
@@ -855,7 +855,33 @@ classicthemerestorerjs.ctr = {
 			  classicthemerestorerjs.ctr.closeContentPrefsInWin();
 		
 			if (branch.getCharPref("altoptions")!="options_default" && classicthemerestorerjs.ctr.fxdefaulttheme==true){
-			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("altoptions"),true);
+			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("altoptions"),true);	  
+			}
+			
+			if (branch.getCharPref("altoptions")=="options_win" || branch.getCharPref("altoptions")=="options_win_alt") {
+			  classicthemerestorerjs.ctr.loadUnloadCSS('altoptionsmitem',true);
+			} else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS('altoptionsmitem',false);
+			}
+			
+			// for MacOSX: hide items using js instead of css or it won't work
+			if (classicthemerestorerjs.ctr.osstring=="Darwin"){
+				if (branch.getCharPref("altoptions")=="options_win" || branch.getCharPref("altoptions")=="options_win_alt") {
+					setTimeout(function(){
+					  try{
+						document.getElementById("ctraddon_toolsmenu_preferencesUnix").collapsed = false;
+						document.getElementById("ctraddon_toolsmenu_preferencesWindows").collapsed = true;
+					  } catch(e){}
+					},1000);
+				}
+				else {
+				  setTimeout(function(){
+					try{
+					  document.getElementById("ctraddon_toolsmenu_preferencesWindows").collapsed = true;
+					  document.getElementById("ctraddon_toolsmenu_preferencesUnix").collapsed = true;
+					} catch(e){}
+				  },1000);
+				}
 			}
 
 		  break;
@@ -3271,6 +3297,7 @@ classicthemerestorerjs.ctr = {
 		case "options_alt": 		manageCSS("alt_optionspage.css");		break;
 		case "options_win": 		manageCSS("alt_optionswindow.css");		break;
 		case "options_win_alt": 	manageCSS("alt_optionswindow2.css");	break;
+		case "altoptionsmitem": 	manageCSS("alt_options_mitem.css");		break;
 		case "svgfilters": 			manageCSS("svgfilters.css");			break;
 		case "iat_notf_vt": 		manageCSS("mode_iat_no_vt.css");		break;
 		case "to_notf_vt": 			manageCSS("mode_to_no_vt.css");			break;
@@ -5126,7 +5153,7 @@ classicthemerestorerjs.ctr = {
 	if (classicthemerestorerjs.ctr.fxdefaulttheme) {
 		
 	  var wwidth = 800; // window width
-	  var wheight = 660; // window height
+	  var wheight = 670; // window height
 	  
 	  if (classicthemerestorerjs.ctr.prefs.getCharPref("altoptions")=='options_win_alt') {
 		wwidth = 700;

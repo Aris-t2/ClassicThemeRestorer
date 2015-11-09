@@ -1,3 +1,5 @@
+@import url(chrome://ctraddon_os_special/skin/alt_optionswindow2extra.css);
+
 @-moz-document url(about:preferences),url-prefix(about:preferences){
  	
 	page,
@@ -18,6 +20,10 @@
 	  padding: 0 6px 6px 6px !important;
 	}
 	
+	#categories + vbox > #mainPrefPane + hbox {
+	  margin-bottom: -20px !important;
+	}
+
 	/* main colors category items */
 	#categories .category[selected]{
 	  background-color: #c1d2ee !important;
@@ -91,6 +97,7 @@
 	  -moz-padding-start: 0px !important;
 	  margin-top: -35px !important;
 	  -moz-margin-start: -40px !important;
+	  -moz-margin-end: -30px !important;
 	}
 	
 	#mainPrefPane textbox {
@@ -99,6 +106,7 @@
 	
 	textbox {
 	  min-height: 24px !important;
+	  height: 24px !important;
 	}
 
 	description,
@@ -173,6 +181,40 @@
 	  padding: unset !important;
 	  margin: unset !important;
 	}
+	
+	@media not all and (-moz-windows-theme:aero) {
+	
+		checkbox image,
+		radio image {
+		  width: 14px !important;
+		  height: 14px !important;
+		  margin: 0 !important;
+		}
+		
+		checkbox label,
+		radio label {
+		  -moz-margin-start: -10px !important;
+		}
+		
+		radio *{
+		  outline: unset !important;
+		}
+	}
+	
+	@media (min-resolution: 1.1dppx) {
+		checkbox image,
+		radio image {
+		  width: 14px !important;
+		  height: 14px !important;
+		}
+		
+		checkbox label,
+		radio label {
+		  -moz-margin-start: -10px !important;
+		}
+	}
+	
+	/* content */
 	#categories .box-inherit {
 	  -moz-box-orient: horizontal !important;
 	  position: fixed !important;
@@ -295,6 +337,38 @@
   margin: unset !important;
 }
 
+@media not all and (-moz-windows-theme:aero) {
+
+	*[subdialog="true"] checkbox image,
+	*[subdialog="true"] radio image {
+	  width: 14px !important;
+	  height: 14px !important;
+	  margin: 0 !important;
+	}
+	
+	*[subdialog="true"] checkbox label,
+	*[subdialog="true"] radio label {
+	  -moz-margin-start: -10px !important;
+	}
+	
+	*[subdialog="true"] radio *{
+	  outline: unset !important;
+	}
+}
+
+@media (min-resolution: 1.1dppx) {
+	*[subdialog="true"] checkbox image,
+	*[subdialog="true"] radio image {
+	  width: 14px !important;
+	  height: 14px !important;
+	}
+	
+	*[subdialog="true"] checkbox label,
+	*[subdialog="true"] radio label {
+	  -moz-margin-start: -10px !important;
+	}
+}
+
 *[subdialog="true"] > vbox,
 *[subdialog="true"] > hbox,
 *[subdialog="true"] .prefWindow-dlgbuttons,
@@ -308,6 +382,7 @@
 
 *[subdialog="true"] textbox {
   min-height: 24px !important;
+  height: 24px !important;
 }
 
 *[subdialog="true"] treecols,

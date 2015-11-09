@@ -1,0 +1,18 @@
+@import url(chrome://ctraddon_os_special/skin/alt_options_mitemextra.css);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+  #wrapper-preferences-button,
+  #preferences-button {
+	visibility: collapse !important; 
+	display: none !important;
+  }
+  
+  #wrapper-ctraddon_preferences-button,
+  #ctraddon_preferences-button {
+	visibility: visible !important; 
+	display: inline !important;
+  }
+
+}

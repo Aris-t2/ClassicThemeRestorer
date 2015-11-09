@@ -293,9 +293,11 @@ radio.ctraddontab .radio-check-box1 {
 }
 
 #ctraddon_pw_closeicon .radio-spacer-box,
+#ctraddon_pw_closeicon radio .radio-check,
 #ctraddon_pw_closeicon radio .radio-check-box1,
 #ctraddon_pw_closeicon #ctraddon_closeicon_def image,
 #ctraddon_pw_closeicong .radio-spacer-box,
+#ctraddon_pw_closeicong radio .radio-check,
 #ctraddon_pw_closeicong radio .radio-check-box1,
 #ctraddon_pw_closeicong #ctraddon_closeicong_def image {
   display: none;
@@ -357,6 +359,7 @@ radio.ctraddontab .radio-check-box1 {
 }
 
 #ctraddon_pw_tabseparator radio .radio-spacer-box,
+#ctraddon_pw_tabseparator radio .radio-check,
 #ctraddon_pw_tabseparator radio .radio-check-box1,
 #ctraddon_pw_tabseparator #ctraddon_tabsep_def image {
   display: none;

@@ -154,6 +154,10 @@
 	  display: none !important;
 	  visibility:collapse !important;
 	}
+	
+	#main-window[fx44plus="true"]  #ctraddon_appbutton > .toolbarbutton-icon{
+	  max-width: unset !important;
+	}
 
 	/* style appbutton*/
 	#TabsToolbar #ctraddon_appbutton{
@@ -483,6 +487,19 @@
 	}
 	
 	/* Fx44+ fix */
-	#main-window[fx44plus="true"] #PersonalToolbar toolbarbutton[id^="ctraddon_"] > .toolbarbutton-icon{
+	#main-window[fx44plus="true"] toolbarbutton[id^="ctraddon_"] > .toolbarbutton-icon{
 	  max-width: unset !important;
+	}
+	
+	/* CTR preference items */
+	#ctraddon_toolsmenu_preferencesWindows,
+	#ctraddon_toolsmenu_preferencesUnix {
+	  visibility: collapse;
+	  display: none;
+	}
+	
+	#wrapper-ctraddon_preferences-button,
+	#ctraddon_preferences-button {
+	  visibility: collapse; 
+	  display: none;
 	}
