@@ -44,11 +44,11 @@
 	}
 	
 	/* groupbox */
-	groupbox{
+	.main-content groupbox{
 	  -moz-appearance: groupbox !important;
 	}
 
-	groupbox caption {
+	.main-content groupbox caption {
 	  background-color: -moz-Dialog !important;
 	  -moz-margin-start: 6px !important;
 	}
@@ -124,7 +124,7 @@
 	  font-size: 120% !important;
 	  padding-bottom: 0 !important;
 	}
-
+	
 	.header:not(#header-advanced){
 	  margin-bottom: 0px !important;
 	}
@@ -299,6 +299,26 @@
 	  min-height: unset !important;
 	}
 	
+	@media all and (-moz-windows-classic) {
+		#mainPrefPane textbox {
+		  font-size:80% !important;
+		}
+		description,
+		.main-content label{
+		  font-size:90% !important;
+		}
+		.header label {
+		  font-size: 130% !important;
+		}
+		button:not(.button-link):not(.close-icon):not(.spinbuttons-button),
+		menulist{
+		  font-size: 100% !important;
+		}
+		richlistitem.category > .category-name {
+		  font-size:110% !important;
+		}
+	}
+	
 }
 
 /* preference sub windows */
@@ -308,6 +328,15 @@
   min-height: unset !important;
   height: unset !important;
   font-size: 90% !important;
+}
+
+@media all and (-moz-windows-classic) {
+
+	*[subdialog="true"] button:not(.button-link):not(.close-icon):not(.spinbuttons-button),
+	*[subdialog="true"] menulist{
+	  font-size: 100% !important;
+	}
+
 }
 
 *[subdialog="true"] button:not(.button-link):not(.close-icon):not(.spinbuttons-button){

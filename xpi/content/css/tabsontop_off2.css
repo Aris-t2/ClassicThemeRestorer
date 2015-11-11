@@ -35,6 +35,10 @@
 	window[chromehidden~="menubar"] #titlebar{
 	  margin-bottom:-26px !important;
 	}
+	/* exclude CTRs prefwindow */
+	#main-window[chromehidden~="menubar"][title^="about:preferences"][tabsontop="false"] #titlebar{
+	  margin-bottom:0px !important;
+	}
 
 	#TabsToolbar,
 	#TabsToolbar:not(:-moz-lwtheme),
