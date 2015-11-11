@@ -23,6 +23,11 @@
 	#categories + vbox > #mainPrefPane + hbox {
 	  margin-bottom: -20px !important;
 	}
+	
+	#dialogBox {
+	  min-width: unset !important;
+	  min-height: unset !important;
+	}
 
 	/* main colors category items */
 	#categories .category[selected]{
