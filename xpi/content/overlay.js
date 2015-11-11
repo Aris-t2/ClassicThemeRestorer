@@ -850,6 +850,8 @@ classicthemerestorerjs.ctr = {
 		  
 		  case "altoptions":
 			  classicthemerestorerjs.ctr.loadUnloadCSS("options_alt",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("options_alt2",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("options_alt3",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("options_win",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("options_win_alt",false);
 			  classicthemerestorerjs.ctr.closeContentPrefsInWin();
@@ -3295,6 +3297,8 @@ classicthemerestorerjs.ctr = {
 		case "nbcompact":			manageCSS("navbar_compact.css");		break;
 		case "noconicons": 			manageCSS("nocontexticons.css");		break;
 		case "options_alt": 		manageCSS("alt_optionspage.css");		break;
+		case "options_alt2": 		manageCSS("alt_optionswindow.css");		break;
+		case "options_alt3": 		manageCSS("alt_optionswindow2.css");	break;
 		case "options_win": 		manageCSS("alt_optionswindow.css");		break;
 		case "options_win_alt": 	manageCSS("alt_optionswindow2.css");	break;
 		case "altoptionsmitem": 	manageCSS("alt_options_mitem.css");		break;
