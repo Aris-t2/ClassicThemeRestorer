@@ -170,12 +170,12 @@
 	<!--### Entries in menubars 'Tools' menu popup ###-->
 	<menupopup id="menu_ToolsPopup">
 	  <menuitem id="ctraddon_toolsmenu_preferencesWindows"
-				label="&preferencesCmd2.label; (Window)"
+				label="&preferencesCmd2.label; (&Ctr_window;)"
 				accesskey="&preferencesCmd2.accesskey;"
 				oncommand="if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt')
 							 classicthemerestorerjs.ctr.openContentPrefsInWin();  else openPreferences();"/>
 	  <menuitem id="ctraddon_toolsmenu_preferencesUnix"
-				label="&preferencesCmdUnix.label; (Window)"
+				label="&preferencesCmdUnix.label; (&Ctr_window;)"
 				accesskey="&preferencesCmdUnix.accesskey;"
 				oncommand="if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt')
 						 classicthemerestorerjs.ctr.openContentPrefsInWin(); else openPreferences();"/>
@@ -965,10 +965,10 @@
  
       <!--### creates a movable go button ###-->
 	  <toolbarbutton id="ctraddon_preferences-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
-                     label="&preferencesCmd2.label; (Window)" removable="true"
+                     label="&preferencesCmd2.label; (&Ctr_window;)" removable="true"
 					 oncommand="if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt')
 							 classicthemerestorerjs.ctr.openContentPrefsInWin();  else openPreferences();"
-                     tooltiptext="&preferencesCmd2.label; (Window)"/>
+                     tooltiptext="&preferencesCmd2.label; (&Ctr_window;)"/>
 	  
 	  <!--### restores spaces, flexible spaces and separators ###-->
       <toolbarspring 	id="spring"		class="ctraddon_flexspaces"	label="&Ctr_flexspace;"	customizableui-areatype="toolbar" removable="true" flex="1"/>
