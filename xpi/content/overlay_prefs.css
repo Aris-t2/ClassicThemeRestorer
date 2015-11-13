@@ -323,7 +323,7 @@ radio.ctraddontab .radio-check-box1 {
 
 /* tab separator settings */
 #ctraddon_tabsep_def {
-  -moz-margin-end:-4px;
+  -moz-margin-end:-2px;
 }
 #ctraddon_tabsep_black{
   list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator.png');
@@ -573,6 +573,7 @@ radio.ctraddontab .radio-check-box1 {
 }
 
 #ctraddon_padlock_radio radio .radio-spacer-box,
+#ctraddon_padlock_radio radio .radio-check,
 #ctraddon_padlock_radio radio .radio-check-box1 {
   display: none;
 }

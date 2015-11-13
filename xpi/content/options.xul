@@ -718,6 +718,7 @@
 				<menuitem value="appbutton_v2io2" label="&Ctr_appbutton2io; (v2)"	oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v2io2',true)"/>
 				<menuitem value="appbutton_v2h"	  label="&Ctr_appbutton2h;"			oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v2h',true)"/>
 				<menuitem value="appbutton_pm" 	  label="&Ctr_paneluibtweak;"		oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_pm',true)" id="ctraddon_pw_appbutton_pm"/>
+				<label value="&Ctr_paneluibtweak2;"/>
 				<label value=" "/>
 				<description class="ctraddon_font1">&Ctr_appbuttonI1;</description>
 			</menupopup>
@@ -997,6 +998,7 @@
 		  <textbox id="ctraddon_pw_nbisizedelay" size="4" maxlength="4" preference="ctraddon_nbisizedelay" type="number" min="0" max="9999"/>
 		  <description>&Ctr_nbisizedelay;</description>
 		</hbox>
+		<description>&Ctr_nbisizedelay0;</description>
 	  </groupbox>
 
 	  <groupbox>

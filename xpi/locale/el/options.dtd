@@ -15,7 +15,7 @@
 <!ENTITY Ctr_sidebarbutton	"(Πλευρική στήλη)">
 <!ENTITY Ctr_windowcontrols	"Ελαχιστοποίηση/επαναφορά/κλείσιμο (Πλήρης οθόνη)">
 <!ENTITY Ctr_rr				"Απαιτείται επανεκκίνηση!">
-<!ENTITY Ctr_window			"παραθύρου">
+<!ENTITY Ctr_window			"παράθυρο">
 
 <!ENTITY Ctr_cuibuttons		"Κουμπιά">
 <!ENTITY Ctr_cuibutnormal	"Κανονικά">
@@ -81,7 +81,8 @@
 <!ENTITY Ctr_appbutton2		"Στη γραμμή τίτλου του [&brandShortName;]">
 <!ENTITY Ctr_appbutton2h	"Στη γραμμή τίτλου του [&brandShortName;] (σε απόκρυψη)">
 <!ENTITY Ctr_appbutton2io	"Στη γραμμή τίτλου του [&brandShortName;] (μόνο εικονίδιο)">
-<!ENTITY Ctr_paneluibtweak	"Εμφάνιση κουμπιού κύριου μενού πίνακα ως κουμπί εφαρμογής, όταν βρίσκεται στην εργαλειοθήκη καρτελών">
+<!ENTITY Ctr_paneluibtweak	"Εμφάνιση κουμπιού κύριου μενού πίνακα ως κουμπί εφαρμογής,...">
+<!ENTITY Ctr_paneluibtweak2	"...όταν βρίσκεται στην εργαλειοθήκη καρτελών">
 <!ENTITY Ctr_appbuttonc_o	"Πορτοκαλί χρώμα κουμπιού (προεπιλογή)">
 <!ENTITY Ctr_appbuttonc_a	"Μπλε χρώμα κουμπιού (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Μαύρο χρώμα κουμπιού (Nightly)">
@@ -113,13 +114,13 @@
 <!ENTITY Ctr_hide_bf_popup	"Απόκρυψη αναδυόμενου μενού ιστορικού κουμπιών κατά το πάτημά τους">
 <!ENTITY Ctr_bf_space		"Μείωση διαστήματος μεταξύ των κουμπιών (εάν είναι δυνατόν)">
 <!ENTITY Ctr_noconicons		"Μενού περιεχομένου σελίδας: αντικατάσταση εικονιδίων με ετικέτες («Πίσω», «Μπροστά», «Διακοπή», «Ανανέωση», «Η σελίδα ως σελιδοδείκτης»)">
-<!ENTITY Ctr_altoptionsd	"Σελίδα επιλογών (about:preferences): default appearance">
+<!ENTITY Ctr_altoptionsd	"Σελίδα επιλογών (about:preferences): προεπιλεγμένη εμφάνιση">
 <!ENTITY Ctr_altoptionsp	"Σελίδα επιλογών (about:preferences): εναλλακτική εμφάνιση">
 <!ENTITY Ctr_altoptionsw	"Άνοιγμα σελίδας επιλογών (about:preferences) σε παράθυρο">
 <!ENTITY Ctr_svgfilters		"Χρώματα SVG για προεπιλεγμένα εικονίδια κουμπιών εργαλειοθήκης">
 <!ENTITY Ctr_wincontrols	"Μετακινήσιμα στοιχεία ελέγχου παραθύρου σε προβολή πλήρους οθόνης">
-<!ENTITY Ctr_oldtoplevimg	"'Top level domain' images: classic appearance">
-<!ENTITY Ctr_altalertbox	"'Alert box': alternative appearance">
+<!ENTITY Ctr_oldtoplevimg	"Εικόνες τομέα «ανώτατου επιπέδου»: κλασική εμφάνιση">
+<!ENTITY Ctr_altalertbox	"«Πλαίσιο ειδοποίησης»: εναλλακτική εμφάνιση">
 <!ENTITY Ctr_emptyfavicon2	"Αντικατάσταση γενικού εικονιδίου (κενό και διάστικτο) με εικονίδιο φύλλου">
 <!ENTITY Ctr_mstatusbar		"Μετακινήσιμο πινακίδιο γραμμής κατάστασης">
 <!ENTITY Ctr_mstatusbars4e	"Το πινακίδιο γραμμής κατάστασης ελέγχεται από την επέκταση «Status-4-Evar»">
@@ -132,7 +133,8 @@
 <!ENTITY Ctr_hideprivmask	"Ιδιωτική περιήγηση: απόκρυψη ενδείκτη-μάσκα">
 <!ENTITY Ctr_navsmallicons	"Μικρά εικονίδια">
 <!ENTITY Ctr_navlargeicons	"Μεγάλα εικονίδια">
-<!ENTITY Ctr_nbisizedelay	"ms - καθυστέρηση εφαρμογής κατά την εκκίνηση του περιηγητή (1000 ms = 1 δευτερόλεπτο)">
+<!ENTITY Ctr_nbisizedelay0	"καθυστέρηση εφαρμογής κατά την εκκίνηση του περιηγητή">
+<!ENTITY Ctr_nbisizedelay	"ms (1000 ms = 1 δευτερόλεπτο)">
 <!ENTITY Ctr_findbar		"Θέση γραμμής εύρεσης">
 <!ENTITY Ctr_findbar_def	"Κάτω μέρος (προεπιλογή)">
 <!ENTITY Ctr_findbar_top	"Κορυφή">
@@ -208,11 +210,11 @@
 <!ENTITY Ctr_hideurlgo		"Απόκρυψη κουμπιού «Μετάβαση»">
 <!ENTITY Ctr_hideurlsrg		"Απόκρυψη διαχωριστικών &amp; διαστημάτων κουμπιών «Ανανέωση», «Διακοπή» &amp; «Μετάβαση»">
 <!ENTITY Ctr_urlbardropm	"Μετακίνηση του δείκτη ανάπτυξης στο τέλος της γραμμής τοποθεσιών">
-<!ENTITY Ctr_altreaderico	"Alternative 'Reader' icons">
+<!ENTITY Ctr_altreaderico	"Εναλλακτικά εικονίδια «λειτουργίας ανάγνωσης»">
 <!ENTITY Ctr_hideprbutton	"Απόκρυψη εικονιδίου ειδοποίησης φραγής αναδυόμενου παραθύρου">
 <!ENTITY Ctr_urlbar_ib		"Κουμπί ταυτοποίησης τοποθεσιών (πλαίσιο ταυτοποίησης)">
-<!ENTITY Ctr_ib_nohovcolor	"Do not show gray color when hovered">
-<!ENTITY Ctr_verifiedcolors	"Button colors for verified websites, secure and not secure connections">
+<!ENTITY Ctr_ib_nohovcolor	"Μη εμφάνιση γκρι χρώματος κατά την κατάδειξη">
+<!ENTITY Ctr_verifiedcolors	"Χρώματα κουμπιού για επαληθευμένες ιστοσελίδες, ασφαλείς και μη ασφαλείς συνδέσεις">
 <!ENTITY Ctr_faviconurl		"Εικονίδιο URL: τρέχον εικονίδιο τοποθεσιών">
 <!ENTITY Ctr_padlock		"Εικονίδιο «Λουκέτο» για ασφαλείς συνδέσεις">
 <!ENTITY Ctr_padlock_hid	"κρυμμένο">

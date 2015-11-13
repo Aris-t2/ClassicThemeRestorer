@@ -169,12 +169,7 @@
 	
 	<!--### Entries in menubars 'Tools' menu popup ###-->
 	<menupopup id="menu_ToolsPopup">
-	  <menuitem id="ctraddon_toolsmenu_preferencesWindows"
-				label="&preferencesCmd2.label; (&Ctr_window;)"
-				accesskey="&preferencesCmd2.accesskey;"
-				oncommand="if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt')
-							 classicthemerestorerjs.ctr.openContentPrefsInWin();  else openPreferences();"/>
-	  <menuitem id="ctraddon_toolsmenu_preferencesUnix"
+	  <menuitem id="ctraddon_toolsmenu_preferencesOSX"
 				label="&preferencesCmdUnix.label; (&Ctr_window;)"
 				accesskey="&preferencesCmdUnix.accesskey;"
 				oncommand="if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt')

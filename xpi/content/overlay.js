@@ -871,16 +871,14 @@ classicthemerestorerjs.ctr = {
 				if (branch.getCharPref("altoptions")=="options_win" || branch.getCharPref("altoptions")=="options_win_alt") {
 					setTimeout(function(){
 					  try{
-						document.getElementById("ctraddon_toolsmenu_preferencesUnix").collapsed = false;
-						document.getElementById("ctraddon_toolsmenu_preferencesWindows").collapsed = true;
+						document.getElementById("ctraddon_toolsmenu_preferencesOSX").collapsed = false;
 					  } catch(e){}
 					},1000);
 				}
 				else {
 				  setTimeout(function(){
 					try{
-					  document.getElementById("ctraddon_toolsmenu_preferencesWindows").collapsed = true;
-					  document.getElementById("ctraddon_toolsmenu_preferencesUnix").collapsed = true;
+					  document.getElementById("ctraddon_toolsmenu_preferencesOSX").collapsed = true;
 					} catch(e){}
 				  },1000);
 				}
