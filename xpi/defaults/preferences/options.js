@@ -238,5 +238,9 @@ pref("extensions.classicthemerestorer.tabc_act_tb",false);
 pref("extensions.classicthemerestorer.tabc_hov_unr",false);
 pref("extensions.classicthemerestorer.tabc_hov_unl",false);
 
+pref("extensions.classicthemerestorer.saveprefslocation",true);
+pref("extensions.classicthemerestorer.aboutprefs",'category-general');
+pref("extensions.classicthemerestorer.aboutprefsInd",0);
+
 // first run/reset preference
 pref("extensions.classicthemerestorer.ctrreset",true);

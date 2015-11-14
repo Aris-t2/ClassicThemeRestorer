@@ -5186,7 +5186,7 @@ classicthemerestorerjs.ctr = {
 
 	  var w = (screen.availWidth-wwidth)/2;
 	  var h = (screen.availHeight-wheight)/2;
-
+	  
 	  classicthemerestorerjs.ctr.ctrcontentprefswin = window.open('about:preferences', 'about:preferences', 'width='+wwidth+',height='+wheight+',top='+h+',left='+w+',resizable=yes');
 	} else openPreferences();
 
