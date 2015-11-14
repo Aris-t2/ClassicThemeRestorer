@@ -405,7 +405,7 @@ classicthemerestorerjso.ctr = {
 	PrefListener.prototype.register = function(trigger) {
 	  this._branch.addObserver('', this, false);
 	  if (trigger) {
-		let that = this;
+		var that = this;
 		this._branch.getChildList('', {}).
 		  forEach(function (pref_leaf_name)
 			{ that._callback(that._branch, pref_leaf_name); });
@@ -900,7 +900,7 @@ classicthemerestorerjso.ctr = {
   
   resetCTRpreferences: function() {
     var preferences = document.getElementsByTagName("preference");
-    for (let preference of preferences) {
+    for (var preference of preferences) {
       if(preference.name.indexOf("extensions.classicthemerestorer.")!=-1)
 		preference.value = preference.defaultValue == null ? undefined : preference.defaultValue;
     }
@@ -1007,7 +1007,7 @@ classicthemerestorerjso.ctr = {
 	  
 	var preflist = Services.prefs.getChildList("extensions.classicthemerestorer.");
 
-	let preferenceArray = [];
+	var preferenceArray = [];
 		 
 	// Add filter header
 	preferenceArray.push("CTR_Preferences__DO_NOT_EDIT__'='->booleans__':'->strings__'~'->integers");	
@@ -1064,7 +1064,7 @@ classicthemerestorerjso.ctr = {
 	  
 	function saveToFile(patterns) {
 
-	  const nsIFilePicker = Ci.nsIFilePicker;
+	  var nsIFilePicker = Ci.nsIFilePicker;
 	  var fp = Cc["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
 	  var stream = Cc["@mozilla.org/network/file-output-stream;1"].createInstance(Ci.nsIFileOutputStream);
 
@@ -1074,7 +1074,7 @@ classicthemerestorerjso.ctr = {
 	  fp.appendFilters(nsIFilePicker.filterText);
 
 	  if (fp.show() != nsIFilePicker.returnCancel) {
-		let file = fp.file;
+		var file = fp.file;
 		if (!/\.txt$/.test(file.leafName.toLowerCase()))
 		  file.leafName += ".txt";
 		if (file.exists())
@@ -1137,7 +1137,7 @@ classicthemerestorerjso.ctr = {
 	   
 	function loadFromFile() {
 
-	   const nsIFilePicker = Ci.nsIFilePicker;
+	   var nsIFilePicker = Ci.nsIFilePicker;
 	   var fp = Cc["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
 	   var stream = Cc["@mozilla.org/network/file-input-stream;1"].createInstance(Ci.nsIFileInputStream);
 	   var streamIO = Cc["@mozilla.org/scriptableinputstream;1"].createInstance(Ci.nsIScriptableInputStream);
@@ -1211,7 +1211,7 @@ classicthemerestorerjso.ctr = {
 	 
 	function loadFromFile() {
 
-	   const nsIFilePicker = Ci.nsIFilePicker;
+	   var nsIFilePicker = Ci.nsIFilePicker;
 	   var fp = Cc["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
 	   var stream = Cc["@mozilla.org/network/file-input-stream;1"].createInstance(Ci.nsIFileInputStream);
 	   var streamIO = Cc["@mozilla.org/scriptableinputstream;1"].createInstance(Ci.nsIScriptableInputStream);
@@ -1250,7 +1250,7 @@ classicthemerestorerjso.ctr = {
 
 	var preflist = Services.prefs.getChildList("extensions.classicthemerestorer.");
 
-	let preferenceArray = {
+	var preferenceArray = {
 	  preference: [],
 	  value: []
 	};
@@ -1292,7 +1292,7 @@ classicthemerestorerjso.ctr = {
 	  
 	function saveToFile(patterns) {
 
-	  const nsIFilePicker = Ci.nsIFilePicker;
+	  var nsIFilePicker = Ci.nsIFilePicker;
 	  var fp = Cc["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
 	  var stream = Cc["@mozilla.org/network/file-output-stream;1"].createInstance(Ci.nsIFileOutputStream);
 
@@ -1302,7 +1302,7 @@ classicthemerestorerjso.ctr = {
 	  fp.appendFilters(nsIFilePicker.filterAll);
 
 	  if (fp.show() != nsIFilePicker.returnCancel) {
-		let file = fp.file;
+		var file = fp.file;
 		if (!/\.json$/.test(file.leafName.toLowerCase()))
 		  file.leafName += ".json";
 		if (file.exists())
@@ -1323,13 +1323,13 @@ classicthemerestorerjso.ctr = {
   }, 
  
   onCtrPanelSelect: function() {
-    let ctrAddonPrefBoxTab = document.getElementById("CtrRadioGroup");
-    let selectedPanel = document.getElementById(ctrAddonPrefBoxTab.value);
+    var ctrAddonPrefBoxTab = document.getElementById("CtrRadioGroup");
+    var selectedPanel = document.getElementById(ctrAddonPrefBoxTab.value);
     selectedPanel.parentNode.selectedPanel = selectedPanel;
 
-    for (let i=0; i < ctrAddonPrefBoxTab.itemCount; i++) {
-      let radioItem = ctrAddonPrefBoxTab.getItemAtIndex(i);
-      let pane = document.getElementById(radioItem.value);
+    for (var i=0; i < ctrAddonPrefBoxTab.itemCount; i++) {
+      var radioItem = ctrAddonPrefBoxTab.getItemAtIndex(i);
+      var pane = document.getElementById(radioItem.value);
       pane.setAttribute("selected", (radioItem.selected)? "true" : "false");
     }
   }

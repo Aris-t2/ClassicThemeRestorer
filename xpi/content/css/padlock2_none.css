@@ -1,8 +1,8 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 @-moz-document url(chrome://browser/content/browser.xul) {
 	
-	#main-window:not([fx42plus="true"]) #urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"],
-	#main-window:not([fx42plus="true"]) #urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"]{
+	#main-window:not([fx42plus="true"]):not([fx45plus="true"]) #urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"],
+	#main-window:not([fx42plus="true"]):not([fx45plus="true"]) #urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"]{
 	  list-style-image: url(chrome://branding/content/identity-icons-brand.png) !important;
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	}
@@ -17,6 +17,23 @@
 	#main-window[fx42plus="true"] #urlbar .mixedActiveBlocked #page-proxy-favicon[pageproxystate="valid"]	{
 	  list-style-image: url(chrome://branding/content/identity-icons-brand.svg) !important;
 	  -moz-image-region: rect(0, 32px, 32px, 0) !important;
+	}
+	
+	/* Firefox 45+ */
+	#main-window[fx45plus="true"] #urlbar[pageproxystate="valid"] .verifiedDomain #identity-icon,
+	#main-window[fx45plus="true"] #urlbar[pageproxystate="valid"] .verifiedIdentity #identity-icon,
+	#main-window[fx45plus="true"] #urlbar[pageproxystate="valid"] .insecureLoginForms #identity-icon,
+	#main-window[fx45plus="true"] #urlbar[pageproxystate="valid"] .mixedActiveContent #identity-icon,
+	#main-window[fx45plus="true"] #urlbar[pageproxystate="valid"] .weakCipher #identity-icon,
+	#main-window[fx45plus="true"] #urlbar[pageproxystate="valid"] .mixedDisplayContent #identity-icon,
+	#main-window[fx45plus="true"] #urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked #identity-icon,
+	#main-window[fx45plus="true"] #urlbar[pageproxystate="valid"] .mixedActiveBlocked #identity-icon {
+	  list-style-image: url(chrome://branding/content/identity-icons-brand.svg) !important;
+	  -moz-image-region: rect(0, 32px, 32px, 0) !important;
+	}
+	
+	#main-window[fx45plus="true"] #urlbar #connection-icon {
+	  display:none !important;	
 	}
 
 }
