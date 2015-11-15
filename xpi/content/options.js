@@ -128,7 +128,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_tabstoolbargroup').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_devthemegb').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_hightabpososx').style.visibility = 'collapse';
-		document.getElementById('ctraddon_altoptions_box').style.visibility = 'collapse';
+		document.getElementById('ctraddon_altoptions_list').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tttitlebar').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_am_compact').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_am_compact2').style.visibility = 'collapse';
@@ -138,6 +138,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_special_info2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_special_font').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'collapse';
+		document.getElementById('ctraddon_altoptions_list2').style.visibility = 'collapse';
 	};
 	
 	//pref e10s tabs

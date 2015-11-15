@@ -33,8 +33,11 @@
 	/* END: navigator-toolbox toolbars */
 
 	/* fix for popup windows, which disable 'menubar' by force*/
-	window[chromehidden~="menubar"] #titlebar{
+	#main-window[chromehidden~="menubar"]:not([fx42plus="true"]) #titlebar{
 	  margin-bottom:-26px !important;
+	}
+	#main-window[chromehidden~="menubar"][chromehidden~="toolbar"]:not([chromehidden~="location"]) #nav-bar {
+	  visibility: collapse !important;
 	}
 	/* exclude CTRs prefwindow */
 	#main-window[chromehidden~="menubar"][title^="about:preferences"][tabsontop="false"] #titlebar{

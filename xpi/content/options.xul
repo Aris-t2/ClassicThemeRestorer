@@ -815,6 +815,12 @@
 				<menuitem value="options_win_alt"	label="&Ctr_altoptionsw; (v2)" id="ctraddon_pw_options_win_alt"/>
 			</menupopup>
 		  </menulist>
+		  <menulist preference="ctraddon_altoptions" id="ctraddon_altoptions_list2">
+			<menupopup>
+				<menuitem value="options_default"	label="&Ctr_altoptionsd;" id="ctraddon_pw_altoptions_default"/>
+				<menuitem value="options_win"		label="&Ctr_altoptionsw;" id="ctraddon_pw_options_win_ct"/>
+			</menupopup>
+		  </menulist>
 		</hbox>
 
 		<checkbox label="&Ctr_svgfilters;"		preference="ctraddon_svgfilters" id="ctraddon_pw_svgfilters"/>

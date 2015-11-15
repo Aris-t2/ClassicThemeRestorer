@@ -62,6 +62,11 @@ ctrAboutPrefs = {
 
 	  observer2.observe(document.querySelector('#advancedPrefs'), { attributes: true, attributeFilter: ['selectedIndex'] });
 	  
+	  try{
+		  var thirdpartytheme = Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin");
+		  document.querySelector('#categories').setAttribute('currenttheme',thirdpartytheme);
+	  } catch(e){}
+	  
 	}
   }
 }

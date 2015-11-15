@@ -858,10 +858,16 @@ classicthemerestorerjs.ctr = {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("options_alt3",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("options_win",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("options_win_alt",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("options_win_ct",false);
 			  classicthemerestorerjs.ctr.closeContentPrefsInWin();
 		
-			if (branch.getCharPref("altoptions")!="options_default" && classicthemerestorerjs.ctr.fxdefaulttheme==true){
-			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("altoptions"),true);	  
+			if (branch.getCharPref("altoptions")!="options_default"){
+			  if (branch.getCharPref("altoptions")=="options_win" && classicthemerestorerjs.ctr.fxdefaulttheme==true)
+				classicthemerestorerjs.ctr.loadUnloadCSS("options_win",true);
+			  else if (branch.getCharPref("altoptions")=="options_win" && classicthemerestorerjs.ctr.fxdefaulttheme==false)
+				classicthemerestorerjs.ctr.loadUnloadCSS("options_win_ct",true);
+			  else			  
+			    classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("altoptions"),true);	  
 			}
 			
 			if (branch.getCharPref("altoptions")=="options_win" || branch.getCharPref("altoptions")=="options_win_alt") {
@@ -3321,6 +3327,7 @@ classicthemerestorerjs.ctr = {
 		case "options_alt3": 		manageCSS("alt_optionswindow2.css");	break;
 		case "options_win": 		manageCSS("alt_optionswindow.css");		break;
 		case "options_win_alt": 	manageCSS("alt_optionswindow2.css");	break;
+		case "options_win_ct": 		manageCSS("alt_optionswindow_ct.css");	break;
 		case "altoptionsmitem": 	manageCSS("alt_options_mitem.css");		break;
 		case "svgfilters": 			manageCSS("svgfilters.css");			break;
 		case "iat_notf_vt": 		manageCSS("mode_iat_no_vt.css");		break;
@@ -5175,7 +5182,6 @@ classicthemerestorerjs.ctr = {
   openContentPrefsInWin: function() {
 	 
 	try{classicthemerestorerjs.ctr.ctrcontentprefswin.close();} catch(e){}
-	if (classicthemerestorerjs.ctr.fxdefaulttheme) {
 		
 	  var wwidth = 800; // window width
 	  var wheight = 670; // window height
@@ -5188,7 +5194,6 @@ classicthemerestorerjs.ctr = {
 	  var h = (screen.availHeight-wheight)/2;
 	  
 	  classicthemerestorerjs.ctr.ctrcontentprefswin = window.open('about:preferences', 'about:preferences', 'width='+wwidth+',height='+wheight+',top='+h+',left='+w+',resizable=yes');
-	} else openPreferences();
 
   },
   
