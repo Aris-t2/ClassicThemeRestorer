@@ -1,17 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 @-moz-document url(chrome://browser/content/browser.xul) {
 	
-	#identity-popup.verifiedDomain,
-	#identity-popup.verifiedIdentity,
-	#main-window[fx42plus="true"] #identity-popup.insecureLoginForms,
-	#main-window[fx42plus="true"] #identity-popup.mixedActiveContent,
-	#main-window[fx42plus="true"] #identity-popup.weakCipher,
-	#main-window[fx42plus="true"] #identity-popup.mixedDisplayContent,
-	#main-window[fx42plus="true"] #identity-popup.mixedDisplayContentLoadedActiveBlocked,
-	#main-window[fx42plus="true"] #identity-popup.mixedActiveBlocked {
-	  -moz-margin-start:-30px !important;
-	}
-
 	/* provides the padlock icon for secure connections */
 	#urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"],
 	#urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"],
@@ -21,51 +10,50 @@
 	#main-window[fx42plus="true"] #urlbar .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar .mixedActiveBlocked #page-proxy-favicon[pageproxystate="valid"] {
-	  width:36px !important;
-	  -moz-padding-start: 20px !important;
+	  width: 36px !important;
+	  -moz-padding-end: 20px !important;
 	}
 
 	#urlbar .verifiedDomain #page-proxy-favicon[pageproxystate="valid"],
 	#urlbar .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
-	  background: url("chrome://classic_theme_restorer/content/images/padlock_modern.png") no-repeat center left !important;
+	  background: url("chrome://classic_theme_restorer/content/images/padlock_modern.png") no-repeat center right !important;
 	}
 	
 	#urlbar:-moz-locale-dir(rtl) .verifiedDomain #page-proxy-favicon[pageproxystate="valid"],
 	#urlbar:-moz-locale-dir(rtl) .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
-	  background: url("chrome://classic_theme_restorer/content/images/padlock_modern.png") no-repeat center right !important;
+	  background: url("chrome://classic_theme_restorer/content/images/padlock_modern.png") no-repeat center left !important;
 	}
 	
 	#main-window[fx42plus="true"] #urlbar .insecureLoginForms #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar .mixedActiveContent  #page-proxy-favicon[pageproxystate="valid"] {
-	  background: url("chrome://classic_theme_restorer/content/images/padlock_modern_mal.png") no-repeat center left !important;
+	  background: url("chrome://classic_theme_restorer/content/images/padlock_modern_mal.png") no-repeat center right !important;
 	}
 	
 	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .insecureLoginForms #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .mixedActiveContent  #page-proxy-favicon[pageproxystate="valid"] {
-	  background: url("chrome://classic_theme_restorer/content/images/padlock_modern_mal.png") no-repeat center right !important;
+	  background: url("chrome://classic_theme_restorer/content/images/padlock_modern_mal.png") no-repeat center left !important;
 	}
 
 	#main-window[fx42plus="true"] #urlbar .weakCipher #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"] {
-	  background: url("chrome://classic_theme_restorer/content/images/padlock_modern_mpl.png") no-repeat center left !important;
+	  background: url("chrome://classic_theme_restorer/content/images/padlock_modern_mpl.png") no-repeat center right !important;
 	}
 	
 	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .weakCipher #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .mixedDisplayContent #page-proxy-favicon[pageproxystate="valid"],
 	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .mixedDisplayContentLoadedActiveBlocked #page-proxy-favicon[pageproxystate="valid"] {
-	  background: url("chrome://classic_theme_restorer/content/images/padlock_modern_mpl.png") no-repeat center right !important;
+	  background: url("chrome://classic_theme_restorer/content/images/padlock_modern_mpl.png") no-repeat center left !important;
 	}
 	
 	#main-window[fx42plus="true"] #urlbar .mixedActiveBlocked > #identity-icons > #page-proxy-favicon[pageproxystate="valid"] {
-	  background: url("chrome://classic_theme_restorer/content/images/padlock_modern_mab.png") no-repeat center left !important;
-	}
-	
-	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .mixedActiveBlocked > #identity-icons > #page-proxy-favicon[pageproxystate="valid"] {
 	  background: url("chrome://classic_theme_restorer/content/images/padlock_modern_mab.png") no-repeat center right !important;
 	}
 	
-	
+	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .mixedActiveBlocked > #identity-icons > #page-proxy-favicon[pageproxystate="valid"] {
+	  background: url("chrome://classic_theme_restorer/content/images/padlock_modern_mab.png") no-repeat center left !important;
+	}
+
 	/* Firefox 45+ */
 	#main-window[fx45plus="true"] #urlbar[pageproxystate="valid"] .verifiedDomain #connection-icon,
 	#main-window[fx45plus="true"] #urlbar[pageproxystate="valid"] .verifiedIdentity #connection-icon {

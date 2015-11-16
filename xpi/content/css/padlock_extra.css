@@ -1,62 +1,66 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#identity-popup.chromeUI{
-	  -moz-margin-start:-29.5px !important;
-	}
-
 	#urlbar .chromeUI #page-proxy-favicon[pageproxystate="valid"][src] {
 	  width: 34px !important;
-	  -moz-padding-start: 18px !important;
+	  -moz-padding-end: 18px !important;
 	}
 
 	#main-window:not([fx42plus="true"]) #urlbar .chromeUI #page-proxy-favicon[pageproxystate="valid"][src] {
 	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
-					0, 16, 16, 0) no-repeat center left !important;
+					0, 16, 16, 0) no-repeat center right !important;
 	}
 	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .chromeUI #page-proxy-favicon[pageproxystate="valid"][src] {
 	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
-					0, 16, 16, 0) no-repeat center right !important;
+					0, 16, 16, 0) no-repeat center left !important;
 	}
 
 	#main-window:not([fx42plus="true"]) #urlbar .chromeUI #page-proxy-favicon[pageproxystate="valid"][src]:hover {
 	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
-					0, 32, 16, 16) no-repeat center left !important;
+					0, 32, 16, 16) no-repeat center right !important;
 	}
 	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .chromeUI #page-proxy-favicon[pageproxystate="valid"][src]:hover {
 	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
-					0, 32, 16, 16) no-repeat center right !important;
+					0, 32, 16, 16) no-repeat center left !important;
 	}
 
 	#main-window:not([fx42plus="true"]) #urlbar .chromeUI #page-proxy-favicon[pageproxystate="valid"][src]:hover:active {
 	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
-					0, 48, 16, 32) no-repeat center left !important;
+					0, 48, 16, 32) no-repeat center right !important;
 	}
 	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) .chromeUI #page-proxy-favicon[pageproxystate="valid"][src]:hover:active {
 	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
-					0, 48, 16, 32) no-repeat center right !important;
+					0, 48, 16, 32) no-repeat center left !important;
 	}
 
 	#main-window:not([fx42plus="true"]) #urlbar *[open=true].chromeUI #page-proxy-favicon[pageproxystate="valid"][src] {
 	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
-					0, 48, 16, 32) no-repeat center left !important;
+					0, 48, 16, 32) no-repeat center right !important;
 	}
 	#main-window:not([fx42plus="true"]) #urlbar:-moz-locale-dir(rtl) *[open=true].chromeUI #page-proxy-favicon[pageproxystate="valid"][src] {
 	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.png"),
-					0, 48, 16, 32) no-repeat center right !important;
+					0, 48, 16, 32) no-repeat center left !important;
 	}
 
 	#main-window[fx42plus="true"] #urlbar .chromeUI #page-proxy-favicon[pageproxystate="valid"][src],
 	#main-window[fx42plus="true"] #urlbar *[open=true].chromeUI #page-proxy-favicon[pageproxystate="valid"][src] {
 	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.svg"),
-					0, 32, 32, 0) no-repeat center left !important;
+					0, 32, 32, 0) no-repeat center right !important;
 	  background-size: 16px 16px !important;
 	}
 	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) .chromeUI #page-proxy-favicon[pageproxystate="valid"][src],	
 	#main-window[fx42plus="true"] #urlbar:-moz-locale-dir(rtl) *[open=true].chromeUI #page-proxy-favicon[pageproxystate="valid"][src] {
 	  background: -moz-image-rect(url("chrome://branding/content/identity-icons-brand.svg"),
-					0, 32, 32, 0) no-repeat center right !important;
+					0, 32, 32, 0) no-repeat center left !important;
 	  background-size: 16px 16px !important;
+	}
+	
+	/* Firefox 45+ */
+	#main-window[fx45plus="true"] #urlbar[pageproxystate="valid"] .chromeUI #connection-icon {
+	  list-style-image: url(chrome://branding/content/identity-icons-brand.svg) !important;
+	  visibility: visible !important;
+	  width: 16px !important;
+	  height: 16px !important;
 	}
 
 }
