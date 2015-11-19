@@ -1998,27 +1998,48 @@ classicthemerestorerjs.ctr = {
 
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_default',false);
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_classic',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_amo',false);
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_modern',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_modern2',false);
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_none',false);
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_none',false);
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_classic',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_amo',false);
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_modern',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_modern2',false);
+			
+				switch (branch.getCharPref("padlock")) {
 
-				if (branch.getCharPref("padlock")=="padlock_none")
-				    classicthemerestorerjs.ctr.loadUnloadCSS("padlock2_none",true);			
-				if (branch.getCharPref("padlock")=="padlock_classic")
-					classicthemerestorerjs.ctr.loadUnloadCSS("padlock2_classic",true);
-				if (branch.getCharPref("padlock")=="padlock_modern")
-					classicthemerestorerjs.ctr.loadUnloadCSS("padlock2_modern",true);
+				  case "padlock_none":
+				  	classicthemerestorerjs.ctr.loadUnloadCSS("padlock2_none",true);	
+				  break;
+				  case "padlock_classic":
+				  	classicthemerestorerjs.ctr.loadUnloadCSS("padlock2_classic",true);	
+				  break;
+				  case "padlock_amo":
+				  	classicthemerestorerjs.ctr.loadUnloadCSS("padlock2_amo",true);	
+				  break;
+				  case "padlock_modern":
+				  	classicthemerestorerjs.ctr.loadUnloadCSS("padlock2_modern",true);	
+				  break;
+				  case "padlock_modern2":
+				  	classicthemerestorerjs.ctr.loadUnloadCSS("padlock2_modern2",true);	
+				  break;
+
+				}
 
 			} else {
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_default',false);
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_classic',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_amo',false);
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_modern',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_modern2',false);
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_none',false);
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_none',false);
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_classic',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_amo',false);
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_modern',false);
+				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_modern2',false);
 			}
 		  break;
 		  
@@ -2665,7 +2686,9 @@ classicthemerestorerjs.ctr = {
 
 	classicthemerestorerjs.ctr.loadUnloadCSS('padlock_default',false);
 	classicthemerestorerjs.ctr.loadUnloadCSS('padlock_classic',false);
+	classicthemerestorerjs.ctr.loadUnloadCSS('padlock_amo',false);
 	classicthemerestorerjs.ctr.loadUnloadCSS('padlock_modern',false);
+	classicthemerestorerjs.ctr.loadUnloadCSS('padlock_modern2',false);
 	classicthemerestorerjs.ctr.loadUnloadCSS('padlock_none',false);
 	classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_none',false);
 	classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_classic',false);
@@ -3423,11 +3446,15 @@ classicthemerestorerjs.ctr = {
 		
 		case "padlock_default": 	manageCSS("padlock_default.css");		break;
 		case "padlock_classic": 	manageCSS("padlock_classic.css");		break;
+		case "padlock_amo": 		manageCSS("padlock_amo.css");			break;
 		case "padlock_modern":		manageCSS("padlock_modern.css");		break;
+		case "padlock_modern2":		manageCSS("padlock_modern2.css");		break;
 		case "padlock_extra":		manageCSS("padlock_extra.css");			break;
 		case "padlock_none":		manageCSS("padlock_none.css");			break;
 		case "padlock2_classic": 	manageCSS("padlock2_classic.css");		break;
+		case "padlock2_amo": 		manageCSS("padlock2_amo.css");			break;
 		case "padlock2_modern":		manageCSS("padlock2_modern.css");		break;
+		case "padlock2_modern2":	manageCSS("padlock2_modern2.css");		break;
 		case "padlock2_none":		manageCSS("padlock2_none.css");			break;
 		
 		case "throbber_alt": 		manageCSS("throbberalt.css");			break;
@@ -4989,9 +5016,9 @@ classicthemerestorerjs.ctr = {
 			if(enable==true && this.prefs.getBoolPref('navbarpad')){
 		
 				this.navbarpadding=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#main-window:not([customizing]) #nav-bar-customization-target {\
-					  padding-left: '+this.prefs.getIntPref('navbarpad_l')+'px !important;\
-					  padding-right: '+this.prefs.getIntPref('navbarpad_r')+'px !important;\
+					#main-window:not([customizing]) #nav-bar {\
+					  margin-left: '+this.prefs.getIntPref('navbarpad_l')+'px !important;\
+					  margin-right: '+this.prefs.getIntPref('navbarpad_r')+'px !important;\
 					}\
 				'), null, null);
 				
@@ -5139,7 +5166,7 @@ classicthemerestorerjs.ctr = {
 
   // open prefwindow and specific category
   additionalToolbars: function(){
-	Services.prefs.getBranch("extensions.classicthemerestorer.").setIntPref('pref_actindx',8);
+	Services.prefs.getBranch("extensions.classicthemerestorer.").setIntPref('pref_actindx',9);
 	
 	setTimeout(function(){
 	  classicthemerestorerjs.ctr.openCTRPreferences();
@@ -5183,12 +5210,13 @@ classicthemerestorerjs.ctr = {
 	 
 	try{classicthemerestorerjs.ctr.ctrcontentprefswin.close();} catch(e){}
 		
-	  var wwidth = 800; // window width
+	  var wwidth = 700; // window width
 	  var wheight = 670; // window height
-	  
-	  if (classicthemerestorerjs.ctr.prefs.getCharPref("altoptions")=='options_win_alt') {
-		wwidth = 700;
-	  }
+  
+	  if(classicthemerestorerjs.ctr.prefs.getIntPref("aboutprefsww") != 700)
+		wwidth = classicthemerestorerjs.ctr.prefs.getIntPref("aboutprefsww");
+	  if(classicthemerestorerjs.ctr.prefs.getIntPref("aboutprefswh") != 670)
+		wheight = classicthemerestorerjs.ctr.prefs.getIntPref("aboutprefswh");
 
 	  var w = (screen.availWidth-wwidth)/2;
 	  var h = (screen.availHeight-wheight)/2;

@@ -486,6 +486,7 @@ classicthemerestorerjso.ctr = {
 	this.altTabsToolbarBgExtra(this.prefs.getBoolPref("alttabstb"));
 	this.ctrpwModeextra(this.prefs.getCharPref("nav_txt_ico"));
 	this.currentTabAppearance(this.prefs.getCharPref("tabs"));
+	this.currentAboutPrefs(this.prefs.getCharPref("altoptions"));
 	this.ctrpwTranspTbW10(this.prefs.getBoolPref("transpttbw10"));
 	this.ctrpwNavBarPadding(this.prefs.getBoolPref("navbarpad"));
 	this.ctrpwCompactAddonList(this.prefs.getBoolPref("am_compact"));
@@ -878,6 +879,17 @@ classicthemerestorerjso.ctr = {
 	} else {
 	  document.getElementById('ctraddon_pw_square_edges').disabled = true;
 	  document.getElementById('ctraddon_pw_square_edges').style.visibility = 'collapse';
+	}
+  },
+  
+  currentAboutPrefs: function(which) {
+	
+	if(which=="options_win" || which=="options_win_alt") {
+	  document.getElementById('ctraddon_pw_aboutprefswsize').style.visibility = 'visible';
+	  document.getElementById('ctraddon_pw_altoptionsi').style.visibility = 'visible';
+	} else {
+	  document.getElementById('ctraddon_pw_aboutprefswsize').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_altoptionsi').style.visibility = 'collapse';
 	}
   },
   

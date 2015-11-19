@@ -15,25 +15,27 @@ if (!ctrAboutPrefs ) {
 ctrAboutPrefs = {
   init: function(){
 	
-	if(Services.prefs.getBranch('extensions.classicthemerestorer.').getBoolPref('saveprefslocation')) {
+	if(Services.prefs.getBranch('extensions.classicthemerestorer.').getBoolPref('optionsrem')) {
 	
-	  var prefslocation = 'about:preferences';
+	  var prefslocation = 'paneGeneral';
 	  
 	  switch (Services.prefs.getBranch('extensions.classicthemerestorer.').getCharPref('aboutprefs')) {
 
-		case "category-general": prefslocation = 'about:preferences#general'; break;
-		case "category-search": prefslocation = 'about:preferences#search'; break;
-		case "category-content": prefslocation = 'about:preferences#content'; break;
-		case "category-application": prefslocation = 'about:preferences#applications'; break;
-		case "category-privacy": prefslocation = 'about:preferences#privacy'; break;
-		case "category-security": prefslocation = 'about:preferences#security'; break;
-		case "category-sync": prefslocation = 'about:preferences#sync'; break;
-		case "category-advanced": prefslocation = 'about:preferences#advanced'; break;
+		case "category-general": prefslocation = 'paneGeneral'; break;
+		case "category-search": prefslocation = 'paneSearch'; break;
+		case "category-content": prefslocation = 'paneContent'; break;
+		case "category-application": prefslocation = 'paneApplications'; break;
+		case "category-privacy": prefslocation = 'panePrivacy'; break;
+		case "category-security": prefslocation = 'paneSecurity'; break;
+		case "category-sync": prefslocation = 'paneSync'; break;
+		case "category-advanced": prefslocation = 'paneAdvanced'; break;
 
 	  }
 		
-	  window.location.href = prefslocation;
-	  
+	  setTimeout(function(){
+		gotoPref(prefslocation);
+	  },50);
+  
 	  try{
 	    document.getElementById("advancedPrefs").selectedIndex = Services.prefs.getBranch('extensions.classicthemerestorer.').getIntPref('aboutprefsInd');
 	  } catch(e) {}

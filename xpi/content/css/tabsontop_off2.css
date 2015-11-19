@@ -35,9 +35,9 @@
 	#main-window[chromehidden~="menubar"]:not([fx42plus="true"]) #titlebar{
 	  margin-bottom:-26px !important;
 	}
-	#main-window[fx42plus="true"][chromehidden~="menubar"][chromehidden~="toolbar"]:not([chromehidden~="location"]) #nav-bar {
+	/*#main-window[fx42plus="true"][chromehidden~="menubar"][chromehidden~="toolbar"]:not([chromehidden~="location"]) #nav-bar {
 	  visibility: collapse !important;
-	}
+	}*/
 	/* exclude CTRs prefwindow */
 	#main-window[fx42plus="true"][chromehidden~="menubar"][title^="about:preferences"][tabsontop="false"] #titlebar{
 	  margin-bottom:0px !important;

@@ -261,6 +261,10 @@
 		<preference id="ctraddon_navbarpad"		name="extensions.classicthemerestorer.navbarpad"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_navbarpad_l"	name="extensions.classicthemerestorer.navbarpad_l" 	type="int"		instantApply="true"/>
 		<preference id="ctraddon_navbarpad_r"	name="extensions.classicthemerestorer.navbarpad_r" 	type="int"		instantApply="true"/>
+		
+		<preference id="ctraddon_aboutprefsww"	name="extensions.classicthemerestorer.aboutprefsww" type="int"		instantApply="true"/>
+		<preference id="ctraddon_aboutprefswh"	name="extensions.classicthemerestorer.aboutprefswh" type="int"		instantApply="true"/>
+		<preference id="ctraddon_optionsrem"	name="extensions.classicthemerestorer.optionsrem"	type="bool"		instantApply="true"/>
 
 	</preferences>
 
@@ -276,6 +280,7 @@
 	  <radio class="ctraddontab" value="ctraddon_appbuttonbox" 	label="&Ctr_appbutton;"/>
 	  <radio class="ctraddontab" value="ctraddon_generaluibox"	label="&Ctr_ui; (1)"/>
 	  <radio class="ctraddontab" value="ctraddon_generaluibox2"	label="&Ctr_ui; (2)"/>
+	  <radio class="ctraddontab" value="ctraddon_prefpagebox"	label="&Ctr_prefpage;"/>
 	  <radio class="ctraddontab" value="ctraddon_addonmngrbox"	label="&Ctr_addonmanager;"/>
 	  <radio class="ctraddontab" value="ctraddon_iconsbox"		label="&Ctr_urlbar;"/>
 	  <radio class="ctraddontab" value="ctraddon_toolbarsbox"	label="&Ctr_toolbars; (1)"/>
@@ -802,27 +807,6 @@
 		<checkbox label="&Ctr_noconicons;"		preference="ctraddon_noconicons" id="ctraddon_pw_noconicons"/>
 		<checkbox label="&Ctr_alt_newtabp;"		preference="ctraddon_alt_newtabp" id="ctraddon_pw_alt_newtabp"/>
 		<checkbox label="&Ctr_ctroldsearch;"	preference="ctraddon_ctroldsearch" id="ctraddon_pw_ctroldsearch"/>
-		
-		<hbox  id="ctraddon_altoptions_box">
-		  <image id="ctraddon_altoptions_image"/>
-		  <menulist preference="ctraddon_altoptions" id="ctraddon_altoptions_list">
-			<menupopup>
-				<menuitem value="options_default"	label="&Ctr_altoptionsd;" id="ctraddon_pw_altoptions_default"/>
-				<menuitem value="options_alt"	 	label="&Ctr_altoptionsp;" id="ctraddon_pw_options_alt"/>
-				<menuitem value="options_alt2"	 	label="&Ctr_altoptionsp; (v2)" id="ctraddon_pw_options_alt2"/>
-				<menuitem value="options_alt3"	 	label="&Ctr_altoptionsp; (v3)" id="ctraddon_pw_options_alt3"/>
-				<menuitem value="options_win"		label="&Ctr_altoptionsw;" id="ctraddon_pw_options_win"/>
-				<menuitem value="options_win_alt"	label="&Ctr_altoptionsw; (v2)" id="ctraddon_pw_options_win_alt"/>
-			</menupopup>
-		  </menulist>
-		  <menulist preference="ctraddon_altoptions" id="ctraddon_altoptions_list2">
-			<menupopup>
-				<menuitem value="options_default"	label="&Ctr_altoptionsd;" id="ctraddon_pw_altoptions_default"/>
-				<menuitem value="options_win"		label="&Ctr_altoptionsw;" id="ctraddon_pw_options_win_ct"/>
-			</menupopup>
-		  </menulist>
-		</hbox>
-
 		<checkbox label="&Ctr_svgfilters;"		preference="ctraddon_svgfilters" id="ctraddon_pw_svgfilters"/>
 		<checkbox label="&Ctr_combrelstop;"		preference="ctraddon_combrelstop" id="ctraddon_pw_stopreload"/>
 		<description class="ctraddonsuboption">&Ctr_stoprel1;</description>
@@ -898,6 +882,39 @@
 		  </rows>
 		</grid>
 	  </groupbox>
+
+	</box>
+	
+	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_prefpagebox">
+
+	  <groupbox>
+		<caption  label="&Ctr_prefpage; (about:preferences)" class="ctraddon_topic"/>
+		
+		<checkbox label="&Ctr_options_rem;"		preference="ctraddon_optionsrem"/>
+
+		<radiogroup preference="ctraddon_altoptions" id="ctraddon_altoptions_list" orient="vertical" value="">
+			<radio value="options_default"	label="&Ctr_altoptionsd;" id="ctraddon_pw_altoptions_default" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_default');"/>
+			<radio value="options_alt"	 	label="&Ctr_altoptionsp;" id="ctraddon_pw_options_alt" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_alt');"/>
+			<radio value="options_alt2"	 	label="&Ctr_altoptionsp; (v2)" id="ctraddon_pw_options_alt2" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_alt2');"/>
+			<radio value="options_alt3"	 	label="&Ctr_altoptionsp; (v3)" id="ctraddon_pw_options_alt3" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_alt3');"/>
+			<radio value="options_win"		label="&Ctr_altoptionsw;" id="ctraddon_pw_options_win" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_win');"/>
+			<radio value="options_win_alt"	label="&Ctr_altoptionsw; (v2)" id="ctraddon_pw_options_win_alt" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_win_alt');"/>
+		</radiogroup>
+		<radiogroup preference="ctraddon_altoptions" id="ctraddon_altoptions_list2" orient="vertical" value="">
+			<radio value="options_default"	label="&Ctr_altoptionsd;" id="ctraddon_pw_altoptions_default" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_default');"/>
+			<radio value="options_win"		label="&Ctr_altoptionsw;" id="ctraddon_pw_options_win_ct" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_win');"/>
+		</radiogroup>
+
+		<hbox class="ctraddonsuboption"  id="ctraddon_pw_aboutprefswsize" align="center">
+		  <label value="&Ctr_altoptionsww; "/>
+		  <textbox size="4" maxlength="4" preference="ctraddon_aboutprefsww" type="number" min="500" max="1200"/>
+		  <label value="&Ctr_altoptionswh; "/>
+		  <textbox size="4" maxlength="4" preference="ctraddon_aboutprefswh" type="number" min="300" max="1200"/>
+		</hbox>
+		
+		<description id="ctraddon_pw_altoptionsi">&Ctr_altoptionsi;</description>
+
+	  </groupbox>
 	  
 	</box>
 	
@@ -954,7 +971,9 @@
 		<radiogroup preference="ctraddon_padlock" id="ctraddon_padlock_radio" orient="horizontal" value="">
 			<radio value="padlock_default"	label="&Ctr_padlock_def;"	id="ctraddon_pw_padlock_default"/>
 			<radio value="padlock_classic"	label="&Ctr_padlock_cla;"	id="ctraddon_pw_padlock_classic"/>
+			<radio value="padlock_amo"		label=" "	id="ctraddon_pw_padlock_amo"/>
 			<radio value="padlock_modern"	label="&Ctr_padlock_mod;"	id="ctraddon_pw_padlock_modern"/>
+			<radio value="padlock_modern2"	label=" "	id="ctraddon_pw_padlock_modern2"/>
 			<radio value="padlock_none"		label="&Ctr_padlock_hid;"	id="ctraddon_pw_padlock_none"/>
 		</radiogroup>
 

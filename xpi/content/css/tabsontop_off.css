@@ -36,9 +36,9 @@
 	#main-window[chromehidden~="menubar"]:not([fx42plus="true"]) #titlebar{
 	  margin-bottom:-26px !important;
 	}
-	#main-window[chromehidden~="menubar"][chromehidden~="toolbar"]:not([chromehidden~="location"]) #nav-bar {
+	/*#main-window[chromehidden~="menubar"][chromehidden~="toolbar"]:not([chromehidden~="location"]) #nav-bar {
 	  visibility: collapse !important;
-	}
+	}*/
 	/* exclude CTRs prefwindow */
 	#main-window[chromehidden~="menubar"][title^="about:preferences"][tabsontop="false"] #titlebar{
 	  margin-bottom:0px !important;

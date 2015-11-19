@@ -54,7 +54,12 @@
               <xul:menuitem class="open-engine-manager"
                             anonid="open-engine-manager"
                             label="&cmd_engineManager.label;"
-                            oncommand="gBrowser.selectedTab = gBrowser.addTab('about:preferences#search')"/>
+                            oncommand="if(Services.prefs.getBranch('extensions.classicthemerestorer.').getBoolPref('saveprefslocation')){
+								Services.prefs.getBranch('extensions.classicthemerestorer.').setCharPref('aboutprefs','category-search');
+								gBrowser.selectedTab = gBrowser.addTab('about:preferences');
+							} else {
+								gBrowser.selectedTab = gBrowser.addTab('about:preferences#search')
+							}"/>
             </xul:menupopup>
           </xul:button>
         </xul:box>
