@@ -701,6 +701,8 @@ classicthemerestorerjso.ctr = {
 	
     document.getElementById('ctraddon_pw_navbarpad_lr').disabled = which;
 	document.getElementById('ctraddon_pw_navbarpad_lr').style.visibility = itemvis;
+    document.getElementById('ctraddon_pw_navbarmar_lr').disabled = which;
+	document.getElementById('ctraddon_pw_navbarmar_lr').style.visibility = itemvis;
   },
   
   ctrpwCompactAddonList: function(which) {

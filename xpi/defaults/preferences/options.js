@@ -155,6 +155,8 @@ pref("extensions.classicthemerestorer.mbarforceright",false);
 pref("extensions.classicthemerestorer.navbarpad",false);
 pref("extensions.classicthemerestorer.navbarpad_l",3);
 pref("extensions.classicthemerestorer.navbarpad_r",3);
+pref("extensions.classicthemerestorer.navbarmar_l",0);
+pref("extensions.classicthemerestorer.navbarmar_r",0);
 
 // Animation
 pref("extensions.classicthemerestorer.tabthrobber","throbber_default");

@@ -813,7 +813,7 @@ classicthemerestorerjs.ctr = {
 			}
 		  break;
 		  
-		  case "navbarpad": case "navbarpad_l": case "navbarpad_r":
+		  case "navbarpad": case "navbarpad_l": case "navbarpad_r": case "navbarmar_l": case "navbarmar_r":
 		    if (branch.getBoolPref("navbarpad")) 
 			  classicthemerestorerjs.ctr.loadUnloadCSS("navbarpad",true);
 		    else
@@ -5016,9 +5016,13 @@ classicthemerestorerjs.ctr = {
 			if(enable==true && this.prefs.getBoolPref('navbarpad')){
 		
 				this.navbarpadding=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					#main-window:not([customizing]) #nav-bar-customization-target {\
+					  padding-left: '+this.prefs.getIntPref('navbarpad_l')+'px !important;\
+					  padding-right: '+this.prefs.getIntPref('navbarpad_r')+'px !important;\
+					}\
 					#main-window:not([customizing]) #nav-bar {\
-					  margin-left: '+this.prefs.getIntPref('navbarpad_l')+'px !important;\
-					  margin-right: '+this.prefs.getIntPref('navbarpad_r')+'px !important;\
+					  margin-left: '+this.prefs.getIntPref('navbarmar_l')+'px !important;\
+					  margin-right: '+this.prefs.getIntPref('navbarmar_r')+'px !important;\
 					}\
 				'), null, null);
 				
@@ -5221,7 +5225,7 @@ classicthemerestorerjs.ctr = {
 	  var w = (screen.availWidth-wwidth)/2;
 	  var h = (screen.availHeight-wheight)/2;
 	  
-	  classicthemerestorerjs.ctr.ctrcontentprefswin = window.open('about:preferences', 'about:preferences', 'width='+wwidth+',height='+wheight+',top='+h+',left='+w+',resizable=yes');
+	  classicthemerestorerjs.ctr.ctrcontentprefswin = window.open('about:preferences', '', 'width='+wwidth+',height='+wheight+',top='+h+',left='+w+',resizable=yes');
 
   },
   

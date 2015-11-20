@@ -261,6 +261,8 @@
 		<preference id="ctraddon_navbarpad"		name="extensions.classicthemerestorer.navbarpad"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_navbarpad_l"	name="extensions.classicthemerestorer.navbarpad_l" 	type="int"		instantApply="true"/>
 		<preference id="ctraddon_navbarpad_r"	name="extensions.classicthemerestorer.navbarpad_r" 	type="int"		instantApply="true"/>
+		<preference id="ctraddon_navbarmar_l"	name="extensions.classicthemerestorer.navbarmar_l" 	type="int"		instantApply="true"/>
+		<preference id="ctraddon_navbarmar_r"	name="extensions.classicthemerestorer.navbarmar_r" 	type="int"		instantApply="true"/>
 		
 		<preference id="ctraddon_aboutprefsww"	name="extensions.classicthemerestorer.aboutprefsww" type="int"		instantApply="true"/>
 		<preference id="ctraddon_aboutprefswh"	name="extensions.classicthemerestorer.aboutprefswh" type="int"		instantApply="true"/>
@@ -1090,10 +1092,17 @@
 		<checkbox label="&Ctr_hidenavbar;"				 preference="ctraddon_hidenavbar"/>
 		<checkbox label="&Ctr_navbarpad;"				 preference="ctraddon_navbarpad" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwNavBarPadding(true);} else {classicthemerestorerjso.ctr.ctrpwNavBarPadding(false);}"/>
 		<hbox class="ctraddonsuboption"  id="ctraddon_pw_navbarpad_lr" align="center">
-		  <label value="&Ctr_navbarpad_l; "/>
+		  <label value="(1) &Ctr_navbarpad_l; "/>
 		  <textbox size="3" maxlength="3" preference="ctraddon_navbarpad_l" type="number" min="0" max="500"/>
 		  <label value="px  -  &Ctr_navbarpad_r; "/>
 		  <textbox size="3" maxlength="3" preference="ctraddon_navbarpad_r" type="number" min="0" max="500"/>
+		  <label value="px"/>
+		</hbox>
+		<hbox class="ctraddonsuboption"  id="ctraddon_pw_navbarmar_lr" align="center">
+		  <label value="(2) &Ctr_navbarpad_l; "/>
+		  <textbox size="3" maxlength="3" preference="ctraddon_navbarmar_l" type="number" min="0" max="500"/>
+		  <label value="px  -  &Ctr_navbarpad_r; "/>
+		  <textbox size="3" maxlength="3" preference="ctraddon_navbarmar_r" type="number" min="0" max="500"/>
 		  <label value="px"/>
 		</hbox>
 		<checkbox label="&Ctr_nonavbarbg;"	 			 preference="ctraddon_nonavbarbg" id="ctraddon_pw_nonavbarbg"/>
