@@ -43,17 +43,17 @@
 <!ENTITY Ctr_tabsontop2		"Karty nie na górze (v1) --- atrybut [tabsontop=false]">
 <!ENTITY Ctr_tabsontop3		"Karty nie na górze (v2) --- atrybut [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"v2 jest tylko dla niektórych dodatków i kompletnych motywów!">
-<!ENTITY Ctr_tabsontopI1	"Dodaje atrybut [tabsontop=true/false] do:">
+<!ENTITY Ctr_tabsontopI1	"Dodaje atrybut [tabsontop=true/false] do">
 <!ENTITY Ctr_tabsintitlebar	"Pasek tytułu &brandShortName; (ustawienie about:config)">
 <!ENTITY Ctr_tabwidthdef	"(domyślne)">
 <!ENTITY Ctr_tabwidthcla	"(klasyczne)">
 <!ENTITY Ctr_tabminheight	"Wysokość:">
-<!ENTITY Ctr_tabheightinfo	"Niskie wartości spowodują błędy w trybie zmaksymalizowanym!">
+<!ENTITY Ctr_tabheightinfo	"Niskie wartości spowodują usterki w trybie zmaksymalizowanym!">
 <!ENTITY Ctr_tabmaxwidth	"Maksymalna szerokość:">
 <!ENTITY Ctr_tabminwidth	"Minimalna szerokość:">
 <!ENTITY Ctr_tabwidthinfo	"Szerokość karty jest kontrolowana przez TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"Szerokość karty jest kontrolowana przez TabUtilities">
-<!ENTITY Ctr_tabwidthinfo3	"Wartości poniżej 48 pikseli w większości przypadków spowodują błędy!">
+<!ENTITY Ctr_tabwidthinfo3	"Wartości poniżej 48 pikseli w większości przypadków spowodują usterki!">
 <!ENTITY Ctr_square_edges	"Kwadratowe górne rogi">
 <!ENTITY Ctr_tttitlebar		"Tytuł karty na pasku tytułu &brandShortName;">
 <!ENTITY Ctr_tabinsertion	"Wstaw powiązaną kartę za kartą bieżącą (about:config)">
@@ -106,22 +106,22 @@
 <!ENTITY Ctr_appbutonclab2	"Dodaj tytuł albo pozostaw puste">
 
 <!ENTITY Ctr_ui				"Główny interfejs użytkownika">
-<!ENTITY Ctr_nbiconsize0	"Ustaw atrybut paska nawigacji">
+<!ENTITY Ctr_nbiconsize0	"Atrybut paska nawigacji 'rozmiar ikony'">
 <!ENTITY Ctr_smallnavbut	"Małe przyciski na pasku nawigacji">
 <!ENTITY Ctr_bfurlbarfix	"Napraw promień krawędzi paska adresu">
 <!ENTITY Ctr_backforward	"Ruchomy przycisk wstecz-do przodu">
 <!ENTITY Ctr_nbcompact		"Zmniejsz wysokość paska nawigacji">
 <!ENTITY Ctr_hide_bf_popup	"Ukryj menu historii po naciśnięciu przycisku myszki">
 <!ENTITY Ctr_bf_space		"Zmniejsz odstęp pomiędzy przyciskami (jeżeli możliwe)">
-<!ENTITY Ctr_noconicons		"Zastąp etykietami ikony menu kontekstowego strony (Wstecz, Do przodu, Zatrzymaj, Odśwież, Dodaj zakładkę)">
+<!ENTITY Ctr_noconicons		"Menu kontekstowe strony: Zastąp ikony etykietami (Wstecz, Do przodu...)">
 <!ENTITY Ctr_prefpage		"Strona opcji">
 <!ENTITY Ctr_altoptionsd	"Domyślny wygląd">
 <!ENTITY Ctr_altoptionsp	"Alternatywny wygląd">
 <!ENTITY Ctr_altoptionsw	"Otwieraj w oknie stronę ustawień">
-<!ENTITY Ctr_altoptionsww	"Width">
-<!ENTITY Ctr_altoptionswh	"Height">
-<!ENTITY Ctr_altoptionsi	"The simulated options window is not a dialog anymore but a 'browser window' with all toolbars hidden. The 'Use Current Page' feature only adds urls of pages opened in the current window, which is only 'about:preferences' in this case. The 'options' toolbar button gets replaced by a new one to be able to open options in a window.">
-<!ENTITY Ctr_options_rem	"Remember last selected category">
+<!ENTITY Ctr_altoptionsww	"Szerokość">
+<!ENTITY Ctr_altoptionswh	"Wysokość">
+<!ENTITY Ctr_altoptionsi	"Symulowane okno opcji nie jest już oknem dialogowym, ale 'oknem przeglądarki' z ukrytymi wszystkimi paskami narzędzi. Funkcja 'Użyj bieżących stron' dodaje tylko adresy stron otwartych w bieżącym oknie, w tym przypadku tylko 'about:preferences'. Przycisk 'opcji' paska narzędzi zostaje zastąpiony nowym, aby mógł otwierać opcje w oknie.">
+<!ENTITY Ctr_options_rem	"Pamiętaj ostatnio wybraną kategorię">
 <!ENTITY Ctr_svgfilters		"Kolory SVG ikon przycisków domyślnego paska narzędzi">
 <!ENTITY Ctr_wincontrols	"Ruchome kontrolki okna pełnego ekranu">
 <!ENTITY Ctr_oldtoplevimg	"Obrazy 'domeny najwyższego poziomu': Klasyczny wygląd">
@@ -138,7 +138,7 @@
 <!ENTITY Ctr_hideprivmask	"Prywatne przeglądanie: Ukryj wskaźnik-maskę">
 <!ENTITY Ctr_navsmallicons	"Małe ikony">
 <!ENTITY Ctr_navlargeicons	"Duże ikony">
-<!ENTITY Ctr_nbisizedelay0	"Opóźnienie inicjalizacji po uruchomieniu przeglądarki">
+<!ENTITY Ctr_nbisizedelay0	"Opóźnienie inicjacji po uruchomieniu przeglądarki">
 <!ENTITY Ctr_nbisizedelay	"ms (1000 ms = 1 s)">
 <!ENTITY Ctr_findbar		"Pozycja paska wyszukiwania">
 <!ENTITY Ctr_findbar_def	"Dolna (domyślna)">
@@ -150,20 +150,20 @@
 <!ENTITY Ctr_nav_txt_ico2	"Pokaż ikony i tekst">
 <!ENTITY Ctr_nav_txt_ico3	"Pokaż tylko tekst">
 <!ENTITY Ctr_nav_txt_exp	"Atrybuty eksperymentalne:">
-<!ENTITY Ctr_iat_notf_vt	"Nie dla pionowych pasków narzędzi">
-<!ENTITY Ctr_cpanelmenus	"Menu panelu: Widok kompaktowy (zakładki, historia itp.)">
+<!ENTITY Ctr_iat_notf_vt	"Wyklucz pionowe paski narzędzi">
+<!ENTITY Ctr_cpanelmenus	"Pop-upy menu panelu (zakładki, historia itp.): Widok kompaktowy">
 <!ENTITY Ctr_hidezoomres	"Kontrolki powiększenia na pasku narzędzi: Ukryj przycisk resetu powiększenia">
 <!ENTITY Ctr_alt_newtabp	"Strona nowej karty (about:newtab): Alternatywny wygląd">
 <!ENTITY Ctr_ctroldsearch	"Stara wyszukiwarka (eksperymentalne)">
 <!ENTITY Ctr_addonmanager	"Menedżer dodatków">
-<!ENTITY Ctr_alt_addonsp	"Strona 'więcej informacji': Alternatywny wygląd">
+<!ENTITY Ctr_alt_addonsp	"Strona 'więcej informacji': Alternatywny porządek">
 <!ENTITY Ctr_alt_addonsm	"Alternatywny wygląd">
 <!ENTITY Ctr_am_nowarning	"Listy dodatków: Ukryj ostrzeżenia">
 <!ENTITY Ctr_am_compact		"Listy dodatków: Widok kompaktowy">
 <!ENTITY Ctr_am_compact2	"Widok kompaktowy +">
 <!ENTITY Ctr_addonversion	"Listy dodatków: Wyświetl wersję dodatku">
 <!ENTITY Ctr_xpinstallui	"Stare okno instalacji dodatku (ustawienie about:config)">
-<!ENTITY Ctr_bmbutpanelm	"Przycisk menu zakładek: Wygląd menu panelu">
+<!ENTITY Ctr_bmbutpanelm	"Przycisk menu zakładek: Wygląd pop-upu menu panelu">
 <!ENTITY Ctr_bmbutnotext	"Przycisk menu zakładek: Ukryj etykietę na pasku zakładek">
 <!ENTITY Ctr_skipprintpr	"Przycisk drukowania: Pomiń podgląd wydruku">
 <!ENTITY Ctr_tbconmenu		"Menu kontekstowe paska narzędzi: Ukryj 'Przenieś do menu', 'Usuń z paska narzędzi', 'Odśwież wszystkie karty', 'Dodaj zakładki do wszystkich kart...' oraz 'Przywróć zamkniętą kartę'">
@@ -179,7 +179,7 @@
 <!ENTITY Ctr_tabmokcolor2	"Biały kolor i ciemny cień tekstu na nieaktywnych kartach">
 <!ENTITY Ctr_tabmokcolor4	"Biały kolor pustej i wykropkowanej ikony ulubionych na karcie">
 
-<!ENTITY Ctr_navthrobber1	"Kliknięcie wskaźnika aktywności otwiera określony adres:">
+<!ENTITY Ctr_navthrobber1	"Kliknięcie wskaźnika aktywności otwiera określony adres w nowej karcie:">
 <!ENTITY Ctr_navthrobber2	"Dodaj adres albo pozostaw puste">
 <!ENTITY Ctr_anewtaburl		"Adres strony nowej karty">
 <!ENTITY Ctr_anewtaburlcb	"Niestandardowy adres strony nowej karty (domyślny: 'about:newtab')">
@@ -215,7 +215,7 @@
 <!ENTITY Ctr_hideurlgo		"Ukryj przycisk 'Przejdź'">
 <!ENTITY Ctr_hideurlsrg		"Ukryj separatory przycisków 'Odśwież, Zatrzymaj i Przejdź' oraz odstępy">
 <!ENTITY Ctr_urlbardropm	"Przenieś znacznik rozwinięcia na koniec paska adresu">
-<!ENTITY Ctr_altreaderico	"Alternatywne ikony 'Czytnika'">
+<!ENTITY Ctr_altreaderico	"Alternatywne ikony 'Popraw czytelność'">
 <!ENTITY Ctr_hideprbutton	"Ukryj przycisk informujący o zablokowanym wyskakującym oknie">
 <!ENTITY Ctr_urlbar_ib		"Przycisk tożsamości witryny (pole tożsamości)">
 <!ENTITY Ctr_ib_nohovcolor	"Nie pokazuj szarego koloru po najechaniu">
@@ -229,7 +229,7 @@
 <!ENTITY Ctr_padlock_ext	"Ikony zabezpieczeń">
 <!ENTITY Ctr_icopageinfo	"Kliknięcie ikony otwiera okno 'informacji o stronie'">
 
-<!ENTITY Ctr_menubar_items	"Pokaż pozycje menu paska menu na...">
+<!ENTITY Ctr_menubar_items	"Pozycje elementów menu">
 <!ENTITY Ctr_extrabar		"Dodatkowe paski narzędzi">
 <!ENTITY Ctr_extrabar0		"Dodatkowy pasek (dodatkowe paski) narzędzi">
 <!ENTITY Ctr_extrabar1		"Dodatkowy pasek narzędzi">
@@ -266,15 +266,15 @@
 <!ENTITY Ctr_transpttbw10	"Pasek tytułu/menu/kart: Usuń kolor tła">
 <!ENTITY Ctr_transptcw10	"Ukryj domyślne przyciski systemowe: Minimalizuj, Maksymalizuj, Zamknij">
 <!ENTITY Ctr_hidenavbar		"Pasek nawigacji: Ukryj pasek narzędzi">
-<!ENTITY Ctr_navbarpad		"Dodatkowe wypełnienie lewe i prawe">
+<!ENTITY Ctr_navbarpad		"Dodatkowa przestrzeń po lewej i prawej">
 <!ENTITY Ctr_navbarpad_l	"Lewe:">
 <!ENTITY Ctr_navbarpad_r	"Prawe:">
-<!ENTITY Ctr_nobookbarbg	"Pasek zakładek: Usuń kolor tła">
-<!ENTITY Ctr_bookbarfs		"Pasek zakładek: W trybie pełnoekranowym">
-<!ENTITY Ctr_nonavbarbg		"Pasek nawigacji: Usuń kolor tła">
+<!ENTITY Ctr_nobookbarbg	"Usuń kolor tła">
+<!ENTITY Ctr_bookbarfs		"W trybie pełnoekranowym">
+<!ENTITY Ctr_nonavbarbg		"Usuń kolor tła">
 <!ENTITY Ctr_nonavbarbg1	"Dotyczy dodatkowych pasków narzędzi tego dodatku oraz innych górnych pasków narzędzi.">
 <!ENTITY Ctr_nonavbarbg2	"Dotyczy wszystkich pasków narzędzi Slim Chrome z dodatku 'Beyond Australis'.">
-<!ENTITY Ctr_nonavborder	"Pasek zakładek: Dodaj obramowanie na górze paska">
+<!ENTITY Ctr_nonavborder	"Dodaj obramowanie na górze paska">
 <!ENTITY Ctr_nonavtbborder	"Górne paski: Usuń obramowanie paska">
 <!ENTITY Ctr_hidesbclose	"Paski boczne: Ukryj przycisk zamknięcia paska bocznego">
 <!ENTITY Ctr_notextshadow	"Paski narzędzi: Ukryj cień tekstu na pasku narzędzi i na karcie">
@@ -310,14 +310,14 @@
 <!ENTITY Ctr_fx35devtheme	"Odznaczenie tych ustawień wyłącza 'Motyw Edycji Deweloperskiej'.">
 <!ENTITY Ctr_fx36prefs		"Odznaczenie tego ustawienia przywraca stare okno opcji.">
 <!ENTITY Ctr_fx36prefs2		"Uwaga: Stare okno opcji nie zawiera wszystkich ostatnio dodanych ustawień przeglądarki!">
-<!ENTITY Ctr_fx38reader		"Odznaczenie tych ustawienia wyłącza 'tryb czytnika' oraz usuwa jego ikonę z paska adresu.">
+<!ENTITY Ctr_fx38reader		"Odznaczenie tych ustawienia wyłącza funkcję 'Popraw czytelność' oraz usuwa jej ikonę z paska adresu.">
 <!ENTITY Ctr_fx38pocket		"Odznaczenie tego ustawienia wyłącza funkcję 'Pocket' oraz usuwa jej ikonę z pasków narzędzi.">
-<!ENTITY Ctr_fx38pocket2	"Uwaga: Przesunięcie przycisku 'Pocket' do 'palety dostosowywania' przed zablokowaniem tego ustawienia usunie także elementy 'Pocket' w zakładkach i menu czytnika.">
+<!ENTITY Ctr_fx38pocket2	"Uwaga: Przesunięcie przycisku 'Pocket' do 'palety dostosowywania' przed zablokowaniem tego ustawienia usunie także elementy 'Pocket' w zakładkach i menu poprawy czytelności.">
 <!ENTITY Ctr_e_searchui		"Wygląd wyszukiwania">
 <!ENTITY Ctr_e_loop			"Dzwonienie i konwersacja / Loop">
 <!ENTITY Ctr_e_deved		"Motyw Edycji Deweloperskiej">
 <!ENTITY Ctr_e_prefsui		"Ustawienia w karcie">
-<!ENTITY Ctr_e_readermode	"Tryb czytnika">
+<!ENTITY Ctr_e_readermode	"Popraw czytelność">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Ikona odtwarzania dźwięku na kartach">
 <!ENTITY Ctr_fx42tabsaudico	"Odznaczenie tego ustawienia usuwa z kart 'ikonę odtwarzania dźwięku'.">

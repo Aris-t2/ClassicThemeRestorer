@@ -33,6 +33,7 @@
 	#categories .category[selected]{
 	  background-color: #c1d2ee !important;
 	  border-inline-start-color: #c1d2ee !important;
+	  -moz-border-start-color:  #c1d2ee !important;
 	  color: black !important;
 	}
 
@@ -103,6 +104,7 @@
 	  margin-top: -35px !important;
 	  -moz-margin-start: -40px !important;
 	  -moz-margin-end: -30px !important;
+	  padding-top: 10px !important;
 	}
 	
 	#mainPrefPane textbox {
@@ -146,18 +148,23 @@
 	}
 	
 	#engineList treechildren::-moz-tree-row{
-	  min-height: 20px !important;
-	  /*font-size: 60% !important;*/
+	  min-height: 24px !important;
 	}
 	
 	#engineChildren {
 	  font-size: 80% !important;
+	}
+
+	treechildren {
+	  font-size: 90% !important;
 	}
 	
 	treecols,
 	treecol {
 	  min-height: unset !important;
 	  height: 24px !important;
+	  padding-top: 0 !important;
+	  padding-bottom: 0 !important;
 	}
 	
 	/* buttons / menulists */
@@ -168,15 +175,42 @@
 	  font-size: 90% !important;
 	}
 	
+	#weavePrefsDeck button {
+	  font-size: 75% !important;
+	}
+	
 	button:not(.button-link):not(.close-icon):not(.spinbuttons-button){
 	  -moz-appearance: button !important;
 	}
+
 	menulist{
 	  -moz-appearance: menulist !important;
 	}
 	
-	#weavePrefsDeck button {
-	  font-size: 75% !important;
+	/* menulist popup */
+	@media all and (-moz-windows-theme:aero) {
+		menupopup menuitem {
+		  -moz-appearance: menuitem !important;
+		}
+		menupopup menuitem {
+		  color: black !important;
+		}
+	}
+	
+	@media all and (-moz-windows-classic) {
+		
+		menupopup menuitem {
+		  color: black !important;
+		  background: white !important;
+		  padding-top: unset !important;
+		  padding-bottom: unset !important;
+		}
+		menupopup menuitem[selected],
+		menupopup menuitem[_moz-menuactive="true"] {
+		  background: highlight !important;
+		  color: white !important;
+		}
+
 	}
 	
 	/* checkbox and radio items */
@@ -217,6 +251,25 @@
 		radio *{
 		  outline: unset !important;
 		}
+		
+	  @media all and (-moz-windows-classic) {
+	
+		checkbox image,
+		radio image {
+		  width: 10px !important;
+		  height: 10px !important;
+		}
+		checkbox {
+		  margin-top: 2px !important;
+		  margin-bottom: 2px !important;
+		}
+		
+		checkbox label,
+		radio label {
+		  -moz-margin-start: -4px !important;
+		}
+
+	  }
 	}
 	
 	@media (min-resolution: 1.1dppx) {
@@ -230,6 +283,21 @@
 		radio label {
 		  -moz-margin-start: -10px !important;
 		}
+		
+	  @media all and (-moz-windows-classic) {
+	
+		checkbox image,
+		radio image {
+		  width: 10px !important;
+		  height: 10px !important;
+		}
+	
+		checkbox label,
+		radio label {
+		  -moz-margin-start: -4px !important;
+		}
+
+	  }
 	}
 	
 	/* content */
@@ -244,10 +312,6 @@
 	#category-search[hidden="true"],
 	#mainPrefPane .header {
 	  display: none !important;
-	}
-
-	#mainPrefPane {
-	  padding-top: 10px !important;
 	}
 
 	vbox.main-content {
@@ -291,6 +355,9 @@
 	  padding-inline-start: 10px !important;
 	  padding-inline-end: 10px !important;
 	  border-inline-start-width: 0px !important;
+	  -moz-padding-start: 10px !important;
+	  -moz-padding-end: 10px !important;
+	  -moz-border-start-width: 0px !important;
 	}
 	
 	groupbox {
@@ -317,7 +384,7 @@
 	#advancedPrefs #tabsElement {
 	  min-height: unset !important;
 	}
-	
+
 	@media all and (-moz-windows-classic) {
 		#mainPrefPane textbox {
 		  font-size:80% !important;
@@ -336,12 +403,43 @@
 		richlistitem.category > .category-name {
 		  font-size:110% !important;
 		}
+
 	}
 	
 }
 
 /* preference sub windows */
 
+*[subdialog="true"] > vbox,
+*[subdialog="true"] > hbox,
+*[subdialog="true"] .prefWindow-dlgbuttons,
+*[subdialog="true"] prefpane,
+*[subdialog="true"] .contentPane,
+*[subdialog="true"] .dialog-content-box,
+*[subdialog="true"] .largeDialogContainer{
+  /*background-color: -moz-Dialog !important;*/
+  color: black !important;
+  font-size: 90% !important;
+}
+
+*[subdialog="true"] textbox {
+  min-height: 24px !important;
+  height: 24px !important;
+}
+
+/* treechildren */
+*[subdialog="true"] treecols,
+*[subdialog="true"] treecol {
+  min-height: unset !important;
+  height: 20px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+*[subdialog="true"] treechildren {
+  min-height: unset !important;
+}
+
+/* buttons/menulists */
 *[subdialog="true"] button:not(.button-link):not(.spinbuttons-button),
 *[subdialog="true"] menulist{
   min-height: unset !important;
@@ -365,6 +463,33 @@
   -moz-appearance: menulist !important;
 }
 
+/* menu popup */
+@media all and (-moz-windows-theme:aero) {
+	*[subdialog="true"] menupopup menuitem {
+	  -moz-appearance: menuitem !important;
+	}
+	*[subdialog="true"] menupopup menuitem,
+	*[subdialog="true"] menupopup menuitem[selected] {
+	  color: black !important;
+	}
+}
+@media all and (-moz-windows-classic) {
+    
+	*[subdialog="true"] menupopup menuitem {
+	  color: black !important;
+	  background: white !important;
+	  padding-top: unset !important;
+	  padding-bottom: unset !important;
+	}
+	*[subdialog="true"] menupopup menuitem[selected],
+	*[subdialog="true"] menupopup menuitem[_moz-menuactive="true"] {
+	  background: highlight !important;
+	  color: white !important;
+	}
+
+}
+
+/* checkbox / radios */
 *[subdialog="true"] checkbox .checkbox-check {
   -moz-appearance: checkbox  !important;
   box-shadow: unset !important;
@@ -402,6 +527,24 @@
 	*[subdialog="true"] radio *{
 	  outline: unset !important;
 	}
+	@media all and (-moz-windows-classic) {
+	
+		*[subdialog="true"] checkbox image,
+		*[subdialog="true"] radio image {
+		  width: 10px !important;
+		  height: 10px !important;
+		}
+		*[subdialog="true"] checkbox {
+		  margin-top: 2px !important;
+		  margin-bottom: 2px !important;
+		}
+		
+		*[subdialog="true"] checkbox label,
+		*[subdialog="true"] radio label {
+		  -moz-margin-start: -4px !important;
+		}
+
+	}
 }
 
 @media (min-resolution: 1.1dppx) {
@@ -415,26 +558,18 @@
 	*[subdialog="true"] radio label {
 	  -moz-margin-start: -10px !important;
 	}
-}
+	@media all and (-moz-windows-classic) {
+	
+		*[subdialog="true"] checkbox image,
+		*[subdialog="true"] radio image {
+		  width: 10px !important;
+		  height: 10px !important;
+		}
+	
+		*[subdialog="true"] checkbox label,
+		*[subdialog="true"] radio label {
+		  -moz-margin-start: -4px !important;
+		}
 
-*[subdialog="true"] > vbox,
-*[subdialog="true"] > hbox,
-*[subdialog="true"] .prefWindow-dlgbuttons,
-*[subdialog="true"] prefpane,
-*[subdialog="true"] .contentPane,
-*[subdialog="true"] .dialog-content-box,
-*[subdialog="true"] .largeDialogContainer{
-  background-color: -moz-Dialog !important;
-  color: black !important;
-}
-
-*[subdialog="true"] textbox {
-  min-height: 24px !important;
-  height: 24px !important;
-}
-
-*[subdialog="true"] treecols,
-*[subdialog="true"] treecol {
-  min-height: unset !important;
-  height: 26px !important;
+	}
 }
