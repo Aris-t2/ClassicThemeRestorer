@@ -102,6 +102,7 @@ pref("extensions.classicthemerestorer.urlbardropm",false);
 pref("extensions.classicthemerestorer.altreaderico",false);
 
 pref("extensions.classicthemerestorer.ib_nohovcolor",false);
+pref("extensions.classicthemerestorer.ib_graycolor",false);
 pref("extensions.classicthemerestorer.verifiedcolors",false);
 pref("extensions.classicthemerestorer.faviconurl",false);
 pref("extensions.classicthemerestorer.padlock","padlock_default");

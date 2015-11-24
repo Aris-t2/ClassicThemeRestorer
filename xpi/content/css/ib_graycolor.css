@@ -1,0 +1,12 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	#urlbar-wrapper #urlbar[pageproxystate="invalid"] .unknownIdentity,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .unknownIdentity, 
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .chromeUI {
+     background: linear-gradient(white,lightgrey) !important;
+     -moz-border-end: 1px solid lightgrey;
+     border-image-source: none !important;
+   }
+
+}

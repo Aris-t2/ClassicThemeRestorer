@@ -1854,7 +1854,12 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("ib_nohovcolor") && classicthemerestorerjs.ctr.fxdefaulttheme==true && classicthemerestorerjs.ctr.appversion >= 42) classicthemerestorerjs.ctr.loadUnloadCSS("ib_nohovcolor",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("ib_nohovcolor",false);
 		  break;
-		  
+
+		  case "ib_graycolor":
+			if (branch.getBoolPref("ib_graycolor") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("ib_graycolor",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("ib_graycolor",false);
+		  break;
+
 		  case "verifiedcolors":
 			if (branch.getBoolPref("verifiedcolors") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("verifiedcolors",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("verifiedcolors",false);
@@ -2661,10 +2666,35 @@ classicthemerestorerjs.ctr = {
 	 
 	 var emptyfavicon1 = Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("emptyfavicon");
 	 var emptyfavicon2 = Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("emptyfavicon2");
+	 var extrabrandico = Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("padlockex");
+	 var ppsvalid	   = false; try { ppsvalid  = document.getElementById("urlbar").getAttribute('pageproxystate')=='valid'; } catch(e){}
+	 var ppsinvalid	   = false; try { ppsinvalid = document.getElementById("urlbar").getAttribute('pageproxystate')=='invalid'; } catch(e){}
+	 var ibchromeui	   = false; try { ibchromeui = document.getElementById("identity-box").getAttribute('class')=='chromeUI'; } catch(e){}
+	 var ibukidentity  = false; try { ibukidentity = document.getElementById("identity-box").getAttribute('class')=='unknownIdentity'; } catch(e){}
 	 
 	 if(gBrowser.selectedTab.image) {
 	  try {
 		ppfavicon.setAttribute("src", gBrowser.selectedTab.image);
+	  } catch(e){}
+	 }
+	 else if(emptyfavicon1 && extrabrandico && ppsvalid && ibchromeui){
+	  try {
+		ppfavicon.removeAttribute("src");
+	  } catch(e){}
+	 }
+	 else if(emptyfavicon2 && extrabrandico && ppsvalid && ibchromeui){
+	  try {
+		ppfavicon.removeAttribute("src");
+	  } catch(e){}
+	 }
+	 else if(emptyfavicon1 && ppsinvalid && ibukidentity) {
+	  try {
+		ppfavicon.setAttribute("src", "chrome://classic_theme_restorer/content/images/default_dot_favicon.png");
+	  } catch(e){}
+	 }
+	 else if(emptyfavicon2 && ppsinvalid && ibukidentity) {
+	  try {
+		ppfavicon.setAttribute("src", "chrome://classic_theme_restorer/content/images/default_favicon.png");
 	  } catch(e){}
 	 }
 	 else if(emptyfavicon1) {
@@ -3419,6 +3449,7 @@ classicthemerestorerjs.ctr = {
 		case "pmhidelabels": 		manageCSS("panelmenu_nolabels.css");	break;
 		case "menupopupscr": 		manageCSS("menupopupscrollbar.css");	break;
 		case "ib_nohovcolor": 		manageCSS("ib_nohovcolor.css");			break;
+		case "ib_graycolor": 		manageCSS("ib_graycolor.css");			break;
 		case "verifiedcolors": 		manageCSS("verifiedcolors.css");		break;
 		case "hideprivmask": 		manageCSS("hideprivatemask.css");		break;
 		case "bfurlbarfix": 		manageCSS("bf_urlbarfix.css");			break;

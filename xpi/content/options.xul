@@ -103,6 +103,7 @@
 		<preference id="ctraddon_panelmenucol"	name="extensions.classicthemerestorer.panelmenucol"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_activndicat"	name="extensions.classicthemerestorer.activndicat"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_ib_nohovcolor"	name="extensions.classicthemerestorer.ib_nohovcolor" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_ib_graycolor"	name="extensions.classicthemerestorer.ib_graycolor" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_verifiedcolors" name="extensions.classicthemerestorer.verifiedcolors" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_findbar"		name="extensions.classicthemerestorer.findbar"		type="string"	instantApply="true"/>
 		<preference id="ctraddon_nav_txt_ico"	name="extensions.classicthemerestorer.nav_txt_ico" 	type="string"	instantApply="true"/>
@@ -967,6 +968,7 @@
 		<checkbox label="&Ctr_padlock_ext;"		preference="ctraddon_padlockex" id="ctraddon_padlock_extra"/>
 		<checkbox label="&Ctr_icopageinfo;"		preference="ctraddon_icopageinfo"/>
 		<checkbox label="&Ctr_ib_nohovcolor;"	preference="ctraddon_ib_nohovcolor" id="ctraddon_pw_ib_nohovcolor"/>
+		<checkbox label="&Ctr_ib_graycolor;"	preference="ctraddon_ib_graycolor" id="ctraddon_pw_ib_graycolor"/>
 		<checkbox label="&Ctr_verifiedcolors;"	preference="ctraddon_verifiedcolors" id="ctraddon_pw_verifiedcolors"/>
 
 		<description class="ctraddon_font1">&Ctr_padlock;</description>
