@@ -1932,19 +1932,22 @@ classicthemerestorerjs.ctr = {
 				if (newURL=='') newURL='about:newtab';
 				
 				try{
-					var {NewTabURL} = Cu.import("resource:///modules/NewTabURL.jsm", {});
 					if (classicthemerestorerjs.ctr.appversion >= 44) aboutNewTabService.newTabURL = newURL;
-					else NewTabURL.override(newURL);
+					else  {
+					  var {NewTabURL} = Cu.import("resource:///modules/NewTabURL.jsm", {});
+					  NewTabURL.override(newURL);
+					}
 				} catch(e){}
 				
 				classicthemerestorerjs.ctr.altnewtabpageOn = true;
-
 				
 			} else if (classicthemerestorerjs.ctr.appversion >= 41 && classicthemerestorerjs.ctr.altnewtabpageOn==true) {
 				try{
-				  var {NewTabURL} = Cu.import("resource:///modules/NewTabURL.jsm", {});
 				  if (classicthemerestorerjs.ctr.appversion >= 44) aboutNewTabService.resetNewTabURL();
-				  else NewTabURL.reset();
+				  else {
+					var {NewTabURL} = Cu.import("resource:///modules/NewTabURL.jsm", {});
+					NewTabURL.reset();
+				  }
 				} catch(e){}
 				
 				classicthemerestorerjs.ctr.altnewtabpageOn = false;
