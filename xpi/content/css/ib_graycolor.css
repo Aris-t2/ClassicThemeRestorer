@@ -4,9 +4,26 @@
 	#urlbar-wrapper #urlbar[pageproxystate="invalid"] .unknownIdentity,
 	#urlbar-wrapper #urlbar[pageproxystate="valid"] .unknownIdentity, 
 	#urlbar-wrapper #urlbar[pageproxystate="valid"] .chromeUI {
-     background: linear-gradient(white,lightgrey) !important;
-     -moz-border-end: 1px solid lightgrey;
-     border-image-source: none !important;
-   }
+      background: linear-gradient(#fcfcfc,#d4d4d4) !important;
+      -moz-border-end: 1px solid lightgrey;
+      border-image-source: none !important;
+	}
+
+	#urlbar-wrapper #urlbar[pageproxystate="invalid"] .unknownIdentity:hover,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .unknownIdentity:hover,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .chromeUI:hover {
+	  background: linear-gradient(#ececec,#c6c6c6) !important;
+	}
+
+	#urlbar-wrapper #urlbar[pageproxystate="invalid"] .unknownIdentity[open="true"],
+	#urlbar-wrapper #urlbar[pageproxystate="invalid"] .unknownIdentity:hover:active,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .unknownIdentity[open="true"],
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .unknownIdentity:hover:active,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .chromeUI[open="true"],
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .chromeUI:hover:active {
+	  background: linear-gradient(#ececec,#c6c6c6) !important;
+	  box-shadow: 0 1px 1px hsla(0,0%,65%,.9) inset,
+			0 1px 3px 1px hsla(0,0%,65%,.7) inset !important;
+	}
 
 }
