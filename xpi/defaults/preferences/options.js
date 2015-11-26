@@ -110,6 +110,7 @@ pref("extensions.classicthemerestorer.padlockex",true);
 pref("extensions.classicthemerestorer.icopageinfo",false);
 
 pref("extensions.classicthemerestorer.extraurlkeycb",false);
+pref("extensions.classicthemerestorer.locsearchbw10",false);
 
 // Toolbar settings
 pref("extensions.classicthemerestorer.aerocolors",false);

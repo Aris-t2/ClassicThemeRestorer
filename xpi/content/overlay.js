@@ -1137,6 +1137,11 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("altreaderico") && classicthemerestorerjs.ctr.fxdefaulttheme==true && classicthemerestorerjs.ctr.appversion >= 40) classicthemerestorerjs.ctr.loadUnloadCSS("altreaderico",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("altreaderico",false);
 		  break;
+		  
+		  case "locsearchbw10":
+			if (branch.getBoolPref("locsearchbw10") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("locsearchbw10",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("locsearchbw10",false);
+		  break;
 
 		  case "combrelstop":
 			if (branch.getBoolPref("combrelstop")) classicthemerestorerjs.ctr.loadUnloadCSS("combrelstop",true);
@@ -3405,6 +3410,7 @@ classicthemerestorerjs.ctr = {
 		case "hideurlsrg": 			manageCSS("hideurlbarrelstopgo.css"); 	break;
 		case "urlbardropm": 		manageCSS("urlbar_dropm.css"); 			break;
 		case "altreaderico": 		manageCSS("alt_reader_icons.css");		break;
+		case "locsearchbw10": 		manageCSS("locationsearchbarw10.css");	break;
 		case "combrelstop":			manageCSS("combrelstop.css");			break;
 		case "panelmenucol": 		manageCSS("panelmenucolor.css");		break;
 		case "panelmenucol2": 		manageCSS("panelmenucolor2.css");		break;

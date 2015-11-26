@@ -182,7 +182,8 @@ radio.ctraddontab .radio-check-box1 {
 
 @media not all and (-moz-os-version: windows-win10) {
   #ctraddon_pw_transpttbw10,
-  #ctraddon_pw_transptcw10{
+  #ctraddon_pw_transptcw10,
+  #ctraddon_pw_locsearchbw10 {
 	visibility: collapse;
   }
 }
