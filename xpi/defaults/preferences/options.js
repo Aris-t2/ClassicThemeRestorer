@@ -115,6 +115,7 @@ pref("extensions.classicthemerestorer.locsearchbw10",false);
 // Toolbar settings
 pref("extensions.classicthemerestorer.aerocolors",false);
 pref("extensions.classicthemerestorer.transpttbw10",false);
+pref("extensions.classicthemerestorer.transpttbew10",false);
 pref("extensions.classicthemerestorer.transptcw10",false);
 pref("extensions.classicthemerestorer.nbiconsize",'small');
 

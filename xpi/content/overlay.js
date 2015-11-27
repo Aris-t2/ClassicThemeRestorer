@@ -1631,16 +1631,20 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("bookbarfs") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("bookbarfs",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("bookbarfs",false);
 		  break;
-		  
+
 		  case "transpttbw10":
 			if (branch.getBoolPref("transpttbw10") && classicthemerestorerjs.ctr.fxdefaulttheme==true) {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("transpttbw10",true);
 			  
 			  if (branch.getBoolPref("transptcw10"))
 				classicthemerestorerjs.ctr.loadUnloadCSS("transptcw10",true);
+
+			  if (branch.getBoolPref("transpttbew10"))
+				classicthemerestorerjs.ctr.loadUnloadCSS("transpttbew10",true);
 			}
 			else {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("transpttbw10",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("transpttbew10",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("transptcw10",false);
 			}
 		  break;
@@ -1648,6 +1652,11 @@ classicthemerestorerjs.ctr = {
 		  case "transptcw10":
 			if (branch.getBoolPref("transptcw10") && branch.getBoolPref("transpttbw10") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("transptcw10",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("transptcw10",false);
+		  break;
+		  
+		  case "transpttbew10":
+			if (branch.getBoolPref("transpttbew10") && branch.getBoolPref("transpttbw10") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("transpttbew10",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("transpttbew10",false);
 		  break;
 
 		  case "nonavbarbg":
@@ -3426,6 +3435,7 @@ classicthemerestorerjs.ctr = {
 		case "nobookbarbg": 		manageCSS("nobookbarbg.css");			break;
 		case "bookbarfs": 			manageCSS("bmbar_infullscreen.css");	break;
 		case "transpttbw10": 		manageCSS("transp_top_tb_w10.css");		break;
+		case "transpttbew10": 		manageCSS("transp_top_tbe_w10.css");	break;
 		case "transptcw10": 		manageCSS("transp_top_c_w10.css");		break;
 		case "nonavbarbg": 			manageCSS("nonavbarbg.css");			break;
 		case "nonavborder": 		manageCSS("nonavborder.css");			break;

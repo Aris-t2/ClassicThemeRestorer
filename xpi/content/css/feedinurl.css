@@ -26,14 +26,13 @@
 	  margin:-8px 1px !important;
 	  border-image:none !important;
 	  box-shadow:none !important;
-	  opacity: .85 !important;
 	  padding:0 !important;
 	  border:0 !important;
 	  min-width: unset !important;
 	}
 	
 	#main-window toolbar #urlbar-icons #feed-button:hover {
-	  opacity: 1.0 !important;
+	  filter: brightness(1.15) !important;
 	}
 	
 	/* support for text and icons+text modes */
