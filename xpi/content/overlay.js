@@ -5262,10 +5262,10 @@ classicthemerestorerjs.ctr = {
   },
   
   // open 'about:preferences' in a new small window
-  openContentPrefsInWin: function() {
+  openContentPrefsInWin: function(which) {
 	 
 	try{classicthemerestorerjs.ctr.ctrcontentprefswin.close();} catch(e){}
-		
+	
 	  var wwidth = 700; // window width
 	  var wheight = 670; // window height
   
@@ -5277,7 +5277,9 @@ classicthemerestorerjs.ctr = {
 	  var w = (screen.availWidth-wwidth)/2;
 	  var h = (screen.availHeight-wheight)/2;
 	  
-	  classicthemerestorerjs.ctr.ctrcontentprefswin = window.open('about:preferences', '', 'width='+wwidth+',height='+wheight+',top='+h+',left='+w+',resizable=yes');
+	  if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt')
+		classicthemerestorerjs.ctr.ctrcontentprefswin = window.open('about:preferences', '', 'width='+wwidth+',height='+wheight+',top='+h+',left='+w+',resizable=yes');
+	  else openPreferences();
 
   },
   

@@ -121,8 +121,7 @@
 	<menuitem id="context-stop" label="&stopCmd.label;" accesskey="&stopCmd.accesskey;"/>
 	<menuitem id="context-bookmarkpage" label="&bookmarkThisPageCmd.label;" accesskey="&bookmarkPageCmd2.accesskey;"/>
 	
-	<menuitem id="menu_preferences" oncommand="if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt')
-		classicthemerestorerjs.ctr.openContentPrefsInWin(); else openPreferences();"/>
+	<menuitem id="menu_preferences" oncommand="classicthemerestorerjs.ctr.openContentPrefsInWin();"/>
 	
 	<menupopup id="toolbar-context-menu">
 	  <menuitem id="toggle_nav-bar"
@@ -172,8 +171,7 @@
 	  <menuitem id="ctraddon_toolsmenu_preferencesOSX"
 				label="&preferencesCmdUnix.label; (&Ctr_window;)"
 				accesskey="&preferencesCmdUnix.accesskey;"
-				oncommand="if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt')
-						 classicthemerestorerjs.ctr.openContentPrefsInWin(); else openPreferences();"/>
+				oncommand="classicthemerestorerjs.ctr.openContentPrefsInWin();"/>
 	  <menuitem oncommand="classicthemerestorerjs.ctr.openCTRPreferences();"
 		label="&Ctr_title;"
 		class="menuitem-iconic"
@@ -575,17 +573,13 @@
 					onclick="if(classicthemerestorerjs.ctr.prefs.getBoolPref('appbclmmenus')
 								&amp;&amp; event.button=='0'
 								&amp;&amp; event.originalTarget.getAttribute('splitmenu')=='true')
-								{if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt')
-									classicthemerestorerjs.ctr.openContentPrefsInWin();
-									   else openPreferences();document.getElementById('appmenu-popup').hidePopup();}"
+								{classicthemerestorerjs.ctr.openContentPrefsInWin(); document.getElementById('appmenu-popup').hidePopup();}"
 					class="menu-iconic ctraddon_windowsonly">
 			  <menupopup id="appmenu_customizeMenu">  
 				  <menuitem id="appmenu_preferences"
 							label="&preferencesCmd2.label;"
 							accesskey="&preferencesCmd2.accesskey;"
-							oncommand="if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt')
-										 classicthemerestorerjs.ctr.openContentPrefsInWin();
-									   else openPreferences();"/>
+							oncommand="classicthemerestorerjs.ctr.openContentPrefsInWin();"/>
 				  <menuseparator/>
 				  <menuitem command="cmd_CustomizeToolbars"
 							accesskey="&viewCustomizeToolbar.accesskey;"
@@ -605,18 +599,14 @@
 					onclick="if(classicthemerestorerjs.ctr.prefs.getBoolPref('appbclmmenus')
 								&amp;&amp; event.button=='0'
 								&amp;&amp; event.originalTarget.getAttribute('splitmenu')=='true')
-								{if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt')
-									classicthemerestorerjs.ctr.openContentPrefsInWin();
-									   else openPreferences();document.getElementById('appmenu-popup').hidePopup();}"
+								{classicthemerestorerjs.ctr.openContentPrefsInWin(); document.getElementById('appmenu-popup').hidePopup();}"
 					class="menu-iconic ctraddon_nonwindows">
 			  <menupopup id="appmenu_customizeMenu">					  
 				  <menuitem id="appmenu_preferencesUnix"
 							label="&preferencesCmdUnix.label;"
 							class="ctraddon_nonwindows"
 							accesskey="&preferencesCmdUnix.accesskey;"
-							oncommand="if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt')
-										 classicthemerestorerjs.ctr.openContentPrefsInWin();
-									   else openPreferences();"/>
+							oncommand="classicthemerestorerjs.ctr.openContentPrefsInWin();"/>
 				  <menuseparator/>
 				  <menuitem command="cmd_CustomizeToolbars"
 							accesskey="&viewCustomizeToolbar.accesskey;"
@@ -961,8 +951,7 @@
       <!--### creates a movable go button ###-->
 	  <toolbarbutton id="ctraddon_preferences-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
                      label="&preferencesCmd2.label; (&Ctr_window;)" removable="true"
-					 oncommand="if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt')
-							 classicthemerestorerjs.ctr.openContentPrefsInWin();  else openPreferences();"
+					 oncommand="classicthemerestorerjs.ctr.openContentPrefsInWin();"
                      tooltiptext="&preferencesCmd2.label; (&Ctr_window;)"/>
 	  
 	  <!--### restores spaces, flexible spaces and separators ###-->
