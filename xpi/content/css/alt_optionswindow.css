@@ -67,5 +67,11 @@
 	  min-width: unset !important;
 	  min-height: unset !important;
 	}
+
+	@media (min-resolution: 1.1dppx) {
+      richlistitem.category > .category-name {
+		font-size:95% !important;
+      }
+	}
 	
 }

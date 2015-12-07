@@ -405,7 +405,13 @@
 		}
 
 	}
-	
+
+	@media (min-resolution: 1.1dppx) {
+      richlistitem.category > .category-name {
+		font-size:95% !important;
+      }
+	}
+
 }
 
 /* preference sub windows */

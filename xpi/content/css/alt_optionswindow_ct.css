@@ -101,6 +101,13 @@
 	  min-height: unset !important;
 	}
 	
+
+	@media (min-resolution: 1.1dppx) {
+      richlistitem.category > .category-name {
+		font-size:95% !important;
+      }
+	}
+	
 	/* theme fixes */
 	#categories[currenttheme="Qute5pp"] .box-inherit,
 	#categories[currenttheme="Qute6pp"] .box-inherit,

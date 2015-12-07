@@ -50,4 +50,9 @@
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	}
 
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar #identity-icon,
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar #connection-icon{
+	  width: 16px !important;
+	}
+
 }
