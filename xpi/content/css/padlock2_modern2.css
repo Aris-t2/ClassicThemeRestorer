@@ -50,10 +50,15 @@
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	}
 
-	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar #identity-icon,
-	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar #connection-icon{
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .verifiedDomain #connection-icon,
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .verifiedIdentity #connection-icon,
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .insecureLoginForms #connection-icon,
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .mixedActiveContent #connection-icon,
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .weakCipher #connection-icon,
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .mixedDisplayContent #connection-icon,
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked #connection-icon,
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .mixedActiveBlocked #connection-icon{
 	  width: 16px !important;
 	}
-
 
 }

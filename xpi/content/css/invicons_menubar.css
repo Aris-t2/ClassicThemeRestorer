@@ -62,6 +62,10 @@
 	#toolbar-menubar toolbarbutton[id^="loop-"]:not([cui-areatype="menu-panel"]):not([state="error"]):not([state="action"]):not([state="active"]) > .toolbarbutton-badge-stack {
 	  list-style-image: url(chrome://browser/skin/loop/toolbar-inverted.png) !important;
 	}
+	#main-window[fx45plus="true"] #toolbar-menubar toolbarbutton[id^="loop-"]:not([cui-areatype="menu-panel"]):not([state="error"]):not([state="action"]):not([state="active"]) > .toolbarbutton-badge-container,
+	#main-window[fx45plus="true"] #toolbar-menubar toolbarbutton[id^="loop-"]:not([cui-areatype="menu-panel"]):not([state="error"]):not([state="action"]):not([state="active"]) > .toolbarbutton-badge-stack {
+	  list-style-image: url(chrome://loop/skin/toolbar-inverted.png) !important;
+	}
   }
   
   @media  (-moz-os-version: windows-xp),
@@ -127,6 +131,11 @@
 		#main-window[fx40plus="true"] #toolbar-menubar toolbarbutton[id^="loop-"]:not([cui-areatype="menu-panel"]):not([state="error"]):not([state="action"]):not([state="active"]) > .toolbarbutton-badge-container,
 		#main-window[fx40plus="true"] #toolbar-menubar toolbarbutton[id^="loop-"]:not([cui-areatype="menu-panel"]):not([state="error"]):not([state="action"]):not([state="active"]) > .toolbarbutton-badge-stack {
 		  list-style-image: url(chrome://browser/skin/loop/toolbar-inverted@2x.png) !important;
+		}
+
+		#main-window[fx45plus="true"] #toolbar-menubar toolbarbutton[id^="loop-"]:not([cui-areatype="menu-panel"]):not([state="error"]):not([state="action"]):not([state="active"]) > .toolbarbutton-badge-container,
+		#main-window[fx45plus="true"] #toolbar-menubar toolbarbutton[id^="loop-"]:not([cui-areatype="menu-panel"]):not([state="error"]):not([state="action"]):not([state="active"]) > .toolbarbutton-badge-stack {
+		  list-style-image: url(chrome://loop/skin/toolbar-inverted/toolbar-inverted@2x.png) !important;
 		}
 		
 		#main-window[fx40plus="true"] #toolbar-menubar #ctraddon_bookmarks-menu-toolbar-button .toolbarbutton-icon {

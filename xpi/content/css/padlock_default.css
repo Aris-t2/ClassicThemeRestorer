@@ -258,10 +258,38 @@
 	  background: -moz-image-rect(url("chrome://browser/skin/identity-mixed-active-loaded.svg"),
 					0, 16, 16, 0) no-repeat center left !important;
 	}
+	
+	/* Firefox 45+ */
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .verifiedDomain #connection-icon,
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .verifiedIdentity #connection-icon {
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/identity-secure.svg) !important;
+	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
+	}
+	
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .insecureLoginForms #connection-icon,
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .mixedActiveContent #connection-icon {
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/identity-mixed-active-loaded.svg) !important;
+	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
+	}
 
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .weakCipher #connection-icon,
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .mixedDisplayContent #connection-icon,
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked #connection-icon {
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/identity-mixed-passive-loaded.svg) !important;
+	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
+	}
+	
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .mixedActiveBlocked #connection-icon {
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/identity-mixed-active-blocked.svg) !important;
+	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
+	}
+	
 	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar #identity-icon,
 	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar #connection-icon{
 	  width: 16px !important;
+	}
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar *:not(.verifiedDomain):not(.verifiedIdentity):not(.insecureLoginForms):not(.mixedActiveContent):not(.weakCipher):not(.mixedDisplayContent):not(.mixedDisplayContentLoadedActiveBlocked):not(.mixedActiveBlocked) #connection-icon:not([scr]){
+	  width: 0px !important;
 	}
 
 }

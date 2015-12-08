@@ -83,5 +83,8 @@
 	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar #connection-icon{
 	  width: 16px !important;
 	}
+	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar *:not(.verifiedDomain):not(.verifiedIdentity):not(.insecureLoginForms):not(.mixedActiveContent):not(.weakCipher):not(.mixedDisplayContent):not(.mixedDisplayContentLoadedActiveBlocked):not(.mixedActiveBlocked) #connection-icon:not([scr]){
+	  width: 0px !important;
+	}
 
 }
