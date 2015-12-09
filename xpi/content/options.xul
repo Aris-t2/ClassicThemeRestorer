@@ -110,6 +110,12 @@
 		<preference id="ctraddon_nav_txt_ico"	name="extensions.classicthemerestorer.nav_txt_ico" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_iat_notf_vt"	name="extensions.classicthemerestorer.iat_notf_vt"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_closeicong"	name="extensions.classicthemerestorer.closeicong"	type="string"	instantApply="true"/>
+		
+		<preference id="ctraddon_lbsbsize"		name="extensions.classicthemerestorer.lbsbsize"		type="bool"		instantApply="true"/>
+		<preference id="ctraddon_lbsize_minw"	name="extensions.classicthemerestorer.lbsize_minw" 	type="int"		instantApply="true"/>
+		<preference id="ctraddon_lbsize_maxw"	name="extensions.classicthemerestorer.lbsize_maxw" 	type="int"		instantApply="true"/>
+		<preference id="ctraddon_sbsize_minw"	name="extensions.classicthemerestorer.sbsize_minw" 	type="int"		instantApply="true"/>
+		<preference id="ctraddon_sbsize_maxw"	name="extensions.classicthemerestorer.sbsize_maxw" 	type="int"		instantApply="true"/>
 
 		<preference id="ctraddon_ctab1"			name="extensions.classicthemerestorer.ctab1"		type="string"	instantApply="true"/>
 		<preference id="ctraddon_ctab2"			name="extensions.classicthemerestorer.ctab2"		type="string"	instantApply="true"/>
@@ -287,7 +293,8 @@
 	  <radio class="ctraddontab" value="ctraddon_generaluibox2"	label="&Ctr_ui; (2)"/>
 	  <radio class="ctraddontab" value="ctraddon_prefpagebox"	label="&Ctr_prefpage;"/>
 	  <radio class="ctraddontab" value="ctraddon_addonmngrbox"	label="&Ctr_addonmanager;"/>
-	  <radio class="ctraddontab" value="ctraddon_iconsbox"		label="&Ctr_urlbar;"/>
+	  <radio class="ctraddontab" value="ctraddon_locationbbox"	label="&Ctr_urlbar; (1)"/>
+	  <radio class="ctraddontab" value="ctraddon_locationbbox2"	label="&Ctr_urlbar; (2)"/>
 	  <radio class="ctraddontab" value="ctraddon_toolbarsbox"	label="&Ctr_toolbars; (1)"/>
 	  <radio class="ctraddontab" value="ctraddon_toolbarsbox2"	label="&Ctr_toolbars; (2)"/>
 	  <radio class="ctraddontab" value="ctraddon_experttweaks"	label="&Ctr_experttweaks;" id="ctraddon_experttweakstab"/>
@@ -912,9 +919,9 @@
 
 		<hbox class="ctraddonsuboption"  id="ctraddon_pw_aboutprefswsize" align="center">
 		  <label value="&Ctr_altoptionsww; "/>
-		  <textbox size="4" maxlength="4" preference="ctraddon_aboutprefsww" type="number" min="500" max="1200"/>
+		  <textbox size="4" maxlength="4" preference="ctraddon_aboutprefsww" type="number" min="0" max="1200"/>
 		  <label value="&Ctr_altoptionswh; "/>
-		  <textbox size="4" maxlength="4" preference="ctraddon_aboutprefswh" type="number" min="300" max="1200"/>
+		  <textbox size="4" maxlength="4" preference="ctraddon_aboutprefswh" type="number" min="0" max="1200"/>
 		</hbox>
 		
 		<description id="ctraddon_pw_altoptionsi">&Ctr_altoptionsi;</description>
@@ -945,7 +952,7 @@
 
 	</box>
 	
-	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_iconsbox">
+	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_locationbbox">
 	  
 	  <groupbox>
 	    <caption  label="&Ctr_urlbar;" class="ctraddon_topic"/>
@@ -962,7 +969,29 @@
 		<checkbox label="&Ctr_hideprbutton;" preference="ctraddon_hideprbutton" id="ctraddon_pw_urlbarpblocked"/>
 		<checkbox label="&Ctr_extraurlkeycb;&openCmd.commandkey; &amp; Alt+&urlbar.accesskey; [Windows/Linux])"	preference="ctraddon_extraurlkeycb" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<checkbox label="&Ctr_locsearchbw10;" preference="ctraddon_locsearchbw10"  id="ctraddon_pw_locsearchbw10"/>
+		<checkbox label="&Ctr_lbsbsize;" preference="ctraddon_lbsbsize" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwLocationSearchbarSize(true);} else {classicthemerestorerjso.ctr.ctrpwLocationSearchbarSize(false);}"/>
+		<label value="&Ctr_urlbar;" id="ctraddon_lbsbsizelabel1" class="ctraddonsuboption ctraddon_font1"/>
+		<hbox class="ctraddonsuboption"  id="ctraddon_pw_lbsbsize_lb" align="center">
+		  <label value="&Ctr_tabminwidth; "/>
+		  <textbox size="4" maxlength="4" preference="ctraddon_lbsize_minw" type="number" min="0" max="4000"/>
+		  <label value="px  -  &Ctr_tabmaxwidth; "/>
+		  <textbox size="4" maxlength="4" preference="ctraddon_lbsize_maxw" type="number" min="0" max="4000"/>
+		  <label value="px"/>
+		</hbox>
+		<label value="&Ctr_searchbar;" id="ctraddon_lbsbsizelabel2" class="ctraddonsuboption ctraddon_font1"/>
+		<hbox class="ctraddonsuboption"  id="ctraddon_pw_lbsbsize_sb" align="center">
+		  <label value="&Ctr_tabminwidth; "/>
+		  <textbox size="4" maxlength="4" preference="ctraddon_sbsize_minw" type="number" min="0" max="4000"/>
+		  <label value="px  -  &Ctr_tabmaxwidth; "/>
+		  <textbox size="4" maxlength="4" preference="ctraddon_sbsize_maxw" type="number" min="0" max="4000"/>
+		  <label value="px"/>
+		</hbox>
+
 	  </groupbox>
+
+	</box>
+
+	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_locationbbox2">
 		
 	  <groupbox>
 	    <caption  label="&Ctr_urlbar_ib;" class="ctraddon_topic"/>
@@ -973,7 +1002,8 @@
 		<checkbox label="&Ctr_ib_nohovcolor;"	preference="ctraddon_ib_nohovcolor" id="ctraddon_pw_ib_nohovcolor"/>
 		<checkbox label="&Ctr_ib_graycolor;"	preference="ctraddon_ib_graycolor" id="ctraddon_pw_ib_graycolor"/>
 		<checkbox label="&Ctr_verifiedcolors;"	preference="ctraddon_verifiedcolors" id="ctraddon_pw_verifiedcolors"/>
-
+		
+		<description class="ctraddon_font1"></description>
 		<description class="ctraddon_font1">&Ctr_padlock;</description>
 		<radiogroup preference="ctraddon_padlock" id="ctraddon_padlock_radio" orient="horizontal" value="">
 			<radio value="padlock_default"	label="&Ctr_padlock_def;"	id="ctraddon_pw_padlock_default"/>
@@ -987,7 +1017,7 @@
 	  </groupbox>
 
 	</box>
-	
+
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_toolbarsbox">
 
 	  <groupbox>
@@ -1111,7 +1141,7 @@
 		  <textbox size="3" maxlength="3" preference="ctraddon_navbarmar_r" type="number" min="0" max="500"/>
 		  <label value="px"/>
 		</hbox>
-		<checkbox label="&Ctr_nonavbarbg;"	 			 preference="ctraddon_nonavbarbg" id="ctraddon_pw_nonavbarbg"/>
+		<checkbox label="&Ctr_nonavbarbg;" preference="ctraddon_nonavbarbg" id="ctraddon_pw_nonavbarbg"/>
 		<description id="ctraddon_pw_nonavbarbg1" class="ctraddonsuboption">&Ctr_nonavbarbg1;</description>
 		<description id="ctraddon_pw_nonavbarbg2" class="ctraddonsuboption">&Ctr_nonavbarbg2;</description>
 	  </groupbox>

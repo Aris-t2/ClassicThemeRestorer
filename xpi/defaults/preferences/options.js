@@ -112,6 +112,12 @@ pref("extensions.classicthemerestorer.icopageinfo",false);
 pref("extensions.classicthemerestorer.extraurlkeycb",false);
 pref("extensions.classicthemerestorer.locsearchbw10",false);
 
+pref("extensions.classicthemerestorer.lbsbsize",false);
+pref("extensions.classicthemerestorer.lbsize_minw",200);
+pref("extensions.classicthemerestorer.lbsize_maxw",4000);
+pref("extensions.classicthemerestorer.sbsize_minw",200);
+pref("extensions.classicthemerestorer.sbsize_maxw",4000);
+
 // Toolbar settings
 pref("extensions.classicthemerestorer.aerocolors",false);
 pref("extensions.classicthemerestorer.transpttbw10",false);

@@ -493,6 +493,7 @@ classicthemerestorerjso.ctr = {
 	this.currentAboutPrefs(this.prefs.getCharPref("altoptions"));
 	this.ctrpwTranspTbW10(this.prefs.getBoolPref("transpttbw10"));
 	this.ctrpwNavBarPadding(this.prefs.getBoolPref("navbarpad"));
+	this.ctrpwLocationSearchbarSize(this.prefs.getBoolPref("lbsbsize"));
 	this.ctrpwCompactAddonList(this.prefs.getBoolPref("am_compact"));
 	
 	var closetab_value = this.prefs.getCharPref("closetab");
@@ -710,6 +711,23 @@ classicthemerestorerjso.ctr = {
 	document.getElementById('ctraddon_pw_navbarpad_lr').style.visibility = itemvis;
     document.getElementById('ctraddon_pw_navbarmar_lr').disabled = which;
 	document.getElementById('ctraddon_pw_navbarmar_lr').style.visibility = itemvis;
+  },
+  
+  ctrpwLocationSearchbarSize: function(which) {
+	var itemvis = 'collapse';
+	
+    if(which==true) {
+	  which=false; itemvis = 'visible';
+	} else {
+	  which=true; itemvis = 'collapse';
+	}
+	
+    document.getElementById('ctraddon_pw_lbsbsize_lb').disabled = which;
+	document.getElementById('ctraddon_pw_lbsbsize_lb').style.visibility = itemvis;
+    document.getElementById('ctraddon_pw_lbsbsize_sb').disabled = which;
+	document.getElementById('ctraddon_pw_lbsbsize_sb').style.visibility = itemvis;
+	document.getElementById('ctraddon_lbsbsizelabel1').style.visibility = itemvis;
+	document.getElementById('ctraddon_lbsbsizelabel2').style.visibility = itemvis;
   },
   
   ctrpwCompactAddonList: function(which) {

@@ -593,20 +593,20 @@ radio.ctraddontab .radio-check-box1 {
 #ctraddon_padlock_radio radio .radio-spacer-box,
 #ctraddon_padlock_radio radio .radio-check,
 #ctraddon_padlock_radio radio .radio-check-box1 {
-  display: none;
+  display: none !important;
 }
 #ctraddon_padlock_radio #ctraddon_pw_padlock_none image {
-  visibility: hidden;
+  visibility: hidden !important;
 }
 #ctraddon_padlock_radio radio:not([selected="true"]).radio-label-center-box,
 #ctraddon_padlock_radio radio:not([selected="true"]).radio-label-box {
-  border: 1px solid transparent;
+  border: 1px solid transparent !important;
 }
 #ctraddon_padlock_radio radio[selected="true"] .radio-label-center-box,
 #ctraddon_padlock_radio radio:not([selected="true"]):hover .radio-label-center-box,
 #ctraddon_padlock_radio radio[selected="true"] .radio-label-box,
 #ctraddon_padlock_radio radio:not([selected="true"]):hover .radio-label-box{
-  border: 1px solid Highlight;
+  border: 1px solid Highlight !important;
 }
 
 #ClassicTRoptionsPane[defaultfxtheme="true"] #ctraddon_padlock_radio {
