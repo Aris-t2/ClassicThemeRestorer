@@ -205,6 +205,7 @@
 		<preference id="ctraddon_noemptypticon"	name="extensions.classicthemerestorer.noemptypticon" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hidezoomres"	name="extensions.classicthemerestorer.hidezoomres"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbutpanelm"	name="extensions.classicthemerestorer.bmbutpanelm"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_bmbunsortbm"	name="extensions.classicthemerestorer.bmbunsortbm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbutnotext"	name="extensions.classicthemerestorer.bmbutnotext"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_skipprintpr"	name="extensions.classicthemerestorer.skipprintpr"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_tbconmenu"		name="extensions.classicthemerestorer.tbconmenu"	 type="bool"	instantApply="true"/>
@@ -831,6 +832,7 @@
 		<checkbox label="&Ctr_cpanelmenus;"		preference="ctraddon_cpanelmenus"/>
 		<checkbox label="&Ctr_menupopupscr;"	preference="ctraddon_menupopupscr"/>
 		<checkbox label="&Ctr_bmbutpanelm;"		preference="ctraddon_bmbutpanelm" id="ctraddon_pw_bmbutpanelm"/>
+		<checkbox label="&Ctr_bmbunsortbm;"		preference="ctraddon_bmbunsortbm" id="ctraddon_pw_bmbunsortbm"/>
 		<checkbox label="&Ctr_skipprintpr;"		preference="ctraddon_skipprintpr" id="ctraddon_pw_skipprintpr" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 
 		<description class="ctraddon_font1">&Ctr_closegeneral;</description>

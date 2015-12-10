@@ -878,7 +878,9 @@ classicthemerestorerjs.ctr = {
 				classicthemerestorerjs.ctr.loadUnloadCSS("options_win",true);
 			  else if (branch.getCharPref("altoptions")=="options_win" && classicthemerestorerjs.ctr.fxdefaulttheme==false)
 				classicthemerestorerjs.ctr.loadUnloadCSS("options_win_ct",true);
-			  else			  
+			  else if (branch.getCharPref("altoptions")=="options_win_alt" && classicthemerestorerjs.ctr.fxdefaulttheme==false)
+				classicthemerestorerjs.ctr.loadUnloadCSS("options_win_ct",true);
+			  else if (classicthemerestorerjs.ctr.fxdefaulttheme==true)		  
 			    classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("altoptions"),true);	  
 			}
 			
@@ -1850,7 +1852,12 @@ classicthemerestorerjs.ctr = {
 			  },1000);
 			}
 		  break;
-		  
+
+		  case "bmbunsortbm":
+			if (branch.getBoolPref("bmbunsortbm")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbunsortbm",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbunsortbm",false);
+		  break;
+
 		  case "bmbutnotext":
 			if (branch.getBoolPref("bmbutnotext")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbutnotext",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbutnotext",false);
@@ -2413,6 +2420,10 @@ classicthemerestorerjs.ctr = {
   // prevent location bar moving to palette or panel menu
   preventLocationbarRemoval: function() {
 	
+	try {
+	  document.querySelector('#urlbar-container').setAttribute('removable','true');
+	} catch(e){}
+
 	try {
 	  if(!document.querySelector('#urlbar-container').getAttribute('cui-areatype'))
 		document.querySelector('#urlbar-container').setAttribute('cui-areatype','toolbar');
@@ -3498,6 +3509,7 @@ classicthemerestorerjs.ctr = {
 		case "alt_addonsm": 		manageCSS("alt_addonsmanager.css");		break;
 		case "addonversion": 		manageCSS("addonversion.css");			break;
 		case "bmbutpanelm": 		manageCSS("bmbut_pmenu.css");			break;
+		case "bmbunsortbm": 		manageCSS("bmbut_unsortedbookm.css");	break;
 		case "bmbutnotext": 		manageCSS("bmbut_no_label.css");		break;
 		case "tbconmenu": 			manageCSS("tbconmenu.css");				break;
 		case "noresizerxp": 		manageCSS("no_resizer_xp.css");			break;

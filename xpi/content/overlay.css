@@ -419,9 +419,15 @@
 	
 	/* show missing icon */
 	#main-window[defaultfxtheme="true"] #appmenu_unsortedBookmarks,
-	#main-window[defaultfxtheme="true"] #ctraddon_BMB_unsortedBookmarks {
+	#main-window[defaultfxtheme="true"] #ctraddon_BMB_unsortedBookmarks,
+	#main-window[defaultfxtheme="true"] #ctraddon_BMB_unsortedBookmarks_m {
 	  list-style-image: url("chrome://browser/skin/places/unsortedBookmarks.png");
 	  -moz-image-region: auto;
+	}
+	
+	/* hide unsorted bookmarks menu */
+	#ctraddon_BMB_unsortedBookmarks_m {
+	  visibility: collapse;
 	}
 	
 	/* fix ui tour popup position for ctrs panel ui button */

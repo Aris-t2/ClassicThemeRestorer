@@ -63,6 +63,7 @@ pref("extensions.classicthemerestorer.am_compact",false);
 pref("extensions.classicthemerestorer.am_compact2",true);
 pref("extensions.classicthemerestorer.alt_addonsp",false);
 pref("extensions.classicthemerestorer.bmbutpanelm",false);
+pref("extensions.classicthemerestorer.bmbunsortbm",false);
 pref("extensions.classicthemerestorer.bmbutnotext",false);
 pref("extensions.classicthemerestorer.skipprintpr",false);
 pref("extensions.classicthemerestorer.tbconmenu",false);
