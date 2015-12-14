@@ -10,16 +10,16 @@
 <!ENTITY Ctr_flexspace		"Espacio flexible">
 <!ENTITY Ctr_space			"Espacio">
 <!ENTITY Ctr_separator		"Separador">
-<!ENTITY Ctr_puibseparator	"Separador (para el botón triple barra de menú de panel principal)">
+<!ENTITY Ctr_puibseparator	"Separador (para el botón triple-barra de menú de panel principal)">
 <!ENTITY Ctr_navthrobber	"Indicador de actividad">
-<!ENTITY Ctr_sidebarbutton	"Barra lateral">
+<!ENTITY Ctr_sidebarbutton	"(Barra lateral)">
 <!ENTITY Ctr_windowcontrols	"Min/Max/Cerrar (pantalla completa)">
-<!ENTITY Ctr_rr				"¡Requiere reiniciar &brandShortName;!">
+<!ENTITY Ctr_rr				"¡Requiere reiniciar!">
 <!ENTITY Ctr_window			"ventana">
 
 <!ENTITY Ctr_cuibuttons		"Botones">
-<!ENTITY Ctr_cuibutnormal	"Normal">
-<!ENTITY Ctr_cuibutsmall	"Pequeño">
+<!ENTITY Ctr_cuibutnormal	"Normales">
+<!ENTITY Ctr_cuibutsmall	"Pequeños">
 <!ENTITY Ctr_cuimode		"Modo">
 <!ENTITY Ctr_cuiico			"Iconos">
 <!ENTITY Ctr_cuiicotxt		"Iconos + texto">
@@ -31,20 +31,20 @@
 <!ENTITY Ctr_tabcolors_t	"Texto y colores de pestaña">
 
 <!ENTITY Ctr_tabs			"Pestañas">
-<!ENTITY Ctr_tabs0			"Pestañas curvadas (&brandShortName; predeterminado)">
+<!ENTITY Ctr_tabs0			"Pestañas curvadas (predeterminado de &brandShortName;)">
 <!ENTITY Ctr_tabs1			"Pestañas cuadradas (clásico)">
 <!ENTITY Ctr_tabs1m			"Pestañas cuadradas (australizado)">
 <!ENTITY Ctr_tabs2			"Pestañas curvadas (alternativo)">
 <!ENTITY Ctr_tabs3			"Pestañas curvadas (Aero alternativo)">
-<!ENTITY Ctr_tabforminfo	"El aspecto de la pestaña está controlado por el tema de decoración actual.">
+<!ENTITY Ctr_tabforminfo	"El aspecto de la pestaña está controlado por el tema decorativo actual.">
 <!ENTITY Ctr_coltabsinfo	"¡El aspecto de la pestaña no es completamente compatible con el complemento 'ColorfulTabs'!">
 <!ENTITY Ctr_tabsontop0		"Pestañas arriba (predeterminado)">
 <!ENTITY Ctr_tabsontop1		"Pestañas arriba --- atributo [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Pestañas no arriba (v1) --- atributo [tabsontop=false]">
 <!ENTITY Ctr_tabsontop3		"Pestañas no arriba (v2) --- atributo [tabsontop=false]">
-<!ENTITY Ctr_tabsontopW1	"¡(v2) es sólo para algunos complementos y temas completos!">
+<!ENTITY Ctr_tabsontopW1	"¡(v2) es sólo para algunos complementos y temas decorativos completos!">
 <!ENTITY Ctr_tabsontopI1	"Se añade el atributo [tabsontop=true/false] a">
-<!ENTITY Ctr_tabsintitlebar	"Barra de título de &brandShortName; (about:config >> browser.tabs.drawInTitlebar)">
+<!ENTITY Ctr_tabsintitlebar	"Barra de título de &brandShortName; (about:config>>browser.tabs.drawInTitlebar)">
 <!ENTITY Ctr_tabwidthdef	"(predeterminado)">
 <!ENTITY Ctr_tabwidthcla	"(clásico)">
 <!ENTITY Ctr_tabminheight	"Altura:">
@@ -56,7 +56,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"¡Los valores por debajo de 48px causarán problemas en la mayoría de los casos!">
 <!ENTITY Ctr_square_edges	"Esquinas superiores cuadradas">
 <!ENTITY Ctr_tttitlebar		"Título de pestaña en la barra de título de &brandShortName;">
-<!ENTITY Ctr_tabinsertion	"Insertar pestaña asociada tras la actual (... >> browser.tabs.insertRelatedAfterCurrent)">
+<!ENTITY Ctr_tabinsertion	"Insertar pestaña asociada tras la actual (about:config>>browser.tabs.insertRelatedAfterCurrent)">
 <!ENTITY Ctr_emptyfavicon	"Restaurar favicon vacío (si un sitio no ofrece uno)">
 <!ENTITY Ctr_noemptypticon	"Eliminar favicon vacío en pestañas fijadas">
 <!ENTITY Ctr_e10stab_notd	"Pestañas E10s: Eliminar subrayado">
@@ -69,10 +69,10 @@
 <!ENTITY Ctr_closetab_hfot	"Ocultar para una sola pestaña visible">
 <!ENTITY Ctr_closei_def		"Iconos predeterminados">
 <!ENTITY Ctr_closeonleft	"Posición alternativa en la pestaña">
-<!ENTITY Ctr_close_wwltab	"Cerrar ventana con última pestaña (about:config >> browser.tabs.closeWindowWithLastTab)">
+<!ENTITY Ctr_close_wwltab	"Cerrar ventana con la última pestaña (about:config>>browser.tabs.closeWindowWithLastTab)">
 
-<!ENTITY Ctr_hctpinfotab	"Algunos cambios no funcionan con el complemento 'Hide Caption Titlebar Plus'.">
-<!ENTITY Ctr_hctpinfoab		"El botón en la barra de título es incompatible con 'Hide Caption Titlebar Plus'.">
+<!ENTITY Ctr_hctpinfotab	"Algunas variantes no funcionan con el complemento 'Hide Caption Titlebar Plus'.">
+<!ENTITY Ctr_hctpinfoab		"El botón en la barra de título no funciona con 'Hide Caption Titlebar Plus'.">
 
 <!ENTITY Ctr_appbutton		"Botón de la aplicación">
 <!ENTITY Ctr_appbutton0		"Botón deshabilitado">
@@ -81,7 +81,7 @@
 <!ENTITY Ctr_appbutton2		"Botón en la barra de título [de &brandShortName;]">
 <!ENTITY Ctr_appbutton2h	"Botón en la barra de título [de &brandShortName;] (oculto)">
 <!ENTITY Ctr_appbutton2io	"Botón en la barra de título [de &brandShortName;] (sólo icono)">
-<!ENTITY Ctr_paneluibtweak	"Botón de menú de panel en la barra de pestañas,...">
+<!ENTITY Ctr_paneluibtweak	"Botón de menú de panel principal en la barra de pestañas,...">
 <!ENTITY Ctr_paneluibtweak2	"...con estilo botón de la aplicación">
 <!ENTITY Ctr_appbuttonc_o	"Color de botón naranja (predeterminado)">
 <!ENTITY Ctr_appbuttonc_a	"Color de botón azul (Aurora)">
@@ -118,13 +118,13 @@
 <!ENTITY Ctr_altoptionsd	"Apariencia predeterminada">
 <!ENTITY Ctr_altoptionsp	"Apariencia alternativa">
 <!ENTITY Ctr_altoptionsw	"Abrir página de opciones en una ventana">
-<!ENTITY Ctr_altoptionsww	"Width">
-<!ENTITY Ctr_altoptionswh	"Height">
-<!ENTITY Ctr_altoptionsi	"The simulated options window is not a dialog anymore but a 'browser window' with all toolbars hidden. The 'Use Current Page' feature only adds urls of pages opened in the current window, which is only 'about:preferences' in this case. The 'options' toolbar button gets replaced by a new one to be able to open options in a window.">
-<!ENTITY Ctr_options_rem	"Remember last selected category">
+<!ENTITY Ctr_altoptionsww	"Ancho">
+<!ENTITY Ctr_altoptionswh	"Alto">
+<!ENTITY Ctr_altoptionsi	"La ventana simulada de opciones ya no es un cuadro de diálogo sino una 'ventana de navegador' con todas las barras de herramientas ocultas. La característica 'Usar página actual' sólo añade URLs de páginas abiertas en la ventana actual, que en este caso sólo es 'about:preferences'. El botón de barra de herramientas 'Opciones' se sustituye por uno nuevo para poder abrir las opciones en una ventana.">
+<!ENTITY Ctr_options_rem	"Recordar última categoría seleccionada">
 <!ENTITY Ctr_svgfilters		"Colores SVG para iconos predeterminados de botones de barra de herramientas">
 <!ENTITY Ctr_wincontrols	"Controles de ventana móviles en pantalla completa">
-<!ENTITY Ctr_oldtoplevimg	"Imágenes de 'dominio de primer nivel': Apariencia clásica">
+<!ENTITY Ctr_oldtoplevimg	"Imágenes del 'dominio de primer nivel': Apariencia clásica">
 <!ENTITY Ctr_altalertbox	"'Recuadro de alerta': Apariencia alternativa">
 <!ENTITY Ctr_emptyfavicon2	"Reemplazar favicon genérico (vacío y punteado) con uno de hoja en blanco">
 <!ENTITY Ctr_mstatusbar		"Mostrar panel móvil de la antigua barra de estado">
@@ -138,7 +138,7 @@
 <!ENTITY Ctr_hideprivmask	"Navegación privada: Ocultar indicador de máscara">
 <!ENTITY Ctr_navsmallicons	"Iconos pequeños">
 <!ENTITY Ctr_navlargeicons	"Iconos grandes">
-<!ENTITY Ctr_nbisizedelay0	"Ms de retardo de la activación al inicio">
+<!ENTITY Ctr_nbisizedelay0	"Retardo de la activación al inicio">
 <!ENTITY Ctr_nbisizedelay	"ms (1000 ms = 1 seg)">
 <!ENTITY Ctr_findbar		"Posición de la barra de búsqueda en la ventana">
 <!ENTITY Ctr_findbar_def	"Abajo (predeterminada)">
@@ -151,10 +151,10 @@
 <!ENTITY Ctr_nav_txt_ico3	"Mostrar sólo texto">
 <!ENTITY Ctr_nav_txt_exp	"Atributos experimentales:">
 <!ENTITY Ctr_iat_notf_vt	"Excluir barras de herramientas verticales">
-<!ENTITY Ctr_cpanelmenus	"Menús tipo panel (botones de Historial, triple barra, etc.): Vista compacta">
+<!ENTITY Ctr_cpanelmenus	"Menús tipo panel (botones de Historial, triple-barra, etc.): Vista compacta">
 <!ENTITY Ctr_hidezoomres	"Controles de zoom en la barra de herramientas: Ocultar botón de restablecimiento del zoom">
 <!ENTITY Ctr_alt_newtabp	"Página de nueva pestaña (about:newtab): Apariencia alternativa">
-<!ENTITY Ctr_ctroldsearch	"Menú antiguo del cuadro de búsqueda (experimental)">
+<!ENTITY Ctr_ctroldsearch	"Menú antiguo del recuadro de búsqueda (experimental)">
 <!ENTITY Ctr_addonmanager	"Administrador de complementos">
 <!ENTITY Ctr_alt_addonsp	"Página 'más información': Apariencia alternativa">
 <!ENTITY Ctr_alt_addonsm	"Apariencia alternativa">
@@ -162,10 +162,10 @@
 <!ENTITY Ctr_am_compact		"Listas de complementos: Vista compacta">
 <!ENTITY Ctr_am_compact2	"Vista compacta +">
 <!ENTITY Ctr_addonversion	"Mostrar la versión del complemento">
-<!ENTITY Ctr_xpinstallui	"Antiguo cuadro de instalación de complementos (... >> xpinstall.customConfirmationUI)">
-<!ENTITY Ctr_bmbutpanelm	"Botón de menú Marcadores (≠ barra lateral): Estilo de menú emergente de panel">
-<!ENTITY Ctr_bmbunsortbm	"Botón de menú Marcadores (≠ barra lateral): 'unsorted bookmarks' submenu">
-<!ENTITY Ctr_bmbutnotext	"Botón de menú Marcadores (≠ barra lateral): Ocultar etiqueta en la barra de marcadores">
+<!ENTITY Ctr_xpinstallui	"Antiguo cuadro de instalación de complementos (about:config>>xpinstall.customConfirmationUI)">
+<!ENTITY Ctr_bmbutpanelm	"Botón de menú Marcadores: Estilo de menú emergente de panel">
+<!ENTITY Ctr_bmbunsortbm	"Botón de menú Marcadores: Submenú 'Marcadores no ordenados'">
+<!ENTITY Ctr_bmbutnotext	"Botón de menú Marcadores: Ocultar etiqueta en la barra de marcadores">
 <!ENTITY Ctr_skipprintpr	"Botón Imprimir: Omitir previsualización de la impresión">
 <!ENTITY Ctr_tbconmenu		"Menú contextual de barra de herramientas: Ocultar 'Mover al menú', 'Eliminar de la barra de herramientas', 'Recargar todas las pestañas', 'Añadir pestañas a marcadores...' y 'Deshacer el cierre de la última pestaña'">
 <!ENTITY Ctr_noresizerxp	"Ocultar redimensionador (Windows XP)">
@@ -215,30 +215,30 @@
 <!ENTITY Ctr_hideurelstop	"Ocultar botones 'Parar y Recargar'">
 <!ENTITY Ctr_hideurlgo		"Ocultar botón 'Ir'">
 <!ENTITY Ctr_hideurlsrg		"Ocultar separadores y espacios del botón 'Recargar, Parar e Ir'">
-<!ENTITY Ctr_urlbardropm	"Mover flecha de despliegue al final de la barra de URL">
+<!ENTITY Ctr_urlbardropm	"Mover flecha de despliegue al final de barras de direcciones">
 <!ENTITY Ctr_altreaderico	"Iconos de 'Vista de lectura' alternativos">
 <!ENTITY Ctr_hideprbutton	"Ocultar icono de notificación cuando se bloquee una ventana emergente">
-<!ENTITY Ctr_locsearchbw10	"Reduce location bars and search bars height (experimental)">
+<!ENTITY Ctr_locsearchbw10	"Reducir altura de la barra de direcciones y el recuadro de búsqueda (experimental)">
 <!ENTITY Ctr_urlbar_ib		"Botón de identidad del sitio (recuadro de identidad)">
 <!ENTITY Ctr_ib_nohovcolor	"No mostrar color gris al señalarlo">
-<!ENTITY Ctr_ib_graycolor	"Gray color for unknown identity and chrome pages">
-<!ENTITY Ctr_verifiedcolors	"Colores de botón para sitios web verificados, conexiones seguras y no seguras">
+<!ENTITY Ctr_ib_graycolor	"Color gris para identidades desconocidas y páginas chrome://">
+<!ENTITY Ctr_verifiedcolors	"Botón coloreado para sitios web verificados, y conexiones seguras y no seguras">
 <!ENTITY Ctr_faviconurl		"Mostrar favicon del sitio web">
 <!ENTITY Ctr_padlock		"Candado para conexiones seguras">
 <!ENTITY Ctr_padlock_hid	"oculto">
 <!ENTITY Ctr_padlock_def	"predeterminado">
 <!ENTITY Ctr_padlock_cla	"clásico">
 <!ENTITY Ctr_padlock_mod	"moderno">
-<!ENTITY Ctr_padlock_ext	"'&brandShortName;' icon for valid 'about' pages">
+<!ENTITY Ctr_padlock_ext	"Icono de '&brandShortName;' para páginas about: válidas">
 <!ENTITY Ctr_icopageinfo	"Hacer clic en el icono abre la ventana 'Información de la página'">
-<!ENTITY Ctr_lbsbsize		"Custom width for location bar and search bar">
-<!ENTITY Ctr_searchbar		"Search bar">
+<!ENTITY Ctr_lbsbsize		"Ancho personalizado para barra de direcciones y recuadro de búsqueda">
+<!ENTITY Ctr_searchbar		"Recuadro de búsqueda">
 
 <!ENTITY Ctr_menubar_items	"Posición de los elementos del menú">
 <!ENTITY Ctr_extrabar		"Barras de herramientas adicionales">
 <!ENTITY Ctr_extrabar0		"Barra(s) de herramientas adicional(es)">
 <!ENTITY Ctr_extrabar1		"Barra de herramientas adicional">
-<!ENTITY Ctr_extrabarinfo	"Cambiar aleatoriamente entre los modos 'tabs on top' (pestañas arriba) y 'tabs not on top' (pestañas no arriba) altera el orden de las barras de herramientas adicionales. &brandShortName; ha de reiniciarse para resolver el problema.">
+<!ENTITY Ctr_extrabarinfo	"Cambiar aleatoriamente entre los modos 'pestañas arriba' y 'pestañas no arriba' altera el orden de las barras de herramientas adicionales. &brandShortName; ha de reiniciarse para resolver el problema.">
 
 <!ENTITY Ctr_invicons		"Iconos en negativo">
 <!ENTITY Ctr_menubar		"Barra de menús">
@@ -251,8 +251,8 @@
 <!ENTITY Ctr_mbarforceright	"Último elemento">
 
 <!ENTITY Ctr_toolbars		"Barras de herramientas">
-<!ENTITY Ctr_dblclnewtab	"Hacer doble clic abre una 'nueva' pestaña (about:config >> browser.newtab.url)">
-<!ENTITY Ctr_hidetbwot		"Ocultar barra de pestañas con una sola pestaña">
+<!ENTITY Ctr_dblclnewtab	"Hacer doble clic abre una 'nueva' pestaña (about:config>>browser.newtab.url)">
+<!ENTITY Ctr_hidetbwot		"Ocultar barra de pestañas con una sola pestaña visible">
 <!ENTITY Ctr_hidetbwote		"Reducir retardo al ocultar en el inicio">
 <!ENTITY Ctr_hidetbwote_i	"Podría causar problemas en la barra de pestañas">
 <!ENTITY Ctr_hidetbwote2	"Conservar barra de título (pestañas arriba)">
@@ -265,11 +265,11 @@
 <!ENTITY Ctr_altmenubar		"Añadir color de fondo (barra de título del SO)">
 <!ENTITY Ctr_altmenubarpos	"Posición alternativa">
 <!ENTITY Ctr_altmenubarpos2	"Bajo la barra de título de &brandShortName;">
-<!ENTITY Ctr_menubarnofog	"Eliminar color de fondo/niebla (Windows Aeroglass/8)">
+<!ENTITY Ctr_menubarnofog	"Eliminar color/niebla de fondo (Windows Aeroglass/8)">
 
-<!ENTITY Ctr_aerocolors		"Colores azul aero (celeste) para las barras de herramientas principales y pestañas">
+<!ENTITY Ctr_aerocolors		"Colores azul Aero (celeste) para las barras principales y pestañas">
 <!ENTITY Ctr_transpttbw10	"Barra de título/menú/pestañas: Eliminar color de fondo">
-<!ENTITY Ctr_transpttbew10	"Additional tweaks for some OS themes">
+<!ENTITY Ctr_transpttbew10	"Ajustes adicionales para algunos temas decorativos de SO">
 <!ENTITY Ctr_transptcw10	"Ocultar botones Min/Max/Cerrar predeterminados del SO">
 <!ENTITY Ctr_hidenavbar		"Ocultar barra">
 <!ENTITY Ctr_navbarpad		"Ahuecado adicional a izquierda y derecha">
@@ -282,7 +282,7 @@
 <!ENTITY Ctr_nonavbarbg2	"Afecta a todas las barras con 'Chrome esbelto' del complemento 'Beyond Australis'.">
 <!ENTITY Ctr_nonavborder	"Añadir borde superior a la barra">
 <!ENTITY Ctr_nonavtbborder	"Barras superiores: Eliminar bordes de barra de herramientas">
-<!ENTITY Ctr_hidesbclose	"Ocultar botón cerrar de la barras laterales">
+<!ENTITY Ctr_hidesbclose	"Ocultar botón cerrar de las barras laterales">
 <!ENTITY Ctr_notextshadow	"Ocultar sombreado para texto de barra de herramientas y texto de pestaña">
 <!ENTITY Ctr_chevronfix		"Barra de navegación: Ocultar botón de doble flecha ('Más herramientas') al final de las barras">
 <!ENTITY Ctr_tbsep_winc		"Barras superiores: Separadores extra de barra de herramientas">
@@ -295,33 +295,33 @@
 <!ENTITY Ctr_tabthrobber	"Imagen predeterminada durante la carga">
 <!ENTITY Ctr_bmanimation	"Al añadir nuevos marcadores">
 <!ENTITY Ctr_pananimation	"De la apertura de paneles">
-<!ENTITY Ctr_tabanimation	"De la apertura/cierre de pestañas (about:config >> browser.tabs.animate)">
-<!ENTITY Ctr_dlanimation	"De las notificaciones de descarga (about:config >> browser.download.animateNotifications)">
-<!ENTITY Ctr_fsanimation	"De pantalla completa (about:config >> browser.fullscreen.animate)">
-<!ENTITY Ctr_fsaduration	"De pantalla completa para el reproductor HTML5 (... >> full-screen-api.transition-duration.*)">
+<!ENTITY Ctr_tabanimation	"De la apertura/cierre de pestañas (about:config>>browser.tabs.animate)">
+<!ENTITY Ctr_dlanimation	"De las notificaciones de descarga (about:config>>browser.download.animateNotifications)">
+<!ENTITY Ctr_fsanimation	"De pantalla completa (about:config>>browser.fullscreen.animate)">
+<!ENTITY Ctr_fsaduration	"De pantalla completa del reproductor HTML5 (about:config>>full-screen-api.transition-duration.*)">
 
 <!ENTITY Ctr_toolsitem		"Elemento en el menú Herramientas">
 <!ENTITY Ctr_appmenuitem	"Elemento en el menú de la aplicación">
 <!ENTITY Ctr_contextitem	"Elemento en el menú contextual de las barras de herramientas">
-<!ENTITY Ctr_puictrbutton	"Botón en el menú del panel principal (bajo el botón triple barra)">
+<!ENTITY Ctr_puictrbutton	"Botón en el menú de panel principal (bajo el botón triple-barra)">
 
 <!ENTITY Ctr_otherctroptns	"Otras configuraciones">
 <!ENTITY Ctr_cuibotbuttons	"Botones extra en el modo 'Personalizar'">
 <!ENTITY Ctr_bookmarkoinpw	"Elemento 'Abrir en una nueva ventana privada' en el menú contextual de marcadores">
-<!ENTITY Ctr_nodevtheme		"Evitar que se habilite el 'tema de decoración de desarrollador'">
+<!ENTITY Ctr_nodevtheme		"Evitar que se habilite el 'tema decorativo de desarrollador'">
 
 <!ENTITY Ctr_experttweaks	"Avanzadas">
 <!ENTITY Ctr_fx34search		"Desmarcar esto retira la 'nueva apariencia de búsqueda' y recupera la antigua.">
 <!ENTITY Ctr_fx34loop		"Desmarcar esto retira las características de 'llamada y conversación' (Hello).">
-<!ENTITY Ctr_fx35devtheme	"Desmarcar esto deshabilita la decoración del 'tema de desarrollador'.">
+<!ENTITY Ctr_fx35devtheme	"Desmarcar esto deshabilita el 'tema decorativo de desarrollador'.">
 <!ENTITY Ctr_fx36prefs		"Desmarcar esto restaura la antigua ventana de Opciones en lugar de la actual pestaña.">
 <!ENTITY Ctr_fx36prefs2		"¡La ventana antigua no contiene todas las preferencias del navegador añadidas recientemente!">
-<!ENTITY Ctr_fx38reader		"Desmarcar esto deshabilita la 'vista de lectura' y elimina su icono.">
+<!ENTITY Ctr_fx38reader		"Desmarcar esto deshabilita la 'vista de lectura' y elimina su icono de la barra de direcciones.">
 <!ENTITY Ctr_fx38pocket		"Desmarcar esto deshabilita el servicio de guardado 'Pocket' y elimina su botón.">
 <!ENTITY Ctr_fx38pocket2	"Hacerlo con el botón 'Pocket' en 'Personalizar' elimina sus menús en marcadores y vista de lectura.">
-<!ENTITY Ctr_e_searchui		"Aspecto del recuadro búsqueda">
+<!ENTITY Ctr_e_searchui		"Aspecto del recuadro de búsqueda">
 <!ENTITY Ctr_e_loop			"Llamada y conversación / Loop">
-<!ENTITY Ctr_e_deved		"Tema de decoración de la edición de desarrollador">
+<!ENTITY Ctr_e_deved		"Tema decorativo de la edición de desarrollador">
 <!ENTITY Ctr_e_prefsui		"Preferencias en pestaña">
 <!ENTITY Ctr_e_readermode	"Modo de vista de lectura">
 <!ENTITY Ctr_e_pocket		"Pocket">
@@ -338,9 +338,9 @@
 <!ENTITY Ctr_pw_set_syncon	"Añadir a la sincronización">
 <!ENTITY Ctr_pw_set_syncoff	"Eliminar de la sincronización">
 
-<!ENTITY Ctr_special_font	"¡Las configuraciones de color de fondo son sólo para el tema de decoración predeterminado!">
+<!ENTITY Ctr_special_font	"¡Las configuraciones de color de fondo son sólo para el tema decorativo predeterminado!">
 <!ENTITY Ctr_special_info	"¡Algunas opciones podrían no ofrecer cambios visuales en todos los casos!">
-<!ENTITY Ctr_special_info2	"¡Las configuraciones se realizan para el tema de decoración predeterminado de &brandShortName;, y puede que no funcionen con todos los temas de terceros!">
+<!ENTITY Ctr_special_info2	"¡Las configuraciones se realizan para el tema decorativo predeterminado de &brandShortName;, y puede que no funcionen con todos los temas de terceros!">
 <!ENTITY Ctr_support		"Foro de soporte">
 <!ENTITY Ctr_newversion		"¿Nueva versión?">
 

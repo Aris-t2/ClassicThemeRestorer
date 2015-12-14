@@ -70,6 +70,28 @@ ctrAboutPrefs = {
 	  } catch(e){}
 	  
 	}
+	
+	setTimeout(function(){
+		var windowsService = Components.classes['@mozilla.org/appshell/window-mediator;1'].getService(Components.interfaces.nsIWindowMediator);
+		var currentWindow = windowsService.getMostRecentWindow('navigator:browser');
+		var browser = currentWindow.getBrowser();
+		
+		var ss =  Cc["@mozilla.org/content/style-sheet-service;1"].getService(Ci.nsIStyleSheetService);
+		var uri = Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+		\
+		#TabsToolbar .tabbrowser-tab[label="'+browser.selectedTab.label+'"] .tab-icon-image:not([src]),\
+		#main-window[fx44plus="true"] #TabsToolbar .tabbrowser-tab[label="'+browser.selectedTab.label+'"] .tab-icon-image:not([src]),\
+		#TabsToolbar .tabbrowser-tab[label="'+browser.selectedTab.label+'"]:not([pinned]) .tab-icon-image:not([src]),\
+		#main-window[fx44plus="true"] #TabsToolbar .tabbrowser-tab[label="'+browser.selectedTab.label+'"]:not([pinned]) .tab-icon-image:not([src]) {\
+		  list-style-image: url("chrome://browser/skin/preferences/in-content/favicon.ico") !important;\
+		  display:block !important;\
+		}\
+		\
+		'), null, null);
+
+		ss.loadAndRegisterSheet(uri, ss.AGENT_SHEET);
+	},100);
+	
   }
 }
   // Make ctrAboutPrefs a global variable

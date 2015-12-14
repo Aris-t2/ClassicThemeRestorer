@@ -118,10 +118,10 @@
 <!ENTITY Ctr_altoptionsd	"Προεπιλεγμένη εμφάνιση">
 <!ENTITY Ctr_altoptionsp	"Εναλλακτική εμφάνιση">
 <!ENTITY Ctr_altoptionsw	"Άνοιγμα σελίδας επιλογών σε παράθυρο">
-<!ENTITY Ctr_altoptionsww	"Width">
-<!ENTITY Ctr_altoptionswh	"Height">
-<!ENTITY Ctr_altoptionsi	"The simulated options window is not a dialog anymore but a 'browser window' with all toolbars hidden. The 'Use Current Page' feature only adds urls of pages opened in the current window, which is only 'about:preferences' in this case. The 'options' toolbar button gets replaced by a new one to be able to open options in a window.">
-<!ENTITY Ctr_options_rem	"Remember last selected category">
+<!ENTITY Ctr_altoptionsww	"Εύρος">
+<!ENTITY Ctr_altoptionswh	"Ύψος">
+<!ENTITY Ctr_altoptionsi	"Το προσομοιωμένο παράθυρο επιλογών δεν είναι πια παράθυρο διαλόγου, αλλά ένα «παράθυρο περιηγητή» με όλες τις εργαλειοθήκες σε απόκρυψη. Το χαρακτηριστικό «Χρήση τρέχουσας σελίδας» προσθέτει μόνο τις διευθύνσεις URL των ανοιγμένων στο τρέχον παράθυρο σελίδων, που είναι μόνο «about:preferences» σε αυτή την περίπτωση. Το κουμπί εργαλειοθήκης «Επιλογές» αντικαθίσταται από ένα νέο, για να είναι δυνατόν το άνοιγμα επιλογών σε παράθυρο.">
+<!ENTITY Ctr_options_rem	"Απομνημόνευση τελευταία επιλεχθείσας κατηγορίας">
 <!ENTITY Ctr_svgfilters		"Χρώματα SVG για προεπιλεγμένα εικονίδια κουμπιών εργαλειοθήκης">
 <!ENTITY Ctr_wincontrols	"Μετακινήσιμα στοιχεία ελέγχου παραθύρου σε προβολή πλήρους οθόνης">
 <!ENTITY Ctr_oldtoplevimg	"Εικόνες τομέα «ανώτατου επιπέδου»: κλασική εμφάνιση">
@@ -218,10 +218,10 @@
 <!ENTITY Ctr_urlbardropm	"Μετακίνηση του δείκτη ανάπτυξης στο τέλος της γραμμής τοποθεσιών">
 <!ENTITY Ctr_altreaderico	"Εναλλακτικά εικονίδια «λειτουργίας ανάγνωσης»">
 <!ENTITY Ctr_hideprbutton	"Απόκρυψη εικονιδίου ειδοποίησης φραγής αναδυόμενου παραθύρου">
-<!ENTITY Ctr_locsearchbw10	"Reduce location bars and search bars height (experimental)">
+<!ENTITY Ctr_locsearchbw10	"Μείωση ύψους γραμμών τοποθεσιών και αναζήτησης (πειραματικό)">
 <!ENTITY Ctr_urlbar_ib		"Κουμπί ταυτοποίησης τοποθεσιών (πλαίσιο ταυτοποίησης)">
 <!ENTITY Ctr_ib_nohovcolor	"Μη εμφάνιση γκρι χρώματος κατά την κατάδειξη">
-<!ENTITY Ctr_ib_graycolor	"Gray color for unknown identity and chrome pages">
+<!ENTITY Ctr_ib_graycolor	"Γκρι χρώμα για αγνώστου ταυτότητας και «Chrome» σελίδες">
 <!ENTITY Ctr_verifiedcolors	"Χρώματα κουμπιού για επαληθευμένες ιστοσελίδες, ασφαλείς και μη ασφαλείς συνδέσεις">
 <!ENTITY Ctr_faviconurl		"Εικονίδιο URL: τρέχον εικονίδιο τοποθεσιών">
 <!ENTITY Ctr_padlock		"Εικονίδιο «Λουκέτο» για ασφαλείς συνδέσεις">
@@ -229,7 +229,7 @@
 <!ENTITY Ctr_padlock_def	"προεπιλεγμένο">
 <!ENTITY Ctr_padlock_cla	"κλασικό">
 <!ENTITY Ctr_padlock_mod	"μοντέρνο">
-<!ENTITY Ctr_padlock_ext	"'&brandShortName;' icon for valid 'about' pages">
+<!ENTITY Ctr_padlock_ext	"Εικονίδιο «&brandShortName;» για έγκυρες σελίδες «about»">
 <!ENTITY Ctr_icopageinfo	"Άνοιγμα παραθύρου «Πληροφορίες σελίδας» με κλικ στο ικονίδιο">
 <!ENTITY Ctr_lbsbsize		"Custom width for location bar and search bar">
 <!ENTITY Ctr_searchbar		"Search bar">
@@ -269,10 +269,10 @@
 
 <!ENTITY Ctr_aerocolors		"Μπλε χρώματα «Aero» για εργαλειοθήκες (και καρτέλες)">
 <!ENTITY Ctr_transpttbw10	"Τίτλος/μενού/εργαλειοθήκη καρτελών: απομάκρυνση χρώματος φόντου">
-<!ENTITY Ctr_transpttbew10	"Additional tweaks for some OS themes">
+<!ENTITY Ctr_transpttbew10	"Επιπλέον πειράγματα για θέματα ορισμένων Λ.Σ.">
 <!ENTITY Ctr_transptcw10	"Απόκρυψη προεπιλεγμένων κουμπιών ΛΣ ελαχιστοποίηση/μεγιστοποίηση/κλείσιμο">
 <!ENTITY Ctr_hidenavbar		"Απόκρυψη εργαλειοθήκης">
-<!ENTITY Ctr_navbarpad		"Επιπρόσθετη πλήρωση αριστερά και δεξιά">
+<!ENTITY Ctr_navbarpad		"Επιπρόσθετο διάστημα αριστερά και δεξιά">
 <!ENTITY Ctr_navbarpad_l	"Αριστερά:">
 <!ENTITY Ctr_navbarpad_r	"Δεξιά:">
 <!ENTITY Ctr_nobookbarbg	"Απομάκρυνση χρώματος φόντου">

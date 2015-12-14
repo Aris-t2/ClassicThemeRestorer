@@ -79,12 +79,12 @@ classicthemerestorerjs.ctr = {
   activityObserverOn:	false, // activity observer is always disabled, when a window get initialized
 
   init: function() {
-  
+	
 	// remove default panel ui button in favour of CTRs movable duplicate
 	try{
 		document.getElementById("PanelUI-button").removeChild(document.getElementById("PanelUI-menu-button"));
 	} catch(e){}
-	
+
 	// adds a new global attribute 'defaultfxtheme' -> better parting css for default and non-default themes
 	try{
 		if (this.fxdefaulttheme){
@@ -103,52 +103,52 @@ classicthemerestorerjs.ctr = {
 		  classicthemerestorerjs.ctr.loadUnloadCSS("thirdpartythemes",true);
 		}
 	} catch(e){}
-	
+
 	// add a new global attribute 'fx31' -> better parting css between versions
 	try{
 		if (this.appversion >= 31) document.getElementById("main-window").setAttribute('fx31',true);
 	} catch(e){}
-	
+
 	// add a new global attribute 'fx32plus' -> better parting css between versions
 	try{
 		if (this.appversion >= 32) document.getElementById("main-window").setAttribute('fx32plus',true);
 	} catch(e){}
-	
+
 	// add a new global attribute 'fx34plus' -> better parting css between versions
 	try{
 		if (this.appversion >= 34) document.getElementById("main-window").setAttribute('fx34plus',true);
 	} catch(e){}
-	
+
 	// add a new global attribute 'fx36plus' -> better parting css between versions
 	try{
 		if (this.appversion >= 36) document.getElementById("main-window").setAttribute('fx36plus',true);
 	} catch(e){}
-	
+
 	// add a new global attribute 'fx38plus' -> better parting css between versions
 	try{
 		if (this.appversion >= 38) document.getElementById("main-window").setAttribute('fx38plus',true);
 	} catch(e){}
-	
+
 	// add a new global attribute 'fx40plus' -> better parting css between versions
 	try{
 		if (this.appversion >= 40) document.getElementById("main-window").setAttribute('fx40plus',true);
 	} catch(e){}
-	
+
 	// add a new global attribute 'fx42plus' -> better parting css between versions
 	try{
 		if (this.appversion >= 42) document.getElementById("main-window").setAttribute('fx42plus',true);
 	} catch(e){}
-	
+
 	// add a new global attribute 'fx43plus' -> better parting css between versions
 	try{
 		if (this.appversion >= 43) document.getElementById("main-window").setAttribute('fx43plus',true);
 	} catch(e){}
-	
+
 	// add a new global attribute 'fx44plus' -> better parting css between versions
 	try{
 		if (this.appversion >= 44) document.getElementById("main-window").setAttribute('fx44plus',true);
 	} catch(e){}
-	
+
 	// add a new global attribute 'fx45plus' -> better parting css between versions
 	try{
 		if (this.appversion >= 45) document.getElementById("main-window").setAttribute('fx45plus',true);
