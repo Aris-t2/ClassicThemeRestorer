@@ -2246,6 +2246,23 @@ classicthemerestorerjs.ctr = {
 	
 	ctrSettingsListener_forCTB.register(true);
 	
+	// hide tab audio icon and its menuitems properly
+	var ctrSettingsListener_forTabSettings = new PrefListener(
+	  "browser.tabs.",
+	  function(branch, name) {
+		switch (name) {
+
+		  case "showAudioPlayingIcon":
+			if (branch.getBoolPref("showAudioPlayingIcon")) classicthemerestorerjs.ctr.loadUnloadCSS("hidetabaudioico",false);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("hidetabaudioico",true);
+
+		  break;
+		}
+	  }
+	);
+	
+	ctrSettingsListener_forTabSettings.register(true);
+	
 	/*
 	// SettingSanity add-on uses 'defaultDrawInTitlebar' pref, that breaks the default
 	// 'drawInTitlebar' provided by Firefox and required by CTR. Basically it does not
@@ -2303,6 +2320,7 @@ classicthemerestorerjs.ctr = {
 		
 		ctrSettingsListener.unregister();
 		ctrSettingsListener_forCTB.unregister();
+		ctrSettingsListener_forTabSettings.unregister();
 		ctrSettingsListener_forDevtheme.unregister();
 		//ctrSettingsListener_forDevtheme2.unregister();
 		//ctrSettingsListener_forSetSan.unregister();
@@ -3576,6 +3594,8 @@ classicthemerestorerjs.ctr = {
 		case "spaces_extra": 		manageCSS("spaces_extra.css");			break;
 		
 		case "thirdpartythemes": 	manageCSS("thirdpartythemes.css");		break;
+		
+		case "hidetabaudioico": 	manageCSS("hidetabaudioico.css");		break;
 		
 		case "aerocolors":
 			
@@ -5414,6 +5434,18 @@ classicthemerestorerjs.ctr = {
 		  },100);
 		}
 	} catch(e){}
+  },
+  
+  manageOldSearchMenuitem: function() {
+
+	Services.prefs.getBranch('extensions.classicthemerestorer.').setCharPref('aboutprefs','category-search');
+	if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win'
+	  || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt'){
+		classicthemerestorerjs.ctr.openContentPrefsInWin();
+	} else {
+	  gBrowser.selectedTab = gBrowser.addTab('about:preferences#search');
+	}
+
   }
   
 };
