@@ -3796,20 +3796,20 @@ classicthemerestorerjs.ctr = {
 						  background: #eaf2fb !important;\
 						}\
 						/* location bar / search bar borders */\
-						#main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme),\
-						#main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme) {\
+						#main-window[defaultfxtheme="true"] #urlbar-container #urlbar-wrapper #urlbar:not(:-moz-lwtheme),\
+						#main-window[defaultfxtheme="true"] #urlbar-container #urlbar-wrapper .searchbar-textbox:not(:-moz-lwtheme) {\
 						  border-color: hsla(210,54%,20%,.25) hsla(210,54%,20%,.27) hsla(210,54%,20%,.3) hsla(210,54%,20%,.27) !important;\
 						}\
-						#main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme)[focused],\
-						#main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme)[focused] {\
+						#main-window[defaultfxtheme="true"] #urlbar-container #urlbar-wrapper #urlbar:not(:-moz-lwtheme)[focused],\
+						#main-window[defaultfxtheme="true"] #urlbar-container #urlbar-wrapper .searchbar-textbox:not(:-moz-lwtheme)[focused] {\
 						  border-color: Highlight !important;\
 						}\
-						#main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme):not([focused]):hover,\
-						#main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme):not([focused]):hover {\
+						#main-window[defaultfxtheme="true"] #urlbar-container #urlbar-wrapper #urlbar:not(:-moz-lwtheme):not([focused]):hover,\
+						#main-window[defaultfxtheme="true"] #urlbar-container #urlbar-wrapper .searchbar-textbox:not(:-moz-lwtheme):not([focused]):hover {\
 						  border-color: hsla(210,54%,20%,.35) hsla(210,54%,20%,.37) hsla(210,54%,20%,.4) hsla(210,54%,20%,.37) !important;\
 						}\
-						#main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme)[focused],\
-						#main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme)[focused] {\
+						#main-window[defaultfxtheme="true"] #urlbar-container #urlbar-wrapper #urlbar:not(:-moz-lwtheme)[focused],\
+						#main-window[defaultfxtheme="true"] #urlbar-container #urlbar-wrapper .searchbar-textbox:not(:-moz-lwtheme)[focused] {\
 						  border-color: hsla(206,100%,60%,.65) hsla(206,100%,55%,.65) hsla(206,100%,50%,.65) hsla(206,100%,55%,.65) !important;\
 						}\
 						@media (-moz-windows-classic), (-moz-windows-default-theme) {\
@@ -5434,18 +5434,6 @@ classicthemerestorerjs.ctr = {
 		  },100);
 		}
 	} catch(e){}
-  },
-  
-  manageOldSearchMenuitem: function() {
-
-	Services.prefs.getBranch('extensions.classicthemerestorer.').setCharPref('aboutprefs','category-search');
-	if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win'
-	  || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt'){
-		classicthemerestorerjs.ctr.openContentPrefsInWin();
-	} else {
-	  gBrowser.selectedTab = gBrowser.addTab('about:preferences#search');
-	}
-
   }
   
 };

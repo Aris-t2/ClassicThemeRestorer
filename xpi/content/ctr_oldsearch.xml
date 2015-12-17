@@ -5,6 +5,7 @@
     A few checks for deprecated boolean preferences had to be removed
 	for this to work on Firefox 43+. Additionally 'open-engine-manager' 
 	button points to default in-content search preferences.
+	'OneoffUI' binding and telemetry code also got removed.
 	All "< ! - -  ### - - >" comments got removed to reduce file size.
 -->
 
@@ -43,7 +44,7 @@
                    xbl:inherits="disabled,disableautocomplete,searchengine,src,newlines">
 
         <xul:box>
-          <xul:button class="searchbar-engine-button"
+          <xul:toolbarbutton class="searchbar-engine-button"
                       type="menu"
                       anonid="searchbar-engine-button">
             <xul:image class="searchbar-engine-image" xbl:inherits="src"/>
@@ -54,9 +55,9 @@
               <xul:menuitem class="open-engine-manager"
                             anonid="open-engine-manager"
                             label="&cmd_engineManager.label;"
-                            oncommand="classicthemerestorerjs.ctr.manageOldSearchMenuitem();"/>
+                            oncommand="openManager(event);"/>
             </xul:menupopup>
-          </xul:button>
+          </xul:toolbarbutton>
         </xul:box>
         <xul:hbox class="search-go-container">
           <xul:image class="search-go-button"
@@ -117,6 +118,27 @@
         // observer, and leak the world too.
         if (this._textboxInitialized && this._textbox.mController.input == this)
           this._textbox.mController.input = null;
+        ]]></body>
+      </method>
+	  
+	  <!-- 'openSuggestionsPanel' method will always be triggered by Fx, if ALT key + Up/Down
+		gets hit, no matter whether the search bar binding gets overriden or not. In this case
+		the search engine buttons menupopup has to be opened instead of the search panel, because
+		this CTR option 'restores' it.
+	  -->
+      <method name="openSuggestionsPanel">
+        <body><![CDATA[
+		  var mainWindow = window.QueryInterface(Components.interfaces.nsIInterfaceRequestor)
+                       .getInterface(Components.interfaces.nsIWebNavigation)
+                       .QueryInterface(Components.interfaces.nsIDocShellTreeItem)
+                       .rootTreeItem
+                       .QueryInterface(Components.interfaces.nsIInterfaceRequestor)
+                       .getInterface(Components.interfaces.nsIDOMWindow);
+		  var searchbar = mainWindow.document.getElementById("searchbar");
+		  var searchBox = mainWindow.document.getAnonymousElementByAttribute(searchbar, "anonid", "searchbar-textbox");
+		  var searchBut = searchBox.firstChild.firstChild;
+		  searchBut.open = true;
+
         ]]></body>
       </method>
 
@@ -387,23 +409,17 @@
           this._needToBuildPopup = false;
         ]]></body>
       </method>
-
+	  
       <method name="openManager">
         <parameter name="aEvent"/>
         <body><![CDATA[
-          var wm =
-                Components.classes["@mozilla.org/appshell/window-mediator;1"]
-                          .getService(Components.interfaces.nsIWindowMediator);
-
-          var window = wm.getMostRecentWindow("Browser:SearchManager");
-          if (window)
-            window.focus()
-          else {
-            setTimeout(function () {
-              openDialog("chrome://browser/content/search/engineManager.xul",
-                         "_blank", "chrome,dialog,modal,centerscreen,resizable");
-            }, 0);
-          }
+			Services.prefs.getBranch('extensions.classicthemerestorer.').setCharPref('aboutprefs','category-search');
+			if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win'
+			  || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt'){
+				classicthemerestorerjs.ctr.openContentPrefsInWin();
+			} else {
+			  gBrowser.selectedTab = gBrowser.addTab('about:preferences#search');
+			}
         ]]></body>
       </method>
 
@@ -422,8 +438,6 @@
           aEvent.preventDefault();
           aEvent.stopPropagation();
 
-          if (this.hasAttribute("oneoffui"))
-            this.openSuggestionsPanel();
         ]]></body>
       </method>
 
@@ -539,171 +553,8 @@
       ]]></handler>
     </handlers>
   </binding>
-
-  <binding id="searchbar-flare" extends="chrome://browser/content/search/search.xml#searchbar">
-    <resources>
-      <stylesheet src="chrome://browser/content/search/searchbarBindings.css"/>
-      <stylesheet src="chrome://browser/skin/searchbar.css"/>
-    </resources>
-    <content>
-      <xul:stringbundle src="chrome://browser/locale/search.properties"
-                        anonid="searchbar-stringbundle"/>
-
-      <xul:textbox class="searchbar-textbox"
-                   anonid="searchbar-textbox"
-                   type="autocomplete"
-                   flex="1"
-                   autocompletepopup="PopupSearchAutoComplete"
-                   autocompletesearch="search-autocomplete"
-                   autocompletesearchparam="searchbar-history"
-                   maxrows="10"
-                   completeselectedindex="true"
-                   minresultsforpopup="0"
-                   xbl:inherits="disabled,disableautocomplete,searchengine,src,newlines">
-
-        <xul:box>
-          <xul:hbox class="searchbar-search-button-container">
-            <xul:image class="searchbar-search-button"
-                       anonid="searchbar-search-button"
-                       xbl:inherits="addengines"
-                       tooltiptext="&searchEndCap.label;"/>
-          </xul:hbox>
-          <xul:button class="searchbar-engine-button"
-                      type="menu"
-                      anonid="searchbar-engine-button">
-            <xul:image class="searchbar-engine-image" xbl:inherits="src"/>
-            <xul:image class="searchbar-dropmarker-image"/>
-            <xul:menupopup class="searchbar-popup"
-                           anonid="searchbar-popup">
-              <xul:menuseparator/>
-              <xul:menuitem class="open-engine-manager"
-                            anonid="open-engine-manager"
-                            label="&cmd_engineManager.label;"
-                            oncommand="gBrowser.selectedTab = gBrowser.addTab('about:preferences#search')"/>
-            </xul:menupopup>
-          </xul:button>
-        </xul:box>
-        <xul:hbox class="search-go-container">
-          <xul:image class="search-go-button" hidden="true"
-                     anonid="search-go-button"
-                     onclick="handleSearchCommand(event);"
-                     tooltiptext="&searchEndCap.label;"/>
-        </xul:hbox>
-      </xul:textbox>
-    </content>
-    <implementation>
-      <destructor><![CDATA[
-        // For some reason the destructor of the base binding is called
-        // automatically when the window is closed, but now when the node
-        // is removed from the DOM.
-        this.destroy();
-      ]]></destructor>
-
-      <field name="_ignoreFocus">false</field>
-      <field name="_clickClosedPopup">false</field>
-
-      <method name="rebuildPopup">
-        <body><![CDATA[
-          this._textbox.popup.updateHeader();
-        ]]></body>
-      </method>
-
-      <method name="inputChanged">
-        <body><![CDATA[
-          this.updateGoButtonVisibility();
-        ]]></body>
-      </method>
-
-      <method name="updateGoButtonVisibility">
-        <body><![CDATA[
-          document.getAnonymousElementByAttribute(this, "anonid",
-                                                  "search-go-button")
-                  .hidden = !this._textbox.value;
-        ]]></body>
-      </method>
-
-      <method name="openSuggestionsPanel">
-        <parameter name="aShowOnlySettingsIfEmpty"/>
-        <body><![CDATA[
-          if (this._textbox.open)
-            return;
-
-          this._textbox.showHistoryPopup();
-
-          if (this._textbox.value) {
-            // showHistoryPopup does a startSearch("") call, ensure the
-            // controller handles the text from the input box instead:
-            this._textbox.mController.handleText();
-          }
-          else if (aShowOnlySettingsIfEmpty) {
-            this.setAttribute("showonlysettings", "true");
-          }
-        ]]></body>
-      </method>
-    </implementation>
-    <handlers>
-      <handler event="input" action="this.inputChanged();"/>
-      <handler event="drop" action="this.inputChanged();"/>
-
-      <handler event="blur">
-      <![CDATA[
-        // If the input field is still focused then a different window has
-        // received focus, ignore the next focus event.
-        this._ignoreFocus = (document.activeElement == this._textbox.inputField);
-      ]]></handler>
-
-      <handler event="focus">
-      <![CDATA[
-        if (this._ignoreFocus) {
-          // This window has been re-focused, don't show the suggestions
-          this._ignoreFocus = false;
-          return;
-        }
-
-        // Don't open the suggestions if there is no text in the textbox.
-        if (!this._textbox.value)
-          return;
-
-        // Don't open the suggestions if the mouse was used to focus the
-        // textbox, that will be taken care of in the click handler.
-        if (Services.focus.getLastFocusMethod(window) == Services.focus.FLAG_BYMOUSE)
-          return;
-
-        this.openSuggestionsPanel();
-      ]]></handler>
-
-      <handler event="mousedown" phase="capturing">
-      <![CDATA[
-        if (event.originalTarget.getAttribute("anonid") == "searchbar-search-button") {
-          this._clickClosedPopup = this._textbox.popup._isHiding;
-        }
-      ]]></handler>
-
-      <handler event="click" button="0">
-      <![CDATA[
-        // Ignore clicks on the search go button.
-        if (event.originalTarget.getAttribute("anonid") == "search-go-button") {
-          return;
-        }
-
-        let isIconClick = event.originalTarget.getAttribute("anonid") == "searchbar-search-button";
-
-        // Ignore clicks on the icon if they were made to close the popup
-        if (isIconClick && this._clickClosedPopup) {
-          return;
-        }
-
-        // Open the suggestions whenever clicking on the search icon or if there
-        // is text in the textbox.
-        if (isIconClick || this._textbox.value) {
-          this.openSuggestionsPanel(true);
-        }
-      ]]></handler>
-
-    </handlers>
-  </binding>
-
-  <binding id="searchbar-textbox"
+  
+<binding id="searchbar-textbox"
       extends="chrome://global/content/bindings/autocomplete.xml#autocomplete">
     <implementation implements="nsIObserver">
       <constructor><![CDATA[
@@ -879,10 +730,7 @@
             // Don't open search popup if history popup is open
             if (!this.popupOpen) {
               let searchBox = document.getBindingParent(this);
-              if (searchBox.hasAttribute("oneoffui"))
-                searchBox.openSuggestionsPanel();
-              else
-                searchBox.searchButton.open = true;
+              searchBox.searchButton.open = true;
               return false;
             }
             return true;
@@ -1172,4 +1020,5 @@
 
     </handlers>
   </binding>
+
 </bindings>

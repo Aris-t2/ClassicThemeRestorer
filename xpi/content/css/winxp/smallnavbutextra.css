@@ -55,8 +55,17 @@
 		  margin: 0px !important;
 		}
 
+		#main-window[fx43plus="true"] #navigator-toolbox #nav-bar #back-button > .toolbarbutton-icon {
+		  padding: 2px 1px !important;
+		}
+
 		#main-window[fx40plus="true"] #navigator-toolbox #nav-bar #forward-button > .toolbarbutton-icon {
 		  padding: 1px 1px !important;
+		  margin: 0px !important;
+		}
+
+		#main-window[fx43plus="true"] #navigator-toolbox #nav-bar #forward-button > .toolbarbutton-icon {
+		  padding: 2px 1px !important;
 		  margin: 0px !important;
 		}
 	}
