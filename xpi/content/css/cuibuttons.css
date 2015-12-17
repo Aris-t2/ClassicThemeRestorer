@@ -73,7 +73,13 @@
 	  border-top-left-radius: 0px !important;
 	  border-bottom-left-radius: 0px !important;
 	}
-
+	
+	@media (max-width: 1160px) {
+		#main-window[defaultfxtheme="true"] .customizationmode-button{
+		  -moz-padding-start: 0px !important;
+		  -moz-padding-end: 0px !important;
+		}
+	}
 	.customizationmode-button{
 	  min-width: 0 !important;
 	}

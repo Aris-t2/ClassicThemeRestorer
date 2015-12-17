@@ -1797,6 +1797,8 @@ classicthemerestorerjs.ctr = {
 		  case "ctroldsearch":
 			if (branch.getBoolPref("ctroldsearch") && classicthemerestorerjs.ctr.appversion >= 43) classicthemerestorerjs.ctr.loadUnloadCSS("ctroldsearch",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("ctroldsearch",false);
+			  
+			classicthemerestorerjs.ctr.loadUnloadCSS('cui_buttons',true);
 		  break;
 
 		  case "am_nowarning":
@@ -5179,6 +5181,7 @@ classicthemerestorerjs.ctr = {
 				var cuismallnavbut='';
 				var cuiicotextbut='';
 				var cuitabsnontop='';
+				var cuictroldsearch='';
 			  
 				if (this.prefs.getBoolPref("smallnavbut")) {
 				  cuismallnavbut='#ctraddon_cui-smallnavbut-button1 {background:#fbfbfb !important;} #ctraddon_cui-smallnavbut-button2 {background:#dadada !important;}';
@@ -5202,10 +5205,16 @@ classicthemerestorerjs.ctr = {
 					case "false2":	cuitabsnontop='#ctraddon_cui-tabsnontop {background:#bdbdbd !important;}'; break;
 				}
 				
+				if (this.prefs.getBoolPref("ctroldsearch"))
+				  cuictroldsearch='#ctraddon_cui-ctroldsearch {background:#dadada !important;}';
+				else cuictroldsearch='#ctraddon_cui-ctroldsearch {background:#fbfbfb !important;}';
+
+				
 				this.cuiButtonssheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
 					'+cuismallnavbut+'\
 					'+cuiicotextbut+'\
 					'+cuitabsnontop+'\
+					'+cuictroldsearch+'\
 				'), null, null);
 
 				applyNewSheet(this.cuiButtonssheet);
@@ -5291,6 +5300,12 @@ classicthemerestorerjs.ctr = {
 	else if(this.prefs.getCharPref('tabsontop')=='false2') {
 	  this.prefs.setCharPref('tabsontop','unset');
 	} 
+  },
+  
+  cuiPrefOldSearch: function(){
+	if(this.prefs.getBoolPref('ctroldsearch')) {
+	  this.prefs.setBoolPref('ctroldsearch',false);
+	} else this.prefs.setBoolPref('ctroldsearch',true);
   },
   
   openCTRPreferences: function(currentWindow) {

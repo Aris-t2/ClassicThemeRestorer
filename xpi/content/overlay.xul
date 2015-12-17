@@ -47,6 +47,7 @@
 			<button label="&Ctr_cuiicotxt;" id="ctraddon_cui-iconstext-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'iconstxt');"/>
 			<button label="&Ctr_cuitxt;" id="ctraddon_cui-textonly-button" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefChangeString('nav_txt_ico', 'txtonly');"/>
 			<spacer id="ctraddon_cui_spacer"/>
+			<button label="&Ctr_ctroldsearch;" id="ctraddon_cui-ctroldsearch" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefOldSearch();"/>
 			<button label="&Ctr_cuitabsnontop;" id="ctraddon_cui-tabsnontop" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.cuiPrefTabsNontop();"/>
 			<button label="&Ctr_extrabar;" id="ctraddon_cui-addtoolbars" class="customizationmode-button" oncommand="classicthemerestorerjs.ctr.additionalToolbars();"/>
 		 </hbox>

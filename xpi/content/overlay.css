@@ -508,3 +508,9 @@
 	  visibility: collapse; 
 	  display: none;
 	}
+	
+	/**/
+	#main-window:not([fx43plus="true"]) #ctraddon_cui-ctroldsearch {
+	  visibility: collapse; 
+	  display: none;
+	}
