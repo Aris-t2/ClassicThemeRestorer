@@ -6,7 +6,6 @@ pref("extensions.classicthemerestorer.square_edges",false);
 pref("extensions.classicthemerestorer.ctabheight",28);
 pref("extensions.classicthemerestorer.ctabmwidth",100);
 pref("extensions.classicthemerestorer.ctabwidth",210);
-pref("extensions.classicthemerestorer.e10stab_notd",false);
 pref("extensions.classicthemerestorer.emptyfavicon",false);
 pref("extensions.classicthemerestorer.noemptypticon",false);
 pref("extensions.classicthemerestorer.closetab","closetab_default");

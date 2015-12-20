@@ -118,10 +118,7 @@
 	  border-right: 1px solid rgba(0,0,0,.2) !important;
 	}
 	.tabbrowser-tab:not(:-moz-lwtheme)[selected] .tab-content {
-	  /*border-top: 1px solid rgba(0,0,0,.5) !important;
-	  border-left: 1px solid rgba(0,0,0,.4) !important;
-	  border-right: 1px solid rgba(0,0,0,.4) !important;*/
-	  box-shadow: 0px 1px 1px rgba(0,0,0,.6),0px 1px 0px rgba(0,0,0,.3) inset !important;
+	  box-shadow: inset 0px 1px 0px 0px rgba(0,0,0,0.3), 1px 0px 0px 0px rgba(0,0,0,0.3),-1px 0px 0px 0px rgba(0,0,0,0.3) !important;
 	}
 	.tabs-newtab-button[selected]:-moz-lwtheme-darktext ,
 	.tabbrowser-tab[selected] .tab-content:-moz-lwtheme-darktext {
