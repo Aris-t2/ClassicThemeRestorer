@@ -126,11 +126,6 @@
 		the search engine buttons menupopup has to be opened instead of the search panel, because
 		this CTR option 'restores' it.
 	  -->
-      <method name="openSuggestionsPanel">
-        <body><![CDATA[
-		  document.querySelector("#searchbar").searchButton.open = true;
-        ]]></body>
-      </method>
 
       <field name="_stringBundle">document.getAnonymousElementByAttribute(this,
           "anonid", "searchbar-stringbundle");</field>
@@ -404,6 +399,7 @@
         <parameter name="aEvent"/>
         <body><![CDATA[
 			Services.prefs.getBranch('extensions.classicthemerestorer.').setCharPref('aboutprefs','category-search');
+			
 			if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win'
 			  || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt'){
 				classicthemerestorerjs.ctr.openContentPrefsInWin();
@@ -657,6 +653,50 @@
                        (PrivateBrowsingUtils.isWindowPrivate(window) ? '|private' : '');"
                 onset="this.setAttribute('autocompletesearchparam', val); return val;"/>
 
+      <method name="openPopup">
+        <body><![CDATA[
+          var popup = this.popup;
+          if (!popup.mPopupOpen) {
+            // Initially the panel used for the searchbar (PopupSearchAutoComplete
+            // in browser.xul) is hidden to avoid impacting startup / new
+            // window performance. The base binding's openPopup would normally
+            // call the overriden openAutocompletePopup in urlbarBindings.xml's
+            // browser-autocomplete-result-popup binding to unhide the popup,
+            // but since we're overriding openPopup we need to unhide the panel
+            // ourselves.
+            popup.hidden = false;
+
+            // Don't roll up on mouse click in the anchor for the search UI.
+            if (popup.id == "PopupSearchAutoComplete") {
+              popup.setAttribute("norolluponanchor", "true");
+            }
+
+            popup.mInput = this;
+            popup.view = this.controller.QueryInterface(Components.interfaces.nsITreeView);
+            popup.invalidate();
+
+            popup.showCommentColumn = this.showCommentColumn;
+            popup.showImageColumn = this.showImageColumn;
+
+            document.popupNode = null;
+
+            const isRTL = getComputedStyle(this, "").direction == "rtl";
+
+            var outerRect = this.getBoundingClientRect();
+            var innerRect = this.inputField.getBoundingClientRect();
+            if (isRTL) {
+              var width = innerRect.right - outerRect.left;
+            } else {
+              var width = outerRect.right - innerRect.left;
+            }
+            popup.setAttribute("width", width > 100 ? width : 100);
+
+            var yOffset = outerRect.bottom - innerRect.bottom;
+            popup.openPopup(this.inputField, "after_start", 0, yOffset, false, false);
+          }
+        ]]></body>
+      </method>
+
       <method name="observe">
         <parameter name="aSubject"/>
         <parameter name="aTopic"/>
@@ -709,7 +749,6 @@
           let popup = this.popup;
           
 		  let selectedButton = this.selectedButton;
-          let buttons = this.getSelectableButtons(aCycleEngines);
 
           let suggestionsHidden;
           if (!aSkipSuggestions) {
@@ -721,21 +760,18 @@
           // If the last suggestion is selected, DOWN selects the first button.
           if (!aSkipSuggestions && aForward &&
               popup.selectedIndex + 1 == popup.view.rowCount) {
-            this.selectedButton = buttons[0];
             return false;
           }
 
           if (!selectedButton) {
             // If no selection, select the first button or ...
             if (aForward && aSkipSuggestions) {
-              this.selectedButton = buttons[0];
               return true;
             }
 
             if (!aForward && (aCycleEngines || suggestionsHidden ||
                               (!aSkipSuggestions && popup.selectedIndex == -1))) {
               // the last button.
-              this.selectedButton = buttons[buttons.length - 1];
               return true;
             }
           }
@@ -857,7 +893,7 @@
         if (data) {
           event.preventDefault();
           this.value = data;
-          document.getBindingParent(this).openSuggestionsPanel();
+		  document.getBindingParent(this).handleSearchCommand();
         }
       ]]>
       </handler>

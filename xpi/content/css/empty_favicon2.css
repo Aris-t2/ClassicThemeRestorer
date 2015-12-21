@@ -16,7 +16,10 @@
 	display:none !important;
   }
   
-  #tabbrowser-tabs .tab-icon-image:not(src),
+  #tabbrowser-tabs .tab-icon-image:not(src){
+	list-style-image: url("chrome://classic_theme_restorer/content/images/default_favicon.png") !important;
+  }
+
   #alltabs-popup menuitem[image=""] > .menu-iconic-left > .menu-iconic-icon,
   .sidebar-placesTreechildren::-moz-tree-image(leaf),
   toolbaritem .bookmark-item:not(src):not([container]):not([type]),

@@ -6,6 +6,10 @@
 	searchbar {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/ctr_oldsearch.xml#searchbar") !important;
 	}
+	
+	searchbar .searchbar-textbox {
+	  -moz-binding: url("chrome://classic_theme_restorer/content/ctr_oldsearch.xml#searchbar-textbox") !important;
+	}
 
 	.searchbar-engine-button {
 	  -moz-appearance: none !important;
@@ -17,6 +21,10 @@
 	  -moz-box-align: center !important;
 	  background: none !important;
 	  border: none !important;
+	}
+	
+	#navigator-toolbox #nav-bar  .searchbar-engine-button {
+	  min-height: unset !important;	
 	}
 
 	.searchbar-engine-button > .button-box {

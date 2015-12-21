@@ -17,24 +17,32 @@ ctrAboutPrefs = {
 	
 	if(Services.prefs.getBranch('extensions.classicthemerestorer.').getBoolPref('optionsrem')) {
 	
-	  var prefslocation = 'paneGeneral';
-	  
-	  switch (Services.prefs.getBranch('extensions.classicthemerestorer.').getCharPref('aboutprefs')) {
-
-		case "category-general": prefslocation = 'paneGeneral'; break;
-		case "category-search": prefslocation = 'paneSearch'; break;
-		case "category-content": prefslocation = 'paneContent'; break;
-		case "category-application": prefslocation = 'paneApplications'; break;
-		case "category-privacy": prefslocation = 'panePrivacy'; break;
-		case "category-security": prefslocation = 'paneSecurity'; break;
-		case "category-sync": prefslocation = 'paneSync'; break;
-		case "category-advanced": prefslocation = 'paneAdvanced'; break;
-
-	  }
-		
 	  setTimeout(function(){
-		gotoPref(prefslocation);
-	  },50);
+		  
+		var prefslocation = 'paneGeneral';
+	  
+		switch (Services.prefs.getBranch('extensions.classicthemerestorer.').getCharPref('aboutprefs')) {
+
+		  case "category-general": prefslocation = 'paneGeneral'; break;
+		  case "category-search": prefslocation = 'paneSearch'; break;
+		  case "category-content": prefslocation = 'paneContent'; break;
+		  case "category-application": prefslocation = 'paneApplications'; break;
+		  case "category-privacy": prefslocation = 'panePrivacy'; break;
+		  case "category-security": prefslocation = 'paneSecurity'; break;
+		  case "category-sync": prefslocation = 'paneSync'; break;
+		  case "category-advanced": prefslocation = 'paneAdvanced'; break;
+
+		}
+	  
+		var windowsService = Components.classes['@mozilla.org/appshell/window-mediator;1'].getService(Components.interfaces.nsIWindowMediator);
+		var currentWindow = windowsService.getMostRecentWindow('navigator:browser');
+		var browser = currentWindow.getBrowser();
+		
+		if(browser.contentDocument.location.href=='about:preferences') {
+		  gotoPref(prefslocation);
+		}
+		
+	  },80);
   
 	  try{
 	    document.getElementById("advancedPrefs").selectedIndex = Services.prefs.getBranch('extensions.classicthemerestorer.').getIntPref('aboutprefsInd');
@@ -71,26 +79,30 @@ ctrAboutPrefs = {
 	  
 	}
 	
+	/* restore favicon wheel for all categories */
 	setTimeout(function(){
 		var windowsService = Components.classes['@mozilla.org/appshell/window-mediator;1'].getService(Components.interfaces.nsIWindowMediator);
 		var currentWindow = windowsService.getMostRecentWindow('navigator:browser');
 		var browser = currentWindow.getBrowser();
+	
+		if(browser.contentDocument.location.href.indexOf('about:preferences')!=-1) {
 		
-		var ss =  Cc["@mozilla.org/content/style-sheet-service;1"].getService(Ci.nsIStyleSheetService);
-		var uri = Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-		\
-		#TabsToolbar .tabbrowser-tab[label="'+browser.selectedTab.label+'"] .tab-icon-image:not([src]),\
-		#main-window[fx44plus="true"] #TabsToolbar .tabbrowser-tab[label="'+browser.selectedTab.label+'"] .tab-icon-image:not([src]),\
-		#TabsToolbar .tabbrowser-tab[label="'+browser.selectedTab.label+'"]:not([pinned]) .tab-icon-image:not([src]),\
-		#main-window[fx44plus="true"] #TabsToolbar .tabbrowser-tab[label="'+browser.selectedTab.label+'"]:not([pinned]) .tab-icon-image:not([src]) {\
-		  list-style-image: url("chrome://browser/skin/preferences/in-content/favicon.ico") !important;\
-		  display:block !important;\
-		}\
-		\
-		'), null, null);
+			var ss =  Cc["@mozilla.org/content/style-sheet-service;1"].getService(Ci.nsIStyleSheetService);
+			var uri = Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+			\
+			#TabsToolbar .tabbrowser-tab[label="'+browser.selectedTab.label+'"] .tab-icon-image:not([src]),\
+			#main-window[fx44plus="true"] #TabsToolbar .tabbrowser-tab[label="'+browser.selectedTab.label+'"] .tab-icon-image:not([src]),\
+			#TabsToolbar .tabbrowser-tab[label="'+browser.selectedTab.label+'"]:not([pinned]) .tab-icon-image:not([src]),\
+			#main-window[fx44plus="true"] #TabsToolbar .tabbrowser-tab[label="'+browser.selectedTab.label+'"]:not([pinned]) .tab-icon-image:not([src]) {\
+			  list-style-image: url("chrome://browser/skin/preferences/in-content/favicon.ico") !important;\
+			  display:block !important;\
+			}\
+			\
+			'), null, null);
 
-		ss.loadAndRegisterSheet(uri, ss.AGENT_SHEET);
-	},100);
+			ss.loadAndRegisterSheet(uri, ss.AGENT_SHEET);
+		}
+	},200);
 	
   }
 }
