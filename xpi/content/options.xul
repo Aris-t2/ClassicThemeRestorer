@@ -40,6 +40,7 @@
 		<preference id="ctraddon_e10stabs"		name="browser.tabs.remote.autostart"				type="bool"		instantApply="true"/>
 		<preference id="ctraddon_tabsaudioico"	name="browser.tabs.showAudioPlayingIcon"			type="bool"		instantApply="true"/>
 		<preference id="ctraddon_xpinstallui"	name="xpinstall.customConfirmationUI"				type="bool"		instantApply="true" inverted="true"/>
+		<preference id="ctraddon_urlresults"	name="browser.urlbar.maxRichResults"				type="int"		instantApply="true"/>
 
 		<preference id="ctraddon_tabs"			name="extensions.classicthemerestorer.tabs" 		type="string"	instantApply="true"/>
 		<preference id="ctraddon_tabsontop"		name="extensions.classicthemerestorer.tabsontop" 	type="string"	instantApply="true"/>
@@ -206,6 +207,8 @@
 		<preference id="ctraddon_hidezoomres"	name="extensions.classicthemerestorer.hidezoomres"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbutpanelm"	name="extensions.classicthemerestorer.bmbutpanelm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbunsortbm"	name="extensions.classicthemerestorer.bmbunsortbm"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_bmbviewbmtb"	name="extensions.classicthemerestorer.bmbviewbmtb"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_bmbnounsort"	name="extensions.classicthemerestorer.bmbnounsort"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbutnotext"	name="extensions.classicthemerestorer.bmbutnotext"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_skipprintpr"	name="extensions.classicthemerestorer.skipprintpr"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_tbconmenu"		name="extensions.classicthemerestorer.tbconmenu"	 type="bool"	instantApply="true"/>
@@ -833,6 +836,8 @@
 		<checkbox label="&Ctr_menupopupscr;"	preference="ctraddon_menupopupscr"/>
 		<checkbox label="&Ctr_bmbutpanelm;"		preference="ctraddon_bmbutpanelm" id="ctraddon_pw_bmbutpanelm"/>
 		<checkbox label="&Ctr_bmbunsortbm;"		preference="ctraddon_bmbunsortbm" id="ctraddon_pw_bmbunsortbm"/>
+		<checkbox label="&Ctr_bmbviewbmtb;"		preference="ctraddon_bmbviewbmtb" id="ctraddon_pw_bmbviewbmtb"/>
+		<checkbox label="&Ctr_bmbnounsort;"		preference="ctraddon_bmbnounsort" id="ctraddon_pw_bmbnounsort"/>
 		<checkbox label="&Ctr_skipprintpr;"		preference="ctraddon_skipprintpr" id="ctraddon_pw_skipprintpr" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 
 		<description class="ctraddon_font1">&Ctr_closegeneral;</description>
@@ -972,7 +977,7 @@
 		<checkbox label="&Ctr_extraurlkeycb;&openCmd.commandkey; &amp; Alt+&urlbar.accesskey; [Windows/Linux])"	preference="ctraddon_extraurlkeycb" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<checkbox label="&Ctr_locsearchbw10;" preference="ctraddon_locsearchbw10"  id="ctraddon_pw_locsearchbw10"/>
 		<checkbox label="&Ctr_lbsbsize;" preference="ctraddon_lbsbsize" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwLocationSearchbarSize(true);} else {classicthemerestorerjso.ctr.ctrpwLocationSearchbarSize(false);}"/>
-		<label value="&Ctr_urlbar;" id="ctraddon_lbsbsizelabel1" class="ctraddonsuboption ctraddon_font1"/>
+		<description id="ctraddon_lbsbsizelabel1" class="ctraddonsuboption ctraddon_font1">&Ctr_urlbar;</description>
 		<hbox class="ctraddonsuboption"  id="ctraddon_pw_lbsbsize_lb" align="center">
 		  <label value="&Ctr_tabminwidth; "/>
 		  <textbox size="4" maxlength="4" preference="ctraddon_lbsize_minw" type="number" min="0" max="4000"/>
@@ -980,13 +985,18 @@
 		  <textbox size="4" maxlength="4" preference="ctraddon_lbsize_maxw" type="number" min="0" max="4000"/>
 		  <label value="px"/>
 		</hbox>
-		<label value="&Ctr_searchbar;" id="ctraddon_lbsbsizelabel2" class="ctraddonsuboption ctraddon_font1"/>
+		<description id="ctraddon_lbsbsizelabel2" class="ctraddonsuboption ctraddon_font1">&Ctr_searchbar;</description>
 		<hbox class="ctraddonsuboption"  id="ctraddon_pw_lbsbsize_sb" align="center">
 		  <label value="&Ctr_tabminwidth; "/>
 		  <textbox size="4" maxlength="4" preference="ctraddon_sbsize_minw" type="number" min="0" max="4000"/>
 		  <label value="px  -  &Ctr_tabmaxwidth; "/>
 		  <textbox size="4" maxlength="4" preference="ctraddon_sbsize_maxw" type="number" min="0" max="4000"/>
 		  <label value="px"/>
+		</hbox>
+		<description id="ctraddon_lbsugres" class="ctraddon_font1">&Ctr_lbsugres;</description>
+		<hbox class="ctraddonsuboption" id="ctraddon_pw_lbsugresbox" align="center">
+		  <textbox size="4" maxlength="4" preference="ctraddon_urlresults" type="number" min="0"/>
+		  <label value=" 12 &Ctr_tabwidthdef;"/>
 		</hbox>
 
 	  </groupbox>

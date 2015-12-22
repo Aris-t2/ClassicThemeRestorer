@@ -425,7 +425,9 @@
 	  -moz-image-region: auto;
 	}
 	
-	/* hide unsorted bookmarks menu */
+	/* hide bookmark menus items */
+	#ctraddon_BMB_viewBookmarksToolbar,
+	#ctraddon_BMB_viewBookmarksToolbar + menuseparator,
 	#ctraddon_BMB_unsortedBookmarks_m {
 	  visibility: collapse;
 	}

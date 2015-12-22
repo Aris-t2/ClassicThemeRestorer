@@ -770,9 +770,14 @@
                    oncommand="BookmarksEventHandler.onCommand(event, this.parentNode._placesView);"
                    onclick="BookmarksEventHandler.onClick(event, this.parentNode._placesView);"
                    onpopupshowing="BookmarkingUI.onPopupShowing(event);
-                                   if (!this.parentNode._placesView)
-                                     new PlacesMenu(event, 'place:folder=BOOKMARKS_MENU');"
+                                   if (!this.parentNode._placesView) {new PlacesMenu(event, 'place:folder=BOOKMARKS_MENU');} classicthemerestorerjs.ctr.togglePersonalBarItem();"
                    tooltip="bhTooltip" popupsinherittooltip="true">
+          <menuitem id="ctraddon_BMB_viewBookmarksToolbar"
+                    toolbarId="PersonalToolbar"
+                    type="checkbox"
+                    oncommand="onViewToolbarCommand(event)"
+                    label="&viewBookmarksToolbar.label;"/>
+          <menuseparator/>
           <menuitem id="BMB_bookmarksShowAll"
 					class="menuitem-iconic"
                     label="&showAllBookmarks2.label;"

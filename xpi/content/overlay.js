@@ -1859,6 +1859,16 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("bmbunsortbm")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbunsortbm",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbunsortbm",false);
 		  break;
+		  
+		  case "bmbviewbmtb":
+			if (branch.getBoolPref("bmbviewbmtb")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbviewbmtb",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbviewbmtb",false);
+		  break;
+		  
+		  case "bmbnounsort":
+			if (branch.getBoolPref("bmbnounsort")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbnounsort",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbnounsort",false);
+		  break;
 
 		  case "bmbutnotext":
 			if (branch.getBoolPref("bmbutnotext")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbutnotext",true);
@@ -2265,6 +2275,23 @@ classicthemerestorerjs.ctr = {
 	
 	ctrSettingsListener_forTabSettings.register(true);
 	
+	// adjust richlist menuitem results in suggestions popup
+	var ctrSettingsListener_forUrlbarSettings = new PrefListener(
+	  "browser.urlbar.",
+	  function(branch, name) {
+		switch (name) {
+
+		  case "maxRichResults":
+			if (branch.getIntPref("maxRichResults")>12) classicthemerestorerjs.ctr.loadUnloadCSS("urlresults",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("urlresults",false);
+
+		  break;
+		}
+	  }
+	);
+	
+	ctrSettingsListener_forUrlbarSettings.register(true);
+	
 	/*
 	// SettingSanity add-on uses 'defaultDrawInTitlebar' pref, that breaks the default
 	// 'drawInTitlebar' provided by Firefox and required by CTR. Basically it does not
@@ -2323,6 +2350,7 @@ classicthemerestorerjs.ctr = {
 		ctrSettingsListener.unregister();
 		ctrSettingsListener_forCTB.unregister();
 		ctrSettingsListener_forTabSettings.unregister();
+		ctrSettingsListener_forUrlbarSettings.unregister();
 		ctrSettingsListener_forDevtheme.unregister();
 		//ctrSettingsListener_forDevtheme2.unregister();
 		//ctrSettingsListener_forSetSan.unregister();
@@ -3530,6 +3558,8 @@ classicthemerestorerjs.ctr = {
 		case "addonversion": 		manageCSS("addonversion.css");			break;
 		case "bmbutpanelm": 		manageCSS("bmbut_pmenu.css");			break;
 		case "bmbunsortbm": 		manageCSS("bmbut_unsortedbookm.css");	break;
+		case "bmbviewbmtb": 		manageCSS("bmbut_bmbviewbmtb.css");		break;
+		case "bmbnounsort": 		manageCSS("bmbut_bmbnounsort.css");		break;
 		case "bmbutnotext": 		manageCSS("bmbut_no_label.css");		break;
 		case "tbconmenu": 			manageCSS("tbconmenu.css");				break;
 		case "noresizerxp": 		manageCSS("no_resizer_xp.css");			break;
@@ -3598,6 +3628,7 @@ classicthemerestorerjs.ctr = {
 		case "thirdpartythemes": 	manageCSS("thirdpartythemes.css");		break;
 		
 		case "hidetabaudioico": 	manageCSS("hidetabaudioico.css");		break;
+		case "urlresults":			manageCSS("urlbar_results.css");		break;
 		
 		case "aerocolors":
 			
@@ -5449,8 +5480,20 @@ classicthemerestorerjs.ctr = {
 		  },100);
 		}
 	} catch(e){}
-  }
+  },
   
+  togglePersonalBarItem: function() {
+
+  	var PersonalBar = document.getElementById("PersonalToolbar");
+    if(!PersonalBar.collapsed) {
+	  try{ document.getElementById("ctraddon_BMB_viewBookmarksToolbar").setAttribute('checked','true');} catch(e){}
+	}
+	else {
+	  try{ document.getElementById("ctraddon_BMB_viewBookmarksToolbar").removeAttribute('checked');} catch(e){}
+	}
+
+  }
+
 };
 
 classicthemerestorerjs.ctr.init();
