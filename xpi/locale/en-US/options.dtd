@@ -74,14 +74,14 @@
 <!ENTITY Ctr_hctpinfotab	"Some tab variations are not compatible to 'Hide Caption Titlebar Plus' add-on.">
 <!ENTITY Ctr_hctpinfoab		"Button on titlebar is not compatible to 'Hide Caption Titlebar Plus' add-on.">
 
-<!ENTITY Ctr_appbutton		"Application button">
+<!ENTITY Ctr_appbutton		"&brandShortName; button">
 <!ENTITY Ctr_appbutton0		"Button disabled">
 <!ENTITY Ctr_appbutton1		"Button on toolbar">
 <!ENTITY Ctr_appbutton1wt	"Button on toolbar (text only)">
 <!ENTITY Ctr_appbutton2		"Button on [&brandShortName;] titlebar">
 <!ENTITY Ctr_appbutton2h	"Button on [&brandShortName;] titlebar (hidden)">
 <!ENTITY Ctr_appbutton2io	"Button on [&brandShortName;] titlebar (icon only)">
-<!ENTITY Ctr_paneluibtweak	"Display main panel menu button as appbutton...">
+<!ENTITY Ctr_paneluibtweak	"Display menu button as &brandShortName; button...">
 <!ENTITY Ctr_paneluibtweak2	"...when on tabs toolbar">
 <!ENTITY Ctr_appbuttonc_o	"Orange button color (default)">
 <!ENTITY Ctr_appbuttonc_a	"Blue button color (Aurora)">
@@ -95,13 +95,13 @@
 <!ENTITY Ctr_appbuttonc_wh	"White button color">
 <!ENTITY Ctr_appbuttonc_cu	"Custom button color">
 <!ENTITY Ctr_appbuttonI1	"Restart recommended">
-<!ENTITY Ctr_appbuttonI1e	"Not visible on Windows OS titlebar, only on &brandShortName; titlebar!">
-<!ENTITY Ctr_appbuttonI2	"Button colors are only visible on titlebar and tabs toolbar!">
+<!ENTITY Ctr_appbuttonI1e	"Only visible on &brandShortName; titlebar, not Windows OS titlebar!">
+<!ENTITY Ctr_appbuttonI2	"Button colors are only visible, if button is on titlebar or tabs toolbar!">
 <!ENTITY Ctr_appbutmhi		"Higher position (if on tabs toolbar)">
 <!ENTITY Ctr_appbautocol	"Automatically set browser channel color (default/Aurora/Nightly)">
 <!ENTITY Ctr_appbutbdl		"Hide borders and background colors">
-<!ENTITY Ctr_dblclclosefx	"Double click closes current window">
-<!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
+<!ENTITY Ctr_dblclclosefx	"Double click on button to close current window">
+<!ENTITY Ctr_appbclmmenus	"Clickable menus inside menu popup (New Tab, Print...)">
 <!ENTITY Ctr_appbutonclab	"Title">
 <!ENTITY Ctr_appbutonclab2	"Add title or leave empty">
 
@@ -114,7 +114,7 @@
 <!ENTITY Ctr_hide_bf_popup	"Hide buttons history popup menu on mouse press">
 <!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
 <!ENTITY Ctr_noconicons		"Page context menu: replace icons with labels (back, forward...)">
-<!ENTITY Ctr_prefpage		"Options page">
+<!ENTITY Ctr_prefpage		"Options page / window">
 <!ENTITY Ctr_altoptionsd	"Default appearance">
 <!ENTITY Ctr_altoptionsp	"Alternative appearance">
 <!ENTITY Ctr_altoptionsw	"Open options page in a window">
@@ -163,11 +163,12 @@
 <!ENTITY Ctr_am_compact2	"Compact view +">
 <!ENTITY Ctr_addonversion	"Add-on lists: show add-on version">
 <!ENTITY Ctr_xpinstallui	"Old add-on install window (about:config preference)">
-<!ENTITY Ctr_bmbutpanelm	"Bookmarks menu button: panel menu popup appearance">
-<!ENTITY Ctr_bmbunsortbm	"Bookmarks menu button: 'unsorted bookmarks' submenu">
-<!ENTITY Ctr_bmbviewbmtb	"Bookmarks menu button: show 'View Toolbar'">
-<!ENTITY Ctr_bmbnounsort	"Bookmarks menu button: hide 'unsorted bookmarks'">
-<!ENTITY Ctr_bmbutnotext	"Bookmarks menu button: hide label on bookmarks bar">
+<!ENTITY Ctr_bmbutton		"Bookmarks menu button">
+<!ENTITY Ctr_bmbutpanelm	"Popup: panel menu appearance">
+<!ENTITY Ctr_bmbunsortbm	"Popup: 'unsorted bookmarks' submenu">
+<!ENTITY Ctr_bmbviewbmtb	"Popup: show 'View Toolbar'">
+<!ENTITY Ctr_bmbnounsort	"Popup: hide 'unsorted bookmarks'">
+<!ENTITY Ctr_bmbutnotext	"Hide label on bookmarks bar">
 <!ENTITY Ctr_skipprintpr	"Print button: skip print preview">
 <!ENTITY Ctr_tbconmenu		"Toolbar context menu: hide 'move to menu', 'remove from toolbar', 'reload/bookmark all tabs' and 'undo close tab'">
 <!ENTITY Ctr_noresizerxp	"Hide Resizer (Windows XP)">
@@ -235,6 +236,7 @@
 <!ENTITY Ctr_icopageinfo	"Clicking on icon opens 'page info' window">
 <!ENTITY Ctr_lbsbsize		"Custom width for location bar and search bar">
 <!ENTITY Ctr_searchbar		"Search bar">
+<!ENTITY Ctr_lbsugresi		"Remove scrollbar from suggestions popup">
 <!ENTITY Ctr_lbsugres		"Number of results in suggestions popup (about:config preference)">
 
 <!ENTITY Ctr_menubar_items	"Menu items position">

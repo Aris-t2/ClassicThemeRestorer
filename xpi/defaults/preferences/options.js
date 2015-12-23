@@ -63,7 +63,7 @@ pref("extensions.classicthemerestorer.am_compact2",true);
 pref("extensions.classicthemerestorer.alt_addonsp",false);
 pref("extensions.classicthemerestorer.bmbutpanelm",false);
 pref("extensions.classicthemerestorer.bmbunsortbm",false);
-pref("extensions.classicthemerestorer.bmbviewbmtb",true);
+pref("extensions.classicthemerestorer.bmbviewbmtb",false);
 pref("extensions.classicthemerestorer.bmbnounsort",false);
 pref("extensions.classicthemerestorer.bmbutnotext",false);
 pref("extensions.classicthemerestorer.skipprintpr",false);
@@ -72,6 +72,7 @@ pref("extensions.classicthemerestorer.noresizerxp",false);
 pref("extensions.classicthemerestorer.pmhidelabels",false);
 pref("extensions.classicthemerestorer.menupopupscr",false);
 pref("extensions.classicthemerestorer.hideprivmask",false);
+pref("extensions.classicthemerestorer.urlresults",false);
 
 pref("extensions.classicthemerestorer.tabmokcolor",false);
 pref("extensions.classicthemerestorer.tabmokcolor2",false);

@@ -831,6 +831,11 @@ classicthemerestorerjs.ctr = {
 		    else
 			  classicthemerestorerjs.ctr.loadUnloadCSS("lbsbsize",false);
 		  break;
+		  
+		  case "urlresults":
+			if (branch.getBoolPref("urlresults")) classicthemerestorerjs.ctr.loadUnloadCSS("urlresults",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("urlresults",false);
+		  break;
 
 		  case "backforward":
 			if (branch.getBoolPref("backforward")) {
@@ -2282,7 +2287,7 @@ classicthemerestorerjs.ctr = {
 		switch (name) {
 
 		  case "maxRichResults":
-			if (branch.getIntPref("maxRichResults")>12) classicthemerestorerjs.ctr.loadUnloadCSS("urlresults",true);
+			if (classicthemerestorerjs.ctr.prefs.getBoolPref("urlresults")) classicthemerestorerjs.ctr.loadUnloadCSS("urlresults",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("urlresults",false);
 
 		  break;
@@ -2291,36 +2296,6 @@ classicthemerestorerjs.ctr = {
 	);
 	
 	ctrSettingsListener_forUrlbarSettings.register(true);
-	
-	/*
-	// SettingSanity add-on uses 'defaultDrawInTitlebar' pref, that breaks the default
-	// 'drawInTitlebar' provided by Firefox and required by CTR. Basically it does not
-	// switch default pref back when it should. This fixes the problem.
-	// fixed in latest SettingSanity version?
-	var ctrSettingsListener_forSetSan = new PrefListener(
-	  "browser.tabs.",
-	  function(branch, name) {
-		switch (name) {
-		  case "drawInTitlebar":
-			if (branch.getBoolPref("drawInTitlebar")) {
-			  try {
-				if(branch.getBoolPref("defaultDrawInTitlebar")==false)
-				  branch.setBoolPref('defaultDrawInTitlebar',true);
-			  } catch(e) {}
-			}
-			else {
-			  try {
-				if(branch.getBoolPref("defaultDrawInTitlebar"))
-				  branch.setBoolPref('defaultDrawInTitlebar',false);
-			  } catch(e) {}
-			}
-		  break;
-		}
-	  }
-	);
-	
-	ctrSettingsListener_forSetSan.register(true);
-	*/
 
 	// MacOSX requires extra checks to not load CTRs tab styles for (complete) themes by accident
 	if (classicthemerestorerjs.ctr.osstring=="Darwin") {
@@ -2353,7 +2328,6 @@ classicthemerestorerjs.ctr = {
 		ctrSettingsListener_forUrlbarSettings.unregister();
 		ctrSettingsListener_forDevtheme.unregister();
 		//ctrSettingsListener_forDevtheme2.unregister();
-		//ctrSettingsListener_forSetSan.unregister();
 		
 		window.removeEventListener("unload", unregisterCTRListeners, false);
 		
@@ -3996,6 +3970,34 @@ classicthemerestorerjs.ctr = {
 						  background-image: linear-gradient(rgb(144,20,207), rgb(95,0,158) 95%) !important;\
 						}\
 					}\
+					@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {\
+						#ctraddon_pw_appbuttonname {\
+						  -moz-appearance: none !important;\
+						  background-image: linear-gradient('+this.prefs.getCharPref('cappbutc1')+', '+this.prefs.getCharPref('cappbutc2')+' 95%) !important;\
+						  box-shadow: 0 1px 0 rgba(255,255,255,.25) inset,\
+									  0 0 0 1px rgba(255,255,255,.25) inset !important;\
+						  background-clip: padding-box !important;\
+						  border-radius: 0 0 4px 4px;\
+						  height:22px !important;\
+						  border-top: 2px solid !important;\
+						  border-right: 2px solid !important;\
+						  border-left: 2px solid !important;\
+						  border-bottom: 2px solid !important;\
+						  -moz-border-top-colors: rgba(255,255,255,.70) hsla(214,89%,21%,.5) !important;\
+						  -moz-border-right-colors: rgba(255,255,255,.60) hsla(214,89%,21%,.5) !important;\
+						  -moz-border-left-colors: rgba(255,255,255,.60) hsla(214,89%,21%,.5) !important;\
+						  -moz-border-bottom-colors: rgba(255,255,255,.70) hsla(214,89%,21%,.5) !important;\
+						}\
+						#ctraddon_pw_appbuttonname label {\
+						  padding: 2px 12px !important;\
+						  background: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/appmenu-dropmarker.png), 0, 16, 16, 0) no-repeat right !important;\
+						  -moz-margin-end:10px !important;\
+						  color: white !important;\
+						  text-shadow: 0 0 1px rgba(0,0,0,.7),\
+									   0 1px 1.5px rgba(0,0,0,.5) !important;\
+						  font-weight: bold !important;\
+						}\
+					}\
 				'), null, null);
 			
 				applyNewSheet(this.appbutton_color);
@@ -5355,7 +5357,7 @@ classicthemerestorerjs.ctr = {
 
   // open prefwindow and specific category
   additionalToolbars: function(){
-	Services.prefs.getBranch("extensions.classicthemerestorer.").setIntPref('pref_actindx',10);
+	Services.prefs.getBranch("extensions.classicthemerestorer.").setIntPref('pref_actindx',11);
 	
 	setTimeout(function(){
 	  classicthemerestorerjs.ctr.openCTRPreferences();
