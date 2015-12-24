@@ -74,14 +74,14 @@
 <!ENTITY Ctr_hctpinfotab	"Mõned kaardi variatsioonid ei ühildu lisaga 'Hide Caption Titlebar Plus'.">
 <!ENTITY Ctr_hctpinfoab		"Nupp tiitliribal ei ühildu lisaga 'Hide Caption Titlebar Plus'.">
 
-<!ENTITY Ctr_appbutton		"Rakenduse menüünupp">
+<!ENTITY Ctr_appbutton		"&brandShortName;i nupp">
 <!ENTITY Ctr_appbutton0		"Nupp keelatud">
 <!ENTITY Ctr_appbutton1		"Nupp tööriistaribal">
 <!ENTITY Ctr_appbutton1wt	"Nupp tööriistaribal (ainult tekst)">
 <!ENTITY Ctr_appbutton2		"Nupp [&brandShortName;]i tiitliribal">
 <!ENTITY Ctr_appbutton2h	"Nupp [&brandShortName;]i tiitliribal (peidetud)">
 <!ENTITY Ctr_appbutton2io	"Nupp [&brandShortName;]i tiitliribal (ainult ikoon)">
-<!ENTITY Ctr_paneluibtweak	"Kasuta peamise paneelimenüü nupu jaoks rakenduse menüünupu välimust...">
+<!ENTITY Ctr_paneluibtweak	"Kasuta menüünupu jaoks &brandShortName;i nupu välimust...">
 <!ENTITY Ctr_paneluibtweak2	"...kui see asub kaartide ribal">
 <!ENTITY Ctr_appbuttonc_o	"Oranži värvi nupp (vaikimisi)">
 <!ENTITY Ctr_appbuttonc_a	"Sinist värvi nupp (Aurora)">
@@ -95,14 +95,14 @@
 <!ENTITY Ctr_appbuttonc_wh	"Valget värvi nupp">
 <!ENTITY Ctr_appbuttonc_cu	"Kohandatud värvi nupp">
 <!ENTITY Ctr_appbuttonI1	"Taaskäivitamine soovitatav">
-<!ENTITY Ctr_appbuttonI1e	"Pole nähtav Windows OS-i tiitliribal, ainult &brandShortName;i tiitliribal!">
-<!ENTITY Ctr_appbuttonI2	"Nupuvärvid on nähtavad ainult tiitliribal ja kaartide ribal!">
+<!ENTITY Ctr_appbuttonI1e	"Nähtav ainult &brandShortName;i tiitliribal, mitte Windows OS-i tiitliribal!">
+<!ENTITY Ctr_appbuttonI2	"Nupuvärvid on nähtavad ainult siis, kui see asub tiitliribal või kaartide ribal!">
 <!ENTITY Ctr_appbutmhi		"Kõrgem asukoht (kui asub kaartide ribal)">
 <!ENTITY Ctr_appbautocol	"Määra brauseri uuendustekanali värvid (vaikimisi/Aurora/Nightly) automaatselt">
 <!ENTITY Ctr_appbutbdl		"Peida piirjooned ja taustavärvid">
-<!ENTITY Ctr_dblclclosefx	"Topeltklõps sulgeb praeguse akna">
-<!ENTITY Ctr_appbclmmenus	"Klõpsatavad menüünupu-sisesed menüüd (Uus kaart, Prindi...)">
-<!ENTITY Ctr_appbutonclab	"Rakenduse menüünupu nimi">
+<!ENTITY Ctr_dblclclosefx	"Nupul topeltklõpsamine sulgeb praeguse akna">
+<!ENTITY Ctr_appbclmmenus	"Klõpsatavad nupusisesed peamenüüd (Uus kaart, Prindi...)">
+<!ENTITY Ctr_appbutonclab	"&brandShortName;i nupu pealkiri">
 <!ENTITY Ctr_appbutonclab2	"Lisa nimi või jäta tühjaks">
 
 <!ENTITY Ctr_ui				"Kasutajaliides: üldised sätted">
@@ -114,7 +114,7 @@
 <!ENTITY Ctr_hide_bf_popup	"Hiirega klõpsates peida nupu ajaloo hüpikmenüü">
 <!ENTITY Ctr_bf_space		"Vähenda nuppudevahelist tühimikku (kui võimalik)">
 <!ENTITY Ctr_noconicons		"Lehe kontekstimenüü: asenda ikoonid tekstiga (tagasi, edasi...)">
-<!ENTITY Ctr_prefpage		"Sätete leht">
+<!ENTITY Ctr_prefpage		"Sätete leht / aken">
 <!ENTITY Ctr_altoptionsd	"Vaikimisi välimus">
 <!ENTITY Ctr_altoptionsp	"Alternatiivne välimus">
 <!ENTITY Ctr_altoptionsw	"Ava sätete leht aknas">
@@ -164,10 +164,10 @@
 <!ENTITY Ctr_addonversion	"Laienduste loend: näita lisade versiooni">
 <!ENTITY Ctr_xpinstallui	"Vana lisade paigaldamise aken (about:config eelistus)">
 <!ENTITY Ctr_bmbutton		"Järjehoidjate menüü nupp">
-<!ENTITY Ctr_bmbutpanelm	"Popup: paneelimenüü välimus">
-<!ENTITY Ctr_bmbunsortbm	"Popup: alammenüü 'Sortimata järjehoidjad'">
-<!ENTITY Ctr_bmbviewbmtb	"Popup: show 'View Toolbar'">
-<!ENTITY Ctr_bmbnounsort	"Popup: hide 'unsorted bookmarks'">
+<!ENTITY Ctr_bmbutpanelm	"Menüühüpik: paneelimenüü välimus">
+<!ENTITY Ctr_bmbunsortbm	"Menüühüpik: alammenüü 'Sortimata järjehoidjad'">
+<!ENTITY Ctr_bmbviewbmtb	"Menüühüpik: näita kirjet 'Kuva järjehoidjariba'">
+<!ENTITY Ctr_bmbnounsort	"Menüühüpik: peida kirje 'sortimata järjehoidjad'">
 <!ENTITY Ctr_bmbutnotext	"Peida järjehoidjate ribal sildid">
 <!ENTITY Ctr_skipprintpr	"Printimise nupp: jäta vahele printimise eelvaade">
 <!ENTITY Ctr_tbconmenu		"Tööriistariba kontekstimenüü: peida kirjed 'liiguta menüüsse', 'eemalda tööriistamenüült', 'laadi uuesti/lisa järjehoidjatesse kõik kaardid' ja 'võta kaardi sulgemine tagasi'">
@@ -236,8 +236,8 @@
 <!ENTITY Ctr_icopageinfo	"Ikoonil klõpsamine avab akna 'veebilehe teave'">
 <!ENTITY Ctr_lbsbsize		"Aadressiriba ja otsinguriba kohandatud laius">
 <!ENTITY Ctr_searchbar		"Otsinguriba">
-<!ENTITY Ctr_lbsugresi		"Remove scrollbar from suggestions popup">
-<!ENTITY Ctr_lbsugres		"Number of results in suggestions popup (about:config preference)">
+<!ENTITY Ctr_lbsugresi		"Eemalda soovituste hüpikult kerimisriba">
+<!ENTITY Ctr_lbsugres		"Soovituste hüpikul kuvatavate tulemuste arv (about:config eelistus)">
 
 <!ENTITY Ctr_menubar_items	"Menüükirjete asukoht">
 <!ENTITY Ctr_extrabar		"Lisa-tööriistaribad">
