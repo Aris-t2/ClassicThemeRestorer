@@ -61,6 +61,7 @@
 
 		<preference id="ctraddon_appbutton"		name="extensions.classicthemerestorer.appbutton" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_appbuttonc"	name="extensions.classicthemerestorer.appbuttonc" 	type="string"	instantApply="true"/>
+		<preference id="ctraddon_appbuttonct"	name="extensions.classicthemerestorer.appbuttonct" 	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_altabico"		name="extensions.classicthemerestorer.altabico" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_appbutmhi"		name="extensions.classicthemerestorer.appbutmhi" 	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_appbutbdl"		name="extensions.classicthemerestorer.appbutbdl" 	type="bool"		instantApply="true"/>
@@ -792,6 +793,7 @@
 			<radio label="" value="altabico_grey_nd" 	id="ctraddon_altabico_grey_nd"/>
 			<radio label="" value="altabico_dark_nd" 	id="ctraddon_altabico_dark_nd"/>
 		</radiogroup> 
+		<checkbox label="&Ctr_appbuttonct;"	 preference="ctraddon_appbuttonct" id="ctraddon_pw_appbuttonct"/>
 		<checkbox label="&Ctr_appbutmhi;"	 preference="ctraddon_appbutmhi" id="ctraddon_abhigher" class="ctraddon_windowsonly"/>
 		<checkbox label="&Ctr_appbautocol;"  preference="ctraddon_appbautocol" id="ctraddon_pw_appbautocol"/>
 		<checkbox label="&Ctr_appbutbdl;"	 preference="ctraddon_appbutbdl" id="ctraddon_appbutbdl"/>

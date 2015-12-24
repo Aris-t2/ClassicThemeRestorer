@@ -90,12 +90,12 @@
 		<textbox id="ctraddon_extraurlbar_tb" flex="1" type="autocomplete"
 				  completeselectedindex="true"
 				  placeholder="&urlbar.placeholder2;"
-				  autocompletesearch="urlinline history"
+				  autocompletesearch="unifiedcomplete"
 				  enablehistory="true"
 				  class="uri-element"
-				  onkeydown="if(event.keyCode == '13') {gBrowser.selectedTab=gBrowser.addTab(this.value); document.getElementById('ctraddon_urlextrabar').setAttribute('collapsed',true);} else if(event.keyCode == '27') {document.getElementById('ctraddon_urlextrabar').setAttribute('collapsed',true);}"/>
+				  onkeydown="if(event.keyCode == '13') {classicthemerestorerjs.ctr.openUrlFromUrlExtraBar(); } else if(event.keyCode == '27') {document.getElementById('ctraddon_urlextrabar').setAttribute('collapsed',true);}"/>
 		  <button id="ctr_extraurlbar_button" removable="false" class="toolbarbutton-1"
-					oncommand="gBrowser.selectedTab=gBrowser.addTab(document.getElementById('ctraddon_extraurlbar_tb').value); document.getElementById('ctraddon_urlextrabar').setAttribute('collapsed',true);"/>
+					oncommand="classicthemerestorerjs.ctr.openUrlFromUrlExtraBar();"/>
 		  <button id="ctraddon_extraurlbar-close" removable="false" class="ctr_extraurlbar_button-close close-icon"
 			    oncommand="document.getElementById('ctraddon_urlextrabar').setAttribute('collapsed',true);"/>
 	  </hbox>

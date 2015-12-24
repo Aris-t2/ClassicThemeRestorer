@@ -74,7 +74,7 @@
 <!ENTITY Ctr_hctpinfotab	"Niektóre modyfikacje karty nie są kompatybilne z dodatkiem 'Hide Caption Titlebar Plus'.">
 <!ENTITY Ctr_hctpinfoab		"Przycisk na pasku tytułu nie jest kompatybilny z dodatkiem 'Hide Caption Titlebar Plus'.">
 
-<!ENTITY Ctr_appbutton		"Przycisk aplikacji">
+<!ENTITY Ctr_appbutton		"Przycisk &brandShortName;">
 <!ENTITY Ctr_appbutton0		"Przycisk wyłączony">
 <!ENTITY Ctr_appbutton1		"Przycisk na pasku narzędzi">
 <!ENTITY Ctr_appbutton1wt	"Przycisk na pasku narzędzi (tylko tekst)">
@@ -82,7 +82,7 @@
 <!ENTITY Ctr_appbutton2h	"Przycisk na pasku narzędzi [&brandShortName;] (ukryty)">
 <!ENTITY Ctr_appbutton2io	"Przycisk na pasku narzędzi [&brandShortName;] (tylko ikona)">
 <!ENTITY Ctr_paneluibtweak	"Wyświetlaj przycisk menu głównego panelu jako...">
-<!ENTITY Ctr_paneluibtweak2	"... przycisk aplikacji, gdy na pasku kart">
+<!ENTITY Ctr_paneluibtweak2	"... przycisk &brandShortName;, gdy na pasku kart">
 <!ENTITY Ctr_appbuttonc_o	"Pomarańczowy kolor przycisku (domyślny)">
 <!ENTITY Ctr_appbuttonc_a	"Błękitny kolor przycisku (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Czarny kolor przycisku (Nightly)">
@@ -94,14 +94,15 @@
 <!ENTITY Ctr_appbuttonc_pu	"Fioletowy kolor przycisku">
 <!ENTITY Ctr_appbuttonc_wh	"Biały kolor przycisku">
 <!ENTITY Ctr_appbuttonc_cu	"Niestandardowy kolor przycisku">
+<!ENTITY Ctr_appbuttonct	"Custom button color for button on toolbar">
 <!ENTITY Ctr_appbuttonI1	"Zalecany restart">
-<!ENTITY Ctr_appbuttonI1e	"Niewidoczny na systemowym pasku tytułu, tylko na pasku tytułu &brandShortName;!">
-<!ENTITY Ctr_appbuttonI2	"Kolory przycisku są tylko widoczne na pasku tytułu oraz pasku kart!">
+<!ENTITY Ctr_appbuttonI1e	"Tylko widoczny na pasku tytułu &brandShortName;, nie na systemowym pasku tytułu!">
+<!ENTITY Ctr_appbuttonI2	"Kolory przycisku są tylko widoczne, jeżeli przycisk jest na pasku tytułu albo na pasku kart!">
 <!ENTITY Ctr_appbutmhi		"Wyższa pozycja (jeżeli na pasku kart)">
 <!ENTITY Ctr_appbautocol	"Ustaw automatycznie kolor kanału przeglądarki (domyślny/Aurora/Nightly)">
 <!ENTITY Ctr_appbutbdl		"Ukryj kolory obramowań i tła">
-<!ENTITY Ctr_dblclclosefx	"Podwójne kliknięcie zamyka bieżące okno">
-<!ENTITY Ctr_appbclmmenus	"Klikalne menu wewnątrz menu przycisku (Nowa karta, Drukuj...)">
+<!ENTITY Ctr_dblclclosefx	"Podwójne kliknięcie przycisku, aby zamknąć bieżące okno">
+<!ENTITY Ctr_appbclmmenus	"Klikalne menu wewnątrz menu podręcznego (Nowa karta, Drukuj...)">
 <!ENTITY Ctr_appbutonclab	"Tytuł">
 <!ENTITY Ctr_appbutonclab2	"Dodaj tytuł albo pozostaw puste">
 
@@ -111,10 +112,10 @@
 <!ENTITY Ctr_bfurlbarfix	"Napraw promień krawędzi paska adresu">
 <!ENTITY Ctr_backforward	"Ruchomy przycisk wstecz-do przodu">
 <!ENTITY Ctr_nbcompact		"Zmniejsz wysokość paska nawigacji">
-<!ENTITY Ctr_hide_bf_popup	"Ukryj menu historii po naciśnięciu przycisku myszki">
+<!ENTITY Ctr_hide_bf_popup	"Ukryj menu podręczne historii po naciśnięciu przycisku myszki">
 <!ENTITY Ctr_bf_space		"Zmniejsz odstęp pomiędzy przyciskami (jeżeli możliwe)">
 <!ENTITY Ctr_noconicons		"Menu kontekstowe strony: zastąp ikony etykietami (Wstecz, Do przodu...)">
-<!ENTITY Ctr_prefpage		"Strona opcji">
+<!ENTITY Ctr_prefpage		"Strona (okno) opcji">
 <!ENTITY Ctr_altoptionsd	"Domyślny wygląd">
 <!ENTITY Ctr_altoptionsp	"Alternatywny wygląd">
 <!ENTITY Ctr_altoptionsw	"Otwieraj stronę ustawień w oknie">
@@ -151,7 +152,7 @@
 <!ENTITY Ctr_nav_txt_ico3	"Pokaż tylko tekst">
 <!ENTITY Ctr_nav_txt_exp	"Atrybuty eksperymentalne:">
 <!ENTITY Ctr_iat_notf_vt	"Wyklucz pionowe paski narzędzi">
-<!ENTITY Ctr_cpanelmenus	"Pop-upy menu panelu (zakładki, historia itp.): widok kompaktowy">
+<!ENTITY Ctr_cpanelmenus	"Menu podręczne panelu (zakładki, historia itp.): widok kompaktowy">
 <!ENTITY Ctr_hidezoomres	"Kontrolki powiększenia na pasku narzędzi: ukryj przycisk resetu powiększenia">
 <!ENTITY Ctr_alt_newtabp	"Strona nowej karty (about:newtab): alternatywny wygląd">
 <!ENTITY Ctr_ctroldsearch	"Stara wyszukiwarka">
@@ -164,17 +165,17 @@
 <!ENTITY Ctr_addonversion	"Listy dodatków: wyświetl wersję dodatku">
 <!ENTITY Ctr_xpinstallui	"Stare okno instalacji dodatku (ustawienie about:config)">
 <!ENTITY Ctr_bmbutton		"Przycisk menu zakładek">
-<!ENTITY Ctr_bmbutpanelm	"Popup: wygląd pop-upu menu panelu">
-<!ENTITY Ctr_bmbunsortbm	"Popup: podmenu 'nieposortowanych zakładek'">
-<!ENTITY Ctr_bmbviewbmtb	"Popupk: show 'View Toolbar'">
-<!ENTITY Ctr_bmbnounsort	"Popup: hide 'unsorted bookmarks'">
+<!ENTITY Ctr_bmbutpanelm	"Menu podręczne: wygląd menu panelu">
+<!ENTITY Ctr_bmbunsortbm	"Menu podręczne: podmenu 'nieposortowanych zakładek'">
+<!ENTITY Ctr_bmbviewbmtb	"Menu podręczne: wyświetl 'Pokaż pasek narzędzi'">
+<!ENTITY Ctr_bmbnounsort	"Menu podręczne: ukryj 'nieposortowane zakładki'">
 <!ENTITY Ctr_bmbutnotext	"Ukryj etykietę na pasku zakładek">
 <!ENTITY Ctr_skipprintpr	"Przycisk drukowania: pomiń podgląd wydruku">
 <!ENTITY Ctr_tbconmenu		"Menu kontekstowe paska narzędzi: ukryj 'Przenieś do menu', 'Usuń z paska narzędzi', 'Odśwież wszystkie karty', 'Dodaj zakładki do wszystkich kart...' oraz 'Przywróć zamkniętą kartę'">
 <!ENTITY Ctr_noresizerxp	"Usuń zmieniacz rozmiaru (Windows XP)">
 <!ENTITY Ctr_extraurlkeycb	"Otwórz dodatkowy pasek adresu (Cmd/Ctrl+">
-<!ENTITY Ctr_pmhidelabels	"Wyskakujące okno menu panelu: ukryj etykiety przycisku">
-<!ENTITY Ctr_menupopupscr	"Menu kontekstowe: pokaż pasek przewijania zamiast strzałek przewijania">
+<!ENTITY Ctr_pmhidelabels	"Menu podręczne głównego panelu: ukryj etykiety przycisku">
+<!ENTITY Ctr_menupopupscr	"Menu podręczne: pokaż pasek przewijania zamiast strzałek przewijania">
 <!ENTITY Ctr_closegeneral	"Ogólne ikony zamykania">
 
 <!ENTITY Ctr_tabsep_def		"Domyślne separatory kart">
@@ -220,7 +221,7 @@
 <!ENTITY Ctr_hideurlsrg		"Ukryj separatory przycisków 'Odśwież, Zatrzymaj i Przejdź' oraz odstępy">
 <!ENTITY Ctr_urlbardropm	"Przenieś znacznik rozwinięcia na koniec paska adresu">
 <!ENTITY Ctr_altreaderico	"Alternatywne ikony 'Popraw czytelność'">
-<!ENTITY Ctr_hideprbutton	"Ukryj przycisk informujący o zablokowanym wyskakującym oknie">
+<!ENTITY Ctr_hideprbutton	"Ukryj ikonę powiadomienia, gdy wyskakujące okno zostanie zablokowane">
 <!ENTITY Ctr_locsearchbw10	"Zredukuj wysokość paska adresu i wyszukiwania (eksperymentalne)">
 <!ENTITY Ctr_urlbar_ib		"Przycisk tożsamości witryny (pole tożsamości)">
 <!ENTITY Ctr_ib_nohovcolor	"Nie pokazuj szarego koloru po najechaniu">
@@ -236,8 +237,8 @@
 <!ENTITY Ctr_icopageinfo	"Kliknięcie ikony otwiera okno 'informacji o stronie'">
 <!ENTITY Ctr_lbsbsize		"Niestandardowa szerokość paska adresu i paska wyszukiwania">
 <!ENTITY Ctr_searchbar		"Pasek wyszukiwania">
-<!ENTITY Ctr_lbsugresi		"Remove scrollbar from suggestions popup">
-<!ENTITY Ctr_lbsugres		"Liczba wyników w pop-upie z sugestiami (ustawienie about:config)">
+<!ENTITY Ctr_lbsugresi		"Usuń pasek przewijania z menu z sugestiami">
+<!ENTITY Ctr_lbsugres		"Liczba wyników w menu z sugestiami (ustawienie about:config)">
 
 <!ENTITY Ctr_menubar_items	"Pozycje elementów menu">
 <!ENTITY Ctr_extrabar		"Dodatkowe paski narzędzi">

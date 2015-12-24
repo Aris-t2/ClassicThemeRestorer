@@ -17,6 +17,7 @@ pref("extensions.classicthemerestorer.tttitlebar",false);
 //Appbutton settings
 pref("extensions.classicthemerestorer.appbutton",'appbutton_v1');
 pref("extensions.classicthemerestorer.appbuttonc",'appbuttonc_orange');
+pref("extensions.classicthemerestorer.appbuttonct",false);
 pref("extensions.classicthemerestorer.altabico",'altabico_white');
 pref("extensions.classicthemerestorer.appbutmhi",false);
 pref("extensions.classicthemerestorer.appbutbdl",false);
