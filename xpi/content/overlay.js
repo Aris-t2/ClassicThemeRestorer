@@ -3796,6 +3796,13 @@ classicthemerestorerjs.ctr = {
 						  background-image:unset !important;\
 						  background-color:#dbeaf9 !important;\
 						}\
+						@media all and (-moz-windows-classic) {\
+						  #main-window[defaultfxtheme="true"]:not([tabsintitlebar])[tabsontop="false"] #toolbar-menubar:not(:-moz-lwtheme){\
+							-moz-appearance: none !important;\
+							background-image:unset !important;\
+							background-color:#dbeaf9 !important;\
+						  }\
+						}\
 						#main-window[defaultfxtheme="true"] #theFoxOnlyBetter-slimChrome-slimmer:not([collapsed]) ~ #theFoxOnlyBetter-slimChrome-container > *:not(#theFoxOnlyBetter-slimChrome-toolbars-bottom):not(:-moz-lwtheme){\
 						  background-image: linear-gradient(#eaf2fb 0px, #dbeaf9 36px, #dbeaf9) !important;\
 						}\

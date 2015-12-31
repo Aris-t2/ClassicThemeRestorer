@@ -1,4 +1,3 @@
-/*@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);*/
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	#nav-bar #notification-popup-box + *{
@@ -81,6 +80,29 @@
       margin-left: 6px !important;
 	}
 	/**/
+	
+	@media (-moz-os-version: windows-win10) {
+	  @media (max-resolution: 1.0dppx) {
+		#main-window[fx44plus="true"] #navigator-toolbox #nav-bar #back-button > .toolbarbutton-icon{
+		  padding: 2px 0px !important;
+		  margin: 0px 0px !important;
+		  margin: 0px 0px !important;
+		}
+		
+		#main-window[fx44plus="true"] #navigator-toolbox #nav-bar #forward-button > .toolbarbutton-icon{
+		  padding: 2px 0px !important;
+		  margin: 0px !important;
+		}
+		
+		#main-window[fx44plus="true"] #navigator-toolbox #nav-bar:-moz-locale-dir(ltr) #forward-button{
+		  margin-left: 9px !important;
+		}
+
+		#main-window[fx44plus="true"] #navigator-toolbox #nav-bar:-moz-locale-dir(rtl) #forward-button{
+		  margin-left: 9px !important;
+		}
+	  }
+	}
 
 	#nav-bar .toolbarbutton-1 {
 	  -moz-appearance: toolbarbutton !important;
@@ -206,6 +228,14 @@
 		  #main-window[fx40plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
 			padding: 2px !important;
 		  }
+		  
+		  #main-window[fx44plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+			padding: 0px 2px !important;
+		  }
+		  #main-window[fx44plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] .toolbarbutton-menubutton-button {
+			padding: 0px !important;
+			margin: 0px !important;
+		  }
 		}
 
 		#main-window[fx40plus="true"] #nav-bar toolbarbutton[cui-areatype="toolbar"] > :-moz-any(#zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button) > .toolbarbutton-icon,
@@ -295,11 +325,6 @@
 		  min-height: 24px !important;
 		  height: 24px !important;
 		}
-		
-		/*#searchbar .autocomplete-textbox,
-		#urlbar .autocomplete-textbox {
-		  font-size:97% !important;
-		}*/
 
 		#urlbar{
 		  padding-top: unset !important;

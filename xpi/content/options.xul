@@ -80,6 +80,7 @@
 		<preference id="ctraddon_noconicons"	name="extensions.classicthemerestorer.noconicons"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_alt_newtabp"	name="extensions.classicthemerestorer.alt_newtabp"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_ctroldsearch"	name="extensions.classicthemerestorer.ctroldsearch"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_ctroldsearchc"	name="extensions.classicthemerestorer.ctroldsearchc" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_addonversion"	name="extensions.classicthemerestorer.addonversion"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_am_nowarning"	name="extensions.classicthemerestorer.am_nowarning"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_am_compact"	name="extensions.classicthemerestorer.am_compact"	 type="bool"	instantApply="true"/>
@@ -814,6 +815,7 @@
 	  <groupbox>
 		<caption  label="&Ctr_ui;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_ctroldsearch;"	preference="ctraddon_ctroldsearch" id="ctraddon_pw_ctroldsearch"/>
+		<checkbox label="&Ctr_ctroldsearchc;"	preference="ctraddon_ctroldsearchc" id="ctraddon_pw_ctroldsearchc"  class="ctraddonsuboption"/>
 		<checkbox label="&Ctr_smallnavbut;"		preference="ctraddon_smallnavbut" oncommand="if(this.checked) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',true);classicthemerestorerjso.ctr.ctrpwSNextra(false);} else if(classicthemerestorerjso.ctr.prefs.getBoolPref('backforward')==false) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',false);} else{classicthemerestorerjso.ctr.ctrpwSNextra(true);}" id="ctraddon_pw_smallnavbut"/>
 		<checkbox label="&Ctr_bfurlbarfix;"		preference="ctraddon_bfurlbarfix" id="ctraddon_pw_bfurlbarfix" class="ctraddonsuboption"/>
 		<checkbox label="&Ctr_backforward;"		preference="ctraddon_backforward"  id="ctraddon_pw_backforward" oncommand="if(this.checked) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',true);classicthemerestorerjso.ctr.ctrpwBFextra(true);} else if(classicthemerestorerjso.ctr.prefs.getBoolPref('smallnavbut')==false) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',false);classicthemerestorerjso.ctr.ctrpwBFextra(false);} else {classicthemerestorerjso.ctr.ctrpwBFextra(false);}"/>
@@ -838,18 +840,7 @@
 		<checkbox label="&Ctr_altalertbox;"		preference="ctraddon_altalertbox" id="ctraddon_pw_altalertbox"/>
 		<checkbox label="&Ctr_emptyfavicon2;"	preference="ctraddon_emptyfavicon2" id="ctraddon_pw_emptyfavicon2" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwTabEmptyFavicon(true);} else {classicthemerestorerjso.ctr.ctrpwTabEmptyFavicon(false);}"/>
 		<checkbox label="&Ctr_skipprintpr;"		preference="ctraddon_skipprintpr" id="ctraddon_pw_skipprintpr" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
-		
-		<description class="ctraddon_font1">&Ctr_closegeneral;</description>
-		<radiogroup preference="ctraddon_closeicong" id="ctraddon_pw_closeicong" orient="horizontal" value="">
-			<radio value="closeicong_default" label="&Ctr_closei_def;" id="ctraddon_closeicong_def"/>
-			<radio value="closeicong_red"	  label=""	id="ctraddon_closeicong_red"/>
-			<radio value="closeicong_w7"	  label=""	id="ctraddon_closeicong_w7"/>
-			<radio value="closeicong_w8"	  label=""	id="ctraddon_closeicong_w8"/>
-			<radio value="closeicong_w10"	  label=""	id="ctraddon_closeicong_w10"/>
-			<radio value="closeicong_w10i"	  label=""	id="ctraddon_closeicong_w10i"/>
-			<radio value="closeicong_w10red"  label=""	id="ctraddon_closeicong_w10red"/>
-			<radio value="closeicong_gc"	  label=""	id="ctraddon_closeicong_gc"/>
-		</radiogroup>
+
 	  </groupbox>
 
 	</box>
@@ -868,6 +859,18 @@
 		<checkbox label="&Ctr_bmbviewbmtb;"		preference="ctraddon_bmbviewbmtb" id="ctraddon_pw_bmbviewbmtb"/>
 		<checkbox label="&Ctr_bmbnounsort;"		preference="ctraddon_bmbnounsort" id="ctraddon_pw_bmbnounsort"/>
 		<checkbox label="&Ctr_bmbutnotext;"		preference="ctraddon_bmbutnotext" id="ctraddon_pw_bmbutnotext"/>
+		
+		<description class="ctraddon_font1">&Ctr_closegeneral;</description>
+		<radiogroup preference="ctraddon_closeicong" id="ctraddon_pw_closeicong" orient="horizontal" value="">
+			<radio value="closeicong_default" label="&Ctr_closei_def;" id="ctraddon_closeicong_def"/>
+			<radio value="closeicong_red"	  label=""	id="ctraddon_closeicong_red"/>
+			<radio value="closeicong_w7"	  label=""	id="ctraddon_closeicong_w7"/>
+			<radio value="closeicong_w8"	  label=""	id="ctraddon_closeicong_w8"/>
+			<radio value="closeicong_w10"	  label=""	id="ctraddon_closeicong_w10"/>
+			<radio value="closeicong_w10i"	  label=""	id="ctraddon_closeicong_w10i"/>
+			<radio value="closeicong_w10red"  label=""	id="ctraddon_closeicong_w10red"/>
+			<radio value="closeicong_gc"	  label=""	id="ctraddon_closeicong_gc"/>
+		</radiogroup>
 
 	  </groupbox>
 

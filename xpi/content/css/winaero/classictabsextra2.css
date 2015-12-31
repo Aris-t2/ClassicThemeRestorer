@@ -160,7 +160,10 @@
 		#TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
 		  list-style-image: url(chrome://browser/skin/tabbrowser/newtab.png) !important;
 		}
-
+		#main-window[fx45plus="true"] .tabs-newtab-button:not(:-moz-lwtheme):not(#privateTab-afterTabs-openNewPrivateTab),
+		#main-window[fx45plus="true"] #TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
+		  list-style-image: url(chrome://browser/skin/tabbrowser/newtab.svg) !important;
+		}
 
     }
 	

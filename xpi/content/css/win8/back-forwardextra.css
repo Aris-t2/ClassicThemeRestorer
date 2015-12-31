@@ -111,5 +111,12 @@
 	#main-window[fx31="true"] #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
 	  margin-left: 8px !important;
 	}
+	
+	@media (-moz-os-version: windows-win10) {
+		#main-window[fx44plus="true"] #urlbar-container > #urlbar-wrapper > #urlbar,
+		#main-window[fx44plus="true"] #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
+		  margin-left: 10px !important;
+		}
+	}
 
 }

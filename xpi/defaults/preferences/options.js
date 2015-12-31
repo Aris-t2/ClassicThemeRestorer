@@ -56,6 +56,7 @@ pref("extensions.classicthemerestorer.cpanelmenus",false);
 pref("extensions.classicthemerestorer.hidezoomres",false);
 pref("extensions.classicthemerestorer.alt_newtabp",false);
 pref("extensions.classicthemerestorer.ctroldsearch",false);
+pref("extensions.classicthemerestorer.ctroldsearchc",false);
 pref("extensions.classicthemerestorer.addonversion",false);
 pref("extensions.classicthemerestorer.alt_addonsm",false);
 pref("extensions.classicthemerestorer.am_nowarning",false);

@@ -462,6 +462,10 @@
 
           if (where == "tab-background")
             this.focus();
+			
+		  // clear input after search
+		  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("ctroldsearchc"))
+		    textBox.value="";
         ]]></body>
       </method>
 
