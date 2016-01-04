@@ -486,6 +486,7 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwAppbuttonextra(this.prefs.getCharPref("appbutton"),false);
 	this.ctrpwAppbuttonColorExtra(this.prefs.getCharPref("appbuttonc"));
 	this.ctrpwTabEmptyFavicon(this.prefs.getBoolPref("emptyfavicon2"));
+	this.ctrpwCtrOldSearch(this.prefs.getBoolPref("ctroldsearch"));
 	this.ctrpwFaviconextra(this.prefs.getBoolPref("faviconurl"));
 	this.ctrpwBFextra(this.prefs.getBoolPref("backforward"));
 	this.ctrpwSNextra(!this.prefs.getBoolPref('smallnavbut'));
@@ -744,6 +745,19 @@ classicthemerestorerjso.ctr = {
 	
     document.getElementById('ctraddon_pw_am_compact2').disabled = which;
 	document.getElementById('ctraddon_pw_am_compact2').style.visibility = itemvis;
+  },
+  
+  ctrpwCtrOldSearch: function(which) {
+	var itemvis = 'collapse';
+	
+    if(which==true) {
+	  which=false; itemvis = 'visible';
+	} else {
+	  which=true; itemvis = 'collapse';
+	}
+	
+    document.getElementById('ctraddon_pw_ctroldsearchc').disabled = which;
+	document.getElementById('ctraddon_pw_ctroldsearchc').style.visibility = itemvis;
   },
  
   altTabsToolbarBgExtra: function(which) {

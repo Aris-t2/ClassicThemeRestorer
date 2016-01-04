@@ -3797,6 +3797,7 @@ classicthemerestorerjs.ctr = {
 						  background-color:#dbeaf9 !important;\
 						}\
 						@media all and (-moz-windows-classic) {\
+						  #main-window[defaultfxtheme="true"]:not([tabsintitlebar]) #navigator-toolbox:not(:-moz-lwtheme),\
 						  #main-window[defaultfxtheme="true"]:not([tabsintitlebar])[tabsontop="false"] #toolbar-menubar:not(:-moz-lwtheme){\
 							-moz-appearance: none !important;\
 							background-image:unset !important;\
@@ -3811,19 +3812,19 @@ classicthemerestorerjs.ctr = {
 						}\
 						/* location bar / search bar borders */\
 						#main-window[defaultfxtheme="true"] #urlbar-container #urlbar-wrapper #urlbar:not(:-moz-lwtheme),\
-						#main-window[defaultfxtheme="true"] #urlbar-container #urlbar-wrapper .searchbar-textbox:not(:-moz-lwtheme) {\
+						#main-window[defaultfxtheme="true"] #search-container #searchbar .searchbar-textbox:not(:-moz-lwtheme) {\
 						  border-color: hsla(210,54%,20%,.25) hsla(210,54%,20%,.27) hsla(210,54%,20%,.3) hsla(210,54%,20%,.27) !important;\
 						}\
 						#main-window[defaultfxtheme="true"] #urlbar-container #urlbar-wrapper #urlbar:not(:-moz-lwtheme)[focused],\
-						#main-window[defaultfxtheme="true"] #urlbar-container #urlbar-wrapper .searchbar-textbox:not(:-moz-lwtheme)[focused] {\
+						#main-window[defaultfxtheme="true"] #search-container #searchbar .searchbar-textbox:not(:-moz-lwtheme)[focused] {\
 						  border-color: Highlight !important;\
 						}\
 						#main-window[defaultfxtheme="true"] #urlbar-container #urlbar-wrapper #urlbar:not(:-moz-lwtheme):not([focused]):hover,\
-						#main-window[defaultfxtheme="true"] #urlbar-container #urlbar-wrapper .searchbar-textbox:not(:-moz-lwtheme):not([focused]):hover {\
+						#main-window[defaultfxtheme="true"] #search-container #searchbar .searchbar-textbox:not(:-moz-lwtheme):not([focused]):hover {\
 						  border-color: hsla(210,54%,20%,.35) hsla(210,54%,20%,.37) hsla(210,54%,20%,.4) hsla(210,54%,20%,.37) !important;\
 						}\
 						#main-window[defaultfxtheme="true"] #urlbar-container #urlbar-wrapper #urlbar:not(:-moz-lwtheme)[focused],\
-						#main-window[defaultfxtheme="true"] #urlbar-container #urlbar-wrapper .searchbar-textbox:not(:-moz-lwtheme)[focused] {\
+						#main-window[defaultfxtheme="true"] #search-container #searchbar .searchbar-textbox:not(:-moz-lwtheme)[focused] {\
 						  border-color: hsla(206,100%,60%,.65) hsla(206,100%,55%,.65) hsla(206,100%,50%,.65) hsla(206,100%,55%,.65) !important;\
 						}\
 						@media (-moz-windows-classic), (-moz-windows-default-theme) {\

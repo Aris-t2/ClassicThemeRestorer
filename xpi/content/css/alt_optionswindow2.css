@@ -275,29 +275,15 @@
 	@media (min-resolution: 1.1dppx) {
 		checkbox image,
 		radio image {
-		  width: 14px !important;
-		  height: 14px !important;
-		}
-		
-		checkbox label,
-		radio label {
-		  -moz-margin-start: -10px !important;
-		}
-		
-	  @media all and (-moz-windows-classic) {
-	
-		checkbox image,
-		radio image {
 		  width: 10px !important;
 		  height: 10px !important;
 		}
-	
+		
 		checkbox label,
 		radio label {
 		  -moz-margin-start: -4px !important;
 		}
-
-	  }
+		
 	}
 	
 	/* content */
@@ -556,26 +542,23 @@
 @media (min-resolution: 1.1dppx) {
 	*[subdialog="true"] checkbox image,
 	*[subdialog="true"] radio image {
-	  width: 14px !important;
-	  height: 14px !important;
+	  width: 10px !important;
+	  height: 10px !important;
 	}
 	
 	*[subdialog="true"] checkbox label,
 	*[subdialog="true"] radio label {
-	  -moz-margin-start: -10px !important;
+	  -moz-margin-start: -4px !important;
 	}
-	@media all and (-moz-windows-classic) {
 	
-		*[subdialog="true"] checkbox image,
-		*[subdialog="true"] radio image {
-		  width: 10px !important;
-		  height: 10px !important;
-		}
+	#FontsDialog checkbox image {
+	  min-width: 10px !important;
+	  min-height: 10px !important;
+	  width: 10px !important;
+	  height: 10px !important;
+	}
 	
-		*[subdialog="true"] checkbox label,
-		*[subdialog="true"] radio label {
-		  -moz-margin-start: -4px !important;
-		}
-
+	#FontsDialog checkbox label {
+	  -moz-margin-start: -4px !important;
 	}
 }
