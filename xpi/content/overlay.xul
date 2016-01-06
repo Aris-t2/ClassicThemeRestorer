@@ -144,6 +144,20 @@
 				insertbefore="placesContext_openSeparator"/>
 	</menugroup>
 	
+	<menugroup id="bookmarksMenuPopup">
+      <menu id="ctraddon_BMB_unsortedBookmarks_mm"
+                  class="menu-iconic bookmark-item"
+                  label="&bookmarksMenuButton.unsorted.label;"
+                  container="true">
+        <menupopup id="BMB_unsortedBookmarksPopup_mm"
+                  placespopup="true"
+                  context="placesContext"
+                  onpopupshowing="if (!this.parentNode._placesView)
+                                    new PlacesMenu(event, 'place:folder=UNFILED_BOOKMARKS',
+                                    PlacesUIUtils.getViewForNode(this.parentNode.parentNode).options);"/>
+      </menu>
+	</menugroup>
+	
 	<!--### Add ability to open the 'more page info' window by clicking the icon inside identity box ###-->
 	<image id="page-proxy-favicon"
 	  onclick="if (event.button=='0' &amp;&amp; classicthemerestorerjs.ctr.prefs.getBoolPref('icopageinfo')) {gIdentityHandler.handleMoreInfoClick(event);} else {PageProxyClickHandler(event);}"/>
@@ -758,7 +772,7 @@
                      removable="true"
                      type="menu"
                      label="&bookmarksMenuButton.label;"
-                     tooltiptext="&bookmarksButton.tooltip;"
+                     tooltiptext="&bookmarksMenuButton.label;"
                      ondragenter="PlacesMenuDNDHandler.onDragEnter(event);"
                      ondragover="PlacesMenuDNDHandler.onDragOver(event);"
                      ondragleave="PlacesMenuDNDHandler.onDragLeave(event);"

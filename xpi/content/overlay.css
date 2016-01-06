@@ -123,6 +123,7 @@
 	/* custom bookmarks-menu-toolbar-button */
 	#PersonalToolbar #ctraddon_bookmarks-menu-toolbar-button .toolbarbutton-text {
 	  display: -moz-box !important;
+	  -moz-padding-start:4px !important;
 	}
 	#PersonalToolbar #ctraddon_bookmarks-menu-toolbar-button dropmarker,
 	#PersonalToolbar #ctraddon_history-menu-toolbar-button dropmarker {
@@ -420,7 +421,8 @@
 	/* show missing icon */
 	#main-window[defaultfxtheme="true"] #appmenu_unsortedBookmarks,
 	#main-window[defaultfxtheme="true"] #ctraddon_BMB_unsortedBookmarks,
-	#main-window[defaultfxtheme="true"] #ctraddon_BMB_unsortedBookmarks_m {
+	#main-window[defaultfxtheme="true"] #ctraddon_BMB_unsortedBookmarks_m,
+	#main-window[defaultfxtheme="true"] #ctraddon_BMB_unsortedBookmarks_mm {
 	  list-style-image: url("chrome://browser/skin/places/unsortedBookmarks.png");
 	  -moz-image-region: auto;
 	}
@@ -428,7 +430,8 @@
 	/* hide bookmark menus items */
 	#ctraddon_BMB_viewBookmarksToolbar,
 	#ctraddon_BMB_viewBookmarksToolbar + menuseparator,
-	#ctraddon_BMB_unsortedBookmarks_m {
+	#ctraddon_BMB_unsortedBookmarks_m,
+	#ctraddon_BMB_unsortedBookmarks_mm {
 	  visibility: collapse;
 	}
 	
