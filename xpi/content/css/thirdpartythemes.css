@@ -80,4 +80,10 @@
 		}
 	  }
 	}
+
+	/* RedCats themes */
+	#main-window[currenttheme^="RedCats"] .searchbar-engine-button .searchbar-engine-image {
+	  width: 22px !important;
+	}
+
 }

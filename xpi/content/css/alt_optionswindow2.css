@@ -158,6 +158,9 @@
 	treechildren {
 	  font-size: 90% !important;
 	}
+	.autocomplete-tree treechildren {
+	  font-size: 100% !important;
+	}
 	
 	treecols,
 	treecol {
@@ -165,6 +168,11 @@
 	  height: 24px !important;
 	  padding-top: 0 !important;
 	  padding-bottom: 0 !important;
+	}
+	
+	.autocomplete-tree treecols,
+	.autocomplete-tree treecol {
+	  height: unset !important;
 	}
 	
 	/* buttons / menulists */
@@ -426,6 +434,10 @@
   height: 20px !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+}
+*[subdialog="true"] .autocomplete-tree treecols,
+*[subdialog="true"] .autocomplete-tree treecol {
+  height: unset !important;
 }
 *[subdialog="true"] treechildren {
   min-height: unset !important;

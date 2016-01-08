@@ -153,6 +153,7 @@ classicthemerestorerjs.ctr = {
 	try{
 		if (this.appversion >= 45) document.getElementById("main-window").setAttribute('fx45plus',true);
 	} catch(e){}
+
 	// add CTR version number to '#main-window' node, so other add-ons/themes can easier distinguish between versions
 	AddonManager.getAddonByID('ClassicThemeRestorer@ArisT2Noia4dev', function(addon) {
 	  try{
@@ -3529,7 +3530,12 @@ classicthemerestorerjs.ctr = {
 		case "am_compact2":			manageCSS("am_compact2.css");			break;
 		case "alt_addonsp": 		manageCSS("alt_addonspage.css");		break;
 		case "alt_addonsm": 		manageCSS("alt_addonsmanager.css");		break;
-		case "addonversion": 		manageCSS("addonversion.css");			break;
+		
+		case "addonversion":
+			if (classicthemerestorerjs.ctr.appversion < 46) manageCSS("addonversion.css");
+			else manageCSS("addonversion46.css");
+		break;
+		
 		case "bmbutpanelm": 		manageCSS("bmbut_pmenu.css");			break;
 		case "bmbunsortbm": 		manageCSS("bmbut_unsortedbookm.css");	break;
 		case "bmbviewbmtb": 		manageCSS("bmbut_bmbviewbmtb.css");		break;

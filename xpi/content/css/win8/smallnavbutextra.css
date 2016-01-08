@@ -236,6 +236,7 @@
 			padding: 0px !important;
 			margin: 0px !important;
 		  }
+
 		}
 
 		#main-window[fx40plus="true"] #nav-bar toolbarbutton[cui-areatype="toolbar"] > :-moz-any(#zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button) > .toolbarbutton-icon,
@@ -369,6 +370,11 @@
 		  #main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme)[focused] {
 			border-color: Highlight !important;
 		  }
+		}
+		
+		#navigator-toolbox #nav-bar .toolbarbutton-1[type="menu-button"] > .toolbarbutton-menubutton-dropmarker {
+		  margin-top: -3px !important;
+		  margin-bottom: -3px !important;
 		}
 
 	}

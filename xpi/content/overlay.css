@@ -519,3 +519,67 @@
 	  visibility: collapse; 
 	  display: none;
 	}
+	
+	/* support for old text mode */
+	toolbar[mode="text"] #back-button label,
+	toolbar[mode="text"] #forward-button label,
+	toolbar[mode="text"] #urlbar #urlbar-reload-button .toolbarbutton-text,
+	toolbar[mode="text"] #urlbar #urlbar-stop-button .toolbarbutton-text,
+	toolbar[mode="text"] #urlbar #urlbar-go-button .toolbarbutton-text,
+	toolbar[mode="text"] .tabs-newtab-button .toolbarbutton-text {
+	  display: none !important;
+	}
+	
+	toolbar[mode="text"] #back-button image,
+	toolbar[mode="text"] #forward-button image,
+	toolbar[mode="text"] #urlbar #urlbar-reload-button .toolbarbutton-icon,
+	toolbar[mode="text"] #urlbar #urlbar-stop-button .toolbarbutton-icon,
+	toolbar[mode="text"] #urlbar #urlbar-go-button .toolbarbutton-icon,
+	toolbar[mode="text"] .tabs-newtab-button .toolbarbutton-icon,
+	toolbar[mode="text"] .tabbrowser-tab .tab-close-button .toolbarbutton-icon {
+	  display:block !important;
+	}
+	
+	/* support for old icons+text mode */
+	toolbar[mode="full"] .toolbarbutton-1:not([type="menu-button"]):not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button) {
+	  -moz-box-orient: vertical !important;
+	}
+
+	toolbar[mode="full"] #back-button .toolbarbutton-text,
+	toolbar[mode="full"] #forward-button .toolbarbutton-text{
+	  display: none !important;
+	}
+	
+	toolbar[mode="full"] toolbarbutton[type="menu"]:not(#bookmarks-menu-button) dropmarker,
+	toolbar[mode="full"] toolbarbutton[type="menu-button"]:not(#bookmarks-menu-button) dropmarker{
+	  display: none !important;
+	}
+
+	toolbar[mode="full"] .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button),
+	toolbar[mode="full"] .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button) > .toolbarbutton-menubutton-button {
+	  min-width: 57px !important;
+	}
+
+	toolbar[mode="full"] #urlbar .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button),
+	toolbar[mode="full"] #urlbar .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button) > .toolbarbutton-menubutton-button {
+	  min-width: unset !important;
+	}
+
+	toolbar[mode="full"] #urlbar #urlbar-reload-button .toolbarbutton-text,
+	toolbar[mode="full"] #urlbar #urlbar-stop-button .toolbarbutton-text,
+	toolbar[mode="full"] #urlbar #urlbar-go-button .toolbarbutton-text,
+	toolbar[mode="full"] .tabs-newtab-button .toolbarbutton-text {
+	  display: none !important;
+	}
+
+	toolbar[mode="full"] #urlbar-icons toolbarbutton label,
+	toolbar[mode="full"] #urlbar-icons toolbarbutton .toolbarbutton-text {
+	  display: none !important;
+	  visibility: collapse !important;
+	}
+	
+	#nav-bar[mode="full"] #downloads-button image,
+	#nav-bar[mode="full"] #downloads-button stack {
+	  margin-left: 30px !important;
+	  margin-right: 30px !important;
+	}
