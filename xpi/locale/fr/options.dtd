@@ -116,17 +116,17 @@
 <!ENTITY Ctr_bf_space		"Réduire l'espace entre les boutons (si possible)">
 <!ENTITY Ctr_noconicons		"Remplacer les icônes du menu contextuel de la page par du texte (Page précédente, Page suivante, Arrêter/Actualiser, Marquer cette page)">
 <!ENTITY Ctr_prefpage		"Page d'options">
-<!ENTITY Ctr_altoptionsd	"Default appearance">
+<!ENTITY Ctr_altoptionsd	"Appearance par défaut">
 <!ENTITY Ctr_altoptionsp	"Appearance alternative ">
 <!ENTITY Ctr_altoptionsw	"Ouvrir la page d'options dans une fenêtre">
-<!ENTITY Ctr_altoptionsww	"Width">
-<!ENTITY Ctr_altoptionswh	"Height">
-<!ENTITY Ctr_altoptionsi	"The simulated options window is not a dialog anymore but a 'browser window' with all toolbars hidden. The 'Use Current Page' feature only adds urls of pages opened in the current window, which is only 'about:preferences' in this case. The 'options' toolbar button gets replaced by a new one to be able to open options in a window.">
-<!ENTITY Ctr_options_rem	"Remember last selected category">
+<!ENTITY Ctr_altoptionsww	"Largeur">
+<!ENTITY Ctr_altoptionswh	"Hauteur">
+<!ENTITY Ctr_altoptionsi	"La fenêtre des paramètres n'est plus une boîte de dialogue, mais une « fenêtre de navigateur » avec toutes les barres d'outils cachées. La fonctionnalité « Utiliser la Page Courante » ne fait qu'ajouter l'URL des pages ouvertes dans la fenêtre actuelle, qui est dans ce cas uniquement « about:preferences ».  Le bouton d'« options » de la barre d'outils sera remplacé par un nouveau permettant de les ouvrir dans une fenêtre.">
+<!ENTITY Ctr_options_rem	"Se souvenir de la dernière catégorie sélectionnée">
 <!ENTITY Ctr_svgfilters		"Couleurs SVG pour les icônes par défaut de la barre d'outils">
 <!ENTITY Ctr_wincontrols	"Plein écran : boutons déplaçables">
-<!ENTITY Ctr_oldtoplevimg	"'Top level domain' images: classic appearance">
-<!ENTITY Ctr_altalertbox	"'Alert box': alternative appearance">
+<!ENTITY Ctr_oldtoplevimg	"Images du 'domaine de 1er niveau' : appearance classique ">
+<!ENTITY Ctr_altalertbox	"'Boîte d'alerte' : appearance alternative">
 <!ENTITY Ctr_emptyfavicon2	"Remplacer le favicon générique (vide avec pointillés) par un favicon avec l'aspect d'une feuille de papier">
 <!ENTITY Ctr_mstatusbar		"Barre d'état déplaçable">
 <!ENTITY Ctr_mstatusbars4e	"Barre d'état contrôlée par 'Status-4-Evar'">
@@ -164,7 +164,7 @@
 <!ENTITY Ctr_am_compact		"Listes de modules : vue compacte">
 <!ENTITY Ctr_am_compact2	"Vue compacte +">
 <!ENTITY Ctr_addonversion	"Listes de modules : afficher la version du module">
-<!ENTITY Ctr_xpinstallui	"Acienne fenêtre d'installation de modules (préférence about:config)">
+<!ENTITY Ctr_xpinstallui	"Ancienne fenêtre d'installation de modules (préférence about:config)">
 <!ENTITY Ctr_bmbutton		"Bouton Marque-pages">
 <!ENTITY Ctr_bmbutpanelm	"Popup : apparence Panneau menu">
 <!ENTITY Ctr_bmbunsortbm	"Popup : 'unsorted bookmarks' submenu">
@@ -219,14 +219,14 @@
 <!ENTITY Ctr_feedinurl		"Bouton d'abonnement">
 <!ENTITY Ctr_hideurelstop	"Masquer 'stop-actualiser'">
 <!ENTITY Ctr_hideurlgo		"Masquer le bouton 'aller à'">
-<!ENTITY Ctr_hideurlsrg		"Cacher les séparateurs de boutons 'actualiser, stop &amp; aller à' &amp; espaces">
+<!ENTITY Ctr_hideurlsrg		"Cacher les séparateurs de boutons « actualiser, stop &amp; aller à » &amp; espaces">
 <!ENTITY Ctr_urlbardropm	"Move dropmarker to the last possible position">
-<!ENTITY Ctr_altreaderico	"Alternative 'Reader' icons">
+<!ENTITY Ctr_altreaderico	"Icônes 'Reader' alternatives">
 <!ENTITY Ctr_hideprbutton	"Masquer l'icône de notification quand un pop-up est bloqué">
-<!ENTITY Ctr_locsearchbw10	"Reduce location bars and search bars height (experimental)">
+<!ENTITY Ctr_locsearchbw10	"Réduire la hauteur de la barre d'adresse et la barre de recherche (expérimentale)">
 <!ENTITY Ctr_urlbar_ib		"Bouton d'identité">
-<!ENTITY Ctr_ib_nohovcolor	"Do not show gray color when hovered">
-<!ENTITY Ctr_ib_graycolor	"Gray color for unknown identity and chrome pages">
+<!ENTITY Ctr_ib_nohovcolor	"Ne pas afficher de couleur grise quand il est survolé">
+<!ENTITY Ctr_ib_graycolor	"Couleur grise pour les pages dont l'identification est inconnue et celles du chrome">
 <!ENTITY Ctr_verifiedcolors	"Couleurs de boutons pour les sites certifiés sécurisés, les connexions sécurisées et non sécurisées">
 <!ENTITY Ctr_faviconurl		"Afficher le favicon dans la barre d'adresse">
 <!ENTITY Ctr_padlock		"Cadenas">
@@ -234,12 +234,12 @@
 <!ENTITY Ctr_padlock_def	"par défaut">
 <!ENTITY Ctr_padlock_cla	"classique">
 <!ENTITY Ctr_padlock_mod	"moderne">
-<!ENTITY Ctr_padlock_ext	"'&brandShortName;' icon for valid 'about' pages">
+<!ENTITY Ctr_padlock_ext	"Icône '&brandShortName;' pour la page invalide 'about'">
 <!ENTITY Ctr_icopageinfo	"Un clic sur l'icône ouvre la 'page info'">
-<!ENTITY Ctr_lbsbsize		"Custom width for location bar and search bar">
-<!ENTITY Ctr_searchbar		"Search bar">
-<!ENTITY Ctr_lbsugresi		"Display as many results in suggestions popup as possible (without scrollbar)">
-<!ENTITY Ctr_lbsugres		"Number of results in suggestions popup (about:config preference)">
+<!ENTITY Ctr_lbsbsize		"Hauteur personnalisée pour la barre d'adresse et la barre de recherche">
+<!ENTITY Ctr_searchbar		"Barre de recherche">
+<!ENTITY Ctr_lbsugresi		"Afficher autant de résultats que possible dans les suggestions contextuelles (sans ascenseur)">
+<!ENTITY Ctr_lbsugres		"Nombre de résultat dans les suggestions contextuelles (préférence about:config)">
 
 <!ENTITY Ctr_menubar_items	"Position de la barre de menus">
 <!ENTITY Ctr_extrabar		"Barres d'outils supplémentaires">
@@ -276,10 +276,10 @@
 
 <!ENTITY Ctr_aerocolors		"Couleur Bleue Aero pour les barres d'outils principales et les onglets">
 <!ENTITY Ctr_transpttbw10	"Titre/menu/barres d'outils : supprimer la couleur de fond">
-<!ENTITY Ctr_transpttbew10	"Additional tweaks for some OS themes">
+<!ENTITY Ctr_transpttbew10	"Réglages supplémentaires pour certains thèmes d'OS">
 <!ENTITY Ctr_transptcw10	"Caché les boutons par défaut min/max/fermeture">
 <!ENTITY Ctr_hidenavbar		"Masquer la barre de navigation">
-<!ENTITY Ctr_navbarpad		"Additional left and right padding">
+<!ENTITY Ctr_navbarpad		"'Padding' additionnel en gauche et droite">
 <!ENTITY Ctr_navbarpad_l	"Gauche :">
 <!ENTITY Ctr_navbarpad_r	"Droite :">
 <!ENTITY Ctr_nobookbarbg	"Barre personnelle : enlever l'arrière-plan">
