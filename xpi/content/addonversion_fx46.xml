@@ -670,6 +670,14 @@
         ]]></body>
       </method>
 
+      <method name="_updateUpgradeInfo">
+        <body><![CDATA[
+          // Only update the version string if we're displaying the upgrade info
+          if (this.hasAttribute("upgrade") && shouldShowVersionNumber(this.mAddon))
+            this._version.value = this.mManualUpdate.version;
+        ]]></body>
+      </method>
+
       <method name="_fetchReleaseNotes">
         <parameter name="aURI"/>
         <body><![CDATA[
@@ -957,6 +965,9 @@
 
           this.mManualUpdate = aInstall;
           this._showStatus("update-available");
+		  try {
+		    this._updateUpgradeInfo();
+		  } catch(e) {}
         ]]></body>
       </method>
 

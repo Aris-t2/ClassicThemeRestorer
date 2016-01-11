@@ -791,6 +791,10 @@
           if (!popup.popupOpen)
             return;
 
+          let list = document.getAnonymousElementByAttribute(popup, "anonid",
+                                                             "search-panel-one-offs");
+          if (!list) // remove this check when removing the old search UI.
+            return;
           // accel + up/down changes the default engine and shouldn't affect
           // the selection on the one-off buttons.
           if (aEvent.ctrlKey)

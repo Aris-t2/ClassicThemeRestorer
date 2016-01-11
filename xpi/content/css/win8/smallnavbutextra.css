@@ -392,6 +392,14 @@
 	  margin-bottom: 2px !important;
 	}
 	
+	/* tweaks for text/full modes */
+	#nav-bar[mode="text"] toolbarbutton .toolbarbutton-text,
+	#nav-bar[mode="full"] toolbarbutton .toolbarbutton-text {
+	  background: none !important;
+	  box-shadow: none !important;
+	  border: unset !important;
+	}
+	
 	/* default badge buttons: loop/panelUI */
 	#nav-bar #PanelUI-menu-button .toolbarbutton-badge,
 	#nav-bar #PanelUI-menu-button .toolbarbutton-badge-container,

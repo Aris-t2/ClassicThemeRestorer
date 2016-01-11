@@ -191,6 +191,14 @@
 	  margin-bottom: 0px !important;
 	}
 	
+	/* tweaks for text/full modes */
+	#nav-bar[mode="text"] toolbarbutton .toolbarbutton-text,
+	#nav-bar[mode="full"] toolbarbutton .toolbarbutton-text {
+	  background: none !important;
+	  box-shadow: none !important;
+	  border: unset !important;
+	}
+	
 	/*buttons with SVG images*/
 	#nav-bar .toolbarbutton-1[image$="svg"] .toolbarbutton-icon {
 	  max-width: 22px !important;

@@ -257,7 +257,7 @@
 		}
 
 	}
-	
+
 	@media (min-resolution: 1.1dppx) {
 		#main-window[fx40plus="true"] #nav-bar toolbarbutton[cui-areatype="toolbar"] > :-moz-any(#zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button) > .toolbarbutton-icon,
 		#main-window[fx40plus="true"] #nav-bar :-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #switch-to-metro-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #panic-button, #web-apps-button, #webide-button, #loop-button, #pocket-button):-moz-any([cui-areatype="toolbar"],:not([cui-areatype])) > .toolbarbutton-icon,
@@ -343,6 +343,14 @@
 	#nav-bar #ctraddon_puib_separator{
 	  margin-top: 2px !important;
 	  margin-bottom: 2px !important;
+	}
+	
+	/* tweaks for text/full modes */
+	#nav-bar[mode="text"] toolbarbutton .toolbarbutton-text,
+	#nav-bar[mode="full"] toolbarbutton .toolbarbutton-text {
+	  background: none !important;
+	  box-shadow: none !important;
+	  border: unset !important;
 	}
 	
 	/* default badge buttons: loop/panelUI */
@@ -455,6 +463,7 @@
 	#nav-bar #zoompage-zoomout-n image{
 	  padding:0px !important;
 	}
+
 	/* special buttons inside urlbars boxes */
 	#urlbar #notification-popup-box + box toolbarbutton,
 	#urlbar #notification-popup-box + box toolbarbutton .toolbarbutton-icon,
