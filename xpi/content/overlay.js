@@ -856,7 +856,7 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "nbcompact":
-			if (branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && classicthemerestorerjs.ctr.osstring!="Darwin"&& branch.getBoolPref("smallnavbut")==false && classicthemerestorerjs.ctr.fxdefaulttheme==true){
+			if (branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && classicthemerestorerjs.ctr.osstring!="Darwin"&& branch.getBoolPref("smallnavbut")==false){
 			  classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
 
 			  if (branch.getCharPref("nav_txt_ico").indexOf('iconstxt')!=-1)
@@ -1187,6 +1187,7 @@ classicthemerestorerjs.ctr = {
 			classicthemerestorerjs.ctr.loadUnloadCSS('txtonly',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",false);
 			classicthemerestorerjs.ctr.loadUnloadCSS("to_notf_vt",false);
+			classicthemerestorerjs.ctr.loadUnloadCSS("iconstxtfull2",false);
 			
 			classicthemerestorerjs.ctr.setCTRModeAttributes('icons');
 			
@@ -1248,6 +1249,10 @@ classicthemerestorerjs.ctr = {
 			  break;
 			  case "full":
 				classicthemerestorerjs.ctr.setCTRModeAttributes('full');
+			  break;
+			  case "full2":
+				classicthemerestorerjs.ctr.setCTRModeAttributes('full');
+				classicthemerestorerjs.ctr.loadUnloadCSS("iconstxtfull2",true);
 			  break;
 			}
 
@@ -2599,6 +2604,15 @@ classicthemerestorerjs.ctr = {
 		  classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton').setAttribute("label","DevFox");
 	  } catch(e){}
 	},300);
+	
+	//OSX bookmarks item fix
+	if (classicthemerestorerjs.ctr.osstring=="Darwin"){
+	  setTimeout(function(){
+		try{
+		  document.getElementById("ctraddon_BMB_unsortedBookmarks_mm").collapsed = true;
+		} catch(e){}
+	  },1000);
+	}
 
   },
   
@@ -3430,6 +3444,7 @@ classicthemerestorerjs.ctr = {
 		break;
 		
 		case "txtonly":				manageCSS("mode_txtonly.css");			break;
+		case "iconstxtfull2":		manageCSS("mode_full_v2.css");			break;
 		
 		case "iconsbig":
 
@@ -5303,7 +5318,10 @@ classicthemerestorerjs.ctr = {
 					case "iconstxt2":	cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#bdbdbd !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;}'; break;
 					case "iconstxt3":	cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#dadada !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button label { border-bottom: 1px dotted !important; margin-bottom: -1px !important; }'; break;
 					case "iconstxt4":	cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#bdbdbd !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button label { border-bottom: 1px dotted !important; margin-bottom: -1px !important; }'; break;
+					case "full":		cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#dadada !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button label { border-bottom: 1px dashed !important; margin-bottom: -1px !important; }'; break;
+					case "full2":		cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#bdbdbd !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button label { border-bottom: 1px dashed !important; margin-bottom: -1px !important; }'; break;
 					case "txtonly":		cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#fbfbfb !important;} #ctraddon_cui-textonly-button {background:#dadada !important;}'; break;
+					case "text":		cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#fbfbfb !important;} #ctraddon_cui-textonly-button {background:#bdbdbd !important;}'; break;
 				}
 				
 				switch (this.prefs.getCharPref("tabsontop")) {
@@ -5389,7 +5407,19 @@ classicthemerestorerjs.ctr = {
 	  this.prefs.setCharPref(which,'iconstxt4');
 	}
 	else if(this.prefs.getCharPref('nav_txt_ico')=='iconstxt4' && value=="iconstxt") {
+	  this.prefs.setCharPref(which,'full');
+	}
+	else if(this.prefs.getCharPref('nav_txt_ico')=='full' && value=="iconstxt") {
+	  this.prefs.setCharPref(which,'full2');
+	}
+	else if(this.prefs.getCharPref('nav_txt_ico')=='full2' && value=="iconstxt") {
 	  this.prefs.setCharPref(which,'iconstxt');
+	}
+	else if(this.prefs.getCharPref('nav_txt_ico')=='txtonly' && value=="txtonly") {
+	  this.prefs.setCharPref(which,'text');
+	}
+	else if(this.prefs.getCharPref('nav_txt_ico')=='text' && value=="txtonly") {
+	  this.prefs.setCharPref(which,'txtonly');
 	}
 	else {
 	  this.prefs.setCharPref(which,value);

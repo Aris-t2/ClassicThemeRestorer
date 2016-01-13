@@ -1,0 +1,16 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#main-window toolbar[mode="full"] .toolbarbutton-1:not([type="menu-button"]):not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button) {
+	  -moz-box-orient: horizontal !important;
+	}
+	#main-window #navigator-toolbox #nav-bar[mode="full"] #downloads-button image,
+	#main-window #navigator-toolbox #nav-bar[mode="full"] #downloads-button stack {
+	  margin-left: unset !important;
+	  margin-right: unset !important;
+	}
+	#main-window #TabsToolbar[mode="full"] toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text{
+	  display: block !important;
+	}
+}

@@ -545,6 +545,7 @@
 	  -moz-box-orient: vertical !important;
 	}
 
+	#TabsToolbar[mode="full"] toolbarbutton .toolbarbutton-text,
 	toolbar[mode="full"] #back-button .toolbarbutton-text,
 	toolbar[mode="full"] #forward-button .toolbarbutton-text{
 	  display: none !important;
@@ -560,6 +561,8 @@
 	  min-width: 57px !important;
 	}
 
+	#navigator-toolbox #TabsToolbar[mode="full"] .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button),
+	#navigator-toolbox #TabsToolbar[mode="full"] .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button) > .toolbarbutton-menubutton-button,
 	toolbar[mode="full"] #urlbar .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button),
 	toolbar[mode="full"] #urlbar .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button) > .toolbarbutton-menubutton-button {
 	  min-width: unset !important;

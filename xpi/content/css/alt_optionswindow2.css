@@ -140,6 +140,30 @@
 	#advancedPrefs #tabsElement tab {
 	  min-height: 30px !important;
 	}
+	
+	#addEnginesBox {
+	  margin-bottom: 0px !important;
+	}
+	
+	#trackingProtectionLearnMore{
+	  display: none !important;
+	}
+
+	#trackingprotectionbox caption label{
+	  padding: unset !important;
+	  margin: -6px 0 0 0 !important;
+	}
+	#trackingprotectionbox caption {
+	  margin: -4px 0 0 0 !important;
+	}
+
+	#trackingGroup{
+	  margin-top: 10px !important;
+	}
+
+	#defaultEngineGroup{
+	  margin-top: 2px !important;
+	}
 
 	/* treechildren*/
 	#handlersView richlistitem,
