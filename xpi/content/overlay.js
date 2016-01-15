@@ -1191,6 +1191,9 @@ classicthemerestorerjs.ctr = {
 			
 			classicthemerestorerjs.ctr.setCTRModeAttributes('icons');
 			
+			if (branch.getBoolPref("nbcompact"))
+			  classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
+			
 			switch (branch.getCharPref("nav_txt_ico")) {
 
 			  case "iconsbig":
@@ -1214,35 +1217,35 @@ classicthemerestorerjs.ctr = {
 				if (branch.getBoolPref("iat_notf_vt"))
 				  classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",true);
 			    if (branch.getBoolPref("nbcompact"))
-				  branch.setBoolPref("nbcompact",false);
+				  classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
 			  break;
 			  case "iconstxt2":
 				classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt2',true);
 				if (branch.getBoolPref("iat_notf_vt"))
 				  classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",true);
 			    if (branch.getBoolPref("nbcompact"))
-				  branch.setBoolPref("nbcompact",false);
+				  classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
 			  break;
 			  case "iconstxt3":
 				classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt3',true);
 				if (branch.getBoolPref("iat_notf_vt"))
 				  classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",true);
 			    if (branch.getBoolPref("nbcompact"))
-				  branch.setBoolPref("nbcompact",false);
+				  classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
 			  break;
 			  case "iconstxt4":
 				classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt4',true);
 				if (branch.getBoolPref("iat_notf_vt"))
 				  classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",true);
 			    if (branch.getBoolPref("nbcompact"))
-				  branch.setBoolPref("nbcompact",false);
+				  classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
 			  break;
 			  case "txtonly":
 				classicthemerestorerjs.ctr.loadUnloadCSS('txtonly',true);
 				if (branch.getBoolPref("iat_notf_vt"))
 				  classicthemerestorerjs.ctr.loadUnloadCSS("to_notf_vt",true);
 			    if (branch.getBoolPref("nbcompact"))
-				  branch.setBoolPref("nbcompact",false);
+				  classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
 			  break;
 			  case "text":
 				classicthemerestorerjs.ctr.setCTRModeAttributes('text');

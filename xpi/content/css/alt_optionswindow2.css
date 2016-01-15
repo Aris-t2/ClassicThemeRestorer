@@ -149,16 +149,9 @@
 	  display: none !important;
 	}
 
-	#trackingprotectionbox caption label{
-	  padding: unset !important;
-	  margin: -6px 0 0 0 !important;
-	}
-	#trackingprotectionbox caption {
-	  margin: -4px 0 0 0 !important;
-	}
-
-	#trackingGroup{
-	  margin-top: 10px !important;
+	#applicationsContent > hbox,
+	#noFxaAccount > hbox {
+	  margin-top: -10px !important;
 	}
 
 	#defaultEngineGroup{

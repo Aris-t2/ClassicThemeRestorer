@@ -914,6 +914,22 @@
         }
       ]]>
       </handler>
+	  
+      <handler event="click"><![CDATA[
+        if (event.button == 2)
+          return; // ignore right clicks.
+		else if (event.button == 1) { // middle click
+
+          let button = event.originalTarget;
+          let engine = button.engine || button.parentNode.engine;
+
+          if (!engine) return;
+
+          let searchbar = document.getElementById("searchbar");
+		  searchbar.searchButton.open = false;
+          searchbar.handleSearchCommand(event, engine);
+		}
+      ]]></handler>
 
     </handlers>
   </binding>
