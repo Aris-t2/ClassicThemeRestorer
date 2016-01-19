@@ -44,7 +44,7 @@
 <!ENTITY Ctr_tabsontop3		"Pestañas no arriba (v2) --- atributo [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"¡(v2) es sólo para algunos complementos y temas decorativos completos!">
 <!ENTITY Ctr_tabsontopI1	"Se añade el atributo [tabsontop=true/false] a">
-<!ENTITY Ctr_tabsintitlebar	"Barra de título de &brandShortName; (about:config>>browser.tabs.drawInTitlebar)">
+<!ENTITY Ctr_tabsintitlebar	"Barra de título de &brandShortName; (about:config >> browser.tabs.drawInTitlebar)">
 <!ENTITY Ctr_tabwidthdef	"(predeterminado)">
 <!ENTITY Ctr_tabwidthcla	"(clásico)">
 <!ENTITY Ctr_tabminheight	"Altura:">
@@ -56,7 +56,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"¡Los valores por debajo de 48px causarán problemas en la mayoría de los casos!">
 <!ENTITY Ctr_square_edges	"Esquinas superiores cuadradas">
 <!ENTITY Ctr_tttitlebar		"Título de pestaña en la barra de título de &brandShortName;">
-<!ENTITY Ctr_tabinsertion	"Insertar pestaña asociada tras la actual (about:config>>browser.tabs.insertRelatedAfterCurrent)">
+<!ENTITY Ctr_tabinsertion	"Insertar pestaña asociada tras la actual (about:config >> browser.tabs.insertRelatedAfterCurrent)">
 <!ENTITY Ctr_emptyfavicon	"Restaurar favicon vacío (si un sitio no ofrece uno)">
 <!ENTITY Ctr_noemptypticon	"Eliminar favicon vacío en pestañas fijadas">
 <!ENTITY Ctr_e10stab_notd	"Pestañas E10s: Eliminar subrayado">
@@ -69,7 +69,7 @@
 <!ENTITY Ctr_closetab_hfot	"Ocultar para una sola pestaña visible">
 <!ENTITY Ctr_closei_def		"Iconos predeterminados">
 <!ENTITY Ctr_closeonleft	"Posición alternativa en la pestaña">
-<!ENTITY Ctr_close_wwltab	"Cerrar ventana con la última pestaña (about:config>>browser.tabs.closeWindowWithLastTab)">
+<!ENTITY Ctr_close_wwltab	"Cerrar ventana con la última pestaña (about:config >> browser.tabs.closeWindowWithLastTab)">
 
 <!ENTITY Ctr_hctpinfotab	"Algunas variantes no funcionan con el complemento 'Hide Caption Titlebar Plus'.">
 <!ENTITY Ctr_hctpinfoab		"El botón en la barra de título no funciona con 'Hide Caption Titlebar Plus'.">
@@ -94,7 +94,7 @@
 <!ENTITY Ctr_appbuttonc_pu	"Color de botón púrpura">
 <!ENTITY Ctr_appbuttonc_wh	"Color de botón blanco">
 <!ENTITY Ctr_appbuttonc_cu	"Color de botón personalizado">
-<!ENTITY Ctr_appbuttonct	"Custom button color for button on toolbar">
+<!ENTITY Ctr_appbuttonct	"Color de botón personalizado para botón en la barra de herramientas">
 <!ENTITY Ctr_appbuttonI1	"Se recomienda reiniciar">
 <!ENTITY Ctr_appbuttonI1e	"¡No es visible en la barra de título de SO de Windows, sólo en la barra de título de &brandShortName;!">
 <!ENTITY Ctr_appbuttonI2	"¡Los colores del botón sólo son visibles en la barra de título y la barra de pestañas!">
@@ -156,7 +156,10 @@
 <!ENTITY Ctr_hidezoomres	"Controles de zoom en la barra de herramientas: Ocultar botón de restablecimiento del zoom">
 <!ENTITY Ctr_alt_newtabp	"Página de nueva pestaña (about:newtab): Apariencia alternativa">
 <!ENTITY Ctr_ctroldsearch	"Menú antiguo del recuadro de búsqueda">
-<!ENTITY Ctr_ctroldsearchc	"Clear searchbox after search">
+<!ENTITY Ctr_ctroldsearchc	"Limpiar recuadro de búsqueda después de buscar">
+<!ENTITY Ctr_search_oit		"Open search in new tab (about:config preference)">
+<!ENTITY Ctr_osearch_meoit	"Middle-clicks: search in new 'foreground tab'">
+<!ENTITY Ctr_osearch_dm		"Small dropmarker">
 <!ENTITY Ctr_addonmanager	"Administrador de complementos">
 <!ENTITY Ctr_alt_addonsp	"Página 'más información': Apariencia alternativa">
 <!ENTITY Ctr_alt_addonsm	"Apariencia alternativa">
@@ -164,13 +167,13 @@
 <!ENTITY Ctr_am_compact		"Listas de complementos: Vista compacta">
 <!ENTITY Ctr_am_compact2	"Vista compacta +">
 <!ENTITY Ctr_addonversion	"Mostrar la versión del complemento">
-<!ENTITY Ctr_xpinstallui	"Antiguo cuadro de instalación de complementos (about:config>>xpinstall.customConfirmationUI)">
-<!ENTITY Ctr_bmbutton		"Botón de menú Marcadores">
-<!ENTITY Ctr_bmbutpanelm	"Popup: Estilo de menú emergente de panel">
-<!ENTITY Ctr_bmbunsortbm	"Popup: Submenú 'Marcadores no ordenados'">
-<!ENTITY Ctr_bmbviewbmtb	"Popup: show 'View Toolbar'">
-<!ENTITY Ctr_bmbnounsort	"Popup: hide 'unsorted bookmarks'">
-<!ENTITY Ctr_bmbutnotext	"Ocultar etiqueta en la barra de marcadores">
+<!ENTITY Ctr_xpinstallui	"Antiguo diálogo de instalación (about:config >> xpinstall.customConfirmationUI)">
+<!ENTITY Ctr_bmbutton		"Botón de menú emergente de Marcadores">
+<!ENTITY Ctr_bmbutpanelm	"Estilo de panel para el menú emergente ">
+<!ENTITY Ctr_bmbunsortbm	"Mostrar submenú 'Marcadores no ordenados'">
+<!ENTITY Ctr_bmbviewbmtb	"Mostrar 'Ver barra de herramientas'">
+<!ENTITY Ctr_bmbnounsort	"Ocultar 'Marcadores no ordenados'">
+<!ENTITY Ctr_bmbutnotext	"Ocultar etiquetas en la barra de marcadores">
 <!ENTITY Ctr_skipprintpr	"Botón Imprimir: Omitir previsualización de la impresión">
 <!ENTITY Ctr_tbconmenu		"Menú contextual de barra de herramientas: Ocultar 'Mover al menú', 'Eliminar de la barra de herramientas', 'Recargar todas las pestañas', 'Añadir pestañas a marcadores...' y 'Deshacer el cierre de la última pestaña'">
 <!ENTITY Ctr_noresizerxp	"Ocultar redimensionador (Windows XP)">
@@ -220,7 +223,7 @@
 <!ENTITY Ctr_hideurelstop	"Ocultar botones 'Parar y Recargar'">
 <!ENTITY Ctr_hideurlgo		"Ocultar botón 'Ir'">
 <!ENTITY Ctr_hideurlsrg		"Ocultar separadores y espacios del botón 'Recargar, Parar e Ir'">
-<!ENTITY Ctr_urlbardropm	"Move dropmarker to the last possible position">
+<!ENTITY Ctr_urlbardropm	"Mover flecha de despliegue a la última posición posible">
 <!ENTITY Ctr_altreaderico	"Iconos de 'Vista de lectura' alternativos">
 <!ENTITY Ctr_hideprbutton	"Ocultar icono de notificación cuando se bloquee una ventana emergente">
 <!ENTITY Ctr_locsearchbw10	"Reducir altura de la barra de direcciones y el recuadro de búsqueda (experimental)">
@@ -238,8 +241,8 @@
 <!ENTITY Ctr_icopageinfo	"Hacer clic en el icono abre la ventana 'Información de la página'">
 <!ENTITY Ctr_lbsbsize		"Ancho personalizado para barra de direcciones y recuadro de búsqueda">
 <!ENTITY Ctr_searchbar		"Recuadro de búsqueda">
-<!ENTITY Ctr_lbsugresi		"Display as many results in suggestions popup as possible (without scrollbar)">
-<!ENTITY Ctr_lbsugres		"Number of results in suggestions popup (about:config preference)">
+<!ENTITY Ctr_lbsugresi		"Mostrar máximo de resultados (sin barra de desplazamiento) en el menú de sugerencias">
+<!ENTITY Ctr_lbsugres		"Resultados menú de sugerencias (about:config >> browser.urlbar.maxRichResults)">
 
 <!ENTITY Ctr_menubar_items	"Posición de los elementos del menú">
 <!ENTITY Ctr_extrabar		"Barras de herramientas adicionales">
@@ -258,7 +261,7 @@
 <!ENTITY Ctr_mbarforceright	"Último elemento">
 
 <!ENTITY Ctr_toolbars		"Barras de herramientas">
-<!ENTITY Ctr_dblclnewtab	"Hacer doble clic abre una 'nueva' pestaña (about:config>>browser.newtab.url)">
+<!ENTITY Ctr_dblclnewtab	"Hacer doble clic abre una 'nueva' pestaña (about:config >> browser.newtab.url)">
 <!ENTITY Ctr_hidetbwot		"Ocultar barra de pestañas con una sola pestaña visible">
 <!ENTITY Ctr_hidetbwote		"Reducir retardo al ocultar en el inicio">
 <!ENTITY Ctr_hidetbwote_i	"Podría causar problemas en la barra de pestañas">
@@ -302,10 +305,10 @@
 <!ENTITY Ctr_tabthrobber	"Imagen predeterminada durante la carga">
 <!ENTITY Ctr_bmanimation	"Al añadir nuevos marcadores">
 <!ENTITY Ctr_pananimation	"De la apertura de paneles">
-<!ENTITY Ctr_tabanimation	"De la apertura/cierre de pestañas (about:config>>browser.tabs.animate)">
-<!ENTITY Ctr_dlanimation	"De las notificaciones de descarga (about:config>>browser.download.animateNotifications)">
-<!ENTITY Ctr_fsanimation	"De pantalla completa (about:config>>browser.fullscreen.animate)">
-<!ENTITY Ctr_fsaduration	"De pantalla completa del reproductor HTML5 (about:config>>full-screen-api.transition-duration.*)">
+<!ENTITY Ctr_tabanimation	"De la apertura/cierre de pestañas (about:config >> browser.tabs.animate)">
+<!ENTITY Ctr_dlanimation	"De las notificaciones de descarga (about:config >> browser.download.animateNotifications)">
+<!ENTITY Ctr_fsanimation	"De pantalla completa (about:config >> browser.fullscreen.animate)">
+<!ENTITY Ctr_fsaduration	"De pantalla comp. reproductor HTML5 (about:config >> full-screen-api.transition-duration.*)">
 
 <!ENTITY Ctr_toolsitem		"Elemento en el menú Herramientas">
 <!ENTITY Ctr_appmenuitem	"Elemento en el menú de la aplicación">

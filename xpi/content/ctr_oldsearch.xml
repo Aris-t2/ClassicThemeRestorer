@@ -462,9 +462,14 @@
           else {
             if ((aEvent instanceof KeyboardEvent) && aEvent.altKey)
               where = "tab";
+			  
             if ((aEvent instanceof MouseEvent) && (aEvent.button == 1 ||
-                                                   aEvent.ctrlKey))
-              where = "tab-background";
+                                                   aEvent.ctrlKey)) {
+              if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("osearch_meoit"))
+			    where = "tab";
+			  else
+			    where = "tab-background";
+			}
           }
 		  
           this.doSearch(textValue, where, aEngine);
@@ -484,6 +489,9 @@
         <parameter name="aEngine"/>
         <body><![CDATA[
           var textBox = this._textbox;
+		  
+          if(aWhere == "tab-background" && Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("osearch_meoit"))
+			aWhere = "tab";
 
           // Save the current value in the form history
           if (aData && !PrivateBrowsingUtils.isWindowPrivate(window)) {
@@ -504,6 +512,7 @@
             postData: submission.postData,
             inBackground: aWhere == "tab-background"
           };
+
           openUILinkIn(submission.uri.spec,
                        aWhere == "tab-background" ? "tab" : aWhere,
                        params);

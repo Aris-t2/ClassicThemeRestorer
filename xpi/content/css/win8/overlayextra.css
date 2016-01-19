@@ -428,11 +428,11 @@
 	}
 	
 	/* fix recent icon stretching*/
-    #nav-bar .toolbarbutton-1:not([type=menu-button]),
+    /*#nav-bar .toolbarbutton-1:not([type=menu-button]),
     #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button,
     #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
       -moz-box-align: center !important;
-    }
+    }*/
 
 	/* temporal fix for Win8s minimize button in some cases */
 	@media (-moz-windows-default-theme) {

@@ -148,7 +148,8 @@
       <menu id="ctraddon_BMB_unsortedBookmarks_mm"
                   class="menu-iconic bookmark-item"
                   label="&bookmarksMenuButton.unsorted.label;"
-                  container="true">
+                  container="true"
+				  insertbefore="bookmarksMenuItemsSeparator">
         <menupopup id="BMB_unsortedBookmarksPopup_mm"
                   placespopup="true"
                   context="placesContext"

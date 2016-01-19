@@ -758,6 +758,13 @@ classicthemerestorerjso.ctr = {
 	
     document.getElementById('ctraddon_pw_ctroldsearchc').disabled = which;
 	document.getElementById('ctraddon_pw_ctroldsearchc').style.visibility = itemvis;
+    document.getElementById('ctraddon_pw_osearch_dm').disabled = which;
+	document.getElementById('ctraddon_pw_osearch_dm').style.visibility = itemvis;
+    document.getElementById('ctraddon_pw_search_oit').disabled = which;
+	document.getElementById('ctraddon_pw_search_oit').style.visibility = itemvis;
+    document.getElementById('ctraddon_pw_osearch_meoit').disabled = which;
+	document.getElementById('ctraddon_pw_osearch_meoit').style.visibility = itemvis;
+	
   },
  
   altTabsToolbarBgExtra: function(which) {

@@ -1809,10 +1809,24 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "ctroldsearch":
-			if (branch.getBoolPref("ctroldsearch") && classicthemerestorerjs.ctr.appversion >= 43) classicthemerestorerjs.ctr.loadUnloadCSS("ctroldsearch",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("ctroldsearch",false);
+			if (branch.getBoolPref("ctroldsearch") && classicthemerestorerjs.ctr.appversion >= 43) {
+				classicthemerestorerjs.ctr.loadUnloadCSS("ctroldsearch",true);
+				
+				if (branch.getBoolPref("osearch_dm"))
+				  classicthemerestorerjs.ctr.loadUnloadCSS("osearch_dm",true);
+			}
+			else { 
+			  classicthemerestorerjs.ctr.loadUnloadCSS("ctroldsearch",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("osearch_dm",false);
+			}
 			  
 			classicthemerestorerjs.ctr.loadUnloadCSS('cui_buttons',true);
+		  break;
+		  
+		  case "osearch_dm":
+			if (branch.getBoolPref("osearch_dm") && branch.getBoolPref("ctroldsearch") &&
+				classicthemerestorerjs.ctr.appversion >= 43) classicthemerestorerjs.ctr.loadUnloadCSS("osearch_dm",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("osearch_dm",false);
 		  break;
 
 		  case "am_nowarning":
@@ -3543,6 +3557,7 @@ classicthemerestorerjs.ctr = {
 		case "hidezoomres": 		manageCSS("hide_zoomreset.css");		break;
 		case "alt_newtabp": 		manageCSS("alt_newtabpage.css");		break;
 		case "ctroldsearch": 		manageCSS("oldsearch.css");				break;
+		case "osearch_dm": 			manageCSS("oldsearch_dm.css");			break;
 		case "am_nowarning":		manageCSS("am_nowarnings.css");			break;
 		case "am_compact":			manageCSS("am_compact.css");			break;
 		case "am_compact2":			manageCSS("am_compact2.css");			break;
