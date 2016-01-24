@@ -1,3 +1,17 @@
 @-moz-document url(about:preferences),url-prefix(about:preferences){
+	textbox {
+	  -moz-appearance: textfield !important;
+	}
+	treecol {
+	  -moz-appearance: treeheadercell !important;
+	  color: black !important;
+	}
+}
 
+window[subdialog="true"] textbox {
+  -moz-appearance: textfield !important;
+}
+window[subdialog="true"] treecol {
+  -moz-appearance: treeheadercell !important;
+  color: black !important;
 }

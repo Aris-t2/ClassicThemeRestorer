@@ -33,13 +33,21 @@
 	margin-bottom: -1px !important;
   }
   
-  #forward-button > .toolbarbutton-icon {
+  #forward-button:not([disabled]) > .toolbarbutton-icon {
     padding-top: 2px !important;
     padding-bottom: 2px !important;
     -moz-padding-start: 6px !important;
     -moz-padding-end: 3px !important;
     -moz-margin-start: 2px !important;
-    max-width: unset !important;
   }
-    
+  @media (max-resolution: 1.0dppx) {
+    #forward-button:not([disabled]) > .toolbarbutton-icon {
+      max-width: unset !important;
+    }
+  }
+  @media (min-resolution: 1.1dppx) {
+    #identity-icon-labels label {
+      margin-top: -2px !important;
+    }
+  }
 }

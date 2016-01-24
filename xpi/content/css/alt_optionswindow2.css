@@ -212,6 +212,17 @@
 	  -moz-appearance: menulist !important;
 	}
 	
+	#noFxaSignIn *,
+	#noFxaSignUp *{
+	  padding:0 !important;
+	  margin: 0 -8px !important;
+	}
+	
+	#fxaUnlinkButton * {
+	  -moz-margin-start: -8px !important;
+	  -moz-margin-end: 8px !important;
+	}
+	
 	/* menulist popup */
 	@media all and (-moz-windows-theme:aero) {
 		menupopup menuitem {

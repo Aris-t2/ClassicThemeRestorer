@@ -1,0 +1,12 @@
+@-moz-document url-prefix(chrome://mozapps/content/extensions/extensions.xul), url-prefix(about:addons) {
+
+	#addons-page .main-content .addon:hover,
+	#addons-page .main-content .addon[active="false"]:hover{
+	  background: Highlight !important;
+	  color: HighlightText !important;
+	}
+	#addons-page .main-content .addon:hover .content-inner-container label{
+	  color: HighlightText !important;
+	}
+
+}
