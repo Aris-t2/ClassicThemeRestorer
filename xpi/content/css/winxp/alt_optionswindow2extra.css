@@ -6,6 +6,12 @@
 	  -moz-appearance: treeheadercell !important;
 	  color: black !important;
 	}
+	@media all and (-moz-windows-classic) {
+	  treecol {
+		-moz-appearance: button !important;
+		color: black !important;
+	  }
+	}
 }
 
 window[subdialog="true"] textbox {
@@ -14,4 +20,10 @@ window[subdialog="true"] textbox {
 window[subdialog="true"] treecol {
   -moz-appearance: treeheadercell !important;
   color: black !important;
+}
+@media all and (-moz-windows-classic) {
+  window[subdialog="true"] treecol {
+	-moz-appearance: button !important;
+	color: black !important;
+  }
 }

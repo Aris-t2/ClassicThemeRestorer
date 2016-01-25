@@ -346,9 +346,6 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_readermodegb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_pocketgb').style.visibility = 'collapse';
 	}
-	if (this.appversion > 37) {
-	  document.getElementById('ctraddon_pw_bmarkoinpw').style.visibility = 'collapse';
-	}
 	if (this.appversion < 40) {
 	  document.getElementById('ctraddon_pw_addonversion').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_alt_addonsm').style.visibility = 'collapse';

@@ -318,7 +318,6 @@
 
 <!ENTITY Ctr_otherctroptns	"Άλλες ρυθμίσεις">
 <!ENTITY Ctr_cuibotbuttons	"Επιπρόσθετα κουμπιά στη λειτουργία προσαρμογής">
-<!ENTITY Ctr_bookmarkoinpw	"Καταχώριση «Άνοιγμα σε νέο παράθυρο ιδιωτικής περιήγησης» στο μενού περιεχομένου σελιδοδεικτών">
 <!ENTITY Ctr_nodevtheme		"Αποτροπή ενεργοποίησης του «Θέματος έκδοσης για προγραμματιστές»">
 
 <!ENTITY Ctr_experttweaks	"Προηγμένες">
@@ -355,20 +354,18 @@
 <!ENTITY Ctr_support		"Φόρουμ υποστήριξης">
 <!ENTITY Ctr_newversion		"Νέα έκδοση;">
 
-<!ENTITY Ctr_addon-bar.accesskey			"λ">
-<!ENTITY Ctr_openInPrivateWindow			"Άνοιγμα σε νέο παράθυρο ιδιωτικής περιήγησης">
-<!ENTITY Ctr_openInPrivateWindow.accesskey	"θ">
-<!ENTITY appMenuGettingStarted.label		"Ξεκινώντας">
-<!ENTITY goCmd.label						"Μετάβαση">
+<!ENTITY Ctr_addon-bar.accesskey		"λ">
+<!ENTITY appMenuGettingStarted.label	"Ξεκινώντας">
+<!ENTITY goCmd.label					"Μετάβαση">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
-<!ENTITY backCmd.accesskey					"Π">
-<!ENTITY forwardCmd.accesskey				"Μ">
-<!ENTITY reloadCmd.accesskey				"ν">
-<!ENTITY stopCmd.accesskey					"Δ">
-<!ENTITY bookmarkPageCmd2.accesskey			"σ">
+<!ENTITY backCmd.accesskey				"Π">
+<!ENTITY forwardCmd.accesskey			"Μ">
+<!ENTITY reloadCmd.accesskey			"ν">
+<!ENTITY stopCmd.accesskey				"Δ">
+<!ENTITY bookmarkPageCmd2.accesskey		"σ">
 
-<!-- Fallback entities. Leave empty! -->
-<!ENTITY openCmd.commandkey					"">
-<!ENTITY urlbar.accesskey					"">
-<!ENTITY urlbar.placeholder2				"">
+<!-- Fallback entities. Do not change! -->
+<!ENTITY openCmd.commandkey				"">
+<!ENTITY urlbar.accesskey				"">
+<!ENTITY urlbar.placeholder2			"">

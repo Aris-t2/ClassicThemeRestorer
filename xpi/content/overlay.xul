@@ -133,17 +133,6 @@
 				insertbefore="viewToolbarsMenuSeparator"/>
 	</menupopup>
 	
-	<!--### add a menuitem to bookmarks context menu to open a bookmark in a new private window ###-->
-	<menugroup id="placesContext">
-	  <menuitem id="ctraddon_placesContext_openInPrivatewindow"
-                label="&Ctr_openInPrivateWindow;"
-                accesskey="&Ctr_openInPrivateWindow.accesskey;"
-				oncommand="classicthemerestorerjs.ctr.openInPrWin();"
-				selectiontype="single"
-				selection="link"
-				insertbefore="placesContext_openSeparator"/>
-	</menugroup>
-	
 	<menugroup id="bookmarksMenuPopup">
       <menu id="ctraddon_BMB_unsortedBookmarks_mm"
                   class="menu-iconic bookmark-item"

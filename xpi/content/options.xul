@@ -276,8 +276,7 @@
 		<preference id="ctraddon_contextitem"	name="extensions.classicthemerestorer.contextitem"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_puictrbutton"	name="extensions.classicthemerestorer.puictrbutton"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_cuibuttons"	name="extensions.classicthemerestorer.cuibuttons"	type="bool"		instantApply="true"/>
-		<preference id="ctraddon_bmarkoinpw"	name="extensions.classicthemerestorer.bmarkoinpw"	type="bool"		instantApply="true"/>
-		
+
 		<preference id="ctraddon_navbarpad"		name="extensions.classicthemerestorer.navbarpad"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_navbarpad_l"	name="extensions.classicthemerestorer.navbarpad_l" 	type="int"		instantApply="true"/>
 		<preference id="ctraddon_navbarpad_r"	name="extensions.classicthemerestorer.navbarpad_r" 	type="int"		instantApply="true"/>
@@ -1298,7 +1297,6 @@
 		<caption  label="&Ctr_otherctroptns;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_cuibotbuttons;"	preference="ctraddon_cuibuttons"/>
 		<checkbox label="&Ctr_nodevtheme;"		preference="ctraddon_nodevtheme2" id="ctraddon_pw_nodevtheme2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
-		<checkbox label="&Ctr_bookmarkoinpw;"	preference="ctraddon_bmarkoinpw" id="ctraddon_pw_bmarkoinpw"/>
 	  </groupbox>
 
 	</box>

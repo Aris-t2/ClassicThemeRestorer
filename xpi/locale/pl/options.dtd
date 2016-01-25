@@ -150,7 +150,7 @@
 <!ENTITY Ctr_nav_txt_ico1	"Pokaż duże ikony">
 <!ENTITY Ctr_nav_txt_ico2	"Pokaż ikony i tekst">
 <!ENTITY Ctr_nav_txt_ico3	"Pokaż tylko tekst">
-<!ENTITY Ctr_nav_txt_exp	"Classic attributes (experimental):">
+<!ENTITY Ctr_nav_txt_exp	"Atrybuty klasyczne (eksperymentalne):">
 <!ENTITY Ctr_iat_notf_vt	"Wyklucz pionowe paski narzędzi">
 <!ENTITY Ctr_cpanelmenus	"Menu podręczne panelu (zakładki, historia itp.): widok kompaktowy">
 <!ENTITY Ctr_hidezoomres	"Kontrolki powiększenia na pasku narzędzi: ukryj przycisk resetu powiększenia">
@@ -166,7 +166,7 @@
 <!ENTITY Ctr_am_nowarning	"Listy dodatków: ukryj ostrzeżenia">
 <!ENTITY Ctr_am_compact		"Listy dodatków: widok kompaktowy">
 <!ENTITY Ctr_am_compact2	"Widok kompaktowy +">
-<!ENTITY Ctr_am_highlight	"Add-on lists: highlight entry on hover">
+<!ENTITY Ctr_am_highlight	"Listy dodatków: podświetl pozycję po najechaniu">
 <!ENTITY Ctr_addonversion	"Listy dodatków: wyświetl wersję dodatku">
 <!ENTITY Ctr_xpinstallui	"Stare okno instalacji dodatku (ustawienie about:config)">
 <!ENTITY Ctr_bmbutton		"Przycisk menu zakładek">
@@ -318,7 +318,6 @@
 
 <!ENTITY Ctr_otherctroptns	"Inne ustawienia">
 <!ENTITY Ctr_cuibotbuttons	"Dodatkowe przyciski w trybie 'dostosowywania'">
-<!ENTITY Ctr_bookmarkoinpw	"Pozycja 'Otwórz w nowym oknie prywatnym' w menu kontekstowym zakładek">
 <!ENTITY Ctr_nodevtheme		"Zapobiegaj włączeniu 'Motywu Edycji Deweloperskiej'">
 
 <!ENTITY Ctr_experttweaks	"Zaawansowane">
@@ -355,20 +354,18 @@
 <!ENTITY Ctr_support		"Forum wsparcia">
 <!ENTITY Ctr_newversion		"Nowa wersja?">
 
-<!ENTITY Ctr_addon-bar.accesskey	"A">
-<!ENTITY Ctr_openInPrivateWindow	"Otwórz w nowym oknie prywatnym">
-<!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
+<!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"Pierwsze kroki">
-<!ENTITY goCmd.label		"Przejdź">
+<!ENTITY goCmd.label					"Przejdź">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
-<!ENTITY backCmd.accesskey            "W">
-<!ENTITY forwardCmd.accesskey         "p">
-<!ENTITY reloadCmd.accesskey          "O">
-<!ENTITY stopCmd.accesskey            "Z">
-<!ENTITY bookmarkPageCmd2.accesskey   "D">
+<!ENTITY backCmd.accesskey				"W">
+<!ENTITY forwardCmd.accesskey			"p">
+<!ENTITY reloadCmd.accesskey			"O">
+<!ENTITY stopCmd.accesskey				"Z">
+<!ENTITY bookmarkPageCmd2.accesskey		"D">
 
 <!-- Fallback entities. Do not change! -->
-<!ENTITY openCmd.commandkey			"">
-<!ENTITY urlbar.accesskey			"">
-<!ENTITY urlbar.placeholder2		"">
+<!ENTITY openCmd.commandkey				"">
+<!ENTITY urlbar.accesskey				"">
+<!ENTITY urlbar.placeholder2			"">

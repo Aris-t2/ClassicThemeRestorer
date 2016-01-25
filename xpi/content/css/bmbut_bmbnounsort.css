@@ -4,11 +4,14 @@
 
 	* #ctraddon_BMB_unsortedBookmarks_m,
 	* #ctraddon_BMB_unsortedBookmarks_mm,
-	#ctraddon_BMB_bookmarksPopup .hide-if-empty-places-result,
 	#ctraddon_BMB_unsortedBookmarks,
-	#bookmarksMenuPopup .hide-if-empty-places-result,
 	#menu_unsortedBookmarks {
 	  display:none !important;
+	}
+	
+	#ctraddon_BMB_bookmarksPopup .hide-if-empty-places-result,
+	#bookmarksMenuPopup .hide-if-empty-places-result {
+	  visibility: collapse !important;
 	}
 
 }
