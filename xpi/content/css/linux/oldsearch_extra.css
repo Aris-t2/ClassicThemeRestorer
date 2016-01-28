@@ -26,5 +26,11 @@
 	searchbar .search-go-button {
 	  -moz-margin-end: 0px !important;
 	}
+	
+	.addengine-item {
+	  -moz-appearance: menuitem !important;
+	  padding: unset !important;
+	  height: auto !important;
+	}
 
 }

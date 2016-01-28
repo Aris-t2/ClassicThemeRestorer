@@ -214,4 +214,19 @@
 	toolbar:not(#nav-bar):not(#TabsToolbar) #zoompage-item .toolbarbutton-1:not([type="menu-button"]) {
 	  min-width: unset !important;
 	}
+	
+	/* fix Firefox 44+ button width issues */
+	#main-window[fx44plus="true"] .toolbarbutton-1 > .toolbarbutton-icon,
+	#main-window[fx44plus="true"] .toolbarbutton-1 > :-moz-any(.toolbarbutton-menubutton-button, .toolbarbutton-badge-stack) > .toolbarbutton-icon,
+	#main-window[fx44plus="true"] .toolbarbutton-1:-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #panic-button, #web-apps-button, #webide-button, #loop-button, #pocket-button) > .toolbarbutton-icon,
+	#main-window[fx44plus="true"] .toolbarbutton-1:-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #panic-button, #web-apps-button, #webide-button, #loop-button, #pocket-button) > :-moz-any(.toolbarbutton-menubutton-button, .toolbarbutton-badge-stack) > .toolbarbutton-icon,
+	#main-window[fx44plus="true"] #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon,
+	#main-window[fx44plus="true"] #nav-bar .toolbarbutton-1 > .toolbarbutton-icon,
+	#main-window[fx44plus="true"] #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+	#main-window[fx44plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon,
+	#main-window[fx44plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+	#main-window[fx44plus="true"] #back-button > .toolbarbutton-icon{
+	  max-width: unset !important;
+	}
+
 }

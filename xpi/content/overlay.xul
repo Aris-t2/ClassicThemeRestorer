@@ -837,7 +837,7 @@
           <menuseparator builder="end"
                          class="hide-if-empty-places-result"/>
           <menuitem id="ctraddon_BMB_unsortedBookmarks"
-                    label="&bookmarksMenuButton.unsorted.label;"
+                    label="&unsortedBookmarksCmd.label;"
                     oncommand="PlacesCommandHook.showPlacesOrganizer('UnfiledBookmarks');"
                     class="menuitem-iconic"/>
         </menupopup>
