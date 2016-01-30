@@ -1776,7 +1776,7 @@ classicthemerestorerjs.ctr = {
 		  break;		  
 
 		  case "emptyfavicon":
-			if (branch.getBoolPref("emptyfavicon")) classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",true);
+			if (branch.getBoolPref("emptyfavicon") && branch.getBoolPref("emptyfavicon2")==false) classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",false);
 			
 			if (branch.getBoolPref("faviconurl")) {classicthemerestorerjs.ctr.favIconinUrlbarCTR();}
@@ -1785,9 +1785,10 @@ classicthemerestorerjs.ctr = {
 		  case "emptyfavicon2":
 			if (branch.getBoolPref("emptyfavicon2")) {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon2",true);
-			  if (branch.getBoolPref("emptyfavicon")) { branch.setBoolPref("emptyfavicon",false);}
+			  if (branch.getBoolPref("emptyfavicon")) { classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",false);}
 			} else {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon2",false);
+			  if (branch.getBoolPref("emptyfavicon")) { classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",true);}
 			}
 
 			if (branch.getBoolPref("faviconurl")) {classicthemerestorerjs.ctr.favIconinUrlbarCTR();}
@@ -2796,7 +2797,7 @@ classicthemerestorerjs.ctr = {
 		ppfavicon.setAttribute("src", gBrowser.selectedTab.image);
 	  } catch(e){}
 	 }
-	 else if(emptyfavicon1 && extrabrandico && ppsvalid && ibchromeui){
+	 else if(emptyfavicon1 && emptyfavicon2==false && extrabrandico && ppsvalid && ibchromeui){
 	  try {
 		ppfavicon.removeAttribute("src");
 	  } catch(e){}
@@ -2806,7 +2807,7 @@ classicthemerestorerjs.ctr = {
 		ppfavicon.removeAttribute("src");
 	  } catch(e){}
 	 }
-	 else if(emptyfavicon1 && ppsinvalid && ibukidentity) {
+	 else if(emptyfavicon1 && emptyfavicon2==false && ppsinvalid && ibukidentity) {
 	  try {
 		ppfavicon.setAttribute("src", "chrome://classic_theme_restorer/content/images/default_dot_favicon.png");
 	  } catch(e){}
@@ -2816,7 +2817,7 @@ classicthemerestorerjs.ctr = {
 		ppfavicon.setAttribute("src", "chrome://classic_theme_restorer/content/images/default_favicon.png");
 	  } catch(e){}
 	 }
-	 else if(emptyfavicon1) {
+	 else if(emptyfavicon1 && emptyfavicon2==false) {
 	  try {
 		ppfavicon.setAttribute("src", "chrome://classic_theme_restorer/content/images/default_dot_favicon.png");
 	  } catch(e){}
