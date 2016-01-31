@@ -557,8 +557,7 @@
 	  display: none !important;
 	}
 	
-	toolbar[mode="full"] toolbarbutton[type="menu"]:not(#bookmarks-menu-button) dropmarker,
-	toolbar[mode="full"] toolbarbutton[type="menu-button"]:not(#bookmarks-menu-button) dropmarker{
+	toolbar[mode="full"] toolbarbutton[type="menu"]:not(#bookmarks-menu-button) dropmarker{
 	  display: none !important;
 	}
 
