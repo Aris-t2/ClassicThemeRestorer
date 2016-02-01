@@ -57,7 +57,9 @@
 <!ENTITY Ctr_square_edges	"使分頁標籤四角為嚴格直角">
 <!ENTITY Ctr_tttitlebar		"將分頁標題文字顯示於 &brandShortName; 標題列">
 <!ENTITY Ctr_tabinsertion	"在網頁上點選連結時，將新分頁開啟於目前分頁的旁邊，即把預設行為 [a][b][c][1][2][3] 改為 [a][1][2][3][b][c] (about:config » browser.tabs.insertRelatedAfterCurrent)">
-<!ENTITY Ctr_emptyfavicon	"開啟的網頁若未提供網站圖示，仍在該分頁顯示空圖示">
+<!ENTITY Ctr_emptytfavico	"Show favicon (if a site does not offer one)">
+<!ENTITY Ctr_emptytfavico_n	"None">
+<!ENTITY Ctr_emptytfavico_g	"Generic">
 <!ENTITY Ctr_noemptypticon	"從釘選分頁移除空圖示">
 <!ENTITY Ctr_e10stab_notd	"e10s 分頁: 移除底線">
 <!ENTITY Ctr_closetab_0		"關閉按鈕">
@@ -127,7 +129,7 @@
 <!ENTITY Ctr_wincontrols	"可移動的全螢幕視窗控制項">
 <!ENTITY Ctr_oldtoplevimg	"「頂層網域」圖示: 經典外觀">
 <!ENTITY Ctr_altalertbox	"「警示方塊」: 換個外觀">
-<!ENTITY Ctr_emptyfavicon2	"以白紙圖示取代空圖示">
+<!ENTITY Ctr_emptygfavico	"Replace generic favicon">
 <!ENTITY Ctr_mstatusbar		"使狀態列可移動">
 <!ENTITY Ctr_mstatusbars4e	"狀態列由 Status-4-Evar 控制">
 <!ENTITY Ctr_mstatusbartpp	"狀態列由 The Puzzle Piece 控制">
@@ -172,6 +174,7 @@
 <!ENTITY Ctr_bmbutton		"書籤選單按鈕">
 <!ENTITY Ctr_bmbutpanelm	"彈出式書籤選單: 書籤選單使用和面板選單同風格的外觀">
 <!ENTITY Ctr_bmbunsortbm	"彈出式書籤選單: 「未排序書籤」項目附加子選單">
+<!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
 <!ENTITY Ctr_bmbviewbmtb	"彈出式書籤選單: 顯示「檢視書籤工具列」項目">
 <!ENTITY Ctr_bmbnounsort	"彈出式書籤選單: 隱藏「未排序書籤」項目">
 <!ENTITY Ctr_bmbutnotext	"當此按鈕位於書籤列時，隱藏按鈕文字標籤">
@@ -222,9 +225,11 @@
 <!ENTITY Ctr_starinurlinfo	"原書籤按鈕將被隱藏">
 <!ENTITY Ctr_feedinurl		"網址列中顯示消息來源訂閱按鈕">
 <!ENTITY Ctr_hideurelstop	"隱藏網址列中的停止與重新載入按鈕">
+<!ENTITY Ctr_hideurelstop2	"Always show 'go' button">
 <!ENTITY Ctr_hideurlgo		"隱藏「衝」按鈕">
 <!ENTITY Ctr_hideurlsrg		"隱藏「重新載入、停止載入、衝」按鈕兩側的分隔線和空白">
 <!ENTITY Ctr_urlbardropm	"將下拉式三角按鈕儘可能地移動到網址列最末端">
+<!ENTITY Ctr_urlbardropm2	"Make dropmarker always visible">
 <!ENTITY Ctr_altreaderico	"換個「閱讀模式」圖示">
 <!ENTITY Ctr_hideprbutton	"當彈出型廣告視窗被封鎖時，不顯示通知圖示">
 <!ENTITY Ctr_locsearchbw10	"減少網址列和搜尋列高度 (實驗性)">

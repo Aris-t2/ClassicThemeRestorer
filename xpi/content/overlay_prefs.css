@@ -225,7 +225,6 @@ radio.ctraddontab .radio-check-box1 {
    At least 'padding-left' does not create an empty space in front of ootion labels on rtl locales
 */
 
-#ctraddon_pw_tab_emptyfavicon label,
 #ctraddon_pw_tab_noemptypticon label {
   background:url('chrome://classic_theme_restorer/content/images/default_dot_favicon.png') no-repeat left !important;
   padding-left:20px !important;
@@ -322,25 +321,51 @@ radio.ctraddontab .radio-check-box1 {
   border: 1px solid Highlight !important;
 }
 
+/**/
+
+#ctraddon_emptyfavico_t_sheet,
+#ctraddon_emptyfavico_g_sheet{
+  list-style-image:url('chrome://classic_theme_restorer/content/images/default_favicon.png');
+}
+
+#ctraddon_emptyfavico_t_dot,
+#ctraddon_emptyfavico_g_dot{
+  list-style-image:url('chrome://classic_theme_restorer/content/images/default_dot_favicon.png');
+}
+
+#ctraddon_emptyfavico_t_none.
+#ctraddon_emptyfavico_g_def {
+  -moz-margin-end: 0px;	
+}
+
+#ctraddon_emptyfavico_t_gen,
+#ctraddon_emptyfavico_t_dot,
+#ctraddon_emptyfavico_g_dot,
+#ctraddon_emptyfavico_t_sheet,
+#ctraddon_emptyfavico_g_sheet{
+  margin-left: -1px;
+  margin-right: -1px;
+}
+
 /* tab separator settings */
 #ctraddon_tabsep_def {
   -moz-margin-end:-2px;
 }
 #ctraddon_tabsep_black{
   list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator.png');
-      -moz-image-region: rect(0px, 3px, 24px, 0px);
+  -moz-image-region: rect(0px, 3px, 24px, 0px);
 }
 #ctraddon_tabsep_luna{
   list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator-luna-blue.png');
-      -moz-image-region: rect(0px, 3px, 24px, 0px);
+  -moz-image-region: rect(0px, 3px, 24px, 0px);
 }
 #ctraddon_tabsep_xp{
   list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator-XP.png');
-      -moz-image-region: rect(0px, 3px, 24px, 0px);
+  -moz-image-region: rect(0px, 3px, 24px, 0px);
 }
 #ctraddon_tabsep_white{
   list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator-inv.png');
-      -moz-image-region: rect(0px, 3px, 24px, 0px);
+  -moz-image-region: rect(0px, 3px, 24px, 0px);
 }
 #ctraddon_tabsep_black_sol{
   list-style-image:url('chrome://classic_theme_restorer/content/images/tab-separator_solid.png');
@@ -420,12 +445,6 @@ radio.ctraddontab .radio-check-box1 {
   min-height:16px !important;
 }
 
-#ctraddon_pw_emptyfavicon2 label {
-  background:url('chrome://classic_theme_restorer/content/images/default_favicon.png') no-repeat left !important;
-  padding-left:20px !important;
-  min-height:16px !important;
-}
-
 #ctraddon_pw_activitythrobber label {
   background:url('chrome://classic_theme_restorer/content/images/throbber_loading.png') no-repeat left !important;
   padding-left:20px !important;
@@ -445,6 +464,7 @@ radio.ctraddontab .radio-check-box1 {
   min-height:16px !important;
 }
 
+#ctraddon_pw_hideurelstop2 label,
 #ctraddon_pw_hideurlgo label {
   background:url('chrome://classic_theme_restorer/content/images/urlgo.png') no-repeat left !important;
   padding-left:20px !important;
@@ -457,7 +477,8 @@ radio.ctraddontab .radio-check-box1 {
   min-height:16px !important;
 }
 
-#ctraddon_pw_urlbardropm label{
+#ctraddon_pw_urlbardropm label,
+#ctraddon_pw_urlbardropm2 label{
   background:url('chrome://classic_theme_restorer/content/images/pw_urlbar_dropmarker.png') no-repeat left !important;
   padding-left:20px !important;
 }
@@ -525,6 +546,7 @@ radio.ctraddontab .radio-check-box1 {
 
 #ctraddon_pw_bmbutpanelm label,
 #ctraddon_pw_bmbunsortbm label,
+#ctraddon_pw_bmbunsortbm2 label,
 #ctraddon_pw_bmbutnotext label,
 #ctraddon_pw_bmbviewbmtb label,
 #ctraddon_pw_bmbnounsort label {

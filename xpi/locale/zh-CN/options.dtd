@@ -57,7 +57,9 @@
 <!ENTITY Ctr_square_edges	"方形顶部边角">
 <!ENTITY Ctr_tttitlebar		"在 &brandShortName; 标题栏显示标签页标题">
 <!ENTITY Ctr_tabinsertion	"在当前标签页后插入关联标签页 (about:config)">
-<!ENTITY Ctr_emptyfavicon	"使用空白网站小图标 (如果网站没有提供)">
+<!ENTITY Ctr_emptytfavico	"Show favicon (if a site does not offer one)">
+<!ENTITY Ctr_emptytfavico_n	"None">
+<!ENTITY Ctr_emptytfavico_g	"Generic">
 <!ENTITY Ctr_noemptypticon	"为固定的标签页移除空白小图标">
 <!ENTITY Ctr_e10stab_notd	"E10s 标签页: 移除下划线">
 <!ENTITY Ctr_closetab_0		"标签页关闭按钮">
@@ -127,7 +129,7 @@
 <!ENTITY Ctr_wincontrols	"全屏窗口控制按钮可以移动">
 <!ENTITY Ctr_oldtoplevimg	"“顶级域名”图片: 经典外观">
 <!ENTITY Ctr_altalertbox	"“提示框”: 备选的外观">
-<!ENTITY Ctr_emptyfavicon2	"使用空白页面图标来代替常规图标(空白或虚线框)">
+<!ENTITY Ctr_emptygfavico	"Replace generic favicon">
 <!ENTITY Ctr_mstatusbar		"使状态栏面板可以移动">
 <!ENTITY Ctr_mstatusbars4e	"状态栏面板由“Status-4-Evar”所控制">
 <!ENTITY Ctr_mstatusbartpp	"状态栏面板由“ThePuzzlePiece”所控制">
@@ -172,6 +174,7 @@
 <!ENTITY Ctr_bmbutton		"书签菜单按钮">
 <!ENTITY Ctr_bmbutpanelm	"弹出式菜单: 面板式菜单外观">
 <!ENTITY Ctr_bmbunsortbm	"弹出式菜单: “未分类书签”子菜单">
+<!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
 <!ENTITY Ctr_bmbviewbmtb	"弹出式菜单: 显示“查看工具栏”">
 <!ENTITY Ctr_bmbnounsort	"弹出式菜单: 隐藏“未分类书签”">
 <!ENTITY Ctr_bmbutnotext	"隐藏书签工具栏上的文本标签">
@@ -222,9 +225,11 @@
 <!ENTITY Ctr_starinurlinfo	"默认书签菜单按钮被隐藏">
 <!ENTITY Ctr_feedinurl		"RSS源按钮">
 <!ENTITY Ctr_hideurelstop	"隐藏停止和重新载入按钮">
+<!ENTITY Ctr_hideurelstop2	"Always show 'go' button">
 <!ENTITY Ctr_hideurlgo		"隐藏 “转到” 按钮">
 <!ENTITY Ctr_hideurlsrg		"隐藏 “重新载入，停止和转到” 按钮的分隔符与空白">
 <!ENTITY Ctr_urlbardropm	"尽可能移动下拉按钮到最后的位置">
+<!ENTITY Ctr_urlbardropm2	"Make dropmarker always visible">
 <!ENTITY Ctr_altreaderico	"备选的 “阅读模式” 图标">
 <!ENTITY Ctr_hideprbutton	"当弹出窗口被阻止时隐藏通知图标">
 <!ENTITY Ctr_locsearchbw10	"减小地址栏与搜索栏高度(实验性)">

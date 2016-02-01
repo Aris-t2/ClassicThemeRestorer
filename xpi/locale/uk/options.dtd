@@ -57,7 +57,9 @@
 <!ENTITY Ctr_square_edges	"Квадратні верхні кути">
 <!ENTITY Ctr_tttitlebar		"Заголовок вкладки на панелі заголовку &brandShortName;">
 <!ENTITY Ctr_tabinsertion	"Вставити відповідну вкладку після поточної вкладки (about:config)">
-<!ENTITY Ctr_emptyfavicon	"Відновити порожній значок сайту (якщо сайт не пропонує його)">
+<!ENTITY Ctr_emptytfavico	"Show favicon (if a site does not offer one)">
+<!ENTITY Ctr_emptytfavico_n	"None">
+<!ENTITY Ctr_emptytfavico_g	"Generic">
 <!ENTITY Ctr_noemptypticon	"Прибрати порожній значок адреси з прикріпленої вкладки">
 <!ENTITY Ctr_e10stab_notd	"E10s вкладки: видалити підкреслення">
 <!ENTITY Ctr_closetab_0		"Кнопка закриття вкладки">
@@ -127,7 +129,7 @@
 <!ENTITY Ctr_wincontrols	"Рухоме управління повноекранним режимом">
 <!ENTITY Ctr_oldtoplevimg	"Зображення «домену верхнього рівня»: класичний вигляд">
 <!ENTITY Ctr_altalertbox	"«Вікно попереджень»: альтернативний вигляд">
-<!ENTITY Ctr_emptyfavicon2	"Замінити загальний значок сайту (порожній і пунктирний)">
+<!ENTITY Ctr_emptygfavico	"Replace generic favicon">
 <!ENTITY Ctr_mstatusbar		"Рухомий рядок стану">
 <!ENTITY Ctr_mstatusbars4e	"Панель статусу контролюється додатком «Status-4-Evar»">
 <!ENTITY Ctr_mstatusbartpp	"Панель статусу контролюється додатком «ThePuzzlePiece»">
@@ -172,6 +174,7 @@
 <!ENTITY Ctr_bmbutton		"Кнопка меню закладок">
 <!ENTITY Ctr_bmbutpanelm	"Спливаюче вікно: вигляд меню панелі">
 <!ENTITY Ctr_bmbunsortbm	"Спливаюче вікно: субменю «несортованих закладок»">
+<!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
 <!ENTITY Ctr_bmbviewbmtb	"Спливаюче вікно: показати «Огляд панелі»">
 <!ENTITY Ctr_bmbnounsort	"Спливаюче вікно: приховати «несортовані закладки»">
 <!ENTITY Ctr_bmbutnotext	"Приховати ярлик на панелі закладок">
@@ -222,9 +225,11 @@
 <!ENTITY Ctr_starinurlinfo	"Кнопка меню закладок за замовчуванням буде прихованою">
 <!ENTITY Ctr_feedinurl		"Кнопка RSS">
 <!ENTITY Ctr_hideurelstop	"Приховати кнопку «Зупинити та Перезавантажити»">
+<!ENTITY Ctr_hideurelstop2	"Always show 'go' button">
 <!ENTITY Ctr_hideurlgo		"Приховати кнопку «Перейти»">
 <!ENTITY Ctr_hideurlsrg		"Приховати розділювачі та пробіли кнопок «перезавантажити, зупинити та перейти»">
 <!ENTITY Ctr_urlbardropm	"Рухати позначку випадного списку в останню можливу позицію">
+<!ENTITY Ctr_urlbardropm2	"Make dropmarker always visible">
 <!ENTITY Ctr_altreaderico	"Альтернативні іконки «Читача»">
 <!ENTITY Ctr_hideprbutton	"Приховати інфо кнопку «спливаюче вікно блоковано»">
 <!ENTITY Ctr_locsearchbw10	"Зменшити висоту панелей рядку адреси та пошуку (експериментальне)">

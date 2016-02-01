@@ -1,0 +1,34 @@
+@import url(empty_favicon_g0.css);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul),
+	       url(chrome://browser/content/places/places.xul),
+	       url(chrome://browser/content/history/history-panel.xul),
+	       url(chrome://browser/content/bookmarks/bookmarksPanel.xul),
+	       url(chrome://browser/content/preferences/aboutPermissions.xul),
+	       url(about:permissions) {
+
+  #alltabs-popup menuitem[image=""] > .menu-iconic-left > .menu-iconic-icon,
+  .sidebar-placesTreechildren::-moz-tree-image(leaf),
+  toolbaritem .bookmark-item:not(src):not([container]):not([type]),
+  menupopup .bookmark-item:not(src):not([container]):not([type]),
+  .site-favicon:not(src) {
+	list-style-image: url("chrome://classic_theme_restorer/content/images/default_favicon.png") !important;
+	-moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+  }
+
+  #PopupAutoCompleteRichResult .ac-site-icon[src^="chrome://mozapps/skin/places/defaultFavicon.png"] {
+	width: 0 !important;
+	padding-right: 16px !important;
+	background-image: url("chrome://classic_theme_restorer/content/images/default_favicon.png") !important;
+  }
+  
+  treechildren::-moz-tree-image(title) {
+	list-style-image: url("chrome://classic_theme_restorer/content/images/default_favicon.png") !important;
+	padding-right: 2px !important;
+	margin: 0px 2px !important;
+	width: 16px !important;
+	height: 16px !important;
+  }
+
+}

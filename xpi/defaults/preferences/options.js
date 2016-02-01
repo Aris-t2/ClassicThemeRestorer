@@ -1,5 +1,4 @@
 // tab settings
-// tab settings
 pref("extensions.classicthemerestorer.tabs","tabs_squared");
 pref("extensions.classicthemerestorer.tabsontop",'unset');
 pref("extensions.classicthemerestorer.ctabheightcb",false);
@@ -7,7 +6,7 @@ pref("extensions.classicthemerestorer.square_edges",false);
 pref("extensions.classicthemerestorer.ctabheight",28);
 pref("extensions.classicthemerestorer.ctabmwidth",100);
 pref("extensions.classicthemerestorer.ctabwidth",210);
-pref("extensions.classicthemerestorer.emptyfavicon",false);
+pref("extensions.classicthemerestorer.emptyfavico_t",'emptyfavico_t_none');
 pref("extensions.classicthemerestorer.noemptypticon",false);
 pref("extensions.classicthemerestorer.closetab","closetab_default");
 pref("extensions.classicthemerestorer.closetabhfl",false);
@@ -51,7 +50,7 @@ pref("extensions.classicthemerestorer.iat_notf_vt",false);
 pref("extensions.classicthemerestorer.wincontrols",false);
 pref("extensions.classicthemerestorer.oldtoplevimg",false);
 pref("extensions.classicthemerestorer.altalertbox",false);
-pref("extensions.classicthemerestorer.emptyfavicon2",false);
+pref("extensions.classicthemerestorer.emptyfavico_g",'emptyfavico_g_def');
 pref("extensions.classicthemerestorer.panelmenucol",false);
 pref("extensions.classicthemerestorer.cpanelmenus",false);
 pref("extensions.classicthemerestorer.hidezoomres",false);
@@ -69,6 +68,7 @@ pref("extensions.classicthemerestorer.am_highlight",false);
 pref("extensions.classicthemerestorer.alt_addonsp",false);
 pref("extensions.classicthemerestorer.bmbutpanelm",false);
 pref("extensions.classicthemerestorer.bmbunsortbm",false);
+pref("extensions.classicthemerestorer.bmbunsortbm2",true);
 pref("extensions.classicthemerestorer.bmbviewbmtb",false);
 pref("extensions.classicthemerestorer.bmbnounsort",false);
 pref("extensions.classicthemerestorer.bmbutnotext",false);
@@ -104,10 +104,12 @@ pref("extensions.classicthemerestorer.tabseparator","tabsep_default");
 pref("extensions.classicthemerestorer.starinurl",false);
 pref("extensions.classicthemerestorer.feedinurl",false);
 pref("extensions.classicthemerestorer.hideurelstop",false);
+pref("extensions.classicthemerestorer.hideurelstop2",false);
 pref("extensions.classicthemerestorer.hideurlgo",false);
 pref("extensions.classicthemerestorer.hideurlsrg",false);
 pref("extensions.classicthemerestorer.hideprbutton",false);
 pref("extensions.classicthemerestorer.urlbardropm",false);
+pref("extensions.classicthemerestorer.urlbardropm2",false);
 pref("extensions.classicthemerestorer.altreaderico",false);
 
 pref("extensions.classicthemerestorer.ib_nohovcolor",false);

@@ -57,7 +57,9 @@
 <!ENTITY Ctr_square_edges	"Rendre carrés les angles supérieurs">
 <!ENTITY Ctr_tttitlebar		"Titre de l'onglet dans &brandShortName; titlebar">
 <!ENTITY Ctr_tabinsertion	"Insérer l'onglet connexe après l'onglet actuel (about:config)">
-<!ENTITY Ctr_emptyfavicon	"Restaurer le favicon vide sur les onglets (sites ne possédant pas de favicon)">
+<!ENTITY Ctr_emptytfavico	"Show favicon (if a site does not offer one)">
+<!ENTITY Ctr_emptytfavico_n	"None">
+<!ENTITY Ctr_emptytfavico_g	"Generic">
 <!ENTITY Ctr_noemptypticon	"Enlever les favicons vides des onglets épinglés">
 <!ENTITY Ctr_e10stab_notd	"Onglets E10s : enlever le soulignage">
 <!ENTITY Ctr_closetab_0		"Bouton de fermeture">
@@ -127,7 +129,7 @@
 <!ENTITY Ctr_wincontrols	"Plein écran : boutons déplaçables">
 <!ENTITY Ctr_oldtoplevimg	"Images du 'domaine de 1er niveau' : appearance classique">
 <!ENTITY Ctr_altalertbox	"« Boîte d'alerte »: appearance alternative">
-<!ENTITY Ctr_emptyfavicon2	"Remplacer le favicon générique (vide avec pointillés) par un favicon avec l'aspect d'une feuille de papier">
+<!ENTITY Ctr_emptygfavico	"Replace generic favicon">
 <!ENTITY Ctr_mstatusbar		"Barre d'état déplaçable">
 <!ENTITY Ctr_mstatusbars4e	"Barre d'état contrôlée par « Status-4-Evar »">
 <!ENTITY Ctr_mstatusbartpp	"Barre d'état contrôlée par « ThePuzzlePiece »">
@@ -171,7 +173,8 @@
 <!ENTITY Ctr_xpinstallui	"Ancienne fenêtre d'installation de modules (préférence about:config)">
 <!ENTITY Ctr_bmbutton		"Bouton Marque-pages">
 <!ENTITY Ctr_bmbutpanelm	"Popup : apparence Panneau menu">
-<!ENTITY Ctr_bmbunsortbm	"Popup : sous menu des « marque-pages non triés » ">
+<!ENTITY Ctr_bmbunsortbm	"Popup : sous menu des « marque-pages non triés »">
+<!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
 <!ENTITY Ctr_bmbviewbmtb	"Popup : afficher « Voir la barre d'outils »">
 <!ENTITY Ctr_bmbnounsort	"Popup : cacher les « marque-pages non triés »">
 <!ENTITY Ctr_bmbutnotext	"Cacher « Marque-pages » sur la barre personnelle">
@@ -222,9 +225,11 @@
 <!ENTITY Ctr_starinurlinfo	"Par défaut le bouton de menu des marque-pages est masqué">
 <!ENTITY Ctr_feedinurl		"Bouton d'abonnement">
 <!ENTITY Ctr_hideurelstop	"Masquer « stop-actualiser »">
+<!ENTITY Ctr_hideurelstop2	"Always show 'go' button">
 <!ENTITY Ctr_hideurlgo		"Masquer le bouton « aller à »">
 <!ENTITY Ctr_hideurlsrg		"Cacher les séparateurs de boutons « actualiser, stop &amp; aller à » &amp; espaces">
 <!ENTITY Ctr_urlbardropm	"Move dropmarker to the last possible position">
+<!ENTITY Ctr_urlbardropm2	"Make dropmarker always visible">
 <!ENTITY Ctr_altreaderico	"Icônes « Lecteur » alternatives">
 <!ENTITY Ctr_hideprbutton	"Masquer l'icône de notification quand un pop-up est bloqué">
 <!ENTITY Ctr_locsearchbw10	"Réduire la hauteur de la barre d'adresse et la barre de recherche (expérimentale)">

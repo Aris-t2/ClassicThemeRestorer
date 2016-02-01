@@ -1134,13 +1134,33 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "hideurelstop":
-			if (branch.getBoolPref("hideurelstop")) classicthemerestorerjs.ctr.loadUnloadCSS("hideurelstop",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("hideurelstop",false);
+			if (branch.getBoolPref("hideurelstop")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("hideurelstop",true);
+			  
+			  if (branch.getBoolPref("hideurelstop2") && branch.getBoolPref("hideurlgo")==false) classicthemerestorerjs.ctr.loadUnloadCSS("hideurelstop2",true);
+			}
+			else { 
+			  classicthemerestorerjs.ctr.loadUnloadCSS("hideurelstop",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("hideurelstop2",false);
+			}
+		  break;
+		  
+		  case "hideurelstop2":
+			if (branch.getBoolPref("hideurelstop2") && branch.getBoolPref("hideurelstop") && branch.getBoolPref("hideurlgo")==false) classicthemerestorerjs.ctr.loadUnloadCSS("hideurelstop2",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("hideurelstop2",false);
 		  break;
 		  
 		  case "hideurlgo":
-			if (branch.getBoolPref("hideurlgo")) classicthemerestorerjs.ctr.loadUnloadCSS("hideurlgo",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("hideurlgo",false);
+			if (branch.getBoolPref("hideurlgo")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("hideurlgo",true);
+
+			  if (branch.getBoolPref("hideurelstop2") && branch.getBoolPref("hideurelstop")) classicthemerestorerjs.ctr.loadUnloadCSS("hideurelstop2",false);
+			}
+			else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("hideurlgo",false);
+
+			  if (branch.getBoolPref("hideurelstop2") && branch.getBoolPref("hideurelstop")) classicthemerestorerjs.ctr.loadUnloadCSS("hideurelstop2",true);
+			}
 		  break;
 
 		  case "hideurlsrg":
@@ -1151,6 +1171,11 @@ classicthemerestorerjs.ctr = {
 		  case "urlbardropm":
 			if (branch.getBoolPref("urlbardropm")) classicthemerestorerjs.ctr.loadUnloadCSS("urlbardropm",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("urlbardropm",false);
+		  break;
+
+		  case "urlbardropm2":
+			if (branch.getBoolPref("urlbardropm2")) classicthemerestorerjs.ctr.loadUnloadCSS("urlbardropm2",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("urlbardropm2",false);
 		  break;
 
 		  case "altreaderico":
@@ -1775,23 +1800,28 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("bf_space",false);
 		  break;		  
 
-		  case "emptyfavicon":
-			if (branch.getBoolPref("emptyfavicon") && branch.getBoolPref("emptyfavicon2")==false) classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",false);
+		  case "emptyfavico_t":
+			  
+			classicthemerestorerjs.ctr.loadUnloadCSS('emptyfavico_t_dot',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('emptyfavico_t_gen',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('emptyfavico_t_sheet',false);
+			
+			if (branch.getCharPref("emptyfavico_t")!="emptyfavico_t_none"){
+			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("emptyfavico_t"),true);
+			}
 			
 			if (branch.getBoolPref("faviconurl")) {classicthemerestorerjs.ctr.favIconinUrlbarCTR();}
 		  break;
-		  
-		  case "emptyfavicon2":
-			if (branch.getBoolPref("emptyfavicon2")) {
-			  classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon2",true);
-			  if (branch.getBoolPref("emptyfavicon")) { classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",false);}
-			} else {
-			  classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon2",false);
-			  if (branch.getBoolPref("emptyfavicon")) { classicthemerestorerjs.ctr.loadUnloadCSS("emptyfavicon",true);}
+
+		  case "emptyfavico_g":
+			  
+			classicthemerestorerjs.ctr.loadUnloadCSS('emptyfavico_g_dot',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('emptyfavico_g_sheet',false);
+			
+			if (branch.getCharPref("emptyfavico_g")!="emptyfavico_g_def"){
+			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("emptyfavico_g"),true);
 			}
 
-			if (branch.getBoolPref("faviconurl")) {classicthemerestorerjs.ctr.favIconinUrlbarCTR();}
 		  break;
 		  
 		  case "noemptypticon":
@@ -1889,9 +1919,17 @@ classicthemerestorerjs.ctr = {
 			}
 		  break;
 
-		  case "bmbunsortbm":
-			if (branch.getBoolPref("bmbunsortbm")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbunsortbm",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbunsortbm",false);
+		  case "bmbunsortbm": case "bmbunsortbm2":
+			if (branch.getBoolPref("bmbunsortbm") && branch.getBoolPref("bmbunsortbm2")==false) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("bmbunsortbm",true);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("bmbunsortbm2",false);
+			} else if (branch.getBoolPref("bmbunsortbm") && branch.getBoolPref("bmbunsortbm2")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("bmbunsortbm",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("bmbunsortbm2",true);
+			} else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("bmbunsortbm",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("bmbunsortbm2",false);
+			}
 		  break;
 		  
 		  case "bmbviewbmtb":
@@ -2629,6 +2667,7 @@ classicthemerestorerjs.ctr = {
 	  setTimeout(function(){
 		try{
 		  document.getElementById("ctraddon_BMB_unsortedBookmarks_mm").collapsed = true;
+		  document.getElementById("ctraddon_BMB_unsortedBookmarks_mm2").collapsed = true;
 		} catch(e){}
 	  },1000);
 	}
@@ -2784,8 +2823,7 @@ classicthemerestorerjs.ctr = {
 		} catch(e){}
 	 }
 	 
-	 var emptyfavicon1 = Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("emptyfavicon");
-	 var emptyfavicon2 = Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("emptyfavicon2");
+	 var emptyfavicon = Services.prefs.getBranch("extensions.classicthemerestorer.").getCharPref("emptyfavico_t");
 	 var extrabrandico = Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("padlockex");
 	 var ppsvalid	   = false; try { ppsvalid  = document.getElementById("urlbar").getAttribute('pageproxystate')=='valid'; } catch(e){}
 	 var ppsinvalid	   = false; try { ppsinvalid = document.getElementById("urlbar").getAttribute('pageproxystate')=='invalid'; } catch(e){}
@@ -2797,37 +2835,37 @@ classicthemerestorerjs.ctr = {
 		ppfavicon.setAttribute("src", gBrowser.selectedTab.image);
 	  } catch(e){}
 	 }
-	 else if(emptyfavicon1 && emptyfavicon2==false && extrabrandico && ppsvalid && ibchromeui){
+	 else if(emptyfavicon=='emptyfavico_t_dot' && extrabrandico && ppsvalid && ibchromeui){
 	  try {
 		ppfavicon.removeAttribute("src");
 	  } catch(e){}
 	 }
-	 else if(emptyfavicon2 && extrabrandico && ppsvalid && ibchromeui){
+	 else if(emptyfavicon=='emptyfavico_t_sheet' && extrabrandico && ppsvalid && ibchromeui){
 	  try {
 		ppfavicon.removeAttribute("src");
 	  } catch(e){}
 	 }
-	 else if(emptyfavicon1 && emptyfavicon2==false && ppsinvalid && ibukidentity) {
+	 else if(emptyfavicon=='emptyfavico_t_dot' && ppsinvalid && ibukidentity) {
 	  try {
 		ppfavicon.setAttribute("src", "chrome://classic_theme_restorer/content/images/default_dot_favicon.png");
 	  } catch(e){}
 	 }
-	 else if(emptyfavicon2 && ppsinvalid && ibukidentity) {
+	 else if(emptyfavicon=='emptyfavico_t_sheet' && ppsinvalid && ibukidentity) {
 	  try {
 		ppfavicon.setAttribute("src", "chrome://classic_theme_restorer/content/images/default_favicon.png");
 	  } catch(e){}
 	 }
-	 else if(emptyfavicon1 && emptyfavicon2==false) {
+	 else if(emptyfavicon=='emptyfavico_t_dot') {
 	  try {
 		ppfavicon.setAttribute("src", "chrome://classic_theme_restorer/content/images/default_dot_favicon.png");
 	  } catch(e){}
 	 }
-	 else if(emptyfavicon2) {
+	 else if(emptyfavicon=='emptyfavico_t_sheet') {
 	  try {
 		ppfavicon.setAttribute("src", "chrome://classic_theme_restorer/content/images/default_favicon.png");
 	  } catch(e){}
 	 }
-	 else if(emptyfavicon1==false && emptyfavicon2==false) {
+	 else if(emptyfavicon=='emptyfavico_t_gen' || emptyfavicon=='emptyfavico_t_none') {
 	  try {
 		ppfavicon.removeAttribute("src");
 	  } catch(e){}
@@ -3517,9 +3555,11 @@ classicthemerestorerjs.ctr = {
 		case "feedinurl":			manageCSS("feedinurl.css");				break;
 		case "statusbar": 			manageCSS("statusbar.css"); 			break;
 		case "hideurelstop": 		manageCSS("hideurlbarrelstop.css"); 	break;
+		case "hideurelstop2": 		manageCSS("hideurlbarrelstop2.css"); 	break;
 		case "hideurlgo": 			manageCSS("hideurlbargo.css"); 			break;
 		case "hideurlsrg": 			manageCSS("hideurlbarrelstopgo.css"); 	break;
 		case "urlbardropm": 		manageCSS("urlbar_dropm.css"); 			break;
+		case "urlbardropm2": 		manageCSS("urlbar_dropm2.css"); 		break;
 		case "altreaderico": 		manageCSS("alt_reader_icons.css");		break;
 		case "locsearchbw10": 		manageCSS("locationsearchbarw10.css");	break;
 		case "combrelstop":			manageCSS("combrelstop.css");			break;
@@ -3553,8 +3593,11 @@ classicthemerestorerjs.ctr = {
 		case "alttabstb2": 			manageCSS("alttabstoolbar2.css");		break;
 		case "hidetbwotextra": 		manageCSS("hidetbwot_extra.css");		break;
 		
-		case "emptyfavicon": 		manageCSS("empty_favicon.css");			break;
-		case "emptyfavicon2": 		manageCSS("empty_favicon2.css");		break;
+		case "emptyfavico_t_gen": 	manageCSS("empty_favicon_t0.css");		break;
+		case "emptyfavico_t_dot": 	manageCSS("empty_favicon_t1.css");		break;
+		case "emptyfavico_t_sheet": manageCSS("empty_favicon_t2.css");		break;
+		case "emptyfavico_g_dot": 	manageCSS("empty_favicon_g1.css");		break;
+		case "emptyfavico_g_sheet": manageCSS("empty_favicon_g2.css");		break;
 		case "noemptypticon": 		manageCSS("empty_favicon_pt.css");		break;
 		case "hidezoomres": 		manageCSS("hide_zoomreset.css");		break;
 		case "alt_newtabp": 		manageCSS("alt_newtabpage.css");		break;
@@ -3574,6 +3617,7 @@ classicthemerestorerjs.ctr = {
 		
 		case "bmbutpanelm": 		manageCSS("bmbut_pmenu.css");			break;
 		case "bmbunsortbm": 		manageCSS("bmbut_unsortedbookm.css");	break;
+		case "bmbunsortbm2": 		manageCSS("bmbut_unsortedbookm2.css");	break;
 		case "bmbviewbmtb": 		manageCSS("bmbut_bmbviewbmtb.css");		break;
 		case "bmbnounsort": 		manageCSS("bmbut_bmbnounsort.css");		break;
 		case "bmbutnotext": 		manageCSS("bmbut_no_label.css");		break;

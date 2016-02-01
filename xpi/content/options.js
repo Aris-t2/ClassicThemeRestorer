@@ -391,6 +391,7 @@ classicthemerestorerjso.ctr = {
 
 	if (this.appversion < 44) {
 	  document.getElementById('ctraddon_pw_altalertbox').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_urlbardropm2').style.visibility = 'collapse';
 	}
 
 
@@ -482,7 +483,6 @@ classicthemerestorerjso.ctr = {
 	// update sub settings
 	this.ctrpwAppbuttonextra(this.prefs.getCharPref("appbutton"),false);
 	this.ctrpwAppbuttonColorExtra(this.prefs.getCharPref("appbuttonc"));
-	this.ctrpwTabEmptyFavicon(this.prefs.getBoolPref("emptyfavicon2"));
 	this.ctrpwCtrOldSearch(this.prefs.getBoolPref("ctroldsearch"));
 	this.ctrpwFaviconextra(this.prefs.getBoolPref("faviconurl"));
 	this.ctrpwBFextra(this.prefs.getBoolPref("backforward"));
@@ -496,6 +496,8 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwNavBarPadding(this.prefs.getBoolPref("navbarpad"));
 	this.ctrpwLocationSearchbarSize(this.prefs.getBoolPref("lbsbsize"));
 	this.ctrpwCompactAddonList(this.prefs.getBoolPref("am_compact"));
+	this.ctrpwUnsortBM(this.prefs.getBoolPref("bmbunsortbm"));
+	this.ctrpwHideUrlStopRel(this.prefs.getBoolPref("hideurelstop"));
 	
 	var closetab_value = this.prefs.getCharPref("closetab");
   
@@ -628,10 +630,6 @@ classicthemerestorerjso.ctr = {
 	document.getElementById('ctraddon_padlock_extra').disabled = which;
   },
   
-  ctrpwTabEmptyFavicon: function(which) {
-	document.getElementById('ctraddon_pw_tab_emptyfavicon').disabled = which;
-  },
-  
   ctrpwBFextra: function(which) {
 	var itemvis = 'collapse';
 	
@@ -742,6 +740,32 @@ classicthemerestorerjso.ctr = {
 	
     document.getElementById('ctraddon_pw_am_compact2').disabled = which;
 	document.getElementById('ctraddon_pw_am_compact2').style.visibility = itemvis;
+  },
+  
+  ctrpwUnsortBM: function(which) {
+	var itemvis = 'collapse';
+	
+    if(which==true) {
+	  which=false; itemvis = 'visible';
+	} else {
+	  which=true; itemvis = 'collapse';
+	}
+	
+    document.getElementById('ctraddon_pw_bmbunsortbm2').disabled = which;
+	document.getElementById('ctraddon_pw_bmbunsortbm2').style.visibility = itemvis;
+  },
+  
+  ctrpwHideUrlStopRel: function(which) {
+	var itemvis = 'collapse';
+	
+    if(which==true) {
+	  which=false; itemvis = 'visible';
+	} else {
+	  which=true; itemvis = 'collapse';
+	}
+	
+    document.getElementById('ctraddon_pw_hideurelstop2').disabled = which;
+	document.getElementById('ctraddon_pw_hideurelstop2').style.visibility = itemvis;
   },
   
   ctrpwCtrOldSearch: function(which) {
@@ -1004,7 +1028,7 @@ classicthemerestorerjso.ctr = {
 	this.prefs.setCharPref("findbar",'findbar_bottoma');
 	this.prefs.setBoolPref("hideprivmask",true);
 	this.prefs.setBoolPref("cpanelmenus",true);
-	this.prefs.setBoolPref("emptyfavicon",true);
+	this.prefs.setCharPref("emptyfavico_t",'emptyfavico_t_dot');
 	this.prefs.setBoolPref("hidezoomres",true);
 	this.prefs.setBoolPref("faviconurl",true);
 	this.prefs.setBoolPref("bmanimation",true);

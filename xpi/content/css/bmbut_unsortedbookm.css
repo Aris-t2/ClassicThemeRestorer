@@ -2,19 +2,16 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#ctraddon_BMB_unsortedBookmarks_m,
-	#ctraddon_BMB_unsortedBookmarks_mm {
+	#ctraddon_BMB_unsortedBookmarks_m2,
+	#ctraddon_BMB_unsortedBookmarks_mm2 {
 	  visibility: visible !important;
 	}
 
+	#ctraddon_BMB_unsortedBookmarks_m,
+	#ctraddon_BMB_unsortedBookmarks_mm,
 	#menu_unsortedBookmarks,
 	#ctraddon_BMB_unsortedBookmarks{
 	  display:none !important;
-	}
-
-	#ctraddon_BMB_bookmarksPopup .hide-if-empty-places-result,
-	#bookmarksMenuPopup .hide-if-empty-places-result {
-	  visibility: collapse !important;
 	}
 
 }

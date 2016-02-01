@@ -146,6 +146,17 @@
                                     new PlacesMenu(event, 'place:folder=UNFILED_BOOKMARKS',
                                     PlacesUIUtils.getViewForNode(this.parentNode.parentNode).options);"/>
       </menu>
+      <menu id="ctraddon_BMB_unsortedBookmarks_mm2"
+                  class="menu-iconic bookmark-item"
+                  label="&bookmarksMenuButton.unsorted.label;"
+                  container="true">
+        <menupopup id="BMB_unsortedBookmarksPopup_mm2"
+                  placespopup="true"
+                  context="placesContext"
+                  onpopupshowing="if (!this.parentNode._placesView)
+                                    new PlacesMenu(event, 'place:folder=UNFILED_BOOKMARKS',
+                                    PlacesUIUtils.getViewForNode(this.parentNode.parentNode).options);"/>
+      </menu>
 	</menugroup>
 	
 	<!--### Add ability to open the 'more page info' window by clicking the icon inside identity box ###-->
@@ -824,7 +835,7 @@
                   class="menu-iconic bookmark-item"
                   label="&bookmarksMenuButton.unsorted.label;"
                   container="true">
-              <menupopup id="BMB_unsortedBookmarksPopup"
+              <menupopup id="BMB_unsortedBookmarksPopup_m"
                          placespopup="true"
                          context="placesContext"
                          onpopupshowing="if (!this.parentNode._placesView)
@@ -840,6 +851,17 @@
                     label="&unsortedBookmarksCmd.label;"
                     oncommand="PlacesCommandHook.showPlacesOrganizer('UnfiledBookmarks');"
                     class="menuitem-iconic"/>
+          <menu id="ctraddon_BMB_unsortedBookmarks_m2"
+                  class="menu-iconic bookmark-item"
+                  label="&bookmarksMenuButton.unsorted.label;"
+                  container="true">
+              <menupopup id="BMB_unsortedBookmarksPopup_m2"
+                         placespopup="true"
+                         context="placesContext"
+                         onpopupshowing="if (!this.parentNode._placesView)
+                                           new PlacesMenu(event, 'place:folder=UNFILED_BOOKMARKS',
+                                                          PlacesUIUtils.getViewForNode(this.parentNode.parentNode).options);"/>
+          </menu>
         </menupopup>
       </toolbarbutton>
 	  

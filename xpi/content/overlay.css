@@ -421,7 +421,9 @@
 	#main-window[defaultfxtheme="true"] #appmenu_unsortedBookmarks,
 	#main-window[defaultfxtheme="true"] #ctraddon_BMB_unsortedBookmarks,
 	#main-window[defaultfxtheme="true"] #ctraddon_BMB_unsortedBookmarks_m,
-	#main-window[defaultfxtheme="true"] #ctraddon_BMB_unsortedBookmarks_mm {
+	#main-window[defaultfxtheme="true"] #ctraddon_BMB_unsortedBookmarks_m2,
+	#main-window[defaultfxtheme="true"] #ctraddon_BMB_unsortedBookmarks_mm,
+	#main-window[defaultfxtheme="true"] #ctraddon_BMB_unsortedBookmarks_mm2 {
 	  list-style-image: url("chrome://browser/skin/places/unsortedBookmarks.png");
 	  -moz-image-region: auto;
 	}
@@ -430,7 +432,9 @@
 	#ctraddon_BMB_viewBookmarksToolbar,
 	#ctraddon_BMB_viewBookmarksToolbar + menuseparator,
 	#ctraddon_BMB_unsortedBookmarks_m,
-	#ctraddon_BMB_unsortedBookmarks_mm {
+	#ctraddon_BMB_unsortedBookmarks_m2,
+	#ctraddon_BMB_unsortedBookmarks_mm,
+	#ctraddon_BMB_unsortedBookmarks_mm2 {
 	  visibility: collapse;
 	}
 	
