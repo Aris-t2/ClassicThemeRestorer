@@ -279,6 +279,7 @@
 		<preference id="ctraddon_contextitem"	name="extensions.classicthemerestorer.contextitem"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_puictrbutton"	name="extensions.classicthemerestorer.puictrbutton"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_cuibuttons"	name="extensions.classicthemerestorer.cuibuttons"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_restartapp"	name="extensions.classicthemerestorer.restartapp"	type="bool"		instantApply="true"/>
 
 		<preference id="ctraddon_navbarpad"		name="extensions.classicthemerestorer.navbarpad"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_navbarpad_l"	name="extensions.classicthemerestorer.navbarpad_l" 	type="int"		instantApply="true"/>
@@ -359,16 +360,17 @@
 		</menulist>
 		
 		<checkbox label="&Ctr_square_edges;"	preference="ctraddon_square_edges" id="ctraddon_pw_square_edges"/>
+		<checkbox label="&Ctr_tttitlebar;"		preference="ctraddon_tttitlebar" id="ctraddon_pw_tttitlebar"  class="ctraddon_windowsonly" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
+		
 		<description class="ctraddon_font1">&Ctr_emptytfavico;</description>
 		<radiogroup preference="ctraddon_emptyfavico_t" id="ctraddon_pw_emptyfavico_t" orient="horizontal" value="">
 			<radio value="emptyfavico_t_none"	label="&Ctr_emptytfavico_n;" id="ctraddon_emptyfavico_t_none"/>
-			<radio value="emptyfavico_t_gen"	label="&Ctr_emptytfavico_g;" id="ctraddon_emptyfavico_t_gen"/>
+			<radio value="emptyfavico_t_gen"	label="&Ctr_tabwidthdef;"	id="ctraddon_emptyfavico_t_gen"/>
 			<radio value="emptyfavico_t_dot"	label=""	id="ctraddon_emptyfavico_t_dot"/>
 			<radio value="emptyfavico_t_sheet"	label=""	id="ctraddon_emptyfavico_t_sheet"/>
 		</radiogroup>
 		
 		<checkbox label="&Ctr_noemptypticon;"	preference="ctraddon_noemptypticon" id="ctraddon_pw_tab_noemptypticon"/>
-		<checkbox label="&Ctr_tttitlebar;"		preference="ctraddon_tttitlebar" id="ctraddon_pw_tttitlebar"  class="ctraddon_windowsonly" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
 		<radiogroup preference="ctraddon_tabthrobber" id="ctraddon_pw_tabthrobber" orient="horizontal" value="">
 			<radio value="throbber_default" label="&Ctr_tabthrobber;" id="ctraddon_closeicon_def"/>
 			<radio value="throbber_alt"		label=""	id="ctraddon_pw_tabthrobber_alt"/>
@@ -376,13 +378,6 @@
 			<radio value="throbber_nav"		label=""	id="ctraddon_pw_tabthrobber_nav"/>
 		</radiogroup>
 		
-		<hbox align="center">
-		  <checkbox label="&Ctr_tabminheight;"	preference="ctraddon_ctabheightcb" id="ctraddon_pw_tab_ctabheightcb"/>
-		  <textbox size="2" maxlength="2" preference="ctraddon_ctabheight" type="number" min="18" max="50" id="ctraddon_pw_tab_ctabheight"/>
-		  <label value="px"/>
-		</hbox>
-		<description id="ctraddon_pw_tabheightinfo" class="ctraddon_topic">&Ctr_tabheightinfo;</description>
-
 		<description id="ctraddon_pw_tabwidthinfo"  class="ctraddon_topic">&Ctr_tabwidthinfo;</description>
 		<description id="ctraddon_pw_tabwidthinfo2" class="ctraddon_topic">&Ctr_tabwidthinfo2;</description>
 		<description id="ctraddon_pw_tabwidthinfo3" class="ctraddon_topic">&Ctr_tabwidthinfo3;</description>
@@ -407,6 +402,13 @@
 			</row>
 		  </rows>
 		</grid>
+		
+		<hbox align="center">
+		  <checkbox label="&Ctr_tabminheight;"	preference="ctraddon_ctabheightcb" id="ctraddon_pw_tab_ctabheightcb"/>
+		  <textbox size="2" maxlength="2" preference="ctraddon_ctabheight" type="number" min="18" max="50" id="ctraddon_pw_tab_ctabheight"/>
+		  <label value="px"/>
+		</hbox>
+		<description id="ctraddon_pw_tabheightinfo" class="ctraddon_topic">&Ctr_tabheightinfo;</description>
 
 	  </groupbox>
 
@@ -853,13 +855,10 @@
 		<description class="ctraddonsuboption">&Ctr_stoprel1;</description>
 
 		<checkbox label="&Ctr_wincontrols;"		preference="ctraddon_wincontrols" id="ctraddon_wincontrols"/>
-		<checkbox label="&Ctr_oldtoplevimg;"	preference="ctraddon_oldtoplevimg" id="ctraddon_pw_oldtoplevimg"/>
-		<checkbox label="&Ctr_altalertbox;"		preference="ctraddon_altalertbox" id="ctraddon_pw_altalertbox"/>
-		<checkbox label="&Ctr_skipprintpr;"		preference="ctraddon_skipprintpr" id="ctraddon_pw_skipprintpr" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 
 		<description class="ctraddon_font1">&Ctr_emptygfavico;</description>
 		<radiogroup preference="ctraddon_emptyfavico_g" id="ctraddon_pw_emptyfavico_g" orient="horizontal" value="">
-			<radio value="emptyfavico_g_def"	label="&Ctr_tabnor_t;" id="ctraddon_emptyfavico_g_def"/>
+			<radio value="emptyfavico_g_def"	label="&Ctr_tabwidthdef;" id="ctraddon_emptyfavico_g_def"/>
 			<radio value="emptyfavico_g_dot"	label=""	id="ctraddon_emptyfavico_g_dot"/>
 			<radio value="emptyfavico_g_sheet"	label=""	id="ctraddon_emptyfavico_g_sheet"/>
 		</radiogroup>
@@ -872,7 +871,9 @@
 
 	  <groupbox>
 	    <caption  label="&Ctr_ui;" class="ctraddon_topic"/>
-		
+		<checkbox label="&Ctr_oldtoplevimg;"	preference="ctraddon_oldtoplevimg" id="ctraddon_pw_oldtoplevimg"/>
+		<checkbox label="&Ctr_altalertbox;"		preference="ctraddon_altalertbox" id="ctraddon_pw_altalertbox"/>
+		<checkbox label="&Ctr_skipprintpr;"		preference="ctraddon_skipprintpr" id="ctraddon_pw_skipprintpr" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<checkbox label="&Ctr_panelmenucol;"	preference="ctraddon_panelmenucol" id="ctraddon_pw_panelmenucolor"/>
 		<checkbox label="&Ctr_cpanelmenus;"		preference="ctraddon_cpanelmenus"/>
 		<checkbox label="&Ctr_menupopupscr;"	preference="ctraddon_menupopupscr"/>
@@ -898,17 +899,6 @@
 
 	  </groupbox>
 
-	  <groupbox>
-	    <caption  label="&Ctr_navthrobber;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_navthrobber;"	preference="ctraddon_activndicat" id="ctraddon_pw_activitythrobber"/>
-	    <description>&Ctr_navthrobber1;</description>
-		<hbox>
-		  <label value=""/>
-		  <textbox id="ctraddon_pw_athrobberurlbox" preference="ctraddon_athrobberurl" size="auto" flex="1" type="autocomplete" placeholder="&Ctr_navthrobber2;"/>
-		  <label value=""/>
-		</hbox>
-	  </groupbox>
-
 	</box>
 
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_generaluibox3">
@@ -924,7 +914,18 @@
 		<checkbox label="&Ctr_noresizerxp;"		preference="ctraddon_noresizerxp" id="ctraddon_pw_noresizerxp"/>
 		<checkbox label="&Ctr_tbconmenu;"		preference="ctraddon_tbconmenu"	  id="ctraddon_pw_tbconmenu"/>
 	  </groupbox>
-	  
+
+	  <groupbox>
+	    <caption  label="&Ctr_navthrobber;" class="ctraddon_topic"/>
+		<checkbox label="&Ctr_navthrobber;"	preference="ctraddon_activndicat" id="ctraddon_pw_activitythrobber"/>
+	    <description>&Ctr_navthrobber1;</description>
+		<hbox>
+		  <label value=""/>
+		  <textbox id="ctraddon_pw_athrobberurlbox" preference="ctraddon_athrobberurl" size="auto" flex="1" type="autocomplete" placeholder="&Ctr_navthrobber2;"/>
+		  <label value=""/>
+		</hbox>
+	  </groupbox>
+
 	  <groupbox id="ctraddon_pw_invertedicons">
 		<caption  label="&Ctr_invicons;" class="ctraddon_topic"/>
 		<grid>
@@ -1314,7 +1315,8 @@
 
 	  <groupbox>
 		<caption  label="&Ctr_otherctroptns;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_cuibotbuttons;"	preference="ctraddon_cuibuttons"/>
+		<checkbox label="&Ctr_restartapp;"		preference="ctraddon_restartapp"  id="ctraddon_pw_restartapp"/>
+		<checkbox label="&Ctr_cuibotbuttons;"	preference="ctraddon_cuibuttons"  id="ctraddon_pw_cuibuttons"/>
 		<checkbox label="&Ctr_nodevtheme;"		preference="ctraddon_nodevtheme2" id="ctraddon_pw_nodevtheme2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 	  </groupbox>
 

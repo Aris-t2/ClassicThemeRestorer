@@ -57,9 +57,9 @@
 <!ENTITY Ctr_square_edges	"Kwadratowe górne rogi">
 <!ENTITY Ctr_tttitlebar		"Tytuł karty na pasku tytułu &brandShortName;">
 <!ENTITY Ctr_tabinsertion	"Wstaw powiązaną kartę za kartą bieżącą (about:config)">
-<!ENTITY Ctr_emptytfavico	"Show favicon (if a site does not offer one)">
-<!ENTITY Ctr_emptytfavico_n	"None">
-<!ENTITY Ctr_emptytfavico_g	"Generic">
+<!ENTITY Ctr_emptytfavico	"Pokaż ikonę ulubionych (jeżeli strona nie zaoferuje żadnej)">
+<!ENTITY Ctr_emptytfavico_n	"Brak">
+<!ENTITY Ctr_emptytfavico_g	"Standardowa">
 <!ENTITY Ctr_noemptypticon	"Usuń pustą ikonę ulubionych z przypiętej karty">
 <!ENTITY Ctr_e10stab_notd	"Karty E10s: usuń podkreślenie">
 <!ENTITY Ctr_closetab_0		"Przycisk zamknięcia karty">
@@ -129,7 +129,7 @@
 <!ENTITY Ctr_wincontrols	"Ruchome kontrolki okna pełnego ekranu">
 <!ENTITY Ctr_oldtoplevimg	"Obrazy 'domeny najwyższego poziomu': klasyczny wygląd">
 <!ENTITY Ctr_altalertbox	"'Pole ostrzeżenia': alternatywny wygląd">
-<!ENTITY Ctr_emptygfavico	"Replace generic favicon">
+<!ENTITY Ctr_emptygfavico	"Zamień standardową ikonę ulubionych">
 <!ENTITY Ctr_mstatusbar		"Ruchomy panel paska statusu">
 <!ENTITY Ctr_mstatusbars4e	"Panel paska statusu jest kontrolowany przez 'Status-4-Evar'">
 <!ENTITY Ctr_mstatusbartpp	"Panel paska statusu jest kontrolowany przez 'ThePuzzlePiece'">
@@ -174,7 +174,7 @@
 <!ENTITY Ctr_bmbutton		"Przycisk menu zakładek">
 <!ENTITY Ctr_bmbutpanelm	"Menu podręczne: wygląd menu panelu">
 <!ENTITY Ctr_bmbunsortbm	"Menu podręczne: podmenu 'nieposortowanych zakładek'">
-<!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
+<!ENTITY Ctr_bmbunsortbm2	"Menu ponad zakładkami">
 <!ENTITY Ctr_bmbviewbmtb	"Menu podręczne: wyświetl 'Pokaż pasek narzędzi'">
 <!ENTITY Ctr_bmbnounsort	"Menu podręczne: ukryj 'nieposortowane zakładki'">
 <!ENTITY Ctr_bmbutnotext	"Ukryj etykietę na pasku zakładek">
@@ -225,11 +225,11 @@
 <!ENTITY Ctr_starinurlinfo	"Domyślny przycisk menu zakładek zostanie ukryty">
 <!ENTITY Ctr_feedinurl		"Przycisk RSS">
 <!ENTITY Ctr_hideurelstop	"Ukryj przyciski zatrzymania i odświeżania">
-<!ENTITY Ctr_hideurelstop2	"Always show 'go' button">
+<!ENTITY Ctr_hideurelstop2	"Zawsze pokazuj przycisk 'Przejdź'">
 <!ENTITY Ctr_hideurlgo		"Ukryj przycisk 'Przejdź'">
 <!ENTITY Ctr_hideurlsrg		"Ukryj separatory przycisków 'Odśwież, Zatrzymaj i Przejdź' oraz odstępy">
 <!ENTITY Ctr_urlbardropm	"Przenieś znacznik rozwinięcia na ostatnią możliwą pozycję">
-<!ENTITY Ctr_urlbardropm2	"Make dropmarker always visible">
+<!ENTITY Ctr_urlbardropm2	"Ustaw znacznik rozwinięcia jako zawsze widoczny">
 <!ENTITY Ctr_altreaderico	"Alternatywne ikony 'Popraw czytelność'">
 <!ENTITY Ctr_hideprbutton	"Ukryj ikonę powiadomienia, gdy wyskakujące okno zostanie zablokowane">
 <!ENTITY Ctr_locsearchbw10	"Zredukuj wysokość paska adresu i wyszukiwania (eksperymentalne)">
@@ -362,6 +362,8 @@
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"Pierwsze kroki">
 <!ENTITY goCmd.label					"Przejdź">
+<!ENTITY Ctr_menu_restart.label			"Restart &brandShortName;">
+<!ENTITY Ctr_restartapp					"'Restart &brandShortName;' in appmenu and filemenu">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"W">

@@ -51,6 +51,12 @@ classicthemerestorerjso.ctr = {
 	  }
 	} catch(e){}
 	
+	try{
+	  if (this.appversion >= 44) {
+		document.getElementById("ClassicTRoptionsPane").setAttribute('fx44plus',true);
+	  }
+	} catch(e){}
+	
 	// restore last selected categories/tabs
 	document.getElementById("CtrRadioGroup").selectedIndex = this.prefs.getIntPref('pref_actindx');
 	document.getElementById("ctraddon_tabcolor_tabs").selectedIndex = this.prefs.getIntPref('pref_actindx2');

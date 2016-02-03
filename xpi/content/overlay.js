@@ -2295,6 +2295,31 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("cuibuttons")) classicthemerestorerjs.ctr.loadUnloadCSS("cuibuttons",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("cuibuttons",false);
 		  break;
+		  
+		  case "restartapp":
+		  
+			if (branch.getBoolPref("restartapp")) classicthemerestorerjs.ctr.loadUnloadCSS("restartapp",false);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("restartapp",true);
+			
+			// for MacOSX: hide filemenu item using js instead of css or it won't work
+			if (classicthemerestorerjs.ctr.osstring=="Darwin"){
+				if (branch.getBoolPref("restartapp")) {
+					setTimeout(function(){
+					  try{
+						document.getElementById("ctraddon_restart-menu").collapsed = false;
+					  } catch(e){}
+					},500);
+				}
+				else {
+				  setTimeout(function(){
+					try{
+					  document.getElementById("ctraddon_restart-menu").collapsed = true;
+					} catch(e){}
+				  },500);
+				}
+			}
+
+		  break;
 
 		}
 	  }
@@ -3678,6 +3703,7 @@ classicthemerestorerjs.ctr = {
 		case "puictrbutton": 		manageCSS("ctraddon_puictrbutton.css");	break;
 		case "toolsitem": 			manageCSS("ctraddon_toolsitem.css");	break;
 		
+		case "restartapp":			manageCSS("ctraddon_restartapp.css");	break;
 		case "cuibuttons":			manageCSS("cuibuttons.css");			break;
 		
 		case "nodevtheme2":			manageCSS("no_devtheme.css");			break;
@@ -5665,6 +5691,19 @@ classicthemerestorerjs.ctr = {
 	else {
 	  try{ document.getElementById("ctraddon_BMB_viewBookmarksToolbar").removeAttribute('checked');} catch(e){}
 	}
+
+  },
+  
+  restartBrowser: function() {
+    
+	var cancelQuit   = Cc["@mozilla.org/supports-PRBool;1"].createInstance(Ci.nsISupportsPRBool);
+	var observerSvc  = Cc["@mozilla.org/observer-service;1"].getService(Ci.nsIObserverService);
+		
+	observerSvc.notifyObservers(cancelQuit, "quit-application-requested", "restart");
+	
+	if(cancelQuit.data) return false;
+		
+	Services.startup.quit(Services.startup.eRestart | Services.startup.eAttemptQuit);
 
   }
 

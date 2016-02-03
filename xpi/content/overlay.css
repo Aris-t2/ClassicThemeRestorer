@@ -203,6 +203,11 @@
 	#appmenu-popup #ctraddon_appmenu_ctr2{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_ctr.png");
 	}
+	
+	#menu_FilePopup #ctraddon_restart-menu,
+	#appmenu-popup #ctraddon_restart-appmenu{
+	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_restart.png");
+	}
 
 	#appmenu-edit-label,
 	#appmenu-edit-label:hover{

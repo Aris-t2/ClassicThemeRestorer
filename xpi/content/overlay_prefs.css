@@ -321,7 +321,7 @@ radio.ctraddontab .radio-check-box1 {
   border: 1px solid Highlight !important;
 }
 
-/**/
+/* empty favicon options */
 
 #ctraddon_emptyfavico_t_sheet,
 #ctraddon_emptyfavico_g_sheet{
@@ -345,6 +345,18 @@ radio.ctraddontab .radio-check-box1 {
 #ctraddon_emptyfavico_g_sheet{
   margin-left: -1px;
   margin-right: -1px;
+}
+#ClassicTRoptionsPane:not([fx44plus="true"]) #ctraddon_emptyfavico_t_gen,
+#ClassicTRoptionsPane:not([fx44plus="true"]) #ctraddon_emptyfavico_g_def{
+  list-style-image:url('chrome://classic_theme_restorer/content/images/default_dot_favicon.png');
+}
+#ClassicTRoptionsPane[fx44plus="true"] #ctraddon_emptyfavico_t_gen,
+#ClassicTRoptionsPane[fx44plus="true"] #ctraddon_emptyfavico_g_def {
+  list-style-image:url('chrome://classic_theme_restorer/content/images/globe.png');
+}
+#ClassicTRoptionsPane:not([fx44plus="true"])  #ctraddon_emptyfavico_t_dot,
+#ClassicTRoptionsPane:not([fx44plus="true"])  #ctraddon_emptyfavico_g_dot{
+  display: none;
 }
 
 /* tab separator settings */
