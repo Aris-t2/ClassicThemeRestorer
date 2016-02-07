@@ -57,9 +57,9 @@
 <!ENTITY Ctr_square_edges	"Kvadratasti zgornji koti">
 <!ENTITY Ctr_tttitlebar		"Naziv zavihka v nazivni vrstici &brandShortName;">
 <!ENTITY Ctr_tabinsertion	"Vstavi odprti zavihek poleg trenutnega (možnost about:config)">
-<!ENTITY Ctr_emptytfavico	"Show favicon (if a site does not offer one)">
-<!ENTITY Ctr_emptytfavico_n	"None">
-<!ENTITY Ctr_emptytfavico_g	"Generic">
+<!ENTITY Ctr_emptytfavico	"Prikaži zaznamko (če je stran ne dobavi)">
+<!ENTITY Ctr_emptytfavico_n	"Brez">
+<!ENTITY Ctr_emptytfavico_g	"Splošno">
 <!ENTITY Ctr_noemptypticon	"Odstrani prazno zaznamko iz pripetih zavihkov">
 <!ENTITY Ctr_e10stab_notd	"Zavihki E10s: odstrani podčrtanje">
 <!ENTITY Ctr_closetab_0		"Gumb Zapri zavihek">
@@ -129,7 +129,7 @@
 <!ENTITY Ctr_wincontrols	"Premakljive nadzorne tipke celozaslonskega okna">
 <!ENTITY Ctr_oldtoplevimg	"Slike 'vrhnje domene': klasični videz">
 <!ENTITY Ctr_altalertbox	"'Okno opozorila': nadomestni videz">
-<!ENTITY Ctr_emptygfavico	"Replace generic favicon">
+<!ENTITY Ctr_emptygfavico	"Nadomesti splošno zaznamko">
 <!ENTITY Ctr_mstatusbar		"Premakljivo podokno stanja">
 <!ENTITY Ctr_mstatusbars4e	"Podokno stanja nadzira 'Status-4-Evar'">
 <!ENTITY Ctr_mstatusbartpp	"Podokno stanja nadzira 'ThePuzzlePiece'">
@@ -174,7 +174,7 @@
 <!ENTITY Ctr_bmbutton		"Gumb menija zaznamkov">
 <!ENTITY Ctr_bmbutpanelm	"Pojavna okna: videz ploščastega menija">
 <!ENTITY Ctr_bmbunsortbm	"Pojavna okna: podmeni 'nerazvrščeni zaznamki'">
-<!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
+<!ENTITY Ctr_bmbunsortbm2	"Meni nad zaznamki">
 <!ENTITY Ctr_bmbviewbmtb	"Pojavna okna: prikaži 'Orodno vrstico pogledov'">
 <!ENTITY Ctr_bmbnounsort	"Pojavna okna: skrij 'nerazvrščeni zaznamki'">
 <!ENTITY Ctr_bmbutnotext	"Skrij oznako na vrstici zaznamkov">
@@ -225,14 +225,14 @@
 <!ENTITY Ctr_starinurlinfo	"Privzeti gumb menija zaznamkov se skrije">
 <!ENTITY Ctr_feedinurl		"Gumb vira RSS">
 <!ENTITY Ctr_hideurelstop	"Skrij gumba 'Ustavi in Ponovno naloži'">
-<!ENTITY Ctr_hideurelstop2	"Always show 'go' button">
+<!ENTITY Ctr_hideurelstop2	"Vedno prikaži gumb 'Pojdi'">
 <!ENTITY Ctr_hideurlgo		"Skrij gumb 'Pojdi'">
 <!ENTITY Ctr_hideurlsrg		"Skrij ločila in presledke gumbov 'Ponovno naloži, Ustavi in Pojdi'">
 <!ENTITY Ctr_urlbardropm	"Premakni spustno oznako na zadnji možni položaj">
-<!ENTITY Ctr_urlbardropm2	"Make dropmarker always visible">
+<!ENTITY Ctr_urlbardropm2	"Naj bo spustna puščica vedno vidna">
 <!ENTITY Ctr_altreaderico	"Nadomestne ikone 'Bralnika'">
 <!ENTITY Ctr_hideprbutton	"Skrij ikono obvestil ob blokiranju pojavnega okna">
-<!ENTITY Ctr_locsearchbw10	"Zmanjšaj višino naslovne in iskalnne vrstice (preskusno)">
+<!ENTITY Ctr_locsearchbw10	"Zmanjšaj višino naslovne in iskalne vrstice (preskusno)">
 <!ENTITY Ctr_urlbar_ib		"Gumb identitete strani (polje identitete)">
 <!ENTITY Ctr_ib_nohovcolor	"Ob prehodu ne prikaži sive barve">
 <!ENTITY Ctr_ib_graycolor	"Siva barva za neznano identiteto in strani chrome">
@@ -362,8 +362,8 @@
 <!ENTITY Ctr_addon-bar.accesskey		"d">
 <!ENTITY appMenuGettingStarted.label	"Začetek">
 <!ENTITY goCmd.label					"Pojdi">
-<!ENTITY Ctr_menu_restart.label			"Restart &brandShortName;">
-<!ENTITY Ctr_restartapp					"'Restart &brandShortName;' in appmenu and filemenu">
+<!ENTITY Ctr_menu_restart.label			"Ponovno zaženi &brandShortName;">
+<!ENTITY Ctr_restartapp					"'Ponovno zaženi &brandShortName;' v programskem meniju in meniju Datoteka">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"N">
