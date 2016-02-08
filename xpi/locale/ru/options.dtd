@@ -56,10 +56,10 @@
 <!ENTITY Ctr_tabwidthinfo3	"Значение ниже 48px вызовет сбои в большинстве случаев!">
 <!ENTITY Ctr_square_edges	"Верхние углы квадратные">
 <!ENTITY Ctr_tttitlebar		"Название вкладки в заголовке &brandShortName;">
-<!ENTITY Ctr_tabinsertion	"Открывать связанную вкладку после текущей вкладки (about:config)">
-<!ENTITY Ctr_emptytfavico	"Show favicon (if a site does not offer one)">
-<!ENTITY Ctr_emptytfavico_n	"None">
-<!ENTITY Ctr_emptytfavico_g	"Generic">
+<!ENTITY Ctr_tabinsertion	"Открывать связанную вкладку после текущей вкладки (настройка about:config)">
+<!ENTITY Ctr_emptytfavico	"Показывать фавиконку (если отсутствует)">
+<!ENTITY Ctr_emptytfavico_n	"Нет">
+<!ENTITY Ctr_emptytfavico_g	"Стандартная">
 <!ENTITY Ctr_noemptypticon	"Удалить пустой значок из прикреплённой вкладки">
 <!ENTITY Ctr_e10stab_notd	"E10s вкладки: удалить подчёркивание">
 <!ENTITY Ctr_closetab_0		"Кнопка закрытия вкладки">
@@ -71,7 +71,7 @@
 <!ENTITY Ctr_closetab_hfot	"Скрыть для одной вкладки">
 <!ENTITY Ctr_closei_def		"Стандартный значок">
 <!ENTITY Ctr_closeonleft	"Альтернативная позиция на вкладке">
-<!ENTITY Ctr_close_wwltab	"Закрыть окно при закрытии последней вкладки (about:config)">
+<!ENTITY Ctr_close_wwltab	"Закрыть окно при закрытии последней вкладки (настройка about:config)">
 
 <!ENTITY Ctr_hctpinfotab	"Некоторые разновидности вкладок несовместимы с расширением 'Hide Caption Titlebar Plus'.">
 <!ENTITY Ctr_hctpinfoab		"Кнопка в заголовке несовместима с расширением 'Hide Caption Titlebar Plus'.">
@@ -129,7 +129,7 @@
 <!ENTITY Ctr_wincontrols	"Подвижное управление полноэкранным режимом">
 <!ENTITY Ctr_oldtoplevimg	"Изображение «домена верхнего уровня»: классический вид">
 <!ENTITY Ctr_altalertbox	"«Окно предупреждений»: альтернативный вид">
-<!ENTITY Ctr_emptygfavico	"Replace generic favicon">
+<!ENTITY Ctr_emptygfavico	"Заменять пустые фавиконки">
 <!ENTITY Ctr_mstatusbar		"Подвижная строка состояния">
 <!ENTITY Ctr_mstatusbars4e	"Панель статуса контролируется 'Status-4-Evar'">
 <!ENTITY Ctr_mstatusbartpp	"Панель статуса контролируется 'ThePuzzlePiece'">
@@ -152,29 +152,29 @@
 <!ENTITY Ctr_nav_txt_ico1	"Показывать большие значки">
 <!ENTITY Ctr_nav_txt_ico2	"Показывать значки и текст">
 <!ENTITY Ctr_nav_txt_ico3	"Показывать только текст">
-<!ENTITY Ctr_nav_txt_exp	"Classic attributes (experimental):">
+<!ENTITY Ctr_nav_txt_exp	"Классические атрибуты (экспериментально):">
 <!ENTITY Ctr_iat_notf_vt	"Исключить вертикальные панели инструментов">
 <!ENTITY Ctr_cpanelmenus	"Компактная панель меню (закладки, история и т. д.)">
 <!ENTITY Ctr_hidezoomres	"Кнопки масштаба: скрыть сброс масштабирования">
 <!ENTITY Ctr_alt_newtabp	"Страница новой вкладки (about:newtab): альтернативный вид">
 <!ENTITY Ctr_ctroldsearch	"Старый поиск">
 <!ENTITY Ctr_ctroldsearchc	"Очистить форму после поиска">
-<!ENTITY Ctr_search_oit		"Open search in new tab (about:config preference)">
-<!ENTITY Ctr_osearch_meoit	"Middle-clicks: search in new 'foreground tab'">
-<!ENTITY Ctr_osearch_dm		"Small dropmarker">
+<!ENTITY Ctr_search_oit		"Открывать поиск в новой вкладке (настройка about:config)">
+<!ENTITY Ctr_osearch_meoit	"Средний-клик: поиск в новой активной вкладке">
+<!ENTITY Ctr_osearch_dm		"Маленький дропмаркер">
 <!ENTITY Ctr_addonmanager	"Управление дополнениями">
 <!ENTITY Ctr_alt_addonsp	"Страница дополнений «Подробнее»: альтернативный вид">
 <!ENTITY Ctr_alt_addonsm	"Управление дополнениями: альтернативный вид">
 <!ENTITY Ctr_am_nowarning	"Список дополнений: скрыть предупреждения">
 <!ENTITY Ctr_am_compact		"Список дополнений: компактный вид">
 <!ENTITY Ctr_am_compact2	"Компактный вид +">
-<!ENTITY Ctr_am_highlight	"Add-on lists: highlight entry on hover">
+<!ENTITY Ctr_am_highlight	"Список дополнений: выделять элемент при наведении">
 <!ENTITY Ctr_addonversion	"Список дополнений: показывать версии дополнений">
 <!ENTITY Ctr_xpinstallui	"Старое окно установки дополнений (настройка about:config)">
 <!ENTITY Ctr_bmbutton		"Кнопка меню закладок">
 <!ENTITY Ctr_bmbutpanelm	"Всплывающее окно: вид панели меню">
 <!ENTITY Ctr_bmbunsortbm	"Всплывающее окно: подменю «Неподшитые закладки»">
-<!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
+<!ENTITY Ctr_bmbunsortbm2	"Меню над закладками">
 <!ENTITY Ctr_bmbviewbmtb	"Всплывающее окно: «Показать панель закладок»">
 <!ENTITY Ctr_bmbnounsort	"Всплывающее окно: скрыть «Неподшитые закладки»">
 <!ENTITY Ctr_bmbutnotext	"Скрыть текст на панели закладок">
@@ -225,11 +225,11 @@
 <!ENTITY Ctr_starinurlinfo	"Кнопка меню закладок по умолчанию будет скрыта">
 <!ENTITY Ctr_feedinurl		"Кнопка RSS в адресной строке">
 <!ENTITY Ctr_hideurelstop	"Скрыть кнопку «Остановить и перезагрузить»">
-<!ENTITY Ctr_hideurelstop2	"Always show 'go' button">
+<!ENTITY Ctr_hideurelstop2	"Всегда показывать кнопку «Перейти»">
 <!ENTITY Ctr_hideurlgo		"Скрыть кнопку «Перейти»">
 <!ENTITY Ctr_hideurlsrg		"Скрыть разделители и пробелы между кнопками «Обновить», «Остановить» и «Перейти»">
 <!ENTITY Ctr_urlbardropm	"Переместить дропмаркер до последней возможной позиции">
-<!ENTITY Ctr_urlbardropm2	"Make dropmarker always visible">
+<!ENTITY Ctr_urlbardropm2	"Всегда показывать дропмаркер">
 <!ENTITY Ctr_altreaderico	"Альтернативный значок «Чтения»">
 <!ENTITY Ctr_hideprbutton	"Скрыть значок уведомления, когда блокируется всплывающее окно">
 <!ENTITY Ctr_locsearchbw10	"Уменьшить высоту панелей адреса и поиска (экспериментально)">
@@ -311,9 +311,9 @@
 <!ENTITY Ctr_tabthrobber	"Стандартная анимация загрузки">
 <!ENTITY Ctr_bmanimation	"Анимация создания закладок">
 <!ENTITY Ctr_pananimation	"Анимация открытия панели">
-<!ENTITY Ctr_tabanimation	"Анимация открытия и закрытия вкладок (about:config)">
-<!ENTITY Ctr_dlanimation	"Анимация «Загрузка завершена» (about:config)">
-<!ENTITY Ctr_fsanimation	"Полноэкранная анимация (about:config preference)">
+<!ENTITY Ctr_tabanimation	"Анимация открытия и закрытия вкладок (настройка about:config)">
+<!ENTITY Ctr_dlanimation	"Анимация «Загрузка завершена» (настройка about:config)">
+<!ENTITY Ctr_fsanimation	"Полноэкранная анимация (настройка about:config)">
 <!ENTITY Ctr_fsaduration	"Полноэкранная анимация для HTML5 контента (настройка about:config)">
 
 <!ENTITY Ctr_toolsitem		"Пункт в меню инструментов">
@@ -362,8 +362,8 @@
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"Начало работы">
 <!ENTITY goCmd.label					"Перейти">
-<!ENTITY Ctr_menu_restart.label			"Restart &brandShortName;">
-<!ENTITY Ctr_restartapp					"'Restart &brandShortName;' in appmenu and filemenu">
+<!ENTITY Ctr_menu_restart.label			"Перезапуск &brandShortName;">
+<!ENTITY Ctr_restartapp					"'Перезапуск &brandShortName;' в меню приложения/файл">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"Н">

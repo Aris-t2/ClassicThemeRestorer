@@ -333,14 +333,28 @@ radio.ctraddontab .radio-check-box1 {
   list-style-image:url('chrome://classic_theme_restorer/content/images/default_dot_favicon.png');
 }
 
+#ctraddon_emptyfavico_t_dot2,
+#ctraddon_emptyfavico_g_dot2{
+  list-style-image:url('chrome://classic_theme_restorer/content/images/default_dot_favicon_white.png');
+}
+
+#ctraddon_emptyfavico_t_gen2,
+#ctraddon_emptyfavico_g_def2 {
+  list-style-image:url('chrome://classic_theme_restorer/content/images/globe_white.png');
+}
+
 #ctraddon_emptyfavico_t_none.
 #ctraddon_emptyfavico_g_def {
   -moz-margin-end: 0px;	
 }
 
 #ctraddon_emptyfavico_t_gen,
+#ctraddon_emptyfavico_t_gen2,
+#ctraddon_emptyfavico_g_def2,
 #ctraddon_emptyfavico_t_dot,
+#ctraddon_emptyfavico_t_dot2,
 #ctraddon_emptyfavico_g_dot,
+#ctraddon_emptyfavico_g_dot2,
 #ctraddon_emptyfavico_t_sheet,
 #ctraddon_emptyfavico_g_sheet{
   margin-left: -1px;
