@@ -57,9 +57,9 @@
 <!ENTITY Ctr_square_edges	"Rendre carrés les angles supérieurs">
 <!ENTITY Ctr_tttitlebar		"Titre de l'onglet dans &brandShortName; titlebar">
 <!ENTITY Ctr_tabinsertion	"Insérer l'onglet connexe après l'onglet actuel (about:config)">
-<!ENTITY Ctr_emptytfavico	"Show favicon (if a site does not offer one)">
-<!ENTITY Ctr_emptytfavico_n	"None">
-<!ENTITY Ctr_emptytfavico_g	"Generic">
+<!ENTITY Ctr_emptytfavico	"Afficher une favicon (si le site n'en dispose pas)">
+<!ENTITY Ctr_emptytfavico_n	"Non">
+<!ENTITY Ctr_emptytfavico_g	"Générique">
 <!ENTITY Ctr_noemptypticon	"Enlever les favicons vides des onglets épinglés">
 <!ENTITY Ctr_e10stab_notd	"Onglets E10s : enlever le soulignage">
 <!ENTITY Ctr_closetab_0		"Bouton de fermeture">
@@ -152,23 +152,23 @@
 <!ENTITY Ctr_nav_txt_ico1	"Afficher de grandes icônes">
 <!ENTITY Ctr_nav_txt_ico2	"Afficher icônes et textes">
 <!ENTITY Ctr_nav_txt_ico3	"Afficher seulement les textes">
-<!ENTITY Ctr_nav_txt_exp	"Classic attributes (experimental):">
+<!ENTITY Ctr_nav_txt_exp	"Attributes classique (expérimental) :">
 <!ENTITY Ctr_iat_notf_vt	"Exclure les barres d'outils verticales">
 <!ENTITY Ctr_cpanelmenus	"Compacter les panneaux (marque-pages, historique, etc.)">
 <!ENTITY Ctr_hidezoomres	"Boutons de zoom (si sur une barre d'outils) : Masquer le bouton « Réinitialiser le niveau de zoom »">
 <!ENTITY Ctr_alt_newtabp	"Page 'Nouvel onglet' (about:newtab) : apparence alternative">
-<!ENTITY Ctr_ctroldsearch	"Ancienne recherche">
-<!ENTITY Ctr_ctroldsearchc	"Clear searchbox after search">
-<!ENTITY Ctr_search_oit		"Open search in new tab (about:config preference)">
-<!ENTITY Ctr_osearch_meoit	"Middle-clicks: search in new 'foreground tab'">
-<!ENTITY Ctr_osearch_dm		"Small dropmarker">
-<!ENTITY Ctr_addonmanager	"Add-on manager">
+<!ENTITY Ctr_ctroldsearch	"Ancienne barre de recherche">
+<!ENTITY Ctr_ctroldsearchc	"Effacer boîte de recherche après une recherche">
+<!ENTITY Ctr_search_oit		"Ouvrir la recherche dans un nouvel onglet (préférence about:config)">
+<!ENTITY Ctr_osearch_meoit	"Clic central : recherche dans un nouvel “onglet au premier plan”">
+<!ENTITY Ctr_osearch_dm		"Petite “dropmarker”">
+<!ENTITY Ctr_addonmanager	"Gestionnaire de modules complémentaires">
 <!ENTITY Ctr_alt_addonsp	"Page « Plus d'infos » des modules : apparence alternative">
-<!ENTITY Ctr_alt_addonsm	"Alternative appearance">
+<!ENTITY Ctr_alt_addonsm	"Appearance alternative">
 <!ENTITY Ctr_am_nowarning	"Listes de modules : cacher les alertes">
 <!ENTITY Ctr_am_compact		"Listes de modules : vue compacte">
 <!ENTITY Ctr_am_compact2	"Vue compacte +">
-<!ENTITY Ctr_am_highlight	"Add-on lists: highlight entry on hover">
+<!ENTITY Ctr_am_highlight	"Listes de modules : mettre l'entrée en surbrillance au survol">
 <!ENTITY Ctr_addonversion	"Listes de modules : afficher la version du module">
 <!ENTITY Ctr_xpinstallui	"Ancienne fenêtre d'installation de modules (préférence about:config)">
 <!ENTITY Ctr_bmbutton		"Bouton Marque-pages">
@@ -225,7 +225,7 @@
 <!ENTITY Ctr_starinurlinfo	"Par défaut le bouton de menu des marque-pages est masqué">
 <!ENTITY Ctr_feedinurl		"Bouton d'abonnement">
 <!ENTITY Ctr_hideurelstop	"Masquer « stop-actualiser »">
-<!ENTITY Ctr_hideurelstop2	"Always show 'go' button">
+<!ENTITY Ctr_hideurelstop2	"Toujours afficher le bouton « aller à »"">
 <!ENTITY Ctr_hideurlgo		"Masquer le bouton « aller à »">
 <!ENTITY Ctr_hideurlsrg		"Cacher les séparateurs de boutons « actualiser, stop &amp; aller à » &amp; espaces">
 <!ENTITY Ctr_urlbardropm	"Move dropmarker to the last possible position">
@@ -361,9 +361,9 @@
 
 <!ENTITY Ctr_addon-bar.accesskey		"D">
 <!ENTITY appMenuGettingStarted.label	"Pour commencer">
-<!ENTITY goCmd.label					"Go">
-<!ENTITY Ctr_menu_restart.label			"Restart &brandShortName;">
-<!ENTITY Ctr_restartapp					"'Restart &brandShortName;' in appmenu and filemenu">
+<!ENTITY goCmd.label					"Aller à">
+<!ENTITY Ctr_menu_restart.label			"Redémarrer &brandShortName;">
+<!ENTITY Ctr_restartapp					"« Redémarrer &brandShortName; » dans le menu de l'application et le menu Fichier">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"d">
