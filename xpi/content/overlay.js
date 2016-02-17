@@ -613,6 +613,7 @@ classicthemerestorerjs.ctr = {
 			classicthemerestorerjs.ctr.loadUnloadCSS('appbutton_v2io2',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('appbutton_v2h',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('appbutton_pm',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('appbutton_pm2',false);
 		
 			if (branch.getCharPref("appbutton")!="appbutton_off"){
 			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("appbutton"),true);
@@ -3490,6 +3491,7 @@ classicthemerestorerjs.ctr = {
 		case "appbutton_v2io2":		manageCSS("appbutton2io2.css");			break;
 		case "appbutton_v2h":		manageCSS("appbutton2hidden.css");		break;
 		case "appbutton_pm": 		manageCSS("paneluibutton_tweak.css");	break;
+		case "appbutton_pm2": 		manageCSS("paneluibutton_tweak2.css");	break;
 		
 		case "appbutton_on_nav":	manageCSS("appbutton_on_navbar.css");	break;
 		
@@ -4040,7 +4042,7 @@ classicthemerestorerjs.ctr = {
 		case "appbuttonc_custom":
 		
 			removeOldSheet(this.appbutton_color);
-			if(enable==true && this.prefs.getCharPref('appbuttonc')=='appbuttonc_custom' && this.prefs.getCharPref('appbutton')=='appbutton_pm') {
+			if(enable==true && this.prefs.getCharPref('appbuttonc')=='appbuttonc_custom' && (this.prefs.getCharPref('appbutton')=='appbutton_pm' || this.prefs.getCharPref('appbutton')=='appbutton_pm2')) {
 			
 				this.appbutton_color=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
 					@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);\

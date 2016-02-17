@@ -1,4 +1,4 @@
-﻿<!ENTITY % overlayDTD
+<!ENTITY % overlayDTD
     SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
   %overlayDTD;
 <!-- Do not edit above this line and do not edit the variable '&brandShortName;' inside translated strings -->
@@ -14,8 +14,8 @@
 <!ENTITY Ctr_navthrobber	"Indicatore attività">
 <!ENTITY Ctr_sidebarbutton	"Barra laterale">
 <!ENTITY Ctr_windowcontrols	"Pulsanti controllo finestra (A tutto schermo)">
-<!ENTITY Ctr_rr				"Riavvio richiesto!">
-<!ENTITY Ctr_window			"finestra">
+<!ENTITY Ctr_rr				"Riavviare &brandShortName;!">
+<!ENTITY Ctr_window			"la finestra">
 
 <!ENTITY Ctr_cuibuttons		"Pulsanti">
 <!ENTITY Ctr_cuibutnormal	"Normali">
@@ -31,38 +31,38 @@
 <!ENTITY Ctr_tabcolors_t	"Colori e testo schede">
 
 <!ENTITY Ctr_tabs			"Schede">
-<!ENTITY Ctr_tabs0			"Predefinito in &brandShortName; (Schede con angoli arrotondati)">
+<!ENTITY Ctr_tabs0			"Schede con angoli arrotondati (predefinito in &brandShortName;)">
 <!ENTITY Ctr_tabs1			"Schede con angoli spigolosi (stile classico)">
 <!ENTITY Ctr_tabs1m			"Schede con angoli spigolosi (effetto Australis)">
 <!ENTITY Ctr_tabs2			"Scheda con angoli arrotondati (stile alternativo)">
 <!ENTITY Ctr_tabs3			"Schede con angoli arrotondati (stile Aero)">
 <!ENTITY Ctr_tabforminfo	"L’aspetto delle schede è definito dal tema in uso.">
-<!ENTITY Ctr_coltabsinfo	"L’aspetto delle schede non è del tutto compatibile con l’estensione 'ColorfulTabs'.">
+<!ENTITY Ctr_coltabsinfo	"L’aspetto delle schede non è del tutto compatibile con il componente aggiuntivo 'ColorfulTabs'.">
 <!ENTITY Ctr_tabsontop0		"Schede in alto (predefinito)">
-<!ENTITY Ctr_tabsontop1		"Schede in alto --- attributo [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Schede in basso (v1) --- attributo [tabsontop=false]">
-<!ENTITY Ctr_tabsontop3		"Schede in basso (v2) --- attributo [tabsontop=false]">
-<!ENTITY Ctr_tabsontopW1	"La versione v2 è disponibile solo con alcune estensioni o temi completi.">
+<!ENTITY Ctr_tabsontop1		"Schede in alto --- attivata [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Schede in basso (v1) --- attivata [tabsontop=false]">
+<!ENTITY Ctr_tabsontop3		"Schede in basso (v2) --- attivata [tabsontop=false]">
+<!ENTITY Ctr_tabsontopW1	"La versione v2 è solo per alcuni componenti aggiuntivi e temi completi!">
 <!ENTITY Ctr_tabsontopI1	"Aggiunge l’attributo [tabsontop=true/false] a">
-<!ENTITY Ctr_tabsintitlebar	"Schede nella barra del titolo di &brandShortName; (about:config)">
-<!ENTITY Ctr_tabwidthdef	"(predefinito)">
+<!ENTITY Ctr_tabsintitlebar	"Schede nella barra del titolo (about:config)">
+<!ENTITY Ctr_tabwidthdef	"(predefinita)">
 <!ENTITY Ctr_tabwidthcla	"(stile classico)">
 <!ENTITY Ctr_tabminheight	"Altezza:">
-<!ENTITY Ctr_tabheightinfo	"Valori bassi causeranno anomalie nella finestra ingrandita!">
+<!ENTITY Ctr_tabheightinfo	"Valori bassi provocheranno anomalie nella finestra ingrandita!">
 <!ENTITY Ctr_tabmaxwidth	"Larghezza massima:">
 <!ENTITY Ctr_tabminwidth	"Larghezza minima:">
 <!ENTITY Ctr_tabwidthinfo	"La larghezza minima e massima delle schede è definita da TabMixPlus">
 <!ENTITY Ctr_tabwidthinfo2	"La larghezza minima e massima delle schede è definita da TabUtilities">
-<!ENTITY Ctr_tabwidthinfo3	"In molti casi, valori inferiori a 48px causeranno anomalie.">
+<!ENTITY Ctr_tabwidthinfo3	"Valori inferiori a 48px provocheranno anomalie nella maggior parte dei casi!">
 <!ENTITY Ctr_square_edges	"Angoli superiori spigolosi">
 <!ENTITY Ctr_tttitlebar		"Titolo scheda nella barra del titolo di &brandShortName;">
 <!ENTITY Ctr_tabinsertion	"Inserisci la scheda relativa dopo la scheda corrente (about:config)">
-<!ENTITY Ctr_emptytfavico	"Show favicon (if a site does not offer one)">
+<!ENTITY Ctr_emptytfavico	"Mostra favicon (quando un sito ne è privo)">
 <!ENTITY Ctr_emptytfavico_n	"None">
 <!ENTITY Ctr_emptytfavico_g	"Generic">
-<!ENTITY Ctr_noemptypticon	"Rimuovi la favicon vuota dalle schede bloccate">
+<!ENTITY Ctr_noemptypticon	"Rimuovi la favicon vuota dalla scheda bloccata">
 <!ENTITY Ctr_e10stab_notd	"Schede E10s: rimuovi la sottolineatura">
-<!ENTITY Ctr_closetab_0		"Pulsante di chiusura schede">
+<!ENTITY Ctr_closetab_0		"Pulsante di chiusura">
 <!ENTITY Ctr_closetab_1		"Nella scheda attiva">
 <!ENTITY Ctr_closetab_2		"Nessun pulsante di chiusura schede">
 <!ENTITY Ctr_closetab_3		"A destra della barra delle schede">
@@ -73,8 +73,8 @@
 <!ENTITY Ctr_closeonleft	"Posizione alternativa sulla scheda">
 <!ENTITY Ctr_close_wwltab	"Chiudendo l’ultima scheda chiudi la finestra (about:config)">
 
-<!ENTITY Ctr_hctpinfotab	"Alcune modifiche alle schede non sono compatibili con l’estensione 'Hide Caption Titlebar Plus'.">
-<!ENTITY Ctr_hctpinfoab		"Il pulsante nella barra del titolo non è compatibile con l’estensione 'Hide Caption Titlebar Plus'.">
+<!ENTITY Ctr_hctpinfotab	"Alcune modifiche alle schede non sono compatibili con il componente aggiuntivo 'Hide Caption Titlebar Plus'.">
+<!ENTITY Ctr_hctpinfoab		"Il pulsante nella barra del titolo non è compatibile con il componente aggiuntivo 'Hide Caption Titlebar Plus'.">
 
 <!ENTITY Ctr_appbutton		"Pulsante applicazione">
 <!ENTITY Ctr_appbutton0		"Nessun pulsante">
@@ -83,8 +83,9 @@
 <!ENTITY Ctr_appbutton2		"Pulsante nella barra del titolo">
 <!ENTITY Ctr_appbutton2h	"Pulsante nella barra del titolo (nascosto)">
 <!ENTITY Ctr_appbutton2io	"Pulsante nella barra del titolo (solo icona)">
-<!ENTITY Ctr_paneluibtweak	"Mostra pulsante menu come pulsante applicazione…">
-<!ENTITY Ctr_paneluibtweak2	"…è nella barra delle schede">
+<!ENTITY Ctr_paneluibtweak	"Stile pulsante per il pannello dei menu quando...">
+<!ENTITY Ctr_paneluibtweak2	"Stile pulsante per il pannello dei menu quando (solo icona)...">
+<!ENTITY Ctr_paneluibtweak3	"...è nella barra delle schede">
 <!ENTITY Ctr_appbuttonc_o	"Pulsante arancione (predefinito)">
 <!ENTITY Ctr_appbuttonc_a	"Pulsante blu (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Pulsante nero (Nightly)">
@@ -101,7 +102,7 @@
 <!ENTITY Ctr_appbuttonI1e	"Visibile solo nella barra del titolo di &brandShortName; e non in quella di Windows.">
 <!ENTITY Ctr_appbuttonI2	"Colorato solo nella barra del titolo e nella barra delle schede.">
 <!ENTITY Ctr_appbutmhi		"In cima a tutto (se nella barra delle schede)">
-<!ENTITY Ctr_appbautocol	"Imposta automaticamente il colore canale (Stabile/Aurora/Nightly)">
+<!ENTITY Ctr_appbautocol	"Imposta in automatico i colori default / Aurora / Nightly">
 <!ENTITY Ctr_appbutbdl		"Nascondi bordi e colori di sfondo">
 <!ENTITY Ctr_dblclclosefx	"Doppio clic per chiudere la finestra corrente">
 <!ENTITY Ctr_appbclmmenus	"Menu cliccabili interni al pulsante Menu (Nuova scheda, Stampa…)">
@@ -109,27 +110,27 @@
 <!ENTITY Ctr_appbutonclab2	"Aggiungi titolo o lascia vuoto">
 
 <!ENTITY Ctr_ui				"Interfaccia base">
-<!ENTITY Ctr_nbiconsize0	"Imposta attributo 'iconsize' alla barra di navigazione">
+<!ENTITY Ctr_nbiconsize0	"Imposta attributo alla barra di navigazione">
 <!ENTITY Ctr_smallnavbut	"Pulsanti piccoli nella barra di navigazione">
 <!ENTITY Ctr_bfurlbarfix	"Correggi la curvatura della barra degli indirizzi ">
 <!ENTITY Ctr_backforward	"Pulsante Indietro/Avanti mobile">
 <!ENTITY Ctr_nbcompact		"Riduci l’altezza delle barre di navigazione">
 <!ENTITY Ctr_hide_bf_popup	"Nascondi la cronologia tenendo premuto il pulsante Avanti/Indietro mobile">
 <!ENTITY Ctr_bf_space		"Riduci lo spazio tra i pulsanti (se possibile)">
-<!ENTITY Ctr_noconicons		"Sostituisci icone con etichette nel menu contestuale della pagina (Avanti, Indietro…)">
+<!ENTITY Ctr_noconicons		"Sostituisce le icone del menu contestuale con etichette (indietro, avanti, stop, ricarica, segnalibro)">
 <!ENTITY Ctr_prefpage		"Pagina Opzioni">
 <!ENTITY Ctr_altoptionsd	"Aspetto predefinito">
 <!ENTITY Ctr_altoptionsp	"Aspetto alternativo">
-<!ENTITY Ctr_altoptionsw	"Apri la pagina Opzioni in una finestra">
+<!ENTITY Ctr_altoptionsw	"Aprire la pagina Opzioni in una finestra">
 <!ENTITY Ctr_altoptionsww	"Larghezza">
 <!ENTITY Ctr_altoptionswh	"Altezza">
-<!ENTITY Ctr_altoptionsi	"La finestra delle opzioni non si presenta più come una finestra di dialogo ma come una vera e propria finestra del browser con tutte le barre degli strumenti nascoste. La funzione 'Usa la pagina corrente' aggiunge gli url delle pagine aperte nella finestra corrente, che in questo caso è solo 'about:preferences. La versione modificata del pulsante delle opzioni consente di aprire le opzioni in una nuova finestra.">
+<!ENTITY Ctr_altoptionsi	"La finestra delle opzioni non si presenta più come un dialogo ma come una finestra del browser con tutte le barre degli strumenti nascoste. La caratteristica 'Usa la pagina corrente' aggiunge gli url delle pagine aperte nella finestra corrente, che in questo caso è solo 'about:preferences'. Il pulsante delle 'opzioni' è sostituito da uno nuovo che è in grado di aprire le opzioni in una finestra.">
 <!ENTITY Ctr_options_rem	"Ricorda l'ultima categoria selezionata">
 <!ENTITY Ctr_svgfilters		"Colori SVG per le icone dei pulsanti della barra strumenti">
 <!ENTITY Ctr_wincontrols	"Angoli finestra mobili in modalità schermo intero">
-<!ENTITY Ctr_oldtoplevimg	"Immagini domini di livello superiore: aspetto classico">
-<!ENTITY Ctr_altalertbox	"Finestra di avviso: aspetto alternativo">
-<!ENTITY Ctr_emptygfavico	"Replace generic favicon">
+<!ENTITY Ctr_oldtoplevimg	"Immagini 'Top level domain': aspetto classico">
+<!ENTITY Ctr_altalertbox	"'Alert box': aspetto alternativo">
+<!ENTITY Ctr_emptygfavico	"Sostituisci la favicon generica predefinita con un’icona a forma di foglio">
 <!ENTITY Ctr_mstatusbar		"Barra di stato mobile">
 <!ENTITY Ctr_mstatusbars4e	"La barra di stato è gestita da 'Status-4-Evar'">
 <!ENTITY Ctr_mstatusbartpp	"La barra di stato è gestita da 'ThePuzzlePiece'">
@@ -152,38 +153,38 @@
 <!ENTITY Ctr_nav_txt_ico1	"Utilizza icone grandi">
 <!ENTITY Ctr_nav_txt_ico2	"Utilizza icone e testo">
 <!ENTITY Ctr_nav_txt_ico3	"Utilizza solo testo">
-<!ENTITY Ctr_nav_txt_exp	"Classic attributes (experimental):">
+<!ENTITY Ctr_nav_txt_exp	"Attributi sperimentali:">
 <!ENTITY Ctr_iat_notf_vt	"Escludi le barre degli strumenti verticali">
 <!ENTITY Ctr_cpanelmenus	"Pannello menu unificato (Segnalibri, Cronologia, ecc.)">
 <!ENTITY Ctr_hidezoomres	"Nascondi il pulsante per ripristinare il livello di zoom dalla barra degli strumenti">
 <!ENTITY Ctr_alt_newtabp	"Nuova scheda (about:newtab): aspetto alternativo">
 <!ENTITY Ctr_ctroldsearch	"Ricerca vecchio stile">
-<!ENTITY Ctr_ctroldsearchc	"Cancella la casella di ricerca dopo averla effettuata">
-<!ENTITY Ctr_search_oit		"Open search in new tab (about:config preference)">
-<!ENTITY Ctr_osearch_meoit	"Middle-clicks: search in new 'foreground tab'">
-<!ENTITY Ctr_osearch_dm		"Small dropmarker">
+<!ENTITY Ctr_ctroldsearchc	"Pulisci la casella di ricerca dopo aver effettuato la ricerca">
+<!ENTITY Ctr_search_oit		"Apri la ricerca in una nuova scheda (preferenza in  about:config)">
+<!ENTITY Ctr_osearch_meoit	"Clic sul tasto centrale: ricerca in una nuova scheda attiva">
+<!ENTITY Ctr_osearch_dm		"Freccia verso il basso piccola">
 <!ENTITY Ctr_addonmanager	"Gestione componenti aggiuntivi">
 <!ENTITY Ctr_alt_addonsp	"Pagina 'Altro' dei componenti aggiuntivi: aspetto alternativo">
 <!ENTITY Ctr_alt_addonsm	"Gestione componenti aggiuntivi: aspetto alternativo">
 <!ENTITY Ctr_am_nowarning	"Informazioni sui componenti aggiuntivi: nascondi avvisi">
 <!ENTITY Ctr_am_compact		"Informazioni sui componenti aggiuntivi: visualizzazione compatta">
 <!ENTITY Ctr_am_compact2	"visualizzazione compatta plus">
-<!ENTITY Ctr_am_highlight	"Add-on lists: highlight entry on hover">
+<!ENTITY Ctr_am_highlight	"Elenco dei componenti aggiuntivi: evidenzia il componente al passaggio del mouse">
 <!ENTITY Ctr_addonversion	"Informazioni sui componenti aggiuntivi: mostra versione del componente">
 <!ENTITY Ctr_xpinstallui	"Stile classico per la finestra di installazione dei componenti aggiuntivi (about:config)">
 <!ENTITY Ctr_bmbutton		"Menu del pulsante segnalibri">
-<!ENTITY Ctr_bmbutpanelm	"Popup: aspetto del menu a pannello">
-<!ENTITY Ctr_bmbunsortbm	"Popup: sottomenu 'Segnalibri non catalogati'">
+<!ENTITY Ctr_bmbutpanelm	"Aspetto del menu a pannello">
+<!ENTITY Ctr_bmbunsortbm	"Sottomenu dei 'Segnalibri non catalogati'">
 <!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
-<!ENTITY Ctr_bmbviewbmtb	"Popup: mostra 'Visualizza barra degli strumenti'">
-<!ENTITY Ctr_bmbnounsort	"Popup: nascondi 'Segnalibri non catalogati'">
+<!ENTITY Ctr_bmbviewbmtb	"Mostra 'Visualizza barra dei segnalibri'">
+<!ENTITY Ctr_bmbnounsort	"Nascondi 'Segnalibri non catalogati'">
 <!ENTITY Ctr_bmbutnotext	"Nascondi etichetta della barra dei segnalibri">
 <!ENTITY Ctr_skipprintpr	"Pulsante stampa: salta l’anteprima di stampa">
 <!ENTITY Ctr_tbconmenu		"Menu contestuale della barra degli strumenti: nascondi 'Sposta nel menu', 'Rimuovi dalla barra degli strumenti', 'Ricarica/ tutte le schede nei segnalibri' e 'Riapri scheda chiusa'">
 <!ENTITY Ctr_noresizerxp	"Nascondi il ridimensionatore (Windows XP)">
 <!ENTITY Ctr_extraurlkeycb	"Apri una barra degli indirizzi supplementare (Cmd/Ctrl+)">
 <!ENTITY Ctr_pmhidelabels	"Mostra solo le icone nel pannello menu">
-<!ENTITY Ctr_menupopupscr	"Utilizza barra di scorrimento al posto delle frecce nei popup di menu">
+<!ENTITY Ctr_menupopupscr	"Utilizza la barra di scorrimento al posto delle frecce nei menu a comparsa">
 <!ENTITY Ctr_closegeneral	"Icone generiche di chiusura">
 
 <!ENTITY Ctr_tabsep_def		"Separatori schede predefiniti">
@@ -225,18 +226,18 @@
 <!ENTITY Ctr_starinurlinfo	"Il pulsante segnalibri viene nascosto">
 <!ENTITY Ctr_feedinurl		"Pulsante dei feed nella barra degli indirizzi">
 <!ENTITY Ctr_hideurelstop	"Nascondi i pulsanti Stop e Ricarica nella barra degli indirizzi">
-<!ENTITY Ctr_hideurelstop2	"Always show 'go' button">
+<!ENTITY Ctr_hideurelstop2	"Mostra sempre il pulsante 'Vai'">
 <!ENTITY Ctr_hideurlgo		"Nascondi il pulsante 'Vai'">
 <!ENTITY Ctr_hideurlsrg		"Nascondi spazio e separatori dai pulsanti Stop, Ricarica e Vai">
-<!ENTITY Ctr_urlbardropm	"Vai all’ultima posizione del menu cronologia">
-<!ENTITY Ctr_urlbardropm2	"Make dropmarker always visible">
-<!ENTITY Ctr_altreaderico	"Icone alternative per la modalità lettura">
+<!ENTITY Ctr_urlbardropm	"Sposta il dropmarker nella posizione più lontana possibile">
+<!ENTITY Ctr_urlbardropm2	"Freccia verso il basso sempre visibile">
+<!ENTITY Ctr_altreaderico	"Icone alternative della modalità di lettura">
 <!ENTITY Ctr_hideprbutton	"Nascondi l’icona di notifica quando un popup viene bloccato">
 <!ENTITY Ctr_locsearchbw10	"Riduci l'altezza delle barre degli indirizzi e di ricerca (sperimentale)">
 <!ENTITY Ctr_urlbar_ib		"Pulsante delle connessioni sicure (riquadro di verifica)">
 <!ENTITY Ctr_ib_nohovcolor	"Non mostrare il colore grigio al passaggio del mouse">
 <!ENTITY Ctr_ib_graycolor	"Colore grigio per le identità sconosciute e le pagine chrome">
-<!ENTITY Ctr_verifiedcolors	"Pulsanti colorrati per le connessioni ai siti verificati, sicuri e non sicuri">
+<!ENTITY Ctr_verifiedcolors	"Pulsanti colorati per le connessioni ai siti verificati, sicuri e non sicuri">
 <!ENTITY Ctr_faviconurl		"Favicon nella barra degli indirizzi">
 <!ENTITY Ctr_padlock		"Lucchetto connessioni sicure">
 <!ENTITY Ctr_padlock_hid	"nascosto">
@@ -247,8 +248,8 @@
 <!ENTITY Ctr_icopageinfo	"Cliccando sull’icona vengono visualizzate le 'Informazioni sulla pagina'">
 <!ENTITY Ctr_lbsbsize		"Larghezza personalizzata per la barra degli indirizzi e di ricerca">
 <!ENTITY Ctr_searchbar		"Barra di ricerca">
-<!ENTITY Ctr_lbsugresi		"Mostra quanti più suggerimenti possibili senza utilizzare barra di scorrimento">
-<!ENTITY Ctr_lbsugres		"Numero di suggerimenti da mostrare (about:config)">
+<!ENTITY Ctr_lbsugresi		"Mostra il maggior numero possibile di suggerimenti (senza barra di scorrimento)">
+<!ENTITY Ctr_lbsugres		"Numero di risultati nei suggerimenti a comparsa (about:config preference)">
 
 <!ENTITY Ctr_menubar_items	"Posizione delle voci del menu">
 <!ENTITY Ctr_extrabar		"Barre degli strumenti aggiuntive">
@@ -285,7 +286,7 @@
 
 <!ENTITY Ctr_aerocolors		"Colori Blu Aero per le barre degli strumenti e le schede">
 <!ENTITY Ctr_transpttbw10	"Barre del titolo/menu/schede: rimuovi il colore di sfondo">
-<!ENTITY Ctr_transpttbew10	"Modifiche aggiuntive per alcuni temi di sistema">
+<!ENTITY Ctr_transpttbew10	"Modifiche aggiuntive per alcuni temi del SO">
 <!ENTITY Ctr_transptcw10	"Nascondi i pulsanti di controllo finestra di sistema">
 <!ENTITY Ctr_hidenavbar		"Nascondi la barra di navigazione">
 <!ENTITY Ctr_navbarpad		"Spaziatura supplementare">
@@ -316,13 +317,13 @@
 <!ENTITY Ctr_fsanimation	"Icona animata all’attivazione della modalità 'A tutto schermo' (about:config)">
 <!ENTITY Ctr_fsaduration	"Icona animata per la modalità 'A tutto schermo' degli elementi HTML5 (about:config)">
 
-<!ENTITY Ctr_toolsitem		"Aggiungi voci al menu Strumenti">
-<!ENTITY Ctr_appmenuitem	"Aggiungi voci nel menu del pulsante app">
-<!ENTITY Ctr_contextitem	"Voci nel menu contestuale delle barre degli strumenti">
+<!ENTITY Ctr_toolsitem		"Aggiungi voce nel menu Strumenti">
+<!ENTITY Ctr_appmenuitem	"Aggiungi voce nel menu del Pulsante applicazione">
+<!ENTITY Ctr_contextitem	"Voce nel menu contestuale delle barre degli strumenti">
 <!ENTITY Ctr_puictrbutton	"Pulsante nel pannello del menu principale">
 
 <!ENTITY Ctr_otherctroptns	"Altre impostazioni">
-<!ENTITY Ctr_cuibotbuttons	"Aggiungi pulsanti in modalità personalizzazione">
+<!ENTITY Ctr_cuibotbuttons	"Pulsanti extra nella modalità di personalizzazione">
 <!ENTITY Ctr_nodevtheme		"Impedisci l’attivazione del 'Developer Theme'">
 
 <!ENTITY Ctr_experttweaks	"Avanzate">
@@ -359,20 +360,20 @@
 <!ENTITY Ctr_support		"Forum di supporto">
 <!ENTITY Ctr_newversion		"È disponibile una nuova versione?">
 
-<!ENTITY Ctr_addon-bar.accesskey		"B">
+<!ENTITY Ctr_addon-bar.accesskey	"B">
 <!ENTITY appMenuGettingStarted.label	"Primi passi">
-<!ENTITY goCmd.label					"Vai">
-<!ENTITY Ctr_menu_restart.label			"Restart &brandShortName;">
-<!ENTITY Ctr_restartapp					"'Restart &brandShortName;' in appmenu and filemenu">
+<!ENTITY goCmd.label		"Vai">
+<!ENTITY Ctr_menu_restart.label			"Riavvia &brandShortName;">
+<!ENTITY Ctr_restartapp					"'Riavvia &brandShortName;' nel menu dell’applicazione e nel menu File">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
-<!ENTITY backCmd.accesskey				"I">
-<!ENTITY forwardCmd.accesskey			"A">
-<!ENTITY reloadCmd.accesskey			"R">
-<!ENTITY stopCmd.accesskey				"t">
-<!ENTITY bookmarkPageCmd2.accesskey		"b">
+<!ENTITY backCmd.accesskey            "I">
+<!ENTITY forwardCmd.accesskey         "A">
+<!ENTITY reloadCmd.accesskey          "R">
+<!ENTITY stopCmd.accesskey            "t">
+<!ENTITY bookmarkPageCmd2.accesskey   "b">
 
 <!-- Fallback entities. Leave empty! -->
-<!ENTITY openCmd.commandkey				"">
-<!ENTITY urlbar.accesskey				"">
-<!ENTITY urlbar.placeholder2			"">
+<!ENTITY openCmd.commandkey			"">
+<!ENTITY urlbar.accesskey			"">
+<!ENTITY urlbar.placeholder2		"">

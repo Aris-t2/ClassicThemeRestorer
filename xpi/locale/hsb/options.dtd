@@ -57,9 +57,9 @@
 <!ENTITY Ctr_square_edges	"Kwadratiske hornje róžki">
 <!ENTITY Ctr_tttitlebar		"Rajtarkowy titul w titulne lajsće &brandShortName;">
 <!ENTITY Ctr_tabinsertion	"Přiwuzny rajtark za aktualnym rajtarkom zasadźić (about:config)">
-<!ENTITY Ctr_emptytfavico	"Show favicon (if a site does not offer one)">
-<!ENTITY Ctr_emptytfavico_n	"None">
-<!ENTITY Ctr_emptytfavico_g	"Generic">
+<!ENTITY Ctr_emptytfavico	"Faworitowy symbol pokazać (jeli sydło žadyn njepodawa)">
+<!ENTITY Ctr_emptytfavico_n	"Žadyn">
+<!ENTITY Ctr_emptytfavico_g	"Powšitkowny">
 <!ENTITY Ctr_noemptypticon	"Prózdny faworitowy symbol z připinjeneho rajtarka wotstronić">
 <!ENTITY Ctr_e10stab_notd	"E10s-rajtarki: podsmužku wotstronić">
 <!ENTITY Ctr_closetab_0		"Rajtark začinić">
@@ -84,7 +84,8 @@
 <!ENTITY Ctr_appbutton2h	"Tłóčatko na titulnej lajsće [&brandShortName;] (schowane)">
 <!ENTITY Ctr_appbutton2io	"Tłóčatko na titulnej lajsće [&brandShortName;] (jenož symbol)">
 <!ENTITY Ctr_paneluibtweak	"Menijowe tłóčatko jako tłóčatko &brandShortName; pokazać,...">
-<!ENTITY Ctr_paneluibtweak2	"...hdyž je na rajtarkowej lajsće">
+<!ENTITY Ctr_paneluibtweak2	"Menijowe tłóčatko jako tłóčatko &brandShortName; pokazać (jenož symbol),...">
+<!ENTITY Ctr_paneluibtweak3	"...hdyž je na rajtarkowej lajsće">
 <!ENTITY Ctr_appbuttonc_o	"Tłóčatkowa barba: Oranžowy (standard)">
 <!ENTITY Ctr_appbuttonc_a	"Tłóčatkowa barba: Módry (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Tłóčatkowa barba: Čorny (Nightly)">
@@ -129,7 +130,7 @@
 <!ENTITY Ctr_wincontrols	"Přesuwajomne wodźenske elementy połneje wobrazowki">
 <!ENTITY Ctr_oldtoplevimg	"Wobrazy 'najwyšeje domeny': klasiski zwonkowny napohlad">
 <!ENTITY Ctr_altalertbox	"'Warnowanski kašćik': alternatiwny zwonkowny napohlad">
-<!ENTITY Ctr_emptygfavico	"Replace generic favicon">
+<!ENTITY Ctr_emptygfavico	"Powšitkowny faworitowy symbol wuměnić">
 <!ENTITY Ctr_mstatusbar		"Přesuwajomny wobłuk statusoweje lajsty">
 <!ENTITY Ctr_mstatusbars4e	"Statusowy wobłuk seo přez 'Status-4-Evar' kontroluje">
 <!ENTITY Ctr_mstatusbartpp	"Statusowy wobłuk so přez 'ThePuzzlePiece' kontroluje">
@@ -173,8 +174,8 @@
 <!ENTITY Ctr_xpinstallui	"Stary přidatkowe instalowanske wokno (nastajenje about:config)">
 <!ENTITY Ctr_bmbutton		"Tłóčatko menija zapołožkow">
 <!ENTITY Ctr_bmbutpanelm	"Wuskakowacy meni: napohlad wuskakowaceho menija">
-<!ENTITY Ctr_bmbunsortbm	"Wuskakowacy meni: podmeni 'Njesortěrowane zapołožki'">
-<!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
+<!ENTITY Ctr_bmbunsortbm	"Wuskakowacy meni: meni 'Njesortěrowane zapołožki'">
+<!ENTITY Ctr_bmbunsortbm2	"Meni nad zapołožkami">
 <!ENTITY Ctr_bmbviewbmtb	"Wuskakowacy meni: 'Lajstu zapołožkow pokazać' pokazać">
 <!ENTITY Ctr_bmbnounsort	"Wuskakowcy meni: 'Njesortěrowane zapołožki' schować">
 <!ENTITY Ctr_bmbutnotext	"Tekst na lajśce zapołožkow schować">
@@ -225,11 +226,11 @@
 <!ENTITY Ctr_starinurlinfo	"Standardne tłóčatko menija Zapołožki so schowa">
 <!ENTITY Ctr_feedinurl		"Kanalowe tłóčatko RSS">
 <!ENTITY Ctr_hideurelstop	"Tłóčatce Stój a Znowa adresowych lajstow schować">
-<!ENTITY Ctr_hideurelstop2	"Always show 'go' button">
+<!ENTITY Ctr_hideurelstop2	"Tłóčatko 'Start' přeco pokazać">
 <!ENTITY Ctr_hideurlgo		"Tłóčatko 'Start' schować">
 <!ENTITY Ctr_hideurlsrg		"Dźělatka a mjezery za tłošatka 'Znowa, Stój a Start' schować">
 <!ENTITY Ctr_urlbardropm	"Tłóčatko šipkoweho kónčka do poslednjeje móžneje pozicije přesunyć">
-<!ENTITY Ctr_urlbardropm2	"Make dropmarker always visible">
+<!ENTITY Ctr_urlbardropm2	"Tłóčtko šipkoweho kónčka přeco pokazać">
 <!ENTITY Ctr_altreaderico	"Alternatiwne 'čitakowe' symbolei">
 <!ENTITY Ctr_hideprbutton	"Zdźělenski symbol schować, hdyž so wuskakowace wokno blokuje">
 <!ENTITY Ctr_locsearchbw10	"Wysokosć adresowych a pytanskich polow redukować (eksperimentelne)">
@@ -362,8 +363,8 @@
 <!ENTITY Ctr_addon-bar.accesskey		"d">
 <!ENTITY appMenuGettingStarted.label	"Prěnje kroki">
 <!ENTITY goCmd.label					"Start">
-<!ENTITY Ctr_menu_restart.label			"Restart &brandShortName;">
-<!ENTITY Ctr_restartapp					"'Restart &brandShortName;' in appmenu and filemenu">
+<!ENTITY Ctr_menu_restart.label			"&brandShortName; znowa startować">
+<!ENTITY Ctr_restartapp					"'&brandShortName;' znowa startować pod tłóčatkom '&brandShortName;' a w meniju 'Dataja'">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"W">
