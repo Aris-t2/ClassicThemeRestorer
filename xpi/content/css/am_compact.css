@@ -65,7 +65,7 @@
 	#addons-page button.sorter{
 	  padding:2px !important;
 	  min-height: 26px !important;
-		height: unset !important;
+	  height: unset !important;
 	}
 
 	#addons-page #header-search{
@@ -83,6 +83,11 @@
 	#addons-page #addon-list .pending,
 	#addons-page #addon-list .error{
 	  font-size: 90% !important;
+	}
+	
+	button.addon-control image{
+	  margin-top: -1.5px !important;
+	  margin-bottom: -1.5px !important;
 	}
 
 	/* search */
@@ -124,10 +129,6 @@
 	}
 
 	/********************/
-	.addon{
-	  /*padding-top: unset !important;
-	  padding-bottom: unset !important;*/
-	}
 	.addon .warning,
 	.addon .error,
 	.addon .pending,

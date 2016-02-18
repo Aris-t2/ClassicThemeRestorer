@@ -228,7 +228,7 @@
 		menupopup menuitem {
 		  -moz-appearance: menuitem !important;
 		}
-		menupopup menuitem {
+		menupopup menuitem:not([disabled="true"]) {
 		  color: black !important;
 		}
 	}
@@ -236,14 +236,19 @@
 	@media all and (-moz-windows-classic) {
 		
 		menupopup menuitem {
-		  color: black !important;
 		  background: white !important;
 		  padding-top: unset !important;
 		  padding-bottom: unset !important;
 		}
+		menupopup menuitem:not([disabled="true"]) {
+		  color: black !important;
+		}
 		menupopup menuitem[selected],
 		menupopup menuitem[_moz-menuactive="true"] {
 		  background: highlight !important;
+		}
+		menupopup menuitem:not([disabled="true"])[selected],
+		menupopup menuitem:not([disabled="true"])[_moz-menuactive="true"] {
 		  color: white !important;
 		}
 
@@ -500,22 +505,27 @@
 	*[subdialog="true"] menupopup menuitem {
 	  -moz-appearance: menuitem !important;
 	}
-	*[subdialog="true"] menupopup menuitem,
-	*[subdialog="true"] menupopup menuitem[selected] {
+	*[subdialog="true"] menupopup menuitem:not([disabled="true"]),
+	*[subdialog="true"] menupopup menuitem:not([disabled="true"])[selected] {
 	  color: black !important;
 	}
 }
 @media all and (-moz-windows-classic) {
     
 	*[subdialog="true"] menupopup menuitem {
-	  color: black !important;
 	  background: white !important;
 	  padding-top: unset !important;
 	  padding-bottom: unset !important;
 	}
+	*[subdialog="true"] menupopup menuitem:not([disabled="true"]) {
+	  color: black !important;
+	}
 	*[subdialog="true"] menupopup menuitem[selected],
 	*[subdialog="true"] menupopup menuitem[_moz-menuactive="true"] {
 	  background: highlight !important;
+	}
+	*[subdialog="true"] menupopup menuitem:not([disabled="true"])[selected],
+	*[subdialog="true"] menupopup menuitem:not([disabled="true"])[_moz-menuactive="true"] {
 	  color: white !important;
 	}
 

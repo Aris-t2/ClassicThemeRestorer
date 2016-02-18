@@ -399,6 +399,9 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_altalertbox').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_urlbardropm2').style.visibility = 'collapse';
 	}
+	if (this.appversion < 45) {
+	  document.getElementById('ctraddon_pw_ibinfoico').style.visibility = 'collapse';
+	}
 
 
 	function PrefListener(branch_name, callback) {
@@ -632,7 +635,7 @@ classicthemerestorerjso.ctr = {
   },
   
   ctrpwFaviconextra: function(which) {
-    if(which==true) which=false; else which=true;
+	if(which==true) which=false; else which=true;
 	document.getElementById('ctraddon_padlock_extra').disabled = which;
   },
   

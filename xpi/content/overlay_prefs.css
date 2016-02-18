@@ -599,7 +599,9 @@ radio.ctraddontab .radio-check-box1 {
 #ctraddon_pw_am_nowarning label,
 #ctraddon_pw_am_compact label,
 #ctraddon_pw_am_compact2 label,
-#ctraddon_pw_am_highlight label {
+#ctraddon_pw_am_highlight label ,
+#ctraddon_pw_am_buticons label,
+#ctraddon_pw_am_hovshowb label{
   background:url('chrome://classic_theme_restorer/content/images/appmenu_addons_lin.png') no-repeat left !important;
   padding-left:20px !important;
   min-height:16px !important;
@@ -607,6 +609,12 @@ radio.ctraddontab .radio-check-box1 {
 
 #ctraddon_pw_noresizerxp label {
   background:url('chrome://classic_theme_restorer/content/images/resizer.png') no-repeat left !important;
+  padding-left:20px !important;
+  min-height:16px !important;
+}
+
+#ctraddon_pw_ibinfoico label {
+  background:url('chrome://classic_theme_restorer/content/images/globe.png') no-repeat left !important;
   padding-left:20px !important;
   min-height:16px !important;
 }

@@ -1,0 +1,79 @@
+@-moz-document url-prefix(chrome://mozapps/content/extensions/extensions.xul), url-prefix(about:addons) {
+	richlistitem[type="userstyle"] .control-container button[oncommand="document.getBindingParent(document.getBindingParent(this)).openEdit();"] image,
+	button[anonid="preferences-btn"].addon-control image{
+	  list-style-image: url("chrome://browser/skin/Toolbar.png");
+	  -moz-image-region: rect(0, 468px, 18px, 450px);
+	  filter: url("data:image/svg+xml;utf8,\
+			<svg xmlns='http://www.w3.org/2000/svg'>\
+			  <filter id='matrix-cbb' color-interpolation-filters='sRGB' filterUnits='objectBoundingBox' x='0' y='0' width='100%' height='100%'>\
+				<feColorMatrix type='saturate' in='SourceGraphic' values='0' result='A'/>\
+				<feColorMatrix type='matrix' in='A' values='0.38  0.3  0.3  0.0  0.0 0.3  0.38  0.3  0.0  0.07 0.3  0.3  0.38  0.0  0.3 0.0  0.0  0.0  1.0  0.0'/>\
+			  </filter>\
+			</svg>#matrix-cbb") !important;
+	}
+
+	button[anonid="install-remote-btn"].addon-control image,
+	button[anonid="enable-btn"].addon-control image{
+	  list-style-image: url("chrome://browser/skin/Toolbar.png");
+	  -moz-image-region: rect(0, 576px, 18px, 558px);
+	  filter: url("data:image/svg+xml;utf8,\
+			<svg xmlns='http://www.w3.org/2000/svg'>\
+			  <filter id='matrix-ygg' color-interpolation-filters='sRGB' filterUnits='objectBoundingBox' x='0' y='0' width='100%' height='100%'>\
+				<feColorMatrix type='saturate' in='SourceGraphic' values='0' result='A'/>\
+				<feColorMatrix type='matrix' in='A' values='0.38  0.3  0.3  0.0  0.1 0.3  0.38  0.3  0.0  0.28 0.3  0.3  0.38  0.0  0.0 0.0  0.0  0.0  1.0  0.0'/>\
+			  </filter>\
+			</svg>#matrix-ygg") !important;
+	}
+	button[anonid="disable-btn"].addon-control image{
+	  list-style-image: url("chrome://browser/skin/Toolbar.png");
+	  -moz-image-region: rect(0, 558px, 18px, 540px);
+	  filter: url("data:image/svg+xml;utf8,\
+			<svg xmlns='http://www.w3.org/2000/svg'>\
+			  <filter id='matrix-ryy' color-interpolation-filters='sRGB' filterUnits='objectBoundingBox' x='0' y='0' width='100%' height='100%'>\
+				<feColorMatrix type='saturate' in='SourceGraphic' values='0' result='A'/>\
+				<feColorMatrix type='matrix' in='A' values='0.38  0.3  0.3  0.0  0.4 0.3  0.38  0.3  0.0  0.3 0.3  0.3  0.38  0.0  0.0 0.0  0.0  0.0  1.0  0.0'/>\
+			  </filter>\
+			</svg>#matrix-ryy") !important;
+	}
+	button[anonid="remove-btn"].addon-control image{
+	  list-style-image: url("chrome://browser/skin/Toolbar.png");
+	  -moz-image-region: rect(0, 108px, 18px, 90px);
+	  filter: url("data:image/svg+xml;utf8,\
+			<svg xmlns='http://www.w3.org/2000/svg'>\
+			  <filter id='matrix-r' color-interpolation-filters='sRGB' filterUnits='objectBoundingBox' x='0' y='0' width='100%' height='100%'>\
+				<feColorMatrix type='saturate' in='SourceGraphic' values='0' result='A'/>\
+				<feColorMatrix type='matrix' in='A' values='0.38  0.3  0.3  0.0  0.4 0.3  0.38  0.3  0.0  0.0 0.3  0.3  0.38  0.0  0.0 0.0  0.0  0.0  1.0  0.0'/>\
+			  </filter>\
+			</svg>#matrix-r") !important;
+	}
+	button[anonid="update-btn"].addon-control image{
+	  list-style-image: url("chrome://browser/skin/Toolbar.png");
+	  -moz-image-region: rect(0, 612px, 18px, 596px);
+	  transform: rotate(-90deg);
+	  filter: url("data:image/svg+xml;utf8,\
+			<svg xmlns='http://www.w3.org/2000/svg'>\
+			  <filter id='matrix-ygg' color-interpolation-filters='sRGB' filterUnits='objectBoundingBox' x='0' y='0' width='100%' height='100%'>\
+				<feColorMatrix type='saturate' in='SourceGraphic' values='0' result='A'/>\
+				<feColorMatrix type='matrix' in='A' values='0.38  0.3  0.3  0.0  0.1 0.3  0.38  0.3  0.0  0.28 0.3  0.3  0.38  0.0  0.0 0.0  0.0  0.0  1.0  0.0'/>\
+			  </filter>\
+			</svg>#matrix-ygg") !important;
+	}
+
+	richlistitem[type="userstyle"] .control-container button[oncommand="document.getBindingParent(document.getBindingParent(this)).openEdit();"],
+	button[anonid].addon-control{
+	  min-width: unset !important;
+	}
+
+	richlistitem[type="userstyle"] .control-container button[oncommand="document.getBindingParent(document.getBindingParent(this)).openEdit();"] label,
+	button[anonid="install-remote-btn"].addon-control label,
+	button[anonid="preferences-btn"].addon-control label,
+	button[anonid="enable-btn"].addon-control label,
+	button[anonid="disable-btn"].addon-control label,
+	button[anonid="remove-btn"].addon-control label,
+	button[anonid="update-btn"].addon-control label{
+	  visibility: collapse;
+	}
+	button.addon-control image{
+	  display: block !important;
+	}
+}
