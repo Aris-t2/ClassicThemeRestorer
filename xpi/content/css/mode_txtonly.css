@@ -111,7 +111,8 @@
 	}
 	
 	toolbar .toolbarbutton-badge-stack {
-	  display: none !important;
+	  visibility:collapse !important;
+	  display: -moz-box !important;
 	}
 	
 }

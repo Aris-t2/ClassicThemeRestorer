@@ -57,9 +57,9 @@
 <!ENTITY Ctr_square_edges	"Τετραγωνισμένες γωνίες κορυφής">
 <!ENTITY Ctr_tttitlebar		"Τίτλος καρτέλας στη γραμμή τίτλου του &brandShortName;">
 <!ENTITY Ctr_tabinsertion	"Εισαγωγή συναφούς καρτέλας μετά την τρέχουσα καρτέλα (προτίμηση «about:config»)">
-<!ENTITY Ctr_emptytfavico	"Show favicon (if a site does not offer one)">
-<!ENTITY Ctr_emptytfavico_n	"None">
-<!ENTITY Ctr_emptytfavico_g	"Generic">
+<!ENTITY Ctr_emptytfavico	"Εμφάνιση εικονιδίου (αν ένας ιστότοπος δεν διαθέτει εικονίδιο)">
+<!ENTITY Ctr_emptytfavico_n	"Οικοσελίδας">
+<!ENTITY Ctr_emptytfavico_g	"Γενικής χρήσης">
 <!ENTITY Ctr_noemptypticon	"Απομάκρυνση κενού εικονιδίου από καρτέλες εφαρμογών">
 <!ENTITY Ctr_e10stab_notd	"Καρτέλες E10s: απομάκρυνση υπογράμμισης">
 <!ENTITY Ctr_closetab_0		"Κλείσιμο καρτέλας">
@@ -130,7 +130,7 @@
 <!ENTITY Ctr_wincontrols	"Μετακινήσιμα στοιχεία ελέγχου παραθύρου σε προβολή πλήρους οθόνης">
 <!ENTITY Ctr_oldtoplevimg	"Εικόνες τομέα «ανώτατου επιπέδου»: κλασική εμφάνιση">
 <!ENTITY Ctr_altalertbox	"«Πλαίσιο ειδοποίησης»: εναλλακτική εμφάνιση">
-<!ENTITY Ctr_emptygfavico	"Replace generic favicon">
+<!ENTITY Ctr_emptygfavico	"Αντικατάσταση εικονιδίου γενικής χρήσης">
 <!ENTITY Ctr_mstatusbar		"Μετακινήσιμο πινακίδιο γραμμής κατάστασης">
 <!ENTITY Ctr_mstatusbars4e	"Το πινακίδιο γραμμής κατάστασης ελέγχεται από την επέκταση «Status-4-Evar»">
 <!ENTITY Ctr_mstatusbartpp	"Το πινακίδιο γραμμής κατάστασης ελέγχεται από την επέκταση «ThePuzzlePiece»">
@@ -175,7 +175,7 @@
 <!ENTITY Ctr_bmbutton		"Κουμπί μενού σελιδοδεικτών">
 <!ENTITY Ctr_bmbutpanelm	"Αναδυόμενο: εμφάνιση ως μενού πίνακα">
 <!ENTITY Ctr_bmbunsortbm	"Αναδυόμενο: υπομενού «Αταξινόμητοι σελιδοδείκτες»">
-<!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
+<!ENTITY Ctr_bmbunsortbm2	"Πάνω από τους σελιδοδείκτες">
 <!ENTITY Ctr_bmbviewbmtb	"Αναδυόμενο: εμφάνιση «Προβολή εργαλειοθήκης σελιδοδεικτών»">
 <!ENTITY Ctr_bmbnounsort	"Αναδυόμενο: απόκρυψη «Αταξινόμητοι σελιδοδείκτες»">
 <!ENTITY Ctr_bmbutnotext	"Απόκρυψη ετικέτας στην εργαλειοθήκη σελιδοδεικτών">
@@ -226,11 +226,11 @@
 <!ENTITY Ctr_starinurlinfo	"Το προεπιλεγμένο κουμπί μενού σελιδοδεικτών αποκρύπτεται">
 <!ENTITY Ctr_feedinurl		"Κουμπί «Συνδρομή» (RSS)">
 <!ENTITY Ctr_hideurelstop	"Απόκρυψη κουμπιών «Διακοπή» &amp; «Ανανέωση»">
-<!ENTITY Ctr_hideurelstop2	"Always show 'go' button">
+<!ENTITY Ctr_hideurelstop2	"Πάντα εμφάνιση του κουμπιού «Μετάβαση»">
 <!ENTITY Ctr_hideurlgo		"Απόκρυψη κουμπιού «Μετάβαση»">
 <!ENTITY Ctr_hideurlsrg		"Απόκρυψη διαχωριστικών &amp; διαστημάτων κουμπιών «Ανανέωση», «Διακοπή» &amp; «Μετάβαση»">
 <!ENTITY Ctr_urlbardropm	"Μετακίνηση του δείκτη ανάπτυξης στην τελευταία δυνατή θέση">
-<!ENTITY Ctr_urlbardropm2	"Make dropmarker always visible">
+<!ENTITY Ctr_urlbardropm2	"Να είναι πάντα ορατός ο δείκτης ανάπτυξης">
 <!ENTITY Ctr_altreaderico	"Εναλλακτικά εικονίδια «λειτουργίας ανάγνωσης»">
 <!ENTITY Ctr_hideprbutton	"Απόκρυψη εικονιδίου ειδοποίησης φραγής αναδυόμενου παραθύρου">
 <!ENTITY Ctr_locsearchbw10	"Μείωση ύψους γραμμών τοποθεσιών και αναζήτησης (πειραματικό)">
@@ -363,8 +363,8 @@
 <!ENTITY Ctr_addon-bar.accesskey		"λ">
 <!ENTITY appMenuGettingStarted.label	"Ξεκινώντας">
 <!ENTITY goCmd.label					"Μετάβαση">
-<!ENTITY Ctr_menu_restart.label			"Restart &brandShortName;">
-<!ENTITY Ctr_restartapp					"'Restart &brandShortName;' in appmenu and filemenu">
+<!ENTITY Ctr_menu_restart.label			"Επανεκκίνηση &brandShortName;">
+<!ENTITY Ctr_restartapp					"«Επανεκκίνηση &brandShortName;» στα μενού κουμπιού εφαρμογής και «Αρχείο»">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"Π">
