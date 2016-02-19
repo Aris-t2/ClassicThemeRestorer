@@ -70,6 +70,10 @@
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/reload-inv.png");
 	}
 	
+	#ctraddon_restart-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/ctrrestart.png");
+	}
+	
 	/* for Retina display */
 	@media (min-resolution: 2dppx) {
 	  #main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_back-button, #ctraddon_forward-button, #ctraddon_bookmarks-menu-toolbar-button, #ctraddon_bookmarks-button, #ctraddon_history-button, #ctraddon_history-menu-toolbar-button, #ctraddon_reload-button, #ctraddon_stop-button,#ctraddon_go-button)  {
@@ -131,7 +135,12 @@
 	  #main-window[defaultfxtheme="true"] #ctraddon_stop-button:hover:active:not([disabled="true"]) {
 		-moz-image-region: rect(36px, 216px, 72px, 180px) !important;
 	  }
-	  #main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_back-button, #ctraddon_forward-button, #ctraddon_bookmarks-menu-toolbar-button, #ctraddon_bookmarks-button, #ctraddon_history-button,#ctraddon_history-menu-toolbar-button, #ctraddon_reload-button, #ctraddon_stop-button,#ctraddon_ctr-button,#ctraddon_go-button,#ctraddon_preferences-button) > .toolbarbutton-icon {
+		
+	  #main-window[defaultfxtheme="true"] #ctraddon_restart-button {
+		list-style-image: url("chrome://classic_theme_restorer/content/images/ctrrestart2x.png");
+	  }
+
+	  #main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_back-button, #ctraddon_forward-button, #ctraddon_bookmarks-menu-toolbar-button, #ctraddon_bookmarks-button, #ctraddon_history-button,#ctraddon_history-menu-toolbar-button, #ctraddon_reload-button, #ctraddon_stop-button,#ctraddon_ctr-button,#ctraddon_go-button,#ctraddon_preferences-button,#ctraddon_restart-button) > .toolbarbutton-icon {
 		width: 18px !important;
 	  }
 	  

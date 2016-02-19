@@ -399,10 +399,15 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_altalertbox').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_urlbardropm2').style.visibility = 'collapse';
 	}
+
 	if (this.appversion < 45) {
 	  document.getElementById('ctraddon_pw_ibinfoico').style.visibility = 'collapse';
 	}
 
+	if (this.appversion < 47) {
+	  document.getElementById('ctraddon_pw_hiderecentbm').style.visibility = 'collapse';
+	}
+	
 
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get

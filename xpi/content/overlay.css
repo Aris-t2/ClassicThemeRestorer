@@ -367,6 +367,14 @@
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/bookmarks_menu.png);
 	}
 	
+	#main-window[defaultfxtheme="true"] #ctraddon_restart-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+	#main-window[defaultfxtheme="true"] toolbarpaletteitem[place="palette"] > #ctraddon_restart-button > .toolbarbutton-icon,
+	#ctraddon_restart-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+	toolbarpaletteitem[place="palette"] > #ctraddon_restart-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 32px, 32px, 0);
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/ctrrestart@2x.png);
+	}
+	
 	#ctraddon_bookmarks-menu-toolbar-button[cui-areatype="menu-panel"]  dropmarker,
 	toolbarpaletteitem[place="palette"] > #ctraddon_bookmarks-menu-toolbar-button  dropmarker,
 	#ctraddon_history-menu-toolbar-button[cui-areatype="menu-panel"]  dropmarker,

@@ -31,7 +31,7 @@
 <!ENTITY Ctr_tabcolors_t	"Kolory karty i tekstu">
 
 <!ENTITY Ctr_tabs			"Karty">
-<!ENTITY Ctr_tabs0			"Domyślne &brandShortName; (karty zaokrąglone)">
+<!ENTITY Ctr_tabs0			"Domyślne programu &brandShortName; (karty zaokrąglone)">
 <!ENTITY Ctr_tabs1			"Karty prostokątne (klasyczne)">
 <!ENTITY Ctr_tabs1m			"Karty prostokątne (w stylu Australis)">
 <!ENTITY Ctr_tabs2			"Karty zaokrąglone (alternatywne)">
@@ -44,7 +44,7 @@
 <!ENTITY Ctr_tabsontop3		"Karty nie na górze (v2) --- atrybut [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"v2 jest tylko dla niektórych dodatków i kompletnych motywów!">
 <!ENTITY Ctr_tabsontopI1	"Dodaje atrybut [tabsontop=true/false] do">
-<!ENTITY Ctr_tabsintitlebar	"Pasek tytułu &brandShortName; (ustawienie about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Pasek tytułu programu &brandShortName; (ustawienie about:config)">
 <!ENTITY Ctr_tabwidthdef	"(domyślne)">
 <!ENTITY Ctr_tabwidthcla	"(klasyczne)">
 <!ENTITY Ctr_tabminheight	"Wysokość:">
@@ -55,7 +55,7 @@
 <!ENTITY Ctr_tabwidthinfo2	"Szerokość karty jest kontrolowana przez TabUtilities">
 <!ENTITY Ctr_tabwidthinfo3	"Wartości poniżej 48 pikseli w większości przypadków spowodują usterki!">
 <!ENTITY Ctr_square_edges	"Kwadratowe górne rogi">
-<!ENTITY Ctr_tttitlebar		"Tytuł karty na pasku tytułu &brandShortName;">
+<!ENTITY Ctr_tttitlebar		"Tytuł karty na pasku tytułu programu &brandShortName;">
 <!ENTITY Ctr_tabinsertion	"Wstaw powiązaną kartę za kartą bieżącą (about:config)">
 <!ENTITY Ctr_emptytfavico	"Pokaż ikonę ulubionych (jeżeli strona nie zaoferuje żadnej)">
 <!ENTITY Ctr_emptytfavico_n	"Brak">
@@ -71,21 +71,21 @@
 <!ENTITY Ctr_closetab_hfot	"Ukryj na jednej widocznej karcie">
 <!ENTITY Ctr_closei_def		"Domyślne ikony">
 <!ENTITY Ctr_closeonleft	"Alternatywna pozycja na karcie">
-<!ENTITY Ctr_closetabbig	"Bigger icon (20x20px)">
+<!ENTITY Ctr_closetabbig	"Większa ikona (20x20 pikseli)">
 <!ENTITY Ctr_close_wwltab	"Zamykaj okno z ostatnią widoczną kartą (about:config)">
 
 <!ENTITY Ctr_hctpinfotab	"Niektóre modyfikacje karty nie są kompatybilne z dodatkiem 'Hide Caption Titlebar Plus'.">
 <!ENTITY Ctr_hctpinfoab		"Przycisk na pasku tytułu nie jest kompatybilny z dodatkiem 'Hide Caption Titlebar Plus'.">
 
-<!ENTITY Ctr_appbutton		"Przycisk &brandShortName;">
+<!ENTITY Ctr_appbutton		"Przycisk programu &brandShortName;">
 <!ENTITY Ctr_appbutton0		"Przycisk wyłączony">
 <!ENTITY Ctr_appbutton1		"Przycisk na pasku narzędzi">
 <!ENTITY Ctr_appbutton1wt	"Przycisk na pasku narzędzi (tylko tekst)">
 <!ENTITY Ctr_appbutton2		"Przycisk na pasku narzędzi [&brandShortName;]">
 <!ENTITY Ctr_appbutton2h	"Przycisk na pasku narzędzi [&brandShortName;] (ukryty)">
 <!ENTITY Ctr_appbutton2io	"Przycisk na pasku narzędzi [&brandShortName;] (tylko ikona)">
-<!ENTITY Ctr_paneluibtweak	"Wyświetlaj przycisk menu jako przycisk &brandShortName;...">
-<!ENTITY Ctr_paneluibtweak2	"Wyświetlaj przycisk menu jako przycisk &brandShortName; (tylko ikona)...">
+<!ENTITY Ctr_paneluibtweak	"Wyświetlaj przycisk menu jako przycisk programu &brandShortName;...">
+<!ENTITY Ctr_paneluibtweak2	"Wyświetlaj przycisk menu jako przycisk programu &brandShortName; (tylko ikona)...">
 <!ENTITY Ctr_paneluibtweak3	"...gdy na pasku kart">
 <!ENTITY Ctr_appbuttonc_o	"Pomarańczowy kolor przycisku (domyślny)">
 <!ENTITY Ctr_appbuttonc_a	"Błękitny kolor przycisku (Aurora)">
@@ -100,7 +100,7 @@
 <!ENTITY Ctr_appbuttonc_cu	"Niestandardowy kolor przycisku">
 <!ENTITY Ctr_appbuttonct	"Niestandardowy kolor przycisku dla przycisku na pasku narzędzi">
 <!ENTITY Ctr_appbuttonI1	"Zalecany restart">
-<!ENTITY Ctr_appbuttonI1e	"Tylko widoczny na pasku tytułu &brandShortName;, nie na systemowym pasku tytułu!">
+<!ENTITY Ctr_appbuttonI1e	"Tylko widoczny na pasku tytułu programu &brandShortName;, nie na systemowym pasku tytułu!">
 <!ENTITY Ctr_appbuttonI2	"Kolory przycisku są tylko widoczne, jeżeli przycisk jest na pasku tytułu albo na pasku kart!">
 <!ENTITY Ctr_appbutmhi		"Wyższa pozycja (jeżeli na pasku kart)">
 <!ENTITY Ctr_appbautocol	"Ustaw automatycznie kolor kanału przeglądarki (domyślny/Aurora/Nightly)">
@@ -170,12 +170,13 @@
 <!ENTITY Ctr_am_nowarning	"Listy dodatków: ukryj ostrzeżenia">
 <!ENTITY Ctr_am_compact		"Listy dodatków: widok kompaktowy">
 <!ENTITY Ctr_am_compact2	"Widok kompaktowy +">
-<!ENTITY Ctr_am_highlight	"Listy dodatków: podświetl pozycję po najechaniu">
-<!ENTITY Ctr_am_buticons	"Add-on lists: replace button labels with icons">
-<!ENTITY Ctr_am_hovshowb	"Add-on lists: only show buttons on 'hover'">
+<!ENTITY Ctr_am_highlight	"Listy dodatków: podświetl pozycję 'po najechaniu'">
+<!ENTITY Ctr_am_buticons	"Listy dodatków: zamień etykiety przycisków na ikony">
+<!ENTITY Ctr_am_hovshowb	"Listy dodatków: pokazuj przyciski tylko 'po najechaniu'">
 <!ENTITY Ctr_addonversion	"Listy dodatków: wyświetl wersję dodatku">
 <!ENTITY Ctr_xpinstallui	"Stare okno instalacji dodatku (ustawienie about:config)">
 <!ENTITY Ctr_bmbutton		"Przycisk menu zakładek">
+<!ENTITY Ctr_hiderecentbm	"Bookmarks popup: hide recently added bookmarks">
 <!ENTITY Ctr_bmbutpanelm	"Menu podręczne: wygląd menu panelu">
 <!ENTITY Ctr_bmbunsortbm	"Menu podręczne: podmenu 'nieposortowanych zakładek'">
 <!ENTITY Ctr_bmbunsortbm2	"Menu ponad zakładkami">
@@ -191,7 +192,7 @@
 <!ENTITY Ctr_closegeneral	"Ogólne ikony zamykania">
 
 <!ENTITY Ctr_tabsep_def		"Domyślne separatory kart">
-<!ENTITY Ctr_fxmockup		"Makieta &brandShortName;">
+<!ENTITY Ctr_fxmockup		"Makieta programu &brandShortName;">
 <!ENTITY Ctr_tabmokcolor	"Biały kolor przycisków karty (zamknij, nowa, grupy, lista wszystkich)">
 <!ENTITY Ctr_tabmokcolor2	"Biały kolor i ciemny cień tekstu na nieaktywnych kartach">
 <!ENTITY Ctr_tabmokcolor4	"Biały kolor pustej i wykropkowanej ikony ulubionych na karcie">
@@ -241,14 +242,14 @@
 <!ENTITY Ctr_ib_nohovcolor	"Nie pokazuj szarego koloru po najechaniu">
 <!ENTITY Ctr_ib_graycolor	"Szary kolor dla nieznanej tożsamości oraz stron 'chrome'">
 <!ENTITY Ctr_verifiedcolors	"Kolory przycisków zweryfikowanych stron, połączeń bezpiecznych oraz niebezpiecznych">
-<!ENTITY Ctr_ibinfoico		"Replace 'i'-icon with globe icon">
+<!ENTITY Ctr_ibinfoico		"Zamień ikonę 'i' na ikonę globu">
 <!ENTITY Ctr_faviconurl		"Ikona ulubionych: ikona bieżącej strony">
 <!ENTITY Ctr_padlock		"Ikona kłódki dla bezpiecznych połączeń">
 <!ENTITY Ctr_padlock_hid	"Ukryta">
 <!ENTITY Ctr_padlock_def	"Domyślna">
 <!ENTITY Ctr_padlock_cla	"Klasyczna">
 <!ENTITY Ctr_padlock_mod	"Nowoczesna">
-<!ENTITY Ctr_padlock_ext	"Ikona '&brandShortName;' dla ważnych stron 'about'">
+<!ENTITY Ctr_padlock_ext	"Ikona programu '&brandShortName;' dla ważnych stron 'about'">
 <!ENTITY Ctr_icopageinfo	"Kliknięcie ikony otwiera okno 'informacji o stronie'">
 <!ENTITY Ctr_lbsbsize		"Niestandardowa szerokość paska adresu i paska wyszukiwania">
 <!ENTITY Ctr_searchbar		"Pasek wyszukiwania">
@@ -259,7 +260,7 @@
 <!ENTITY Ctr_extrabar		"Dodatkowe paski narzędzi">
 <!ENTITY Ctr_extrabar0		"Dodatkowy pasek (dodatkowe paski) narzędzi">
 <!ENTITY Ctr_extrabar1		"Dodatkowy pasek narzędzi">
-<!ENTITY Ctr_extrabarinfo	"Przełączanie pomiędzy trybami 'karty na górze' a 'karty nie na górze' losowo zmienia układ dodatkowych pasków narzędzi. &brandShortName; musi zostać zrestartowany, aby rozwiązać ten problem.">
+<!ENTITY Ctr_extrabarinfo	"Przełączanie pomiędzy trybami 'karty na górze' a 'karty nie na górze' losowo zmienia układ dodatkowych pasków narzędzi. Program &brandShortName; musi zostać zrestartowany, aby rozwiązać ten problem.">
 
 <!ENTITY Ctr_invicons		"Odwrócone kolory ikon">
 <!ENTITY Ctr_menubar		"Pasek menu">
@@ -285,7 +286,7 @@
 
 <!ENTITY Ctr_altmenubar		"Dodaj kolor tła (systemowy pasek tytuły)">
 <!ENTITY Ctr_altmenubarpos	"Alternatywna pozycja">
-<!ENTITY Ctr_altmenubarpos2	"Poniżej paska tytułu &brandShortName;">
+<!ENTITY Ctr_altmenubarpos2	"Poniżej paska tytułu programu &brandShortName;">
 <!ENTITY Ctr_menubarnofog	"Usuń kolor tła i mgłę (Windows AeroGlass/8)">
 
 <!ENTITY Ctr_aerocolors		"Niebieskie kolory Aero pasków narzędzi (i kart)">
@@ -352,7 +353,7 @@
 <!ENTITY Ctr_pw_settings	"Ustawienia">
 <!ENTITY Ctr_pw_set_reset	"Przywróć domyślne">
 <!ENTITY Ctr_pw_set_predef	"Ustawienia klasyczne">
-<!ENTITY Ctr_pw_set_preaus	"Ustawienia &brandShortName;">
+<!ENTITY Ctr_pw_set_preaus	"Ustawienia programu &brandShortName;">
 <!ENTITY Ctr_pw_set_export	"Eksportuj ustawienia">
 <!ENTITY Ctr_pw_set_import	"Importuj ustawienia">
 <!ENTITY Ctr_pw_set_syncon	"Dodaj do Sync">
@@ -360,15 +361,15 @@
 
 <!ENTITY Ctr_special_font	"Ustawienia koloru tła są tylko dla domyślnego stylu!">
 <!ENTITY Ctr_special_info	"Niektóre opcje mogą nie oferować widocznych zmian we wszystkich przypadkach">
-<!ENTITY Ctr_special_info2	"Ustawienia są stworzone dla domyślnego stylu &brandShortName; i mogą nie działać z innymi stylami!">
+<!ENTITY Ctr_special_info2	"Ustawienia są stworzone dla domyślnego stylu programu &brandShortName;, więc mogą nie działać z innymi stylami!">
 <!ENTITY Ctr_support		"Forum wsparcia">
 <!ENTITY Ctr_newversion		"Nowa wersja?">
 
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"Pierwsze kroki">
 <!ENTITY goCmd.label					"Przejdź">
-<!ENTITY Ctr_menu_restart.label			"Zrestartuj &brandShortName;">
-<!ENTITY Ctr_restartapp					"'Zrestartuj &brandShortName;' w menu aplikacji oraz menu Plik">
+<!ENTITY Ctr_menu_restart.label			"Zrestartuj program &brandShortName;">
+<!ENTITY Ctr_restartapp					"'Zrestartuj program &brandShortName;' w menu aplikacji oraz menu Plik">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"W">

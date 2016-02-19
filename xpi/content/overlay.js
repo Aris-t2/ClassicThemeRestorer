@@ -1924,6 +1924,11 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("addonversion") && classicthemerestorerjs.ctr.appversion >= 40) classicthemerestorerjs.ctr.loadUnloadCSS("addonversion",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("addonversion",false);
 		  break;
+		  
+		  case "hiderecentbm":
+			if (branch.getBoolPref("hiderecentbm") && classicthemerestorerjs.ctr.appversion >= 47) classicthemerestorerjs.ctr.loadUnloadCSS("hiderecentbm",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("hiderecentbm",false);
+		  break;
 
 		  case "bmbutpanelm":
 			if (branch.getBoolPref("bmbutpanelm")) {
@@ -3703,6 +3708,7 @@ classicthemerestorerjs.ctr = {
 			else manageCSS("addonversion46.css");
 		break;
 		
+		case "hiderecentbm": 		manageCSS("hide_recently_bm.css");		break;
 		case "bmbutpanelm": 		manageCSS("bmbut_pmenu.css");			break;
 		case "bmbunsortbm": 		manageCSS("bmbut_unsortedbookm.css");	break;
 		case "bmbunsortbm2": 		manageCSS("bmbut_unsortedbookm2.css");	break;

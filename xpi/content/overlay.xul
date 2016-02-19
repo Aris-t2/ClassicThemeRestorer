@@ -985,6 +985,12 @@
                      label="&goCmd.label;" removable="true"
                      onclick="gURLBar.handleCommand(event);"
                      tooltiptext="&goEndCap.tooltip;"/>
+					 
+      <!--### creates a movable restart button ###-->
+	  <toolbarbutton id="ctraddon_restart-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
+                     label="&Ctr_menu_restart.label;" removable="true"
+					 oncommand="classicthemerestorerjs.ctr.restartBrowser()"
+                     tooltiptext="&Ctr_menu_restart.label;"/>
   
 	  <!--### creates clone of fullscreen window control buttons ###-->
 	  <toolbaritem id="ctraddon_window-controls" class="chromeclass-toolbar-additional"

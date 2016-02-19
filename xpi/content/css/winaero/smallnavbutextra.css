@@ -215,7 +215,7 @@
 
     #navigator-toolbox #nav-bar #back-button[disabled] > .toolbarbutton-icon,
 	#navigator-toolbox #nav-bar .toolbarbutton-menubutton-dropmarker > image,
-	#navigator-toolbox #nav-bar .toolbarbutton-menubutton-button .toolbarbutton-icon,
+	#navigator-toolbox #nav-bar .toolbarbutton-menubutton-button:not([label="Tile Tabs"]) .toolbarbutton-icon,
 	#navigator-toolbox #nav-bar toolbarbutton[type="menu-button"] > .toolbarbutton-icon,
 	#navigator-toolbox #nav-bar .toolbarbutton-1:-moz-any(:hover ,[checked],[open],[type="menu-button"]) > .toolbarbutton-icon,
 	#navigator-toolbox #nav-bar .toolbarbutton-1[type="menu-button"] > .toolbarbutton-menubutton-dropmarker::before{
