@@ -71,6 +71,7 @@ classicthemerestorerjs.ctr = {
   moveStarIntoUrlbar:	false,
   moveFeedIntoUrlbar:	false,
   altnewtabpageOn:		false,
+  removeRecentBmOn:		false,
   
   devthemeinterval: 	null,
   ctrcontentprefswin: 	null,
@@ -1926,8 +1927,93 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "hiderecentbm":
-			if (branch.getBoolPref("hiderecentbm") && classicthemerestorerjs.ctr.appversion >= 47) classicthemerestorerjs.ctr.loadUnloadCSS("hiderecentbm",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("hiderecentbm",false);
+		    if(classicthemerestorerjs.ctr.appversion >= 47) {
+				if (branch.getBoolPref("hiderecentbm")) {
+				  classicthemerestorerjs.ctr.loadUnloadCSS("hiderecentbm",true);
+				  
+				  if (classicthemerestorerjs.ctr.osstring=="Darwin"){
+
+					setTimeout(function(){
+
+					  var recentlyBookmarked0 = document.getElementById("menu_recentBookmarks");
+					  var recentlyBookmarked1 = recentlyBookmarked0.nextSibling; // 1st recent bookmark
+					  var recentlyBookmarked2 = recentlyBookmarked1.nextSibling; // 2nd...
+					  var recentlyBookmarked3 = recentlyBookmarked2.nextSibling;
+					  var recentlyBookmarked4 = recentlyBookmarked3.nextSibling;
+					  var recentlyBookmarked5 = recentlyBookmarked4.nextSibling;
+					  
+					  var rec_stop=false;
+					  
+					  if(recentlyBookmarked0.previousSibling!=null && recentlyBookmarked0.previousSibling.nodeName=="menuseparator")
+					    recentlyBookmarked0.previousSibling.collapsed=true;
+					  
+					  recentlyBookmarked0.collapsed=true;
+					  
+					  if(recentlyBookmarked1!=null && recentlyBookmarked1.nodeName=="menuitem" && rec_stop==false)
+						recentlyBookmarked1.collapsed=true;
+					  else rec_stop=true;
+					  if(recentlyBookmarked2!=null && recentlyBookmarked2.nodeName=="menuitem" && rec_stop==false)
+						recentlyBookmarked2.collapsed=true;
+					  else rec_stop=true;
+					  if(recentlyBookmarked3!=null && recentlyBookmarked3.nodeName=="menuitem" && rec_stop==false)
+						recentlyBookmarked3.collapsed=true;
+					  else rec_stop=true;
+					  if(recentlyBookmarked4!=null && recentlyBookmarked4.nodeName=="menuitem" && rec_stop==false)
+						recentlyBookmarked4.collapsed=true;
+					  else rec_stop=true;
+					  if(recentlyBookmarked5!=null && recentlyBookmarked5.nodeName=="menuitem" && rec_stop==false)
+						recentlyBookmarked5.collapsed=true;
+					},1000);
+				  
+				    classicthemerestorerjs.ctr.removeRecentBmOn = true;
+				  }
+				}
+				else {
+				  classicthemerestorerjs.ctr.loadUnloadCSS("hiderecentbm",false);
+				  
+				  if (classicthemerestorerjs.ctr.osstring=="Darwin"){
+				   if(classicthemerestorerjs.ctr.removeRecentBmOn) {
+
+					setTimeout(function(){
+
+					  var recentlyBookmarked0 = document.getElementById("menu_recentBookmarks");
+					  var recentlyBookmarked1 = recentlyBookmarked0.nextSibling; // 1st recent bookmark
+					  var recentlyBookmarked2 = recentlyBookmarked1.nextSibling; // 2nd...
+					  var recentlyBookmarked3 = recentlyBookmarked2.nextSibling;
+					  var recentlyBookmarked4 = recentlyBookmarked3.nextSibling;
+					  var recentlyBookmarked5 = recentlyBookmarked4.nextSibling;
+					  
+					  var rec_stop=false;
+					  
+					  if(recentlyBookmarked0.previousSibling!=null && recentlyBookmarked0.previousSibling.nodeName=="menuseparator")
+					    recentlyBookmarked0.previousSibling.collapsed=false;
+
+					  recentlyBookmarked0.collapsed=false;
+					  
+					  if(recentlyBookmarked1!=null && recentlyBookmarked1.nodeName=="menuitem" && rec_stop==false)
+						recentlyBookmarked1.collapsed=false;
+					  else rec_stop=true;
+					  if(recentlyBookmarked2!=null && recentlyBookmarked2.nodeName=="menuitem" && rec_stop==false)
+						recentlyBookmarked2.collapsed=false;
+					  else rec_stop=true;
+					  if(recentlyBookmarked3!=null && recentlyBookmarked3.nodeName=="menuitem" && rec_stop==false)
+						recentlyBookmarked3.collapsed=false;
+					  else rec_stop=true;
+					  if(recentlyBookmarked4!=null && recentlyBookmarked4.nodeName=="menuitem" && rec_stop==false)
+						recentlyBookmarked4.collapsed=false;
+					  else rec_stop=true;
+					  if(recentlyBookmarked5!=null && recentlyBookmarked5.nodeName=="menuitem" && rec_stop==false)
+						recentlyBookmarked5.collapsed=false;
+
+					},1000);
+					
+					classicthemerestorerjs.ctr.removeRecentBmOn = false;
+				  
+				   }
+				  }
+				  
+				}
+			}
 		  break;
 
 		  case "bmbutpanelm":

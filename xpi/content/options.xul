@@ -888,7 +888,7 @@
 		<checkbox label="&Ctr_panelmenucol;"	preference="ctraddon_panelmenucol" id="ctraddon_pw_panelmenucolor"/>
 		<checkbox label="&Ctr_cpanelmenus;"		preference="ctraddon_cpanelmenus"/>
 		<checkbox label="&Ctr_menupopupscr;"	preference="ctraddon_menupopupscr"/>
-		<checkbox label="&Ctr_hiderecentbm;"	preference="ctraddon_hiderecentbm" id="ctraddon_pw_hiderecentbm" class="ctraddon_winlinonly"/>
+		<checkbox label="&Ctr_hiderecentbm;"	preference="ctraddon_hiderecentbm" id="ctraddon_pw_hiderecentbm"/>
 		<description class="ctraddon_font1">&Ctr_bmbutton;</description>
 		<checkbox label="&Ctr_bmbutpanelm;"		preference="ctraddon_bmbutpanelm" id="ctraddon_pw_bmbutpanelm"/>
 		<checkbox label="&Ctr_bmbunsortbm;"		preference="ctraddon_bmbunsortbm" id="ctraddon_pw_bmbunsortbm" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwUnsortBM(true);} else {classicthemerestorerjso.ctr.ctrpwUnsortBM(false);}"/>
