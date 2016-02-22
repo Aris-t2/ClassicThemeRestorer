@@ -20,6 +20,9 @@
 		-moz-appearance: button !important;
 		color: black !important;
 	  }
+	  treecolpicker {
+		-moz-appearance: treeheadercell !important;
+	  }
 
 	  window, prefwindow, .content-box, #dialogBox {
 		background-color: -moz-Dialog !important;
@@ -52,6 +55,19 @@
 		-moz-margin-start: 8px !important;
 		margin-top: 2px !important;
 		margin-bottom: 0px !important;
+	  }
+	  
+	  listitem:hover,
+	  treechildren::-moz-tree-row(hover) {
+		background: Highlight !important;
+		color: white !important;
+	  }
+	  treechildren::-moz-tree-cell-text(hover) {
+		color: HighlightText !important;
+	  }
+	  listitem[selected],
+	  treechildren::-moz-tree-row(selected) {
+		background: Highlight !important;
 	  }
 
 	}

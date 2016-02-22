@@ -58,8 +58,8 @@
 <!ENTITY Ctr_tttitlebar		"Titolo scheda nella barra del titolo di &brandShortName;">
 <!ENTITY Ctr_tabinsertion	"Inserisci la scheda relativa dopo la scheda corrente (about:config)">
 <!ENTITY Ctr_emptytfavico	"Mostra favicon (quando un sito ne è privo)">
-<!ENTITY Ctr_emptytfavico_n	"None">
-<!ENTITY Ctr_emptytfavico_g	"Generic">
+<!ENTITY Ctr_emptytfavico_n	"Nessuna">
+<!ENTITY Ctr_emptytfavico_g	"Generica">
 <!ENTITY Ctr_noemptypticon	"Rimuovi la favicon vuota dalla scheda bloccata">
 <!ENTITY Ctr_e10stab_notd	"Schede E10s: rimuovi la sottolineatura">
 <!ENTITY Ctr_closetab_0		"Pulsante di chiusura">
@@ -71,7 +71,7 @@
 <!ENTITY Ctr_closetab_hfot	"Nascondi quando c’è una sola scheda aperta">
 <!ENTITY Ctr_closei_def		"Icone predefinite">
 <!ENTITY Ctr_closeonleft	"Posizione alternativa sulla scheda">
-<!ENTITY Ctr_closetabbig	"Bigger icon (20x20px)">
+<!ENTITY Ctr_closetabbig	"Icona più grande (20x20 px)">
 <!ENTITY Ctr_close_wwltab	"Chiudendo l’ultima scheda chiudi la finestra (about:config)">
 
 <!ENTITY Ctr_hctpinfotab	"Alcune modifiche alle schede non sono compatibili con il componente aggiuntivo 'Hide Caption Titlebar Plus'.">
@@ -167,18 +167,18 @@
 <!ENTITY Ctr_addonmanager	"Gestione componenti aggiuntivi">
 <!ENTITY Ctr_alt_addonsp	"Pagina 'Altro' dei componenti aggiuntivi: aspetto alternativo">
 <!ENTITY Ctr_alt_addonsm	"Gestione componenti aggiuntivi: aspetto alternativo">
-<!ENTITY Ctr_am_nowarning	"Informazioni sui componenti aggiuntivi: nascondi avvisi">
-<!ENTITY Ctr_am_compact		"Informazioni sui componenti aggiuntivi: visualizzazione compatta">
-<!ENTITY Ctr_am_compact2	"visualizzazione compatta plus">
-<!ENTITY Ctr_am_highlight	"Elenco dei componenti aggiuntivi: evidenzia il componente al passaggio del mouse">
-<!ENTITY Ctr_am_buticons	"Add-on lists: replace button labels with icons">
-<!ENTITY Ctr_am_hovshowb	"Add-on lists: only show buttons on 'hover'">
-<!ENTITY Ctr_addonversion	"Informazioni sui componenti aggiuntivi: mostra versione del componente">
+<!ENTITY Ctr_am_nowarning	"Informazioni sui componenti: nascondi avvisi">
+<!ENTITY Ctr_am_compact		"Informazioni sui componenti: visualizzazione compatta">
+<!ENTITY Ctr_am_compact2	"Visualizzazione compatta plus">
+<!ENTITY Ctr_am_highlight	"Elenco dei componenti: evidenzia il componente al passaggio del mouse">
+<!ENTITY Ctr_am_buticons	"Elenco dei componenti: sostituisci il testo dei pulsanti con le icone">
+<!ENTITY Ctr_am_hovshowb	"Elenco dei componenti: mostra i pulsanti soltanto al passaggio del mouse">
+<!ENTITY Ctr_addonversion	"Informazioni sui componenti: mostra versione del componente aggiuntivo">
 <!ENTITY Ctr_xpinstallui	"Stile classico per la finestra di installazione dei componenti aggiuntivi (preferenza in about:config)">
 <!ENTITY Ctr_bmbutton		"Menu del pulsante segnalibri">
-<!ENTITY Ctr_hiderecentbm	"Bookmarks popup: hide recently added bookmarks">
+<!ENTITY Ctr_hiderecentbm	"Popup segnalibri: nascondi i segnalibri aggiunti di recente">
 <!ENTITY Ctr_bmbutpanelm	"Aspetto del menu a pannello">
-<!ENTITY Ctr_bmbunsortbm	"Sottomenu dei 'Segnalibri non catalogati'">
+<!ENTITY Ctr_bmbunsortbm	"Menu dei 'Segnalibri non catalogati'">
 <!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
 <!ENTITY Ctr_bmbviewbmtb	"Mostra 'Visualizza barra dei segnalibri'">
 <!ENTITY Ctr_bmbnounsort	"Nascondi 'Segnalibri non catalogati'">
@@ -186,13 +186,13 @@
 <!ENTITY Ctr_skipprintpr	"Pulsante stampa: salta l’anteprima di stampa">
 <!ENTITY Ctr_tbconmenu		"Menu contestuale della barra degli strumenti: nascondi 'Sposta nel menu', 'Rimuovi dalla barra degli strumenti', 'Ricarica/ tutte le schede nei segnalibri' e 'Riapri scheda chiusa'">
 <!ENTITY Ctr_noresizerxp	"Nascondi il ridimensionatore (Windows XP)">
-<!ENTITY Ctr_extraurlkeycb	"Apri una barra degli indirizzi supplementare (Cmd/Ctrl+)">
+<!ENTITY Ctr_extraurlkeycb	"Apri una barra degli indirizzi supplementare (Cmd/Ctrl+">
 <!ENTITY Ctr_pmhidelabels	"Mostra solo le icone nel pannello principale del menu">
 <!ENTITY Ctr_menupopupscr	"Utilizza la barra di scorrimento al posto delle frecce nei menu a comparsa">
 <!ENTITY Ctr_closegeneral	"Icone generiche di chiusura">
 
 <!ENTITY Ctr_tabsep_def		"Separatori schede predefiniti">
-<!ENTITY Ctr_fxmockup		"Mockup &brandShortName;">
+<!ENTITY Ctr_fxmockup		"Mockup di &brandShortName;">
 <!ENTITY Ctr_tabmokcolor	"Utilizza il colore bianco per i pulsanti delle schede (Chiudi, Nuova, Gruppi, Mostra tutte)">
 <!ENTITY Ctr_tabmokcolor2	"Utilizza testo bianco con ombreggiatura scura nelle schede non attive">
 <!ENTITY Ctr_tabmokcolor4	"Colore bianco per la favicon punteggiata vuota">
@@ -242,7 +242,7 @@
 <!ENTITY Ctr_ib_nohovcolor	"Non mostrare il colore grigio al passaggio del mouse">
 <!ENTITY Ctr_ib_graycolor	"Colore grigio per le identità sconosciute e le pagine chrome">
 <!ENTITY Ctr_verifiedcolors	"Pulsanti colorati per le connessioni ai siti verificati, sicuri e non sicuri">
-<!ENTITY Ctr_ibinfoico		"Replace 'i'-icon with globe icon">
+<!ENTITY Ctr_ibinfoico		"Sostituisci l'icona 'i' con l'icona globo">
 <!ENTITY Ctr_faviconurl		"Favicon nella barra degli indirizzi">
 <!ENTITY Ctr_padlock		"Lucchetto connessioni sicure">
 <!ENTITY Ctr_padlock_hid	"nascosto">
@@ -254,7 +254,7 @@
 <!ENTITY Ctr_lbsbsize		"Larghezza personalizzata per la barra degli indirizzi e di ricerca">
 <!ENTITY Ctr_searchbar		"Barra di ricerca">
 <!ENTITY Ctr_lbsugresi		"Mostra il maggior numero possibile di suggerimenti (senza barra di scorrimento)">
-<!ENTITY Ctr_lbsugres		"Numero di risultati nei suggerimenti a comparsa (about:config preference)">
+<!ENTITY Ctr_lbsugres		"Numero di risultati nei suggerimenti a comparsa (preferenza in about:config)">
 
 <!ENTITY Ctr_menubar_items	"Posizione delle voci del menu">
 <!ENTITY Ctr_extrabar		"Barre degli strumenti aggiuntive">
@@ -365,11 +365,11 @@
 <!ENTITY Ctr_support		"Forum di supporto">
 <!ENTITY Ctr_newversion		"È disponibile una nuova versione?">
 
-<!ENTITY Ctr_addon-bar.accesskey	"B">
+<!ENTITY Ctr_addon-bar.accesskey		"B">
 <!ENTITY appMenuGettingStarted.label	"Primi passi">
-<!ENTITY goCmd.label		"Vai">
+<!ENTITY goCmd.label					"Vai">
 <!ENTITY Ctr_menu_restart.label			"Riavvia">
-<!ENTITY Ctr_restartapp					"'Riavvia' nel menu dell’applicazione e nel menu File">
+<!ENTITY Ctr_restartapp					"'Riavvia' nel menu del Pulsante &brandShortName; e nel menu File">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey            "I">

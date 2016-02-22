@@ -83,7 +83,9 @@
 	  #nav-bar toolbaritem .toolbarbutton-1:not([disabled])[open],
 	  #nav-bar .toolbarbutton-1:not([disabled])[open],
 	  #nav-bar toolbaritem .toolbarbutton-1:not([disabled]):active,
-	  #nav-bar .toolbarbutton-1:not([disabled]):active{
+	  #nav-bar .toolbarbutton-1:not([disabled]):active
+	  #nav-bar toolbaritem .toolbarbutton-1:not([disabled]):hover:active,
+	  #nav-bar .toolbarbutton-1:not([disabled]):hover:active{
 		-moz-border-top-colors: transparent #808080 !important;
 		border-right: 1px solid white !important;
 		border-left: 1px solid #808080 !important;

@@ -2970,6 +2970,8 @@ classicthemerestorerjs.ctr = {
 	 var ibchromeui	   = false; try { ibchromeui = document.getElementById("identity-box").getAttribute('class')=='chromeUI'; } catch(e){}
 	 var ibukidentity  = false; try { ibukidentity = document.getElementById("identity-box").getAttribute('class')=='unknownIdentity'; } catch(e){}
 	 
+	 try{
+	 
 	 if(gBrowser.selectedTab.image) {
 	  try {
 		ppfavicon.setAttribute("src", gBrowser.selectedTab.image);
@@ -3040,6 +3042,9 @@ classicthemerestorerjs.ctr = {
 		ppfavicon.removeAttribute("src");
 	  } catch(e){}
 	 }
+	
+	} catch(e){}
+	
 	}
 
 	classicthemerestorerjs.ctr.loadUnloadCSS('padlock_default',false);

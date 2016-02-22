@@ -397,7 +397,7 @@
 					<textbox id="ctraddon_pw_tabMinWidth" size="3" maxlength="3" preference="ctraddon_tabmwidth" type="number"/>
 					<label value="px"/>
 				</hbox>
-				<label value="100px &Ctr_tabwidthdef;" id="ctraddon_pw_tabMinWidth_L2"/>
+				<label value="100 px &Ctr_tabwidthdef;" id="ctraddon_pw_tabMinWidth_L2"/>
 			</row>
 			<row align="center">
 				<label value="&Ctr_tabmaxwidth;" id="ctraddon_pw_tabMaxWidth_L1"/>
@@ -405,7 +405,7 @@
 					<textbox id="ctraddon_pw_tabMaxWidth" size="3" maxlength="3" preference="ctraddon_tabwidth" type="number"/>
 					<label value="px"/>
 				</hbox>
-				<label value="210px &Ctr_tabwidthdef; / 250px &Ctr_tabwidthcla;" id="ctraddon_pw_tabMaxWidth_L2"/>
+				<label value="210 px &Ctr_tabwidthdef; / 250 px &Ctr_tabwidthcla;" id="ctraddon_pw_tabMaxWidth_L2"/>
 			</row>
 		  </rows>
 		</grid>

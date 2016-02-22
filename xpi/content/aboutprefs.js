@@ -102,7 +102,7 @@ ctrAboutPrefs = {
 
 			ss.loadAndRegisterSheet(uri, ss.AGENT_SHEET);
 		}
-	},200);
+	},400);
 	
   }
 }
