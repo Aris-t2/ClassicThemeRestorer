@@ -2015,6 +2015,33 @@ classicthemerestorerjs.ctr = {
 				}
 			}
 		  break;
+		  
+		  case "hideeditbm":
+		    if(classicthemerestorerjs.ctr.appversion >= 47) {
+				if (branch.getBoolPref("hideeditbm")) {
+					var editBookmark_popup = document.getElementById('editBookmarkPanel');
+
+					document.getElementById("bookmarks-menu-button").addEventListener("click", function(e) {
+						
+						editBookmark_popup.addEventListener("popupshown", function(){
+							
+						  if (document.getElementById('bookmarks-menu-button').getAttribute('notification')) {
+							StarUI.panel.hidePopup();
+							StarUI.quitEditMode();
+							editBookmark_popup.removeAttribute('panelopen');
+							editBookmark_popup.removeAttribute('animate');
+
+							if(e.target.localName == "toolbarbutton" && e.originalTarget.getAttribute("anonid") == "button"){
+								e.originalTarget.removeAttribute('open');
+							}
+						  }
+
+						}, false);
+
+					}, false);
+				}
+			}
+		  break;
 
 		  case "bmbutpanelm":
 			if (branch.getBoolPref("bmbutpanelm")) {
