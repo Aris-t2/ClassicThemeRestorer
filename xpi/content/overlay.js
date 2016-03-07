@@ -796,7 +796,7 @@ classicthemerestorerjs.ctr = {
 			}
 			else {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("smallnavbut",false);
-			  if(branch.getBoolPref("nbcompact"))
+			  if(branch.getBoolPref("nbcompact") && branch.getBoolPref("smallnavbut")==false)
 			    classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
 			}
 			
@@ -856,14 +856,14 @@ classicthemerestorerjs.ctr = {
 			else { 
 			  classicthemerestorerjs.ctr.loadUnloadCSS("backforward",false);
 			  
-			  if (branch.getBoolPref("nbcompact")){
+			  if (branch.getBoolPref("nbcompact")&& branch.getBoolPref("smallnavbut")==false){
 				classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
 			  }
 			}
 		  break;
 		  
 		  case "nbcompact":
-			if (branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && classicthemerestorerjs.ctr.osstring!="Darwin"&& branch.getBoolPref("smallnavbut")==false){
+			if (branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && classicthemerestorerjs.ctr.osstring!="Darwin" && branch.getBoolPref("smallnavbut")==false){
 			  classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
 
 			  if (branch.getCharPref("nav_txt_ico").indexOf('iconstxt')!=-1)
@@ -1223,7 +1223,7 @@ classicthemerestorerjs.ctr = {
 			
 			classicthemerestorerjs.ctr.setCTRModeAttributes('icons');
 			
-			if (branch.getBoolPref("nbcompact"))
+			if (branch.getBoolPref("nbcompact") && branch.getBoolPref("smallnavbut")==false)
 			  classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
 			
 			switch (branch.getCharPref("nav_txt_ico")) {
