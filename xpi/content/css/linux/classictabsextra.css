@@ -20,16 +20,19 @@
 	}
 	/**/
 
-	.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme){
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab[selected="true"]:not(:-moz-lwtheme),
+	#main-window[fx40plus="true"] .tabbrowser-tab[visuallyselected=true]:not(:-moz-lwtheme){
 	  background-image: linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%),
 						linear-gradient(-moz-dialog, -moz-dialog);
 	}
 	
-	.tabbrowser-tab:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not([selected="true"]):not(:hover):not(:-moz-lwtheme),
+	#main-window[fx40plus="true"] .tabbrowser-tab:not([visuallyselected=true]):not(:hover):not(:-moz-lwtheme) {
 	  background-image: linear-gradient(hsla(0,0%,100%,.2), hsla(0,0%,45%,.2) 2px, hsla(0,0%,32%,.2) 80%);
 	}
 	
-	.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) ,
+	#main-window[fx40plus="true"] .tabbrowser-tab:not([visuallyselected=true]):hover:not(:-moz-lwtheme) {
 	  background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.2) 4px, hsla(0,0%,75%,.2) 80%);
 	}
 	
@@ -41,12 +44,14 @@
 	  background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.2) 4px, hsla(0,0%,75%,.2) 80%) !important;
 	}
 	
-	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:hover):not(:-moz-lwtheme){
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:hover):not(:-moz-lwtheme),
+	#main-window[fx40plus="true"] .tabbrowser-tab[pinned][titlechanged]:not([visuallyselected=true]):not(:hover):not(:-moz-lwtheme) {
 	  background-size: 95% 100% !important;
 	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #afaba5,#c0bdb6,#c9c6c0) !important;
 	}
 	
-	.tabbrowser-tab[selected="true"]:-moz-lwtheme {
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab[selected="true"]:-moz-lwtheme,
+	#main-window[fx40plus="true"] .tabbrowser-tab[visuallyselected=true]:-moz-lwtheme {
 	  background-image: linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%) !important;
 	}
 	

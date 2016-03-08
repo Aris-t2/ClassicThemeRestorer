@@ -783,7 +783,7 @@ classicthemerestorerjso.ctr = {
     document.getElementById('ctraddon_pw_hideurelstop2').disabled = which;
 	document.getElementById('ctraddon_pw_hideurelstop2').style.visibility = itemvis;
   },
-  
+ 
   ctrpwCtrOldSearch: function(which) {
 	var itemvis = 'collapse';
 	
