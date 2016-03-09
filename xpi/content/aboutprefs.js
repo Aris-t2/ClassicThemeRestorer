@@ -17,6 +17,7 @@ ctrAboutPrefs = {
 	
 	if(Services.prefs.getBranch('extensions.classicthemerestorer.').getBoolPref('optionsrem')) {
 	
+	  /* main pref categories */	  
 	  setTimeout(function(){
 		  
 		var prefslocation = 'paneGeneral';
@@ -44,10 +45,6 @@ ctrAboutPrefs = {
 		
 	  },80);
   
-	  try{
-	    document.getElementById("advancedPrefs").selectedIndex = Services.prefs.getBranch('extensions.classicthemerestorer.').getIntPref('aboutprefsInd');
-	  } catch(e) {}
-		
 	  var observer = new MutationObserver(function(mutations) {
 		mutations.forEach(function(mutation) {
 
@@ -60,24 +57,32 @@ ctrAboutPrefs = {
 
 	  observer.observe(document.querySelector('#categories'), { attributes: true, attributeFilter: ['last-selected'] });
 	  
-	  var observer2 = new MutationObserver(function(mutations) {
-		mutations.forEach(function(mutation) {
+	  /* advanced prefs area */
+	  setTimeout(function(){
+		  try{
+			document.getElementById("advancedPrefs").selectedIndex = Services.prefs.getBranch('extensions.classicthemerestorer.').getIntPref('aboutprefsInd');
+		  } catch(e) {}
+		  
+		  var observer2 = new MutationObserver(function(mutations) {
+			mutations.forEach(function(mutation) {
 
-		   try{ 
-		     Services.prefs.getBranch('extensions.classicthemerestorer.').setIntPref('aboutprefsInd',document.getElementById("advancedPrefs").getAttribute("selectedIndex"));
-		   } catch(e) {}
-			
-		});    
-	  });
+			   try{ 
+				 Services.prefs.getBranch('extensions.classicthemerestorer.').setIntPref('aboutprefsInd',document.getElementById("advancedPrefs").getAttribute("selectedIndex"));
+			   } catch(e) {}
+				
+			});    
+		  });
 
-	  observer2.observe(document.querySelector('#advancedPrefs'), { attributes: true, attributeFilter: ['selectedIndex'] });
-	  
-	  try{
-		  var thirdpartytheme = Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin");
-		  document.querySelector('#categories').setAttribute('currenttheme',thirdpartytheme);
-	  } catch(e){}
+		  observer2.observe(document.querySelector('#advancedPrefs'), { attributes: true, attributeFilter: ['selectedIndex'] });
+		  
+	  },500);
 	  
 	}
+	
+	try{
+	  var thirdpartytheme = Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin");
+	  document.querySelector('#categories').setAttribute('currenttheme',thirdpartytheme);
+	} catch(e){}
 	
 	/* restore favicon wheel for all categories */
 	setTimeout(function(){
