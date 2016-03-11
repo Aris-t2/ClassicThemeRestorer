@@ -41,7 +41,11 @@
 	  }
 	  #main-window[fx45plus="true"] #PersonalToolbar toolbarbutton[id^="loop-"]:not([cui-areatype="menu-panel"]):not([state="error"]):not([state="action"]):not([state="active"]) > .toolbarbutton-badge-container,
 	  #main-window[fx45plus="true"] #PersonalToolbar toolbarbutton[id^="loop-"]:not([cui-areatype="menu-panel"]):not([state="error"]):not([state="action"]):not([state="active"]) > .toolbarbutton-badge-stack {
-	    list-style-image: url(chrome://loop/skin/toolbar-inverted/toolbar-inverted@2x.png) !important;
+	    list-style-image: url(chrome://loop/skin/toolbar-inverted@2x.png) !important;
+	  }
+	  
+	  #main-window[fx46plus="true"] #PersonalToolbar #pocket-button:not([open]) {
+		-moz-image-region: rect(0, 1548px, 36px, 1520px) !important;
 	  }
 
 	  #PersonalToolbar #ctraddon_back-button > .toolbarbutton-icon {
