@@ -2087,7 +2087,19 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("ibinfoico")) classicthemerestorerjs.ctr.loadUnloadCSS("ibinfoico",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("ibinfoico",false);
 		  break;
-		  
+
+		  case "ibinfoico2":
+			if (branch.getBoolPref("ibinfoico2") && branch.getBoolPref("faviconurl")==false
+			  && classicthemerestorerjs.ctr.appversion >= 45 && branch.getCharPref("padlock")!="padlock_none")
+				classicthemerestorerjs.ctr.loadUnloadCSS("ibinfoico2",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("ibinfoico2",false);
+		  break;
+
+		  case "iblabels":
+			if (branch.getBoolPref("iblabels") && classicthemerestorerjs.ctr.appversion >= 45) classicthemerestorerjs.ctr.loadUnloadCSS("iblabels",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("iblabels",false);
+		  break;
+
 		  case "hideprivmask":
 			if (branch.getBoolPref("hideprivmask")) classicthemerestorerjs.ctr.loadUnloadCSS("hideprivmask",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("hideprivmask",false);
@@ -2242,7 +2254,7 @@ classicthemerestorerjs.ctr = {
 				switch (branch.getCharPref("padlock")) {
 
 				  case "padlock_none":
-				  	classicthemerestorerjs.ctr.loadUnloadCSS("padlock2_none",true);	
+				  	classicthemerestorerjs.ctr.loadUnloadCSS("padlock2_none",true);
 				  break;
 				  case "padlock_classic":
 				  	classicthemerestorerjs.ctr.loadUnloadCSS("padlock2_classic",true);	
@@ -2258,6 +2270,11 @@ classicthemerestorerjs.ctr = {
 				  break;
 
 				}
+				
+				if(branch.getCharPref("padlock")=="padlock_none" && branch.getBoolPref("ibinfoico2"))
+				  classicthemerestorerjs.ctr.loadUnloadCSS("ibinfoico2",false);
+				else if(branch.getBoolPref("ibinfoico2") && classicthemerestorerjs.ctr.appversion >= 45)
+				  classicthemerestorerjs.ctr.loadUnloadCSS("ibinfoico2",true);
 
 			} else {
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock_default',false);
@@ -2271,6 +2288,9 @@ classicthemerestorerjs.ctr = {
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_amo',false);
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_modern',false);
 				classicthemerestorerjs.ctr.loadUnloadCSS('padlock2_modern2',false);
+				
+				if(branch.getBoolPref("ibinfoico2") && classicthemerestorerjs.ctr.appversion >= 45)
+				  classicthemerestorerjs.ctr.loadUnloadCSS("ibinfoico2",true);
 			}
 		  break;
 		  
@@ -2768,6 +2788,12 @@ classicthemerestorerjs.ctr = {
 		classicthemerestorerjs.ctr.ctrGetId("status-bar").appendChild(classicthemerestorerjs.ctr.ctrGetId("aniweather_canvas"));
 	  } catch(e){}
 	},300);
+	//Aniweather add-on fix
+	setTimeout(function(){
+	  try{
+		classicthemerestorerjs.ctr.ctrGetId("status-bar").appendChild(classicthemerestorerjs.ctr.ctrGetId("cachestatus-panel"));
+	  } catch(e){}
+	},300);
 	
 	//ColorfulTabs
 	setTimeout(function(){
@@ -3035,6 +3061,8 @@ classicthemerestorerjs.ctr = {
 	
 	}
 
+	classicthemerestorerjs.ctr.loadUnloadCSS('ibinfoico2',false);
+	
 	classicthemerestorerjs.ctr.loadUnloadCSS('padlock_default',false);
 	classicthemerestorerjs.ctr.loadUnloadCSS('padlock_classic',false);
 	classicthemerestorerjs.ctr.loadUnloadCSS('padlock_amo',false);
@@ -3802,6 +3830,8 @@ classicthemerestorerjs.ctr = {
 		case "ib_graycolor": 		manageCSS("ib_graycolor.css");			break;
 		case "verifiedcolors": 		manageCSS("verifiedcolors.css");		break;
 		case "ibinfoico": 			manageCSS("hide_ibinfoico.css");		break;
+		case "ibinfoico2": 			manageCSS("hide_ibinfoico2.css");		break;
+		case "iblabels": 			manageCSS("hide_iblabels.css");			break;
 		case "hideprivmask": 		manageCSS("hideprivatemask.css");		break;
 		case "bfurlbarfix": 		manageCSS("bf_urlbarfix.css");			break;
 		case "bf_space": 			manageCSS("bf_space.css");				break;

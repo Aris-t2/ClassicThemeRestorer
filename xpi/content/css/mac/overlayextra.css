@@ -267,6 +267,14 @@
 	  background-repeat: no-repeat;
 	}
 	
+	#main-window[defaultfxtheme="true"] #ctraddon_addon-bar toolbarbutton[type="menu-button"] > toolbarbutton,
+	#main-window[defaultfxtheme="true"] #ctraddon_addon-bar toolbarbutton[type="menu-button"] > dropmarker {
+	  -moz-appearance: none !important;
+	  border-style: none !important;
+	  background: none !important;
+	  box-shadow: none !important;
+	}
+	
 	/* Hide Windows OS window controls*/
 	#main-window toolbar #ctraddon_window-controls,
 	#ctraddon_window-controls,

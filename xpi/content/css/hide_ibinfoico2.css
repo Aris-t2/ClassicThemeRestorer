@@ -1,0 +1,26 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@-moz-document url(chrome://browser/content/browser.xul) {
+	
+	#urlbar[pageproxystate="valid"] .verifiedDomain #identity-icon,
+	#urlbar[pageproxystate="valid"] .verifiedIdentity #identity-icon,
+	#urlbar[pageproxystate="valid"] .insecureLoginForms #identity-icon,
+	#urlbar[pageproxystate="valid"] .mixedActiveContent #identity-icon,
+	#urlbar[pageproxystate="valid"] .weakCipher #identity-icon,
+	#urlbar[pageproxystate="valid"] .mixedDisplayContent #identity-icon,
+	#urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked #identity-icon,
+	#urlbar[pageproxystate="valid"] .mixedActiveBlocked #identity-icon {
+	  visibility: collapse;
+	}
+
+	#urlbar[pageproxystate="valid"] .verifiedDomain #connection-icon,
+	#urlbar[pageproxystate="valid"] .verifiedIdentity #connection-icon,
+	#urlbar[pageproxystate="valid"] .insecureLoginForms #connection-icon,
+	#urlbar[pageproxystate="valid"] .mixedActiveContent #connection-icon,
+	#urlbar[pageproxystate="valid"] .weakCipher #connection-icon,
+	#urlbar[pageproxystate="valid"] .mixedDisplayContent #connection-icon,
+	#urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked #connection-icon,
+	#urlbar[pageproxystate="valid"] .mixedActiveBlocked #connection-icon {
+	  -moz-padding-start: 0 !important;
+	  -moz-margin-start: 0 !important;
+	}
+}

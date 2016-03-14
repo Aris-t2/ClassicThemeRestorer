@@ -121,6 +121,8 @@
 		<preference id="ctraddon_ib_graycolor"	name="extensions.classicthemerestorer.ib_graycolor" type="bool"		instantApply="true"/>
 		<preference id="ctraddon_verifiedcolors" name="extensions.classicthemerestorer.verifiedcolors" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_ibinfoico"		name="extensions.classicthemerestorer.ibinfoico"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_ibinfoico2"	name="extensions.classicthemerestorer.ibinfoico2"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_iblabels"		name="extensions.classicthemerestorer.iblabels"		type="bool"		instantApply="true"/>
 		<preference id="ctraddon_findbar"		name="extensions.classicthemerestorer.findbar"		type="string"	instantApply="true"/>
 		<preference id="ctraddon_nav_txt_ico"	name="extensions.classicthemerestorer.nav_txt_ico" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_iat_notf_vt"	name="extensions.classicthemerestorer.iat_notf_vt"	type="bool"		instantApply="true"/>
@@ -1077,11 +1079,13 @@
 
 		<checkbox label="&Ctr_faviconurl;"		preference="ctraddon_faviconurl" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwFaviconextra(true);} else {classicthemerestorerjso.ctr.ctrpwFaviconextra(false);} classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<checkbox label="&Ctr_padlock_ext;"		preference="ctraddon_padlockex" id="ctraddon_padlock_extra"/>
-		<checkbox label="&Ctr_icopageinfo;"		preference="ctraddon_icopageinfo"/>
+		<checkbox label="&Ctr_icopageinfo;"		preference="ctraddon_icopageinfo" id="ctraddon_pw_icopageinfo"/>
+		<checkbox label="&Ctr_ibinfoico;"		preference="ctraddon_ibinfoico" id="ctraddon_pw_ibinfoico"/>
+		<checkbox label="&Ctr_ibinfoico2;"		preference="ctraddon_ibinfoico2" id="ctraddon_pw_ibinfoico2"/>
+		<checkbox label="&Ctr_iblabels;"		preference="ctraddon_iblabels" id="ctraddon_pw_iblabels"/>
 		<checkbox label="&Ctr_ib_nohovcolor;"	preference="ctraddon_ib_nohovcolor" id="ctraddon_pw_ib_nohovcolor"/>
 		<checkbox label="&Ctr_ib_graycolor;"	preference="ctraddon_ib_graycolor" id="ctraddon_pw_ib_graycolor"/>
 		<checkbox label="&Ctr_verifiedcolors;"	preference="ctraddon_verifiedcolors" id="ctraddon_pw_verifiedcolors"/>
-		<checkbox label="&Ctr_ibinfoico;"		preference="ctraddon_ibinfoico" id="ctraddon_pw_ibinfoico"/>
 		
 		<description class="ctraddon_font1"></description>
 		<description class="ctraddon_font1">&Ctr_padlock;</description>
