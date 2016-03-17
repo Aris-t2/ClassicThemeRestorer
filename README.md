@@ -1,5 +1,7 @@
 <b>Classic Theme Restorers AMO website: https://addons.mozilla.org/addon/classicthemerestorer/ </b>
 
+<b>Users of Debian 9 or later and Ubuntu 16.04 or later: `apt-get install xul-ext-classic-theme-restorer`</b>
+
 This add-on restores squared tabs, the application button with application menu (known from Firefox for Windows), the add-on bar, bookmarks/history menu/sidebar buttons and other buttons. It moves star & feed buttons into location bar, adds status bar element to the ui and allows many items to be movable. All features are fully optional. Some buttons have to be moved to toolbars manually using browsers 'customizing' mode.
 
 <i><b>Main features (on options window)</b></i>
