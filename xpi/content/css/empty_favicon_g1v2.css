@@ -55,7 +55,7 @@
   }
 
   treechildren::-moz-tree-image(title, container) {
-	list-style-image: url("chrome://global/skin/icons/folder-item.png")!important;
+	list-style-image: url("chrome://classic_theme_restorer/content/images/folder-item.png")!important;
 	-moz-image-region: rect(0px, 32px, 16px, 16px) !important;
   }
 
@@ -69,8 +69,8 @@
   }
 
   treechildren::-moz-tree-image(container, OrganizerQuery_AllBookmarks) {
-	list-style-image: url("chrome://browser/skin/Toolbar-small.png") !important;
-	-moz-image-region: rect(0px 48px 16px 32px) !important;
+	list-style-image: url("chrome://classic_theme_restorer/content/images/appmenu_bookmarks.png") !important;
+	-moz-image-region: rect(0px 16px 16px 0px) !important;
   }
 
   treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksToolbar) {
@@ -84,8 +84,8 @@
   }
 
   treechildren::-moz-tree-image(container, OrganizerQuery_UnfiledBookmarks) {
-	list-style-image: url("chrome://browser/skin/places/unsortedBookmarks.png") !important;
-	-moz-image-region: auto !important;
+	list-style-image: url("chrome://classic_theme_restorer/content/images/unsortedBookmarks.png") !important;
+	-moz-image-region: rect(0px 16px 16px 0px) !important;
   }
 
   treechildren::-moz-tree-image(title, query) {
@@ -105,17 +105,17 @@
   }
 
   treechildren::-moz-tree-image(title, query, dayContainer) {
-	list-style-image: url("chrome://browser/skin/places/calendar.png") !important;
-	-moz-image-region: auto !important;
+	list-style-image: url("chrome://classic_theme_restorer/content/images/calendar.png") !important;
+	-moz-image-region: rect(0px 16px 16px 0px) !important;
   }
 
   treechildren::-moz-tree-image(title, query, hostContainer) {
-	list-style-image: url("chrome://global/skin/icons/folder-item.png") !important;
+	list-style-image: url("chrome://classic_theme_restorer/content/images/folder-item.png") !important;
 	-moz-image-region: rect(0px, 32px, 16px, 16px) !important;
   }
 
   treechildren::-moz-tree-image(title, query, hostContainer, open) {
-	list-style-image: url("chrome://global/skin/icons/folder-item.png") !important;
+	list-style-image: url("chrome://classic_theme_restorer/content/images/folder-item.png") !important;
 	-moz-image-region: rect(16px, 32px, 32px, 16px) !important;
   }
 
@@ -125,7 +125,7 @@
   }
 
   treechildren::-moz-tree-image(title, query, folder) {
-	list-style-image: url("chrome://global/skin/icons/folder-item.png")!important;
+	list-style-image: url("chrome://classic_theme_restorer/content/images/folder-item.png")!important;
 	-moz-image-region: rect(0px, 32px, 16px, 16px) !important;
   }
 

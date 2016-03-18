@@ -330,5 +330,12 @@
 	#nav-bar #back-button > .toolbarbutton-icon{
 	  max-width: unset !important;
 	}
+	
+	
+	/* Auto Form add-ons icon sizes*/
+	#nav-bar toolbarbutton[id^="af_button"] .toolbarbutton-icon {
+	  width: unset !important;
+	  max-width: unset !important;
+	}
 
 }

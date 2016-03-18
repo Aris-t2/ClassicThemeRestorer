@@ -608,3 +608,9 @@
 	  margin-left: 30px !important;
 	  margin-right: 30px !important;
 	}
+	
+	/* Auto Form add-ons icon sizes*/
+	toolbarbutton[id^="af_button"] .toolbarbutton-icon {
+	  width: 18px !important;
+	  max-width: 18px !important;
+	}
