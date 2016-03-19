@@ -787,6 +787,22 @@ classicthemerestorerjs.ctr = {
 				}catch(e){}
 			  },1500);
 			}
+			
+			// verify the menuitem is checked or not after dom content load
+			window.addEventListener("DOMContentLoaded", function toggleNavBarSwitch(event){
+			  window.removeEventListener("DOMContentLoaded", toggleNavBarSwitch, false);
+				
+			  if (branch.getBoolPref("hidenavbar")) {
+				try{
+				  document.getElementById("toggle_nav-bar").setAttribute("checked",false);
+				}catch(e){}
+			  } else {
+				try{
+				  document.getElementById("toggle_nav-bar").setAttribute("checked",true);
+				}catch(e){}
+			  }
+
+			},false);
 		  break;
 		  
 		  case "navbarpad": case "navbarpad_l": case "navbarpad_r": case "navbarmar_l": case "navbarmar_r":
