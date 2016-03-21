@@ -5923,7 +5923,7 @@ classicthemerestorerjs.ctr = {
 	  var wwidth = 700; // window width
 	  var wheight = 670; // window height
   
-	  if(classicthemerestorerjs.ctr.prefs.getIntPref("aboutprefsww") != 700)
+	  if(classicthemerestorerjs.ctr.prefs.getIntPref("aboutprefsww") != 850)
 		wwidth = classicthemerestorerjs.ctr.prefs.getIntPref("aboutprefsww");
 	  if(classicthemerestorerjs.ctr.prefs.getIntPref("aboutprefswh") != 670)
 		wheight = classicthemerestorerjs.ctr.prefs.getIntPref("aboutprefswh");

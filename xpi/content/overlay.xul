@@ -128,8 +128,7 @@
 	  <menuitem id="ctraddon_restart-menu"
 				label="&Ctr_menu_restart.label;"
 				oncommand="classicthemerestorerjs.ctr.restartBrowser()"
-				insertbefore="menu_FileQuitItem"
-				class="menuitem-iconic"/>
+				insertbefore="menu_FileQuitItem"/>
 	</menupopup>
 	
 	<menupopup id="toolbar-context-menu">

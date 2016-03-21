@@ -136,13 +136,20 @@ radio.ctraddontab .radio-check-box1 {
 }
 
 .ctraddontabpanel {
-  height:480px;
-  max-height:480px;
+  height:550px;
+  max-height:550px;
   min-width:500px;
-  width:500px;
+  width:520px;
   max-width:800px;
   overflow-x:auto;
   overflow-y:auto;
+}
+
+@media screen and (max-device-height: 600px) {
+	.ctraddontabpanel {
+	  height:480px;
+	  max-height:480px;
+	}
 }
 
 .ctraddontabpanel {

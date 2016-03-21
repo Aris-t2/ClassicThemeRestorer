@@ -59,6 +59,12 @@
 	  margin-bottom: 0 !important;
 	}
 	
+	#offlineAppsList > * {
+	  min-width: unset !important;
+	  width: auto !important;
+	  max-width: 550px !important;
+	}
+	
 	#categories + vbox > #mainPrefPane + hbox {
 	  margin-bottom: -20px !important;
 	}

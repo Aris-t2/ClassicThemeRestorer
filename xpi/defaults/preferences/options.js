@@ -271,7 +271,7 @@ pref("extensions.classicthemerestorer.tabc_hov_unl",false);
 pref("extensions.classicthemerestorer.optionsrem",true);
 pref("extensions.classicthemerestorer.aboutprefs",'category-general');
 pref("extensions.classicthemerestorer.aboutprefsInd",0);
-pref("extensions.classicthemerestorer.aboutprefsww",700);
+pref("extensions.classicthemerestorer.aboutprefsww",850);
 pref("extensions.classicthemerestorer.aboutprefswh",670);
 
 // first run/reset preference

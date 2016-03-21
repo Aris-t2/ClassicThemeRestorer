@@ -989,8 +989,9 @@
 		<hbox class="ctraddonsuboption"  id="ctraddon_pw_aboutprefswsize" align="center">
 		  <label value="&Ctr_altoptionsww; "/>
 		  <textbox size="4" maxlength="4" preference="ctraddon_aboutprefsww" type="number" min="0" max="1200"/>
-		  <label value="&Ctr_altoptionswh; "/>
+		  <label value="px  -  &Ctr_altoptionswh; "/>
 		  <textbox size="4" maxlength="4" preference="ctraddon_aboutprefswh" type="number" min="0" max="1200"/>
+		  <label value="px"/>
 		</hbox>
 		
 		<description id="ctraddon_pw_altoptionsi">&Ctr_altoptionsi;</description>
