@@ -194,6 +194,7 @@
 		<preference id="ctraddon_tabc_act_tb"	name="extensions.classicthemerestorer.tabc_act_tb"	 type="bool"	instantApply="true"/>
 
 		<preference id="ctraddon_highaddonsbar"	name="extensions.classicthemerestorer.highaddonsbar" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_lessaddonsbar"	name="extensions.classicthemerestorer.lessaddonsbar" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_addonbarfs"	name="extensions.classicthemerestorer.addonbarfs"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hightabpososx"	name="extensions.classicthemerestorer.hightabpososx" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_altmenubar"	name="extensions.classicthemerestorer.altmenubar" 	 type="bool"	instantApply="true"/>
@@ -1204,13 +1205,17 @@
 
 	  <groupbox id="ctraddon_pw_bookmarksbargroup">
 	    <caption  label="&Ctr_bookbar;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_bookbarfs;"	 			 preference="ctraddon_bookbarfs" id="ctraddon_pw_bookbarfs"/>
+		<checkbox label="&Ctr_bookbarfs;" preference="ctraddon_bookbarfs" id="ctraddon_pw_bookbarfs"/>
 	  </groupbox>
 
 	  <groupbox>
 	    <caption  label="&Ctr_addonbar;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_addonbarfs;"		preference="ctraddon_addonbarfs"/>
-		<checkbox label="&Ctr_highaddonsbar;"	preference="ctraddon_highaddonsbar"/>
+		<hbox>
+		  <checkbox label="&Ctr_highaddonsbar;"	preference="ctraddon_highaddonsbar"/>
+		  <checkbox label="&Ctr_lessaddonsbar;"	preference="ctraddon_lessaddonsbar"/>
+		  <spacer flex="1"/>
+		</hbox>
 	  </groupbox>
 
 	  <groupbox>

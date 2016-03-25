@@ -1,0 +1,53 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	#ctraddon_addon-bar {
+	  min-height: unset !important;
+	}
+	
+	#ctraddon_addon-bar > *,
+	#ctraddon_addon-bar > #footiefox_statusbarpanel > * {
+	  margin-top: -2px !important;
+	  margin-bottom: -0.5px !important;
+	  padding-top: 0 !important;
+	  padding-bottom: 0 !important;
+	}
+
+	#ctraddon_addon-bar > * image {
+	  padding-top: 0 !important;
+	  padding-bottom: 0 !important;
+	}
+
+	#ctraddon_addon-bar {
+	  min-height: unset !important;
+	}
+
+	#ctraddon_addon-bar toolbarbutton {
+	  -moz-appearance: unset !important;
+	}
+	
+	#ctraddon_addon-bar .toolbarbutton-1:not([disabled]):hover,
+	#ctraddon_addon-bar .toolbarbutton-1[open],
+	#ctraddon_addon-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):hover {
+	  background-image: linear-gradient(to top, transparent, rgba(0,0,0,.15)),
+						linear-gradient(to top, transparent, rgba(0,0,0,.15) 30%),
+						linear-gradient(to top, transparent, rgba(0,0,0,.15) 30%);
+	  background-size: auto, 0px 100%, 0px 100% !important;
+	  background-position: 0 2px !important;
+	  background-repeat: no-repeat;
+	}
+  
+	#ctraddon_addon-bar #bookmarks-menu-button .toolbarbutton-menubutton-dropmarker,
+	#ctraddon_addon-bar .toolbarbutton-1 .toolbarbutton-menubutton-button  {
+	  -moz-appearance: none !important;
+	  border-style: none !important;
+	  background: unset !important;
+	  padding: unset !important;
+	  margin: unset !important;
+	}
+
+	/*add-on fixes*/
+	#ctraddon_addon-bar #forecastfox-toolbar .separators {
+	  height:16px !important;
+	}
+}

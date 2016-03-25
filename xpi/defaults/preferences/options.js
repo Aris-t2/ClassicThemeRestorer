@@ -172,6 +172,7 @@ pref("extensions.classicthemerestorer.menubarnofog",false);
 
 pref("extensions.classicthemerestorer.closeabarbut",false);
 pref("extensions.classicthemerestorer.highaddonsbar",false);
+pref("extensions.classicthemerestorer.lessaddonsbar",false);
 pref("extensions.classicthemerestorer.addonbarfs",false);
 pref("extensions.classicthemerestorer.noaddonbarbg",false);
 

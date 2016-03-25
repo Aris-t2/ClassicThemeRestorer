@@ -1285,7 +1285,7 @@ classicthemerestorerjs.ctr = {
 			}
 		  break;
 		  
-		 case "mbarforceleft":
+		  case "mbarforceleft":
 			if (branch.getBoolPref("mbarforceleft")){
 			  classicthemerestorerjs.ctr.loadUnloadCSS("mbarforceleft",true);
 			  branch.setBoolPref("mbarforceright",false);
@@ -1293,7 +1293,7 @@ classicthemerestorerjs.ctr = {
 			else classicthemerestorerjs.ctr.loadUnloadCSS("mbarforceleft",false);
 		  break;
 		  
-		 case "mbarforceright":
+		  case "mbarforceright":
 			if (branch.getBoolPref("mbarforceright")){
 			  classicthemerestorerjs.ctr.loadUnloadCSS("mbarforceright",true);
 			  branch.setBoolPref("mbarforceleft",false);
@@ -2122,8 +2122,19 @@ classicthemerestorerjs.ctr = {
 		  break;
 
 		  case "highaddonsbar":
-			if (branch.getBoolPref("highaddonsbar")) classicthemerestorerjs.ctr.loadUnloadCSS("highaddonsbar",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("highaddonsbar",false);
+			if (branch.getBoolPref("highaddonsbar")){
+			  classicthemerestorerjs.ctr.loadUnloadCSS("highaddonsbar",true);
+			  branch.setBoolPref("lessaddonsbar",false);
+			}
+			else classicthemerestorerjs.ctr.loadUnloadCSS("highaddonsbar",false);
+		  break;
+		  
+		  case "lessaddonsbar":
+			if (branch.getBoolPref("lessaddonsbar")){
+			  classicthemerestorerjs.ctr.loadUnloadCSS("lessaddonsbar",true);
+			  branch.setBoolPref("highaddonsbar",false);
+			}
+			else classicthemerestorerjs.ctr.loadUnloadCSS("lessaddonsbar",false);
 		  break;
 		  
 		  case "addonbarfs":
@@ -3796,7 +3807,8 @@ classicthemerestorerjs.ctr = {
 		case "notextshadow": 		manageCSS("notextshadow.css");			break;
 		case "chevronfix": 			manageCSS("chevronfix.css");			break;
 		case "tbsep_winc": 			manageCSS("tbsep_winc.css");			break;
-		case "highaddonsbar": 		manageCSS("higher_addonsbar.css");		break;
+		case "highaddonsbar": 		manageCSS("addonsbar_bigger.css");		break;
+		case "lessaddonsbar": 		manageCSS("addonsbar_smaller.css");		break;
 		case "addonbarfs": 			manageCSS("addonbar_infullscreen.css");	break;
 		case "hightabpososx": 		manageCSS("higher_tabs_pos.css");		break;
 		case "alttabstb": 			manageCSS("alttabstoolbar.css");		break;
