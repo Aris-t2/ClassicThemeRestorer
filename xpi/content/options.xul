@@ -1092,12 +1092,12 @@
 		<description class="ctraddon_font1"></description>
 		<description class="ctraddon_font1">&Ctr_padlock;</description>
 		<radiogroup preference="ctraddon_padlock" id="ctraddon_padlock_radio" orient="horizontal" value="">
-			<radio value="padlock_default"	label="&Ctr_padlock_def;"	id="ctraddon_pw_padlock_default"/>
-			<radio value="padlock_classic"	label="&Ctr_padlock_cla;"	id="ctraddon_pw_padlock_classic"/>
-			<radio value="padlock_amo"		label=" "	id="ctraddon_pw_padlock_amo"/>
-			<radio value="padlock_modern"	label="&Ctr_padlock_mod;"	id="ctraddon_pw_padlock_modern"/>
-			<radio value="padlock_modern2"	label=" "	id="ctraddon_pw_padlock_modern2"/>
 			<radio value="padlock_none"		label="&Ctr_padlock_hid;"	id="ctraddon_pw_padlock_none"/>
+			<radio value="padlock_default"	label="&Ctr_tabwidthdef;"	id="ctraddon_pw_padlock_default"/>
+			<radio value="padlock_classic"	label=" "	id="ctraddon_pw_padlock_classic"/>
+			<radio value="padlock_amo"		label=" "	id="ctraddon_pw_padlock_amo"/>
+			<radio value="padlock_modern"	label=" "	id="ctraddon_pw_padlock_modern"/>
+			<radio value="padlock_modern2"	label=" "	id="ctraddon_pw_padlock_modern2"/>
 		</radiogroup>
 
 	  </groupbox>

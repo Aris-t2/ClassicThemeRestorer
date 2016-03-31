@@ -443,12 +443,15 @@
 	
 	/* hide bookmark menus items */
 	#ctraddon_BMB_viewBookmarksToolbar,
-	#ctraddon_BMB_viewBookmarksToolbar + menuseparator,
+	#ctraddon_BMB_viewBookmarksToolbar + menuseparator {
+	  visibility: collapse;
+	}
+
 	#ctraddon_BMB_unsortedBookmarks_m,
 	#ctraddon_BMB_unsortedBookmarks_m2,
 	#ctraddon_BMB_unsortedBookmarks_mm,
 	#ctraddon_BMB_unsortedBookmarks_mm2 {
-	  visibility: collapse;
+	  display:none;
 	}
 	
 	/* fix ui tour popup position for ctrs panel ui button */
