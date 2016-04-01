@@ -617,3 +617,14 @@
 	  width: 18px !important;
 	  max-width: 18px !important;
 	}
+	
+	/* fix FireIE add-ons location bar icon */
+	#urlbar #fireie-urlbar-switch image,
+	#urlbar #fireie-urlbar-switch label,
+	#urlbar #fireie-urlbar-switch {
+	  -moz-appearance: none !important;
+	  border: unset !important;
+	  box-shadow: unset !important;
+	  padding: unset !important;
+	  margin: unset !important;
+	}
