@@ -163,6 +163,9 @@ classicthemerestorerjs.ctr = {
 	
 	// prevent accidental location bar removal by using context menu 
 	this.removeContextItemsFromLocationbarContext();
+	
+	// move 'Tools' menus dev tools into application buttons popup 
+	this.moveDevtoolsmenu();
 
 	// CTR Preferences listener
 	function PrefListener(branch_name, callback) {
@@ -2658,14 +2661,22 @@ classicthemerestorerjs.ctr = {
 			
 			//add attribute 'open'
 			app_popup.addEventListener("popupshown", function onCtrTitleAppmenuPopupShown(event){
-			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup"))
+			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
 			    classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton2').setAttribute("open", "true");
+				  try {
+					document.getElementById("appmenuPrimaryPane").insertBefore(document.getElementById("webDeveloperMenu"), document.getElementById("appmenu_webDeveloper"));
+				  } catch(e){}
+			  }
 			}, false);
 			
 			// remove attribute 'open'
 			app_popup.addEventListener("popuphidden", function onCtrTitleAppmenuPopupHidden(event){
-			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup"))
+			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
 			    classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton2').removeAttribute("open");
+				try {
+				  document.getElementById("menu_ToolsPopup").insertBefore(document.getElementById("webDeveloperMenu"), document.getElementById("menu_pageInfo"));
+				} catch(e){}
+			  }
 			}, false);
 
 		}, false);
@@ -3281,6 +3292,38 @@ classicthemerestorerjs.ctr = {
 
 	}, false);
 	  
+  },
+  
+  // move 'Tools' menus dev tools into application buttons popup 
+  moveDevtoolsmenu: function(){
+	
+	setTimeout(function(){
+		
+		document.getElementById("ctraddon_appbutton").addEventListener("mousedown", function() {
+
+			var app_popup = classicthemerestorerjs.ctr.ctrGetId('appmenu-popup');
+			
+			//add attribute 'open'
+			app_popup.addEventListener("popupshown", function onCtrTitleAppmenuPopupShown(event){
+			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
+				try {
+				  document.getElementById("appmenuPrimaryPane").insertBefore(document.getElementById("webDeveloperMenu"), document.getElementById("appmenu_webDeveloper"));
+				} catch(e){}
+			  }
+			}, false);
+			
+			// remove attribute 'open'
+			app_popup.addEventListener("popuphidden", function onCtrTitleAppmenuPopupHidden(event){
+			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
+				try {
+				  document.getElementById("menu_ToolsPopup").insertBefore(document.getElementById("webDeveloperMenu"), document.getElementById("menu_pageInfo"));
+				} catch(e){}
+			  }
+			}, false);
+
+		}, false);
+
+	},500);
   },
   
   // tab width stuff

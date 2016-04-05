@@ -97,7 +97,7 @@
 	  }
 
 	  #main-window[defaultfxtheme="true"] #ctraddon_forward-button:hover:active:not([disabled="true"]),
-	    #main-window[defaultfxtheme="true"] #ctraddon_go-button:hover:active:not([disabled="true"]){
+	  #main-window[defaultfxtheme="true"] #ctraddon_go-button:hover:active:not([disabled="true"]){
 		-moz-image-region: rect(36px, 144px, 72px, 108px) !important;
 	  }
 	  
@@ -287,4 +287,9 @@
 	#main-window .ctraddon_linuxonly,
 	#main-window .ctraddon_windowsonly{
 	  visibility: collapse !important;
+	}
+	
+	/* adust webdeveloper menu inside appmenu popup */
+	#appmenu-popup #webDeveloperMenu:not(.menu-iconic) > label {
+	  -moz-padding-start: 22px !important;
 	}

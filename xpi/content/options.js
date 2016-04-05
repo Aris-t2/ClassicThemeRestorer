@@ -1106,8 +1106,7 @@ classicthemerestorerjso.ctr = {
 	this.prefs.setBoolPref("activndicat",false);
 	this.prefs.setBoolPref("toolsitem",false);
 	this.prefs.setBoolPref("cuibuttons",false);
-	
-	if (this.oswindows) this.prefs.setBoolPref("dblclnewtab",true);
+	this.prefs.setBoolPref("addonversion",false);
 	
 	this.needsBrowserRestart();
 

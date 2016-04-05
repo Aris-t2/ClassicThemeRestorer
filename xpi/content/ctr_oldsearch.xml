@@ -444,13 +444,13 @@
           var textValue = textBox.value;
 
           var where = "current";
+		  var newTabPref = Services.prefs.getBranch("browser.search.").getBoolPref("openintab");
 		  
 		  Components.utils.import("resource://gre/modules/Services.jsm", {})
 		  
 		  // force search to open in a new tab, if the corresponding browser preference it active
 		  try {
-			if(Services.prefs.getBranch("browser.search.").getBoolPref("openintab"))
-			  where = "tab";
+			if(newTabPref) where = "tab";
 		  } catch(e) {}
 
           // Open ctrl/cmd clicks on one-off buttons in a new background tab.
@@ -460,8 +460,10 @@
             where = whereToOpenLink(aEvent, false, true);
           }
           else {
-            if ((aEvent instanceof KeyboardEvent) && aEvent.altKey)
+            if ((aEvent instanceof KeyboardEvent) && aEvent.altKey) {
               where = "tab";
+			  if(newTabPref) where = "current";
+			}
 			  
             if ((aEvent instanceof MouseEvent) && (aEvent.button == 1 ||
                                                    aEvent.ctrlKey)) {

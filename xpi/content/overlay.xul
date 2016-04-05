@@ -166,6 +166,15 @@
       </menu>
 	</menugroup>
 	
+	<menu id="webDeveloperMenu"
+		  splitmenu="true"
+		  onclick="if(classicthemerestorerjs.ctr.prefs.getBoolPref('appbclmmenus')
+					&amp;&amp; event.button=='0'
+					&amp;&amp; event.originalTarget.parentNode.id!='menu_ToolsPopup'
+					&amp;&amp; event.originalTarget.getAttribute('splitmenu')=='true')
+					{gDevToolsBrowser.toggleToolboxCommand(gBrowser);document.getElementById('appmenu-popup').hidePopup();}"
+	/>
+	
 	<!--### Add ability to open the 'more page info' window by clicking the icon inside identity box ###-->
 	<image id="page-proxy-favicon"
 	  onclick="if (event.button=='0' &amp;&amp; classicthemerestorerjs.ctr.prefs.getBoolPref('icopageinfo')) {gIdentityHandler.handleMoreInfoClick(event);} else {PageProxyClickHandler(event);}"/>
@@ -369,63 +378,10 @@
 
 			<menuseparator/>
 
-			<menu id="appmenu_webDeveloper"
-                  label="&webDeveloperMenu.label;"
-				  splitmenu="true"
-				  onclick="if(classicthemerestorerjs.ctr.prefs.getBoolPref('appbclmmenus')
-							&amp;&amp; event.button=='0'
-							&amp;&amp; event.originalTarget.getAttribute('splitmenu')=='true')
-							{gDevToolsBrowser.toggleToolboxCommand(gBrowser);document.getElementById('appmenu-popup').hidePopup();}"
-				  class="menu-iconic">
-                <menupopup id="appmenu_webDeveloper_popup">
-                  <menuitem id="appmenu_devToolbox"
-                            observes="devtoolsMenuBroadcaster_DevToolbox"
-                            accesskey="&devToolboxMenuItem.accesskey;"/>
-                  <menuseparator id="appmenu_devtools_separator"/>
-                  <menuitem id="appmenu_devToolbar"
-                            observes="devtoolsMenuBroadcaster_DevToolbar"
-                            accesskey="&devToolbarMenu.accesskey;"/>
-                  <menuitem id="appmenu_devAppMgr"
-                            observes="devtoolsMenuBroadcaster_DevAppMgr"
-                            accesskey="&devAppMgrMenu.accesskey;"/>
-                  <menuitem id="appmenu_webide"
-                            observes="devtoolsMenuBroadcaster_webide"
-                            accesskey="&webide.accesskey;"/>
-                  <menuitem id="appmenu_browserConsole"
-                            observes="devtoolsMenuBroadcaster_BrowserConsole"
-                            accesskey="&browserConsoleCmd.accesskey;"/>
-                  <menuitem id="appmenu_responsiveUI"
-                            observes="devtoolsMenuBroadcaster_ResponsiveUI"
-                            accesskey="&responsiveDesignTool.accesskey;"/>
-                  <menuitem id="appmenu_eyedropper"
-                            observes="devtoolsMenuBroadcaster_Eyedropper"
-                            accesskey="&eyedropper.accesskey;"/>
-                  <menuitem id="appmenu_scratchpad"
-                            observes="devtoolsMenuBroadcaster_Scratchpad"
-                            accesskey="&scratchpad.accesskey;"/>
-                  <menuitem id="appmenu_pageSource"
-                            observes="devtoolsMenuBroadcaster_PageSource"
-                            accesskey="&pageSourceCmd.accesskey;"/>
-                  <menuitem id="appmenu_errorConsole"
-                            observes="devtoolsMenuBroadcaster_ErrorConsole"
-                            accesskey="&errorConsoleCmd.accesskey;"/>
-                  <menuitem id="appmenu_devtools_connect"
-                            observes="devtoolsMenuBroadcaster_connect"/>
-                  <menuseparator/>
-                  <menuitem id="appmenu_getMoreDevtools"
-                            observes="devtoolsMenuBroadcaster_GetMoreTools"
-                            accesskey="&getMoreDevtoolsCmd.accesskey;"/>
-				  <menuseparator/>
-				  <menuitem id="appmenu_offlineMode"
-                          label="&goOfflineCmd.label;"
-                          accesskey="&goOfflineCmd.accesskey;"
-                          type="checkbox"
-                          observes="workOfflineMenuitemState"
-                          oncommand="BrowserOffline.toggleOfflineStatus();"/>
-                </menupopup>
-            </menu>
+			<menu id="appmenu_webDeveloper"/>
 
 			<menuseparator/>
+
 			<menuitem id="appmenu_fullScreen"
 					  label="&fullScreenCmd.label;"
 					  type="checkbox"
