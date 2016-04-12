@@ -171,6 +171,10 @@
 	  -moz-margin-start: 4px !important;
 	  -moz-margin-end: 0 !important;
 	}
+	
+	.addon .content-container * {
+	  font-size: 100% !important;
+	}
 
 	.addon .update-available button,
 	.addon .control-container button,
