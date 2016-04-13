@@ -1171,7 +1171,12 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("altreaderico") && classicthemerestorerjs.ctr.fxdefaulttheme==true && classicthemerestorerjs.ctr.appversion >= 40) classicthemerestorerjs.ctr.loadUnloadCSS("altreaderico",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("altreaderico",false);
 		  break;
-		  
+
+		  case "altautocompl":
+			if (branch.getBoolPref("altautocompl") && classicthemerestorerjs.ctr.appversion >= 48) classicthemerestorerjs.ctr.loadUnloadCSS("altautocompl",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("altautocompl",false);
+		  break;
+
 		  case "locsearchbw10":
 			if (branch.getBoolPref("locsearchbw10") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("locsearchbw10",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("locsearchbw10",false);
@@ -2826,7 +2831,7 @@ classicthemerestorerjs.ctr = {
 		classicthemerestorerjs.ctr.ctrGetId("status-bar").appendChild(classicthemerestorerjs.ctr.ctrGetId("aniweather_canvas"));
 	  } catch(e){}
 	},300);
-	//Aniweather add-on fix
+	//Cache Status add-on fix
 	setTimeout(function(){
 	  try{
 		classicthemerestorerjs.ctr.ctrGetId("status-bar").appendChild(classicthemerestorerjs.ctr.ctrGetId("cachestatus-panel"));
@@ -3825,6 +3830,7 @@ classicthemerestorerjs.ctr = {
 		case "urlbardropm": 		manageCSS("urlbar_dropm.css"); 			break;
 		case "urlbardropm2": 		manageCSS("urlbar_dropm2.css"); 		break;
 		case "altreaderico": 		manageCSS("alt_reader_icons.css");		break;
+		case "altautocompl": 		manageCSS("alt_autocomplete.css");		break;
 		case "locsearchbw10": 		manageCSS("locationsearchbarw10.css");	break;
 		case "combrelstop":			manageCSS("combrelstop.css");			break;
 		case "panelmenucol": 		manageCSS("panelmenucolor.css");		break;

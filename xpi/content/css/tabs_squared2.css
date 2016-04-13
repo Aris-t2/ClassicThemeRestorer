@@ -362,6 +362,21 @@
 	  -moz-padding-end: 0px !important;
 	}
 	
+	/* pinned tabs fix (Fx45+) */
+	#main-window[fx45plus="true"] #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-content[pinned] {
+	  -moz-padding-end: 0px !important;
+	  -moz-padding-start: 0px !important;
+	}
+	#main-window[fx45plus="true"] #TabsToolbar #tabbrowser-tabs .tabbrowser-tab[pinned] image{
+	  -moz-padding-start:0px !important;
+	  -moz-padding-end: 0px !important;
+	  -moz-margin-start:5px !important;
+	  -moz-margin-end: 0px !important;
+	}
+	#main-window[fx45plus="true"] #TabsToolbar #tabbrowser-tabs .tabbrowser-tab[pinned] label{
+	  display:none!important;
+	}
+
 	/* remove ridiculous clipping */
 	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive],:not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
 	  clip-path: none !important;

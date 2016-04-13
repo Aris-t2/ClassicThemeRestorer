@@ -412,7 +412,10 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_hideeditbm').style.visibility = 'collapse';
 	}
 	
-
+	if (this.appversion < 48) {
+	  document.getElementById('ctraddon_pw_altautocompl').style.visibility = 'collapse';
+	}
+	
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get
 	  // garbage collected.

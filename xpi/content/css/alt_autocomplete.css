@@ -1,0 +1,38 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	
+	panel[type="autocomplete-richlistbox"],
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
+	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings.xml#urlbar-rich-result-popup") !important;
+	}
+
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
+	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings.xml#autocomplete-richlistitem") !important;
+	  -moz-box-orient: vertical !important;
+	  overflow: -moz-hidden-unscrollable !important;
+	  min-height: unset !important;
+	  height: unset !important;
+	  max-height: unset !important;
+	  padding: 4px 4px !important;
+	}
+
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-separator {
+	  display:none !important;
+	}
+
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-type-icon{
+	  -moz-margin-start: -23px !important;
+	}
+
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-title{
+	  -moz-margin-start: -9px !important;
+	}
+	
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem :-moz-any(.ac-title, .ac-title-text, .ac-tags, .ac-tags-text, .ac-url, .ac-text-overflow-container, .ac-url-text, .ac-action, .ac-text-overflow-container, .ac-action-text){
+	  min-width: unset !important;
+	  width: unset !important;
+	  max-width: unset !important;
+	}
+
+}
