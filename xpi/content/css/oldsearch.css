@@ -81,6 +81,10 @@
 	.searchbar-engine-menuitem[selected="true"] > .menu-iconic-text {
 	  font-weight: bold !important;
 	}
+	
+	.searchbar-popup {
+	  -moz-margin-start: -1px !important;	
+	}
 
 	/* location bars footer */
 	#urlbar-search-footer{

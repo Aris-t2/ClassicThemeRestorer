@@ -2834,7 +2834,8 @@ classicthemerestorerjs.ctr = {
 	//Cache Status add-on fix
 	setTimeout(function(){
 	  try{
-		classicthemerestorerjs.ctr.ctrGetId("status-bar").appendChild(classicthemerestorerjs.ctr.ctrGetId("cachestatus-panel"));
+		if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref('cstatextlb')==false)
+		  classicthemerestorerjs.ctr.ctrGetId("status-bar").appendChild(classicthemerestorerjs.ctr.ctrGetId("cachestatus-panel"));
 	  } catch(e){}
 	},300);
 	

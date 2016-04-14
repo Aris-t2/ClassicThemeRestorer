@@ -207,12 +207,21 @@
 		  var width = 300;
 		  
 		  try{
-			width = document.getElementById("urlbar").getBoundingClientRect().width+2;
+			width = document.getElementById("urlbar").getBoundingClientRect().width;
 		  } catch(e){}
 
-          this.setAttribute("width", width);
+		  var xOffset = 0;
+		  
+		  var ctr_small = Services.prefs.getBranch('extensions.classicthemerestorer.').getBoolPref('smallnavbut');
+		  var ctr_mbf = Services.prefs.getBranch('extensions.classicthemerestorer.').getBoolPref('backforward');
+		  
+		  if(ctr_small && !ctr_mbf) {
+		    width = width+1;
+		  }
+		  
+		  this.setAttribute("width", width);
 
-          this.openPopup(aElement, "after_start", -1, -1, false, false);
+          this.openPopup(aElement, "after_start", xOffset, -1, false, false);
         ]]></body>
       </method>
 
@@ -460,7 +469,7 @@
     <content align="start"
              onoverflow="this._onOverflow();"
              onunderflow="this._onUnderflow();">
-      <xul:hbox>
+      <xul:hbox align="center">
 		  <xul:image anonid="type-icon"
 					 class="ac-type-icon"
 					 xbl:inherits="selected,current"/>
@@ -468,7 +477,7 @@
 					 class="ac-site-icon"
 					 xbl:inherits="src=image,selected"/>
 		  <xul:hbox class="ac-title"
-					align="start"
+					align="center"
 					xbl:inherits="selected">
 			<xul:description class="ac-text-overflow-container">
 			  <xul:description anonid="title-text"
@@ -478,7 +487,7 @@
 		  </xul:hbox>
 		  <xul:hbox anonid="tags"
 					class="ac-tags"
-					align="start"
+					align="center"
 					xbl:inherits="selected">
 			<xul:description class="ac-text-overflow-container">
 			  <xul:description anonid="tags-text"
@@ -487,15 +496,15 @@
 			</xul:description>
 		  </xul:hbox>
 	  </xul:hbox>
-	  <xul:hbox>
+	  <xul:hbox align="center">
 		  <xul:hbox anonid="separator"
 					class="ac-separator"
-					align="start"
+					align="center"
 					xbl:inherits="selected,actiontype">
 			<xul:description class="ac-separator-text">—</xul:description>
 		  </xul:hbox>
 		  <xul:hbox class="ac-url"
-					align="start"
+					align="center"
 					xbl:inherits="selected,actiontype">
 			<xul:description class="ac-text-overflow-container">
 			  <xul:description anonid="url-text"
@@ -504,7 +513,7 @@
 			</xul:description>
 		  </xul:hbox>
 		  <xul:hbox class="ac-action"
-					align="start"
+					align="center"
 					xbl:inherits="selected,actiontype">
 			<xul:description class="ac-text-overflow-container">
 			  <xul:description anonid="action-text"

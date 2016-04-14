@@ -14,7 +14,7 @@
 	  min-height: unset !important;
 	  height: unset !important;
 	  max-height: unset !important;
-	  padding: 4px 4px !important;
+	  padding: 4px 2px !important;
 	}
 
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-separator {
@@ -22,11 +22,16 @@
 	}
 
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-type-icon{
-	  -moz-margin-start: -23px !important;
+	  -moz-margin-start: -21px !important;
 	}
 
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-title{
-	  -moz-margin-start: -9px !important;
+	  -moz-margin-start: -7px !important;
+	  margin-top:-2px !important;
+	}
+	
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem  .ac-url{
+	  -moz-margin-start: 21px !important;
 	}
 	
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem :-moz-any(.ac-title, .ac-title-text, .ac-tags, .ac-tags-text, .ac-url, .ac-text-overflow-container, .ac-url-text, .ac-action, .ac-text-overflow-container, .ac-action-text){

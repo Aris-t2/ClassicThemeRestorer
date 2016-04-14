@@ -76,9 +76,8 @@
         // Make sure we rebuild the popup in onpopupshowing
         this._needToBuildPopup = true;
 
-        var os =
-               Components.classes["@mozilla.org/observer-service;1"]
-                         .getService(Components.interfaces.nsIObserverService);
+        var os = Components.classes["@mozilla.org/observer-service;1"]
+                    .getService(Components.interfaces.nsIObserverService);
         os.addObserver(this, "browser-search-engine-modified", false);
 
         this._initialized = true;
@@ -111,11 +110,6 @@
           os.removeObserver(this, "browser-search-engine-modified");
         }
 
-        // Make sure to break the cycle from _textbox to us. Otherwise we leak
-        // the world. But make sure it's actually pointing to us.
-        // Also make sure the textbox has ever been constructed, otherwise the
-        // _textbox getter will cause the textbox constructor to run, add an
-        // observer, and leak the world too.
         if (this._textboxInitialized && this._textbox.mController.input == this)
           this._textbox.mController.input = null;
         ]]></body>
@@ -237,8 +231,7 @@
         <body><![CDATA[
           for (let browser of gBrowser.browsers) {
             if (browser.hiddenEngines) {
-              // XXX This will need to be changed when engines are identified by
-              // URL rather than title; see bug 335102.
+
               var removeTitle = aEngine.wrappedJSObject.name;
               for (var i = 0; i < browser.hiddenEngines.length; i++) {
                 if (browser.hiddenEngines[i].title == removeTitle) {
@@ -260,8 +253,7 @@
         <body><![CDATA[
           for (let browser of gBrowser.browsers) {
             if (browser.engines) {
-              // XXX This will need to be changed when engines are identified by
-              // URL rather than title; see bug 335102.
+
               var removeTitle = aEngine.wrappedJSObject.name;
               for (var i = 0; i < browser.engines.length; i++) {
                 if (browser.engines[i].title == removeTitle) {
@@ -309,15 +301,25 @@
           this.rebuildPopup();
 
           var popup = this._popup;
-          // Clear any addengine menuitems, including addengine-item entries and
-          // the addengine-separator.  Work backward to avoid invalidating the
-          // indexes as items are removed.
+
           var items = popup.childNodes;
           for (var i = items.length - 1; i >= 0; i--) {
             if (items[i].classList.contains("addengine-item") ||
                 items[i].classList.contains("addengine-separator"))
               popup.removeChild(items[i]);
           }
+		  
+		  var width = 100;
+		  
+		  try{
+			width = document.getElementById("searchbar").getBoundingClientRect().width-3;
+		  } catch(e){}
+		  
+		  if(Services.appinfo.OS=="Darwin")
+			width = width-4;
+
+          popup.setAttribute("width", width);
+
 
           var addengines = gBrowser.selectedBrowser.engines;
 		  	  
@@ -387,9 +389,7 @@
             var name = engines[i].name;
             menuitem.setAttribute("label", name);
             menuitem.setAttribute("class", "menuitem-iconic searchbar-engine-menuitem menuitem-with-favicon");
-            // Since this menu is rebuilt by the observer method whenever a new
-            // engine is selected, the "selected" attribute does not need to be
-            // explicitly cleared anywhere.
+
             if (engines[i] == this.currentEngine)
               menuitem.setAttribute("selected", "true");
             var tooltip = this._stringBundle.getFormattedString("searchtip", [name]);
@@ -422,7 +422,7 @@
         <parameter name="aEvent"/>
         <parameter name="isNextEngine"/>
         <body><![CDATA[
-          // Find the new index
+
           var newIndex = this.engines.indexOf(this.currentEngine);
           newIndex += isNextEngine ? 1 : -1;
 
@@ -557,8 +557,7 @@
 
       <handler event="focus">
       <![CDATA[
-        // Speculatively connect to the current engine's search URI (and
-        // suggest URI, if different) to reduce request latency
+
         this.currentEngine.speculativeConnect({window: window});
       ]]></handler>
     </handlers>
@@ -681,13 +680,7 @@
         <body><![CDATA[
           var popup = this.popup;
           if (!popup.mPopupOpen) {
-            // Initially the panel used for the searchbar (PopupSearchAutoComplete
-            // in browser.xul) is hidden to avoid impacting startup / new
-            // window performance. The base binding's openPopup would normally
-            // call the overriden openAutocompletePopup in urlbarBindings.xml's
-            // browser-autocomplete-result-popup binding to unhide the popup,
-            // but since we're overriding openPopup we need to unhide the panel
-            // ourselves.
+
             popup.hidden = false;
 
             // Don't roll up on mouse click in the anchor for the search UI.
@@ -704,19 +697,22 @@
 
             document.popupNode = null;
 
-            const isRTL = getComputedStyle(this, "").direction == "rtl";
-
             var outerRect = this.getBoundingClientRect();
             var innerRect = this.inputField.getBoundingClientRect();
-            if (isRTL) {
-              var width = innerRect.right - outerRect.left;
-            } else {
-              var width = outerRect.right - innerRect.left;
-            }
-            popup.setAttribute("width", width > 100 ? width : 100);
+			
+			var width = 100;
+		  
+			try{
+			  width = document.getElementById("searchbar").getBoundingClientRect().width-3;
+			} catch(e){}
+			
+			if(Services.appinfo.OS=="Darwin")
+			  width = width-4;
+
+            popup.setAttribute("width", width);
 
             var yOffset = outerRect.bottom - innerRect.bottom;
-            popup.openPopup(this.inputField, "after_start", 0, yOffset, false, false);
+            popup.openPopup(this.inputField, "after_start", -35, yOffset, false, false);
           }
         ]]></body>
       </method>
