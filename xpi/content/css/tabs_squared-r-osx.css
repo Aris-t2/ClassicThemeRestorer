@@ -365,9 +365,8 @@
 	  -moz-padding-end: 0px !important;
 	  -moz-padding-start: 0px !important;
 	}
-	#main-window[fx45plus="true"] #TabsToolbar #tabbrowser-tabs .tabbrowser-tab[pinned] image{
-	  -moz-padding-start:0px !important;
-	  -moz-padding-end: 0px !important;
+	#main-window[fx45plus="true"] #TabsToolbar #tabbrowser-tabs .tabbrowser-tab[pinned] .tab-throbber,
+	#main-window[fx45plus="true"] #TabsToolbar #tabbrowser-tabs .tabbrowser-tab[pinned] .tab-icon-image{
 	  -moz-margin-start:5px !important;
 	  -moz-margin-end: 0px !important;
 	}
