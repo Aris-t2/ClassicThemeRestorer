@@ -76,7 +76,7 @@
     }
 	
 	#main-window[tabsontop='false'] .tabs-newtab-button:not(:-moz-lwtheme) {
-      margin-left: -20px !important;
+      -moz-margin-start: -20px !important;
       background: url("chrome://classic_theme_restorer/content/images/atab.png") 3px 1px no-repeat !important;
     }
     #main-window[tabsontop='false'] .tabs-newtab-button:hover:not(:-moz-lwtheme) {
@@ -132,36 +132,25 @@
       border-style:solid;
     }
     
-    #tabbrowser-tabs::after:not(:-moz-lwtheme) {
+    #tabbrowser-tabs::before:not(:-moz-lwtheme),
+	#tabbrowser-tabs::after:not(:-moz-lwtheme) {
       content: '';
       display: block;
       background-image:
         url(chrome://classic_theme_restorer/content/images/atab.png),
         url(chrome://classic_theme_restorer/content/images/atab_act.png),
         url(chrome://classic_theme_restorer/content/images/atab_hov.png),
-		url(chrome://classic_theme_restorer/content/images/atab_at.png);
+		url(chrome://classic_theme_restorer/content/images/atab_tc.png),
+		url(chrome://classic_theme_restorer/content/images/atab_hov_tc.png);
     }
-    
-    .tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:-moz-lwtheme) > .tab-stack > .tab-content {
-      /*-moz-border-image: url("chrome://classic_theme_restorer/content/images/atab_at.png") 2 28 repeat stretch !important;
-	  /*background-size: 95% 100% !important;
-	  background-image: linear-gradient(to top, #868d94 0px, transparent -1px),linear-gradient(to top,#b4c0cc,#c8d4e1,#d1deec) !important;
-	  background-position: 0px 0px !important;*/
-    }
-    .tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):hover:not(:-moz-lwtheme) > .tab-stack > .tab-content {
-      /*-moz-border-image: url("chrome://classic_theme_restorer/content/images/atab_hov.png") 2 28 repeat stretch !important;
-	  /*background-size: 95% 100% !important;
-	  background-image: linear-gradient(to top, #868d94 0px, transparent -1px),linear-gradient(to top,#d0dce8,#dce7f3,#e5effa) !important;
-	  background-position: 0px 0px !important;*/
-    }
-	
-    .tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:-moz-lwtheme) > .tab-stack > .tab-content {
-      -moz-border-image: url("chrome://classic_theme_restorer/content/images/atab_at.png") 2 28 fill repeat stretch !important;
+ 
+	.tabbrowser-tab[pinned][titlechanged]:not(:-moz-lwtheme) > .tab-stack > .tab-content:not([selected="true"]) {
+      -moz-border-image: url("chrome://classic_theme_restorer/content/images/atab_tc.png") 2 28 fill repeat stretch !important;
       border-style:solid;
     }
 	
-    .tabbrowser-tab[pinned][titlechanged]:hover:not([selected="true"]):not(:-moz-lwtheme) > .tab-stack > .tab-content {
-      -moz-border-image: url("chrome://classic_theme_restorer/content/images/atab_hov.png") 2 28 fill repeat stretch !important;
+    .tabbrowser-tab[pinned][titlechanged]:hover:not(:-moz-lwtheme) > .tab-stack > .tab-content:not([selected="true"]) {
+      -moz-border-image: url("chrome://classic_theme_restorer/content/images/atab_hov_tc.png") 2 28 fill repeat stretch !important;
       border-style:solid;
     }
 	

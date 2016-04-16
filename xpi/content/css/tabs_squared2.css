@@ -239,24 +239,15 @@
 	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.5) 50%) !important;
 	}
 
-	/*@media all and (-moz-windows-glass) {
-		.tabs-newtab-button:-moz-lwtheme,		
-		.tabbrowser-tab:-moz-lwtheme,
-		.tabbrowser-tab[pinned]:-moz-lwtheme {
-		  background-size: calc(100% - 1px) calc(100% - 4px) !important;
-		}
-	}*/
-	
 	.tabs-newtab-button:-moz-lwtheme,
 	.tabbrowser-tab:not([selected="true"]):-moz-lwtheme {
 	  background:none !important;
 	}
-
-	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]) {
-	  background-image: radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,0.5) 3%, rgba(186,221,251,.25) 40%, rgba(127,179,255,.12) 80%, rgba(127,179,255,.05)) !important;
-	}
-	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):hover {
-	  background-image: radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,0.5) 3%, rgba(186,221,251,.25) 40%, rgba(127,179,255,.12) 80%, rgba(127,179,255,.05)) !important;
+	
+	/* titlechanged pinned tabs */
+	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:hover):not(:-moz-lwtheme){
+	  background-size: 100% 100% !important;
+	  background-image: none !important;
 	}
 
 	#navigator-toolbox toolbar:-moz-lwtheme{
@@ -267,10 +258,7 @@
 	  border-top: 1px solid transparent !important;
 	}
 	
-	/*#TabsToolbar:not(:-moz-lwtheme) {
-	  margin-bottom:0px !important;
-	}*/
-	
+
 	@media all and (-moz-windows-theme:aero) {
 	  #TabsToolbar{
 		background-image: none !important;
@@ -283,8 +271,6 @@
 
 	.tabbrowser-tab[pinned]{
 	  min-width: 32px !important;
-	  /*width: 32px !important;
-	  max-width: 32px !important;*/
 	  background-position: 0px 2px !important;
 	  background-size: calc(100% - 0px) calc(100% - 1px) !important;
 	}

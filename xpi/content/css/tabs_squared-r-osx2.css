@@ -27,11 +27,6 @@
 	  background-image: linear-gradient(transparent,transparent) !important;
 	}
 
-	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:hover):not(:-moz-lwtheme){
-	  background-size: 95% 100% !important;
-	  background-image: linear-gradient(to bottom, #676f76 0px, transparent 1px),linear-gradient(to bottom, #a1a1a1,#c0c0c0,#cccccc,#d4d4d4) !important;
-	}
-
 	.tabbrowser-tabs{
 	  border-bottom:0 !important;
 	  margin-top: -2px !important;
@@ -41,12 +36,6 @@
 	  margin-right: -8px !important;
 	}
 
-	/*.tab-background-start[visuallyselected=true]::after,
-	.tab-background-start[visuallyselected=true]::before,
-	.tab-background-start,
-	.tab-background-end,
-	.tab-background-end[visuallyselected=true]::after,
-	.tab-background-end[visuallyselected=true]::before,*/
 	#tabbrowser-tabs{
 	  min-height: 0px !important;
 	}
@@ -279,19 +268,9 @@
 		background:none !important;
 	}
 
-
-
 	.tabbrowser-tab[selected="true"]:-moz-lwtheme,
 	.tabbrowser-tab[pinned]:-moz-lwtheme {
 	  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.7) 50%) !important;
-	}
-	
-	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]) {
-	  background-image: radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,1) 3%, rgba(186,221,251,.75) 40%, rgba(127,179,255,.5) 80%, rgba(127,179,255,.25)) !important;
-	}
-	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):hover {
-	  background-image: linear-gradient(hsla(0,0%,100%,.4), hsla(0,0%,75%,.4) 80%),
-						radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,1) 3%, rgba(186,221,251,.75) 40%, rgba(127,179,255,.5) 80%, rgba(127,179,255,.25)) !important;
 	}
 	
 	.tabbrowser-tab[pinned]{

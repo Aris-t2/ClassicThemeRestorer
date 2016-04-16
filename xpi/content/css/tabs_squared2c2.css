@@ -92,18 +92,6 @@
 	  width: 28px!important;
 	}
 	
-	/* titlechanged pinned tabs */
-	/*.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]) .tab-content{
-	  background-size: 100% 100% !important;
-	  background-image: linear-gradient(hsla(0,0%,100%,.4), hsla(0,0%,75%,.4) 80%),
-						radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,.75) 3%, rgba(186,221,251,.55) 40%, rgba(127,179,255,.25) 80%, rgba(127,179,255,.15)) !important;
-	}
-	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):hover .tab-content{
-	  background-size: 100% 100% !important;
-	  background-image: linear-gradient(hsla(0,0%,100%,.4), hsla(0,0%,75%,.4) 80%),
-						radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,1) 3%, rgba(186,221,251,.75) 40%, rgba(127,179,255,.5) 80%, rgba(127,179,255,.25)) !important;
-	}*/
-
 	/* tab borders */
 	.tabs-newtab-button,
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected]) .tab-content {
@@ -176,12 +164,6 @@
 	}
 
 	/* Tabs Toolbar */
-	/*.tab-background-start[visuallyselected=true]::after,
-	.tab-background-start[visuallyselected=true]::before,
-	.tab-background-start,
-	.tab-background-end,
-	.tab-background-end[visuallyselected=true]::after,
-	.tab-background-end[visuallyselected=true]::before,*/
 	#tabbrowser-tabs{
 	  min-height: 0px !important;
 	}

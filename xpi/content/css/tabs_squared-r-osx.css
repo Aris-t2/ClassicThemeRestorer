@@ -32,11 +32,6 @@
 	  background-image: linear-gradient(to bottom, #676f76 0px, transparent 1px),linear-gradient(to bottom,#adadad,#b8b8b8) !important;
 	}
 
-	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:hover):not(:-moz-lwtheme){
-	  background-size: 95% 100% !important;
-	  background-image: linear-gradient(to bottom, #676f76 0px, transparent 1px),linear-gradient(to bottom, #a1a1a1,#c0c0c0,#cccccc,#d4d4d4) !important;
-	}
-
 	.tabbrowser-tabs{
 	  border-bottom:0 !important;
 	  margin-top: -2px !important;
@@ -46,12 +41,6 @@
 	  margin-right: -8px !important;
 	}
 
-	/*.tab-background-start[visuallyselected=true]::after,
-	.tab-background-start[visuallyselected=true]::before,
-	.tab-background-start,
-	.tab-background-end,
-	.tab-background-end[visuallyselected=true]::after,
-	.tab-background-end[visuallyselected=true]::before,*/
 	#tabbrowser-tabs{
 	  min-height: 0px !important;
 	}
@@ -269,7 +258,14 @@
 	.tabs-newtab-button:-moz-lwtheme-darktext:hover {
 	  background-image: linear-gradient(hsla(0,0%,80%,.5), hsla(0,0%,60%,.5) 80%) !important;
 	}
-
+	
+	/* titlechanged pinned tabs */
+	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"])  .tab-content{
+	  background: unset !important;
+	}
+	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]){
+	  background-size: 100% 100% !important;
+	}
 	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]) {
 	  background-image: radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,1) 3%, rgba(186,221,251,.75) 40%, rgba(127,179,255,.5) 80%, rgba(127,179,255,.25)) !important;
 	}
