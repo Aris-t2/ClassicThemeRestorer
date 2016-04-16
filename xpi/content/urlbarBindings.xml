@@ -220,7 +220,7 @@
 		  }
 		  
 		  this.setAttribute("width", width);
-
+			
           this.openPopup(aElement, "after_start", xOffset, -1, false, false);
         ]]></body>
       </method>
@@ -238,22 +238,12 @@
         <parameter name="aElement"/>
         <body>
           <![CDATA[
-          // With the notification shown, the listbox's height can sometimes be
-          // too small when it's flexed, as it normally is.  Also, it can start
-          // out slightly scrolled down.  Both problems appear together, most
-          // often when the popup is very narrow and the notification's text
-          // must wrap.  Work around them by removing the flex.
-          //
-          // But without flexing the listbox, the listbox's height animation
-          // sometimes fails to complete, leaving the popup too tall.  Work
-          // around that problem by disabling the listbox animation.
           this.richlistbox.flex = 0;
           this.setAttribute("dontanimate", "true");
 
           this.classList.add("showSearchSuggestionsNotification");
           this._updateFooterVisibility();
 
-          // This event allows accessibility APIs to see the notification.
           if (!this.popupOpen) {
             let event = document.createEvent("Events");
             event.initEvent("AlertActive", true, true);
@@ -273,7 +263,7 @@
           }
           this._hideSearchSuggestionsNotificationWithAnimation().then(() => {
             if (enableSuggestions && this.input.textValue) {
-              // Start a new search so that suggestions appear immediately.
+
               this.input.controller.startSearch(this.input.textValue);
             }
           });
@@ -288,7 +278,6 @@
           this.richlistbox.flex = 1;
           this.removeAttribute("dontanimate");
           if (this._matchCount) {
-            // Update popup height.
             this._invalidate();
           } else {
             this.closePopup();
@@ -328,33 +317,27 @@
         <parameter name="aEvent"/>
         <body>
           <![CDATA[
-          // Ignore right-clicks
+
           if (aEvent.button == 2)
             return;
 
           var controller = this.view.QueryInterface(Components.interfaces.nsIAutoCompleteController);
 
-          // Check for unmodified left-click, and use default behavior
           if (aEvent.button == 0 && !aEvent.shiftKey && !aEvent.ctrlKey &&
               !aEvent.altKey && !aEvent.metaKey) {
             controller.handleEnter(true);
             return;
           }
 
-          // Check for middle-click or modified clicks on the URL bar
           if (gURLBar && this.mInput == gURLBar) {
             var url = controller.getValueAt(this.selectedIndex);
             var options = {};
 
-            // close the autocomplete popup and revert the entered address
             this.closePopup();
             controller.handleEscape();
 
-            // Check if this is meant to be an action
             let action = this.mInput._parseActionUrl(url);
             if (action) {
-              // TODO (bug 1054816): Centralise the implementation of actions
-              // into a JS module.
               switch (action.type) {
                 case "switchtab": // Fall through.
                 case "keyword": // Fall through.
@@ -373,7 +356,6 @@
               }
             }
 
-            // respect the usual clicking subtleties
             openUILink(url, aEvent, options);
           }
         ]]>
@@ -409,8 +391,7 @@
             let types = item.getAttribute("type").split(/\s+/);
             let type = types.find(type => type != "action" && type != "heuristic");
             try {
-              // Some types intentionally do not map to strings, which is not
-              // an error.
+
               parts.push(this._bundle.GetStringFromName(type + "ResultLabel"));
             } catch (e) {}
 
@@ -425,14 +406,9 @@
             if (!Services.prefs.getBoolPref("browser.urlbar.unifiedcomplete"))
               return;
 
-            // If nothing is selected yet, select the first result if it is a
-            // pre-selected "heuristic" result.  (See UnifiedComplete.js.)
             if (this.selectedIndex == -1 && this._isFirstResultHeuristic) {
-              // Don't handle this as a user-initiated action.
               this._ignoreNextSelect = true;
 
-              // Don't fire DOMMenuItemActive so that screen readers still see
-              // the input as being focused.
               this.richlistbox.suppressMenuItemEvent = true;
 
               this.selectedIndex = 0;
@@ -453,11 +429,6 @@
     <handlers>
 
       <handler event="mousedown"><![CDATA[
-        // Required to make the xul:label.text-link elements in the search
-        // suggestions notification work correctly when clicked on Linux.
-        // This is copied from the mousedown handler in
-        // browser-search-autocomplete-result-popup, which apparently had a
-        // similar problem.
         event.preventDefault();
       ]]></handler>
 
@@ -558,8 +529,6 @@
       <property name="label" readonly="true">
         <getter>
           <![CDATA[
-            // This property is a string that is read aloud by screen readers,
-            // so it must not contain anything that should not be user-facing.
 
             let parts = [
               this.getAttribute("title"),
@@ -567,8 +536,6 @@
             ];
             let label = parts.filter(str => str).join(" ")
 
-            // allow consumers that have extended popups to override
-            // the label values for the richlistitems
             let panel = this.parentNode.parentNode;
             if (panel.createResultLabel) {
               return panel.createResultLabel(this, label);
@@ -629,60 +596,49 @@
         <parameter name="aSearchTokens"/>
         <body>
           <![CDATA[
-          // Short circuit for empty search ([""] == "")
           if (aSearchTokens == "")
             return [0, aText.length];
 
-          // Find which regions of text match the search terms
           let regions = [];
           for (let search of Array.prototype.slice.call(aSearchTokens)) {
             let matchIndex = -1;
             let searchLen = search.length;
 
-            // Find all matches of the search terms, but stop early for perf
             let lowerText = aText.substr(0, this.boundaryCutoff).toLowerCase();
             while ((matchIndex = lowerText.indexOf(search, matchIndex + 1)) >= 0) {
               regions.push([matchIndex, matchIndex + searchLen]);
             }
           }
 
-          // Sort the regions by start position then end position
           regions = regions.sort((a, b) => {
             let start = a[0] - b[0];
             return (start == 0) ? a[1] - b[1] : start;
           });
 
-          // Generate the boundary indices from each region
           let start = 0;
           let end = 0;
           let boundaries = [];
           let len = regions.length;
           for (let i = 0; i < len; i++) {
-            // We have a new boundary if the start of the next is past the end
+
             let region = regions[i];
             if (region[0] > end) {
-              // First index is the beginning of match
+
               boundaries.push(start);
-              // Second index is the beginning of non-match
               boundaries.push(end);
 
-              // Track the new region now that we've stored the previous one
               start = region[0];
             }
 
-            // Push back the end index for the current or new region
             end = Math.max(end, region[1]);
           }
 
-          // Add the last region
           boundaries.push(start);
           boundaries.push(end);
 
-          // Put on the end boundary if necessary
           if (end < aText.length)
             boundaries.push(aText.length);
 
-          // Skip the first item because it's always 0
           return boundaries.slice(1);
           ]]>
         </body>
@@ -704,17 +660,15 @@
         <parameter name="aNoEmphasis"/>
         <body>
           <![CDATA[
-          // Get rid of all previous text
+
           while (aDescriptionElement.hasChildNodes())
             aDescriptionElement.removeChild(aDescriptionElement.firstChild);
 
-          // If aNoEmphasis is specified, don't add any emphasis
           if (aNoEmphasis) {
             aDescriptionElement.appendChild(document.createTextNode(aText));
             return;
           }
 
-          // Get the indices that separate match and non-match text
           let search = this.getAttribute("text");
           let tokens = this._getSearchTokens(search);
           let indices = this._getBoundaryIndices(aText, tokens);
@@ -735,20 +689,20 @@
           let next;
           let start = 0;
           let len = indices.length;
-          // Even indexed boundaries are matches, so skip the 0th if it's empty
+
           for (let i = indices[0] == 0 ? 1 : 0; i < len; i++) {
             next = indices[i];
             let spanText = text.substr(start, next - start);
             start = next;
 
             if (i % 2 == 0) {
-              // Emphasize the text for even indices
+
               let span = spansParentElement.appendChild(
                 document.createElementNS("http://www.w3.org/1999/xhtml", "span"));
               this._setUpEmphasisSpan(span, descriptionElement);
               span.textContent = spanText;
             } else {
-              // Otherwise, it's plain text
+
               spansParentElement.appendChild(document.createTextNode(spanText));
             }
           }
@@ -766,9 +720,9 @@
 
           let anyTagsMatch = false;
 
-          // Include only tags that match the search string.
+
           for (let tag of tags) {
-            // Check if the tag matches the search string.
+
             let search = this.getAttribute("text");
             let tokens = this._getSearchTokens(search);
             let indices = this._getBoundaryIndices(tag, tokens);
@@ -776,7 +730,7 @@
             if (indices.length == 2 &&
                 indices[0] == 0 &&
                 indices[1] == tag.length) {
-              // The tag doesn't match the search string, so don't include it.
+
               continue;
             }
 
@@ -826,29 +780,16 @@
           <![CDATA[
             let pairs = [];
 
-            // Split on %S, %1$S, %2$S, etc. ie:
-            //   "textA %S"
-            //     becomes ["textA ", "%S"]
-            //   "textA %1$S textB textC %2$S"
-            //     becomes ["textA ", "%1$S", " textB textC ", "%2$S"]
             let parts = aSourceString.split(/(%(?:[0-9]+\$)?S)/);
 
             for (let part of parts) {
-              // The above regex will actually give us an empty string at the
-              // end - we don't want that, as we don't want to later generate an
-              // empty text node for it.
               if (part.length === 0)
                 continue;
 
-              // Determine if this token is a replacement token or a normal text
-              // token. If it is a replacement token, we want to extract the
-              // numerical number. However, we still want to match on "$S".
               let match = part.match(/^%(?:([0-9]+)\$)?S$/);
 
               if (match) {
-                // "%S" doesn't have a numerical number in it, but will always
-                // be assumed to be 1. Furthermore, the input string specifies
-                // these with a 1-based index, but we want a 0-based index.
+
                 let index = (match[1] || 1) - 1;
 
                 if (index >= 0 && index < aReplacements.length) {
@@ -869,7 +810,7 @@
         <parameter name="aTextPairs"/>
         <body>
           <![CDATA[
-          // Get rid of all previous text
+
           while (aDescriptionElement.hasChildNodes())
             aDescriptionElement.firstChild.remove();
 
@@ -920,7 +861,7 @@
           let type = this.getAttribute("type");
           let types = new Set(type.split(/\s+/));
           let initialTypes = new Set(types);
-          // Remove types that should ultimately not be in the `type` string.
+
           types.delete("action");
           types.delete("autofill");
           types.delete("heuristic");
@@ -958,25 +899,15 @@
             } else if (action.type == "searchengine") {
               emphasiseUrl = false;
 
-              // The order here is not localizable, we default to appending
-              // "- Search with Engine" to the search string, to be able to
-              // properly generate emphasis pairs. That said, no localization
-              // changed the order while it was possible, so doesn't look like
-              // there's a strong need for that.
               let {engineName, searchSuggestion, searchQuery} = action.params;
               let engineStr =
                 this._stringBundle.formatStringFromName("searchWithEngine",
                                                         [engineName], 1);
               this._setUpDescription(this._actionText, engineStr, true);
 
-              // Make the title by generating an array of pairs and its
-              // corresponding interpolation string (e.g., "%1$S") to pass to
-              // _generateEmphasisPairs.
               let pairs;
               if (searchSuggestion) {
-                // Check if the search query appears in the suggestion.  It may
-                // not.  If it does, then emphasize the query in the suggestion
-                // and otherwise just include the suggestion without emphasis.
+
                 let idx = searchSuggestion.indexOf(searchQuery);
                 if (idx >= 0) {
                   pairs = [
@@ -997,12 +928,6 @@
               let interpStr = pairs.map((pair, i) => `%${i + 1}$S`).join("");
               title = this._generateEmphasisPairs(interpStr, pairs);
 
-              // If this is a default search match, we remove the image so we
-              // can style it ourselves with a generic search icon.
-              // We don't do this when matching an aliased search engine,
-              // because the icon helps with recognising which engine will be
-              // used (when using the default engine, we don't need that
-              // recognition).
               if (!action.params.alias && !initialTypes.has("favicon")) {
                 this.removeAttribute("image");
               }
@@ -1024,7 +949,6 @@
           }
           this.setAttribute("displayurl", displayUrl);
 
-          // Show the domain as the title if we don't have a title.
           if (!title) {
             title = displayUrl;
             try {
@@ -1038,11 +962,10 @@
           this._tags.setAttribute("empty", "true");
 
           if (type == "tag" || type == "bookmark-tag") {
-            // The title is separated from the tags by an endash
+
             let tags;
             [, title, tags] = title.match(/^(.+) \u2013 (.+)$/);
 
-            // Each tag is split by a comma in an undefined order, so sort it
             let sortedTags = tags.split(/\s*,\s*/).sort((a, b) => {
               return a.localeCompare(a);
             });
@@ -1055,11 +978,11 @@
               type = "bookmark";
             }
           } else if (type == "keyword") {
-            // Note that this is a moz-action with action.type == keyword.
+
             emphasiseUrl = false;
             let keywordArg = this.getAttribute("text").replace(/^[^\s]+\s*/, "");
             if (!keywordArg) {
-              // Treat keyword searches without arguments as visiturl actions.
+
               type = "visiturl";
               this.setAttribute("actiontype", "visiturl");
               let visitStr = this._stringBundle.GetStringFromName("visit");
@@ -1069,9 +992,7 @@
               let interpStr =
                 this._stringBundle.GetStringFromName("bookmarkKeywordSearch");
               title = this._generateEmphasisPairs(interpStr, pairs);
-              // The action box will be visible since this is a moz-action, but
-              // we want it to appear as if it were not visible, so set its text
-              // to the empty string.
+
               this._setUpDescription(this._actionText, "", false);
             }
           }
@@ -1103,6 +1024,31 @@
           ]]>
         </body>
       </method>
+	  
+      <method name="adjustSiteIconStart">
+        <parameter name="newStart"/>
+        <body>
+          <![CDATA[
+          if (typeof(newStart) != "number") {
+            this._typeIcon.style.removeProperty("-moz-margin-start");
+            return true;
+          }
+          let rect = this._siteIcon.getBoundingClientRect();
+          let dir = this.getAttribute("dir");
+          let delta = dir == "rtl" ? rect.right - newStart
+                                   : newStart - rect.left;
+          let px = this._typeIcon.style.MozMarginStart;
+          if (!px) {
+
+            let style = window.getComputedStyle(this._typeIcon);
+            px = dir == "rtl" ? style.marginRight : style.marginLeft;
+          }
+          let typeIconStart = Number(px.substr(0, px.length - 2));
+          this._typeIcon.style.MozMarginStart = (typeIconStart + delta) + "px";
+          return delta > 0;
+          ]]>
+        </body>
+      </method>
 
       <!-- This method truncates the displayed strings as necessary. -->
       <method name="_handleOverflow">
@@ -1116,25 +1062,19 @@
           let separatorURLActionWidth =
             separatorRect.width + Math.max(urlRect.width, actionRect.width);
 
-          // Total width for the title and URL/action is the width of the item
-          // minus the start of the title text minus a little extra padding.
-          // This extra padding amount is basically arbitrary but keeps the text
-          // from getting too close to the popup's edge.
           let extraPadding = 30;
-          let dir =
-            this.ownerDocument.defaultView.getComputedStyle(this).direction;
+          let dir = this.getAttribute("dir");
           let titleStart = dir == "rtl" ? itemRect.right - titleRect.right
                                         : titleRect.left - itemRect.left;
           let itemWidth = itemRect.width - titleStart - extraPadding;
 
           if (this._tags.hasAttribute("empty")) {
-            // The tags box is not displayed in this case.
+
             tagsRect.width = 0;
           }
 
           let titleTagsWidth = titleRect.width + tagsRect.width;
           if (titleTagsWidth + separatorURLActionWidth > itemWidth) {
-            // Title + tags + URL/action overflows the item width.
 
             // The percentage of the item width allocated to the title and tags.
             let titleTagsPct = 0.66;
@@ -1145,10 +1085,7 @@
               itemWidth * titleTagsPct
             );
             if (titleTagsWidth > titleTagsMaxWidth) {
-              // Title + tags overflows the max title + tags width.
 
-              // The percentage of the title + tags width allocated to the
-              // title.
               let titlePct = 0.33;
 
               let titleAvailable = titleTagsMaxWidth - tagsRect.width;
@@ -1190,8 +1127,6 @@
           if (!aUrl.startsWith("moz-action:"))
             return null;
 
-          // URL is in the format moz-action:ACTION,PARAMS
-          // Where PARAMS is a JSON encoded object.
           let [, type, params] = aUrl.match(/^moz-action:([^,]+),(.*)$/);
 
           let action = {
@@ -1204,10 +1139,6 @@
               action.params[key] = decodeURIComponent(action.params[key]);
             }
           } catch (e) {
-            // If this failed, we assume that params is not a JSON object, and
-            // is instead just a flat string. This will happen when
-            // UnifiedComplete is disabled - in which case, the param is always
-            // a URL.
             action.params = {
               url: params,
             }
@@ -1217,6 +1148,5 @@
         ]]></body>
       </method>
     </implementation>
-  </binding>
-	  
+  </binding>	  
 </bindings>
