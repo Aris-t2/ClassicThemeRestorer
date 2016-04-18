@@ -199,9 +199,6 @@
             return;
           }
 
-          this.mInput = aInput;
-          this.selectedIndex = -1;
-          this.view = aInput.controller.QueryInterface(Components.interfaces.nsITreeView);
           this.invalidate();
 		  
 		  var width = 300;
@@ -210,18 +207,9 @@
 			width = document.getElementById("urlbar").getBoundingClientRect().width;
 		  } catch(e){}
 
-		  var xOffset = 0;
-		  
-		  var ctr_small = Services.prefs.getBranch('extensions.classicthemerestorer.').getBoolPref('smallnavbut');
-		  var ctr_mbf = Services.prefs.getBranch('extensions.classicthemerestorer.').getBoolPref('backforward');
-		  
-		  if(ctr_small && !ctr_mbf) {
-		    width = width+1;
-		  }
-		  
 		  this.setAttribute("width", width);
 			
-          this.openPopup(aElement, "after_start", xOffset, -1, false, false);
+          this.openPopup(aElement, "after_start", 0, -1, false, false);
         ]]></body>
       </method>
 
@@ -1077,7 +1065,7 @@
           if (titleTagsWidth + separatorURLActionWidth > itemWidth) {
 
             // The percentage of the item width allocated to the title and tags.
-            let titleTagsPct = 0.66;
+            let titleTagsPct = 1.00;
 
             let titleTagsAvailable = itemWidth - separatorURLActionWidth;
             let titleTagsMaxWidth = Math.max(
@@ -1098,16 +1086,22 @@
                 tagsAvailable,
                 titleTagsMaxWidth * (1 - titlePct)
               );
-              this._titleText.style.maxWidth = titleMaxWidth + "px";
-              this._tagsText.style.maxWidth = tagsMaxWidth + "px";
+              this._titleText.style.maxWidth = (titleMaxWidth+20) + "px";
+              this._tagsText.style.maxWidth = (titleMaxWidth+20) + "px";
             }
             let urlActionMaxWidth = Math.max(
               itemWidth - titleTagsWidth,
               itemWidth * (1 - titleTagsPct)
             );
+			
+            let titleMaxWidth = Math.max(
+              (titleTagsMaxWidth - tagsRect.width),
+              titleTagsMaxWidth * 0.33
+            );
+
             urlActionMaxWidth -= separatorRect.width;
-            this._urlText.style.maxWidth = urlActionMaxWidth + "px";
-            this._actionText.style.maxWidth = urlActionMaxWidth + "px";
+            this._urlText.style.maxWidth = (titleMaxWidth+20) + "px";
+            this._actionText.style.maxWidth = (titleMaxWidth+20) + "px";
           }
         ]]></body>
       </method>

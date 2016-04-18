@@ -405,6 +405,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_ibinfoico').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_ibinfoico2').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_iblabels').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_html5warning').style.visibility = 'collapse';
 	}
 
 	if (this.appversion < 47) {

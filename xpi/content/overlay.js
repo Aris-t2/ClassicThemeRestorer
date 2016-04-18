@@ -68,6 +68,7 @@ classicthemerestorerjs.ctr = {
   stringBundle:			Services.strings.createBundle("chrome://classic_theme_restorer/locale/messages.file"),
   
   fullscreeduration:	false,
+  html5warning:			false,
   moveStarIntoUrlbar:	false,
   moveFeedIntoUrlbar:	false,
   altnewtabpageOn:		false,
@@ -166,7 +167,7 @@ classicthemerestorerjs.ctr = {
 	
 	// move 'Tools' menus dev tools into application buttons popup 
 	this.moveDevtoolsmenu();
-
+	
 	// CTR Preferences listener
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get
@@ -2188,6 +2189,25 @@ classicthemerestorerjs.ctr = {
 				  try {
 					Services.prefs.getBranch("full-screen-api.transition-duration.").setCharPref('enter','0 0');
 					Services.prefs.getBranch("full-screen-api.transition-duration.").setCharPref('leave','0 0');
+				  } catch(e){}
+				}
+			}
+		  break;
+		  
+		  case "html5warning":
+		    if(classicthemerestorerjs.ctr.appversion >= 45) {
+				if (branch.getBoolPref("html5warning")) {
+				  if (classicthemerestorerjs.ctr.html5warning == true) {
+					try {
+					  Services.prefs.getBranch("full-screen-api.warning.").setIntPref('timeout',3000);
+					  Services.prefs.getBranch("full-screen-api.warning.").setIntPref('delay',500);
+					} catch(e){}
+				  }
+				} else {
+				  classicthemerestorerjs.ctr.html5warning = true;
+				  try {
+					Services.prefs.getBranch("full-screen-api.warning.").setIntPref('timeout',0);
+					Services.prefs.getBranch("full-screen-api.warning.").setIntPref('delay',0);
 				  } catch(e){}
 				}
 			}

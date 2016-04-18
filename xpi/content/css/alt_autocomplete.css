@@ -14,7 +14,8 @@
 	  min-height: unset !important;
 	  height: unset !important;
 	  max-height: unset !important;
-	  padding: 4px 2px !important;
+	  padding: 4px 0px !important;
+	  border-radius: 0 !important;
 	}
 
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-separator {
@@ -29,15 +30,24 @@
 	  -moz-margin-start: -7px !important;
 	  margin-top:-2px !important;
 	}
-	
-	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem  .ac-url{
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-action,
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-url{
 	  -moz-margin-start: 21px !important;
 	}
 	
-	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem :-moz-any(.ac-title, .ac-title-text, .ac-tags, .ac-tags-text, .ac-url, .ac-text-overflow-container, .ac-url-text, .ac-action, .ac-text-overflow-container, .ac-action-text){
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-action[actiontype=searchengine]:not([selected]) {
+	  display: block !important;
+	}
+	
+	/*#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem :-moz-any(.ac-title, .ac-title-text, .ac-tags, .ac-tags-text, .ac-url, .ac-text-overflow-container, .ac-url-text, .ac-action, .ac-text-overflow-container, .ac-action-text){
 	  min-width: unset !important;
 	  width: unset !important;
 	  max-width: unset !important;
+	  text-overflow: ellipsis !important;
 	}
+	
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem :-moz-any(.ac-title, .ac-title-text, .ac-tags, .ac-tags-text, .ac-url, .ac-text-overflow-container, .ac-url-text, .ac-action, .ac-text-overflow-container, .ac-action-text) *{
+	  text-overflow: ellipsis !important;
+	}*/
 
 }

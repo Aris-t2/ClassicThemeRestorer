@@ -193,6 +193,7 @@ pref("extensions.classicthemerestorer.tabthrobber","throbber_default");
 pref("extensions.classicthemerestorer.bmanimation",true);
 pref("extensions.classicthemerestorer.pananimation",true);
 pref("extensions.classicthemerestorer.fsaduration",true);
+pref("extensions.classicthemerestorer.html5warning",true);
 
 // CTR area
 pref("extensions.classicthemerestorer.toolsitem",true);

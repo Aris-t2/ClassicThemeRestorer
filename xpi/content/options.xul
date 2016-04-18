@@ -284,6 +284,7 @@
 		<preference id="ctraddon_dlanimate"		name="browser.download.animateNotifications"		type="bool"		instantApply="true"/>
 		<preference id="ctraddon_fsanimation"	name="browser.fullscreen.animate"					type="bool"		instantApply="true"/>
 		<preference id="ctraddon_fsaduration"	name="extensions.classicthemerestorer.fsaduration"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_html5warning"	name="extensions.classicthemerestorer.html5warning"	type="bool"		instantApply="true"/>
 
 		<preference id="ctraddon_closeabarbut"	name="extensions.classicthemerestorer.closeabarbut"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_toolsitem"		name="extensions.classicthemerestorer.toolsitem"	type="bool"		instantApply="true"/>
@@ -871,6 +872,7 @@
 		<description class="ctraddonsuboption">&Ctr_stoprel1;</description>
 
 		<checkbox label="&Ctr_wincontrols;"		preference="ctraddon_wincontrols" id="ctraddon_wincontrols"/>
+		<checkbox label="&Ctr_html5warning;"	preference="ctraddon_html5warning" id="ctraddon_pw_html5warning"/>
 
 		<description class="ctraddon_font1">&Ctr_emptygfavico;</description>
 		<radiogroup preference="ctraddon_emptyfavico_g" id="ctraddon_pw_emptyfavico_g" orient="horizontal" value="">

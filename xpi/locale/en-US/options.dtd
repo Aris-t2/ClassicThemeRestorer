@@ -13,7 +13,7 @@
 <!ENTITY Ctr_puibseparator	"Separator (for main panel menu button)">
 <!ENTITY Ctr_navthrobber	"Activity Indicator">
 <!ENTITY Ctr_sidebarbutton	"(Sidebar)">
-<!ENTITY Ctr_windowcontrols	"Min/max/close (Fullscreen)">
+<!ENTITY Ctr_windowcontrols	"Min/max/close (full screen)">
 <!ENTITY Ctr_rr				"Restart required!">
 <!ENTITY Ctr_window			"window">
 
@@ -61,7 +61,6 @@
 <!ENTITY Ctr_emptytfavico_n	"None">
 <!ENTITY Ctr_emptytfavico_g	"Generic">
 <!ENTITY Ctr_noemptypticon	"Remove empty favicon from pinned tabs">
-<!ENTITY Ctr_e10stab_notd	"E10s tabs: remove underline">
 <!ENTITY Ctr_closetab_0		"Tab Close">
 <!ENTITY Ctr_closetab_1		"On active tab only">
 <!ENTITY Ctr_closetab_2		"Nowhere">
@@ -128,7 +127,8 @@
 <!ENTITY Ctr_altoptionsi	"The simulated options window is not a dialog anymore but a 'browser window' with all toolbars hidden. The 'Use Current Page' feature only adds urls of pages opened in the current window, which is only 'about:preferences' in this case. The 'options' toolbar button gets replaced by a new one to be able to open options in a window.">
 <!ENTITY Ctr_options_rem	"Remember last selected category">
 <!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
-<!ENTITY Ctr_wincontrols	"Movable fullscreen window controls">
+<!ENTITY Ctr_wincontrols	"Movable full screen window controls">
+<!ENTITY Ctr_html5warning	"HTML5 full screen warning">
 <!ENTITY Ctr_oldtoplevimg	"'Top level domain' images: classic appearance">
 <!ENTITY Ctr_altalertbox	"'Alert box': alternative appearance">
 <!ENTITY Ctr_emptygfavico	"Replace generic favicon">
@@ -303,7 +303,7 @@
 <!ENTITY Ctr_navbarpad_l	"Left:">
 <!ENTITY Ctr_navbarpad_r	"Right:">
 <!ENTITY Ctr_nobookbarbg	"Remove background color">
-<!ENTITY Ctr_bookbarfs		"In fullscreen mode">
+<!ENTITY Ctr_bookbarfs		"In full screen mode">
 <!ENTITY Ctr_nonavbarbg		"Remove background color">
 <!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
 <!ENTITY Ctr_nonavbarbg2	"All toolbars in 'Beyond Australis' add-on's 'Slim Chrome' are affected.">
@@ -317,7 +317,7 @@
 <!ENTITY Ctr_closeabarbut	"Add-on bar: hide close button">
 <!ENTITY Ctr_highaddonsbar	"Increase height">
 <!ENTITY Ctr_lessaddonsbar	"Decrease height">
-<!ENTITY Ctr_addonbarfs		"In fullscreen mode">
+<!ENTITY Ctr_addonbarfs		"In full screen mode">
 
 <!ENTITY Ctr_animation		"Animation">
 <!ENTITY Ctr_tabthrobber	"Default loading image">
@@ -325,8 +325,8 @@
 <!ENTITY Ctr_pananimation	"Panel opening animation">
 <!ENTITY Ctr_tabanimation	"Tab closing/opening animation (about:config preference)">
 <!ENTITY Ctr_dlanimation	"'Download notification' animation (about:config preference)">
-<!ENTITY Ctr_fsanimation	"Fullscreen animations (about:config preference)">
-<!ENTITY Ctr_fsaduration	"Fullscreen animations for HTML5 content (about:config preferences)">
+<!ENTITY Ctr_fsanimation	"Full screen animations (about:config preference)">
+<!ENTITY Ctr_fsaduration	"Full screen animations for HTML5 content (about:config preferences)">
 
 <!ENTITY Ctr_toolsitem		"Menuitem in tools menu">
 <!ENTITY Ctr_appmenuitem	"Menuitem in appbuttons menu">
