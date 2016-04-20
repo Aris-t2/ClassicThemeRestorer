@@ -9,25 +9,25 @@
 	#nav-bar #forward-button:not(:hover) > .toolbarbutton-icon,
 	#nav-bar #back-button:hover[disabled] > .toolbarbutton-icon,
 	#nav-bar #forward-button:hover[disabled] > .toolbarbutton-icon{
-		-moz-appearance: none !important;
-		border: 1px solid transparent !important;
-		box-shadow: none !important;
-		background: none !important;
-		border-radius: 2.5px !important;
+	  -moz-appearance: none !important;
+	  border: 1px solid transparent !important;
+	  box-shadow: none !important;
+	  background: none !important;
+	  border-radius: 2.5px !important;
 	}
 	#nav-bar #forward-button:not(:hover) > .toolbarbutton-icon,
 	#nav-bar #forward-button:hover[disabled] > .toolbarbutton-icon{
-		border: 1px solid transparent !important;
+	  border: 1px solid transparent !important;
 	}
 	
 	#nav-bar #back-button:hover > .toolbarbutton-icon,
 	#nav-bar #forward-button:hover > .toolbarbutton-icon{
-		-moz-appearance: none !important;
-		border: 1px solid #c8d4e0 !important;
-		border-radius: 2.5px !important;
-		box-shadow: none !important;
-		transition-property: none !important;
-        transition-duration: 0ms !important;
+	  -moz-appearance: none !important;
+	  border: 1px solid #c8d4e0 !important;
+	  border-radius: 2.5px !important;
+	  box-shadow: none !important;
+	  transition-property: none !important;
+      transition-duration: 0ms !important;
 	}
 
 	#nav-bar #forward-button:not(:hover) > .toolbarbutton-icon{

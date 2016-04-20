@@ -2727,16 +2727,21 @@ classicthemerestorerjs.ctr = {
 	
   	var observer = new MutationObserver(function(mutations) {
 	  mutations.forEach(function(mutation) {
-		if(!document.querySelector('#urlbar-container').getAttribute('cui-areatype')) {
-		  CustomizableUI.addWidgetToArea("urlbar-container", CustomizableUI.AREA_NAVBAR);
-		}
-	    else if (document.querySelector('#urlbar-container').getAttribute('cui-areatype')=="menu-panel") {
-		  CustomizableUI.addWidgetToArea("urlbar-container", CustomizableUI.AREA_NAVBAR);
-		}
+		try {
+			if(/*document.querySelector('#urlbar-container')==null
+				&& document.querySelector('#main-window').getAttribute('chromehidden')=="menubar toolbar directories extrachrome "
+					||*/ !document.querySelector('#urlbar-container').getAttribute('cui-areatype')) {
+			  CustomizableUI.addWidgetToArea("urlbar-container", CustomizableUI.AREA_NAVBAR);
+			}
+			else if (document.querySelector('#urlbar-container').getAttribute('cui-areatype')=="menu-panel") {
+			  CustomizableUI.addWidgetToArea("urlbar-container", CustomizableUI.AREA_NAVBAR);
+			}
+		} catch(e){}
 	  });    
 	});
 	
 	observer.observe(document.querySelector('#urlbar-container'), { attributes: true, attributeFilter: ['cui-areatype'] });
+	
   },
 
   // create 0-20 additional toolbars on startup
