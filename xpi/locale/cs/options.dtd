@@ -57,9 +57,9 @@
 <!ENTITY Ctr_square_edges	"Hranaté horní rohy">
 <!ENTITY Ctr_tttitlebar		"Název panelu v &brandShortName; liště aplikace">
 <!ENTITY Ctr_tabinsertion	"Vložit související panel za aktuální (about:config)">
-<!ENTITY Ctr_emptytfavico	"Show favicon (if a site does not offer one)">
-<!ENTITY Ctr_emptytfavico_n	"None">
-<!ENTITY Ctr_emptytfavico_g	"Generic">
+<!ENTITY Ctr_emptytfavico	"Zobrazit faviconu (v případě, že ji stránka nenabízí)">
+<!ENTITY Ctr_emptytfavico_n	"Žádná">
+<!ENTITY Ctr_emptytfavico_g	"Výchozí">
 <!ENTITY Ctr_noemptypticon	"Odebrat prázdnou faviconu z připnutého panelu">
 <!ENTITY Ctr_closetab_0		"Zavřít panel">
 <!ENTITY Ctr_closetab_1		"Pouze na aktivním panelu">
@@ -70,7 +70,7 @@
 <!ENTITY Ctr_closetab_hfot	"Skrýt pro jeden viditelný panel">
 <!ENTITY Ctr_closei_def		"Defaultní icony">
 <!ENTITY Ctr_closeonleft	"Alternativní pozice na panelu">
-<!ENTITY Ctr_closetabbig	"Bigger icon (20x20px)">
+<!ENTITY Ctr_closetabbig	"Větší ikona (20x20px)">
 <!ENTITY Ctr_close_wwltab	"Zavřít okno s posledním viditelným panelem (about:config)">
 
 <!ENTITY Ctr_hctpinfotab	"Některá nastavení nejsou kompatibilní s rozšířením 'Hide Caption Titlebar Plus'.">
@@ -97,7 +97,7 @@
 <!ENTITY Ctr_appbuttonc_pu	"Fialové tlačítko">
 <!ENTITY Ctr_appbuttonc_wh	"Bílé tlačítko">
 <!ENTITY Ctr_appbuttonc_cu	"Zvolit barvu tlačítka">
-<!ENTITY Ctr_appbuttonct	"Custom button color for button on toolbar">
+<!ENTITY Ctr_appbuttonct	"Vlastní barva tlačítka a liště">
 <!ENTITY Ctr_appbuttonI1	"Doporučený restart">
 <!ENTITY Ctr_appbuttonI1e	"Není viditelné v záhlaví okna Windows OS, pouze v záhlaví okna &brandShortName;u!">
 <!ENTITY Ctr_appbuttonI2	"Barvy tlačítka jsou viditelné pouze v záhlaví okna nebo liště s panely!">
@@ -128,10 +128,10 @@
 <!ENTITY Ctr_options_rem	"Pamatovat poslední zvolenou kategorii">
 <!ENTITY Ctr_svgfilters		"SVG barvy pro defaultní ikony tlačítek lišty">
 <!ENTITY Ctr_wincontrols	"Přesunutelné ovládací prvky okna v režimu celé obrazovky">
-<!ENTITY Ctr_html5warning	"HTML5 full screen warning">
+<!ENTITY Ctr_html5warning	"Varování HTML5 při full screenu">
 <!ENTITY Ctr_oldtoplevimg	"'Top level domain' obrázků: klasický vzhled">
 <!ENTITY Ctr_altalertbox	"'Alert box': alternativní vzhled">
-<!ENTITY Ctr_emptygfavico	"Replace generic favicon">
+<!ENTITY Ctr_emptygfavico	"Nahradit původní faviconu">
 <!ENTITY Ctr_mstatusbar		"Přesunutelný stavový řádek">
 <!ENTITY Ctr_mstatusbars4e	"Stavový řádek je nastaven pomocí rozšíření 'Status-4-Evar'">
 <!ENTITY Ctr_mstatusbartpp	"Stavový řádek je nastaven pomocí rozšíření 'ThePuzzlePiece'">
@@ -154,33 +154,33 @@
 <!ENTITY Ctr_nav_txt_ico1	"Zobrazit velké ikony">
 <!ENTITY Ctr_nav_txt_ico2	"Zobrazit ikony a text">
 <!ENTITY Ctr_nav_txt_ico3	"Zobrazit pouze text">
-<!ENTITY Ctr_nav_txt_exp	"Classic attributes (experimental):">
+<!ENTITY Ctr_nav_txt_exp	"Klasické atributy (experimentální):">
 <!ENTITY Ctr_iat_notf_vt	"S výjimkou svislých lišt">
 <!ENTITY Ctr_cpanelmenus	"Nabídky panelů: kompaktní zobrazení (záložky, historie atd.)">
 <!ENTITY Ctr_hidezoomres	"Přiblížit prvky na liště: skrýt tlačítko pro obnovení lupy">
 <!ENTITY Ctr_alt_newtabp	"Nový panel (about:newtab): alternativní vzhled">
 <!ENTITY Ctr_ctroldsearch	"Starý styl vyhledávání">
 <!ENTITY Ctr_ctroldsearchc	"Po vyhledávání vyčistit pole hledání">
-<!ENTITY Ctr_search_oit		"Open search in new tab (about:config preference)">
-<!ENTITY Ctr_osearch_meoit	"Middle-clicks: search in new 'foreground tab'">
-<!ENTITY Ctr_osearch_dm		"Small dropmarker">
+<!ENTITY Ctr_search_oit		"Otevřít vyhledávání v novém panelu (předvolba about:config)">
+<!ENTITY Ctr_osearch_meoit	"Klik kolečkem myši: prohledávat nové panely 'na pozadí'">
+<!ENTITY Ctr_osearch_dm		"Malá rozevírací šipka">
 <!ENTITY Ctr_addonmanager	"Správce rozšíření">
 <!ENTITY Ctr_alt_addonsp	"Stránka rozšíření lišty 'další info': alternativní vzhled">
 <!ENTITY Ctr_alt_addonsm	"Správce rozšíření: alternativní vzhled">
-<!ENTITY Ctr_am_nowarning	"Seznam Správce rozšíření: skrývat varování">
+<!ENTITY Ctr_am_nowarning	"Správce rozšíření: skrývat varování">
 <!ENTITY Ctr_am_compact		"Správce doplňků: kompaktní vzhled">
 <!ENTITY Ctr_am_compact2	"Kompaktní vzhled +">
 <!ENTITY Ctr_am_highlight	"Správce rozšíření: zvýraznit položku po najetí myší">
-<!ENTITY Ctr_am_buticons	"Add-on lists: replace button labels with icons">
-<!ENTITY Ctr_am_hovshowb	"Add-on lists: only show buttons on 'hover'">
-<!ENTITY Ctr_addonversion	"Seznam Správce rozšíření: zobrazit verzi rozšíření">
+<!ENTITY Ctr_am_buticons	"Správce rozšíření: nahradit text tlačítka ikonou">
+<!ENTITY Ctr_am_hovshowb	"Správce rozšíření: tlačítko zobrazit jen po najetí myši">
+<!ENTITY Ctr_addonversion	"Správce rozšíření: zobrazit verzi rozšíření">
 <!ENTITY Ctr_xpinstallui	"Správce rozšíření: starý vzhled (předvolba about:config)">
 <!ENTITY Ctr_bmbutton		"Tlačítko menu záložek">
-<!ENTITY Ctr_hiderecentbm	"Bookmarks popup: hide recently added bookmarks">
-<!ENTITY Ctr_hideeditbm		"Bookmarks star: hide popup (if page is not bookmarked)">
+<!ENTITY Ctr_hiderecentbm	"Záložky (bublina): skrýt posledně přidané záložky">
+<!ENTITY Ctr_hideeditbm		"Hvězdička záložek: skrýt bublinu (pokud stránka není v záložkách)">
 <!ENTITY Ctr_bmbutpanelm	"Popup: panel menu vzhledu">
 <!ENTITY Ctr_bmbunsortbm	"Popup: 'Netříděné záložky' v submenu">
-<!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
+<!ENTITY Ctr_bmbunsortbm2	"Menu nad záložkami">
 <!ENTITY Ctr_bmbviewbmtb	"Popup: ukázat 'Zobrazit lištu'">
 <!ENTITY Ctr_bmbnounsort	"Popup: skrýt 'Netříděné záložky'">
 <!ENTITY Ctr_bmbutnotext	"Skrýt návěští na liště záložek">
@@ -231,23 +231,23 @@
 <!ENTITY Ctr_starinurlinfo	"Skrýt tlačítka menu záložek">
 <!ENTITY Ctr_feedinurl		"Tlačítko kanálu">
 <!ENTITY Ctr_hideurelstop	"Skrýt tlačítka zastavit &amp; obnovit">
-<!ENTITY Ctr_hideurelstop2	"Always show 'go' button">
+<!ENTITY Ctr_hideurelstop2	"Vždy zobrazit tlačítko 'přejít'">
 <!ENTITY Ctr_hideurlgo		"Skrýt tlačítko 'přejít'">
 <!ENTITY Ctr_hideurlsrg		"Skrýt tlačítka 'obnovit, zastavit &amp; přejít' oddělovače &amp; mezery">
 <!ENTITY Ctr_urlbardropm	"Přesunout šipku na poslední pozici vpravo">
-<!ENTITY Ctr_urlbardropm2	"Make dropmarker always visible">
+<!ENTITY Ctr_urlbardropm2	"Rozevírací šipka vždy viditelná">
 <!ENTITY Ctr_altreaderico	"Alternativní ikona 'Readeru'">
-<!ENTITY Ctr_altautocompl	"Alternative 'autocomplete popup' (experimental)">
+<!ENTITY Ctr_altautocompl	"Alternativní 'bublina autokompletace' (experimentální)">
 <!ENTITY Ctr_hideprbutton	"Nezobrazovat upozornění při blokování vyskakovacích oken">
-<!ENTITY Ctr_urlbar_uc		"Disable 'Unified autocomplete' feature (about:config preference)">
+<!ENTITY Ctr_urlbar_uc		"Zakázat automatické doplňování (předvolba about:config)">
 <!ENTITY Ctr_locsearchbw10	"Snížit výšku adresního řádku a vyhledávače (experimentální)">
 <!ENTITY Ctr_urlbar_ib		"Tlačítko identity webu (identity box)">
 <!ENTITY Ctr_ib_nohovcolor	"Nezobrazovat šedou barvu při přejetí myší">
 <!ENTITY Ctr_ib_graycolor	"Šedá barva pro neznámou identitu a stránky chrome">
 <!ENTITY Ctr_verifiedcolors	"Barvy tlačítka pro ověřené stránky, zabezpečené a nezabezpečené připojení">
-<!ENTITY Ctr_ibinfoico		"Replace 'i'-icon with globe icon">
-<!ENTITY Ctr_ibinfoico2		"Hide 'i'-icon (if possible)">
-<!ENTITY Ctr_iblabels		"Hide labels">
+<!ENTITY Ctr_ibinfoico		"Nahradit 'i'-ikonu za ikonu globu">
+<!ENTITY Ctr_ibinfoico2		"Skrýt 'i'-ikonu (pokud možno)">
+<!ENTITY Ctr_iblabels		"Skrýt štítky">
 <!ENTITY Ctr_faviconurl		"Favicona">
 <!ENTITY Ctr_padlock		"Zámek">
 <!ENTITY Ctr_padlock_hid	"skrytý">
@@ -255,7 +255,7 @@
 <!ENTITY Ctr_padlock_cla	"klasický">
 <!ENTITY Ctr_padlock_mod	"moderní">
 <!ENTITY Ctr_padlock_ext	"'&brandShortName;' ikona pro validní chrome stránky">
-<!ENTITY Ctr_icopageinfo	"Favicon/globe-/'i'-icon: 'click' opens 'page info window'">
+<!ENTITY Ctr_icopageinfo	"Favicona/globe-/'i'-icon: 'klik' otevře okno 'Informace o stránce'">
 <!ENTITY Ctr_lbsbsize		"Volitelná šířka pro adresní řádek a vyhledávač">
 <!ENTITY Ctr_searchbar		"Vyhledávač">
 <!ENTITY Ctr_lbsugresi		"Zobrazit počet možných návrhů (bez posuvníku)">
@@ -296,7 +296,7 @@
 
 <!ENTITY Ctr_aerocolors		"Barvy 'Blue Aero' pro hlavní lištu a panely">
 <!ENTITY Ctr_transpttbw10	"Lišta title/menu/tabs: odstranit barvu pozadí">
-<!ENTITY Ctr_transpttbew10	"Additional tweaks for some OS themes">
+<!ENTITY Ctr_transpttbew10	"Další tweaky pro některá témata OS">
 <!ENTITY Ctr_transptcw10	"Skrýt defaultní OS tlačítka min/max/close">
 <!ENTITY Ctr_hidenavbar		"Navigační lišta: skrýt lištu">
 <!ENTITY Ctr_navbarpad		"Přidat místo po stranách">
@@ -316,7 +316,7 @@
 
 <!ENTITY Ctr_closeabarbut	"Skrýt tlačítko zavření lišty doplňků">
 <!ENTITY Ctr_highaddonsbar	"Zvětšit výšku">
-<!ENTITY Ctr_lessaddonsbar	"Decrease height">
+<!ENTITY Ctr_lessaddonsbar	"Snížit výšku">
 <!ENTITY Ctr_addonbarfs		"V celoobrazovkovém módu (fullscreen)">
 
 <!ENTITY Ctr_animation		"Animace">
