@@ -420,7 +420,7 @@
 		
 		<hbox align="center">
 		  <checkbox label="&Ctr_tabminheight;"	preference="ctraddon_ctabheightcb" id="ctraddon_pw_tab_ctabheightcb"/>
-		  <textbox size="2" maxlength="2" preference="ctraddon_ctabheight" type="number" min="18" max="50" id="ctraddon_pw_tab_ctabheight"/>
+		  <textbox size="2" maxlength="3" preference="ctraddon_ctabheight" type="number" min="18" max="250" id="ctraddon_pw_tab_ctabheight"/>
 		  <label value="px"/>
 		</hbox>
 		<description id="ctraddon_pw_tabheightinfo" class="ctraddon_topic">&Ctr_tabheightinfo;</description>

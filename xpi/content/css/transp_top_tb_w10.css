@@ -10,7 +10,7 @@
 	@media (-moz-windows-theme:aero) {
 	  #main-window[fx40plus="true"]:not([customizing]) .titlebar-button,
 	  #main-window[fx40plus="true"]:not([customizing]) .titlebar-button:not(#titlebar-close) > .toolbarbutton-icon{
-		opacity: 0 !important;
+		opacity: 0.01 !important;
 	  }
 	  #main-window[fx40plus="true"]:not([customizing]) .titlebar-button:hover {
 		opacity: 1 !important;
@@ -20,14 +20,14 @@
 	/* allows titlebar colors for caption buttons for non OS default visual styles */
 	@media not all and (-moz-windows-theme:aero) {
       #main-window[fx40plus="true"]:not([customizing]) .titlebar-button{
-        opacity: 0 !important;
+        opacity: 0.01 !important;
         background: black !important;
       }
       #main-window[fx40plus="true"]:not([customizing]) #titlebar-close {
         background: #e81123 !important;
       }
       #main-window[fx40plus="true"]:not([customizing]) .titlebar-button:not(#titlebar-close) > .toolbarbutton-icon {
-        opacity: 0 !important;
+        opacity: 0.01 !important;
       }
 	  #main-window[fx40plus="true"]:not([customizing]) .titlebar-button:hover {
         opacity: 0.1 !important;
