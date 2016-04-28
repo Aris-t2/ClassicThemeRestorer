@@ -7,6 +7,7 @@
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings.xml#urlbar-rich-result-popup") !important;
 	}
 
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings.xml#autocomplete-richlistitem") !important;
 	  -moz-box-orient: vertical !important;
@@ -18,36 +19,32 @@
 	  border-radius: 0 !important;
 	}
 
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-separator,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-separator {
 	  display:none !important;
 	}
 
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-type-icon,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-type-icon{
 	  -moz-margin-start: -21px !important;
 	}
 
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-title,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-title{
 	  -moz-margin-start: -7px !important;
 	  margin-top:-2px !important;
 	}
+
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-action,
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-url,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-action,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-url{
 	  -moz-margin-start: 21px !important;
 	}
 	
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-action[actiontype=searchengine]:not([selected]),
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-action[actiontype=searchengine]:not([selected]) {
 	  display: block !important;
 	}
-	
-	/*#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem :-moz-any(.ac-title, .ac-title-text, .ac-tags, .ac-tags-text, .ac-url, .ac-text-overflow-container, .ac-url-text, .ac-action, .ac-text-overflow-container, .ac-action-text){
-	  min-width: unset !important;
-	  width: unset !important;
-	  max-width: unset !important;
-	  text-overflow: ellipsis !important;
-	}
-	
-	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem :-moz-any(.ac-title, .ac-title-text, .ac-tags, .ac-tags-text, .ac-url, .ac-text-overflow-container, .ac-url-text, .ac-action, .ac-text-overflow-container, .ac-action-text) *{
-	  text-overflow: ellipsis !important;
-	}*/
 
 }

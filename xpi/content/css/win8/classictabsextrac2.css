@@ -145,5 +145,12 @@
 	  -moz-margin-end:-15px !important;
 	}
 	/**/
+	
+	@media (-moz-os-version: windows-win10) {
+        #main-window[fx47plus="true"][sizemode="maximized"] .titlebar-button {
+          padding-top: 7px !important;
+		  padding-bottom: 7px !important;
+        }
+	}
 
 }

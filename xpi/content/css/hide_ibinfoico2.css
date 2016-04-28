@@ -13,15 +13,28 @@
       -moz-margin-end: -2px !important;
 	}
 
-	#urlbar[pageproxystate="valid"] .verifiedDomain #connection-icon,
-	#urlbar[pageproxystate="valid"] .verifiedIdentity #connection-icon,
-	#urlbar[pageproxystate="valid"] .insecureLoginForms #connection-icon,
-	#urlbar[pageproxystate="valid"] .mixedActiveContent #connection-icon,
-	#urlbar[pageproxystate="valid"] .weakCipher #connection-icon,
-	#urlbar[pageproxystate="valid"] .mixedDisplayContent #connection-icon,
-	#urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked #connection-icon,
-	#urlbar[pageproxystate="valid"] .mixedActiveBlocked #connection-icon {
+	#urlbar[pageproxystate="valid"] .verifiedDomain #tracking-protection-icon[state="blocked-tracking-content"],
+	#urlbar[pageproxystate="valid"] .verifiedIdentity #tracking-protection-icon[state="blocked-tracking-content"],
+	#urlbar[pageproxystate="valid"] .insecureLoginForms #tracking-protection-icon[state="blocked-tracking-content"],
+	#urlbar[pageproxystate="valid"] .mixedActiveContent #tracking-protection-icon[state="blocked-tracking-content"],
+	#urlbar[pageproxystate="valid"] .weakCipher #tracking-protection-icon[state="blocked-tracking-content"],
+	#urlbar[pageproxystate="valid"] .mixedDisplayContent #tracking-protection-icon[state="blocked-tracking-content"],
+	#urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked #tracking-protection-icon[state="blocked-tracking-content"],
+	#urlbar[pageproxystate="valid"] .mixedActiveBlocked #tracking-protection-icon[state="blocked-tracking-content"] {
 	  -moz-margin-start: -14px !important;
       -moz-margin-end: 1px !important;
 	}
+ 
+	#urlbar[pageproxystate="valid"] .verifiedDomain #tracking-protection-icon:not([state="blocked-tracking-content"]) + #connection-icon,
+	#urlbar[pageproxystate="valid"] .verifiedIdentity #tracking-protection-icon:not([state="blocked-tracking-content"]) + #connection-icon,
+	#urlbar[pageproxystate="valid"] .insecureLoginForms #tracking-protection-icon:not([state="blocked-tracking-content"]) + #connection-icon,
+	#urlbar[pageproxystate="valid"] .mixedActiveContent #tracking-protection-icon:not([state="blocked-tracking-content"]) + #connection-icon,
+	#urlbar[pageproxystate="valid"] .weakCipher #tracking-protection-icon:not([state="blocked-tracking-content"]) + #connection-icon,
+	#urlbar[pageproxystate="valid"] .mixedDisplayContent #tracking-protection-icon:not([state="blocked-tracking-content"]) + #connection-icon,
+	#urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked #tracking-protection-icon:not([state="blocked-tracking-content"]) + #connection-icon,
+	#urlbar[pageproxystate="valid"] .mixedActiveBlocked #tracking-protection-icon:not([state="blocked-tracking-content"]) + #connection-icon {
+	  -moz-margin-start: -14px !important;
+      -moz-margin-end: 1px !important;
+	}
+
 }

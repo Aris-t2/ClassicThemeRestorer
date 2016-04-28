@@ -118,6 +118,7 @@ classicthemerestorerjs.ctr = {
 	try{if (this.appversion >= 44) document.getElementById("main-window").setAttribute('fx44plus',true);} catch(e){}
 	try{if (this.appversion >= 45) document.getElementById("main-window").setAttribute('fx45plus',true);} catch(e){}
 	try{if (this.appversion >= 46) document.getElementById("main-window").setAttribute('fx46plus',true);} catch(e){}
+	try{if (this.appversion >= 47) document.getElementById("main-window").setAttribute('fx47plus',true);} catch(e){}
 
 	// add CTR version number to '#main-window' node, so other add-ons/themes can easier distinguish between versions
 	AddonManager.getAddonByID('ClassicThemeRestorer@ArisT2Noia4dev', function(addon) {
