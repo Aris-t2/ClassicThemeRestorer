@@ -60,6 +60,7 @@ pref("extensions.classicthemerestorer.ctroldsearch",false);
 pref("extensions.classicthemerestorer.ctroldsearchc",false);
 pref("extensions.classicthemerestorer.osearch_meoit",false);
 pref("extensions.classicthemerestorer.osearch_dm",false);
+pref("extensions.classicthemerestorer.osearch_iwidth",true);
 pref("extensions.classicthemerestorer.addonversion",true);
 pref("extensions.classicthemerestorer.alt_addonsm",false);
 pref("extensions.classicthemerestorer.am_nowarning",false);

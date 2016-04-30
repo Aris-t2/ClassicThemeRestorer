@@ -309,17 +309,18 @@
               popup.removeChild(items[i]);
           }
 		  
-		  var width = 100;
-		  
-		  try{
-			width = document.getElementById("searchbar").getBoundingClientRect().width-3;
-		  } catch(e){}
-		  
-		  if(Services.appinfo.OS=="Darwin")
-			width = width-6;
+		  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("osearch_iwidth")) {
+			  var width = 100;
+			  
+			  try{
+				width = document.getElementById("searchbar").getBoundingClientRect().width-3;
+			  } catch(e){}
+			  
+			  if(Services.appinfo.OS=="Darwin")
+				width = width-6;
 
-          popup.setAttribute("width", width);
-
+			  popup.setAttribute("width", width);
+		  }
 
           var addengines = gBrowser.selectedBrowser.engines;
 		  	  
@@ -696,29 +697,43 @@
             popup.showImageColumn = this.showImageColumn;
 
             document.popupNode = null;
-
+			
+			var isRTL = getComputedStyle(this, "").direction == "rtl";
             var outerRect = this.getBoundingClientRect();
             var innerRect = this.inputField.getBoundingClientRect();
 			
-			var width = 100;
-			var xOffset = -35;
-		  
-			try{
-			  width = document.getElementById("searchbar").getBoundingClientRect().width-3;
-			} catch(e){}
+			var xOffset = 0;
 			
-			if(Services.appinfo.OS=="Darwin") {
-			  width = width-6;
-			  xOffset = -36;
-			} else if (Services.appinfo.OS!="Darwin" && Services.appinfo.OS!="WINNT") {
-			  width = width-2;
-			  xOffset = -36;
-			} else if (Services.appinfo.OS=="WINNT" && navigator.oscpu == "Windows NT 10.0") {
-			  xOffset = -36;
-			  width = width+1;
-			}
+			if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("osearch_iwidth")) {
+			
+				var width = 100;
+				xOffset = -35;
+			  
+				try{
+				  width = document.getElementById("searchbar").getBoundingClientRect().width-3;
+				} catch(e){}
+				
+				if(Services.appinfo.OS=="Darwin") {
+				  width = width-6;
+				  xOffset = -36;
+				} else if (Services.appinfo.OS!="Darwin" && Services.appinfo.OS!="WINNT") {
+				  width = width-2;
+				  xOffset = -36;
+				} else if (Services.appinfo.OS=="WINNT" && navigator.oscpu == "Windows NT 10.0") {
+				  xOffset = -36;
+				  width = width+1;
+				}
 
-            popup.setAttribute("width", width);
+				popup.setAttribute("width", width);
+
+			} else {
+				if (isRTL) {
+				  var width = innerRect.right - outerRect.left;
+				} else {
+				  var width = outerRect.right - innerRect.left;
+				}
+				popup.setAttribute("width", width > 100 ? width : 100);
+			}
 
             var yOffset = outerRect.bottom - innerRect.bottom;
             popup.openPopup(this.inputField, "after_start", xOffset, yOffset, false, false);
