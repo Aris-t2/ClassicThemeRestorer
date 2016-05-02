@@ -119,6 +119,7 @@ classicthemerestorerjs.ctr = {
 	try{if (this.appversion >= 45) document.getElementById("main-window").setAttribute('fx45plus',true);} catch(e){}
 	try{if (this.appversion >= 46) document.getElementById("main-window").setAttribute('fx46plus',true);} catch(e){}
 	try{if (this.appversion >= 47) document.getElementById("main-window").setAttribute('fx47plus',true);} catch(e){}
+	try{if (this.appversion >= 48) document.getElementById("main-window").setAttribute('fx48plus',true);} catch(e){}
 
 	// add CTR version number to '#main-window' node, so other add-ons/themes can easier distinguish between versions
 	AddonManager.getAddonByID('ClassicThemeRestorer@ArisT2Noia4dev', function(addon) {
@@ -2811,7 +2812,7 @@ classicthemerestorerjs.ctr = {
 	// NoiaButtons
 	var NBListener = {
 	   onEnabled: function(addon) {
-		  if(addon.id == 'NoiaButtons@ArisT2_Noia4dev') { 
+		  if(addon.id == 'NoiaButtons@ArisT2_Noia4dev') {
 		  
 		    if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("smallnavbut"))
 			  Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref("smallnavbut",false);
@@ -2873,6 +2874,17 @@ classicthemerestorerjs.ctr = {
 	     try{
 		   document.getElementById("main-window").setAttribute('colorfultabs',true);
 		 } catch(e){}
+		 
+	   }
+	  });
+	},300);
+	
+	// Searchbar autoresizer add-on
+	setTimeout(function(){
+	  AddonManager.getAddonByID('{655397ca-4766-496b-b7a8-3a5b176ee4c2}', function(addon) {
+	   if(addon && addon.isActive) {
+	     
+	      Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('osearch_iwidth',false);
 		 
 	   }
 	  });
@@ -5970,7 +5982,7 @@ classicthemerestorerjs.ctr = {
 
   // open prefwindow and specific category
   additionalToolbars: function(){
-	Services.prefs.getBranch("extensions.classicthemerestorer.").setIntPref('pref_actindx',11);
+	Services.prefs.getBranch("extensions.classicthemerestorer.").setIntPref('pref_actindx',12);
 	
 	setTimeout(function(){
 	  classicthemerestorerjs.ctr.openCTRPreferences();

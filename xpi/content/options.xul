@@ -87,6 +87,7 @@
 		<preference id="ctraddon_ctroldsearchc"	name="extensions.classicthemerestorer.ctroldsearchc" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_osearch_dm"	name="extensions.classicthemerestorer.osearch_dm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_osearch_meoit"	name="extensions.classicthemerestorer.osearch_meoit" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_osearch_iwidth" name="extensions.classicthemerestorer.osearch_iwidth" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_addonversion"	name="extensions.classicthemerestorer.addonversion"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_am_nowarning"	name="extensions.classicthemerestorer.am_nowarning"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_am_compact"	name="extensions.classicthemerestorer.am_compact"	 type="bool"	instantApply="true"/>
@@ -319,6 +320,7 @@
 	  <radio class="ctraddontab" value="ctraddon_generaluibox"	label="&Ctr_ui; (1)"/>
 	  <radio class="ctraddontab" value="ctraddon_generaluibox2"	label="&Ctr_ui; (2)"/>
 	  <radio class="ctraddontab" value="ctraddon_generaluibox3"	label="&Ctr_ui; (3)"/>
+	  <radio class="ctraddontab" value="ctraddon_searchuibox"	label="&Ctr_search_ui;"/>
 	  <radio class="ctraddontab" value="ctraddon_prefpagebox"	label="&Ctr_prefpage;"/>
 	  <radio class="ctraddontab" value="ctraddon_addonmngrbox"	label="&Ctr_addonmanager;"/>
 	  <radio class="ctraddontab" value="ctraddon_locationbbox"	label="&Ctr_urlbar; (1)"/>
@@ -842,16 +844,29 @@
 	  </groupbox>
 
 	</box>
+	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_searchuibox">
+	  <groupbox>
+	    <caption  label="&Ctr_search_ui;" class="ctraddon_topic"/>
+		<checkbox label="&Ctr_ctroldsearch;"	preference="ctraddon_ctroldsearch" id="ctraddon_pw_ctroldsearch" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(true);} else {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(false);}"/>
+		<checkbox label="&Ctr_osearch_dm;"		preference="ctraddon_osearch_dm" id="ctraddon_pw_osearch_dm" class="ctraddon_winmaconly"/>
+		<checkbox label="&Ctr_ctroldsearchc;"	preference="ctraddon_ctroldsearchc" id="ctraddon_pw_ctroldsearchc"/>
+		<checkbox label="&Ctr_osearch_meoit;"	preference="ctraddon_osearch_meoit" id="ctraddon_pw_osearch_meoit"/>
+		<checkbox label="&Ctr_osearch_iwidth;"	preference="ctraddon_osearch_iwidth" id="ctraddon_pw_osearch_iwidth"/>
+		<checkbox label="&Ctr_search_oit;"		preference="ctraddon_search_oit" id="ctraddon_pw_search_oit" />
+	  </groupbox>
+	  
+	  <groupbox>
+		<hbox>
+		  <image src="chrome://classic_theme_restorer/content/images/oldsearch.png"/>
+		  <label value=""/>
+		</hbox>
+	  </groupbox>
+
+	</box>
 
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_generaluibox">
 	  <groupbox>
 		<caption  label="&Ctr_ui;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_ctroldsearch;"	preference="ctraddon_ctroldsearch" id="ctraddon_pw_ctroldsearch" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(true);} else {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(false);}"/>
-		<checkbox label="&Ctr_osearch_dm;"		preference="ctraddon_osearch_dm" id="ctraddon_pw_osearch_dm"  class="ctraddonsuboption ctraddon_winmaconly"/>
-		<checkbox label="&Ctr_ctroldsearchc;"	preference="ctraddon_ctroldsearchc" id="ctraddon_pw_ctroldsearchc"  class="ctraddonsuboption"/>
-		<checkbox label="&Ctr_search_oit;"		preference="ctraddon_search_oit" id="ctraddon_pw_search_oit"  class="ctraddonsuboption"/>
-		<checkbox label="&Ctr_osearch_meoit;"	preference="ctraddon_osearch_meoit" id="ctraddon_pw_osearch_meoit"  class="ctraddonsuboption"/>
-
 		<checkbox label="&Ctr_smallnavbut;"		preference="ctraddon_smallnavbut" oncommand="if(this.checked) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',true);classicthemerestorerjso.ctr.ctrpwSNextra(false);} else if(classicthemerestorerjso.ctr.prefs.getBoolPref('backforward')==false) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',false);} else{classicthemerestorerjso.ctr.ctrpwSNextra(true);}" id="ctraddon_pw_smallnavbut"/>
 		<checkbox label="&Ctr_bfurlbarfix;"		preference="ctraddon_bfurlbarfix" id="ctraddon_pw_bfurlbarfix" class="ctraddonsuboption"/>
 		<checkbox label="&Ctr_backforward;"		preference="ctraddon_backforward"  id="ctraddon_pw_backforward" oncommand="if(this.checked) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',true);classicthemerestorerjso.ctr.ctrpwBFextra(true);} else if(classicthemerestorerjso.ctr.prefs.getBoolPref('smallnavbut')==false) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',false);classicthemerestorerjso.ctr.ctrpwBFextra(false);} else {classicthemerestorerjso.ctr.ctrpwBFextra(false);}"/>

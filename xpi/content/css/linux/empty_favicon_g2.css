@@ -15,16 +15,18 @@
 	list-style-image: url("chrome://classic_theme_restorer/content/images/default_favicon.png") !important;
 	-moz-image-region: rect(0px, 16px, 16px, 0px) !important;
   }
-
+  
+  #main-window[fx48plus="true"] #PopupAutoCompleteRichResult .ac-site-icon:not([src]),
+  #main-window[fx48plus="true"] #PopupAutoCompleteRichResult .ac-site-icon[src=""],
   #PopupAutoCompleteRichResult .ac-site-icon[src^="chrome://mozapps/skin/places/defaultFavicon.png"] {
 	width: 0 !important;
-	padding-right: 16px !important;
+	-moz-padding-end: 16px !important;
 	background-image: url("chrome://classic_theme_restorer/content/images/default_favicon.png") !important;
   }
   
   treechildren::-moz-tree-image(title) {
 	list-style-image: url("chrome://classic_theme_restorer/content/images/default_favicon.png") !important;
-	padding-right: 2px !important;
+	-moz-padding-end: 2px !important;
 	margin: 0px 2px !important;
 	width: 16px !important;
 	height: 16px !important;
