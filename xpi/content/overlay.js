@@ -170,6 +170,9 @@ classicthemerestorerjs.ctr = {
 	// move 'Tools' menus dev tools into application buttons popup 
 	this.moveDevtoolsmenu();
 	
+	// prevent browser from disablning CTRs reload button for no reason
+	this.preventReloaddisabling();
+	
 	// CTR Preferences listener
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get
@@ -1839,6 +1842,11 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("alt_newtabp")) classicthemerestorerjs.ctr.loadUnloadCSS("alt_newtabp",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("alt_newtabp",false);
 		  break;
+
+		  case "nosnippets":
+			if (branch.getBoolPref("nosnippets")) classicthemerestorerjs.ctr.loadUnloadCSS("nosnippets",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("nosnippets",false);
+		  break;
 		  
 		  case "ctroldsearch":
 			if (branch.getBoolPref("ctroldsearch") && classicthemerestorerjs.ctr.appversion >= 43) {
@@ -2058,6 +2066,11 @@ classicthemerestorerjs.ctr = {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("bmbunsortbm",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("bmbunsortbm2",false);
 			}
+		  break;
+
+		  case "bmbviewbmsb":
+			if (branch.getBoolPref("bmbviewbmsb")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbviewbmsb",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbviewbmsb",false);
 		  break;
 		  
 		  case "bmbviewbmtb":
@@ -3370,6 +3383,26 @@ classicthemerestorerjs.ctr = {
 	},500);
   },
   
+  // prevent browser from disablning CTRs reload button for no reason
+  preventReloaddisabling: function(){
+	window.addEventListener("DOMContentLoaded", function preventRelDis(event){
+	  window.removeEventListener("DOMContentLoaded", preventRelDis, false);
+
+	  setTimeout(function(){
+		var observer = new MutationObserver(function(mutations) {
+		  mutations.forEach(function(mutation) {
+			try {
+				if(document.querySelector('#ctraddon_reload-button').hasAttribute('disabled'))
+				  document.querySelector('#ctraddon_reload-button').removeAttribute('disabled');
+			} catch(e){}
+		  });    
+		});
+		
+		observer.observe(document.querySelector('#ctraddon_reload-button'), { attributes: true, attributeFilter: ['disabled'] });
+	  },1000);
+	},false);
+  },
+  
   // tab width stuff
   updateTabWidth: function() {
   	window.addEventListener("DOMWindowCreated", function load(event){
@@ -3915,6 +3948,7 @@ classicthemerestorerjs.ctr = {
 		case "noemptypticon": 		manageCSS("empty_favicon_pt.css");		break;
 		case "hidezoomres": 		manageCSS("hide_zoomreset.css");		break;
 		case "alt_newtabp": 		manageCSS("alt_newtabpage.css");		break;
+		case "nosnippets": 			manageCSS("nosnippets.css");			break;
 		case "ctroldsearch": 		manageCSS("oldsearch.css");				break;
 		case "osearch_dm": 			manageCSS("oldsearch_dm.css");			break;
 		case "am_nowarning":		manageCSS("am_nowarnings.css");			break;
@@ -3935,6 +3969,7 @@ classicthemerestorerjs.ctr = {
 		case "bmbutpanelm": 		manageCSS("bmbut_pmenu.css");			break;
 		case "bmbunsortbm": 		manageCSS("bmbut_unsortedbookm.css");	break;
 		case "bmbunsortbm2": 		manageCSS("bmbut_unsortedbookm2.css");	break;
+		case "bmbviewbmsb": 		manageCSS("bmbut_bmbviewbmsb.css");		break;
 		case "bmbviewbmtb": 		manageCSS("bmbut_bmbviewbmtb.css");		break;
 		case "bmbnounsort": 		manageCSS("bmbut_bmbnounsort.css");		break;
 		case "bmbutnotext": 		manageCSS("bmbut_no_label.css");		break;

@@ -44,7 +44,7 @@
 <!ENTITY Ctr_tabsontop3		"Tabs not on top (v2) --- [tabsontop=false] attribute">
 <!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
 <!ENTITY Ctr_tabsontopI1	"Attribute [tabsontop=true/false] gets added to">
-<!ENTITY Ctr_tabsintitlebar	"&brandShortName; titlebar (about:config preference)">
+<!ENTITY Ctr_tabsintitlebar	"Use &brandShortName; titlebar instead of OS titlebar (about:config preference)">
 <!ENTITY Ctr_tabwidthdef	"(default)">
 <!ENTITY Ctr_tabwidthcla	"(classic)">
 <!ENTITY Ctr_tabminheight	"Height:">
@@ -80,9 +80,9 @@
 <!ENTITY Ctr_appbutton0		"Button disabled">
 <!ENTITY Ctr_appbutton1		"Button on toolbar">
 <!ENTITY Ctr_appbutton1wt	"Button on toolbar (text only)">
-<!ENTITY Ctr_appbutton2		"Button on [&brandShortName;] titlebar">
-<!ENTITY Ctr_appbutton2h	"Button on [&brandShortName;] titlebar (hidden)">
-<!ENTITY Ctr_appbutton2io	"Button on [&brandShortName;] titlebar (icon only)">
+<!ENTITY Ctr_appbutton2		"Button on &brandShortName; titlebar">
+<!ENTITY Ctr_appbutton2h	"Button on &brandShortName; titlebar (hidden)">
+<!ENTITY Ctr_appbutton2io	"Button on &brandShortName; titlebar (icon only)">
 <!ENTITY Ctr_paneluibtweak	"Display menu button as &brandShortName; button...">
 <!ENTITY Ctr_paneluibtweak2	"Display menu button as &brandShortName; button (icon only)...">
 <!ENTITY Ctr_paneluibtweak3	"...when on tabs toolbar">
@@ -159,6 +159,7 @@
 <!ENTITY Ctr_cpanelmenus	"Panel menu popups (bookmarks, history etc.): compact view">
 <!ENTITY Ctr_hidezoomres	"Zoom controls on toolbar: hide zoom-reset button">
 <!ENTITY Ctr_alt_newtabp	"New tab page (about:newtab): alternative appearance">
+<!ENTITY Ctr_nosnippets		"Start page (about:home): hide snippets">
 <!ENTITY Ctr_search_ui		"Search">
 <!ENTITY Ctr_ctroldsearch	"Old search">
 <!ENTITY Ctr_ctroldsearchc	"Clear searchbox after search">
@@ -183,6 +184,7 @@
 <!ENTITY Ctr_bmbutpanelm	"Popup: panel menu appearance">
 <!ENTITY Ctr_bmbunsortbm	"Popup: 'unsorted bookmarks' menu">
 <!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
+<!ENTITY Ctr_bmbviewbmsb	"Popup: show 'View Sidebar'">
 <!ENTITY Ctr_bmbviewbmtb	"Popup: show 'View Toolbar'">
 <!ENTITY Ctr_bmbnounsort	"Popup: hide 'unsorted bookmarks'">
 <!ENTITY Ctr_bmbutnotext	"Hide label on bookmarks bar">

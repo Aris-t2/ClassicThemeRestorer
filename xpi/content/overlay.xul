@@ -694,6 +694,12 @@
 											   new HistoryMenu(event);"
 							 tooltip="bhTooltip"
 							 popupsinherittooltip="true">
+					<menuitem id="ctraddon_history_viewHistorySidebar"
+								type="checkbox"
+								oncommand="SidebarUI.toggle('viewHistorySidebar');"
+								label="&appMenuHistory.viewSidebar.label;">
+						<observes element="viewHistorySidebar" attribute="checked"/>
+					</menuitem>
 					<menuitem id="ctraddon_history_showAllHistory"
 							  label="&showAllHistoryCmd2.label;"
 							  key="showAllHistoryKb"
@@ -754,6 +760,12 @@
                    onpopupshowing="BookmarkingUI.onPopupShowing(event);
                                    if (!this.parentNode._placesView) {new PlacesMenu(event, 'place:folder=BOOKMARKS_MENU');} classicthemerestorerjs.ctr.togglePersonalBarItem();"
                    tooltip="bhTooltip" popupsinherittooltip="true">
+          <menuitem id="ctraddon_BMB_viewBookmarksSidebar"
+                    type="checkbox"
+                    oncommand="SidebarUI.toggle('viewBookmarksSidebar');"
+                    label="&viewBookmarksSidebar2.label;">
+			<observes element="viewBookmarksSidebar" attribute="checked"/>
+		  </menuitem>
           <menuitem id="ctraddon_BMB_viewBookmarksToolbar"
                     toolbarId="PersonalToolbar"
                     type="checkbox"

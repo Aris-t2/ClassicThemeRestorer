@@ -442,7 +442,10 @@
 	}
 	
 	/* hide bookmark menus items */
-	#ctraddon_BMB_viewBookmarksToolbar,
+	#ctraddon_BMB_viewBookmarksSidebar,
+	#ctraddon_BMB_viewBookmarksToolbar {
+	  display:none;
+	}
 	#ctraddon_BMB_viewBookmarksToolbar + menuseparator {
 	  visibility: collapse;
 	}

@@ -83,6 +83,7 @@
 		<preference id="ctraddon_backforward"	name="extensions.classicthemerestorer.backforward"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_noconicons"	name="extensions.classicthemerestorer.noconicons"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_alt_newtabp"	name="extensions.classicthemerestorer.alt_newtabp"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_nosnippets"	name="extensions.classicthemerestorer.nosnippets"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_ctroldsearch"	name="extensions.classicthemerestorer.ctroldsearch"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_ctroldsearchc"	name="extensions.classicthemerestorer.ctroldsearchc" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_osearch_dm"	name="extensions.classicthemerestorer.osearch_dm"	 type="bool"	instantApply="true"/>
@@ -230,6 +231,7 @@
 		<preference id="ctraddon_bmbutpanelm"	name="extensions.classicthemerestorer.bmbutpanelm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbunsortbm"	name="extensions.classicthemerestorer.bmbunsortbm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbunsortbm2"	name="extensions.classicthemerestorer.bmbunsortbm2"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_bmbviewbmsb"	name="extensions.classicthemerestorer.bmbviewbmsb"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbviewbmtb"	name="extensions.classicthemerestorer.bmbviewbmtb"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbnounsort"	name="extensions.classicthemerestorer.bmbnounsort"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbutnotext"	name="extensions.classicthemerestorer.bmbutnotext"	 type="bool"	instantApply="true"/>
@@ -882,6 +884,7 @@
 		
 		<checkbox label="&Ctr_noconicons;"		preference="ctraddon_noconicons" id="ctraddon_pw_noconicons"/>
 		<checkbox label="&Ctr_alt_newtabp;"		preference="ctraddon_alt_newtabp" id="ctraddon_pw_alt_newtabp"/>
+		<checkbox label="&Ctr_nosnippets;"		preference="ctraddon_nosnippets" id="ctraddon_pw_nosnippets"/>
 		<checkbox label="&Ctr_svgfilters;"		preference="ctraddon_svgfilters" id="ctraddon_pw_svgfilters"/>
 		<checkbox label="&Ctr_combrelstop;"		preference="ctraddon_combrelstop" id="ctraddon_pw_stopreload"/>
 		<description class="ctraddonsuboption">&Ctr_stoprel1;</description>
@@ -918,6 +921,7 @@
 		<checkbox label="&Ctr_bmbutpanelm;"		preference="ctraddon_bmbutpanelm" id="ctraddon_pw_bmbutpanelm"/>
 		<checkbox label="&Ctr_bmbunsortbm;"		preference="ctraddon_bmbunsortbm" id="ctraddon_pw_bmbunsortbm" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwUnsortBM(true);} else {classicthemerestorerjso.ctr.ctrpwUnsortBM(false);}"/>
 		<checkbox label="&Ctr_bmbunsortbm2;"	preference="ctraddon_bmbunsortbm2" id="ctraddon_pw_bmbunsortbm2" class="ctraddonsuboption"/>
+		<checkbox label="&Ctr_bmbviewbmsb;"		preference="ctraddon_bmbviewbmsb" id="ctraddon_pw_bmbviewbmsb"/>
 		<checkbox label="&Ctr_bmbviewbmtb;"		preference="ctraddon_bmbviewbmtb" id="ctraddon_pw_bmbviewbmtb"/>
 		<checkbox label="&Ctr_bmbnounsort;"		preference="ctraddon_bmbnounsort" id="ctraddon_pw_bmbnounsort"/>
 		<checkbox label="&Ctr_bmbutnotext;"		preference="ctraddon_bmbutnotext" id="ctraddon_pw_bmbutnotext"/>
