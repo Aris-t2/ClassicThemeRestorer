@@ -136,7 +136,7 @@
 		<preference id="ctraddon_lbsize_maxw"	name="extensions.classicthemerestorer.lbsize_maxw" 	type="int"		instantApply="true"/>
 		<preference id="ctraddon_sbsize_minw"	name="extensions.classicthemerestorer.sbsize_minw" 	type="int"		instantApply="true"/>
 		<preference id="ctraddon_sbsize_maxw"	name="extensions.classicthemerestorer.sbsize_maxw" 	type="int"		instantApply="true"/>
-		<preference id="ctraddon_urlresults"	name="extensions.classicthemerestorer.urlresults" type="bool"		instantApply="true"/>
+		<preference id="ctraddon_urlresults"	name="extensions.classicthemerestorer.urlresults"	type="bool"		instantApply="true"/>
 
 		<preference id="ctraddon_ctab1"			name="extensions.classicthemerestorer.ctab1"		type="string"	instantApply="true"/>
 		<preference id="ctraddon_ctab2"			name="extensions.classicthemerestorer.ctab2"		type="string"	instantApply="true"/>
@@ -1065,8 +1065,6 @@
 		<checkbox label="&Ctr_urlbardropm2;" preference="ctraddon_urlbardropm2"  id="ctraddon_pw_urlbardropm2"/>
 		<checkbox label="&Ctr_altreaderico;" preference="ctraddon_altreaderico"  id="ctraddon_pw_altreaderico"/>
 		<checkbox label="&Ctr_hideprbutton;" preference="ctraddon_hideprbutton" id="ctraddon_pw_urlbarpblocked"/>
-		<checkbox label="&Ctr_altautocompl;" preference="ctraddon_altautocompl"  id="ctraddon_pw_altautocompl" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
-		<checkbox label="&Ctr_urlbar_uc;" preference="ctraddon_urlbar_uc" id="ctraddon_pw_urlbar_uc"/>
 		<checkbox label="&Ctr_extraurlkeycb;&openCmd.commandkey; &amp; Alt+&urlbar.accesskey; [Windows/Linux])"	preference="ctraddon_extraurlkeycb" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<checkbox label="&Ctr_locsearchbw10;" preference="ctraddon_locsearchbw10"  id="ctraddon_pw_locsearchbw10"/>
 		<checkbox label="&Ctr_lbsbsize;" preference="ctraddon_lbsbsize" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwLocationSearchbarSize(true);} else {classicthemerestorerjso.ctr.ctrpwLocationSearchbarSize(false);}"/>
@@ -1085,12 +1083,6 @@
 		  <label value="px  -  &Ctr_tabmaxwidth; "/>
 		  <textbox size="4" maxlength="4" preference="ctraddon_sbsize_maxw" type="number" min="0" max="4000"/>
 		  <label value="px"/>
-		</hbox>
-		<checkbox label="&Ctr_lbsugresi;" preference="ctraddon_urlresults"  id="ctraddon_pw_urlresults"/>
-		<description id="ctraddon_lbsugres" class="ctraddon_font1">&Ctr_lbsugres;</description>
-		<hbox id="ctraddon_pw_lbsugresbox" align="center">
-		  <textbox size="4" maxlength="4" preference="ctraddon_urlresultsl" type="number" min="0"/>
-		  <label value=" 12 &Ctr_tabwidthdef;"/>
 		</hbox>
 
 	  </groupbox>
@@ -1122,6 +1114,20 @@
 			<radio value="padlock_modern"	label=" "	id="ctraddon_pw_padlock_modern"/>
 			<radio value="padlock_modern2"	label=" "	id="ctraddon_pw_padlock_modern2"/>
 		</radiogroup>
+
+	  </groupbox>
+	  
+	  <groupbox>
+
+	    <caption  label="&Ctr_autocomplete;" class="ctraddon_topic"/>
+		<checkbox label="&Ctr_altautocompl;" preference="ctraddon_altautocompl"  id="ctraddon_pw_altautocompl" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+		<checkbox label="&Ctr_urlbar_uc;" preference="ctraddon_urlbar_uc" id="ctraddon_pw_urlbar_uc"/>
+		<checkbox label="&Ctr_lbsugresi;" preference="ctraddon_urlresults"  id="ctraddon_pw_urlresults"/>
+		<description id="ctraddon_lbsugres" class="ctraddon_font1">&Ctr_lbsugres;</description>
+		<hbox id="ctraddon_pw_lbsugresbox" align="center">
+		  <textbox size="4" maxlength="4" preference="ctraddon_urlresultsl" type="number" min="0" onchange="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+		  <label value=" 12 &Ctr_tabwidthdef;"/>
+		</hbox>
 
 	  </groupbox>
 

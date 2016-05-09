@@ -202,13 +202,34 @@
           this.invalidate();
 		  
 		  var width = 300;
-		  
+
 		  try{
 			width = document.getElementById("urlbar").getBoundingClientRect().width;
 		  } catch(e){}
-
+		  
 		  this.setAttribute("width", width);
+		  
+		  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("urlresults")) {
+		  
+		    var height = 300;
+			var inFullscreen = false;
 			
+			try{
+			  if(document.getElementById("main-window").hasAttribute("inFullscreen"))
+			    inFullscreen=true;
+			} catch(e){}
+
+			try{
+			  if(inFullscreen)
+			    height = screen.height - document.getElementById("urlbar").getBoundingClientRect().bottom;
+			  else
+			    height = /*window.innerHeight*/ screen.availHeight - document.getElementById("urlbar").getBoundingClientRect().bottom;
+			} catch(e){}
+			
+			this.removeAttribute("height");
+			this.setAttribute("maxheight", height);
+		  }
+
           this.openPopup(aElement, "after_start", 0, -1, false, false);
         ]]></body>
       </method>

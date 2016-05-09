@@ -44,7 +44,7 @@
 <!ENTITY Ctr_tabsontop3		"Karty nie na górze (v2) --- atrybut [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"v2 jest tylko dla niektórych dodatków i kompletnych motywów!">
 <!ENTITY Ctr_tabsontopI1	"Dodaje atrybut [tabsontop=true/false] do">
-<!ENTITY Ctr_tabsintitlebar	"Pasek tytułu programu &brandShortName; (ustawienie about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Użyj paska tytułu programu &brandShortName; zamiast systemowego (ustawienie about:config)">
 <!ENTITY Ctr_tabwidthdef	"(domyślne)">
 <!ENTITY Ctr_tabwidthcla	"(klasyczne)">
 <!ENTITY Ctr_tabminheight	"Wysokość:">
@@ -80,9 +80,9 @@
 <!ENTITY Ctr_appbutton0		"Przycisk wyłączony">
 <!ENTITY Ctr_appbutton1		"Przycisk na pasku narzędzi">
 <!ENTITY Ctr_appbutton1wt	"Przycisk na pasku narzędzi (tylko tekst)">
-<!ENTITY Ctr_appbutton2		"Przycisk na pasku narzędzi [&brandShortName;]">
-<!ENTITY Ctr_appbutton2h	"Przycisk na pasku narzędzi [&brandShortName;] (ukryty)">
-<!ENTITY Ctr_appbutton2io	"Przycisk na pasku narzędzi [&brandShortName;] (tylko ikona)">
+<!ENTITY Ctr_appbutton2		"Przycisk na pasku tytułu programu &brandShortName;">
+<!ENTITY Ctr_appbutton2h	"Przycisk na pasku tytułu programu &brandShortName; (ukryty)">
+<!ENTITY Ctr_appbutton2io	"Przycisk na pasku tytułu programu &brandShortName; (tylko ikona)">
 <!ENTITY Ctr_paneluibtweak	"Wyświetlaj przycisk menu jako przycisk programu &brandShortName;...">
 <!ENTITY Ctr_paneluibtweak2	"Wyświetlaj przycisk menu jako przycisk programu &brandShortName; (tylko ikona)...">
 <!ENTITY Ctr_paneluibtweak3	"...gdy na pasku kart">
@@ -159,13 +159,13 @@
 <!ENTITY Ctr_cpanelmenus	"Menu podręczne panelu (zakładki, historia itp.): widok kompaktowy">
 <!ENTITY Ctr_hidezoomres	"Kontrolki powiększenia na pasku narzędzi: ukryj przycisk resetu powiększenia">
 <!ENTITY Ctr_alt_newtabp	"Strona nowej karty (about:newtab): alternatywny wygląd">
-<!ENTITY Ctr_nosnippets		"Start page (about:home): hide snippets">
-<!ENTITY Ctr_search_ui		"Search">
+<!ENTITY Ctr_nosnippets		"Strona startowa (about:home): ukryj fragmenty">
+<!ENTITY Ctr_search_ui		"Wyszukiwanie">
 <!ENTITY Ctr_ctroldsearch	"Stara wyszukiwarka">
 <!ENTITY Ctr_ctroldsearchc	"Czyść pole wyszukiwania po wyszukaniu">
 <!ENTITY Ctr_search_oit		"Otwórz wyszukiwanie w nowej karcie (ustawienie about:config)">
 <!ENTITY Ctr_osearch_meoit	"Kliknięcia środkowym przyciskiem: wyszukaj w nowej 'karcie pierwszoplanowej'">
-<!ENTITY Ctr_osearch_iwidth	"Automatically adjust popup width">
+<!ENTITY Ctr_osearch_iwidth	"Automatycznie dostosuj szerokość menu podręcznego">
 <!ENTITY Ctr_osearch_dm		"Mały przycisk podręczny">
 <!ENTITY Ctr_addonmanager	"Menedżer dodatków">
 <!ENTITY Ctr_alt_addonsp	"Strona 'więcej informacji': alternatywny porządek">
@@ -184,7 +184,7 @@
 <!ENTITY Ctr_bmbutpanelm	"Menu podręczne: wygląd menu panelu">
 <!ENTITY Ctr_bmbunsortbm	"Menu podręczne: podmenu 'nieposortowanych zakładek'">
 <!ENTITY Ctr_bmbunsortbm2	"Menu ponad zakładkami">
-<!ENTITY Ctr_bmbviewbmsb	"Popup: show 'View Sidebar'">
+<!ENTITY Ctr_bmbviewbmsb	"Menu podręczne: wyświetl 'Pokaż pasek boczny'">
 <!ENTITY Ctr_bmbviewbmtb	"Menu podręczne: wyświetl 'Pokaż pasek narzędzi'">
 <!ENTITY Ctr_bmbnounsort	"Menu podręczne: ukryj 'nieposortowane zakładki'">
 <!ENTITY Ctr_bmbutnotext	"Ukryj etykietę na pasku zakładek">
@@ -241,9 +241,7 @@
 <!ENTITY Ctr_urlbardropm	"Przenieś znacznik rozwinięcia na ostatnią możliwą pozycję">
 <!ENTITY Ctr_urlbardropm2	"Ustaw znacznik rozwinięcia jako zawsze widoczny">
 <!ENTITY Ctr_altreaderico	"Alternatywne ikony 'Popraw czytelność'">
-<!ENTITY Ctr_altautocompl	"Alternatywne 'menu podręczne autouzupełniania' (eksperymentalne)">
 <!ENTITY Ctr_hideprbutton	"Ukryj ikonę powiadomienia, gdy wyskakujące okno zostanie zablokowane">
-<!ENTITY Ctr_urlbar_uc		"Wyłącz funkcję 'Ujednolicone autouzupełnianie' (ustawienie about:config)">
 <!ENTITY Ctr_locsearchbw10	"Zredukuj wysokość paska adresu i wyszukiwania (eksperymentalne)">
 <!ENTITY Ctr_urlbar_ib		"Przycisk tożsamości witryny (pole tożsamości)">
 <!ENTITY Ctr_ib_nohovcolor	"Nie pokazuj szarego koloru po najechaniu">
@@ -262,8 +260,11 @@
 <!ENTITY Ctr_icopageinfo	"Ikona ulubionych/globu/'i': 'kliknięcie' otwiera 'okno informacji o stronie'">
 <!ENTITY Ctr_lbsbsize		"Niestandardowa szerokość paska adresu i paska wyszukiwania">
 <!ENTITY Ctr_searchbar		"Pasek wyszukiwania">
-<!ENTITY Ctr_lbsugresi		"Wyświetl tak dużo wyników w menu podręcznym z sugestiami, jak to tylko możliwe (bez paska przewijania)">
-<!ENTITY Ctr_lbsugres		"Liczba wyników w menu z sugestiami (ustawienie about:config)">
+<!ENTITY Ctr_autocomplete	"Autocomplete popup">
+<!ENTITY Ctr_altautocompl	"Alternative appearance (experimental)">
+<!ENTITY Ctr_urlbar_uc		"Wyłącz funkcję 'ujednolicone autouzupełnianie' (ustawienie about:config)">
+<!ENTITY Ctr_lbsugresi		"Disable height limit">
+<!ENTITY Ctr_lbsugres		"Number of results (about:config preference)">
 
 <!ENTITY Ctr_menubar_items	"Pozycje elementów menu">
 <!ENTITY Ctr_extrabar		"Dodatkowe paski narzędzi">
