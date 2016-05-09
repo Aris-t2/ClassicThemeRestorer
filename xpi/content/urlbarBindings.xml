@@ -211,19 +211,16 @@
 		  
 		  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("urlresults")) {
 		  
-		    var height = 300;
-			var inFullscreen = false;
+		    var height = 400;
 			
-			try{
-			  if(document.getElementById("main-window").hasAttribute("inFullscreen"))
-			    inFullscreen=true;
-			} catch(e){}
+			// urlbars bottom position
+			var urlbbotpos = document.getElementById("urlbar").boxObject.screenY + document.getElementById("urlbar").boxObject.height;
 
 			try{
-			  if(inFullscreen)
-			    height = screen.height - document.getElementById("urlbar").getBoundingClientRect().bottom;
+			  if(document.getElementById("main-window").hasAttribute("inFullscreen"))
+			    height = screen.height - urlbbotpos - 3;
 			  else
-			    height = /*window.innerHeight*/ screen.availHeight - document.getElementById("urlbar").getBoundingClientRect().bottom;
+			    height = screen.availHeight - urlbbotpos - 3;
 			} catch(e){}
 			
 			this.removeAttribute("height");
@@ -237,7 +234,7 @@
       <method name="_updateFooterVisibility">
         <body>
           <![CDATA[
-          this.footer.collapsed = this._matchCount == 0;
+            this.footer.collapsed = this._matchCount == 0;
           ]]>
         </body>
       </method>
