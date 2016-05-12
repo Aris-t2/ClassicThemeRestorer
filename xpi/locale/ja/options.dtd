@@ -11,11 +11,11 @@
 <!ENTITY Ctr_space			"スペース">
 <!ENTITY Ctr_separator		"セパレータ">
 <!ENTITY Ctr_puibseparator	"パネル UI ボタンセパレータ">
-<!ENTITY Ctr_navthrobber	"Activity Indicator">
+<!ENTITY Ctr_navthrobber	"アクティビティインジケータ">
 <!ENTITY Ctr_sidebarbutton	"サイドバー">
 <!ENTITY Ctr_windowcontrols	"最小/最大/閉じる (Fullscreen)">
 <!ENTITY Ctr_rr				"要 &brandShortName; 再起動">
-<!ENTITY Ctr_window			"window">
+<!ENTITY Ctr_window			"ウィンドウ">
 
 <!ENTITY Ctr_cuibuttons		"ボタン">
 <!ENTITY Ctr_cuibutnormal	"通常">
@@ -31,50 +31,50 @@
 <!ENTITY Ctr_tabcolors_t	"タブ色 &amp; テキスト">
 
 <!ENTITY Ctr_tabs			"タブ">
-<!ENTITY Ctr_tabs0			"&brandShortName; default (Curved tabs)">
+<!ENTITY Ctr_tabs0			"&brandShortName; デフォルト (丸いタブ)">
 <!ENTITY Ctr_tabs1			"四角いタブ (クラシック)">
 <!ENTITY Ctr_tabs1m			"四角いタブ (Australis化)">
 <!ENTITY Ctr_tabs2			"丸いタブ (別バージョン)">
 <!ENTITY Ctr_tabs3			"丸いタブ (別バージョン Aero)">
 <!ENTITY Ctr_tabforminfo	"タブの見栄えは現在のテーマで制御されます。">
-<!ENTITY Ctr_coltabsinfo	"Tab appearance is not fully compatible to 'ColorfulTabs' add-on!">
+<!ENTITY Ctr_coltabsinfo	"タブの見栄えは ColorfulTabs とは完全な互換性はありません！">
 <!ENTITY Ctr_tabsontop0		"タブを上にする (デフォルト)">
-<!ENTITY Ctr_tabsontop1		"タブを上にする --- [tabsontop=true] attribute">
-<!ENTITY Ctr_tabsontop2		"タブを下にする (v1) --- [tabsontop=false] attribute">
-<!ENTITY Ctr_tabsontop3		"タブを下にする (v2) --- [tabsontop=false] attribute">
-<!ENTITY Ctr_tabsontopW1	"v2 is for some add-ons and complete themes only!">
-<!ENTITY Ctr_tabsontopI1	"以下に属性[tabsontop=true/false]を加える">
+<!ENTITY Ctr_tabsontop1		"タブを上にする --- [tabsontop=true] 属性">
+<!ENTITY Ctr_tabsontop2		"タブを下にする (v1) --- [tabsontop=false] 属性">
+<!ENTITY Ctr_tabsontop3		"タブを下にする (v2) --- [tabsontop=false] 属性">
+<!ENTITY Ctr_tabsontopW1	"v2 はいくつかのアドオンと完全なテーマ以外に互換性はありません！">
+<!ENTITY Ctr_tabsontopI1	"以下の項目に属性 [tabsontop=true/false] 属性 を加える">
 <!ENTITY Ctr_tabsintitlebar	"&brandShortName; タイトルバー (about:config設定)">
 <!ENTITY Ctr_tabwidthdef	"(デフォルト)">
 <!ENTITY Ctr_tabwidthcla	"(クラシック)">
 <!ENTITY Ctr_tabminheight	"高さ:">
-<!ENTITY Ctr_tabheightinfo	"Low values will cause glitches in maximized mode!">
+<!ENTITY Ctr_tabheightinfo	"値を低くするとウィンドウの最大化時に不具合の原因となります！">
 <!ENTITY Ctr_tabmaxwidth	"最大幅:">
 <!ENTITY Ctr_tabminwidth	"最小幅:">
 <!ENTITY Ctr_tabwidthinfo	"タブの最小幅と最大幅は Tab Mix Plus で制御されます。">
 <!ENTITY Ctr_tabwidthinfo2	"タブの最小幅と最大幅は Tab Utilities で制御されます。">
-<!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
-<!ENTITY Ctr_square_edges	"Squared top corners">
-<!ENTITY Ctr_tttitlebar		"Tab title in &brandShortName; titlebar">
-<!ENTITY Ctr_tabinsertion	"Insert related tab after current tab (about:config設定)">
-<!ENTITY Ctr_emptytfavico	"Show favicon (if a site does not offer one)">
-<!ENTITY Ctr_emptytfavico_n	"None">
-<!ENTITY Ctr_emptytfavico_g	"Generic">
+<!ENTITY Ctr_tabwidthinfo3	"48px未満の値は、ほとんどの場合、不具合の原因となります！">
+<!ENTITY Ctr_square_edges	"上部の角を四角くする">
+<!ENTITY Ctr_tttitlebar		"タブタイトルを &brandShortName; タイトルバーに表示する">
+<!ENTITY Ctr_tabinsertion	"現在のタブの後ろに関連するタブを開く (about:config設定)">
+<!ENTITY Ctr_emptytfavico	"ファビコンの表示（サイトのファビコンが存在しないとき）">
+<!ENTITY Ctr_emptytfavico_n	"なし">
+<!ENTITY Ctr_emptytfavico_g	"一般">
 <!ENTITY Ctr_noemptypticon	"ピン止めタブから空ファビコンを取り除く">
-<!ENTITY Ctr_closetab_0		"タブを閉じる">
+<!ENTITY Ctr_closetab_0		"タブを閉じるボタン">
 <!ENTITY Ctr_closetab_1		"アクティブタブのみ表示">
 <!ENTITY Ctr_closetab_2		"表示しない">
-<!ENTITY Ctr_closetab_3		"ツールバーの最後に表示">
-<!ENTITY Ctr_closetab_4		"ツールバーの最初に表示">
+<!ENTITY Ctr_closetab_3		"ツールバーの後ろに表示">
+<!ENTITY Ctr_closetab_4		"ツールバーの先頭に表示">
 <!ENTITY Ctr_closetab_5		"全てのタブ (強制)">
-<!ENTITY Ctr_closetab_hfot	"可視タブに対して隠す">
-<!ENTITY Ctr_closei_def		"Default icons">
-<!ENTITY Ctr_closeonleft	"別の位置に表示">
-<!ENTITY Ctr_closetabbig	"Bigger icon (20x20 px)">
-<!ENTITY Ctr_close_wwltab	"最後の可視タブをもつウィンドウを閉じる (about:config設定)">
+<!ENTITY Ctr_closetab_hfot	"タブが1つの時はボタンを隠す">
+<!ENTITY Ctr_closei_def		"デフォルトボタン">
+<!ENTITY Ctr_closeonleft	"タブタイトルの前に表示">
+<!ENTITY Ctr_closetabbig	"大きなボタン (20x20 px)">
+<!ENTITY Ctr_close_wwltab	"タブが1つの時はウィンドウを閉じる (about:config設定)">
 
-<!ENTITY Ctr_hctpinfotab	"Some tab variations are not compatible to 'Hide Caption Titlebar Plus' add-on.">
-<!ENTITY Ctr_hctpinfoab		"Button on titlebar is not compatible to 'Hide Caption Titlebar Plus' add-on.">
+<!ENTITY Ctr_hctpinfotab	"いくつかのタブのバリエーションは Hide Caption Titlebar Plus とは互換性がありません。">
+<!ENTITY Ctr_hctpinfoab		"タイトルバー上のボタンは Hide Caption Titlebar Plus に対応していません。">
 
 <!ENTITY Ctr_appbutton		"アプリケーションボタン">
 <!ENTITY Ctr_appbutton0		"ボタンを無効にする">
@@ -83,9 +83,9 @@
 <!ENTITY Ctr_appbutton2		"&brandShortName; タイトルバーに表示">
 <!ENTITY Ctr_appbutton2h	"&brandShortName; タイトルバーに表示 (hidden)">
 <!ENTITY Ctr_appbutton2io	"&brandShortName; タイトルバーに表示 (アイコンのみ)">
-<!ENTITY Ctr_paneluibtweak	"Display menu button as &brandShortName; button...">
-<!ENTITY Ctr_paneluibtweak2	"Display menu button as &brandShortName; button (icon only)...">
-<!ENTITY Ctr_paneluibtweak3	"...when on tabs toolbar">
+<!ENTITY Ctr_paneluibtweak	"メニューボタンとして &brandShortName; ボタンを表示する…">
+<!ENTITY Ctr_paneluibtweak2	"メニューボタンとして &brandShortName; ボタン (アイコンのみ) を表示する…">
+<!ENTITY Ctr_paneluibtweak3	"…タブツールバー上にある時のみ">
 <!ENTITY Ctr_appbuttonc_o	"橙色 (デフォルト)">
 <!ENTITY Ctr_appbuttonc_a	"青色 (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"黒色 (Nightly)">
@@ -97,53 +97,53 @@
 <!ENTITY Ctr_appbuttonc_pu	"紫色">
 <!ENTITY Ctr_appbuttonc_wh	"白色">
 <!ENTITY Ctr_appbuttonc_cu	"任意の色">
-<!ENTITY Ctr_appbuttonct	"Custom button color for button on toolbar">
+<!ENTITY Ctr_appbuttonct	"ツールバー上のボタンのカスタム色">
 <!ENTITY Ctr_appbuttonI1	"再起動を推奨">
 <!ENTITY Ctr_appbuttonI1e	"WindowsのOSタイトルバーには表示されません。&brandShortName;タイトルバー上のみです。">
 <!ENTITY Ctr_appbuttonI2	"ボタン色はタイトルバーとタブツールバーのみに表示されます。">
 <!ENTITY Ctr_appbutmhi		"高い位置に表示 (タブツールバーに表示した時のみ)">
-<!ENTITY Ctr_appbautocol	"Set default / Aurora / Nightly color automatically">
+<!ENTITY Ctr_appbautocol	"自動的に色を変更する (デフォルト / Aurora / Nightly)">
 <!ENTITY Ctr_appbutbdl		"ボーダーと背景色を隠す">
 <!ENTITY Ctr_dblclclosefx	"ダブルクリックで現在のウィンドウを閉じる">
-<!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
+<!ENTITY Ctr_appbclmmenus	"ボタンメニュー内をクリッカブルメニューにする (新しいタブ、印刷など)">
 <!ENTITY Ctr_appbutonclab	"タイトル">
 <!ENTITY Ctr_appbutonclab2	"タイトルを入力するか、空欄のままにしてください">
 
 <!ENTITY Ctr_ui				"UI 一般">
 <!ENTITY Ctr_nbiconsize0	"ナビゲーションツールバー属性の設定">
 <!ENTITY Ctr_smallnavbut	"ナビゲーションツールバーのボタンを小さくする">
-<!ENTITY Ctr_bfurlbarfix	"URLバーの border-radius を修正する">
-<!ENTITY Ctr_backforward	"戻る-進むボタンを移動可にする">
-<!ENTITY Ctr_nbcompact		"Reduce navigation toolbars height">
+<!ENTITY Ctr_bfurlbarfix	"ロケーションバーの border-radius を修正する">
+<!ENTITY Ctr_backforward	"戻る-進むボタンを移動可能にする">
+<!ENTITY Ctr_nbcompact		"ナビゲーションツールバーの高さを下げる">
 <!ENTITY Ctr_hide_bf_popup	"マウスを押す時に履歴メニューを隠す">
-<!ENTITY Ctr_bf_space		"(可能であれば) ボタン間のスペースを減らす">
+<!ENTITY Ctr_bf_space		"ボタン間のスペースを減らす (可能であれば)">
 <!ENTITY Ctr_noconicons		"ラベル(戻る、進む、停止、ブックマーク)をもつページコンテキストメニューアイコンを置換する">
-<!ENTITY Ctr_prefpage		"Options page / window">
-<!ENTITY Ctr_altoptionsd	"Default appearance">
-<!ENTITY Ctr_altoptionsp	"Alternative appearance">
-<!ENTITY Ctr_altoptionsw	"Open options page in a window">
-<!ENTITY Ctr_altoptionsww	"Width:">
-<!ENTITY Ctr_altoptionswh	"Height:">
-<!ENTITY Ctr_altoptionsi	"The simulated options window is not a dialog anymore but a 'browser window' with all toolbars hidden. The 'Use Current Page' feature only adds urls of pages opened in the current window, which is only 'about:preferences' in this case. The 'options' toolbar button gets replaced by a new one to be able to open options in a window.">
-<!ENTITY Ctr_options_rem	"Remember last selected category">
-<!ENTITY Ctr_svgfilters		"SVG colors for default toolbar button icons">
-<!ENTITY Ctr_wincontrols	"フルスクリーンウィンドウ制御を移動可にする">
-<!ENTITY Ctr_html5warning	"HTML5 full screen warning">
-<!ENTITY Ctr_oldtoplevimg	"'Top level domain' images: classic appearance">
-<!ENTITY Ctr_altalertbox	"'Alert box': alternative appearance">
-<!ENTITY Ctr_emptygfavico	"Replace generic favicon">
-<!ENTITY Ctr_mstatusbar		"ステータスバーパネルを移動可にする">
-<!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
-<!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
-<!ENTITY Ctr_mstatusbarpzt	"Status-bar panel is controlled by 'Puzzle Toolbars'">
-<!ENTITY Ctr_mstatusbarabr	"Status-bar panel is controlled by 'The Addon Bar (Restored)'">
+<!ENTITY Ctr_prefpage		"オプションページ・ウィンドウ">
+<!ENTITY Ctr_altoptionsd	"デフォルトの外観">
+<!ENTITY Ctr_altoptionsp	"替わりの外観で置き換える">
+<!ENTITY Ctr_altoptionsw	"オプションページをウィンドウで表示">
+<!ENTITY Ctr_altoptionsww	"幅:">
+<!ENTITY Ctr_altoptionswh	"高さ:">
+<!ENTITY Ctr_altoptionsi	"シミュレートされたオプションウィンドウは、すべてのツールバーが隠されたブラウザ・ウィンドウであり、ダイアログではありません。この場合、「現在のページを使用」機能は、現在のウィンドウのURL(about:preferences)を追加します。オプションツールバーボタンは、ウィンドウにオプションを開くことができるように、新しいものに置き換えられます。">
+<!ENTITY Ctr_options_rem	"最後に開いたカテゴリを記憶する">
+<!ENTITY Ctr_svgfilters		"デフォルトのツールバーボタンのアイコンを SVG カラーにする">
+<!ENTITY Ctr_wincontrols	"フルスクリーンウィンドウ制御を移動可能にする">
+<!ENTITY Ctr_html5warning	"HTML5 フルスクリーン警告">
+<!ENTITY Ctr_oldtoplevimg	"トップレベルドメインイメージ: 古い外観で置き換える">
+<!ENTITY Ctr_altalertbox	"'Alert box': 替わりの外観で置き換える">
+<!ENTITY Ctr_emptygfavico	"空ファビコンを置き換える">
+<!ENTITY Ctr_mstatusbar		"ステータスバーパネルを移動可能にする">
+<!ENTITY Ctr_mstatusbars4e	"ステータスバーパネルは Status-4-Evar で制御されます。">
+<!ENTITY Ctr_mstatusbartpp	"ステータスバーパネルは ThePuzzlePiece で制御されます。">
+<!ENTITY Ctr_mstatusbarpzt	"ステータスバーパネルは Puzzle Toolbars で制御されます。">
+<!ENTITY Ctr_mstatusbarabr	"ステータスバーパネルは The Addon Bar (Restored) で制御されます。">
 <!ENTITY Ctr_combrelstop	"中止&amp;再読み込みボタンを組み合わせる">
 <!ENTITY Ctr_stoprel1		"重要：停止ボタンの後に再読み込みボタンを設置します">
 <!ENTITY Ctr_panelmenucol	"パネルメニューを別の背景色にする">
 <!ENTITY Ctr_hideprivmask	"プライベートブラウジング: マスク表示を隠す">
-<!ENTITY Ctr_navsmallicons	"Small icons">
-<!ENTITY Ctr_navlargeicons	"Large icons">
-<!ENTITY Ctr_nbisizedelay0	"Initialization delay on browser startup">
+<!ENTITY Ctr_navsmallicons	"小さなアイコン">
+<!ENTITY Ctr_navlargeicons	"大きなアイコン">
+<!ENTITY Ctr_nbisizedelay0	"ブラウザの起動時に初期化を遅延する">
 <!ENTITY Ctr_nbisizedelay	"ms (1000 ms = 1 sec)">
 <!ENTITY Ctr_findbar		"検索バー">
 <!ENTITY Ctr_findbar_def	"デフォルト位置">
@@ -154,58 +154,58 @@
 <!ENTITY Ctr_nav_txt_ico1	"大きいアイコンを表示">
 <!ENTITY Ctr_nav_txt_ico2	"アイコンとテキストを表示">
 <!ENTITY Ctr_nav_txt_ico3	"テキストのみを表示">
-<!ENTITY Ctr_nav_txt_exp	"Classic attributes (experimental):">
-<!ENTITY Ctr_iat_notf_vt	"Exclude vertical toolbars">
+<!ENTITY Ctr_nav_txt_exp	"古い属性 (実験的):">
+<!ENTITY Ctr_iat_notf_vt	"垂直ツールバーを除外する">
 <!ENTITY Ctr_cpanelmenus	"パネルメニュー：コンパクトビュー (ブックマーク、履歴など)">
 <!ENTITY Ctr_hidezoomres	"ツールバーのズームコントロール: ズームリセットボタンを隠す">
-<!ENTITY Ctr_alt_newtabp	"New tab page (about:newtab): alternative appearance">
-<!ENTITY Ctr_nosnippets		"Start page (about:home): hide snippets">
-<!ENTITY Ctr_search_ui		"Search">
-<!ENTITY Ctr_ctroldsearch	"Old search">
-<!ENTITY Ctr_ctroldsearchc	"Clear searchbox after search">
-<!ENTITY Ctr_search_oit		"Open search in new tab (about:config設定)">
-<!ENTITY Ctr_osearch_meoit	"Middle-clicks: search in new 'foreground tab'">
-<!ENTITY Ctr_osearch_iwidth	"Automatically adjust popup width">
-<!ENTITY Ctr_osearch_dm		"Small dropmarker">
-<!ENTITY Ctr_addonmanager	"Add-on manager">
-<!ENTITY Ctr_alt_addonsp	"'More info' page: alternative order">
-<!ENTITY Ctr_alt_addonsm	"Alternative appearance">
-<!ENTITY Ctr_am_nowarning	"Add-on lists: hide warnings">
-<!ENTITY Ctr_am_compact		"Add-on lists: compact view">
-<!ENTITY Ctr_am_compact2	"Compact view +">
-<!ENTITY Ctr_am_highlight	"Add-on lists: highlight entry on 'hover'">
-<!ENTITY Ctr_am_buticons	"Add-on lists: replace button labels with icons">
-<!ENTITY Ctr_am_hovshowb	"Add-on lists: only show buttons on 'hover'">
-<!ENTITY Ctr_addonversion	"Add-on lists: show add-on version">
-<!ENTITY Ctr_xpinstallui	"Old add-on install window (about:config設定)">
-<!ENTITY Ctr_bmbutton		"Bookmarks menu button">
-<!ENTITY Ctr_hiderecentbm	"Bookmarks popup: hide recently added bookmarks">
-<!ENTITY Ctr_hideeditbm		"Bookmarks star: hide popup (if page is not bookmarked)">
-<!ENTITY Ctr_bmbutpanelm	"Popup: panel menu appearance">
-<!ENTITY Ctr_bmbunsortbm	"Popup: 'unsorted bookmarks' menu">
-<!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
-<!ENTITY Ctr_bmbviewbmsb	"Popup: show 'View Sidebar'">
-<!ENTITY Ctr_bmbviewbmtb	"Popup: show 'View Toolbar'">
-<!ENTITY Ctr_bmbnounsort	"Popup: hide 'unsorted bookmarks'">
-<!ENTITY Ctr_bmbutnotext	"Hide label on bookmarks bar">
-<!ENTITY Ctr_skipprintpr	"Print button: skip print preview">
-<!ENTITY Ctr_tbconmenu		"Toolbar context menu: hide 'move to menu', 'remove from toolbar', 'reload/bookmark all tabs' and 'undo close tab'">
-<!ENTITY Ctr_noresizerxp	"Hide Resizer (Windows XP)">
-<!ENTITY Ctr_extraurlkeycb	"Open additional location bar (Cmd/Ctrl+">
+<!ENTITY Ctr_alt_newtabp	"新しいタブ (about:newtab): 替わりの外観で置き換える">
+<!ENTITY Ctr_nosnippets		"スタートページ (about:home): スニペットを隠す">
+<!ENTITY Ctr_search_ui		"検索">
+<!ENTITY Ctr_ctroldsearch	"古い検索">
+<!ENTITY Ctr_ctroldsearchc	"検索後に検索ボックスを消去する">
+<!ENTITY Ctr_search_oit		"新しいタブで Open search を開く (about:config設定)">
+<!ENTITY Ctr_osearch_meoit	"中クリック: 新しいフォアグラウンドタブで検索">
+<!ENTITY Ctr_osearch_iwidth	"ポップアップの幅を合わせる">
+<!ENTITY Ctr_osearch_dm		"小さなドロップダウンマーカー">
+<!ENTITY Ctr_addonmanager	"アドオンマネージャ">
+<!ENTITY Ctr_alt_addonsp	"詳細情報: 順序を変える">
+<!ENTITY Ctr_alt_addonsm	"替わりの外観で置き換える">
+<!ENTITY Ctr_am_nowarning	"アドオンリスト: 警告を隠す">
+<!ENTITY Ctr_am_compact		"アドオンリスト: コンパクトビュー">
+<!ENTITY Ctr_am_compact2	"コンパクトビュー＋">
+<!ENTITY Ctr_am_highlight	"アドオンリスト: カーソルが乗っているときハイライトする">
+<!ENTITY Ctr_am_buticons	"アドオンリスト: ボタンをアイコンに置き換える">
+<!ENTITY Ctr_am_hovshowb	"アドオンリスト: カーソルが乗っているときボタンを表示する">
+<!ENTITY Ctr_addonversion	"アドオンリスト: アドオンのバージョンを表示する">
+<!ENTITY Ctr_xpinstallui	"古いアドオンインストールウィンドウ (about:config設定)">
+<!ENTITY Ctr_bmbutton		"ブックマークメニューボタン">
+<!ENTITY Ctr_hiderecentbm	"ブックマークポップアップ: 「最近ブックマークしたページ」を隠す">
+<!ENTITY Ctr_hideeditbm		"ブックマークスター: ポップアップを隠す (ページがブックマークされていない場合)">
+<!ENTITY Ctr_bmbutpanelm	"ポップアップ: パネルメニューの外観">
+<!ENTITY Ctr_bmbunsortbm	"ポップアップ: 未整理のブックマークをメニューとして表示">
+<!ENTITY Ctr_bmbunsortbm2	"メニュー上部に表示">
+<!ENTITY Ctr_bmbviewbmsb	"ポップアップ: 「ブックマークサイドバーを表示」をメニューに表示">
+<!ENTITY Ctr_bmbviewbmtb	"ポップアップ: 「ブックマークツールバーを表示」をメニューに表示">
+<!ENTITY Ctr_bmbnounsort	"ポップアップ: 「未整理のブックマーク」を隠す">
+<!ENTITY Ctr_bmbutnotext	"ブックマークツールバーのラベルを隠す">
+<!ENTITY Ctr_skipprintpr	"印刷ボタン: 印刷プレビューをスキップ">
+<!ENTITY Ctr_tbconmenu		"ツールバーの右クリック：メニューに移動、ツールバーから削除、全てのタブを再読、閉じたタブを元に戻すのメニューを表示しない">
+<!ENTITY Ctr_noresizerxp	"リサイズボックスを隠す (Windows XP)">
+<!ENTITY Ctr_extraurlkeycb	"追加のロケーションバー (Cmd/Ctrl+">
 <!ENTITY Ctr_pmhidelabels	"パネルメニューポップアップ：ボタンのラベルを隠す">
 <!ENTITY Ctr_menupopupscr	"メニューポップアップ: 矢印の代わりにスクロールバーを表示する">
-<!ENTITY Ctr_closegeneral	"General close icons">
+<!ENTITY Ctr_closegeneral	"その他の閉じるボタン">
 
-<!ENTITY Ctr_tabsep_def		"Default tab separators">
+<!ENTITY Ctr_tabsep_def		"デフォルトのタブセパレーター">
 <!ENTITY Ctr_fxmockup		"&brandShortName; モックアップ">
 <!ENTITY Ctr_tabmokcolor	"タブボタンを白色にする (閉じる、新しいタブを開く、タブグループ、タブを一覧表示)">
 <!ENTITY Ctr_tabmokcolor2	"非アクティブタブを白色の文字にして、灰色の影をつける">
-<!ENTITY Ctr_tabmokcolor4	"White color for empty dotted tab favicon">
+<!ENTITY Ctr_tabmokcolor4	"空ファビコンを白色にする">
 
-<!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
+<!ENTITY Ctr_navthrobber1	"アクティビティインジケーターをクリックした時、指定したURLを開く:">
 <!ENTITY Ctr_navthrobber2	"URL を入力するか、空欄のままにしてください">
-<!ENTITY Ctr_anewtaburl		"New tab page url">
-<!ENTITY Ctr_anewtaburlcb	"Custom new tab page url (default: 'about:newtab')">
+<!ENTITY Ctr_anewtaburl		"新しいタブの URL">
+<!ENTITY Ctr_anewtaburlcb	"新しいタブを以下の URL で開く (デフォルト値: about:newtab)">
 
 <!ENTITY Ctr_tab_tf_info1	"色名、16 進コード、rgb(a)、hsl(a) の値をサポートします。">
 <!ENTITY Ctr_tab_tf_info2	"入力値は検証されません。">
@@ -227,148 +227,148 @@
 <!ENTITY Ctr_ntabhov		"新しいタブ (hover)">
 <!ENTITY Ctr_bold			"太字">
 <!ENTITY Ctr_italic			"斜体">
-<!ENTITY Ctr_notabhov		"Enabled settings override 'hovered' settings">
-<!ENTITY Ctr_tabc_act_tb	"Background color on toolbars">
+<!ENTITY Ctr_notabhov		"hovere の設定を上書きする">
+<!ENTITY Ctr_tabc_act_tb	"ツールバーに背景色をつける">
 
-<!ENTITY Ctr_urlbar			"URL バー">
-<!ENTITY Ctr_starinurl		"URL バーにスターボタンを表示する">
-<!ENTITY Ctr_starinurlinfo	"Default bookmarks menu button gets hidden">
-<!ENTITY Ctr_feedinurl		"URL バーにフィードボタンを表示する">
-<!ENTITY Ctr_hideurelstop	"URL バーの中止&amp;再読み込みボタンを隠す">
-<!ENTITY Ctr_hideurelstop2	"Always show 'go' button">
-<!ENTITY Ctr_hideurlgo		"Hide 'go' button">
-<!ENTITY Ctr_hideurlsrg		"Hide 'reload, stop &amp; go' button separators &amp; spaces">
-<!ENTITY Ctr_urlbardropm	"Move dropmarker to the last possible position">
-<!ENTITY Ctr_urlbardropm2	"Make dropmarker always visible">
-<!ENTITY Ctr_altreaderico	"Alternative 'Reader' icons">
-<!ENTITY Ctr_hideprbutton	"Hide notification icon when a popup gets blocked">
-<!ENTITY Ctr_locsearchbw10	"Reduce location bars and search bars height (experimental)">
-<!ENTITY Ctr_urlbar_ib		"Site Identity Button (identity box)">
-<!ENTITY Ctr_ib_nohovcolor	"Do not show gray color when hovered">
-<!ENTITY Ctr_ib_graycolor	"Gray color for unknown identity and chrome pages">
-<!ENTITY Ctr_verifiedcolors	"Button colors for verified websites, secure and not secure connections">
-<!ENTITY Ctr_ibinfoico		"Replace 'i'-icon with globe icon">
-<!ENTITY Ctr_ibinfoico2		"Hide 'i'-icon (if possible)">
-<!ENTITY Ctr_iblabels		"Hide labels">
-<!ENTITY Ctr_faviconurl		"URLバーにファビコンを表示する">
+<!ENTITY Ctr_urlbar			"ロケーションバー">
+<!ENTITY Ctr_starinurl		"ロケーションバーにスターボタンを表示する">
+<!ENTITY Ctr_starinurlinfo	"デフォルトのブックマークメニューボタンが隠れてます">
+<!ENTITY Ctr_feedinurl		"ロケーションバーにフィードボタンを表示する">
+<!ENTITY Ctr_hideurelstop	"ロケーションバーの中止&amp;再読み込みボタンを隠す">
+<!ENTITY Ctr_hideurelstop2	"移動ボタンを常に表示">
+<!ENTITY Ctr_hideurlgo		"移動ボタンを隠す">
+<!ENTITY Ctr_hideurlsrg		"再読み込み＆中止＆移動ボタンのセパレーターとスペースを隠す">
+<!ENTITY Ctr_urlbardropm	"ドロップマーカーを後ろの可能な位置に移す">
+<!ENTITY Ctr_urlbardropm2	"ドロップマーカーを常に表示する">
+<!ENTITY Ctr_altreaderico	"リーダーアイコンを変更する">
+<!ENTITY Ctr_hideprbutton	"ポップアップブロックの通知アイコンを隠す">
+<!ENTITY Ctr_locsearchbw10	"ロケーションバーと検索バーの高さを減らす (実験的)">
+<!ENTITY Ctr_urlbar_ib		"サイト認証ボタン (identity box)">
+<!ENTITY Ctr_ib_nohovcolor	"カーソルを置いた時グレーにしない">
+<!ENTITY Ctr_ib_graycolor	"Web サイトの識別情報を取得できない時はグレーで表示する">
+<!ENTITY Ctr_verifiedcolors	"審査済みのウェブサイト、安全な接続、安全でない接続でボタンの色を分ける">
+<!ENTITY Ctr_ibinfoico		"ｉアイコンを地球アイコンで置き換える">
+<!ENTITY Ctr_ibinfoico2		"ｉアイコンを隠す (可能ならば)">
+<!ENTITY Ctr_iblabels		"ラベルを隠す">
+<!ENTITY Ctr_faviconurl		"ロケーションバーにファビコンを表示する">
 <!ENTITY Ctr_padlock		"南京錠">
 <!ENTITY Ctr_padlock_hid	"隠す">
 <!ENTITY Ctr_padlock_def	"デフォルト">
 <!ENTITY Ctr_padlock_cla	"クラシック">
 <!ENTITY Ctr_padlock_mod	"モダン">
-<!ENTITY Ctr_padlock_ext	"'&brandShortName;' icon for valid 'about' pages">
-<!ENTITY Ctr_icopageinfo	"Favicon/globe-/'i'-icon: 'click' opens 'page info window'">
-<!ENTITY Ctr_lbsbsize		"Custom width for location bar and search bar">
-<!ENTITY Ctr_searchbar		"Search bar">
-<!ENTITY Ctr_autocomplete	"Autocomplete popup">
-<!ENTITY Ctr_altautocompl	"Alternative appearance (experimental)">
-<!ENTITY Ctr_urlbar_uc		"Disable 'Unified autocomplete' feature (about:config設定)">
-<!ENTITY Ctr_lbsugresi		"Disable height limit">
-<!ENTITY Ctr_lbsugres		"Number of results (about:config preference)">
+<!ENTITY Ctr_padlock_ext	"空白ページで&brandShortName;アイコンを表示する">
+<!ENTITY Ctr_icopageinfo	"クリックした時ページ情報ウィンドウを開く">
+<!ENTITY Ctr_lbsbsize		"ロケーションバーと検索バーの横幅を指定する">
+<!ENTITY Ctr_searchbar		"検索バー">
+<!ENTITY Ctr_autocomplete	"自動補完候補">
+<!ENTITY Ctr_altautocompl	"替わりの自動補完候補で置き換える (実験的)">
+<!ENTITY Ctr_urlbar_uc		"自動補完機能を無効にする (about:config設定)">
+<!ENTITY Ctr_lbsugresi		"候補数を制限しない">
+<!ENTITY Ctr_lbsugres		"候補の表示数 (about:config設定)">
 
-<!ENTITY Ctr_menubar_items	"Menu items position">
-<!ENTITY Ctr_extrabar		"Additional Toolbars">
-<!ENTITY Ctr_extrabar0		"Additional Toolbar(s)">
+<!ENTITY Ctr_menubar_items	"メニュー項目の位置">
+<!ENTITY Ctr_extrabar		"追加のツールバー">
+<!ENTITY Ctr_extrabar0		"追加のツールバー">
 <!ENTITY Ctr_extrabar1		"追加のツールバー">
-<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. &brandShortName; has to be restarted to solve this issue.">
+<!ENTITY Ctr_extrabarinfo	"「タブ上部」と「タブ上部以外」では追加のツールバーの順序をランダムに切り替えます。設定の反映には&brandShortName; の再起動が必要です。">
 
 <!ENTITY Ctr_invicons		"反転アイコン">
 <!ENTITY Ctr_menubar		"メニューバー">
 <!ENTITY Ctr_tabstoolbar	"タブツールバー">
 <!ENTITY Ctr_navbar			"ナビゲーションツールバー">
 <!ENTITY Ctr_bookbar		"ブックマークツールバー">
-<!ENTITY Ctr_notoolbar		"Hidden (do not show menu items)">
+<!ENTITY Ctr_notoolbar		"隠す (メニュー項目を表示しない)">
 
-<!ENTITY Ctr_mbarforceleft	"First element">
-<!ENTITY Ctr_mbarforceright	"Last element">
+<!ENTITY Ctr_mbarforceleft	"先頭に表示">
+<!ENTITY Ctr_mbarforceright	"後ろに表示">
 
 <!ENTITY Ctr_toolbars		"ツールバー設定">
 <!ENTITY Ctr_dblclnewtab	" ダブルクリックで'新しい'タブを開く (browser.newtab.url を使用)">
 <!ENTITY Ctr_hidetbwot		"1つのタブでタブツールバーを隠す">
-<!ENTITY Ctr_hidetbwote		"Reduce hiding delay on startup">
-<!ENTITY Ctr_hidetbwote_i	"Could cause glitches on tabs toolbar">
-<!ENTITY Ctr_hidetbwote2	"Keep titlebar (tabs on top)">
+<!ENTITY Ctr_hidetbwote		"起動時に非表示の遅延を減少させる">
+<!ENTITY Ctr_hidetbwote_i	"タブツールバーに不具合が発生する可能性があります。">
+<!ENTITY Ctr_hidetbwote2	"タイトルバーを維持する (タブが上部の時)">
 <!ENTITY Ctr_notabfog		"背景のぼかしを取り除く (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_notabbg		"背景色を取り除く (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_hightabpos		"ツールバーの上の間隔を減らす (可能ならば)">
 <!ENTITY Ctr_alttabstb		"別の背景色にする">
-<!ENTITY Ctr_alttabstb2		"In maximized mode (tabs on top)">
+<!ENTITY Ctr_alttabstb2		"最大化した時 (タブを上部の時)">
 
 <!ENTITY Ctr_altmenubar		"背景色を加える (OS タイトルバー)">
 <!ENTITY Ctr_altmenubarpos	"別の位置">
 <!ENTITY Ctr_altmenubarpos2	"&brandShortName;タイトルバーの下">
 <!ENTITY Ctr_menubarnofog	"背景色とぼかしを取り除く (Windows AeroGlass / Win8)">
 
-<!ENTITY Ctr_aerocolors		"Blue Aero colors for main toolbars and tabs">
-<!ENTITY Ctr_transpttbw10	"Title/menu/tabs toolbar: remove background color">
-<!ENTITY Ctr_transpttbew10	"Additional tweaks for some OS themes">
-<!ENTITY Ctr_transptcw10	"Hide default OS min/max/close buttons">
+<!ENTITY Ctr_aerocolors		"メインツールバーとタブを Blue Aero カラーにする">
+<!ENTITY Ctr_transpttbw10	"タイトル/メニュー/タブ ツールバー: 背景色を取り除く">
+<!ENTITY Ctr_transpttbew10	"いくつかのOSテーマのための追加の微調整">
+<!ENTITY Ctr_transptcw10	"OSデフォルトのボタンを隠す (最小化/最大化/閉じる)">
 <!ENTITY Ctr_hidenavbar		"ナビゲーションツールバー：ツールバーを隠す">
-<!ENTITY Ctr_navbarpad		"Additional left and right padding">
-<!ENTITY Ctr_navbarpad_l	"Left:">
-<!ENTITY Ctr_navbarpad_r	"Right:">
+<!ENTITY Ctr_navbarpad		"左右に余白を追加">
+<!ENTITY Ctr_navbarpad_l	"左:">
+<!ENTITY Ctr_navbarpad_r	"右:">
 <!ENTITY Ctr_nobookbarbg	"ブックマークツールバー: 背景色を取り除く">
-<!ENTITY Ctr_bookbarfs		"ブックマークツールバー: in fullscreen mode">
-<!ENTITY Ctr_nonavbarbg		"ナビゲーションツールバー: 背景色を取り除く">
-<!ENTITY Ctr_nonavbarbg1	"This add-on's additional toolbars and other top toolbars are affected.">
-<!ENTITY Ctr_nonavbarbg2	"All toolbars in 'Beyond Australis' add-on's Slim Chrome are affected.">
+<!ENTITY Ctr_bookbarfs		"ブックマークツールバー: フルスクリーンモード中も表示する">
+<!ENTITY Ctr_nonavbarbg		"背景色を取り除く">
+<!ENTITY Ctr_nonavbarbg1	"このアドオンの追加のツールバーや他のトップツールバーが影響を受けます。">
+<!ENTITY Ctr_nonavbarbg2	"Beyond Australis アドオンのすべてのSlim Chromeツールバーが影響を受けます。">
 <!ENTITY Ctr_nonavborder	"ブックマークツールバー: ツールバーに上ボーダーを加える">
 <!ENTITY Ctr_nonavtbborder	"ツールバー: 上ボーダーを取り除く">
-<!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
-<!ENTITY Ctr_notextshadow	"Toolbars: hide shadow for toolbar text and tab text">
-<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('More Tools') at toolbars end">
-<!ENTITY Ctr_tbsep_winc		"Top toolbars: additional toolbar separators">
+<!ENTITY Ctr_hidesbclose	"サイドバー: 閉じるボタンを隠す">
+<!ENTITY Ctr_notextshadow	"ツールバー: ツールバーとタブのテキストの影を隠す">
+<!ENTITY Ctr_chevronfix		"ナビゲーションツールバー: ツールバーの後ろの“その他のツール”の矢印を消す">
+<!ENTITY Ctr_tbsep_winc		"トップツールバー: 追加のツールバーセパレーター">
 
-<!ENTITY Ctr_closeabarbut	"アドオンバーの閉じるボタンを隠す">
+<!ENTITY Ctr_closeabarbut	"アドオンバー: 閉じるボタンを隠す">
 <!ENTITY Ctr_highaddonsbar	"高さを増やす">
-<!ENTITY Ctr_lessaddonsbar	"Decrease height">
-<!ENTITY Ctr_addonbarfs		"In fullscreen mode">
+<!ENTITY Ctr_lessaddonsbar	"高さを減らす">
+<!ENTITY Ctr_addonbarfs		"フルスクリーンモード中も表示する">
 
 <!ENTITY Ctr_animation		"アニメーション">
-<!ENTITY Ctr_tabthrobber	"Default loading image">
+<!ENTITY Ctr_tabthrobber	"デフォルトのロードイメージ">
 <!ENTITY Ctr_bmanimation	"ブックマーク時にアニメーションさせる">
 <!ENTITY Ctr_pananimation	"パネルを開く時にアニメーションさせる">
 <!ENTITY Ctr_tabanimation	"タブを閉じる/開く時にアニメーションさせる (about:config設定)">
 <!ENTITY Ctr_dlanimation	"'ダウンロード通知'時にアニメーションさせる (about:config設定)">
-<!ENTITY Ctr_fsanimation	"Fullscreen animations (about:config設定)">
-<!ENTITY Ctr_fsaduration	"Fullscreen animations for HTML5 content (about:config設定)">
+<!ENTITY Ctr_fsanimation	"フルスクリーンアニメーション (about:config設定)">
+<!ENTITY Ctr_fsaduration	"HTML5コンテンツのフルスクリーンアニメーション (about:config設定)">
 
 <!ENTITY Ctr_toolsitem		"ツールメニューに項目を表示する">
 <!ENTITY Ctr_appmenuitem	"アプリボタンメニューに項目を表示する">
 <!ENTITY Ctr_contextitem	"ツールバーのメニュー項目のコンテキストメニュー">
-<!ENTITY Ctr_puictrbutton	"Button in main panel menu">
+<!ENTITY Ctr_puictrbutton	"パネルメニューにボタンを追加する">
 
-<!ENTITY Ctr_otherctroptns	"Other settings">
+<!ENTITY Ctr_otherctroptns	"その他の設定">
 <!ENTITY Ctr_cuibotbuttons	"'カスタマイズ'モードの追加ボタンを表示する">
-<!ENTITY Ctr_nodevtheme		"Prevent 'Developer Edition Theme' from being enabled">
+<!ENTITY Ctr_nodevtheme		"開発ツールを有効にされるのを防ぐ">
 
 <!ENTITY Ctr_experttweaks	"拡張設定">
-<!ENTITY Ctr_fx34search		"Unchecking this preference removes the 'new search appearance' and returns the old one.">
-<!ENTITY Ctr_fx34loop		"Unchecking this preference removes 'calling and conversation' features.">
-<!ENTITY Ctr_fx35devtheme	"Unchecking this preference disables the 'developer theme'.">
-<!ENTITY Ctr_fx36prefs		"Unchecking this preference restores the old preference window.">
-<!ENTITY Ctr_fx36prefs2		"Note: Old preference window does not contain all recently added browser preferences!">
-<!ENTITY Ctr_fx38reader		"Unchecking this preference disables the 'reader mode' and removes its icon from location bar.">
-<!ENTITY Ctr_fx38pocket		"Unchecking this preference disables the 'Pocket' feature and removes 'Pocket' button from toolbars.">
-<!ENTITY Ctr_fx38pocket2	"Note: Moving Pocket button to 'Additional Tools and Features' area in 'Customize' mode before disabling this preference removes all Pocket-related entries from Bookmarks-menu and Reader-menu popups.">
-<!ENTITY Ctr_e_searchui		"Search appearance">
-<!ENTITY Ctr_e_loop			"Calling and conversation / Loop">
-<!ENTITY Ctr_e_deved		"Developer Edition Theme">
-<!ENTITY Ctr_e_prefsui		"Preferences in tab">
-<!ENTITY Ctr_e_readermode	"Reader mode">
+<!ENTITY Ctr_fx34search		"この設定をオフにすると、新しい外観の検索を無効にし古い外観の検索になります。">
+<!ENTITY Ctr_fx34loop		"この設定をオフにすると、 &brandShortName; Helloの機能を無効にします。">
+<!ENTITY Ctr_fx35devtheme	"この設定をオフにすると開発ツールを無効にします。">
+<!ENTITY Ctr_fx36prefs		"この設定をオフにすると、古い初期設定画面を復元します。">
+<!ENTITY Ctr_fx36prefs2		"注: 古い初期設定画面には最近追加されたブラウザの設定は含まれません！">
+<!ENTITY Ctr_fx38reader		"この設定をオフにすると、リーダーモードを無効にし、ロケーションバーからアイコンを除去します。">
+<!ENTITY Ctr_fx38pocket		"この設定をオフにすると、Pocket機能を無効にし、ツールバーからPocketボタンを削除します。">
+<!ENTITY Ctr_fx38pocket2	"注：ブックマークメニューとリーダーメニューのポップアップからすべてのPocket関連のエントリを削除する前に、カスタマイズモードで「その他のツールと機能」領域にPocketボタンを移動してください。">
+<!ENTITY Ctr_e_searchui		"検索の外観">
+<!ENTITY Ctr_e_loop			"&brandShortName; Hello">
+<!ENTITY Ctr_e_deved		"開発ツール">
+<!ENTITY Ctr_e_prefsui		"初期設定をタブで開く">
+<!ENTITY Ctr_e_readermode	"リーダーモード">
 <!ENTITY Ctr_e_pocket		"Pocket">
-<!ENTITY Ctr_e_tabsaudioico	"Audio playing icon on tabs">
-<!ENTITY Ctr_fx42tabsaudico	"Unchecking this preference removes 'audio playing icon' from tabs.">
+<!ENTITY Ctr_e_tabsaudioico	"タブのサウンド再生アイコン">
+<!ENTITY Ctr_fx42tabsaudico	"この設定をオフにすると、サウンド再生アイコンをタブから除去します。">
 
 
 <!ENTITY Ctr_pw_settings	"設定">
 <!ENTITY Ctr_pw_set_reset	"デフォルトに戻す">
 <!ENTITY Ctr_pw_set_predef	"クラシックプリセット">
-<!ENTITY Ctr_pw_set_preaus	"&brandShortName; preset">
+<!ENTITY Ctr_pw_set_preaus	"&brandShortName; プリセット">
 <!ENTITY Ctr_pw_set_export	"設定をエクスポート">
 <!ENTITY Ctr_pw_set_import	"設定をインポート">
-<!ENTITY Ctr_pw_set_syncon	"Add to Sync">
-<!ENTITY Ctr_pw_set_syncoff	"Remove from Sync">
+<!ENTITY Ctr_pw_set_syncon	"Syncに追加">
+<!ENTITY Ctr_pw_set_syncoff	"Syncから削除">
 
 <!ENTITY Ctr_special_font	"背景色の設定はデフォルトテーマのみに適用されます。">
 <!ENTITY Ctr_special_info	"一部オプションは特定のケースでのみ動作します。">
@@ -377,10 +377,10 @@
 <!ENTITY Ctr_newversion		"新バージョンをチェック">
 
 <!ENTITY Ctr_addon-bar.accesskey		"A">
-<!ENTITY appMenuGettingStarted.label	"Getting started">
-<!ENTITY goCmd.label					"Go">
-<!ENTITY Ctr_menu_restart.label			"Restart">
-<!ENTITY Ctr_restartapp					"'Restart' in &brandShortName;-menu and file menu">
+<!ENTITY appMenuGettingStarted.label	"入門">
+<!ENTITY goCmd.label					"移動">
+<!ENTITY Ctr_menu_restart.label			"リスタート">
+<!ENTITY Ctr_restartapp					"&brandShortName;メニューとファイルメニューにリスタートを追加する">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"B">

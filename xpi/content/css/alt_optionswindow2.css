@@ -417,6 +417,32 @@
 	  max-width: 550px !important;
 	}
 	
+	/* adjust first groupbox on privacy category*/
+	#mainPrefPane[fx46plus="true"] groupbox#trackingGroup{
+	  margin-top: 11px !important;
+	}
+
+	#mainPrefPane[fx46plus="true"] #trackingprotectionpbmbox {
+	  margin-top: -11px !important;
+	}
+	#mainPrefPane[fx46plus="true"] #trackingprotectionpbmbox caption{
+	  -moz-margin-start: unset !important;
+	  background: unset !important;
+	}
+	#mainPrefPane[fx46plus="true"] #trackingprotectionpbmbox caption label{
+	  background: -moz-Dialog !important;
+	}
+
+	#mainPrefPane[fx49plus="true"] groupbox#trackingGroup{
+	  margin-top: 11px !important;
+	}
+
+	#mainPrefPane[fx49plus="true"] #trackingprotectionbox hbox caption {
+	  margin-top: -11px !important;
+	  -moz-margin-start: unset !important;
+	  -moz-margin-end: 30px !important;
+	}
+	
 	/* advanced category tabs */
 	#advancedPrefs #tabsElement tab:not([selected]):not(:hover),
 	#advancedPrefs #tabsElement {

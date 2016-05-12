@@ -1,0 +1,31 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	/* Tabs toolbar tab close button (Fx31+) */
+	#main-window #navigator-toolbox #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-close-button,
+	#navigator-toolbox #TabsToolbar #tabs-closebutton,
+	#navigator-toolbox #TabsToolbar #ctraddon_tabs-closebutton{
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/close_w7v2.png") !important;
+	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
+	}
+	#main-window #navigator-toolbox #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-close-button:hover,
+	#navigator-toolbox #TabsToolbar #tabs-closebutton:hover,
+	#navigator-toolbox #TabsToolbar #ctraddon_tabs-closebutton:hover{
+	  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
+	}
+	#main-window #navigator-toolbox #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-close-button:hover:active,
+	#navigator-toolbox #TabsToolbar #tabs-closebutton:hover:active,
+	#navigator-toolbox #TabsToolbar #ctraddon_tabs-closebutton:hover:active {
+	  -moz-image-region: rect(0, 48px, 16px, 32px) !important;
+	}
+	
+	#main-window #navigator-toolbox #TabsToolbar #tabbrowser-tabs .tabbrowser-tab:not([selected]):not(:hover) .tab-close-button{
+	  opacity: .7 !important;
+	}
+
+	#TabsToolbar .close-icon > .toolbarbutton-icon {
+	  width: 16px !important;
+	}
+
+}

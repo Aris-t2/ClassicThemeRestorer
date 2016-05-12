@@ -84,6 +84,13 @@ ctrAboutPrefs = {
 	  document.querySelector('#categories').setAttribute('currenttheme',thirdpartytheme);
 	} catch(e){}
 	
+	try{
+	  if(parseInt(Services.appinfo.version) >=46 && parseInt(Services.appinfo.version) < 49)
+	    document.querySelector('#mainPrefPane').setAttribute('fx46plus',true);
+	  else if(parseInt(Services.appinfo.version) >=49)
+		document.querySelector('#mainPrefPane').setAttribute('fx49plus',true);
+	} catch(e){}
+	
 	/* restore favicon wheel for all categories */
 	setTimeout(function(){
 		var windowsService = Components.classes['@mozilla.org/appshell/window-mediator;1'].getService(Components.interfaces.nsIWindowMediator);
