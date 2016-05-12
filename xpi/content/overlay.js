@@ -2019,24 +2019,23 @@ classicthemerestorerjs.ctr = {
 		  case "hideeditbm":
 		    if(classicthemerestorerjs.ctr.appversion >= 47) {
 				if (branch.getBoolPref("hideeditbm")) {
-					var ctraddon_editBookmark_popup = document.getElementById('editBookmarkPanel');
 
 					document.getElementById("bookmarks-menu-button").addEventListener("click", function(e) {
 											
-						ctraddon_editBookmark_popup.style.visibility = 'hidden';
+						document.getElementById('editBookmarkPanel').style.visibility = 'hidden';
 						
-						ctraddon_editBookmark_popup.addEventListener("popupshown", function(){
+						document.getElementById('editBookmarkPanel').addEventListener("popupshown", function(){
 							
 						  if (document.getElementById('bookmarks-menu-button').hasAttribute('notification')) {
 							StarUI.panel.hidePopup();
 							StarUI.quitEditMode();
-							ctraddon_editBookmark_popup.removeAttribute('panelopen');
-							ctraddon_editBookmark_popup.removeAttribute('animate');
+							document.getElementById('editBookmarkPanel').removeAttribute('panelopen');
+							document.getElementById('editBookmarkPanel').removeAttribute('animate');
 
 							if(e.target.localName == "toolbarbutton" && e.originalTarget.getAttribute("anonid") == "button"){
 								e.originalTarget.removeAttribute('open');
 							}
-						  } else ctraddon_editBookmark_popup.style.visibility = 'visible';
+						  } else document.getElementById('editBookmarkPanel').style.visibility = 'visible';
 
 						}, false);
 
@@ -2241,22 +2240,16 @@ classicthemerestorerjs.ctr = {
 				if (newURL=='') newURL='about:newtab';
 				
 				try{
-					if (classicthemerestorerjs.ctr.appversion >= 44) aboutNewTabService.newTabURL = newURL;
-					else  {
-					  var {NewTabURL} = Cu.import("resource:///modules/NewTabURL.jsm", {});
-					  NewTabURL.override(newURL);
-					}
+				  var {NewTabURL} = Cu.import("resource:///modules/NewTabURL.jsm", {});
+				  NewTabURL.override(newURL);
 				} catch(e){}
 
 				classicthemerestorerjs.ctr.altnewtabpageOn = true;
 				
 			} else if (classicthemerestorerjs.ctr.appversion >= 41 && classicthemerestorerjs.ctr.altnewtabpageOn==true) {
 				try{
-				  if (classicthemerestorerjs.ctr.appversion >= 44) aboutNewTabService.resetNewTabURL();
-				  else {
-					var {NewTabURL} = Cu.import("resource:///modules/NewTabURL.jsm", {});
-					NewTabURL.reset();
-				  }
+				  var {NewTabURL} = Cu.import("resource:///modules/NewTabURL.jsm", {});
+				  NewTabURL.reset();
 				} catch(e){}
 				
 				classicthemerestorerjs.ctr.altnewtabpageOn = false;
@@ -2626,7 +2619,7 @@ classicthemerestorerjs.ctr = {
   },
    
   // show backForwardMenu popup for CTRs movable back/forward buttons 'mouse hold event'
-  ctrBackMenuShow: function(ctraddon_anchorElem,event) {
+  ctrBackMenuShow: function(anchorElem,event) {
   
    if(this.prefs.getBoolPref("hide_bf_popup")==false) {
 	var timeoutID;
@@ -2635,22 +2628,22 @@ classicthemerestorerjs.ctr = {
 	var positionY = event.clientY;
 	
 	timeoutID = window.setTimeout(function(){
-	  document.getElementById("backForwardMenu").openPopupAtScreen(ctraddon_anchorElem.boxObject.screenX, ctraddon_anchorElem.boxObject.screenY+ctraddon_anchorElem.boxObject.height-1, false);
-	  ctraddon_anchorElem.onmouseleave = function(event) {}
+	  document.getElementById("backForwardMenu").openPopupAtScreen(anchorElem.boxObject.screenX, anchorElem.boxObject.screenY+anchorElem.boxObject.height-1, false);
+	  anchorElem.onmouseleave = function(event) {}
 	}, 600);
 		
-	ctraddon_anchorElem.onmouseleave = function(event) {
+	anchorElem.onmouseleave = function(event) {
 	  window.clearTimeout(timeoutID);
 	  
 	  // if mouse pointer position changes vertically, display popup menu without timeout
 	  if(event.clientY > positionY+5) {
-		document.getElementById("backForwardMenu").openPopupAtScreen(ctraddon_anchorElem.boxObject.screenX, ctraddon_anchorElem.boxObject.screenY+ctraddon_anchorElem.boxObject.height-1, false);
+		document.getElementById("backForwardMenu").openPopupAtScreen(anchorElem.boxObject.screenX, anchorElem.boxObject.screenY+anchorElem.boxObject.height-1, false);
 	  }
-	  ctraddon_anchorElem.onmouseleave = function(event) {}
+	  anchorElem.onmouseleave = function(event) {}
 	}
-	ctraddon_anchorElem.onmouseup = function() {
+	anchorElem.onmouseup = function() {
 	  window.clearTimeout(timeoutID);
-	  ctraddon_anchorElem.onmouseleave = function(event) {}
+	  anchorElem.onmouseleave = function(event) {}
 	}
 
    }
