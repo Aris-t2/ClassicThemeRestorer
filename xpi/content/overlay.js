@@ -2602,9 +2602,7 @@ classicthemerestorerjs.ctr = {
 	// Remove current windows preference listeners once the window gets closed
 	// to prevent memory leaks and other issues in a multi window environment.
 	window.addEventListener("unload", function unregisterCTRListeners(event){
-		
-		//console.log("unregistered!"); // log stuff for testing
-		
+	
 		ctrSettingsListener.unregister();
 		ctrSettingsListener_forCTB.unregister();
 		ctrSettingsListener_forTabSettings.unregister();
@@ -3400,7 +3398,9 @@ classicthemerestorerjs.ctr = {
 		  });    
 		});
 		
-		observer.observe(document.querySelector('#ctraddon_reload-button'), { attributes: true, attributeFilter: ['disabled'] });
+		try {
+		  observer.observe(document.querySelector('#ctraddon_reload-button'), { attributes: true, attributeFilter: ['disabled'] });
+		} catch(e){}
 	  },1000);
 	},false);
   },

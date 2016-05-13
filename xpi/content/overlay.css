@@ -34,6 +34,14 @@
 	  height: unset !important;
 	  max-height: unset !important;
 	}
+	toolbar:not(#nav-bar) #ctraddon_panelui-button {
+	  display: block !important;
+	}
+	toolbar:not(#nav-bar) #ctraddon_panelui-button #PanelUI-button,
+	toolbar:not(#nav-bar) #ctraddon_panelui-button #PanelUI-button #PanelUI-menu-button {
+	  visibility: visible !important;
+	  display: block !important;
+	}
 
 	/* PanelUI-CTR-button */
 	#ctraddon_PanelUI-CTR-button,
