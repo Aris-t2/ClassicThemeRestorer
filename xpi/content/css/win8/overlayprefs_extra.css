@@ -12,14 +12,14 @@
 #tabs_curvedall,
 #ctraddon_appbutton_list2{
   visibility: collapse !important;
-  display:none !important;
+  display: none !important;
 }
 #ctraddon_pw_okbutton{
   display: inline !important;
 }
 #ctraddon_pw_starinurl label{
   background: -moz-image-rect(url('chrome://classic_theme_restorer/content/images/starbutton1.png'),
-  0, 72, 18, 36) no-repeat left !important;
+			  0, 72, 18, 36) no-repeat left !important;
   -moz-padding-start:20px !important;
   min-height:16px !important;
 }
@@ -27,11 +27,6 @@
   background:url('chrome://classic_theme_restorer/content/images/feedinurlbar.png') no-repeat left !important;
   -moz-padding-start:20px !important;
   min-height:16px !important;
-}
-
-#ClassicTRoptionsPane[fx40plus="true"] #ctraddon_pw_bfurlbarfix {
-  display: none !important;
-  visibility: collapse !important;
 }
 
 #ctraddon_closeicon_red, #ctraddon_closeicong_red,

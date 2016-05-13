@@ -67,7 +67,6 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_abhigher').disabled = true;
 		document.getElementById('ctraddon_pw_smallnavbut').disabled = true;
 		document.getElementById('ctraddon_pw_iconsbig').disabled = true;
-		document.getElementById('ctraddon_pw_bfurlbarfix').disabled = true;
 		document.getElementById('ctraddon_pw_altmenubar').disabled = true;
 		document.getElementById('ctraddon_pw_menubarnofog').disabled = true;
 		document.getElementById('ctraddon_pw_tabmokcolor').disabled = true;
@@ -104,7 +103,6 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_ccol_act_b1').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_ccol_act_b2').style.visibility = 'collapse';
 
-		document.getElementById('ctraddon_pw_bfurlbarfix').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_altmenubar').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_menubarnofog').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabmokcolor').style.visibility = 'collapse';
@@ -517,6 +515,7 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwTranspTbW10(this.prefs.getBoolPref("transpttbw10"));
 	this.ctrpwNavBarPadding(this.prefs.getBoolPref("navbarpad"));
 	this.ctrpwLocationSearchbarSize(this.prefs.getBoolPref("lbsbsize"));
+	this.ctrpwLocationSearchbarRadius(this.prefs.getBoolPref("lbsbradius"));
 	this.ctrpwCompactAddonList(this.prefs.getBoolPref("am_compact"));
 	this.ctrpwUnsortBM(this.prefs.getBoolPref("bmbunsortbm"));
 	this.ctrpwHideUrlStopRel(this.prefs.getBoolPref("hideurelstop"));
@@ -750,6 +749,23 @@ classicthemerestorerjso.ctr = {
 	document.getElementById('ctraddon_pw_lbsbsize_sb').style.visibility = itemvis;
 	document.getElementById('ctraddon_lbsbsizelabel1').style.visibility = itemvis;
 	document.getElementById('ctraddon_lbsbsizelabel2').style.visibility = itemvis;
+  },
+  
+  ctrpwLocationSearchbarRadius: function(which) {
+	var itemvis = 'collapse';
+	
+    if(which==true) {
+	  which=false; itemvis = 'visible';
+	} else {
+	  which=true; itemvis = 'collapse';
+	}
+	
+    document.getElementById('ctraddon_pw_lbsbradius_lb').disabled = which;
+	document.getElementById('ctraddon_pw_lbsbradius_lb').style.visibility = itemvis;
+    document.getElementById('ctraddon_pw_lbsbradius_sb').disabled = which;
+	document.getElementById('ctraddon_pw_lbsbradius_sb').style.visibility = itemvis;
+	document.getElementById('ctraddon_lbsbradiuslabel1').style.visibility = itemvis;
+	document.getElementById('ctraddon_lbsbradiuslabel2').style.visibility = itemvis;
   },
   
   ctrpwCompactAddonList: function(which) {

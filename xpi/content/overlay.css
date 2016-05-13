@@ -9,28 +9,30 @@
 	  -moz-margin-start:26px !important;
 	}
 
-	#ctraddon_puib_separator{
-	  min-width:5px;
-	  width:5px;
-	  background: url("chrome://classic_theme_restorer/content/images/separator2.png") center no-repeat;
-	}
-	
-	#ctraddon_puib_separator[cui-areatype="menu-panel"]{
-	  width:260px !important;
-	  min-height:0px !important;
-	  margin-right: 2px !important;
-	  margin-left: 2px !important;
-	  border-top:1px solid rgba(0,0,0,.0) !important;
-	  border-bottom:1px solid rgba(0,0,0,.5) !important;
-	}
-	
 	#ctraddon_connavsep {
 	  visibility:collapse;
 	}
 	
-	/* hide PanelUI-button completely */
+	/* hide browsers default PanelUI-button completely */
 	#nav-bar > #PanelUI-button {
 	  display: none;
+	}
+	
+	/* configure PanelUI buttons apperance withing CTR PanelUI container */
+	#ctraddon_panelui-button #PanelUI-button {
+	  -moz-appearance: unset !important;
+	  background: unset !important;
+	  box-shadow: unset !important;
+	  border-image: unset !important;
+	  border: unset !important;
+	  padding: unset !important;
+	  margin: unset !important;
+	  min-width: unset !important;
+	  width: unset !important;
+	  max-width: unset !important;
+	  min-height: unset !important;
+	  height: unset !important;
+	  max-height: unset !important;
 	}
 
 	/* PanelUI-CTR-button */
@@ -456,12 +458,7 @@
 	#ctraddon_BMB_unsortedBookmarks_mm2 {
 	  display:none;
 	}
-	
-	/* fix ui tour popup position for ctrs panel ui button */
-	#main-window:not([fx44plus="true"]) #UITourTooltip {
-	  -moz-margin-end:0px !important;
-	}
-	
+
 	/* adjust panel menu button on nav-bar */
 	#main-window[defaultfxtheme="true"] #nav-bar #PanelUI-menu-button {
 	  -moz-padding-start: 2px !important;

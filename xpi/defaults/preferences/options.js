@@ -33,7 +33,6 @@ pref("extensions.classicthemerestorer.cappbutc2",'#007700');
 
 //General UI
 pref("extensions.classicthemerestorer.smallnavbut",false);
-pref("extensions.classicthemerestorer.bfurlbarfix",false);
 pref("extensions.classicthemerestorer.bf_space",false);
 pref("extensions.classicthemerestorer.backforward",false);
 pref("extensions.classicthemerestorer.hide_bf_popup",false);
@@ -140,6 +139,11 @@ pref("extensions.classicthemerestorer.lbsize_minw",200);
 pref("extensions.classicthemerestorer.lbsize_maxw",4000);
 pref("extensions.classicthemerestorer.sbsize_minw",200);
 pref("extensions.classicthemerestorer.sbsize_maxw",4000);
+pref("extensions.classicthemerestorer.lbsbradius",false);
+pref("extensions.classicthemerestorer.lbradius_left",0);
+pref("extensions.classicthemerestorer.lbradius_right",0);
+pref("extensions.classicthemerestorer.sbradius_left",0);
+pref("extensions.classicthemerestorer.sbradius_right",0);
 
 // Toolbar settings
 pref("extensions.classicthemerestorer.aerocolors",false);

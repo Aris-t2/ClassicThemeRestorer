@@ -320,9 +320,9 @@
 	  border-bottom: 0px !important;
 	}
 	
-	#main-window[tabsontop="false"]:-moz-lwtheme #TabsToolbar #tabbrowser-tabs .tabbrowser-tab[selected] {
+	/*#main-window[tabsontop="false"]:-moz-lwtheme #TabsToolbar #tabbrowser-tabs .tabbrowser-tab[selected] {
 	  background:none !important
-	}
+	}*/
 
 	/* remove ridiculous clipping */
 	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive],:not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {

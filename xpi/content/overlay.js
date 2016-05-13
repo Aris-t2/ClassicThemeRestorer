@@ -52,6 +52,7 @@ classicthemerestorerjs.ctr = {
   tabheight:			Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
   locsearchbarsize:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  locsearchbarradius:	Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
   navbarpadding:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
@@ -82,10 +83,13 @@ classicthemerestorerjs.ctr = {
 
   init: function() {
 
-	// remove default panel ui button in favour of CTRs movable duplicate
-	try{
-		document.getElementById("PanelUI-button").removeChild(document.getElementById("PanelUI-menu-button"));
-	} catch(e){}
+	// move default non-movable PanelUI-button/PanelUI-menu-button into a movable container
+	window.addEventListener("DOMContentLoaded", function toggleNavBarSwitch(event){
+	  window.removeEventListener("DOMContentLoaded", toggleNavBarSwitch, false);
+	    try{
+		  document.getElementById("ctraddon_panelui-button").insertBefore(document.getElementById("PanelUI-button"),null);
+	    }catch(e){}
+	},false);
 
 	// adds a new global attribute 'defaultfxtheme' -> better parting css for default and non-default themes
 	try{
@@ -343,7 +347,6 @@ classicthemerestorerjs.ctr = {
 				// move CTRs items on 'first run' or 'reset' onto toolbars
 				CustomizableUI.addWidgetToArea("ctraddon_back-forward-button", CustomizableUI.AREA_NAVBAR);
 				CustomizableUI.addWidgetToArea("ctraddon_appbutton", CustomizableUI.AREA_NAVBAR);
-				CustomizableUI.addWidgetToArea("ctraddon_puib_separator", CustomizableUI.AREA_NAVBAR);
 				CustomizableUI.addWidgetToArea("ctraddon_panelui-button", CustomizableUI.AREA_NAVBAR);
 				if (classicthemerestorerjs.ctr.osstring=="WINNT") CustomizableUI.addWidgetToArea("ctraddon_window-controls", CustomizableUI.AREA_NAVBAR);
 				CustomizableUI.addWidgetToArea("ctraddon_bookmarks-menu-toolbar-button", CustomizableUI.AREA_BOOKMARKS);						
@@ -828,6 +831,13 @@ classicthemerestorerjs.ctr = {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("lbsbsize",true);
 		    else
 			  classicthemerestorerjs.ctr.loadUnloadCSS("lbsbsize",false);
+		  break;
+		  
+		  case "lbsbradius": case "lbradius_left": case "lbradius_right": case "sbradius_left": case "sbradius_right":
+		    if (branch.getBoolPref("lbsbradius")) 
+			  classicthemerestorerjs.ctr.loadUnloadCSS("lbsbradius",true);
+		    else
+			  classicthemerestorerjs.ctr.loadUnloadCSS("lbsbradius",false);
 		  break;
 		  
 		  case "urlresults":
@@ -1790,11 +1800,6 @@ classicthemerestorerjs.ctr = {
 		  case "closeabarbut":
 			if (branch.getBoolPref("closeabarbut"))	classicthemerestorerjs.ctr.loadUnloadCSS("closeabarbut",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("closeabarbut",false);
-		  break;
-
-		  case "bfurlbarfix":
-			if (branch.getBoolPref("bfurlbarfix") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("bfurlbarfix",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("bfurlbarfix",false);
 		  break;
 
 		  case "bf_space":
@@ -3983,7 +3988,6 @@ classicthemerestorerjs.ctr = {
 		case "ibinfoico2": 			manageCSS("hide_ibinfoico2.css");		break;
 		case "iblabels": 			manageCSS("hide_iblabels.css");			break;
 		case "hideprivmask": 		manageCSS("hideprivatemask.css");		break;
-		case "bfurlbarfix": 		manageCSS("bf_urlbarfix.css");			break;
 		case "bf_space": 			manageCSS("bf_space.css");				break;
 	
 		case "invicomenubar": 		manageCSS("invicons_menubar.css");		break;
@@ -5828,6 +5832,56 @@ classicthemerestorerjs.ctr = {
 		
 		break;
 		
+		case "lbsbradius":
+			removeOldSheet(this.locsearchbarradius);
+			
+			if(enable==true && this.prefs.getBoolPref('lbsbradius')){
+		
+				var locborraiusextra_l='';
+				var locborraiusextra_r='';
+				
+				if (this.prefs.getIntPref('lbradius_left')!=0) {
+				  locborraiusextra_l='\
+				    #urlbar:-moz-locale-dir(ltr) #notification-popup-box:not([hidden="true"]),\
+					#urlbar:-moz-locale-dir(ltr) #notification-popup-box[hidden="true"] + box{\
+					  border-top-left-radius: '+this.prefs.getIntPref('lbradius_left')+'px !important;\
+					  border-bottom-left-radius: '+this.prefs.getIntPref('lbradius_left')+'px !important;\
+					}\
+				  ';
+				}
+				
+				if (this.prefs.getIntPref('lbradius_right')!=0) {
+				  locborraiusextra_r='\
+					#urlbar:-moz-locale-dir(rtl) #notification-popup-box:not([hidden="true"]),\
+					#urlbar:-moz-locale-dir(rtl) #notification-popup-box[hidden="true"] + box{\
+					  border-top-right-radius: '+this.prefs.getIntPref('lbradius_right')+'px !important;\
+					  border-bottom-right-radius: '+this.prefs.getIntPref('lbradius_right')+'px !important;\
+					}\
+				  ';
+				}
+				
+				this.locsearchbarradius=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					#urlbar {\
+					  border-top-left-radius: '+this.prefs.getIntPref('lbradius_left')+'px !important;\
+					  border-bottom-left-radius: '+this.prefs.getIntPref('lbradius_left')+'px !important;\
+					  border-top-right-radius: '+this.prefs.getIntPref('lbradius_right')+'px !important;\
+					  border-bottom-right-radius: '+this.prefs.getIntPref('lbradius_right')+'px !important;\
+					}\
+					.searchbar-textbox {\
+					  border-top-left-radius: '+this.prefs.getIntPref('sbradius_left')+'px !important;\
+					  border-bottom-left-radius: '+this.prefs.getIntPref('sbradius_left')+'px !important;\
+					  border-top-right-radius: '+this.prefs.getIntPref('sbradius_right')+'px !important;\
+					  border-bottom-right-radius: '+this.prefs.getIntPref('sbradius_right')+'px !important;\
+					}\
+					'+locborraiusextra_l+'\
+					'+locborraiusextra_r+'\
+				'), null, null);
+				
+				applyNewSheet(this.locsearchbarradius);
+			}
+		
+		break;
+		
 		case "navbarpad":
 			removeOldSheet(this.navbarpadding);
 			
@@ -6097,7 +6151,6 @@ classicthemerestorerjs.ctr = {
 	  try{
 		CustomizableUI.addWidgetToArea("ctraddon_back-forward-button", CustomizableUI.AREA_NAVBAR);
 		CustomizableUI.addWidgetToArea("ctraddon_appbutton", CustomizableUI.AREA_NAVBAR);
-		CustomizableUI.addWidgetToArea("ctraddon_puib_separator", CustomizableUI.AREA_NAVBAR);
 		CustomizableUI.addWidgetToArea("ctraddon_panelui-button", CustomizableUI.AREA_NAVBAR);
 		if (classicthemerestorerjs.ctr.osstring=="WINNT") CustomizableUI.addWidgetToArea("ctraddon_window-controls", CustomizableUI.AREA_NAVBAR);
 		CustomizableUI.addWidgetToArea("ctraddon_bookmarks-menu-toolbar-button", CustomizableUI.AREA_BOOKMARKS);

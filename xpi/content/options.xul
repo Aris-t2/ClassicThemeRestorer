@@ -130,13 +130,19 @@
 		<preference id="ctraddon_nav_txt_ico"	name="extensions.classicthemerestorer.nav_txt_ico" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_iat_notf_vt"	name="extensions.classicthemerestorer.iat_notf_vt"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_closeicong"	name="extensions.classicthemerestorer.closeicong"	type="string"	instantApply="true"/>
+		<preference id="ctraddon_urlresults"	name="extensions.classicthemerestorer.urlresults"	type="bool"		instantApply="true"/>
 		
 		<preference id="ctraddon_lbsbsize"		name="extensions.classicthemerestorer.lbsbsize"		type="bool"		instantApply="true"/>
 		<preference id="ctraddon_lbsize_minw"	name="extensions.classicthemerestorer.lbsize_minw" 	type="int"		instantApply="true"/>
 		<preference id="ctraddon_lbsize_maxw"	name="extensions.classicthemerestorer.lbsize_maxw" 	type="int"		instantApply="true"/>
 		<preference id="ctraddon_sbsize_minw"	name="extensions.classicthemerestorer.sbsize_minw" 	type="int"		instantApply="true"/>
 		<preference id="ctraddon_sbsize_maxw"	name="extensions.classicthemerestorer.sbsize_maxw" 	type="int"		instantApply="true"/>
-		<preference id="ctraddon_urlresults"	name="extensions.classicthemerestorer.urlresults"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_lbsbradius"	name="extensions.classicthemerestorer.lbsbradius"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_lbradius_left"	name="extensions.classicthemerestorer.lbradius_left" type="int"		instantApply="true"/>
+		<preference id="ctraddon_lbradius_right"	name="extensions.classicthemerestorer.lbradius_right" type="int"		instantApply="true"/>
+		<preference id="ctraddon_sbradius_left"	name="extensions.classicthemerestorer.sbradius_left" type="int"		instantApply="true"/>
+		<preference id="ctraddon_sbradius_right"	name="extensions.classicthemerestorer.sbradius_right" type="int"		instantApply="true"/>
+		
 
 		<preference id="ctraddon_ctab1"			name="extensions.classicthemerestorer.ctab1"		type="string"	instantApply="true"/>
 		<preference id="ctraddon_ctab2"			name="extensions.classicthemerestorer.ctab2"		type="string"	instantApply="true"/>
@@ -220,7 +226,6 @@
 		<preference id="ctraddon_alttabstb2"	name="extensions.classicthemerestorer.alttabstb2" 	 type="bool"	instantApply="true"/>
 		
 		<preference id="ctraddon_cpanelmenus"	name="extensions.classicthemerestorer.cpanelmenus"	 type="bool"	instantApply="true"/>
-		<preference id="ctraddon_bfurlbarfix"	name="extensions.classicthemerestorer.bfurlbarfix"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bf_space"		name="extensions.classicthemerestorer.bf_space"	 	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_emptyfavico_t"	name="extensions.classicthemerestorer.emptyfavico_t" type="string"	instantApply="true"/>
 		<preference id="ctraddon_emptyfavico_g"	name="extensions.classicthemerestorer.emptyfavico_g" type="string"	instantApply="true"/>
@@ -870,9 +875,8 @@
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_generaluibox">
 	  <groupbox>
 		<caption  label="&Ctr_ui;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_smallnavbut;"		preference="ctraddon_smallnavbut" oncommand="if(this.checked) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',true);classicthemerestorerjso.ctr.ctrpwSNextra(false);} else if(classicthemerestorerjso.ctr.prefs.getBoolPref('backforward')==false) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',false);} else{classicthemerestorerjso.ctr.ctrpwSNextra(true);}" id="ctraddon_pw_smallnavbut"/>
-		<checkbox label="&Ctr_bfurlbarfix;"		preference="ctraddon_bfurlbarfix" id="ctraddon_pw_bfurlbarfix" class="ctraddonsuboption"/>
-		<checkbox label="&Ctr_backforward;"		preference="ctraddon_backforward"  id="ctraddon_pw_backforward" oncommand="if(this.checked) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',true);classicthemerestorerjso.ctr.ctrpwBFextra(true);} else if(classicthemerestorerjso.ctr.prefs.getBoolPref('smallnavbut')==false) {classicthemerestorerjso.ctr.prefs.setBoolPref('bfurlbarfix',false);classicthemerestorerjso.ctr.ctrpwBFextra(false);} else {classicthemerestorerjso.ctr.ctrpwBFextra(false);}"/>
+		<checkbox label="&Ctr_smallnavbut;"		preference="ctraddon_smallnavbut" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwSNextra(false);} else if(classicthemerestorerjso.ctr.prefs.getBoolPref('backforward')) {classicthemerestorerjso.ctr.ctrpwSNextra(true);}" id="ctraddon_pw_smallnavbut"/>
+		<checkbox label="&Ctr_backforward;"		preference="ctraddon_backforward"  id="ctraddon_pw_backforward" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwBFextra(true);} else if(classicthemerestorerjso.ctr.prefs.getBoolPref('smallnavbut')==false) {classicthemerestorerjso.ctr.ctrpwBFextra(false);} else {classicthemerestorerjso.ctr.ctrpwBFextra(false);}"/>
 		<checkbox label="&Ctr_bf_space;"		preference="ctraddon_bf_space" id="ctraddon_pw_bf_space" class="ctraddonsuboption"/>
 		<checkbox label="&Ctr_hide_bf_popup;"	preference="ctraddon_hide_bf_popup" id="ctraddon_pw_hide_bf_popup" class="ctraddonsuboption"/>
 		<checkbox label="&Ctr_nbcompact;"		preference="ctraddon_nbcompact" id="ctraddon_pw_nbcompact" class="ctraddonsuboption"/>
@@ -1084,6 +1088,24 @@
 		  <textbox size="4" maxlength="4" preference="ctraddon_sbsize_minw" type="number" min="0" max="4000"/>
 		  <label value="px  -  &Ctr_tabmaxwidth; "/>
 		  <textbox size="4" maxlength="4" preference="ctraddon_sbsize_maxw" type="number" min="0" max="4000"/>
+		  <label value="px"/>
+		</hbox>
+		
+		<checkbox label="&Ctr_lbsbradius;" preference="ctraddon_lbsbradius" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwLocationSearchbarRadius(true);} else {classicthemerestorerjso.ctr.ctrpwLocationSearchbarRadius(false);}"/>
+		<description id="ctraddon_lbsbradiuslabel1" class="ctraddonsuboption ctraddon_font1">&Ctr_urlbar;</description>
+		<hbox class="ctraddonsuboption"  id="ctraddon_pw_lbsbradius_lb" align="center">
+		  <label value="&Ctr_navbarpad_l; "/>
+		  <textbox size="2" maxlength="2" preference="ctraddon_lbradius_left" type="number" min="0" max="20"/>
+		  <label value="px  -  &Ctr_navbarpad_r; "/>
+		  <textbox size="2" maxlength="2" preference="ctraddon_lbradius_right" type="number" min="0" max="20"/>
+		  <label value="px"/>
+		</hbox>
+		<description id="ctraddon_lbsbradiuslabel2" class="ctraddonsuboption ctraddon_font1">&Ctr_searchbar;</description>
+		<hbox class="ctraddonsuboption"  id="ctraddon_pw_lbsbradius_sb" align="center">
+		  <label value="&Ctr_navbarpad_l; "/>
+		  <textbox size="2" maxlength="2" preference="ctraddon_sbradius_left" type="number" min="0" max="20"/>
+		  <label value="px  -  &Ctr_navbarpad_r; "/>
+		  <textbox size="2" maxlength="2" preference="ctraddon_sbradius_right" type="number" min="0" max="20"/>
 		  <label value="px"/>
 		</hbox>
 
