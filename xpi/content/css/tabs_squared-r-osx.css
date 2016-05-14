@@ -199,20 +199,38 @@
 	  background-position: 1px 2px !important;
 	  background-size: calc(100% - 2px) calc(100% - 2px) !important;
 	  background-repeat: no-repeat !important;
+	}
+
+	.tabbrowser-tab:not(:-moz-lwtheme),
+	.tabs-newtab-button:not(:-moz-lwtheme){
 	  border-bottom-left-radius: 9px !important;
 	  border-bottom-right-radius: 9px !important;
 	}
-
-	.tabs-newtab-button:not(:-moz-lwtheme),
+	
+	.tabbrowser-tab:-moz-lwtheme,
 	.tabs-newtab-button:-moz-lwtheme{
+	  border-top-left-radius: 9px !important;
+	  border-top-right-radius: 9px !important;
+	}
+
+	.tabs-newtab-button:not(:-moz-lwtheme){
 	  border-width: 1px 3px 3px !important;
 	  border-image: url(chrome://classic_theme_restorer/content/images/tab-r.png) 0 3 1 fill repeat stretch !important;
 	  border-style: solid !important;
 	}
-	.tabbrowser-tab[selected=true] > .tab-stack > .tab-content,
-	.tabbrowser-tab:not([selected=true]):not(:-moz-lwtheme) > .tab-stack > .tab-content,
-	.tabbrowser-tab:not([selected=true]):-moz-lwtheme > .tab-stack > .tab-content {
+	.tabs-newtab-button:-moz-lwtheme{
+	  border-width: 1px 3px 3px !important;
+	  border-image: url(chrome://classic_theme_restorer/content/images/tab.png) 0 3 1 fill repeat stretch !important;
+	  border-style: solid !important;
+	}
+	.tabbrowser-tab[selected=true]:not(:-moz-lwtheme) > .tab-stack > .tab-content,
+	.tabbrowser-tab:not([selected=true]):not(:-moz-lwtheme) > .tab-stack > .tab-content {
       border-image: url("chrome://classic_theme_restorer/content/images/tab-r.png") 1 3 0 fill repeat stretch !important;
+      border-style: solid !important;
+    }
+	.tabbrowser-tab[selected=true]:-moz-lwtheme > .tab-stack > .tab-content,
+	.tabbrowser-tab:not([selected=true]):-moz-lwtheme > .tab-stack > .tab-content {
+      border-image: url("chrome://classic_theme_restorer/content/images/tab.png") 1 3 0 fill repeat stretch !important;
       border-style: solid !important;
     }
 	
@@ -318,11 +336,7 @@
 	#TabsToolbar::after {
 	  border-bottom: 0px !important;
 	}
-	
-	/*#main-window[tabsontop="false"]:-moz-lwtheme #TabsToolbar #tabbrowser-tabs .tabbrowser-tab[selected] {
-	  background:none !important
-	}*/
-	
+
 	/* remove ridiculous clipping */
 	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive],:not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
 	  clip-path: none !important;

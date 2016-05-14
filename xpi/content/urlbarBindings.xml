@@ -204,7 +204,7 @@
 		  var width = 300;
 
 		  try{
-			width = document.getElementById("urlbar").getBoundingClientRect().width;
+			width = Math.round(document.getElementById("urlbar").getBoundingClientRect().width);
 		  } catch(e){}
 		  
 		  this.setAttribute("width", width);
