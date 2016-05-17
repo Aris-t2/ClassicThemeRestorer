@@ -72,7 +72,7 @@
 <!ENTITY Ctr_closetabbig	"大きなボタン (20x20 px)">
 <!ENTITY Ctr_close_wwltab	"タブがひとつの時はタブと同時にウィンドウを閉じる (about:config設定)">
 
-<!ENTITY Ctr_hctpinfotab	"いくつかの種類のタブは Hide Caption Titlebar Plus とは互換性がありません。">
+<!ENTITY Ctr_hctpinfotab	"タブのスタイルのうちいくつかは Hide Caption Titlebar Plus とは互換性がありません。">
 <!ENTITY Ctr_hctpinfoab		"タイトルバー上のボタンは Hide Caption Titlebar Plus に対応していません。">
 
 <!ENTITY Ctr_appbutton		"アプリケーションボタン">
@@ -247,7 +247,7 @@
 <!ENTITY Ctr_verifiedcolors	"審査済みのウェブサイト、安全な接続、安全でない接続でボタンの色を分ける">
 <!ENTITY Ctr_ibinfoico		"ｉアイコンを地球アイコンで置き換える">
 <!ENTITY Ctr_ibinfoico2		"ｉアイコンを隠す (可能ならば)">
-<!ENTITY Ctr_iblabels		"ラベルを隠す">
+<!ENTITY Ctr_iblabels		"テキストを隠す">
 <!ENTITY Ctr_faviconurl		"ロケーションバーにファビコンを表示する">
 <!ENTITY Ctr_padlock		"錠前アイコン">
 <!ENTITY Ctr_padlock_hid	"隠す">
@@ -263,7 +263,7 @@
 <!ENTITY Ctr_urlbar_uc		"自動補完機能を無効にする (about:config設定)">
 <!ENTITY Ctr_lbsugresi		"候補数を制限しない">
 <!ENTITY Ctr_lbsugres		"候補の表示数 (about:config設定)">
-<!ENTITY Ctr_lbsbradius		"ロケーションバーと検索バーの 境界線半径 を修正する">
+<!ENTITY Ctr_lbsbradius		"ロケーションバーと検索バーの枠線の角の丸みを設定する">
 
 <!ENTITY Ctr_menubar_items	"メニュー項目の位置">
 <!ENTITY Ctr_extrabar		"追加のツールバー">
@@ -281,10 +281,10 @@
 <!ENTITY Ctr_mbarforceleft	"先頭に表示">
 <!ENTITY Ctr_mbarforceright	"後ろに表示">
 
-<!ENTITY Ctr_toolbars		"ツールバー">
+<!ENTITY Ctr_toolbars		"ツールバー全般">
 <!ENTITY Ctr_dblclnewtab	"ダブルクリックで新しいタブを開く (browser.newtab.url を使用)">
 <!ENTITY Ctr_hidetbwot		"タブがひとつの時はタブバーを隠す">
-<!ENTITY Ctr_hidetbwote		"起動時に非表示なるまでの遅延を減少させる">
+<!ENTITY Ctr_hidetbwote		"起動時に非表示になるまでの遅延を減少させる">
 <!ENTITY Ctr_hidetbwote_i	"タブバーに不具合が発生する可能性があります。">
 <!ENTITY Ctr_hidetbwote2	"タイトルバーを維持する (タブが上部の時)">
 <!ENTITY Ctr_notabfog		"背景のぼかしを取り除く (Windows AeroGlass / Win8)">
@@ -370,7 +370,7 @@
 <!ENTITY Ctr_pw_set_syncoff	"Syncから削除">
 
 <!ENTITY Ctr_special_font	"背景色の設定はデフォルトテーマのみに適用されます。">
-<!ENTITY Ctr_special_info	"一部オプションは特定のケースでのみ動作します。">
+<!ENTITY Ctr_special_info	"一部オプションは特定の条件でのみ動作します。">
 <!ENTITY Ctr_special_info2	"設定は&brandShortName; デフォルトテーマ用に作成されたもので、サードパーティのテーマで動作しない可能性があります。">
 <!ENTITY Ctr_support		"サポートフォーラム (英語)">
 <!ENTITY Ctr_newversion		"新バージョンをチェック">
@@ -380,6 +380,10 @@
 <!ENTITY goCmd.label					"移動">
 <!ENTITY Ctr_menu_restart.label			"リスタート">
 <!ENTITY Ctr_restartapp					"&brandShortName;メニューとファイルメニューにリスタートを追加する">
+
+<!ENTITY Ctr_openInCurrentTab			"入力後に現在のタブで開く">
+<!ENTITY Ctr_openInNewTab				"入力後に新しいタブで開く">
+<!ENTITY Ctr_openInNewWindow			"入力後に新しいウィンドウで開く">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"B">

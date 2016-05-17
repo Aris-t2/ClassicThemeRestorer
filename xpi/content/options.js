@@ -519,6 +519,7 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwCompactAddonList(this.prefs.getBoolPref("am_compact"));
 	this.ctrpwUnsortBM(this.prefs.getBoolPref("bmbunsortbm"));
 	this.ctrpwHideUrlStopRel(this.prefs.getBoolPref("hideurelstop"));
+	this.ctrpwExtraUrlbar(this.prefs.getBoolPref("extraurlkeycb"));
 	
 	var closetab_value = this.prefs.getCharPref("closetab");
   
@@ -744,11 +745,11 @@ classicthemerestorerjso.ctr = {
 	}
 	
     document.getElementById('ctraddon_pw_lbsbsize_lb').disabled = which;
-	document.getElementById('ctraddon_pw_lbsbsize_lb').style.visibility = itemvis;
     document.getElementById('ctraddon_pw_lbsbsize_sb').disabled = which;
-	document.getElementById('ctraddon_pw_lbsbsize_sb').style.visibility = itemvis;
-	document.getElementById('ctraddon_lbsbsizelabel1').style.visibility = itemvis;
-	document.getElementById('ctraddon_lbsbsizelabel2').style.visibility = itemvis;
+	document.getElementById('ctraddon_lbsize_minw').disabled = which;
+	document.getElementById('ctraddon_lbsize_maxw').disabled = which;
+	document.getElementById('ctraddon_sbsize_minw').disabled = which;
+	document.getElementById('ctraddon_sbsize_maxw').disabled = which;
   },
   
   ctrpwLocationSearchbarRadius: function(which) {
@@ -761,11 +762,11 @@ classicthemerestorerjso.ctr = {
 	}
 	
     document.getElementById('ctraddon_pw_lbsbradius_lb').disabled = which;
-	document.getElementById('ctraddon_pw_lbsbradius_lb').style.visibility = itemvis;
     document.getElementById('ctraddon_pw_lbsbradius_sb').disabled = which;
-	document.getElementById('ctraddon_pw_lbsbradius_sb').style.visibility = itemvis;
-	document.getElementById('ctraddon_lbsbradiuslabel1').style.visibility = itemvis;
-	document.getElementById('ctraddon_lbsbradiuslabel2').style.visibility = itemvis;
+	document.getElementById('ctraddon_lbradius_left').disabled = which;
+	document.getElementById('ctraddon_lbradius_right').disabled = which;
+	document.getElementById('ctraddon_sbradius_left').disabled = which;
+	document.getElementById('ctraddon_sbradius_right').disabled = which;
   },
   
   ctrpwCompactAddonList: function(which) {
@@ -805,6 +806,19 @@ classicthemerestorerjso.ctr = {
 	
     document.getElementById('ctraddon_pw_hideurelstop2').disabled = which;
 	document.getElementById('ctraddon_pw_hideurelstop2').style.visibility = itemvis;
+  },
+  
+  ctrpwExtraUrlbar: function(which) {
+	var itemvis = 'collapse';
+	
+    if(which==true) {
+	  which=false; itemvis = 'visible';
+	} else {
+	  which=true; itemvis = 'collapse';
+	}
+	
+    document.getElementById('ctraddon_extraurltarget_list').disabled = which;
+	document.getElementById('ctraddon_extraurltarget_list').style.visibility = itemvis;
   },
  
   ctrpwCtrOldSearch: function(which) {

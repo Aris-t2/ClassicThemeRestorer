@@ -5867,13 +5867,15 @@ classicthemerestorerjs.ctr = {
 				}
 				
 				this.locsearchbarradius=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					#urlbar {\
+					#urlbar,\
+					#urlbar .autocomplete-textbox-container {\
 					  border-top-left-radius: '+this.prefs.getIntPref('lbradius_left')+'px !important;\
 					  border-bottom-left-radius: '+this.prefs.getIntPref('lbradius_left')+'px !important;\
 					  border-top-right-radius: '+this.prefs.getIntPref('lbradius_right')+'px !important;\
 					  border-bottom-right-radius: '+this.prefs.getIntPref('lbradius_right')+'px !important;\
 					}\
-					.searchbar-textbox {\
+					.searchbar-textbox,\
+					.searchbar-textbox .autocomplete-textbox-container{\
 					  border-top-left-radius: '+this.prefs.getIntPref('sbradius_left')+'px !important;\
 					  border-bottom-left-radius: '+this.prefs.getIntPref('sbradius_left')+'px !important;\
 					  border-top-right-radius: '+this.prefs.getIntPref('sbradius_right')+'px !important;\
@@ -6076,7 +6078,7 @@ classicthemerestorerjs.ctr = {
 
   // open prefwindow and specific category
   additionalToolbars: function(){
-	Services.prefs.getBranch("extensions.classicthemerestorer.").setIntPref('pref_actindx',12);
+	Services.prefs.getBranch("extensions.classicthemerestorer.").setIntPref('pref_actindx',13);
 	
 	setTimeout(function(){
 	  classicthemerestorerjs.ctr.openCTRPreferences();
@@ -6201,9 +6203,15 @@ classicthemerestorerjs.ctr = {
   
   openUrlFromUrlExtraBar: function() {
     try{
-		delayedOpenTab(document.getElementById('ctraddon_extraurlbar_tb').value, null, null, null, true);
+		if(classicthemerestorerjs.ctr.prefs.getCharPref('extraurltarget')=="current")
+		  openUILinkIn(document.getElementById('ctraddon_extraurlbar_tb').value,"current", true, null, null);
+		else if(classicthemerestorerjs.ctr.prefs.getCharPref('extraurltarget')=="window")
+		  openUILinkIn(document.getElementById('ctraddon_extraurlbar_tb').value,"window", true, null, null);
+		else
+		  openUILinkIn(document.getElementById('ctraddon_extraurlbar_tb').value,"tab", true, null, null);
+		
 		document.getElementById('ctraddon_urlextrabar').setAttribute('collapsed',true);
-	} catch(e){}
+	} catch(e){}		
   },
   
   togglePersonalBarItem: function() {

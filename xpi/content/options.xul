@@ -105,6 +105,7 @@
 		<preference id="ctraddon_altalertbox"	name="extensions.classicthemerestorer.altalertbox"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_hideprbutton"	name="extensions.classicthemerestorer.hideprbutton"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_extraurlkeycb"	name="extensions.classicthemerestorer.extraurlkeycb" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_extraurltarget" name="extensions.classicthemerestorer.extraurltarget" type="string"	instantApply="true"/>
 		<preference id="ctraddon_starinurl"		name="extensions.classicthemerestorer.starinurl"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_feedinurl"		name="extensions.classicthemerestorer.feedinurl"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_statusbar"		name="extensions.classicthemerestorer.statusbar"	type="bool"		instantApply="true"/>
@@ -327,11 +328,12 @@
 	  <radio class="ctraddontab" value="ctraddon_generaluibox"	label="&Ctr_ui; (1)"/>
 	  <radio class="ctraddontab" value="ctraddon_generaluibox2"	label="&Ctr_ui; (2)"/>
 	  <radio class="ctraddontab" value="ctraddon_generaluibox3"	label="&Ctr_ui; (3)"/>
-	  <radio class="ctraddontab" value="ctraddon_searchuibox"	label="&Ctr_search_ui;"/>
 	  <radio class="ctraddontab" value="ctraddon_prefpagebox"	label="&Ctr_prefpage;"/>
 	  <radio class="ctraddontab" value="ctraddon_addonmngrbox"	label="&Ctr_addonmanager;"/>
 	  <radio class="ctraddontab" value="ctraddon_locationbbox"	label="&Ctr_urlbar; (1)"/>
 	  <radio class="ctraddontab" value="ctraddon_locationbbox2"	label="&Ctr_urlbar; (2)"/>
+	  <radio class="ctraddontab" value="ctraddon_locationbbox3"	label="&Ctr_urlbar; / &Ctr_searchbar;"/>
+	  <radio class="ctraddontab" value="ctraddon_searchuibox"	label="&Ctr_searchbar;"/>
 	  <radio class="ctraddontab" value="ctraddon_toolbarsbox"	label="&Ctr_toolbars; (1)"/>
 	  <radio class="ctraddontab" value="ctraddon_toolbarsbox2"	label="&Ctr_toolbars; (2)"/>
 	  <radio class="ctraddontab" value="ctraddon_toolbarsbox3"	label="&Ctr_toolbars; (3)"/>
@@ -852,25 +854,6 @@
 	  </groupbox>
 
 	</box>
-	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_searchuibox">
-	  <groupbox>
-	    <caption  label="&Ctr_search_ui;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_ctroldsearch;"	preference="ctraddon_ctroldsearch" id="ctraddon_pw_ctroldsearch" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(true);} else {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(false);}"/>
-		<checkbox label="&Ctr_osearch_dm;"		preference="ctraddon_osearch_dm" id="ctraddon_pw_osearch_dm" class="ctraddon_winmaconly"/>
-		<checkbox label="&Ctr_ctroldsearchc;"	preference="ctraddon_ctroldsearchc" id="ctraddon_pw_ctroldsearchc"/>
-		<checkbox label="&Ctr_osearch_meoit;"	preference="ctraddon_osearch_meoit" id="ctraddon_pw_osearch_meoit"/>
-		<checkbox label="&Ctr_osearch_iwidth;"	preference="ctraddon_osearch_iwidth" id="ctraddon_pw_osearch_iwidth"/>
-		<checkbox label="&Ctr_search_oit;"		preference="ctraddon_search_oit" id="ctraddon_pw_search_oit" />
-	  </groupbox>
-	  
-	  <groupbox>
-		<hbox>
-		  <image src="chrome://classic_theme_restorer/content/images/oldsearch.png"/>
-		  <label value=""/>
-		</hbox>
-	  </groupbox>
-
-	</box>
 
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_generaluibox">
 	  <groupbox>
@@ -1071,44 +1054,16 @@
 		<checkbox label="&Ctr_urlbardropm2;" preference="ctraddon_urlbardropm2"  id="ctraddon_pw_urlbardropm2"/>
 		<checkbox label="&Ctr_altreaderico;" preference="ctraddon_altreaderico"  id="ctraddon_pw_altreaderico"/>
 		<checkbox label="&Ctr_hideprbutton;" preference="ctraddon_hideprbutton" id="ctraddon_pw_urlbarpblocked"/>
-		<checkbox label="&Ctr_extraurlkeycb;&openCmd.commandkey; &amp; Alt+&urlbar.accesskey; [Windows/Linux])"	preference="ctraddon_extraurlkeycb" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
-		<checkbox label="&Ctr_locsearchbw10;" preference="ctraddon_locsearchbw10"  id="ctraddon_pw_locsearchbw10"/>
-		<checkbox label="&Ctr_lbsbsize;" preference="ctraddon_lbsbsize" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwLocationSearchbarSize(true);} else {classicthemerestorerjso.ctr.ctrpwLocationSearchbarSize(false);}"/>
-		<description id="ctraddon_lbsbsizelabel1" class="ctraddonsuboption ctraddon_font1">&Ctr_urlbar;</description>
-		<hbox class="ctraddonsuboption"  id="ctraddon_pw_lbsbsize_lb" align="center">
-		  <label value="&Ctr_tabminwidth; "/>
-		  <textbox size="4" maxlength="4" preference="ctraddon_lbsize_minw" type="number" min="0" max="4000"/>
-		  <label value="px  -  &Ctr_tabmaxwidth; "/>
-		  <textbox size="4" maxlength="4" preference="ctraddon_lbsize_maxw" type="number" min="0" max="4000"/>
-		  <label value="px"/>
+		<checkbox label="&Ctr_extraurlkeycb;&openCmd.commandkey; &amp; Alt+&urlbar.accesskey; [Windows/Linux])"	preference="ctraddon_extraurlkeycb" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwExtraUrlbar(true);} else {classicthemerestorerjso.ctr.ctrpwExtraUrlbar(false);} classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+		<hbox class="ctraddonsuboption">
+		  <menulist preference="ctraddon_extraurltarget" id="ctraddon_extraurltarget_list">
+			<menupopup>
+				<menuitem value="current" label="&Ctr_openInCurrentTab;"/>
+				<menuitem value="tab"	  label="&Ctr_openInNewTab;"/>
+				<menuitem value="window"  label="&Ctr_openInNewWindow;"/>
+			</menupopup>
+		  </menulist>
 		</hbox>
-		<description id="ctraddon_lbsbsizelabel2" class="ctraddonsuboption ctraddon_font1">&Ctr_searchbar;</description>
-		<hbox class="ctraddonsuboption"  id="ctraddon_pw_lbsbsize_sb" align="center">
-		  <label value="&Ctr_tabminwidth; "/>
-		  <textbox size="4" maxlength="4" preference="ctraddon_sbsize_minw" type="number" min="0" max="4000"/>
-		  <label value="px  -  &Ctr_tabmaxwidth; "/>
-		  <textbox size="4" maxlength="4" preference="ctraddon_sbsize_maxw" type="number" min="0" max="4000"/>
-		  <label value="px"/>
-		</hbox>
-		
-		<checkbox label="&Ctr_lbsbradius;" preference="ctraddon_lbsbradius" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwLocationSearchbarRadius(true);} else {classicthemerestorerjso.ctr.ctrpwLocationSearchbarRadius(false);}"/>
-		<description id="ctraddon_lbsbradiuslabel1" class="ctraddonsuboption ctraddon_font1">&Ctr_urlbar;</description>
-		<hbox class="ctraddonsuboption"  id="ctraddon_pw_lbsbradius_lb" align="center">
-		  <label value="&Ctr_navbarpad_l; "/>
-		  <textbox size="2" maxlength="2" preference="ctraddon_lbradius_left" type="number" min="0" max="20"/>
-		  <label value="px  -  &Ctr_navbarpad_r; "/>
-		  <textbox size="2" maxlength="2" preference="ctraddon_lbradius_right" type="number" min="0" max="20"/>
-		  <label value="px"/>
-		</hbox>
-		<description id="ctraddon_lbsbradiuslabel2" class="ctraddonsuboption ctraddon_font1">&Ctr_searchbar;</description>
-		<hbox class="ctraddonsuboption"  id="ctraddon_pw_lbsbradius_sb" align="center">
-		  <label value="&Ctr_navbarpad_l; "/>
-		  <textbox size="2" maxlength="2" preference="ctraddon_sbradius_left" type="number" min="0" max="20"/>
-		  <label value="px  -  &Ctr_navbarpad_r; "/>
-		  <textbox size="2" maxlength="2" preference="ctraddon_sbradius_right" type="number" min="0" max="20"/>
-		  <label value="px"/>
-		</hbox>
-
 	  </groupbox>
 
 	</box>
@@ -1153,6 +1108,70 @@
 		  <label value=" 12 &Ctr_tabwidthdef; / 10 (&brandShortName; 48+)"/>
 		</hbox>
 
+	  </groupbox>
+
+	</box>
+
+	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_locationbbox3">
+	  
+	  <groupbox>
+	    <caption  label="&Ctr_urlbar; / &Ctr_searchbar;" class="ctraddon_topic"/>
+		<checkbox label="&Ctr_locsearchbw10;" preference="ctraddon_locsearchbw10"  id="ctraddon_pw_locsearchbw10"/>
+		<checkbox label="&Ctr_lbsbsize;" preference="ctraddon_lbsbsize" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwLocationSearchbarSize(true);} else {classicthemerestorerjso.ctr.ctrpwLocationSearchbarSize(false);}"/>
+		<description id="ctraddon_lbsbsizelabel1" class="ctraddonsuboption ctraddon_font1">&Ctr_urlbar;</description>
+		<hbox class="ctraddonsuboption"  id="ctraddon_pw_lbsbsize_lb" align="center">
+		  <label value="&Ctr_tabminwidth; "/>
+		  <textbox size="4" maxlength="4" preference="ctraddon_lbsize_minw" type="number" min="0" max="4000" id="ctraddon_lbsize_minw"/>
+		  <label value="px  -  &Ctr_tabmaxwidth; "/>
+		  <textbox size="4" maxlength="4" preference="ctraddon_lbsize_maxw" type="number" min="0" max="4000" id="ctraddon_lbsize_maxw"/>
+		  <label value="px"/>
+		</hbox>
+		<description id="ctraddon_lbsbsizelabel2" class="ctraddonsuboption ctraddon_font1">&Ctr_searchbar;</description>
+		<hbox class="ctraddonsuboption"  id="ctraddon_pw_lbsbsize_sb" align="center">
+		  <label value="&Ctr_tabminwidth; "/>
+		  <textbox size="4" maxlength="4" preference="ctraddon_sbsize_minw" type="number" min="0" max="4000" id="ctraddon_sbsize_minw"/>
+		  <label value="px  -  &Ctr_tabmaxwidth; "/>
+		  <textbox size="4" maxlength="4" preference="ctraddon_sbsize_maxw" type="number" min="0" max="4000" id="ctraddon_sbsize_maxw"/>
+		  <label value="px"/>
+		</hbox>
+		
+		<checkbox label="&Ctr_lbsbradius;" preference="ctraddon_lbsbradius" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwLocationSearchbarRadius(true);} else {classicthemerestorerjso.ctr.ctrpwLocationSearchbarRadius(false);}"/>
+		<description id="ctraddon_lbsbradiuslabel1" class="ctraddonsuboption ctraddon_font1">&Ctr_urlbar;</description>
+		<hbox class="ctraddonsuboption"  id="ctraddon_pw_lbsbradius_lb" align="center">
+		  <label value="&Ctr_navbarpad_l; "/>
+		  <textbox size="2" maxlength="2" preference="ctraddon_lbradius_left" type="number" min="0" max="20" id="ctraddon_lbradius_left"/>
+		  <label value="px  -  &Ctr_navbarpad_r; "/>
+		  <textbox size="2" maxlength="2" preference="ctraddon_lbradius_right" type="number" min="0" max="20" id="ctraddon_lbradius_right"/>
+		  <label value="px"/>
+		</hbox>
+		<description id="ctraddon_lbsbradiuslabel2" class="ctraddonsuboption ctraddon_font1">&Ctr_searchbar;</description>
+		<hbox class="ctraddonsuboption"  id="ctraddon_pw_lbsbradius_sb" align="center">
+		  <label value="&Ctr_navbarpad_l; "/>
+		  <textbox size="2" maxlength="2" preference="ctraddon_sbradius_left" type="number" min="0" max="20" id="ctraddon_sbradius_left"/>
+		  <label value="px  -  &Ctr_navbarpad_r; "/>
+		  <textbox size="2" maxlength="2" preference="ctraddon_sbradius_right" type="number" min="0" max="20" id="ctraddon_sbradius_right"/>
+		  <label value="px"/>
+		</hbox>
+	  </groupbox>
+
+	</box>
+	
+	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_searchuibox">
+	  <groupbox>
+	    <caption  label="&Ctr_searchbar;" class="ctraddon_topic"/>
+		<checkbox label="&Ctr_ctroldsearch;"	preference="ctraddon_ctroldsearch" id="ctraddon_pw_ctroldsearch" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(true);} else {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(false);}"/>
+		<checkbox label="&Ctr_osearch_dm;"		preference="ctraddon_osearch_dm" id="ctraddon_pw_osearch_dm" class="ctraddon_winmaconly"/>
+		<checkbox label="&Ctr_ctroldsearchc;"	preference="ctraddon_ctroldsearchc" id="ctraddon_pw_ctroldsearchc"/>
+		<checkbox label="&Ctr_osearch_meoit;"	preference="ctraddon_osearch_meoit" id="ctraddon_pw_osearch_meoit"/>
+		<checkbox label="&Ctr_osearch_iwidth;"	preference="ctraddon_osearch_iwidth" id="ctraddon_pw_osearch_iwidth"/>
+		<checkbox label="&Ctr_search_oit;"		preference="ctraddon_search_oit" id="ctraddon_pw_search_oit" />
+	  </groupbox>
+	  
+	  <groupbox>
+		<hbox>
+		  <image src="chrome://classic_theme_restorer/content/images/oldsearch.png"/>
+		  <label value=""/>
+		</hbox>
 	  </groupbox>
 
 	</box>

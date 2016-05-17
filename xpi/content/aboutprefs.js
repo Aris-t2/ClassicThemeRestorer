@@ -81,6 +81,7 @@ ctrAboutPrefs = {
 
 	window.addEventListener("DOMContentLoaded", function addPrefAttributes(event){
 	  window.removeEventListener("DOMContentLoaded", addPrefAttributes, false);
+	  setTimeout(function(){
 	
 	  /* add attributes to nodes for better css parting */
 	  try{
@@ -114,9 +115,12 @@ ctrAboutPrefs = {
 		}\
 		\
 		'), null, null);
+		
+		console.log(browser.selectedTab.label);
 
 		ss.loadAndRegisterSheet(uri, ss.AGENT_SHEET);
 	  }
+	  },500);
 	},false);
 	
   }

@@ -1,4 +1,4 @@
-﻿<!ENTITY % overlayDTD
+<!ENTITY % overlayDTD
     SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
   %overlayDTD;
 <!-- Do not edit above this line and do not edit the variable '&brandShortName;' inside translated strings -->
@@ -70,7 +70,7 @@
 <!ENTITY Ctr_closei_def		"Iconos predeterminados">
 <!ENTITY Ctr_closeonleft	"Posición alternativa en la pestaña">
 <!ENTITY Ctr_closetabbig	"Icono más grande (20x20 px)">
-<!ENTITY Ctr_close_wwltab	"Cerrar ventana con última pestaña (about:config >> browser.tabs.closeWindowWithLastTab)">
+<!ENTITY Ctr_close_wwltab	"Cerrar ventana con la última pestaña (about:config >> browser.tabs.closeWindowWithLastTab)">
 
 <!ENTITY Ctr_hctpinfotab	"Algunas variantes no funcionan con el complemento 'Hide Caption Titlebar Plus'.">
 <!ENTITY Ctr_hctpinfoab		"El botón en la barra de título no funciona con 'Hide Caption Titlebar Plus'.">
@@ -157,14 +157,14 @@
 <!ENTITY Ctr_cpanelmenus	"Menús tipo panel (botones de Historial, triple-barra, etc.): Vista compacta">
 <!ENTITY Ctr_hidezoomres	"Controles de zoom en la barra de herramientas: Ocultar botón de restablecimiento del zoom">
 <!ENTITY Ctr_alt_newtabp	"Página de nueva pestaña (about:newtab): Apariencia alternativa">
-<!ENTITY Ctr_nosnippets		"Start page (about:home): hide snippets">
-<!ENTITY Ctr_search_ui		"Search">
+<!ENTITY Ctr_nosnippets		"Página de inicio (about:home): Ocultar miniaturas">
+<!ENTITY Ctr_search_ui		"Buscar">
 <!ENTITY Ctr_ctroldsearch	"Menú antiguo de la barra de búsqueda">
 <!ENTITY Ctr_ctroldsearchc	"Limpiar barra de búsqueda después de buscar">
 <!ENTITY Ctr_search_oit		"Abrir búsqueda en una nueva pestaña (about:config >> browser.search.openintab)">
-<!ENTITY Ctr_osearch_meoit	"Clic con el botón central: Busca en una nueva 'pestaña en primer plano'">
-<!ENTITY Ctr_osearch_iwidth	"Automatically adjust popup width">
-<!ENTITY Ctr_osearch_dm		"Flecha de desplegable pequeña">
+<!ENTITY Ctr_osearch_meoit	"Clic central: Busqueda en una nueva 'pestaña en primer plano'">
+<!ENTITY Ctr_osearch_iwidth	"Ajustar automáticamente anchura del menú emergente">
+<!ENTITY Ctr_osearch_dm		"Flecha pequeña de despliegue">
 <!ENTITY Ctr_addonmanager	"Administrador de complementos">
 <!ENTITY Ctr_alt_addonsp	"Página 'más información': Apariencia alternativa">
 <!ENTITY Ctr_alt_addonsm	"Apariencia alternativa">
@@ -182,7 +182,7 @@
 <!ENTITY Ctr_bmbutpanelm	"Estilo de panel para el menú emergente ">
 <!ENTITY Ctr_bmbunsortbm	"Mostrar submenú 'Marcadores no ordenados'">
 <!ENTITY Ctr_bmbunsortbm2	"Menú por encima de los marcadores">
-<!ENTITY Ctr_bmbviewbmsb	"Popup: show 'View Sidebar'">
+<!ENTITY Ctr_bmbviewbmsb	"Mostrar 'Ver barra lateral'">
 <!ENTITY Ctr_bmbviewbmtb	"Mostrar 'Ver barra de herramientas'">
 <!ENTITY Ctr_bmbnounsort	"Ocultar 'Marcadores no ordenados'">
 <!ENTITY Ctr_bmbutnotext	"Ocultar etiquetas en la barra de marcadores">
@@ -258,12 +258,12 @@
 <!ENTITY Ctr_icopageinfo	"Favicon/icono de globo-terráqueo/icono-'i': Hacer clic abre la 'ventana de información de la página'">
 <!ENTITY Ctr_lbsbsize		"Ancho personalizado para barra de direcciones y barra de búsqueda">
 <!ENTITY Ctr_searchbar		"Barra de búsqueda">
-<!ENTITY Ctr_autocomplete	"Autocomplete popup">
+<!ENTITY Ctr_autocomplete	"Ménu emergente de autocompletado">
 <!ENTITY Ctr_urlbar_uc		"Deshabilitar 'Autocompletado unificado' (about:config >> browser.urlbar.unifiedcomplete)">
-<!ENTITY Ctr_altautocompl	"Alternative appearance (experimental)">
-<!ENTITY Ctr_lbsugresi		"Disable height limit">
-<!ENTITY Ctr_lbsugres		"Number of results (about:config >> browser.urlbar.maxRichResults)">
-<!ENTITY Ctr_lbsbradius		"Custom border radius for location bar and search bar">
+<!ENTITY Ctr_altautocompl	"Apariencia alternativa (experimental)">
+<!ENTITY Ctr_lbsugresi		"Deshabilitar límite de altura">
+<!ENTITY Ctr_lbsugres		"Número de resultados (about:config >> browser.urlbar.maxRichResults)">
+<!ENTITY Ctr_lbsbradius		"Borde de radio personalizado para barra de direcciones y barra de búsqueda">
 
 <!ENTITY Ctr_menubar_items	"Posición de los elementos del menú">
 <!ENTITY Ctr_extrabar		"Barras de herramientas adicionales">
@@ -330,7 +330,7 @@
 <!ENTITY Ctr_tabanimation	"De la apertura/cierre de pestañas (about:config >> browser.tabs.animate)">
 <!ENTITY Ctr_dlanimation	"De las notificaciones de descarga (about:config >> browser.download.animateNotifications)">
 <!ENTITY Ctr_fsanimation	"De pantalla completa (about:config >> browser.fullscreen.animate)">
-<!ENTITY Ctr_fsaduration	"De pantalla completa de contenido HTML5 (about:config >> full-screen-api.transition-duration.*)">
+<!ENTITY Ctr_fsaduration	"De pantalla completa del contenido HTML5 (about:config >> full-screen-api.transition-duration.*)">
 
 <!ENTITY Ctr_toolsitem		"Elemento en el menú Herramientas">
 <!ENTITY Ctr_appmenuitem	"Elemento en el menú de la aplicación">
@@ -339,7 +339,7 @@
 
 <!ENTITY Ctr_otherctroptns	"Otras configuraciones">
 <!ENTITY Ctr_cuibotbuttons	"Botones extra en el modo 'Personalizar'">
-<!ENTITY Ctr_nodevtheme		"Evitar que se habilite el 'tema decorativo de desarrollador'">
+<!ENTITY Ctr_nodevtheme		"Evitar que se habilite el estilo del 'tema de desarrollador'">
 
 <!ENTITY Ctr_experttweaks	"Avanzadas">
 <!ENTITY Ctr_fx34search		"Desmarcar esto retira la 'nueva apariencia de búsqueda' y recupera la antigua.">
@@ -379,7 +379,11 @@
 <!ENTITY appMenuGettingStarted.label	"Comenzar">
 <!ENTITY goCmd.label					"Ir">
 <!ENTITY Ctr_menu_restart.label			"Reiniciar">
-<!ENTITY Ctr_restartapp					"'Reiniciar' en el menú-&brandShortName; y el menú 'Archivo'">
+<!ENTITY Ctr_restartapp					"'Reiniciar' en el menú de &brandShortName; y el menú 'Archivo'">
+
+<!ENTITY Ctr_openInCurrentTab			"Open inputs in current tab">
+<!ENTITY Ctr_openInNewTab				"Open inputs in a new tab">
+<!ENTITY Ctr_openInNewWindow			"Open inputs in a new window">
 
 <!-- For page context entries. Have to be adjusted for every locale! a-s-r-p-m -->
 <!ENTITY backCmd.accesskey				"n">
