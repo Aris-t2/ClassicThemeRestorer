@@ -43,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Καρτέλες όχι στο πάνω μέρος (v2) --- ορισμός χαρακτηριστικού [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"Η v2 είναι για ορισμένες επεκτάσεις και πλήρη θέματα μόνο!">
 <!ENTITY Ctr_tabsontopI1	"Προσθέτει χαρακτηριστικό [tabsontop=true/false] σε">
-<!ENTITY Ctr_tabsintitlebar	"Γραμμή τίτλου &brandShortName; (προτίμηση «about:config»)">
+<!ENTITY Ctr_tabsintitlebar	"Χρήση γραμμής τίτλου του &brandShortName; αντί του Λ.Σ. (προτίμηση «about:config»)">
 <!ENTITY Ctr_tabwidthdef	"(προεπιλογή)">
 <!ENTITY Ctr_tabwidthcla	"(κλασικό)">
 <!ENTITY Ctr_tabminheight	"Ύψος:">
@@ -79,9 +79,9 @@
 <!ENTITY Ctr_appbutton0		"Απενεργοποιημένο">
 <!ENTITY Ctr_appbutton1		"Στην εργαλειοθήκη">
 <!ENTITY Ctr_appbutton1wt	"Στην εργαλειοθήκη (μόνο κείμενο)">
-<!ENTITY Ctr_appbutton2		"Στη γραμμή τίτλου του [&brandShortName;]">
-<!ENTITY Ctr_appbutton2h	"Στη γραμμή τίτλου του [&brandShortName;] (σε απόκρυψη)">
-<!ENTITY Ctr_appbutton2io	"Στη γραμμή τίτλου του [&brandShortName;] (μόνο εικονίδιο)">
+<!ENTITY Ctr_appbutton2		"Στη γραμμή τίτλου του &brandShortName;">
+<!ENTITY Ctr_appbutton2h	"Στη γραμμή τίτλου του &brandShortName; (σε απόκρυψη)">
+<!ENTITY Ctr_appbutton2io	"Στη γραμμή τίτλου του &brandShortName; (μόνο εικονίδιο)">
 <!ENTITY Ctr_paneluibtweak	"Εμφάνιση κουμπιού-μενού ως κουμπί &brandShortName;…">
 <!ENTITY Ctr_paneluibtweak2	"Εμφάνιση κουμπιού-μενού ως κουμπί &brandShortName; (μόνο εικονίδιο)…">
 <!ENTITY Ctr_paneluibtweak3	"…όταν βρίσκεται στην εργαλειοθήκη καρτελών">
@@ -157,13 +157,13 @@
 <!ENTITY Ctr_cpanelmenus	"Αναδυόμενα μενού πίνακα (σελιδοδείκτες, ιστορικό κλπ): συνεπτυγμένη προβολή">
 <!ENTITY Ctr_hidezoomres	"Στοιχεία ελέγχου μεγέθυνσης σε εργαλειοθήκη: απόκρυψη κουμπιού επεναφοράς επιπέδου μεγέθυνσης">
 <!ENTITY Ctr_alt_newtabp	"Σελίδα νέας καρτέλας (about:newtab): εναλλακτική εμφάνιση">
-<!ENTITY Ctr_nosnippets		"Start page (about:home): hide snippets">
-<!ENTITY Ctr_search_ui		"Search">
+<!ENTITY Ctr_nosnippets		"Αρχική σελίδα (about:home): απόκρυψη αποσπασμάτων κειμένου">
+<!ENTITY Ctr_search_ui		"Αναζήτηση">
 <!ENTITY Ctr_ctroldsearch	"Παλιότερη διεπαφή αναζήτησης">
 <!ENTITY Ctr_ctroldsearchc	"Κένωση πλαισίου αναζήτησης μετά την αναζήτηση">
 <!ENTITY Ctr_search_oit		"Άνοιγμα αναζήτησης σε νέα καρτέλα (προτίμηση «about:config»)">
 <!ENTITY Ctr_osearch_meoit	"Μεσαίο κλικ: αναζήτηση σε νέα καρτέλα στο προσκήνιο">
-<!ENTITY Ctr_osearch_iwidth	"Automatically adjust popup width">
+<!ENTITY Ctr_osearch_iwidth	"Αυτόματη ρύθμιση εύρους αναδυόμενου">
 <!ENTITY Ctr_osearch_dm		"Μικρός δείκτης ανάπτυξης">
 <!ENTITY Ctr_addonmanager	"Διαχειριστής πρόσθετων">
 <!ENTITY Ctr_alt_addonsp	"Σελίδα «Περισσότερα»: εναλλακτική σειρά περιεχομένου">
@@ -182,7 +182,7 @@
 <!ENTITY Ctr_bmbutpanelm	"Αναδυόμενο: εμφάνιση ως μενού πίνακα">
 <!ENTITY Ctr_bmbunsortbm	"Αναδυόμενο: υπομενού «Αταξινόμητοι σελιδοδείκτες»">
 <!ENTITY Ctr_bmbunsortbm2	"Πάνω από τους σελιδοδείκτες">
-<!ENTITY Ctr_bmbviewbmsb	"Popup: show 'View Sidebar'">
+<!ENTITY Ctr_bmbviewbmsb	"Αναδυόμενο: εμφάνιση «Προβολή πλευρικής στήλης»">
 <!ENTITY Ctr_bmbviewbmtb	"Αναδυόμενο: εμφάνιση «Προβολή εργαλειοθήκης σελιδοδεικτών»">
 <!ENTITY Ctr_bmbnounsort	"Αναδυόμενο: απόκρυψη «Αταξινόμητοι σελιδοδείκτες»">
 <!ENTITY Ctr_bmbutnotext	"Απόκρυψη ετικέτας στην εργαλειοθήκη σελιδοδεικτών">
@@ -243,7 +243,7 @@
 <!ENTITY Ctr_locsearchbw10	"Μείωση ύψους γραμμών τοποθεσιών και αναζήτησης (πειραματικό)">
 <!ENTITY Ctr_urlbar_ib		"Κουμπί ταυτοποίησης τοποθεσιών (πλαίσιο ταυτοποίησης)">
 <!ENTITY Ctr_ib_nohovcolor	"Μη εμφάνιση γκρι χρώματος κατά την κατάδειξη">
-<!ENTITY Ctr_ib_graycolor	"Γκρι χρώμα για αγνώστου ταυτότητας και «Chrome» σελίδες">
+<!ENTITY Ctr_ib_graycolor	"Γκρι χρώμα για αγνώστου ταυτότητας και «about:» σελίδες">
 <!ENTITY Ctr_verifiedcolors	"Χρώματα κουμπιού για επαληθευμένες ιστοσελίδες, ασφαλείς και μη ασφαλείς συνδέσεις">
 <!ENTITY Ctr_ibinfoico		"Αντικατάσταση εικονιδίου «i» με εικονίδιο υδρογείου">
 <!ENTITY Ctr_ibinfoico2		"Απόκρυψη εικονιδίου «i» (εάν είναι δυνατόν)">
@@ -258,12 +258,12 @@
 <!ENTITY Ctr_icopageinfo	"Εικονίδιο υδρογείου/ιστότοπου/«i»: Άνοιγμα παραθύρου «Πληροφορίες σελίδας» με κλικ στο εικονίδιο">
 <!ENTITY Ctr_lbsbsize		"Προσαρμοσμένο εύρος γραμμών διευθύνσεων και αναζήτησης">
 <!ENTITY Ctr_searchbar		"Γραμμή αναζήτησης">
-<!ENTITY Ctr_autocomplete	"Autocomplete popup">
-<!ENTITY Ctr_altautocompl	"Alternative appearance (experimental)">
+<!ENTITY Ctr_autocomplete	"Αναδυόμενο αυτόματης συμπλήρωσης">
+<!ENTITY Ctr_altautocompl	"Εναλλακτική εμφάνιση (πειραματικό)">
 <!ENTITY Ctr_urlbar_uc		"Απενεργοποίηση χαρακτηριστικού ενιαίας αυτόματης συμπλήρωσης (προτίμηση «about:config»)">
-<!ENTITY Ctr_lbsugresi		"Disable height limit">
-<!ENTITY Ctr_lbsugres		"Number of results (about:config preference)">
-<!ENTITY Ctr_lbsbradius		"Custom border radius for location bar and search bar">
+<!ENTITY Ctr_lbsugresi		"Απενεργοποίηση ορίου ύψους">
+<!ENTITY Ctr_lbsugres		"Αριθμός αποτελεσμάτων (προτίμηση «about:config»)">
+<!ENTITY Ctr_lbsbradius		"Προσαρμοσμένη ακτίνα περιγράμματος γραμμών τοποθεσιών και αναζήτησης">
 
 <!ENTITY Ctr_menubar_items	"Θέση στοιχείων μενού της εργαλειοθήκης μενού">
 <!ENTITY Ctr_extrabar		"Επιπρόσθετες εργαλειοθήκες">
@@ -371,7 +371,7 @@
 
 <!ENTITY Ctr_special_font	"Οι ρυθμίσεις χρώματος φόντου είναι για το προεπιλεγμένο θέμα μόνο!">
 <!ENTITY Ctr_special_info	"Ορισμένες επιλογές ενδέχεται να μην προσφέρουν ορατές αλλαγές σε όλες τις περιπτώσεις">
-<!ENTITY Ctr_special_info2	"Οι ρυθμίσεις έχουν σχεδιαστεί για το προεπιλεγμένο θέμα του &brandShortName; και ενδέχεται να μη λειτουργούν με όλα τα θέματα τρίτων!">
+<!ENTITY Ctr_special_info2	"Aνιχνεύθηκε θέμα τρίτων! Ορισμένες επιλογές δε λειτουργούν με θέματα τρίτων!">
 <!ENTITY Ctr_support		"Φόρουμ υποστήριξης">
 <!ENTITY Ctr_newversion		"Νέα έκδοση;">
 
@@ -381,9 +381,9 @@
 <!ENTITY Ctr_menu_restart.label			"Επανεκκίνηση">
 <!ENTITY Ctr_restartapp					"Στοιχείο «Επανεκκίνηση» στα μενού κουμπιού &brandShortName; και «Αρχείο»">
 
-<!ENTITY Ctr_openInCurrentTab			"Open inputs in current tab">
-<!ENTITY Ctr_openInNewTab				"Open inputs in a new tab">
-<!ENTITY Ctr_openInNewWindow			"Open inputs in a new window">
+<!ENTITY Ctr_openInCurrentTab			"Άνοιγμα καταχωρίσεων στην τρέχουσα καρτέλα">
+<!ENTITY Ctr_openInNewTab				"Άνοιγμα καταχωρίσεων σε νέα καρτέλα">
+<!ENTITY Ctr_openInNewWindow			"Άνοιγμα καταχωρίσεων σε νέο παράθυρο">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"Π">

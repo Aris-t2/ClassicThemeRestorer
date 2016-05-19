@@ -36,6 +36,7 @@
 	  margin-right: -8px !important;
 	}
 
+	#TabsToolbar,
 	#tabbrowser-tabs{
 	  min-height: 0px !important;
 	}
@@ -174,10 +175,6 @@
 	  margin-right: 0px !important;
 	  margin-top: -1px !important;
 	  margin-bottom: 0px !important;
-	}
-
-	#TabsToolbar {
-	  min-height: 0px !important;
 	}
 
 	.tabbrowser-tab[selected="true"]{

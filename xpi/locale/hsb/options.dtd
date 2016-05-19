@@ -43,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Rajtarki nic horjeka (v2) --- stajće [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"v2 je jenož za někotre přidatki a dospołne drasty!">
 <!ENTITY Ctr_tabsontopI1	"Přidawa atribut [tabsontop=true/false] na">
-<!ENTITY Ctr_tabsintitlebar	"Titulna lajsta &brandShortName; (about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Titulnu lajstu &brandShortName; město titulneje lajsty dźěłoweho systema wužiwać (nastajenje about:config)">
 <!ENTITY Ctr_tabwidthdef	"(standard)">
 <!ENTITY Ctr_tabwidthcla	"(klasiski)">
 <!ENTITY Ctr_tabminheight	"Wysokosć:">
@@ -79,9 +79,9 @@
 <!ENTITY Ctr_appbutton0		"Tłóčatko znjemóžnjeny">
 <!ENTITY Ctr_appbutton1		"Tłóčatko na symbolowej lajsće">
 <!ENTITY Ctr_appbutton1wt	"Tłóčatko na symbolowej lajsće (jenož tekst)">
-<!ENTITY Ctr_appbutton2		"Tłóčatko na titulnej lajsće [&brandShortName;]">
-<!ENTITY Ctr_appbutton2h	"Tłóčatko na titulnej lajsće [&brandShortName;] (schowane)">
-<!ENTITY Ctr_appbutton2io	"Tłóčatko na titulnej lajsće [&brandShortName;] (jenož symbol)">
+<!ENTITY Ctr_appbutton2		"Tłóčatko na titulnej lajsće &brandShortName;">
+<!ENTITY Ctr_appbutton2h	"Tłóčatko na titulnej lajsće &brandShortName; (schowane)">
+<!ENTITY Ctr_appbutton2io	"Tłóčatko na titulnej lajsće &brandShortName; (jenož symbol)">
 <!ENTITY Ctr_paneluibtweak	"Menijowe tłóčatko jako tłóčatko &brandShortName; pokazać,...">
 <!ENTITY Ctr_paneluibtweak2	"Menijowe tłóčatko jako tłóčatko &brandShortName; pokazać (jenož symbol),...">
 <!ENTITY Ctr_paneluibtweak3	"...hdyž je na rajtarkowej lajsće">
@@ -122,7 +122,7 @@
 <!ENTITY Ctr_altoptionsw	"Strona nastajenjow we woknje wočinić">
 <!ENTITY Ctr_altoptionsww	"Šěrokosć">
 <!ENTITY Ctr_altoptionswh	"Wysokosć">
-<!ENTITY Ctr_altoptionsi	"Simulowane wokno nastajenjow dialog hižo njeje, ale 'wobhladowakowe wokno', hdźež wšě symbolowe lajsty su schowane. Funkcija 'Aktualnu stronu wužiwać' přidawa jenož URL stronow, kotrež so w aktualnym woknje wočinjeja, kotrež je w tutym padźe jenož 'about:preferences'. Tłóčatko symboloweje lajsty 'Nastajenja' so přez nowe wuměnja, zo bychu so nastajenja we woknje wočinili.">
+<!ENTITY Ctr_altoptionsi	"Simulowane wokno nastajenjow dialog hižo njeje, ale 'wobhladowakowe wokno', hdźež wšě symbolowe lajsty su schowane. Funkcija 'Aktualnu stronu wužiwać' přidawa jenož URL stronow, kotrež so w aktualnym woknje wočinjeja, kotrež je w tutym padźe jenož 'about:preferences'. 'Tłóčatko symboloweje lajsty Nastajenja' so přez nowe wuměnja, zo bychu so nastajenja we woknje wočinili.">
 <!ENTITY Ctr_options_rem	"Kategoriju sej spomjatkować, kotraž je so jako poslednja wubrała">
 <!ENTITY Ctr_svgfilters		"SVG-barby za symbole standardnych tłóčatkow">
 <!ENTITY Ctr_wincontrols	"Přesuwajomne wodźenske elementy połneje wobrazowki">
@@ -157,13 +157,13 @@
 <!ENTITY Ctr_cpanelmenus	"Menijowe wuskakowace wokna (čitanske znamjenja, historija atd.): Kompaktny napohlad">
 <!ENTITY Ctr_hidezoomres	"Skalowanske elementy na symbolowej lajsće: Tłóčatko za wróćostajenje skalowanja schować">
 <!ENTITY Ctr_alt_newtabp	"Strona noweho rajtarka (about:newtab): Alternatiwny napohlad">
-<!ENTITY Ctr_nosnippets		"Start page (about:home): hide snippets">
-<!ENTITY Ctr_search_ui		"Search">
+<!ENTITY Ctr_nosnippets		"Startowa strona (about:home): šlipki schować">
+<!ENTITY Ctr_search_ui		"Pytanje">
 <!ENTITY Ctr_ctroldsearch	"Stare pytanje">
 <!ENTITY Ctr_ctroldsearchc	"Po pytanju pytanske polo wuprózdnić">
-<!ENTITY Ctr_search_oit		"Pytanje w nowym rajtarku wočinić (about:config preference)">
+<!ENTITY Ctr_search_oit		"Pytanje w nowym rajtarku wočinić (nastajenje about:config)">
 <!ENTITY Ctr_osearch_meoit	"Srjedźne kliknjenja: W nowym 'prědkowym rajtarku' pytać">
-<!ENTITY Ctr_osearch_iwidth	"Automatically adjust popup width">
+<!ENTITY Ctr_osearch_iwidth	"Šěrokosć wuskakowaceho wokna přiměrić">
 <!ENTITY Ctr_osearch_dm		"Małe wuběranske tłóčatko">
 <!ENTITY Ctr_addonmanager	"Zrjadowak přidatkow">
 <!ENTITY Ctr_alt_addonsp	"Strona 'wjace info': Alternatiwny porjad">
@@ -182,7 +182,7 @@
 <!ENTITY Ctr_bmbutpanelm	"Wuskakowacy meni: Napohlad wuskakowaceho menija">
 <!ENTITY Ctr_bmbunsortbm	"Wuskakowacy meni: Meni 'Njesortěrowane zapołožki'">
 <!ENTITY Ctr_bmbunsortbm2	"Meni nad zapołožkami">
-<!ENTITY Ctr_bmbviewbmsb	"Popup: show 'View Sidebar'">
+<!ENTITY Ctr_bmbviewbmsb	"Wuskakowacy meni: 'Bóčnicu pokazać' pokazać">
 <!ENTITY Ctr_bmbviewbmtb	"Wuskakowacy meni: 'Lajstu zapołožkow pokazać' pokazać">
 <!ENTITY Ctr_bmbnounsort	"Wuskakowcy meni: 'Njesortěrowane zapołožki' schować">
 <!ENTITY Ctr_bmbutnotext	"Tekst na lajśce zapołožkow schować">
@@ -243,7 +243,7 @@
 <!ENTITY Ctr_locsearchbw10	"Wysokosć adresowych a pytanskich polow redukować (eksperimentelne)">
 <!ENTITY Ctr_urlbar_ib		"Tłóčatko sydłoweje identity">
 <!ENTITY Ctr_ib_nohovcolor	"Pod kursorom myški šěru barbu njepokazać">
-<!ENTITY Ctr_ib_graycolor	"Šěra barba za njeznate identitowe strony a strony 'chrome'">
+<!ENTITY Ctr_ib_graycolor	"Šěra barba za njeznate identitowe strony a strony about:'">
 <!ENTITY Ctr_verifiedcolors	"Tłóčatkowe barby za přepruwowane websydła, wěste a njewěste zwiski">
 <!ENTITY Ctr_ibinfoico		"'i'-symbol přez globusowy symbol wuměnić">
 <!ENTITY Ctr_ibinfoico2		"'i'-symbol schować (jeli móžno)">
@@ -258,13 +258,12 @@
 <!ENTITY Ctr_icopageinfo	"Faworitowy symbol/globusowy symbol/'i'-symbol: 'Kliknjenje' wokno 'Info wo stronje' wočinja">
 <!ENTITY Ctr_lbsbsize		"Swójska šěrokosć za adresowe polo a pytanske polo">
 <!ENTITY Ctr_searchbar		"Pytanske polo">
-<!ENTITY Ctr_autocomplete	"Autocomplete popup">
-<!ENTITY Ctr_altautocompl	"Alternative appearance (experimental)">
+<!ENTITY Ctr_autocomplete	"Wuskakowace wokno awtowudospołnjenja">
+<!ENTITY Ctr_altautocompl	"Alternatiwny napohlad (eksperimentelny)">
 <!ENTITY Ctr_urlbar_uc		"Funkciju 'Zjednoćene awtowudospołnjenje' znjemóžnić (nastajenje about:config)">
-<!ENTITY Ctr_lbsugresi		"Disable height limit">
-<!ENTITY Ctr_lbsugres		"Number of results (about:config preference)">
-<!ENTITY Ctr_lbsbradius		"Custom border radius for location bar and search bar">
-
+<!ENTITY Ctr_lbsugresi		"Limit wysokosće znjemóžnić">
+<!ENTITY Ctr_lbsugres		"Ličba wuslědkow (nastajenje about:config)">
+<!ENTITY Ctr_lbsbradius		"Swójska ramikowa křiwizna za adresowe polo a pytanske polo">
 <!ENTITY Ctr_menubar_items	"Pozicija menijowych zapiskow">
 <!ENTITY Ctr_extrabar		"Přidatne symbolowe lajsty">
 <!ENTITY Ctr_extrabar0		"Přidatne symbolowe lajsty">
@@ -371,7 +370,7 @@
 
 <!ENTITY Ctr_special_font	"Nastajenja za pozadkowu barbu su jenož za standardnu drastu!">
 <!ENTITY Ctr_special_info	"Někotre nastajenja snano wizuelne změny nic we wšěch padach poskićeja!">
-<!ENTITY Ctr_special_info2	"Nastajenja su za standardnu drastu sčinjene a je móžno, zo z druhimi drastami njefunguja!">
+<!ENTITY Ctr_special_info2	"Drasta třećeho poskićowarja je so wotkryła! Někotre nastajenja z drastami třećich poskićowarjow njefunguja!">
 <!ENTITY Ctr_support		"Podpěranski forum">
 <!ENTITY Ctr_newversion		"Nowa wersija?">
 
@@ -381,9 +380,9 @@
 <!ENTITY Ctr_menu_restart.label			"Znowa startować">
 <!ENTITY Ctr_restartapp					"Znowa startować pod tłóčatkom '&brandShortName;' a w meniju 'Dataja'">
 
-<!ENTITY Ctr_openInCurrentTab			"Open inputs in current tab">
-<!ENTITY Ctr_openInNewTab				"Open inputs in a new tab">
-<!ENTITY Ctr_openInNewWindow			"Open inputs in a new window">
+<!ENTITY Ctr_openInCurrentTab			"Zapodaća w aktualnym rajtarku wočinić">
+<!ENTITY Ctr_openInNewTab				"Zapodaća w nowym rajtarku wočinić">
+<!ENTITY Ctr_openInNewWindow			"Zapodaća w nowym woknje wočinić">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"W">

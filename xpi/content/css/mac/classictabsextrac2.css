@@ -24,6 +24,11 @@
 	.tabbrowser-tab[selected]:-moz-lwtheme .tab-content {
 	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.5) 50%) !important;
 	}
+	
+	/* centering tab content */
+	.tabbrowser-tab .tab-content{
+	  padding-bottom: 4px !important;
+	}
 
     /* lightweight theme tweaks*/
 	#navigator-toolbox #TabsToolbar:not([tabsontop="false"]):-moz-lwtheme{
