@@ -48,6 +48,7 @@ pref("extensions.classicthemerestorer.findbar","findbar_default");
 pref("extensions.classicthemerestorer.nav_txt_ico","icons");
 pref("extensions.classicthemerestorer.iat_notf_vt",false);
 pref("extensions.classicthemerestorer.wincontrols",false);
+pref("extensions.classicthemerestorer.puibuttonsep",'puib_nosep');
 pref("extensions.classicthemerestorer.oldtoplevimg",false);
 pref("extensions.classicthemerestorer.altalertbox",false);
 pref("extensions.classicthemerestorer.emptyfavico_g",'emptyfavico_g_def');

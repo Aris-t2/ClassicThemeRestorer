@@ -34,14 +34,6 @@
 	  height: unset !important;
 	  max-height: unset !important;
 	}
-	toolbar:not(#nav-bar) #ctraddon_panelui-button {
-	  display: block !important;
-	}
-	toolbar:not(#nav-bar) #ctraddon_panelui-button #PanelUI-button,
-	toolbar:not(#nav-bar) #ctraddon_panelui-button #PanelUI-button #PanelUI-menu-button {
-	  visibility: visible !important;
-	  display: block !important;
-	}
 
 	/* PanelUI-CTR-button */
 	#ctraddon_PanelUI-CTR-button,
@@ -576,7 +568,7 @@
 	  display:block !important;
 	}
 	
-	toolbar[mode="text"] #PanelUI-menu-button .toolbarbutton-icon {
+	toolbar[mode="text"]:not(#TabsToolbar) #PanelUI-menu-button .toolbarbutton-icon {
 	  -moz-appearance: unset !important;
 	  display:block !important;
 	  visibility: hidden !important;
@@ -603,6 +595,15 @@
 
 	#nav-bar[mode="text"] #PanelUI-menu-button .toolbarbutton-text {
 	  -moz-margin-start: -14px !important;
+	}
+	
+	/* icons on tabs toolbar do no get hidden*/
+	#TabsToolbar[mode="text"] .toolbarbutton-text {
+	  display: none !important;
+	}
+
+	#TabsToolbar[mode="text"] .toolbarbutton-icon {
+	  display: block !important;
 	}
 	
 	/* support for old icons+text mode */

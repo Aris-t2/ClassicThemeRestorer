@@ -932,6 +932,16 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("wincontrols")) classicthemerestorerjs.ctr.loadUnloadCSS("wincontrols",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("wincontrols",false);
 		  break;
+		  
+		  case "puibuttonsep":
+			classicthemerestorerjs.ctr.loadUnloadCSS('puib_leftsep',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('puib_rightsep',false);
+		
+			if (branch.getCharPref("puibuttonsep")!="puib_nosep"){
+			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("puibuttonsep"),true);
+			}
+
+		  break;
 
 		  case "altalertbox":
 			if (branch.getBoolPref("altalertbox")
@@ -3897,6 +3907,8 @@ classicthemerestorerjs.ctr = {
 		case "mbarforceleft": 		manageCSS("menuitems_forceleft.css");	break;
 		case "mbarforceright": 		manageCSS("menuitems_forceright.css");	break;
 		case "wincontrols": 		manageCSS("windowcontrols.css");		break;
+		case "puib_leftsep": 		manageCSS("puibutton_leftsep.css");		break;
+		case "puib_rightsep": 		manageCSS("puibutton_rightsep.css");	break;
 		case "oldtoplevimg": 		manageCSS("old_toplevel_img.css");		break;
 		case "altalertbox": 		manageCSS("alt_alertboxfx44.css");		break;
 		case "navthrobber": 		manageCSS("navthrobber.css");			break;

@@ -17,11 +17,6 @@
 	  margin-top: unset !important;
 	  margin-bottom: unset !important;
 	}
-
-	#main-window:not([customizing]) #nav-bar #ctraddon_puib_separator{
-	  margin-top: unset !important;
-	  margin-bottom: unset !important;
-	}
 	
 	#main-window:not([customizing]) #nav-bar #ctraddon_back-forward-dropmarker{
 	  margin-top: unset !important;
@@ -38,10 +33,6 @@
 
 	#main-window:not([customizing]):not([tabsontop="false"]) #nav-bar *{
       padding-top: 1px !important; 
-	}
-
-	#main-window:not([customizing]) #PanelUI-button {
-	  visibility: collapse !important;
 	}
 
 	#main-window:not([customizing]) #PersonalToolbar:not(:-moz-lwtheme),

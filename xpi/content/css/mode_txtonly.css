@@ -110,7 +110,7 @@
 	  box-shadow:none !important;
 	}
 	
-	toolbar .toolbarbutton-badge-stack {
+	toolbar:not(#TabsToolbar) .toolbarbutton-badge-stack {
 	  visibility:collapse !important;
 	  display: -moz-box !important;
 	}
