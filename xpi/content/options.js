@@ -214,7 +214,7 @@ classicthemerestorerjso.ctr = {
 	  }
 	});
 	
-	// Status4Evar, The Puzzle Piece, Puzzle Toolbars and The Addon Bar Restored
+	// Status4Evar, The Puzzle Piece, Puzzle Bars and The Addon Bar Restored
 	// override CTRs mov. status bar panel, so CTRs option gets disabled 
 	document.getElementById('ctraddon_pw_statusbar_s4e_info').style.visibility = 'collapse';
 	document.getElementById('ctraddon_pw_statusbar_tpp_info').style.visibility = 'collapse';
