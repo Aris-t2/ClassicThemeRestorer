@@ -214,7 +214,7 @@ classicthemerestorerjso.ctr = {
 	  }
 	});
 	
-	// Status4Evar, The Puzzle Piece, Puzzle Bars and The Addon Bar Restored
+	// 'Status4Evar', 'Puzzle Bars' and 'The Addon Bar Restored'
 	// override CTRs mov. status bar panel, so CTRs option gets disabled 
 	document.getElementById('ctraddon_pw_statusbar_s4e_info').style.visibility = 'collapse';
 	document.getElementById('ctraddon_pw_statusbar_tpp_info').style.visibility = 'collapse';
@@ -520,6 +520,7 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwUnsortBM(this.prefs.getBoolPref("bmbunsortbm"));
 	this.ctrpwHideUrlStopRel(this.prefs.getBoolPref("hideurelstop"));
 	this.ctrpwExtraUrlbar(this.prefs.getBoolPref("extraurlkeycb"));
+	this.ctrpwSearchPopupSize(this.prefs.getBoolPref("osearch_cwidth"));
 	
 	var closetab_value = this.prefs.getCharPref("closetab");
   
@@ -819,6 +820,19 @@ classicthemerestorerjso.ctr = {
 	
     document.getElementById('ctraddon_extraurltarget_list').disabled = which;
 	document.getElementById('ctraddon_extraurltarget_list').style.visibility = itemvis;
+  },
+  
+  ctrpwSearchPopupSize: function(which) {
+	var itemvis = 'collapse';
+	
+    if(which==true) {
+	  which=false; itemvis = 'visible';
+	} else {
+	  which=true; itemvis = 'collapse';
+	}
+	
+    document.getElementById('ctraddon_pw_os_spsize_box').disabled = which;
+	document.getElementById('ctraddon_pw_os_spsize_box').style.visibility = itemvis;
   },
  
   ctrpwCtrOldSearch: function(which) {

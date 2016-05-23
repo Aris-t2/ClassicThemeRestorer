@@ -702,22 +702,15 @@
 			var isRTL = getComputedStyle(this, "").direction == "rtl";
             var outerRect = this.getBoundingClientRect();
             var innerRect = this.inputField.getBoundingClientRect();
-			
-			var xOffset = 0;
-			
+		
 			if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("osearch_iwidth")) {
 			
 				var width = 100;
-				xOffset = -35;
 				
 				width = isRTL ? Math.round(outerRect.left - outerRect.right) : Math.round(outerRect.right - outerRect.left);
 
 				if(Services.appinfo.OS=="Darwin") {
-				  width = width - 2; // MacOSX
-				} else if (Services.appinfo.OS!="Darwin" && Services.appinfo.OS!="WINNT") {
-				  xOffset = -37; // Linux, BSD...
-				} else if (Services.appinfo.OS=="WINNT" && navigator.oscpu == "Windows NT 10.0") {
-				  xOffset = -36; // Windows 10
+				  width = width - 1; // MacOSX
 				}
 				
 				popup.setAttribute("width", width > 100 ? width : 100);
@@ -731,8 +724,7 @@
 				popup.setAttribute("width", width > 100 ? width : 100);
 			}
 
-            var yOffset = outerRect.bottom - innerRect.bottom;
-            popup.openPopup(this.inputField, "after_start", xOffset, yOffset, false, false);
+            popup.openPopup(this, "after_start", 0, 0, false, false);
           }
         ]]></body>
       </method>

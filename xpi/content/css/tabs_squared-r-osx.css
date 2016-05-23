@@ -250,7 +250,8 @@
 
 	.tabbrowser-tab[selected="true"]:-moz-lwtheme,
 	.tabbrowser-tab[pinned]:-moz-lwtheme {
-	  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.7) 50%) !important;
+	  /*background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.7) 50%) !important;*/
+	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.46) 50%) !important;
 	  background-size: calc(100% - 1px) calc(100% - 4px) !important;
 	}
 

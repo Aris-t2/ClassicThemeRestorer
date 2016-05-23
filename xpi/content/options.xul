@@ -89,6 +89,9 @@
 		<preference id="ctraddon_osearch_dm"	name="extensions.classicthemerestorer.osearch_dm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_osearch_meoit"	name="extensions.classicthemerestorer.osearch_meoit" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_osearch_iwidth" name="extensions.classicthemerestorer.osearch_iwidth" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_osearch_cwidth" name="extensions.classicthemerestorer.osearch_cwidth" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_os_spsize_minw" name="extensions.classicthemerestorer.os_spsize_minw" type="int"	instantApply="true"/>
+		<preference id="ctraddon_os_spsize_maxw" name="extensions.classicthemerestorer.os_spsize_maxw" type="int"	instantApply="true"/>
 		<preference id="ctraddon_addonversion"	name="extensions.classicthemerestorer.addonversion"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_am_nowarning"	name="extensions.classicthemerestorer.am_nowarning"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_am_compact"	name="extensions.classicthemerestorer.am_compact"	 type="bool"	instantApply="true"/>
@@ -101,11 +104,12 @@
 		<preference id="ctraddon_altoptions"	name="extensions.classicthemerestorer.altoptions"	type="string"	instantApply="true"/>
 		<preference id="ctraddon_svgfilters"	name="extensions.classicthemerestorer.svgfilters"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_wincontrols"	name="extensions.classicthemerestorer.wincontrols"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_puibuttonsep"	name="extensions.classicthemerestorer.puibuttonsep"	type="string"	instantApply="true"/>
 		<preference id="ctraddon_oldtoplevimg"	name="extensions.classicthemerestorer.oldtoplevimg"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_altalertbox"	name="extensions.classicthemerestorer.altalertbox"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_hideprbutton"	name="extensions.classicthemerestorer.hideprbutton"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_extraurlkeycb"	name="extensions.classicthemerestorer.extraurlkeycb" type="bool"	instantApply="true"/>
-		<preference id="ctraddon_extraurltarget" name="extensions.classicthemerestorer.extraurltarget" type="string"	instantApply="true"/>
+		<preference id="ctraddon_extraurltarget" name="extensions.classicthemerestorer.extraurltarget" type="string" instantApply="true"/>
 		<preference id="ctraddon_starinurl"		name="extensions.classicthemerestorer.starinurl"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_feedinurl"		name="extensions.classicthemerestorer.feedinurl"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_statusbar"		name="extensions.classicthemerestorer.statusbar"	type="bool"		instantApply="true"/>
@@ -878,6 +882,17 @@
 		<description class="ctraddonsuboption">&Ctr_stoprel1;</description>
 
 		<checkbox label="&Ctr_wincontrols;"		preference="ctraddon_wincontrols" id="ctraddon_wincontrols"/>
+		
+		<hbox align="center" flex="1" id="ctraddon_pw_puibutsep">
+		  <description>&Ctr_puibuttonsep;</description>
+		  <menulist preference="ctraddon_puibuttonsep" id="ctraddon_puibuttonsep_list">
+			<menupopup>
+				<menuitem value="puib_nosep"	label="&Ctr_puibut_no_sep;"/>
+				<menuitem value="puib_leftsep"	label="&Ctr_puibut_l_sep;"/>
+				<menuitem value="puib_rightsep"	label="&Ctr_puibut_r_sep;"/>
+			</menupopup>
+		  </menulist>
+		</hbox>
 		<checkbox label="&Ctr_html5warning;"	preference="ctraddon_html5warning" id="ctraddon_pw_html5warning"/>
 
 		<description class="ctraddon_font1">&Ctr_emptygfavico;</description>
@@ -1163,8 +1178,16 @@
 		<checkbox label="&Ctr_osearch_dm;"		preference="ctraddon_osearch_dm" id="ctraddon_pw_osearch_dm" class="ctraddon_winmaconly"/>
 		<checkbox label="&Ctr_ctroldsearchc;"	preference="ctraddon_ctroldsearchc" id="ctraddon_pw_ctroldsearchc"/>
 		<checkbox label="&Ctr_osearch_meoit;"	preference="ctraddon_osearch_meoit" id="ctraddon_pw_osearch_meoit"/>
-		<checkbox label="&Ctr_osearch_iwidth;"	preference="ctraddon_osearch_iwidth" id="ctraddon_pw_osearch_iwidth"/>
 		<checkbox label="&Ctr_search_oit;"		preference="ctraddon_search_oit" id="ctraddon_pw_search_oit" />
+		<checkbox label="&Ctr_osearch_iwidth;"	preference="ctraddon_osearch_iwidth" id="ctraddon_pw_osearch_iwidth"/>
+		<checkbox label="&Ctr_osearch_cwidth;" preference="ctraddon_osearch_cwidth" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwSearchPopupSize(true);} else {classicthemerestorerjso.ctr.ctrpwSearchPopupSize(false);}"/>
+		<hbox class="ctraddonsuboption"  id="ctraddon_pw_os_spsize_box" align="center">
+		  <label value="&Ctr_tabminwidth; "/>
+		  <textbox size="4" maxlength="4" preference="ctraddon_os_spsize_minw" type="number" min="0" max="4000" id="ctraddon_os_spsize_minw"/>
+		  <label value="px  -  &Ctr_tabmaxwidth; "/>
+		  <textbox size="4" maxlength="4" preference="ctraddon_os_spsize_maxw" type="number" min="0" max="4000" id="ctraddon_os_spsize_maxw"/>
+		  <label value="px"/>
+		</hbox>
 	  </groupbox>
 	  
 	  <groupbox>
