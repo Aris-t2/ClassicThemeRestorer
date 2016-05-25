@@ -59,6 +59,7 @@ pref("extensions.classicthemerestorer.alt_newtabp",false);
 pref("extensions.classicthemerestorer.nosnippets",false);
 pref("extensions.classicthemerestorer.ctroldsearch",false);
 pref("extensions.classicthemerestorer.ctroldsearchc",false);
+pref("extensions.classicthemerestorer.ctroldsearchr",false);
 pref("extensions.classicthemerestorer.osearch_meoit",false);
 pref("extensions.classicthemerestorer.osearch_dm",false);
 pref("extensions.classicthemerestorer.osearch_iwidth",true);
@@ -152,6 +153,7 @@ pref("extensions.classicthemerestorer.sbradius_right",0);
 
 // Toolbar settings
 pref("extensions.classicthemerestorer.aerocolors",false);
+pref("extensions.classicthemerestorer.aerocolorsg",false);
 pref("extensions.classicthemerestorer.transpttbw10",false);
 pref("extensions.classicthemerestorer.transpttbew10",false);
 pref("extensions.classicthemerestorer.transptcw10",false);

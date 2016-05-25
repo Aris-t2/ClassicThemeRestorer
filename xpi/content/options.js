@@ -521,6 +521,7 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwHideUrlStopRel(this.prefs.getBoolPref("hideurelstop"));
 	this.ctrpwExtraUrlbar(this.prefs.getBoolPref("extraurlkeycb"));
 	this.ctrpwSearchPopupSize(this.prefs.getBoolPref("osearch_cwidth"));
+	this.ctrpwAeroColors(this.prefs.getBoolPref("aerocolors"));
 	
 	var closetab_value = this.prefs.getCharPref("closetab");
   
@@ -834,6 +835,19 @@ classicthemerestorerjso.ctr = {
     document.getElementById('ctraddon_pw_os_spsize_box').disabled = which;
 	document.getElementById('ctraddon_pw_os_spsize_box').style.visibility = itemvis;
   },
+  
+  ctrpwAeroColors: function(which) {
+	var itemvis = 'collapse';
+	
+    if(which==true) {
+	  which=false; itemvis = 'visible';
+	} else {
+	  which=true; itemvis = 'collapse';
+	}
+	
+    document.getElementById('ctraddon_pw_aerocolorsg').disabled = which;
+	document.getElementById('ctraddon_pw_aerocolorsg').style.visibility = itemvis;
+  },
  
   ctrpwCtrOldSearch: function(which) {
 	var itemvis = 'collapse';
@@ -845,6 +859,7 @@ classicthemerestorerjso.ctr = {
 	}
 	
     document.getElementById('ctraddon_pw_ctroldsearchc').disabled = which;
+	document.getElementById('ctraddon_pw_ctroldsearchr').disabled = which;
     document.getElementById('ctraddon_pw_osearch_dm').disabled = which;
     document.getElementById('ctraddon_pw_osearch_iwidth').disabled = which;
     document.getElementById('ctraddon_pw_osearch_meoit').disabled = which;

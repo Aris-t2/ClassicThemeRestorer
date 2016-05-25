@@ -43,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Onglets pas au-dessus (v2) --- attribut [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"v2 est uniquement destiné à certains modules et thèmes complets !">
 <!ENTITY Ctr_tabsontopI1	"Assigne l'attribut [tabsontop=true/false] à :">
-<!ENTITY Ctr_tabsintitlebar	"Barre de titre &brandShortName; (paramètre about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Utiliser la barre de titre de &brandShortName; au lieu de celle du système (paramètre about:config)">
 <!ENTITY Ctr_tabwidthdef	"(par défaut)">
 <!ENTITY Ctr_tabwidthcla	"(classique)">
 <!ENTITY Ctr_tabminheight	"Hauteur :">
@@ -79,9 +79,9 @@
 <!ENTITY Ctr_appbutton0		"Désactivé">
 <!ENTITY Ctr_appbutton1		"Afficher sur une barre d'outils">
 <!ENTITY Ctr_appbutton1wt	"Afficher sur une barre d'outils (texte seul)">
-<!ENTITY Ctr_appbutton2		"Afficher sur la barre de titre [&brandShortName;]">
-<!ENTITY Ctr_appbutton2h	"Afficher sur la barre de titre [&brandShortName;] (masqué)">
-<!ENTITY Ctr_appbutton2io	"Afficher sur la barre de titre [&brandShortName;] (icône seule)">
+<!ENTITY Ctr_appbutton2		"Afficher sur la barre de titre de &brandShortName;">
+<!ENTITY Ctr_appbutton2h	"Afficher sur la barre de titre de &brandShortName; (masqué)">
+<!ENTITY Ctr_appbutton2io	"Afficher sur la barre de titre de &brandShortName; (icône seule)">
 <!ENTITY Ctr_paneluibtweak	" Donner son apparence au bouton de menu...">
 <!ENTITY Ctr_paneluibtweak2	" Donner son apparence (seulement l'icône) au bouton de menu...">
 <!ENTITY Ctr_paneluibtweak3	"... si ce dernier se trouve sur la barre des onglets">
@@ -137,7 +137,7 @@
 <!ENTITY Ctr_mstatusbar		"Rendre mobile le panneau de la barre d'état">
 <!ENTITY Ctr_mstatusbars4e	"Le panneau de la barre d'état est contrôlé par « Status-4-Evar ».">
 <!ENTITY Ctr_mstatusbartpp	"Le panneau de la barre d'état est contrôlé par « The Puzzle Piece ».">
-<!ENTITY Ctr_mstatusbarpzt	"Le panneau de la barre d'état est contrôlé par « Puzzle Bars ».">
+<!ENTITY Ctr_mstatusbarpzt	"Le panneau de la barre d'état est contrôlé par « Puzzle Toolbars ».">
 <!ENTITY Ctr_mstatusbarabr	"Le panneau de la barre d'état est contrôlé par « The Addon Bar (Restored) ».">
 <!ENTITY Ctr_combrelstop 	"« Arrêter » &amp; « Actualiser » : combiner les boutons sur la barre d'outils">
 <!ENTITY Ctr_stoprel1		"Important : positionner le bouton « Actualiser » après le bouton « Arrêter » !">
@@ -161,10 +161,11 @@
 <!ENTITY Ctr_cpanelmenus	"Menus de type « panneau » (marque-pages, historique, etc.) : vue compacte">
 <!ENTITY Ctr_hidezoomres	"Boutons de zoom sur une barre d'outils : masquer « Réinitialiser le niveau »">
 <!ENTITY Ctr_alt_newtabp	"Page « Nouvel onglet » (about:newtab) : apparence alternative">
-<!ENTITY Ctr_nosnippets		"Start page (about:home): hide snippets">
+<!ENTITY Ctr_nosnippets		"Page de démarrage par défaut (about:home) : masquer les astuces">
 <!ENTITY Ctr_search_ui		"Barre de recherche">
-<!ENTITY Ctr_ctroldsearch	"Utiliser l'ancienne interface">
+<!ENTITY Ctr_ctroldsearch	"Utiliser l'ancienne interface de barre de recherche">
 <!ENTITY Ctr_ctroldsearchc	"Effacer le contenu de la barre après une recherche">
+<!ENTITY Ctr_ctroldsearchr	"Revert to default search engine after search">
 <!ENTITY Ctr_search_oit		"Ouvrir la recherche dans un nouvel onglet (paramètre about:config)">
 <!ENTITY Ctr_osearch_meoit	"Clic milieu : rechercher dans un nouvel « onglet au premier plan »">
 <!ENTITY Ctr_osearch_iwidth	"Ajuster automatiquement la largeur de la fenêtre surgissante">
@@ -187,7 +188,7 @@
 <!ENTITY Ctr_bmbutpanelm	"Menu déroulant : apparence de menu de type « panneau »">
 <!ENTITY Ctr_bmbunsortbm	"Menu déroulant : menu « Marque-pages non classés »">
 <!ENTITY Ctr_bmbunsortbm2	"Menu au-dessus des marque-pages">
-<!ENTITY Ctr_bmbviewbmsb	"Popup: show 'View Sidebar'">
+<!ENTITY Ctr_bmbviewbmsb	"Menu déroulant : afficher « Afficher panneau des marque-pages »">
 <!ENTITY Ctr_bmbviewbmtb	"Menu déroulant : afficher « Afficher la barre personnelle »">
 <!ENTITY Ctr_bmbnounsort	"Menu déroulant : masquer « Marque-pages non classés »">
 <!ENTITY Ctr_bmbutnotext	"Masquer le texte sur la barre personnelle">
@@ -248,7 +249,7 @@
 <!ENTITY Ctr_locsearchbw10	"Réduire la hauteur des barres d'adresse et de recherche (expérimental)">
 <!ENTITY Ctr_urlbar_ib		"Bouton d'identité des sites (boite d'identité)">
 <!ENTITY Ctr_ib_nohovcolor	"Ne pas afficher la couleur grise lors du survol">
-<!ENTITY Ctr_ib_graycolor	"Utiliser une couleur grise pour les identités inconnues et les pages chrome">
+<!ENTITY Ctr_ib_graycolor	"Utiliser une couleur grise pour les identités inconnues et les pages « about: »">
 <!ENTITY Ctr_verifiedcolors	"Colorer le bouton pour les sites web vérifiés et les connexions sécurisées et non sécurisées">
 <!ENTITY Ctr_ibinfoico		"Remplacer l'icône « i » par un globe">
 <!ENTITY Ctr_ibinfoico2		"Masquer l'icône « i » (si possible)">
@@ -264,11 +265,11 @@
 <!ENTITY Ctr_lbsbsize		"Personnaliser la largeur de la barre d'adresse et/ou de la barre de recherche">
 <!ENTITY Ctr_searchbar		"Barre de recherche">
 <!ENTITY Ctr_urlbar_uc		"Désactiver la fonctionnalité « Autocomplétion unifiée » (paramètre about:config)">
-<!ENTITY Ctr_autocomplete	"Autocomplete popup">
-<!ENTITY Ctr_altautocompl	"Alternative appearance (experimental)">
-<!ENTITY Ctr_lbsugresi		"Disable height limit">
-<!ENTITY Ctr_lbsugres		"Number of results (about:config preference)">
-<!ENTITY Ctr_lbsbradius		"Custom border radius for location bar and search bar">
+<!ENTITY Ctr_autocomplete	"Fenêtre surgissante d'autocomplétion">
+<!ENTITY Ctr_altautocompl	"Apparence alternative (expérimental)">
+<!ENTITY Ctr_lbsugresi		"Désactiver la limite de hauteur">
+<!ENTITY Ctr_lbsugres		"Nombre de résultats (paramètres about:config) :">
+<!ENTITY Ctr_lbsbradius		"Rayon de bordure personnalisé pour la barre d'adresse et la barre de recherche">
 
 <!ENTITY Ctr_menubar_items	"Position des éléments de menu :">
 <!ENTITY Ctr_extrabar		"Barres d'outils supplémentaires :">
@@ -304,6 +305,7 @@
 <!ENTITY Ctr_menubarnofog	"Enlever la couleur d'arrière-plan/le brouillard (Aero Glass de Windows/Windows 8)">
 
 <!ENTITY Ctr_aerocolors		"Utiliser des couleurs Aero bleues (pour les onglets également)">
+<!ENTITY Ctr_aerocolorsg	"Grey-blue Aero colors">
 <!ENTITY Ctr_transpttbw10	"Barres d'outils des onglets/du menu/de titre : enlever la couleur d'arrière-plan">
 <!ENTITY Ctr_transpttbew10	"Réglages supplémentaires pour certains thèmes du système d'exploitation">
 <!ENTITY Ctr_transptcw10	"Masquer les boutons Réduire/Agrandir/Fermer par défaut du système d'exploitation">
@@ -376,7 +378,7 @@
 
 <!ENTITY Ctr_special_font	"La personnalisation de la couleur d'arrière-plan est réservée au thème par défaut !">
 <!ENTITY Ctr_special_info	"Certaines options peuvent ne pas toujours offrir de changements visibles.">
-<!ENTITY Ctr_special_info2	"Les paramètres sont prévus pour le thème par défaut et peuvent ne pas fonctionner avec d'autres thèmes !">
+<!ENTITY Ctr_special_info2	"Thème de tierce partie détecté ! Certains paramètres ne fonctionnent pas avec de tels thèmes !">
 <!ENTITY Ctr_support		"Forum d'assistance">
 <!ENTITY Ctr_newversion		"Nouvelle version ?">
 
@@ -386,9 +388,9 @@
 <!ENTITY Ctr_menu_restart.label			"Redémarrer">
 <!ENTITY Ctr_restartapp					"Afficher « Redémarrer » dans le menu « Fichier » et dans le menu de l'ancien bouton &brandShortName;">
 
-<!ENTITY Ctr_openInCurrentTab			"Open inputs in current tab">
-<!ENTITY Ctr_openInNewTab				"Open inputs in a new tab">
-<!ENTITY Ctr_openInNewWindow			"Open inputs in a new window">
+<!ENTITY Ctr_openInCurrentTab			"Ouvrir les entrées dans l'onglet actuel">
+<!ENTITY Ctr_openInNewTab				"Ouvrir les entrées dans un nouvel onglet">
+<!ENTITY Ctr_openInNewWindow			"Ouvrir les entrées dans une nouvelle fenêtre">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"d">

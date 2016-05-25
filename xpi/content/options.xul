@@ -86,6 +86,7 @@
 		<preference id="ctraddon_nosnippets"	name="extensions.classicthemerestorer.nosnippets"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_ctroldsearch"	name="extensions.classicthemerestorer.ctroldsearch"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_ctroldsearchc"	name="extensions.classicthemerestorer.ctroldsearchc" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_ctroldsearchr"	name="extensions.classicthemerestorer.ctroldsearchr" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_osearch_dm"	name="extensions.classicthemerestorer.osearch_dm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_osearch_meoit"	name="extensions.classicthemerestorer.osearch_meoit" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_osearch_iwidth" name="extensions.classicthemerestorer.osearch_iwidth" type="bool"	instantApply="true"/>
@@ -266,6 +267,7 @@
 		<preference id="ctraddon_tabseparator"	name="extensions.classicthemerestorer.tabseparator"  type="string"	instantApply="true"/>
 		
 		<preference id="ctraddon_aerocolors"	name="extensions.classicthemerestorer.aerocolors"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_aerocolorsg"	name="extensions.classicthemerestorer.aerocolorsg"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_transpttbw10"	name="extensions.classicthemerestorer.transpttbw10"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_transpttbew10"	name="extensions.classicthemerestorer.transpttbew10" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_transptcw10"	name="extensions.classicthemerestorer.transptcw10"	type="bool"		instantApply="true"/>
@@ -1177,6 +1179,7 @@
 		<checkbox label="&Ctr_ctroldsearch;"	preference="ctraddon_ctroldsearch" id="ctraddon_pw_ctroldsearch" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(true);} else {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(false);}"/>
 		<checkbox label="&Ctr_osearch_dm;"		preference="ctraddon_osearch_dm" id="ctraddon_pw_osearch_dm" class="ctraddon_winmaconly"/>
 		<checkbox label="&Ctr_ctroldsearchc;"	preference="ctraddon_ctroldsearchc" id="ctraddon_pw_ctroldsearchc"/>
+		<checkbox label="&Ctr_ctroldsearchr;"	preference="ctraddon_ctroldsearchr" id="ctraddon_pw_ctroldsearchr"/>
 		<checkbox label="&Ctr_osearch_meoit;"	preference="ctraddon_osearch_meoit" id="ctraddon_pw_osearch_meoit"/>
 		<checkbox label="&Ctr_search_oit;"		preference="ctraddon_search_oit" id="ctraddon_pw_search_oit" />
 		<checkbox label="&Ctr_osearch_iwidth;"	preference="ctraddon_osearch_iwidth" id="ctraddon_pw_osearch_iwidth"/>
@@ -1333,7 +1336,8 @@
 
 	  <groupbox>
 	    <caption  label="&Ctr_toolbars;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_aerocolors;"				 preference="ctraddon_aerocolors" id="ctraddon_pw_aerocolors"/>
+		<checkbox label="&Ctr_aerocolors;"				 preference="ctraddon_aerocolors" id="ctraddon_pw_aerocolors" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwAeroColors(true);} else {classicthemerestorerjso.ctr.ctrpwAeroColors(false);}"/>
+		<checkbox label="&Ctr_aerocolorsg;"				 preference="ctraddon_aerocolorsg" id="ctraddon_pw_aerocolorsg" class="ctraddonsuboption"/>
 		<checkbox label="&Ctr_notextshadow;"			 preference="ctraddon_notextshadow"/>
 		<checkbox label="&Ctr_transpttbw10;"			 preference="ctraddon_transpttbw10" id="ctraddon_pw_transpttbw10" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwTranspTbW10(true);} else {classicthemerestorerjso.ctr.ctrpwTranspTbW10(false);}"/>
 		<checkbox label="&Ctr_transptcw10;"			 	 preference="ctraddon_transptcw10" id="ctraddon_pw_transptcw10" class="ctraddonsuboption"/>

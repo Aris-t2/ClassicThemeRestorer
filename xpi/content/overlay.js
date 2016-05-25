@@ -705,7 +705,7 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  /*Aero Colors*/
-		  case "aerocolors":
+		  case "aerocolors": case "aerocolorsg":
 		 
 			var devtheme=false;
 
@@ -4079,13 +4079,18 @@ classicthemerestorerjs.ctr = {
 			removeOldSheet(this.aerocolors);
 			
 			if(enable==true) {
+				
+				var main_ab_color = '#dbeaf9';
+				
+				if (this.prefs.getBoolPref("aerocolorsg"))
+				  main_ab_color = '#cfdbec';
 			
 				var aero_color_addonsm = '';
 				
 				if (this.prefs.getBoolPref("alt_addonsm")) {
 					aero_color_addonsm = '\
 						#addons-page {\
-						  background: linear-gradient(to bottom right, #edf6ff,#dbeaf9,#edf6ff,#dbeaf9) !important;\
+						  background: linear-gradient(to bottom right, #edf6ff,'+main_ab_color+',#edf6ff,'+main_ab_color+') !important;\
 						}\
 					';
 				}
@@ -4096,7 +4101,7 @@ classicthemerestorerjs.ctr = {
 					aero_color_optionsp = '\
 					  @-moz-document url(about:preferences),url-prefix(about:preferences){\
 						page, #dialogBox .groupbox-title {\
-						  background: linear-gradient(to bottom right, #edf6ff,#dbeaf9,#edf6ff,#dbeaf9) !important;\
+						  background: linear-gradient(to bottom right, #edf6ff,'+main_ab_color+',#edf6ff,'+main_ab_color+') !important;\
 						}\
 					  }\
 					';
@@ -4294,7 +4299,7 @@ classicthemerestorerjs.ctr = {
 					@-moz-document url(chrome://browser/content/browser.xul) {\
 						/* Toolbars */\
 						#main-window[defaultfxtheme="true"] :not(#theFoxOnlyBetter-slimChrome-toolbars) > #nav-bar:not(:-moz-lwtheme){\
-						  background-image: linear-gradient(#eaf2fb,#dbeaf9) !important;\
+						  background-image: linear-gradient(#eaf2fb,'+main_ab_color+') !important;\
 						  box-shadow:unset !important;\
 						}\
 						#main-window[defaultfxtheme="true"][tabsontop="false"] #TabsToolbar:not(:-moz-lwtheme),\
@@ -4302,18 +4307,18 @@ classicthemerestorerjs.ctr = {
 						#main-window[defaultfxtheme="true"] #theFoxOnlyBetter-slimChrome-container > *:not(#theFoxOnlyBetter-slimChrome-toolbars-bottom):not(:-moz-lwtheme),\
 						#main-window[defaultfxtheme="true"] #ctraddon_urlextrabar:not(:-moz-lwtheme){\
 						  background-image:unset !important;\
-						  background-color:#dbeaf9 !important;\
+						  background-color:'+main_ab_color+' !important;\
 						}\
 						@media all and (-moz-windows-classic) {\
 						  #main-window[defaultfxtheme="true"]:not([tabsintitlebar]) #navigator-toolbox:not(:-moz-lwtheme),\
 						  #main-window[defaultfxtheme="true"]:not([tabsintitlebar])[tabsontop="false"] #toolbar-menubar:not(:-moz-lwtheme){\
 							-moz-appearance: none !important;\
 							background-image:unset !important;\
-							background-color:#dbeaf9 !important;\
+							background-color:'+main_ab_color+' !important;\
 						  }\
 						}\
 						#main-window[defaultfxtheme="true"] #theFoxOnlyBetter-slimChrome-slimmer:not([collapsed]) ~ #theFoxOnlyBetter-slimChrome-container > *:not(#theFoxOnlyBetter-slimChrome-toolbars-bottom):not(:-moz-lwtheme){\
-						  background-image: linear-gradient(#eaf2fb 0px, #dbeaf9 36px, #dbeaf9) !important;\
+						  background-image: linear-gradient(#eaf2fb 0px, '+main_ab_color+' 36px, '+main_ab_color+') !important;\
 						}\
 						#main-window[defaultfxtheme="true"] #theFoxOnlyBetter-slimChrome-slimmer:not([collapsed]) {\
 						  background: #eaf2fb !important;\

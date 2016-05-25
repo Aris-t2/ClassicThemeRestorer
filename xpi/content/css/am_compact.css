@@ -14,8 +14,8 @@
 	  -moz-margin-start: -1px !important;
 	}
 	
-	#addons-page:not(.inSidebar) #updates-list .scrollbox-innerbox,
-	#addons-page:not(.inSidebar) #addon-list .scrollbox-innerbox{
+	#addons-page:not(.inSidebar):not([aios-inSidebar="true"]) #updates-list .scrollbox-innerbox,
+	#addons-page:not(.inSidebar):not([aios-inSidebar="true"]) #addon-list .scrollbox-innerbox{
 	  -moz-margin-end: -46px !important;
 	}
 

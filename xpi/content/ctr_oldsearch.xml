@@ -484,6 +484,10 @@
 		  // clear input after search
 		  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("ctroldsearchc"))
 		    textBox.value="";
+			
+		  // revent to default engine after search
+		  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("ctroldsearchr"))
+			this.currentEngine = this.engines[0];
         ]]></body>
       </method>
 
