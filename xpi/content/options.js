@@ -1194,326 +1194,282 @@ classicthemerestorerjso.ctr = {
 	} catch(e) {}
   },
 
-  /* export CTR settings Text */
-  exportCTRpreferences: function() {
-	  
-	  
-	var preflist = Services.prefs.getChildList("extensions.classicthemerestorer.");
-
-	var preferenceArray = [];
-		 
-	// Add filter header
-	preferenceArray.push("CTR_Preferences__DO_NOT_EDIT__'='->booleans__':'->strings__'~'->integers");	
-
-	// Filter preference type and return its value.
-	function prefValue(pref){
-
-	  switch (Services.prefs.getPrefType(pref)){
-		case 32:	return Services.prefs.getCharPref(pref);	break;
-		case 64:	return Services.prefs.getIntPref(pref);		break;
-		case 128:	return Services.prefs.getBoolPref(pref);	break;	
-	  }
-
-	}	
-	
-	//Filter preference type and return its filter value.	
-	function prefType(pref){
-
-	  switch (Services.prefs.getPrefType(pref)){
-		case 32:	return ":";	break;
-		case 64:	return "~";	break;
-		case 128:	return "=";	break;	
-	  }
-
-	}
-
-	for (var i=0; i < preflist.length; i++) {
-
-	  try {
-		// Run Blacklist filter. Exclude all preferences we don't want to export/import.
-		var index = preflist.indexOf(this.blacklist[i]);
-
-		if (index > -1) {
-		  preflist.splice(index, 1);
-		}
-
-		// Filter extensions.classicthemerestorer.*
-		var sliceNdice = preflist[i].replace("extensions.classicthemerestorer.", "");
-		
-		// Populate array	
-		preferenceArray.push(
-		  sliceNdice+prefType(preflist[i])+prefValue(preflist[i]) 
-		);
-
-	  } catch(e) {
-		// Report errors to console
-		Cu.reportError(e);
-	  }
-
-	}	  
-	  
-	// Use new less bulky export for text.
-	saveToFile(preferenceArray);
-	  
-	function saveToFile(patterns) {
-
-	  var nsIFilePicker = Ci.nsIFilePicker;
-	  var fp = Cc["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
-	  var stream = Cc["@mozilla.org/network/file-output-stream;1"].createInstance(Ci.nsIFileOutputStream);
-
-	  fp.init(window, null, nsIFilePicker.modeSave);
-	  fp.defaultExtension = "txt";
-	  fp.defaultString = "CTRpreferences.txt";
-	  fp.appendFilters(nsIFilePicker.filterText);
-
-	  if (fp.show() != nsIFilePicker.returnCancel) {
-		var file = fp.file;
-		if (!/\.txt$/.test(file.leafName.toLowerCase()))
-		  file.leafName += ".txt";
-		if (file.exists())
-		  file.remove(true);
-		file.create(file.NORMAL_FILE_TYPE, parseInt("0666", 8));
-		stream.init(file, 0x02, 0x200, null);
-
-		for (var i = 0; i < patterns.length ; i++) {
-		  patterns[i]=patterns[i]+"\n";
-		  stream.write(patterns[i], patterns[i].length);
-		}
-		stream.close();
-	  }
-	}
-	  
-	return true;
-  },
-  
-  /* import CTR settings */
-  importCTRpreferences: function() {
- 
-	var stringBundle = Services.strings.createBundle("chrome://classic_theme_restorer/locale/messages.file");
-  
-	var pattern = loadFromFile();
-
-	if (!pattern) return false;
-	   
-	if(pattern[0]!="CTR_Preferences__DO_NOT_EDIT__'='->booleans__':'->strings__'~'->integers") {
-	  alert(stringBundle.GetStringFromName("import.error"));
-	  return false;
-	}
-
-	var i, prefName, prefValue;
-	   
-	for (i=1; i<pattern.length; i++){
-	  var index1 = pattern[i].indexOf("="); // for finding booleans
-	  var index2 = pattern[i].indexOf(":"); // for finding strings
-	  var index3 = pattern[i].indexOf("~"); // for finding integers
-
-	  if (index2 > 0){ // find string
-		 prefName  = pattern[i].substring(0,index2);
-		 prefValue = pattern[i].substring(index2+1,pattern[i].length);
-		 
-		 this.prefs.setCharPref(''+prefName+'',''+prefValue+'');
-	  }
-	  else if (index1 > 0){ // find boolean
-		 prefName  = pattern[i].substring(0,index1);
-		 prefValue = pattern[i].substring(index1+1,pattern[i].length);
-		 
-		 // if prefValue string is "true" -> true, else -> false
-		 this.prefs.setBoolPref(''+prefName+'',(prefValue === 'true'));
-	  }
-	  else if (index3 > 0){ // find integer
-		 prefName  = pattern[i].substring(0,index3);
-		 prefValue = pattern[i].substring(index3+1,pattern[i].length);
-		 
-		 this.prefs.setIntPref(''+prefName+'',prefValue);
-	  }
-	}
-	   
-	function loadFromFile() {
-
-	   var nsIFilePicker = Ci.nsIFilePicker;
-	   var fp = Cc["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
-	   var stream = Cc["@mozilla.org/network/file-input-stream;1"].createInstance(Ci.nsIFileInputStream);
-	   var streamIO = Cc["@mozilla.org/scriptableinputstream;1"].createInstance(Ci.nsIScriptableInputStream);
-
-	   fp.defaultExtension = "txt";
-	   fp.defaultString = "CTRpreferences.txt";
-	   fp.init(window, null, nsIFilePicker.modeOpen);
-	   fp.appendFilters(nsIFilePicker.filterText);
-
-	   if (fp.show() != nsIFilePicker.returnCancel) {
-		  stream.init(fp.file, 0x01, parseInt("0444", 8), null);
-		  streamIO.init(stream);
-		  var input = streamIO.read(stream.available());
-		  streamIO.close();
-		  stream.close();
-
-		  var linebreak = input.match(/(((\n+)|(\r+))+)/m)[1];
-		  return input.split(linebreak);
-	   }
-	   return null;
-	}
-	
-	this.needsBrowserRestart();
-	
-	return true;
-  },
-  
-  /* import CTR settings JSON*/
-  importCTRpreferencesJSON: function() {
- 
-	var stringBundle = Services.strings.createBundle("chrome://classic_theme_restorer/locale/messages.file");
-
-	var parjson = loadFromFile();
-
-	if (!parjson) return false;
-	
-	function setPrefValue(pref, val){
-
-	  switch (Services.prefs.getPrefType(pref)){
-		case 32:	return Services.prefs.setCharPref(pref, val);	break;
-		case 64:	return Services.prefs.setIntPref(pref, val);	break;
-		case 128:	return Services.prefs.setBoolPref(pref, val);	break;	
-	  }
-
-	}
-			
-	for (var i=0; i<parjson.length; i++) {					  
-	  try {
-
-		if(parjson[i].preference.match(/extensions.classicthemerestorer./g)){
-			//To import previously generated preference export.
-			setPrefValue(parjson[i].preference, parjson[i].value);
-		} else{
-			setPrefValue('extensions.classicthemerestorer.' + parjson[i].preference, parjson[i].value);
-		}
-
-	  } catch(e) {
-		// Report errors to console
-		Cu.reportError(e);
-	  }
-	}	
-
 	// Need to check if json is valid. If json not valid. don't continue and show error.
-	function IsJsonValid(text) {
+	IsJsonValid: function(aData) {
+        try {
+            JSON.parse(aData);
+        } catch (e) {
+            return false;
+        }
+        return true;
+    },
 
-	  try { JSON.parse(text); }
-	  catch (e) { return false; }
-	  return true;
+	/* Export CTR preferences Text|Json */
+    ExportPreferences: function(aPattern) {
+			
+			if (!aPattern == "txt" || !aPattern == "json") return false;
+		
+        var preferenceList = Services.prefs.getChildList("extensions.classicthemerestorer.");
+        var preferenceArray = null;
 
-	}				
-	 
-	function loadFromFile() {
+        if (aPattern == "txt") {
+            preferenceArray = [];
+            // Add filter header.
+            preferenceArray.push("CTR_Preferences__DO_NOT_EDIT__'='->booleans__':'->strings__'~'->integers");
+        }
 
-	   var nsIFilePicker = Ci.nsIFilePicker;
-	   var fp = Cc["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
-	   var stream = Cc["@mozilla.org/network/file-input-stream;1"].createInstance(Ci.nsIFileInputStream);
-	   var streamIO = Cc["@mozilla.org/scriptableinputstream;1"].createInstance(Ci.nsIScriptableInputStream);
+        if (aPattern == "json") {
+            preferenceArray = {
+                preference: [],
+                value: []
+            };
+        }
+        // Filter preference type and return its value.
+        function _prefValue(pref) {
+            switch (Services.prefs.getPrefType(pref)) {
+                case 32:return Services.prefs.getCharPref(pref);break;
+                case 64:return Services.prefs.getIntPref(pref);break;
+                case 128:return Services.prefs.getBoolPref(pref);break;
+            }
+        }
 
-	   fp.defaultExtension = "json";
-	   fp.defaultString = "CTRpreferences.json";
-	   fp.init(window, null, nsIFilePicker.modeOpen);
-	   fp.appendFilters(nsIFilePicker.filterAll);
+        // Filter preference type and return its filter value.	
+        function _prefType(pref) {
+            switch (Services.prefs.getPrefType(pref)) {
+                case 32:return ":";break;
+                case 64:return "~";break;
+                case 128:return "=";break;
+            }
+        }
 
-	   if (fp.show() != nsIFilePicker.returnCancel) {
-		  stream.init(fp.file, 0x01, parseInt("0444", 8), null);
-		  streamIO.init(stream);
-		  var input = streamIO.read(stream.available());
-		  streamIO.close();
-		  stream.close();
 
-		 var text = input;
+        for (var i = 0; i < preferenceList.length; i++) {
+            try {
+                // Run Blacklist filter. Exclude all preferences we don't want to export/import.
+                var index = preferenceList.indexOf(this.blacklist[i]);
 
-		  if(!IsJsonValid(text)){
-			  alert(stringBundle.GetStringFromName("import.error"));
-			  return false;
-		  } else{
-			return JSON.parse(input);
-		  }
-	   }
-	   return null;
-	}
+                if (index > -1) {
+                    preferenceList.splice(index, 1);
+                }
+
+                if (aPattern == "txt") {
+                    // Filter extensions.classicthemerestorer.*
+                    var sliceNdice = preferenceList[i].replace("extensions.classicthemerestorer.", "");
+
+                    // Populate array	
+                    preferenceArray.push(
+                        sliceNdice + _prefType(preferenceList[i]) + _prefValue(preferenceList[i])
+                    );
+                }
+
+                if (aPattern == "json") {
+					// Populate array
+                    preferenceArray.preference.push({
+                        "preference": preferenceList[i].replace("extensions.classicthemerestorer.", ""),
+                        "value": _prefValue(preferenceList[i])
+                    });
+                }
+
+            } catch (e) {
+                // Report errors to console
+                Cu.reportError(e);
+            }
+        }
+        // Use new less bulky export for text.
+        classicthemerestorerjso.ctr.saveToFile(preferenceArray, aPattern);
+        // Clear preferenceArray after export.
+        preferenceArray = [];
+        return true;
+    },
 	
-	this.needsBrowserRestart();
-	
-	return true;
-  },
-  
-  /* export CTR settings JSON */
-  exportCTRpreferencesJSON: function() {
-
-	var preflist = Services.prefs.getChildList("extensions.classicthemerestorer.");
-
-	var preferenceArray = {
-	  preference: [],
-	  value: []
-	};
-
-
-	function prefValue(pref){
-
-	  switch (Services.prefs.getPrefType(pref)){
-		case 32:	return Services.prefs.getCharPref(pref);	break;
-		case 64:	return Services.prefs.getIntPref(pref);		break;
-		case 128:	return Services.prefs.getBoolPref(pref);	break;	
-	  }
-
-	}
-
-	for (var i=0; i < preflist.length; i++) {
-
-	  try {
-		// 'Blacklist' filter. Exclude all preferences we don't want to export/import.
-		var index = preflist.indexOf(this.blacklist[i]);
-
-		if (index > -1) {
-		  preflist.splice(index, 1);
+	/* Import CTR preferences Text|Json */
+	ImportPreferences: function(aPattern) {
+		
+		if (!aPattern == "txt" || !aPattern == "json") return false;
+		
+		var stringBundle = Services.strings.createBundle("chrome://classic_theme_restorer/locale/messages.file");
+		var pattern = null;
+		
+		if (aPattern == "txt") {
+			pattern = classicthemerestorerjso.ctr.loadFromFile("txt");
+		}
+		
+		if (aPattern == "json") {
+			pattern = classicthemerestorerjso.ctr.loadFromFile("json");
+		}		
+		
+		if (!pattern) return false;
+		   
+		if(pattern[0]!="CTR_Preferences__DO_NOT_EDIT__'='->booleans__':'->strings__'~'->integers" && aPattern == "txt") {
+		  alert(stringBundle.GetStringFromName("import.error"));
+		  return false;
 		}
 
-		preferenceArray.preference.push({
-		  "preference" : preflist[i].replace("extensions.classicthemerestorer.", ""),
-		  "value" : prefValue(preflist[i])
-		});
+		function _setPrefValue(pref, val){
 
-	  } catch(e) {
-		// Report errors to console
-		Cu.reportError(e);
-	  }
+		  switch (Services.prefs.getPrefType(pref)){
+			case 32:	return Services.prefs.setCharPref(pref, val);	break;
+			case 64:	return Services.prefs.setIntPref(pref, val);	break;
+			case 128:	return Services.prefs.setBoolPref(pref, val);	break;	
+		  }
 
-	}
+		}
+		
+		if (aPattern == "txt") {
+			var i, prefName, prefValue;
+			   
+			for (i=1; i<pattern.length; i++){
+			  var index1 = pattern[i].indexOf("="); // for finding booleans
+			  var index2 = pattern[i].indexOf(":"); // for finding strings
+			  var index3 = pattern[i].indexOf("~"); // for finding integers
 
-	saveToFile(preferenceArray);
-	  
-	function saveToFile(patterns) {
+			  if (index2 > 0){ // find string
+				 prefName  = pattern[i].substring(0,index2);
+				 prefValue = pattern[i].substring(index2+1,pattern[i].length);
+				 
+				 this.prefs.setCharPref(''+prefName+'',''+prefValue+'');
+			  }
+			  else if (index1 > 0){ // find boolean
+				 prefName  = pattern[i].substring(0,index1);
+				 prefValue = pattern[i].substring(index1+1,pattern[i].length);
+				 
+				 // if prefValue string is "true" -> true, else -> false
+				 this.prefs.setBoolPref(''+prefName+'',(prefValue === 'true'));
+			  }
+			  else if (index3 > 0){ // find integer
+				 prefName  = pattern[i].substring(0,index3);
+				 prefValue = pattern[i].substring(index3+1,pattern[i].length);
+				 
+				 this.prefs.setIntPref(''+prefName+'',prefValue);
+			  }
+			}
+		}
+		
+		if (aPattern == "json") {
+			for (var i=0; i<pattern.length; i++) {					  
+			  try {
 
-	  var nsIFilePicker = Ci.nsIFilePicker;
-	  var fp = Cc["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
-	  var stream = Cc["@mozilla.org/network/file-output-stream;1"].createInstance(Ci.nsIFileOutputStream);
+				if(pattern[i].preference.match(/extensions.classicthemerestorer./g)){
+					// To import previously generated preference export.
+					_setPrefValue(pattern[i].preference, pattern[i].value);
+				} else{
+					_setPrefValue('extensions.classicthemerestorer.' + pattern[i].preference, pattern[i].value);
+				}
 
-	  fp.init(window, null, nsIFilePicker.modeSave);
-	  fp.defaultExtension = "json";
-	  fp.defaultString = "CTRpreferences.json";
-	  fp.appendFilters(nsIFilePicker.filterAll);
+			  } catch(e) {
+				// Report errors to console
+				Cu.reportError(e);
+			  }
+			}
+		}
+		
+		this.needsBrowserRestart();		
+		return true;
+	},
+	
+	saveToFile: function(aPattern, aType) {
+		try{
+			
+			if (!aType === "txt" || !aType === "json" || aPattern.length === 0) return false;
 
-	  if (fp.show() != nsIFilePicker.returnCancel) {
-		var file = fp.file;
-		if (!/\.json$/.test(file.leafName.toLowerCase()))
-		  file.leafName += ".json";
-		if (file.exists())
-		  file.remove(true);
-		file.create(file.NORMAL_FILE_TYPE, parseInt("0666", 8));
-		stream.init(file, 0x02, 0x200, null);
+			const nsIFilePicker = Ci.nsIFilePicker;
+			var fp = Cc["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+			var stream = Cc["@mozilla.org/network/file-output-stream;1"].createInstance(Ci.nsIFileOutputStream);
 
-		var patternItems = JSON.stringify(patterns.preference);
+			fp.init(window, null, nsIFilePicker.modeSave);
+			fp.defaultExtension = aType;
+			fp.defaultString = "CTRpreferences." + aType;
 
-		stream.write(patternItems, patternItems.length)
+			if (aType === "txt") {
+			  fp.appendFilters(nsIFilePicker.filterText);
+			} else if (aType === "json") {
+			  fp.appendFilters(nsIFilePicker.filterAll);
+			}
 
-		stream.close();
-	  }
-	}
+			if (fp.show() != nsIFilePicker.returnCancel) {
+			  var file = fp.file;
+			  if (aType === "txt") {
+				if (!/\.txt$/.test(file.leafName.toLowerCase()))
+				  file.leafName += ".txt";
+			  } else if (aType === "json") {
+				if (!/\.json$/.test(file.leafName.toLowerCase()))
+				  file.leafName += ".json";
+			  }
+			  if (file.exists())
+				file.remove(true);
+			  file.create(file.NORMAL_FILE_TYPE, parseInt("0666", 8));
+			  stream.init(file, 0x02, 0x200, null);
 
-	return true;
+			  switch (aType) {
+				case "txt":
+				  for (var i = 0; i < aPattern.length; i++) {
+					aPattern[i] = aPattern[i] + "\n";
+					stream.write(aPattern[i], aPattern[i].length);
+				  }
+				  break;
+				case "json":
+				  var patternItems = JSON.stringify(aPattern.preference);
+				  stream.write(patternItems, patternItems.length)
+				  break;
+			  }
+			  stream.close();
+			}
+			return true;
+		  } catch(e) {
+			Cu.reportError(e);
+		  }
+	  },
 
-  }, 
+	  loadFromFile: function(aType) {
+		  try{
+			if (aType === "txt" || aType === "json") {} else {
+			  return false;
+			}
+			
+			var stringBundle = Services.strings.createBundle("chrome://classic_theme_restorer/locale/messages.file");
+			const nsIFilePicker = Ci.nsIFilePicker;
+			var fp = Cc["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+			var stream = Cc["@mozilla.org/network/file-input-stream;1"].createInstance(Ci.nsIFileInputStream);
+			var streamIO = Cc["@mozilla.org/scriptableinputstream;1"].createInstance(Ci.nsIScriptableInputStream);
+
+			fp.defaultExtension = aType;
+			fp.defaultString = "CTRpreferences." + aType;
+			fp.init(window, null, nsIFilePicker.modeOpen);
+			if (aType === "txt") {
+			  fp.appendFilters(nsIFilePicker.filterText);
+			} else if (aType === "json") {
+			  fp.appendFilters(nsIFilePicker.filterAll);
+			}
+
+			if (fp.show() != nsIFilePicker.returnCancel) {
+			  stream.init(fp.file, 0x01, parseInt("0444", 8), null);
+			  streamIO.init(stream);
+			  var input = streamIO.read(stream.available());
+			  streamIO.close();
+			  stream.close();
+
+			  switch (aType) {
+				case "txt":
+				  var linebreak = input.match(/(((\n+)|(\r+))+)/m)[1];
+				  return input.split(linebreak);
+				  break;
+				case "json":
+				  var text = input;
+				  if (!classicthemerestorerjso.ctr.IsJsonValid(text)) {
+					alert(stringBundle.GetStringFromName("import.error"));
+					return false;
+				  } else {
+					return JSON.parse(input);
+				  }
+				  break;
+			  }
+
+			}
+			return null;
+		  } catch(e) {
+			Cu.reportError(e);
+		  }
+	  },
  
   onCtrPanelSelect: function() {
     var ctrAddonPrefBoxTab = document.getElementById("CtrRadioGroup");
