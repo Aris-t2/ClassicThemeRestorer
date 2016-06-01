@@ -1468,11 +1468,11 @@
 		<menuitem label="&Ctr_pw_set_predef;" id="ctr_pw_settings_classic"	oncommand="classicthemerestorerjso.ctr.classicCTRpreferences();" class="menuitem-iconic"/>
 		<menuitem label="&Ctr_pw_set_preaus;" id="ctr_pw_settings_austral"	oncommand="classicthemerestorerjso.ctr.australisCTRpreferences();" class="menuitem-iconic"/>
 		<menuseparator/>
-		<menuitem label="&Ctr_pw_set_export; (txt)" id="ctr_pw_settings_export"	oncommand="classicthemerestorerjso.ctr.exportCTRpreferences();" class="menuitem-iconic"/>
-		<menuitem label="&Ctr_pw_set_import; (txt)" id="ctr_pw_settings_import"	oncommand="classicthemerestorerjso.ctr.importCTRpreferences();" class="menuitem-iconic"/>
+		<menuitem label="&Ctr_pw_set_export; (txt)" id="ctr_pw_settings_export"	oncommand="classicthemerestorerjso.ctr.ExportPreferences('txt');" class="menuitem-iconic"/>
+		<menuitem label="&Ctr_pw_set_import; (txt)" id="ctr_pw_settings_import"	oncommand="classicthemerestorerjso.ctr.ImportPreferences('txt');" class="menuitem-iconic"/>
 		<menuseparator/>
-		<menuitem label="&Ctr_pw_set_export; (JSON)" id="ctr_pw_settings_export_json"	oncommand="classicthemerestorerjso.ctr.exportCTRpreferencesJSON();" class="menuitem-iconic"/>
-		<menuitem label="&Ctr_pw_set_import; (JSON)" id="ctr_pw_settings_import_json"	oncommand="classicthemerestorerjso.ctr.importCTRpreferencesJSON();" class="menuitem-iconic"/>
+		<menuitem label="&Ctr_pw_set_export; (JSON)" id="ctr_pw_settings_export_json"	oncommand="classicthemerestorerjso.ctr.ExportPreferences('json');" class="menuitem-iconic"/>
+		<menuitem label="&Ctr_pw_set_import; (JSON)" id="ctr_pw_settings_import_json"	oncommand="classicthemerestorerjso.ctr.ImportPreferences('json');" class="menuitem-iconic"/>
 		<menuseparator/>
 		<menuitem label="&Ctr_pw_set_syncon;"	id="ctr_pw_settings_sync_on"	oncommand="classicthemerestorerjso.ctr.enableSyncCTRprefs();" class="menuitem-iconic"/>
 		<menuitem label="&Ctr_pw_set_syncoff;"	id="ctr_pw_settings_sync_off"	oncommand="classicthemerestorerjso.ctr.disableSyncCTRprefs();" class="menuitem-iconic"/>
