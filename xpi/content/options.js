@@ -820,7 +820,6 @@ classicthemerestorerjso.ctr = {
 	}
 	
     document.getElementById('ctraddon_extraurltarget_list').disabled = which;
-	document.getElementById('ctraddon_extraurltarget_list').style.visibility = itemvis;
   },
   
   ctrpwSearchPopupSize: function(which) {
@@ -832,8 +831,8 @@ classicthemerestorerjso.ctr = {
 	  which=true; itemvis = 'collapse';
 	}
 	
-    document.getElementById('ctraddon_pw_os_spsize_box').disabled = which;
-	document.getElementById('ctraddon_pw_os_spsize_box').style.visibility = itemvis;
+	document.getElementById('ctraddon_os_spsize_minw').disabled = which;
+	document.getElementById('ctraddon_os_spsize_maxw').disabled = which;
   },
   
   ctrpwAeroColors: function(which) {
@@ -863,7 +862,14 @@ classicthemerestorerjso.ctr = {
     document.getElementById('ctraddon_pw_osearch_dm').disabled = which;
     document.getElementById('ctraddon_pw_osearch_iwidth').disabled = which;
     document.getElementById('ctraddon_pw_osearch_meoit').disabled = which;
-	document.getElementById('ctraddon_pw_osearch_iwidth').disabled = which;
+	document.getElementById('ctraddon_pw_osearch_cwidth').disabled = which;
+	if(this.prefs.getBoolPref("osearch_cwidth") && which == false) {
+	  document.getElementById('ctraddon_os_spsize_minw').disabled = false;
+	  document.getElementById('ctraddon_os_spsize_maxw').disabled = false;
+	} else {
+	  document.getElementById('ctraddon_os_spsize_minw').disabled = true;
+	  document.getElementById('ctraddon_os_spsize_maxw').disabled = true;
+	}
 	
   },
  
@@ -1063,11 +1069,11 @@ classicthemerestorerjso.ctr = {
   currentAboutPrefs: function(which) {
 	
 	if(which=="options_win" || which=="options_win_alt") {
-	  document.getElementById('ctraddon_pw_aboutprefswsize').style.visibility = 'visible';
-	  document.getElementById('ctraddon_pw_altoptionsi').style.visibility = 'visible';
+	  document.getElementById('ctraddon_pw_aboutprefswsizew').disabled = false;
+	  document.getElementById('ctraddon_pw_aboutprefswsizeh').disabled = false;
 	} else {
-	  document.getElementById('ctraddon_pw_aboutprefswsize').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_altoptionsi').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_aboutprefswsizew').disabled = true;
+	  document.getElementById('ctraddon_pw_aboutprefswsizeh').disabled = true;
 	}
   },
   
@@ -1243,6 +1249,7 @@ classicthemerestorerjso.ctr = {
         }
 
 
+
         for (var i = 0; i < preferenceList.length; i++) {
             try {
                 // Run Blacklist filter. Exclude all preferences we don't want to export/import.
@@ -1312,6 +1319,7 @@ classicthemerestorerjso.ctr = {
 			case 64:	return Services.prefs.setIntPref(pref, val);	break;
 			case 128:	return Services.prefs.setBoolPref(pref, val);	break;	
 		  }
+
 
 		}
 		
