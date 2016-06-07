@@ -74,6 +74,7 @@
 
 <!ENTITY Ctr_hctpinfotab	"Деякі різновиди вкладок не сумісні з додатком Hide Caption Titlebar Plus.">
 <!ENTITY Ctr_hctpinfoab		"Кнопка на панелі заголовку не сумісна з додатком Hide Caption Titlebar Plus.">
+<!ENTITY Ctr_tobainfotab	"The add-on 'Tabs on Bottom' is not compatible with '&Ctr_title;' and should be disabled. Use available '&Ctr_cuitabsnontop;' settings instead!">
 
 <!ENTITY Ctr_appbutton		"Кнопка програми">
 <!ENTITY Ctr_appbutton0		"Кнопка вимкнена">
@@ -122,14 +123,14 @@
 <!ENTITY Ctr_altoptionsw	"Відкрити сторінку налаштувань у новому вікні">
 <!ENTITY Ctr_altoptionsww	"Ширина">
 <!ENTITY Ctr_altoptionswh	"Висота">
-<!ENTITY Ctr_altoptionsi	"Вікно змодельованих параметрів не є більше діалогом, але 'вікно браузера' з усіма панелями інструментів приховані. Функція 'Використовувати поточну сторінку' тільки додає URL-адреси сторінок, відкритих в поточному вікні, які є тільки «about:preferences» в цьому випадку. Кнопка 'Параметри' панелі інструментів замінюється на нову, щоб бути в змозі відкрити параметри у вікні.">
+<!ENTITY Ctr_altoptionsi	"Вікно змодельованих параметрів не є більше діалогом, але «вікно браузера» з усіма панелями інструментів приховані. Функція «Використовувати поточну сторінку» тільки додає URL-адреси сторінок, відкритих в поточному вікні, які є тільки «about:preferences» в цьому випадку. Кнопка «Параметри» панелі інструментів замінюється на нову, щоб бути в змозі відкрити параметри у вікні.">
 <!ENTITY Ctr_options_rem	"Пам’ятати останню обрану категорію">
 <!ENTITY Ctr_svgfilters		"SVG кольори для типових іконок кнопок панелі інструментів">
 <!ENTITY Ctr_wincontrols	"Рухоме управління повноекранним режимом">
-<!ENTITY Ctr_puibuttonsep	"Menu button separator">
-<!ENTITY Ctr_puibut_no_sep	"Hidden">
-<!ENTITY Ctr_puibut_l_sep	"Left">
-<!ENTITY Ctr_puibut_r_sep	"Right">
+<!ENTITY Ctr_puibuttonsep	"Розділювач кнопки меню">
+<!ENTITY Ctr_puibut_no_sep	"Прихований">
+<!ENTITY Ctr_puibut_l_sep	"Зліва">
+<!ENTITY Ctr_puibut_r_sep	"Зправа">
 <!ENTITY Ctr_html5warning	"HTML5 повноекранне попередження">
 <!ENTITY Ctr_oldtoplevimg	"Зображення «домену верхнього рівня»: класичний вигляд">
 <!ENTITY Ctr_altalertbox	"«Вікно попереджень»: альтернативний вигляд">
@@ -165,11 +166,11 @@
 <!ENTITY Ctr_search_ui		"Пошук">
 <!ENTITY Ctr_ctroldsearch	"Старий пошук">
 <!ENTITY Ctr_ctroldsearchc	"Очистити пошукове поле після пошуку">
-<!ENTITY Ctr_ctroldsearchr	"Revert to first search engine in list after search">
+<!ENTITY Ctr_ctroldsearchr	"Відкотити до першої пошукової системи в списку після пошуку">
 <!ENTITY Ctr_search_oit		"Відкрити пошук у новій вкладці (about:config preference)">
 <!ENTITY Ctr_osearch_meoit	"Середні-кліки: пошук в новій «передньоплановій вкладці»">
 <!ENTITY Ctr_osearch_iwidth	"Автоматично налаштовувати ширину спливаючого вікна">
-<!ENTITY Ctr_osearch_cwidth	"Custom width for search popups">
+<!ENTITY Ctr_osearch_cwidth	"Налаштовувана ширина для пошукових спливаючих вікон">
 <!ENTITY Ctr_osearch_dm		"Мала позначка випадного списку">
 <!ENTITY Ctr_addonmanager	"Менеджер додатків">
 <!ENTITY Ctr_alt_addonsp	"Сторінка «Детальніше» в Додатках: альтернативний вигляд">
@@ -291,7 +292,7 @@
 <!ENTITY Ctr_dblclnewtab	"Подвійний клік відкриває нову вкладку (використовує адресу нової вкладки браузера)">
 <!ENTITY Ctr_hidetbwot		"Приховувати панель вкладок з одною вкладкою">
 <!ENTITY Ctr_hidetbwote		"Зменшити затримки приховування при запуску">
-<!ENTITY Ctr_hidetbwote_i	"Може викликати збої на панелі вкладок">
+<!ENTITY Ctr_hidetbwote_i	"Може викликати перебої на панелі вкладок">
 <!ENTITY Ctr_hidetbwote2	"Утримувати панель заголовку (вкладки нагорі)">
 <!ENTITY Ctr_notabfog		"Прибрати затуманення тла (Windows AeroGlass/8)">
 <!ENTITY Ctr_notabbg		"Прибрати колір тла (Windows AeroGlass/8)">
@@ -305,7 +306,7 @@
 <!ENTITY Ctr_menubarnofog	"Прибрати затуманення/колір тла (Windows AeroGlass/8)">
 
 <!ENTITY Ctr_aerocolors		"Кольори Blue Aero для основних панелей і вкладок">
-<!ENTITY Ctr_aerocolorsg	"Grey-blue Aero colors">
+<!ENTITY Ctr_aerocolorsg	"Сіро-сині кольори Aero">
 <!ENTITY Ctr_transpttbw10	"Панель заголовку/меню/вкладок: прибрати колір тла">
 <!ENTITY Ctr_transpttbew10	"Додаткові налаштування для деяких тем ОС">
 <!ENTITY Ctr_transptcw10	"Приховати типові OС кнопки мін/макс/закрити">
@@ -388,9 +389,9 @@
 <!ENTITY Ctr_menu_restart.label			"Рестарт">
 <!ENTITY Ctr_restartapp					"«Рестарт» в кнопці програми та в меню «Файл»">
 
-<!ENTITY Ctr_openInCurrentTab			"Open inputs in current tab">
-<!ENTITY Ctr_openInNewTab				"Open inputs in a new tab">
-<!ENTITY Ctr_openInNewWindow			"Open inputs in a new window">
+<!ENTITY Ctr_openInCurrentTab			"Відкрити вхідні дані в поточній вкладці">
+<!ENTITY Ctr_openInNewTab				"Відкрити вхідні дані в новій вкладці">
+<!ENTITY Ctr_openInNewWindow			"Відкрити вхідні дані у новому вікні">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"Н">

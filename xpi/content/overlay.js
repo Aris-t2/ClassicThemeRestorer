@@ -2226,8 +2226,8 @@ classicthemerestorerjs.ctr = {
 				if (branch.getBoolPref("fsaduration")) {
 				  if (classicthemerestorerjs.ctr.fullscreeduration == true) {
 					try {
-					  Services.prefs.getBranch("full-screen-api.transition-duration.").setCharPref('enter','400 400');
-					  Services.prefs.getBranch("full-screen-api.transition-duration.").setCharPref('leave','400 400');
+					  Services.prefs.getBranch("full-screen-api.transition-duration.").setCharPref('enter','200 200');
+					  Services.prefs.getBranch("full-screen-api.transition-duration.").setCharPref('leave','200 200');
 					} catch(e){}
 				  }
 				} else {

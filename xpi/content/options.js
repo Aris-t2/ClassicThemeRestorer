@@ -172,6 +172,9 @@ classicthemerestorerjso.ctr = {
 	document.getElementById('ctraddon_hctpinfotab').style.visibility = 'collapse';
 	document.getElementById('ctraddon_hctpinfoab').style.visibility = 'collapse';
 	
+	// 'Tabs on bottom' add-ons
+	document.getElementById('ctraddon_tobinfotab').style.visibility = 'collapse';
+	
 	// extra checks to not enable tab width settings while 'TabMixPlus' or 'TabUtilities' is enabled
 	AddonManager.getAddonByID('{dc572301-7619-498c-a57d-39143191b318}', function(addon) {
 	  if(addon && addon.isActive) {
@@ -317,6 +320,46 @@ classicthemerestorerjso.ctr = {
 	   }
 	};
 	AddonManager.addAddonListener(HCTPListener);
+	
+	// 'Tabs on bottom' add-on extra info
+	AddonManager.getAddonByID('tabsonbottom@piro.sakura.ne.jp', function(addon) {
+	  if(addon && addon.isActive) {
+		document.getElementById('ctraddon_tobinfotab').style.visibility = 'visible';
+	  }
+	});
+	var TOB1Listener = {
+	   onEnabled: function(addon) {
+		  if(addon.id == 'tabsonbottom@piro.sakura.ne.jp') {
+			document.getElementById('ctraddon_tobinfotab').style.visibility = 'visible';
+		  }
+	   },
+	   onDisabled: function(addon) {
+		  if(addon.id == 'tabsonbottom@piro.sakura.ne.jp') {
+			document.getElementById('ctraddon_tobinfotab').style.visibility = 'collapse';
+		  }
+	   }
+	};
+	AddonManager.addAddonListener(TOB1Listener);
+	
+	// 'Tabs on bottom (Australis)' add-on extra info
+	AddonManager.getAddonByID('jid1-OesGFwaQGIBASw@jetpack', function(addon) {
+	  if(addon && addon.isActive) {
+		document.getElementById('ctraddon_tobinfotab').style.visibility = 'visible';
+	  }
+	});
+	var TOB2Listener = {
+	   onEnabled: function(addon) {
+		  if(addon.id == 'jid1-OesGFwaQGIBASw@jetpack') {
+			document.getElementById('ctraddon_tobinfotab').style.visibility = 'visible';
+		  }
+	   },
+	   onDisabled: function(addon) {
+		  if(addon.id == 'jid1-OesGFwaQGIBASw@jetpack') {
+			document.getElementById('ctraddon_tobinfotab').style.visibility = 'collapse';
+		  }
+	   }
+	};
+	AddonManager.addAddonListener(TOB2Listener);
 
 	// disable bookmark animation checkbox, if 'star button in urlbar' is used
 	if (this.prefs.getBoolPref('starinurl')) document.getElementById('ctraddon_pw_bmanimation').disabled = true;
