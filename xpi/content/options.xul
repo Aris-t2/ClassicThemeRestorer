@@ -449,6 +449,7 @@
 
 	    <caption  label="&Ctr_tabstoolbar;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_tabinsertion;" preference="ctraddon_tabinsertion" id="ctraddon_pw_tab_tabinsertion"/>
+		<description class="ctraddonsuboption">about:config &gt;&gt; browser.tabs.insertRelatedAfterCurrent</description>
 		<checkbox label="&Ctr_dblclnewtab;"	preference="ctraddon_dblclnewtab" class="ctraddon_windowsonly"/>
 		<checkbox label="&Ctr_hightabpos;"	preference="ctraddon_hightabpososx" id="ctraddon_pw_hightabpososx"/>
 		<checkbox label="&Ctr_hidetbwot;"	preference="ctraddon_hidetbwot" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(true);} else {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(false);} classicthemerestorerjso.ctr.needsBrowserRestart();"/>
@@ -778,6 +779,7 @@
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_appbuttonbox">
 
 	  <hbox><checkbox label="&Ctr_tabsintitlebar;"	preference="ctraddon_tabsintitlebar" id="ctraddon_tabs_in_titlebar" tooltiptext="browser.tabs.drawInTitlebar"/></hbox>
+	  <description class="ctraddonsuboption">about:config &gt;&gt; browser.tabs.drawInTitlebar</description>
 
 	  <groupbox>
 		<caption  label="&Ctr_appbutton;" class="ctraddon_topic" id="ctraddon_pw_appbuttonname"/>
@@ -886,7 +888,7 @@
 
 		<checkbox label="&Ctr_wincontrols;"		preference="ctraddon_wincontrols" id="ctraddon_wincontrols"/>
 		
-		<hbox align="center" flex="1" id="ctraddon_pw_puibutsep">
+		<hbox align="center" id="ctraddon_pw_puibutsep">
 		  <description>&Ctr_puibuttonsep;</description>
 		  <menulist preference="ctraddon_puibuttonsep" id="ctraddon_puibuttonsep_list">
 			<menupopup>
@@ -897,6 +899,7 @@
 		  </menulist>
 		</hbox>
 		<checkbox label="&Ctr_html5warning;"	preference="ctraddon_html5warning" id="ctraddon_pw_html5warning"/>
+		<description class="ctraddonsuboption">about:config &gt;&gt; full-screen-api.warning.*</description>
 
 		<description class="ctraddon_font1">&Ctr_emptygfavico;</description>
 		<radiogroup preference="ctraddon_emptyfavico_g" id="ctraddon_pw_emptyfavico_g" orient="horizontal" value="">
@@ -1044,6 +1047,7 @@
 		<checkbox label="&Ctr_am_highlight;"	preference="ctraddon_am_highlight" id="ctraddon_pw_am_highlight"/>
 		<checkbox label="&Ctr_alt_addonsp;"		preference="ctraddon_alt_addonsp" id="ctraddon_pw_alt_addonsp"/>
 		<checkbox label="&Ctr_xpinstallui;"		preference="ctraddon_xpinstallui" id="ctraddon_pw_xpinstallui"/>
+		<description class="ctraddonsuboption">about:config &gt;&gt; xpinstall.customConfirmationUI</description>
 	  </groupbox>
 	  
 	  <groupbox>
@@ -1119,8 +1123,10 @@
 	    <caption  label="&Ctr_autocomplete;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_altautocompl;" preference="ctraddon_altautocompl"  id="ctraddon_pw_altautocompl" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<checkbox label="&Ctr_urlbar_uc;" preference="ctraddon_urlbar_uc" id="ctraddon_pw_urlbar_uc"/>
+		<description class="ctraddonsuboption">about:config &gt;&gt; browser.urlbar.unifiedcomplete</description>
 		<checkbox label="&Ctr_lbsugresi;" preference="ctraddon_urlresults"  id="ctraddon_pw_urlresults"/>
 		<description id="ctraddon_lbsugres" class="ctraddon_font1">&Ctr_lbsugres;</description>
+		<description>about:config &gt;&gt; browser.urlbar.maxRichResults</description>
 		<hbox id="ctraddon_pw_lbsugresbox" align="center">
 		  <textbox size="4" maxlength="4" preference="ctraddon_urlresultsl" type="number" min="0" onchange="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		  <label value=" 12 &Ctr_tabwidthdef; / 10 (&brandShortName; 48+)"/>
@@ -1179,6 +1185,7 @@
 	    <caption  label="&Ctr_searchbar;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_ctroldsearch;"	preference="ctraddon_ctroldsearch" id="ctraddon_pw_ctroldsearch" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(true);} else {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(false);}"/>
 		<checkbox label="&Ctr_search_oit;"		preference="ctraddon_search_oit" id="ctraddon_pw_search_oit" />
+		<description class="ctraddonsuboption">about:config &gt;&gt; browser.search.openintab</description>
 		<checkbox label="&Ctr_osearch_dm;"		preference="ctraddon_osearch_dm" id="ctraddon_pw_osearch_dm" class="ctraddon_winmaconly"/>
 		<checkbox label="&Ctr_ctroldsearchc;"	preference="ctraddon_ctroldsearchc" id="ctraddon_pw_ctroldsearchc"/>
 		<checkbox label="&Ctr_ctroldsearchr;"	preference="ctraddon_ctroldsearchr" id="ctraddon_pw_ctroldsearchr"/>
@@ -1430,10 +1437,14 @@
 		<caption  label="&Ctr_animation;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_bmanimation;"		preference="ctraddon_bmanimation" id="ctraddon_pw_bmanimation"/>
 		<checkbox label="&Ctr_pananimation;"	preference="ctraddon_pananimation" id="ctraddon_pw_pananimation"/>
-		<checkbox label="&Ctr_tabanimation;"	preference="ctraddon_tabsanimate" tooltiptext="browser.tabs.animate"/>
-		<checkbox label="&Ctr_dlanimation;"		preference="ctraddon_dlanimate" tooltiptext="browser.download.animateNotifications"/>
+		<checkbox label="&Ctr_tabanimation;"	preference="ctraddon_tabsanimate"/>
+		<description class="ctraddonsuboption">about:config &gt;&gt; browser.tabs.animate</description>
+		<checkbox label="&Ctr_dlanimation;"		preference="ctraddon_dlanimate"/>
+		<description class="ctraddonsuboption">about:config &gt;&gt; browser.download.animateNotifications</description>
 		<checkbox label="&Ctr_fsanimation;"		preference="ctraddon_fsanimation" id="ctraddon_pw_fsanimation"/>
+		<description class="ctraddonsuboption">about:config &gt;&gt; browser.fullscreen.animate</description>
 		<checkbox label="&Ctr_fsaduration;"		preference="ctraddon_fsaduration" id="ctraddon_pw_fsaduration"/>
+		<description class="ctraddonsuboption">about:config &gt;&gt; full-screen-api.transition-duration.*</description>
 	  </groupbox>
 	  
 	  <groupbox>

@@ -115,8 +115,6 @@ ctrAboutPrefs = {
 		}\
 		\
 		'), null, null);
-		
-		console.log(browser.selectedTab.label);
 
 		ss.loadAndRegisterSheet(uri, ss.AGENT_SHEET);
 	  }

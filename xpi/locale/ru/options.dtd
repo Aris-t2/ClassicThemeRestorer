@@ -43,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Вкладки не вверху (v2) --- [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"v2 только для некоторых дополнений и для полных тем!">
 <!ENTITY Ctr_tabsontopI1	"Добавляет атрибут [tabsontop=true/false] для">
-<!ENTITY Ctr_tabsintitlebar	"Заголовок &brandShortName; (настройка about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Заголовок &brandShortName;">
 <!ENTITY Ctr_tabwidthdef	"(по умолчанию)">
 <!ENTITY Ctr_tabwidthcla	"(классич.)">
 <!ENTITY Ctr_tabminheight	"Высота:">
@@ -55,7 +55,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Значение ниже 48px вызовет сбои в большинстве случаев!">
 <!ENTITY Ctr_square_edges	"Верхние углы квадратные">
 <!ENTITY Ctr_tttitlebar		"Название вкладки в заголовке &brandShortName;">
-<!ENTITY Ctr_tabinsertion	"Открывать связанную вкладку после текущей вкладки (настройка about:config)">
+<!ENTITY Ctr_tabinsertion	"Открывать связанную вкладку после текущей вкладки">
 <!ENTITY Ctr_emptytfavico	"Показывать фавиконку (если отсутствует)">
 <!ENTITY Ctr_emptytfavico_n	"Нет">
 <!ENTITY Ctr_emptytfavico_g	"Стандартная">
@@ -70,7 +70,7 @@
 <!ENTITY Ctr_closei_def		"Стандартный значок">
 <!ENTITY Ctr_closeonleft	"Альтернативная позиция на вкладке">
 <!ENTITY Ctr_closetabbig	"Увеличенный значок (20x20 пикс.)">
-<!ENTITY Ctr_close_wwltab	"Закрыть окно при закрытии последней вкладки (настройка about:config)">
+<!ENTITY Ctr_close_wwltab	"Закрыть окно при закрытии последней вкладки">
 
 <!ENTITY Ctr_hctpinfotab	"Некоторые разновидности вкладок несовместимы с расширением 'Hide Caption Titlebar Plus'.">
 <!ENTITY Ctr_hctpinfoab		"Кнопка в заголовке несовместима с расширением 'Hide Caption Titlebar Plus'.">
@@ -167,7 +167,7 @@
 <!ENTITY Ctr_ctroldsearch	"Старый поиск">
 <!ENTITY Ctr_ctroldsearchc	"Очистить форму после поиска">
 <!ENTITY Ctr_ctroldsearchr	"Revert to first search engine in list after search">
-<!ENTITY Ctr_search_oit		"Открывать поиск в новой вкладке (настройка about:config)">
+<!ENTITY Ctr_search_oit		"Открывать поиск в новой вкладке">
 <!ENTITY Ctr_osearch_meoit	"Средний-клик: поиск в новой активной вкладке">
 <!ENTITY Ctr_osearch_iwidth	"Автонастройка ширины всплывающего меню">
 <!ENTITY Ctr_osearch_cwidth	"Пользовательская ширина всплывающего меню">
@@ -182,7 +182,7 @@
 <!ENTITY Ctr_am_buticons	"Список дополнений: заменить надписи на кнопках иконками">
 <!ENTITY Ctr_am_hovshowb	"Список дополнений: показывать кнопки только при наведении мыши">
 <!ENTITY Ctr_addonversion	"Список дополнений: показывать версии дополнений">
-<!ENTITY Ctr_xpinstallui	"Старое окно установки дополнений (настройка about:config)">
+<!ENTITY Ctr_xpinstallui	"Старое окно установки дополнений">
 <!ENTITY Ctr_bmbutton		"Кнопка меню закладок">
 <!ENTITY Ctr_hiderecentbm	"Всплывающее меню: скрыть недавно добавленные закладки">
 <!ENTITY Ctr_hideeditbm		"Звездочка закладок: скрыть всплывающее окно (если страница не в закладках)">
@@ -266,10 +266,10 @@
 <!ENTITY Ctr_lbsbsize		"Пользовательская ширина строки адреса и поиска">
 <!ENTITY Ctr_searchbar		"Панель поиска">
 <!ENTITY Ctr_autocomplete	"Автозаполнение">
-<!ENTITY Ctr_altautocompl	"Альтернативный внешний вид (экспериментально)">
-<!ENTITY Ctr_urlbar_uc		"Отключить функцию «автозаполнение» (настройка about:config)">
+<!ENTITY Ctr_altautocompl	"Альтернативный внешний вид">
+<!ENTITY Ctr_urlbar_uc		"Отключить функцию «автозаполнение»">
 <!ENTITY Ctr_lbsugresi		"Отключить ограничение по высоте">
-<!ENTITY Ctr_lbsugres		"Количество результатов (настройка about:config)">
+<!ENTITY Ctr_lbsugres		"Количество результатов">
 <!ENTITY Ctr_lbsbradius		"Пользовательский радиус границы для строки адреса поиска">
 
 <!ENTITY Ctr_menubar_items	"Позиция пунктов меню">
@@ -335,10 +335,10 @@
 <!ENTITY Ctr_tabthrobber	"Стандартная анимация загрузки">
 <!ENTITY Ctr_bmanimation	"Анимация создания закладок">
 <!ENTITY Ctr_pananimation	"Анимация открытия панели">
-<!ENTITY Ctr_tabanimation	"Анимация открытия и закрытия вкладок (настройка about:config)">
-<!ENTITY Ctr_dlanimation	"Анимация «Загрузка завершена» (настройка about:config)">
-<!ENTITY Ctr_fsanimation	"Полноэкранная анимация (настройка about:config)">
-<!ENTITY Ctr_fsaduration	"Полноэкранная анимация для HTML5 контента (настройка about:config)">
+<!ENTITY Ctr_tabanimation	"Анимация открытия и закрытия вкладок">
+<!ENTITY Ctr_dlanimation	"Анимация «Загрузка завершена»">
+<!ENTITY Ctr_fsanimation	"Полноэкранная анимация">
+<!ENTITY Ctr_fsaduration	"Полноэкранная анимация для HTML5 контента">
 
 <!ENTITY Ctr_toolsitem		"Пункт в меню инструментов">
 <!ENTITY Ctr_appmenuitem	"Пункт в меню кнопки приложения">

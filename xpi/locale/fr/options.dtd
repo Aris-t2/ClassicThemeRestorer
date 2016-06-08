@@ -43,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Onglets pas au-dessus (v2) --- attribut [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"v2 est uniquement destiné à certains modules et thèmes complets !">
 <!ENTITY Ctr_tabsontopI1	"Assigne l'attribut [tabsontop=true/false] à :">
-<!ENTITY Ctr_tabsintitlebar	"Utiliser la barre de titre de &brandShortName; au lieu de celle du système (paramètre about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Utiliser la barre de titre de &brandShortName; au lieu de celle du système">
 <!ENTITY Ctr_tabwidthdef	"(par défaut)">
 <!ENTITY Ctr_tabwidthcla	"(classique)">
 <!ENTITY Ctr_tabminheight	"Hauteur :">
@@ -55,7 +55,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Les valeurs au-dessous de 48px causeront des erreurs dans la plupart des cas !">
 <!ENTITY Ctr_square_edges	"Coins supérieurs carrés">
 <!ENTITY Ctr_tttitlebar		"Afficher le titre de l'onglet dans la barre de titre de &brandShortName;">
-<!ENTITY Ctr_tabinsertion	"Insérer les onglets liés à la suite de l'onglet actuel (paramètre about:config)">
+<!ENTITY Ctr_tabinsertion	"Insérer les onglets liés à la suite de l'onglet actuel">
 <!ENTITY Ctr_emptytfavico	"Afficher un Favicon (pour les pages qui n'en proposent pas) :">
 <!ENTITY Ctr_emptytfavico_n	"Non">
 <!ENTITY Ctr_emptytfavico_g	"Générique">
@@ -70,7 +70,7 @@
 <!ENTITY Ctr_closei_def		"Icônes par défaut">
 <!ENTITY Ctr_closeonleft	"Position alternative sur l'onglet">
 <!ENTITY Ctr_closetabbig	"Icône plus grande (20x20 pixels)">
-<!ENTITY Ctr_close_wwltab	"Fermer la fenêtre en fermant le dernier onglet visible (paramètre about:config)">
+<!ENTITY Ctr_close_wwltab	"Fermer la fenêtre en fermant le dernier onglet visible">
 
 <!ENTITY Ctr_hctpinfotab	"Certaines modifications d'onglets ne sont pas compatibles avec le module « Hide Caption Titlebar Plus ».">
 <!ENTITY Ctr_hctpinfoab		"Le bouton sur la barre de titre n'est pas compatible avec le module « Hide Caption Titlebar Plus ».">
@@ -167,7 +167,7 @@
 <!ENTITY Ctr_ctroldsearch	"Utiliser l'ancienne interface de barre de recherche">
 <!ENTITY Ctr_ctroldsearchc	"Effacer le contenu de la barre après une recherche">
 <!ENTITY Ctr_ctroldsearchr	"Revenir au moteur de recherche par défaut après une recherche">
-<!ENTITY Ctr_search_oit		"Ouvrir la recherche dans un nouvel onglet (paramètre about:config)">
+<!ENTITY Ctr_search_oit		"Ouvrir la recherche dans un nouvel onglet">
 <!ENTITY Ctr_osearch_meoit	"Clic milieu : rechercher dans un nouvel « onglet au premier plan »">
 <!ENTITY Ctr_osearch_iwidth	"Ajuster automatiquement la largeur de la fenêtre surgissante">
 <!ENTITY Ctr_osearch_cwidth	"Largeur personnalisée pour la fenêtre surgissante">
@@ -182,7 +182,7 @@
 <!ENTITY Ctr_am_buticons	"Listes de modules : remplacer le texte des boutons par des icônes">
 <!ENTITY Ctr_am_hovshowb	"Listes de modules : n'afficher les boutons que lors du « survol »">
 <!ENTITY Ctr_addonversion	"Listes de modules : afficher les numéros de version">
-<!ENTITY Ctr_xpinstallui	"Ancienne fenêtre d'installation de module (paramètre about:config)">
+<!ENTITY Ctr_xpinstallui	"Ancienne fenêtre d'installation de module">
 <!ENTITY Ctr_bmbutton		"Bouton de menu des marque-pages">
 <!ENTITY Ctr_hiderecentbm	"Menu déroulant des marque-pages : masquer les marque-pages récemment ajoutés">
 <!ENTITY Ctr_hideeditbm		"Étoile des marque-pages : masquer le menu déroulant (si la page n'a pas été marquée)">
@@ -265,11 +265,11 @@
 <!ENTITY Ctr_icopageinfo	"Favicon/globe/icône « i » : ouvrir la fenêtre « Informations sur la page » en cliquant sur l'icône">
 <!ENTITY Ctr_lbsbsize		"Personnaliser la largeur de la barre d'adresse et/ou de la barre de recherche">
 <!ENTITY Ctr_searchbar		"Barre de recherche">
-<!ENTITY Ctr_urlbar_uc		"Désactiver la fonctionnalité « Autocomplétion unifiée » (paramètre about:config)">
+<!ENTITY Ctr_urlbar_uc		"Désactiver la fonctionnalité « Autocomplétion unifiée »">
 <!ENTITY Ctr_autocomplete	"Fenêtre surgissante d'autocomplétion">
-<!ENTITY Ctr_altautocompl	"Apparence alternative (expérimental)">
+<!ENTITY Ctr_altautocompl	"Apparence alternative">
 <!ENTITY Ctr_lbsugresi		"Désactiver la limite de hauteur">
-<!ENTITY Ctr_lbsugres		"Nombre de résultats (paramètres about:config) :">
+<!ENTITY Ctr_lbsugres		"Nombre de résultats :">
 <!ENTITY Ctr_lbsbradius		"Rayon de bordure personnalisé pour la barre d'adresse et la barre de recherche">
 
 <!ENTITY Ctr_menubar_items	"Position des éléments de menu :">
@@ -335,10 +335,10 @@
 <!ENTITY Ctr_tabthrobber	"Image de chargement par défaut">
 <!ENTITY Ctr_bmanimation	"Animation du bouton étoile lors de l'ajout de nouveaux marque-pages">
 <!ENTITY Ctr_pananimation	"Animation d'ouverture des panneaux">
-<!ENTITY Ctr_tabanimation	"Animation d'ouverture et de fermeture des onglets (paramètre about:config)">
-<!ENTITY Ctr_dlanimation	"Animation du bouton « Téléchargement » lorsqu'un téléchargement s'achève (paramètre about:config)">
-<!ENTITY Ctr_fsanimation	"Animations de transition vers/depuis le mode plein écran (paramètre about:config)">
-<!ENTITY Ctr_fsaduration	"Animations de transition vers/depuis le mode plein écran pour le contenu HTML5 (paramètres about:config)">
+<!ENTITY Ctr_tabanimation	"Animation d'ouverture et de fermeture des onglets">
+<!ENTITY Ctr_dlanimation	"Animation du bouton « Téléchargement » lorsqu'un téléchargement s'achève">
+<!ENTITY Ctr_fsanimation	"Animations de transition vers/depuis le mode plein écran">
+<!ENTITY Ctr_fsaduration	"Animations de transition vers/depuis le mode plein écran pour le contenu HTML5">
 
 <!ENTITY Ctr_toolsitem		"Ajouter un élément dans le menu « Outils »">
 <!ENTITY Ctr_appmenuitem	"Ajouter un élément dans le menu de l'ancien bouton &brandShortName;">

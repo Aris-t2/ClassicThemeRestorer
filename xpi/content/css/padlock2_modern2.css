@@ -60,5 +60,8 @@
 	#main-window[fx45plus="true"]:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .mixedActiveBlocked #connection-icon{
 	  width: 16px !important;
 	}
-
+	
+	#connection-icon {
+	  filter: unset !important;
+	}
 }

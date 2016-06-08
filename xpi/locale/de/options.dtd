@@ -43,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Tabs unten (v2) --- '[tabsontop=false]'-Attribut gesetzt">
 <!ENTITY Ctr_tabsontopW1	"v2 ist nur für einige Add-ons und vollständige Themen sinnvoll!">
 <!ENTITY Ctr_tabsontopI1	"[tabsontop=true/false]-Attribut wird gesetzt für">
-<!ENTITY Ctr_tabsintitlebar	"Verwende &brandShortName;-Titelleiste anstatt der Betriebssystem-Titelleiste (about:config-Einstellung)">
+<!ENTITY Ctr_tabsintitlebar	"Verwende &brandShortName;-Titelleiste anstatt der Betriebssystem-Titelleiste">
 <!ENTITY Ctr_tabwidthdef	"(Standard)">
 <!ENTITY Ctr_tabwidthcla	"(klassisch)">
 <!ENTITY Ctr_tabminheight	"Höhe:">
@@ -55,7 +55,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Werte unter 48 px sorgen meistens für eine fehlerhafte Darstellung!">
 <!ENTITY Ctr_square_edges	"Eckige obere Tabränder">
 <!ENTITY Ctr_tttitlebar		"Tabtitel in der &brandShortName;-Titelleiste">
-<!ENTITY Ctr_tabinsertion	"Verwandten Tab nach aktuellem Tab einfügen (about:config-Einstellung)">
+<!ENTITY Ctr_tabinsertion	"Verwandten Tab nach aktuellem Tab einfügen">
 <!ENTITY Ctr_emptytfavico	"Lesezeichensymbol auf Tabs zeigen (falls keines vorhanden ist)">
 <!ENTITY Ctr_emptytfavico_n	"Kein Symbol">
 <!ENTITY Ctr_emptytfavico_g	"Allgemein">
@@ -70,7 +70,7 @@
 <!ENTITY Ctr_closei_def		"Standard-Symbol">
 <!ENTITY Ctr_closeonleft	"Am Anfang des Tabs">
 <!ENTITY Ctr_closetabbig	"Größeres Symbol (20x20 px)">
-<!ENTITY Ctr_close_wwltab	"Fenster mit nur einem sichtbaren Tab schließen (about:config-Einstellung)">
+<!ENTITY Ctr_close_wwltab	"Fenster mit nur einem sichtbaren Tab schließen">
 
 <!ENTITY Ctr_hctpinfotab	"Einige Tabvarianten sind nicht kompatibel mit 'Hide Caption Titlebar Plus'.">
 <!ENTITY Ctr_hctpinfoab		"Die Titelleisten-Schaltfläche ist nicht kompatibel mit 'Hide Caption Titlebar Plus'.">
@@ -167,7 +167,7 @@
 <!ENTITY Ctr_ctroldsearch	"Alte Suche">
 <!ENTITY Ctr_ctroldsearchc	"Eingabefeld nach der Suche leeren">
 <!ENTITY Ctr_ctroldsearchr	"Nach der Suche zur ersten Suchmaschine in der Liste wechseln">
-<!ENTITY Ctr_search_oit		"Suche in neuem Tab öffnen (about:config-Einstellung)">
+<!ENTITY Ctr_search_oit		"Suche in neuem Tab öffnen">
 <!ENTITY Ctr_osearch_meoit	"Mittelklick: Suche im Vordergrund-Tab öffnen">
 <!ENTITY Ctr_osearch_iwidth	"Popupbreite automatisch der Suchfeldbreite anpassen">
 <!ENTITY Ctr_osearch_cwidth	"Eigene Breite für Such-Pop-ups">
@@ -182,7 +182,7 @@
 <!ENTITY Ctr_am_buticons	"Add-on-Übersicht: Schaltflächentexte durch Symbole ersetzen">
 <!ENTITY Ctr_am_hovshowb	"Add-on-Übersicht: Schaltflächen nur beim 'Hovern' anzeigen">
 <!ENTITY Ctr_addonversion	"Add-on-Übersicht: Versionsnummer von Add-ons anzeigen">
-<!ENTITY Ctr_xpinstallui	"Altes Add-on-Installationsfenster (about:config-Einstellung)">
+<!ENTITY Ctr_xpinstallui	"Altes Add-on-Installationsfenster">
 <!ENTITY Ctr_bmbutton		"Lesezeichen-Menüschaltfläche">
 <!ENTITY Ctr_hiderecentbm	"Lesezeichen-Pop-up: Zuletzt hinzugefügte Lesezeichen verstecken">
 <!ENTITY Ctr_hideeditbm		"Lesezeichen-Stern: Pop-up verstecken (wenn Seite noch kein Lesezeichen ist)">
@@ -266,10 +266,10 @@
 <!ENTITY Ctr_lbsbsize		"Benutzerdefinierte Breite für Adressleiste und Suchleiste">
 <!ENTITY Ctr_searchbar		"Suchleiste">
 <!ENTITY Ctr_autocomplete	"Autovervollständigungs-Pop-up">
-<!ENTITY Ctr_altautocompl	"Alternative Darstellung (experimentell)">
-<!ENTITY Ctr_urlbar_uc		"'Vereinigte Autovervollständigung' deaktivieren (about:config-Einstellung)">
+<!ENTITY Ctr_altautocompl	"Alternative Darstellung">
+<!ENTITY Ctr_urlbar_uc		"'Vereinigte Autovervollständigung' deaktivieren">
 <!ENTITY Ctr_lbsugresi		"Höhenlimit deaktivieren">
-<!ENTITY Ctr_lbsugres		"Anzahl der Vorschläge (about:config-Einstellung)">
+<!ENTITY Ctr_lbsugres		"Anzahl der Vorschläge">
 <!ENTITY Ctr_lbsbradius		"Benutzerdefinierte Krümmung für Adressleisten- und Suchleistenränder">
 
 <!ENTITY Ctr_menubar_items	"Position der Menüeinträge">
@@ -335,9 +335,9 @@
 <!ENTITY Ctr_tabthrobber	"Standard-Ladeanzeige">
 <!ENTITY Ctr_bmanimation	"'Lesezeichen hinzufügen'">
 <!ENTITY Ctr_pananimation	"'Panel-Aufklappmenü öffnen'">
-<!ENTITY Ctr_tabanimation	"'Tab schließen und öffnen' (about:config-Einstellung)">
-<!ENTITY Ctr_dlanimation	"'Download gestartet und beendet' (about:config-Einstellung)">
-<!ENTITY Ctr_fsanimation	"'Vollbild-Animationen' (about:config-Einstellung)">
+<!ENTITY Ctr_tabanimation	"'Tab schließen und öffnen'">
+<!ENTITY Ctr_dlanimation	"'Download gestartet und beendet'">
+<!ENTITY Ctr_fsanimation	"'Vollbild-Animationen'">
 <!ENTITY Ctr_fsaduration	"'Vollbild-Animationen' für HTML5-Inhalte">
 
 <!ENTITY Ctr_toolsitem		"Eintrag im Menü 'Extras'">

@@ -1192,6 +1192,8 @@ classicthemerestorerjso.ctr = {
 	if(this.appversion >= 43) { 
 	  this.prefs.setBoolPref("oldsearch",true);
 	}
+	if(this.appversion >= 48)
+	  this.prefs.setBoolPref("altautocompl",true);
 	
 	setTimeout(function(){
 		Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref("starinurl",true);

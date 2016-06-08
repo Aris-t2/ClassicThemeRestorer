@@ -43,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"分頁列不置頂 (v2) --- 設定 [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"對於某些擴充套件和佈景主題，若 v1 無效，可嘗試 v2!">
 <!ENTITY Ctr_tabsontopI1	"加入 [tabsontop=true/false] 屬性到">
-<!ENTITY Ctr_tabsintitlebar	"分頁列併入標題列 (about:config)">
+<!ENTITY Ctr_tabsintitlebar	"分頁列併入標題列">
 <!ENTITY Ctr_tabwidthdef	"(預設值)">
 <!ENTITY Ctr_tabwidthcla	"(經典傳統)">
 <!ENTITY Ctr_tabminheight	"高度:">
@@ -55,7 +55,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"小於 48px 的值有可能導致故障!">
 <!ENTITY Ctr_square_edges	"使分頁標籤四角為嚴格直角">
 <!ENTITY Ctr_tttitlebar		"將分頁標題文字顯示於 &brandShortName; 標題列">
-<!ENTITY Ctr_tabinsertion	"在網頁上點選連結時，將新分頁開啟於目前分頁的旁邊，即把預設行為 [a][b][c][1][2][3] 改為 [a][1][2][3][b][c] (about:config » browser.tabs.insertRelatedAfterCurrent)">
+<!ENTITY Ctr_tabinsertion	"在網頁上點選連結時，將新分頁開啟於目前分頁的旁邊，即把預設行為 [a][b][c][1][2][3] 改為 [a][1][2][3][b][c]">
 <!ENTITY Ctr_emptytfavico	"Show favicon (if a site does not offer one)">
 <!ENTITY Ctr_emptytfavico_n	"None">
 <!ENTITY Ctr_emptytfavico_g	"Generic">
@@ -70,7 +70,7 @@
 <!ENTITY Ctr_closei_def		"預設圖示">
 <!ENTITY Ctr_closeonleft	"關閉按鈕置於分頁左側">
 <!ENTITY Ctr_closetabbig	"Bigger icon (20x20px)">
-<!ENTITY Ctr_close_wwltab	"關閉最後一個分頁時，也關閉視窗 (about:config)">
+<!ENTITY Ctr_close_wwltab	"關閉最後一個分頁時，也關閉視窗">
 
 <!ENTITY Ctr_hctpinfotab	"一些分頁設定不相容於 Hide Caption Titlebar Plus 擴充套件。">
 <!ENTITY Ctr_hctpinfoab		"「顯示在標題列」設定不相容於 Hide Caption Titlebar Plus 擴充套件。">
@@ -167,7 +167,7 @@
 <!ENTITY Ctr_ctroldsearch	"傳統搜尋列">
 <!ENTITY Ctr_ctroldsearchc	"搜尋後清除搜尋列">
 <!ENTITY Ctr_ctroldsearchr	"Revert to first search engine in list after search">
-<!ENTITY Ctr_search_oit		"Open search in new tab (about:config preference)">
+<!ENTITY Ctr_search_oit		"Open search in new tab">
 <!ENTITY Ctr_osearch_meoit	"Middle-clicks: search in new 'foreground tab'">
 <!ENTITY Ctr_osearch_iwidth	"Automatically adjust popup width">
 <!ENTITY Ctr_osearch_cwidth	"Custom width for search popups">
@@ -182,7 +182,7 @@
 <!ENTITY Ctr_am_buticons	"Add-on lists: replace button labels with icons">
 <!ENTITY Ctr_am_hovshowb	"Add-on lists: only show buttons on 'hover'">
 <!ENTITY Ctr_addonversion	"附加元件清單: 顯示附加元件版本號">
-<!ENTITY Ctr_xpinstallui	"使用傳統彈出式的附加元件安裝視窗 (about:config)">
+<!ENTITY Ctr_xpinstallui	"使用傳統彈出式的附加元件安裝視窗">
 <!ENTITY Ctr_bmbutton		"書籤選單按鈕">
 <!ENTITY Ctr_hiderecentbm	"Bookmarks popup: hide recently added bookmarks">
 <!ENTITY Ctr_hideeditbm		"Bookmarks star: hide popup (if page is not bookmarked)">
@@ -266,10 +266,10 @@
 <!ENTITY Ctr_lbsbsize		"自訂網址列與搜尋列的寬度">
 <!ENTITY Ctr_searchbar		"搜尋列">
 <!ENTITY Ctr_autocomplete	"Autocomplete popup">
-<!ENTITY Ctr_altautocompl	"Alternative appearance (experimental)">
-<!ENTITY Ctr_urlbar_uc		"Disable 'unified autocomplete' feature (about:config preference)">
+<!ENTITY Ctr_altautocompl	"Alternative appearance">
+<!ENTITY Ctr_urlbar_uc		"Disable 'unified autocomplete' feature">
 <!ENTITY Ctr_lbsugresi		"Disable height limit">
-<!ENTITY Ctr_lbsugres		"Number of results (about:config » browser.urlbar.maxRichResults)">
+<!ENTITY Ctr_lbsugres		"Number of results">
 <!ENTITY Ctr_lbsbradius		"Custom border radius for location bar and search bar">
 
 <!ENTITY Ctr_menubar_items	"選單列併入">
@@ -335,10 +335,10 @@
 <!ENTITY Ctr_tabthrobber	"預設分頁載入圖示動畫 (進度指示器)">
 <!ENTITY Ctr_bmanimation	"書籤加入的動畫">
 <!ENTITY Ctr_pananimation	"面板開啟的動畫">
-<!ENTITY Ctr_tabanimation	"分頁關閉/開啟的動畫 (about:config)">
-<!ENTITY Ctr_dlanimation	"「下載通知」動畫 (about:config)">
-<!ENTITY Ctr_fsanimation	"全螢幕模式動畫 (about:config)">
-<!ENTITY Ctr_fsaduration	"HTML5 內容的全螢幕模式動畫 ( about:config » full-screen-api.transition-duration.* )">
+<!ENTITY Ctr_tabanimation	"分頁關閉/開啟的動畫">
+<!ENTITY Ctr_dlanimation	"「下載通知」動畫">
+<!ENTITY Ctr_fsanimation	"全螢幕模式動畫">
+<!ENTITY Ctr_fsaduration	"HTML5 內容的全螢幕模式動畫">
 
 <!ENTITY Ctr_toolsitem		"工具選單中顯示 Classic Theme Restorer 項目">
 <!ENTITY Ctr_appmenuitem	"火狐橙選單中顯示 Classic Theme Restorer 項目">

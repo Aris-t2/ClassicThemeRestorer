@@ -43,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Karty nie na górze (v2) --- atrybut [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"v2 jest tylko dla niektórych dodatków i kompletnych motywów!">
 <!ENTITY Ctr_tabsontopI1	"Dodaje atrybut [tabsontop=true/false] do">
-<!ENTITY Ctr_tabsintitlebar	"Użyj paska tytułu programu &brandShortName; zamiast systemowego (ustawienie about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Użyj paska tytułu programu &brandShortName; zamiast systemowego">
 <!ENTITY Ctr_tabwidthdef	"(domyślne)">
 <!ENTITY Ctr_tabwidthcla	"(klasyczne)">
 <!ENTITY Ctr_tabminheight	"Wysokość:">
@@ -55,7 +55,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Wartości poniżej 48 pikseli w większości przypadków spowodują usterki!">
 <!ENTITY Ctr_square_edges	"Kwadratowe górne rogi">
 <!ENTITY Ctr_tttitlebar		"Tytuł karty na pasku tytułu programu &brandShortName;">
-<!ENTITY Ctr_tabinsertion	"Wstaw powiązaną kartę za kartą bieżącą (about:config)">
+<!ENTITY Ctr_tabinsertion	"Wstaw powiązaną kartę za kartą bieżącą">
 <!ENTITY Ctr_emptytfavico	"Pokaż ikonę ulubionych (jeżeli strona nie zaoferuje żadnej)">
 <!ENTITY Ctr_emptytfavico_n	"Brak">
 <!ENTITY Ctr_emptytfavico_g	"Standardowa">
@@ -70,11 +70,11 @@
 <!ENTITY Ctr_closei_def		"Domyślne ikony">
 <!ENTITY Ctr_closeonleft	"Alternatywna pozycja na karcie">
 <!ENTITY Ctr_closetabbig	"Większa ikona (20x20 pikseli)">
-<!ENTITY Ctr_close_wwltab	"Zamykaj okno z ostatnią widoczną kartą (about:config)">
+<!ENTITY Ctr_close_wwltab	"Zamykaj okno z ostatnią widoczną kartą">
 
 <!ENTITY Ctr_hctpinfotab	"Niektóre modyfikacje karty nie są kompatybilne z dodatkiem 'Hide Caption Titlebar Plus'.">
 <!ENTITY Ctr_hctpinfoab		"Przycisk na pasku tytułu nie jest kompatybilny z dodatkiem 'Hide Caption Titlebar Plus'.">
-<!ENTITY Ctr_tobainfotab	"The add-on 'Tabs on Bottom' is not compatible with '&Ctr_title;' and should be disabled. Use available '&Ctr_cuitabsnontop;' settings instead!">
+<!ENTITY Ctr_tobainfotab	"Dodatek 'Tabs on Bottom' jest niekompatybilny z '&Ctr_title;' i powinien zostać wyłączony. Zamiast tego użyj ustawień '&Ctr_cuitabsnontop;'!">
 
 <!ENTITY Ctr_appbutton		"Przycisk programu &brandShortName;">
 <!ENTITY Ctr_appbutton0		"Przycisk wyłączony">
@@ -167,7 +167,7 @@
 <!ENTITY Ctr_ctroldsearch	"Stara wyszukiwarka">
 <!ENTITY Ctr_ctroldsearchc	"Czyść pole wyszukiwania po wyszukaniu">
 <!ENTITY Ctr_ctroldsearchr	"Przywracaj pierwszą wyszukiwarkę na liście po wyszukaniu">
-<!ENTITY Ctr_search_oit		"Otwórz wyszukiwanie w nowej karcie (ustawienie about:config)">
+<!ENTITY Ctr_search_oit		"Otwórz wyszukiwanie w nowej karcie">
 <!ENTITY Ctr_osearch_meoit	"Kliknięcia środkowym przyciskiem: wyszukaj w nowej 'karcie pierwszoplanowej'">
 <!ENTITY Ctr_osearch_iwidth	"Automatycznie dostosuj szerokość menu podręcznego">
 <!ENTITY Ctr_osearch_cwidth	"Niestandardowa szerokość menu podręcznego wyszukiwania">
@@ -182,7 +182,7 @@
 <!ENTITY Ctr_am_buticons	"Listy dodatków: zamień etykiety przycisków na ikony">
 <!ENTITY Ctr_am_hovshowb	"Listy dodatków: pokazuj przyciski tylko 'po najechaniu'">
 <!ENTITY Ctr_addonversion	"Listy dodatków: wyświetl wersję dodatku">
-<!ENTITY Ctr_xpinstallui	"Stare okno instalacji dodatku (ustawienie about:config)">
+<!ENTITY Ctr_xpinstallui	"Stare okno instalacji dodatku">
 <!ENTITY Ctr_bmbutton		"Przycisk menu zakładek">
 <!ENTITY Ctr_hiderecentbm	"Menu podręczne zakładek: ukryj ostatnio dodane zakładki">
 <!ENTITY Ctr_hideeditbm		"Gwiazdka zakładek: ukryj menu podręczne (jeżeli zakładka nie jest dodana do strony)">
@@ -266,10 +266,10 @@
 <!ENTITY Ctr_lbsbsize		"Niestandardowa szerokość paska adresu i paska wyszukiwania">
 <!ENTITY Ctr_searchbar		"Pasek wyszukiwania">
 <!ENTITY Ctr_autocomplete	"Menu podręczne autouzupełniania">
-<!ENTITY Ctr_altautocompl	"Alternatywny wygląd (eksperymentalne)">
-<!ENTITY Ctr_urlbar_uc		"Wyłącz funkcję 'ujednolicone autouzupełnianie' (ustawienie about:config)">
+<!ENTITY Ctr_altautocompl	"Alternatywny wygląd">
+<!ENTITY Ctr_urlbar_uc		"Wyłącz funkcję 'ujednolicone autouzupełnianie'">
 <!ENTITY Ctr_lbsugresi		"Wyłącz ograniczenie wysokości">
-<!ENTITY Ctr_lbsugres		"Liczba wyników (ustawienie about:config)">
+<!ENTITY Ctr_lbsugres		"Liczba wyników">
 <!ENTITY Ctr_lbsbradius		"Niestandardowe zaokrąglenia obrzeży paska adresu i paska wyszukiwania">
 
 <!ENTITY Ctr_menubar_items	"Pozycje elementów menu">
@@ -335,10 +335,10 @@
 <!ENTITY Ctr_tabthrobber	"Domyślny obraz ładowania">
 <!ENTITY Ctr_bmanimation	"Animacja dodawania zakładki">
 <!ENTITY Ctr_pananimation	"Animacja otwierania panelu">
-<!ENTITY Ctr_tabanimation	"Animacja otwierania i zamykania karty (ustawienie about:config)">
-<!ENTITY Ctr_dlanimation	"Animacja 'powiadomienia pobierania' (ustawienie about:config)">
-<!ENTITY Ctr_fsanimation	"Animacje pełnoekranowe (ustawienie about:config)">
-<!ENTITY Ctr_fsaduration	"Animacje pełnoekranowe treści HTML5 (ustawienia about:config)">
+<!ENTITY Ctr_tabanimation	"Animacja otwierania i zamykania karty">
+<!ENTITY Ctr_dlanimation	"Animacja 'powiadomienia pobierania'">
+<!ENTITY Ctr_fsanimation	"Animacje pełnoekranowe">
+<!ENTITY Ctr_fsaduration	"Animacje pełnoekranowe treści HTML5">
 
 <!ENTITY Ctr_toolsitem		"Element w menu narzędzi">
 <!ENTITY Ctr_appmenuitem	"Element w menu przycisków aplikacji">

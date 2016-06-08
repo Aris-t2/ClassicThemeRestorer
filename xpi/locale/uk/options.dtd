@@ -43,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Вкладки не нагорі (v2) --- встановлено [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"v2 - тільки для деяких додатків і повних тем!">
 <!ENTITY Ctr_tabsontopI1	"Додає атрибут [tabsontop=true/false] для">
-<!ENTITY Ctr_tabsintitlebar	"Панель заголовку &brandShortName; (about:config preference)">
+<!ENTITY Ctr_tabsintitlebar	"Панель заголовку &brandShortName;">
 <!ENTITY Ctr_tabwidthdef	"(типово)">
 <!ENTITY Ctr_tabwidthcla	"(класичний)">
 <!ENTITY Ctr_tabminheight	"Висота:">
@@ -55,7 +55,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Значення нижче 48пікс викличе збої в більшості випадків!">
 <!ENTITY Ctr_square_edges	"Квадратні верхні кути">
 <!ENTITY Ctr_tttitlebar		"Заголовок вкладки на панелі заголовку &brandShortName;">
-<!ENTITY Ctr_tabinsertion	"Вставити відповідну вкладку після поточної вкладки (about:config)">
+<!ENTITY Ctr_tabinsertion	"Вставити відповідну вкладку після поточної вкладки">
 <!ENTITY Ctr_emptytfavico	"Показувати іконку сайту (якщо сайт не пропонує його)">
 <!ENTITY Ctr_emptytfavico_n	"Немає">
 <!ENTITY Ctr_emptytfavico_g	"Типовий">
@@ -70,7 +70,7 @@
 <!ENTITY Ctr_closei_def		"Типові іконки">
 <!ENTITY Ctr_closeonleft	"Альтернативна позиція на вкладці">
 <!ENTITY Ctr_closetabbig	"Велика іконка (20x20 пікс)">
-<!ENTITY Ctr_close_wwltab	"Закрити вікно з останньою видимою вкладкою (about:config)">
+<!ENTITY Ctr_close_wwltab	"Закрити вікно з останньою видимою вкладкою">
 
 <!ENTITY Ctr_hctpinfotab	"Деякі різновиди вкладок не сумісні з додатком Hide Caption Titlebar Plus.">
 <!ENTITY Ctr_hctpinfoab		"Кнопка на панелі заголовку не сумісна з додатком Hide Caption Titlebar Plus.">
@@ -167,7 +167,7 @@
 <!ENTITY Ctr_ctroldsearch	"Старий пошук">
 <!ENTITY Ctr_ctroldsearchc	"Очистити пошукове поле після пошуку">
 <!ENTITY Ctr_ctroldsearchr	"Відкотити до першої пошукової системи в списку після пошуку">
-<!ENTITY Ctr_search_oit		"Відкрити пошук у новій вкладці (about:config preference)">
+<!ENTITY Ctr_search_oit		"Відкрити пошук у новій вкладці">
 <!ENTITY Ctr_osearch_meoit	"Середні-кліки: пошук в новій «передньоплановій вкладці»">
 <!ENTITY Ctr_osearch_iwidth	"Автоматично налаштовувати ширину спливаючого вікна">
 <!ENTITY Ctr_osearch_cwidth	"Налаштовувана ширина для пошукових спливаючих вікон">
@@ -182,7 +182,7 @@
 <!ENTITY Ctr_am_buticons	"Список додатків: замінити написи на кнопках іконками">
 <!ENTITY Ctr_am_hovshowb	"Список додатків: показувати кнопки тільки при наведенні миші">
 <!ENTITY Ctr_addonversion	"Список додатків у Менеджері додатків: показати версію додатка">
-<!ENTITY Ctr_xpinstallui	"Менеджер додатків: старе вікно встановлення додатків (about:config preference)">
+<!ENTITY Ctr_xpinstallui	"Менеджер додатків: старе вікно встановлення додатків">
 <!ENTITY Ctr_bmbutton		"Кнопка меню закладок">
 <!ENTITY Ctr_hiderecentbm	"Спливаюче вікно закладок: приховати недавно додані закладки">
 <!ENTITY Ctr_hideeditbm		"Зірка закладок: приховати спливаюче вікно (якщо сторінка не закладена)">
@@ -266,10 +266,10 @@
 <!ENTITY Ctr_lbsbsize		"Налаштовувана ширина для панелей рядку адреси та пошуку">
 <!ENTITY Ctr_searchbar		"Панель пошуку">
 <!ENTITY Ctr_autocomplete	"Спливаюче вікно автозаповнення">
-<!ENTITY Ctr_altautocompl	"Альтернативний вигляд (експериментальний)">
-<!ENTITY Ctr_urlbar_uc		"Вимкнути функцію «автозаповнення» (about:config preference)">
+<!ENTITY Ctr_altautocompl	"Альтернативний вигляд">
+<!ENTITY Ctr_urlbar_uc		"Вимкнути функцію «автозаповнення»">
 <!ENTITY Ctr_lbsugresi		"Вимкнути обмеження висоти">
-<!ENTITY Ctr_lbsugres		"Кількість результатів (about:config preference)">
+<!ENTITY Ctr_lbsugres		"Кількість результатів">
 <!ENTITY Ctr_lbsbradius		"Налаштовуваний радіус рамки для панелей адреси та пошуку">
 
 <!ENTITY Ctr_menubar_items	"Позиція пунктів меню">
@@ -335,10 +335,10 @@
 <!ENTITY Ctr_tabthrobber	"Типове зображення завантаження">
 <!ENTITY Ctr_bmanimation	"Анімація створення закладок">
 <!ENTITY Ctr_pananimation	"Анімація відкривання панелі">
-<!ENTITY Ctr_tabanimation	"Анімація відкривання/закривання вкладок (about:config preference)">
-<!ENTITY Ctr_dlanimation	"Анімація «Повідомлення завантаження» (about:config preference)">
-<!ENTITY Ctr_fsanimation	"Повноекранні анімації (about:config preference)">
-<!ENTITY Ctr_fsaduration	"Повноекранні анімації для HTML5 вмісту (about:config preferences)">
+<!ENTITY Ctr_tabanimation	"Анімація відкривання/закривання вкладок">
+<!ENTITY Ctr_dlanimation	"Анімація «Повідомлення завантаження»">
+<!ENTITY Ctr_fsanimation	"Повноекранні анімації">
+<!ENTITY Ctr_fsaduration	"Повноекранні анімації для HTML5 вмісту">
 
 <!ENTITY Ctr_toolsitem		"Пункт в меню інструментів">
 <!ENTITY Ctr_appmenuitem	"Пункт меню в кнопках додатку">

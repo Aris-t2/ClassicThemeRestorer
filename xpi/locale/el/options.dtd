@@ -43,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"Καρτέλες όχι στο πάνω μέρος (v2) --- ορισμός χαρακτηριστικού [tabsontop=false]">
 <!ENTITY Ctr_tabsontopW1	"Η v2 είναι για ορισμένες επεκτάσεις και πλήρη θέματα μόνο!">
 <!ENTITY Ctr_tabsontopI1	"Προσθέτει χαρακτηριστικό [tabsontop=true/false] σε">
-<!ENTITY Ctr_tabsintitlebar	"Χρήση γραμμής τίτλου του &brandShortName; αντί του Λ.Σ. (προτίμηση «about:config»)">
+<!ENTITY Ctr_tabsintitlebar	"Χρήση γραμμής τίτλου του &brandShortName; αντί του Λ.Σ.">
 <!ENTITY Ctr_tabwidthdef	"(προεπιλογή)">
 <!ENTITY Ctr_tabwidthcla	"(κλασικό)">
 <!ENTITY Ctr_tabminheight	"Ύψος:">
@@ -55,7 +55,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Τιμές κάτω από 48px θα προκαλέσουν δυσλειτουργίες στις περισσότερες περιπτώσεις!">
 <!ENTITY Ctr_square_edges	"Τετραγωνισμένες γωνίες κορυφής">
 <!ENTITY Ctr_tttitlebar		"Τίτλος καρτέλας στη γραμμή τίτλου του &brandShortName;">
-<!ENTITY Ctr_tabinsertion	"Εισαγωγή συναφούς καρτέλας μετά την τρέχουσα καρτέλα (προτίμηση «about:config»)">
+<!ENTITY Ctr_tabinsertion	"Εισαγωγή συναφούς καρτέλας μετά την τρέχουσα καρτέλα">
 <!ENTITY Ctr_emptytfavico	"Εμφάνιση εικονιδίου (αν ένας ιστότοπος δεν διαθέτει εικονίδιο)">
 <!ENTITY Ctr_emptytfavico_n	"Οικοσελίδας">
 <!ENTITY Ctr_emptytfavico_g	"Γενικής χρήσης">
@@ -70,7 +70,7 @@
 <!ENTITY Ctr_closei_def		"Προεπιλεγμένα εικονίδια">
 <!ENTITY Ctr_closeonleft	"Εναλλακτική θέση στην καρτέλα">
 <!ENTITY Ctr_closetabbig	"Μεγαλύτερο εικονίδιο (20x20 px)">
-<!ENTITY Ctr_close_wwltab	"Κλείσιμο παραθύρου κλείνοντας την τελευταία ορατή καρτέλα (προτίμηση «about:config»)">
+<!ENTITY Ctr_close_wwltab	"Κλείσιμο παραθύρου κλείνοντας την τελευταία ορατή καρτέλα">
 
 <!ENTITY Ctr_hctpinfotab	"Κάποιες παραλλαγές καρτελών δεν είναι συμβατές με την επέκταση «Hide Caption Titlebar Plus».">
 <!ENTITY Ctr_hctpinfoab		"Το κουμπί στη γραμμή τίτλου δεν είναι συμβατό με την επέκταση «Hide Caption Titlebar Plus».">
@@ -167,7 +167,7 @@
 <!ENTITY Ctr_ctroldsearch	"Παλιότερη διεπαφή αναζήτησης">
 <!ENTITY Ctr_ctroldsearchc	"Κένωση πλαισίου αναζήτησης μετά την αναζήτηση">
 <!ENTITY Ctr_ctroldsearchr	"Revert to first search engine in list after search">
-<!ENTITY Ctr_search_oit		"Άνοιγμα αναζήτησης σε νέα καρτέλα (προτίμηση «about:config»)">
+<!ENTITY Ctr_search_oit		"Άνοιγμα αναζήτησης σε νέα καρτέλα">
 <!ENTITY Ctr_osearch_meoit	"Μεσαίο κλικ: αναζήτηση σε νέα καρτέλα στο προσκήνιο">
 <!ENTITY Ctr_osearch_iwidth	"Αυτόματη ρύθμιση εύρους αναδυόμενου">
 <!ENTITY Ctr_osearch_cwidth	"Custom width for search popups">
@@ -182,7 +182,7 @@
 <!ENTITY Ctr_am_buticons	"Λίστες πρόσθετων: αντικατάσταση ετικετών κουμπιών με εικονίδια">
 <!ENTITY Ctr_am_hovshowb	"Λίστες πρόσθετων: εμφάνιση κουμπιών μόνο κατά την κατάδειξη">
 <!ENTITY Ctr_addonversion	"Λίστες πρόσθετων: εμφάνιση έκδοσης πρόσθετου">
-<!ENTITY Ctr_xpinstallui	"Παλιό παράθυρο εγκατάστασης πρόσθετων (προτίμηση «about:config»)">
+<!ENTITY Ctr_xpinstallui	"Παλιό παράθυρο εγκατάστασης πρόσθετων">
 <!ENTITY Ctr_bmbutton		"Κουμπί-μενού σελιδοδεικτών">
 <!ENTITY Ctr_hiderecentbm	"Αναδυόμενο σελιδοδεικτών: απόκρυψη πρόσφατα προστεθέντων σελιδοδεικτών">
 <!ENTITY Ctr_hideeditbm		"Αστέρι σελιδοδεικτών: απόκρυψη αναδυόμενου (αν η σελίδα δεν είναι στους σελιδοδείκτες)">
@@ -266,10 +266,10 @@
 <!ENTITY Ctr_lbsbsize		"Προσαρμοσμένο εύρος γραμμών διευθύνσεων και αναζήτησης">
 <!ENTITY Ctr_searchbar		"Γραμμή αναζήτησης">
 <!ENTITY Ctr_autocomplete	"Αναδυόμενο αυτόματης συμπλήρωσης">
-<!ENTITY Ctr_altautocompl	"Εναλλακτική εμφάνιση (πειραματικό)">
-<!ENTITY Ctr_urlbar_uc		"Απενεργοποίηση χαρακτηριστικού ενιαίας αυτόματης συμπλήρωσης (προτίμηση «about:config»)">
+<!ENTITY Ctr_altautocompl	"Εναλλακτική εμφάνιση">
+<!ENTITY Ctr_urlbar_uc		"Απενεργοποίηση χαρακτηριστικού ενιαίας αυτόματης συμπλήρωσης">
 <!ENTITY Ctr_lbsugresi		"Απενεργοποίηση ορίου ύψους">
-<!ENTITY Ctr_lbsugres		"Αριθμός αποτελεσμάτων (προτίμηση «about:config»)">
+<!ENTITY Ctr_lbsugres		"Αριθμός αποτελεσμάτων">
 <!ENTITY Ctr_lbsbradius		"Προσαρμοσμένη ακτίνα περιγράμματος γραμμών τοποθεσιών και αναζήτησης">
 
 <!ENTITY Ctr_menubar_items	"Θέση στοιχείων μενού της εργαλειοθήκης μενού">
@@ -335,10 +335,10 @@
 <!ENTITY Ctr_tabthrobber	"Προεπιλεγμένο εικονίδιο φόρτωσης">
 <!ENTITY Ctr_bmanimation	"Κινησιομοίωση προσθήκης σελιδοδείκτη">
 <!ENTITY Ctr_pananimation	"Κινησιομοίωση ανοίγματος μενού πίνακα">
-<!ENTITY Ctr_tabanimation	"Κινησιομοίωση κλεισίματος/ανοίγματος καρτέλας (προτίμηση «about:config»)">
-<!ENTITY Ctr_dlanimation	"Κινησιομοίωση ειδοποίησης λήψης (προτίμηση «about:config»)">
-<!ENTITY Ctr_fsanimation	"Κινησιομοίωση πλήρους οθόνης (προτίμηση «about:config»)">
-<!ENTITY Ctr_fsaduration	"Κινησιομοίωση πλήρους οθόνης για περιεχόμενο HTML5 (προτιμήσεις «about:config»)">
+<!ENTITY Ctr_tabanimation	"Κινησιομοίωση κλεισίματος/ανοίγματος καρτέλας">
+<!ENTITY Ctr_dlanimation	"Κινησιομοίωση ειδοποίησης λήψης">
+<!ENTITY Ctr_fsanimation	"Κινησιομοίωση πλήρους οθόνης">
+<!ENTITY Ctr_fsaduration	"Κινησιομοίωση πλήρους οθόνης για περιεχόμενο HTML5">
 
 <!ENTITY Ctr_toolsitem		"Στοιχείο μενού στο μενού «Εργαλεία»">
 <!ENTITY Ctr_appmenuitem	"Στοιχείο μενού στο μενού του κουμπιού εφαρμογής">

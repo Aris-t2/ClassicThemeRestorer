@@ -43,7 +43,7 @@
 <!ENTITY Ctr_tabsontop3		"タブを下にする (v2) --- [tabsontop=false] 属性">
 <!ENTITY Ctr_tabsontopW1	"v2 はいくつかのアドオンと完全なテーマ以外に互換性はありません！">
 <!ENTITY Ctr_tabsontopI1	"以下の項目に属性 [tabsontop=true/false] 属性 を加える">
-<!ENTITY Ctr_tabsintitlebar	"&brandShortName; タイトルバー (about:config 設定)">
+<!ENTITY Ctr_tabsintitlebar	"&brandShortName; タイトルバー">
 <!ENTITY Ctr_tabwidthdef	"(デフォルト)">
 <!ENTITY Ctr_tabwidthcla	"(クラシック)">
 <!ENTITY Ctr_tabminheight	"高さ:">
@@ -55,7 +55,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"48px未満の値は、ほとんどの場合、不具合の原因となります！">
 <!ENTITY Ctr_square_edges	"上部の角を四角くする">
 <!ENTITY Ctr_tttitlebar		"タブタイトルを &brandShortName; タイトルバーに表示する">
-<!ENTITY Ctr_tabinsertion	"現在のタブの後ろに関連するタブを開く (about:config 設定)">
+<!ENTITY Ctr_tabinsertion	"現在のタブの後ろに関連するタブを開く">
 <!ENTITY Ctr_emptytfavico	"ファビコンの表示（サイトのファビコンが存在しないとき）">
 <!ENTITY Ctr_emptytfavico_n	"なし">
 <!ENTITY Ctr_emptytfavico_g	"一般">
@@ -70,7 +70,7 @@
 <!ENTITY Ctr_closei_def		"デフォルトボタン">
 <!ENTITY Ctr_closeonleft	"タブタイトルの前に表示">
 <!ENTITY Ctr_closetabbig	"大きなボタン (20x20 px)">
-<!ENTITY Ctr_close_wwltab	"タブがひとつの時はタブと同時にウィンドウを閉じる (about:config 設定)">
+<!ENTITY Ctr_close_wwltab	"タブがひとつの時はタブと同時にウィンドウを閉じる">
 
 <!ENTITY Ctr_hctpinfotab	"タブのスタイルのうちいくつかは Hide Caption Titlebar Plus とは互換性がありません。">
 <!ENTITY Ctr_hctpinfoab		"タイトルバー上のボタンは Hide Caption Titlebar Plus に対応していません。">
@@ -167,7 +167,7 @@
 <!ENTITY Ctr_ctroldsearch	"古い検索スタイル">
 <!ENTITY Ctr_ctroldsearchc	"検索後に検索ボックスを消去する">
 <!ENTITY Ctr_ctroldsearchr	"検索後にリスト最上位の検索エンジンに変更する">
-<!ENTITY Ctr_search_oit		"検索結果を新しいタブで開く (about:config 設定)">
+<!ENTITY Ctr_search_oit		"検索結果を新しいタブで開く">
 <!ENTITY Ctr_osearch_meoit	"中クリック: 検索結果を新しい新しいタブで開く">
 <!ENTITY Ctr_osearch_iwidth	"ポップアップの幅を合わせる">
 <!ENTITY Ctr_osearch_cwidth	"ポップアップの幅を設定する">
@@ -182,7 +182,7 @@
 <!ENTITY Ctr_am_buticons	"アドオンリスト: ボタンをアイコンに置き換える">
 <!ENTITY Ctr_am_hovshowb	"アドオンリスト: カーソルを乗せた時ボタンを表示する">
 <!ENTITY Ctr_addonversion	"アドオンリスト: アドオンのバージョンを表示する">
-<!ENTITY Ctr_xpinstallui	"古いアドオンインストールウィンドウ (about:config 設定)">
+<!ENTITY Ctr_xpinstallui	"古いアドオンインストールウィンドウ">
 <!ENTITY Ctr_bmbutton		"ブックマークメニューボタン">
 <!ENTITY Ctr_hiderecentbm	"ブックマークポップアップ: 「最近ブックマークしたページ」を隠す">
 <!ENTITY Ctr_hideeditbm		"ブックマークスター: ポップアップを隠す (ページがブックマークされていない場合)">
@@ -266,10 +266,10 @@
 <!ENTITY Ctr_lbsbsize		"ロケーションバーと検索バーの横幅を指定する">
 <!ENTITY Ctr_searchbar		"検索バー">
 <!ENTITY Ctr_autocomplete	"自動補完候補のポップアップリスト">
-<!ENTITY Ctr_altautocompl	"替わりの自動補完候補で置き換える (実験的)">
-<!ENTITY Ctr_urlbar_uc		"自動補完機能を無効にする (about:config 設定)">
+<!ENTITY Ctr_altautocompl	"替わりの自動補完候補で置き換える">
+<!ENTITY Ctr_urlbar_uc		"自動補完機能を無効にする">
 <!ENTITY Ctr_lbsugresi		"候補数を制限しない">
-<!ENTITY Ctr_lbsugres		"候補の表示数 (about:config 設定)">
+<!ENTITY Ctr_lbsugres		"候補の表示数">
 <!ENTITY Ctr_lbsbradius		"ロケーションバーと検索バーの枠線の角の丸みを設定する">
 
 <!ENTITY Ctr_menubar_items	"メニュー項目の位置">
@@ -335,10 +335,10 @@
 <!ENTITY Ctr_tabthrobber	"デフォルトのロードイメージ">
 <!ENTITY Ctr_bmanimation	"ブックマークする時にアニメーションする">
 <!ENTITY Ctr_pananimation	"パネルを開く時にアニメーションする">
-<!ENTITY Ctr_tabanimation	"タブを閉じる/開く時にアニメーションする (about:config 設定)">
-<!ENTITY Ctr_dlanimation	"ダウンロード通知をアニメーションする (about:config 設定)">
-<!ENTITY Ctr_fsanimation	"フルスクリーンアニメーション (about:config 設定)">
-<!ENTITY Ctr_fsaduration	"HTML5コンテンツのフルスクリーンアニメーション (about:config 設定)">
+<!ENTITY Ctr_tabanimation	"タブを閉じる/開く時にアニメーションする">
+<!ENTITY Ctr_dlanimation	"ダウンロード通知をアニメーションする">
+<!ENTITY Ctr_fsanimation	"フルスクリーンアニメーション">
+<!ENTITY Ctr_fsaduration	"HTML5コンテンツのフルスクリーンアニメーション">
 
 <!ENTITY Ctr_toolsitem		"ツールメニューに表示する">
 <!ENTITY Ctr_appmenuitem	"&brandShortName; メニューに表示する">
