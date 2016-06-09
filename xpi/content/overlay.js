@@ -4594,12 +4594,25 @@ classicthemerestorerjs.ctr = {
 			
 				var linuxbutton='';
 				
+				var windows10fx47='';
+				
 				if (classicthemerestorerjs.ctr.osstring!="Darwin" && classicthemerestorerjs.ctr.osstring!="WINNT") {
 					linuxbutton='\
 						#TabsToolbar toolbarbutton{\
 						  padding-top:0 !important;\
 						  padding-bottom:0 !important;\
 						}\
+					';
+				}
+				
+				if (classicthemerestorerjs.ctr.osstring=="WINNT" && this.prefs.getIntPref('ctabheight')<26) {
+					windows10fx47='\
+					  @media (-moz-os-version: windows-win10) {\
+						#main-window[fx47plus="true"][sizemode="maximized"] #titlebar-buttonbox toolbarbutton {\
+						  padding-top: 5px !important;\
+						  padding-bottom: 5px !important;\
+						}\
+					  }\
 					';
 				}
 			
@@ -4625,6 +4638,7 @@ classicthemerestorerjs.ctr = {
 					  height: '+this.prefs.getIntPref('ctabheight')+'px !important;\
 					}\
 					'+linuxbutton+'\
+					'+windows10fx47+'\
 				'), null, null);
 				
 				applyNewSheet(this.tabheight);
