@@ -447,9 +447,6 @@
              onoverflow="this._onOverflow();"
              onunderflow="this._onUnderflow();">
       <xul:hbox align="center">
-		  <xul:image anonid="type-icon"
-					 class="ac-type-icon"
-					 xbl:inherits="selected,current"/>
 		  <xul:image anonid="site-icon"
 					 class="ac-site-icon"
 					 xbl:inherits="src=image,selected"/>
@@ -461,6 +458,9 @@
 							   class="ac-title-text"
 							   xbl:inherits="selected"/>
 			</xul:description>
+		    <xul:image anonid="type-icon"
+					 class="ac-type-icon"
+					 xbl:inherits="selected,current"/>
 		  </xul:hbox>
 		  <xul:hbox anonid="tags"
 					class="ac-tags"

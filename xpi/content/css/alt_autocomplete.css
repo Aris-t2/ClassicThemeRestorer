@@ -23,10 +23,10 @@
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-separator {
 	  display:none !important;
 	}
-
-	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-type-icon,
-	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-type-icon{
-	  -moz-margin-start: -21px !important;
+	
+	panel[type="autocomplete-richlistbox"] .ac-site-icon,
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .ac-site-icon {
+	  -moz-margin-start: 1px !important;
 	}
 
 	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-title,
