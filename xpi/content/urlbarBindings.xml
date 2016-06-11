@@ -409,8 +409,13 @@
       <method name="onResultsAdded">
         <body>
           <![CDATA[
-            if (!Services.prefs.getBoolPref("browser.urlbar.unifiedcomplete"))
-              return;
+		  
+		  	var appversion = parseInt(Services.appinfo.version);
+		  
+			if(appversion < '50') {
+              if (!Services.prefs.getBoolPref("browser.urlbar.unifiedcomplete"))
+				return;
+			}
 
             if (this.selectedIndex == -1 && this._isFirstResultHeuristic) {
               this._ignoreNextSelect = true;

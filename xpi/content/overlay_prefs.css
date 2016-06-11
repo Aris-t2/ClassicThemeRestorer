@@ -152,6 +152,15 @@ radio.ctraddontab .radio-check-box1 {
 	}
 }
 
+@media screen and (max-device-height: 800px) {
+  @media (min-resolution: 1.1dppx) {
+	.ctraddontabpanel {
+	  height:480px !important;
+	  max-height:480px !important;
+	}
+  }
+}
+
 .ctraddontabpanel {
   visibility: collapse;
 }
@@ -646,8 +655,8 @@ radio.ctraddontab .radio-check-box1 {
   padding-left:20px !important;
   min-height:16px !important;
 }
-
-#ctraddon_pw_pocket label {
+#ctraddon_pw_pocket label,
+#ctraddon_pw_pocket2 label {
   background:url('chrome://classic_theme_restorer/content/images/pocket.png') no-repeat left !important;
   padding-left:20px !important;
   min-height:16px !important;

@@ -840,11 +840,6 @@ classicthemerestorerjs.ctr = {
 		    else
 			  classicthemerestorerjs.ctr.loadUnloadCSS("lbsbradius",false);
 		  break;
-		  
-		  case "urlresults":
-			if (branch.getBoolPref("urlresults")) classicthemerestorerjs.ctr.loadUnloadCSS("urlresults",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("urlresults",false);
-		  break;
 
 		  case "backforward":
 			if (branch.getBoolPref("backforward")) {
@@ -1204,6 +1199,14 @@ classicthemerestorerjs.ctr = {
 		  case "altautocompl":
 			if (branch.getBoolPref("altautocompl") && classicthemerestorerjs.ctr.appversion >= 48) classicthemerestorerjs.ctr.loadUnloadCSS("altautocompl",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("altautocompl",false);
+		  break;
+		  
+		  case "urlresults": case "autocompl_it":
+			if (branch.getBoolPref("urlresults")) classicthemerestorerjs.ctr.loadUnloadCSS("urlresults",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("urlresults",false);
+		  
+			if (branch.getBoolPref("autocompl_it") && branch.getBoolPref("urlresults") && classicthemerestorerjs.ctr.appversion >= 48) classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_it",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_it",false);
 		  break;
 
 		  case "locsearchbw10":
@@ -3932,6 +3935,7 @@ classicthemerestorerjs.ctr = {
 		case "urlbardropm2": 		manageCSS("urlbar_dropm2.css"); 		break;
 		case "altreaderico": 		manageCSS("alt_reader_icons.css");		break;
 		case "altautocompl": 		manageCSS("alt_autocomplete.css");		break;
+		case "autocompl_it": 		manageCSS("alt_autocompl_items.css");	break;
 		case "locsearchbw10": 		manageCSS("locationsearchbarw10.css");	break;
 		case "combrelstop":			manageCSS("combrelstop.css");			break;
 		case "panelmenucol": 		manageCSS("panelmenucolor.css");		break;
