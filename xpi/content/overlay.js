@@ -3312,40 +3312,48 @@ classicthemerestorerjs.ctr = {
   
   // add tab title to browsers titlebar
   tabTitleInBrowsersTitlebar: function(){
-	if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("tttitlebar")==true
-		&& classicthemerestorerjs.ctr.osstring=="WINNT"
-			&& classicthemerestorerjs.ctr.fxdefaulttheme==true) {
+	if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("tttitlebar")==true){
+	
+	  window.addEventListener("DOMContentLoaded", function ctr_tabTitleInBrowsersTitlebar() {
+		window.removeEventListener("DOMContentLoaded", ctr_tabTitleInBrowsersTitlebar, false);
+		
+		setTimeout(function(){
 
-	  try {
+		 if(classicthemerestorerjs.ctr.osstring=="WINNT" && classicthemerestorerjs.ctr.fxdefaulttheme==true) {
 
-		var titlebartitle = document.createElement("toolbarbutton");
-		titlebartitle.setAttribute("id", "ctraddon_titlebartitle");
-		titlebartitle.setAttribute("ordinal", "0");
-		titlebartitle.setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
+		  try {
 
-		document.getElementById("titlebar-content").appendChild(titlebartitle);
+			var titlebartitle = document.createElement("toolbarbutton");
+			titlebartitle.setAttribute("id", "ctraddon_titlebartitle");
+			titlebartitle.setAttribute("ordinal", "0");
+			titlebartitle.setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
 
-		window.addEventListener("load", function update_title() {
-		   document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
-		}, false);
-		window.addEventListener("DOMContentLoaded", function update_title() {
-		  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
-		}, false);
-		window.addEventListener("TabOpen", function update_title() {
-		  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
-		}, false);
-		window.addEventListener("TabSelect", function update_title() {
-		  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
-		}, false);
-		window.addEventListener("TabAttrModified", function update_title() {
-		  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
-		}, false);
+			document.getElementById("titlebar-content").appendChild(titlebartitle);
 
-	  
-	  } catch(e) {}
-	  
-	  classicthemerestorerjs.ctr.loadUnloadCSS("tttitlebar",true);
-	}
+			window.addEventListener("load", function update_title() {
+			   document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
+			}, false);
+			window.addEventListener("DOMContentLoaded", function update_title() {
+			  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
+			}, false);
+			window.addEventListener("TabOpen", function update_title() {
+			  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
+			}, false);
+			window.addEventListener("TabSelect", function update_title() {
+			  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
+			}, false);
+			window.addEventListener("TabAttrModified", function update_title() {
+			  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
+			}, false);
+
+		  } catch(e) {}
+		  
+		  classicthemerestorerjs.ctr.loadUnloadCSS("tttitlebar",true);
+
+		 }
+		},200);
+	  }, false);
+    }
   },
   
   // prevent accidental location bar removal by using context menu 
@@ -4307,7 +4315,7 @@ classicthemerestorerjs.ctr = {
 						  box-shadow:unset !important;\
 						}\
 						#main-window[defaultfxtheme="true"][tabsontop="false"] #TabsToolbar:not(:-moz-lwtheme),\
-						#main-window[defaultfxtheme="true"] :not(#theFoxOnlyBetter-slimChrome-toolbars) > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar):not(.devtools-tabbar):not(#developer-toolbar):not(#puzzleBars-urlbar-bar):not(#theFoxOnlyBetter-skyLights-container):not(#theFoxOnlyBetter-slimChrome-slimmer),\
+						#main-window[defaultfxtheme="true"] :not(#theFoxOnlyBetter-slimChrome-toolbars) > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar):not(.devtools-tabbar):not(#developer-toolbar):not(.devtools-responsiveui-toolbar):not(#puzzleBars-urlbar-bar):not(#theFoxOnlyBetter-skyLights-container):not(#theFoxOnlyBetter-slimChrome-slimmer),\
 						#main-window[defaultfxtheme="true"] #theFoxOnlyBetter-slimChrome-container > *:not(#theFoxOnlyBetter-slimChrome-toolbars-bottom):not(:-moz-lwtheme),\
 						#main-window[defaultfxtheme="true"] #ctraddon_urlextrabar:not(:-moz-lwtheme){\
 						  background-image:unset !important;\

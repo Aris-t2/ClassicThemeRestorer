@@ -292,5 +292,20 @@
 	#main-window[sizemode="maximized"][developertheme="true"][devtoolstheme="light"]:not([tabsontop="false"]) {
 	  background: #e3e4e6 !important;
 	}
+	
+	@media (-moz-os-version: windows-win10) {
+		#main-window[sizemode="normal"][developertheme="true"] #TabsToolbar,
+		#main-window[sizemode="normal"][developertheme="true"] #tabbrowser-tabs,
+		#main-window[sizemode="normal"][developertheme="true"] #browser-panel {
+		  background: unset !important;
+		}
+
+		#main-window[sizemode="normal"][developertheme="true"][devtoolstheme="dark"]:not([tabsontop="false"]){
+		  background: #1c2126 !important;
+		}
+		#main-window[sizemode="normal"][developertheme="true"][devtoolstheme="light"]:not([tabsontop="false"]) {
+		  background: #e3e4e6 !important;
+		}
+	}
 
 }

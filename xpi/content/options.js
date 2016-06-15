@@ -575,7 +575,7 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwNavBarPadding(this.prefs.getBoolPref("navbarpad"));
 	this.ctrpwLocationSearchbarSize(this.prefs.getBoolPref("lbsbsize"));
 	this.ctrpwLocationSearchbarRadius(this.prefs.getBoolPref("lbsbradius"));
-	this.ctrpwCompactAddonList(this.prefs.getBoolPref("am_compact"));
+	if (this.fxdefaulttheme) this.ctrpwCompactAddonList(this.prefs.getBoolPref("am_compact"));
 	this.ctrpwUnsortBM(this.prefs.getBoolPref("bmbunsortbm"));
 	this.ctrpwHideUrlStopRel(this.prefs.getBoolPref("hideurelstop"));
 	this.ctrpwExtraUrlbar(this.prefs.getBoolPref("extraurlkeycb"));
