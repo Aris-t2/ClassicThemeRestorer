@@ -83,8 +83,8 @@
 <!ENTITY Ctr_appbutton2		"Przycisk na pasku tytułu programu &brandShortName;">
 <!ENTITY Ctr_appbutton2h	"Przycisk na pasku tytułu programu &brandShortName; (ukryty)">
 <!ENTITY Ctr_appbutton2io	"Przycisk na pasku tytułu programu &brandShortName; (tylko ikona)">
-<!ENTITY Ctr_paneluibtweak	"Wyświetlaj przycisk menu jako przycisk programu &brandShortName;...">
-<!ENTITY Ctr_paneluibtweak2	"Wyświetlaj przycisk menu jako przycisk programu &brandShortName; (tylko ikona)...">
+<!ENTITY Ctr_paneluibtweak	"Wyświetl przycisk menu jako przycisk programu &brandShortName;...">
+<!ENTITY Ctr_paneluibtweak2	"Wyświetl przycisk menu jako przycisk programu &brandShortName; (tylko ikona)...">
 <!ENTITY Ctr_paneluibtweak3	"...gdy na pasku kart">
 <!ENTITY Ctr_appbuttonc_o	"Pomarańczowy kolor przycisku (domyślny)">
 <!ENTITY Ctr_appbuttonc_a	"Błękitny kolor przycisku (Aurora)">
@@ -132,7 +132,7 @@
 <!ENTITY Ctr_puibut_l_sep	"Po lewej">
 <!ENTITY Ctr_puibut_r_sep	"Po prawej">
 <!ENTITY Ctr_html5warning	"Ostrzeżenie o pełnym ekranie HTML5">
-<!ENTITY Ctr_oldtoplevimg	"Obrazy 'domeny najwyższego poziomu': klasyczny wygląd">
+<!ENTITY Ctr_oldtoplevimg	"Klasyczny wygląd obrazu na białym tle">
 <!ENTITY Ctr_altalertbox	"'Pole powiadomień': alternatywny wygląd">
 <!ENTITY Ctr_emptygfavico	"Zamień standardową ikonę ulubionych">
 <!ENTITY Ctr_mstatusbar		"Ruchomy panel paska statusu">
@@ -187,11 +187,11 @@
 <!ENTITY Ctr_hiderecentbm	"Menu podręczne zakładek: ukryj ostatnio dodane zakładki">
 <!ENTITY Ctr_hideeditbm		"Gwiazdka zakładek: ukryj menu podręczne (jeżeli zakładka nie jest dodana do strony)">
 <!ENTITY Ctr_bmbutpanelm	"Menu podręczne: wygląd menu panelu">
-<!ENTITY Ctr_bmbunsortbm	"Menu podręczne: podmenu 'nieposortowanych zakładek'">
+<!ENTITY Ctr_bmbunsortbm	"Menu podręczne: podmenu 'Zakładki nieposortowane'">
 <!ENTITY Ctr_bmbunsortbm2	"Menu ponad zakładkami">
-<!ENTITY Ctr_bmbviewbmsb	"Menu podręczne: wyświetl 'Pokaż pasek boczny'">
-<!ENTITY Ctr_bmbviewbmtb	"Menu podręczne: wyświetl 'Pokaż pasek narzędzi'">
-<!ENTITY Ctr_bmbnounsort	"Menu podręczne: ukryj 'nieposortowane zakładki'">
+<!ENTITY Ctr_bmbviewbmsb	"Menu podręczne: pokaż 'Wyświetl panel zakładek'">
+<!ENTITY Ctr_bmbviewbmtb	"Menu podręczne: pokaż 'Wyświetl pasek zakładek'">
+<!ENTITY Ctr_bmbnounsort	"Menu podręczne: ukryj 'Zakładki nieposortowane'">
 <!ENTITY Ctr_bmbutnotext	"Ukryj etykietę na pasku zakładek">
 <!ENTITY Ctr_skipprintpr	"Przycisk drukowania: pomiń podgląd wydruku">
 <!ENTITY Ctr_tbconmenu		"Menu kontekstowe paska narzędzi: ukryj 'Przenieś do menu', 'Usuń z paska narzędzi', 'Odśwież wszystkie karty', 'Dodaj zakładki do wszystkich kart...' oraz 'Przywróć zamkniętą kartę'">
@@ -267,7 +267,7 @@
 <!ENTITY Ctr_searchbar		"Pasek wyszukiwania">
 <!ENTITY Ctr_autocomplete	"Menu podręczne autouzupełniania">
 <!ENTITY Ctr_altautocompl	"Alternatywny wygląd">
-<!ENTITY Ctr_autocompl_it	"Remove 'Search with...' and 'Visit' items (if present)">
+<!ENTITY Ctr_autocompl_it	"Usuń elementy 'szukaj w...' oraz 'otwórz stronę' (jeżeli obecne)">
 <!ENTITY Ctr_urlbar_uc		"Wyłącz funkcję 'ujednolicone autouzupełnianie'">
 <!ENTITY Ctr_lbsugresi		"Wyłącz ograniczenie wysokości">
 <!ENTITY Ctr_lbsugres		"Liczba wyników">
@@ -290,7 +290,7 @@
 <!ENTITY Ctr_mbarforceright	"Ostatni element">
 
 <!ENTITY Ctr_toolbars		"Paski narzędzi">
-<!ENTITY Ctr_dblclnewtab	"Podwójne kliknięcie otwiera 'nową' kartę">
+<!ENTITY Ctr_dblclnewtab	"Podwójne kliknięcie paska narzędzi otwiera nową kartę">
 <!ENTITY Ctr_hidetbwot		"Ukryj pasek kart z widoczną tylko jedną kartą">
 <!ENTITY Ctr_hidetbwote		"Zmniejsz opóźnienie ukrywania przy uruchamianiu">
 <!ENTITY Ctr_hidetbwote_i	"Może powodować usterki kart paska narzędzi">
@@ -298,6 +298,7 @@
 <!ENTITY Ctr_notabfog		"Usuń mgłę tła (Windows AeroGlass/8)">
 <!ENTITY Ctr_notabbg		"Usuń kolor tła (Windows AeroGlass/8)">
 <!ENTITY Ctr_hightabpos		"Zredukuj przestrzeń powyżej paska narzędzi (jeśli to możliwe)">
+<!ENTITY Ctr_showalltabsb	"Always show 'all tabs' button">
 <!ENTITY Ctr_alttabstb		"Alternatywny kolor tła">
 <!ENTITY Ctr_alttabstb2		"W trybie zmaksymalizowanym (karty na górze)">
 
@@ -322,7 +323,7 @@
 <!ENTITY Ctr_nonavbarbg2	"Dotyczy wszystkich pasków narzędzi Slim Chrome z dodatku 'Beyond Australis'.">
 <!ENTITY Ctr_nonavborder	"Dodaj obramowanie na górze paska">
 <!ENTITY Ctr_nonavtbborder	"Górne paski: usuń obramowanie paska">
-<!ENTITY Ctr_hidesbclose	"Paski boczne: ukryj przycisk zamknięcia paska bocznego">
+<!ENTITY Ctr_hidesbclose	"Paski boczne: ukryj przycisk zamknięcia">
 <!ENTITY Ctr_notextshadow	"Paski narzędzi: ukryj cień tekstu na pasku narzędzi i na karcie">
 <!ENTITY Ctr_chevronfix		"Pasek nawigacji: ukryj podwójną strzałkę ('szewron') na końcu paska">
 <!ENTITY Ctr_tbsep_winc		"Górne paski: dodatkowe separatory paska narzędzi">
@@ -360,7 +361,7 @@
 <!ENTITY Ctr_fx38pocket		"Odznaczenie tego ustawienia wyłącza funkcję 'Pocket' oraz usuwa jej ikonę z pasków narzędzi.">
 <!ENTITY Ctr_fx38pocket2	"Uwaga: przesunięcie przycisku Pocket do strefy 'Dodatkowe funkcje i opcje' w trybie 'Dostosuj' przed wyłączeniem tego ustawienia usunie z menu podręcznych Zakładki oraz Popraw czytelność wszystkie elementy związane z Pocket.">
 <!ENTITY Ctr_e_searchui		"Wygląd wyszukiwania">
-<!ENTITY Ctr_e_loop			"Dzwonienie i konwersacja / Loop">
+<!ENTITY Ctr_e_loop			"Hello / Dzwonienie i konwersacja / Loop">
 <!ENTITY Ctr_e_deved		"Motyw Edycji Deweloperskiej">
 <!ENTITY Ctr_e_prefsui		"Ustawienia w karcie">
 <!ENTITY Ctr_e_readermode	"Popraw czytelność">
@@ -388,7 +389,7 @@
 <!ENTITY appMenuGettingStarted.label	"Pierwsze kroki">
 <!ENTITY goCmd.label					"Przejdź">
 <!ENTITY Ctr_menu_restart.label			"Zrestartuj">
-<!ENTITY Ctr_restartapp					"'Zrestartuj' w menu programu &brandShortName; oraz w menu Plik">
+<!ENTITY Ctr_restartapp					"Pokaż 'Zrestartuj' w menu programu &brandShortName; oraz w menu Plik">
 
 <!ENTITY Ctr_openInCurrentTab			"Otwórz dane wejściowe w bieżącej karcie">
 <!ENTITY Ctr_openInNewTab				"Otwórz dane wejściowe w nowej karcie">

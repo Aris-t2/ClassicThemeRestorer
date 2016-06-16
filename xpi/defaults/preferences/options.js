@@ -178,6 +178,7 @@ pref("extensions.classicthemerestorer.hidetbwote2",true);
 pref("extensions.classicthemerestorer.notabfog",false);
 pref("extensions.classicthemerestorer.notabbg",false);
 pref("extensions.classicthemerestorer.hightabpososx",false);
+pref("extensions.classicthemerestorer.showalltabsb",false);
 pref("extensions.classicthemerestorer.alttabstb",false);
 pref("extensions.classicthemerestorer.alttabstb2",true);
 

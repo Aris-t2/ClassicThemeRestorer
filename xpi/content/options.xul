@@ -147,9 +147,9 @@
 		<preference id="ctraddon_sbsize_maxw"	name="extensions.classicthemerestorer.sbsize_maxw" 	type="int"		instantApply="true"/>
 		<preference id="ctraddon_lbsbradius"	name="extensions.classicthemerestorer.lbsbradius"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_lbradius_left"	name="extensions.classicthemerestorer.lbradius_left" type="int"		instantApply="true"/>
-		<preference id="ctraddon_lbradius_right"	name="extensions.classicthemerestorer.lbradius_right" type="int"		instantApply="true"/>
+		<preference id="ctraddon_lbradius_right" name="extensions.classicthemerestorer.lbradius_right" type="int"	instantApply="true"/>
 		<preference id="ctraddon_sbradius_left"	name="extensions.classicthemerestorer.sbradius_left" type="int"		instantApply="true"/>
-		<preference id="ctraddon_sbradius_right"	name="extensions.classicthemerestorer.sbradius_right" type="int"		instantApply="true"/>
+		<preference id="ctraddon_sbradius_right" name="extensions.classicthemerestorer.sbradius_right" type="int"	instantApply="true"/>
 		
 
 		<preference id="ctraddon_ctab1"			name="extensions.classicthemerestorer.ctab1"		type="string"	instantApply="true"/>
@@ -214,6 +214,7 @@
 		<preference id="ctraddon_lessaddonsbar"	name="extensions.classicthemerestorer.lessaddonsbar" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_addonbarfs"	name="extensions.classicthemerestorer.addonbarfs"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hightabpososx"	name="extensions.classicthemerestorer.hightabpososx" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_showalltabsb"	name="extensions.classicthemerestorer.showalltabsb"  type="bool"	instantApply="true"/>
 		<preference id="ctraddon_altmenubar"	name="extensions.classicthemerestorer.altmenubar" 	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_altmbarpos"	name="extensions.classicthemerestorer.altmbarpos"	 type="string"	instantApply="true"/>
 		<preference id="ctraddon_menubarnofog"	name="extensions.classicthemerestorer.menubarnofog"  type="bool"	instantApply="true"/>
@@ -454,6 +455,7 @@
 		<description class="ctraddonsuboption">about:config &gt;&gt; browser.tabs.insertRelatedAfterCurrent</description>
 		<checkbox label="&Ctr_dblclnewtab;"	preference="ctraddon_dblclnewtab" class="ctraddon_windowsonly"/>
 		<checkbox label="&Ctr_hightabpos;"	preference="ctraddon_hightabpososx" id="ctraddon_pw_hightabpososx"/>
+		<checkbox label="&Ctr_showalltabsb;" preference="ctraddon_showalltabsb" id="ctraddon_pw_showalltabsb"/>
 		<checkbox label="&Ctr_hidetbwot;"	preference="ctraddon_hidetbwot" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(true);} else {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(false);} classicthemerestorerjso.ctr.needsBrowserRestart();"/>
 		<checkbox label="&Ctr_hidetbwote;"	preference="ctraddon_hidetbwote" class="ctraddonsuboption" id="ctraddon_pw_hidetbwote"/>
 		<description id="ctraddon_pw_hidetbwote_winc" class="ctraddonsuboption2 ctraddon_windowsonly">&Ctr_hidetbwote_i;</description>
@@ -801,6 +803,8 @@
 				<menuitem value="appbutton_pm2"	  label="&Ctr_paneluibtweak;"		oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_pm2',true)" id="ctraddon_pw_appbutton_pm2"/>
 				<menuitem value="appbutton_pm" 	  label="&Ctr_paneluibtweak2;"		oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_pm',true)" id="ctraddon_pw_appbutton_pm"/>
 				<label value="&Ctr_paneluibtweak3;"/>
+				<label value=" "/>
+				<description class="ctraddon_font1">&Ctr_tabsontopW1;</description>
 				<label value=" "/>
 				<description class="ctraddon_font1">&Ctr_appbuttonI1;</description>
 			</menupopup>

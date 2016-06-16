@@ -633,6 +633,9 @@ classicthemerestorerjs.ctr = {
 				},500);
 
 			}
+			
+			//custom tab height adjustment
+			if (branch.getBoolPref("ctabheightcb")) classicthemerestorerjs.ctr.loadUnloadCSS("ctabheight",true);
 
 		  break;
 		  
@@ -2400,6 +2403,11 @@ classicthemerestorerjs.ctr = {
 			else classicthemerestorerjs.ctr.loadUnloadCSS("hightabpososx",false);
 		  break;
 		  
+		  case "showalltabsb":
+			if (branch.getBoolPref("showalltabsb")) classicthemerestorerjs.ctr.loadUnloadCSS("showalltabsb",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("showalltabsb",false);
+		  break;
+		  
 		  case "alttabstb":
 			if (branch.getBoolPref("alttabstb") && classicthemerestorerjs.ctr.fxdefaulttheme==true) {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("alttabstb",true);
@@ -3024,8 +3032,10 @@ classicthemerestorerjs.ctr = {
 		// optionally reduces delay on startup (because it can cause glitches with Windows Classic visual style)
 		if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hidetbwote"))
 		  document.getElementById("TabsToolbar").style.visibility = 'collapse';
-		else
+		else {
+		  classicthemerestorerjs.ctr.loadUnloadCSS("hidetabsbarwot",true);
 		  document.getElementById("TabsToolbar").collapsed = true;
+		}
 		
 		// correct titlebar appearance, if the user wants it (not required for all visual styles)
 		if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hidetbwote2")) {
@@ -3044,9 +3054,11 @@ classicthemerestorerjs.ctr = {
 	  else {
 		
 		if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hidetbwote"))
-		  document.getElementById("TabsToolbar").style.visibility = 'visible';
-		else
+		   document.getElementById("TabsToolbar").style.visibility = 'visible';
+		else {
+		  classicthemerestorerjs.ctr.loadUnloadCSS("hidetabsbarwot",false);
 		  document.getElementById("TabsToolbar").collapsed = false;
+		}
 		
 		if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hidetbwote2")) {
 			
@@ -3973,9 +3985,11 @@ classicthemerestorerjs.ctr = {
 		case "lessaddonsbar": 		manageCSS("addonsbar_smaller.css");		break;
 		case "addonbarfs": 			manageCSS("addonbar_infullscreen.css");	break;
 		case "hightabpososx": 		manageCSS("higher_tabs_pos.css");		break;
+		case "showalltabsb": 		manageCSS("showalltabsbutton.css");		break;
 		case "alttabstb": 			manageCSS("alttabstoolbar.css");		break;
 		case "alttabstb2": 			manageCSS("alttabstoolbar2.css");		break;
 		case "hidetbwotextra": 		manageCSS("hidetbwot_extra.css");		break;
+		case "hidetabsbarwot": 		manageCSS("hidetabsbarwot.css");		break;
 		
 		case "emptyfavico_t_gen": 	manageCSS("empty_favicon_t0.css");		break;
 		case "emptyfavico_t_gen2": 	manageCSS("empty_favicon_t0v2.css");	break;
@@ -4606,7 +4620,8 @@ classicthemerestorerjs.ctr = {
 			
 				var linuxbutton='';
 				
-				var windows10fx47='';
+				var windows10fx47captionb='';
+				var windows10fx47appbuttonicon='';
 				
 				if (classicthemerestorerjs.ctr.osstring!="Darwin" && classicthemerestorerjs.ctr.osstring!="WINNT") {
 					linuxbutton='\
@@ -4617,8 +4632,8 @@ classicthemerestorerjs.ctr = {
 					';
 				}
 				
-				if (classicthemerestorerjs.ctr.osstring=="WINNT" && this.prefs.getIntPref('ctabheight')<26) {
-					windows10fx47='\
+				if (classicthemerestorerjs.ctr.osstring=="WINNT" && this.prefs.getIntPref('ctabheight')<28) {
+					windows10fx47captionb='\
 					  @media (-moz-os-version: windows-win10) {\
 						#main-window[fx47plus="true"][sizemode="maximized"] #titlebar-buttonbox toolbarbutton {\
 						  padding-top: 5px !important;\
@@ -4626,6 +4641,19 @@ classicthemerestorerjs.ctr = {
 						}\
 					  }\
 					';
+				}
+			
+				if(this.prefs.getCharPref("appbutton")=="appbutton_v2io" || this.prefs.getCharPref("appbutton")=="appbutton_v2io2") {
+				  if (classicthemerestorerjs.ctr.osstring=="WINNT" && this.prefs.getIntPref('ctabheight')<28) {
+					windows10fx47appbuttonicon='\
+					  @media (-moz-os-version: windows-win10) {\
+						#main-window[fx47plus="true"][sizemode="maximized"] #ctraddon_appbutton2{\
+						  margin-top:-1px !important;\
+						  margin: -1px 0 2px -2px !important;\
+						}\
+					  }\
+					';
+				  }
 				}
 			
 				this.tabheight=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
@@ -4650,7 +4678,8 @@ classicthemerestorerjs.ctr = {
 					  height: '+this.prefs.getIntPref('ctabheight')+'px !important;\
 					}\
 					'+linuxbutton+'\
-					'+windows10fx47+'\
+					'+windows10fx47captionb+'\
+					'+windows10fx47appbuttonicon+'\
 				'), null, null);
 				
 				applyNewSheet(this.tabheight);

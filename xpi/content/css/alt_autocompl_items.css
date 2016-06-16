@@ -4,10 +4,12 @@
 	
 	panel[type="autocomplete-richlistbox"] richlistitem[type="action searchengine heuristic"],
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[type="action searchengine heuristic"],
-	panel[type="autocomplete-richlistbox"] richlistitem[type="autofill heuristic"],
-	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[type="autofill heuristic"],
 	panel[type="autocomplete-richlistbox"] richlistitem[type="action visiturl heuristic"],
-	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[type="action visiturl heuristic"]{
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[type="action visiturl heuristic"],
+	/*panel[type="autocomplete-richlistbox"] richlistitem[type="action switchtab"],
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[type="action switchtab"],*/
+	panel[type="autocomplete-richlistbox"] richlistitem[type="autofill heuristic"],
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[type="autofill heuristic"] {
 	  display:none !important;
 	}
 

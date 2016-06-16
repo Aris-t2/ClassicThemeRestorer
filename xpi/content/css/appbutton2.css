@@ -218,6 +218,10 @@
 		margin-top:-1px !important;
 		margin: -1px 0 6px -2px !important;
 	  }
+	  #main-window[fx47plus="true"][sizemode="maximized"] #ctraddon_appbutton2{
+		margin-top:-2px !important;
+		margin: -2px 0 5px -2px !important;
+	  }
 	  
 	  #main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] #toolbar-menubar ~ #TabsToolbar,
 	  #main-window[tabsintitlebar][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar,
