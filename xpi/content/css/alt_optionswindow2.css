@@ -1,4 +1,5 @@
 @import url(chrome://ctraddon_os_special/skin/alt_optionswindow2extra.css);
+@import url(chrome://ctraddon_os_special/skin/alt_optionswindow2extra.css);
 
 @-moz-document url(about:preferences),url-prefix(about:preferences){
  	
@@ -212,7 +213,7 @@
 	  -moz-appearance: menulist !important;
 	}
 	
-	#noFxaSignIn *,
+	/*#noFxaSignIn *,
 	#noFxaSignUp *{
 	  padding:0 !important;
 	  margin: 0 -8px !important;
@@ -221,7 +222,7 @@
 	#fxaUnlinkButton * {
 	  -moz-margin-start: -8px !important;
 	  -moz-margin-end: 8px !important;
-	}
+	}*/
 	
 	/* menulist popup */
 	@media all and (-moz-windows-theme:aero) {

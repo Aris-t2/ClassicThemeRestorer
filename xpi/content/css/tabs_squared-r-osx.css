@@ -19,6 +19,16 @@
 	  background-image: linear-gradient(to bottom, #676f76 0px, transparent 1px),linear-gradient(to bottom,#adadad,#b8b8b8);
 	}
 	
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][style][selected="true"]:not(:-moz-lwtheme) {
+	  background-image: linear-gradient(to bottom,#d3d3d3,#d3d3d3,#cdcdcd) !important;
+	}
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][style]:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
+	  background-image: linear-gradient(to bottom, #676f76 0px, transparent 1px),linear-gradient(to bottom, #949494,#9f9f9f,#a9a9a9) !important;
+	}
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][style]:not([selected="true"]):hover:not(:-moz-lwtheme) {
+	  background-image: linear-gradient(to bottom, #676f76 0px, transparent 1px),linear-gradient(to bottom,#adadad,#b8b8b8) !important;
+	}
+	
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover),
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover{
 	  color: black !important;

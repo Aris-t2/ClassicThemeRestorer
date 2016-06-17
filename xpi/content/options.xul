@@ -39,12 +39,15 @@
 		<preference id="ctraddon_pocket2"		name="extensions.pocket.enabled"					type="bool"		instantApply="true"/>
 		<preference id="ctraddon_nodevtheme2"	name="extensions.classicthemerestorer.nodevtheme2"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_tabinsertion"	name="browser.tabs.insertRelatedAfterCurrent"		type="bool"		instantApply="true"/>
-		<preference id="ctraddon_e10stabs"		name="browser.tabs.remote.autostart"				type="bool"		instantApply="true"/>
 		<preference id="ctraddon_tabsaudioico"	name="browser.tabs.showAudioPlayingIcon"			type="bool"		instantApply="true"/>
 		<preference id="ctraddon_xpinstallui"	name="xpinstall.customConfirmationUI"				type="bool"		instantApply="true" inverted="true"/>
 		<preference id="ctraddon_urlresultsl"	name="browser.urlbar.maxRichResults"				type="int"		instantApply="true"/>
 		<preference id="ctraddon_search_oit"	name="browser.search.openintab"						type="bool"		instantApply="true"/>
 		<preference id="ctraddon_urlbar_uc"		name="browser.urlbar.unifiedcomplete"				type="bool"		instantApply="true" inverted="true"/>
+		<preference id="ctraddon_containertab"	name="privacy.userContext.enabled"					type="bool"		instantApply="true"/>
+		<preference id="ctraddon_findbarhl1"	name="findbar.modalHighlight"						type="bool"		instantApply="true"/>
+		<preference id="ctraddon_findbarhl2"	name="findbar.highlightAll"							type="bool"		instantApply="true"/>
+		<preference id="ctraddon_flyweb"		name="dom.flyweb.enabled"							type="bool"		instantApply="true"/>
 
 		<preference id="ctraddon_tabs"			name="extensions.classicthemerestorer.tabs" 		type="string"	instantApply="true"/>
 		<preference id="ctraddon_tabsontop"		name="extensions.classicthemerestorer.tabsontop" 	type="string"	instantApply="true"/>
@@ -1413,8 +1416,6 @@
 		<checkbox label="about:config &gt;&gt; browser.preferences.inContent" preference="ctraddon_oldprefs" id="ctraddon_pw_oldprefs"/>
 		<description class="ctraddonsuboption acprefdesc">&Ctr_fx36prefs;</description>
 		<description class="ctraddonsuboption acprefdesc">&Ctr_fx36prefs2;</description>
-		<checkbox label="about:config &gt;&gt; browser.tabs.remote.autostart" preference="ctraddon_e10stabs" id="ctraddon_pw_e10stabs" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
-		<description class="ctraddonsuboption acprefdesc" id="ctraddon_pw_e10stabsdescr">E10S (multi-process) mode (Nightly channel)</description>
 	  </groupbox>
 
 	  <groupbox id="ctraddon_pw_readermodegb">
@@ -1436,6 +1437,25 @@
 		<caption  label="&Ctr_e_tabsaudioico;" class="ctraddon_topic"/>
 		<checkbox label="about:config &gt;&gt; browser.tabs.showAudioPlayingIcon" preference="ctraddon_tabsaudioico" id="ctraddon_pw_tabsaudioico"/>
 		<description class="ctraddonsuboption acprefdesc">&Ctr_fx42tabsaudico;</description>
+	  </groupbox>
+	  
+	  <groupbox id="ctraddon_pw_containertabgb">
+		<caption  label="&Ctr_e_containertab;" class="ctraddon_topic"/>
+		<checkbox label="about:config &gt;&gt; privacy.userContext.enabled" preference="ctraddon_containertab" id="ctraddon_pw_containertab"/>
+		<description class="ctraddonsuboption acprefdesc">&Ctr_fx50containert;</description>
+	  </groupbox>
+	  
+	  <groupbox id="ctraddon_pw_findbarhlgb">
+		<caption  label="&Ctr_e_findbarhl;" class="ctraddon_topic"/>
+		<checkbox label="about:config &gt;&gt; findbar.modalHighlight" preference="ctraddon_findbarhl1" id="ctraddon_pw_findbarhl1"/>
+		<checkbox label="about:config &gt;&gt; findbar.highlightAll" preference="ctraddon_findbarhl2" id="ctraddon_pw_findbarhl2"/>
+		<description class="ctraddonsuboption acprefdesc">&Ctr_fx50findbarhl;</description>
+	  </groupbox>
+	  
+	  <groupbox id="ctraddon_pw_flywebgb">
+		<caption  label="&Ctr_e_flyweb;" class="ctraddon_topic"/>
+		<checkbox label="about:config &gt;&gt; dom.flyweb.enabled" preference="ctraddon_flyweb" id="ctraddon_pw_flyweb"/>
+		<description class="ctraddonsuboption acprefdesc">&Ctr_fx50flyweb;</description>
 	  </groupbox>
 	  
 	</box>
