@@ -127,6 +127,7 @@
 		<preference id="ctraddon_altreaderico"	name="extensions.classicthemerestorer.altreaderico"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_altautocompl"	name="extensions.classicthemerestorer.altautocompl"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_autocompl_it"	name="extensions.classicthemerestorer.autocompl_it"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_autocompl_hl"	name="extensions.classicthemerestorer.autocompl_hl"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_locsearchbw10"	name="extensions.classicthemerestorer.locsearchbw10" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_combrelstop"	name="extensions.classicthemerestorer.combrelstop"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_panelmenucol"	name="extensions.classicthemerestorer.panelmenucol"	type="bool"		instantApply="true"/>
@@ -1135,6 +1136,7 @@
 		<description class="ctraddonsuboption" id="ctraddon_pw_urlbar_uc_desc">about:config &gt;&gt; browser.urlbar.unifiedcomplete</description>
 		<checkbox label="&Ctr_lbsugresi;" preference="ctraddon_urlresults" id="ctraddon_pw_urlresults" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwAutoCompleteHeight(true);} else {classicthemerestorerjso.ctr.ctrpwAutoCompleteHeight(false);}"/>
 		<checkbox label="&Ctr_autocompl_it;" preference="ctraddon_autocompl_it" id="ctraddon_pw_autocompl_it"/>
+		<checkbox label="&Ctr_autocompl_hl;" preference="ctraddon_autocompl_hl" id="ctraddon_pw_autocompl_hl"/>
 		
 		<description id="ctraddon_lbsugres" class="ctraddon_font1">&Ctr_lbsugres;</description>
 		<description>about:config &gt;&gt; browser.urlbar.maxRichResults</description>
