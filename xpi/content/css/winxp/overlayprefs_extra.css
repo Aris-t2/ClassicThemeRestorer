@@ -1,0 +1,60 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+#ClassicTRoptionsPane .ctraddon_nonwindows,
+#ClassicTRoptionsPane .ctraddon_linuxonly,
+#ClassicTRoptionsPane .ctraddon_maconly{
+  visibility: collapse !important;
+}
+
+#ctraddon_pw_noresizerxp,
+#ctraddon_appbutton_list1{
+  visibility: visible !important;
+}
+#ctraddon_pw_menubargroup2,
+#ctraddon_pw_menubarnofog,
+#ctraddon_pw_altmenubar,
+#ctraddon_appbutton_list2{
+  visibility: collapse !important;
+  display:none !important;
+}
+#ctraddon_pw_okbutton{
+  display: inline !important;
+}
+#ctraddon_pw_starinurl label{
+  background:url('chrome://classic_theme_restorer/content/images/appmenu_bookmarks.png') no-repeat left !important;
+  -moz-padding-start:20px !important;
+  min-height:16px !important;
+}
+#ctraddon_pw_feedinurl label{
+  background:url('chrome://classic_theme_restorer/content/images/feedinurlbar.png') no-repeat left !important;
+  -moz-padding-start:20px !important;
+  min-height:16px !important;
+}
+
+#ctraddon_closeicon_red, #ctraddon_closeicong_red,
+#ctraddon_closeicon_w7, #ctraddon_closeicong_w7,
+#ctraddon_closeicon_w7v2, #ctraddon_closeicong_w7v2,
+#ctraddon_closeicon_w8, #ctraddon_closeicong_w8,
+#ctraddon_closeicon_w10, #ctraddon_closeicong_w10,
+#ctraddon_closeicon_w10i, #ctraddon_closeicong_w10i,
+#ctraddon_closeicon_w10red, #ctraddon_closeicong_w10red,
+#ctraddon_closeicon_gc, #ctraddon_closeicong_gc,
+#ctraddon_tabsep_black,
+#ctraddon_tabsep_white,
+#ctraddon_tabsep_luna,
+#ctraddon_tabsep_xp,
+#ctraddon_tabsep_black_sol,
+#ctraddon_tabsep_white_sol,
+#ctraddon_tabsep_black_sol2,
+#ctraddon_tabsep_white_sol2{
+  -moz-margin-start: -3px;
+  -moz-margin-end: -4px;
+}
+
+#ctraddon_pw_padlock_default,
+#ctraddon_pw_padlock_classic,
+#ctraddon_pw_padlock_modern,
+#ctraddon_pw_padlock_none{
+  margin-left: -3px;
+  margin-right: -3px;
+}

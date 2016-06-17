@@ -2,8 +2,11 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#main-window:not([tabsontop="false"]) #TabsToolbar:not([tabsontop="false"]) {
+	#main-window:not([tabsontop="false"]) #TabsToolbar:not([tabsontop="false"]):not(:-moz-lwtheme) {
 	  margin-top:0px !important;
+	}
+	#main-window[sizemode="normal"]:not([tabsontop="false"]) #TabsToolbar:not([tabsontop="false"]):-moz-lwtheme {
+	  margin-top:2px !important;
 	}
 	#main-window[sizemode="normal"]:not([tabsontop="false"]) #titlebar-placeholder-on-TabsToolbar-for-captions-buttons{
 	  -moz-margin-start: 0px !important;

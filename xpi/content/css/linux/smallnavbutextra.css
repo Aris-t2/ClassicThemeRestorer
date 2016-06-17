@@ -60,6 +60,12 @@
 	  padding-right:2px !important;
 	  transition: none !important;
 	}
+	
+	#main-window[fx42plus="true"][defaultfxtheme="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + *,
+	#main-window[fx42plus="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + * {
+	  -moz-padding-start: 4px !important;
+	  -moz-padding-end: 3px !important;
+	}
 
     #nav-bar * .toolbarbutton-icon,
 	#nav-bar * {
@@ -115,6 +121,10 @@
 	}
 
 	/* urlbar border tweaks */
+	#main-window[fx42plus="true"][defaultfxtheme="true"] #urlbar {
+	  min-height: 24px;
+	}
+
 	#main-window[defaultfxtheme="true"] #nav-bar #urlbar,
 	#main-window[defaultfxtheme="true"] #nav-bar .searchbar-textbox {
 	  border: 1px solid ThreeDShadow !important;
@@ -122,6 +132,14 @@
 	#main-window[defaultfxtheme="true"] #nav-bar #urlbar[focused],
 	#main-window[defaultfxtheme="true"] #nav-bar .searchbar-textbox[focused] {
 	  border-color: Highlight !important;
+	}
+	
+	/* tweaks for text/full modes */
+	#nav-bar[mode="text"] toolbarbutton .toolbarbutton-text,
+	#nav-bar[mode="full"] toolbarbutton .toolbarbutton-text {
+	  background: none !important;
+	  box-shadow: none !important;
+	  border: unset !important;
 	}
 
 	/*buttons with SVG images*/
@@ -131,11 +149,55 @@
 	  width: auto !important;
 	  height: auto !important;
 	}
-	
+
 	/*Jetpacks toggle & action buttons support*/
 	#nav-bar toolbarbutton[id^="action-button-"] .toolbarbutton-icon,
 	#nav-bar toolbarbutton[id^="toggle-button-"] .toolbarbutton-icon {
+	  width:16px !important;
+	}
+
+	#main-window:not([fx36plus="true"]) #nav-bar toolbarbutton[id^="action-button-"] .toolbarbutton-icon,
+	#main-window:not([fx36plus="true"]) #nav-bar toolbarbutton[id^="toggle-button-"] .toolbarbutton-icon {
 	  width:18px !important;
+	}
+
+	#nav-bar toolbarbutton .toolbarbutton-badge,
+	#nav-bar toolbarbutton .toolbarbutton-badge-container,
+	#nav-bar toolbarbutton .toolbarbutton-badge-stack {
+	  box-shadow: none !important;
+	  border: 0 !important;
+	  padding: 0 !important;
+	  margin: 0 !important;
+	}
+
+	#navigator-toolbox #nav-bar toolbarbutton .toolbarbutton-badge-stack {
+	  padding-right: 1px !important;
+      padding-left: 1px !important;
+	  margin-right: 2px !important;
+      margin-left: 2px !important;
+	}
+	
+	#navigator-toolbox #nav-bar toolbarbutton .toolbarbutton-badge-stack .toolbarbutton-badge {
+      min-width: 0px !important;
+	  width: 10px !important;
+      font-size:75% !important;
+	  margin-top: -4px !important;
+	  -moz-margin-end: -3px !important;
+	}
+
+	#nav-bar toolbarbutton .toolbarbutton-badge-container,
+	#nav-bar toolbarbutton .toolbarbutton-badge-stack {
+	  background: none !important;
+	}
+	
+	/*Feedly Notifier support*/
+	#nav-bar toolbaritem[id="widget:jid1-BOjn8b0IM7kH2w@jetpack-main-widget"] {
+      min-width:0px !important;
+      width:22px !important;
+      min-height:0px !important;
+      height:16px !important;
+	  padding: 0 !important;
+	  margin: 1px !important;
 	}
 
 	/* The Fox, only better add-on support*/
@@ -146,6 +208,29 @@
 	/* Disconnect */
 	#nav-bar #disconnect-item #disconnect-badge{
 	  margin-top:6px !important;
+	}
+	
+	/* special buttons inside urlbars boxes */
+	#urlbar #notification-popup-box + box toolbarbutton,
+	#urlbar #notification-popup-box + box toolbarbutton .toolbarbutton-icon,
+	#urlbar-icons toolbarbutton[type="menu"],
+	#urlbar-icons toolbarbutton[type="menu"] .toolbarbutton-icon {
+	  -moz-appearance: none !important;
+	  padding-top: unset !important;
+	  padding-bottom: unset !important;
+	  margin-top: unset !important;
+	  margin-bottom: unset !important;
+	  border: unset !important;
+	  box-shadow: unset !important;
+	  background: unset !important;
+	}
+
+	/*Tile tabs tweaks*/
+	#navigator-toolbox #nav-bar #tiletabs-buttonmenu .toolbarbutton-menubutton-button image {
+      margin-right: unset !important;
+      padding-right: unset !important;
+	  padding: 0 !important;
+	  -moz-margin-start: 1px !important;
 	}
 
 }

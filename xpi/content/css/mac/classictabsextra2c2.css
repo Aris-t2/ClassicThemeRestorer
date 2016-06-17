@@ -1,0 +1,52 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	/* tab colors */
+	.tabbrowser-tab[selected]:not(:-moz-lwtheme) .tab-content {
+	  background-image: linear-gradient(to top,#eaeaea,#e2e2e2,#ededed,#fcfcfc) !important;
+	}
+	
+	/* tab colors lightweight theme */
+	.tabbrowser-tab[selected]:-moz-lwtheme .tab-content {
+	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.5) 50%) !important;
+	}
+	
+	/* centering tab content */
+	.tabbrowser-tab .tab-content{
+	  padding-bottom: 4px !important;
+	}
+
+    /* lightweight theme tweaks*/
+	#navigator-toolbox #TabsToolbar:not([tabsontop="false"]):-moz-lwtheme{
+	  box-shadow:none !important;
+	  border-bottom: 1px solid transparent !important;
+	}
+	#navigator-toolbox #nav-bar:-moz-lwtheme{
+      box-shadow:none !important;
+	  border-top: 1px solid transparent !important;
+	}
+	
+	/* other */
+	#navigator-toolbox #nav-bar:not(:-moz-lwtheme){
+	  box-shadow:none !important;
+	  border-top: 1px solid transparent !important;
+	}
+	
+	#navigator-toolbox #TabsToolbar:not([tabsontop="false"]):not(:-moz-lwtheme){
+	  box-shadow:none !important;
+	  border-bottom: 1px solid transparent !important;
+	}
+	
+	#TabsToolbar{
+	  background-image: none !important;
+	}
+	#TabsToolbar::after {
+	  border-bottom: 0px !important;
+	}
+	.tabs-newtab-button > .toolbarbutton-icon{
+	  margin-left:-10px !important;
+	  margin-right:-10px !important;
+	}
+
+}

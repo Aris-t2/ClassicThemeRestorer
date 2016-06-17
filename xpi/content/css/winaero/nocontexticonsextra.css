@@ -9,66 +9,65 @@
 	#context-bookmarkpage image{
 	  display:none !important;
 	}
-	#context-back:before,
-	#context-forward:before,
-	#context-reload:before,
-	#context-stop:before,
-	#context-bookmarkpage:before{
-	  content: attr(aria-label) !important;
+
+	#context-back label,
+	#context-forward label,
+	#context-reload label,
+	#context-stop label,
+	#context-bookmarkpage label{
+	  display: inline !important;
 	}
+
 	#context-navigation{
 	  -moz-box-orient: vertical !important;
 	}
-	#context-navigation > .menuitem-iconic {
-	  -moz-box-pack: start !important;
-	}
 
-	#context-back:before,
-	#context-forward:before,
-	#context-reload:before,
-	#context-stop:before,
-	#context-bookmarkpage:before{
-	  -moz-margin-start:32px !important;
+	#context-back label,
+	#context-forward label,
+	#context-reload label,
+	#context-stop label,
+	#context-bookmarkpage label{
+      -moz-margin-start:15px !important; /* 32 -17 */
 	}
 	
 	/*Windows screen dpi value of 110%*/
 	@media (min-resolution: 105dpi) {
-		#context-back:before,
-		#context-forward:before,
-		#context-reload:before,
-		#context-stop:before,
-		#context-bookmarkpage:before{
-		  -moz-margin-start:29px !important;
+		#context-back label,
+		#context-forward label,
+		#context-reload label,
+		#context-stop label,
+		#context-bookmarkpage label{
+		  -moz-margin-start:12px !important;
 		}
 	}
 	/*Windows screen dpi value of 120%*/
 	@media (min-resolution: 115dpi) {
-		#context-back:before,
-		#context-forward:before,
-		#context-reload:before,
-		#context-stop:before,
-		#context-bookmarkpage:before{
-		  -moz-margin-start:27px !important;
+		#context-back label,
+		#context-forward label,
+		#context-reload label,
+		#context-stop label,
+		#context-bookmarkpage label{
+		  -moz-margin-start:10px !important;
 		}
 	}
 	/*Windows screen dpi value of 125%*/
 	@media (min-resolution: 120dpi) {
-		#context-back:before,
-		#context-forward:before,
-		#context-reload:before,
-		#context-stop:before,
-		#context-bookmarkpage:before{
-		  -moz-margin-start:28px !important;
+		#context-back label,
+		#context-forward label,
+		#context-reload label,
+		#context-stop label,
+		#context-bookmarkpage label{
+		  -moz-margin-start:11px !important;
 		}
 	}
 	/*Windows screen dpi value of 150%*/
 	@media (min-resolution: 140dpi) {
-		#context-back:before,
-		#context-forward:before,
-		#context-reload:before,
-		#context-stop:before,
-		#context-bookmarkpage:before{
-		  -moz-margin-start:25px !important;
+		#context-back label,
+		#context-forward label,
+		#context-reload label,
+		#context-stop label,
+		#context-bookmarkpage label{
+		  -moz-margin-start:8px !important;
 		}
 	}
 	
@@ -77,12 +76,12 @@
 	}
 
 	@media all and (-moz-windows-classic) {
-		#context-back:before,
-		#context-forward:before,
-		#context-reload:before,
-		#context-stop:before,
-		#context-bookmarkpage:before{
-		  -moz-margin-start:18px !important;
+		#context-back label,
+		#context-forward label,
+		#context-reload label,
+		#context-stop label,
+		#context-bookmarkpage label{
+		  -moz-margin-start:1px !important;
 		}
 		#context-navigation{
 		  margin-bottom:-5px !important;

@@ -1,0 +1,14 @@
+@-moz-document url(about:addons) {
+	
+	.addon[name="Developer Edition"]{
+	  display:none !important;
+	}
+
+}
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#customization-lwtheme-menu *[label="Developer Edition"]{
+	  display:none !important;
+	}
+
+}

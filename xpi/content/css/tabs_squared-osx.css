@@ -19,6 +19,16 @@
 	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#b3b3b3,#cfcfcf,#dedede,#e5e5e5);
 	}
 	
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][style][selected="true"]:not(:-moz-lwtheme) {
+	  background-image: linear-gradient(to top,#eaeaea,#e2e2e2,#ededed,#fcfcfc) !important;
+	}
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][style]:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
+	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #a1a1a1,#c0c0c0,#cccccc,#d4d4d4) !important;
+	}
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][style]:not([selected="true"]):hover:not(:-moz-lwtheme) {
+	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#b3b3b3,#cfcfcf,#dedede,#e5e5e5) !important;
+	}
+	
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover),
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover{
 	  color: black !important;
@@ -32,11 +42,6 @@
 	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#b3b3b3,#cfcfcf,#dedede,#e5e5e5) !important;
 	}
 
-	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:hover):not(:-moz-lwtheme){
-	  background-size: 95% 100% !important;
-	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #a1a1a1,#c0c0c0,#cccccc,#d4d4d4) !important;
-	}
-
 	.tabbrowser-tabs{
 	  border-bottom:0 !important;
 	}
@@ -44,7 +49,7 @@
 	#tabbrowser-tabs:not([overflow="true"]) {
 	  -moz-margin-end: -8px !important;
 	}
-	
+
 	#tabbrowser-tabs{
 	  min-height: 0px !important;
 	}
@@ -71,7 +76,48 @@
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_appbutton{
 	  -moz-margin-start:-2px !important;
 	}
-	
+	.tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+	.tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before,
+	.tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+	.tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before,
+	.tab-background-start[visuallyselected=true]:-moz-lwtheme::before,
+	.tab-background-end[visuallyselected=true]:-moz-lwtheme::before {
+	  background-image: unset !important;
+	}
+	.tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,
+	.tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before,
+	.tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,
+	.tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before {
+	  clip-path: unset !important;
+	}
+	.tab-background-middle[visuallyselected=true],
+	.tab-background-middle[visuallyselected=true]:-moz-lwtheme {
+	  background-color: unset !important;
+	  background-image: unset !important;
+	}
+	.tab-background-start[visuallyselected=true]:-moz-lwtheme::before,
+	.tab-background-end[visuallyselected=true]:-moz-lwtheme::before,
+	.tab-background-middle[visuallyselected=true]:-moz-lwtheme {
+	  background-color: unset !important;
+	}
+	.tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+	.tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before ,
+	.tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+	.tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before,
+	.tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr)::after,
+	.tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl)::after,
+	.tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr)::after,
+	.tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl)::after,
+	.tab-background-middle[visuallyselected=true],
+	.tab-background-middle[visuallyselected=true]:-moz-lwtheme,
+	.tab-background-start[visuallyselected=true]:-moz-lwtheme::before,
+	.tab-background-end[visuallyselected=true]:-moz-lwtheme::before,
+	.tabbrowser-tab:hover > .tab-stack > .tab-background:not([visuallyselected=true]),
+	/*.tabbrowser-tab[pinned][titlechanged]:not([visuallyselected="true"]) > .tab-stack > .tab-content,*/
+	#tabbrowser-tabs::before {
+	  background-image: none !important;
+	}
+
 	.tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-background-middle:not([selected=true]),
 	.tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-background-start:not([selected=true]),
 	.tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-background-end:not([selected=true]),
@@ -88,6 +134,37 @@
 	.tab-background-end[selected=true]:-moz-locale-dir(ltr)::after{
 	  content:none !important;
 	}
+	
+	.tab-background-middle {
+	  border-left-width: 0 !important;
+	  border-right-width: 0 !important;
+	  margin: 0 !important;
+	}
+
+	#TabsToolbar:not([orient="vertical"]) .tab-background {
+	  -moz-margin-end: 0 !important;
+	  -moz-margin-start: 0 !important;
+	}
+
+	.tab-background-start::after,
+	.tab-background-start::before,
+	.tab-background-start[visuallyselected=true]::after,
+	.tab-background-start[visuallyselected=true]::before,
+	.tab-background-start,
+	.tab-background-end,
+	.tab-background-end::after,
+	.tab-background-end::before,
+	.tab-background-end[visuallyselected=true]::after,
+	.tab-background-end[visuallyselected=true]::before {
+	  width: 0 !important;
+	}
+
+	.tab-background-start,.tab-background-end,
+	.tab-background-start[visuallyselected=true]::after,
+	.tab-background-end[visuallyselected=true]::after {
+	  -moz-margin-start: 0 !important;
+	}
+
 
 	.tabs-newtab-button {
 	  -moz-margin-start: 0px !important;
@@ -194,6 +271,13 @@
 	  background-image: linear-gradient(hsla(0,0%,80%,.5), hsla(0,0%,60%,.5) 80%) !important;
 	}
 
+	/* titlechanged pinned tabs */
+	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"])  .tab-content{
+	  background: unset !important;
+	}
+	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]){
+	  background-size: 100% 100% !important;
+	}
 	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]) {
 	  background-image: radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,1) 3%, rgba(186,221,251,.75) 40%, rgba(127,179,255,.5) 80%, rgba(127,179,255,.25)) !important;
 	}
@@ -226,12 +310,12 @@
 	.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
 	#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
 		background-image: none !important;
+		background-color: unset !important;
 	}
 
 	.tabbrowser-tab:not([pinned]) .tab-close-button{
 	  -moz-margin-end:-4px !important;
 	}
-	
 	
 	#TabsToolbar{
 	  background-image: none !important;
@@ -243,6 +327,11 @@
 	/* remove ridiculous clipping */
 	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive],:not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
 	  clip-path: none !important;
+	}
+	
+	/* fix crash icons position */
+	.tabbrowser-tab[crashed] .tab-icon-overlay {
+	  margin-top:0px !important;
 	}
 	
 	/* Pinned tabs & TabMixPlus/TabUtilities locked/protected tabs support */	
@@ -263,6 +352,16 @@
 	  -moz-margin-start:0px !important;
 	}
 	
+	/* pinned tabs fix (Fx38+) */
+	#main-window[fx38plus="true"] #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-content[pinned] {
+	  -moz-padding-end: 0px !important;
+	}
+	
+	/* pinned tabs fix (Fx45+) */
+	#main-window[fx45plus="true"] #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-content[pinned] {
+	  -moz-padding-start: 6px !important;
+	}
+
 	/* TU workaround */
 	#PinnedTabsBarItems {
 	  margin-left:0px !important;
@@ -283,7 +382,12 @@
 	  border-left:0 !important;
 	  border-right:0 !important;
 	}
-
+	
+	/*Faviconise tab add-on */
+	#tabbrowser-tabs .tabbrowser-tab[faviconized="true"] .tab-icon-image{
+	  -moz-margin-start:2px !important;
+	  -moz-margin-end:1px !important;
+	}
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {

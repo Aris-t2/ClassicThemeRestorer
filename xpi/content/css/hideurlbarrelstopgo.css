@@ -1,0 +1,17 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	#urlbar-go-button,
+	#urlbar-reload-button,
+	#urlbar-stop-button {
+	  padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      -moz-padding-start: 3px !important;
+      -moz-padding-end: 4px !important;
+	  margin-inline-start: unset !important;
+	  border-inline-start: unset !important;
+	  border-image: unset !important;
+	  border-image-slice: unset !important;
+	}
+
+}

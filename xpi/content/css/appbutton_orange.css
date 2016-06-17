@@ -83,3 +83,34 @@
 	}
 
 }
+
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+	#ctraddon_pw_appbuttonname {
+	  -moz-appearance: none !important;
+	  background-image: linear-gradient(rgb(247,182,82), rgb(215,98,10) 95%) !important;
+	  box-shadow: 0 1px 0 rgba(255,255,255,.25) inset,
+				  0 0 0 1px rgba(255,255,255,.25) inset !important;
+	  background-clip: padding-box !important;
+	  border-radius: 0 0 4px 4px;
+	  height:22px !important;
+	  border-top: 2px solid !important;
+	  border-right: 2px solid !important;
+	  border-left: 2px solid !important;
+	  border-bottom: 2px solid !important;
+	  -moz-border-top-colors: rgba(255,255,255,.70) hsla(214,89%,21%,.5) !important;
+	  -moz-border-right-colors: rgba(255,255,255,.60) hsla(214,89%,21%,.5) !important;
+	  -moz-border-left-colors: rgba(255,255,255,.60) hsla(214,89%,21%,.5) !important;
+	  -moz-border-bottom-colors: rgba(255,255,255,.70) hsla(214,89%,21%,.5) !important;
+	
+	}
+	#ctraddon_pw_appbuttonname label {
+	  padding: 2px 12px !important;
+	  background: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/appmenu-dropmarker.png), 0, 16, 16, 0) no-repeat right !important;
+	  -moz-margin-end:10px !important;
+	  color: white !important;
+	  text-shadow: 0 0 1px rgba(0,0,0,.7),
+				   0 1px 1.5px rgba(0,0,0,.5) !important;
+	  font-weight: bold !important;
+	}
+
+}

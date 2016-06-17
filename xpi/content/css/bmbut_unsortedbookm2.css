@@ -1,0 +1,27 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#ctraddon_BMB_unsortedBookmarks_m,
+	#ctraddon_BMB_unsortedBookmarks_mm {
+	  display: unset !important;
+	}
+
+	#ctraddon_BMB_unsortedBookmarks_m,
+	#ctraddon_BMB_unsortedBookmarks_mm {
+	  visibility: visible !important;
+	}
+
+	#menu_unsortedBookmarks,
+	#ctraddon_BMB_unsortedBookmarks{
+	  display:none !important;
+	}
+	
+	#ctraddon_BMB_unsortedBookmarks_m2,
+	#ctraddon_BMB_unsortedBookmarks_mm2,
+	#ctraddon_BMB_bookmarksPopup .hide-if-empty-places-result,
+	#bookmarksMenuPopup .hide-if-empty-places-result {
+	  visibility: collapse !important;
+	}
+
+}

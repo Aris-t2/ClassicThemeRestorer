@@ -1,9 +1,7 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	/* Restore classic colors for verified identity and verified domain */
-	
-	#urlbar[pageproxystate="valid"] .verifiedDomain {
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedDomain {
 	  background: linear-gradient(hsl(215,60%,92%), hsl(215,58%,88%)) !important;
 	  box-shadow: 0 1px 0 hsla(215,54%,33%,.05) inset !important;
 	  -moz-border-end-color: hsla(215,54%,33%,.2) !important;
@@ -11,18 +9,18 @@
 	  -moz-margin-end:2px !important;
 	}
 
-	#urlbar[pageproxystate="valid"] .verifiedDomain:hover {
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedDomain:hover {
 	  background: linear-gradient(hsl(215,85%,85%), hsl(215,70%,68%)) !important;
 	}
 
-	#urlbar[pageproxystate="valid"] .verifiedDomain[open="true"],
-	#urlbar[pageproxystate="valid"] .verifiedDomain:hover:active {
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedDomain[open="true"],
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedDomain:hover:active {
 	  background: linear-gradient(hsl(215,80%,80%), hsl(215,67%,65%)) !important;
 	  box-shadow: 0 1px 1px hsla(215,54%,33%,.7) inset,
 				  0 1px 3px 1px hsla(215,54%,33%,.5) inset !important;
 	}
 
-	#urlbar[pageproxystate="valid"] .verifiedIdentity {
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedIdentity {
 	  background: linear-gradient(hsl(91,70%,90%), hsl(93,60%,81%)) !important;
 	  box-shadow: 0 1px 0 hsla(92,81%,16%,.05) inset !important;
 	  -moz-border-end-color: hsla(92,81%,16%,.2) !important;
@@ -30,20 +28,77 @@
 	  font-weight:bold !important;
 	}
 
-	#urlbar[pageproxystate="valid"] .verifiedIdentity:hover {
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedIdentity:hover {
 	  background: linear-gradient(hsl(92,69%,77%), hsl(92,44%,51%)) !important;
 	}
 
-	#urlbar[pageproxystate="valid"] .verifiedIdentity[open="true"],
-	#urlbar[pageproxystate="valid"] .verifiedIdentity:hover:active {
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedIdentity[open="true"],
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedIdentity:hover:active {
 	  background: linear-gradient(hsl(92,65%,70%), hsl(92,40%,48%)) !important;
 	  box-shadow: 0 1px 1px hsla(92,81%,16%,.6) inset,
 				  0 1px 3px 1px hsla(92,81%,16%,.5) inset !important;
 	}
-	
-	#urlbar[pageproxystate="valid"] .verifiedDomain,
-	#urlbar[pageproxystate="valid"] .verifiedIdentity {
+
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .insecureLoginForms,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedActiveContent {
+	  background: linear-gradient(hsl(6,35%,88%), hsl(0,53%,82%)) !important;
+	  box-shadow: 0 1px 0 hsla(92,81%,16%,.05) inset !important;
+	  -moz-border-end-color: hsla(92,81%,16%,.2) !important;
+	}
+
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .insecureLoginForms:hover,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedActiveContent:hover {
+	  background: linear-gradient(hsl(6,65%,88%), hsl(0,73%,82%)) !important;
+	}
+
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .insecureLoginForms[open="true"],
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .insecureLoginForms:hover:active,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedActiveContent[open="true"],
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedActiveContent:hover:active {
+	  background: linear-gradient(hsl(6,70%,88%), hsl(0,78%,82%)) !important;
+	  box-shadow: 0 1px 1px hsla(0,85%,15%,.7) inset,
+			0 1px 3px 1px hsla(0,85%,15%,.5) inset !important;
+	}
+
+
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .weakCipher,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedDisplayContent,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked {
+	  background: linear-gradient(hsl(48,100%,93%), hsl(49,97%,85%)) !important;
+	  box-shadow: 0 1px 0 hsla(92,81%,16%,.05) inset !important;
+	  -moz-border-end-color: hsla(92,81%,16%,.2) !important;
+	}
+
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .weakCipher:hover,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedDisplayContent:hover,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked:hover {
+	  background: linear-gradient(hsl(54,85%,67%), hsl(54,90%,50%)) !important;
+	}
+
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .weakCipher[open="true"],
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .weakCipher:hover:active,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedDisplayContent[open="true"],
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedDisplayContent:hover:active,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked[open="true"],
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked:hover:active {
+	  background: linear-gradient(hsl(54,95%,67%), hsl(54,100%,50%)) !important;
+	  box-shadow: 0 1px 1px hsla(0,85%,15%,.7) inset,
+			0 1px 3px 1px hsla(0,85%,15%,.5) inset !important;
+	}
+
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .weakCipher,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedDisplayContent,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .insecureLoginForms,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedActiveContent,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedDomain,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedIdentity {
 	  -moz-border-end: 1px solid;
+	  border-image-source: none !important;
+	}
+	
+	#connection-icon {
+	  filter: unset !important;
 	}
 
 }

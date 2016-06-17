@@ -1,0 +1,193 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+  
+	#ctraddon_titlebartitle {
+	  -moz-appearance: none !important;
+	  padding: unset !important;
+	  margin: unset !important;
+	  border: unset !important;
+	  box-shadow: unset !important;
+	  white-space: nowrap;
+	  float:left;
+	  max-width: 1650px;
+	}
+	#ctraddon_titlebartitle:-moz-locale-dir(rtl) {
+	  float:right;
+	}
+	/* adjust length for different window sizes */
+	@media not all and (min-width: 2000px) {
+	  #ctraddon_titlebartitle {
+		max-width: 1650px;
+	  }
+	}
+	@media not all and (min-width: 1900px) {
+	  #ctraddon_titlebartitle {
+		max-width: 1550px;
+	  }
+	}
+	@media not all and (min-width: 1800px) {
+	  #ctraddon_titlebartitle {
+		max-width: 1450px;
+	  }
+	}
+	@media not all and (min-width: 1700px) {
+	  #ctraddon_titlebartitle {
+		max-width: 1350px;
+	  }
+	}
+	@media not all and (min-width: 1600px) {
+	  #ctraddon_titlebartitle {
+		max-width: 1250px;
+	  }
+	}
+	@media not all and (min-width: 1500px) {
+	  #ctraddon_titlebartitle {
+		max-width: 1150px;
+	  }
+	}
+	@media not all and (min-width: 1400px) {
+	  #ctraddon_titlebartitle {
+		max-width: 1050px;
+	  }
+	}
+	@media not all and (min-width: 1300px) {
+	  #ctraddon_titlebartitle {
+		max-width: 950px;
+	  }
+	}
+	@media not all and (min-width: 1200px) {
+	  #ctraddon_titlebartitle {
+		max-width: 850px;
+	  }
+	}
+	@media not all and (min-width: 1100px) {
+	  #ctraddon_titlebartitle {
+		max-width: 750px;
+	  }
+	}
+	@media not all and (min-width: 1000px) {
+	  #ctraddon_titlebartitle {
+		max-width: 650px;
+	  }
+	}
+	@media not all and (min-width: 900px) {
+	  #ctraddon_titlebartitle {
+		max-width: 550px;
+	  }
+	}
+	@media not all and (min-width: 800px) {
+	  #ctraddon_titlebartitle {
+		max-width: 450px;
+	  }
+	}
+	@media not all and (min-width: 700px) {
+	  #ctraddon_titlebartitle {
+		max-width: 350px;
+	  }
+	}
+	@media not all and (min-width: 600px) {
+	  #ctraddon_titlebartitle {
+		max-width: 250px;
+	  }
+	}
+	@media not all and (min-width: 500px) {
+	  #ctraddon_titlebartitle {
+		max-width: 150px;
+	  }
+	}
+	@media not all and (min-width: 400px) {
+	  #ctraddon_titlebartitle {
+		max-width: 50px;
+	  }
+	}
+	
+	/* adjust position on Windows 10 & XP*/
+	@media  (-moz-os-version: windows-xp),
+			(-moz-os-version: windows-win10) {
+		#ctraddon_titlebartitle {
+		  margin-top: -5px !important;
+		}
+	}
+
+	/* make sure a visible menubar does not cause trouble */
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #tab-view-deck #navigator-toolbox #toolbar-menubar[inactive="true"]:not([autohide="true"]),
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #tab-view-deck #navigator-toolbox #toolbar-menubar[inactive="true"][autohide="false"],
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #tab-view-deck #navigator-toolbox #toolbar-menubar[autohide="true"]:not([inactive="true"]),
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="normal"] #tab-view-deck #navigator-toolbox #toolbar-menubar:not([autohide="true"]),
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #tab-view-deck #navigator-toolbox #toolbar-menubar[inactive="true"][autohide="false"],
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #tab-view-deck #navigator-toolbox #toolbar-menubar[autohide="true"]:not([inactive="true"]),
+	#main-window[tabsintitlebar]:not([inFullscreen])[sizemode="maximized"] #tab-view-deck #navigator-toolbox #toolbar-menubar:not([autohide="true"]) {
+	  margin-top: 24px !important;
+	  -moz-margin-start: 0 !important;
+	}
+	#main-window[tabsintitlebar][sizemode="normal"]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar,
+	#main-window[tabsintitlebar][sizemode="normal"]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar,
+	#main-window[tabsintitlebar][sizemode="maximized"]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar,
+	#main-window[tabsintitlebar][sizemode="maximized"]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
+	  margin-top: 22px !important;
+	  -moz-margin-start: 0 !important;
+	}
+
+	/* font & text-shadow css is partly from "Firefox: Bring the Title Back userstyle" */
+	#ctraddon_titlebartitle label {
+	  font-weight: bold !important;
+	  color: CaptionText !important;
+	}
+
+	#main-window:-moz-window-inactive #ctraddon_titlebartitle label {
+	  color: InactiveCaptionText !important;
+	}
+	
+	#main-window:-moz-lwtheme-darktext #ctraddon_titlebartitle label,
+	#main-window:-moz-window-inactive:-moz-lwtheme-darktext #ctraddon_titlebartitle label{
+	  color: black !important;
+	}
+
+	#main-window:-moz-lwtheme-brighttext #ctraddon_titlebartitle label,
+	#main-window:-moz-window-inactive:-moz-lwtheme-brighttext #ctraddon_titlebartitle label{
+	  color: white !important;
+	}
+
+	@media (-moz-windows-glass) {
+
+	  #ctraddon_titlebartitle:not(:-moz-lwtheme) label {
+		text-shadow:  white 7px -1px 12px, white 7px -1px 13px, white 7px -1px 14px,
+					  white -7px -1px 12px, white -7px -1px 13px, white -7px -1px 14px !important;
+	  }
+
+	  #main-window:-moz-window-inactive #ctraddon_titlebartitle:not(:-moz-lwtheme) label {
+		text-shadow:  rgba(255, 255, 255, .8) 7px -1px 12px, rgba(255, 255, 255, .8) 7px -1px 13px,
+					  rgba(255, 255, 255, .8) 7px -1px 14px, rgba(255, 255, 255, .8) -7px -1px 12px,
+					  rgba(255, 255, 255, .8) -7px -1px 13px, rgba(255, 255, 255, .8) -7px -1px 14px !important;
+	  }
+
+	}
+
+	@media (-moz-windows-theme: luna-blue),
+		   (-moz-windows-theme: luna-olive) {
+
+	  #ctraddon_titlebartitle:not(:-moz-lwtheme) label {
+		text-shadow: 1px 1px rgba(0, 0, 0, .6) !important;
+	  }
+	  #main-window:-moz-window-inactive #ctraddon_titlebartitle:not(:-moz-lwtheme) label {
+		text-shadow: none !important;
+	  }
+
+	}
+
+	@media  (-moz-windows-theme: luna-silver),
+			(-moz-windows-theme: royale),
+			(-moz-windows-theme: zune),
+			(-moz-windows-theme: generic) {
+
+		#ctraddon_titlebartitle:not(:-moz-lwtheme) label {
+		  text-shadow: 1px 1px rgba(0, 0, 0, .2) !important;
+		}
+		#main-window:-moz-window-inactive #ctraddon_titlebartitle:not(:-moz-lwtheme) label {
+		  text-shadow: none !important;
+		}
+
+	}
+
+}

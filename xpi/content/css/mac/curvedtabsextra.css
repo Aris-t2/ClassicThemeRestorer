@@ -2,15 +2,27 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 	
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end {
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end {
 	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(transparent, transparent 2px, #d4d4d4 0px, #cccccc, #c0c0c0,#a1a1a1), none !important;
 	}
 	
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-stack .tab-background-middle,
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start,
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end {
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-stack .tab-background-middle,
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start,
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end {
+	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(transparent, transparent 2px, #e5e5e5 0px, #dedede,#cfcfcf,#b3b3b3), none !important;
+	}
+	
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-stack .tab-background-middle,
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-start,
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-end {
+	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(transparent, transparent 2px, #d4d4d4 0px, #cccccc, #c0c0c0,#a1a1a1), none !important;
+	}
+	
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):hover .tab-stack .tab-background-middle,
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):hover .tab-background-start,
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):hover .tab-background-end {
 	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(transparent, transparent 2px, #e5e5e5 0px, #dedede,#cfcfcf,#b3b3b3), none !important;
 	}
 	

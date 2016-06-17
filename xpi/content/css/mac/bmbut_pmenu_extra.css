@@ -1,0 +1,10 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#ctraddon_BMB_bookmarksPopup menu:not([_moz-menuactive]),
+	#ctraddon_BMB_bookmarksPopup menuitem:not([_moz-menuactive]) {
+	  -moz-appearance:none !important;
+	}
+
+}

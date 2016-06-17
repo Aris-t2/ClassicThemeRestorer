@@ -9,5 +9,7 @@
 	#PanelUI-popup * {
 	  transition: none !important;
 	}
-	
+	#main-window * #ctraddon_BMB_bookmarksPopup{
+	  transition-duration: 0.01s !important;
+	}
 }

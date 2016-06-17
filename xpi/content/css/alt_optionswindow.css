@@ -1,0 +1,83 @@
+@import url(chrome://classic_theme_restorer/content/css/alt_optionspage.css);
+@-moz-document url(about:preferences),url-prefix(about:preferences){
+
+	#categories .box-inherit {
+	  -moz-box-orient: horizontal !important;
+	  position: fixed !important;
+	  top:0px !important;
+	  background: inherit !important;
+	}
+	
+	#category-search[hidden="true"],
+	#mainPrefPane .header {
+	  display: none !important;
+	}
+
+	#mainPrefPane {
+	  padding-top: 10px !important;
+	}
+
+	vbox.main-content {
+	  margin-top: 56px !important;
+	  min-width: 600px !important;
+	  margin-bottom: 0px !important;
+	}
+	  
+	richlistitem.category {
+	  -moz-box-orient: vertical !important;
+	  padding-top: 8px !important;
+	  min-width: auto !important;
+	  width: auto !important;
+	}
+	  
+	richlistitem .category-icon {
+	  padding-top: 0px !important;
+	}
+	  
+	richlistitem.category > * {
+	  padding-left: unset !important;
+	  padding-right: unset !important;
+	  visibility: visible !important;
+	  
+	}
+	 
+	@media (max-width: 800px) {
+	  richlistitem.category > .category-name {
+		display: block !important;
+	  }
+	}
+
+	richlistitem.category > .category-name {
+	  margin-left: -5px !important;
+	  margin-right:  -5px !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+	}
+	
+	groupbox {
+	  margin-top: 0 !important;
+	  margin-bottom: 0 !important;
+	}
+	
+	#offlineAppsList > * {
+	  min-width: unset !important;
+	  width: auto !important;
+	  max-width: 550px !important;
+	}
+	
+	#categories + vbox > #mainPrefPane + hbox {
+	  margin-bottom: -20px !important;
+	}
+	
+	#dialogBox {
+	  min-width: unset !important;
+	  min-height: unset !important;
+	}
+
+	@media (min-resolution: 1.1dppx) {
+      richlistitem.category > .category-name {
+		font-size:95% !important;
+      }
+	}
+	
+}

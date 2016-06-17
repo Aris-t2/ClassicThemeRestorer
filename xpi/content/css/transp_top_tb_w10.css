@@ -1,0 +1,41 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+  /* allows OS titlebar colors for Fx title/menu/tabs toolbar */
+  @media (-moz-os-version: windows-win10) {
+    #main-window[fx40plus="true"]:not([customizing]){
+      background-color: transparent !important;
+    }
+		
+	@media (-moz-windows-theme:aero) {
+	  #main-window[fx40plus="true"]:not([customizing]) .titlebar-button,
+	  #main-window[fx40plus="true"]:not([customizing]) .titlebar-button:not(#titlebar-close) > .toolbarbutton-icon{
+		opacity: 0.01 !important;
+	  }
+	  #main-window[fx40plus="true"]:not([customizing]) .titlebar-button:hover {
+		opacity: 1 !important;
+	  }
+	}
+	
+	/* allows titlebar colors for caption buttons for non OS default visual styles */
+	@media not all and (-moz-windows-theme:aero) {
+      #main-window[fx40plus="true"]:not([customizing]) .titlebar-button{
+        opacity: 0.01 !important;
+        background: black !important;
+      }
+      #main-window[fx40plus="true"]:not([customizing]) #titlebar-close {
+        background: #e81123 !important;
+      }
+      #main-window[fx40plus="true"]:not([customizing]) .titlebar-button:not(#titlebar-close) > .toolbarbutton-icon {
+        opacity: 0.01 !important;
+      }
+	  #main-window[fx40plus="true"]:not([customizing]) .titlebar-button:hover {
+        opacity: 0.1 !important;
+      }
+      #main-window[fx40plus="true"]:not([customizing]) #titlebar-close:hover {
+        opacity: 1 !important;
+      }
+	}
+  }
+}
+

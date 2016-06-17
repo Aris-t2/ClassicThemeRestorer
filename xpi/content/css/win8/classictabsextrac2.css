@@ -50,6 +50,15 @@
 	  border-top: 1px solid transparent !important;
 	}
 	
+	/* Windows 10 tweaks */
+	@media (-moz-os-version: windows-win10) {
+	  #main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme,
+	  #main-window[defaultfxtheme="true"][fx32plus="true"] #TabsToolbar:not(:-moz-lwtheme),	
+	  #main-window[defaultfxtheme="true"][fx32plus="true"] #TabsToolbar:-moz-lwtheme {
+		border-bottom: 0 !important;
+	  }
+	}
+	
 	/* other */
 	#TabsToolbar:not(:-moz-lwtheme){
 	  box-shadow:none !important;
@@ -58,7 +67,14 @@
 
 	#navigator-toolbox #nav-bar:not(:-moz-lwtheme){
 	  box-shadow:none !important;
-	  border-top: 1px solid transparent !important;
+	  /*border-top: 1px solid transparent !important;*/
+	}
+	
+	@media (-moz-os-version: windows-win10) {
+	  #main-window[fx40plus="true"] #navigator-toolbox #nav-bar:not(:-moz-lwtheme){
+		box-shadow:none !important;
+		border-top: 1px solid rgba(0,0,0,.2) !important; 
+	  }
 	}
 	
 	/* Tabs toolbar tab close button (Fx31+) */
@@ -99,6 +115,10 @@
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	}
 	
+	#TabsToolbar .close-icon > .toolbarbutton-icon {
+	  width: 16px !important;
+	}
+	
 	/*TabUtilities autoreload extra*/
 	.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover,
 	.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover[selected="true"] {
@@ -125,5 +145,12 @@
 	  -moz-margin-end:-15px !important;
 	}
 	/**/
+	
+	@media (-moz-os-version: windows-win10) {
+        #main-window[fx47plus="true"][sizemode="maximized"] .titlebar-button {
+          padding-top: 7px !important;
+		  padding-bottom: 7px !important;
+        }
+	}
 
 }

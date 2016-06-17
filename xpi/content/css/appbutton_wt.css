@@ -15,6 +15,11 @@
 	#ctraddon_appbutton .toolbarbutton-icon{
 	  visibility: collapse !important;
 	}
+	
+	#ctraddon_appbutton[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+	toolbarpaletteitem[place="palette"] > #ctraddon_appbutton > .toolbarbutton-icon{
+	  visibility:visible !important;
+	}
 
 	/* make text visible */
 	#ctraddon_appbutton .toolbarbutton-text {

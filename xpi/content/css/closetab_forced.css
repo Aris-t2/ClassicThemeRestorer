@@ -1,0 +1,14 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	/* prevent TMP form hiding it, if CTRs option is active*/
+	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:not([pinned]):not([protected]) .tab-close-button {
+	  visibility: visible !important;
+	  display: block !important;
+	}
+	
+	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:not([pinned]):not([protected])[faviconized="true"] .tab-close-button {
+	  visibility: collapse !important;
+	  display: none !important;
+	}
+}

@@ -1,6 +1,30 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
+
+	#main-window:not([customizing]) #nav-bar-customization-target,
+	#main-window:not([customizing]) #nav-bar-overflow-button {
+	  margin-top: unset !important;
+	  margin-bottom: unset!important;
+	}
+	#main-window:not([customizing]) #nav-bar-customization-target #urlbar-container,
+	#main-window:not([customizing]) #nav-bar-customization-target #search-container {
+	  margin-top: unset !important;
+	  margin-bottom: unset !important;
+	}
+	
+	#main-window:not([customizing]) #nav-bar toolbarseparator {
+	  margin-top: unset !important;
+	  margin-bottom: unset !important;
+	}
+	
+	#main-window:not([customizing]) #nav-bar #ctraddon_back-forward-dropmarker{
+	  margin-top: unset !important;
+	  margin-bottom: unset !important;
+	  padding-top: unset !important;
+	  padding-bottom: unset !important;
+	}
+
 	#main-window:not([customizing]):not([tabsontop="false"]) #nav-bar{
 	  min-height:2px !important;
 	  height:2px !important;
@@ -11,12 +35,13 @@
       padding-top: 1px !important; 
 	}
 
-	#main-window:not([customizing]) #PanelUI-button {
-	  visibility: collapse !important;
-	}
-
-	#main-window:not([customizing]) #PersonalToolbar:not(:-moz-lwtheme)  {
+	#main-window:not([customizing]) #PersonalToolbar:not(:-moz-lwtheme),
+	#main-window:not([customizing]) toolbar[id^=ctraddon_extra-bar]:not([collapsed="true"]):not(:-moz-lwtheme) {
 	  background-image: linear-gradient(rgba(253, 253, 253, 0.5), rgba(255, 255, 255, 0));
+	}
+	#main-window:not([customizing]) toolbar[id^=ctraddon_extra-bar]:not([collapsed="true"]) ~ toolbar[id^=ctraddon_extra-bar]:not([collapsed="true"]):not(:-moz-lwtheme),
+	#main-window:not([customizing]) toolbar[id^=ctraddon_extra-bar]:not([collapsed="true"]) ~ #PersonalToolbar:not(:-moz-lwtheme)  {
+	  background-image: none;
 	}
 	
 	#main-window:not([customizing])[tabsontop="false"] #nav-bar{

@@ -1,0 +1,26 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+  @media (-moz-os-version: windows-win10) {
+
+	#main-window[sizemode="normal"] #titlebar #titlebar-content #ctraddon_appbutton2{
+	  margin: 0px 0 8px 0px !important;
+	}
+
+	#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] #toolbar-menubar ~ #TabsToolbar,
+	#main-window[tabsintitlebar][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar,
+	#main-window[tabsintitlebar][sizemode="normal"]:not([inFullscreen]) #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar {
+	  padding-top: 14px !important;
+	}
+
+	#main-window[sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox toolbarbutton image {
+	  margin-bottom: unset !important;
+	}
+	#main-window[sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox toolbarbutton {
+	  padding-top: 9px !important;
+	  padding-bottom: 9px !important;
+	}
+
+  }
+}
+

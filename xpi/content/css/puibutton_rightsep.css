@@ -1,0 +1,10 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	#ctraddon_panelui-button #PanelUI-button {
+	  margin-inline-end: 2px !important;
+	  border-inline-end: 1px solid !important;
+	  border-image: linear-gradient(transparent, rgba(0,0,0,.1) 20%, rgba(0,0,0,.1) 80%, transparent) !important;
+	  border-image-slice: 1 !important;
+	}
+}

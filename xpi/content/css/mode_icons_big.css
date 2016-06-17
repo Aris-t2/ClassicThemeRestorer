@@ -3,7 +3,7 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#nav-bar :-moz-any(#home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #switch-to-metro-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button,#e10s-button,#panic-button,#web-apps-button)[cui-areatype="toolbar"] {
+	#nav-bar :-moz-any(#home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #switch-to-metro-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button,#e10s-button,#panic-button,#web-apps-button)[cui-areatype="toolbar"] {
 	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
 	
@@ -12,6 +12,7 @@
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel3.png) !important;
 	}
 	
+	#nav-bar #ctraddon_go-button > .toolbarbutton-icon,
 	#nav-bar #ctraddon_forward-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel3.png) !important;
@@ -115,6 +116,7 @@
 	  -moz-image-region: rect(0px, 736px, 32px, 704px) !important;
 	}
 
+	#nav-bar #ctraddon_preferences-button[cui-areatype="toolbar"],
 	#nav-bar #preferences-button[cui-areatype="toolbar"] {
 	  -moz-image-region: rect(0px, 768px, 32px, 736px) !important;
 	}
@@ -174,10 +176,15 @@
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
 	  -moz-image-region: rect(0px, 256px, 32px, 224px) !important;
 	}
-
-	#nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+	
+	#nav-bar #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
-	  -moz-image-region: rect(0px, 286px, 32px, 256px) !important;
+	  -moz-image-region: rect(0px, 288px, 32px, 256px) !important;
+	}
+
+	#nav-bar #pocket-button[cui-areatype="toolbar"] {
+	  list-style-image: url("chrome://browser/skin/menuPanel.png") !important;
+	  -moz-image-region: rect(0px, 992px, 32px, 960px) !important;
 	}
 
 	/* fixes bug with tabview buttons wrong panel icon */
@@ -197,6 +204,10 @@
 	#nav-bar #ctraddon_reload-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
 	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
+	}
+	
+	#nav-bar #ctraddon_restart-button > .toolbarbutton-icon{
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/ctrrestart@2x.png) !important;
 	}
 
 	#nav-bar #ctraddon_history-button > .toolbarbutton-icon{
@@ -218,44 +229,124 @@
 	}
 	
 	/*call button*/
-	#nav-bar #loop-button[cui-areatype="toolbar"] > .toolbarbutton-badge-container image,
-	#nav-bar #loop-call-button[cui-areatype="toolbar"] > .toolbarbutton-badge-container image	{
+	#nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"] > .toolbarbutton-badge-container image,
+	#nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"] > .toolbarbutton-badge-stack image {
 	  list-style-image: url(chrome://browser/skin/loop/menuPanel.png) !important;
 	  -moz-image-region: rect(0, 32px, 32px, 0) !important;
 	}
-	#nav-bar #loop-button[cui-areatype="toolbar"][state="disabled"] > .toolbarbutton-badge-container image,
-	#nav-bar #loop-button[cui-areatype="toolbar"][disabled="true"] > .toolbarbutton-badge-container image ,
-	#nav-bar #loop-call-button[cui-areatype="toolbar"][state="disabled"] > .toolbarbutton-badge-container image,
-	#nav-bar #loop-call-button[cui-areatype="toolbar"][disabled="true"] > .toolbarbutton-badge-container image {
+	#nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"][state="disabled"] > .toolbarbutton-badge-container image,
+	#nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"][disabled="true"] > .toolbarbutton-badge-container image,
+	#nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"][state="disabled"] > .toolbarbutton-badge-stack image,
+	#nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"][disabled="true"] > .toolbarbutton-badge-stack image{
+	  list-style-image: url(chrome://browser/skin/loop/menuPanel.png) !important;
 	  -moz-image-region: rect(0, 64px, 32px, 32px) !important;
 	}
-	#nav-bar #loop-button[cui-areatype="toolbar"]:not([disabled="true"])[state="error"] > .toolbarbutton-badge-container image,
-	#nav-bar #loop-call-button[cui-areatype="toolbar"]:not([disabled="true"])[state="error"] > .toolbarbutton-badge-container image {
+	#nav-bar toolbarbutton[id^="loop-"]:not([disabled="true"])[state="error"] > .toolbarbutton-badge-container image,
+	#nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"]:not([disabled="true"])[state="error"] > .toolbarbutton-badge-stack image {
+	  list-style-image: url(chrome://browser/skin/loop/menuPanel.png) !important;
 	  -moz-image-region: rect(0, 96px, 32px, 64px) !important;
 	}
-	#nav-bar #loop-button[cui-areatype="toolbar"]:not([disabled="true"])[state="action"] > .toolbarbutton-badge-container image,
-	#nav-bar #loop-call-button[cui-areatype="toolbar"]:not([disabled="true"])[state="action"] > .toolbarbutton-badge-container image{
+	#nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"]:not([disabled="true"])[state="action"] > .toolbarbutton-badge-container image,
+	#nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"]:not([disabled="true"])[state="action"] > .toolbarbutton-badge-stack image{
+	  list-style-image: url(chrome://browser/skin/loop/menuPanel.png) !important;
 	  -moz-image-region: rect(0, 128px, 32px, 96px) !important;
 	}
-	#nav-bar #loop-button[cui-areatype="toolbar"]:not([disabled="true"])[state="action"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container image,
-	#nav-bar #loop-call-button[cui-areatype="toolbar"]:not([disabled="true"])[state="action"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container image{
+	#nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"]:not([disabled="true"])[state="action"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container image,
+	#nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"]:not([disabled="true"])[state="action"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-stack image{
+	  list-style-image: url(chrome://browser/skin/loop/menuPanel.png) !important;
 	  -moz-image-region: rect(0, 160px, 32px, 128px) !important;
 	}
-	#nav-bar #loop-button[cui-areatype="toolbar"]:not([disabled="true"])[state="active"] > .toolbarbutton-badge-container image,
-	#nav-bar #loop-call-button[cui-areatype="toolbar"]:not([disabled="true"])[state="active"] > .toolbarbutton-badge-container image {
+	#nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"]:not([disabled="true"])[state="active"] > .toolbarbutton-badge-container image,
+	#nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"]:not([disabled="true"])[state="active"] > .toolbarbutton-badge-stack image {
+	  list-style-image: url(chrome://browser/skin/loop/menuPanel.png) !important;
 	  -moz-image-region: rect(0, 192px, 32px, 160px) !important;
 	}
-	#nav-bar #loop-button[cui-areatype="toolbar"]:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container image,
-	#nav-bar #loop-call-button[cui-areatype="toolbar"]:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container image{
+	#nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"]:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container image,
+	#nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"]:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-stack image{
+	  list-style-image: url(chrome://browser/skin/loop/menuPanel.png) !important;
 	  -moz-image-region: rect(0, 224px, 32px, 192px) !important;
 	}
-	#nav-bar #loop-button[cui-areatype="toolbar"] > .toolbarbutton-badge-container image {
-	  min-width: 32px !important;
+	
+	#main-window[fx45plus="true"] #nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"] > .toolbarbutton-badge-stack image{
+      list-style-image: url("chrome://loop/skin/toolbar@2x.png") !important;
+      -moz-image-region: rect(0, 36px, 36px, 0) !important;
+	}
+	#main-window[fx45plus="true"] #nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"][state="disabled"] > .toolbarbutton-badge-stack image,
+	#main-window[fx45plus="true"] #nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"][disabled="true"] > .toolbarbutton-badge-stack image{
+	  list-style-image: url("chrome://loop/skin/toolbar@2x.png") !important;
+	  -moz-image-region: rect(0, 72px, 36px, 36px) !important;
+	}
+	#main-window[fx45plus="true"] #nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"]:not([disabled="true"])[state="error"] > .toolbarbutton-badge-stack image {
+	  list-style-image: url("chrome://loop/skin/toolbar@2x.png") !important;
+	  -moz-image-region: rect(0, 108px, 36px, 72px) !important;
+	}
+	#main-window[fx45plus="true"] #nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"]:not([disabled="true"])[state="action"] > .toolbarbutton-badge-stack image{
+	  list-style-image: url("chrome://loop/skin/toolbar@2x.png") !important;
+	  -moz-image-region: rect(0, 144px, 36px, 108px) !important;
+	}
+	#main-window[fx45plus="true"] #nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"]:not([disabled="true"])[state="action"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-stack image{
+	  list-style-image: url("chrome://loop/skin/toolbar@2x.png") !important;
+	  -moz-image-region: rect(0, 180px, 36px, 144px) !important;
+	}
+	#main-window[fx45plus="true"] #nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"]:not([disabled="true"])[state="active"] > .toolbarbutton-badge-stack image {
+	  list-style-image: url("chrome://loop/skin/toolbar@2x.png") !important;
+	  -moz-image-region: rect(0, 216px, 36px, 180px) !important;
+	}
+	#main-window[fx45plus="true"] #nav-bar toolbarbutton[id^="loop-"][cui-areatype="toolbar"]:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-stack image{
+	  list-style-image: url("chrome://loop/skin/toolbar@2x.png") !important;
+	  -moz-image-region: rect(0, 252px, 36px, 216px) !important;
+	}
+
+	#nav-bar .toolbarbutton-badge-stack image,
+	#nav-bar .toolbarbutton-badge-container image {
+	  min-width:32px !important;
+      min-height:32px !important;
 	}
 	
 	/*CTR button*/
 	#nav-bar #ctraddon_ctr-button[cui-areatype="toolbar"] > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/palette_ctr.png") !important;
+	}
+	
+    #nav-bar * .toolbarbutton-icon,
+	#nav-bar *,
+	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper {
+	  clip-path: none !important;
+	}
+	
+	/* experimental support for buttons, that are not part of toolbarbutton-1 class by default */
+	#nav-bar #nav-bar-customization-target > toolbarbutton:not(.toolbarbutton-1) .toolbarbutton-icon {
+	  min-width: 32px !important;
+	}
+	
+	/* fix Firefox 44+ button width issues */
+	#nav-bar .toolbarbutton-1 > .toolbarbutton-icon,
+	#nav-bar .toolbarbutton-1 > :-moz-any(.toolbarbutton-menubutton-button, .toolbarbutton-badge-stack) > .toolbarbutton-icon,
+	#nav-bar .toolbarbutton-1:-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #panic-button, #web-apps-button, #webide-button, #loop-button, #pocket-button) > .toolbarbutton-icon,
+	#nav-bar .toolbarbutton-1:-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #panic-button, #web-apps-button, #webide-button, #loop-button, #pocket-button) > :-moz-any(.toolbarbutton-menubutton-button, .toolbarbutton-badge-stack) > .toolbarbutton-icon,
+	#nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon,
+	#nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon,
+	#nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+	#nav-bar #back-button > .toolbarbutton-icon{
+	  max-width: unset !important;
+	}
+	
+	/* Fx45 fix */
+	#main-window[fx45plus="true"][defaultfxtheme="true"] #nav-bar #notification-popup-box[hidden] + * {
+	  -moz-padding-start: 4px !important;
+	  -moz-padding-end: 5px !important;
+	}
+	
+	#main-window[fx45plus="true"] #identity-icon,
+	#main-window[fx45plus="true"] #tracking-protection-icon,
+	#main-window[fx45plus="true"] #connection-icon {
+	  min-height: 16px !important;
+	}
+	
+	/* Auto Form add-ons icon sizes*/
+	#nav-bar toolbarbutton[id^="af_button"] .toolbarbutton-icon {
+	  width: unset !important;
+	  max-width: unset !important;
 	}
 
 }

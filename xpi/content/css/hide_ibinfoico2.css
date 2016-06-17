@@ -1,0 +1,40 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@-moz-document url(chrome://browser/content/browser.xul) {
+	
+	#urlbar[pageproxystate="valid"] .verifiedDomain #identity-icon,
+	#urlbar[pageproxystate="valid"] .verifiedIdentity #identity-icon,
+	#urlbar[pageproxystate="valid"] .insecureLoginForms #identity-icon,
+	#urlbar[pageproxystate="valid"] .mixedActiveContent #identity-icon,
+	#urlbar[pageproxystate="valid"] .weakCipher #identity-icon,
+	#urlbar[pageproxystate="valid"] .mixedDisplayContent #identity-icon,
+	#urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked #identity-icon,
+	#urlbar[pageproxystate="valid"] .mixedActiveBlocked #identity-icon {
+	  visibility: hidden;
+      -moz-margin-end: -2px !important;
+	}
+
+	#urlbar[pageproxystate="valid"] .verifiedDomain #tracking-protection-icon[state="blocked-tracking-content"],
+	#urlbar[pageproxystate="valid"] .verifiedIdentity #tracking-protection-icon[state="blocked-tracking-content"],
+	#urlbar[pageproxystate="valid"] .insecureLoginForms #tracking-protection-icon[state="blocked-tracking-content"],
+	#urlbar[pageproxystate="valid"] .mixedActiveContent #tracking-protection-icon[state="blocked-tracking-content"],
+	#urlbar[pageproxystate="valid"] .weakCipher #tracking-protection-icon[state="blocked-tracking-content"],
+	#urlbar[pageproxystate="valid"] .mixedDisplayContent #tracking-protection-icon[state="blocked-tracking-content"],
+	#urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked #tracking-protection-icon[state="blocked-tracking-content"],
+	#urlbar[pageproxystate="valid"] .mixedActiveBlocked #tracking-protection-icon[state="blocked-tracking-content"] {
+	  -moz-margin-start: -14px !important;
+      -moz-margin-end: 1px !important;
+	}
+ 
+	#urlbar[pageproxystate="valid"] .verifiedDomain #tracking-protection-icon:not([state="blocked-tracking-content"]) + #connection-icon,
+	#urlbar[pageproxystate="valid"] .verifiedIdentity #tracking-protection-icon:not([state="blocked-tracking-content"]) + #connection-icon,
+	#urlbar[pageproxystate="valid"] .insecureLoginForms #tracking-protection-icon:not([state="blocked-tracking-content"]) + #connection-icon,
+	#urlbar[pageproxystate="valid"] .mixedActiveContent #tracking-protection-icon:not([state="blocked-tracking-content"]) + #connection-icon,
+	#urlbar[pageproxystate="valid"] .weakCipher #tracking-protection-icon:not([state="blocked-tracking-content"]) + #connection-icon,
+	#urlbar[pageproxystate="valid"] .mixedDisplayContent #tracking-protection-icon:not([state="blocked-tracking-content"]) + #connection-icon,
+	#urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked #tracking-protection-icon:not([state="blocked-tracking-content"]) + #connection-icon,
+	#urlbar[pageproxystate="valid"] .mixedActiveBlocked #tracking-protection-icon:not([state="blocked-tracking-content"]) + #connection-icon {
+	  -moz-margin-start: -14px !important;
+      -moz-margin-end: 1px !important;
+	}
+
+}

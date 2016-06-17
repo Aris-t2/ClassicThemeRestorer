@@ -26,14 +26,34 @@
 	  margin:-8px 1px !important;
 	  border-image:none !important;
 	  box-shadow:none !important;
-	  opacity: .85 !important;
 	  padding:0 !important;
 	  border:0 !important;
 	  min-width: unset !important;
 	}
 	
 	#main-window toolbar #urlbar-icons #feed-button:hover {
-	  opacity: 1.0 !important;
+	  filter: brightness(1.15) !important;
+	}
+	
+	/* support for text and icons+text modes */
+	toolbar #urlbar-icons #feed-button .toolbarbutton-text {
+	  display: none !important;
+	}
+	toolbar #urlbar-icons #feed-button {
+	  -moz-box-orient: unset !important;
+	}
+	toolbar #urlbar-container #urlbar #urlbar-icons #feed-button .toolbarbutton-icon {
+	  visibility: visible !important;
+	}
+	
+	/*Fx40+ support*/
+	#main-window[fx40plus="true"] #nav-bar #urlbar-icons :-moz-any(#feed-button):-moz-any([cui-areatype="toolbar"],:not([cui-areatype])) > .toolbarbutton-icon {
+	  width: unset !important;;
+	}
+	
+	/**/
+	#urlbar-icons #feed-button .toolbarbutton-icon { 
+	  filter: none !important;
 	}
 
 	/* Flagfox support */

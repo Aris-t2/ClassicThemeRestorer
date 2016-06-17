@@ -1,3 +1,8 @@
+<!ENTITY % overlayDTD
+    SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
+  %overlayDTD;
+<!-- Do not edit above this line and do not edit the variable '&brandShortName;' inside translated strings -->
+
 <!ENTITY Ctr_title			"Επαναφορέας κλασικού θέματος">
 
 <!ENTITY Ctr_addonbar		"Εργαλειοθήκη πρόσθετων">
@@ -5,11 +10,11 @@
 <!ENTITY Ctr_flexspace		"Ευέλικτο διάστημα">
 <!ENTITY Ctr_space			"Διάστημα">
 <!ENTITY Ctr_separator		"Διαχωριστικό">
-<!ENTITY Ctr_puibseparator	"Διαχωριστικό (για το μενού πίνακα)">
 <!ENTITY Ctr_navthrobber	"Ενδείκτης δραστηριότητας">
 <!ENTITY Ctr_sidebarbutton	"(Πλευρική στήλη)">
-<!ENTITY Ctr_windowcontrols	"Ελαχιστοποίηση/επαναφορά/κλείσιμο (Πλήρης οθόνη)">
-<!ENTITY Ctr_rr				"Επανεκκινήστε τον Firefox!">
+<!ENTITY Ctr_windowcontrols	"Ελαχιστοποίηση/Μεγιστοποίηση/Κλείσιμο (Πλήρης οθόνη)">
+<!ENTITY Ctr_rr				"Απαιτείται επανεκκίνηση!">
+<!ENTITY Ctr_window			"Παράθυρο">
 
 <!ENTITY Ctr_cuibuttons		"Κουμπιά">
 <!ENTITY Ctr_cuibutnormal	"Κανονικά">
@@ -18,34 +23,43 @@
 <!ENTITY Ctr_cuiico			"Εικονίδια">
 <!ENTITY Ctr_cuiicotxt		"Εικονίδια και κείμενο">
 <!ENTITY Ctr_cuitxt			"Κείμενο">
+<!ENTITY Ctr_cuitabsnontop	"Καρτέλες όχι στο πάνω μέρος">
 
 <!ENTITY Ctr_tnot			"(καρτέλες όχι στο πάνω μέρος)">
 
 <!ENTITY Ctr_tabcolors_t	"Χρώματα καρτελών &amp; κειμένου">
 
 <!ENTITY Ctr_tabs			"Καρτέλες">
-<!ENTITY Ctr_tabs0			"Καμπυλόγραμμες καρτέλες (προεπιλογή Firefox)">
+<!ENTITY Ctr_tabs0			"Προεπιλογή &brandShortName; (Καμπυλόγραμμες καρτέλες)">
 <!ENTITY Ctr_tabs1			"Τετραγωνισμένες καρτέλες (κλασική τεχνοτροπία)">
-<!ENTITY Ctr_tabs1m			"Τετραγωνισμένες καρτέλες (τεχνοτροπία Australis)">
+<!ENTITY Ctr_tabs1m		  	"Τετραγωνισμένες καρτέλες (τεχνοτροπία Australis)">
 <!ENTITY Ctr_tabs2			"Καμπυλόγραμμες καρτέλες (εναλλακτική τεχνοτροπία)">
 <!ENTITY Ctr_tabs3			"Καμπυλόγραμμες καρτέλες (εναλλακτική τεχνοτροπία, Aero)">
 <!ENTITY Ctr_tabforminfo	"Η εμφάνιση των καρτελών ελέγχεται από το τρέχον θέμα.">
-<!ENTITY Ctr_tabsontop0		"Καρτέλες στο πάνω μέρος (προεπιλογή) - [μη ορισμένο]">
-<!ENTITY Ctr_tabsontop1		"Καρτέλες στο πάνω μέρος - ορισμός [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Καρτέλες όχι στο πάνω μέρος - ορισμός [tabsontop=false]">
-<!ENTITY Ctr_tabsontop3		"Καρτέλες όχι στο πάνω μέρος (v2) - ορισμός [tabsontop=false]">
+<!ENTITY Ctr_coltabsinfo	"Η εμφάνιση καρτελών δεν είναι πλήρως συμβατή με την επέκταση «ColorfulTabs»!">
+<!ENTITY Ctr_tabsontop0		"Καρτέλες στο πάνω μέρος (προεπιλογή)">
+<!ENTITY Ctr_tabsontop1		"Καρτέλες στο πάνω μέρος --- ορισμός χαρακτηριστικού [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Καρτέλες όχι στο πάνω μέρος (v1) --- ορισμός χαρακτηριστικού [tabsontop=false]">
+<!ENTITY Ctr_tabsontop3		"Καρτέλες όχι στο πάνω μέρος (v2) --- ορισμός χαρακτηριστικού [tabsontop=false]">
+<!ENTITY Ctr_tabsontopW1	"Η v2 είναι για ορισμένες επεκτάσεις και πλήρη θέματα μόνο!">
 <!ENTITY Ctr_tabsontopI1	"Προσθέτει χαρακτηριστικό [tabsontop=true/false] σε">
-<!ENTITY Ctr_tabsintitlebar	"Γραμμή τίτλου Firefox (προτίμηση about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Χρήση γραμμής τίτλου του &brandShortName; αντί του Λ.Σ.">
 <!ENTITY Ctr_tabwidthdef	"(προεπιλογή)">
 <!ENTITY Ctr_tabwidthcla	"(κλασικό)">
-<!ENTITY Ctr_tabminheight	"Height:">
+<!ENTITY Ctr_tabminheight	"Ύψος:">
+<!ENTITY Ctr_tabheightinfo	"Χαμηλές τιμές ύψους θα προκαλέσουν δυσλειτουργίες σε λειτουργία μεγιστοποίησης!">
 <!ENTITY Ctr_tabmaxwidth	"Μέγιστο εύρος:">
 <!ENTITY Ctr_tabminwidth	"Ελάχιστο εύρος:">
 <!ENTITY Ctr_tabwidthinfo	"Το εύρος καρτελών ελέγχεται από την επέκταση «TabMixPlus»">
 <!ENTITY Ctr_tabwidthinfo2	"Το εύρος καρτελών ελέγχεται από την επέκταση «TabUtilities»">
 <!ENTITY Ctr_tabwidthinfo3	"Τιμές κάτω από 48px θα προκαλέσουν δυσλειτουργίες στις περισσότερες περιπτώσεις!">
-<!ENTITY Ctr_emptyfavicon	"Επαναφορά κενού εικονιδίου (εάν ένας ιστότοπος δεν διαθέτει εικονίδιο)">
-<!ENTITY Ctr_noemptypticon	"Αφαίρεση κενού εικονιδίου από καρτέλες εφαρμογών">
+<!ENTITY Ctr_square_edges	"Τετραγωνισμένες γωνίες κορυφής">
+<!ENTITY Ctr_tttitlebar		"Τίτλος καρτέλας στη γραμμή τίτλου του &brandShortName;">
+<!ENTITY Ctr_tabinsertion	"Εισαγωγή συναφούς καρτέλας μετά την τρέχουσα καρτέλα">
+<!ENTITY Ctr_emptytfavico	"Εμφάνιση εικονιδίου (αν ένας ιστότοπος δεν διαθέτει εικονίδιο)">
+<!ENTITY Ctr_emptytfavico_n	"Οικοσελίδας">
+<!ENTITY Ctr_emptytfavico_g	"Γενικής χρήσης">
+<!ENTITY Ctr_noemptypticon	"Απομάκρυνση κενού εικονιδίου από καρτέλες εφαρμογών">
 <!ENTITY Ctr_closetab_0		"Κλείσιμο καρτέλας">
 <!ENTITY Ctr_closetab_1		"Μόνο στην ενεργή καρτέλα">
 <!ENTITY Ctr_closetab_2		"Πουθενά">
@@ -53,17 +67,25 @@
 <!ENTITY Ctr_closetab_4		"Στην αρχή της εργαλειοθήκης καρτελών">
 <!ENTITY Ctr_closetab_5		"Σε όλες τις καρτέλες (επιβεβλημένα)">
 <!ENTITY Ctr_closetab_hfot	"Απόκρυψη για μόνο μία ορατή καρτέλα">
-<!ENTITY Ctr_closealt		"Κόκκινο εικονίδιο κλεισίματος">
+<!ENTITY Ctr_closei_def		"Προεπιλεγμένα εικονίδια">
 <!ENTITY Ctr_closeonleft	"Εναλλακτική θέση στην καρτέλα">
-<!ENTITY Ctr_close_wwltab	"Κλείσιμο παραθύρου κλείνοντας την τελευταία ορατή καρτέλα (about:config)">
+<!ENTITY Ctr_closetabbig	"Μεγαλύτερο εικονίδιο (20x20 px)">
+<!ENTITY Ctr_close_wwltab	"Κλείσιμο παραθύρου κλείνοντας την τελευταία ορατή καρτέλα">
 
-<!ENTITY Ctr_appbutton		"Κουμπί εφαρμογής">
+<!ENTITY Ctr_hctpinfotab	"Κάποιες παραλλαγές καρτελών δεν είναι συμβατές με την επέκταση «Hide Caption Titlebar Plus».">
+<!ENTITY Ctr_hctpinfoab		"Το κουμπί στη γραμμή τίτλου δεν είναι συμβατό με την επέκταση «Hide Caption Titlebar Plus».">
+<!ENTITY Ctr_tobainfotab	"Η επέκταση «Tabs on Bottom» δεν είναι συμβατή με τον «Επαναφορέα κλασικού θέματος» και θα πρέπει να απενεργοποιηθεί. Χρησιμοποιήστε τη διαθέσιμη επιλογή «&Ctr_cuitabsnontop;»!">
+
+<!ENTITY Ctr_appbutton		"Κουμπί &brandShortName;">
 <!ENTITY Ctr_appbutton0		"Απενεργοποιημένο">
 <!ENTITY Ctr_appbutton1		"Στην εργαλειοθήκη">
 <!ENTITY Ctr_appbutton1wt	"Στην εργαλειοθήκη (μόνο κείμενο)">
-<!ENTITY Ctr_appbutton2		"Στη γραμμή τίτλου [Firefox]">
-<!ENTITY Ctr_appbutton2io	"Στη γραμμή τίτλου [Firefox] (μόνο εικονίδιο)">
-<!ENTITY Ctr_paneluibtweak	"Πορτοκαλί κουμπί μενού πίνακα στην εργαλειοθήκη καρτελών">
+<!ENTITY Ctr_appbutton2		"Στη γραμμή τίτλου του &brandShortName;">
+<!ENTITY Ctr_appbutton2h	"Στη γραμμή τίτλου του &brandShortName; (σε απόκρυψη)">
+<!ENTITY Ctr_appbutton2io	"Στη γραμμή τίτλου του &brandShortName; (μόνο εικονίδιο)">
+<!ENTITY Ctr_paneluibtweak	"Εμφάνιση κουμπιού-μενού ως κουμπί &brandShortName;…">
+<!ENTITY Ctr_paneluibtweak2	"Εμφάνιση κουμπιού-μενού ως κουμπί &brandShortName; (μόνο εικονίδιο)…">
+<!ENTITY Ctr_paneluibtweak3	"…όταν βρίσκεται στην εργαλειοθήκη καρτελών">
 <!ENTITY Ctr_appbuttonc_o	"Πορτοκαλί χρώμα κουμπιού (προεπιλογή)">
 <!ENTITY Ctr_appbuttonc_a	"Μπλε χρώμα κουμπιού (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Μαύρο χρώμα κουμπιού (Nightly)">
@@ -74,38 +96,58 @@
 <!ENTITY Ctr_appbuttonc_gr	"Γκρι χρώμα κουμπιού">
 <!ENTITY Ctr_appbuttonc_pu	"Πορφυρό χρώμα κουμπιού">
 <!ENTITY Ctr_appbuttonc_wh	"Άσπρο χρώμα κουμπιού">
-<!ENTITY Ctr_appbuttonc_cu	"Custom button color">
+<!ENTITY Ctr_appbuttonc_cu	"Προσαρμοσμένο χρώμα κουμπιού">
+<!ENTITY Ctr_appbuttonct	"Προσαρμοσμένο χρώμα κουμπιού για το κουμπί σε εργαλειοθήκη">
 <!ENTITY Ctr_appbuttonI1	"Συνιστάται επανεκκίνηση">
-<!ENTITY Ctr_appbuttonI1e	"Δεν είναι ορατό στη γραμμή τίτλου του Λ.Σ. Windows, μόνο στη γραμμή τίτλου του Firefox!">
-<!ENTITY Ctr_appbuttonI2	"Τα χρώματα του κουμπιού είναι ορατά μόνο στη γραμμή τίτλου και στην εργαλειοθήκη καρτελών!">
-<!ENTITY Ctr_alttbappb		"Εναλλακτικά εικονίδια χωρίς δείκτη ανάπτυξης">
+<!ENTITY Ctr_appbuttonI1e	"Ορατό μόνο στη γραμμή τίτλου του &brandShortName;, όχι σε αυτή του Λ.Σ. Windows!">
+<!ENTITY Ctr_appbuttonI2	"Τα χρώματα του κουμπιού είναι ορατά μόνο εάν το κουμπί είναι στη γραμμή τίτλου ή στην εργαλειοθήκη καρτελών!">
 <!ENTITY Ctr_appbutmhi		"Υψηλότερη θέση (εάν είναι στην εργαλειοθήκη καρτελών)">
+<!ENTITY Ctr_appbautocol	"Ορισμός χρώματος καναλιού περιηγητή αυτόματα (Προεπιλεγμένο/Aurora/Nightly)">
 <!ENTITY Ctr_appbutbdl		"Απόκρυψη περιγραμμάτων και χρωμάτων φόντου">
-<!ENTITY Ctr_dblclclosefx	"Κλείσιμο τρέχοντος παραθύρου με διπλό κλικ">
-<!ENTITY Ctr_appbclmmenus	"Επιλέξιμα με κλικ μενού, μέσα στο μενού του κουμπιού («Νέα καρτέλα», «Εκτύπωση...»)">
+<!ENTITY Ctr_dblclclosefx	"Κλείσιμο τρέχοντος παραθύρου με διπλό κλικ στο κουμπί">
+<!ENTITY Ctr_appbclmmenus	"Επιλέξιμα με κλικ μενού, μέσα στο αναδυόμενο μενού («Νέα καρτέλα», «Εκτύπωση…»)">
 <!ENTITY Ctr_appbutonclab	"Τίτλος">
 <!ENTITY Ctr_appbutonclab2	"Προσθέστε τίτλο ή αφήστε τη γραμμή κενή">
 
 <!ENTITY Ctr_ui				"Διεπαφή χρήστη - Γενικά">
 <!ENTITY Ctr_nbiconsize0	"Ορισμός χαρακτηριστικού «iconsize» εργαλειοθήκης πλοήγησης">
 <!ENTITY Ctr_smallnavbut	"Μικρά κουμπιά στην εργαλειοθήκη πλοήγησης">
-<!ENTITY Ctr_bfurlbarfix	"Διόρθωση ακτίνας περιγράμματος γραμμής τοποθεσιών">
 <!ENTITY Ctr_backforward	"Μετακινήσιμα κουμπιά πίσω-εμπρός">
+<!ENTITY Ctr_nbcompact		"Μείωση ύψους εργαλειοθήκης πλοήγησης">
 <!ENTITY Ctr_hide_bf_popup	"Απόκρυψη αναδυόμενου μενού ιστορικού κουμπιών κατά το πάτημά τους">
 <!ENTITY Ctr_bf_space		"Μείωση διαστήματος μεταξύ των κουμπιών (εάν είναι δυνατόν)">
 <!ENTITY Ctr_noconicons		"Μενού περιεχομένου σελίδας: αντικατάσταση εικονιδίων με ετικέτες («Πίσω», «Μπροστά», «Διακοπή», «Ανανέωση», «Η σελίδα ως σελιδοδείκτης»)">
+<!ENTITY Ctr_prefpage		"Σελίδα / παράθυρο επιλογών">
+<!ENTITY Ctr_altoptionsd	"Προεπιλεγμένη εμφάνιση">
+<!ENTITY Ctr_altoptionsp	"Εναλλακτική εμφάνιση">
+<!ENTITY Ctr_altoptionsw	"Άνοιγμα σελίδας επιλογών σε παράθυρο">
+<!ENTITY Ctr_altoptionsww	"Εύρος:">
+<!ENTITY Ctr_altoptionswh	"Ύψος:">
+<!ENTITY Ctr_altoptionsi	"Το προσομοιωμένο παράθυρο επιλογών δεν είναι πια παράθυρο διαλόγου, αλλά ένα «παράθυρο περιηγητή» με όλες τις εργαλειοθήκες σε απόκρυψη. Το χαρακτηριστικό «Χρήση τρέχουσας σελίδας» προσθέτει μόνο τις διευθύνσεις URL των ανοιγμένων στο τρέχον παράθυρο σελίδων, που είναι μόνο «about:preferences» σε αυτή την περίπτωση. Το κουμπί εργαλειοθήκης «Επιλογές» αντικαθίσταται από ένα νέο, για να είναι δυνατόν το άνοιγμα επιλογών σε παράθυρο.">
+<!ENTITY Ctr_options_rem	"Απομνημόνευση τελευταία επιλεχθείσας κατηγορίας">
+<!ENTITY Ctr_svgfilters		"Χρώματα SVG για προεπιλεγμένα εικονίδια κουμπιών εργαλειοθήκης">
 <!ENTITY Ctr_wincontrols	"Μετακινήσιμα στοιχεία ελέγχου παραθύρου σε προβολή πλήρους οθόνης">
-<!ENTITY Ctr_emptyfavicon2	"Αντικατάσταση γενικού εικονιδίου (κενό και διάστικτο) με εικονίδιο φύλλου">
+<!ENTITY Ctr_puibuttonsep	"Διαχωριστικό κουμπιού μενού">
+<!ENTITY Ctr_puibut_no_sep	"Κρυφό">
+<!ENTITY Ctr_puibut_l_sep	"Αριστερά">
+<!ENTITY Ctr_puibut_r_sep	"Δεξιά">
+<!ENTITY Ctr_html5warning	"Προειδοποίηση πλήρους οθόνης HTML5">
+<!ENTITY Ctr_oldtoplevimg	"Εικόνες τομέα «ανώτατου επιπέδου»: κλασική εμφάνιση">
+<!ENTITY Ctr_altalertbox	"«Πλαίσιο ειδοποίησης»: εναλλακτική εμφάνιση">
+<!ENTITY Ctr_emptygfavico	"Αντικατάσταση εικονιδίου γενικής χρήσης">
 <!ENTITY Ctr_mstatusbar		"Μετακινήσιμο πινακίδιο γραμμής κατάστασης">
 <!ENTITY Ctr_mstatusbars4e	"Το πινακίδιο γραμμής κατάστασης ελέγχεται από την επέκταση «Status-4-Evar»">
 <!ENTITY Ctr_mstatusbartpp	"Το πινακίδιο γραμμής κατάστασης ελέγχεται από την επέκταση «ThePuzzlePiece»">
-<!ENTITY Ctr_mstatusbarpzt	"Το πινακίδιο γραμμής κατάστασης ελέγχεται από την επέκταση «Puzzle Toolbars»">
+<!ENTITY Ctr_mstatusbarpzt	"Το πινακίδιο γραμμής κατάστασης ελέγχεται από την επέκταση «Puzzle Bars»">
 <!ENTITY Ctr_mstatusbarabr	"Το πινακίδιο γραμμής κατάστασης ελέγχεται από την επέκταση «The Addon Bar (Restored)»">
 <!ENTITY Ctr_combrelstop	"Κουμπιά «Διακοπή» &amp; «Ανανέωση»: συνδυασμός κουμπιών στην εργαλειοθήκη">
 <!ENTITY Ctr_stoprel1		"Σημαντικό: τοποθετήστε το κουμπί «Ανανέωση» μετά από το κουμπί «Διακοπή»!">
-<!ENTITY Ctr_panelmenucol	"Μενού πίνακα: εναλλακτικό χρώμα φόντου">
+<!ENTITY Ctr_panelmenucol	"Αναδυόμενα μενού πίνακα: εναλλακτικό χρώμα φόντου">
 <!ENTITY Ctr_hideprivmask	"Ιδιωτική περιήγηση: απόκρυψη ενδείκτη-μάσκα">
-<!ENTITY Ctr_nbisizedelay	"ms καθυστέρηση εκτέλεσης (1000 ms = 1 δευτερόλεπτο)">
+<!ENTITY Ctr_navsmallicons	"Μικρά εικονίδια">
+<!ENTITY Ctr_navlargeicons	"Μεγάλα εικονίδια">
+<!ENTITY Ctr_nbisizedelay0	"καθυστέρηση εφαρμογής κατά την εκκίνηση του περιηγητή">
+<!ENTITY Ctr_nbisizedelay	"ms (1000 ms = 1 δευτερόλεπτο)">
 <!ENTITY Ctr_findbar		"Θέση γραμμής εύρεσης">
 <!ENTITY Ctr_findbar_def	"Κάτω μέρος (προεπιλογή)">
 <!ENTITY Ctr_findbar_top	"Κορυφή">
@@ -115,22 +157,60 @@
 <!ENTITY Ctr_nav_txt_ico1	"Εμφάνιση μεγάλων εικονιδίων">
 <!ENTITY Ctr_nav_txt_ico2	"Εμφάνιση εικονιδίων και κειμένου">
 <!ENTITY Ctr_nav_txt_ico3	"Εμφάνιση μόνο κειμένου">
-<!ENTITY Ctr_nav_txt_exp	"Πειραματικά χαρακτηριστικά:">
-<!ENTITY Ctr_iat_notf_vt	"Όχι για κατακόρυφες εργαλειοθήκες">
-<!ENTITY Ctr_cpanelmenus	"Μενού πίνακα: συνεπτυγμένη προβολή (σελιδοδείκτες, ιστορικό κλπ.)">
+<!ENTITY Ctr_nav_txt_exp	"Κλασικά χαρακτηριστικά (πειραματικό):">
+<!ENTITY Ctr_iat_notf_vt	"Εξαιρούνται κατακόρυφες εργαλειοθήκες">
+<!ENTITY Ctr_cpanelmenus	"Αναδυόμενα μενού πίνακα (σελιδοδείκτες, ιστορικό κλπ): συνεπτυγμένη προβολή">
 <!ENTITY Ctr_hidezoomres	"Στοιχεία ελέγχου μεγέθυνσης σε εργαλειοθήκη: απόκρυψη κουμπιού επεναφοράς επιπέδου μεγέθυνσης">
-<!ENTITY Ctr_alt_newtabp	"New tab page: alternative appearance">
-<!ENTITY Ctr_pmhidelabels	"Μενού πίνακα: απόκρυψη ετικετών κουμπιών">
+<!ENTITY Ctr_alt_newtabp	"Σελίδα νέας καρτέλας (about:newtab): εναλλακτική εμφάνιση">
+<!ENTITY Ctr_nosnippets		"Αρχική σελίδα (about:home): απόκρυψη αποσπασμάτων κειμένου">
+<!ENTITY Ctr_search_ui		"Αναζήτηση">
+<!ENTITY Ctr_ctroldsearch	"Παλιότερη διεπαφή αναζήτησης">
+<!ENTITY Ctr_ctroldsearchc	"Κένωση πλαισίου αναζήτησης μετά την αναζήτηση">
+<!ENTITY Ctr_ctroldsearchr	"Επαναφορά στην πρώτη μηχανή αναζήτησης στη λίστα μετά την αναζήτηση">
+<!ENTITY Ctr_search_oit		"Άνοιγμα αναζήτησης σε νέα καρτέλα">
+<!ENTITY Ctr_osearch_meoit	"Μεσαίο κλικ: αναζήτηση σε νέα καρτέλα στο προσκήνιο">
+<!ENTITY Ctr_osearch_iwidth	"Αυτόματη ρύθμιση εύρους αναδυόμενου">
+<!ENTITY Ctr_osearch_cwidth	"Προσαρμοσμένο εύρος για αναδυόμενα αναζήτησης">
+<!ENTITY Ctr_osearch_dm		"Μικρός δείκτης ανάπτυξης">
+<!ENTITY Ctr_addonmanager	"Διαχειριστής πρόσθετων">
+<!ENTITY Ctr_alt_addonsp	"Σελίδα «Περισσότερα»: εναλλακτική σειρά περιεχομένου">
+<!ENTITY Ctr_alt_addonsm	"Εναλλακτική εμφάνιση">
+<!ENTITY Ctr_am_nowarning	"Λίστες πρόσθετων: απόκρυψη προειδοποιήσεων">
+<!ENTITY Ctr_am_compact		"Λίστες πρόσθετων: συμπαγής προβολή">
+<!ENTITY Ctr_am_compact2	"Συμπαγής προβολή +">
+<!ENTITY Ctr_am_highlight	"Λίστες πρόσθετων: επισήμανση καταχώρισης κατά την κατάδειξη">
+<!ENTITY Ctr_am_buticons	"Λίστες πρόσθετων: αντικατάσταση ετικετών κουμπιών με εικονίδια">
+<!ENTITY Ctr_am_hovshowb	"Λίστες πρόσθετων: εμφάνιση κουμπιών μόνο κατά την κατάδειξη">
+<!ENTITY Ctr_addonversion	"Λίστες πρόσθετων: εμφάνιση έκδοσης πρόσθετου">
+<!ENTITY Ctr_xpinstallui	"Παλιό παράθυρο εγκατάστασης πρόσθετων">
+<!ENTITY Ctr_bmbutton		"Κουμπί-μενού σελιδοδεικτών">
+<!ENTITY Ctr_hiderecentbm	"Αναδυόμενο σελιδοδεικτών: απόκρυψη πρόσφατα προστεθέντων σελιδοδεικτών">
+<!ENTITY Ctr_hideeditbm		"Αστέρι σελιδοδεικτών: απόκρυψη αναδυόμενου (αν η σελίδα δεν είναι στους σελιδοδείκτες)">
+<!ENTITY Ctr_bmbutpanelm	"Αναδυόμενο: εμφάνιση ως μενού πίνακα">
+<!ENTITY Ctr_bmbunsortbm	"Αναδυόμενο: υπομενού «Αταξινόμητοι σελιδοδείκτες»">
+<!ENTITY Ctr_bmbunsortbm2	"Πάνω από τους σελιδοδείκτες">
+<!ENTITY Ctr_bmbviewbmsb	"Αναδυόμενο: εμφάνιση «Προβολή πλευρικής στήλης»">
+<!ENTITY Ctr_bmbviewbmtb	"Αναδυόμενο: εμφάνιση «Προβολή εργαλειοθήκης σελιδοδεικτών»">
+<!ENTITY Ctr_bmbnounsort	"Αναδυόμενο: απόκρυψη «Αταξινόμητοι σελιδοδείκτες»">
+<!ENTITY Ctr_bmbutnotext	"Απόκρυψη ετικέτας στην εργαλειοθήκη σελιδοδεικτών">
+<!ENTITY Ctr_skipprintpr	"Κουμπί «Εκτύπωση»: παράκαμψη προεπισκόπησης εκτύπωσης">
+<!ENTITY Ctr_tbconmenu		"Μενού περιεχομένου εργαλειοθήκης: Απόκρυψη «Μετακίνηση στο μενού», «Απομάκρυνση από την εργαλειοθήκη», «Ανανέωση όλων των καρτελών», «Όλες οι καρτέλες σε σελιδοδείκτη…» και «Αναίρεση κλεισίματος καρτέλας»">
+<!ENTITY Ctr_noresizerxp	"Απόκρυψη λαβής αλλαγής μεγέθους του παραθύρου (Windows XP)">
+<!ENTITY Ctr_extraurlkeycb	"Άνοιγμα επιπρόσθετης γραμμής τοποθεσιών (Cmd/Ctrl+">
+<!ENTITY Ctr_pmhidelabels	"Κύριο αναδυόμενο μενού πίνακα: απόκρυψη ετικετών κουμπιών">
 <!ENTITY Ctr_menupopupscr	"Αναδυόμενα μενού: εμφάνιση γραμμών κύλισης αντί για βέλη κύλισης">
+<!ENTITY Ctr_closegeneral	"Γενικά εικονίδια κλεισίματος">
 
-<!ENTITY Ctr_fxmockup		"Μακέτα Firefox">
+<!ENTITY Ctr_tabsep_def		"Προεπιλεγμένα διαχωριστικά καρτελών">
+<!ENTITY Ctr_fxmockup		"Μακέτα &brandShortName;">
 <!ENTITY Ctr_tabmokcolor	"Άσπρο χρώμα κουμπιών καρτελών (κλείσιμο, νέα, ομάδες, λίστα όλων)">
 <!ENTITY Ctr_tabmokcolor2	"Άσπρο χρώμα και σκοτεινή σκιά κειμένου μη ενεργών καρτελών">
-<!ENTITY Ctr_tabmokcolor3	"Άσπρο χρώμα διαχωριστικών καρτελών">
 <!ENTITY Ctr_tabmokcolor4	"Άσπρο χρώμα για κενό διάστικτο εικονίδιο καρτέλας">
 
 <!ENTITY Ctr_navthrobber1	"Άνοιγμα σε νέα καρτέλα με κλικ στον ενδείκτη δραστηριότητας, της ακόλουθης διεύθυνσης url:">
 <!ENTITY Ctr_navthrobber2	"Προσθέστε διεύθυνση url ή αφήστε τη γραμμή κενή">
+<!ENTITY Ctr_anewtaburl		"URL σελίδας νέας καρτέλας">
+<!ENTITY Ctr_anewtaburlcb	"Προσαρμοσμένο url σελίδας νέας καρτέλας (προεπιλογή: «about:newtab»)">
 
 <!ENTITY Ctr_tab_tf_info1	"Ονόματα χρωμάτων, δεκαεξαδικοί κωδικοί, τιμές rgb(a) και hsl(a) υποστηρίζονται.">
 <!ENTITY Ctr_tab_tf_info2	"Οι εισηγμένες τιμές δεν θα επικυρωθούν!">
@@ -143,39 +223,61 @@
 <!ENTITY Ctr_customsqtab1	"Φόντο">
 <!ENTITY Ctr_ctext			"Κείμενο">
 <!ENTITY Ctr_ctextsh		"Σκιά κειμένου">
-<!ENTITY Ctr_tabnor			"Καρτέλα (προεπιλογή)">
-<!ENTITY Ctr_tabhov			"Καρτέλα (κατάδειξη)">
-<!ENTITY Ctr_tabact			"Καρτέλα (ενεργή)">
-<!ENTITY Ctr_tabpen			"Καρτέλα (μη φορτωμένη)">
-<!ENTITY Ctr_tabunr			"Καρτέλα (μη αναγνωσμένη)">
-<!ENTITY Ctr_ntabnor		"Νέα καρτέλα (προεπιλογή)">
-<!ENTITY Ctr_ntabhov		"Νέα καρτέλα (κατάδειξη)">
-<!ENTITY Ctr_bold			"Έντονη γραφή">
+<!ENTITY Ctr_tabnor			"Προεπιλογές καρτέλας">
+<!ENTITY Ctr_tabhov			"Κατάδειξη καρτέλας">
+<!ENTITY Ctr_tabact			"Ενεργή καρτέλα">
+<!ENTITY Ctr_tabpen			"Μη φορτωμένη καρτέλα">
+<!ENTITY Ctr_tabunr			"Μη αναγνωσμένη καρτέλα">
+<!ENTITY Ctr_ntabnor		"Προεπιλογές νέας καρτέλας">
+<!ENTITY Ctr_ntabhov		"Κατάδειξη νέας καρτέλας">
+<!ENTITY Ctr_bold		    "Έντονη γραφή">
 <!ENTITY Ctr_italic			"Πλάγια γραφή">
 <!ENTITY Ctr_notabhov		"Παράκαμψη ρυθμίσεων κατάδειξης από τις ενεργοποιημένες ρυθμίσεις εδώ">
-<!ENTITY Ctr_tabc_act_tb	"Background color on toolbars">
+<!ENTITY Ctr_tabc_act_tb	"Χρώμα φόντου σε εργαλειοθήκες">
 
 <!ENTITY Ctr_urlbar			"Γραμμή τοποθεσιών">
 <!ENTITY Ctr_starinurl		"Κουμπί-αστέρι">
+<!ENTITY Ctr_starinurlinfo	"Το προεπιλεγμένο κουμπί-μενού σελιδοδεικτών αποκρύπτεται">
 <!ENTITY Ctr_feedinurl		"Κουμπί «Συνδρομή» (RSS)">
 <!ENTITY Ctr_hideurelstop	"Απόκρυψη κουμπιών «Διακοπή» &amp; «Ανανέωση»">
-<!ENTITY Ctr_urlbardropm	"Μετακίνηση του δείκτη ανάπτυξης στο τέλος της γραμμής τοποθεσιών">
+<!ENTITY Ctr_hideurelstop2	"Πάντα εμφάνιση του κουμπιού «Μετάβαση»">
+<!ENTITY Ctr_hideurlgo		"Απόκρυψη κουμπιού «Μετάβαση»">
+<!ENTITY Ctr_hideurlsrg		"Απόκρυψη διαχωριστικών &amp; διαστημάτων κουμπιών «Ανανέωση», «Διακοπή» &amp; «Μετάβαση»">
+<!ENTITY Ctr_urlbardropm	"Μετακίνηση του δείκτη ανάπτυξης στην τελευταία δυνατή θέση">
+<!ENTITY Ctr_urlbardropm2	"Να είναι πάντα ορατός ο δείκτης ανάπτυξης">
+<!ENTITY Ctr_altreaderico	"Εναλλακτικά εικονίδια «λειτουργίας ανάγνωσης»">
 <!ENTITY Ctr_hideprbutton	"Απόκρυψη εικονιδίου ειδοποίησης φραγής αναδυόμενου παραθύρου">
+<!ENTITY Ctr_locsearchbw10	"Μείωση ύψους γραμμών τοποθεσιών και αναζήτησης (πειραματικό)">
 <!ENTITY Ctr_urlbar_ib		"Κουμπί ταυτοποίησης τοποθεσιών (πλαίσιο ταυτοποίησης)">
-<!ENTITY Ctr_verifiedcolors	"Πράσινο/μπλε κουμπί για επαληθευμένες ιστοσελίδες και ασφαλείς συνδέσεις">
+<!ENTITY Ctr_ib_nohovcolor	"Μη εμφάνιση γκρι χρώματος κατά την κατάδειξη">
+<!ENTITY Ctr_ib_graycolor	"Γκρι χρώμα για αγνώστου ταυτότητας και «about:» σελίδες">
+<!ENTITY Ctr_verifiedcolors	"Χρώματα κουμπιού για επαληθευμένες ιστοσελίδες, ασφαλείς και μη ασφαλείς συνδέσεις">
+<!ENTITY Ctr_ibinfoico		"Αντικατάσταση εικονιδίου «i» με εικονίδιο υδρογείου">
+<!ENTITY Ctr_ibinfoico2		"Απόκρυψη εικονιδίου «i» (εάν είναι δυνατόν)">
+<!ENTITY Ctr_iblabels		"Απόκρυψη ετικετών">
 <!ENTITY Ctr_faviconurl		"Εικονίδιο URL: τρέχον εικονίδιο τοποθεσιών">
-<!ENTITY Ctr_padlock_hid	"Εικονίδιο «Λουκέτο» για ασφαλείς συνδέσεις (κρυμμένο)">
-<!ENTITY Ctr_padlock_def	"Εικονίδιο «Λουκέτο» για ασφαλείς συνδέσεις (προεπιλογή)">
-<!ENTITY Ctr_padlock_cla	"Εικονίδιο «Λουκέτο» για ασφαλείς συνδέσεις (κλασικό)">
-<!ENTITY Ctr_padlock_mod	"Εικονίδιο «Λουκέτο» για ασφαλείς συνδέσεις (μοντέρνο)">
-<!ENTITY Ctr_padlock_ext	"Εικονίδια ασφάλειας">
-<!ENTITY Ctr_icopageinfo	"Άνοιγμα παραθύρου «Πληροφορίες σελίδας» με κλικ στο ικονίδιο">
+<!ENTITY Ctr_padlock		"Εικονίδιο «Λουκέτο» για ασφαλείς συνδέσεις">
+<!ENTITY Ctr_padlock_hid	"κρυμμένο">
+<!ENTITY Ctr_padlock_def	"προεπιλεγμένο">
+<!ENTITY Ctr_padlock_cla	"κλασικό">
+<!ENTITY Ctr_padlock_mod	"μοντέρνο">
+<!ENTITY Ctr_padlock_ext	"Εικονίδιο «&brandShortName;» για έγκυρες σελίδες «about»">
+<!ENTITY Ctr_icopageinfo	"Εικονίδιο υδρογείου/ιστότοπου/«i»: Άνοιγμα παραθύρου «Πληροφορίες σελίδας» με κλικ στο εικονίδιο">
+<!ENTITY Ctr_lbsbsize		"Προσαρμοσμένο εύρος γραμμών διευθύνσεων και αναζήτησης">
+<!ENTITY Ctr_searchbar		"Γραμμή αναζήτησης">
+<!ENTITY Ctr_autocomplete	"Αναδυόμενο αυτόματης συμπλήρωσης">
+<!ENTITY Ctr_altautocompl	"Εναλλακτική εμφάνιση">
+<!ENTITY Ctr_autocompl_it	"Remove 'Search with...' and 'Visit' items (if present)">
+<!ENTITY Ctr_urlbar_uc		"Απενεργοποίηση χαρακτηριστικού ενιαίας αυτόματης συμπλήρωσης">
+<!ENTITY Ctr_lbsugresi		"Απενεργοποίηση ορίου ύψους">
+<!ENTITY Ctr_lbsugres		"Αριθμός αποτελεσμάτων">
+<!ENTITY Ctr_lbsbradius		"Προσαρμοσμένη ακτίνα περιγράμματος γραμμών τοποθεσιών και αναζήτησης">
 
 <!ENTITY Ctr_menubar_items	"Θέση στοιχείων μενού της εργαλειοθήκης μενού">
 <!ENTITY Ctr_extrabar		"Επιπρόσθετες εργαλειοθήκες">
 <!ENTITY Ctr_extrabar0		"Επιπρόσθετη/ες εργαλειοθήκη/ες">
 <!ENTITY Ctr_extrabar1		"Επιπρόσθετη εργαλειοθήκη">
-<!ENTITY Ctr_extrabarinfo	"Η εναλλαγή λειτουργιών «Καρτέλες στο πάνω μέρος» και «Καρτέλες όχι στο πάνω μέρος», αλλάζει τυχαία τη σειρά των επιπρόσθετων εργαλειοθηκών. Ο Firefox πρέπει να επανεκκινηθεί για αντιμετώπιση αυτού του θέματος.">
+<!ENTITY Ctr_extrabarinfo	"Η εναλλαγή λειτουργιών «Καρτέλες στο πάνω μέρος» και «Καρτέλες όχι στο πάνω μέρος», αλλάζει τυχαία τη σειρά των επιπρόσθετων εργαλειοθηκών. Ο &brandShortName; πρέπει να επανεκκινηθεί για αντιμετώπιση αυτού του θέματος.">
 
 <!ENTITY Ctr_invicons		"Ανεστραμμένα εικονίδια">
 <!ENTITY Ctr_menubar		"Εργαλειοθήκη μενού">
@@ -184,39 +286,61 @@
 <!ENTITY Ctr_bookbar		"Εργαλειοθήκη σελιδοδεικτών">
 <!ENTITY Ctr_notoolbar		"Απόκρυψη (μη εμφάνιση των στοιχείων μενού)">
 
-<!ENTITY Ctr_mbarforceleft	"First element">
-<!ENTITY Ctr_mbarforceright	"Last element">
+<!ENTITY Ctr_mbarforceleft	"Ως πρώτο στοιχείο">
+<!ENTITY Ctr_mbarforceright	"Ως τελευταίο στοιχείο">
 
 <!ENTITY Ctr_toolbars		"Εργαλειοθήκες">
-<!ENTITY Ctr_dblclnewtab	"Άνοιγμα νέας καρτέλας με διπλό κλικ (χρήση browser.newtab.url)">
-<!ENTITY Ctr_hidetbwot		"Απόκρυψη εργαλειοθήκης καρτελών με μία ορατή καρτέλα">
+<!ENTITY Ctr_dblclnewtab	"Άνοιγμα νέας καρτέλας με διπλό κλικ">
+<!ENTITY Ctr_hidetbwot		"Απόκρυψη εργαλειοθήκης καρτελών με μόνο μία ορατή καρτέλα">
 <!ENTITY Ctr_hidetbwote		"Μείωση καθυστέρησης απόκρυψης κατά την εκκίνηση">
-<!ENTITY Ctr_notabfog		"Αφαίρεση ομίχλης φόντου (Windows AeroGlass/8)">
-<!ENTITY Ctr_notabbg		"Αφαίρεση χρώματος φόντου (Windows AeroGlass/8)">
+<!ENTITY Ctr_hidetbwote_i	"Ενδέχεται να προκαλέσει δυσλειτουργίες στην εργαλειοθήκη καρτελών">
+<!ENTITY Ctr_hidetbwote2	"Διατήρηση γραμμής τίτλου (καρτέλες στο πάνω μέρος)">
+<!ENTITY Ctr_notabfog		"Απομάκρυνση ομίχλης φόντου (Windows AeroGlass/8)">
+<!ENTITY Ctr_notabbg		"Απομάκρυνση χρώματος φόντου (Windows AeroGlass/8)">
 <!ENTITY Ctr_hightabpos		"Μείωση χώρου πάνω από την εργαλειοθήκη (εάν είναι δυνατόν)">
+<!ENTITY Ctr_showalltabsb	"Always show 'all tabs' button">
 <!ENTITY Ctr_alttabstb		"Εναλλακτικό χρώμα φόντου">
+<!ENTITY Ctr_alttabstb2		"Σε λειτουργία μεγιστοποίησης (καρτέλες στο πάνω μέρος)">
 
 <!ENTITY Ctr_altmenubar		"Προσθήκη χρώματος φόντου (γραμμή τίτλου Λ.Σ.)">
-<!ENTITY Ctr_altmenubarpos	"Εναλλακτική θέση (παρακάτω από τη γραμμή τίτλου του Firefox)">
-<!ENTITY Ctr_menubarnofog	"Αφαίρεση χρώματος/ομίχλης φόντου (Windows AeroGlass/8)">
+<!ENTITY Ctr_altmenubarpos	"Εναλλακτική θέση">
+<!ENTITY Ctr_altmenubarpos2	"Παρακάτω από τη γραμμή τίτλου του &brandShortName;">
+<!ENTITY Ctr_menubarnofog	"Απομάκρυνση χρώματος/ομίχλης φόντου (Windows AeroGlass/8)">
 
-<!ENTITY Ctr_hidenavbar		"Εργαλειοθήκη πλοήγησης: απόκρυψη εργαλειοθήκης">
-<!ENTITY Ctr_nobookbarbg	"Εργαλειοθήκη σελιδοδεικτών: αφαίρεση χρώματος φόντου">
-<!ENTITY Ctr_nonavbarbg		"Εργαλειοθήκη πλοήγησης: αφαίρεση χρώματος φόντου">
-<!ENTITY Ctr_nonavborder	"Εργαλειοθήκη σελιδοδεικτών: προσθήκη περιγράμματος κορυφής στην εργαλειοθήκη">
-<!ENTITY Ctr_nonavtbborder	"Εργαλειοθήκες κορυφής: αφαίρεση περιγραμμάτων εργαλειοθήκης">
+<!ENTITY Ctr_aerocolors		"Μπλε χρώματα «Aero» για εργαλειοθήκες (και καρτέλες)">
+<!ENTITY Ctr_aerocolorsg	"Γκρι-μπλε χρώματα «Aero»">
+<!ENTITY Ctr_transpttbw10	"Τίτλος/μενού/εργαλειοθήκη καρτελών: απομάκρυνση χρώματος φόντου">
+<!ENTITY Ctr_transpttbew10	"Επιπλέον πειράγματα για θέματα ορισμένων Λ.Σ.">
+<!ENTITY Ctr_transptcw10	"Απόκρυψη προεπιλεγμένων κουμπιών ΛΣ ελαχιστοποίηση/μεγιστοποίηση/κλείσιμο">
+<!ENTITY Ctr_hidenavbar		"Απόκρυψη εργαλειοθήκης">
+<!ENTITY Ctr_navbarpad		"Επιπρόσθετο διάστημα αριστερά και δεξιά">
+<!ENTITY Ctr_navbarpad_l	"Αριστερά:">
+<!ENTITY Ctr_navbarpad_r	"Δεξιά:">
+<!ENTITY Ctr_nobookbarbg	"Απομάκρυνση χρώματος φόντου">
+<!ENTITY Ctr_bookbarfs		"Εμφάνιση σε προβολή πλήρους οθόνης">
+<!ENTITY Ctr_nonavbarbg		"Απομάκρυνση χρώματος φόντου">
+<!ENTITY Ctr_nonavbarbg1	"Επηρεάζονται επίσης οι επιπρόσθετες εργαλειοθήκες αυτής της επέκτασης και άλλες εργαλειοθήκες κορυφής.">
+<!ENTITY Ctr_nonavbarbg2	"Επηρεάζονται όλες οι εργαλειοθήκες σε λειτουργία «Slim Chrome» της επέκτασης «The Fox, Only Better».">
+<!ENTITY Ctr_nonavborder	"Προσθήκη περιγράμματος κορυφής στην εργαλειοθήκη">
+<!ENTITY Ctr_nonavtbborder	"Εργαλειοθήκες κορυφής: Απομάκρυνση περιγραμμάτων εργαλειοθήκης">
 <!ENTITY Ctr_hidesbclose	"Πλευρικές στήλες: απόκρυψη κουμπιού κλεισίματος πλευρικής στήλης">
-<!ENTITY Ctr_chevronfix		"Εργαλειοθήκη πλοήγησης: απόκρυψη διπλού βέλους («σιρίτι») στο τέλος της εργαλειοθήκης">
+<!ENTITY Ctr_notextshadow	"Εργαλειοθήκες: απόκρυψη σκιάς κειμένου εργαλειοθηκών και καρτελών">
+<!ENTITY Ctr_chevronfix		"Εργαλειοθήκη πλοήγησης: απόκρυψη διπλού βέλους («Περισσότερα εργαλεία…») στο τέλος της εργαλειοθήκης">
+<!ENTITY Ctr_tbsep_winc		"Εργαλειοθήκες κορυφής: επιπρόσθετα διαχωριστικά εργαλειοθηκών">
 
 <!ENTITY Ctr_closeabarbut	"Απόκρυψη κουμπιού κλεισίματος εργαλειοθήκης πρόσθετων">
 <!ENTITY Ctr_highaddonsbar	"Αύξηση ύψους">
+<!ENTITY Ctr_lessaddonsbar	"Μείωση ύψους">
+<!ENTITY Ctr_addonbarfs		"Εμφάνιση σε προβολή πλήρους οθόνης">
 
 <!ENTITY Ctr_animation		"Κινησιομοίωση">
-<!ENTITY Ctr_throbberalt	"Εναλλακτική κινησιομοίωση ενδεικτικού φόρτωσης στις καρτέλες">
+<!ENTITY Ctr_tabthrobber	"Προεπιλεγμένο εικονίδιο φόρτωσης">
 <!ENTITY Ctr_bmanimation	"Κινησιομοίωση προσθήκης σελιδοδείκτη">
 <!ENTITY Ctr_pananimation	"Κινησιομοίωση ανοίγματος μενού πίνακα">
-<!ENTITY Ctr_tabanimation	"Κινησιομοίωση κλεισίματος/ανοίγματος καρτέλας (προτίμηση about:config)">
-<!ENTITY Ctr_dlanimation	"Κινησιομοίωση ειδοποίησης λήψης (προτίμηση about:config)">
+<!ENTITY Ctr_tabanimation	"Κινησιομοίωση κλεισίματος/ανοίγματος καρτέλας">
+<!ENTITY Ctr_dlanimation	"Κινησιομοίωση ειδοποίησης λήψης">
+<!ENTITY Ctr_fsanimation	"Κινησιομοίωση πλήρους οθόνης">
+<!ENTITY Ctr_fsaduration	"Κινησιομοίωση πλήρους οθόνης για περιεχόμενο HTML5">
 
 <!ENTITY Ctr_toolsitem		"Στοιχείο μενού στο μενού «Εργαλεία»">
 <!ENTITY Ctr_appmenuitem	"Στοιχείο μενού στο μενού του κουμπιού εφαρμογής">
@@ -225,23 +349,66 @@
 
 <!ENTITY Ctr_otherctroptns	"Άλλες ρυθμίσεις">
 <!ENTITY Ctr_cuibotbuttons	"Επιπρόσθετα κουμπιά στη λειτουργία προσαρμογής">
-<!ENTITY Ctr_bookmarkoinpw	"Καταχώριση «&Ctr_openInPrivateWindow;» στο μενού περιεχομένου σελιδοδεικτών">
+<!ENTITY Ctr_nodevtheme		"Αποτροπή ενεργοποίησης του «Θέματος έκδοσης για προγραμματιστές»">
+
+<!ENTITY Ctr_experttweaks	"Προηγμένες">
+<!ENTITY Ctr_fx34search		"Αποεπιλέγοντας αυτή την προτίμηση απομακρύνεται η νέα εμφάνιση διεπαφής αναζήτησης και επαναφέρεται η παλιότερη διεπαφή.">
+<!ENTITY Ctr_fx34loop		"Αποεπιλέγοντας αυτή την προτίμηση απομακρύνονται οι δυνατότητες «κλήσης και συνομιλίας».">
+<!ENTITY Ctr_fx35devtheme	"Αποεπιλέγοντας αυτές τις προτιμήσεις απενεργοποιείται το «Θέμα για προγραμματιστές».">
+<!ENTITY Ctr_fx36prefs		"Αποεπιλέγοντας αυτή την προτίμηση επαναφέρεται το παλιό παράθυρο επιλογών.">
+<!ENTITY Ctr_fx36prefs2		"Σημείωση: Το παλιό παράθυρο επιλογών δεν περιέχει όλες τις προσφάτως προστεθείσες επιλογές του περιηγητή!">
+<!ENTITY Ctr_fx38reader		"Αποεπιλέγοντας αυτή την προτίμηση απενεργοποιείται η «λειτουργία ανάγνωσης» και απομακρύνεται το εικονίδιό της από τη γραμμή τοποθεσιών.">
+<!ENTITY Ctr_fx38pocket		"Αποεπιλέγοντας αυτή την προτίμηση απενεργοποιείται το χαρακτηριστικό «Pocket» και απομακρύνεται το κουμπί του από τις εργαλειοθήκες.">
+<!ENTITY Ctr_fx38pocket2	"Σημείωση: Μετακινώντας το κουμπί του «Pocket» στην παλέτα προσαρμογής πριν από την απενεργοποίηση αυτής της προτίμησης, απομακρύνονται επίσης και οι καταχωρίσεις του «Pocket» από τα μενού σελιδοδεικτών και αναγνώστη.">
+<!ENTITY Ctr_e_searchui		"Εμφάνιση αναζήτησης">
+<!ENTITY Ctr_e_loop			"Κλήση και συνομιλία">
+<!ENTITY Ctr_e_deved		"Θέμα έκδοσης για προγραμματιστές">
+<!ENTITY Ctr_e_prefsui		"Επιλογές σε καρτέλα">
+<!ENTITY Ctr_e_readermode	"Λειτουργία ανάγνωσης">
+<!ENTITY Ctr_e_pocket		"Pocket">
+<!ENTITY Ctr_e_tabsaudioico	"Εικονίδιο αναπαραγωγής ήχου σε καρτέλες">
+<!ENTITY Ctr_fx42tabsaudico	"Αποεπιλέγοντας αυτή την προτίμηση απομακρύνεται το εικονίδιο αναπαραγωγής ήχου από τις καρτέλες.">
+<!ENTITY Ctr_e_containertab	"Container Tabs">
+<!ENTITY Ctr_fx50containert	"Unchecking this preference removes 'container tabs'.">
+<!ENTITY Ctr_e_findbarhl	"Findbar highlighting">
+<!ENTITY Ctr_fx50findbarhl	"Unchecking these preferences removes findbars 'highlight' features.">
+<!ENTITY Ctr_e_flyweb		"Flyweb">
+<!ENTITY Ctr_fx50flyweb		"Unchecking this preference disables 'flyweb'.">
 
 
 <!ENTITY Ctr_pw_settings	"Ρυθμίσεις">
 <!ENTITY Ctr_pw_set_reset	"Επαναφορά προεπιλογών">
 <!ENTITY Ctr_pw_set_predef	"Προκαθορισμένες κλασικές">
-<!ENTITY Ctr_pw_set_preaus	"Προκαθορισμένες Firefox">
+<!ENTITY Ctr_pw_set_preaus	"Προκαθορισμένες του &brandShortName;">
 <!ENTITY Ctr_pw_set_export	"Εξαγωγή προτιμήσεων">
 <!ENTITY Ctr_pw_set_import	"Εισαγωγή προτιμήσεων">
+<!ENTITY Ctr_pw_set_syncon	"Προσθήκη στο «Sync»">
+<!ENTITY Ctr_pw_set_syncoff	"Απομάκρυνση από το «Sync»">
 
 <!ENTITY Ctr_special_font	"Οι ρυθμίσεις χρώματος φόντου είναι για το προεπιλεγμένο θέμα μόνο!">
 <!ENTITY Ctr_special_info	"Ορισμένες επιλογές ενδέχεται να μην προσφέρουν ορατές αλλαγές σε όλες τις περιπτώσεις">
-<!ENTITY Ctr_special_info2	"Οι ρυθμίσεις έχουν σχεδιαστεί για το προεπιλεγμένο θέμα του Firefox και ενδέχεται να μη λειτουργούν με όλα τα θέματα τρίτων!">
+<!ENTITY Ctr_special_info2	"Aνιχνεύθηκε θέμα τρίτων! Ορισμένες επιλογές δε λειτουργούν με θέματα τρίτων!">
 <!ENTITY Ctr_support		"Φόρουμ υποστήριξης">
 <!ENTITY Ctr_newversion		"Νέα έκδοση;">
 
-<!ENTITY Ctr_addon-bar.accesskey	"λ">
-<!ENTITY Ctr_openInPrivateWindow	"Άνοιγμα σε νέο παράθυρο ιδιωτικής περιήγησης">
-<!ENTITY Ctr_openInPrivateWindow.accesskey	"θ">
+<!ENTITY Ctr_addon-bar.accesskey		"λ">
 <!ENTITY appMenuGettingStarted.label	"Ξεκινώντας">
+<!ENTITY goCmd.label					"Μετάβαση">
+<!ENTITY Ctr_menu_restart.label			"Επανεκκίνηση">
+<!ENTITY Ctr_restartapp					"Στοιχείο «Επανεκκίνηση» στα μενού κουμπιού &brandShortName; και «Αρχείο»">
+
+<!ENTITY Ctr_openInCurrentTab			"Άνοιγμα καταχωρίσεων στην τρέχουσα καρτέλα">
+<!ENTITY Ctr_openInNewTab				"Άνοιγμα καταχωρίσεων σε νέα καρτέλα">
+<!ENTITY Ctr_openInNewWindow			"Άνοιγμα καταχωρίσεων σε νέο παράθυρο">
+
+<!-- For page context entries. Have to be adjusted for every locale! -->
+<!ENTITY backCmd.accesskey				"Π">
+<!ENTITY forwardCmd.accesskey			"Μ">
+<!ENTITY reloadCmd.accesskey			"ν">
+<!ENTITY stopCmd.accesskey				"Δ">
+<!ENTITY bookmarkPageCmd2.accesskey		"σ">
+
+<!-- Fallback entities. Do not change! -->
+<!ENTITY openCmd.commandkey				"">
+<!ENTITY urlbar.accesskey				"">
+<!ENTITY urlbar.placeholder2			"">

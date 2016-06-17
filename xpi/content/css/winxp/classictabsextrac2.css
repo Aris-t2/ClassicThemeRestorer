@@ -26,7 +26,10 @@
 	#TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
 	  list-style-image: url(chrome://browser/skin/tabbrowser/newtab.png) !important;
 	}
-
+	#main-window[fx45plus="true"] .tabs-newtab-button:not(:-moz-lwtheme):not(#privateTab-afterTabs-openNewPrivateTab),
+	#main-window[fx45plus="true"] #TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
+	  list-style-image: url(chrome://browser/skin/tabbrowser/newtab.svg) !important;
+	}
 
 	/* tab colors lightweight theme */
 	.tabbrowser-tab[selected]:-moz-lwtheme .tab-content {
@@ -59,6 +62,9 @@
 	#navigator-toolbox #nav-bar:not(:-moz-lwtheme){
 	  box-shadow:none !important;
 	  border-top: 1px solid transparent !important;
+	}
+	#TabsToolbar:not([tabsontop="false"]):not(:-moz-lwtheme) {
+	  margin-bottom:0px !important;
 	}
 
 	/* Tabs toolbar tab close button (Fx31+) */
@@ -110,6 +116,11 @@
 
 	.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
 	  -moz-padding-start: 3px !important;
+	}
+	@media all and (-moz-windows-classic) {
+		#TabsToolbar[currentset*="tabbrowser-tabs,tabmixScrollBox"]:not([orient="vertical"]) .tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
+		  -moz-padding-end: 3px !important;
+		}
 	}
 		
 	.tabs-newtab-button{

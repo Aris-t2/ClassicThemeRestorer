@@ -1,0 +1,53 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@media (-moz-os-version: windows-win10) {
+  
+  .searchbar-textbox,
+  #urlbar-wrapper,#urlbar {
+    min-height: 0px !important;
+    height: 24px !important;
+  }
+
+
+  window:not([chromehidden~="toolbar"]) #urlbar-wrapper {
+	  clip-path: url("chrome://browser/content/browser.xul#urlbar-back-button-clip-path") !important;
+	  margin-inline-start: calc(-1 * var(--backbutton-urlbar-overlap)) !important;
+  }
+
+  :root {
+    --backbutton-urlbar-overlap: 6px !important;
+  }
+
+  .searchbar-search-button,
+  #page-proxy-favicon{
+    padding: unset !important;
+    margin: 0 2px !important;
+  }
+  .search-go-button{
+    margin: -1px -2px !important;
+  }
+  
+  #connection-icon,
+  #identity-icon{
+	margin-top: -2px !important;
+	margin-bottom: -1px !important;
+  }
+  
+  #forward-button:not([disabled]) > .toolbarbutton-icon {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    -moz-padding-start: 6px !important;
+    -moz-padding-end: 3px !important;
+    -moz-margin-start: 2px !important;
+  }
+  @media (max-resolution: 1.0dppx) {
+    #forward-button:not([disabled]) > .toolbarbutton-icon {
+      max-width: unset !important;
+    }
+  }
+  @media (min-resolution: 1.1dppx) {
+    #identity-icon-labels label {
+      margin-top: -2px !important;
+    }
+  }
+}

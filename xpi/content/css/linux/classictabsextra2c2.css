@@ -1,0 +1,49 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	/* tab colors */
+	.tabbrowser-tab[selected]:not(:-moz-lwtheme) .tab-content {
+	  background-image: linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%),
+						linear-gradient(-moz-dialog, -moz-dialog) !important;
+	}
+
+	/* tab colors lightweight theme */
+	.tabbrowser-tab[selected]:-moz-lwtheme .tab-content {
+	  background-image: linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%) !important;
+	}
+
+    /* lightweight theme tweaks*/
+	#navigator-toolbox #TabsToolbar:-moz-lwtheme{
+	  box-shadow:none !important;
+	}
+	#navigator-toolbox #nav-bar:-moz-lwtheme{
+      box-shadow:none !important;
+	  border-top: 1px solid transparent !important;
+	}
+	
+	/* other */
+	#navigator-toolbox #nav-bar:not(:-moz-lwtheme){
+	  box-shadow:none !important;
+	  border-top: 1px solid grey !important;
+	}
+
+	#TabsToolbar::after{
+	  box-shadow:none !important;
+      border-bottom:0px solid transparent !important;
+	}
+	
+	#TabsToolbar toolbarbutton{
+	  margin-top:0 !important;
+	  margin-bottom:0 !important;
+	  padding-top:0 !important;
+	  padding-bottom:0 !important;
+	}
+	
+	/* toolbar buttons should not increase tab height */
+	#TabsToolbar toolbarbutton{
+	  padding-top:0 !important;
+	  padding-bottom:0 !important;
+	}
+
+}

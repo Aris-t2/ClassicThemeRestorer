@@ -1,0 +1,20 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	.tabbrowser-tab:not([pinned]) .tab-icon-image:not([src]) {
+	  display:inline !important;
+	}
+	
+	#main-window .tabbrowser-tab[pinned] .tab-icon-image:not([src]),
+	#main-window .tabbrowser-tab:not([pinned]) .tab-icon-image:not([src]),
+	#main-window[fx44plus="true"] .tabbrowser-tab[pinned] .tab-icon-image:not([src]),
+	#main-window[fx44plus="true"] .tabbrowser-tab:not([pinned]) .tab-icon-image:not([src]) {
+	  list-style-image:url('chrome://classic_theme_restorer/content/images/default_favicon.png') !important;
+	}
+
+	.tabbrowser-tab:not([pinned])[busy] .tab-throbber + .tab-icon-image:not([src]) {
+	  display:none !important;
+	}
+
+}

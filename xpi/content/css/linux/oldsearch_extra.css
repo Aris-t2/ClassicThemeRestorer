@@ -1,0 +1,36 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	searchbar .searchbar-engine-button {
+	  padding-top: 3px !important;
+	  padding-bottom: 3px !important;
+	}
+	
+	.searchbar-dropmarker-image {
+	  list-style-image: unset !important;
+	  -moz-image-region: unset !important;
+	  -moz-appearance: toolbarbutton-dropdown !important;
+	  width: 12px !important;
+	  height: 12px !important;
+	}
+
+	searchbar .search-go-button ,
+	searchbar .search-go-button:hover,
+	searchbar .search-go-button:active {
+	  list-style-image: url("moz-icon://stock/gtk-find?size=menu") !important;
+	  -moz-image-region: rect(0px, 16px, 16px, 0) !important;
+	  width: 18px !important;
+	}
+
+	searchbar .search-go-button {
+	  -moz-margin-end: 0px !important;
+	}
+	
+	.addengine-item {
+	  -moz-appearance: menuitem !important;
+	  padding: unset !important;
+	  height: auto !important;
+	}
+
+}

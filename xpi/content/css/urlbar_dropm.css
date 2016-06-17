@@ -4,5 +4,10 @@
 	.urlbar-history-dropmarker{
 	  -moz-box-ordinal-group:100 !important;
 	}
+	#urlbar .autocomplete-history-dropmarker,
+	#urlbar .urlbar-history-dropmarker,
+	#urlbar:not(:hover) > .urlbar-textbox-container > .urlbar-history-dropmarker {
+	  opacity: 1 !important;
+	}
 
 }

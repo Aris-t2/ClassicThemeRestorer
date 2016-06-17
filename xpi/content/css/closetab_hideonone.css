@@ -10,5 +10,11 @@
 	#main-window[tabmix_lwt="false"] #TabsToolbar .tabbrowser-tab[protected][first-tab="true"][last-tab="true"]:not([first-visible-tab]) .tab-close-button{
 	  visibility: collapse !important;
 	}
+	
+	#navigator-toolbox #TabsToolbar #tabbrowser-tabs .tabbrowser-tab:not([pinned]):not([protected])[first-visible-tab][last-visible-tab] .tab-close-button,
+	#navigator-toolbox #TabsToolbar #tabbrowser-tabs .tabbrowser-tab:not([pinned]):not([protected])[first-tab="true"][last-tab="true"]:not([first-visible-tab]) .tab-close-button {
+	  visibility: collapse !important;
+	  display: none !important;
+	}
 
 }

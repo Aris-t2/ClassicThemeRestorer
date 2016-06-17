@@ -1,0 +1,11 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+  #main-window:not([customizing]) #TabsToolbar > toolbarbutton,
+  #main-window:not([customizing]) #TabsToolbar .tabs-newtab-button,
+  #main-window:not([customizing]) #TabsToolbar .tabbrowser-tab {
+	opacity: 0.01 !important;
+  }
+
+}

@@ -1,0 +1,12 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	
+	#ctraddon_BMB_bookmarksPopup menupopup[placespopup=true] > hbox,
+	#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_subscribeToPageSubmenuMenupopup {
+	  background: -moz-dialog !important;
+	}
+	#ctraddon_BMB_bookmarksPopup *:not([disabled]) label{ 
+	  color: black !important;
+	}
+}

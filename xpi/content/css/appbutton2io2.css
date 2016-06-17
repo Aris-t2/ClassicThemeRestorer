@@ -9,6 +9,8 @@
     #ctraddon_appbutton2 > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-inv.png") !important;
       padding: 0 9px !important;
+      margin-top: -0.5px !important;
+      margin-bottom: -0.5px !important;
 	}
 	
 	#ctraddon_appbutton2{
@@ -32,6 +34,34 @@
 	  -moz-appearance: none !important;
       margin: -1px -34px 0 -26px !important;
 	}
+	
+	@media (-moz-os-version: windows-win8) {
+		#main-window[tabsintitlebar][sizemode="maximized"] #ctraddon_appbutton2 > .toolbarbutton-icon {
+		  padding: 1px 9px !important;
+		}
+	}
+	
+	@media (-moz-os-version: windows-win10) {
+		#ctraddon_appbutton2 > .toolbarbutton-icon {
+		  padding: 1px 9px !important;
+		}
+	}
+	
+	@media (min-resolution: 1.1dppx) {
+	
+	  @media (-moz-os-version: windows-win8) {
+		#main-window[tabsintitlebar][sizemode="maximized"][fx40plus="true"] #ctraddon_appbutton2 > .toolbarbutton-icon {
+			margin-top:-1.5px !important;
+		}
+	  }
+
+	  @media (-moz-os-version: windows-win10) {
+		#main-window[tabsintitlebar][sizemode="maximized"][fx40plus="true"] #ctraddon_appbutton2 > .toolbarbutton-icon {
+		  margin-top:-1.5px !important;
+		}
+	  }
+
+	}
 
 	#ctraddon_appbutton2 > .toolbarbutton-menu-dropmarker{
       visibility: collapse !important;
@@ -45,8 +75,8 @@
 	  -moz-margin-start: 0px !important;
 	}
 
-	#main-window[tabsintitlebar][chromehidden~="menubar"] #toolbar-menubar ~ #TabsToolbar,
-	#main-window[tabsintitlebar]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
+	#main-window[tabsintitlebar][chromehidden~="menubar"]:not([inFullscreen]) #toolbar-menubar ~ #TabsToolbar,
+	#main-window[tabsintitlebar]:not([tabsontop="false"]):not([inFullscreen]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
 	  -moz-margin-start: 32px;
 	}
 	

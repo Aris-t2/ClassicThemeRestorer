@@ -2,17 +2,7 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 	
-	toolbar:not(#TabsToolbar) #ctraddon_appbutton > .toolbarbutton-icon {
-	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-dark.png") !important;
-	}
-
-	toolbar:not(#TabsToolbar) #ctraddon_appbutton:-moz-lwtheme-brighttext > .toolbarbutton-icon,
-	#TabsToolbar #ctraddon_appbutton > .toolbarbutton-icon {
-	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton-inv.png") !important;
-	}
-	
-	.customization-target:not(#TabsToolbar) > #ctraddon_appbutton > .toolbarbutton-icon {
-	  padding-left:7px !important;
-	  padding-right:7px !important;
+	#ctraddon_appbutton > .toolbarbutton-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton2.png") !important;
 	}
 }

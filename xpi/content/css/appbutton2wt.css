@@ -16,6 +16,44 @@
       margin: 0 -34px 0 -26px !important;
 	}
 
+	@media (-moz-os-version: windows-win8) {
+		#ctraddon_appbutton2:-moz-locale-dir(ltr) > label{
+		  -moz-appearance: none !important;
+		  margin: -4px -26px 0 -34px !important;
+		  padding-top: 4px !important;
+		}
+		#ctraddon_appbutton2:-moz-locale-dir(rtl) > label{
+		  -moz-appearance: none !important;
+		  margin: -4px -34px 0 -26px !important;
+		  padding-top: 4px !important;
+		}
+	}
+
+	@media (-moz-os-version: windows-win10) {
+		#ctraddon_appbutton2:-moz-locale-dir(ltr) > label{
+		  -moz-appearance: none !important;
+		  margin: -4px -26px 0 -34px !important;
+		  padding-top: 4px !important;
+		}
+		#ctraddon_appbutton2:-moz-locale-dir(rtl) > label{
+		  -moz-appearance: none !important;
+		  margin: -4px -34px 0 -26px !important;
+		  padding-top: 4px !important;
+		}
+		
+		#ctraddon_appbutton2 > .toolbarbutton-menu-dropmarker{
+		  -moz-appearance: none !important;
+		  margin-top: 0px !important;
+		  padding-top: 2px !important;
+		}
+		
+		@media not all and (-moz-windows-theme:aero) {
+		  #main-window[tabsintitlebar][sizemode="normal"] #TabsToolbar .titlebar-placeholder{
+			visibility:collapse !important;
+		  }
+		}
+	}
+
 	#ctraddon_appbutton2 > .toolbarbutton-menu-dropmarker,
 	#ctraddon_appbutton2:hover:active > .toolbarbutton-menu-dropmarker,
 	#ctraddon_appbutton2[open] > .toolbarbutton-menu-dropmarker{
@@ -47,8 +85,8 @@
 			#main-window[tabsintitlebar][sizemode="normal"] #TabsToolbar .titlebar-placeholder{
 			  visibility:collapse !important;
 			}
-			#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"] #toolbar-menubar ~ #TabsToolbar,
-			#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
+			#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"]:not([inFullscreen]) #toolbar-menubar ~ #TabsToolbar,
+			#main-window[tabsintitlebar][sizemode="normal"]:not([inFullscreen]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
 			  margin-top: 20px !important;
 			}
 			
@@ -59,8 +97,8 @@
 			  visibility:collapse !important;
 			}
 
-			#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"] #toolbar-menubar ~ #TabsToolbar,
-			#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
+			#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"]:not([inFullscreen]) #toolbar-menubar ~ #TabsToolbar,
+			#main-window[tabsintitlebar][sizemode="normal"]:not([inFullscreen]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
 			  margin-top: 26px !important;
 			}
 		}
@@ -73,12 +111,25 @@
 		#main-window[tabsintitlebar][sizemode="normal"] #TabsToolbar .titlebar-placeholder{
 		  visibility:collapse !important;
 		}
-		#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"] #toolbar-menubar ~ #TabsToolbar,
-		#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
+		#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"]:not([inFullscreen]) #toolbar-menubar ~ #TabsToolbar,
+		#main-window[tabsintitlebar][sizemode="normal"]:not([inFullscreen]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
 		  margin-top: 16px !important;
 		}
 	
 	  }
+	}
+	
+	/* for LavaFox themes */
+	#main-window[currenttheme^="LavaFox"][tabsintitlebar][chromehidden~="menubar"][sizemode="normal"]:not([inFullscreen]) #toolbar-menubar ~ #TabsToolbar,
+	#main-window[currenttheme^="LavaFox"][tabsintitlebar][sizemode="normal"]:not([inFullscreen]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
+	  margin-top: 0px !important;
+	}
+	#main-window[currenttheme^="LavaFox"][tabsintitlebar][sizemode="normal"] #titlebar:not([hidden]) ~ * #toolbar-menubar {
+	 -moz-margin-start: 0px !important;
+	}
+	#main-window[currenttheme^="LavaFox"][tabsintitlebar][chromehidden~="menubar"][sizemode="maximized"]:not([tabsontop="false"]) #toolbar-menubar ~ #TabsToolbar,
+	#main-window[currenttheme^="LavaFox"][tabsintitlebar][sizemode="maximized"]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
+	 -moz-margin-start: 97px !important;
 	}
 
 }

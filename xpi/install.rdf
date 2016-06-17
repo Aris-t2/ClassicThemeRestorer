@@ -5,7 +5,7 @@
 	<Description rdf:about="urn:mozilla:install-manifest">
 		<em:id>ClassicThemeRestorer@ArisT2Noia4dev</em:id>
 		<em:name>Classic Theme Restorer</em:name>
-		<em:version>1.2.7beta3</em:version>
+		<em:version>1.5.4beta4</em:version>
 		<em:type>2</em:type>
 		<em:multiprocessCompatible>true</em:multiprocessCompatible>
 
@@ -15,35 +15,51 @@
 			<Description>
 				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
 				<em:minVersion>29.0</em:minVersion>
-				<em:maxVersion>37.0</em:maxVersion>
+				<em:maxVersion>50.0</em:maxVersion>
 			</Description>
 		</em:targetApplication>
 
 		<em:description>'Classic Theme Restorer' brings back appmenu button, squared tabs, add-ons bar, small nav-bar buttons, a few older buttons and more to Firefox Australis UI. Use 'Customize' menu to move buttons on toolbars.</em:description>
 		<em:homepageURL>https://addons.mozilla.org/addon/classicthemerestorer/</em:homepageURL>
 		<em:creator>Aris</em:creator>
+		
+		<em:contributor>InternalError503 (Toady)</em:contributor>
+		<em:contributor>Quicksaver</em:contributor>
+		<em:contributor>George M.</em:contributor>
+		
 		<em:translator>MichalS (cs) - Czech</em:translator>
+		<em:translator>scootergrisen (da) - Danish</em:translator>
 		<em:translator>Aris (de) - German</em:translator>
 		<em:translator>milupo (dsb) - Lower Sorbian</em:translator>
 		<em:translator>Γιώργος Μαλαμάς (el) - Greek</em:translator>
 		<em:translator>strel (es) - Spanish</em:translator>
+		<em:translator>Maidur (et) - Estonian</em:translator>
+		<em:translator>Zefling (fr) - French</em:translator>
 		<em:translator>David V. (fr) - French</em:translator>
 		<em:translator>goofy (fr) - French</em:translator>
+		<em:translator>BlackJack (fr) - French</em:translator>
 		<em:translator>milupo (hsb) - Upper Sorbian</em:translator>
 		<em:translator>gialloporpora (it) - Italian</em:translator>
+		<em:translator>Styb (it) - Italian</em:translator>
+		<em:translator>mm_k (ja) - Japanese</em:translator>
+		<em:translator>ma2moto (ja) - Japanese</em:translator>
 		<em:translator>momdo (ja) - Japanese</em:translator>
 		<em:translator>Mrere (pl) - Polish</em:translator>
 		<em:translator>Claudio (pt-BR) - Portuguese [Brazil]</em:translator>
+		<em:translator>3deshka (ru) - Russian</em:translator>
 		<em:translator>Alexei (ru) - Russian</em:translator>
 		<em:translator>radion-t (ru) - Russian</em:translator>
 		<em:translator>Alexander T. (ru) - Russian</em:translator>
+		<em:translator>Klofutar (sl) - Slovenian</em:translator>
+		<em:translator>Bekir Uçarci (tr) - Turkish</em:translator>
 		<em:translator>Sacredwheels (uk) - Ukrainian</em:translator>
+		<em:translator>Cye3s (zh-CN) - Chinese [China]</em:translator>
 		<em:translator>jzhone (zh-CN) - Chinese [China]</em:translator>
 		<em:translator>Shyangs (zh-TW) - Chinese [Taiwan]</em:translator>
 
 		<em:localized>
 			<Description>
-				<em:name>Classic Theme Restorer (Customize UI)</em:name>
+				<em:name>Classic Theme Restorer</em:name>
 				<em:locale>cs</em:locale>
 				<em:description>'Classic Theme Restorer' restores appmenu button, squared tabs, add-ons bar, small nav-bar buttons, other buttons and more. Use 'Customize' menu to move buttons on toolbars.</em:description>
 				<em:translator>MichalS (cs) - Czech</em:translator>
@@ -52,15 +68,24 @@
 
 		<em:localized>
 			<Description>
-				<em:name>Classic Theme Restorer (Customize UI)</em:name>
+				<em:name>Classic Theme Restorer</em:name>
+				<em:locale>da</em:locale>
+				<em:description>'Classic Theme Restorer' genskaber Firefox-menuknappen, firkantede faneblade, tilføjelseslinjen, små knapper på navigationslinjen, og andre ældre knapper og mere. Brug 'Tilpas' for at flytte knapperne hen på værktøjslinjerne.</em:description>
+				<em:translator>scootergrisen (da) - Danish</em:translator>
+			</Description>
+		</em:localized>
+
+		<em:localized>
+			<Description>
+				<em:name>Classic Theme Restorer</em:name>
 				<em:locale>de</em:locale>
-				<em:description>'Classic Theme Restorer' stellt bekannte Elemente wie die Firefox Menüschaltfläche, quadratische Tabs, Addonleiste, kleine Buttonansicht und einige Buttons wieder her. Über das 'Anpassen'-Menü lassen sich Buttons auf Leisten verschieben.</em:description>
+				<em:description>'Classic Theme Restorer' stellt bekannte Elemente wie die Firefox-Menüschaltfläche, quadratische Tabs, Add-on-Leiste, kleine Schaltflächenansicht und einige Schaltflächen wieder her. Über das 'Anpassen'-Menü lassen sich Buttons auf Leisten verschieben.</em:description>
 			</Description>
 		</em:localized>
 		
 		<em:localized>
 			<Description>
-				<em:name>Classic Theme Restorer (Customize UI)</em:name>
+				<em:name>Classic Theme Restorer</em:name>
 				<em:locale>dsb</em:locale>
 				<em:description>Rozšyrjenje 'Classic Theme Restorer' póra znate elementy ako nałožeński menijowy tłocašk, rožkate rejtarki, rědku dodankow,  małe tłocaški nawigaciskeje rědki, někotare stare tłocaški a wěcej k Firefox Australis UI slědk. Wužyjśo meni 'Pśiměriś', aby tłocaški na symbolowych rědkach pśesunuł.</em:description>
 				<em:translator>milupo (dsb) - Lower Sorbian</em:translator>
@@ -69,7 +94,7 @@
 		
 		<em:localized><!-- Greek -->
 			<Description>
-				<em:name>Classic Theme Restorer (Customize UI)</em:name>
+				<em:name>Classic Theme Restorer</em:name>
 				<em:locale>el</em:locale>
 				<em:description>Ο «Επαναφορέας κλασικού θέματος» επαναφέρει κουμπί εφαρμογής, τετραγωνισμένες καρτέλες, εργαλειοθήκη πρόσθετων, μικρά κουμπιά εργαλειοθήκης πλοήγησης, μερικά παλαιότερα κουμπιά και περισσότερα, στη διεπαφή «Australis» του Firefox. Χρησιμοποιήστε το μενού «Προσαρμογή» για να μετακινήσετε κουμπιά στις εργαλειοθήκες.</em:description>
 				<em:translator>Γιώργος Μαλαμάς (el) - Greek</em:translator>
@@ -78,26 +103,37 @@
 
 		<em:localized>
 			<Description>
-				<em:name>Classic Theme Restorer (Customize UI)</em:name>
+				<em:name>Classic Theme Restorer</em:name>
 				<em:locale>es</em:locale>
 				<em:description>La extensión Classic Theme Restorer restaura menú y botón de la aplicación clásicos, barra de herramientas de complementos, vista de iconos pequeños, botón de menú de marcadores, botones de barras laterales de marcadores e historial, botones pequeños de barra de navegación y pestañas cuadradas, en la interfaz de usuario Australis de Firefox. Use el menú 'Personalizar' para mover botones a su barra de herramientas preferida.</em:description>
 				<em:translator>strel (es) - Spanish</em:translator>
 			</Description>
 		</em:localized>
-		
+
 		<em:localized>
 			<Description>
-				<em:name>Classic Theme Restorer (Customize UI)</em:name>
-				<em:locale>fr</em:locale>
-				<em:description>L'extension 'Classic Theme Restorer' vous permet de restaurer dans l'interface Australis: l'ancien bouton Firefox (bouton appmenu), les onglets classiques 'carrés', la barre des modules, les petits boutons de la barre de navigation et bien d'autres paramètres des versions pré-Australis de Firefox. Utilisez le menu 'Personnaliser' pour déplacer les boutons de vos barres d'outils.</em:description>
-				<em:translator>David V. (fr) - French</em:translator>
-				<em:translator>goofy (fr) - French</em:translator>
+				<em:name>Classic Theme Restorer</em:name>
+				<em:locale>et</em:locale>
+				<em:description>'Classic Theme Restorer' toob Firefoxi Australise kasutajaliidesesse tagasi rakenduse menüünupu, kandilised kaardid, lisade riba, väiksed navigeerimisriba nupud, mõned vanemad nupud ja muud. Nuppude tööriistaribadel liigutamiseks kasuta Kohandamise menüüd.</em:description>
+				<em:translator>Maidur (et) - Estonian</em:translator>
 			</Description>
 		</em:localized>
 
 		<em:localized>
 			<Description>
-				<em:name>Classic Theme Restorer (Customize UI)</em:name>
+				<em:name>Classic Theme Restorer</em:name>
+				<em:locale>fr</em:locale>
+				<em:description>« Classic Theme Restorer » restaure dans l'interface utilisateur Australis de Firefox : l'ancien bouton menu, les onglets rectangulaires, la barre des modules, les petits boutons de la barre de navigation, quelques autres anciens boutons, et plus. Utilisez le menu « Personnaliser... » afin de déplacer les boutons sur les barres d'outils.</em:description>
+				<em:translator>Zefling (fr) - French</em:translator>
+				<em:translator>David V. (fr) - French</em:translator>
+				<em:translator>goofy (fr) - French</em:translator>
+				<em:translator>BlackJack (fr) - French</em:translator>
+			</Description>
+		</em:localized>
+
+		<em:localized>
+			<Description>
+				<em:name>Classic Theme Restorer</em:name>
 				<em:locale>hsb</em:locale>
 				<em:description>Rozšěrjenje 'Classic Theme Restorer' přinjese znate elementy ako nałoženske menijowe tłóčatko, róžkate rejtarki, lajstu přidatkow,  małe tłóčatka nawigaciskeje lajsty, někotre stare tłóčatka a wjace k Firefox Australis UI wróćo. Wužijće meni 'Přiměrić', zo byšće tłóčatka na symbolowych lajstach přesunył.</em:description>
 				<em:translator>milupo (hsb) - Upper Sorbian</em:translator>
@@ -106,25 +142,28 @@
 		
 		<em:localized>
 			<Description>
-				<em:name>Classic Theme Restorer (Customize UI)</em:name>
+				<em:name>Classic Theme Restorer</em:name>
 				<em:locale>it</em:locale>
 				<em:description>'Classic Theme Restorer' permette di ripristinare il pulsante app, lo stile spigoloso delle schede, la Barra dei componenti aggiuntivi, le icone piccole nella Barra di navigazione, alcuni altri pulsanti presenti nelle versioni precedenti e altri elementi in Australis, la nuova interfaccia di Firefox. Per spostare i pulsanti nelle barre degli strumenti utilizzare il menu Personalizza.</em:description>
 				<em:translator>gialloporpora (it) - Italian</em:translator>
+				<em:translator>Styb (it) - Italian</em:translator>
 			</Description>
 		</em:localized>
 		
 		<em:localized>
 			<Description>
-				<em:name>Classic Theme Restorer (Customize UI)</em:name>
+				<em:name>Classic Theme Restorer</em:name>
 				<em:locale>ja</em:locale>
 				<em:description>'Classic Theme Restorer' は、アプリメニューボタン、四角いタブ、アドオンバー、小さなナビゲーションバー、古いボタンを Australis UI に復活させます。ボタンやツールバーを移動させるには、'カスタマイズ' メニューを使用してください。</em:description>
+				<em:translator>mm_k (ja) - Japanese</em:translator>
+				<em:translator>ma2moto (ja) - Japanese</em:translator>
 				<em:translator>momdo (ja) - Japanese</em:translator>
 			</Description>
 		</em:localized>
-		
+	
 		<em:localized>
 			<Description>
-				<em:name>Classic Theme Restorer (Customize UI)</em:name>
+				<em:name>Classic Theme Restorer</em:name>
 				<em:locale>pl</em:locale>
 				<em:description>﻿'Classic Theme Restorer' przywraca do interfejsu użytkownika Firefox Australis: przycisk menu aplikacji, prostokątne karty, pasek dodatków, małe przyciski paska nawigacji, kilka starszych przycisków i więcej. Używaj menu 'Dostosuj', aby przesuwać przyciski na paski narzędzi.</em:description>
 				<em:translator>Mrere (pl) - Polish</em:translator>
@@ -133,7 +172,7 @@
 
 		<em:localized>
 			<Description>
-				<em:name>Classic Theme Restorer (Customize UI)</em:name>
+				<em:name>Classic Theme Restorer</em:name>
 				<em:locale>pt-BR</em:locale>
 				<em:description>O 'Classic Theme Restorer' traz de volta à Interface de Usuário do Firefox Australis, o botão de menú do aplicativo, as guias quadradas, a barra de complementos, os botões pequenos da barra de navegação, alguns botões mais antigos e muito mais para a Interface do Usuário Australis do Firefox! Use o menu 'Personalizar' para mover os botões nas barras de ferramentas.</em:description>
 				<em:translator>Claudio (pt-BR) - Portuguese [Brazil]</em:translator>
@@ -142,18 +181,37 @@
 		
 		<em:localized>
 			<Description>
-				<em:name>Classic Theme Restorer (Customize UI)</em:name>
+				<em:name>Classic Theme Restorer</em:name>
 				<em:locale>ru</em:locale>
 				<em:description>«Classic Theme Restorer» возвращает главную кнопку приложения, квадратные вкладки, панель дополнений, маленькие кнопки на панели навигации, несколько старых кнопок и другое, в интерфейсе Australis Firefox. Используйте меню «Настроить», чтобы переместить кнопки на панели инструментов.</em:description>
+				<em:translator>3deshka (ru) - Russian</em:translator>
 				<em:translator>Alexei (ru) - Russian</em:translator>
 				<em:translator>radion-t (ru) - Russian</em:translator>
 				<em:translator>Alexander T. (ru) - Russian</em:translator>
 			</Description>
 		</em:localized>
+		
+		<em:localized>
+			<Description>
+				<em:name>Classic Theme Restorer</em:name>
+				<em:locale>sl</em:locale>
+				<em:description>'Classic Theme Restorer' obnovi gumb programskega menija, kvadrataste zavihke, vrstico dodatkov, majhne gumbe vrstice za krmarjenje, druge gumbe in več. Za premik gumbov na orodnih vrsticah uporabite meni 'Prilagodi'.</em:description>
+				<em:translator>Klofutar (sl) - Slovenian</em:translator>
+			</Description>
+		</em:localized>
+		
+		<em:localized>
+			<Description>
+				<em:name>Classic Theme Restorer</em:name>
+				<em:locale>tr</em:locale>
+				<em:description>'Classic Theme Restorer' restores appmenu button, squared tabs, add-ons bar, small nav-bar buttons, other buttons and more. Use 'Customize' menu to move buttons on toolbars.</em:description>
+				<em:translator>Bekir Uçarci (tr) - Turkish</em:translator>
+			</Description>
+		</em:localized>
 
 		<em:localized>
 			<Description>
-				<em:name>Classic Theme Restorer (Customize UI)</em:name>
+				<em:name>Classic Theme Restorer</em:name>
 				<em:locale>uk</em:locale>
 				<em:description>'Classic Theme Restorer' restores appmenu button, squared tabs, add-ons bar, small nav-bar buttons, other buttons and more. Use 'Customize' menu to move buttons on toolbars.</em:description>
 				<em:translator>Sacredwheels (uk) - Ukrainian</em:translator>
@@ -162,16 +220,17 @@
 		
 		<em:localized>
 			<Description>
-				<em:name>Classic Theme Restorer (Customize UI)</em:name>
+				<em:name>Classic Theme Restorer</em:name>
 				<em:locale>zh-CN</em:locale>
 				<em:description>'Classic Theme Restorer' 恢复了 Firefox 按钮, 方形标签页, 附加组件工具栏, 导航栏的小图标按钮, 一些经典风格的按钮以及更多对 Firefox Australis 界面的自定义更改。 使用「自定义」菜单将按钮移动到工具栏上.</em:description>
+				<em:translator>Cye3s (zh-CN) - Chinese [China]</em:translator>
 				<em:translator>jzhone (zh-CN) - Chinese [China]</em:translator>
 			</Description>
 		</em:localized>
 		
 		<em:localized>
 			<Description>
-				<em:name>Classic Theme Restorer (Customize UI)</em:name>
+				<em:name>Classic Theme Restorer</em:name>
 				<em:locale>zh-TW</em:locale>
 				<em:description>Classic Theme Restorer 恢復了應用程式按鈕(火狐橙)、矩形分頁、附加元件列、瀏覽工具列小圖示按鈕、其他經典傳統風格的按鈕，以及更多對 Firefox Australis 介面的改造。 使用「自訂」選單移動按鈕到工具列上。</em:description>
 				<em:translator>Shyangs (zh-TW) - Chinese [Taiwan]</em:translator>

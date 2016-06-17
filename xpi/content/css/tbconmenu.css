@@ -1,0 +1,15 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+  
+	#toolbar-context-menu .customize-context-moveToPanel,
+	#toolbar-context-menu .customize-context-removeFromToolbar,
+	#toolbar-context-menu .customize-context-removeFromToolbar + menuseparator,
+	#toolbar-context-reloadAllTabs,
+	#toolbar-context-bookmarkAllTabs,
+	#toolbar-context-undoCloseTab,
+	#toolbar-context-undoCloseTab + menuseparator {
+	  display: none !important;
+	}
+
+}

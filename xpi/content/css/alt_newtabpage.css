@@ -1,12 +1,128 @@
 @-moz-document url(about:newtab) {
-	
+
+	html #newtab-customize-overlay,
 	#newtab-intro-what,
-	#newtab-search-form{
-		display:none !important;
+	#newtab-search-form,
+	#newtab-margin-undo-container,
+	.newtab-suggested-bounds,
+	.newtab-suggested,
+	.newtab-sponsored {
+	  display: none !important;
 	}
+
 	.newtab-cell,
-	.newtab-link{ 
+	.newtab-link,
+	.newtab-site,
+	.newtab-title,
+	.newtab-thumbnail { 
 	  border-radius: 0px !important;
 	}
 
+	#newtab-window:not([fx40plus="true"]) .newtab-cell {
+	  margin: 20px 10px 20px !important;
+	}
+
+	html .newtab-cell,
+	#newtab-window[fx40plus="true"] .newtab-cell {
+	  margin: 20px 10px 0px !important;
+	}
+
+	html #newtab-grid {
+	  min-height: unset !important;
+	  max-height: unset !important;
+	}
+
+	#newtab-customize-button,
+	.newtab-customize,
+	.newtab-control-pin,
+	.newtab-control-block {
+	  background-size: 16px !important;
+	  height: 16px !important;
+	  width: 16px !important;
+	}
+
+	.newtab-control-pin {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_controls.png), 0, 16, 16, 0) !important;
+	}
+
+	.newtab-control-pin:hover {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_controls.png), 0, 32, 16, 16) !important;
+	}
+
+	.newtab-control-pin:hover:active {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_controls.png), 0, 48, 16, 32) !important;
+	}
+
+	.newtab-site[pinned] .newtab-control-pin {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_controls.png), 0, 64, 16, 48) !important;
+	}
+	
+	.newtab-site[pinned] .newtab-control-pin:hover {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_controls.png), 0, 80, 16, 64) !important;
+	}
+	
+	.newtab-site[pinned] .newtab-control-pin:hover:active {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_controls.png), 0, 96, 16, 80) !important;
+	}
+
+	.newtab-control-block {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_controls.png), 0, 112, 16, 96) !important;
+	}
+
+	.newtab-control-block:hover {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_controls.png), 0, 128, 16, 112) !important;
+	}
+
+	.newtab-control-block:hover:active {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_controls.png), 0, 144, 16, 128) !important;
+	}
+	
+	html #newtab-customize-button,
+	#newtab-scrollbox:not([page-disabled="true"]) #newtab-customize-button,
+	#newtab-scrollbox:not([page-disabled="true"]) .newtab-customize {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_controls.png), 0, 160, 16, 144) !important;
+	}
+	
+	html #newtab-customize-button:-moz-any(:hover, :active, [active]),
+	#newtab-scrollbox[page-disabled="true"] #newtab-customize-button,
+	#newtab-scrollbox[page-disabled="true"] .newtab-customize {
+	  background-image: -moz-image-rect(url(chrome://classic_theme_restorer/content/images/newtab_controls.png), 0, 176, 16, 160) !important;
+	}
+	
+	#newtab-customize-button {
+	  margin-top: 5px !important;
+	  -moz-margin-end: 5px !important;
+	}
+	
+	.newtab-control::-moz-focus-inner,
+	#newtab-customize-button::-moz-focus-inner,
+	.newtab-control,
+	#newtab-customize-button{
+	  border: 0 !important;
+	}
+	
+	#newtab-customize-button {
+	  opacity: 0.7;
+	}
+	#newtab-customize-button:-moz-any(:hover, :active, [active]) {
+	  opacity: 1.0;
+	}
+	
+	#newtab-margin-top,
+	#newtab-margin-bottom {
+	  -moz-box-flex: 1 !important;
+	}
+	
+	.newtab-control-pin,
+	.newtab-control-block {
+	  border: 1px white solid !important;
+	  height: 18px !important;
+	  width: 18px !important;
+   }
+
+}
+
+/* remove overlay on top of new tab page */
+#newtab-window #newtab-customize-overlay {
+  display: none !important;
 }

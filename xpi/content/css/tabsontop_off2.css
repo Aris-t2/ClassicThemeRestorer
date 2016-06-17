@@ -32,13 +32,22 @@
 	/* END: navigator-toolbox toolbars */
 
 	/* fix for popup windows, which disable 'menubar' by force*/
-	window[chromehidden~="menubar"] #titlebar{
+	#main-window[chromehidden~="menubar"]:not([fx42plus="true"]) #titlebar{
 	  margin-bottom:-26px !important;
+	}
+	/*#main-window[fx42plus="true"][chromehidden~="menubar"][chromehidden~="toolbar"]:not([chromehidden~="location"]) #nav-bar {
+	  visibility: collapse !important;
+	}*/
+	/* exclude CTRs prefwindow */
+	#main-window[fx42plus="true"][chromehidden~="menubar"][title^="about:preferences"][tabsontop="false"] #titlebar{
+	  margin-bottom:0px !important;
 	}
 
 	#TabsToolbar,
 	#TabsToolbar:not(:-moz-lwtheme),
-	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
+	#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] #toolbar-menubar ~ #TabsToolbar,
+	#main-window[tabsintitlebar][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar,
+	#main-window[tabsintitlebar][sizemode="normal"][tabsontop="false"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
 	  margin-top: 0px !important;
 	}
 	
@@ -52,6 +61,16 @@
 	
 	#tabbrowser-tabs .tab-drop-indicator {
 	  margin-bottom:0px !important;
+	}
+	
+	/* Windows 10 tweaks */
+	@media (-moz-os-version: windows-win10) {
+	  #main-window[defaultfxtheme="true"][fx32plus="true"][tabsontop="false"] #TabsToolbar:not(:-moz-lwtheme) {
+		margin-bottom: -1px !important;
+	  }
+	  #main-window[defaultfxtheme="true"][fx32plus="true"][tabsontop="false"] #TabsToolbar:-moz-lwtheme {
+		margin-bottom: -2px !important;
+	  }
 	}
 
 	/* Personas support */

@@ -3,11 +3,13 @@ skin    classic_theme_restorer	classic/1.0		skin/
 
 #locales
 locale	classic_theme_restorer	cs				locale/cs/
+locale	classic_theme_restorer	da				locale/da/
 locale	classic_theme_restorer	de				locale/de/
 locale	classic_theme_restorer	dsb				locale/dsb/
 locale	classic_theme_restorer	el				locale/el/
 locale	classic_theme_restorer	en-US			locale/en-US/
 locale	classic_theme_restorer	es				locale/es/
+locale	classic_theme_restorer	et				locale/et/
 locale	classic_theme_restorer	fr				locale/fr/
 locale	classic_theme_restorer	hsb				locale/hsb/
 locale	classic_theme_restorer	it				locale/it/
@@ -15,6 +17,8 @@ locale	classic_theme_restorer	ja				locale/ja/
 locale	classic_theme_restorer	pl				locale/pl/
 locale	classic_theme_restorer	pt-BR			locale/pt-BR/
 locale	classic_theme_restorer	ru				locale/ru/
+locale	classic_theme_restorer	sl				locale/sl/
+locale	classic_theme_restorer	tr				locale/tr/
 locale	classic_theme_restorer	uk				locale/uk/
 locale	classic_theme_restorer	zh-CN			locale/zh-CN/
 locale	classic_theme_restorer	zh-TW			locale/zh-TW/
@@ -32,4 +36,5 @@ skin	ctraddon_os_special	classic_theme_restorer	content/css/linux/		os=NetBSD
 skin	ctraddon_os_special	classic_theme_restorer	content/css/linux/		os=SunOS
 
 overlay chrome://browser/content/browser.xul			chrome://classic_theme_restorer/content/overlay.xul
-style   chrome://global/content/customizeToolbar.xul	chrome://classic_theme_restorer/content/overlay.css
+overlay about:newtab									chrome://classic_theme_restorer/content/aboutnewtab.xul
+overlay about:preferences								chrome://classic_theme_restorer/content/aboutprefs.xul

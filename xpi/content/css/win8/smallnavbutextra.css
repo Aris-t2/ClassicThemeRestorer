@@ -1,4 +1,3 @@
-@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	#nav-bar #notification-popup-box + *{
@@ -9,6 +8,12 @@
 	#nav-bar #notification-popup-box[hidden] + * {
 	  -moz-padding-start: 2px !important;
 	  transition: none !important;
+	}
+
+	#main-window[fx42plus="true"][defaultfxtheme="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + *,
+	#main-window[fx42plus="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + * {
+	  -moz-padding-start: 4px !important;
+	  -moz-padding-end: 3px !important;
 	}
 
 	#nav-bar #notification-popup-box:not([hidden]) {
@@ -32,19 +37,39 @@
 	#main-window[ctraddon_appbutton_on_navbar="true"] #appmenu-popup {
 	  margin-top:0px !important;
 	}
-
-	#navigator-toolbox #nav-bar #back-button > .toolbarbutton-icon{
-	  padding: 2px 0px !important;
-      margin: 0px 0px !important;
-	}
 	
-	#navigator-toolbox #nav-bar #forward-button > .toolbarbutton-icon{
-	  padding: 2px 0px !important;
-      margin: 0px !important;
+	#main-window:not([fx40plus="true"]) #navigator-toolbox #nav-bar #back-button > .toolbarbutton-icon{
+	  padding: 3px 0px !important;
+	  margin: 0px 0px !important;
+	  margin: 0px 0px !important;
 	}
-	#navigator-toolbox #nav-bar #back-button,
-	#navigator-toolbox #nav-bar #forward-button{
-      margin: -1px 0 !important;
+		
+	#main-window:not([fx40plus="true"]) #navigator-toolbox #nav-bar #forward-button > .toolbarbutton-icon{
+	  padding: 2px 0px !important;
+	  margin: 0px !important;
+	}
+	  
+	#main-window:not([fx40plus="true"]) #navigator-toolbox #nav-bar #back-button,
+	#main-window:not([fx40plus="true"]) #navigator-toolbox #nav-bar #forward-button{
+	  margin: -1px 0 !important;
+	}
+
+	@media (max-resolution: 1.0dppx) {
+		#main-window[fx40plus="true"] #navigator-toolbox #nav-bar #back-button > .toolbarbutton-icon{
+		  padding: 3px 0px !important;
+		  margin: 0px 0px !important;
+		  margin: 0px 0px !important;
+		}
+		
+		#main-window[fx40plus="true"] #navigator-toolbox #nav-bar #forward-button > .toolbarbutton-icon{
+		  padding: 2px 0px !important;
+		  margin: 0px !important;
+		}
+	  
+		#main-window[fx40plus="true"] #navigator-toolbox #nav-bar #back-button,
+		#main-window[fx40plus="true"] #navigator-toolbox #nav-bar #forward-button{
+		  margin: -1px 0 !important;
+		}
 	}
 
 	/* Fx31+*/
@@ -55,11 +80,37 @@
       margin-left: 6px !important;
 	}
 	/**/
+	
+	@media (-moz-os-version: windows-win10) {
+	  @media (max-resolution: 1.0dppx) {
+		#main-window[fx44plus="true"] #navigator-toolbox #nav-bar #back-button > .toolbarbutton-icon{
+		  padding: 2px 0px !important;
+		  margin: 0px 0px !important;
+		  margin: 0px 0px !important;
+		}
+		
+		#main-window[fx44plus="true"] #navigator-toolbox #nav-bar #forward-button > .toolbarbutton-icon{
+		  padding: 2px 0px !important;
+		  margin: 0px !important;
+		}
+		
+		#main-window[fx44plus="true"] #navigator-toolbox #nav-bar:-moz-locale-dir(ltr) #forward-button{
+		  margin-left: 9px !important;
+		}
+
+		#main-window[fx44plus="true"] #navigator-toolbox #nav-bar:-moz-locale-dir(rtl) #forward-button{
+		  margin-left: 9px !important;
+		}
+	  }
+	}
 
 	#nav-bar .toolbarbutton-1 {
 	  -moz-appearance: toolbarbutton !important;
 	  background: unset !important;
 	  box-shadow: unset !important;
+	}
+	#nav-bar #urlbar-icons .toolbarbutton-1 {
+	  -moz-appearance: none !important;
 	}
 	
 	#navigator-toolbox #nav-bar:not([tabsontop="false"]) .toolbarbutton-1 > .toolbarbutton-menubutton-button,
@@ -84,6 +135,7 @@
 	#main-window[inFullscreen][tabsontop="false"] #nav-bar {
 	  margin-top: -1px !important;
 	}
+	
 
 	@media not all and (-moz-windows-theme:aero) {
 
@@ -123,6 +175,12 @@
 	#nav-bar #urlbar-container #back-button:not([cui-areatype="menu-panel"]) {
 	  -moz-image-region: rect(0, 54px, 18px, 36px) !important;
 	}
+	
+	@media (min-resolution: 1.1dppx) {
+		#main-window[fx40plus="true"] #nav-bar #urlbar-container #back-button:not([cui-areatype="menu-panel"]) {
+		  -moz-image-region: rect(0, 108px, 36px, 72px) !important;
+		}
+	}
 
 	#nav-bar #urlbar-container #forward-button[disabled]{
 	  visibility: visible !important;
@@ -131,7 +189,7 @@
 
     #navigator-toolbox #nav-bar #back-button[disabled] > .toolbarbutton-icon,
 	#navigator-toolbox #nav-bar .toolbarbutton-menubutton-dropmarker > image,
-	#navigator-toolbox #nav-bar .toolbarbutton-menubutton-button .toolbarbutton-icon,
+	#navigator-toolbox #nav-bar .toolbarbutton-menubutton-button:not([label="Tile Tabs"]) .toolbarbutton-icon,
 	#navigator-toolbox #nav-bar toolbarbutton[type="menu-button"] > .toolbarbutton-icon,
 	#navigator-toolbox #nav-bar .toolbarbutton-1:-moz-any(:hover ,[checked],[open],[type="menu-button"]) > .toolbarbutton-icon,
 	#navigator-toolbox #nav-bar .toolbarbutton-1[type="menu-button"] > .toolbarbutton-menubutton-dropmarker::before{
@@ -145,8 +203,8 @@
       transition-duration: 0ms !important;
 	}   
 
-	#nav-bar .toolbarbutton-menubutton-button > .toolbarbutton-icon,
-	#nav-bar .toolbarbutton-1:not([type="menu"]) > .toolbarbutton-icon{
+	#main-window:not([fx40plus="true"]) #nav-bar .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+	#main-window:not([fx40plus="true"]) #nav-bar .toolbarbutton-1:not([type="menu"]) > .toolbarbutton-icon{
 	  padding: 2px !important;
 	}
 
@@ -160,7 +218,72 @@
 	  background: none !important;
 	}
 
+	@media (max-resolution: 1.0dppx) {
+		#main-window[fx40plus="true"] #nav-bar .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+		#main-window[fx40plus="true"] #nav-bar .toolbarbutton-1:not([type="menu"]) > .toolbarbutton-icon{
+		  padding: 2px !important;
+		}
+		
+		@media (-moz-os-version: windows-win10) {
+		  #main-window[fx40plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+			padding: 2px !important;
+		  }
+		  
+		  #main-window[fx44plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+			padding: 0px 2px !important;
+		  }
+		  #main-window[fx44plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] .toolbarbutton-menubutton-button {
+			padding: 0px !important;
+			margin: 0px !important;
+		  }
+
+		}
+
+		#main-window[fx40plus="true"] #nav-bar toolbarbutton[cui-areatype="toolbar"] > :-moz-any(#zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button) > .toolbarbutton-icon,
+		#main-window[fx40plus="true"] #nav-bar :-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #switch-to-metro-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #panic-button, #web-apps-button, #webide-button, #loop-button, #pocket-button):-moz-any([cui-areatype="toolbar"],:not([cui-areatype])) > .toolbarbutton-icon,
+		#main-window[fx40plus="true"] #nav-bar :-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #switch-to-metro-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #panic-button, #web-apps-button, #webide-button, #loop-button, #pocket-button):-moz-any([cui-areatype="toolbar"],:not([cui-areatype])) > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+		#main-window[fx40plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+		  width: unset !important;;
+		}
+
+	}
+	
+	@media (min-resolution: 1.1dppx) {
+		#main-window[fx40plus="true"] #nav-bar toolbarbutton[cui-areatype="toolbar"] > :-moz-any(#zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button) > .toolbarbutton-icon,
+		#main-window[fx40plus="true"] #nav-bar :-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #switch-to-metro-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #panic-button, #web-apps-button, #webide-button, #loop-button, #pocket-button):-moz-any([cui-areatype="toolbar"],:not([cui-areatype])) > .toolbarbutton-icon,
+		#main-window[fx40plus="true"] #nav-bar :-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #switch-to-metro-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #panic-button, #web-apps-button, #webide-button, #loop-button, #pocket-button):-moz-any([cui-areatype="toolbar"],:not([cui-areatype])) > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+		#main-window[fx40plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon,
+		#main-window[fx40plus="true"][defaultfxtheme="true"] #nav-bar :-moz-any(#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_ctr-button) > .toolbarbutton-icon {
+		  width: 18px !important;
+		  height: 18px !important;
+		  padding: 0 !important;
+		}
+
+		#main-window[fx40plus="true"] #nav-bar #back-button:hover > .toolbarbutton-icon,
+		#main-window[fx40plus="true"] #nav-bar #forward-button:hover > .toolbarbutton-icon,
+		#main-window[fx40plus="true"] #nav-bar #back-button:not(:hover) > .toolbarbutton-icon,
+		#main-window[fx40plus="true"] #nav-bar #forward-button:not(:hover) > .toolbarbutton-icon,
+		#main-window[fx40plus="true"] #nav-bar #back-button:hover[disabled] > .toolbarbutton-icon,
+		#main-window[fx40plus="true"] #nav-bar #forward-button:hover[disabled] > .toolbarbutton-icon{
+		  -moz-appearance: none !important;
+		  border: 1px solid transparent !important;
+		  box-shadow: none !important;
+		  background: none !important;
+		}
+		#main-window[fx40plus="true"] #nav-bar #urlbar-container #back-button,
+		#main-window[fx40plus="true"] #nav-bar #urlbar-container #forward-button{
+		  padding-top:2px !important;
+		  padding-bottom:2px !important;
+		  margin-top:2px !important;
+		  margin-bottom:2px !important;
+		}
+	}
+
 	/* START: urlbar border tweaking (default theme does not provide left urlbar border) */
+	#main-window[fx42plus="true"][defaultfxtheme="true"] #urlbar {
+	  min-height: 24px;
+	}
+
 	#main-window[defaultfxtheme="true"] #urlbar,
 	#main-window[defaultfxtheme="true"] .searchbar-textbox {
 	  border: 1px solid ThreeDShadow !important;
@@ -186,6 +309,75 @@
 		border-color: Highlight !important;
 	  }
 	}
+	
+	/* Windows 10 tweaks */
+	@media (-moz-os-version: windows-win10) {
+
+		#main-window[fx40plus="true"]:not([fx42plus="true"])[defaultfxtheme="true"] #notification-popup-box[hidden] + * {
+		  -moz-padding-start: 0px !important;
+		}
+	
+		#main-window[fx42plus="true"][defaultfxtheme="true"] #nav-bar #notification-popup-box[hidden] + * {
+		  -moz-padding-start: 4px !important;
+		}
+
+		#urlbar-wrapper, #urlbar,
+		.searchbar-textbox{
+		  min-height: 24px !important;
+		  height: 24px !important;
+		}
+
+		#urlbar{
+		  padding-top: unset !important;
+		  padding-bottom: unset !important;
+		}
+		#searchbar .searchbar-search-button {
+		  margin-top:unset !important;
+		  margin-bottom:unset !important;
+		  padding-top: unset !important;
+		  padding-bottom: unset !important;
+		}
+		
+		#urlbar[pageproxystate="valid"] .verifiedDomain,
+		#urlbar[pageproxystate="valid"] .verifiedIdentity {
+		  background: unset !important;
+		}
+		
+		#main-window[defaultfxtheme="true"] #urlbar,
+		#main-window[defaultfxtheme="true"] .searchbar-textbox {
+		  border: 1px solid hsl(0,0%,90%) !important;
+		}
+		@media (-moz-windows-default-theme) {
+		  #main-window[defaultfxtheme="true"] #urlbar,
+		  #main-window[defaultfxtheme="true"] .searchbar-textbox {
+			border-color: hsl(0,0%,90%) !important;
+		  }
+		}
+		#main-window[defaultfxtheme="true"] #urlbar:-moz-lwtheme,
+		#main-window[defaultfxtheme="true"] .searchbar-textbox:-moz-lwtheme {
+		  border-color: rgba(0,0,0,.32) !important;
+		}
+		@media (-moz-windows-default-theme) {
+		  #main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme),
+		  #main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme) {
+			border-color: hsl(0,0%,90%) !important;
+		  }
+		  #main-window[defaultfxtheme="true"] #urlbar:hover:not(:-moz-lwtheme),
+		  #main-window[defaultfxtheme="true"] .searchbar-textbox:hover:not(:-moz-lwtheme) {
+			border-color: hsl(0,0%,80%) !important;
+		  }
+		  #main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme)[focused],
+		  #main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme)[focused] {
+			border-color: Highlight !important;
+		  }
+		}
+		
+		#navigator-toolbox #nav-bar .toolbarbutton-1[type="menu-button"] > .toolbarbutton-menubutton-dropmarker {
+		  margin-top: -3px !important;
+		  margin-bottom: -3px !important;
+		}
+
+	}
 	/* END: urlbar border tweaking (default theme does not provide left urlbar border) */
 
 	#nav-bar #ctraddon_appbutton > .toolbarbutton-icon {
@@ -195,9 +387,22 @@
 	  margin-right: 0px !important;
 	}
 
-	#nav-bar #ctraddon_puib_separator{
-	  margin-top: 2px !important;
-	  margin-bottom: 2px !important;
+	/* tweaks for text/full modes */
+	#nav-bar[mode="text"] toolbarbutton .toolbarbutton-text,
+	#nav-bar[mode="full"] toolbarbutton .toolbarbutton-text {
+	  background: none !important;
+	  box-shadow: none !important;
+	  border: unset !important;
+	}
+	
+	/* default badge buttons: loop/panelUI */
+	#nav-bar #PanelUI-menu-button .toolbarbutton-badge,
+	#nav-bar #PanelUI-menu-button .toolbarbutton-badge-container,
+	#nav-bar #loop-button .toolbarbutton-badge,
+	#nav-bar #loop-button .toolbarbutton-badge-container,
+	#nav-bar #loop-button-throttled .toolbarbutton-badge,
+	#nav-bar #loop-button-throttled .toolbarbutton-badge-container{
+	  padding:0 !important;
 	}
 
 	/*buttons with SVG images*/
@@ -207,11 +412,55 @@
 	  width: auto !important;
 	  height: auto !important;
 	}
-	
+
 	/*Jetpacks toggle & action buttons support*/
 	#nav-bar toolbarbutton[id^="action-button-"] .toolbarbutton-icon,
 	#nav-bar toolbarbutton[id^="toggle-button-"] .toolbarbutton-icon {
+	  width:16px !important;
+	}
+
+	#main-window:not([fx36plus="true"]) #nav-bar toolbarbutton[id^="action-button-"] .toolbarbutton-icon,
+	#main-window:not([fx36plus="true"]) #nav-bar toolbarbutton[id^="toggle-button-"] .toolbarbutton-icon {
 	  width:22px !important;
+	}
+
+	#nav-bar toolbarbutton .toolbarbutton-badge,
+	#nav-bar toolbarbutton .toolbarbutton-badge-container,
+	#nav-bar toolbarbutton .toolbarbutton-badge-stack {
+	  box-shadow: none !important;
+	  border: 0 !important;
+	  padding: 0 !important;
+	  margin: 0 !important;
+	}
+
+	#navigator-toolbox #nav-bar toolbarbutton .toolbarbutton-badge-stack {
+	  padding-right: 1px !important;
+      padding-left: 1px !important;
+	  margin-right: 2px !important;
+      margin-left: 2px !important;
+	}
+	
+	#navigator-toolbox #nav-bar toolbarbutton .toolbarbutton-badge-stack .toolbarbutton-badge {
+      min-width: 0px !important;
+	  width: 10px !important;
+      font-size:75% !important;
+	  margin-top: -4px !important;
+	  -moz-margin-end: -3px !important;
+	}
+
+	#nav-bar toolbarbutton .toolbarbutton-badge-container,
+	#nav-bar toolbarbutton .toolbarbutton-badge-stack {
+	  background: none !important;
+	}
+	
+	/*Feedly Notifier support*/
+	#nav-bar toolbaritem[id="widget:jid1-BOjn8b0IM7kH2w@jetpack-main-widget"] {
+      min-width:0px !important;
+      width:22px !important;
+      min-height:0px !important;
+      height:16px !important;
+	  padding: 0 !important;
+	  margin: 1px !important;
 	}
 
 	/* The Fox, only better add-on support*/
@@ -228,6 +477,11 @@
 	#nav-bar #ghostery-button .toolbarbutton-icon {
 	  margin-top:2px !important;
 	}
+	#nav-bar #ghostery-button-badge{
+	  margin-bottom:-3px !important;
+	  -moz-margin-end: 0px !important;
+	  padding: 0px !important;
+	}
 
 	/* zoom page add-on */
     #navigator-toolbox #nav-bar #zoompage-zoomdisplay-s,
@@ -238,6 +492,7 @@
     #navigator-toolbox #nav-bar #zoompage-zoomin-t {
       -moz-appearance: none !important;
     }
+
 	#nav-bar #zoompage-zoomout-s image,
 	#nav-bar #zoompage-zoomin-s image,
 	#nav-bar #zoompage-zoomout-t image,
@@ -253,6 +508,7 @@
       margin-left:-4px !important;
       margin-right:-4px !important;
     }
+
 	#nav-bar #zoompage-zoomin-c image,
 	#nav-bar #zoompage-zoomdisplay-c image,
 	#nav-bar #zoompage-zoomout-c image,
@@ -262,4 +518,26 @@
 	  padding:0px !important;
 	}
 
+	/* special buttons inside urlbars boxes */
+	#urlbar #notification-popup-box + box toolbarbutton,
+	#urlbar #notification-popup-box + box toolbarbutton .toolbarbutton-icon,
+	#urlbar-icons toolbarbutton[type="menu"],
+	#urlbar-icons toolbarbutton[type="menu"] .toolbarbutton-icon {
+	  -moz-appearance: none !important;
+	  padding-top: unset !important;
+	  padding-bottom: unset !important;
+	  margin-top: unset !important;
+	  margin-bottom: unset !important;
+	  border: unset !important;
+	  box-shadow: unset !important;
+	  background: unset !important;
+	}
+
+	/*Tile tabs tweaks*/
+	#navigator-toolbox #nav-bar #tiletabs-buttonmenu .toolbarbutton-menubutton-button image {
+      margin-right: unset !important;
+      padding-right: unset !important;
+	  padding: 0 !important;
+	  -moz-margin-start: 1px !important;
+	}
 }

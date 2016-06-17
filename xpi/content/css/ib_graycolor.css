@@ -1,0 +1,29 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	#urlbar-wrapper #urlbar[pageproxystate="invalid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked),
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked), 
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .chromeUI {
+      background: linear-gradient(#fcfcfc,#d4d4d4) !important;
+      -moz-border-end: 1px solid lightgrey;
+      border-image-source: none !important;
+	}
+
+	#urlbar-wrapper #urlbar[pageproxystate="invalid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked):hover,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked):hover,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .chromeUI:hover {
+	  background: linear-gradient(#f2f2f2,#c0c0c0) !important;
+	}
+
+	#urlbar-wrapper #urlbar[pageproxystate="invalid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked)[open="true"],
+	#urlbar-wrapper #urlbar[pageproxystate="invalid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked):hover:active,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked)[open="true"],
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked):hover:active,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .chromeUI[open="true"],
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .chromeUI:hover:active {
+	  background: linear-gradient(#f0f0f0,#c0c0c0) !important;
+	  box-shadow: 0 1px 1px hsla(0,0%,48%,1.0) inset,
+				  0 1px 3px 1px hsla(0,0%,48%,1.0) inset !important;
+	}
+
+}

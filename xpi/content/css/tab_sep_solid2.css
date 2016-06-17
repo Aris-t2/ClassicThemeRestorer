@@ -1,0 +1,27 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#main-window #navigator-toolbox #TabsToolbar #tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
+	#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([visuallyselected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
+	#main-window #navigator-toolbox #TabsToolbar #tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([visuallyselected]):not([beforehovered]):not(:hover)::after,
+	#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
+	#main-window #navigator-toolbox #TabsToolbar #tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
+      background-image: url(chrome://classic_theme_restorer/content/images/tab-separator_solid.png) !important;
+	  background-size: 1px 100% !important;
+      opacity:1.0 !important;
+	}
+	
+	#main-window[fx42plus="true"] #navigator-toolbox #TabsToolbar #tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
+	#main-window[fx42plus="true"] #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([visuallyselected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
+	#main-window[fx42plus="true"] #navigator-toolbox #TabsToolbar #tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([visuallyselected]):not([beforehovered]):not(:hover)::after,
+	#main-window[fx42plus="true"] #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
+	#main-window[fx42plus="true"] #navigator-toolbox #TabsToolbar #tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
+	  background-color: unset !important;
+	  margin-top: unset !important;
+	  margin-bottom: unset !important;
+	  padding-top: unset !important;
+	  padding-bottom: unset !important;
+	}
+  
+}

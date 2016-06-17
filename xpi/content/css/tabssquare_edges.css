@@ -1,0 +1,13 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+  
+	#TabsToolbar .tabs-newtab-button,
+	#TabsToolbar .tabbrowser-tab .tab-background-middle,
+	#TabsToolbar .tabbrowser-tab .tab-content,
+	#TabsToolbar .tabbrowser-tab {
+	  border-top-left-radius: 0px !important;
+	  border-top-right-radius: 0px !important;
+	}
+  
+}

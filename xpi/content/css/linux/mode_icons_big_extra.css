@@ -108,14 +108,10 @@
 	  transition: none !important;
 	}
 	
-	#nav-bar #loop-call-button[cui-areatype="toolbar"] > .toolbarbutton-badge-container  image {
+	#nav-bar #loop-call[cui-areatype="toolbar"] .toolbarbutton-badge-stack image,
+	#nav-bar #loop-call-button[cui-areatype="toolbar"] > .toolbarbutton-badge-container image {
 	  min-width:42px !important;
 	  height:36px !important;
 	}
-	
-	/*#nav-bar :-moz-any(#back-button, #forward-button, #ctraddon_back-button, #ctraddon_forward-button, #ctraddon_appbutton, #ctraddon_history-button, #ctraddon_history-menu-toolbar-button, #ctraddon_bookmarks-menu-toolbar-button,#ctraddon_bookmarks-button, #PanelUI-menu-button, #cut-button, #copy-button, #paste-button, #zoom-out-button, #zoom-in-button, #webrtc-status-button,#nav-bar-overflow-button) image,
-	#nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
-	  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='colorize'><feColorMatrix type='saturate' in='SourceGraphic' values = '0'/></filter></svg>#colorize") !important;
-	}*/
 
 }

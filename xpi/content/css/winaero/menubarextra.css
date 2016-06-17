@@ -11,12 +11,10 @@
 	
 	@media not all and (-moz-windows-theme:aero) {
 	  #main-window:not([tabsintitlebar])[tabsontop='false'] #toolbar-menubar:not([inactive="true"]),
-      #main-window:not([tabsintitlebar])[tabsontop='false'] #toolbar-menubar[autohide="false"] {
-		background: -moz-Dialog !important;
-	  }
+      #main-window:not([tabsintitlebar])[tabsontop='false'] #toolbar-menubar[autohide="false"],
       #main-window:not([tabsintitlebar])[tabsontop='false'] #toolbar-menubar:not([inactive="true"]) ~ * ~ #nav-bar,
 	  #main-window:not([tabsintitlebar])[tabsontop='false'] #toolbar-menubar[autohide="false"] ~ * ~ #nav-bar {
-	    background: none !important;
+	    background: -moz-Dialog !important;
 	  }
 	}
 

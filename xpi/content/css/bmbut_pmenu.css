@@ -1,0 +1,101 @@
+@import url(chrome://ctraddon_os_special/skin/bmbut_pmenu_extra.css);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#ctraddon_BMB_bookmarksPopup{
+	  -moz-appearance: none !important;
+	  -moz-binding: url("chrome://browser/content/places/menu.xml#places-popup-arrow") !important;
+	  background: transparent !important;
+	  border: none !important;
+	  -moz-image-region: auto !important;
+	  transform: scale(.4) !important;
+	  opacity: 0 !important;
+	  transition-property: transform, opacity !important;
+	  transition-duration: 0.15s !important;
+	  transition-timing-function: ease-out !important;
+	  padding: 0px !important;
+	}
+	
+	#ctraddon_BMB_bookmarksPopup .popup-internal-box {
+	  padding: 0 4px !important;
+	}
+	
+	#ctraddon_BMB_bookmarksPopup[animate="open"] {
+	  transform: none !important;
+	  opacity: 1.0 !important;
+	}
+
+	#ctraddon_BMB_bookmarksPopup[animate="cancel"] {
+	  transform: none !important;
+	}
+
+	#ctraddon_BMB_bookmarksPopup[arrowposition="after_start"]:-moz-locale-dir(ltr),
+	#ctraddon_BMB_bookmarksPopup[arrowposition="after_end"]:-moz-locale-dir(rtl) {
+	  transform-origin: 20px top !important;
+	}
+
+	#ctraddon_BMB_bookmarksPopup[arrowposition="after_end"]:-moz-locale-dir(ltr),
+	#ctraddon_BMB_bookmarksPopup[arrowposition="after_start"]:-moz-locale-dir(rtl) {
+	  transform-origin: calc(100% - 20px) top !important;
+	}
+
+	#ctraddon_BMB_bookmarksPopup[arrowposition="before_start"]:-moz-locale-dir(ltr),
+	#ctraddon_BMB_bookmarksPopup[arrowposition="before_end"]:-moz-locale-dir(rtl) {
+	  transform-origin: 20px bottom !important;
+	}
+
+	#ctraddon_BMB_bookmarksPopup[arrowposition="before_end"]:-moz-locale-dir(ltr),
+	#ctraddon_BMB_bookmarksPopup[arrowposition="before_start"]:-moz-locale-dir(rtl) {
+	  transform-origin: calc(100% - 20px) bottom !important;
+	}
+
+	#ctraddon_BMB_bookmarksPopup[side="top"],
+	#ctraddon_BMB_bookmarksPopup[side="bottom"] {
+	  margin-left: -20px !important;
+	  margin-right: -20px !important;
+	}
+
+	#ctraddon_BMB_bookmarksPopup[side="left"],
+	#ctraddon_BMB_bookmarksPopup[side="right"] {
+	  margin-top: -20px !important;
+	  margin-bottom: -20px !important;
+	}
+	
+	#ctraddon_BMB_bookmarksPopup[arrowposition] menuseparator {
+	  margin-left: -30px !important;
+	  margin-right: -30px !important;
+
+	}
+
+	#ctraddon_BMB_bookmarksPopup[arrowposition] box {
+	  padding-left: 1px !important;
+	  padding-right: 1px !important;
+	}
+
+	#ctraddon_BMB_bookmarksToolbar + menuseparator + menuseparator + menu + menu + menu + menuseparator,
+	/*#ctraddon_BMB_bookmarksToolbar + menuseparator,*/
+	#BMB_bookmarksShowAll + menuseparator {
+	  display:none !important;
+	}
+
+	#ctraddon_BMB_bookmarksPopup menupopup[placespopup=true] {
+	  -moz-appearance: none !important;
+	  border: none !important;
+	  padding: 0px !important;
+	  border-radius: 3.5px !important;
+	}
+	
+	#ctraddon_BMB_bookmarksPopup menupopup[placespopup=true] > hbox {
+	  box-shadow: 0 0 4px rgba(0,0,0,0.2) !important;
+	  border-radius: 3.5px !important;
+	  padding: 4px 2px !important;
+	}
+	
+	#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_subscribeToPageSubmenuMenupopup {
+	  -moz-appearance: none !important;
+	  padding: 4px 2px !important;
+	  border-radius: 3.5px !important;
+	}
+
+}

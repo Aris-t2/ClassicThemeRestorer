@@ -6,8 +6,84 @@
 	  padding:0 !important;
 	}
 	
-	/*Nuvola support */
+	/* Nuvola support */
 	#main-window[currenttheme="Nuvola"] #ctraddon_ctr-button .toolbarbutton-icon{
 	  padding: 2px !important;
 	}
+	
+	/* LavaFox & BlackFox support */
+	#main-window[currenttheme^="LavaFox"] toolbar #urlbar-container #urlbar #urlbar-icons #feed-button,
+	#main-window[currenttheme^="BlackFox"] toolbar #urlbar-container #urlbar #urlbar-icons #feed-button {
+	  margin-top:-2px !important;
+	  margin-bottom:-2px !important;
+	}
+	#main-window[currenttheme^="LavaFox"] #ctraddon_navigator-throbber {
+	  background:url("chrome://global/skin/throbber/Throbber.png") center no-repeat !important;
+	}
+	#main-window[currenttheme^="LavaFox"] #ctraddon_navigator-throbber[busy="true"],
+	#main-window[currenttheme^="BlackFox"] #ctraddon_navigator-throbber[busy="true"] {
+	  background:url("chrome://global/skin/throbber/throbber-spin.png") center no-repeat !important;
+	}
+	
+	/* Support for Alfred Kaysers Themes 'Walnut, Walnut2, Littlefox, Nautipolis, Metal, Microfox & Bricks' */
+	#main-window[currenttheme="walnut"] toolbar #ctraddon_back-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="walnut"] toolbar #ctraddon_forward-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="walnut2"] toolbar #ctraddon_back-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="walnut2"] toolbar #ctraddon_forward-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="littlefox"] toolbar #ctraddon_back-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="littlefox"] toolbar #ctraddon_forward-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="nautipolis"] toolbar #ctraddon_back-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="nautipolis"] toolbar #ctraddon_forward-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="metal"] toolbar #ctraddon_back-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="metal"] toolbar #ctraddon_forward-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="microfox"] toolbar #ctraddon_back-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="microfox"] toolbar #ctraddon_forward-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="bricks"] toolbar #ctraddon_back-button .toolbarbutton-multiline-text,
+	#main-window[currenttheme="bricks"] toolbar #ctraddon_forward-button .toolbarbutton-multiline-text {
+	  display: none !important;
+	}
+	
+	#main-window[currenttheme="walnut"] #ctraddon_appbutton2 > label,
+	#main-window[currenttheme="walnut2"] #ctraddon_appbutton2 > label,
+	#main-window[currenttheme="littlefox"] #ctraddon_appbutton2 > label,
+	#main-window[currenttheme="nautipolis"] #ctraddon_appbutton2 > label,
+	#main-window[currenttheme="metal"] #ctraddon_appbutton2 > label,
+	#main-window[currenttheme="microfox"] #ctraddon_appbutton2 > label,
+	#main-window[currenttheme="bricks"] #ctraddon_appbutton2 > label{
+	  margin: unset !important;
+	  -moz-margin-end: -26px !important;
+	}
+	
+	/* Qute 4 & 5 complete themes */
+	@media (-moz-os-version: windows-win10) {
+	  #main-window[currenttheme^="Qute"][fx40plus="true"][sizemode="normal"] #ctraddon_appbutton2{
+		margin-bottom: 0px !important;
+	  }
+	  #main-window[currenttheme^="Qute"][fx40plus="true"][sizemode="maximized"] #ctraddon_appbutton2{
+		margin-bottom: 2px !important;
+      }
+	  #main-window[currenttheme^="Qute"][sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox toolbarbutton{
+		padding-top: 0px !important;
+	  }
+	  @media not all and (-moz-windows-theme:aero) {
+		#main-window[currenttheme^="Qute"][sizemode="normal"]:not([inFullscreen]) #titlebar #titlebar-buttonbox toolbarbutton{
+		  padding-top: 0px !important;
+		  padding-bottom: 0px !important;
+		}
+		#main-window[currenttheme^="Qute"][sizemode="normal"]:not([inFullscreen]) #titlebar #titlebar-buttonbox toolbarbutton image{
+		  margin-top: -2px !important;
+		}
+		#main-window[currenttheme^="Qute"][tabsintitlebar][chromehidden~="menubar"][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] * #toolbar-menubar ~ #TabsToolbar,
+		#main-window[currenttheme^="Qute"][tabsintitlebar][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] * #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar,
+		#main-window[currenttheme^="Qute"][tabsintitlebar][sizemode="normal"]:not([inFullscreen]) * #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar {
+		  padding-top: 18px !important;
+		}
+	  }
+	}
+
+	/* RedCats themes */
+	#main-window[currenttheme^="RedCats"] .searchbar-engine-button .searchbar-engine-image {
+	  width: 22px !important;
+	}
+
 }

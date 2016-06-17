@@ -9,27 +9,27 @@
 	#context-bookmarkpage image{
 	  display:none !important;
 	}
-	#context-back:before,
-	#context-forward:before,
-	#context-reload:before,
-	#context-stop:before,
-	#context-bookmarkpage:before{
-	  content: attr(aria-label) !important;
+
+	#context-back label,
+	#context-forward label,
+	#context-reload label,
+	#context-stop label,
+	#context-bookmarkpage label{
+	  display: inline !important;
 	}
+
 	#context-navigation{
 	  -moz-box-orient: vertical !important;
 	}
-	#context-navigation > .menuitem-iconic {
-	  -moz-box-pack: start !important;
-	}
 
-	#context-back:before,
-	#context-forward:before,
-	#context-reload:before,
-	#context-stop:before,
-	#context-bookmarkpage:before{
-	  -moz-margin-start:18px !important;
+	#context-back label,
+	#context-forward label,
+	#context-reload label,
+	#context-stop label,
+	#context-bookmarkpage label{
+      -moz-margin-start:2px !important;
 	}
+	
 	#context-navigation{
 	  margin-bottom:-5px !important;
 	}

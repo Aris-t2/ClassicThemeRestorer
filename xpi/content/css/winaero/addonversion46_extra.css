@@ -1,0 +1,12 @@
+@-moz-document url-prefix(chrome://mozapps/content/extensions/extensions.xul), url-prefix(about:addons) {
+	/*  addonversion.xml contains a copy of the 'addon-generic' binding Mozilla removed from Fx40+ builds!*/
+	
+	.addon:not([type="userstyle"]):not([pending="uninstall"])[status="installed"]	{
+	  -moz-binding: url("chrome://classic_theme_restorer/content/addonversion_fx46.xml#addon-generic") !important;
+	}
+	
+	.addon:not([type="userstyle"]):not([pending="uninstall"])[status="installed"] .name-container .version {
+	  visibility: visible !important;
+	}
+
+}

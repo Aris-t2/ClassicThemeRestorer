@@ -1,0 +1,15 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+*:not(#TabsToolbar):not(.tab-content) > .close-icon{
+  list-style-image: url("chrome://classic_theme_restorer/content/images/close_w10i.png") !important;
+  -moz-image-region: rect(0, 20px, 20px, 0) !important;
+}
+*:not(#TabsToolbar):not(.tab-content) > .close-icon:hover{
+  -moz-image-region: rect(0, 40px, 20px, 20px) !important;
+}
+*:not(#TabsToolbar):not(.tab-content) > .close-icon:hover:active {
+  -moz-image-region: rect(0, 60px, 20px, 40px) !important;
+}
+*:not(#TabsToolbar):not(.tab-content) > .close-icon > .toolbarbutton-icon {
+  width: 16px !important;
+}

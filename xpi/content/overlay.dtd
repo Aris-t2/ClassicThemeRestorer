@@ -45,14 +45,18 @@
 <!ENTITY goOfflineCmd.label				"Work Offline">
 <!ENTITY goOfflineCmd.accesskey			"k">
 <!ENTITY fullScreenCmd.label			"Full Screen">
-<!ENTITY syncSetup.label				"Set Up Sync...">
-<!ENTITY quitApplicationCmdWin.label	"Exit">
-<!ENTITY quitApplicationCmdWin.accesskey	"x">
+<!ENTITY syncSetup.label				"Sync">
+<!ENTITY quitApplicationCmdWin.label	"">
+<!ENTITY quitApplicationCmdWin2.label	"">
+<!ENTITY quitApplicationCmdWin.accesskey	"">
+<!ENTITY quitApplicationCmdWin2.accesskey	"">
 <!ENTITY quitApplicationCmd.label		"Quit">
 <!ENTITY quitApplicationCmd.accesskey	"Q">
 <!ENTITY quitApplicationCmdMac.label	"Quit Firefox">
 <!ENTITY quitApplicationCmd.accesskey	"Q">
 <!ENTITY bookmarksMenu.label			"Bookmarks">
+<!ENTITY appMenuHistory.viewSidebar.label "View History Sidebar">
+<!ENTITY viewBookmarksSidebar2.label	"View Bookmarks Sidebar">
 <!ENTITY showAllBookmarks2.label		"Show All Bookmarks">
 <!ENTITY bookmarkThisPageCmd.label		"Bookmarks This Page">
 <!ENTITY subscribeToPageMenuitem.label	"Subscribe to This Page...">
@@ -60,6 +64,8 @@
 <!ENTITY addCurPagesCmd.label			"Bookmark All Tabs…">
 <!ENTITY personalbarCmd.label			"Bookmarks Toolbar">
 <!ENTITY unsortedBookmarksCmd.label		"Unsorted Bookmarks">
+<!ENTITY readingList.label				"Reading List">
+<!ENTITY readingList.showSidebar.label	"Show Reading List Sidebar">
 <!ENTITY historyMenu.label				"History">
 <!ENTITY showAllHistoryCmd2.label		"Show All History">
 <!ENTITY clearRecentHistory.label		"Clear Recent History…">
@@ -76,23 +82,27 @@
 <!ENTITY viewCustomizeToolbar.label		"Customize…">
 <!ENTITY viewCustomizeToolbar.accesskey	"C">
 <!ENTITY helpMenuWin.label				"Help">
-<!ENTITY productHelp.label				"Firefox Help">
-<!ENTITY appMenuGettingStarted.label	"Getting started">
-<!ENTITY productHelp.accesskey			"H">
+<!ENTITY productHelp.label				"">
+<!ENTITY productHelp.accesskey			"">
+<!ENTITY productHelp2.label       		"">
+<!ENTITY productHelp2.accesskey   		"">
 <!ENTITY helpKeyboardShortcuts.label	"Keyboard Shortcuts">
-<!ENTITY helpKeyboardShortcuts.accesskey	"K">
-<!ENTITY healthReport.label				"Firefox Health Report">
-<!ENTITY healthReport.accesskey			"e">
+<!ENTITY helpKeyboardShortcuts.accesskey "K">
+<!ENTITY healthReport.label				"">
+<!ENTITY healthReport.accesskey			"">
+<!ENTITY healthReport2.label      		"">
+<!ENTITY healthReport2.accesskey  		"">
 <!ENTITY helpTroubleshootingInfo.accesskey	"T">
 <!ENTITY helpTroubleshootingInfo.label	"Troubleshooting Information">
 <!ENTITY helpFeedbackPage.accesskey		"S">
 <!ENTITY helpFeedbackPage.label			"Submit Feedback…">
 <!ENTITY helpSafeMode.accesskey			"R">
 <!ENTITY helpSafeMode.label				"Restart with Add-ons Disabled…">
-<!ENTITY aboutProduct.accesskey			"A">
-<!ENTITY aboutProduct.label				"About Firefox">
+<!ENTITY aboutProduct.accesskey			"">
+<!ENTITY aboutProduct.label				"">
+<!ENTITY aboutProduct2.label      		"">
+<!ENTITY aboutProduct2.accesskey  		"">
 <!ENTITY bookmarksMenuButton.label		"Bookmarks">
-<!ENTITY bookmarksButton.tooltip		"Display your bookmarks">
 <!ENTITY viewBookmarksToolbar.label		"View Bookmarks Toolbar">
 <!ENTITY showAllBookmarks2.label		"Show All Bookmarks">
 <!ENTITY bookmarkThisPageCmd.label		"Bookmark This Page">
@@ -111,6 +121,10 @@
 <!ENTITY fullScreenRestore.tooltip		"Restore">
 <!ENTITY fullScreenClose.tooltip		"Close">
 <!ENTITY closeTab.label					"Close Tab">
-<!ENTITY helpShowTour.label				"Firefox Tour">
-<!ENTITY helpShowTour.accesskey			"o">
+<!ENTITY helpShowTour.label				"">
+<!ENTITY helpShowTour.accesskey			"">
+<!ENTITY helpShowTour2.label            "">
+<!ENTITY helpShowTour2.accesskey        "">
 <!ENTITY eyedropper.accesskey			"y">
+<!ENTITY navbarCmd.label				"Navigation Toolbar">
+<!ENTITY goEndCap.tooltip 		        "">

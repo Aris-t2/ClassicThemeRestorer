@@ -1,0 +1,95 @@
+@-moz-document	url(about:preferences),
+				url-prefix(about:preferences),
+				url-prefix(chrome://browser/content/preferences/),
+				url-prefix(chrome://mozapps/content/preferences/),
+				url-prefix(chrome://passwordmgr/content/passwordManager.xul),
+				url-prefix(chrome://passwordmgr/content/passwordManagerExceptions.xul),
+				url-prefix(chrome://mozapps/content/preferences/changemp.xul) {
+
+	textbox {
+	  -moz-appearance: textfield !important;
+	}
+	treecol {
+	  -moz-appearance: treeheadercell !important;
+	  color: black !important;
+	}
+
+	@media all and (-moz-windows-classic) {
+		
+	  treecol {
+		-moz-appearance: button !important;
+		color: black !important;
+	  }
+	  treecolpicker {
+		-moz-appearance: treeheadercell !important;
+	  }
+
+	  window, prefwindow, .content-box, #dialogBox {
+		background-color: -moz-Dialog !important;
+		-moz-appearance: window !important;
+	  }
+	  
+	  #changemp {
+		background: none !important;
+	  }
+
+	  #dialogOverlay #dialogBox .groupbox-title {
+		-moz-appearance: -moz-window-titlebar !important;
+		color: white !important;
+		margin-left: 2px !important;
+		margin-right: 2px !important;
+		font-size: 80% !important;
+	  }
+
+	  #dialogOverlay #dialogBox #dialogClose:not([class="windowDialog"]) {
+		-moz-appearance: -moz-window-button-close !important;
+		-moz-margin-end: 0px !important;
+	  }
+
+	  #dialogOverlay #dialogBox #dialogClose .button-icon:not([class="windowDialog"]) {
+		list-style-image: none !important;
+	  }
+
+	  #dialogOverlay #dialogBox #dialogTitle {
+		text-align: start !important;
+		-moz-margin-start: 8px !important;
+		margin-top: 2px !important;
+		margin-bottom: 0px !important;
+	  }
+	  
+	  listitem:hover,
+	  treechildren::-moz-tree-row(hover) {
+		background: Highlight !important;
+		color: white !important;
+	  }
+	  treechildren::-moz-tree-cell-text(hover) {
+		color: HighlightText !important;
+	  }
+	  listitem[selected],
+	  treechildren::-moz-tree-row(selected) {
+		background: Highlight !important;
+	  }
+
+	}
+}
+
+*[subdialog="true"] textbox {
+  -moz-appearance: textfield !important;
+}
+*[subdialog="true"] treecol {
+  -moz-appearance: treeheadercell !important;
+  color: black !important;
+}
+*[subdialog="true"] #signonsTree treecolpicker{
+  -moz-appearance: treeheadercell !important;
+}
+@media all and (-moz-windows-classic) {
+  *[subdialog="true"] treecol {
+	-moz-appearance: button !important;
+	color: black !important;
+  }
+  *[subdialog="true"] #signonsTree treecolpicker{
+  	-moz-appearance: button !important;
+	padding: unset !important;
+  }
+}

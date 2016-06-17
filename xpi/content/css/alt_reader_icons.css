@@ -1,0 +1,22 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	
+	#reader-mode-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/reader.png") !important;
+	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
+	}
+
+	#reader-mode-button[readeractive] {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/reader.png") !important;
+	  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
+	}
+
+	#reader-mode-button:hover,
+	#reader-mode-button[readeractive]:hover,
+	#reader-mode-button:hover:active,
+	#reader-mode-button[readeractive]:hover:active {
+	  filter: brightness(1.15) !important;
+	}
+
+}

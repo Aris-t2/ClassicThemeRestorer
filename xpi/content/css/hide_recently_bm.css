@@ -1,0 +1,21 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	#menu_bookmarkAllTabs + menuseparator,
+	#BMB_bookmarksShowAllTop + menuseparator,
+	#menu_recentBookmarks,
+	#menu_recentBookmarks + menuitem,
+	#menu_recentBookmarks + menuitem + menuitem,
+	#menu_recentBookmarks + menuitem + menuitem + menuitem,
+	#menu_recentBookmarks + menuitem + menuitem + menuitem + menuitem,
+	#menu_recentBookmarks + menuitem + menuitem + menuitem + menuitem + menuitem,
+	#BMB_recentBookmarks,
+	#BMB_recentBookmarks + menuitem,
+	#BMB_recentBookmarks + menuitem + menuitem,
+	#BMB_recentBookmarks + menuitem + menuitem + menuitem,
+	#BMB_recentBookmarks + menuitem + menuitem + menuitem + menuitem,
+	#BMB_recentBookmarks + menuitem + menuitem + menuitem + menuitem + menuitem{
+		visibility: collapse !important;
+		display:none !important;
+	}
+}

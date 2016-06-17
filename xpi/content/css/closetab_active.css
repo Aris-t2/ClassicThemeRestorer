@@ -7,6 +7,11 @@
 	#ctraddon_pw_alw_tabclose{
 	  visibility: collapse !important;
 	}
+	/* prevent TMp form hiding it, if CTRs option is active*/
+	#tabbrowser-tabs .tabbrowser-tab[selected="true"]:not([pinned]):not([protected]) .tab-close-button {
+	  visibility: visible !important;
+	  display: block !important;
+	}
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {

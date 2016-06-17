@@ -1,0 +1,13 @@
+@-moz-document url-prefix(chrome://mozapps/content/extensions/extensions.xul), url-prefix(about:addons) {
+
+	#detail-contributions{
+	  -moz-box-ordinal-group: 9 !important;
+	}
+	#detail-controls{
+	  -moz-box-ordinal-group: 10 !important;
+	}
+	#detail-desc-container {
+	  -moz-box-ordinal-group: 11 !important;
+	}
+
+}

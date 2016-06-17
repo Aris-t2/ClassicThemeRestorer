@@ -1,3 +1,8 @@
+<!ENTITY % overlayDTD
+    SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
+  %overlayDTD;
+<!-- Do not edit above this line and do not edit the variable '&brandShortName;' inside translated strings -->
+
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Lajsta přidatkow">
@@ -5,11 +10,11 @@
 <!ENTITY Ctr_flexspace		"Flexibelna mjezera">
 <!ENTITY Ctr_space			"Mjezera">
 <!ENTITY Ctr_separator		"Dźělatko">
-<!ENTITY Ctr_puibseparator	"Dźělatko tłóčatkow woknoweho menija">
-<!ENTITY Ctr_navthrobber	"Activity Indicator">
+<!ENTITY Ctr_navthrobber	"Wozjewjenje aktiwity">
 <!ENTITY Ctr_sidebarbutton	"Bočnica">
-<!ENTITY Ctr_windowcontrols	"Min/max/close (Fullscreen)">
-<!ENTITY Ctr_rr				"Startujće Firefox znowa!">
+<!ENTITY Ctr_windowcontrols	"Min./maks./začinić (połna wobrazowka)">
+<!ENTITY Ctr_rr				"Startujće &brandShortName; znowa!">
+<!ENTITY Ctr_window			"wokno">
 
 <!ENTITY Ctr_cuibuttons		"Tłóčatka">
 <!ENTITY Ctr_cuibutnormal	"Normalny">
@@ -18,33 +23,42 @@
 <!ENTITY Ctr_cuiico			"Symbole">
 <!ENTITY Ctr_cuiicotxt		"Symbole + Tekst">
 <!ENTITY Ctr_cuitxt			"Tekst">
+<!ENTITY Ctr_cuitabsnontop	"Rajtarki nic horjeka">
 
 <!ENTITY Ctr_tnot			"(Rajtarki nic horjeka)">
 
 <!ENTITY Ctr_tabcolors_t	"Rajtarkowe barby a tekst">
 
 <!ENTITY Ctr_tabs			"Rajtarki">
-<!ENTITY Ctr_tabs0			"Skulojćene rajtarki (standard za Australis)">
+<!ENTITY Ctr_tabs0			"Standard za Australis (Skulojćene rajtarki)">
 <!ENTITY Ctr_tabs1			"Róžkate rajtarki (klasiski)">
 <!ENTITY Ctr_tabs1m			"Róžkate rajtarki (na Australis přiměrjeny)">
 <!ENTITY Ctr_tabs2			"Skulojćene rajtarki (alternatiwny)">
 <!ENTITY Ctr_tabs3			"Skulojćene rajtarki (alternatiwa Aero)">
 <!ENTITY Ctr_tabforminfo	"Napohlad rajtarkow wot aktualneje drasty wotwisuje.">
-<!ENTITY Ctr_tabsontop0		"Rajtarki horjeka (standard) - [njenastajeny]">
-<!ENTITY Ctr_tabsontop1		"Rajtarki horjeka - stajće [tabsontop=true]">
-<!ENTITY Ctr_tabsontop2		"Rajtarki nic horjeka - stajće [tabsontop=false]">
-<!ENTITY Ctr_tabsontop3		"Rajtarki nic horjeka (v2) - stajće [tabsontop=false]">
+<!ENTITY Ctr_coltabsinfo	"Napohlad rajtarka njeje połnje kompatibelny z rozšěrjenjom 'ColorfulTabs'!">
+<!ENTITY Ctr_tabsontop0		"Rajtarki horjeka (standard)">
+<!ENTITY Ctr_tabsontop1		"Rajtarki horjeka --- stajće [tabsontop=true]">
+<!ENTITY Ctr_tabsontop2		"Rajtarki nic horjeka (v1) --- stajće [tabsontop=false]">
+<!ENTITY Ctr_tabsontop3		"Rajtarki nic horjeka (v2) --- stajće [tabsontop=false]">
+<!ENTITY Ctr_tabsontopW1	"v2 je jenož za někotre přidatki a dospołne drasty!">
 <!ENTITY Ctr_tabsontopI1	"Přidawa atribut [tabsontop=true/false] na">
-<!ENTITY Ctr_tabsintitlebar	"Titulna lajsta Firefox (about:config)">
+<!ENTITY Ctr_tabsintitlebar	"Titulnu lajstu &brandShortName; město titulneje lajsty dźěłoweho systema wužiwać">
 <!ENTITY Ctr_tabwidthdef	"(standard)">
 <!ENTITY Ctr_tabwidthcla	"(klasiski)">
-<!ENTITY Ctr_tabminheight	"Height:">
+<!ENTITY Ctr_tabminheight	"Wysokosć:">
+<!ENTITY Ctr_tabheightinfo	"Niske hódnoty zwobraznjenske zmylki w maksiměrowanym napohledźe zawinuja!">
 <!ENTITY Ctr_tabmaxwidth	"Maksimalna šěrokosć:">
 <!ENTITY Ctr_tabminwidth	"Minimalna šěrokosć:">
 <!ENTITY Ctr_tabwidthinfo	"Minimalna a maksimalna šěrokosć rajtarkow so přez TabMixPlus kontrolujetej">
 <!ENTITY Ctr_tabwidthinfo2	"Minimalna a maksimalna šěrokosć rajtarkow so přez TabUtilities kontrolujetej">
-<!ENTITY Ctr_tabwidthinfo3	"Values below 48px will cause glitches in most cases!">
-<!ENTITY Ctr_emptyfavicon	"Prózdny faworitowy symbol wobnowić (jeli sydło žadyn njeposkića)">
+<!ENTITY Ctr_tabwidthinfo3	"Hódnoty pod 48px w najwjace padach zwobraznjenske zmylki zawinuja!">
+<!ENTITY Ctr_square_edges	"Kwadratiske hornje róžki">
+<!ENTITY Ctr_tttitlebar		"Rajtarkowy titul w titulne lajsće &brandShortName;">
+<!ENTITY Ctr_tabinsertion	"Přiwuzny rajtark za aktualnym rajtarkom zasadźić">
+<!ENTITY Ctr_emptytfavico	"Faworitowy symbol pokazać (jeli sydło žadyn njepodawa)">
+<!ENTITY Ctr_emptytfavico_n	"Žadyn">
+<!ENTITY Ctr_emptytfavico_g	"Powšitkowny">
 <!ENTITY Ctr_noemptypticon	"Prózdny faworitowy symbol z připinjeneho rajtarka wotstronić">
 <!ENTITY Ctr_closetab_0		"Rajtark začinić">
 <!ENTITY Ctr_closetab_1		"Jenož na aktiwnym rajtarku">
@@ -53,17 +67,25 @@
 <!ENTITY Ctr_closetab_4		"Na spočatku rajtarkoweje lajsty">
 <!ENTITY Ctr_closetab_5		"Na wšěch rajtarkach (wunuzowany)">
 <!ENTITY Ctr_closetab_hfot	"Za jedyn widźomny rajtark schować">
-<!ENTITY Ctr_closealt		"Alternatiwny symbol">
+<!ENTITY Ctr_closei_def		"Standardne symbole">
 <!ENTITY Ctr_closeonleft	"Alternatiwna pozicija na rajtarku">
-<!ENTITY Ctr_close_wwltab	"Wokno z poslednim widźomnym rajtarkom začinić (about:config)">
+<!ENTITY Ctr_closetabbig	"Wjetši symbol (20x20 px)">
+<!ENTITY Ctr_close_wwltab	"Wokno z poslednim widźomnym rajtarkom začinić">
 
-<!ENTITY Ctr_appbutton		"Nałoženske tłóčatko">
+<!ENTITY Ctr_hctpinfotab	"Někotre rajtarkowe warianty z rozšěrjenjom 'Hide Caption Titlebar Plus' kompatibelne njejsu.">
+<!ENTITY Ctr_hctpinfoab		"Tłóčatko na titulnej lajsće z rozšěrjenjom 'Hide Caption Titlebar Plus' kompatibelne njeje.">
+<!ENTITY Ctr_tobainfotab	"Přidatk 'Tabs on Bottom' njeje kompatibelny z '&Ctr_title;' a měł so znjemóžnić. Wužiwajće k dispoziciji stejace nastajenja '&Ctr_cuitabsnontop;' město toho!">
+
+<!ENTITY Ctr_appbutton		"Tłóčatko &brandShortName;">
 <!ENTITY Ctr_appbutton0		"Tłóčatko znjemóžnjeny">
 <!ENTITY Ctr_appbutton1		"Tłóčatko na symbolowej lajsće">
 <!ENTITY Ctr_appbutton1wt	"Tłóčatko na symbolowej lajsće (jenož tekst)">
-<!ENTITY Ctr_appbutton2		"Tłóčatko na titulnej lajsće [Firefox]">
-<!ENTITY Ctr_appbutton2io	"Tłóčatko na titulnej lajsće [Firefox] (jenož symbol)">
-<!ENTITY Ctr_paneluibtweak	"Oranžowe menijowe tłóčatko na rajtarkowej lajsće">
+<!ENTITY Ctr_appbutton2		"Tłóčatko na titulnej lajsće &brandShortName;">
+<!ENTITY Ctr_appbutton2h	"Tłóčatko na titulnej lajsće &brandShortName; (schowane)">
+<!ENTITY Ctr_appbutton2io	"Tłóčatko na titulnej lajsće &brandShortName; (jenož symbol)">
+<!ENTITY Ctr_paneluibtweak	"Menijowe tłóčatko jako tłóčatko &brandShortName; pokazać,...">
+<!ENTITY Ctr_paneluibtweak2	"Menijowe tłóčatko jako tłóčatko &brandShortName; pokazać (jenož symbol),...">
+<!ENTITY Ctr_paneluibtweak3	"...hdyž je na rajtarkowej lajsće">
 <!ENTITY Ctr_appbuttonc_o	"Tłóčatkowa barba: Oranžowy (standard)">
 <!ENTITY Ctr_appbuttonc_a	"Tłóčatkowa barba: Módry (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Tłóčatkowa barba: Čorny (Nightly)">
@@ -74,38 +96,58 @@
 <!ENTITY Ctr_appbuttonc_gr	"Tłóčatkowa barba: Šěry">
 <!ENTITY Ctr_appbuttonc_pu	"Tłóčatkowa barba: Purpur">
 <!ENTITY Ctr_appbuttonc_wh	"Tłóčatkowa barba: Běły">
-<!ENTITY Ctr_appbuttonc_cu	"Custom button color">
+<!ENTITY Ctr_appbuttonc_cu	"Swójska tłóčatkowa barba">
+<!ENTITY Ctr_appbuttonct	"Swójska barba za tłóčatko na symbolowej lajsće">
 <!ENTITY Ctr_appbuttonI1	"Nowy start doporučeny">
-<!ENTITY Ctr_appbuttonI1e	"Njeje widźomny w titulnej lajsće Windows, jenož w titulnej lajsće Firefox!">
-<!ENTITY Ctr_appbuttonI2	"Tłóčatkowe barby su jenož widźomne na titulnej lajsće a rajtarkowej lajsće!">
-<!ENTITY Ctr_alttbappb		"Alternatiwne symbole">
+<!ENTITY Ctr_appbuttonI1e	"Jenož widźomny w titulnej lajsće &brandShortName;, nic na titulnej lajsće dźěłoweho systema Windows!">
+<!ENTITY Ctr_appbuttonI2	"Tłóčatkowe barby su jenož widźomne, jeli tłóčatko je na titulnej lajsće abo rajtarkowej lajsće!">
 <!ENTITY Ctr_appbutmhi		"Wyša pozicija (jeli je na rajtarkowej lajsće)">
+<!ENTITY Ctr_appbautocol	"Barbu wobhladowakoweho kanala awtomatisce nastajić (standard/Aurora/Nightly)">
 <!ENTITY Ctr_appbutbdl		"Ramiki a pozadkowe barby schować">
-<!ENTITY Ctr_dblclclosefx	"Dwójne kliknjenje začinja aktualne wokno">
-<!ENTITY Ctr_appbclmmenus	"Clickable menus inside button menu (New Tab, Print...)">
-<!ENTITY Ctr_appbutonclab	"Title">
-<!ENTITY Ctr_appbutonclab2	"Add title or leave empty">
+<!ENTITY Ctr_dblclclosefx	"Klikńće dwójce, zo byšće aktualne wokno začinił">
+<!ENTITY Ctr_appbclmmenus	"Kliknjomne menije w menijowym woknje (Nowy rajtark, Ćišćeć...)">
+<!ENTITY Ctr_appbutonclab	"Titul">
+<!ENTITY Ctr_appbutonclab2	"Titul přidać abo prózdne wostajić">
 
 <!ENTITY Ctr_ui				"Wužiwarski powjerch">
 <!ENTITY Ctr_nbiconsize0	"Atribut nawigaciskeje lajsty stajić">
 <!ENTITY Ctr_smallnavbut	"Małe tłóčatka na nawigaciskej lajsće">
-<!ENTITY Ctr_bfurlbarfix	"Ramikowy radius za adresowe lajsty porjedźić">
 <!ENTITY Ctr_backforward	"Přesuwajomne tłóčatko Wróćo-Doprědka">
+<!ENTITY Ctr_nbcompact		"Wysokosć nawigaciskich lajstow redukować">
 <!ENTITY Ctr_hide_bf_popup	"Meni historije přez tłóčenje tasty myše schować">
-<!ENTITY Ctr_bf_space		"Reduce space between buttons (if possible)">
+<!ENTITY Ctr_bf_space		"Rum mjez tłóčatkami redukować (jeli móžno)">
 <!ENTITY Ctr_noconicons		"Symbole kontekstoweho menija strony přez pomjenowanja wuměnić (wróćo, dale, stój, znowa, stronu jako zapołožku składować)">
+<!ENTITY Ctr_prefpage		"Strona/wokno nastajenjow">
+<!ENTITY Ctr_altoptionsd	"Standardny zwonkowny napohlad">
+<!ENTITY Ctr_altoptionsp	"Alternatiwny zwonkowny napohlad">
+<!ENTITY Ctr_altoptionsw	"Strona nastajenjow we woknje wočinić">
+<!ENTITY Ctr_altoptionsww	"Šěrokosć">
+<!ENTITY Ctr_altoptionswh	"Wysokosć">
+<!ENTITY Ctr_altoptionsi	"Simulowane wokno nastajenjow dialog hižo njeje, ale 'wobhladowakowe wokno', hdźež wšě symbolowe lajsty su schowane. Funkcija 'Aktualnu stronu wužiwać' přidawa jenož URL stronow, kotrež so w aktualnym woknje wočinjeja, kotrež je w tutym padźe jenož 'about:preferences'. 'Tłóčatko symboloweje lajsty Nastajenja' so přez nowe wuměnja, zo bychu so nastajenja we woknje wočinili.">
+<!ENTITY Ctr_options_rem	"Kategoriju sej spomjatkować, kotraž je so jako poslednja wubrała">
+<!ENTITY Ctr_svgfilters		"SVG-barby za symbole standardnych tłóčatkow">
 <!ENTITY Ctr_wincontrols	"Přesuwajomne wodźenske elementy połneje wobrazowki">
-<!ENTITY Ctr_emptyfavicon2	"Prózdny a dypkowany faworitowy symbol přez łopjenowy symbol wuměnić">
+<!ENTITY Ctr_puibuttonsep	"Dźělatko menijoweho tłóčatka">
+<!ENTITY Ctr_puibut_no_sep	"Schowane">
+<!ENTITY Ctr_puibut_l_sep	"Nalěwo">
+<!ENTITY Ctr_puibut_r_sep	"Naprawo">
+<!ENTITY Ctr_html5warning	"Warnowanje połneje wobrazowki HTML5">
+<!ENTITY Ctr_oldtoplevimg	"Wobrazy 'najwyšeje domeny': Klasiski zwonkowny napohlad">
+<!ENTITY Ctr_altalertbox	"'Warnowanski kašćik': Alternatiwny zwonkowny napohlad">
+<!ENTITY Ctr_emptygfavico	"Powšitkowny faworitowy symbol wuměnić">
 <!ENTITY Ctr_mstatusbar		"Přesuwajomny wobłuk statusoweje lajsty">
-<!ENTITY Ctr_mstatusbars4e	"Status-bar panel is controlled by 'Status-4-Evar'">
-<!ENTITY Ctr_mstatusbartpp	"Status-bar panel is controlled by 'ThePuzzlePiece'">
-<!ENTITY Ctr_mstatusbarpzt	"Status-bar panel is controlled by 'Puzzle Toolbars'">
-<!ENTITY Ctr_mstatusbarabr	"Status-bar panel is controlled by 'The Addon Bar (Restored)'">
+<!ENTITY Ctr_mstatusbars4e	"Statusowy wobłuk so přez 'Status-4-Evar' kontroluje">
+<!ENTITY Ctr_mstatusbartpp	"Statusowy wobłuk so přez 'ThePuzzlePiece' kontroluje">
+<!ENTITY Ctr_mstatusbarpzt	"Statusowy wobłuk so přez 'Puzzle Bars' kontroluje">
+<!ENTITY Ctr_mstatusbarabr	"Statusowy wobłuk so přez 'The Addon Bar (Restored)' komtroluje">
 <!ENTITY Ctr_combrelstop	"Tłóčatce Stój a Znowa kombinować">
 <!ENTITY Ctr_stoprel1		"Wažny: Tłóčatko Znowa za tłóčatkom Stój zaměstnić!">
-<!ENTITY Ctr_panelmenucol	"Pólne menije: alternatiwna pozadkowa barba">
-<!ENTITY Ctr_hideprivmask	"Priwatny modus: maskowy pokazowar schować">
-<!ENTITY Ctr_nbisizedelay	"ms delay in execution (1000 ms = 1 sec)">
+<!ENTITY Ctr_panelmenucol	"Menijowe wuskakowace wokna: Alternatiwna pozadkowa barba">
+<!ENTITY Ctr_hideprivmask	"Priwatny modus: Maskowy pokazowar schować">
+<!ENTITY Ctr_navsmallicons	"Małe symbole">
+<!ENTITY Ctr_navlargeicons	"Wulke symbole">
+<!ENTITY Ctr_nbisizedelay0	"Komdźenje wuwjedźenja w ms">
+<!ENTITY Ctr_nbisizedelay	"ms (1000 ms = 1 sekunda)">
 <!ENTITY Ctr_findbar		"Pytanska lajsta">
 <!ENTITY Ctr_findbar_def	"Standardna pozicija">
 <!ENTITY Ctr_findbar_top	"Horjeka">
@@ -115,22 +157,60 @@
 <!ENTITY Ctr_nav_txt_ico1	"Wulke symbole pokazać">
 <!ENTITY Ctr_nav_txt_ico2	"Symbole a tekst pokazać">
 <!ENTITY Ctr_nav_txt_ico3	"Jenož tekst pokazać">
-<!ENTITY Ctr_nav_txt_exp	"Experimental attributes:">
-<!ENTITY Ctr_iat_notf_vt	"Exclude vertical toolbars">
-<!ENTITY Ctr_cpanelmenus	"Kompaktne pólne menije (zapołožki, historija atd.)">
+<!ENTITY Ctr_nav_txt_exp	"Klasiske atributy (eksperimentelny):">
+<!ENTITY Ctr_iat_notf_vt	"Wertikalne symbolowe lajsty wuzamknyć">
+<!ENTITY Ctr_cpanelmenus	"Menijowe wuskakowace wokna (čitanske znamjenja, historija atd.): Kompaktny napohlad">
 <!ENTITY Ctr_hidezoomres	"Skalowanske elementy na symbolowej lajsće: Tłóčatko za wróćostajenje skalowanja schować">
-<!ENTITY Ctr_alt_newtabp	"New tab page: alternative appearance">
-<!ENTITY Ctr_pmhidelabels	"Pólny meni: Tekst tłóčatkow schować">
-<!ENTITY Ctr_menupopupscr	"Wuskakowace menije: suwanske lajsty město suwanskich šipkow pokazać">
+<!ENTITY Ctr_alt_newtabp	"Strona noweho rajtarka (about:newtab): Alternatiwny napohlad">
+<!ENTITY Ctr_nosnippets		"Startowa strona (about:home): šlipki schować">
+<!ENTITY Ctr_search_ui		"Pytanje">
+<!ENTITY Ctr_ctroldsearch	"Stare pytanje">
+<!ENTITY Ctr_ctroldsearchc	"Po pytanju pytanske polo wuprózdnić">
+<!ENTITY Ctr_ctroldsearchr	"Po pytanju so k prěnjej pytawje w lisćinje wróćić">
+<!ENTITY Ctr_search_oit		"Pytanje w nowym rajtarku wočinić">
+<!ENTITY Ctr_osearch_meoit	"Srjedźne kliknjenja: W nowym 'prědkowym rajtarku' pytać">
+<!ENTITY Ctr_osearch_iwidth	"Šěrokosć wuskakowaceho wokna přiměrić">
+<!ENTITY Ctr_osearch_cwidth	"Swójska šěrokosć za pytanske wuskakowace wokna">
+<!ENTITY Ctr_osearch_dm		"Małe wuběranske tłóčatko">
+<!ENTITY Ctr_addonmanager	"Zrjadowak přidatkow">
+<!ENTITY Ctr_alt_addonsp	"Strona 'wjace info': Alternatiwny porjad">
+<!ENTITY Ctr_alt_addonsm	"Alternatiwny napohlad">
+<!ENTITY Ctr_am_nowarning	"Lisćiny přidatkow: Warnowanja schować">
+<!ENTITY Ctr_am_compact		"Lisćiny přidatkow: Kompaktny napohlad">
+<!ENTITY Ctr_am_compact2	"Kompaktny napohlad +">
+<!ENTITY Ctr_am_highlight	"Lisćiny přidatkow: Zapisk přez hover wuzběhnyć">
+<!ENTITY Ctr_am_buticons	"Lisćiny přidatkow: Popisy tłóčatko přez symbole wuměnić">
+<!ENTITY Ctr_am_hovshowb	"Lisćiny přidatkow: Tłóčatka jenož při 'hover' pokazać">
+<!ENTITY Ctr_addonversion	"Lisćiny přidatkow: Wersiju přidatka pokazać">
+<!ENTITY Ctr_xpinstallui	"Stare přidatkowe instalowanske wokno">
+<!ENTITY Ctr_bmbutton		"Tłóčatko menija zapołožkow">
+<!ENTITY Ctr_hiderecentbm	"Wuskakowace wokno zapołožkow: Njedawo přidate zapołožki schować">
+<!ENTITY Ctr_hideeditbm		"Hwěžka zapołožkow: Wuskakowace wokno schować (jeli strona jako zapołožka składowana njeje)">
+<!ENTITY Ctr_bmbutpanelm	"Wuskakowacy meni: Napohlad wuskakowaceho menija">
+<!ENTITY Ctr_bmbunsortbm	"Wuskakowacy meni: Meni 'Njesortěrowane zapołožki'">
+<!ENTITY Ctr_bmbunsortbm2	"Meni nad zapołožkami">
+<!ENTITY Ctr_bmbviewbmsb	"Wuskakowacy meni: 'Bóčnicu pokazać' pokazać">
+<!ENTITY Ctr_bmbviewbmtb	"Wuskakowacy meni: 'Lajstu zapołožkow pokazać' pokazać">
+<!ENTITY Ctr_bmbnounsort	"Wuskakowcy meni: 'Njesortěrowane zapołožki' schować">
+<!ENTITY Ctr_bmbutnotext	"Tekst na lajśce zapołožkow schować">
+<!ENTITY Ctr_skipprintpr	"Ćišćerske tłóčatko: Ćišćerski přehlad přeskočić">
+<!ENTITY Ctr_tbconmenu		"Kontekstowy meni symboloweje lajsty: 'Do menija přesunyć', 'Ze symboloweje lajsty wotstronić', 'Wšě rajtarki znowa začitać/jako zapołožki składować' a 'Začinjenje rajtarka cofnyć' schować">
+<!ENTITY Ctr_noresizerxp	"Přeměnjowak wulkosće schować (Windows XP)">
+<!ENTITY Ctr_extraurlkeycb	"Přidatne adresowe polo wočinić (Cmd/Strg+">
+<!ENTITY Ctr_pmhidelabels	"Wuskakowace wokno hłowneho menija: Tekst tłóčatkow schować">
+<!ENTITY Ctr_menupopupscr	"Menijowe wuskakowace wokna: Suwanske lajsty město suwanskich šipkow pokazać">
+<!ENTITY Ctr_closegeneral	"Powšitkowne začinjenske symbole">
 
-<!ENTITY Ctr_fxmockup		"Naćisk Firefox">
+<!ENTITY Ctr_tabsep_def		"Standardne rajtarkowe dźělatka">
+<!ENTITY Ctr_fxmockup		"Naćisk &brandShortName;">
 <!ENTITY Ctr_tabmokcolor	"Běła barba za rajtarkowe tłóčatka (začinić, nowy, skupiny, wšě nalistować)">
 <!ENTITY Ctr_tabmokcolor2	"Běła barba a ćmowy sćin za tekst na njeaktiwnych rajtarkach">
-<!ENTITY Ctr_tabmokcolor3	"Běła barba za rajtarkowe dźělatka">
-<!ENTITY Ctr_tabmokcolor4	"White color for empty dotted tab favicon">
+<!ENTITY Ctr_tabmokcolor4	"Běła barba za prózdny dypkowany rajtarkowy symbol">
 
-<!ENTITY Ctr_navthrobber1	"Clicking activity indicator opens specified url:">
-<!ENTITY Ctr_navthrobber2	"Add url or leave empty">
+<!ENTITY Ctr_navthrobber1	"Kliknjenje na wozjewjenje aktiwity wočinja slědowacy URL:">
+<!ENTITY Ctr_navthrobber2	"URL přidać abo prózdne wostajić">
+<!ENTITY Ctr_anewtaburl		"URL strony noweho rajtarka">
+<!ENTITY Ctr_anewtaburlcb	"URL swójskeje strony noweho rajtarka (standard: 'about:newtab')">
 
 <!ENTITY Ctr_tab_tf_info1	"Barbne mjena, heksadecimalne kody, rgb(a)- a hsl(a)-hódnoty so podpěruja.">
 <!ENTITY Ctr_tab_tf_info2	"Zapodaća so njepřepruwuja!">
@@ -152,96 +232,182 @@
 <!ENTITY Ctr_ntabhov		"Nowy rajtark (hover)">
 <!ENTITY Ctr_bold			"Tučny">
 <!ENTITY Ctr_italic			"Kursiwny">
-<!ENTITY Ctr_notabhov		"Enabled settings override 'hovered' settings">
-<!ENTITY Ctr_tabc_act_tb	"Background color on toolbars">
+<!ENTITY Ctr_notabhov		"Zmóžnjene nastajenja přepisuja 'hover-nastajenja'">
+<!ENTITY Ctr_tabc_act_tb	"Pozadkowa barba na symbolowych lajstach">
 
-<!ENTITY Ctr_urlbar			"Urlbar">
+<!ENTITY Ctr_urlbar			"Adresowe polo">
 <!ENTITY Ctr_starinurl		"Hwězdne tłóčatko">
-<!ENTITY Ctr_feedinurl		"Kanalowe tłóčatko">
+<!ENTITY Ctr_starinurlinfo	"Standardne tłóčatko menija Zapołožki so schowa">
+<!ENTITY Ctr_feedinurl		"Kanalowe tłóčatko RSS">
 <!ENTITY Ctr_hideurelstop	"Tłóčatce Stój a Znowa adresowych lajstow schować">
-<!ENTITY Ctr_urlbardropm	"Move dropmarker to urlbars end">
-<!ENTITY Ctr_hideprbutton	"Hide notification icon when a popup gets blocked">
-<!ENTITY Ctr_urlbar_ib		"Site Identity Button (identity box)">
-<!ENTITY Ctr_verifiedcolors	"Zeleny/módry identifikaciski kašćik za wobkrućene websydła">
+<!ENTITY Ctr_hideurelstop2	"Tłóčatko 'Start' přeco pokazać">
+<!ENTITY Ctr_hideurlgo		"Tłóčatko 'Start' schować">
+<!ENTITY Ctr_hideurlsrg		"Dźělatka a mjezery za tłóčatka 'Znowa, Stój a Start' schować">
+<!ENTITY Ctr_urlbardropm	"Tłóčatko šipkoweho kónčka do poslednjeje móžneje pozicije přesunyć">
+<!ENTITY Ctr_urlbardropm2	"Tłóčatko šipkoweho kónčka přeco pokazać">
+<!ENTITY Ctr_altreaderico	"Alternatiwne 'čitakowe' symbole">
+<!ENTITY Ctr_hideprbutton	"Zdźělenski symbol schować, hdyž so wuskakowace wokno blokuje">
+<!ENTITY Ctr_locsearchbw10	"Wysokosć adresowych a pytanskich polow redukować (eksperimentelne)">
+<!ENTITY Ctr_urlbar_ib		"Tłóčatko sydłoweje identity">
+<!ENTITY Ctr_ib_nohovcolor	"Pod kursorom myški šěru barbu njepokazać">
+<!ENTITY Ctr_ib_graycolor	"Šěra barba za njeznate identitowe strony a strony about:'">
+<!ENTITY Ctr_verifiedcolors	"Tłóčatkowe barby za přepruwowane websydła, wěste a njewěste zwiski">
+<!ENTITY Ctr_ibinfoico		"'i'-symbol přez globusowy symbol wuměnić">
+<!ENTITY Ctr_ibinfoico2		"'i'-symbol schować (jeli móžno)">
+<!ENTITY Ctr_iblabels		"Popisy schować">
 <!ENTITY Ctr_faviconurl		"Faworitowy symbol">
-<!ENTITY Ctr_padlock_hid	"Zamkowy symbol (schowany)">
-<!ENTITY Ctr_padlock_def	"Zamkowy symbol (standard)">
-<!ENTITY Ctr_padlock_cla	"Zamkowy symbol (klasiski)">
-<!ENTITY Ctr_padlock_mod	"Zamkowy symbol (moderny)">
-<!ENTITY Ctr_padlock_ext	"Wěstotne symbole">
-<!ENTITY Ctr_icopageinfo	"Clicking icon opens the 'page info' window">
-
-<!ENTITY Ctr_menubar_items	"Menu items position">
-<!ENTITY Ctr_extrabar		"Additional Toolbars">
-<!ENTITY Ctr_extrabar0		"Additional Toolbar(s)">
+<!ENTITY Ctr_padlock		"Zamkowy symbol za wěste zwiski">
+<!ENTITY Ctr_padlock_hid	"schowany">
+<!ENTITY Ctr_padlock_def	"standard">
+<!ENTITY Ctr_padlock_cla	"klasiski">
+<!ENTITY Ctr_padlock_mod	"moderny">
+<!ENTITY Ctr_padlock_ext	"Symbol '&brandShortName;' za płaćiwe strony 'about'">
+<!ENTITY Ctr_icopageinfo	"Faworitowy symbol/globusowy symbol/'i'-symbol: 'Kliknjenje' wokno 'Info wo stronje' wočinja">
+<!ENTITY Ctr_lbsbsize		"Swójska šěrokosć za adresowe polo a pytanske polo">
+<!ENTITY Ctr_searchbar		"Pytanske polo">
+<!ENTITY Ctr_autocomplete	"Wuskakowace wokno awtowudospołnjenja">
+<!ENTITY Ctr_altautocompl	"Alternatiwny napohlad">
+<!ENTITY Ctr_autocompl_it	"Remove 'Search with...' and 'Visit' items (if present)">
+<!ENTITY Ctr_urlbar_uc		"Funkciju 'Zjednoćene awtowudospołnjenje' znjemóžnić">
+<!ENTITY Ctr_lbsugresi		"Limit wysokosće znjemóžnić">
+<!ENTITY Ctr_lbsugres		"Ličba wuslědkow">
+<!ENTITY Ctr_lbsbradius		"Swójska ramikowa křiwizna za adresowe polo a pytanske polo">
+<!ENTITY Ctr_menubar_items	"Pozicija menijowych zapiskow">
+<!ENTITY Ctr_extrabar		"Přidatne symbolowe lajsty">
+<!ENTITY Ctr_extrabar0		"Přidatne symbolowe lajsty">
 <!ENTITY Ctr_extrabar1		"Přidatna symbolowa lajsta">
-<!ENTITY Ctr_extrabarinfo	"Switching between 'tabs on top' and 'tabs not on top' modes randomly alters additional toolbars order. Firefox has to be restarted to solve this issue.">
+<!ENTITY Ctr_extrabarinfo	"Přešaltowanje mjez 'rajtarki horjeka' a 'rajtarki deleka' měnja připadnje porjad přidatnych symbolowych lajstow. &brandShortName; dyrbi so znowa startować, zo by so tutón problem rozrisał.">
 
 <!ENTITY Ctr_invicons		"Inwertowane symbole">
 <!ENTITY Ctr_menubar		"Menijowa lajsta">
 <!ENTITY Ctr_tabstoolbar	"Rajtarkowa lajsta">
 <!ENTITY Ctr_navbar			"Nawigaciska lajsta">
 <!ENTITY Ctr_bookbar		"Lajsta zapołožkow">
-<!ENTITY Ctr_notoolbar		"Hidden (do not show menu items)">
+<!ENTITY Ctr_notoolbar		"Schowany (menijowe zapiski njepokazać)">
 
-<!ENTITY Ctr_mbarforceleft	"First element">
-<!ENTITY Ctr_mbarforceright	"Last element">
+<!ENTITY Ctr_mbarforceleft	"Prěni element">
+<!ENTITY Ctr_mbarforceright	"Posledni element">
 
 <!ENTITY Ctr_toolbars		"Nastajenja symboloweje lajsty">
-<!ENTITY Ctr_dblclnewtab	"Dwójne kliknjenje wočinja 'nowy' rajtark (z pomocu browser.newtab.url)">
+<!ENTITY Ctr_dblclnewtab	"Dwójne kliknjenje wočinja 'nowy' rajtark">
 <!ENTITY Ctr_hidetbwot		"Rajtarkowu lajstu z jenož jednym rajtarkom schować">
-<!ENTITY Ctr_hidetbwote		"Reduce hiding delay on startup">
+<!ENTITY Ctr_hidetbwote		"Komdźenje chowanja při startowanju redukować">
+<!ENTITY Ctr_hidetbwote_i	"To móhło brachi na rajtarkowej lajsće zawinować">
+<!ENTITY Ctr_hidetbwote2	"Titulnu lajstu wobchować (rajtarki horjeka)">
 <!ENTITY Ctr_notabfog		"Pozadkowu młu wotstronić (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_notabbg		"Pozadkowu barbu wotstronić (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_hightabpos		"Mjezeru wyše symboloweje lajsty redukować (jeli móžno)">
+<!ENTITY Ctr_showalltabsb	"Always show 'all tabs' button">
 <!ENTITY Ctr_alttabstb		"Alternatiwna pozadkowa barba">
+<!ENTITY Ctr_alttabstb2		"W maksiměrowanym napohledźe (rajtarki horjeka)">
 
 <!ENTITY Ctr_altmenubar		"Pozadkowu barbu přidać (titulna lajsta dźěłoweho systema)">
-<!ENTITY Ctr_altmenubarpos	"Alternatiwna pozicijia (pod titulnej lajstu Firefox)">
+<!ENTITY Ctr_altmenubarpos	"Alternatiwna pozicijia">
+<!ENTITY Ctr_altmenubarpos2	"Pod titulnej lajstu &brandShortName;">
 <!ENTITY Ctr_menubarnofog	"Pozadkowu barbu/młu wotstronić (Windows AeroGlass / Win8)">
 
-<!ENTITY Ctr_hidenavbar		"Nawigacisku lajstu schować">
-<!ENTITY Ctr_nobookbarbg	"Lajsta zapołožkow: pozadkowu barbu wotstronić">
-<!ENTITY Ctr_nonavbarbg		"Nawigaciska lajsta: pozadkowu barbu wotstronić">
-<!ENTITY Ctr_nonavborder	"Lajsta zapołožkow: horni ramik symbolowej lajsće přidać">
-<!ENTITY Ctr_nonavtbborder	"Hornje symbolowe lajsty: ramiki symboloweje lajsty wotstronić">
-<!ENTITY Ctr_hidesbclose	"Sidebars: hide sidebar close button">
-<!ENTITY Ctr_chevronfix		"Navigation toolbar: hide double arrow ('chevron') at toolbars end">
+<!ENTITY Ctr_aerocolors		"Barby 'Blue Aero' za hłowne lajsty a rajtarki">
+<!ENTITY Ctr_aerocolorsg	"Barby 'Grey-blue Aero'">
+<!ENTITY Ctr_transpttbw10	"Titulna/menijowa/rajtarkowa lajsta: Pozadkowu barbu wotstronić">
+<!ENTITY Ctr_transpttbew10	"Přidatne polěpšenja za někotre drasty dźěłoweho systema">
+<!ENTITY Ctr_transptcw10	"Standardne tłóčatka Miniměrować/Maksiměrować/Začinić schować">
+<!ENTITY Ctr_hidenavbar		"Symbolowu lajstu schować">
+<!ENTITY Ctr_navbarpad		"Přidatny lěwy a prawy nutřkowny wotstawk">
+<!ENTITY Ctr_navbarpad_l	"Nalěwo:">
+<!ENTITY Ctr_navbarpad_r	"Naprawo:">
+<!ENTITY Ctr_nobookbarbg	"Pozadkowu barbu wotstronić">
+<!ENTITY Ctr_bookbarfs		"W modusu połneje wobrazowki">
+<!ENTITY Ctr_nonavbarbg		"Pozadkowu barbu wotstronić">
+<!ENTITY Ctr_nonavbarbg1	"Wuskutkuje so na přidatne lajsty tutoho přidatka a na druhe hornje lajsty.">
+<!ENTITY Ctr_nonavbarbg2	"Wuskutkuje so na wšě lajsty powjercha Slim přidatka 'Beyond Australis'.">
+<!ENTITY Ctr_nonavborder	"Horni ramik symbolowej lajsće přidać">
+<!ENTITY Ctr_nonavtbborder	"Hornje symbolowe lajsty: Ramiki symboloweje lajsty wotstronić">
+<!ENTITY Ctr_hidesbclose	"Bóčnicy: Tłóčatko Začinić bóčnicy schować">
+<!ENTITY Ctr_notextshadow	"Symbolowe lajsty: Sćin za tekst symboloweje lajsty a rajtarki schować">
+<!ENTITY Ctr_chevronfix		"Nawigaciska lajsta: Dwójny šipk ('Dalše nastroje') na kóncu symboloweje lajsty schować">
+<!ENTITY Ctr_tbsep_winc		"Hornje symbolowe lajsty: Přidatne dźělenske linije">
 
 <!ENTITY Ctr_closeabarbut	"Tłóčatko 'Začinić' na lajsće přidatkow schować">
-<!ENTITY Ctr_highaddonsbar	"Wysokosć symboloweje lajsty powjetšić">
+<!ENTITY Ctr_highaddonsbar	"Wysokosć powjetšić">
+<!ENTITY Ctr_lessaddonsbar	"Wysokosć pomjeńšić">
+<!ENTITY Ctr_addonbarfs		"W modusu połneje wobrazowki">
 
 <!ENTITY Ctr_animation		"Animacija">
-<!ENTITY Ctr_throbberalt	"Alternatiwna animacija za začitowanje rajtarkoweho symbola">
+<!ENTITY Ctr_tabthrobber	"Standardny začitowanski wobraz">
 <!ENTITY Ctr_bmanimation	"Animacija za 'Zapołožku přidać'">
 <!ENTITY Ctr_pananimation	"Animacija za wočinjenje pola">
-<!ENTITY Ctr_tabanimation	"Animacija za začinjenje/wočinjenje rajtarka (nastajenje about:config)">
-<!ENTITY Ctr_dlanimation	"Animacija za 'sćehnjenske zdźělenje' (nastajenje about:config)">
+<!ENTITY Ctr_tabanimation	"Animacija za začinjenje/wočinjenje rajtarka">
+<!ENTITY Ctr_dlanimation	"Animacija za 'sćehnjenske zdźělenje'">
+<!ENTITY Ctr_fsanimation	"Animacije na połnej wobrazowce">
+<!ENTITY Ctr_fsaduration	"Animacije na połnej wobrazowce za wobsah HTML5">
 
 <!ENTITY Ctr_toolsitem		"Menijowy zapisk w meniju Nastroje">
 <!ENTITY Ctr_appmenuitem	"Menijowy zapisk w meniju nałoženskich tłóčatkow">
 <!ENTITY Ctr_contextitem	"Menijowy zapisk w kontekstowym meniju symboloweje lajsty">
-<!ENTITY Ctr_puictrbutton	"Button in main panel menu">
+<!ENTITY Ctr_puictrbutton	"Tłóčatko w hłownym meniju">
 
-<!ENTITY Ctr_otherctroptns	"Other settings">
+<!ENTITY Ctr_otherctroptns	"Druhe nastajenja">
 <!ENTITY Ctr_cuibotbuttons	"Wosebite tłóčatka w 'přiměrjenskim' modusu">
-<!ENTITY Ctr_bookmarkoinpw	"'Open in a new private window' entry in bookmarks context menu">
+<!ENTITY Ctr_nodevtheme		"Zmóžnjenju 'wuwiwarskeje drasty' zadźěwać">
+
+<!ENTITY Ctr_experttweaks	"Rozšěrjene">
+<!ENTITY Ctr_fx34search		"Znjemóžnjenje tutoho nastajenja 'stary pytanski powjerch' wobnowi.">
+<!ENTITY Ctr_fx34loop		"Znjemóžnjenje tutoho nastajenja zawołanske a konwersaciske funkcije wotstroni.">
+<!ENTITY Ctr_fx35devtheme	"Znjemóžnjenje tutych nastajenjow znjemóžni 'wuwiwarsku drastu' a jeje tłóčatko w přiměrjenskim modusu.">
+<!ENTITY Ctr_fx36prefs		"Znjemóžnjenje tutoho nastajenja stare wokno nastajenjow wobnowi.">
+<!ENTITY Ctr_fx36prefs2		"Kedźbu: Stare wokno nastajenjow njewobsahuje wšě njedawno přidate nastajenja wobhladowaka!">
+<!ENTITY Ctr_fx38reader		"Hdyž so  tute nastajenja wotwola, so 'čitanski modus' znjemóžni a jeho symbol wotstroni so z adresoweho pola.">
+<!ENTITY Ctr_fx38pocket		"Hdyž so  tute nastajenje wotwoli, so funkcija 'Pocket' znjemóžni a jeje tłóčatko wotstroni so ze symbolowych lajstow.">
+<!ENTITY Ctr_fx38pocket2	"Kedźbu: Přez přesuwanje tłóčatka 'Pocket' do 'přiměrjenskeho wokna' před znjemóžnjenjom tutoho nastajenja wotstroni tež zapiski 'Pocket' w menijomaj zapołožkow a čitanskeho modusa.">
+<!ENTITY Ctr_e_searchui		"Pytanski powjerch">
+<!ENTITY Ctr_e_loop			"Zawołanje a konwersacija">
+<!ENTITY Ctr_e_deved		"Drasta wuwiwarskeje edicije">
+<!ENTITY Ctr_e_prefsui		"Nastajenja w rajtarku">
+<!ENTITY Ctr_e_readermode	"Čitanski modus">
+<!ENTITY Ctr_e_pocket		"Pocket">
+<!ENTITY Ctr_e_tabsaudioico	"Symbol za awdiowothrawanje na rajtarkach">
+<!ENTITY Ctr_fx42tabsaudico	"Hdyž tute nastajenje znjemóžnjeće, so 'symbol za awdiowothrawanje' z rajtarkow wotstroni.">
+<!ENTITY Ctr_e_containertab	"Container Tabs">
+<!ENTITY Ctr_fx50containert	"Unchecking this preference removes 'container tabs'.">
+<!ENTITY Ctr_e_findbarhl	"Findbar highlighting">
+<!ENTITY Ctr_fx50findbarhl	"Unchecking these preferences removes findbars 'highlight' features.">
+<!ENTITY Ctr_e_flyweb		"Flyweb">
+<!ENTITY Ctr_fx50flyweb		"Unchecking this preference disables 'flyweb'.">
 
 
 <!ENTITY Ctr_pw_settings	"Nastajenja">
 <!ENTITY Ctr_pw_set_reset	"Standard wobnowić">
 <!ENTITY Ctr_pw_set_predef	"Klasiske standardne hódnoty">
-<!ENTITY Ctr_pw_set_preaus	"Firefox preset">
+<!ENTITY Ctr_pw_set_preaus	"Standard &brandShortName;">
 <!ENTITY Ctr_pw_set_export	"Nastajenja eksportować">
 <!ENTITY Ctr_pw_set_import	"Nastajenja importować">
+<!ENTITY Ctr_pw_set_syncon	"K Sync přidać">
+<!ENTITY Ctr_pw_set_syncoff	"Ze Sync wotstronić">
 
 <!ENTITY Ctr_special_font	"Nastajenja za pozadkowu barbu su jenož za standardnu drastu!">
 <!ENTITY Ctr_special_info	"Někotre nastajenja snano wizuelne změny nic we wšěch padach poskićeja!">
-<!ENTITY Ctr_special_info2	"Nastajenja su za standardnu drastu sčinjene a je móžno, zo z druhimi drastami njefunguja!">
+<!ENTITY Ctr_special_info2	"Drasta třećeho poskićowarja je so wotkryła! Někotre nastajenja z drastami třećich poskićowarjow njefunguja!">
 <!ENTITY Ctr_support		"Podpěranski forum">
 <!ENTITY Ctr_newversion		"Nowa wersija?">
 
-<!ENTITY Ctr_addon-bar.accesskey	"L">
-<!ENTITY Ctr_openInPrivateWindow	"Open in a New Private Window">
-<!ENTITY Ctr_openInPrivateWindow.accesskey	"P">
-<!ENTITY appMenuGettingStarted.label	"Getting started">
+<!ENTITY Ctr_addon-bar.accesskey		"d">
+<!ENTITY appMenuGettingStarted.label	"Prěnje kroki">
+<!ENTITY goCmd.label					"Start">
+<!ENTITY Ctr_menu_restart.label			"Znowa startować">
+<!ENTITY Ctr_restartapp					"Znowa startować pod tłóčatkom '&brandShortName;' a w meniju 'Dataja'">
+
+<!ENTITY Ctr_openInCurrentTab			"Zapodaća w aktualnym rajtarku wočinić">
+<!ENTITY Ctr_openInNewTab				"Zapodaća w nowym rajtarku wočinić">
+<!ENTITY Ctr_openInNewWindow			"Zapodaća w nowym woknje wočinić">
+
+<!-- For page context entries. Have to be adjusted for every locale! -->
+<!ENTITY backCmd.accesskey				"W">
+<!ENTITY forwardCmd.accesskey			"D">
+<!ENTITY reloadCmd.accesskey			"Z">
+<!ENTITY stopCmd.accesskey				"S">
+<!ENTITY bookmarkPageCmd2.accesskey		"T">
+
+<!-- Fallback entities. Leave empty! -->
+<!ENTITY openCmd.commandkey				"">
+<!ENTITY urlbar.accesskey				"">
+<!ENTITY urlbar.placeholder2			"">

@@ -1,0 +1,142 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul){
+
+	/* tab colors */
+	.tabbrowser-tab[selected]:not(:-moz-lwtheme) .tab-content {
+	  background-image: linear-gradient(rgba(255,255,255,.0) 1px, rgba(255,255,255,.7) 1px, rgba(255,255,255,.4) 50%),
+	  linear-gradient(rgba(255,255,255,.0) 1px, -moz-dialog 1px, -moz-dialog) !important;
+	}
+	
+	/* tab colors lightweight theme */
+	.tabbrowser-tab[selected]:-moz-lwtheme .tab-content {
+	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.46) 50%) !important;
+	}
+	
+	/* tab tweaks */
+	.tabbrowser-tab .tab-stack {
+	  -moz-appearance: none !important;
+	  margin-top: 0px !important;
+	  margin-bottom: -5px !important;
+	}
+    
+	#TabsToolbar .tabbrowser-tab .tab-content{
+	  -moz-appearance: none !important;
+	  -moz-border-image: none !important;
+	  margin: 0 0 5px 0 !important;
+	}
+
+    /* lightweight theme tweaks*/
+	#navigator-toolbox #TabsToolbar:-moz-lwtheme{
+	  box-shadow:none !important;
+	  border-bottom: 1px solid transparent !important;
+	}
+	#navigator-toolbox #nav-bar:-moz-lwtheme{
+      box-shadow:none !important;
+	  border-top: 1px solid transparent !important;
+	}
+	
+	/* Windows 10 tweaks */
+	@media (-moz-os-version: windows-win10) {
+	  #main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme,
+	  #main-window[defaultfxtheme="true"][fx32plus="true"] #TabsToolbar:not(:-moz-lwtheme),	
+	  #main-window[defaultfxtheme="true"][fx32plus="true"] #TabsToolbar:-moz-lwtheme {
+		border-bottom: 0 !important;
+	  }
+	}
+	
+	/* other */
+	#TabsToolbar:not(:-moz-lwtheme){
+	  box-shadow:none !important;
+	  border-bottom: 1px solid transparent !important;
+	}
+
+	#navigator-toolbox #nav-bar:not(:-moz-lwtheme){
+	  box-shadow:none !important;
+	  /*border-top: 1px solid transparent !important;*/
+	}
+	
+	@media (-moz-os-version: windows-win10) {
+	  #main-window[fx40plus="true"] #navigator-toolbox #nav-bar:not(:-moz-lwtheme){
+		box-shadow:none !important;
+		border-top: 1px solid rgba(0,0,0,.2) !important; 
+	  }
+	}
+	
+	/* Tabs toolbar tab close button (Fx31+) */
+	#ctraddon_tabs-closebutton{
+	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
+	  -moz-appearance: none !important;
+	  border: none !important;
+	  padding: 0px !important;
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png") !important;
+	}
+	#ctraddon_tabs-closebutton:hover{
+	  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
+	}
+	#ctraddon_tabs-closebutton:hover:active {
+	  -moz-image-region: rect(0, 48px, 16px, 32px) !important;
+	}
+	
+	/* Tab close button */
+	.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button {
+	  -moz-appearance: none !important;
+	  -moz-image-region: rect(0, 64px, 16px, 48px) !important;
+	  border: none !important;
+	  padding: 0px !important;
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png") !important;
+	}
+	
+	.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button:hover,
+	.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button:hover[selected="true"] {
+	  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
+	}
+	
+	.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button:hover:active,
+	.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button:hover:active[selected="true"] {
+	  -moz-image-region: rect(0, 48px, 16px, 32px) !important;
+	}
+	
+	.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button[selected="true"] {
+	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
+	}
+	
+	#TabsToolbar .close-icon > .toolbarbutton-icon {
+	  width: 16px !important;
+	}
+	
+	/*TabUtilities autoreload extra*/
+	.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover,
+	.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover[selected="true"] {
+	  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
+	  border: none !important;
+	  padding: 0px !important;
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png") !important;
+	}
+
+	.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
+	  -moz-padding-start: 3px !important;
+	}
+		
+	.tabs-newtab-button{
+	  margin-right:-12px !important;
+	}
+	
+	/* TU workaround */
+	#PinnedTabsBarItems {
+	  -moz-margin-start:-15px !important;
+	  -moz-margin-end:0px !important;
+	}
+	#tabbrowser-tabs[overflow] #PinnedTabsBarItems {
+	  -moz-margin-end:-15px !important;
+	}
+	/**/
+	
+	@media (-moz-os-version: windows-win10) {
+        #main-window[fx47plus="true"][sizemode="maximized"] .titlebar-button {
+          padding-top: 7px !important;
+		  padding-bottom: 7px !important;
+        }
+	}
+
+}

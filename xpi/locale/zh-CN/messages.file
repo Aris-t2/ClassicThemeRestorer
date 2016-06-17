@@ -1,5 +1,6 @@
+# %S will be replaced by browsers short name automatically
 popup.title=Classic Theme Restorer
-popup.msg.restart=Firefox 需要重启才能生效。\n现在就重启吗?
+popup.msg.restart=%S 需要重启才能生效。\n现在就重启吗?
 import.error=错误：发现修改的或者是错误的文件。\n无法被导入！
-ctr_extrabar=新增工具栏
-ctr_actthrobber=Activity Indicator
+ctr_extrabar=附加工具栏
+ctr_actthrobber=活动指示器

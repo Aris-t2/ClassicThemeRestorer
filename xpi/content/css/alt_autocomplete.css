@@ -1,0 +1,50 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	
+	panel[type="autocomplete-richlistbox"],
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
+	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings.xml#urlbar-rich-result-popup") !important;
+	}
+
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem,
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
+	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings.xml#autocomplete-richlistitem") !important;
+	  -moz-box-orient: vertical !important;
+	  overflow: -moz-hidden-unscrollable !important;
+	  min-height: unset !important;
+	  height: unset !important;
+	  max-height: unset !important;
+	  padding: 4px 0px !important;
+	  border-radius: 0 !important;
+	}
+
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-separator,
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-separator {
+	  display:none !important;
+	}
+	
+	panel[type="autocomplete-richlistbox"] .ac-site-icon,
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .ac-site-icon {
+	  -moz-margin-start: 1px !important;
+	}
+
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-title,
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-title{
+	  -moz-margin-start: -7px !important;
+	  margin-top:-2px !important;
+	}
+
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-action,
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-url,
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-action,
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-url{
+	  -moz-margin-start: 21px !important;
+	}
+	
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-action[actiontype=searchengine]:not([selected]),
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-action[actiontype=searchengine]:not([selected]) {
+	  display: block !important;
+	}
+
+}

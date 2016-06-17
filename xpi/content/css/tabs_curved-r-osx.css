@@ -2,40 +2,69 @@
 
 @-moz-document url(chrome://browser/content/browser.xul){
 
-	.tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([selected=true]),
-	.tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]),
 	.tabs-newtab-button:not(:-moz-lwtheme) {
 	  background-position: left bottom, 30px bottom, right bottom;
 	  background-repeat: no-repeat;
 	  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;
 	}
 
-	.tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([selected=true]),
-	.tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]){
+	.tabs-newtab-button:not(:-moz-lwtheme){
+	  background-image: url(chrome://classic_theme_restorer/content/images/ntab-end-r.png),
+						url(chrome://classic_theme_restorer/content/images/ntab-middle-r.png),
+						url(chrome://classic_theme_restorer/content/images/ntab-start-r.png) !important;
+	}
+
+	.tabs-newtab-button:not(:-moz-lwtheme):hover{
+	  background-image: url(chrome://classic_theme_restorer/content/images/ntab-hov-end-r.png),
+						url(chrome://classic_theme_restorer/content/images/ntab-hov-middle-r.png),
+						url(chrome://classic_theme_restorer/content/images/ntab-hov-start-r.png) !important;
+	}
+	
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([selected=true]),
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]) {
+	  background-position: left bottom, 30px bottom, right bottom;
+	  background-repeat: no-repeat;
+	  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;
+	}
+
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([selected=true]),
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([selected=true]){
 	  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start.png),
 						url(chrome://browser/skin/tabbrowser/tab-background-middle.png),
 						url(chrome://browser/skin/tabbrowser/tab-background-end.png) !important;
 	}
 	
-	.tabs-newtab-button:not(:-moz-lwtheme){
-	  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),
-						url(chrome://browser/skin/tabbrowser/tab-active-middle.png),
-						url(chrome://browser/skin/tabbrowser/tab-stroke-end.png) !important;
-	}
-
-	.tabs-newtab-button:not(:-moz-lwtheme):hover{
-	  background-image: url(chrome://classic_theme_restorer/content/images/ntab-hov-start.png),
-						url(chrome://classic_theme_restorer/content/images/ntab-hov-middle.png),
-						url(chrome://classic_theme_restorer/content/images/ntab-hov-end.png) !important;
-	}
-
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start{
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start{
 	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;
 	}
 	
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end,
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end	{
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end,
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end	{
+	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;
+	}
+	
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([visuallyselected=true]),
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([visuallyselected=true]) {
+	  background-position: left bottom, 30px bottom, right bottom;
+	  background-repeat: no-repeat;
+	  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;
+	}
+
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([visuallyselected=true]),
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([visuallyselected=true]){
+	  background-image: url(chrome://browser/skin/tabbrowser/tab-background-start.png),
+						url(chrome://browser/skin/tabbrowser/tab-background-middle.png),
+						url(chrome://browser/skin/tabbrowser/tab-background-end.png) !important;
+	}
+	
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-start,
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):hover .tab-background-start{
+	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;
+	}
+	
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-end,
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):hover .tab-background-end	{
 	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;
 	}
 
@@ -43,39 +72,61 @@
 	.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
 	#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
 	  background-image: none !important;
+	  background-color: unset !important;
 	}
 
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end {
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-stack .tab-background-middle,
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start,
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end {
 	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(transparent, transparent 2px, #a9a9a9 0px, #9f9f9f, #949494), none !important;
 	}
 	
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-stack .tab-background-middle,
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start,
-	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end {
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-stack .tab-background-middle,
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start,
+	#main-window:not([fx40plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end {
 	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(transparent, transparent 2px, #b8b8b8 0px, #adadad), none !important;
 	}
 
-	.tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
-	.tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {
+	#main-window:not([fx40plus="true"]) .tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+	#main-window:not([fx40plus="true"]) .tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {
 	  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient(to top,#d3d3d3,#d3d3d3,#cdcdcd) !important;
 	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;
 	}
-	.tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
-	.tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {
+	#main-window:not([fx40plus="true"]) .tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+	#main-window:not([fx40plus="true"]) .tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {
 	  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(to top,#d3d3d3,#d3d3d3,#cdcdcd) !important;
 	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;
 	}
-	.tab-background-middle[selected=true]:not(:-moz-lwtheme) {
+	#main-window:not([fx40plus="true"]) .tab-background-middle[selected=true]:not(:-moz-lwtheme) {
 	  background-clip: padding-box, padding-box, content-box !important;
 	  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png), linear-gradient(transparent, transparent 2px, #cdcdcd 0px,#d3d3d3), none !important;
 	}
+	
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-stack .tab-background-middle,
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-start,
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-end {
+	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(transparent, transparent 2px, #a9a9a9 0px, #9f9f9f, #949494), none !important;
+	}
+	
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):hover .tab-stack .tab-background-middle,
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):hover .tab-background-start,
+	#main-window[fx40plus="true"] .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):hover .tab-background-end {
+	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(transparent, transparent 2px, #b8b8b8 0px, #adadad), none !important;
+	}
 
-	#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
-	.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
-	#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
-	  background-image: none !important;
+	#main-window[fx40plus="true"] .tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+	#main-window[fx40plus="true"] .tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {
+	  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient(to top,#d3d3d3,#d3d3d3,#cdcdcd) !important;
+	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;
+	}
+	#main-window[fx40plus="true"] .tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
+	#main-window[fx40plus="true"] .tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {
+	  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(to top,#d3d3d3,#d3d3d3,#cdcdcd) !important;
+	  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;
+	}
+	#main-window[fx40plus="true"] .tab-background-middle[visuallyselected=true]:not(:-moz-lwtheme) {
+	  background-clip: padding-box, padding-box, content-box !important;
+	  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png), linear-gradient(transparent, transparent 2px, #cdcdcd 0px,#d3d3d3), none !important;
 	}
 	
 	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive], :not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
@@ -100,20 +151,8 @@
 	  border-top: 1px solid #8b8b8b !important;
 	}
 
-	.tabbrowser-tab,
-	.tabbrowser-tab .tab-content,
-	.tabbrowser-tab progressmeter.tab-progress,
-	.tabs-newtab-button	{
+	.tabbrowser-tab .tab-background {
 	  transform: scale(-1, -1) !important;
-	}
-	.tabs-newtab-button	{
-	  z-index: 1 !important;
-	}
-	.tabbrowser-tab:not([selected=true]){
-	  z-index: 2 !important;
-	}
-	.tabbrowser-tab[selected=true]{
-	  z-index: 3 !important;
 	}
 	
 	/* remove ridiculous clipping */
@@ -121,6 +160,7 @@
 	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive], :not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
 	  clip-path: none !important;
 	}
+
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {

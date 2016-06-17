@@ -1,0 +1,15 @@
+@-moz-document url(about:preferences),url-prefix(about:preferences){
+
+	menulist dropmarker{
+	  display: none !important;
+	}
+	
+	menulist {
+	  min-height: 26px !important;
+	}
+
+}
+
+*[subdialog="true"] 	menulist dropmarker{
+  display: none !important;
+}

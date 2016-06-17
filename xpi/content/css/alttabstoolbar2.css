@@ -1,0 +1,35 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	@media all and (-moz-windows-theme:aero) {
+		#main-window[defaultfxtheme="true"]:not([tabsontop="false"])[sizemode="maximized"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
+		  background: #dbeaf9 !important;
+		}
+		@media all and (-moz-windows-glass) {
+			#main-window[defaultfxtheme="true"][sizemode="maximized"]:not([tabsontop="false"]):not(:-moz-lwtheme){
+			  background: #dbeaf9 !important;
+			}
+		}
+	}
+	@media not all and (-moz-windows-theme:aero) {
+		#main-window[defaultfxtheme="true"][sizemode="maximized"]:not([tabsontop="false"]):not(:-moz-lwtheme),
+		#main-window[defaultfxtheme="true"]:not([tabsontop="false"])[sizemode="maximized"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
+		  background: -moz-Dialog !important;
+		}
+	}
+
+	/* Win8*/
+	@media all and (-moz-windows-compositor) {
+	  @media not all and (-moz-windows-glass) {
+		#main-window[defaultfxtheme="true"][sizemode="maximized"]:not([tabsontop="false"]):not(:-moz-lwtheme),
+		#main-window[defaultfxtheme="true"]:not([tabsontop="false"])[sizemode="maximized"] #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme){
+		  background: -moz-Dialog !important;
+		}
+		#main-window[defaultfxtheme="true"] #titlebar-buttonbox {
+			-moz-margin-end:-5px !important;
+		}
+	  }
+	}
+
+}

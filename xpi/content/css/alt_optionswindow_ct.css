@@ -1,0 +1,126 @@
+@-moz-document url(about:preferences),url-prefix(about:preferences){
+	
+	#categories{
+	  min-width: unset !important;
+	  width: unset !important;
+	  background: unset !important;
+	  border: unset !important;
+
+	}
+	#categories .category{
+	  min-width: unset !important;
+	  width: unset !important;
+	  height: 58px !important;
+	}
+
+	#categories .category .category-icon {
+	  height: 32px !important;
+	  width: 32px !important;
+	  max-height: 32px !important;
+	  max-width: 32px !important;
+	}
+
+	#categories .box-inherit {
+	  -moz-box-orient: horizontal !important;
+	  position: fixed !important;
+	  top:0px !important;
+	  background: inherit !important;
+	}
+	
+	#category-search[hidden="true"],
+	#mainPrefPane .header {
+	  display: none !important;
+	}
+
+	vbox.main-content {
+	  margin-top: 60px !important;
+	  min-width: unset !important;
+	  margin-bottom: 0px !important;
+	  border-top: 1px solid #848484 !important;
+	}
+
+	richlistitem.category {
+	  -moz-box-orient: vertical !important;
+	  padding-top: 0px !important;
+	  min-width: auto !important;
+	  width: auto !important;
+	}
+
+	description,
+	.main-content label{
+	  font-size:100% !important;
+	}
+
+	richlistitem .category-icon {
+	  padding-top: 0px !important;
+	}
+	  
+	richlistitem.category > * {
+	  padding-left: unset !important;
+	  padding-right: unset !important;
+	  visibility: visible !important;
+	  
+	}
+
+	@media (max-width: 800px) {
+	  richlistitem.category > .category-name {
+		display: block !important;
+	  }
+	} 
+
+	richlistitem.category > .category-name {
+      padding-left: 2px !important;
+      padding-right: 2px !important;
+	  font-size:100% !important;
+	  min-width: unset !important;
+	  width: unset !important;
+	}
+	
+	#categories .category{
+	  padding-inline-start: 0px !important;
+	  padding-inline-end: 0px !important;
+	  border-inline-start-width: 0px !important;
+	}
+
+	checkbox image,
+	radio image {
+	  max-width: 16px !important;
+	  max-height: 16px !important;
+	}
+	
+	radio *{
+	  outline: unset !important;
+	}
+
+	#advancedPrefs #tabsElement tab {
+	  min-height: unset !important;
+	}
+	
+	#dialogBox {
+	  min-width: unset !important;
+	  min-height: unset !important;
+	}
+	
+
+	@media (min-resolution: 1.1dppx) {
+      richlistitem.category > .category-name {
+		font-size:95% !important;
+      }
+	}
+	
+	/* theme fixes */
+	#categories[currenttheme="Qute5pp"] .box-inherit,
+	#categories[currenttheme="Qute6pp"] .box-inherit,
+	#categories[currenttheme="simplewhite"] .box-inherit,
+	#categories[currenttheme="mx3"] .box-inherit,
+	#categories[currenttheme="mx4"] .box-inherit,
+	#categories[currenttheme="FXChrome"] .box-inherit,
+	#categories[currenttheme="FXOpera"] .box-inherit,
+	#categories[currenttheme="mla"] .box-inherit,
+	#categories[currenttheme="mlag"] .box-inherit,
+	#categories[currenttheme="mlagt"] .box-inherit,
+	#categories[currenttheme="mlagtsp"] .box-inherit {
+	  background: #424f5a !important;
+	}
+	
+}

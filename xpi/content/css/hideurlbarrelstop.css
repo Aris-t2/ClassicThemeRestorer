@@ -6,5 +6,10 @@
 	#urlbar-container #urlbar-stop-button{
 	  visibility: collapse !important;
 	}
+	
+	/* fix FireIE add-ons location bar icon */
+	#urlbar #fireie-urlbar-switch {
+	  -moz-padding-end: 4px !important;
+	}
 
 }

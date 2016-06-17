@@ -1,0 +1,17 @@
+@-moz-document url-prefix(chrome://mozapps/content/extensions/extensions.xul), url-prefix(about:addons) {
+
+	.addon .warning,
+	.addon .error,
+	#show-disabled-unsigned-extensions,
+	#detail-view .error,
+	#detail-view .warning,
+	.global-warning-container {
+	  display: none;
+	}
+   
+	.addon,
+	#detail-view {
+	  background-image: none !important;
+	}
+
+}

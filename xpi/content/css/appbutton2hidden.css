@@ -1,0 +1,25 @@
+@import url(appbutton2wt.css);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#main-window:not([chromehidden~="toolbar"])[sizemode="normal"] #titlebar #ctraddon_appbutton2 {
+	  visibility: hidden !important;
+	}
+	#main-window:not([chromehidden~="toolbar"]):not([sizemode="normal"]) #titlebar #ctraddon_appbutton2,
+	#main-window:not([chromehidden~="toolbar"]):not([sizemode="normal"])[sizemode="maximized"] #titlebar #ctraddon_appbutton2 {
+	  visibility: collapse !important;
+	}
+	#main-window[tabsintitlebar][sizemode="normal"] #titlebar:not([hidden]) ~ * #toolbar-menubar,
+	#main-window[tabsintitlebar][sizemode="maximized"] #titlebar:not([hidden]) ~ * #toolbar-menubar {
+	  -moz-margin-start: 0px !important;
+	}
+	#main-window[tabsintitlebar][customizing][sizemode="maximized"] #titlebar:not([hidden]) ~ * #toolbar-menubar {
+	 -moz-margin-start: 26px !important;
+	}
+	#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="maximized"]:not([tabsontop="false"]) #toolbar-menubar ~ #TabsToolbar,
+	#main-window[tabsintitlebar][sizemode="maximized"]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
+	  -moz-margin-start: 0px !important;
+	}
+
+}

@@ -40,6 +40,10 @@
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	}
 	
+	#TabsToolbar .close-icon > .toolbarbutton-icon {
+	  width: 16px !important;
+	}
+	
 	/* TabUtilities auto-reload extra */
 	.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover,
 	.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover[selected="true"] {
@@ -54,18 +58,21 @@
 	  -moz-padding-start: 0px !important;
 	}
 	
-	#main-window[colorfultabs="true"] #TabsToolbar:not([orient="vertical"]) .tabs-newtab-button + .tabs-newtab-button,
-	#TabsToolbar:not([currentset*="tabbrowser-tabs,new-tab-button"]):not([orient="vertical"]) .tabs-newtab-button + .tabs-newtab-button{
+	#main-window[colorfultabs="true"] #TabsToolbar:not([orient="vertical"]) .tabs-newtab-button + .tabs-newtab-button{
       -moz-margin-start: 0px !important;
 	}
 	
-	#TabsToolbar:not([currentset*="tabbrowser-tabs,new-tab-button"]):not([orient="vertical"]) .tabs-newtab-button{
+	#TabsToolbar[currentset*="tabbrowser-tabs,tabmixScrollBox"]:not([orient="vertical"]) .tabs-newtab-button + .tabs-newtab-button{
+	  -moz-margin-start: 0px !important;
+	}
+	#TabsToolbar[currentset*="tabbrowser-tabs,tabmixScrollBox"]:not([orient="vertical"]) .tabs-newtab-button{
 	  -moz-margin-end: 0px !important;
 	}
+
 	#TabsToolbar:not([currentset*="tabbrowser-tabs,new-tab-button"]):not([orient="vertical"]) #tabbrowser-tabs:not([overflow]) {
 	  -moz-margin-end: -15px !important;
 	}
-
+	
 	#TabsToolbar[currentset*="tabbrowser-tabs,search-container"]:not([orient="vertical"]) #tabbrowser-tabs:not([overflow]),
 	#TabsToolbar[currentset*="tabbrowser-tabs,urlbar-container"]:not([orient="vertical"]) #tabbrowser-tabs:not([overflow]) {
 	  -moz-margin-end: -15px !important;
@@ -101,6 +108,21 @@
 	  background-image: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px), linear-gradient(hsla(0,0%,100%,.3) 1px, hsla(0,0%,75%,.2) 80%, hsla(0,0%,60%,.2)),
 						linear-gradient(-moz-dialog, -moz-dialog);
 	}
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][style][selected="true"]:not(:-moz-lwtheme) {
+	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.4) 50%),
+						linear-gradient(-moz-dialog, -moz-dialog) !important;
+	}
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][style][selected="true"]:-moz-lwtheme{
+	  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.4) 50%) !important;
+	}
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][style]:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
+	  background-image: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px), linear-gradient(transparent, hsla(0,0%,45%,.1) 1px, hsla(0,0%,32%,.2) 80%, hsla(0,0%,0%,.2)),
+						linear-gradient(-moz-dialog, -moz-dialog) !important;
+	}
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][style]:not([selected="true"]):hover:not(:-moz-lwtheme) {
+	  background-image: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px), linear-gradient(hsla(0,0%,100%,.3) 1px, hsla(0,0%,75%,.2) 80%, hsla(0,0%,60%,.2)),
+						linear-gradient(-moz-dialog, -moz-dialog) !important;
+	}
 	
 	.tabs-newtab-button:not(:-moz-lwtheme) {
 	  background-image: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px), linear-gradient(transparent, hsla(0,0%,45%,.1) 1px, hsla(0,0%,32%,.2) 80%, hsla(0,0%,0%,.2)),
@@ -112,20 +134,25 @@
 						linear-gradient(-moz-dialog, -moz-dialog) !important;
 	}
 		
-	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):not(:hover):not(:-moz-lwtheme){
-	  background-size: 100% 100% !important;
-	}
-	
-	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]) {
-	  background-image: radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,1) 3%, rgba(186,221,251,.75) 40%, rgba(127,179,255,.5) 80%, rgba(127,179,255,.25)) !important;
-	}
-	.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):hover {
-	  background-image: linear-gradient(hsla(0,0%,100%,.4), hsla(0,0%,75%,.4) 80%),
-						radial-gradient(circle farthest-corner at 50% 3px, rgba(255,255,255,1) 3%, rgba(186,221,251,.75) 40%, rgba(127,179,255,.5) 80%, rgba(127,179,255,.25)) !important;
-	}
-	
 	#main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme{
 	  border-bottom: 1px solid transparent !important;
+	}
+	
+	/* Windows 10 tweaks */
+	@media (-moz-os-version: windows-win10) {
+	  #main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme{
+		border-bottom: 0 !important;
+	  }
+	  #main-window[fx40plus="true"] #navigator-toolbox #nav-bar:not([tabsontop="false"]):not(:-moz-lwtheme){
+		border-top: 1px solid rgba(0,0,0,.2) !important;
+        margin-top: -2px !important;
+	  }
+	}
+	
+	#TabsToolbar #tabbrowser-tabs .tabs-newtab-button:-moz-lwtheme,
+	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:-moz-lwtheme,
+	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab[pinned]:-moz-lwtheme{
+	  background-size: calc(100% - 1px) calc(100% - 3px) !important;
 	}
 	
 }

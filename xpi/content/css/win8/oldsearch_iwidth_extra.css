@@ -1,0 +1,11 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+  @media (-moz-os-version: windows-win10) {
+	searchbar .searchbar-popup {
+	  -moz-margin-start: -2px !important;
+	}
+  }
+
+}

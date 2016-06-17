@@ -1,0 +1,31 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	#ctraddon_addon-bar {
+	  min-height: unset !important;
+	}
+
+	#ctraddon_addon-bar > *,
+	#ctraddon_addon-bar > #footiefox_statusbarpanel > *{
+	  margin-top: -2px !important;
+	  margin-bottom: -0.5px !important;
+	  padding-top: 0 !important;
+	  padding-bottom: 0 !important;
+	  background-size: auto, 0px 100%, 0px 100% !important;
+	  background-position: 0 2px !important;
+	}
+
+	#ctraddon_addon-bar > * image {
+	  padding-top: 0 !important;
+	  padding-bottom: 0 !important;
+	}
+
+	#ctraddon_addon-bar #bookmarks-menu-button .toolbarbutton-menubutton-dropmarker {
+	  padding: unset !important;
+	}
+
+	/*add-on fixes*/
+	#ctraddon_addon-bar #forecastfox-toolbar .separators {
+	  height:16px !important;
+	}
+}

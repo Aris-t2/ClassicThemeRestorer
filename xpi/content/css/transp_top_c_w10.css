@@ -1,0 +1,16 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@-moz-document url(chrome://browser/content/browser.xul) {
+  
+  /* hide OS caption buttons for the option "OS titlebar colors for Fx title/menu/tabs toolbar" */
+  @media (-moz-os-version: windows-win10) {
+	#main-window[fx40plus="true"]:not([customizing]) * .titlebar-button,
+	#main-window[fx40plus="true"]:not([customizing]) * #titlebar-close,
+	#main-window[fx40plus="true"]:not([customizing]) * .titlebar-button:not(#titlebar-close) > .toolbarbutton-icon{
+      background: none !important;
+      list-style-image: unset !important;
+	}
+
+  }
+ 
+}
+

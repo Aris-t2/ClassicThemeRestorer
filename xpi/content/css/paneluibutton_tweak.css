@@ -12,6 +12,7 @@
 	}
 	#main-window #navigator-toolbox #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button .toolbarbutton-icon{
 	  visibility: visible !important;
+	  max-width: unset !important;
 	}
 	
 	#TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button {
@@ -25,7 +26,8 @@
 
 	#TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton.png") !important;
-	  -moz-image-region: rect(0, 25px, 16px, 0px) !important;
+	  -moz-image-region: rect(0, 26px, 18px, 0px) !important;
+	  width: 26px !important;
 	}
 
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button:hover:active,
@@ -81,11 +83,48 @@
 	#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button[open] {
 	  background-image: linear-gradient(rgb(144,20,207), rgb(95,0,158) 95%) !important;
 	}
-
-	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button{
-	  margin-top:-18px !important;
-	  margin-bottom:24px !important;
+	
+	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button,
+	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button[open]{
 	  border-radius: 0 0 4px 4px !important;
+	}
+	
+	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button{
+	  margin-top:-16px !important;
+	  margin-bottom:24px !important;
+	}
+	
+	@media all and (-moz-windows-classic) {
+	  #main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button{
+		margin-top:-18px !important;
+	  }
+	}
+	
+	#main-window[tabsintitlebar][sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button,
+	#main-window[tabsintitlebar][inFullscreen] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button{
+	  margin-top:0px !important;
+	}
+	
+	#main-window[tabsintitlebar][sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button:hover,
+	#main-window[tabsintitlebar][inFullscreen] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button:hover{
+	  border-radius: 0 4px 0 0 !important;
+	}
+
+}
+
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+
+	#ctraddon_pw_appbuttonc_aurora,
+	#ctraddon_pw_appbuttonc_nightly,
+	#ctraddon_pw_appbuttonc_transp,
+	#ctraddon_pw_appbuttonc_palemo,
+	#ctraddon_pw_appbuttonc_red,
+	#ctraddon_pw_appbuttonc_green,
+	#ctraddon_pw_appbuttonc_gray,
+	#ctraddon_pw_appbuttonc_purple,
+	#ctraddon_pw_appbuttonc_white{
+	  visibility: collapse !important;
+	  display: none !important;
 	}
 
 }

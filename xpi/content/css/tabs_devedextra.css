@@ -1,0 +1,26 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@-moz-document url(chrome://browser/content/browser.xul) {
+	#main-window[developertheme="true"] #navigator-toolbox #TabsToolbar .tabs-newtab-button,
+	#main-window[developertheme="true"] #navigator-toolbox #TabsToolbar .tabs-newtab-button:hover {
+	  background-size: 100% !important;
+	}
+}
+
+@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {
+	.tabactcolorbox,
+	.tabcolorbox,
+	.tabhovcolorbox,
+	.tabpencolorbox,
+	.tabunrcolorbox,
+	.ntabcolorbox,
+	.ntabhovcolorbox,
+	#ntabcolorbox,
+	#ntabhovcolorbox,
+	#ClassicTRoptionsPane[defaultfxtheme="true"] #ctraddon_pw_colors_ntab_t,
+	#ctraddon_pw_tabs_devtabs{
+	  visibility: visible !important;
+	}
+	#ctraddon_ccap_t_default{
+	  visibility: collapse !important;
+	}
+}

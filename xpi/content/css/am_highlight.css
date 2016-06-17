@@ -1,0 +1,20 @@
+@-moz-document url-prefix(chrome://mozapps/content/extensions/extensions.xul), url-prefix(about:addons) {
+
+	#addons-page .main-content .addon:hover,
+	#addons-page .main-content .addon[active="false"]:hover{
+	  background: Highlight !important;
+	  color: HighlightText !important;
+	}
+	#addons-page .main-content .addon:hover .button-link label,
+	#addons-page .main-content .addon:hover .basicinfo-container label,
+	#addons-page .main-content .addon:hover .description-container label,
+	#addons-page .main-content .addon:hover .relnotes-toggle:not(:hover) label{
+	  color: HighlightText !important;
+	}
+	
+	#addons-page .main-content .addon:hover .button-link:hover label {
+	  text-decoration: underline !important;
+	  text-decoration-color: HighlightText !important;
+	}
+
+}
