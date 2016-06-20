@@ -967,7 +967,7 @@
  
       <!--### creates a movable go button ###-->
 	  <toolbarbutton id="ctraddon_preferences-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
-                     label="&preferencesCmd2.label; (&Ctr_window;)" removable="true"
+                     label="&preferencesCmd2.label;" removable="true"
 					 oncommand="classicthemerestorerjs.ctr.openContentPrefsInWin();"
                      tooltiptext="&preferencesCmd2.label; (&Ctr_window;)"/>
 	  

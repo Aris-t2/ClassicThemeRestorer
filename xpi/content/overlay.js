@@ -3036,14 +3036,21 @@ classicthemerestorerjs.ctr = {
 	  if(gBrowser.tabContainer.tabbrowser.visibleTabs.length < 2) {
 		
 		// optionally reduces delay on startup (because it can cause glitches with Windows Classic visual style)
-		if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hidetbwote"))
-		  document.getElementById("TabsToolbar").style.visibility = 'collapse';
+		if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hidetbwote")) {
+		  
+		  // MacOSX + 47+: this combo does not like 'style.visibility' for tabs toolbar
+		  if(classicthemerestorerjs.ctr.osstring=="Darwin" && tabsintitlebar==true && classicthemerestorerjs.ctr.appversion >= 47) {
+			classicthemerestorerjs.ctr.loadUnloadCSS("hidetabsbarwot",true);
+			document.getElementById("TabsToolbar").collapsed = true;
+		  } 		  
+		  else document.getElementById("TabsToolbar").style.visibility = 'collapse';
+		}
 		else {
 		  classicthemerestorerjs.ctr.loadUnloadCSS("hidetabsbarwot",true);
 		  document.getElementById("TabsToolbar").collapsed = true;
 		}
 		
-		// correct titlebar appearance, if the user wants it (not required for all visual styles)
+		// correct titlebar appearance, if needed (not required for all visual styles)
 		if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hidetbwote2")) {
 		
 		  if(classicthemerestorerjs.ctr.osstring=="WINNT" && tabsintitlebar==true){ // Windows
@@ -3059,8 +3066,14 @@ classicthemerestorerjs.ctr = {
 	  }
 	  else {
 		
-		if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hidetbwote"))
-		   document.getElementById("TabsToolbar").style.visibility = 'visible';
+		if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hidetbwote")) {
+			
+		  if(classicthemerestorerjs.ctr.osstring=="Darwin" && tabsintitlebar==true && classicthemerestorerjs.ctr.appversion >= 47) {
+			classicthemerestorerjs.ctr.loadUnloadCSS("hidetabsbarwot",false);
+			document.getElementById("TabsToolbar").collapsed = false;
+		  } 
+		  else document.getElementById("TabsToolbar").style.visibility = 'visible';
+		}
 		else {
 		  classicthemerestorerjs.ctr.loadUnloadCSS("hidetabsbarwot",false);
 		  document.getElementById("TabsToolbar").collapsed = false;

@@ -459,6 +459,10 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_hideeditbm').style.visibility = 'collapse';
 	}
 	
+	if (this.appversion >= 47 && Services.appinfo.OS=="Darwin") {
+	  document.getElementById('ctraddon_pw_hidetbwote').style.visibility = 'collapse';
+	}
+	
 	if (this.appversion < 48) {
 	  document.getElementById('ctraddon_pw_altautocompl').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_autocompl_it').style.visibility = 'collapse';
@@ -760,9 +764,13 @@ classicthemerestorerjso.ctr = {
 	  which=true; itemvis = 'collapse';
 	}
 	
-    document.getElementById('ctraddon_pw_hidetbwote').disabled = which;
+    if (this.appversion >= 47 && Services.appinfo.OS=="Darwin") {}
+	else {
+	  document.getElementById('ctraddon_pw_hidetbwote').disabled = which;
+	  document.getElementById('ctraddon_pw_hidetbwote').style.visibility = itemvis;
+	}
+	
 	document.getElementById('ctraddon_pw_hidetbwote2').disabled = which;
-	document.getElementById('ctraddon_pw_hidetbwote').style.visibility = itemvis;
 	document.getElementById('ctraddon_pw_hidetbwote_winc').style.visibility = itemvis;
 	document.getElementById('ctraddon_pw_hidetbwote2').style.visibility = itemvis;
   },

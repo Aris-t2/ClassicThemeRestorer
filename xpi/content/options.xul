@@ -547,7 +547,7 @@
 	  <description class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curved">&Ctr_tabs2;</description>
 	  <description class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curvedaero">&Ctr_tabs3;</description>
 	  <description>&Ctr_tab_tf_info1;</description>
-	  <description class="ctraddonsuboption">blue - #0000ff - rgba(0,0,255,0.8) - hsla(240,100%,50%,0.8)</description>
+	  <description class="ctraddonsuboption text-link"  onclick="if(event.button == 0) { window.close(); window.opener.openURL('https://developer.mozilla.org/docs/Web/CSS/color_value/'); };">blue - #0000ff - rgba(0,0,255,0.8) - hsla(240,100%,50%,0.8)</description>
 	  <description>&Ctr_tab_tf_info2;</description>
 	  <label value=""/>
 
@@ -1377,7 +1377,7 @@
 		<checkbox label="&Ctr_nonavborder; &Ctr_tnot;"	 preference="ctraddon_nonavborder" class="ctraddon_windowsonly" id="ctraddon_pw_nonavborder"/>
 	  </groupbox>
 
-	  <groupbox id="ctraddon_pw_tabstoolbargroup">
+	  <groupbox id="ctraddon_pw_tabstoolbargroup" class="ctraddon_winlinonly">
 	    <caption  label="&Ctr_tabstoolbar;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_notabfog;"	preference="ctraddon_notabfog" class="ctraddon_windowsonly" id="ctraddon_pw_notabfog"/>
 		<checkbox label="&Ctr_notabbg;"		preference="ctraddon_notabbg" class="ctraddon_windowsonly" id="ctraddon_pw_notabbg"/>

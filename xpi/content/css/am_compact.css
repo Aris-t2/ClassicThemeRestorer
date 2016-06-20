@@ -13,11 +13,12 @@
 	#addons-page #addon-list {
 	  -moz-margin-start: -1px !important;
 	}
-	
-	#addons-page:not(.inSidebar):not([aios-inSidebar="true"]) #updates-list .scrollbox-innerbox,
-	#addons-page:not(.inSidebar):not([aios-inSidebar="true"]) #addon-list .scrollbox-innerbox{
-	  -moz-margin-end: -46px !important;
+
+	#addons-page:not(.inSidebar):not([aios-inSidebar="true"])  .view-pane > .list > scrollbox {
+	  padding-right: 0 !important;
+	  padding-left: 0 !important;
 	}
+
 
 	#addons-page #detail-view,
 	#addons-page #userstyle-sorting,
