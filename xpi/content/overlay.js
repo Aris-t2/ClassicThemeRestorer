@@ -1217,6 +1217,11 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("autocompl_hl")) classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hl",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hl",false);
 		  break;
+		  
+		  case "autocompl_sep":
+			if (branch.getBoolPref("autocompl_sep")) classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_sep",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_sep",false);
+		  break;
 
 		  case "locsearchbw10":
 			if (branch.getBoolPref("locsearchbw10") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("locsearchbw10",true);
@@ -3977,6 +3982,7 @@ classicthemerestorerjs.ctr = {
 		case "altautocompl": 		manageCSS("alt_autocomplete.css");		break;
 		case "autocompl_it": 		manageCSS("alt_autocompl_items.css");	break;
 		case "autocompl_hl": 		manageCSS("alt_autocompl_highl.css");	break;
+		case "autocompl_sep": 		manageCSS("alt_autocompl_sep.css");		break;
 		case "locsearchbw10": 		manageCSS("locationsearchbarw10.css");	break;
 		case "combrelstop":			manageCSS("combrelstop.css");			break;
 		case "panelmenucol": 		manageCSS("panelmenucolor.css");		break;
@@ -6197,7 +6203,7 @@ classicthemerestorerjs.ctr = {
 
   // open prefwindow and specific category
   additionalToolbars: function(){
-	Services.prefs.getBranch("extensions.classicthemerestorer.").setIntPref('pref_actindx',13);
+	Services.prefs.getBranch("extensions.classicthemerestorer.").setIntPref('pref_actindx',14);
 	
 	setTimeout(function(){
 	  classicthemerestorerjs.ctr.openCTRPreferences();
