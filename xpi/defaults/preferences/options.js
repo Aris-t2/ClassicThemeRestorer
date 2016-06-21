@@ -126,6 +126,7 @@ pref("extensions.classicthemerestorer.altreaderico",false);
 pref("extensions.classicthemerestorer.altautocompl",false);
 pref("extensions.classicthemerestorer.autocompl_it",false);
 pref("extensions.classicthemerestorer.autocompl_hl",false);
+pref("extensions.classicthemerestorer.autocompl_sep",false);
 
 pref("extensions.classicthemerestorer.ib_nohovcolor",false);
 pref("extensions.classicthemerestorer.ib_graycolor",false);

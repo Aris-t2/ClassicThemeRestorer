@@ -128,6 +128,7 @@
 		<preference id="ctraddon_altautocompl"	name="extensions.classicthemerestorer.altautocompl"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_autocompl_it"	name="extensions.classicthemerestorer.autocompl_it"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_autocompl_hl"	name="extensions.classicthemerestorer.autocompl_hl"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_autocompl_sep"	name="extensions.classicthemerestorer.autocompl_sep" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_locsearchbw10"	name="extensions.classicthemerestorer.locsearchbw10" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_combrelstop"	name="extensions.classicthemerestorer.combrelstop"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_panelmenucol"	name="extensions.classicthemerestorer.panelmenucol"	type="bool"		instantApply="true"/>
@@ -345,7 +346,8 @@
 	  <radio class="ctraddontab" value="ctraddon_addonmngrbox"	label="&Ctr_addonmanager;"/>
 	  <radio class="ctraddontab" value="ctraddon_locationbbox"	label="&Ctr_urlbar; (1)"/>
 	  <radio class="ctraddontab" value="ctraddon_locationbbox2"	label="&Ctr_urlbar; (2)"/>
-	  <radio class="ctraddontab" value="ctraddon_locationbbox3"	label="&Ctr_urlbar; / &Ctr_searchbar;"/>
+	  <radio class="ctraddontab" value="ctraddon_locationbbox3"	label="&Ctr_urlbar; (3)"/>
+	  <radio class="ctraddontab" value="ctraddon_locationbbox4"	label="&Ctr_urlbar; / &Ctr_searchbar;"/>
 	  <radio class="ctraddontab" value="ctraddon_searchuibox"	label="&Ctr_searchbar;"/>
 	  <radio class="ctraddontab" value="ctraddon_toolbarsbox"	label="&Ctr_toolbars; (1)"/>
 	  <radio class="ctraddontab" value="ctraddon_toolbarsbox2"	label="&Ctr_toolbars; (2)"/>
@@ -547,7 +549,7 @@
 	  <description class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curved">&Ctr_tabs2;</description>
 	  <description class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curvedaero">&Ctr_tabs3;</description>
 	  <description>&Ctr_tab_tf_info1;</description>
-	  <description class="ctraddonsuboption">blue - #0000ff - rgba(0,0,255,0.8) - hsla(240,100%,50%,0.8)</description>
+	  <description class="ctraddonsuboption text-link"  onclick="if(event.button == 0) { window.close(); window.opener.openURL('https://developer.mozilla.org/docs/Web/CSS/color_value/'); };">blue - #0000ff - rgba(0,0,255,0.8) - hsla(240,100%,50%,0.8)</description>
 	  <description>&Ctr_tab_tf_info2;</description>
 	  <label value=""/>
 
@@ -1127,6 +1129,10 @@
 		</radiogroup>
 
 	  </groupbox>
+
+	</box>
+
+	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_locationbbox3">
 	  
 	  <groupbox>
 
@@ -1137,6 +1143,7 @@
 		<checkbox label="&Ctr_lbsugresi;" preference="ctraddon_urlresults" id="ctraddon_pw_urlresults" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwAutoCompleteHeight(true);} else {classicthemerestorerjso.ctr.ctrpwAutoCompleteHeight(false);}"/>
 		<checkbox label="&Ctr_autocompl_it;" preference="ctraddon_autocompl_it" id="ctraddon_pw_autocompl_it"/>
 		<checkbox label="&Ctr_autocompl_hl;" preference="ctraddon_autocompl_hl" id="ctraddon_pw_autocompl_hl"/>
+		<checkbox label="&Ctr_autocompl_sep;" preference="ctraddon_autocompl_sep" id="ctraddon_pw_autocompl_sep"/>
 		
 		<description id="ctraddon_lbsugres" class="ctraddon_font1">&Ctr_lbsugres;</description>
 		<description>about:config &gt;&gt; browser.urlbar.maxRichResults</description>
@@ -1146,10 +1153,17 @@
 		</hbox>
 
 	  </groupbox>
+	  
+	  <groupbox>
+		<hbox>
+		  <image src="chrome://classic_theme_restorer/content/images/autocomplete.png"/>
+		  <label value=""/>
+		</hbox>
+	  </groupbox>
 
 	</box>
 
-	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_locationbbox3">
+	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_locationbbox4">
 	  
 	  <groupbox>
 	    <caption  label="&Ctr_urlbar; / &Ctr_searchbar;" class="ctraddon_topic"/>
@@ -1377,7 +1391,7 @@
 		<checkbox label="&Ctr_nonavborder; &Ctr_tnot;"	 preference="ctraddon_nonavborder" class="ctraddon_windowsonly" id="ctraddon_pw_nonavborder"/>
 	  </groupbox>
 
-	  <groupbox id="ctraddon_pw_tabstoolbargroup">
+	  <groupbox id="ctraddon_pw_tabstoolbargroup" class="ctraddon_winlinonly">
 	    <caption  label="&Ctr_tabstoolbar;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_notabfog;"	preference="ctraddon_notabfog" class="ctraddon_windowsonly" id="ctraddon_pw_notabfog"/>
 		<checkbox label="&Ctr_notabbg;"		preference="ctraddon_notabbg" class="ctraddon_windowsonly" id="ctraddon_pw_notabbg"/>
