@@ -124,7 +124,7 @@
 	
 	<menuitem id="menu_preferences" oncommand="classicthemerestorerjs.ctr.openContentPrefsInWin();"/>
 	
-	<!--panel id="UITourTooltip" targetName="home-button" consumeoutsideclicks="true"/-->
+	<toolbarbutton id="lpt_lastpass-compact-btn" class="toolbarbutton-1 chromeclass-toolbar-additional"/>
 	
 	<menupopup id="menu_FilePopup">
 	  <menuitem id="ctraddon_restart-menu"
