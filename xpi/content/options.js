@@ -375,7 +375,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_autocompl_rhl').style.visibility = 'collapse';
 	}
 
-	if (this.appversion >= 49) {
+	if (this.appversion >= 48) {
 	  document.getElementById('ctraddon_pw_urlbar_uc').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_urlbar_uc_desc').style.visibility = 'collapse';
 	}
