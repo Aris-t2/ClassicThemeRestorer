@@ -55,13 +55,13 @@
 	@media (min-resolution: 1.1dppx) {
 	
 	  @media (-moz-os-version: windows-win8) {
-		#main-window[tabsintitlebar][sizemode="maximized"][fx40plus="true"] #ctraddon_appbutton2 > .toolbarbutton-icon {
+		#main-window[tabsintitlebar][sizemode="maximized"] #ctraddon_appbutton2 > .toolbarbutton-icon {
 			margin-top:-1.5px !important;
 		}
 	  }
 
 	  @media (-moz-os-version: windows-win10) {
-		#main-window[tabsintitlebar][sizemode="maximized"][fx40plus="true"] #ctraddon_appbutton2 > .toolbarbutton-icon {
+		#main-window[tabsintitlebar][sizemode="maximized"] #ctraddon_appbutton2 > .toolbarbutton-icon {
 		  margin-top:-1.5px !important;
 		}
 	  }

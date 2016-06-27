@@ -39,8 +39,8 @@
 	/* Windows 10 tweaks */
 	@media (-moz-os-version: windows-win10) {
 	  #main-window #navigator-toolbox #TabsToolbar:-moz-lwtheme,
-	  #main-window[defaultfxtheme="true"][fx32plus="true"] #TabsToolbar:not(:-moz-lwtheme),	
-	  #main-window[defaultfxtheme="true"][fx32plus="true"] #TabsToolbar:-moz-lwtheme {
+	  #main-window[defaultfxtheme="true"] #TabsToolbar:not(:-moz-lwtheme),	
+	  #main-window[defaultfxtheme="true"] #TabsToolbar:-moz-lwtheme {
 		border-bottom: 0 !important;
 	  }
 	}
@@ -57,7 +57,7 @@
 	}
 	
 	@media (-moz-os-version: windows-win10) {
-	  #main-window[fx40plus="true"] #navigator-toolbox #nav-bar:not(:-moz-lwtheme){
+	  #main-window #navigator-toolbox #nav-bar:not(:-moz-lwtheme){
 		box-shadow:none !important;
 		border-top: 1px solid rgba(0,0,0,.2) !important; 
 	  }

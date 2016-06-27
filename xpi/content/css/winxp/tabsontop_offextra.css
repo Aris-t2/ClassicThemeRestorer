@@ -38,12 +38,12 @@
 	  background: -moz-Dialog !important;
 	}
 	
-	#main-window[fx32plus="true"][defaultfxtheme="true"][tabsontop="false"] #TabsToolbar:not(:-moz-lwtheme) {
+	#main-window[defaultfxtheme="true"][tabsontop="false"] #TabsToolbar:not(:-moz-lwtheme) {
 	  border-bottom: 1px solid hsla(209,67%,12%,0.25) !important;
 	}
 	
 	/* add missing line for Fx38+ */
-	#main-window[defaultfxtheme="true"][fx38plus="true"][tabsontop="false"] #TabsToolbar:-moz-lwtheme {
+	#main-window[defaultfxtheme="true"][tabsontop="false"] #TabsToolbar:-moz-lwtheme {
 	  border-bottom: 1px solid hsla(209,67%,12%,0.25) !important;
 	}
 	

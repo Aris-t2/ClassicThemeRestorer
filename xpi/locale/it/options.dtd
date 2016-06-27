@@ -132,7 +132,7 @@
 <!ENTITY Ctr_puibut_l_sep	"Sinistra">
 <!ENTITY Ctr_puibut_r_sep	"Destra">
 <!ENTITY Ctr_html5warning	"Avviso per HTML5 a tutto schermo">
-<!ENTITY Ctr_oldtoplevimg	"Immagini dei domini di livello superiore: aspetto classico">
+<!ENTITY Ctr_oldtoplevimg	"Sfondo bianco classico per la visualizzazione degli URL immagine">
 <!ENTITY Ctr_altalertbox	"Avvisi di notifiche: aspetto alternativo">
 <!ENTITY Ctr_emptygfavico	"Sostituisci la favicon generica">
 <!ENTITY Ctr_mstatusbar		"Barra di stato mobile">
@@ -232,7 +232,7 @@
 <!ENTITY Ctr_ntabhov		"Nuova scheda al passaggio del mouse">
 <!ENTITY Ctr_bold			"Grassetto">
 <!ENTITY Ctr_italic			"Corsivo">
-<!ENTITY Ctr_underlined		"Underlined">
+<!ENTITY Ctr_underlined		"Sottolineato">
 <!ENTITY Ctr_notabhov		"Le impostazioni attivate prevalgono su quelle del passaggio del mouse">
 <!ENTITY Ctr_tabc_act_tb	"Colore di sfondo delle barre degli strumenti">
 
@@ -269,8 +269,9 @@
 <!ENTITY Ctr_autocomplete	"Completamento automatico">
 <!ENTITY Ctr_altautocompl	"Aspetto alternativo">
 <!ENTITY Ctr_autocompl_it	"Remove 'Search with...' and 'Visit' items (if present)">
-<!ENTITY Ctr_autocompl_hl	"Highlighting of text hits">
-<!ENTITY Ctr_autocompl_sep	"Show separator between results">
+<!ENTITY Ctr_autocompl_hl	"Evidenziamento del testo dei risultati">
+<!ENTITY Ctr_autocompl_rhl	"Aero colors for highlighted results">
+<!ENTITY Ctr_autocompl_sep	"Mostra i separatori tra i risultati">
 <!ENTITY Ctr_urlbar_uc		"Disattiva il completamento automatico">
 <!ENTITY Ctr_lbsugresi		"Disattiva il limite di altezza">
 <!ENTITY Ctr_lbsugres		"Numero di risultati">
@@ -301,7 +302,7 @@
 <!ENTITY Ctr_notabfog		"Disattiva l’effetto nebbia (Windows AeroGlass e Win8)">
 <!ENTITY Ctr_notabbg		"Rimuovi colore di sfondo (Windows AeroGlass e Win8)">
 <!ENTITY Ctr_hightabpos		"Quando possibile, riduci lo spazio sopra le barre">
-<!ENTITY Ctr_showalltabsb	"Always show 'all tabs' button">
+<!ENTITY Ctr_showalltabsb	"Mostra sempre il pulsante 'Elenco di tutte le schede'">
 <!ENTITY Ctr_alttabstb		"Colore di sfondo alternativo">
 <!ENTITY Ctr_alttabstb2		"Finestra ingrandita (schede in alto)">
 
@@ -355,18 +356,11 @@
 <!ENTITY Ctr_nodevtheme		"Impedisci l’attivazione del 'Developer Theme'">
 
 <!ENTITY Ctr_experttweaks	"Avanzate">
-<!ENTITY Ctr_fx34search		"Deselezionando questa preferenza viene ripristinato lo stile classico per la barra di ricerca.">
 <!ENTITY Ctr_fx34loop		"Deselezionando questa preferenza vengono rimosse le funzioni di chiamata e conversazione (Firefox Hello).">
-<!ENTITY Ctr_fx35devtheme	"Deselezionando questa preferenza viene disattivato il 'Developer Theme'.">
-<!ENTITY Ctr_fx36prefs		"Deselezionando questa preferenza viene ripristinata la finestra Opzioni classica.">
-<!ENTITY Ctr_fx36prefs2		"Nota: la finestra Opzioni classica non include tutte le preferenze introdotte nelle ultime versioni.">
 <!ENTITY Ctr_fx38reader		"Deselezionando questa preferenza viene disattivata la modalità lettura e viene eliminata l’icona dalla barra degli indirizzi.">
 <!ENTITY Ctr_fx38pocket		"Deselezionando questa preferenza viene disattivata la funzione Pocket e rimossa l’icona dalle barre degli strumenti.">
 <!ENTITY Ctr_fx38pocket2	"Nota: muovendo il pulsante 'Pocket' nella personalizzazione prima di disattivare questa opzione, Pocket viene rimosso dai segnalibri e dal menu di lettura.">
-<!ENTITY Ctr_e_searchui		"Aspetto barra di ricerca">
 <!ENTITY Ctr_e_loop			"Chiamate e conversazioni (Hello)">
-<!ENTITY Ctr_e_deved		"Developer Edition Theme">
-<!ENTITY Ctr_e_prefsui		"Preferenze in una scheda">
 <!ENTITY Ctr_e_readermode	"Modalità lettura">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Icone altoparlanti nelle schede">

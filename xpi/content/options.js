@@ -43,18 +43,9 @@ classicthemerestorerjso.ctr = {
 	} catch(e){}
 	
 	try{
-	  if (this.appversion >= 40) {
 		if(Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org') {
 		  this.fxdefaulttheme=false;
 		}
-		document.getElementById("ClassicTRoptionsPane").setAttribute('fx40plus',true);
-	  }
-	} catch(e){}
-	
-	try{
-	  if (this.appversion >= 44) {
-		document.getElementById("ClassicTRoptionsPane").setAttribute('fx44plus',true);
-	  }
 	} catch(e){}
 	
 	// restore last selected categories/tabs
@@ -360,91 +351,6 @@ classicthemerestorerjso.ctr = {
 	if (this.prefs.getBoolPref('starinurl')) document.getElementById('ctraddon_pw_bmanimation').disabled = true;
 	
 	// hide settings, if unsupported by Firefox version
-	if (this.appversion < 31) {
-	  document.getElementById('ctraddon_pw_pananimation').style.visibility = 'collapse';
-	  
-	  document.getElementById('ctraddon_closetab_pw_act').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_closetab_pw_non').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_closetab_pw_sta').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_closetab_pw_end').style.visibility = 'collapse';
-	}
-	if (this.appversion < 32) {
-	  document.getElementById('ctraddon_pw_noconicons').style.visibility = 'collapse';
-	}
-	if (this.appversion < 33) {
-	  document.getElementById('ctraddon_experttweakstab').style.visibility = 'collapse';
-	}
-	if (this.appversion < 34) {
-	  document.getElementById('ctraddon_pw_oldsearchgb').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_loopcallgb').style.visibility = 'collapse';
-	}
-	if (this.appversion < 35) {
-	  document.getElementById('ctraddon_pw_devthemegb').style.visibility = 'collapse';
-	}
-	if (this.appversion < 36) {
-	  document.getElementById('ctraddon_pw_oldprefsgb').style.visibility = 'collapse';
-	}
-	if (this.appversion < 38) {
-	  document.getElementById('ctraddon_pw_readermodegb').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_pocketgb').style.visibility = 'collapse';
-	}
-	if (this.appversion < 40) {
-	  document.getElementById('ctraddon_pw_addonversion').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_alt_addonsm').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_am_compact').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_am_compact2').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_transpttbw10').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_altreaderico').style.visibility = 'collapse';
-	}
-	
-	if (this.appversion >= 40) {
-	  document.getElementById('ctraddon_pw_devthemegb').style.visibility = 'collapse';
-	}
-	
-	if (this.appversion >= 40 && this.appversion < 42) {
-	  document.getElementById('ctraddon_pw_nodevtheme2').style.visibility = 'collapse';
-	}
-
-	if (this.appversion < 41) {
-	  document.getElementById('ctraddon_pw_anewtaburlgbox').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_hideurlsrg').style.visibility = 'collapse';
-	}
-
-	if (this.appversion < 42) {
-	  document.getElementById('ctraddon_pw_fsaduration').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_tabsaudioicogb').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_ib_nohovcolor').style.visibility = 'collapse';
-	}
-
-	if (this.appversion >= 42) {
-	  document.getElementById('ctraddon_pw_readermode2').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_oldprefsgb').style.visibility = 'collapse';
-	}
-	
-	if (this.appversion < 43) {
-	  document.getElementById('ctraddon_pw_ctroldsearch').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_lbsugres').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_lbsugresbox').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_urlbar_uc').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_urlbar_uc_desc').style.visibility = 'collapse';
-	}
-
-	if (this.appversion >= 43) {
-	  document.getElementById('ctraddon_pw_oldsearchgb').style.visibility = 'collapse';
-	}
-
-	if (this.appversion < 44) {
-	  document.getElementById('ctraddon_pw_altalertbox').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_urlbardropm2').style.visibility = 'collapse';
-	}
-
-	if (this.appversion < 45) {
-	  document.getElementById('ctraddon_pw_ibinfoico').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_ibinfoico2').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_iblabels').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_html5warning').style.visibility = 'collapse';
-	}
-	
 	if (this.appversion < 46) {
 	  document.getElementById('ctraddon_pw_pocket2').style.visibility = 'collapse';
 	}
@@ -466,6 +372,7 @@ classicthemerestorerjso.ctr = {
 	if (this.appversion < 48) {
 	  document.getElementById('ctraddon_pw_altautocompl').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_autocompl_it').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_autocompl_rhl').style.visibility = 'collapse';
 	}
 
 	if (this.appversion >= 49) {
@@ -670,30 +577,17 @@ classicthemerestorerjso.ctr = {
  
   hideThemeInfoForTabs: function(){
 	setTimeout(function(){
-		//try {
-		  if(classicthemerestorerjso.ctr.appversion < 41) {
-			try {
-			  if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
-				document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'visible';
-				document.getElementById('ctraddon_pw_tabmenulist').disabled = true;
-			  } else if(classicthemerestorerjso.ctr.fxdefaulttheme) {
-				document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'collapse';
-				document.getElementById('ctraddon_pw_tabmenulist').disabled = false;
-			  }
-			} catch(e) {}
-		  } else {
-			  try {
-				if(Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org'){
-				  document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'visible';
-				  document.getElementById('ctraddon_pw_tabmenulist').disabled = true;
-				} else if(classicthemerestorerjso.ctr.fxdefaulttheme) {
-				  document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'collapse';
-				  document.getElementById('ctraddon_pw_tabmenulist').disabled = false;
-				}
-			  } catch(e) {}
-			  
-		  }
-		//} catch(e) {}
+
+	  try {
+		if(Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org'){
+		  document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'visible';
+		  document.getElementById('ctraddon_pw_tabmenulist').disabled = true;
+		} else if(classicthemerestorerjso.ctr.fxdefaulttheme) {
+		  document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'collapse';
+		  document.getElementById('ctraddon_pw_tabmenulist').disabled = false;
+		}
+	  } catch(e) {}
+
 	},100);
   },
 
@@ -1217,19 +1111,15 @@ classicthemerestorerjso.ctr = {
 	this.prefs.setBoolPref("activndicat",true);
 	this.prefs.setBoolPref("tbconmenu",true);
 
-	if(this.appversion >= 38) { 
-	  this.prefs.setCharPref("altoptions",'options_win_alt');
-	}
-	if(this.appversion >= 40) { 
-	  this.prefs.setBoolPref("alt_addonsm",true);
-	  this.prefs.setBoolPref("addonversion",true);
-	}
-	if(this.appversion >= 41) { 
-	  this.prefs.setBoolPref("hideurlsrg",true);
-	}
-	if(this.appversion >= 43) { 
-	  this.prefs.setBoolPref("oldsearch",true);
-	}
+	this.prefs.setCharPref("altoptions",'options_win_alt');
+
+	this.prefs.setBoolPref("alt_addonsm",true);
+	this.prefs.setBoolPref("addonversion",true);
+
+	this.prefs.setBoolPref("hideurlsrg",true);
+
+	this.prefs.setBoolPref("oldsearch",true);
+
 	if(this.appversion >= 48)
 	  this.prefs.setBoolPref("altautocompl",true);
 	

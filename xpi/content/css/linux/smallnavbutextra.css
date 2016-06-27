@@ -61,8 +61,8 @@
 	  transition: none !important;
 	}
 	
-	#main-window[fx42plus="true"][defaultfxtheme="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + *,
-	#main-window[fx42plus="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + * {
+	#main-window[defaultfxtheme="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + *,
+	#main-window #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + * {
 	  -moz-padding-start: 4px !important;
 	  -moz-padding-end: 3px !important;
 	}
@@ -77,7 +77,7 @@
 	  opacity: 1.0 !important;
 	}
 
-	#main-window[fx31="true"] #nav-bar #urlbar-container #forward-button{
+	#main-window #nav-bar #urlbar-container #forward-button{
       -moz-margin-start:6px !important;
 	}
 
@@ -121,7 +121,7 @@
 	}
 
 	/* urlbar border tweaks */
-	#main-window[fx42plus="true"][defaultfxtheme="true"] #urlbar {
+	#main-window[defaultfxtheme="true"] #urlbar {
 	  min-height: 24px;
 	}
 
@@ -154,11 +154,6 @@
 	#nav-bar toolbarbutton[id^="action-button-"] .toolbarbutton-icon,
 	#nav-bar toolbarbutton[id^="toggle-button-"] .toolbarbutton-icon {
 	  width:16px !important;
-	}
-
-	#main-window:not([fx36plus="true"]) #nav-bar toolbarbutton[id^="action-button-"] .toolbarbutton-icon,
-	#main-window:not([fx36plus="true"]) #nav-bar toolbarbutton[id^="toggle-button-"] .toolbarbutton-icon {
-	  width:18px !important;
 	}
 
 	#nav-bar toolbarbutton .toolbarbutton-badge,

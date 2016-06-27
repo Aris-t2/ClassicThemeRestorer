@@ -1109,8 +1109,8 @@
                 tagsAvailable,
                 titleTagsMaxWidth * (1 - titlePct)
               );
-              this._titleText.style.maxWidth = (titleMaxWidth+20) + "px";
-              this._tagsText.style.maxWidth = (titleMaxWidth+20) + "px";
+			  this._titleText.style.maxWidth = titleMaxWidth + "px";
+              this._tagsText.style.maxWidth = titleMaxWidth + "px";
             }
             let urlActionMaxWidth = Math.max(
               itemWidth - titleTagsWidth,
@@ -1123,8 +1123,8 @@
             );
 
             urlActionMaxWidth -= separatorRect.width;
-            this._urlText.style.maxWidth = (titleMaxWidth+20) + "px";
-            this._actionText.style.maxWidth = (titleMaxWidth+20) + "px";
+			this._urlText.style.maxWidth = titleMaxWidth + "px";
+            this._actionText.style.maxWidth = titleMaxWidth + "px";
           }
         ]]></body>
       </method>
