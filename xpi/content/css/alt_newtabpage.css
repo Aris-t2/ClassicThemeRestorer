@@ -18,12 +18,8 @@
 	  border-radius: 0px !important;
 	}
 
-	#newtab-window:not([fx40plus="true"]) .newtab-cell {
-	  margin: 20px 10px 20px !important;
-	}
-
 	html .newtab-cell,
-	#newtab-window[fx40plus="true"] .newtab-cell {
+	#newtab-window .newtab-cell {
 	  margin: 20px 10px 0px !important;
 	}
 

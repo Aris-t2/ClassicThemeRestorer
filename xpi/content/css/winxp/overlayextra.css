@@ -74,42 +74,42 @@
 	}
 	
 	@media (min-resolution: 1.1dppx) {
-		#main-window[defaultfxtheme="true"][fx40plus="true"] :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button) {
+		#main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button) {
 		  list-style-image: url("chrome://browser/skin/Toolbar@2x.png");
 		}
 		
-		#main-window[defaultfxtheme="true"][fx40plus="true"] :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button):-moz-lwtheme-brighttext {
+		#main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button):-moz-lwtheme-brighttext {
 		  list-style-image: url("chrome://browser/skin/Toolbar-inverted@2x.png");
 		}
-		#main-window[defaultfxtheme="true"][fx40plus="true"] #ctraddon_history-menu-toolbar-button,
-		#main-window[defaultfxtheme="true"][fx40plus="true"] #ctraddon_history-button {
+		#main-window[defaultfxtheme="true"] #ctraddon_history-menu-toolbar-button,
+		#main-window[defaultfxtheme="true"] #ctraddon_history-button {
 		  -moz-image-region: rect(0, 360px, 36px, 324px);
 		}
-		#main-window[defaultfxtheme="true"][fx40plus="true"] #ctraddon_back-button {
+		#main-window[defaultfxtheme="true"] #ctraddon_back-button {
 		  -moz-image-region: rect(0, 108px, 36px, 72px);
 		}
-		#main-window[defaultfxtheme="true"][fx40plus="true"] #ctraddon_forward-button,
-		#main-window[defaultfxtheme="true"][fx40plus="true"] #ctraddon_go-button {
+		#main-window[defaultfxtheme="true"] #ctraddon_forward-button,
+		#main-window[defaultfxtheme="true"] #ctraddon_go-button {
 		  -moz-image-region: rect(0, 144px, 36px, 108px);
 		}
-		#main-window[defaultfxtheme="true"][fx40plus="true"] #ctraddon_reload-button {
+		#main-window[defaultfxtheme="true"] #ctraddon_reload-button {
 		  -moz-image-region: rect(0, 180px, 36px, 144px);
 		}
-		#main-window[defaultfxtheme="true"][fx40plus="true"] #ctraddon_stop-button {
+		#main-window[defaultfxtheme="true"] #ctraddon_stop-button {
 		  -moz-image-region: rect(0, 216px, 36px, 180px);
 		}
 
-		#main-window[defaultfxtheme="true"][fx40plus="true"] #ctraddon_restart-button {
+		#main-window[defaultfxtheme="true"] #ctraddon_restart-button {
 		  list-style-image: url("chrome://classic_theme_restorer/content/images/ctrrestart@2x.png");
 		}
 
-		#main-window[defaultfxtheme="true"][fx40plus="true"] #nav-bar :-moz-any(#ctraddon_history-button,/*#ctraddon_history-menu-toolbar-button,*/#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button,#ctraddon_preferences-button,#ctraddon_restart-button) .toolbarbutton-icon {
+		#main-window[defaultfxtheme="true"] #nav-bar :-moz-any(#ctraddon_history-button,/*#ctraddon_history-menu-toolbar-button,*/#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button,#ctraddon_preferences-button,#ctraddon_restart-button) .toolbarbutton-icon {
 		  width: 32px !important;
 		}
-		#main-window[defaultfxtheme="true"][fx40plus="true"] #nav-bar #ctraddon_history-menu-toolbar-button .toolbarbutton-icon {
+		#main-window[defaultfxtheme="true"] #nav-bar #ctraddon_history-menu-toolbar-button .toolbarbutton-icon {
 		  width: 40px !important;
 		}
-		#main-window[defaultfxtheme="true"][fx40plus="true"] toolbar:not(#nav-bar) :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button,#ctraddon_preferences-button,#ctraddon_restart-button) .toolbarbutton-icon {
+		#main-window[defaultfxtheme="true"] toolbar:not(#nav-bar) :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button,#ctraddon_preferences-button,#ctraddon_restart-button) .toolbarbutton-icon {
 		  width: 18px !important;
 		  height: 18px !important;
 		}

@@ -380,13 +380,8 @@
 	  -moz-margin-start:0px !important;
 	}
 	
-	/* pinned tabs fix (Fx38+) */
-	#main-window[fx38plus="true"] #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-content[pinned] {
-	  -moz-padding-end: 0px !important;
-	}
-	
 	/* pinned tabs fix (Fx45+) */
-	#main-window[fx45plus="true"] #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-content[pinned] {
+	#main-window #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-content[pinned] {
 	  -moz-padding-start: 6px !important;
 	}
 	

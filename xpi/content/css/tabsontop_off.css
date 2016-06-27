@@ -32,13 +32,6 @@
 	}
 	/* END: navigator-toolbox toolbars */
 
-	/* fix for popup windows, which disable 'menubar' by force*/
-	#main-window[chromehidden~="menubar"]:not([fx42plus="true"]) #titlebar{
-	  margin-bottom:-26px !important;
-	}
-	/*#main-window[chromehidden~="menubar"][chromehidden~="toolbar"]:not([chromehidden~="location"]) #nav-bar {
-	  visibility: collapse !important;
-	}*/
 	/* exclude CTRs prefwindow */
 	#main-window[chromehidden~="menubar"][title^="about:preferences"][tabsontop="false"] #titlebar{
 	  margin-bottom:0px !important;
@@ -50,6 +43,11 @@
 	#main-window[tabsintitlebar][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar,
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar{
 	  margin-top: 0px !important;
+	}
+	
+	/**/
+	#main-window[tabsintitlebar][chromehidden="menubar directories extrachrome "][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] #titlebar{
+      margin-bottom:-24px !important;
 	}
 	
 	#main-window:-moz-lwtheme #navigator-toolbox::after {

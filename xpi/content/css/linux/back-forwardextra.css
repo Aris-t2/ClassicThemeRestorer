@@ -12,12 +12,8 @@
 	  transition-delay: 0s !important;
 	}
 	
-	#main-window:not([fx31="true"]) #urlbar-container > #urlbar-wrapper,
-	#main-window:not([fx31="true"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper {
-      -moz-padding-start: 33px !important;
-	}
-	#main-window[fx31="true"] #urlbar-container > #urlbar-wrapper,
-	#main-window[fx31="true"] #urlbar-container[forwarddisabled] > #urlbar-wrapper {
+	#main-window #urlbar-container > #urlbar-wrapper,
+	#main-window #urlbar-container[forwarddisabled] > #urlbar-wrapper {
       -moz-padding-start: 8px !important;
 	}
 		
@@ -26,7 +22,7 @@
 	  transition: none !important;
 	}
 
-	#main-window[fx42plus="true"][defaultfxtheme="true"] #nav-bar #notification-popup-box[hidden] + * {
+	#main-window[defaultfxtheme="true"] #nav-bar #notification-popup-box[hidden] + * {
 	  -moz-padding-start: 6px !important;
 	  -moz-padding-end: 5px !important;
 	}
@@ -38,7 +34,7 @@
 	}
 	
 	/* urlbar border tweaks */
-	#main-window[fx42plus="true"][defaultfxtheme="true"] #urlbar {
+	#main-window[defaultfxtheme="true"] #urlbar {
 	  min-height: 24px;
 	}
 

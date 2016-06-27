@@ -56,10 +56,10 @@
 	
 	/* Qute 4 & 5 complete themes */
 	@media (-moz-os-version: windows-win10) {
-	  #main-window[currenttheme^="Qute"][fx40plus="true"][sizemode="normal"] #ctraddon_appbutton2{
+	  #main-window[currenttheme^="Qute"][sizemode="normal"] #ctraddon_appbutton2{
 		margin-bottom: 0px !important;
 	  }
-	  #main-window[currenttheme^="Qute"][fx40plus="true"][sizemode="maximized"] #ctraddon_appbutton2{
+	  #main-window[currenttheme^="Qute"][sizemode="maximized"] #ctraddon_appbutton2{
 		margin-bottom: 2px !important;
       }
 	  #main-window[currenttheme^="Qute"][sizemode="normal"]:not([inFullscreen]) #titlebar-buttonbox toolbarbutton{

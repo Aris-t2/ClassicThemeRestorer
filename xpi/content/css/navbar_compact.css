@@ -2,11 +2,34 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#nav-bar-customization-target,
-	#nav-bar-overflow-button {
-	  margin-top:-6px !important;
-	  margin-bottom:-6px !important;
+	@media not all and (-moz-os-version: windows-win10) {
+	
+		#nav-bar-customization-target,
+		#nav-bar-overflow-button {
+		  margin-top:-6px !important;
+		  margin-bottom:-6px !important;
+		}
+	
 	}
+	
+	@media (-moz-os-version: windows-win10) {
+		
+		#main-window:not([inFullscreen="true"]) #nav-bar-customization-target,
+		#main-window:not([inFullscreen="true"]) #nav-bar-overflow-button {
+		  margin-top:-6px !important;
+		  margin-bottom:-6px !important;
+		}
+		
+		#main-window[inFullscreen="true"] #navigator-toolbox:not([style=""]) #nav-bar-customization-target,
+		#main-window[inFullscreen="true"] #navigator-toolbox:not([style=""]) #nav-bar-overflow-button {
+		  margin-top:0px !important;
+		  margin-bottom:0px !important;
+		  padding-top:0px !important;
+		  padding-bottom:0px !important;
+		}
+	
+	}
+
 	#nav-bar-customization-target #urlbar-container,
 	#nav-bar-customization-target #search-container {
 	  margin-top:7px !important;

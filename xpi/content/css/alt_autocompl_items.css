@@ -10,5 +10,15 @@
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[type="autofill heuristic"] {
 	  display:none !important;
 	}
+	
+	panel[type="autocomplete-richlistbox"] richlistitem[actiontype="visiturl"] + richlistitem:not([collapse="true"]),
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="visiturl"] + richlistitem:not([collapse="true"]),
+	panel[type="autocomplete-richlistbox"] richlistitem[actiontype="searchengine"] + richlistitem:not([collapse="true"]),
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="searchengine"] + richlistitem:not([collapse="true"]),
+	panel[type="autocomplete-richlistbox"] richlistitem[type="autofill heuristic"] + richlistitem:not([collapse="true"]),
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[type="autofill heuristic"] + richlistitem:not([collapse="true"]) {
+	  border-top: 1px solid transparent !important;
+	  border-bottom: 1px solid transparent !important;
+	}
 
 }

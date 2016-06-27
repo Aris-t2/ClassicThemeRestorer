@@ -157,7 +157,7 @@
 	  visibility:collapse !important;
 	}
 	
-	#main-window[fx44plus="true"]  #ctraddon_appbutton > .toolbarbutton-icon{
+	#ctraddon_appbutton > .toolbarbutton-icon{
 	  max-width: unset !important;
 	}
 
@@ -226,20 +226,14 @@
 	  margin-top: 2px;
 	  margin-bottom: 2px;
 	}
-	
-	#main-window:not([fx31="true"]) #appmenu_eyedropper {
-	  display: none !important;
-	}
 
 	/* remove empty appmenu menu button labels */
 	#appmenu-popup  > hbox > vbox > hbox > menu > .menu-iconic-left,
 	#appmenu-popup > hbox > vbox > hbox > menu label {
 	  visibility: collapse;
 	}
+
 	#main-window[defaultfxtheme="true"]  #appmenu-popup  > hbox > vbox > hbox > menu > .menu-right {
-	  -moz-margin-start: 0px;
-	}
-	#main-window[defaultfxtheme="true"][fx31="true"]  #appmenu-popup  > hbox > vbox > hbox > menu > .menu-right {
 	  -moz-margin-start: 8px;
 	}
 	/* make sure submenu labels stay */
@@ -481,10 +475,7 @@
 	}
 	
 	/* hide unsupported menuitems items */
-	#main-window:not([fx34plus="true"]) #appmenu_webide,
-	#main-window[fx34plus="true"] #appmenu_devAppMgr,
-	#main-window:not([fx38plus="true"]) #appmenu_BMB_readingList,
-	#main-window:not([fx38plus="true"]) #ctraddon_BMB_readingList {
+	#main-window #appmenu_devAppMgr {
 	  visibility: collapse !important;
 	}
 	
@@ -517,7 +508,7 @@
 	}
 	
 	/* Fx44+ fix */
-	#main-window[fx44plus="true"] toolbarbutton[id^="ctraddon_"] > .toolbarbutton-icon{
+	toolbarbutton[id^="ctraddon_"] > .toolbarbutton-icon{
 	  max-width: unset !important;
 	}
 	
@@ -533,16 +524,10 @@
 	  display: none;
 	}
 	
-	/**/
-	#main-window:not([fx43plus="true"]) #ctraddon_cui-ctroldsearch {
-	  visibility: collapse; 
-	  display: none;
-	}
-	
 	/* Firefox 44 large mode fix */
-	#main-window[fx44plus="true"] #nav-bar[iconsize="large"] .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #panic-button, #web-apps-button, #webide-button, #loop-button, #pocket-button)) > .toolbarbutton-icon,
-	#main-window[fx44plus="true"] #nav-bar[iconsize="large"] .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #panic-button, #web-apps-button, #webide-button, #loop-button, #pocket-button)) > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
-	#main-window[fx44plus="true"] #nav-bar[iconsize="large"] .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #panic-button, #web-apps-button, #webide-button, #loop-button, #pocket-button)) > .toolbarbutton-badge-stack > .toolbarbutton-icon{
+	#nav-bar[iconsize="large"] .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #panic-button, #web-apps-button, #webide-button, #loop-button, #pocket-button)) > .toolbarbutton-icon,
+	#nav-bar[iconsize="large"] .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #panic-button, #web-apps-button, #webide-button, #loop-button, #pocket-button)) > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+	#nav-bar[iconsize="large"] .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #panic-button, #web-apps-button, #webide-button, #loop-button, #pocket-button)) > .toolbarbutton-badge-stack > .toolbarbutton-icon{
 	  max-width: unset !important;
 	}
 	
