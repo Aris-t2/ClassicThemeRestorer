@@ -8,9 +8,7 @@
 	  background: url("chrome://classic_theme_restorer/content/images/flex_space.png") white center no-repeat;
 	  border: 1px solid black !important;
 	}
-	toolbarpaletteitem[place="palette"] > toolbarseparator{
-	  /*background: url("chrome://classic_theme_restorer/content/images/separator.png") center no-repeat;*/
-	}
+
 	toolbarpaletteitem[place="palette"] > toolbarspacer{
 	  background: url("chrome://classic_theme_restorer/content/images/space1.png") center no-repeat;
 	}
@@ -21,7 +19,6 @@
 	  border: 1px solid black !important;
 	}
 	toolbarpaletteitem[place="toolbar"] > toolbarseparator{
-	  /*background: url("chrome://classic_theme_restorer/content/images/separator.png") center no-repeat;*/
 	  min-width: 5px;
 	  width: 5px;
 	}

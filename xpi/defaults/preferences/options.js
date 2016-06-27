@@ -125,7 +125,9 @@ pref("extensions.classicthemerestorer.urlbardropm2",false);
 pref("extensions.classicthemerestorer.altreaderico",false);
 pref("extensions.classicthemerestorer.altautocompl",false);
 pref("extensions.classicthemerestorer.autocompl_it",false);
-pref("extensions.classicthemerestorer.autocompl_hl",false);
+pref("extensions.classicthemerestorer.autocompl_hlb",false);
+pref("extensions.classicthemerestorer.autocompl_hlu",false);
+pref("extensions.classicthemerestorer.autocompl_hli",false);
 pref("extensions.classicthemerestorer.autocompl_sep",false);
 
 pref("extensions.classicthemerestorer.ib_nohovcolor",false);

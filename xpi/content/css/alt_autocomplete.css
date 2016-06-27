@@ -22,16 +22,31 @@
 	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-separator,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-separator {
 	  display:none !important;
+	  visibility: collapse !important;
 	}
 	
-	panel[type="autocomplete-richlistbox"] .ac-site-icon,
-	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .ac-site-icon {
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem :-moz-any(.ac-site-icon,.ac-title,.ac-action,.ac-url),
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem :-moz-any(.ac-site-icon,.ac-title,.ac-action,.ac-url){
+	  -moz-margin-start: unset !important;
+	  -moz-margin-end: unset !important;
+	  -moz-padding-start: unset !important;
+	  -moz-padding-end: unset !important;
+	}
+
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-type-icon,
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-type-icon {
+	  margin-inline-start: 4px !important;
+	  margin-inline-end: unset !important;  
+	}
+
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-site-icon,
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-site-icon {
 	  -moz-margin-start: 1px !important;
 	}
 
 	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-title,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-title{
-	  -moz-margin-start: -7px !important;
+	  -moz-margin-start: 4px !important;
 	  margin-top:-2px !important;
 	}
 

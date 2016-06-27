@@ -1213,11 +1213,21 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_it",false);
 		  break;
 		  
-		  case "autocompl_hl":
-			if (branch.getBoolPref("autocompl_hl")) classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hl",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hl",false);
+		  case "autocompl_hlb":
+			if (branch.getBoolPref("autocompl_hlb")) classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hlb",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hlb",false);
 		  break;
-		  
+
+		  case "autocompl_hlu":
+			if (branch.getBoolPref("autocompl_hlu")) classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hlu",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hlu",false);
+		  break;
+
+		  case "autocompl_hli":
+			if (branch.getBoolPref("autocompl_hli")) classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hli",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hli",false);
+		  break;
+
 		  case "autocompl_sep":
 			if (branch.getBoolPref("autocompl_sep")) classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_sep",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_sep",false);
@@ -3981,7 +3991,9 @@ classicthemerestorerjs.ctr = {
 		case "altreaderico": 		manageCSS("alt_reader_icons.css");		break;
 		case "altautocompl": 		manageCSS("alt_autocomplete.css");		break;
 		case "autocompl_it": 		manageCSS("alt_autocompl_items.css");	break;
-		case "autocompl_hl": 		manageCSS("alt_autocompl_highl.css");	break;
+		case "autocompl_hlb": 		manageCSS("alt_autocompl_hl_b.css");	break;
+		case "autocompl_hlu": 		manageCSS("alt_autocompl_hl_u.css");	break;
+		case "autocompl_hli": 		manageCSS("alt_autocompl_hl_i.css");	break;
 		case "autocompl_sep": 		manageCSS("alt_autocompl_sep.css");		break;
 		case "locsearchbw10": 		manageCSS("locationsearchbarw10.css");	break;
 		case "combrelstop":			manageCSS("combrelstop.css");			break;

@@ -28,4 +28,11 @@
 	#ctraddon_addon-bar #forecastfox-toolbar .separators {
 	  height:16px !important;
 	}
+
+	/**/
+	@media not all and (-moz-windows-theme:aero) {
+		#main-window[sizemode="normal"] > #tab-view-deck > #browser-panel > #browser-bottombox > #ctraddon_addon-bar {
+		  margin-bottom: -2px !important;
+		}
+	}
 }

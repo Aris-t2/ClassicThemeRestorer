@@ -224,19 +224,18 @@
 		  padding: 2px !important;
 		}
 		
-		@media (-moz-os-version: windows-win10) {
-		  #main-window[fx40plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
-			padding: 2px !important;
-		  }
+		#main-window[fx40plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+		  padding: 2px !important;
+		}
 		  
-		  #main-window[fx44plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
-			padding: 0px 2px !important;
-		  }
-		  #main-window[fx44plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] .toolbarbutton-menubutton-button {
-			padding: 0px !important;
-			margin: 0px !important;
-		  }
+		#main-window[fx44plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] .toolbarbutton-icon,
+		#main-window[fx44plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] .toolbarbutton-menubutton-dropmarker{
+		  padding: 0px !important;
+		  margin: 0px !important;
+		}
 
+		#main-window[fx44plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"] .toolbarbutton-menubutton-dropmarker .dropmarker-icon {
+		  padding: 0 2px !important;
 		}
 
 		#main-window[fx40plus="true"] #nav-bar toolbarbutton[cui-areatype="toolbar"] > :-moz-any(#zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button) > .toolbarbutton-icon,
@@ -539,5 +538,20 @@
       padding-right: unset !important;
 	  padding: 0 !important;
 	  -moz-margin-start: 1px !important;
+	}
+	
+	/* LastPass tweaks */
+	#nav-bar #lpt_lastpass-compact-btn .toolbarbutton-icon {
+	  padding: unset !important;
+	  margin: unset !important;
+	  min-height: unset !important;
+	  min-width: unset !important;
+	}
+	#nav-bar #lpt_lastpass-compact-btn {
+	  margin: 1px !important;
+	  min-height: unset !important;
+	  min-width: unset !important;
+	  height: unset !important;
+	  width: unset !important;
 	}
 }

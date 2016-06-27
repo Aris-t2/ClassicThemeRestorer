@@ -74,7 +74,7 @@
 
 <!ENTITY Ctr_hctpinfotab	"Certaines modifications d'onglets ne sont pas compatibles avec le module « Hide Caption Titlebar Plus ».">
 <!ENTITY Ctr_hctpinfoab		"Le bouton sur la barre de titre n'est pas compatible avec le module « Hide Caption Titlebar Plus ».">
-<!ENTITY Ctr_tobainfotab	"The add-on 'Tabs on Bottom' is not compatible with '&Ctr_title;' and should be disabled. Use available '&Ctr_cuitabsnontop;' settings instead!">
+<!ENTITY Ctr_tobainfotab	"Le module « Tabs on Bottom » n'est pas compatible avec « &Ctr_title; » et devrait être désactivé. Utilisez les paramètres « &Ctr_cuitabsnontop; » disponibles à la place !">
 
 <!ENTITY Ctr_appbutton		"Ancien bouton &brandShortName;">
 <!ENTITY Ctr_appbutton0		"Désactivé">
@@ -132,7 +132,7 @@
 <!ENTITY Ctr_puibut_l_sep	"À gauche">
 <!ENTITY Ctr_puibut_r_sep	"À droite">
 <!ENTITY Ctr_html5warning	"Afficher l'avertissement de passage en plein écran pour les vidéos HTML5">
-<!ENTITY Ctr_oldtoplevimg	"Images de « domaine de premier niveau » : apparence classique">
+<!ENTITY Ctr_oldtoplevimg	"Apparence classique des images, avec un arrière-plan blanc">
 <!ENTITY Ctr_altalertbox	"« Boites de notification » : apparence alternative">
 <!ENTITY Ctr_emptygfavico	"Remplacer le Favicon générique :">
 <!ENTITY Ctr_mstatusbar		"Rendre mobile le panneau de la barre d'état">
@@ -166,7 +166,7 @@
 <!ENTITY Ctr_search_ui		"Barre de recherche">
 <!ENTITY Ctr_ctroldsearch	"Utiliser l'ancienne interface de barre de recherche">
 <!ENTITY Ctr_ctroldsearchc	"Effacer le contenu de la barre après une recherche">
-<!ENTITY Ctr_ctroldsearchr	"Revenir au moteur de recherche par défaut après une recherche">
+<!ENTITY Ctr_ctroldsearchr	"Après une recherche, revenir au premier moteur de recherche de la liste">
 <!ENTITY Ctr_search_oit		"Ouvrir la recherche dans un nouvel onglet">
 <!ENTITY Ctr_osearch_meoit	"Clic milieu : rechercher dans un nouvel « onglet au premier plan »">
 <!ENTITY Ctr_osearch_iwidth	"Ajuster automatiquement la largeur de la fenêtre surgissante">
@@ -203,7 +203,7 @@
 
 <!ENTITY Ctr_tabsep_def		"Séparateurs d'onglets par défaut">
 <!ENTITY Ctr_fxmockup		"Prototype d'interface &brandShortName;">
-<!ENTITY Ctr_tabmokcolor	"Colorer en blanc les boutons des onglets (fermer, nouveau, groupes, tout lister)">
+<!ENTITY Ctr_tabmokcolor	"Colorer en blanc les boutons des onglets (fermer, nouveau, lister tous les onglets)">
 <!ENTITY Ctr_tabmokcolor2	"Colorer en blanc (avec une ombre noire) le texte des onglets inactifs">
 <!ENTITY Ctr_tabmokcolor4	"Colorer en blanc le Favicon générique (vide et en pointillés) des onglets">
 
@@ -232,6 +232,7 @@
 <!ENTITY Ctr_ntabhov		"Nouvel onglet survolé">
 <!ENTITY Ctr_bold			"Gras">
 <!ENTITY Ctr_italic			"Italique">
+<!ENTITY Ctr_underlined		"Souligné">
 <!ENTITY Ctr_notabhov		"Les paramètres activés supplantent les paramètres « Survolé »">
 <!ENTITY Ctr_tabc_act_tb	"Couleur d'arrière-plan pour les barres d'outils">
 
@@ -268,9 +269,9 @@
 <!ENTITY Ctr_urlbar_uc		"Désactiver la fonctionnalité « Autocomplétion unifiée »">
 <!ENTITY Ctr_autocomplete	"Fenêtre surgissante d'autocomplétion">
 <!ENTITY Ctr_altautocompl	"Apparence alternative">
-<!ENTITY Ctr_autocompl_it	"Remove 'Search with...' and 'Visit' items (if present)">
-<!ENTITY Ctr_autocompl_hl	"Marking of hits: Bold and Underlined">
-<!ENTITY Ctr_autocompl_sep	"Show separator between results">
+<!ENTITY Ctr_autocompl_it	"Supprimer les éléments « Rechercher avec... » et « Consulter » (si présents)">
+<!ENTITY Ctr_autocompl_hl	"Mettre les correspondances de texte dans les résultats en :">
+<!ENTITY Ctr_autocompl_sep	"Afficher un séparateur entre les résultats">
 <!ENTITY Ctr_lbsugresi		"Désactiver la limite de hauteur">
 <!ENTITY Ctr_lbsugres		"Nombre de résultats :">
 <!ENTITY Ctr_lbsbradius		"Rayon de bordure personnalisé pour la barre d'adresse et la barre de recherche">
@@ -292,7 +293,7 @@
 <!ENTITY Ctr_mbarforceright	"Dernier élément">
 
 <!ENTITY Ctr_toolbars		"Barres d'outils">
-<!ENTITY Ctr_dblclnewtab	"Un double-clic ouvre un nouvel onglet">
+<!ENTITY Ctr_dblclnewtab	"Un double-clic sur la barre ouvre un nouvel onglet">
 <!ENTITY Ctr_hidetbwot		"Masquer la barre lorsqu'un seul onglet est visible">
 <!ENTITY Ctr_hidetbwote		"Diminuer le délai pour masquer la barre au démarrage">
 <!ENTITY Ctr_hidetbwote_i	"Pourrait provoquer des défauts sur la barre des onglets">
@@ -300,7 +301,7 @@
 <!ENTITY Ctr_notabfog		"Enlever le brouillard (Aero Glass de Windows/Windows 8)">
 <!ENTITY Ctr_notabbg		"Enlever la couleur d'arrière-plan (Aero Glass de Windows/Windows 8)">
 <!ENTITY Ctr_hightabpos		"Réduire l'espace supérieur (si possible)">
-<!ENTITY Ctr_showalltabsb	"Always show 'all tabs' button">
+<!ENTITY Ctr_showalltabsb	"Toujours afficher le bouton « Lister tous les onglets »">
 <!ENTITY Ctr_alttabstb		"Utiliser une couleur d'arrière-plan alternative">
 <!ENTITY Ctr_alttabstb2		"Dans le mode « Agrandi » (onglets au-dessus)">
 
@@ -355,27 +356,27 @@
 
 <!ENTITY Ctr_experttweaks	"Avancé">
 <!ENTITY Ctr_fx34search		"Décocher ce paramètre désactive la nouvelle apparence de la barre de recherche et revient à l'ancienne.">
-<!ENTITY Ctr_fx34loop		"Décocher ce paramètre désactive les fonctionnalités d'« appels et de conversations ».">
+<!ENTITY Ctr_fx34loop		"Décocher ce paramètre désactive les fonctionnalités d'appels et de conversations.">
 <!ENTITY Ctr_fx35devtheme	"Décocher ce paramètre désactive le thème « Developer Edition ».">
 <!ENTITY Ctr_fx36prefs		"Décocher ce paramètre restaure l'ancienne fenêtre des options.">
 <!ENTITY Ctr_fx36prefs2		"Note : l'ancienne fenêtre des options ne contient pas tous les paramètres de navigateur récemment ajoutés !">
-<!ENTITY Ctr_fx38reader		"Décocher ce paramètre désactive le « mode lecture » et enlève son icône de la barre d'adresse.">
+<!ENTITY Ctr_fx38reader		"Décocher ce paramètre désactive le mode « Lecture » et enlève son icône de la barre d'adresse.">
 <!ENTITY Ctr_fx38pocket		"Décocher ce paramètre désactive la fonction « Pocket » et enlève le bouton « Pocket » des barres d'outils.">
 <!ENTITY Ctr_fx38pocket2	"Note : déplacer le bouton « Pocket » vers la zone « Outils et fonctionnalités supplémentaires » de la « page de personnalisation » avant de désactiver ce paramètre supprime également toutes les entrées relatives à « Pocket » du menu des marque-pages et des fenêtres surgissantes du menu du mode lecture.">
 <!ENTITY Ctr_e_searchui		"Apparence de la barre de recherche">
-<!ENTITY Ctr_e_loop			"Appels et conversations / Boucle">
+<!ENTITY Ctr_e_loop			"Hello / Appels et conversations">
 <!ENTITY Ctr_e_deved		"Thème « Developer Edition »">
 <!ENTITY Ctr_e_prefsui		"Options dans un onglet">
 <!ENTITY Ctr_e_readermode	"Mode lecture">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Icône de lecture audio sur les onglets">
-<!ENTITY Ctr_fx42tabsaudico	"Décocher ce paramètre retire l'« icône de lecture audio » des onglets et désactive le menu contextuel afférent.">
-<!ENTITY Ctr_e_containertab	"Container Tabs">
-<!ENTITY Ctr_fx50containert	"Unchecking this preference removes 'container tabs'.">
-<!ENTITY Ctr_e_findbarhl	"Findbar highlighting">
-<!ENTITY Ctr_fx50findbarhl	"Unchecking these preferences removes findbars 'highlight' features.">
-<!ENTITY Ctr_e_flyweb		"Flyweb">
-<!ENTITY Ctr_fx50flyweb		"Unchecking this preference disables 'flyweb'.">
+<!ENTITY Ctr_fx42tabsaudico	"Décocher ce paramètre retire l'icône de lecture audio des onglets et désactive le menu contextuel afférent.">
+<!ENTITY Ctr_e_containertab	"Onglets conteneurs">
+<!ENTITY Ctr_fx50containert	"Décocher ce paramètre désactive les onglets conteneurs.">
+<!ENTITY Ctr_e_findbarhl	"Surlignage avancé de la barre de recherche">
+<!ENTITY Ctr_fx50findbarhl	"Décocher ces paramètres désactive les fonctionnalités avancées de surlignage de la barre de recherche.">
+<!ENTITY Ctr_e_flyweb		"FlyWeb">
+<!ENTITY Ctr_fx50flyweb		"Décocher ce paramètre désactive « FlyWeb ».">
 
 
 <!ENTITY Ctr_pw_settings	"Paramètres">
