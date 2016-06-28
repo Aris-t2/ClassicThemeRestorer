@@ -7,7 +7,7 @@
 	}
 
 	#nav-bar #notification-popup-box[hidden] + * {
-	  -moz-padding-start: 2px !important;
+	  /*-moz-padding-start: 2px !important;*/
 	  transition: none !important;
 	}
 	
@@ -40,7 +40,7 @@
 	}
 	
 	@media (max-resolution: 1.0dppx) {
-		#main-window#navigator-toolbox #nav-bar #back-button > .toolbarbutton-icon{
+		#main-window #navigator-toolbox #nav-bar #back-button > .toolbarbutton-icon{
 		  padding: 0px 0px !important;
 		  margin: 0px 0 !important;
 		}

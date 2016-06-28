@@ -219,6 +219,7 @@
 	/* pinned tabs fix (Fx45+) */
 	#main-window #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-content[pinned] {
 	  -moz-padding-start: 6px !important;
+	  -moz-padding-end: 0px !important;
 	}
 	
 	/**/
