@@ -412,7 +412,7 @@
 		  
 		  	var appversion = parseInt(Services.appinfo.version);
 		  
-			if(appversion < '50') {
+			if(appversion < '48') {
               if (!Services.prefs.getBoolPref("browser.urlbar.unifiedcomplete"))
 				return;
 			}
