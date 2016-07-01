@@ -127,7 +127,6 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_bookmarksbargroup2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabstoolbargroup').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_menubargroup2').style.visibility = 'collapse';
-		document.getElementById('ctraddon_pw_devthemegb').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_hightabpososx').style.visibility = 'collapse';
 		document.getElementById('ctraddon_altoptions_list').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tttitlebar').style.visibility = 'collapse';
