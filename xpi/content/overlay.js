@@ -723,6 +723,9 @@ classicthemerestorerjs.ctr = {
 		  case "hidenavbar":	  
 			if (branch.getBoolPref("hidenavbar")) {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("hidenavbar",true);
+			  try{
+				document.getElementById("navigator-toolbox").setAttribute('ctrnavbarhidden',true);
+			  }catch(e){}
 			  
 			  setTimeout(function(){
 				try{
@@ -733,6 +736,10 @@ classicthemerestorerjs.ctr = {
 			}
 			else {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("hidenavbar",false);
+			  try{
+				if (document.getElementById("navigator-toolbox").hasAttribute('ctrnavbarhidden'))
+				  document.getElementById("navigator-toolbox").removeAttribute('ctrnavbarhidden');
+			  }catch(e){}
 			  
 			  setTimeout(function(){
 				try{
@@ -748,10 +755,12 @@ classicthemerestorerjs.ctr = {
 			  if (branch.getBoolPref("hidenavbar")) {
 				try{
 				  document.getElementById("toggle_nav-bar").setAttribute("checked",false);
+				  document.getElementById("navigator-toolbox").setAttribute('ctrnavbarhidden',true);
 				}catch(e){}
 			  } else {
 				try{
 				  document.getElementById("toggle_nav-bar").setAttribute("checked",true);
+				  document.getElementById("navigator-toolbox").setAttribute('ctrnavbarhidden',false);
 				}catch(e){}
 			  }
 
@@ -1634,8 +1643,19 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "menubarfs":
-			if (branch.getBoolPref("menubarfs") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("menubarfs",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("menubarfs",false);
+			if (branch.getBoolPref("menubarfs") && classicthemerestorerjs.ctr.fxdefaulttheme==true) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("menubarfs",true);
+		      try {
+				document.getElementById("navigator-toolbox").setAttribute('ctrmenubarfs',true);
+			  } catch(e) {}
+			}
+			else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("menubarfs",false);
+			  try {
+				if (document.getElementById("navigator-toolbox").hasAttribute('ctrmenubarfs'))
+				  document.getElementById("navigator-toolbox").removeAttribute('ctrmenubarfs');
+			  } catch(e) {}
+			} 			  
 		  break;
 		  
 		  case "noaddonbarbg":
@@ -1665,8 +1685,19 @@ classicthemerestorerjs.ctr = {
 		  break;
 
 		  case "bookbarfs":
-			if (branch.getBoolPref("bookbarfs") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("bookbarfs",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("bookbarfs",false);
+			if (branch.getBoolPref("bookbarfs") && classicthemerestorerjs.ctr.fxdefaulttheme==true) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("bookbarfs",true);
+			  try {
+				document.getElementById("navigator-toolbox").setAttribute('ctrbookbarfs',true);
+			  } catch(e) {}
+			}
+			else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("bookbarfs",false);
+			  try {
+				if (document.getElementById("navigator-toolbox").hasAttribute('ctrbookbarfs'))
+				  document.getElementById("navigator-toolbox").removeAttribute('ctrbookbarfs');
+			  } catch(e) {}
+			}
 		  break;
 
 		  case "transpttbw10":
