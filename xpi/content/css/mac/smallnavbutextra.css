@@ -116,15 +116,10 @@
 	  -moz-margin-start: 0px !important;
 	}
 
-	#nav-bar #notification-popup-box[hidden] + *,
-	#nav-bar #notification-popup-box + * {
-	  /*-moz-padding-start: 4px !important;*/
-	  transition: none !important;
-	}
-	
 	#main-window #nav-bar #notification-popup-box[hidden] + *,
 	#main-window #nav-bar #notification-popup-box + * {
 	  -moz-padding-start: 6px !important;
+	  transition: none !important;
 	}
 
 	#nav-bar #urlbar-container[forwarddisabled]:hover:not([switchingtabs]) > #urlbar-wrapper > #urlbar {

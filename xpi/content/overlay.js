@@ -760,7 +760,8 @@ classicthemerestorerjs.ctr = {
 			  } else {
 				try{
 				  document.getElementById("toggle_nav-bar").setAttribute("checked",true);
-				  document.getElementById("navigator-toolbox").setAttribute('ctrnavbarhidden',false);
+				  if (document.getElementById("navigator-toolbox").hasAttribute('ctrnavbarhidden'))
+				    document.getElementById("navigator-toolbox").setAttribute('ctrnavbarhidden',false);
 				}catch(e){}
 			  }
 

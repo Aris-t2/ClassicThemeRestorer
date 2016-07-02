@@ -49,11 +49,6 @@
 	  transition-property: none !important;
       transition-duration: 0ms !important;
 	}
-	
-	#nav-bar #notification-popup-box[hidden] + * {
-	  /*-moz-padding-start: 2px !important;*/
-	  transition: none !important;
-	}
 
 	#nav-bar #notification-popup-box:not([hidden]) {
 	  padding-left:2px !important;
@@ -65,6 +60,7 @@
 	#main-window #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + * {
 	  -moz-padding-start: 4px !important;
 	  -moz-padding-end: 3px !important;
+	  transition: none !important;
 	}
 
     #nav-bar * .toolbarbutton-icon,

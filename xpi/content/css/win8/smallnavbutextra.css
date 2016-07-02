@@ -5,15 +5,11 @@
 	  transition: none !important;
 	}
 
-	#nav-bar #notification-popup-box[hidden] + * {
-	  /*-moz-padding-start: 2px !important;*/
-	  transition: none !important;
-	}
-
 	#main-window[defaultfxtheme="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + *,
 	#main-window #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + * {
 	  -moz-padding-start: 4px !important;
 	  -moz-padding-end: 3px !important;
+	  transition: none !important;
 	}
 
 	#nav-bar #notification-popup-box:not([hidden]) {
@@ -291,9 +287,9 @@
 	/* Windows 10 tweaks */
 	@media (-moz-os-version: windows-win10) {
 
-		#main-window[defaultfxtheme="true"] #nav-bar #notification-popup-box[hidden] + * {
+		/*#main-window[defaultfxtheme="true"] #nav-bar #notification-popup-box[hidden] + * {
 		  -moz-padding-start: 4px !important;
-		}
+		}*/
 
 		#urlbar-wrapper, #urlbar,
 		.searchbar-textbox{

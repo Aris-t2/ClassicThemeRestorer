@@ -13,13 +13,9 @@
 	  transition: none !important;
 	}
 
-	#main-window[defaultfxtheme="true"] #notification-popup-box[hidden] + * {
-	  -moz-padding-start: 5px !important;
-	  transition: none !important;
-	}
-	
 	#main-window[defaultfxtheme="true"] #nav-bar #notification-popup-box[hidden] + * {
 	  -moz-padding-start: 7px !important;
+	  transition: none !important;
 	}
 
 	#main-window[defaultfxtheme="true"] #notification-popup-box:not([hidden]) {
@@ -28,8 +24,8 @@
 	  transition: none !important;
 	}
 	
-	#main-window #urlbar-container > #urlbar-wrapper > #urlbar,
-	#main-window #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
+	#main-window toolbox toolbar  #urlbar-container > #urlbar-wrapper > #urlbar,
+	#main-window toolbox toolbar #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
 	  margin-left: 10px !important; /* for both ltr and rtl */
 	}
 
