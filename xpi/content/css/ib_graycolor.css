@@ -5,8 +5,13 @@
 	#urlbar-wrapper #urlbar[pageproxystate="valid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked), 
 	#urlbar-wrapper #urlbar[pageproxystate="valid"] .chromeUI {
       background: linear-gradient(#fcfcfc,#d4d4d4) !important;
-      -moz-border-end: 1px solid lightgrey;
       border-image-source: none !important;
+	}
+	
+	#main-window:not([fx50plus="true"]) #urlbar-wrapper #urlbar[pageproxystate="invalid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked),
+	#main-window:not([fx50plus="true"]) #urlbar-wrapper #urlbar[pageproxystate="valid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked), 
+	#main-window:not([fx50plus="true"]) #urlbar-wrapper #urlbar[pageproxystate="valid"] .chromeUI {
+      -moz-border-end: 1px solid lightgrey;
 	}
 
 	#urlbar-wrapper #urlbar[pageproxystate="invalid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked):hover,
@@ -24,6 +29,11 @@
 	  background: linear-gradient(#f0f0f0,#c0c0c0) !important;
 	  box-shadow: 0 1px 1px hsla(0,0%,48%,1.0) inset,
 				  0 1px 3px 1px hsla(0,0%,48%,1.0) inset !important;
+	}
+	
+	#main-window[fx50plus="true"] #urlbar-wrapper #urlbar[pageproxystate="valid"]  :-moz-any(.urlbar-input-box, #urlbar-display-box),
+	#main-window[fx50plus="true"] #urlbar-wrapper #urlbar[pageproxystate="invalid"]  :-moz-any(.urlbar-input-box, #urlbar-display-box) {
+	  border-image: unset !important;
 	}
 
 }

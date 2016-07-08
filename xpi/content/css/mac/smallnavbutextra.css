@@ -115,9 +115,17 @@
 	#navigator-toolbox #nav-bar #urlbar-container {
 	  -moz-margin-start: 0px !important;
 	}
+	
+	#main-window[fx50plus="true"][defaultfxtheme="true"] #forward-button[disabled="true"] + #urlbar #identity-icon {
+	  margin-inline-start: -6px !important;
+	}
+	
+	#main-window[fx50plus="true"][defaultfxtheme="true"] #forward-button + #urlbar > * {
+	  transition: none !important;
+	}
 
-	#main-window #nav-bar #notification-popup-box[hidden] + *,
-	#main-window #nav-bar #notification-popup-box + * {
+	#main-window:not([fx50plus="true"]) #nav-bar #notification-popup-box[hidden] + *,
+	#main-window:not([fx50plus="true"]) #nav-bar #notification-popup-box + * {
 	  -moz-padding-start: 6px !important;
 	  transition: none !important;
 	}

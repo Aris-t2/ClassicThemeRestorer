@@ -6,6 +6,9 @@
 	  box-shadow: 0 1px 0 hsla(215,54%,33%,.05) inset !important;
 	  -moz-border-end-color: hsla(215,54%,33%,.2) !important;
 	  color: hsl(215,54%,33%) !important;
+	}
+	
+	#main-window:not([fx50plus="true"]) #urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedDomain {
 	  -moz-margin-end:2px !important;
 	}
 
@@ -86,15 +89,13 @@
 			0 1px 3px 1px hsla(0,85%,15%,.5) inset !important;
 	}
 
-	#urlbar-wrapper #urlbar[pageproxystate="valid"] .weakCipher,
-	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedDisplayContent,
-	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked,
-	#urlbar-wrapper #urlbar[pageproxystate="valid"] .insecureLoginForms,
-	#urlbar-wrapper #urlbar[pageproxystate="valid"] .mixedActiveContent,
-	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedDomain,
-	#urlbar-wrapper #urlbar[pageproxystate="valid"] .verifiedIdentity {
+	#main-window:not([fx50plus="true"]) #urlbar-wrapper #urlbar[pageproxystate="valid"] :-moz-any(.weakCipher,.mixedDisplayContent,.mixedDisplayContentLoadedActiveBlocked,.insecureLoginForms,.mixedActiveContent,.verifiedDomain,.verifiedIdentity) {
 	  -moz-border-end: 1px solid;
 	  border-image-source: none !important;
+	}
+	
+	#main-window[fx50plus="true"] #urlbar-wrapper #urlbar[pageproxystate="valid"]  :-moz-any(.urlbar-input-box, #urlbar-display-box) {
+	  border-image: unset !important;
 	}
 	
 	#connection-icon {
