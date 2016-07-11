@@ -3,7 +3,8 @@
 
 	#main-window[fx50plus="true"][defaultfxtheme="true"] #forward-button[disabled="true"] + #urlbar #identity-icon {
 	  margin-inline-start: -6px !important;
-	} 
+	}
+
 	#main-window[fx50plus="true"][defaultfxtheme="true"] #forward-button + #urlbar > * {
 	  transition: none !important;
 	}
