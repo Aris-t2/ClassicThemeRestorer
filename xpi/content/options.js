@@ -135,13 +135,13 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_ib_nohovcolor').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_altreaderico').style.visibility = 'collapse';
 	} else {
-		document.getElementById('ctraddon_pw_special_info2').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_themes_note').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_special_font').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'collapse';
 		document.getElementById('ctraddon_altoptions_list2').style.visibility = 'collapse';
 	};
 
-	//ColorfulTabs info label
+	// ColorfulTabs info label
 	document.getElementById('ctraddon_coltabsinfo').style.visibility = 'collapse';
 
 	// radio restart label
@@ -159,6 +159,9 @@ classicthemerestorerjso.ctr = {
 	
 	// 'Tabs on bottom' add-ons
 	document.getElementById('ctraddon_tobinfotab').style.visibility = 'collapse';
+	
+	// Add-on comaptibiliy reporter note
+	document.getElementById('ctraddon_pw_acr_note').style.visibility = 'collapse';
 	
 	// extra checks to not enable tab width settings while 'TabMixPlus' or 'TabUtilities' is enabled
 	AddonManager.getAddonByID('{dc572301-7619-498c-a57d-39143191b318}', function(addon) {
@@ -345,6 +348,26 @@ classicthemerestorerjso.ctr = {
 	   }
 	};
 	AddonManager.addAddonListener(TOB2Listener);
+	
+	// 'Add-on comaptibiliy reporter' note
+	AddonManager.getAddonByID('compatibility@addons.mozilla.org', function(addon) {
+	  if(addon && addon.isActive) {
+		document.getElementById('ctraddon_pw_acr_note').style.visibility = 'visible';
+	  }
+	});
+	var ACRListener = {
+	   onEnabled: function(addon) {
+		  if(addon.id == 'compatibility@addons.mozilla.org') {
+			document.getElementById('ctraddon_pw_acr_note').style.visibility = 'visible';
+		  }
+	   },
+	   onDisabled: function(addon) {
+		  if(addon.id == 'compatibility@addons.mozilla.org') {
+			document.getElementById('ctraddon_pw_acr_note').style.visibility = 'collapse';
+		  }
+	   }
+	};
+	AddonManager.addAddonListener(ACRListener);
 
 	// disable bookmark animation checkbox, if 'star button in urlbar' is used
 	if (this.prefs.getBoolPref('starinurl')) document.getElementById('ctraddon_pw_bmanimation').disabled = true;

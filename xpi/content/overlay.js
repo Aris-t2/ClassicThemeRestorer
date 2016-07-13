@@ -2067,14 +2067,20 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("bmbutpanelm")) {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("bmbutpanelm",true);
 			}
-			else classicthemerestorerjs.ctr.loadUnloadCSS("bmbutpanelm",false);
-			  
-			if (branch.getBoolPref("panelmenucol")) {
-			  branch.setBoolPref("panelmenucol",false);
-			  setTimeout(function(){
-				branch.setBoolPref("panelmenucol",true);
-			  },1000);
+			else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("bmbutpanelm",false);
 			}
+			  
+			setTimeout(function(){
+			
+			  if (branch.getBoolPref("panelmenucol")) {
+				branch.setBoolPref("panelmenucol",false);
+				setTimeout(function(){
+				  branch.setBoolPref("panelmenucol",true);
+				},1500);
+			  }
+			},1500);
+
 		  break;
 
 		  case "bmbunsortbm": case "bmbunsortbm2":
