@@ -3,7 +3,10 @@
 @-moz-document url(chrome://browser/content/browser.xul){
 
 	#main-window #navigator-toolbox #TabsToolbar .close-icon > .toolbarbutton-icon {
+	  min-width: 20px !important;
 	  width: 20px !important;
+	  min-height: 20px !important;
+	  height: 20px !important;
 	}
 
 }

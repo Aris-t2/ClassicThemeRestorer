@@ -2288,8 +2288,7 @@ classicthemerestorerjs.ctr = {
 					if (Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("dblclnewtab")==false) {
 						document.getElementById("TabsToolbar").removeEventListener("dblclick", openNewTabOnDoubleClick, false);
 						return;
-					}
-					else if(e.button==0 && e.target.localName != "tab"
+					} else if(e.button==0 && e.target.localName != "tab"
 						&& e.target.localName != "toolbarbutton"
 						  && e.target.localName != "arrowscrollbox"
 							&& e.originalTarget.getAttribute("anonid") != "scrollbutton-up"
@@ -2297,10 +2296,15 @@ classicthemerestorerjs.ctr = {
 								&& e.originalTarget.getAttribute("anonid") != "close-button")
 					{
 
+					  if(classicthemerestorerjs.ctr.appversion >= 47
+						&& Services.prefs.getBranch("browser.tabs.").getBoolPref("drawInTitlebar")==false) {
+							//do nothing
+					  } else {
 						BrowserOpenTab();
 
 						e.stopPropagation();
 						e.preventDefault();
+					  }
 					}
 
 				}, false);

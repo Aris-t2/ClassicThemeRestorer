@@ -493,6 +493,28 @@ classicthemerestorerjso.ctr = {
 	
 	ctrSettingsListenerW_forCTR.register(true);
 	
+	
+	var ctrSettingsListenerW_forWTitlebar = new PrefListener(
+	  "browser.tabs.",
+	  function(branch, name) {
+		switch (name) {
+
+		  case "drawInTitlebar":
+		  
+		    if (classicthemerestorerjso.ctr.appversion >= 47 && branch.getBoolPref("drawInTitlebar")==false)
+			  document.getElementById('ctraddon_pw_dblclnewtab').style.visibility = 'collapse';
+			else
+			  document.getElementById('ctraddon_pw_dblclnewtab').style.visibility = 'visible';
+		  
+		  break;
+		}
+	  }
+	);
+	
+	// double click option is only available for Windows
+	if (this.oswindows)
+	  ctrSettingsListenerW_forWTitlebar.register(true);
+	
 	// update sub settings
 	this.ctrpwAppbuttonextra(this.prefs.getCharPref("appbutton"),false);
 	this.ctrpwAppbuttonColorExtra(this.prefs.getCharPref("appbuttonc"));
