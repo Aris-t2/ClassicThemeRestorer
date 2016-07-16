@@ -6,7 +6,7 @@
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
 <!ENTITY Ctr_addonbar		"Панель дополнений">
-<!ENTITY Ctr_statusbar		"Статус панель">
+<!ENTITY Ctr_statusbar		"Панель состояния">
 <!ENTITY Ctr_flexspace		"Растягивающийся интервал">
 <!ENTITY Ctr_space			"Интервал">
 <!ENTITY Ctr_separator		"Разделитель">
@@ -232,7 +232,7 @@
 <!ENTITY Ctr_ntabhov		"Ожидающая новая вкладка">
 <!ENTITY Ctr_bold			"Полужирный">
 <!ENTITY Ctr_italic			"Курсив">
-<!ENTITY Ctr_underlined		"Underlined">
+<!ENTITY Ctr_underlined		"Подчёркнутый">
 <!ENTITY Ctr_notabhov		"Включение настройки не учитывает параметры «в ожидании»">
 <!ENTITY Ctr_tabc_act_tb	"Цвет фона панели инструментов">
 
@@ -269,9 +269,9 @@
 <!ENTITY Ctr_autocomplete	"Автозаполнение">
 <!ENTITY Ctr_altautocompl	"Альтернативный внешний вид">
 <!ENTITY Ctr_autocompl_it	"Удалить пункты «Искать в...» и «Посетить» (при наличии)">
-<!ENTITY Ctr_autocompl_hl	"Highlighting of text hits">
-<!ENTITY Ctr_autocompl_rhl	"Aero colors for highlighted results">
-<!ENTITY Ctr_autocompl_sep	"Show separator between results">
+<!ENTITY Ctr_autocompl_hl	"Выделение текстовых результатов">
+<!ENTITY Ctr_autocompl_rhl	"«Aero» цвета выделения результатов">
+<!ENTITY Ctr_autocompl_sep	"Разделитель между результатами">
 <!ENTITY Ctr_urlbar_uc		"Отключить функцию «автозаполнение»">
 <!ENTITY Ctr_lbsugresi		"Отключить ограничение по высоте">
 <!ENTITY Ctr_lbsugres		"Количество результатов">
@@ -302,7 +302,7 @@
 <!ENTITY Ctr_notabfog		"Отключить затуманивание фона панели вкладок (Windows AeroGlass/8)">
 <!ENTITY Ctr_notabbg		"Удалить цвет фона (Windows AeroGlass/8)">
 <!ENTITY Ctr_hightabpos		"Уменьшить пространство над панелью инструментов (если возможно)">
-<!ENTITY Ctr_showalltabsb	"Always show 'all tabs' button">
+<!ENTITY Ctr_showalltabsb	"Всегда показывать кнопку «Все вкладки»">
 <!ENTITY Ctr_alttabstb		"Альтернативный цвет фона">
 <!ENTITY Ctr_alttabstb2		"В развёрнутом режиме (вкладки вверху)">
 
@@ -356,21 +356,21 @@
 <!ENTITY Ctr_nodevtheme		"Предотвращение активации «Тема разработчика»">
 
 <!ENTITY Ctr_experttweaks	"Продвинутые">
-<!ENTITY Ctr_fx34loop		"Отключение параметра удаляет эту функцию.">
-<!ENTITY Ctr_fx38reader		"Отключение этого параметра выключает этот режим и удаляет значок из адресной строки.">
-<!ENTITY Ctr_fx38pocket		"Отключение параметра удаляет эту функцию и кнопку на панели инструментов.">
-<!ENTITY Ctr_fx38pocket2	"Примечание: Перемещение кнопки «Pocket» на страницу «Настройка &brandShortName;» перед отключением этой опции также удаляет надписи «Pocket» в закладках и режиме чтения.">
-<!ENTITY Ctr_e_loop			"Hello / Loop / Вызов и разговор">
+<!ENTITY Ctr_fx34loop		"Отключение параметра убирает эту функцию.">
+<!ENTITY Ctr_fx38reader		"Отключение этого параметра выключает этот режим и убирает значок из адресной строки.">
+<!ENTITY Ctr_fx38pocket		"Отключение параметра убирает эту функцию и кнопку на панели инструментов.">
+<!ENTITY Ctr_fx38pocket2	"Примечание: Перемещение кнопки «Pocket» на страницу «Настройка &brandShortName;» перед отключением этой опции также убирает надписи «Pocket» в закладках и режиме чтения.">
+<!ENTITY Ctr_e_loop			"Hello / Вызов и разговор / Loop">
 <!ENTITY Ctr_e_readermode	"Режим чтения">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Значок воспроизведения аудио на вкладках">
-<!ENTITY Ctr_fx42tabsaudico	"Отключение параметра удаляет значок «Воспроизведение аудио» с вкладок.">
-<!ENTITY Ctr_e_containertab	"Container Tabs">
-<!ENTITY Ctr_fx50containert	"Unchecking this preference removes 'container tabs'.">
-<!ENTITY Ctr_e_findbarhl	"Findbar highlighting">
-<!ENTITY Ctr_fx50findbarhl	"Unchecking these preferences removes findbars 'highlight' features.">
-<!ENTITY Ctr_e_flyweb		"Flyweb">
-<!ENTITY Ctr_fx50flyweb		"Unchecking this preference disables 'flyweb'.">
+<!ENTITY Ctr_fx42tabsaudico	"Отключение параметра убирает значок «Воспроизведение аудио» с вкладок.">
+<!ENTITY Ctr_e_containertab	"Контейнер вкладок">
+<!ENTITY Ctr_fx50containert	"Отключение параметра убирает «Контейнер вкладок».">
+<!ENTITY Ctr_e_findbarhl	"Подсветка панели поиска">
+<!ENTITY Ctr_fx50findbarhl	"Отключение параметра убирает функцию «подсветки» панели поиска.">
+<!ENTITY Ctr_e_flyweb		"FlyWeb">
+<!ENTITY Ctr_fx50flyweb		"Отключение параметра выключает «FlyWeb».">
 
 
 <!ENTITY Ctr_pw_settings	"Настройки">
@@ -385,8 +385,12 @@
 <!ENTITY Ctr_special_font	"Настройки цвета фона — только для темы по умолчанию!">
 <!ENTITY Ctr_special_info	"Некоторые параметры могут предложить визуальные изменения только в определённых случаях!">
 <!ENTITY Ctr_special_info2	"Настройки сделаны для темы &brandShortName; по умолчанию и не могут работать со всеми сторонними темами!">
-<!ENTITY Ctr_support		"Форум поддержки">
-<!ENTITY Ctr_newversion		"Новая версия?">
+<!ENTITY Ctr_special_acr	"Only report issues through official support channels and not by using 'Add-on Compatibility Reporter'!">
+<!ENTITY Ctr_support		"Support">
+<!ENTITY Ctr_support_forum1	"MozillaZine (English forum)">
+<!ENTITY Ctr_support_forum2	"Camp Firefox (German forum)">
+<!ENTITY Ctr_github_issues	"Report issue on Github">
+<!ENTITY Ctr_newversion		"Check for new version">
 
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"Начало работы">

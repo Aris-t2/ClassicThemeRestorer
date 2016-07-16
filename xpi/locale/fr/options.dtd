@@ -271,14 +271,14 @@
 <!ENTITY Ctr_altautocompl	"Apparence alternative">
 <!ENTITY Ctr_autocompl_it	"Supprimer les éléments « Rechercher avec... » et « Consulter » (si présents)">
 <!ENTITY Ctr_autocompl_hl	"Mettre les correspondances de texte dans les résultats en :">
-<!ENTITY Ctr_autocompl_rhl	"Aero colors for highlighted results">
+<!ENTITY Ctr_autocompl_rhl	"Utiliser des couleurs Aero pour les résultats surlignés">
 <!ENTITY Ctr_autocompl_sep	"Afficher un séparateur entre les résultats">
 <!ENTITY Ctr_lbsugresi		"Désactiver la limite de hauteur">
 <!ENTITY Ctr_lbsugres		"Nombre de résultats :">
 <!ENTITY Ctr_lbsbradius		"Rayon de bordure personnalisé pour la barre d'adresse et la barre de recherche">
 
 <!ENTITY Ctr_menubar_items	"Position des éléments de menu :">
-<!ENTITY Ctr_extrabar		"Barres d'outils supplémentaires :">
+<!ENTITY Ctr_extrabar		"Barres d'outils supplémentaires">
 <!ENTITY Ctr_extrabar0		"Barre(s) d'outils supplémentaire(s)">
 <!ENTITY Ctr_extrabar1		"Barre d'outils supplémentaire">
 <!ENTITY Ctr_extrabarinfo	"Basculer entre les modes « Onglets au-dessus » et « Onglets pas au-dessus » altère aléatoirement l'ordre des barres. &brandShortName; doit être redémarré pour résoudre ce problème.">
@@ -313,7 +313,7 @@
 
 <!ENTITY Ctr_aerocolors		"Utiliser des couleurs Aero bleues (pour les onglets également)">
 <!ENTITY Ctr_aerocolorsg	"Utiliser des couleurs Aero bleues/grises">
-<!ENTITY Ctr_transpttbw10	"Barres d'outils des onglets/du menu/de titre : enlever la couleur d'arrière-plan">
+<!ENTITY Ctr_transpttbw10	"Barres d'outils des onglets/des menus/de titre : enlever la couleur d'arrière-plan">
 <!ENTITY Ctr_transpttbew10	"Réglages supplémentaires pour certains thèmes du système d'exploitation">
 <!ENTITY Ctr_transptcw10	"Masquer les boutons Réduire/Agrandir/Fermer par défaut du système d'exploitation">
 <!ENTITY Ctr_hidenavbar		"Masquer">
@@ -322,7 +322,7 @@
 <!ENTITY Ctr_navbarpad_r	"À droite :">
 <!ENTITY Ctr_nobookbarbg	"Enlever la couleur d'arrière-plan">
 <!ENTITY Ctr_bookbarfs		"Afficher également en mode « Plein écran »">
-<!ENTITY Ctr_nonavbarbg		"Enlever la couleur d'arrière-plan">
+<!ENTITY Ctr_nonavbarbg		"enlever la couleur d'arrière-plan">
 <!ENTITY Ctr_nonavbarbg1	"Les barres d'outils additionnelles de ce module ainsi que d'autres barres d'outils supérieures sont affectées.">
 <!ENTITY Ctr_nonavbarbg2	"Toutes les barres d'outils en mode « Interface Réduite » du module « Beyond Australis » sont affectées.">
 <!ENTITY Ctr_nonavborder	"Ajouter une bordure supérieure à la barre d'outils">
@@ -385,8 +385,12 @@
 <!ENTITY Ctr_special_font	"La personnalisation de la couleur d'arrière-plan est réservée au thème par défaut !">
 <!ENTITY Ctr_special_info	"Certaines options peuvent ne pas toujours offrir de changements visibles.">
 <!ENTITY Ctr_special_info2	"Thème de tierce partie détecté ! Certains paramètres ne fonctionnent pas avec de tels thèmes !">
-<!ENTITY Ctr_support		"Forum d'assistance">
-<!ENTITY Ctr_newversion		"Nouvelle version ?">
+<!ENTITY Ctr_special_acr	"Only report issues through official support channels and not by using 'Add-on Compatibility Reporter'!">
+<!ENTITY Ctr_support		"Support">
+<!ENTITY Ctr_support_forum1	"MozillaZine (English forum)">
+<!ENTITY Ctr_support_forum2	"Camp Firefox (German forum)">
+<!ENTITY Ctr_github_issues	"Report issue on Github">
+<!ENTITY Ctr_newversion		"Check for new version">
 
 <!ENTITY Ctr_addon-bar.accesskey		"U">
 <!ENTITY appMenuGettingStarted.label	"Commencer">

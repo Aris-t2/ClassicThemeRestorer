@@ -723,6 +723,9 @@ classicthemerestorerjs.ctr = {
 		  case "hidenavbar":	  
 			if (branch.getBoolPref("hidenavbar")) {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("hidenavbar",true);
+			  try{
+				document.getElementById("navigator-toolbox").setAttribute('ctrnavbarhidden',true);
+			  }catch(e){}
 			  
 			  setTimeout(function(){
 				try{
@@ -733,6 +736,10 @@ classicthemerestorerjs.ctr = {
 			}
 			else {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("hidenavbar",false);
+			  try{
+				if (document.getElementById("navigator-toolbox").hasAttribute('ctrnavbarhidden'))
+				  document.getElementById("navigator-toolbox").removeAttribute('ctrnavbarhidden');
+			  }catch(e){}
 			  
 			  setTimeout(function(){
 				try{
@@ -748,10 +755,13 @@ classicthemerestorerjs.ctr = {
 			  if (branch.getBoolPref("hidenavbar")) {
 				try{
 				  document.getElementById("toggle_nav-bar").setAttribute("checked",false);
+				  document.getElementById("navigator-toolbox").setAttribute('ctrnavbarhidden',true);
 				}catch(e){}
 			  } else {
 				try{
 				  document.getElementById("toggle_nav-bar").setAttribute("checked",true);
+				  if (document.getElementById("navigator-toolbox").hasAttribute('ctrnavbarhidden'))
+				    document.getElementById("navigator-toolbox").setAttribute('ctrnavbarhidden',false);
 				}catch(e){}
 			  }
 
@@ -1634,8 +1644,19 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "menubarfs":
-			if (branch.getBoolPref("menubarfs") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("menubarfs",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("menubarfs",false);
+			if (branch.getBoolPref("menubarfs") && classicthemerestorerjs.ctr.fxdefaulttheme==true) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("menubarfs",true);
+		      try {
+				document.getElementById("navigator-toolbox").setAttribute('ctrmenubarfs',true);
+			  } catch(e) {}
+			}
+			else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("menubarfs",false);
+			  try {
+				if (document.getElementById("navigator-toolbox").hasAttribute('ctrmenubarfs'))
+				  document.getElementById("navigator-toolbox").removeAttribute('ctrmenubarfs');
+			  } catch(e) {}
+			} 			  
 		  break;
 		  
 		  case "noaddonbarbg":
@@ -1665,8 +1686,19 @@ classicthemerestorerjs.ctr = {
 		  break;
 
 		  case "bookbarfs":
-			if (branch.getBoolPref("bookbarfs") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("bookbarfs",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("bookbarfs",false);
+			if (branch.getBoolPref("bookbarfs") && classicthemerestorerjs.ctr.fxdefaulttheme==true) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("bookbarfs",true);
+			  try {
+				document.getElementById("navigator-toolbox").setAttribute('ctrbookbarfs',true);
+			  } catch(e) {}
+			}
+			else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("bookbarfs",false);
+			  try {
+				if (document.getElementById("navigator-toolbox").hasAttribute('ctrbookbarfs'))
+				  document.getElementById("navigator-toolbox").removeAttribute('ctrbookbarfs');
+			  } catch(e) {}
+			}
 		  break;
 
 		  case "transpttbw10":
@@ -2032,17 +2064,8 @@ classicthemerestorerjs.ctr = {
 		  break;
 
 		  case "bmbutpanelm":
-			if (branch.getBoolPref("bmbutpanelm")) {
-			  classicthemerestorerjs.ctr.loadUnloadCSS("bmbutpanelm",true);
-			}
-			else classicthemerestorerjs.ctr.loadUnloadCSS("bmbutpanelm",false);
-			  
-			if (branch.getBoolPref("panelmenucol")) {
-			  branch.setBoolPref("panelmenucol",false);
-			  setTimeout(function(){
-				branch.setBoolPref("panelmenucol",true);
-			  },1000);
-			}
+			if (branch.getBoolPref("bmbutpanelm")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbutpanelm",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbutpanelm",false);
 		  break;
 
 		  case "bmbunsortbm": case "bmbunsortbm2":
@@ -2250,8 +2273,7 @@ classicthemerestorerjs.ctr = {
 					if (Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("dblclnewtab")==false) {
 						document.getElementById("TabsToolbar").removeEventListener("dblclick", openNewTabOnDoubleClick, false);
 						return;
-					}
-					else if(e.button==0 && e.target.localName != "tab"
+					} else if(e.button==0 && e.target.localName != "tab"
 						&& e.target.localName != "toolbarbutton"
 						  && e.target.localName != "arrowscrollbox"
 							&& e.originalTarget.getAttribute("anonid") != "scrollbutton-up"
@@ -2259,10 +2281,15 @@ classicthemerestorerjs.ctr = {
 								&& e.originalTarget.getAttribute("anonid") != "close-button")
 					{
 
+					  if(classicthemerestorerjs.ctr.appversion >= 47
+						&& Services.prefs.getBranch("browser.tabs.").getBoolPref("drawInTitlebar")==false) {
+							//do nothing
+					  } else {
 						BrowserOpenTab();
 
 						e.stopPropagation();
 						e.preventDefault();
+					  }
 					}
 
 				}, false);
@@ -2385,14 +2412,9 @@ classicthemerestorerjs.ctr = {
 		  break;
 
 		  case "panelmenucol":
-			if (branch.getBoolPref("panelmenucol") && classicthemerestorerjs.ctr.fxdefaulttheme==true && branch.getBoolPref("bmbutpanelm")==false) {
+			if (branch.getBoolPref("panelmenucol") && classicthemerestorerjs.ctr.fxdefaulttheme==true)
 			  classicthemerestorerjs.ctr.loadUnloadCSS("panelmenucol",true);
-			} else if (branch.getBoolPref("panelmenucol") && classicthemerestorerjs.ctr.fxdefaulttheme==true && branch.getBoolPref("bmbutpanelm")) {
-			  classicthemerestorerjs.ctr.loadUnloadCSS("panelmenucol2",true);
-			} else {
-			  classicthemerestorerjs.ctr.loadUnloadCSS("panelmenucol",false);
-			  classicthemerestorerjs.ctr.loadUnloadCSS("panelmenucol2",false);
-			}
+			else classicthemerestorerjs.ctr.loadUnloadCSS("panelmenucol",false);
 		  break;
 		  
 		  //inv icons START
@@ -3921,7 +3943,6 @@ classicthemerestorerjs.ctr = {
 		case "locsearchbw10": 		manageCSS("locationsearchbarw10.css");	break;
 		case "combrelstop":			manageCSS("combrelstop.css");			break;
 		case "panelmenucol": 		manageCSS("panelmenucolor.css");		break;
-		case "panelmenucol2": 		manageCSS("panelmenucolor2.css");		break;
 
 		case "altmenubar": 			manageCSS("menubar.css");				break;
 		case "altmbarpos1": 		manageCSS("menubar_altpos.css");		break;

@@ -2,28 +2,28 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#main-window:not([defaultfxtheme="true"]) #notification-popup-box[hidden] + *,
-	#main-window:not([defaultfxtheme="true"]) #notification-popup-box + .notification-anchor-icon {
+	#main-window[fx50plus="true"][defaultfxtheme="true"] #forward-button[disabled="true"] + #urlbar #identity-icon {
+	  margin-inline-start: -6px !important;
+	}
+	
+	#main-window:not([fx50plus="true"]):not([defaultfxtheme="true"]) #notification-popup-box[hidden] + *,
+	#main-window:not([fx50plus="true"]):not([defaultfxtheme="true"]) #notification-popup-box + .notification-anchor-icon {
 	  -moz-padding-start: 0px !important;
 	  transition: none !important;
 	}
 	
-	#main-window[defaultfxtheme="true"] #notification-popup-box + .notification-anchor-icon{
+	#main-window:not([fx50plus="true"])[defaultfxtheme="true"] #notification-popup-box + .notification-anchor-icon{
 	  -moz-padding-start: 5px !important;
 	  transition: none !important;
 	}
 
-	#main-window[defaultfxtheme="true"] #notification-popup-box[hidden] + * {
-	  -moz-padding-start: 2px !important;
+	#main-window:not([fx50plus="true"])[defaultfxtheme="true"] #nav-bar #notification-popup-box[hidden] + * {
+	  -moz-padding-start: 6px !important;
+	  -moz-padding-end: 5px !important;
 	  transition: none !important;
 	}
 
-	#main-window[defaultfxtheme="true"] #nav-bar #notification-popup-box[hidden] + * {
-	  -moz-padding-start: 6px !important;
-	  -moz-padding-end: 5px !important;
-	}
-
-	#main-window[defaultfxtheme="true"] #notification-popup-box:not([hidden]) {
+	#main-window:not([fx50plus="true"])[defaultfxtheme="true"] #notification-popup-box:not([hidden]) {
 	  padding-left:2px !important;
 	  padding-right:2px !important;
 	  transition: none !important;
@@ -75,8 +75,8 @@
 	}
 	/* END: urlbar border tweaking (default theme does not provide left urlbar border) */
 	
-	#main-window #urlbar-container > #urlbar-wrapper > #urlbar,
-	#main-window #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
+	#main-window toolbox toolbar #urlbar-container > #urlbar-wrapper > #urlbar,
+	#main-window toolbox toolbar #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
 	  margin-left: 8px !important;
 	}
 	

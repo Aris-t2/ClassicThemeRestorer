@@ -3,17 +3,17 @@
 @-moz-document url(chrome://browser/content/browser.xul){
 
 	/* Tabs toolbar tab close button (Fx31+) */
-	#navigator-toolbox #TabsToolbar #ctraddon_tabs-closebutton{
+	#navigator-toolbox #TabsToolbar :-moz-any(#tabs-closebutton,#ctraddon_tabs-closebutton,#tabmix-tabs-closebutton){
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	  -moz-appearance: none !important;
 	  border: none !important;
 	  padding: 0px !important;
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/close2.png") !important;
 	}
-	#navigator-toolbox #TabsToolbar #ctraddon_tabs-closebutton:hover{
+	#navigator-toolbox #TabsToolbar :-moz-any(#tabs-closebutton,#ctraddon_tabs-closebutton,#tabmix-tabs-closebutton):hover{
 	  -moz-image-region: rect(0, 32px, 16px, 16px) !important;
 	}
-	#navigator-toolbox #TabsToolbar #ctraddon_tabs-closebutton:hover:active {
+	#navigator-toolbox #TabsToolbar :-moz-any(#tabs-closebutton,#ctraddon_tabs-closebutton,#tabmix-tabs-closebutton):hover:active {
 	  -moz-image-region: rect(0, 48px, 16px, 32px) !important;
 	}
 	

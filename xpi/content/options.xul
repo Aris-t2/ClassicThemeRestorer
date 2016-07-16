@@ -458,7 +458,7 @@
 	    <caption  label="&Ctr_tabstoolbar;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_tabinsertion;" preference="ctraddon_tabinsertion" id="ctraddon_pw_tab_tabinsertion"/>
 		<description class="ctraddonsuboption">about:config &gt;&gt; browser.tabs.insertRelatedAfterCurrent</description>
-		<checkbox label="&Ctr_dblclnewtab;"	preference="ctraddon_dblclnewtab" class="ctraddon_windowsonly"/>
+		<checkbox label="&Ctr_dblclnewtab;"	preference="ctraddon_dblclnewtab" id="ctraddon_pw_dblclnewtab" class="ctraddon_windowsonly"/>
 		<checkbox label="&Ctr_hightabpos;"	preference="ctraddon_hightabpososx" id="ctraddon_pw_hightabpososx"/>
 		<checkbox label="&Ctr_showalltabsb;" preference="ctraddon_showalltabsb" id="ctraddon_pw_showalltabsb"/>
 		<checkbox label="&Ctr_hidetbwot;"	preference="ctraddon_hidetbwot" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(true);} else {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(false);} classicthemerestorerjso.ctr.needsBrowserRestart();"/>
@@ -1498,11 +1498,13 @@
   </deck>
 </hbox>
 
-  <hbox flex="1" id="ctraddon_pw_special_info2">
-	<spacer flex="1" />
+  <vbox id="ctraddon_pw_themes_note" align="center">
 	<description class="ctraddon_topic">&Ctr_special_info2;</description>
-	<spacer flex="1" />
-  </hbox>
+  </vbox>
+  
+  <vbox id="ctraddon_pw_acr_note" align="center">
+	<description class="ctraddon_topic">&Ctr_special_acr;</description>
+  </vbox>
 
   <popupset>
 	<menupopup id="ctr_pw_settingsPopup" position="before_start">
@@ -1522,12 +1524,23 @@
 	</menupopup>
   </popupset>
   
-  <hbox align="center" flex="1" style="padding-top:5px;">
+  <popupset>
+	<menupopup id="ctr_pw_supportPopup" position="before_end">
+		<menuitem class="menuitem-iconic" label="&Ctr_newversion;" id="ctraddon_newversion" onclick="if(event.button == 0) { window.close(); window.opener.openURL('https://addons.mozilla.org/addon/classicthemerestorer/versions/'); };"/>
+		<menuseparator/>
+		<menuitem class="menuitem-iconic" label="&Ctr_support_forum1;" id="ctr_pw_support_forum1" onclick="if(event.button == 0) { window.close(); window.opener.openURL('http://forums.mozillazine.org/viewtopic.php?t=2827985'); };"/>
+		<menuitem class="menuitem-iconic" label="&Ctr_support_forum2;" id="ctr_pw_support_forum2" onclick="if(event.button == 0) { window.close(); window.opener.openURL('https://www.camp-firefox.de/forum/viewtopic.php?t=108235'); };"/>
+		<menuitem class="menuitem-iconic" label="&Ctr_github_issues;" id="ctr_pw_support_git" onclick="if(event.button == 0) { window.close(); window.opener.openURL('https://github.com/Aris-t2/ClassicThemeRestorer/issues'); };"/>
+		<menuseparator/>
+		<menuitem class="menuitem-iconic" label="aris-addons [@] gmx [.] net" id="ctr_pw_em_con"/>
+	</menupopup>
+  </popupset>
+  
+  <hbox align="center" style="padding-top:5px;">
     <button label="&Ctr_pw_settings;" popup="ctr_pw_settingsPopup"/>
 	<button label="Classic Toolbar Buttons" class="ctraddon_windowsonly" onclick="if(event.button == 0) { window.close(); window.opener.openURL('https://addons.mozilla.org/addon/cstbb/versions/'); };"/>
 	<spacer flex="1" />
-	<button label="&Ctr_support;" id="ctraddon_support" onclick="if(event.button == 0) { window.close(); window.opener.openURL('http://forums.mozillazine.org/viewtopic.php?t=2827985'); };"/>
-	<button label="&Ctr_newversion;" id="ctraddon_newversion" onclick="if(event.button == 0) { window.close(); window.opener.openURL('https://addons.mozilla.org/addon/classicthemerestorer/versions/'); };"/>
+	<button label="&Ctr_support;" id="ctraddon_support"  popup="ctr_pw_supportPopup"/>
 	<button dlgtype="accept" id="ctraddon_pw_okbutton"/>
   </hbox> 
 

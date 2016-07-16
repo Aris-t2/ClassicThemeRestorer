@@ -1,25 +1,38 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#nav-bar #notification-popup-box + *{
+	#main-window[fx50plus="true"][defaultfxtheme="true"] #forward-button[disabled="true"] + #urlbar #identity-icon {
+	  margin-inline-start: -6px !important;
+	}
+
+	#main-window[fx50plus="true"][defaultfxtheme="true"] #forward-button + #urlbar > * {
+	  transition: none !important;
+	}
+
+	#main-window:not([fx50plus="true"]) #nav-bar #notification-popup-box + *{
 	  -moz-padding-start: 9px !important;
 	  transition: none !important;
 	}
 
-	#nav-bar #notification-popup-box[hidden] + * {
-	  /*-moz-padding-start: 2px !important;*/
+	#main-window:not([fx50plus="true"])[defaultfxtheme="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + *,
+	#main-window:not([fx50plus="true"]) #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + * {
+	  -moz-padding-start: 4px !important;
+	  -moz-padding-end: 3px !important;
 	  transition: none !important;
 	}
 
-	#main-window[defaultfxtheme="true"] #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + *,
-	#main-window #navigator-toolbox #nav-bar #urlbar-container #notification-popup-box[hidden] + * {
-	  -moz-padding-start: 4px !important;
-	  -moz-padding-end: 3px !important;
-	}
-
-	#nav-bar #notification-popup-box:not([hidden]) {
+	#main-window:not([fx50plus="true"]) #nav-bar #notification-popup-box:not([hidden]) {
 	  padding-left:2px !important;
 	  padding-right:2px !important;
 	  transition: none !important;
+	}
+	
+	@media (-moz-os-version: windows-win10) {
+	  #main-window[fx50plus="true"][defaultfxtheme="true"] #forward-button[disabled="true"] + #urlbar #identity-icon {
+		margin-inline-start: -9px !important;
+	  }
+	  #main-window:not([fx50plus="true"])[defaultfxtheme="true"] #nav-bar #notification-popup-box[hidden] + * {
+		-moz-padding-start: 4px !important;
+	  }
 	}
 	
     #nav-bar #urlbar-container > #urlbar-wrapper > #urlbar,
@@ -40,7 +53,7 @@
 	
 	@media (max-resolution: 1.0dppx) {
 		#main-window #navigator-toolbox #nav-bar #back-button > .toolbarbutton-icon{
-		  padding: 3px 0px !important;
+		  padding: 2px 0px !important; /*3 0*/
 		  margin: 0px 0px !important;
 		  margin: 0px 0px !important;
 		}
@@ -290,10 +303,6 @@
 	
 	/* Windows 10 tweaks */
 	@media (-moz-os-version: windows-win10) {
-
-		#main-window[defaultfxtheme="true"] #nav-bar #notification-popup-box[hidden] + * {
-		  -moz-padding-start: 4px !important;
-		}
 
 		#urlbar-wrapper, #urlbar,
 		.searchbar-textbox{
