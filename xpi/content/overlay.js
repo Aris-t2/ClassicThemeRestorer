@@ -2281,8 +2281,9 @@ classicthemerestorerjs.ctr = {
 								&& e.originalTarget.getAttribute("anonid") != "close-button")
 					{
 
-					  if(classicthemerestorerjs.ctr.appversion >= 47
-						&& Services.prefs.getBranch("browser.tabs.").getBoolPref("drawInTitlebar")==false) {
+					  if(classicthemerestorerjs.ctr.appversion >= 47 && Services.prefs.getBranch("browser.tabs.").getBoolPref("drawInTitlebar")==false
+						&& (classicthemerestorerjs.ctr.fxdefaulttheme==true || Services.prefs.getBranch("lightweightThemes.")
+						  .getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org')) {
 							//do nothing
 					  } else {
 						BrowserOpenTab();

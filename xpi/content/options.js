@@ -139,6 +139,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_special_font').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'collapse';
 		document.getElementById('ctraddon_altoptions_list2').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_dblclnewtabdes').style.visibility = 'collapse';
 	};
 
 	// ColorfulTabs info label
@@ -385,6 +386,7 @@ classicthemerestorerjso.ctr = {
 	if (this.appversion < 47) {
 	  document.getElementById('ctraddon_pw_hiderecentbm').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_hideeditbm').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_dblclnewtabdes').style.visibility = 'collapse';
 	}
 	
 	if (this.appversion >= 47 && Services.appinfo.OS=="Darwin") {
@@ -501,11 +503,15 @@ classicthemerestorerjso.ctr = {
 
 		  case "drawInTitlebar":
 		  
-		    if (classicthemerestorerjso.ctr.appversion >= 47 && branch.getBoolPref("drawInTitlebar")==false)
+		    if (classicthemerestorerjso.ctr.appversion >= 47 && branch.getBoolPref("drawInTitlebar")==false
+			  && (classicthemerestorerjso.ctr.fxdefaulttheme
+			    || Services.prefs.getBranch("lightweightThemes.")
+				  .getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org')) {
 			  document.getElementById('ctraddon_pw_dblclnewtab').style.visibility = 'collapse';
-			else
+			  document.getElementById('ctraddon_pw_dblclnewtabdes').style.visibility = 'collapse';
+			} else {
 			  document.getElementById('ctraddon_pw_dblclnewtab').style.visibility = 'visible';
-		  
+			}
 		  break;
 		}
 	  }
@@ -866,7 +872,7 @@ classicthemerestorerjso.ctr = {
 	
     document.getElementById('ctraddon_pw_autocompl_it').disabled = which;
   },
- 
+
   ctrpwCtrOldSearch: function(which) {
 	var itemvis = 'collapse';
 	
