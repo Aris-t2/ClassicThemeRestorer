@@ -17,9 +17,9 @@
 	  transition-property:  none !important;
 	  transition-delay: 0s !important;
 	}
-	#nav-bar #urlbar-container > #urlbar-wrapper > #urlbar,
-	#nav-bar #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
-	  margin-left: 0px !important;
+	#nav-bar #urlbar-container /*> #urlbar-wrapper > #urlbar*/,
+	#nav-bar #urlbar-container[forwarddisabled] /*> #urlbar-wrapper > #urlbar*/ {
+	  margin-left: 1px !important;
 	}
 	
 	#main-window #navigator-toolbox #urlbar-wrapper {
@@ -82,7 +82,8 @@
 	}
 
 	#main-window #nav-bar #urlbar-container #forward-button{
-      -moz-margin-start:6px !important;
+      -moz-margin-start: 2px !important;
+	  -moz-margin-end: 2px !important;
 	}
 
 	#nav-bar #back-button > .toolbarbutton-icon,

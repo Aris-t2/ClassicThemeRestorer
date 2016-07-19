@@ -56,8 +56,8 @@
 	}
 	/* END: urlbar border tweaking (default theme does not provide left urlbar border) */
 	
-	#main-window toolbox toolbar  #urlbar-container > #urlbar-wrapper > #urlbar,
-	#main-window toolbox toolbar  #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
-	  margin-left: 8px !important;
+	#main-window toolbox toolbar  #urlbar-container /*> #urlbar-wrapper > #urlbar*/,
+	#main-window toolbox toolbar  #urlbar-container[forwarddisabled] /*> #urlbar-wrapper > #urlbar*/ {
+	  -moz-margin-start: 8px !important;
 	}
 }

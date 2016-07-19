@@ -507,10 +507,10 @@ classicthemerestorerjso.ctr = {
 			  && (classicthemerestorerjso.ctr.fxdefaulttheme
 			    || Services.prefs.getBranch("lightweightThemes.")
 				  .getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org')) {
-			  document.getElementById('ctraddon_pw_dblclnewtab').style.visibility = 'collapse';
+			  document.getElementById('ctraddon_pw_dblclnewtab').disabled = true;
 			  document.getElementById('ctraddon_pw_dblclnewtabdes').style.visibility = 'collapse';
 			} else {
-			  document.getElementById('ctraddon_pw_dblclnewtab').style.visibility = 'visible';
+			  document.getElementById('ctraddon_pw_dblclnewtab').disabled = false;
 			}
 		  break;
 		}
