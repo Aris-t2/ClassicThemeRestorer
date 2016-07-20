@@ -211,3 +211,11 @@
 	}
 
 }
+
+/* get add-ons discovery page */
+html[data-reactid][data-reactroot] head[data-reactid] + body[data-reactid]{
+  background: white !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+

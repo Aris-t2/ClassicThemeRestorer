@@ -60,7 +60,12 @@
 	  min-width: unset !important;
 	}
 
-    #nav-bar * .toolbarbutton-icon,
+    #urlbar-container,
+	#urlbar-container *,
+	#urlbar-wrapper,
+	#urlbar,
+	#urlbar *,
+	#nav-bar * .toolbarbutton-icon,
 	#nav-bar * {
 	  clip-path: none !important;
 	}
@@ -68,7 +73,7 @@
 	#nav-bar #urlbar-container #back-button:not([cui-areatype="menu-panel"]) {
 	  -moz-image-region: rect(0, 54px, 18px, 36px) !important;
 	}
-	/*retina display*/
+
 	@media (min-resolution: 2dppx) {
 		#nav-bar #urlbar-container #back-button:not([cui-areatype="menu-panel"]) {
 		  -moz-image-region: rect(0, 108px, 36px, 72px) !important;
@@ -112,10 +117,6 @@
                   0 0 2px hsla(210,54%,20%,.1) !important;
 	}
 
-	/*#navigator-toolbox #nav-bar #urlbar-container {
-	  -moz-margin-start: 2px !important;
-	}*/
-	
 	#main-window[fx50plus="true"][defaultfxtheme="true"] #forward-button[disabled="true"] + #urlbar #identity-icon {
 	  margin-inline-start: -6px !important;
 	}
@@ -134,8 +135,8 @@
 	  transition-delay: 0s !important;
 	}
 
-	/*toolbar*/ #urlbar-container /*> #urlbar-wrapper > #urlbar*/,
-	/*toolbar*/ #urlbar-container[forwarddisabled] /*> #urlbar-wrapper > #urlbar*/ {
+	#urlbar-container,
+	#urlbar-container[forwarddisabled] {
 	  -moz-margin-start: 4px !important;
 	}
 	

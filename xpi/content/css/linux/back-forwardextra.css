@@ -47,8 +47,8 @@
 	  border-color: Highlight !important;
 	}
 
-	#urlbar-container /*> #urlbar-wrapper > #urlbar*/,
-	#urlbar-container[forwarddisabled] /*> #urlbar-wrapper > #urlbar*/ {
+	#urlbar-container,
+	#urlbar-container[forwarddisabled] {
 	  -moz-margin-start: 4px !important;
 	}
 

@@ -35,8 +35,8 @@
 	  }
 	}
 	
-    #nav-bar #urlbar-container/* > #urlbar-wrapper > #urlbar*/,
-	#nav-bar #urlbar-container[forwarddisabled]/* > #urlbar-wrapper > #urlbar*/ {
+    #nav-bar #urlbar-container,
+	#nav-bar #urlbar-container[forwarddisabled] {
 	  -moz-margin-start: 2px !important;
 	}
 	
@@ -168,7 +168,12 @@
 	  min-width: unset !important;
 	}
 
-    #nav-bar * .toolbarbutton-icon,
+    #urlbar-container,
+	#urlbar-container *,
+	#urlbar-wrapper,
+	#urlbar,
+	#urlbar *,
+	#nav-bar * .toolbarbutton-icon,
 	#nav-bar * {
 	  clip-path: none !important;
 	}

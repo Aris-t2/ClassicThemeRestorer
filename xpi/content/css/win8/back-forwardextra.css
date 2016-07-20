@@ -101,14 +101,14 @@
 	}
 	/* END: urlbar border tweaking (default theme does not provide left urlbar border) */
 
-	#main-window toolbox toolbar  #urlbar-container/* > #urlbar-wrapper > #urlbar*/,
-	#main-window toolbox toolbar  #urlbar-container[forwarddisabled] /*> #urlbar-wrapper > #urlbar*/ {
+	#main-window * toolbar #urlbar-container,
+	#main-window * toolbar #urlbar-container[forwarddisabled] {
 	  -moz-margin-start: 10px !important;
 	}
 
 	@media (-moz-os-version: windows-win10) {
-		#main-window toolbox toolbar  #urlbar-container /*> #urlbar-wrapper > #urlbar*/,
-		#main-window toolbox toolbar  #urlbar-container[forwarddisabled]/* > #urlbar-wrapper > #urlbar*/ {
+		#main-window * toolbar #urlbar-container,
+		#main-window * toolbar #urlbar-container[forwarddisabled] {
 		  -moz-margin-start: 12px !important;
 		}
 	}

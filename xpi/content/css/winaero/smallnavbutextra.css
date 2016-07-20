@@ -27,9 +27,9 @@
 	  transition: none !important;
 	}
 
-    #nav-bar #urlbar-container/* > #urlbar-wrapper > #urlbar*/,
-	#nav-bar #urlbar-container[forwarddisabled]/* > #urlbar-wrapper > #urlbar*/ {
-	  -moz-margin-start: 2px !important; /* has to be this for ltr and rtl locales */
+    #nav-bar #urlbar-container,
+	#nav-bar #urlbar-container[forwarddisabled] {
+	  -moz-margin-start: 2px !important;
 	}
 
     #nav-bar #urlbar-container > #urlbar-wrapper > #urlbar,
@@ -185,7 +185,12 @@
 	  min-width: unset !important;
 	}
 
-    #nav-bar * .toolbarbutton-icon,
+    #urlbar-container,
+	#urlbar-container *,
+	#urlbar-wrapper,
+	#urlbar,
+	#urlbar *,
+	#nav-bar * .toolbarbutton-icon,
 	#nav-bar * {
 	  clip-path: none !important;
 	}
