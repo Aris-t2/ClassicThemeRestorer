@@ -47,9 +47,9 @@
 	  border-color: Highlight !important;
 	}
 
-	#urlbar-container > #urlbar-wrapper > #urlbar,
-	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
-	  margin-left: 4px !important; /* for both ltr and rtl */
+	#urlbar-container,
+	#urlbar-container[forwarddisabled] {
+	  -moz-margin-start: 4px !important;
 	}
 
 }

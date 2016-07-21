@@ -26,10 +26,13 @@
 	  padding-right:2px !important;
 	  transition: none !important;
 	}
+    #nav-bar #urlbar-container,
+	#nav-bar #urlbar-container[forwarddisabled] {
+	  -moz-margin-start: 2px !important;
+	}
 	
     #nav-bar #urlbar-container > #urlbar-wrapper > #urlbar,
 	#nav-bar #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
-      margin-left: 8px !important; /* has to be this for ltr and rtl locales */
       transition: none !important;
       transition-property: none !important;
       transition-delay: 0s !important;
@@ -56,14 +59,14 @@
 		}
 	}
 	
-	/* Fx31+*/
 	#main-window #navigator-toolbox #nav-bar:-moz-locale-dir(ltr) #forward-button{
       margin-left: 4px !important;
+	  margin-right: 4px !important;
 	}
 	#main-window #navigator-toolbox #nav-bar:-moz-locale-dir(rtl) #forward-button{
-      margin-left: 6px !important;
+      margin-left: 4px !important;
+	  margin-right: 4px !important;
 	}
-	/**/
 
 	#nav-bar .toolbarbutton-1 {
 	  -moz-appearance: none !important;
@@ -136,7 +139,12 @@
 	  min-width: unset !important;
 	}
 
-    #nav-bar * .toolbarbutton-icon,
+    #urlbar-container,
+	#urlbar-container *,
+	#urlbar-wrapper,
+	#urlbar,
+	#urlbar *,
+	#nav-bar * .toolbarbutton-icon,
 	#nav-bar * {
 	  clip-path: none !important;
 	}

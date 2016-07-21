@@ -28,9 +28,9 @@
 	  transition: none !important;
 	}
 	
-	#main-window toolbox toolbar  #urlbar-container > #urlbar-wrapper > #urlbar,
-	#main-window toolbox toolbar #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
-	  margin-left: 10px !important; /* for both ltr and rtl */
+	#main-window * toolbar #urlbar-container ,
+	#main-window * toolbar #urlbar-container[forwarddisabled]  {
+	  -moz-margin-start: 8px !important;
 	}
 
 	#main-window[defaultfxtheme="true"] #urlbar {
