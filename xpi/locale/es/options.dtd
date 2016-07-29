@@ -127,7 +127,7 @@
 <!ENTITY Ctr_options_rem	"Recordar la última categoría seleccionada">
 <!ENTITY Ctr_svgfilters		"Colores SVG para iconos predeterminados de botones de barra de herramientas">
 <!ENTITY Ctr_wincontrols	"Controles de ventana móviles en pantalla completa">
-<!ENTITY Ctr_puibuttonsep	"Separador del botón de menú">
+<!ENTITY Ctr_puibuttonsep	"Posición del separador del botón de menú">
 <!ENTITY Ctr_puibut_no_sep	"Oculto">
 <!ENTITY Ctr_puibut_l_sep	"Izquierda">
 <!ENTITY Ctr_puibut_r_sep	"Derecha">
@@ -148,7 +148,7 @@
 <!ENTITY Ctr_navlargeicons	"Iconos grandes">
 <!ENTITY Ctr_nbisizedelay0	"Retardo de la activación al inicio">
 <!ENTITY Ctr_nbisizedelay	"ms (1000 ms = 1 seg)">
-<!ENTITY Ctr_findbar		"Posición de la barra de herramientas de búsqueda (Ctrl+F, F3) en la ventana">
+<!ENTITY Ctr_findbar		"Posición en la ventana de la barra de herramientas de búsqueda">
 <!ENTITY Ctr_findbar_def	"Abajo (predeterminada)">
 <!ENTITY Ctr_findbar_top	"Arriba">
 <!ENTITY Ctr_findbar_topa	"Arriba (alternativa)">
@@ -168,8 +168,8 @@
 <!ENTITY Ctr_ctroldsearchc	"Limpiar barra de búsqueda después de buscar">
 <!ENTITY Ctr_ctroldsearchr	"Volver al primer motor de búsqueda de la lista después de buscar">
 <!ENTITY Ctr_search_oit		"Abrir búsqueda en una nueva pestaña">
-<!ENTITY Ctr_osearch_meoit	"Clic central: Realizar la búsqueda en una nueva 'pestaña en primer plano'">
-<!ENTITY Ctr_osearch_iwidth	"Ajustar automáticamente anchura del menú emergente">
+<!ENTITY Ctr_osearch_meoit	"Clic central: Realiza la búsqueda en una nueva 'pestaña en primer plano'">
+<!ENTITY Ctr_osearch_iwidth	"Ajustar automáticamente la anchura del menú emergente">
 <!ENTITY Ctr_osearch_cwidth	"Anchura personalizada para menús emergentes de búsqueda">
 <!ENTITY Ctr_osearch_dm		"Flecha de despliegue pequeña">
 <!ENTITY Ctr_addonmanager	"Administrador de complementos">
@@ -275,7 +275,7 @@
 <!ENTITY Ctr_autocompl_sep	"Mostrar separador entre resultados">
 <!ENTITY Ctr_lbsugresi		"Deshabilitar límite de altura">
 <!ENTITY Ctr_lbsugres		"Número de resultados">
-<!ENTITY Ctr_lbsbradius		"Borde de radio personalizado para barra de direcciones y barra de búsqueda">
+<!ENTITY Ctr_lbsbradius		"Radio de borde redondeado personalizado para barra de direcciones y barra de búsqueda">
 
 <!ENTITY Ctr_menubar_items	"Posición de los elementos del menú">
 <!ENTITY Ctr_extrabar		"Barras de herramientas adicionales">
@@ -295,7 +295,7 @@
 
 <!ENTITY Ctr_toolbars		"Barras de herramientas">
 <!ENTITY Ctr_dblclnewtab	"Hacer doble clic abre una 'nueva' pestaña">
-<!ENTITY Ctr_dblclnewtabdes	"Not suitable for all complete themes while Windows titlebar is active.">
+<!ENTITY Ctr_dblclnewtabdes	"No es adecuado para todos los temas decorativos mientras la barra de título de Windows esté activa.">
 <!ENTITY Ctr_hidetbwot		"Ocultar barra de pestañas con una sola pestaña visible">
 <!ENTITY Ctr_hidetbwote		"Reducir retardo al ocultar en el inicio">
 <!ENTITY Ctr_hidetbwote_i	"Podría causar problemas en la barra de pestañas">
@@ -353,7 +353,7 @@
 <!ENTITY Ctr_puictrbutton	"Botón en el menú de panel principal (bajo el botón triple-barra)">
 
 <!ENTITY Ctr_otherctroptns	"Otras configuraciones">
-<!ENTITY Ctr_cuibotbuttons	"Botones extra en el modo 'Personalizar'">
+<!ENTITY Ctr_cuibotbuttons	"Botones extra en el modo 'Personalizar' para opciones de CTR">
 <!ENTITY Ctr_nodevtheme		"Evitar que se habilite el estilo del 'tema de desarrollador'">
 
 <!ENTITY Ctr_experttweaks	"Avanzadas">
@@ -369,7 +369,7 @@
 <!ENTITY Ctr_e_containertab	"Pestañas contenedor">
 <!ENTITY Ctr_fx50containert	"Desmarcar esto suprime las 'pestañas contenedor'.">
 <!ENTITY Ctr_e_findbarhl	"Resaltado de la barra de herramientas de búsqueda.">
-<!ENTITY Ctr_fx50findbarhl	"Desmarcar estos ajustes suprime las funciones de 'resaltado' de las barras de herramientas de búsqueda.">
+<!ENTITY Ctr_fx50findbarhl	"Desmarcar estos ajustes suprime las funciones de 'resaltado' de la barra de herramientas de búsqueda.">
 <!ENTITY Ctr_e_flyweb		"Flyweb">
 <!ENTITY Ctr_fx50flyweb		"Desmarcar esta preferencia deshabilita 'flyweb'.">
 
@@ -386,12 +386,12 @@
 <!ENTITY Ctr_special_font	"¡Las configuraciones de color de fondo son sólo para el tema decorativo predeterminado!">
 <!ENTITY Ctr_special_info	"¡Algunas opciones podrían no ofrecer cambios visuales en todos los casos!">
 <!ENTITY Ctr_special_info2	"¡Detectado tema decorativo de terceros! ¡Algunas opciones no funcionarán con ellos!">
-<!ENTITY Ctr_special_acr	"Only report issues through official support channels and not by using 'Add-on Compatibility Reporter'!">
-<!ENTITY Ctr_support		"Support">
-<!ENTITY Ctr_support_forum1	"MozillaZine (English forum)">
-<!ENTITY Ctr_support_forum2	"Camp Firefox (German forum)">
-<!ENTITY Ctr_github_issues	"Report issue on Github">
-<!ENTITY Ctr_newversion		"Check for new version">
+<!ENTITY Ctr_special_acr	"¡Informar de problemas sólo a través de los canales oficiales de soporte evitando usar 'Add-on Compatibility Reporter'!">
+<!ENTITY Ctr_support		"Soporte">
+<!ENTITY Ctr_support_forum1	"MozillaZine (foro en inglés)">
+<!ENTITY Ctr_support_forum2	"Camp Firefox (foro en alemán)">
+<!ENTITY Ctr_github_issues	"Informar de problema (issue) en GitHub">
+<!ENTITY Ctr_newversion		"Comprobar si hay una nueva versión">
 
 <!ENTITY Ctr_addon-bar.accesskey		"C">
 <!ENTITY appMenuGettingStarted.label	"Comenzar">
