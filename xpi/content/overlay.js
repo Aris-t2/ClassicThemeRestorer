@@ -130,6 +130,9 @@ classicthemerestorerjs.ctr = {
 	// prevent location bar moving to palette or panel menu
 	this.preventLocationbarRemoval();
 	
+	// prevent location bar hiding by ac-popup
+	this.preventLocationbarHidingByACPopup();
+	
 	// additional toolbars
 	this.createAdditionalToolbars();
 	
@@ -166,7 +169,7 @@ classicthemerestorerjs.ctr = {
 	// move 'Tools' menus dev tools into application buttons popup 
 	this.moveDevtoolsmenu();
 	
-	// prevent browser from disablning CTRs reload button for no reason
+	// prevent browser from disabling CTRs reload button for no reason
 	this.preventReloaddisabling();
 	
 	// CTR Preferences listener
@@ -2763,6 +2766,37 @@ classicthemerestorerjs.ctr = {
 	observer.observe(document.querySelector('#urlbar-container'), { attributes: true, attributeFilter: ['cui-areatype'] });
 	
   },
+  
+  // prevent location bar hiding by ac-popup
+  preventLocationbarHidingByACPopup: function() {
+  
+   if (classicthemerestorerjs.ctr.prefs.getBoolPref("altautocompl")==false && classicthemerestorerjs.ctr.appversion >= 48) {
+	
+	document.getElementById('PopupAutoCompleteRichResult').addEventListener("popupshown", function onACPopupshown(){
+		
+	  if(document.querySelector('#urlbar-container').parentNode.id != "nav-bar-customization-target" &&
+		document.querySelector('#urlbar-container').parentNode.parentNode.id == "navigator-toolbox"){
+		  
+		var urlbarpos = document.getElementById("urlbar").boxObject.screenY + document.getElementById("urlbar").boxObject.height;
+		var navbarpos = document.getElementById("nav-bar").boxObject.screenY + document.getElementById("nav-bar").boxObject.height;
+		
+		var newpos = urlbarpos - navbarpos;
+		
+		if(newpos>=0)
+		  document.getElementById('PopupAutoCompleteRichResult').style.marginTop = ""+newpos+"px";
+		  
+		console.log(document.querySelector('#urlbar-container').parentNode.parentNode.id);
+	  
+	  }
+	
+	}, false);
+		
+	document.getElementById('PopupAutoCompleteRichResult').addEventListener("popuphidden", function onACPopuphidden(){
+		document.getElementById('PopupAutoCompleteRichResult').style.marginTop = "0px";
+	}, false);
+	
+   }
+  },
 
   // create 0-20 additional toolbars on startup
   // easier and more accurate compared to adding toolbars manually to overlay.xul
@@ -2985,74 +3019,86 @@ classicthemerestorerjs.ctr = {
 
 	var observer = new MutationObserver(function(mutations) {
 	  mutations.forEach(function(mutation) {
-		ctrTabClose();
+		ctrHideTabbar();
 	  });    
 	});
-
-	window.addEventListener("TabClose", ctrTabClose, false);  
-	window.addEventListener("TabOpen", ctrTabClose, false);
-	window.addEventListener("DOMContentLoaded", ctrTabClose, false);
-	observer.observe(document.querySelector('#toolbar-menubar'), { attributes: true, attributeFilter: ['inactive'] });
-
-	function ctrTabClose(event){
 	
+	var observer_mw = new MutationObserver(function(mutations) {
+	  mutations.forEach(function(mutation) {
+		ctrHideTabbar();
+	  });    
+	});
+	
+	var mainWindow = Components.classes["@mozilla.org/appshell/window-mediator;1"].getService(Components.interfaces.nsIWindowMediator).getMostRecentWindow("navigator:browser");
+
+	mainWindow.addEventListener("TabClose", ctrHideTabbar, false);  
+	mainWindow.addEventListener("TabOpen", ctrHideTabbar, false);
+	mainWindow.addEventListener("load", ctrHideTabbar, false);
+	mainWindow.addEventListener("DOMContentLoaded", ctrHideTabbar, false);
+	observer.observe(mainWindow.document.querySelector('#toolbar-menubar'), { attributes: true, attributeFilter: ['inactive','autohide'] });
+	observer_mw.observe(mainWindow.document.querySelector('#main-window'), { attributes: true, attributeFilter: ['sizemode'] });
+
+	function ctrHideTabbar(event){
+		
 	  var tabsintitlebar = Services.prefs.getBranch("browser.tabs.").getBoolPref("drawInTitlebar");
-					  
-	  if(gBrowser.tabContainer.tabbrowser.visibleTabs.length < 2) {
+	  var mainWindow = Components.classes["@mozilla.org/appshell/window-mediator;1"].getService(Components.interfaces.nsIWindowMediator).getMostRecentWindow("navigator:browser");
+	  var tabsontop = classicthemerestorerjs.ctr.prefs.getCharPref("tabsontop");
 		
-		// optionally reduces delay on startup (because it can cause glitches with Windows Classic visual style)
-		if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hidetbwote")) {
-		  
-		  // MacOSX + 47+: this combo does not like 'style.visibility' for tabs toolbar
-		  if(classicthemerestorerjs.ctr.osstring=="Darwin" && tabsintitlebar==true && classicthemerestorerjs.ctr.appversion >= 47) {
-			classicthemerestorerjs.ctr.loadUnloadCSS("hidetabsbarwot",true);
-			document.getElementById("TabsToolbar").collapsed = true;
-		  } 		  
-		  else document.getElementById("TabsToolbar").style.visibility = 'collapse';
-		}
-		else {
-		  classicthemerestorerjs.ctr.loadUnloadCSS("hidetabsbarwot",true);
-		  document.getElementById("TabsToolbar").collapsed = true;
+	  if(mainWindow.gBrowser.tabContainer.tabbrowser.visibleTabs.length < 2) {
+		if(classicthemerestorerjs.ctr.appversion >= 47) {
+		  mainWindow.document.getElementById("TabsToolbar").style.visibility = 'collapse';
+		} else {
+		  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hidetbwote")) {
+			mainWindow.document.getElementById("TabsToolbar").style.visibility = 'collapse';
+		  } else {
+			mainWindow.document.getElementById("TabsToolbar").collapsed = true;
+		  }
 		}
 		
-		// correct titlebar appearance, if needed (not required for all visual styles)
 		if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hidetbwote2")) {
-		
+		  
 		  if(classicthemerestorerjs.ctr.osstring=="WINNT" && tabsintitlebar==true){ // Windows
 			if (document.getElementById("toolbar-menubar").getAttribute("autohide") == "true"
 				&& document.getElementById("toolbar-menubar").getAttribute("inactive") == "true") {
 			  document.getElementById("toolbar-menubar").style.marginBottom="26px";
 			} else document.getElementById("toolbar-menubar").style.marginBottom="unset";
 		  } else if(classicthemerestorerjs.ctr.osstring=="Darwin" && tabsintitlebar==true) { // MacOSX
+			if(classicthemerestorerjs.ctr.appversion >= 47) {
+			  document.getElementById("TabsToolbar").style.marginTop="unset";
+			  if(tabsontop == 'false' || tabsontop == 'false2')
+			    document.getElementById("titlebar").style.marginBottom="-28px";
+			  else
+				document.getElementById("titlebar").style.marginBottom="-10px";
+			} else {
 			  document.getElementById("titlebar").style.paddingBottom="28px";
+			}
 		  } else {} //Linux does not need special treatment
-		
+		  
 		}
-	  }
-	  else {
-		
-		if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hidetbwote")) {
-			
-		  if(classicthemerestorerjs.ctr.osstring=="Darwin" && tabsintitlebar==true && classicthemerestorerjs.ctr.appversion >= 47) {
-			classicthemerestorerjs.ctr.loadUnloadCSS("hidetabsbarwot",false);
-			document.getElementById("TabsToolbar").collapsed = false;
-		  } 
-		  else document.getElementById("TabsToolbar").style.visibility = 'visible';
-		}
-		else {
-		  classicthemerestorerjs.ctr.loadUnloadCSS("hidetabsbarwot",false);
-		  document.getElementById("TabsToolbar").collapsed = false;
+	  } else {
+
+		if(classicthemerestorerjs.ctr.appversion >= 47) {
+		  mainWindow.document.getElementById("TabsToolbar").style.visibility = 'visible';
+		} else {
+		  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hidetbwote")) {
+			mainWindow.document.getElementById("TabsToolbar").style.visibility = 'visible';
+		  } else {
+			mainWindow.document.getElementById("TabsToolbar").collapsed = false;
+		  }
 		}
 		
 		if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hidetbwote2")) {
-			
 		  if(classicthemerestorerjs.ctr.osstring=="WINNT") 
 			document.getElementById("toolbar-menubar").style.marginBottom="unset";		
-		  else if(classicthemerestorerjs.ctr.osstring=="Darwin")
-			document.getElementById("titlebar").style.paddingBottom="unset";
-	      else {} //Linux does not need special treatment
-		
-	    }
+		  else if(classicthemerestorerjs.ctr.osstring=="Darwin") {
+			if(classicthemerestorerjs.ctr.appversion >= 47) {
+			  document.getElementById("TabsToolbar").style.marginTop="-10px";
+			  document.getElementById("titlebar").style.marginBottom="-28px";
+			} else {
+			  document.getElementById("titlebar").style.paddingBottom="unset";
+			}
+		  } else {} //Linux does not need special treatment
+		}
 	  }
 
 	}

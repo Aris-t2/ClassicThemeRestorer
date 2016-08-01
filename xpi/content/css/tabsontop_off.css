@@ -46,8 +46,9 @@
 	}
 	
 	/**/
-	#main-window[tabsintitlebar][chromehidden="menubar directories extrachrome "][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] #titlebar{
-      margin-bottom:-24px !important;
+	#main-window[tabsintitlebar][chromehidden="menubar directories extrachrome "][sizemode="normal"]:not([inFullscreen])[tabsontop="false"] #titlebar,
+	#main-window[tabsintitlebar][chromehidden="menubar directories extrachrome "][sizemode="maximized"]:not([inFullscreen])[tabsontop="false"] #titlebar{
+      margin-bottom:-10px !important;
 	}
 	
 	#main-window:-moz-lwtheme #navigator-toolbox::after {

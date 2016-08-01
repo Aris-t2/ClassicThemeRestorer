@@ -1156,7 +1156,7 @@
 		<description>about:config &gt;&gt; browser.urlbar.maxRichResults</description>
 		<hbox id="ctraddon_pw_lbsugresbox" align="center">
 		  <textbox size="4" maxlength="4" preference="ctraddon_urlresultsl" type="number" min="0" onchange="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
-		  <label value=" 12 &Ctr_tabwidthdef; / 10 (&brandShortName; 48+)"/>
+		  <label value=" 10 &Ctr_tabwidthdef; / 12 (&brandShortName; 45-47)"/>
 		</hbox>
 
 	  </groupbox>

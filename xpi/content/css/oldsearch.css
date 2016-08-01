@@ -21,8 +21,14 @@
 	  -moz-box-align: center !important;
 	  background: none !important;
 	  border: none !important;
+
 	}
-	
+
+	.searchbar-engine-image {
+	  list-style-image: unset !important;
+	}
+
+  
 	#navigator-toolbox #nav-bar  .searchbar-engine-button {
 	  min-height: unset !important;	
 	}

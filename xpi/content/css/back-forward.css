@@ -14,14 +14,9 @@
 	}
 	
     window:not([chromehidden~="toolbar"]) toolbar #urlbar-wrapper,
-	#urlbar-container,
-	#urlbar-container *,
-	#urlbar-wrapper,
-	#urlbar-wrapper *,
-	#urlbar,
-	#urlbar *,
-	#nav-bar * .toolbarbutton-icon,
-	#nav-bar * {
+	#urlbar-container, #urlbar-container *,
+	#urlbar-wrapper, #urlbar-wrapper *,
+	#urlbar, #urlbar *{
 	  clip-path: none !important;
 	}
 	
