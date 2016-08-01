@@ -592,22 +592,22 @@
 	}
 	
 	/* support for old icons+text mode */
-	toolbar[mode="full"]:not(#web-developer-toolbar) .toolbarbutton-1:not([type="menu-button"]):not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button) {
+	toolbar[mode="full"] .toolbarbutton-1:not([type="menu-button"]):not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button) {
 	  -moz-box-orient: vertical !important;
 	}
 
 	#TabsToolbar[mode="full"] toolbarbutton .toolbarbutton-text,
-	toolbar[mode="full"]:not(#web-developer-toolbar) #back-button .toolbarbutton-text,
-	toolbar[mode="full"]:not(#web-developer-toolbar) #forward-button .toolbarbutton-text{
+	toolbar[mode="full"] #back-button .toolbarbutton-text,
+	toolbar[mode="full"] #forward-button .toolbarbutton-text{
 	  display: none !important;
 	}
 	
-	toolbar[mode="full"]:not(#web-developer-toolbar) toolbarbutton[type="menu"]:not(#bookmarks-menu-button) dropmarker{
+	toolbar[mode="full"] toolbarbutton[type="menu"]:not(#bookmarks-menu-button) dropmarker{
 	  display: none !important;
 	}
 
-	toolbar[mode="full"]:not(#web-developer-toolbar) .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button),
-	toolbar[mode="full"]:not(#web-developer-toolbar) .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button) > .toolbarbutton-menubutton-button {
+	toolbar[mode="full"] .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button),
+	toolbar[mode="full"] .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button) > .toolbarbutton-menubutton-button {
 	  min-width: 57px !important;
 	}
 

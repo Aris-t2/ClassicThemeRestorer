@@ -130,9 +130,6 @@ classicthemerestorerjs.ctr = {
 	// prevent location bar moving to palette or panel menu
 	this.preventLocationbarRemoval();
 	
-	// prevent location bar hiding by ac-popup
-	this.preventLocationbarHidingByACPopup();
-	
 	// additional toolbars
 	this.createAdditionalToolbars();
 	
@@ -169,7 +166,7 @@ classicthemerestorerjs.ctr = {
 	// move 'Tools' menus dev tools into application buttons popup 
 	this.moveDevtoolsmenu();
 	
-	// prevent browser from disabling CTRs reload button for no reason
+	// prevent browser from disablning CTRs reload button for no reason
 	this.preventReloaddisabling();
 	
 	// CTR Preferences listener
@@ -2765,37 +2762,6 @@ classicthemerestorerjs.ctr = {
 	
 	observer.observe(document.querySelector('#urlbar-container'), { attributes: true, attributeFilter: ['cui-areatype'] });
 	
-  },
-  
-  // prevent location bar hiding by ac-popup
-  preventLocationbarHidingByACPopup: function() {
-  
-   if (classicthemerestorerjs.ctr.prefs.getBoolPref("altautocompl")==false && classicthemerestorerjs.ctr.appversion >= 48) {
-	
-	document.getElementById('PopupAutoCompleteRichResult').addEventListener("popupshown", function onACPopupshown(){
-		
-	  if(document.querySelector('#urlbar-container').parentNode.id != "nav-bar-customization-target" &&
-		document.querySelector('#urlbar-container').parentNode.parentNode.id == "navigator-toolbox"){
-		  
-		var urlbarpos = document.getElementById("urlbar").boxObject.screenY + document.getElementById("urlbar").boxObject.height;
-		var navbarpos = document.getElementById("nav-bar").boxObject.screenY + document.getElementById("nav-bar").boxObject.height;
-		
-		var newpos = urlbarpos - navbarpos;
-		
-		if(newpos>=0)
-		  document.getElementById('PopupAutoCompleteRichResult').style.marginTop = ""+newpos+"px";
-		  
-		console.log(document.querySelector('#urlbar-container').parentNode.parentNode.id);
-	  
-	  }
-	
-	}, false);
-		
-	document.getElementById('PopupAutoCompleteRichResult').addEventListener("popuphidden", function onACPopuphidden(){
-		document.getElementById('PopupAutoCompleteRichResult').style.marginTop = "0px";
-	}, false);
-	
-   }
   },
 
   // create 0-20 additional toolbars on startup
