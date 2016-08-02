@@ -496,7 +496,8 @@
 		</menulist>
 		<checkbox label="&Ctr_closetab_hfot;"	preference="ctraddon_closetabhfl" id="ctraddon_pw_closetabhfl"/>
 		<checkbox label="&Ctr_closeonleft;"		preference="ctraddon_closeonleft" id="ctraddon_pw_closeonleft"/>
-		<checkbox label="&Ctr_close_wwltab;"	preference="ctraddon_closewwltab" tooltiptext="browser.tabs.closeWindowWithLastTab"/>
+		<checkbox label="&Ctr_close_wwltab;"	preference="ctraddon_closewwltab" id="ctraddon_pw_closewwltab"/>
+		<description class="ctraddonsuboption">about:config &gt;&gt; browser.tabs.closeWindowWithLastTab</description>
 		<checkbox label="&Ctr_closetabbig;"		preference="ctraddon_closetabbig" id="ctraddon_pw_closetabbig" class="ctraddon_winmaconly"/>
 
 		<radiogroup preference="ctraddon_closeicon" id="ctraddon_pw_closeicon" orient="horizontal" value="">
