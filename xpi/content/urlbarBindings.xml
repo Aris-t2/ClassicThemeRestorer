@@ -226,8 +226,12 @@
 			this.removeAttribute("height");
 			this.setAttribute("maxheight", height);
 		  }
-
-          this.openPopup(aElement, "after_start", 0, -1, false, false);
+		  
+		  // if CTRs movable location bar is on a bottom toolbar, open autocomplete popup above location bar
+		  if(document.getElementById('urlbar-container').parentNode.parentNode.id=="browser-bottombox")
+		    this.openPopup(aElement, "before_end", 0, 0, false, false);
+		  else
+            this.openPopup(aElement, "after_start", 0, -1, false, false);
         ]]></body>
       </method>
 
