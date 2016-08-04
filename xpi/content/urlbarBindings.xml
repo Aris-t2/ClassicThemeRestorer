@@ -215,12 +215,20 @@
 			
 			// urlbars bottom position
 			var urlbbotpos = document.getElementById("urlbar").boxObject.screenY + document.getElementById("urlbar").boxObject.height;
-
+			
+			var onbottombar = document.getElementById('urlbar-container').parentNode.parentNode.id=="browser-bottombox";
+			
 			try{
 			  if(document.getElementById("main-window").hasAttribute("inFullscreen"))
 			    height = screen.height - urlbbotpos - 3;
 			  else
 			    height = screen.availHeight - urlbbotpos - 3;
+				
+			  if(onbottombar)
+			    height = document.getElementById("main-window").boxObject.height
+						 - document.getElementById("navigator-toolbox").boxObject.height
+						 - document.getElementById("urlbar").boxObject.height;
+	
 			} catch(e){}
 			
 			this.removeAttribute("height");
@@ -228,7 +236,7 @@
 		  }
 		  
 		  // if CTRs movable location bar is on a bottom toolbar, open autocomplete popup above location bar
-		  if(document.getElementById('urlbar-container').parentNode.parentNode.id=="browser-bottombox")
+		  if(onbottombar)
 		    this.openPopup(aElement, "before_end", 0, 0, false, false);
 		  else
             this.openPopup(aElement, "after_start", 0, -1, false, false);

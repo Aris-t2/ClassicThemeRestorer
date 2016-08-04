@@ -3076,6 +3076,9 @@ classicthemerestorerjs.ctr = {
 			}
 		  } else {} //Linux does not need special treatment
 		  
+		} else if(classicthemerestorerjs.ctr.osstring=="WINNT" && tabsintitlebar==true){
+			if(classicthemerestorerjs.ctr.appversion >= 47)
+		      recentWindow.document.getElementById("titlebar").style.marginBottom="-26px";
 		} else if(classicthemerestorerjs.ctr.osstring=="Darwin" && tabsintitlebar==true){
 			if(classicthemerestorerjs.ctr.appversion >= 47)
 		      recentWindow.document.getElementById("titlebar").style.marginBottom="-28px";
@@ -3103,6 +3106,9 @@ classicthemerestorerjs.ctr = {
 			  recentWindow.document.getElementById("titlebar").style.paddingBottom="unset";
 			}
 		  } else {} //Linux does not need special treatment
+		} else if(classicthemerestorerjs.ctr.osstring=="WINNT" && tabsintitlebar==true){
+			if(classicthemerestorerjs.ctr.appversion >= 47)
+		      recentWindow.document.getElementById("titlebar").style.marginBottom="-26px";
 		} else if(classicthemerestorerjs.ctr.osstring=="Darwin" && tabsintitlebar==true){
 			if(classicthemerestorerjs.ctr.appversion >= 47)
 		      recentWindow.document.getElementById("titlebar").style.marginBottom="-28px";

@@ -404,13 +404,14 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_urlbar_uc_desc').style.visibility = 'collapse';
 	}
 	
+	if (this.appversion >= 49) {
+	  document.getElementById('ctraddon_pw_loopcallgb').style.visibility = 'collapse';
+	}
+	
 	if (this.appversion < 50) {
 	  document.getElementById('ctraddon_pw_containertabgb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_findbarhlgb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_flywebgb').style.visibility = 'collapse';
-	}
-	if (this.appversion >= 50) {
-	  document.getElementById('ctraddon_pw_loopcallgb').style.visibility = 'collapse';
 	}
 	
 	function PrefListener(branch_name, callback) {
