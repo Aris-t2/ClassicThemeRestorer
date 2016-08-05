@@ -897,9 +897,17 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("altalertbox",false);
 		  break;
 
-		  case "oldtoplevimg":
-			if (branch.getBoolPref("oldtoplevimg")) classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg",false);
+		  case "oldtoplevimg": case "oldtoplevimg2":
+			if (branch.getBoolPref("oldtoplevimg") && branch.getBoolPref("oldtoplevimg2")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg2",true);
+			} else if (branch.getBoolPref("oldtoplevimg") && branch.getBoolPref("oldtoplevimg2")==false) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg",true);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg2",false);
+			} else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg2",false);
+			}
 		  break;
 		  
 		  case "activndicat":
@@ -2957,6 +2965,7 @@ classicthemerestorerjs.ctr = {
 		try{
 		  document.getElementById("ctraddon_BMB_unsortedBookmarks_mm").collapsed = true;
 		  document.getElementById("ctraddon_BMB_unsortedBookmarks_mm2").collapsed = true;
+		  document.getElementById("ctraddon_BMB_unsortedBookmarks_mm2sep").collapsed = true;
 		} catch(e){}
 	  },1000);
 	}
@@ -3079,7 +3088,7 @@ classicthemerestorerjs.ctr = {
 		  
 		} else if(classicthemerestorerjs.ctr.osstring=="WINNT" && tabsintitlebar==true){
 			if(classicthemerestorerjs.ctr.appversion >= 47)
-		      recentWindow.document.getElementById("titlebar").style.marginBottom="-26px";
+		      recentWindow.document.getElementById("titlebar").style.marginBottom="-23px";
 		} else if(classicthemerestorerjs.ctr.osstring=="Darwin" && tabsintitlebar==true){
 			if(classicthemerestorerjs.ctr.appversion >= 47)
 		      recentWindow.document.getElementById("titlebar").style.marginBottom="-28px";
@@ -3109,7 +3118,7 @@ classicthemerestorerjs.ctr = {
 		  } else {} //Linux does not need special treatment
 		} else if(classicthemerestorerjs.ctr.osstring=="WINNT" && tabsintitlebar==true){
 			if(classicthemerestorerjs.ctr.appversion >= 47)
-		      recentWindow.document.getElementById("titlebar").style.marginBottom="-26px";
+		      recentWindow.document.getElementById("titlebar").style.marginBottom="-23px";
 		} else if(classicthemerestorerjs.ctr.osstring=="Darwin" && tabsintitlebar==true){
 			if(classicthemerestorerjs.ctr.appversion >= 47)
 		      recentWindow.document.getElementById("titlebar").style.marginBottom="-28px";
@@ -3982,6 +3991,7 @@ classicthemerestorerjs.ctr = {
 		case "puib_leftsep": 		manageCSS("puibutton_leftsep.css");		break;
 		case "puib_rightsep": 		manageCSS("puibutton_rightsep.css");	break;
 		case "oldtoplevimg": 		manageCSS("old_toplevel_img.css");		break;
+		case "oldtoplevimg2": 		manageCSS("old_toplevel_img2.css");		break;
 		case "altalertbox": 		manageCSS("alt_alertboxfx44.css");		break;
 		case "navthrobber": 		manageCSS("navthrobber.css");			break;
 		case "hideprbutton": 		manageCSS("hidepagereportbutton.css");	break;

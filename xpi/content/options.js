@@ -548,6 +548,7 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwSearchPopupSize(this.prefs.getBoolPref("osearch_cwidth"));
 	this.ctrpwAeroColors(this.prefs.getBoolPref("aerocolors"));
 	this.ctrpwAutoCompleteHeight(this.prefs.getBoolPref("urlresults"));
+	this.ctrpwOldTopLevelImg(this.prefs.getBoolPref("oldtoplevimg"));
 	
 	var closetab_value = this.prefs.getCharPref("closetab");
   
@@ -863,6 +864,19 @@ classicthemerestorerjso.ctr = {
 	
     document.getElementById('ctraddon_pw_aerocolorsg').disabled = which;
 	document.getElementById('ctraddon_pw_aerocolorsg').style.visibility = itemvis;
+  },
+  
+  ctrpwOldTopLevelImg:function(which) {
+	var itemvis = 'collapse';
+	
+    if(which==true) {
+	  which=false; itemvis = 'visible';
+	} else {
+	  which=true; itemvis = 'collapse';
+	}
+	
+    document.getElementById('ctraddon_pw_oldtoplevimg2').disabled = which;
+	document.getElementById('ctraddon_pw_oldtoplevimg2').style.visibility = itemvis;
   },
   
   ctrpwAutoCompleteHeight: function(which) {

@@ -3,16 +3,16 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	#ctraddon_BMB_unsortedBookmarks_m,
-	#ctraddon_BMB_unsortedBookmarks_mm {
+	#main-window:not([fx48plus="true"]) #ctraddon_BMB_unsortedBookmarks_mm {
 	  display: unset !important;
 	}
 
 	#ctraddon_BMB_unsortedBookmarks_m,
-	#ctraddon_BMB_unsortedBookmarks_mm {
+	#main-window:not([fx48plus="true"]) #ctraddon_BMB_unsortedBookmarks_mm {
 	  visibility: visible !important;
 	}
 
-	#menu_unsortedBookmarks,
+	#main-window:not([fx48plus="true"]) #menu_unsortedBookmarks,
 	#ctraddon_BMB_unsortedBookmarks{
 	  display:none !important;
 	}

@@ -143,7 +143,7 @@
 	<menugroup id="bookmarksMenuPopup">
       <menu id="ctraddon_BMB_unsortedBookmarks_mm"
                   class="menu-iconic bookmark-item"
-                  label="&bookmarksMenuButton.unsorted.label;"
+                  label="&bookmarksMenuButton.other.label;"
                   container="true"
 				  insertbefore="bookmarksMenuItemsSeparator">
         <menupopup id="BMB_unsortedBookmarksPopup_mm"
@@ -153,9 +153,11 @@
                                     new PlacesMenu(event, 'place:folder=UNFILED_BOOKMARKS',
                                     PlacesUIUtils.getViewForNode(this.parentNode.parentNode).options);"/>
       </menu>
+	  
+	  <menuseparator id="ctraddon_BMB_unsortedBookmarks_mm2sep"/>
       <menu id="ctraddon_BMB_unsortedBookmarks_mm2"
                   class="menu-iconic bookmark-item"
-                  label="&bookmarksMenuButton.unsorted.label;"
+                  label="&bookmarksMenuButton.other.label;"
                   container="true">
         <menupopup id="BMB_unsortedBookmarksPopup_mm2"
                   placespopup="true"
@@ -478,7 +480,7 @@
 				  <menuseparator builder="end"
 								 class="hide-if-empty-places-result"/>
 				  <menuitem id="appmenu_unsortedBookmarks"
-							label="&unsortedBookmarksCmd.label;"
+							label="&bookmarksMenuButton.other.label;"
 							class="menuitem-iconic"
 							oncommand="PlacesCommandHook.showPlacesOrganizer('UnfiledBookmarks');"/>
 				</menupopup>
@@ -811,7 +813,7 @@
           </menu>
           <menu id="ctraddon_BMB_unsortedBookmarks_m"
                   class="menu-iconic bookmark-item"
-                  label="&bookmarksMenuButton.unsorted.label;"
+                  label="&bookmarksMenuButton.other.label;"
                   container="true">
               <menupopup id="BMB_unsortedBookmarksPopup_m"
                          placespopup="true"
@@ -826,12 +828,12 @@
           <menuseparator builder="end"
                          class="hide-if-empty-places-result"/>
           <menuitem id="ctraddon_BMB_unsortedBookmarks"
-                    label="&unsortedBookmarksCmd.label;"
+                    label="&bookmarksMenuButton.other.label;"
                     oncommand="PlacesCommandHook.showPlacesOrganizer('UnfiledBookmarks');"
                     class="menuitem-iconic"/>
           <menu id="ctraddon_BMB_unsortedBookmarks_m2"
                   class="menu-iconic bookmark-item"
-                  label="&bookmarksMenuButton.unsorted.label;"
+                  label="&bookmarksMenuButton.other.label;"
                   container="true">
               <menupopup id="BMB_unsortedBookmarksPopup_m2"
                          placespopup="true"

@@ -7,6 +7,7 @@
 	  display: unset !important;
 	}
 
+	#main-window[fx48plus="true"] #ctraddon_BMB_unsortedBookmarks_mm2sep,
 	#ctraddon_BMB_unsortedBookmarks_m2,
 	#ctraddon_BMB_unsortedBookmarks_mm2 {
 	  visibility: visible !important;
@@ -17,6 +18,14 @@
 	#menu_unsortedBookmarks,
 	#ctraddon_BMB_unsortedBookmarks{
 	  display:none !important;
+	}
+	
+	#main-window[fx48plus="true"] #ctraddon_BMB_unsortedBookmarks_mm2sep {
+	  -moz-box-ordinal-group: 1000 !important;
+	}
+	
+	#main-window[fx48plus="true"] #ctraddon_BMB_unsortedBookmarks_mm2 {
+	  -moz-box-ordinal-group: 1001 !important;
 	}
 
 }

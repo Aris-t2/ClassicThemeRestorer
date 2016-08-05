@@ -107,6 +107,7 @@
 		<preference id="ctraddon_wincontrols"	name="extensions.classicthemerestorer.wincontrols"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_puibuttonsep"	name="extensions.classicthemerestorer.puibuttonsep"	type="string"	instantApply="true"/>
 		<preference id="ctraddon_oldtoplevimg"	name="extensions.classicthemerestorer.oldtoplevimg"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_oldtoplevimg2"	name="extensions.classicthemerestorer.oldtoplevimg2" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_altalertbox"	name="extensions.classicthemerestorer.altalertbox"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_hideprbutton"	name="extensions.classicthemerestorer.hideprbutton"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_extraurlkeycb"	name="extensions.classicthemerestorer.extraurlkeycb" type="bool"	instantApply="true"/>
@@ -931,7 +932,8 @@
 
 	  <groupbox>
 	    <caption  label="&Ctr_ui;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_oldtoplevimg;"	preference="ctraddon_oldtoplevimg" id="ctraddon_pw_oldtoplevimg"/>
+		<checkbox label="&Ctr_oldtoplevimg;"	preference="ctraddon_oldtoplevimg" id="ctraddon_pw_oldtoplevimg" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwOldTopLevelImg(true);} else {classicthemerestorerjso.ctr.ctrpwOldTopLevelImg(false);}"/>
+		<checkbox label="&Ctr_oldtoplevimg; (v2)" preference="ctraddon_oldtoplevimg2" id="ctraddon_pw_oldtoplevimg2" class="ctraddonsuboption"/>
 		<checkbox label="&Ctr_altalertbox;"		preference="ctraddon_altalertbox" id="ctraddon_pw_altalertbox"/>
 		<checkbox label="&Ctr_skipprintpr;"		preference="ctraddon_skipprintpr" id="ctraddon_pw_skipprintpr" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<checkbox label="&Ctr_panelmenucol;"	preference="ctraddon_panelmenucol" id="ctraddon_pw_panelmenucolor"/>
