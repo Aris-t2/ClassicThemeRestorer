@@ -214,6 +214,11 @@
 	  padding-left: 8px !important;
 	  padding-right: 8px !important;
 	}
+	
+	.tabbrowser-tab:not([pinned])[locked] .tab-throbber{
+	  -moz-margin-start:-3px !important;
+	  -moz-margin-end:3px !important;
+	}
 
 	/*Faviconise tab add-on */
 	#tabbrowser-tabs:not(:-moz-lwtheme) .tabbrowser-tab[faviconized="true"] .tab-icon-image{

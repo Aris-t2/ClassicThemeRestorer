@@ -1,0 +1,6 @@
+@-moz-document url(about:privatebrowsing),url-prefix(about:privatebrowsing) {
+  * {
+    visibility: collapse !important;
+    display:none !important;
+  }
+}

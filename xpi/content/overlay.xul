@@ -143,7 +143,6 @@
 	<menugroup id="bookmarksMenuPopup">
       <menu id="ctraddon_BMB_unsortedBookmarks_mm"
                   class="menu-iconic bookmark-item"
-                  label="&bookmarksMenuButton.other.label;"
                   container="true"
 				  insertbefore="bookmarksMenuItemsSeparator">
         <menupopup id="BMB_unsortedBookmarksPopup_mm"
@@ -157,7 +156,6 @@
 	  <menuseparator id="ctraddon_BMB_unsortedBookmarks_mm2sep"/>
       <menu id="ctraddon_BMB_unsortedBookmarks_mm2"
                   class="menu-iconic bookmark-item"
-                  label="&bookmarksMenuButton.other.label;"
                   container="true">
         <menupopup id="BMB_unsortedBookmarksPopup_mm2"
                   placespopup="true"
@@ -399,19 +397,7 @@
 					  oncommand="classicthemerestorerjs.ctr.restartBrowser()"
 					  class="menuitem-iconic"/>
 			<menuitem id="appmenu-quit"
-					  class="menuitem-iconic ctraddon_windowsonly"
-					  label="&quitApplicationCmdWin.label;&quitApplicationCmdWin2.label;"
-					  accesskey="&quitApplicationCmdWin.accesskey;&quitApplicationCmdWin2.accesskey;"
-					  command="cmd_quitApplication"/>
-			<menuitem id="appmenu-quit"
-					  class="menuitem-iconic ctraddon_linuxonly"
-					  label="&quitApplicationCmd.label;"
-					  accesskey="&quitApplicationCmd.accesskey;"
-					  command="cmd_quitApplication"/>
-			<menuitem id="appmenu-quit"
-					  class="menuitem-iconic ctraddon_maconly"
-					  label="&quitApplicationCmdMac.label;"
-					  accesskey="&quitApplicationCmd.accesskey;"
+					  class="menuitem-iconic"
 					  command="cmd_quitApplication"/>
 		  </vbox>
 
@@ -480,7 +466,6 @@
 				  <menuseparator builder="end"
 								 class="hide-if-empty-places-result"/>
 				  <menuitem id="appmenu_unsortedBookmarks"
-							label="&bookmarksMenuButton.other.label;"
 							class="menuitem-iconic"
 							oncommand="PlacesCommandHook.showPlacesOrganizer('UnfiledBookmarks');"/>
 				</menupopup>
@@ -552,16 +537,14 @@
 			
 			<!-- Windows version of the options menu with Windows specific labels -->
 			<menu id="appmenu_customize"
-					label="&preferencesCmd2.label;"
 					splitmenu="true"
 					onclick="if(classicthemerestorerjs.ctr.prefs.getBoolPref('appbclmmenus')
 								&amp;&amp; event.button=='0'
 								&amp;&amp; event.originalTarget.getAttribute('splitmenu')=='true')
 								{classicthemerestorerjs.ctr.openContentPrefsInWin(); document.getElementById('appmenu-popup').hidePopup();}"
-					class="menu-iconic ctraddon_windowsonly">
+					class="menu-iconic">
 			  <menupopup id="appmenu_customizeMenu">  
 				  <menuitem id="appmenu_preferences"
-							label="&preferencesCmd2.label;"
 							accesskey="&preferencesCmd2.accesskey;"
 							oncommand="classicthemerestorerjs.ctr.openContentPrefsInWin();"/>
 				  <menuseparator/>
@@ -573,33 +556,6 @@
 							label="&Ctr_title;"
 							class="menuitem-iconic"
 							id="ctraddon_appmenu_ctr"/>
-			  </menupopup>
-			</menu>
-
-			<!-- MacOSX/Linux/Unix version of the options menu with MacOSX/Linux/Unix specific labels -->
-			<menu id="appmenu_customizeUnix"
-					label="&preferencesCmdUnix.label;"
-					splitmenu="true"
-					onclick="if(classicthemerestorerjs.ctr.prefs.getBoolPref('appbclmmenus')
-								&amp;&amp; event.button=='0'
-								&amp;&amp; event.originalTarget.getAttribute('splitmenu')=='true')
-								{classicthemerestorerjs.ctr.openContentPrefsInWin(); document.getElementById('appmenu-popup').hidePopup();}"
-					class="menu-iconic ctraddon_nonwindows">
-			  <menupopup id="appmenu_customizeMenu">					  
-				  <menuitem id="appmenu_preferencesUnix"
-							label="&preferencesCmdUnix.label;"
-							class="ctraddon_nonwindows"
-							accesskey="&preferencesCmdUnix.accesskey;"
-							oncommand="classicthemerestorerjs.ctr.openContentPrefsInWin();"/>
-				  <menuseparator/>
-				  <menuitem command="cmd_CustomizeToolbars"
-							accesskey="&viewCustomizeToolbar.accesskey;"
-							label="&viewCustomizeToolbar.label;"/>
-				  <menuseparator id="ctraddon_appmenu_sep2" collapsed="true"/>
-				  <menuitem oncommand="classicthemerestorerjs.ctr.openCTRPreferences();"
-							label="&Ctr_title;"
-							class="menuitem-iconic"
-							id="ctraddon_appmenu_ctr2"/>
 			  </menupopup>
 			</menu>
 
@@ -813,7 +769,6 @@
           </menu>
           <menu id="ctraddon_BMB_unsortedBookmarks_m"
                   class="menu-iconic bookmark-item"
-                  label="&bookmarksMenuButton.other.label;"
                   container="true">
               <menupopup id="BMB_unsortedBookmarksPopup_m"
                          placespopup="true"
@@ -828,12 +783,10 @@
           <menuseparator builder="end"
                          class="hide-if-empty-places-result"/>
           <menuitem id="ctraddon_BMB_unsortedBookmarks"
-                    label="&bookmarksMenuButton.other.label;"
                     oncommand="PlacesCommandHook.showPlacesOrganizer('UnfiledBookmarks');"
                     class="menuitem-iconic"/>
           <menu id="ctraddon_BMB_unsortedBookmarks_m2"
                   class="menu-iconic bookmark-item"
-                  label="&bookmarksMenuButton.other.label;"
                   container="true">
               <menupopup id="BMB_unsortedBookmarksPopup_m2"
                          placespopup="true"
@@ -966,10 +919,9 @@
       </toolbaritem>
  
       <!--### creates a movable go button ###-->
-	  <toolbarbutton id="ctraddon_preferences-button" class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
-                     label="&preferencesCmd2.label;" removable="true"
-					 oncommand="classicthemerestorerjs.ctr.openContentPrefsInWin();"
-                     tooltiptext="&preferencesCmd2.label; (&Ctr_window;)"/>
+	  <toolbarbutton id="ctraddon_preferences-button" removable="true"
+					 class="toolbarbutton-1 chromeclass-toolbar-additional ctraddon-toolbarbutton"
+					 oncommand="classicthemerestorerjs.ctr.openContentPrefsInWin();"/>
 	  
 	  <!--### restores spaces, flexible spaces and separators ###-->
       <toolbarspring 	id="spring"		class="ctraddon_flexspaces"	label="&Ctr_flexspace;"	customizableui-areatype="toolbar" removable="true" flex="1"/>

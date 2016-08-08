@@ -339,7 +339,7 @@
 	}
 	.tabbrowser-tab:not([pinned])[locked] .tab-throbber{
 	  -moz-margin-start:-3px !important;
-	  -moz-margin-end:-13px !important;
+	  -moz-margin-end:3px !important;
 	}
   
  	.tabbrowser-tab[pinned]:not([locked]):not([pinned]) image{

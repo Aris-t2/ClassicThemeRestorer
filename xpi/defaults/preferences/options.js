@@ -110,6 +110,8 @@ pref("extensions.classicthemerestorer.athrobberurl","");
 
 pref("extensions.classicthemerestorer.anewtaburlcb",false);
 pref("extensions.classicthemerestorer.anewtaburl","about:newtab");
+pref("extensions.classicthemerestorer.anewtaburlpcb",false);
+pref("extensions.classicthemerestorer.anewtaburlp","about:privatebrowsing");
 
 pref("extensions.classicthemerestorer.tabseparator","tabsep_default");
 
