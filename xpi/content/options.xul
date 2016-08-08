@@ -285,6 +285,8 @@
 		<preference id="ctraddon_athrobberurl"	name="extensions.classicthemerestorer.athrobberurl"	 type="string"	instantApply="true"/>
 		<preference id="ctraddon_anewtaburlcb"	name="extensions.classicthemerestorer.anewtaburlcb"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_anewtaburl"	name="extensions.classicthemerestorer.anewtaburl"	 type="string"	instantApply="true"/>
+		<preference id="ctraddon_anewtaburlpcb"	name="extensions.classicthemerestorer.anewtaburlpcb" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_anewtaburlp"	name="extensions.classicthemerestorer.anewtaburlp"	 type="string"	instantApply="true"/>
 		<preference id="ctraddon_mbarforceleft"	name="extensions.classicthemerestorer.mbarforceleft" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_mbarforceright" name="extensions.classicthemerestorer.mbarforceright" type="bool"	instantApply="true"/>
 
@@ -337,7 +339,7 @@
 	value="ctraddon_tabsbox" oncommand="classicthemerestorerjso.ctr.onCtrPanelSelect();">
 
 	  <radio class="ctraddontab" value="ctraddon_tabsbox" 		label="&Ctr_tabs; (1)"/>
-	  <radio class="ctraddontab" value="ctraddon_tabsbox2" 		label="&Ctr_tabs; (2)"/>
+	  <radio class="ctraddontab ctraddon_new_in_v48" value="ctraddon_tabsbox2" 		label="&Ctr_tabs; (2)"/>
 	  <radio class="ctraddontab" value="ctraddon_fontbox"    	label="&Ctr_tabcolors_t;" id="ctraddon_sqtabcolorstab"/>
 	  <radio class="ctraddontab" value="ctraddon_appbuttonbox" 	label="&Ctr_appbutton;"/>
 	  <radio class="ctraddontab" value="ctraddon_generaluibox"	label="&Ctr_ui; (1)"/>
@@ -480,6 +482,12 @@
 		<hbox>
 		  <label value=""/>
 		  <textbox id="ctraddon_pw_anewtaburlbox" preference="ctraddon_anewtaburl" size="auto" flex="1" type="autocomplete" placeholder=""/>
+		  <label value=""/>
+		</hbox>
+		<checkbox label="&Ctr_anewtaburlpcb;"	preference="ctraddon_anewtaburlpcb" id="ctraddon_pw_anewtaburlpcb" class="ctraddon_new_in_v48" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
+		<hbox id="ctraddon_pw_anewtaburlpurlbox">
+		  <label value=""/>
+		  <textbox id="ctraddon_pw_anewtaburlpbox" preference="ctraddon_anewtaburlp" size="auto" flex="1" type="autocomplete" placeholder=""/>
 		  <label value=""/>
 		</hbox>
 	  </groupbox>

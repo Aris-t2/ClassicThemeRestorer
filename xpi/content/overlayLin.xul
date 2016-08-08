@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://classic_theme_restorer/content/overlay.css" type="text/css"?>
+
+<!--### most code taken from nightlys default browser.xul ###-->
+
+<!--### use default dtd locale files for duplicated default item labels ###-->
+<!--### chrome://classic_theme_restorer/content/overlay.dtd is a backup file ###-->
+<!DOCTYPE overlay [
+	<!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd">
+		%brandDTD;
+	<!ENTITY % browserDTD SYSTEM "chrome://browser/locale/browser.dtd">
+		%browserDTD;
+	<!ENTITY % baseMenuDTD SYSTEM "chrome://browser/locale/baseMenuOverlay.dtd">
+		%baseMenuDTD;
+	<!ENTITY % textcontextDTD SYSTEM "chrome://global/locale/textcontext.dtd">
+		%textcontextDTD;
+	<!ENTITY % customizeToolbarDTD SYSTEM "chrome://global/locale/customizeToolbar.dtd">
+		%customizeToolbarDTD;
+	<!ENTITY % window SYSTEM "chrome://classic_theme_restorer/locale/options.dtd">
+		%window;
+	<!ENTITY % mainwindowDTD SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
+		%mainwindowDTD;
+]>
+
+<overlay id="classic_theme_restorer-overlay_Linux" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<menuitem id="appmenu-quit"
+			  label="&quitApplicationCmd.label;"
+			  accesskey="&quitApplicationCmd.accesskey;"/>
+
+	<menu id="appmenu_customize" label="&preferencesCmdUnix.label;"/>
+	<menuitem id="appmenu_preferences" label="&preferencesCmdUnix.label;"/>
+	
+	<toolbarbutton id="ctraddon_preferences-button" label="&preferencesCmdUnix.label;" tooltiptext="&preferencesCmdUnix.label; (&Ctr_window;)"/>
+</overlay>

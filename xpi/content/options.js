@@ -397,6 +397,8 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_altautocompl').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_autocompl_it').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_autocompl_rhl').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_anewtaburlpcb').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_anewtaburlpurlbox').style.visibility = 'collapse';
 	}
 
 	if (this.appversion >= 48) {
