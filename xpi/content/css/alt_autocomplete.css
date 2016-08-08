@@ -1,3 +1,4 @@
+@import url(chrome://ctraddon_os_special/skin/alt_autocompleteextra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
@@ -80,6 +81,19 @@
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .search-one-offs {
 	  visibility: collapse !important;
 	  display: none !important;
+	}
+	
+	@media all and (-moz-windows-classic) {
+	  panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-title,
+	  #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-title {
+		padding-top: 2px !important;
+		padding-bottom: 2px !important;
+	  }
+
+	  panel[type="autocomplete-richlistbox"] .autocomplete-richlistbox,
+	  #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistbox {
+		padding: 0 !important;
+	  }
 	}
 
 }

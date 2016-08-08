@@ -187,11 +187,11 @@
 <!ENTITY Ctr_hiderecentbm	"Menu déroulant des marque-pages : masquer les marque-pages récemment ajoutés">
 <!ENTITY Ctr_hideeditbm		"Étoile des marque-pages : masquer le menu déroulant (si la page n'a pas été marquée)">
 <!ENTITY Ctr_bmbutpanelm	"Menu déroulant : apparence de menu de type « panneau »">
-<!ENTITY Ctr_bmbunsortbm	"Menu déroulant : menu « Marque-pages non classés »">
+<!ENTITY Ctr_bmbunsortbm	"Menu déroulant : menu « Autres marque-pages »">
 <!ENTITY Ctr_bmbunsortbm2	"Menu au-dessus des marque-pages">
 <!ENTITY Ctr_bmbviewbmsb	"Menu déroulant : afficher « Afficher panneau des marque-pages »">
 <!ENTITY Ctr_bmbviewbmtb	"Menu déroulant : afficher « Afficher la barre personnelle »">
-<!ENTITY Ctr_bmbnounsort	"Menu déroulant : masquer « Marque-pages non classés »">
+<!ENTITY Ctr_bmbnounsort	"Menu déroulant : masquer « Autres marque-pages »">
 <!ENTITY Ctr_bmbutnotext	"Masquer le texte sur la barre personnelle">
 <!ENTITY Ctr_skipprintpr	"Bouton « Imprimer » : sauter l'aperçu avant impression">
 <!ENTITY Ctr_tbconmenu		"Menu contextuel de barre d'outils : masquer « Déplacer vers le menu », « Retirer de la barre d'outils », « Actualiser/Marquer tous les onglets » et « Annuler la fermeture de l'onglet »">
@@ -269,7 +269,7 @@
 <!ENTITY Ctr_urlbar_uc		"Désactiver la fonctionnalité « Autocomplétion unifiée »">
 <!ENTITY Ctr_autocomplete	"Fenêtre surgissante d'autocomplétion">
 <!ENTITY Ctr_altautocompl	"Apparence alternative">
-<!ENTITY Ctr_autocompl_it	"Supprimer les éléments « Rechercher avec... » et « Consulter » (si présents)">
+<!ENTITY Ctr_autocompl_it	"Supprimer les éléments « Rechercher avec » et « Consulter » (si présents)">
 <!ENTITY Ctr_autocompl_hl	"Mettre les correspondances de texte dans les résultats en :">
 <!ENTITY Ctr_autocompl_rhl	"Utiliser des couleurs Aero pour les résultats surlignés">
 <!ENTITY Ctr_autocompl_sep	"Afficher un séparateur entre les résultats">
@@ -299,7 +299,7 @@
 <!ENTITY Ctr_hidetbwot		"Masquer la barre lorsqu'un seul onglet est visible">
 <!ENTITY Ctr_hidetbwote		"Diminuer le délai pour masquer la barre au démarrage">
 <!ENTITY Ctr_hidetbwote_i	"Pourrait provoquer des défauts sur la barre des onglets">
-<!ENTITY Ctr_hidetbwote2	"Automatically adjust titlebar space">
+<!ENTITY Ctr_hidetbwote2	"Ajuster automatiquement l'espace de la barre de titre">
 <!ENTITY Ctr_notabfog		"Enlever le brouillard (Aero Glass de Windows/Windows 8)">
 <!ENTITY Ctr_notabbg		"Enlever la couleur d'arrière-plan (Aero Glass de Windows/Windows 8)">
 <!ENTITY Ctr_hightabpos		"Réduire l'espace supérieur (si possible)">
@@ -386,8 +386,8 @@
 <!ENTITY Ctr_special_font	"La personnalisation de la couleur d'arrière-plan est réservée au thème par défaut !">
 <!ENTITY Ctr_special_info	"Certaines options peuvent ne pas toujours offrir de changements visibles.">
 <!ENTITY Ctr_special_info2	"Thème de tierce partie détecté ! Certains paramètres ne fonctionnent pas avec de tels thèmes !">
-<!ENTITY Ctr_special_acr	"Ne signalez des problèmes qu'en utilisant les canaux de support officiels, et non à l'aide de « Add-on Compatibility Reporter » !">
-<!ENTITY Ctr_support		"Support">
+<!ENTITY Ctr_special_acr	"Ne signalez des problèmes qu'en utilisant les canaux d'assistance officiels, et non à l'aide de « Add-on Compatibility Reporter » !">
+<!ENTITY Ctr_support		"Assistance">
 <!ENTITY Ctr_support_forum1	"MozillaZine (forum anglais)">
 <!ENTITY Ctr_support_forum2	"Camp Firefox (forum allemand)">
 <!ENTITY Ctr_github_issues	"Signaler des problèmes via Github">
@@ -398,6 +398,7 @@
 <!ENTITY goCmd.label					"Se rendre à la page indiquée dans la barre d'adresse">
 <!ENTITY Ctr_menu_restart.label			"Redémarrer">
 <!ENTITY Ctr_restartapp					"Afficher « Redémarrer » dans le menu « Fichier » et dans le menu de l'ancien bouton &brandShortName;">
+<!ENTITY Ctr_ctrnewinv					"Underline new options for current &brandShortName; version">
 
 <!ENTITY Ctr_openInCurrentTab			"Ouvrir les entrées dans l'onglet actuel">
 <!ENTITY Ctr_openInNewTab				"Ouvrir les entrées dans un nouvel onglet">

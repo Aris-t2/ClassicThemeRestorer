@@ -2509,6 +2509,22 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("cuibuttons",false);
 		  break;
 		  
+		  case "ctrnewinv":
+			if (branch.getBoolPref("ctrnewinv")) {
+			  if (classicthemerestorerjs.ctr.appversion == 47)
+				classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv47",true);
+			  else if (classicthemerestorerjs.ctr.appversion == 48)
+				classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv48",true);
+			  else if (classicthemerestorerjs.ctr.appversion == 50)
+				classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv50",true);
+			}
+			else { 
+			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv47",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv48",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv50",false);
+			}
+		  break;
+		  
 		  case "restartapp":
 		  
 			if (branch.getBoolPref("restartapp")) classicthemerestorerjs.ctr.loadUnloadCSS("restartapp",false);
@@ -4144,6 +4160,10 @@ classicthemerestorerjs.ctr = {
 		case "toolsitem": 			manageCSS("ctraddon_toolsitem.css");	break;
 		
 		case "restartapp":			manageCSS("ctraddon_restartapp.css");	break;
+		case "ctrnewinv47":			manageCSS("ctraddon_new_in_v47.css");	break;
+		case "ctrnewinv48":			manageCSS("ctraddon_new_in_v48.css");	break;
+		case "ctrnewinv50":			manageCSS("ctraddon_new_in_v50.css");	break;
+		
 		case "cuibuttons":			manageCSS("cuibuttons.css");			break;
 		
 		case "nodevtheme2":			manageCSS("no_devtheme.css");			break;
