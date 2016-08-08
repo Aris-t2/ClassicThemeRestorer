@@ -36,7 +36,7 @@
 <!ENTITY Ctr_tabs2			"Abas arredondadas (alternativas)">
 <!ENTITY Ctr_tabs3			"Abas arredondadas (alternativas aero)">
 <!ENTITY Ctr_tabforminfo	"A aparência da aba é controlada pelo tema atual.">
-<!ENTITY Ctr_coltabsinfo	"Tab appearance is not fully compatible to 'ColorfulTabs' add-on!">
+<!ENTITY Ctr_coltabsinfo	"A aparência da aba não é totalmente compatível coma extensão 'ColorfulTabs'!">
 <!ENTITY Ctr_tabsontop0		"Abas no topo (padrão)">
 <!ENTITY Ctr_tabsontop1		"Abas no topo --- definida [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Abas embaixo (v1) --- definida [tabsontop=false]">
@@ -53,12 +53,12 @@
 <!ENTITY Ctr_tabwidthinfo	"Larguras mínimas e máximas são controladas pelo 'TabMixPlus'">
 <!ENTITY Ctr_tabwidthinfo2	"Larguras mínimas e máximas são controladas pelo 'TabUtilities'">
 <!ENTITY Ctr_tabwidthinfo3	"Valores abaixo de 48px causarão falhas na maioria dos casos!">
-<!ENTITY Ctr_square_edges	"Squared top corners">
-<!ENTITY Ctr_tttitlebar		"Tab title in &brandShortName; titlebar">
+<!ENTITY Ctr_square_edges	"Cantos superiores quadrados">
+<!ENTITY Ctr_tttitlebar		"Título da aba na barra de título &brandShortName;">
 <!ENTITY Ctr_tabinsertion	"Inserir a aba relacionada depois da aba atual">
-<!ENTITY Ctr_emptytfavico	"Show favicon (if a site does not offer one)">
-<!ENTITY Ctr_emptytfavico_n	"None">
-<!ENTITY Ctr_emptytfavico_g	"Generic">
+<!ENTITY Ctr_emptytfavico	"Exibir favicon (se o site não oferecer um)">
+<!ENTITY Ctr_emptytfavico_n	"Nenhum">
+<!ENTITY Ctr_emptytfavico_g	"Genérico">
 <!ENTITY Ctr_noemptypticon	"Remover o favicon vazio da aba fixa">
 <!ENTITY Ctr_closetab_0		"Fechar a aba">
 <!ENTITY Ctr_closetab_1		"Só na aba ativa">
@@ -67,14 +67,14 @@
 <!ENTITY Ctr_closetab_4		"No início das barras de abas">
 <!ENTITY Ctr_closetab_5		"Em todas as abas (forçada)">
 <!ENTITY Ctr_closetab_hfot	"Ocultar com uma aba visível">
-<!ENTITY Ctr_closei_def		"Default icons">
+<!ENTITY Ctr_closei_def		"Ícones padrão">
 <!ENTITY Ctr_closeonleft	"Posição alternativa na aba">
-<!ENTITY Ctr_closetabbig	"Bigger icon (20x20px)">
+<!ENTITY Ctr_closetabbig	"Ícone maior (20x20px)">
 <!ENTITY Ctr_close_wwltab	"Fechar a janela com a última aba visível">
 
-<!ENTITY Ctr_hctpinfotab	"Some tab variations are not compatible to 'Hide caption titlebar plus' add-on.">
-<!ENTITY Ctr_hctpinfoab		"Button on titlebar is not compatible to 'Hide caption titlebar plus' add-on.">
-<!ENTITY Ctr_tobainfotab	"The add-on 'Tabs on bottom' is not compatible with '&Ctr_title;' and should be disabled. Use available '&Ctr_cuitabsnontop;' settings instead!">
+<!ENTITY Ctr_hctpinfotab	"Algumas variações de aba não são compatíveis com o complemento 'Hide caption titlebar plus'.">
+<!ENTITY Ctr_hctpinfoab		"O botão na barra de título não é compatível com o complemento 'Hide caption titlebar plus'.">
+<!ENTITY Ctr_tobainfotab	"O complemento 'Tabs on bottom' não é compatível com '&Ctr_title;' e deve ser desativado. Em vez disso, use as configurações '&Ctr_cuitabsnontop;' disponíveis!">
 
 <!ENTITY Ctr_appbutton		"Botão do aplicativo">
 <!ENTITY Ctr_appbutton0		"Botão desativado">
@@ -97,12 +97,12 @@
 <!ENTITY Ctr_appbuttonc_pu	"Botão roxo">
 <!ENTITY Ctr_appbuttonc_wh	"Botão branco">
 <!ENTITY Ctr_appbuttonc_cu	"Cor do botão personalizada">
-<!ENTITY Ctr_appbuttonct	"Custom button color for button on toolbar">
+<!ENTITY Ctr_appbuttonct	"Cor personalizada do botão na barra de ferramentas">
 <!ENTITY Ctr_appbuttonI1	"Recomenda-se reiniciar">
 <!ENTITY Ctr_appbuttonI1e	"Invisível na barra de título do sistema operacional">
 <!ENTITY Ctr_appbuttonI2	"Colorido só nas barras de título e de abas!">
 <!ENTITY Ctr_appbutmhi		"Posição no topo (se na barra de abas)">
-<!ENTITY Ctr_appbautocol	"Set default / Aurora / Nightly color automatically">
+<!ENTITY Ctr_appbautocol	"Definir cor padrão / Aurora / Nightly automaticamente">
 <!ENTITY Ctr_appbutbdl		"Ocultar as bordas e cores do fundo">
 <!ENTITY Ctr_dblclclosefx	"Clicar duas vezes para fechar a janela atual">
 <!ENTITY Ctr_appbclmmenus	"Menus clicáveis dentro do menu do botão (nova aba, imprimir...)">
@@ -117,24 +117,24 @@
 <!ENTITY Ctr_hide_bf_popup	"Ocultar o menu histórico ao pressionar o mouse">
 <!ENTITY Ctr_bf_space		"Reduzir o espaço entre os botões (se possível)">
 <!ENTITY Ctr_noconicons		"Substituir os ícones do menu de contexto da página por rótulos (voltar, avançar, parar, recarregar, página de favoritos)">
-<!ENTITY Ctr_prefpage		"Options page">
-<!ENTITY Ctr_altoptionsd	"Default appearance">
-<!ENTITY Ctr_altoptionsp	"Alternative appearance">
-<!ENTITY Ctr_altoptionsw	"Open options page in a window">
-<!ENTITY Ctr_altoptionsww	"Width">
-<!ENTITY Ctr_altoptionswh	"Height">
-<!ENTITY Ctr_altoptionsi	"The simulated options window is not a dialog anymore but a 'browser window' with all toolbars hidden. The 'Use current page' feature only adds urls of pages opened in the current window, which is only 'about:preferences' in this case. The 'options' toolbar button gets replaced by a new one to be able to open options in a window.">
-<!ENTITY Ctr_options_rem	"Remember last selected category">
+<!ENTITY Ctr_prefpage		"Página de opções">
+<!ENTITY Ctr_altoptionsd	"Aparência padrão">
+<!ENTITY Ctr_altoptionsp	"Aparência alternativa">
+<!ENTITY Ctr_altoptionsw	"Abrir página de opções em uma janela">
+<!ENTITY Ctr_altoptionsww	"Largura">
+<!ENTITY Ctr_altoptionswh	"Altura">
+<!ENTITY Ctr_altoptionsi	"A janela de opções simulada não é mais um diálogo, mas uma 'janela do navegador' com todas as barras de ferramentas ocultadas. O recurso 'Usar página atual' somente adicionas URLs de páginas abertas na janela atual, que é somente 'about:preferences' neste caso. O botão 'Opções' na barra de ferramentas foi substituída por uma nova para ser possível abrir as opções em uma janela.">
+<!ENTITY Ctr_options_rem	"Lembrar última categoria selecionada">
 <!ENTITY Ctr_svgfilters		"Cores sVG para os ícones dos botões da barra de ferramentas padrão">
 <!ENTITY Ctr_wincontrols	"Controles móveis da janela em tela cheia">
-<!ENTITY Ctr_puibuttonsep	"Menu button separator">
-<!ENTITY Ctr_puibut_no_sep	"Hidden">
-<!ENTITY Ctr_puibut_l_sep	"Left">
-<!ENTITY Ctr_puibut_r_sep	"Right">
-<!ENTITY Ctr_html5warning	"HTML5 full screen warning">
-<!ENTITY Ctr_oldtoplevimg	"'Top level domain' images: classic appearance">
-<!ENTITY Ctr_altalertbox	"'Alert box': alternative appearance">
-<!ENTITY Ctr_emptygfavico	"Replace generic favicon">
+<!ENTITY Ctr_puibuttonsep	"Separador de botões do menu">
+<!ENTITY Ctr_puibut_no_sep	"Oculto">
+<!ENTITY Ctr_puibut_l_sep	"Esquerda">
+<!ENTITY Ctr_puibut_r_sep	"Direita">
+<!ENTITY Ctr_html5warning	"Aviso de tela cheia HTML5">
+<!ENTITY Ctr_oldtoplevimg	"Aparência de imagem clássica em fundo branco">
+<!ENTITY Ctr_altalertbox	"'Caixa de alerta': aparência alternativa">
+<!ENTITY Ctr_emptygfavico	"Substituir favicon genérico">
 <!ENTITY Ctr_mstatusbar		"Painel da barra de status móvel">
 <!ENTITY Ctr_mstatusbars4e	"O painel da barra de status é controlado pelo 'Status-4-Evar'">
 <!ENTITY Ctr_mstatusbartpp	"O painel da barra de status é controlado pelo 'ThePuzzlePiece'">
@@ -144,8 +144,8 @@
 <!ENTITY Ctr_stoprel1		"Barra de ferramentas: colocar o botão recarregar depois do botão parar!">
 <!ENTITY Ctr_panelmenucol	"Menus do painel: cor do fundo alternativa">
 <!ENTITY Ctr_hideprivmask	"Navegação particular: ocultar o indicador da máscara">
-<!ENTITY Ctr_navsmallicons	"Small icons">
-<!ENTITY Ctr_navlargeicons	"Large icons">
+<!ENTITY Ctr_navsmallicons	"Ícones pequenos">
+<!ENTITY Ctr_navlargeicons	"Ícones grandes">
 <!ENTITY Ctr_nbisizedelay0	"Atraso (em msegs.) na execução">
 <!ENTITY Ctr_nbisizedelay	"msegs. (1000 msegs. = 1 seg.)">
 <!ENTITY Ctr_findbar		"Barra de pesquisas">
@@ -157,51 +157,51 @@
 <!ENTITY Ctr_nav_txt_ico1	"Exibir ícones grandes">
 <!ENTITY Ctr_nav_txt_ico2	"Exibir ícones e texto">
 <!ENTITY Ctr_nav_txt_ico3	"Exibir só texto">
-<!ENTITY Ctr_nav_txt_exp	"Classic attributes (experimental):">
+<!ENTITY Ctr_nav_txt_exp	"Atributos clássicos (experimental):">
 <!ENTITY Ctr_iat_notf_vt	"Excluir barras de ferramentas verticais">
 <!ENTITY Ctr_cpanelmenus	"Menus do painel compacto (favoritos, histórico, etc.)">
 <!ENTITY Ctr_hidezoomres	"Controles de ampliação na barra de ferramentas: ocultar o botão redefinir ampliação">
 <!ENTITY Ctr_alt_newtabp	"Página nova aba (about:newtab): aparência alternativa">
-<!ENTITY Ctr_nosnippets		"Start page (about:home): hide snippets">
-<!ENTITY Ctr_search_ui		"Search">
-<!ENTITY Ctr_ctroldsearch	"Old search">
-<!ENTITY Ctr_ctroldsearchc	"Clear searchbox after search">
-<!ENTITY Ctr_ctroldsearchr	"Revert to first search engine in list after search">
-<!ENTITY Ctr_search_oit		"Open search in new tab">
-<!ENTITY Ctr_osearch_meoit	"Middle-clicks: search in new 'foreground tab'">
-<!ENTITY Ctr_osearch_iwidth	"Automatically adjust popup width">
-<!ENTITY Ctr_osearch_cwidth	"Custom width for search popups">
-<!ENTITY Ctr_osearch_dm		"Small dropmarker">
-<!ENTITY Ctr_addonmanager	"Add-on manager">
-<!ENTITY Ctr_alt_addonsp	"'More info' page: alternative order">
-<!ENTITY Ctr_alt_addonsm	"Alternative appearance">
-<!ENTITY Ctr_am_nowarning	"Add-on lists: hide warnings">
-<!ENTITY Ctr_am_compact		"Add-on lists: compact view">
-<!ENTITY Ctr_am_compact2	"Compact view +">
-<!ENTITY Ctr_am_highlight	"Add-on lists: highlight entry on hover">
-<!ENTITY Ctr_am_buticons	"Add-on lists: replace button labels with icons">
-<!ENTITY Ctr_am_hovshowb	"Add-on lists: only show buttons on 'hover'">
-<!ENTITY Ctr_addonversion	"Add-on lists: show add-on version">
-<!ENTITY Ctr_xpinstallui	"Old add-on install window">
-<!ENTITY Ctr_bmbutton		"Bookmarks menu button">
-<!ENTITY Ctr_hiderecentbm	"Bookmarks popup: hide recently added bookmarks">
-<!ENTITY Ctr_hideeditbm		"Bookmarks star: hide popup (if page is not bookmarked)">
-<!ENTITY Ctr_bmbutpanelm	"Popup: panel menu appearance">
-<!ENTITY Ctr_bmbunsortbm	"Popup: 'unsorted bookmarks' menu">
-<!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
-<!ENTITY Ctr_bmbviewbmsb	"Popup: show 'View sidebar'">
-<!ENTITY Ctr_bmbviewbmtb	"Popup: show 'View toolbar'">
-<!ENTITY Ctr_bmbnounsort	"Popup: hide 'unsorted bookmarks'">
-<!ENTITY Ctr_bmbutnotext	"Hide label on bookmarks bar">
-<!ENTITY Ctr_skipprintpr	"Print button: skip print preview">
-<!ENTITY Ctr_tbconmenu		"Toolbar context menu: hide 'move to menu', 'remove from toolbar', 'reload/bookmark all tabs' and 'undo close tab'">
+<!ENTITY Ctr_nosnippets		"Página inicial (about:home): ocultar snippets">
+<!ENTITY Ctr_search_ui		"Pesquisa">
+<!ENTITY Ctr_ctroldsearch	"Pesquisa antiga">
+<!ENTITY Ctr_ctroldsearchc	"Limpar caixa de pesquisa após pesquisar">
+<!ENTITY Ctr_ctroldsearchr	"Reverter para primeiro mecanismo de busca na lista após pesquisar">
+<!ENTITY Ctr_search_oit		"Abrir pesquisa em nova aba">
+<!ENTITY Ctr_osearch_meoit	"Cliques do meio: pesquisar em nova 'aba em primeiro plano'">
+<!ENTITY Ctr_osearch_iwidth	"Automaticamente ajustar largura do popup">
+<!ENTITY Ctr_osearch_cwidth	"Largura personalizada para popups de pesquisa">
+<!ENTITY Ctr_osearch_dm		"Marcador pequeno">
+<!ENTITY Ctr_addonmanager	"Gerenciador de complementos">
+<!ENTITY Ctr_alt_addonsp	"Página 'Mais informações': ordem alternativa">
+<!ENTITY Ctr_alt_addonsm	"Aparência alternativa">
+<!ENTITY Ctr_am_nowarning	"Lista de complementos: ocultar avisos">
+<!ENTITY Ctr_am_compact		"Lista de complementos: visualização compacta">
+<!ENTITY Ctr_am_compact2	"Visualização compacta +">
+<!ENTITY Ctr_am_highlight	"Lista de complementos: destacar entrada ao passar com o cursor">
+<!ENTITY Ctr_am_buticons	"Lista de complementos: substituir rótulos de botões com ícones">
+<!ENTITY Ctr_am_hovshowb	"Lista de complementos: somente exibir botões ao passar com o cursor">
+<!ENTITY Ctr_addonversion	"Lista de complementos: exibir versão do complemento">
+<!ENTITY Ctr_xpinstallui	"Janela de instalação de complementos antiga">
+<!ENTITY Ctr_bmbutton		"Botão do menu de favoritos">
+<!ENTITY Ctr_hiderecentbm	"Popup de favoritos: ocultar favoritos adicionados recentemente">
+<!ENTITY Ctr_hideeditbm		"Estrela de favoritos: ocultar popup (se a página não está nos favoritos)">
+<!ENTITY Ctr_bmbutpanelm	"Popup: aparência do menu do painel">
+<!ENTITY Ctr_bmbunsortbm	"Popup: menu 'outros favoritos'">
+<!ENTITY Ctr_bmbunsortbm2	"Menu acima dos favoritos">
+<!ENTITY Ctr_bmbviewbmsb	"Popup: exibir 'Ver Barra Lateral de Favoritos'">
+<!ENTITY Ctr_bmbviewbmtb	"Popup: exibir 'Ver Barra de Favoritos'">
+<!ENTITY Ctr_bmbnounsort	"Popup: ocultar 'Outros Favoritos'">
+<!ENTITY Ctr_bmbutnotext	"Ocultar rótulo na barra de favoritos">
+<!ENTITY Ctr_skipprintpr	"Botão Imprimir: ignorar pré-visualização da impressão">
+<!ENTITY Ctr_tbconmenu		"Menu de contexto da barra de ferramentas: ocultar 'mover para o menu', 'remover da barra de ferramentas', 'recarregar/adicionar todas as abas aos favoritos' e 'desfazer fechar aba'">
 <!ENTITY Ctr_noresizerxp	"Ocultar o redimensionamento (Windows XP)">
-<!ENTITY Ctr_extraurlkeycb	"Open additional location bar: Cmd/Ctrl+">
+<!ENTITY Ctr_extraurlkeycb	"Abrir barra de localização adicional: Cmd/Ctrl+">
 <!ENTITY Ctr_pmhidelabels	"Menu do painel: ocultar rótulos do botão">
-<!ENTITY Ctr_menupopupscr	"Pop-ups do menu: exibir barras de rolagem em vez das setas de rolagem">
-<!ENTITY Ctr_closegeneral	"General close icons">
+<!ENTITY Ctr_menupopupscr	"Popups do menu: exibir barras de rolagem em vez das setas de rolagem">
+<!ENTITY Ctr_closegeneral	"Ícones para fechar geral">
 
-<!ENTITY Ctr_tabsep_def		"Default tab separators">
+<!ENTITY Ctr_tabsep_def		"Separadores padrão de abas">
 <!ENTITY Ctr_fxmockup		"Modelo do &brandShortName;">
 <!ENTITY Ctr_tabmokcolor	"Botões da aba na cor branca (fechar, nova, grupos, listar tudo)">
 <!ENTITY Ctr_tabmokcolor2	"Texto na cor branca e sombra escura nas abas inativas">
@@ -209,8 +209,8 @@
 
 <!ENTITY Ctr_navthrobber1	"Clicar no indicador de atividade abre a uRL especificada:">
 <!ENTITY Ctr_navthrobber2	"Adicione uma uRL ou deixe em branco">
-<!ENTITY Ctr_anewtaburl		"New tab page url">
-<!ENTITY Ctr_anewtaburlcb	"Custom new tab page url (default: 'about:newtab')">
+<!ENTITY Ctr_anewtaburl		"URL da página 'Nova Aba'">
+<!ENTITY Ctr_anewtaburlcb	"URL personalizada da página 'Nova Aba' (padrão: 'about:newtab')">
 
 <!ENTITY Ctr_tab_tf_info1	"Nomes de cores, códigos hex., valores rgb(a) e hsl(a) são suportados.">
 <!ENTITY Ctr_tab_tf_info2	"As entradas não serão validadas!">
@@ -232,52 +232,52 @@
 <!ENTITY Ctr_ntabhov		"Nova aba (flutuante)">
 <!ENTITY Ctr_bold			"Negrito">
 <!ENTITY Ctr_italic			"Itálico">
-<!ENTITY Ctr_underlined		"Underlined">
+<!ENTITY Ctr_underlined		"Sublinhado">
 <!ENTITY Ctr_notabhov		"As configurações habilitadas substituirão as configurações 'flutuantes'">
 <!ENTITY Ctr_tabc_act_tb	"Cor de fundo nas barras de ferramentas">
 
 <!ENTITY Ctr_urlbar			"Barra de URLs">
 <!ENTITY Ctr_starinurl		"Botão de favoritos">
-<!ENTITY Ctr_starinurlinfo	"Default bookmarks menu button gets hidden">
-<!ENTITY Ctr_feedinurl		"Botão feed">
+<!ENTITY Ctr_starinurlinfo	"O botão padrão do menu de favoritos ficará oculto">
+<!ENTITY Ctr_feedinurl		"Botão de Feeds RSS">
 <!ENTITY Ctr_hideurelstop	"Ocultar os botões parar e recarregar">
-<!ENTITY Ctr_hideurelstop2	"Always show 'go' button">
-<!ENTITY Ctr_hideurlgo		"Hide 'go' button">
-<!ENTITY Ctr_hideurlsrg		"Hide 'reload, stop &amp; go' button separators &amp; spaces">
-<!ENTITY Ctr_urlbardropm	"Move dropmarker to the last possible position">
-<!ENTITY Ctr_urlbardropm2	"Make dropmarker always visible">
-<!ENTITY Ctr_altreaderico	"Alternative 'Reader' icons">
+<!ENTITY Ctr_hideurelstop2	"Sempre exibir botão 'Ir'">
+<!ENTITY Ctr_hideurlgo		"Ocultar botão 'Ir'">
+<!ENTITY Ctr_hideurlsrg		"Ocultar separadores e espaços do botão 'Recarregar, parar e ir'">
+<!ENTITY Ctr_urlbardropm	"Mover marcador para a última posição possível">
+<!ENTITY Ctr_urlbardropm2	"Tornar marcador sempre visível">
+<!ENTITY Ctr_altreaderico	"Ícones alternativos do 'Leitor'">
 <!ENTITY Ctr_hideprbutton	"Ocultar o Ícone de notificação quando um pop-up ficar bloqueado">
-<!ENTITY Ctr_locsearchbw10	"Reduce location bars and search bars height (experimental)">
+<!ENTITY Ctr_locsearchbw10	"Reduzir altura das barras de localização e barras de pesquisa (experimental)">
 <!ENTITY Ctr_urlbar_ib		"Botão de identidade do site (caixa de identidade)">
-<!ENTITY Ctr_ib_nohovcolor	"Do not show gray color when hovered">
-<!ENTITY Ctr_ib_graycolor	"Gray color for unknown identity and chrome pages">
-<!ENTITY Ctr_verifiedcolors	"Button colors for verified websites, secure and not secure connections">
-<!ENTITY Ctr_ibinfoico		"Replace 'i'-icon with globe icon">
-<!ENTITY Ctr_ibinfoico2		"Hide 'i'-icon (if possible)">
-<!ENTITY Ctr_iblabels		"Hide labels">
+<!ENTITY Ctr_ib_nohovcolor	"Não exibir cor cinza ao passar com o cursor">
+<!ENTITY Ctr_ib_graycolor	"Cor cinza para identidade desconhecida e páginas chrome">
+<!ENTITY Ctr_verifiedcolors	"Cores do botão para sites verificados, conexões seguras e não seguras">
+<!ENTITY Ctr_ibinfoico		"Substituir ícone 'i' pelo ícone do globo">
+<!ENTITY Ctr_ibinfoico2		"Ocultar ícone 'i' (se possível)">
+<!ENTITY Ctr_iblabels		"Ocultar rótulos">
 <!ENTITY Ctr_faviconurl		"Favicon">
 <!ENTITY Ctr_padlock		"Cadeado">
 <!ENTITY Ctr_padlock_hid	"Oculto">
 <!ENTITY Ctr_padlock_def	"Padrão">
 <!ENTITY Ctr_padlock_cla	"Clássico">
 <!ENTITY Ctr_padlock_mod	"Moderno">
-<!ENTITY Ctr_padlock_ext	"'&brandShortName;' icon for valid 'about' pages">
-<!ENTITY Ctr_icopageinfo	"Favicon/globe-/'i'-icon: 'click' opens 'page info window'">
-<!ENTITY Ctr_lbsbsize		"Custom width for location bar and search bar">
-<!ENTITY Ctr_searchbar		"Search bar">
-<!ENTITY Ctr_autocomplete	"Autocomplete popup">
-<!ENTITY Ctr_altautocompl	"Alternative appearance">
-<!ENTITY Ctr_autocompl_it	"Remove 'Search with...' and 'Visit' items (if present)">
-<!ENTITY Ctr_autocompl_hl	"Highlighting of text hits">
-<!ENTITY Ctr_autocompl_rhl	"Aero colors for highlighted results">
-<!ENTITY Ctr_autocompl_sep	"Show separator between results">
-<!ENTITY Ctr_urlbar_uc		"Disable 'unified autocomplete' feature">
-<!ENTITY Ctr_lbsugresi		"Disable height limit">
-<!ENTITY Ctr_lbsugres		"Number of results">
-<!ENTITY Ctr_lbsbradius		"Custom border radius for location bar and search bar">
+<!ENTITY Ctr_padlock_ext	"Ícone '&brandShortName;' para páginas 'about' válidas">
+<!ENTITY Ctr_icopageinfo	"Favicon/ícone do globo/'i': 'clique' abre 'janela de informações da página'">
+<!ENTITY Ctr_lbsbsize		"Largura personalizada para barra de localização e barra de pesquisa">
+<!ENTITY Ctr_searchbar		"Barra de pesquisa">
+<!ENTITY Ctr_autocomplete	"Popup auto completar">
+<!ENTITY Ctr_altautocompl	"Aparência alternativa">
+<!ENTITY Ctr_autocompl_it	"Remover itens 'Pesquisar com...' e 'Visitar' itens (se presente)">
+<!ENTITY Ctr_autocompl_hl	"Realçar ocorrências do texto">
+<!ENTITY Ctr_autocompl_rhl	"Cores Aero para resultados realçados">
+<!ENTITY Ctr_autocompl_sep	"Exibir separador entre resultados">
+<!ENTITY Ctr_urlbar_uc		"Desativar recurso 'auto completar unificado'">
+<!ENTITY Ctr_lbsugresi		"Desativar limite de altura">
+<!ENTITY Ctr_lbsugres		"Número de resultados">
+<!ENTITY Ctr_lbsbradius		"Tamanho personalizado da borda para barra de localização e busca">
 
-<!ENTITY Ctr_menubar_items	"Posição dos Ítens do menu">
+<!ENTITY Ctr_menubar_items	"Posição dos Itens do menu">
 <!ENTITY Ctr_extrabar		"Barras de ferramentas adicionais">
 <!ENTITY Ctr_extrabar0		"Barra(s) de ferramenta(s) adicional(is)">
 <!ENTITY Ctr_extrabar1		"Barra de ferramentas adicional">
@@ -295,15 +295,15 @@
 
 <!ENTITY Ctr_toolbars		"Barras de ferramentas">
 <!ENTITY Ctr_dblclnewtab	"Clicar duas vezes para abrir a 'nova' aba">
-<!ENTITY Ctr_dblclnewtabdes	"Not suitable for all complete themes while Windows titlebar is active.">
+<!ENTITY Ctr_dblclnewtabdes	"Não recomendado para todos os temas completos enquanto a barra de título do Windows estiver ativa.">
 <!ENTITY Ctr_hidetbwot		"Ocultar as barras de abas com uma aba">
 <!ENTITY Ctr_hidetbwote		"Reduzir o atraso ao ocultar na inicialização">
-<!ENTITY Ctr_hidetbwote_i	"Could cause glitches on tabs toolbar">
-<!ENTITY Ctr_hidetbwote2	"Automatically adjust titlebar space">
+<!ENTITY Ctr_hidetbwote_i	"Pode causar glitches na barra de abas">
+<!ENTITY Ctr_hidetbwote2	"Ajustar espaço da barra de título automaticamente">
 <!ENTITY Ctr_notabfog		"Remover a névoa do fundo (Windows AeroGlass/Win8)">
 <!ENTITY Ctr_notabbg		"Remover a cor do fundo (Windows AeroGlass/Win8)">
 <!ENTITY Ctr_hightabpos		"Reduzir o espaço acima da barra (se possível)">
-<!ENTITY Ctr_showalltabsb	"Always show 'all tabs' button">
+<!ENTITY Ctr_showalltabsb	"Sempre exibir botão 'todas as abas'">
 <!ENTITY Ctr_alttabstb		"Cor do fundo alternativa">
 <!ENTITY Ctr_alttabstb2		"No modo maximizado (abas no topo)">
 
@@ -313,14 +313,14 @@
 <!ENTITY Ctr_menubarnofog	"Remover a cor/Névoa do fundo (Windows AeroGlass/Win8)">
 
 <!ENTITY Ctr_aerocolors		"Cores azul aero para barras de ferramentas principais e abas">
-<!ENTITY Ctr_aerocolorsg	"Grey-blue aero colors">
-<!ENTITY Ctr_transpttbw10	"Title/menu/tabs toolbar: remove background color">
-<!ENTITY Ctr_transpttbew10	"Additional tweaks for some oS themes">
-<!ENTITY Ctr_transptcw10	"Hide default oS min/max/close buttons">
+<!ENTITY Ctr_aerocolorsg	"Cores cinza-azul do Aero">
+<!ENTITY Ctr_transpttbw10	"Barra de título/menu/abas: remover cor de fundo">
+<!ENTITY Ctr_transpttbew10	"Ajustes adicionais para alguns temas do sistema">
+<!ENTITY Ctr_transptcw10	"Ocular botões minimizar/maximizar/fechar padrão do sistema">
 <!ENTITY Ctr_hidenavbar		"Ocultar a barra de navegação">
-<!ENTITY Ctr_navbarpad		"Additional left and right padding">
-<!ENTITY Ctr_navbarpad_l	"Left:">
-<!ENTITY Ctr_navbarpad_r	"Right:">
+<!ENTITY Ctr_navbarpad		"Preenchimento esquerdo e direito adicional">
+<!ENTITY Ctr_navbarpad_l	"Esquerda:">
+<!ENTITY Ctr_navbarpad_r	"Direita:">
 <!ENTITY Ctr_nobookbarbg	"Barra de favoritos: remover a cor do fundo">
 <!ENTITY Ctr_bookbarfs		"Barra de favoritos: no modo de tela cheia">
 <!ENTITY Ctr_nonavbarbg		"Barra de navegação: remover a cor do fundo">
@@ -329,23 +329,23 @@
 <!ENTITY Ctr_nonavborder	"Barra de favoritos: adicionar borda no topo da barra">
 <!ENTITY Ctr_nonavtbborder	"Barras superiores: remover bordas da barra">
 <!ENTITY Ctr_hidesbclose	"Barras laterais: ocultar o botão fechar da barra lateral">
-<!ENTITY Ctr_notextshadow	"Toolbars: hide shadow for toolbar text and tab text">
-<!ENTITY Ctr_chevronfix		"Barra de ferramentas navegação: ocultar a seta dupla ('More tools') no final das barras de ferramentas">
-<!ENTITY Ctr_tbsep_winc		"Top toolbars: additional toolbar separators">
+<!ENTITY Ctr_notextshadow	"Barras de ferramentas: ocultar sombra para texto da barra e da aba">
+<!ENTITY Ctr_chevronfix		"Barra de ferramentas navegação: ocultar a seta dupla ('Mais ferramentas') no final das barras de ferramentas">
+<!ENTITY Ctr_tbsep_winc		"Barras de ferramentas superiores: separadores adicionais da barra">
 
 <!ENTITY Ctr_closeabarbut	"Ocultar o botão fechar">
-<!ENTITY Ctr_highaddonsbar	"Aumentar a altura">
-<!ENTITY Ctr_lessaddonsbar	"Decrease height">
+<!ENTITY Ctr_highaddonsbar	"Aumentar altura">
+<!ENTITY Ctr_lessaddonsbar	"Diminuir altura">
 <!ENTITY Ctr_addonbarfs		"No modo de tela cheia">
 
 <!ENTITY Ctr_animation		"Animações">
-<!ENTITY Ctr_tabthrobber	"Default loading image">
+<!ENTITY Ctr_tabthrobber	"Imagem de carregamento padrão">
 <!ENTITY Ctr_bmanimation	"Usar animação ao usar os favoritos">
 <!ENTITY Ctr_pananimation	"Usar animação ao abrir o painel">
 <!ENTITY Ctr_tabanimation	"Usar animação ao fechar/abrir a aba">
 <!ENTITY Ctr_dlanimation	"Usar animação ao 'notificar download'">
-<!ENTITY Ctr_fsanimation	"Fullscreen animations">
-<!ENTITY Ctr_fsaduration	"Fullscreen animations for HTML5 content">
+<!ENTITY Ctr_fsanimation	"Animações em tela cheia">
+<!ENTITY Ctr_fsaduration	"Animações em tela cheia para conteúdo HTML5">
 
 <!ENTITY Ctr_toolsitem		"Item do menu no menu ferramentas">
 <!ENTITY Ctr_appmenuitem	"Item do menu no menu botões do aplicativo">
@@ -358,20 +358,20 @@
 
 <!ENTITY Ctr_experttweaks	"Avançado">
 <!ENTITY Ctr_fx34loop		"Desmarque esta opção para removê-los.">
-<!ENTITY Ctr_fx38reader		"Unchecking this preference disables the 'Reader mode' and removes its icon from location bar.">
-<!ENTITY Ctr_fx38pocket		"Unchecking this preference disables the 'Pocket' feature and removes 'Pocket' button from toolbars.">
-<!ENTITY Ctr_fx38pocket2	"Note: moving 'Pocket'-button to 'customizing palette' before disabling this preference also removes 'Pocket' entries in bookmarks and reader menus.">
-<!ENTITY Ctr_e_loop			"Hello / loop / chamada e conversação">
-<!ENTITY Ctr_e_readermode	"Reader mode">
+<!ENTITY Ctr_fx38reader		"Desmarcar esta preferência desativa o 'Modo leitura' e remove seu ícone da barra de localização.">
+<!ENTITY Ctr_fx38pocket		"Desmarcar esta preferência desativa o recurso 'Pocket' e remove o botão 'Pocket'  das barras de ferramentas.">
+<!ENTITY Ctr_fx38pocket2	"Nota: mover o botão 'Pocket' para 'paleta de personalização' antes de desativar esta preferência também remove as entradas 'Pocket' nos menus de favoritos e leitura.">
+<!ENTITY Ctr_e_loop			"Hello / Chamada e conversação / Loop">
+<!ENTITY Ctr_e_readermode	"Modo de leitura">
 <!ENTITY Ctr_e_pocket		"Pocket">
-<!ENTITY Ctr_e_tabsaudioico	"Audio playing icon on tabs">
-<!ENTITY Ctr_fx42tabsaudico	"Unchecking this preference removes 'audio playing icon' from tabs.">
-<!ENTITY Ctr_e_containertab	"Container tabs">
-<!ENTITY Ctr_fx50containert	"Unchecking this preference removes 'container tabs'.">
-<!ENTITY Ctr_e_findbarhl	"Findbar highlighting">
-<!ENTITY Ctr_fx50findbarhl	"Unchecking these preferences removes findbars 'highlight' features.">
+<!ENTITY Ctr_e_tabsaudioico	"Ícone de reprodução de áudio em abas">
+<!ENTITY Ctr_fx42tabsaudico	"Desmarcar esta preferência remove o 'ícone de reprodução de áudio' das abas.">
+<!ENTITY Ctr_e_containertab	"Abas container">
+<!ENTITY Ctr_fx50containert	"Desmarcar esta preferência remove 'abas container'.">
+<!ENTITY Ctr_e_findbarhl	"Realce da barra de localização">
+<!ENTITY Ctr_fx50findbarhl	"Desmarcar estas preferências remove os recursos de 'realce' das barra de localização.">
 <!ENTITY Ctr_e_flyweb		"Flyweb">
-<!ENTITY Ctr_fx50flyweb		"Unchecking this preference disables 'Flyweb'.">
+<!ENTITY Ctr_fx50flyweb		"Desmarcar esta preferência desativa 'Flyweb'.">
 
 
 <!ENTITY Ctr_pw_settings	"Configurações">
@@ -380,28 +380,29 @@
 <!ENTITY Ctr_pw_set_preaus	"Pré-configurações do &brandShortName;">
 <!ENTITY Ctr_pw_set_export	"Exportar as preferências">
 <!ENTITY Ctr_pw_set_import	"Importar as preferências">
-<!ENTITY Ctr_pw_set_syncon	"Add to Sync">
-<!ENTITY Ctr_pw_set_syncoff	"Remove from Sync">
+<!ENTITY Ctr_pw_set_syncon	"Adicionar para Sync">
+<!ENTITY Ctr_pw_set_syncoff	"Remover do Sync">
 
 <!ENTITY Ctr_special_font	"As configurações da cor do fundo são só para o tema padrão!">
 <!ENTITY Ctr_special_info	"Algumas opções podem oferecer alterações visuais só em certos casos!">
 <!ENTITY Ctr_special_info2	"As configurações são feitas para o tema padrão do &brandShortName;, e podem não funcionar com temas de terceiros!">
-<!ENTITY Ctr_special_acr	"Only report issues through official support channels and not by using 'Add-on Compatibility Reporter'!">
-<!ENTITY Ctr_support		"Support">
-<!ENTITY Ctr_support_forum1	"MozillaZine (English forum)">
-<!ENTITY Ctr_support_forum2	"Camp Firefox (German forum)">
-<!ENTITY Ctr_github_issues	"Report issue on Github">
-<!ENTITY Ctr_newversion		"Check for new version">
+<!ENTITY Ctr_special_acr	"Somente reporte problemas pelos canais de suporte oficiais e não usando 'Relatar Compatibilidade do Complemento'!">
+<!ENTITY Ctr_support		"Suporte">
+<!ENTITY Ctr_support_forum1	"MozillaZine (fórum em Inglês)">
+<!ENTITY Ctr_support_forum2	"Camp Firefox (fórum Alemão)">
+<!ENTITY Ctr_github_issues	"Reportar problema no Github">
+<!ENTITY Ctr_newversion		"Verificar nova versão">
 
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"Guia rápido">
-<!ENTITY goCmd.label					"Go">
-<!ENTITY Ctr_menu_restart.label			"Restart">
-<!ENTITY Ctr_restartapp					"Restart in &brandShortName;-menu and file menu">
+<!ENTITY goCmd.label					"Ir">
+<!ENTITY Ctr_menu_restart.label			"Reiniciar">
+<!ENTITY Ctr_restartapp					"Exibir 'Reiniciar' no menu &brandShortName; e menu Arquivo">
+<!ENTITY Ctr_ctrnewinv					"Underline new options for current &brandShortName; version">
 
-<!ENTITY Ctr_openInCurrentTab			"Open inputs in current tab">
-<!ENTITY Ctr_openInNewTab				"Open inputs in a new tab">
-<!ENTITY Ctr_openInNewWindow			"Open inputs in a new window">
+<!ENTITY Ctr_openInCurrentTab			"Abrir entradas na aba atual">
+<!ENTITY Ctr_openInNewTab				"Abrir entradas em uma nova aba">
+<!ENTITY Ctr_openInNewWindow			"Abrir entradas em uma nova janela">
 
 <!-- For page context entries. have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"V">

@@ -116,6 +116,7 @@ classicthemerestorerjs.ctr = {
 	try{if (this.appversion >= 47) document.getElementById("main-window").setAttribute('fx47plus',true);} catch(e){}
 	try{if (this.appversion >= 48) document.getElementById("main-window").setAttribute('fx48plus',true);} catch(e){}
 	try{if (this.appversion >= 50) document.getElementById("main-window").setAttribute('fx50plus',true);} catch(e){}
+	try{if (this.appversion >= 51) document.getElementById("main-window").setAttribute('fx51plus',true);} catch(e){}
 
 	// add CTR version number to '#main-window' node, so other add-ons/themes can easier distinguish between versions
 	AddonManager.getAddonByID('ClassicThemeRestorer@ArisT2Noia4dev', function(addon) {
@@ -896,9 +897,17 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("altalertbox",false);
 		  break;
 
-		  case "oldtoplevimg":
-			if (branch.getBoolPref("oldtoplevimg")) classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg",false);
+		  case "oldtoplevimg": case "oldtoplevimg2":
+			if (branch.getBoolPref("oldtoplevimg") && branch.getBoolPref("oldtoplevimg2")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg2",true);
+			} else if (branch.getBoolPref("oldtoplevimg") && branch.getBoolPref("oldtoplevimg2")==false) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg",true);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg2",false);
+			} else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("oldtoplevimg2",false);
+			}
 		  break;
 		  
 		  case "activndicat":
@@ -2500,6 +2509,22 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("cuibuttons",false);
 		  break;
 		  
+		  case "ctrnewinv":
+			if (branch.getBoolPref("ctrnewinv")) {
+			  if (classicthemerestorerjs.ctr.appversion == 47)
+				classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv47",true);
+			  else if (classicthemerestorerjs.ctr.appversion == 48)
+				classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv48",true);
+			  else if (classicthemerestorerjs.ctr.appversion == 50)
+				classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv50",true);
+			}
+			else { 
+			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv47",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv48",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv50",false);
+			}
+		  break;
+		  
 		  case "restartapp":
 		  
 			if (branch.getBoolPref("restartapp")) classicthemerestorerjs.ctr.loadUnloadCSS("restartapp",false);
@@ -2956,6 +2981,7 @@ classicthemerestorerjs.ctr = {
 		try{
 		  document.getElementById("ctraddon_BMB_unsortedBookmarks_mm").collapsed = true;
 		  document.getElementById("ctraddon_BMB_unsortedBookmarks_mm2").collapsed = true;
+		  document.getElementById("ctraddon_BMB_unsortedBookmarks_mm2sep").collapsed = true;
 		} catch(e){}
 	  },1000);
 	}
@@ -3078,7 +3104,7 @@ classicthemerestorerjs.ctr = {
 		  
 		} else if(classicthemerestorerjs.ctr.osstring=="WINNT" && tabsintitlebar==true){
 			if(classicthemerestorerjs.ctr.appversion >= 47)
-		      recentWindow.document.getElementById("titlebar").style.marginBottom="-26px";
+		      recentWindow.document.getElementById("titlebar").style.marginBottom="-23px";
 		} else if(classicthemerestorerjs.ctr.osstring=="Darwin" && tabsintitlebar==true){
 			if(classicthemerestorerjs.ctr.appversion >= 47)
 		      recentWindow.document.getElementById("titlebar").style.marginBottom="-28px";
@@ -3108,7 +3134,7 @@ classicthemerestorerjs.ctr = {
 		  } else {} //Linux does not need special treatment
 		} else if(classicthemerestorerjs.ctr.osstring=="WINNT" && tabsintitlebar==true){
 			if(classicthemerestorerjs.ctr.appversion >= 47)
-		      recentWindow.document.getElementById("titlebar").style.marginBottom="-26px";
+		      recentWindow.document.getElementById("titlebar").style.marginBottom="-23px";
 		} else if(classicthemerestorerjs.ctr.osstring=="Darwin" && tabsintitlebar==true){
 			if(classicthemerestorerjs.ctr.appversion >= 47)
 		      recentWindow.document.getElementById("titlebar").style.marginBottom="-28px";
@@ -3981,6 +4007,7 @@ classicthemerestorerjs.ctr = {
 		case "puib_leftsep": 		manageCSS("puibutton_leftsep.css");		break;
 		case "puib_rightsep": 		manageCSS("puibutton_rightsep.css");	break;
 		case "oldtoplevimg": 		manageCSS("old_toplevel_img.css");		break;
+		case "oldtoplevimg2": 		manageCSS("old_toplevel_img2.css");		break;
 		case "altalertbox": 		manageCSS("alt_alertboxfx44.css");		break;
 		case "navthrobber": 		manageCSS("navthrobber.css");			break;
 		case "hideprbutton": 		manageCSS("hidepagereportbutton.css");	break;
@@ -4133,6 +4160,10 @@ classicthemerestorerjs.ctr = {
 		case "toolsitem": 			manageCSS("ctraddon_toolsitem.css");	break;
 		
 		case "restartapp":			manageCSS("ctraddon_restartapp.css");	break;
+		case "ctrnewinv47":			manageCSS("ctraddon_new_in_v47.css");	break;
+		case "ctrnewinv48":			manageCSS("ctraddon_new_in_v48.css");	break;
+		case "ctrnewinv50":			manageCSS("ctraddon_new_in_v50.css");	break;
+		
 		case "cuibuttons":			manageCSS("cuibuttons.css");			break;
 		
 		case "nodevtheme2":			manageCSS("no_devtheme.css");			break;
