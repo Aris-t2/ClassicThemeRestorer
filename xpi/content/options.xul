@@ -560,7 +560,7 @@
 	  <description class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curved">&Ctr_tabs2;</description>
 	  <description class="ctraddon_tabcolorlabel" id="ctraddon_ccap_t_curvedaero">&Ctr_tabs3;</description>
 	  <description>&Ctr_tab_tf_info1;</description>
-	  <description class="ctraddonsuboption text-link"  onclick="if(event.button == 0) { window.close(); window.opener.gBrowser.loadOneTab('https://developer.mozilla.org/docs/Web/CSS/color_value/', {inBackground: false}); };">blue - #0000ff - rgba(0,0,255,0.8) - hsla(240,100%,50%,0.8)</description>
+	  <description class="ctraddonsuboption text-link"  onclick="if(event.button == 0) { window.close(); window.opener.openURL('https://developer.mozilla.org/docs/Web/CSS/color_value/'); };">blue - #0000ff - rgba(0,0,255,0.8) - hsla(240,100%,50%,0.8)</description>
 	  <description>&Ctr_tab_tf_info2;</description>
 	  <label value=""/>
 
@@ -1540,11 +1540,11 @@
   
   <popupset>
 	<menupopup id="ctr_pw_supportPopup" position="before_end">
-		<menuitem class="menuitem-iconic" label="&Ctr_newversion;" id="ctraddon_newversion" onclick="if(event.button == 0) { window.close(); window.opener.gBrowser.loadOneTab('https://addons.mozilla.org/addon/classicthemerestorer/versions/', {inBackground: false});};"/>
+		<menuitem class="menuitem-iconic" label="&Ctr_newversion;" id="ctraddon_newversion" onclick="if(event.button == 0) { window.close(); window.opener.openURL('https://addons.mozilla.org/addon/classicthemerestorer/versions/'); };"/>
 		<menuseparator/>
-		<menuitem class="menuitem-iconic" label="&Ctr_support_forum1;" id="ctr_pw_support_forum1" onclick="if(event.button == 0) { window.close(); window.opener.gBrowser.loadOneTab('http://forums.mozillazine.org/viewtopic.php?t=2827985', {inBackground: false}); };"/>
-		<menuitem class="menuitem-iconic" label="&Ctr_support_forum2;" id="ctr_pw_support_forum2" onclick="if(event.button == 0) { window.close(); window.opener.gBrowser.loadOneTab('https://www.camp-firefox.de/forum/viewtopic.php?t=108235', {inBackground: false}); };"/>
-		<menuitem class="menuitem-iconic" label="&Ctr_github_issues;" id="ctr_pw_support_git" onclick="if(event.button == 0) { window.close(); window.opener.gBrowser.loadOneTab('https://github.com/Aris-t2/ClassicThemeRestorer/issues', {inBackground: false}); };"/>
+		<menuitem class="menuitem-iconic" label="&Ctr_support_forum1;" id="ctr_pw_support_forum1" onclick="if(event.button == 0) { window.close(); window.opener.openURL('http://forums.mozillazine.org/viewtopic.php?t=2827985'); };"/>
+		<menuitem class="menuitem-iconic" label="&Ctr_support_forum2;" id="ctr_pw_support_forum2" onclick="if(event.button == 0) { window.close(); window.opener.openURL('https://www.camp-firefox.de/forum/viewtopic.php?t=108235'); };"/>
+		<menuitem class="menuitem-iconic" label="&Ctr_github_issues;" id="ctr_pw_support_git" onclick="if(event.button == 0) { window.close(); window.opener.openURL('https://github.com/Aris-t2/ClassicThemeRestorer/issues'); };"/>
 		<menuseparator/>
 		<menuitem class="menuitem-iconic" label="aris-addons [@] gmx [.] net" id="ctr_pw_em_con"/>
 	</menupopup>
@@ -1552,7 +1552,7 @@
   
   <hbox align="center" style="padding-top:5px;">
     <button label="&Ctr_pw_settings;" popup="ctr_pw_settingsPopup"/>
-	<button label="Classic Toolbar Buttons" class="ctraddon_windowsonly" onclick="if(event.button == 0) { window.close(); window.opener.gBrowser.loadOneTab('https://addons.mozilla.org/addon/cstbb/versions/', {inBackground: false}); };"/>
+	<button label="Classic Toolbar Buttons" class="ctraddon_windowsonly" onclick="if(event.button == 0) { window.close(); window.opener.openURL('https://addons.mozilla.org/addon/cstbb/versions/'); };"/>
 	<spacer flex="1" />
 	<button label="&Ctr_support;" id="ctraddon_support"  popup="ctr_pw_supportPopup"/>
 	<button dlgtype="accept" id="ctraddon_pw_okbutton"/>
