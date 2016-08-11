@@ -227,37 +227,48 @@
 		  
 		  this.setAttribute("width", width);
 		  
-		  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("urlresults")) {
+		  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("urlresults")
+			|| Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("cresultshcb")) {
 		  
 		    var height = 400;
+			var cheight = Services.prefs.getBranch("extensions.classicthemerestorer.").getIntPref("cresultsh");
 			
 			// urlbars bottom position
 			var urlbbotpos = document.getElementById("urlbar").boxObject.screenY + document.getElementById("urlbar").boxObject.height;
-			
-			var onbottombar = document.getElementById('urlbar-container').parentNode.parentNode.id=="browser-bottombox";
-			
+		
 			try{
 			  if(document.getElementById("main-window").hasAttribute("inFullscreen"))
 			    height = screen.height - urlbbotpos - 3;
 			  else
 			    height = screen.availHeight - urlbbotpos - 3;
 				
-			  if(onbottombar)
+			  if(document.getElementById('urlbar-container').parentNode.parentNode.id=="browser-bottombox")
 			    height = document.getElementById("main-window").boxObject.height
 						 - document.getElementById("navigator-toolbox").boxObject.height
-						 - document.getElementById("urlbar").boxObject.height;
+						 - document.getElementById("browser-bottombox").boxObject.height;
 	
 			} catch(e){}
 			
 			this.removeAttribute("height");
-			this.setAttribute("maxheight", height);
+			
+			if (Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("cresultshcb")) {
+				if (cheight < height) {
+				  this.setAttribute("maxheight", cheight);
+				} else {
+				  this.setAttribute("maxheight", height);
+				}
+			} else {
+			  this.setAttribute("maxheight", height);
+			}
+
 		  }
-		  
+	  
 		  // if CTRs movable location bar is on a bottom toolbar, open autocomplete popup above location bar
-		  if(onbottombar)
+		  if(document.getElementById('urlbar-container').parentNode.parentNode.id=="browser-bottombox")
 		    this.openPopup(aElement, "before_end", 0, 0, false, false);
 		  else
             this.openPopup(aElement, "after_start", 0, -1, false, false);
+
         ]]></body>
       </method>
 
@@ -466,13 +477,6 @@
         <body>
           <![CDATA[
 		  
-		  	var appversion = parseInt(Services.appinfo.version);
-		  
-			if(appversion < '48') {
-              if (!Services.prefs.getBoolPref("browser.urlbar.unifiedcomplete"))
-				return;
-			}
-
             if (this.selectedIndex == -1 && this._isFirstResultHeuristic) {
               this._ignoreNextSelect = true;
 

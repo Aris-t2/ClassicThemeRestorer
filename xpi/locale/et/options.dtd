@@ -187,11 +187,11 @@
 <!ENTITY Ctr_hiderecentbm	"Järjehoidjate hüpik: peida viimati lisatud järjehoidjad">
 <!ENTITY Ctr_hideeditbm		"Järjehoidjate täht: peida hüpik (kui leht pole järjehoidjates)">
 <!ENTITY Ctr_bmbutpanelm	"Menüühüpik: paneelimenüü välimus">
-<!ENTITY Ctr_bmbunsortbm	"Menüühüpik: alammenüü 'Sortimata järjehoidjad'">
+<!ENTITY Ctr_bmbunsortbm	"Menüühüpik: alammenüü 'Muud järjehoidjad'">
 <!ENTITY Ctr_bmbunsortbm2	"Menüü järjehoidjate kohal">
 <!ENTITY Ctr_bmbviewbmsb	"Menüühüpik: näita kirjet 'Kuva järjehoidjate külgriba'">
 <!ENTITY Ctr_bmbviewbmtb	"Menüühüpik: näita kirjet 'Kuva järjehoidjariba'">
-<!ENTITY Ctr_bmbnounsort	"Menüühüpik: peida kirje 'sortimata järjehoidjad'">
+<!ENTITY Ctr_bmbnounsort	"Menüühüpik: peida kirje 'Muud järjehoidjad'">
 <!ENTITY Ctr_bmbutnotext	"Peida järjehoidjate ribal sildid">
 <!ENTITY Ctr_skipprintpr	"Printimise nupp: jäta vahele printimise eelvaade">
 <!ENTITY Ctr_tbconmenu		"Tööriistariba kontekstimenüü: peida kirjed 'liiguta menüüsse', 'eemalda tööriistamenüült', 'laadi uuesti/lisa järjehoidjatesse kõik kaardid' ja 'võta kaardi sulgemine tagasi'">
@@ -210,8 +210,8 @@
 <!ENTITY Ctr_navthrobber1	"Aktiivsuse näidikul klõpsamine avab uuel kaardil selle aadressi:">
 <!ENTITY Ctr_navthrobber2	"Sisesta URL või jäta tühjaks">
 <!ENTITY Ctr_anewtaburl		"Uue kaardi lehe aadress">
-<!ENTITY Ctr_anewtaburlcb	"Kohandatud uue kaardi lehe aadress (vaikimisi: 'about:newtab')">
-<!ENTITY Ctr_anewtaburlpcb	"Custom private new tab page url (default: 'about:privatebrowsing')">
+<!ENTITY Ctr_anewtaburlcb	"Uue kaardi lehe kohandatud aadress (vaikimisi: 'about:newtab')">
+<!ENTITY Ctr_anewtaburlpcb	"Uue privaatse kaardi lehe kohandatud aadress (vaikimisi: 'about:privatebrowsing')">
 
 <!ENTITY Ctr_tab_tf_info1	"Sisestada saab: värvinimed, kuuskoodid (hexcodes), rgb(a) ja hsl(a).">
 <!ENTITY Ctr_tab_tf_info2	"Sisendeid ei valideerita!">
@@ -275,6 +275,7 @@
 <!ENTITY Ctr_autocompl_sep	"Näita tulemuste vahel eraldusjooni">
 <!ENTITY Ctr_urlbar_uc		"Keela ühtse automaatlõpetamise funktsioon 'unified autocomplete'">
 <!ENTITY Ctr_lbsugresi		"Keela kõrguse piirang">
+<!ENTITY Ctr_cresultshcb	"Custom height limit: ">
 <!ENTITY Ctr_lbsugres		"Tulemuste arv">
 <!ENTITY Ctr_lbsbradius		"Aadressiriba ja otsinguriba piirjoonte kohandatud ümarus">
 
@@ -300,7 +301,7 @@
 <!ENTITY Ctr_hidetbwot		"Ainult ühe nähtava kaardi korral peida kaartide riba">
 <!ENTITY Ctr_hidetbwote		"Vähenda peitmise viivitust käivitumisel">
 <!ENTITY Ctr_hidetbwote_i	"Võib põhjustada kaartide riba tõrkeid">
-<!ENTITY Ctr_hidetbwote2	"Automatically adjust titlebar space">
+<!ENTITY Ctr_hidetbwote2	"Automaatselt kohanda tiitliriba ruumi">
 <!ENTITY Ctr_notabfog		"Eemalda taustaudu (Windows AeroGlass/8)">
 <!ENTITY Ctr_notabbg		"Eemalda taustavärv (Windows AeroGlass/8)">
 <!ENTITY Ctr_hightabpos		"Vähenda tööriistariba kohal olevat tühja ruumi (kui võimalik)">
@@ -373,6 +374,8 @@
 <!ENTITY Ctr_fx50findbarhl	"Nendelt eelistustelt märke eemaldamine keelab otsinguribal esiletõstmise võimalused.">
 <!ENTITY Ctr_e_flyweb		"Flyweb">
 <!ENTITY Ctr_fx50flyweb		"Sellelt eelistuselt märke eemaldamine keelab funktsiooni 'Flyweb'.">
+<!ENTITY Ctr_e_oneoffsearch	"Autocomplete popups search selection">
+<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes location bar popups search selection.">
 
 
 <!ENTITY Ctr_pw_settings	"Sätted">
@@ -399,7 +402,7 @@
 <!ENTITY goCmd.label					"Mine">
 <!ENTITY Ctr_menu_restart.label			"Taaskäivita">
 <!ENTITY Ctr_restartapp					"Näita &brandShortName;i nupu menüüs ja menüüs Fail kirjet 'Taaskäivita'">
-<!ENTITY Ctr_ctrnewinv					"Underline new options for current &brandShortName; version">
+<!ENTITY Ctr_ctrnewinv					"Jooni alla sätted, mis on &brandShortName;i praeguses versioonis uued">
 
 <!ENTITY Ctr_openInCurrentTab			"Ava sisestused praegusel kaardil">
 <!ENTITY Ctr_openInNewTab				"Ava sisestused uuel kaardil">

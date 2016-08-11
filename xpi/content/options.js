@@ -164,6 +164,12 @@ classicthemerestorerjso.ctr = {
 	// Add-on comaptibiliy reporter note
 	document.getElementById('ctraddon_pw_acr_note').style.visibility = 'collapse';
 	
+	// restore prefwindows "OK" button on MacOS; x on titlebar is not enough
+	if (Services.appinfo.OS=="Darwin") {
+		document.getElementById('ctraddon_pw_okbutton').style.display = 'block';
+		document.getElementById('ctraddon_pw_okbutton').disabled = false;
+	}
+	
 	// extra checks to not enable tab width settings while 'TabMixPlus' or 'TabUtilities' is enabled
 	AddonManager.getAddonByID('{dc572301-7619-498c-a57d-39143191b318}', function(addon) {
 	  if(addon && addon.isActive) {
@@ -389,7 +395,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_dblclnewtabdes').style.visibility = 'collapse';
 	}
 	
-	if (this.appversion >= 47/* && Services.appinfo.OS=="Darwin"*/) {
+	if (this.appversion >= 47) {
 	  document.getElementById('ctraddon_pw_hidetbwote').style.visibility = 'collapse';
 	}
 	
@@ -399,6 +405,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_autocompl_rhl').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_anewtaburlpcb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_anewtaburlpurlbox').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_cresultshbox').style.visibility = 'collapse';
 	}
 
 	if (this.appversion >= 48) {
@@ -414,6 +421,15 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_containertabgb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_findbarhlgb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_flywebgb').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_autocompl_it2').style.visibility = 'collapse';
+	}
+	
+	if (this.appversion >= 50) {
+	  document.getElementById('ctraddon_pw_autocompl_it').style.visibility = 'collapse';
+	}
+
+	if (this.appversion < 51) {
+	  document.getElementById('ctraddon_pw_oneoffsearchgb').style.visibility = 'collapse';
 	}
 	
 	function PrefListener(branch_name, callback) {
@@ -549,8 +565,9 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwExtraUrlbar(this.prefs.getBoolPref("extraurlkeycb"));
 	this.ctrpwSearchPopupSize(this.prefs.getBoolPref("osearch_cwidth"));
 	this.ctrpwAeroColors(this.prefs.getBoolPref("aerocolors"));
-	this.ctrpwAutoCompleteHeight(this.prefs.getBoolPref("urlresults"));
 	this.ctrpwOldTopLevelImg(this.prefs.getBoolPref("oldtoplevimg"));
+	this.ctrpwAutoCompleteHeight(this.prefs.getBoolPref("urlresults"));
+	this.ctrpwAltAutocomplete(this.prefs.getBoolPref("altautocompl"));
 	
 	var closetab_value = this.prefs.getCharPref("closetab");
   
@@ -715,8 +732,7 @@ classicthemerestorerjso.ctr = {
 	  which=true; itemvis = 'collapse';
 	}
 	
-    if (this.appversion >= 47 /*&& Services.appinfo.OS=="Darwin"*/) {}
-	else {
+    if (this.appversion < 47) {
 	  document.getElementById('ctraddon_pw_hidetbwote').disabled = which;
 	  document.getElementById('ctraddon_pw_hidetbwote').style.visibility = itemvis;
 	}
@@ -758,13 +774,9 @@ classicthemerestorerjso.ctr = {
   },
   
   ctrpwLocationSearchbarSize: function(which) {
-	var itemvis = 'collapse';
 	
-    if(which==true) {
-	  which=false; itemvis = 'visible';
-	} else {
-	  which=true; itemvis = 'collapse';
-	}
+    if(which==true) which=false;
+	else which=true;
 	
     document.getElementById('ctraddon_pw_lbsbsize_lb').disabled = which;
     document.getElementById('ctraddon_pw_lbsbsize_sb').disabled = which;
@@ -775,13 +787,9 @@ classicthemerestorerjso.ctr = {
   },
   
   ctrpwLocationSearchbarRadius: function(which) {
-	var itemvis = 'collapse';
 	
-    if(which==true) {
-	  which=false; itemvis = 'visible';
-	} else {
-	  which=true; itemvis = 'collapse';
-	}
+    if(which==true) which=false;
+	else which=true;
 	
     document.getElementById('ctraddon_pw_lbsbradius_lb').disabled = which;
     document.getElementById('ctraddon_pw_lbsbradius_sb').disabled = which;
@@ -831,25 +839,17 @@ classicthemerestorerjso.ctr = {
   },
   
   ctrpwExtraUrlbar: function(which) {
-	var itemvis = 'collapse';
-	
-    if(which==true) {
-	  which=false; itemvis = 'visible';
-	} else {
-	  which=true; itemvis = 'collapse';
-	}
+
+    if(which==true) which=false;
+	else which=true;
 	
     document.getElementById('ctraddon_extraurltarget_list').disabled = which;
   },
   
   ctrpwSearchPopupSize: function(which) {
-	var itemvis = 'collapse';
 	
-    if(which==true) {
-	  which=false; itemvis = 'visible';
-	} else {
-	  which=true; itemvis = 'collapse';
-	}
+    if(which==true) which=false;
+	else which=true;
 	
 	document.getElementById('ctraddon_os_spsize_minw').disabled = which;
 	document.getElementById('ctraddon_os_spsize_maxw').disabled = which;
@@ -882,25 +882,27 @@ classicthemerestorerjso.ctr = {
   },
   
   ctrpwAutoCompleteHeight: function(which) {
-	var itemvis = 'collapse';
 	
-    if(which==true) {
-	  which=false; itemvis = 'visible';
-	} else {
-	  which=true; itemvis = 'collapse';
-	}
+    if(which==true) which=false;
+	else which=true;
 	
     document.getElementById('ctraddon_pw_autocompl_it').disabled = which;
+
+  },
+  
+  ctrpwAltAutocomplete: function(which) {
+	
+    if(which==true) which=false;
+	else which=true;
+	
+    document.getElementById('ctraddon_pw_cresultshcb').disabled = which;
+	document.getElementById('ctraddon_pw_cresultsh').disabled = which;
   },
 
   ctrpwCtrOldSearch: function(which) {
-	var itemvis = 'collapse';
 	
-    if(which==true) {
-	  which=false; itemvis = 'visible';
-	} else {
-	  which=true; itemvis = 'collapse';
-	}
+    if(which==true) which=false;
+	else which=true;
 	
     document.getElementById('ctraddon_pw_ctroldsearchc').disabled = which;
 	document.getElementById('ctraddon_pw_ctroldsearchr').disabled = which;
