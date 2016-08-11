@@ -1,0 +1,14 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@-moz-document url(chrome://browser/content/browser.xul){
+	
+	#main-window:not([fx50plus="true"])	panel[type="autocomplete-richlistbox"] .autocomplete-richlistbox,
+	#main-window:not([fx50plus="true"])	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistbox {
+	  max-height: unset !important;
+	}
+	
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistbox,
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistbox {
+	  height: unset !important;
+	}
+
+}

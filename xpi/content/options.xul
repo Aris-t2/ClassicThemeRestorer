@@ -44,6 +44,7 @@
 		<preference id="ctraddon_findbarhl1"	name="findbar.modalHighlight"						type="bool"		instantApply="true"/>
 		<preference id="ctraddon_findbarhl2"	name="findbar.highlightAll"							type="bool"		instantApply="true"/>
 		<preference id="ctraddon_flyweb"		name="dom.flyweb.enabled"							type="bool"		instantApply="true"/>
+		<preference id="ctraddon_oneoffsearch"	name="browser.urlbar.oneOffSearches"				type="bool"		instantApply="true"/>
 
 		<preference id="ctraddon_tabs"			name="extensions.classicthemerestorer.tabs" 		type="string"	instantApply="true"/>
 		<preference id="ctraddon_tabsontop"		name="extensions.classicthemerestorer.tabsontop" 	type="string"	instantApply="true"/>
@@ -124,11 +125,14 @@
 		<preference id="ctraddon_altreaderico"	name="extensions.classicthemerestorer.altreaderico"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_altautocompl"	name="extensions.classicthemerestorer.altautocompl"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_autocompl_it"	name="extensions.classicthemerestorer.autocompl_it"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_autocompl_it2"	name="extensions.classicthemerestorer.autocompl_it2" type="bool"		instantApply="true"/>
 		<preference id="ctraddon_autocompl_hlb"	name="extensions.classicthemerestorer.autocompl_hlb" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_autocompl_hlu"	name="extensions.classicthemerestorer.autocompl_hlu" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_autocompl_hli"	name="extensions.classicthemerestorer.autocompl_hli" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_autocompl_sep"	name="extensions.classicthemerestorer.autocompl_sep" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_autocompl_rhl"	name="extensions.classicthemerestorer.autocompl_rhl" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_cresultshcb"	name="extensions.classicthemerestorer.cresultshcb"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_cresultsh"		name="extensions.classicthemerestorer.cresultsh"	type="int"		instantApply="true"/>
 		<preference id="ctraddon_locsearchbw10"	name="extensions.classicthemerestorer.locsearchbw10" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_combrelstop"	name="extensions.classicthemerestorer.combrelstop"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_panelmenucol"	name="extensions.classicthemerestorer.panelmenucol"	type="bool"		instantApply="true"/>
@@ -338,25 +342,25 @@
   <radiogroup id="CtrRadioGroup" class="ctraddontabs" orient="vertical" flex="1"
 	value="ctraddon_tabsbox" oncommand="classicthemerestorerjso.ctr.onCtrPanelSelect();">
 
-	  <radio class="ctraddontab" value="ctraddon_tabsbox" 		label="&Ctr_tabs; (1)"/>
-	  <radio class="ctraddontab ctraddon_new_in_v48" value="ctraddon_tabsbox2" 		label="&Ctr_tabs; (2)"/>
-	  <radio class="ctraddontab" value="ctraddon_fontbox"    	label="&Ctr_tabcolors_t;" id="ctraddon_sqtabcolorstab"/>
-	  <radio class="ctraddontab" value="ctraddon_appbuttonbox" 	label="&Ctr_appbutton;"/>
-	  <radio class="ctraddontab" value="ctraddon_generaluibox"	label="&Ctr_ui; (1)"/>
-	  <radio class="ctraddontab ctraddon_new_in_v47" value="ctraddon_generaluibox2"	label="&Ctr_ui; (2)"/>
-	  <radio class="ctraddontab" value="ctraddon_generaluibox3"	label="&Ctr_ui; (3)"/>
-	  <radio class="ctraddontab" value="ctraddon_prefpagebox"	label="&Ctr_prefpage;"/>
-	  <radio class="ctraddontab" value="ctraddon_addonmngrbox"	label="&Ctr_addonmanager;"/>
-	  <radio class="ctraddontab" value="ctraddon_locationbbox"	label="&Ctr_urlbar; (1)"/>
-	  <radio class="ctraddontab" value="ctraddon_locationbbox2"	label="&Ctr_urlbar; (2)"/>
-	  <radio class="ctraddontab ctraddon_new_in_v48" value="ctraddon_locationbbox3"	label="&Ctr_urlbar; (3)"/>
-	  <radio class="ctraddontab" value="ctraddon_locationbbox4"	label="&Ctr_urlbar; / &Ctr_searchbar;"/>
-	  <radio class="ctraddontab" value="ctraddon_searchuibox"	label="&Ctr_searchbar;"/>
-	  <radio class="ctraddontab" value="ctraddon_toolbarsbox"	label="&Ctr_toolbars; (1)"/>
-	  <radio class="ctraddontab" value="ctraddon_toolbarsbox2"	label="&Ctr_toolbars; (2)"/>
-	  <radio class="ctraddontab" value="ctraddon_toolbarsbox3"	label="&Ctr_toolbars; (3)"/>
-	  <radio class="ctraddontab ctraddon_new_in_v50" value="ctraddon_experttweaks"	label="&Ctr_experttweaks;" id="ctraddon_experttweakstab"/>
-	  <radio class="ctraddontab" value="ctraddon_ctraddonbox"	label="&Ctr_title;"/>
+	  <radio value="ctraddon_tabsbox" 		label="&Ctr_tabs; (1)"		class="ctraddontab"/>
+	  <radio value="ctraddon_tabsbox2" 		label="&Ctr_tabs; (2)"		class="ctraddontab ctraddon_new_in_v48"/>
+	  <radio value="ctraddon_fontbox"    	label="&Ctr_tabcolors_t;"	id="ctraddon_sqtabcolorstab" class="ctraddontab"/>
+	  <radio value="ctraddon_appbuttonbox" 	label="&Ctr_appbutton;"		class="ctraddontab"/>
+	  <radio value="ctraddon_generaluibox"	label="&Ctr_ui; (1)"		class="ctraddontab"/>
+	  <radio value="ctraddon_generaluibox2"	label="&Ctr_ui; (2)"		class="ctraddontab ctraddon_new_in_v47"/>
+	  <radio value="ctraddon_generaluibox3"	label="&Ctr_ui; (3)"		class="ctraddontab"/>
+	  <radio value="ctraddon_prefpagebox"	label="&Ctr_prefpage;"		class="ctraddontab"/>
+	  <radio value="ctraddon_addonmngrbox"	label="&Ctr_addonmanager;"	class="ctraddontab"/>
+	  <radio value="ctraddon_locationbbox"	label="&Ctr_urlbar; (1)"	class="ctraddontab"/>
+	  <radio value="ctraddon_locationbbox2"	label="&Ctr_urlbar; (2)"	class="ctraddontab"/>
+	  <radio value="ctraddon_locationbbox3"	label="&Ctr_urlbar; (3)"	class="ctraddontab ctraddon_new_in_v48 ctraddon_new_in_v50"/>
+	  <radio value="ctraddon_locationbbox4"	label="&Ctr_urlbar; / &Ctr_searchbar;" class="ctraddontab"/>
+	  <radio value="ctraddon_searchuibox"	label="&Ctr_searchbar;"		class="ctraddontab"/>
+	  <radio value="ctraddon_toolbarsbox"	label="&Ctr_toolbars; (1)"	class="ctraddontab"/>
+	  <radio value="ctraddon_toolbarsbox2"	label="&Ctr_toolbars; (2)"	class="ctraddontab"/>
+	  <radio value="ctraddon_toolbarsbox3"	label="&Ctr_toolbars; (3)"	class="ctraddontab"/>
+	  <radio value="ctraddon_experttweaks"	label="&Ctr_experttweaks;"	id="ctraddon_experttweakstab" class="ctraddontab ctraddon_new_in_v50 ctraddon_new_in_v51"/>
+	  <radio value="ctraddon_ctraddonbox"	label="&Ctr_title;"			class="ctraddontab"/>
 	  <label value=""/>
 	  <description id="ctraddon_pw_radiorestart">&Ctr_rr;</description>
 
@@ -1149,13 +1153,19 @@
 	  <groupbox>
 
 	    <caption  label="&Ctr_autocomplete;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_altautocompl;" preference="ctraddon_altautocompl"  id="ctraddon_pw_altautocompl" class="ctraddon_new_in_v48" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+		<checkbox label="&Ctr_altautocompl;" preference="ctraddon_altautocompl"  id="ctraddon_pw_altautocompl" class="ctraddon_new_in_v48" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwAltAutocomplete(true);} else {classicthemerestorerjso.ctr.ctrpwAltAutocomplete(false);} classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+		<checkbox label="&Ctr_autocompl_it;" preference="ctraddon_autocompl_it2" id="ctraddon_pw_autocompl_it2" class="ctraddon_new_in_v50"/>
 		<checkbox label="&Ctr_urlbar_uc;" preference="ctraddon_urlbar_uc" id="ctraddon_pw_urlbar_uc"/>
 		<description class="ctraddonsuboption" id="ctraddon_pw_urlbar_uc_desc">about:config &gt;&gt; browser.urlbar.unifiedcomplete</description>
-		<checkbox label="&Ctr_lbsugresi;" preference="ctraddon_urlresults" id="ctraddon_pw_urlresults" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwAutoCompleteHeight(true);} else {classicthemerestorerjso.ctr.ctrpwAutoCompleteHeight(false);}"/>
-		<checkbox label="&Ctr_autocompl_it;" preference="ctraddon_autocompl_it" id="ctraddon_pw_autocompl_it" class="ctraddon_new_in_v48"/>
 		<checkbox label="&Ctr_autocompl_sep;" preference="ctraddon_autocompl_sep" id="ctraddon_pw_autocompl_sep"/>
 		<checkbox label="&Ctr_autocompl_rhl;" preference="ctraddon_autocompl_rhl" id="ctraddon_pw_autocompl_rhl" class="ctraddon_new_in_v48"/>
+		<checkbox label="&Ctr_lbsugresi;" preference="ctraddon_urlresults" id="ctraddon_pw_urlresults" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwAutoCompleteHeight(true);} else {classicthemerestorerjso.ctr.ctrpwAutoCompleteHeight(false);}"/>
+		<checkbox label="&Ctr_autocompl_it;" preference="ctraddon_autocompl_it" id="ctraddon_pw_autocompl_it" class="ctraddon_new_in_v48"/>
+		<hbox align="center" id="ctraddon_pw_cresultshbox">
+		  <checkbox label="&Ctr_cresultshcb;" preference="ctraddon_cresultshcb" id="ctraddon_pw_cresultshcb" class="ctraddon_new_in_v48" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+		  <textbox size="4" maxlength="4" preference="ctraddon_cresultsh" type="number" min="0" max="9999" id="ctraddon_pw_cresultsh"/>
+		  <label value="px"/>
+		</hbox>
 		
 		<description id="ctraddon_lbsugres" class="ctraddon_font1">&Ctr_autocompl_hl;</description>
 		<hbox>
@@ -1163,7 +1173,7 @@
 		  <checkbox label="&Ctr_italic;" preference="ctraddon_autocompl_hli" id="ctraddon_pw_autocompl_hli"/>
 		  <checkbox label="&Ctr_underlined;" preference="ctraddon_autocompl_hlu" id="ctraddon_pw_autocompl_hlu"/>
 		</hbox>
-		
+
 		<description id="ctraddon_lbsugres" class="ctraddon_font1">&Ctr_lbsugres;</description>
 		<description>about:config &gt;&gt; browser.urlbar.maxRichResults</description>
 		<hbox id="ctraddon_pw_lbsugresbox" align="center">
@@ -1471,6 +1481,12 @@
 		<caption  label="&Ctr_e_flyweb;" class="ctraddon_topic"/>
 		<checkbox label="about:config &gt;&gt; dom.flyweb.enabled" preference="ctraddon_flyweb" id="ctraddon_pw_flyweb" class="ctraddon_new_in_v50"/>
 		<description class="ctraddonsuboption acprefdesc">&Ctr_fx50flyweb;</description>
+	  </groupbox>
+	  
+	  <groupbox id="ctraddon_pw_oneoffsearchgb">
+		<caption  label="&Ctr_e_oneoffsearch;" class="ctraddon_topic"/>
+		<checkbox label="about:config &gt;&gt; browser.urlbar.oneOffSearches" preference="ctraddon_oneoffsearch" id="ctraddon_pw_oneoffsearch" class="ctraddon_new_in_v51"/>
+		<description class="ctraddonsuboption acprefdesc">&Ctr_fx51OOSeach;</description>
 	  </groupbox>
 	  
 	</box>

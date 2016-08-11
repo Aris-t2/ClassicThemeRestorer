@@ -633,10 +633,10 @@
 	  visibility: collapse !important;
 	}
 	
-	#nav-bar[mode="full"] #downloads-button image,
-	#nav-bar[mode="full"] #downloads-button stack {
-	  margin-left: 30px !important;
-	  margin-right: 30px !important;
+	#main-window:not([fx48plus="true"]) #nav-bar[mode="full"] #downloads-button image,
+	#main-window:not([fx48plus="true"]) #nav-bar[mode="full"] #downloads-button stack {
+	  margin-left: 22px !important;
+	  margin-right: 22px !important;
 	}
 	
 	/* Auto Form add-ons icon sizes*/
