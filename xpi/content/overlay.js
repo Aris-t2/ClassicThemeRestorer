@@ -870,6 +870,11 @@ classicthemerestorerjs.ctr = {
 			}
 
 		  break;
+		  
+		  case "aboutpages":
+			if (branch.getBoolPref("aboutpages") && classicthemerestorerjs.ctr.appversion >= 48) classicthemerestorerjs.ctr.loadUnloadCSS("aboutpages",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("aboutpages",false);
+		  break;
 
 		  case "svgfilters":
 			if (branch.getBoolPref("svgfilters")) classicthemerestorerjs.ctr.loadUnloadCSS("svgfilters",true);
@@ -2088,6 +2093,11 @@ classicthemerestorerjs.ctr = {
 				}
 			}
 		  break;
+		  
+		  case "oldplacesbut":
+			if (branch.getBoolPref("oldplacesbut") && classicthemerestorerjs.ctr.appversion >= 50) classicthemerestorerjs.ctr.loadUnloadCSS("oldplacesbut",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("oldplacesbut",false);
+		  break;
 
 		  case "bmbutpanelm":
 			if (branch.getBoolPref("bmbutpanelm")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbutpanelm",true);
@@ -2345,7 +2355,12 @@ classicthemerestorerjs.ctr = {
 		  break;
 
 		  case "faviconurl": case "padlockex":
-			if (branch.getBoolPref("faviconurl")) classicthemerestorerjs.ctr.favIconinUrlbarCTR();
+			if (branch.getBoolPref("faviconurl")) {
+				classicthemerestorerjs.ctr.favIconinUrlbarCTR();
+				classicthemerestorerjs.ctr.loadUnloadCSS("faviconurl",true);
+			} else {
+				classicthemerestorerjs.ctr.loadUnloadCSS("faviconurl",false);
+			}
 		  break;
 		  
 		  case "padlock":
@@ -4046,6 +4061,7 @@ classicthemerestorerjs.ctr = {
 		case "options_win_alt": 	manageCSS("alt_optionswindow2.css");	break;
 		case "options_win_ct": 		manageCSS("alt_optionswindow_ct.css");	break;
 		case "altoptionsmitem": 	manageCSS("alt_options_mitem.css");		break;
+		case "aboutpages": 			manageCSS("aboutpages.css");			break;
 		case "svgfilters": 			manageCSS("svgfilters.css");			break;
 		case "iat_notf_vt": 		manageCSS("mode_iat_no_vt.css");		break;
 		case "to_notf_vt": 			manageCSS("mode_to_no_vt.css");			break;
@@ -4142,6 +4158,7 @@ classicthemerestorerjs.ctr = {
 		break;
 		
 		case "hiderecentbm": 		manageCSS("hide_recently_bm.css");		break;
+		case "oldplacesbut": 		manageCSS("oldplacesbut.css");			break;
 		case "bmbutpanelm": 		manageCSS("bmbut_pmenu.css");			break;
 		case "bmbunsortbm": 		manageCSS("bmbut_unsortedbookm.css");	break;
 		case "bmbunsortbm2": 		manageCSS("bmbut_unsortedbookm2.css");	break;
@@ -4156,6 +4173,7 @@ classicthemerestorerjs.ctr = {
 		case "ib_nohovcolor": 		manageCSS("ib_nohovcolor.css");			break;
 		case "ib_graycolor": 		manageCSS("ib_graycolor.css");			break;
 		case "verifiedcolors": 		manageCSS("verifiedcolors.css");		break;
+		case "faviconurl": 			manageCSS("faviconurl_extra.css");		break;
 		case "ibinfoico": 			manageCSS("hide_ibinfoico.css");		break;
 		case "ibinfoico2": 			manageCSS("hide_ibinfoico2.css");		break;
 		case "iblabels": 			manageCSS("hide_iblabels.css");			break;

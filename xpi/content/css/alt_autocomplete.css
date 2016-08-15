@@ -95,5 +95,10 @@
 		padding: 0 !important;
 	  }
 	}
+	
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem #ibox-spacer,
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem #ibox-spacer {
+	  width:100000px !important;
+	}
 
 }

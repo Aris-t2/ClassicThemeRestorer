@@ -234,7 +234,8 @@
 			var cheight = Services.prefs.getBranch("extensions.classicthemerestorer.").getIntPref("cresultsh");
 			
 			// urlbars bottom position
-			var urlbbotpos = document.getElementById("urlbar").boxObject.screenY + document.getElementById("urlbar").boxObject.height;
+			//var urlbbotpos = document.getElementById("urlbar").boxObject.screenY + document.getElementById("urlbar").boxObject.height;
+			var urlbbotpos = document.getElementById("urlbar").boxObject.screenY + document.getElementById("urlbar").boxObject.height - window.screen.top;
 		
 			try{
 			  if(document.getElementById("main-window").hasAttribute("inFullscreen"))
@@ -260,7 +261,12 @@
 			} else {
 			  this.setAttribute("maxheight", height);
 			}
-
+			
+			/*var currentbox = document.getAnonymousElementByAttribute(this, "anonid", "richlistbox");
+			
+			if(currentbox.getAttribute('style')=="height: 0px;" || currentbox.getAttribute('style')=="height: 8px;")
+			  this.closePopup();*/
+			  
 		  }
 	  
 		  // if CTRs movable location bar is on a bottom toolbar, open autocomplete popup above location bar
@@ -513,32 +519,37 @@
     <content align="start"
              onoverflow="this._onOverflow();"
              onunderflow="this._onUnderflow();">
-	<xul:hbox align="center">
-      <xul:image anonid="site-icon"
-                 class="ac-site-icon"
-                 xbl:inherits="src=image,selected,type"/>
-      <xul:hbox class="ac-title"
-                align="center"
-                xbl:inherits="selected">
-        <xul:description class="ac-text-overflow-container">
-          <xul:description anonid="title-text"
-                           class="ac-title-text"
-                           xbl:inherits="selected"/>
-        </xul:description>
-      <xul:image anonid="type-icon"
-                 class="ac-type-icon"
-                 xbl:inherits="selected,current,type"/>
-      </xul:hbox>
-      <xul:hbox anonid="tags"
-                class="ac-tags"
-                align="center"
-                xbl:inherits="selected">
-        <xul:description class="ac-text-overflow-container">
-          <xul:description anonid="tags-text"
-                           class="ac-tags-text"
-                           xbl:inherits="selected"/>
-        </xul:description>
-      </xul:hbox>
+	<xul:hbox>
+		<xul:hbox align="center">
+		  <xul:image anonid="site-icon"
+					 class="ac-site-icon"
+					 xbl:inherits="src=image,selected,type"/>
+		  <xul:hbox class="ac-title"
+					align="center"
+					xbl:inherits="selected">
+			<xul:description class="ac-text-overflow-container">
+			  <xul:description anonid="title-text"
+							   class="ac-title-text"
+							   xbl:inherits="selected"/>
+			</xul:description>
+			<xul:hbox anonid="tags"
+					class="ac-tags"
+					align="center"
+					xbl:inherits="selected">
+			  <xul:description class="ac-text-overflow-container">
+				<xul:description anonid="tags-text"
+							   class="ac-tags-text"
+							   xbl:inherits="selected"/>
+			  </xul:description>
+			</xul:hbox>
+		  </xul:hbox>
+		</xul:hbox>
+		<xul:spacer flex="1" id="ibox-spacer"/>
+		<xul:hbox align="end" id="ibox-box">
+		  <xul:image anonid="type-icon"
+				   class="ac-type-icon"
+				   xbl:inherits="selected,current,type"/>
+		</xul:hbox>
 	</xul:hbox>
 	<xul:hbox align="center">
       <xul:hbox anonid="separator"
@@ -1172,7 +1183,7 @@
                 tagsAvailable,
                 titleTagsMaxWidth * (1 - titlePct)
               );
-              this._titleText.style.maxWidth = titleMaxWidth + "px";
+              this._titleText.style.maxWidth = (-16 + titleMaxWidth) + "px";
               this._tagsText.style.maxWidth = titleMaxWidth + "px";
             }
             let urlActionMaxWidth = Math.max(

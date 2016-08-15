@@ -99,7 +99,7 @@
 <!ENTITY Ctr_appbuttonc_cu	"De couleur personnalisée">
 <!ENTITY Ctr_appbuttonct	"Personnaliser la couleur du bouton s'il est sur une barre d'outils">
 <!ENTITY Ctr_appbuttonI1	"Redémarrage recommandé">
-<!ENTITY Ctr_appbuttonI1e	"Uniquement visible sur la barre de titre &brandShortName;, pas sur la barre de titre de Windows !">
+<!ENTITY Ctr_appbuttonI1e	"Uniquement visible sur la barre de titre de &brandShortName;, pas sur la barre de titre de Windows !">
 <!ENTITY Ctr_appbuttonI2	"Les couleurs du bouton sont visibles uniquement s'il est sur la barre de titre ou la barre des onglets !">
 <!ENTITY Ctr_appbutmhi		"Position plus élevée (sur la barre des onglets)">
 <!ENTITY Ctr_appbautocol	"Définir automatiquement la couleur du canal (par défaut/Aurora/Nightly) du navigateur">
@@ -125,6 +125,7 @@
 <!ENTITY Ctr_altoptionswh	"Hauteur :">
 <!ENTITY Ctr_altoptionsi	"La fenêtre simulée des options n'est plus une boite de dialogue mais une « fenêtre du navigateur » avec toutes les barres d'outils masquées. La fonctionnalité « Utiliser la page actuelle » ajoute seulement les URL des pages ouvertes dans la fenêtre actuelle, qui est uniquement « about:preferences » dans ce cas. Le bouton de barre d'outils « Options » est remplacé par un nouveau afin de pouvoir ouvrir les options dans une fenêtre.">
 <!ENTITY Ctr_options_rem	"Mémoriser la dernière catégorie sélectionnée">
+<!ENTITY Ctr_aboutpages		"General 'about:' pages: alternative appearance">
 <!ENTITY Ctr_svgfilters		"Couleurs SVG pour les icônes des boutons de barres d'outils par défaut">
 <!ENTITY Ctr_wincontrols	"Rendre mobiles les commandes de la fenêtre en plein écran">
 <!ENTITY Ctr_puibuttonsep	"Séparateur du bouton de menu :">
@@ -186,6 +187,7 @@
 <!ENTITY Ctr_bmbutton		"Bouton de menu des marque-pages">
 <!ENTITY Ctr_hiderecentbm	"Menu déroulant des marque-pages : masquer les marque-pages récemment ajoutés">
 <!ENTITY Ctr_hideeditbm		"Étoile des marque-pages : masquer le menu déroulant (si la page n'a pas été marquée)">
+<!ENTITY Ctr_oldplacesbut	"Bookmarks on toolbar: old appearance">
 <!ENTITY Ctr_bmbutpanelm	"Menu déroulant : apparence de menu de type « panneau »">
 <!ENTITY Ctr_bmbunsortbm	"Menu déroulant : menu « Autres marque-pages »">
 <!ENTITY Ctr_bmbunsortbm2	"Menu au-dessus des marque-pages">
@@ -209,9 +211,9 @@
 
 <!ENTITY Ctr_navthrobber1	"Cliquer sur l'indicateur d'activité ouvre l'URL suivante dans un nouvel onglet :">
 <!ENTITY Ctr_navthrobber2	"Saisir une URL ou bien laisser vide">
-<!ENTITY Ctr_anewtaburl		"URL de la page de nouvel onglet">
-<!ENTITY Ctr_anewtaburlcb	"Personnaliser l'URL (par défaut : « about:newtab ») :">
-<!ENTITY Ctr_anewtaburlpcb	"Custom private new tab page url (default: 'about:privatebrowsing')">
+<!ENTITY Ctr_anewtaburl		"URL de nouvel onglet et de page d'accueil privée">
+<!ENTITY Ctr_anewtaburlcb	"Modifier l'URL de nouvel onglet (« about:newtab » par défaut) :">
+<!ENTITY Ctr_anewtaburlpcb	"Modifier l'URL d'accueil de navigation privée (« about:privatebrowsing » par défaut) :">
 
 <!ENTITY Ctr_tab_tf_info1	"Les noms de couleurs, les codes hexadécimaux, les valeurs RVB(A) et TSL(A) sont pris en charge.">
 <!ENTITY Ctr_tab_tf_info2	"Les saisies ne seront pas vérifiées !">
@@ -275,9 +277,9 @@
 <!ENTITY Ctr_autocompl_rhl	"Utiliser des couleurs Aero pour les résultats surlignés">
 <!ENTITY Ctr_autocompl_sep	"Afficher un séparateur entre les résultats">
 <!ENTITY Ctr_lbsugresi		"Désactiver la limite de hauteur">
-<!ENTITY Ctr_cresultshcb	"Custom height limit: ">
+<!ENTITY Ctr_cresultshcb	"Limite de hauteur personnalisée :">
 <!ENTITY Ctr_lbsugres		"Nombre de résultats :">
-<!ENTITY Ctr_lbsbradius		"Rayon de bordure personnalisé pour la barre d'adresse et la barre de recherche">
+<!ENTITY Ctr_lbsbradius		"Personnaliser le rayon de bordure de la barre d'adresse et/ou de la barre de recherche">
 
 <!ENTITY Ctr_menubar_items	"Position des éléments de menu :">
 <!ENTITY Ctr_extrabar		"Barres d'outils supplémentaires">
@@ -374,8 +376,8 @@
 <!ENTITY Ctr_fx50findbarhl	"Décocher ces paramètres désactive les fonctionnalités avancées de surlignage de la barre de recherche.">
 <!ENTITY Ctr_e_flyweb		"FlyWeb">
 <!ENTITY Ctr_fx50flyweb		"Décocher ce paramètre désactive « FlyWeb ».">
-<!ENTITY Ctr_e_oneoffsearch	"Autocomplete popups search selection">
-<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes location bar popups search selection.">
+<!ENTITY Ctr_e_oneoffsearch	"Sélection de recherche des fenêtres surgissantes d'autocomplétion">
+<!ENTITY Ctr_fx51OOSeach	"Décocher ce paramètre retire la sélection de recherche des fenêtres surgissantes de la barre de navigation.">
 
 
 <!ENTITY Ctr_pw_settings	"Paramètres">
@@ -402,7 +404,7 @@
 <!ENTITY goCmd.label					"Se rendre à la page indiquée dans la barre d'adresse">
 <!ENTITY Ctr_menu_restart.label			"Redémarrer">
 <!ENTITY Ctr_restartapp					"Afficher « Redémarrer » dans le menu « Fichier » et dans le menu de l'ancien bouton &brandShortName;">
-<!ENTITY Ctr_ctrnewinv					"Underline new options for current &brandShortName; version">
+<!ENTITY Ctr_ctrnewinv					"Souligner les nouvelles options de la version actuelle de &brandShortName;">
 
 <!ENTITY Ctr_openInCurrentTab			"Ouvrir les entrées dans l'onglet actuel">
 <!ENTITY Ctr_openInNewTab				"Ouvrir les entrées dans un nouvel onglet">

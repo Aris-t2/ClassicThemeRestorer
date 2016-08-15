@@ -104,6 +104,7 @@
 		<preference id="ctraddon_alt_addonsp"	name="extensions.classicthemerestorer.alt_addonsp"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_alt_addonsm"	name="extensions.classicthemerestorer.alt_addonsm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_altoptions"	name="extensions.classicthemerestorer.altoptions"	type="string"	instantApply="true"/>
+		<preference id="ctraddon_aboutpages"	name="extensions.classicthemerestorer.aboutpages"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_svgfilters"	name="extensions.classicthemerestorer.svgfilters"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_wincontrols"	name="extensions.classicthemerestorer.wincontrols"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_puibuttonsep"	name="extensions.classicthemerestorer.puibuttonsep"	type="string"	instantApply="true"/>
@@ -251,6 +252,7 @@
 		<preference id="ctraddon_hidezoomres"	name="extensions.classicthemerestorer.hidezoomres"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hiderecentbm"	name="extensions.classicthemerestorer.hiderecentbm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hideeditbm"	name="extensions.classicthemerestorer.hideeditbm"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_oldplacesbut"	name="extensions.classicthemerestorer.oldplacesbut"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbutpanelm"	name="extensions.classicthemerestorer.bmbutpanelm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbunsortbm"	name="extensions.classicthemerestorer.bmbunsortbm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbunsortbm2"	name="extensions.classicthemerestorer.bmbunsortbm2"	 type="bool"	instantApply="true"/>
@@ -346,8 +348,8 @@
 	  <radio value="ctraddon_tabsbox2" 		label="&Ctr_tabs; (2)"		class="ctraddontab ctraddon_new_in_v48"/>
 	  <radio value="ctraddon_fontbox"    	label="&Ctr_tabcolors_t;"	id="ctraddon_sqtabcolorstab" class="ctraddontab"/>
 	  <radio value="ctraddon_appbuttonbox" 	label="&Ctr_appbutton;"		class="ctraddontab"/>
-	  <radio value="ctraddon_generaluibox"	label="&Ctr_ui; (1)"		class="ctraddontab"/>
-	  <radio value="ctraddon_generaluibox2"	label="&Ctr_ui; (2)"		class="ctraddontab ctraddon_new_in_v47"/>
+	  <radio value="ctraddon_generaluibox"	label="&Ctr_ui; (1)"		class="ctraddontab ctraddon_new_in_v48"/>
+	  <radio value="ctraddon_generaluibox2"	label="&Ctr_ui; (2)"		class="ctraddontab ctraddon_new_in_v47 ctraddon_new_in_v50"/>
 	  <radio value="ctraddon_generaluibox3"	label="&Ctr_ui; (3)"		class="ctraddontab"/>
 	  <radio value="ctraddon_prefpagebox"	label="&Ctr_prefpage;"		class="ctraddontab"/>
 	  <radio value="ctraddon_addonmngrbox"	label="&Ctr_addonmanager;"	class="ctraddontab"/>
@@ -909,6 +911,7 @@
 		<checkbox label="&Ctr_noconicons;"		preference="ctraddon_noconicons" id="ctraddon_pw_noconicons"/>
 		<checkbox label="&Ctr_alt_newtabp;"		preference="ctraddon_alt_newtabp" id="ctraddon_pw_alt_newtabp"/>
 		<checkbox label="&Ctr_nosnippets;"		preference="ctraddon_nosnippets" id="ctraddon_pw_nosnippets"/>
+		<checkbox label="&Ctr_aboutpages;"		preference="ctraddon_aboutpages" id="ctraddon_pw_aboutpages" class="ctraddon_new_in_v48"/>
 		<checkbox label="&Ctr_svgfilters;"		preference="ctraddon_svgfilters" id="ctraddon_pw_svgfilters"/>
 		<checkbox label="&Ctr_combrelstop;"		preference="ctraddon_combrelstop" id="ctraddon_pw_stopreload"/>
 		<description class="ctraddonsuboption">&Ctr_stoprel1;</description>
@@ -954,6 +957,7 @@
 		<checkbox label="&Ctr_menupopupscr;"	preference="ctraddon_menupopupscr"/>
 		<checkbox label="&Ctr_hiderecentbm;"	preference="ctraddon_hiderecentbm" id="ctraddon_pw_hiderecentbm" class="ctraddon_new_in_v47"/>
 		<checkbox label="&Ctr_hideeditbm;"		preference="ctraddon_hideeditbm" id="ctraddon_pw_hideeditbm" class="ctraddon_new_in_v47" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+		<checkbox label="&Ctr_oldplacesbut;"	preference="ctraddon_oldplacesbut" id="ctraddon_pw_oldplacesbut" class="ctraddon_winlinonly ctraddon_new_in_v50"/>
 		<description class="ctraddon_font1">&Ctr_bmbutton;</description>
 		<checkbox label="&Ctr_bmbutpanelm;"		preference="ctraddon_bmbutpanelm" id="ctraddon_pw_bmbutpanelm"/>
 		<checkbox label="&Ctr_bmbunsortbm;"		preference="ctraddon_bmbunsortbm" id="ctraddon_pw_bmbunsortbm" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwUnsortBM(true);} else {classicthemerestorerjso.ctr.ctrpwUnsortBM(false);}"/>

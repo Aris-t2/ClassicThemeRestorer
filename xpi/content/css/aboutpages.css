@@ -1,0 +1,158 @@
+@-moz-document	url-prefix(about:support),
+				url-prefix(about:performance),
+				url-prefix(about:profiles),
+				url-prefix(about:sessionrestore),
+				url-prefix(about:welcomeback),
+				url-prefix(about:neterror),
+				url-prefix(about:crashes),
+				url-prefix(about:tabcrashed){
+  
+	:root {
+	  background: white !important;
+	}
+ 
+	button {
+	  min-height: unset !important;
+	  height: unset !important;
+	  font-size: 90% !important;
+	  background-image: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.20),rgba(0,0,0,0.01)) !important;
+	}
+    
+	*.radio-check,
+	*.checkbox-check,
+	input[type="checkbox"] + label:before {
+	  width: 16px !important;
+	  height: 16px !important;
+	}
+
+}
+
+@-moz-document	url-prefix(about:debugging),
+				url-prefix(about:networking) {
+
+ 	html {
+	  background: linear-gradient(to bottom right, #f5f5f5,-moz-Dialog,#f5f5f5,-moz-Dialog) !important;
+	}
+	
+	.category-icon {
+	  background: grey !important;
+	}
+
+	@media (-moz-os-version: windows-win7), (-moz-os-version: windows-vista){
+	  @media (-moz-windows-theme:aero) {
+	    html{
+		  background: linear-gradient(to bottom right, #edf6ff,#dbeaf9,#edf6ff,#dbeaf9) !important;
+	    }
+		.category-icon {
+		  background: lightblue !important;
+		}
+	  }
+	}
+		
+	#categories {
+	  background: transparent !important;
+	}
+		
+	#categories .category[selected],
+	#categories .category.selected{
+	  background-color: white !important;
+	  color: black !important;
+	}
+
+	#categories .category:not([selected]):hover,
+	#categories .category:not(.selected):hover{
+	  background-color: Highlight !important;
+	  color: HighlightText !important;
+	}
+
+	#categories .category:not([selected]):not(:hover),
+	#categories .category:not(.selected):not(:hover){
+	  color: black !important;
+	}
+
+	#categories .category {
+	  transition-duration: unset !important;
+	}
+
+	.targets h2,
+	.header-name {
+	  font-weight: bold !important;
+	  font-size: 130% !important;
+	  padding-bottom: 0 !important;
+	}		
+
+	button {
+	  min-height: unset !important;
+	  height: unset !important;
+	  font-size: 90% !important;
+	  background-image: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.20),rgba(0,0,0,0.01)) !important;
+	}
+	
+	input[type="text"] {
+	  min-height: 18px !important;
+	  height: 18px !important;
+	}
+
+	description,
+	.main-content label{
+	  font-size:90% !important;
+	}
+	
+	.main-content {
+	  margin-top: 20px !important;
+	  margin-bottom: 20px !important;
+	  background-color: white !important;
+	}
+		
+
+	*.checkbox-check,
+	*.radio-check,
+	input[type="checkbox"] + label:before {
+	  width: 16px !important;
+	  height: 16px !important;
+	}
+
+}
+
+@-moz-document	url-prefix(about:debugging) {
+  *.header {
+	visibility: collapse !important;
+    display:none !important;
+  }
+}
+
+@-moz-document	url-prefix(about:networking) {
+  #sectionTitle {
+	visibility: collapse !important;
+    display:none !important;
+  }
+  *.header {
+	padding-bottom: unset !important;
+	border: unset !important;
+  }
+  #warning_message{
+    background: white !important;
+  }
+  #categories > hr {
+    display: none !important;
+  }
+}
+
+@-moz-document	url-prefix(about:privatebrowsing) {
+	html.normal {
+	  background: white !important;
+	}
+	html.normal button {
+	  min-height: unset !important;
+	  height: unset !important;
+	  font-size: 90% !important;
+	  background-image: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.20),rgba(0,0,0,0.01)) !important;
+	}
+}
+
+#errorPageContainer	button {
+  min-height: unset !important;
+  height: unset !important;
+  font-size: 90% !important;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.20),rgba(0,0,0,0.01)) !important;
+}

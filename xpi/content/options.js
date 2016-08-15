@@ -406,6 +406,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_anewtaburlpcb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_anewtaburlpurlbox').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_cresultshbox').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_aboutpages').style.visibility = 'collapse';
 	}
 
 	if (this.appversion >= 48) {
@@ -422,6 +423,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_findbarhlgb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_flywebgb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_autocompl_it2').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_oldplacesbut').style.visibility = 'collapse';
 	}
 	
 	if (this.appversion >= 50) {
@@ -1191,6 +1193,9 @@ classicthemerestorerjso.ctr = {
 	this.prefs.setBoolPref("hideurlsrg",true);
 
 	this.prefs.setBoolPref("oldsearch",true);
+	
+	if(this.appversion >= 50)
+	  this.prefs.setBoolPref("oldplacesbut",true);
 
 	if(this.appversion >= 48)
 	  this.prefs.setBoolPref("altautocompl",true);

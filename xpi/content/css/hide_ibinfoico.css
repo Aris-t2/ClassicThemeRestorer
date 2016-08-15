@@ -3,5 +3,8 @@
 	*:not(.chromeUI) > #identity-icon,
 	*:not(.chromeUI):not(.verifiedDomain):not(.verifiedIdentity) > #page-proxy-favicon {
 	  list-style-image:url('chrome://classic_theme_restorer/content/images/globe.png') !important;
+	  filter: unset !important;
+	  fill: unset !important;
+	  opacity: 1.0 !important;
 	}
 }
