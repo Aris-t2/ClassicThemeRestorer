@@ -77,7 +77,6 @@ pref("extensions.classicthemerestorer.am_highlight",false);
 pref("extensions.classicthemerestorer.am_buticons",false);
 pref("extensions.classicthemerestorer.am_hovshowb",false);
 pref("extensions.classicthemerestorer.alt_addonsp",false);
-pref("extensions.classicthemerestorer.hiderecentbm",false);
 pref("extensions.classicthemerestorer.hideeditbm",false);
 pref("extensions.classicthemerestorer.oldplacesbut",false);
 pref("extensions.classicthemerestorer.bmbutpanelm",false);

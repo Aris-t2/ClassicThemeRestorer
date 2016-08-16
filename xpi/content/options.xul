@@ -45,6 +45,7 @@
 		<preference id="ctraddon_findbarhl2"	name="findbar.highlightAll"							type="bool"		instantApply="true"/>
 		<preference id="ctraddon_flyweb"		name="dom.flyweb.enabled"							type="bool"		instantApply="true"/>
 		<preference id="ctraddon_oneoffsearch"	name="browser.urlbar.oneOffSearches"				type="bool"		instantApply="true"/>
+		<preference id="ctraddon_hiderecentbm"	name="browser.bookmarks.showRecentlyBookmarked"		type="bool"		instantApply="true" inverted="true"/>
 
 		<preference id="ctraddon_tabs"			name="extensions.classicthemerestorer.tabs" 		type="string"	instantApply="true"/>
 		<preference id="ctraddon_tabsontop"		name="extensions.classicthemerestorer.tabsontop" 	type="string"	instantApply="true"/>
@@ -250,7 +251,6 @@
 		<preference id="ctraddon_emptyfavico_g"	name="extensions.classicthemerestorer.emptyfavico_g" type="string"	instantApply="true"/>
 		<preference id="ctraddon_noemptypticon"	name="extensions.classicthemerestorer.noemptypticon" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hidezoomres"	name="extensions.classicthemerestorer.hidezoomres"	 type="bool"	instantApply="true"/>
-		<preference id="ctraddon_hiderecentbm"	name="extensions.classicthemerestorer.hiderecentbm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hideeditbm"	name="extensions.classicthemerestorer.hideeditbm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_oldplacesbut"	name="extensions.classicthemerestorer.oldplacesbut"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbutpanelm"	name="extensions.classicthemerestorer.bmbutpanelm"	 type="bool"	instantApply="true"/>
@@ -349,7 +349,7 @@
 	  <radio value="ctraddon_fontbox"    	label="&Ctr_tabcolors_t;"	id="ctraddon_sqtabcolorstab" class="ctraddontab"/>
 	  <radio value="ctraddon_appbuttonbox" 	label="&Ctr_appbutton;"		class="ctraddontab"/>
 	  <radio value="ctraddon_generaluibox"	label="&Ctr_ui; (1)"		class="ctraddontab ctraddon_new_in_v48"/>
-	  <radio value="ctraddon_generaluibox2"	label="&Ctr_ui; (2)"		class="ctraddontab ctraddon_new_in_v47 ctraddon_new_in_v50"/>
+	  <radio value="ctraddon_generaluibox2"	label="&Ctr_ui; (2)"		class="ctraddontab ctraddon_new_in_v47 ctraddon_new_in_v49 ctraddon_new_in_v50"/>
 	  <radio value="ctraddon_generaluibox3"	label="&Ctr_ui; (3)"		class="ctraddontab"/>
 	  <radio value="ctraddon_prefpagebox"	label="&Ctr_prefpage;"		class="ctraddontab"/>
 	  <radio value="ctraddon_addonmngrbox"	label="&Ctr_addonmanager;"	class="ctraddontab"/>
@@ -955,7 +955,8 @@
 		<checkbox label="&Ctr_panelmenucol;"	preference="ctraddon_panelmenucol" id="ctraddon_pw_panelmenucolor"/>
 		<checkbox label="&Ctr_cpanelmenus;"		preference="ctraddon_cpanelmenus"/>
 		<checkbox label="&Ctr_menupopupscr;"	preference="ctraddon_menupopupscr"/>
-		<checkbox label="&Ctr_hiderecentbm;"	preference="ctraddon_hiderecentbm" id="ctraddon_pw_hiderecentbm" class="ctraddon_new_in_v47"/>
+		<checkbox label="&Ctr_hiderecentbm;"	preference="ctraddon_hiderecentbm" id="ctraddon_pw_hiderecentbm" class="ctraddon_new_in_v49"/>
+		<description id="ctraddon_pw_hiderecentbmdes" class="ctraddonsuboption">about:config &gt;&gt; browser.bookmarks.showRecentlyBookmarked</description>
 		<checkbox label="&Ctr_hideeditbm;"		preference="ctraddon_hideeditbm" id="ctraddon_pw_hideeditbm" class="ctraddon_new_in_v47" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<checkbox label="&Ctr_oldplacesbut;"	preference="ctraddon_oldplacesbut" id="ctraddon_pw_oldplacesbut" class="ctraddon_winlinonly ctraddon_new_in_v50"/>
 		<description class="ctraddon_font1">&Ctr_bmbutton;</description>
