@@ -187,7 +187,7 @@
 <!ENTITY Ctr_bmbutton		"Tlačítko menu záložek">
 <!ENTITY Ctr_hiderecentbm	"Záložky (bublina): skrýt posledně přidané záložky">
 <!ENTITY Ctr_hideeditbm		"Hvězdička záložek: skrýt bublinu (pokud stránka není v záložkách)">
-<!ENTITY Ctr_oldplacesbut	"Bookmarks on toolbar: old appearance">
+<!ENTITY Ctr_oldplacesbut	"Bookmark items and folders on toolbar: old appearance">
 <!ENTITY Ctr_bmbutpanelm	"Popup: panel menu vzhledu">
 <!ENTITY Ctr_bmbunsortbm	"Popup: 'Netříděné záložky' v submenu">
 <!ENTITY Ctr_bmbunsortbm2	"Menu nad záložkami">
@@ -250,6 +250,7 @@
 <!ENTITY Ctr_urlbardropm	"Přesunout šipku na poslední pozici vpravo">
 <!ENTITY Ctr_urlbardropm2	"Rozevírací šipka vždy viditelná">
 <!ENTITY Ctr_altreaderico	"Alternativní ikona 'Readeru'">
+<!ENTITY Ctr_hideurlzoom	"Hide zoom button (if present)">
 <!ENTITY Ctr_hideprbutton	"Nezobrazovat upozornění při blokování vyskakovacích oken">
 <!ENTITY Ctr_locsearchbw10	"Snížit výšku adresního řádku a vyhledávače (experimentální)">
 <!ENTITY Ctr_urlbar_ib		"Tlačítko identity webu (identity box)">
@@ -362,22 +363,18 @@
 
 <!ENTITY Ctr_experttweaks	"Pokročilé">
 <!ENTITY Ctr_fx34loop		"Odškrtnutím předvolby to bude odstraněno.">
-<!ENTITY Ctr_fx38reader		"Odškrtnutím předvolby se to zruší, včetně ikony v adresním řádku.">
 <!ENTITY Ctr_fx38pocket		"Odškrtnutím se funkce zruší a odstraní se tlačítko v liště.">
 <!ENTITY Ctr_fx38pocket2	"Poznámka: Přetažením tlačítka 'Pocket' do 'nastavení lišty' před změnou této předvolby zde, se odstraní vstupy v 'Pocket' z menu záložky a čtečky.">
 <!ENTITY Ctr_e_loop			"Hello / Loop / Volání a konverzace">
 <!ENTITY Ctr_e_readermode	"Mód čtečky">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Ikona audio na panelech">
-<!ENTITY Ctr_fx42tabsaudico	"Zrušení volby odstraní 'ikonu audio' z panelů.">
 <!ENTITY Ctr_e_containertab	"Container Tabs">
-<!ENTITY Ctr_fx50containert	"Unchecking this preference removes 'container tabs'.">
 <!ENTITY Ctr_e_findbarhl	"Findbar highlighting">
 <!ENTITY Ctr_fx50findbarhl	"Unchecking these preferences removes findbars 'highlight' features.">
 <!ENTITY Ctr_e_flyweb		"Flyweb">
-<!ENTITY Ctr_fx50flyweb		"Unchecking this preference disables 'flyweb'.">
 <!ENTITY Ctr_e_oneoffsearch	"Autocomplete popups search selection">
-<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes location bar popups search selection.">
+<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes search selection from location bars autocomplete popup.">
 
 
 <!ENTITY Ctr_pw_settings	"Možnosti">

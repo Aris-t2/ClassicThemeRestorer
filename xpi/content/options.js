@@ -436,6 +436,7 @@ classicthemerestorerjso.ctr = {
 
 	if (this.appversion < 51) {
 	  document.getElementById('ctraddon_pw_oneoffsearchgb').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_hideurlzoom').style.visibility = 'collapse';
 	}
 	
 	function PrefListener(branch_name, callback) {

@@ -187,7 +187,7 @@
 <!ENTITY Ctr_bmbutton		"Bogmærker-menuknap">
 <!ENTITY Ctr_hiderecentbm	"Bogmærkers popup: skjul senest tilførte bogmærker">
 <!ENTITY Ctr_hideeditbm		"Bogmærkers stjerne: skjul popup (hvis side ikke er bogmærket)">
-<!ENTITY Ctr_oldplacesbut	"Bookmarks on toolbar: old appearance">
+<!ENTITY Ctr_oldplacesbut	"Bookmark items and folders on toolbar: old appearance">
 <!ENTITY Ctr_bmbutpanelm	"Popup: panelmenu udseende">
 <!ENTITY Ctr_bmbunsortbm	"Popup: 'Usorterede bogmærker'-undermenu">
 <!ENTITY Ctr_bmbunsortbm2	"Menu over bogmærker">
@@ -250,6 +250,7 @@
 <!ENTITY Ctr_urlbardropm	"Flyt rullemenu-pilen til den sidst mulige position">
 <!ENTITY Ctr_urlbardropm2	"Rullemenu-pil altid synlig">
 <!ENTITY Ctr_altreaderico	"Alternative 'Læser'-ikoner">
+<!ENTITY Ctr_hideurlzoom	"Hide zoom button (if present)">
 <!ENTITY Ctr_hideprbutton	"Skjul notifikationsikonet når en popup blokeres">
 <!ENTITY Ctr_locsearchbw10	"Reducér adresselinjers og søgelinjers højde (eksperimentel)">
 <!ENTITY Ctr_urlbar_ib		"Knappen Identitet for websted (Identitet boks)">
@@ -362,22 +363,18 @@
 
 <!ENTITY Ctr_experttweaks	"Avanceret">
 <!ENTITY Ctr_fx34loop		"Deaktivér denne indstilling for at fjerne funktionen 'opkald og samtaler'.">
-<!ENTITY Ctr_fx38reader		"Deaktivér denne indstilling for at deaktivere 'læsertilstand' og for at fjerne dens ikon fra adresselinjen.">
 <!ENTITY Ctr_fx38pocket		"Deaktivér denne indstilling for at deaktivere funktionen 'Pocket' og for at fjerne dens knap fra værktøjslinjerne.">
 <!ENTITY Ctr_fx38pocket2	"Bemærk: flyttes 'Pocket'-knappen til 'tilpasningspalet' før denne indstilling deaktiveres, vil det også fjerne 'Pocket'-poster fra bogmærker- og læser-menuer.">
 <!ENTITY Ctr_e_loop			"Hello / Opkald og samtale / Loop">
 <!ENTITY Ctr_e_readermode	"Læsertilstand">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Lydafspilningsikon på faneblade">
-<!ENTITY Ctr_fx42tabsaudico	"Deaktivér denne indstilling for at fjerne 'lydafspilningsikon' fra faneblade.">
 <!ENTITY Ctr_e_containertab	"Container Tabs">
-<!ENTITY Ctr_fx50containert	"Unchecking this preference removes 'container tabs'.">
 <!ENTITY Ctr_e_findbarhl	"Findbar highlighting">
 <!ENTITY Ctr_fx50findbarhl	"Unchecking these preferences removes findbars 'highlight' features.">
 <!ENTITY Ctr_e_flyweb		"Flyweb">
-<!ENTITY Ctr_fx50flyweb		"Unchecking this preference disables 'flyweb'.">
 <!ENTITY Ctr_e_oneoffsearch	"Autocomplete popups search selection">
-<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes location bar popups search selection.">
+<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes search selection from location bars autocomplete popup.">
 
 
 <!ENTITY Ctr_pw_settings	"Indstillinger">

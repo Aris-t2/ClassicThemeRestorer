@@ -187,7 +187,7 @@
 <!ENTITY Ctr_bmbutton		"書籤選單按鈕">
 <!ENTITY Ctr_hiderecentbm	"Bookmarks popup: hide recently added bookmarks">
 <!ENTITY Ctr_hideeditbm		"Bookmarks star: hide popup (if page is not bookmarked)">
-<!ENTITY Ctr_oldplacesbut	"Bookmarks on toolbar: old appearance">
+<!ENTITY Ctr_oldplacesbut	"Bookmark items and folders on toolbar: old appearance">
 <!ENTITY Ctr_bmbutpanelm	"彈出式書籤選單: 書籤選單使用和面板選單同風格的外觀">
 <!ENTITY Ctr_bmbunsortbm	"彈出式書籤選單: 「未排序書籤」項目附加子選單">
 <!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
@@ -250,6 +250,7 @@
 <!ENTITY Ctr_urlbardropm	"將下拉式三角按鈕儘可能地移動到網址列最末端">
 <!ENTITY Ctr_urlbardropm2	"Make dropmarker always visible">
 <!ENTITY Ctr_altreaderico	"換個「閱讀模式」圖示">
+<!ENTITY Ctr_hideurlzoom	"Hide zoom button (if present)">
 <!ENTITY Ctr_hideprbutton	"當彈出型廣告視窗被封鎖時，不顯示通知圖示">
 <!ENTITY Ctr_locsearchbw10	"減少網址列和搜尋列高度 (實驗性)">
 <!ENTITY Ctr_urlbar_ib		"網站識別鈕 (身份區塊)">
@@ -362,22 +363,18 @@
 
 <!ENTITY Ctr_experttweaks	"進階">
 <!ENTITY Ctr_fx34loop		"取消勾選這個核取方塊，則可移除這項功能。">
-<!ENTITY Ctr_fx38reader		"取消勾選這個核取方塊，則可停用「閱讀模式」，並將其按鈕從網址列移除。">
 <!ENTITY Ctr_fx38pocket		"取消勾選這個核取方塊，則可停用「Pocket」功能，並將「Pocket」按鈕從工具列移除。">
 <!ENTITY Ctr_fx38pocket2	"註: 若「Pocket」按鈕在自訂模式面板中，同樣會被移除。">
 <!ENTITY Ctr_e_loop			"Hello 即時通訊">
 <!ENTITY Ctr_e_readermode	"閱讀模式">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"分頁靜音按鈕">
-<!ENTITY Ctr_fx42tabsaudico	"取消勾選這個核取方塊，則可移除「分頁靜音按鈕」。">
 <!ENTITY Ctr_e_containertab	"Container Tabs">
-<!ENTITY Ctr_fx50containert	"Unchecking this preference removes 'container tabs'.">
 <!ENTITY Ctr_e_findbarhl	"Findbar highlighting">
 <!ENTITY Ctr_fx50findbarhl	"Unchecking these preferences removes findbars 'highlight' features.">
 <!ENTITY Ctr_e_flyweb		"Flyweb">
-<!ENTITY Ctr_fx50flyweb		"Unchecking this preference disables 'flyweb'.">
 <!ENTITY Ctr_e_oneoffsearch	"Autocomplete popups search selection">
-<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes location bar popups search selection.">
+<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes search selection from location bars autocomplete popup.">
 
 
 <!ENTITY Ctr_pw_settings	"設定值">

@@ -187,7 +187,7 @@
 <!ENTITY Ctr_bmbutton		"Botón de menú emergente de Marcadores">
 <!ENTITY Ctr_hiderecentbm	"Menú emergente de Marcadores: Ocultar marcadores añadidos recientemente">
 <!ENTITY Ctr_hideeditbm		"Estrella de marcadores: Ocultar panel emergente (si la página no está en marcadores)">
-<!ENTITY Ctr_oldplacesbut	"Bookmarks on toolbar: old appearance">
+<!ENTITY Ctr_oldplacesbut	"Bookmark items and folders on toolbar: old appearance">
 <!ENTITY Ctr_bmbutpanelm	"Estilo de panel para el menú emergente ">
 <!ENTITY Ctr_bmbunsortbm	"Mostrar submenú 'Marcadores no ordenados'">
 <!ENTITY Ctr_bmbunsortbm2	"Menú por encima de los marcadores">
@@ -250,6 +250,7 @@
 <!ENTITY Ctr_urlbardropm	"Mover flecha de despliegue a la última posición posible">
 <!ENTITY Ctr_urlbardropm2	"Hacer siempre visible la flecha de despliegue">
 <!ENTITY Ctr_altreaderico	"Iconos de 'Vista de lectura' alternativos">
+<!ENTITY Ctr_hideurlzoom	"Hide zoom button (if present)">
 <!ENTITY Ctr_hideprbutton	"Ocultar icono de notificación cuando se bloquee una ventana emergente">
 <!ENTITY Ctr_locsearchbw10	"Reducir altura de barras de direcciones y de búsqueda (experimental)">
 <!ENTITY Ctr_urlbar_ib		"Botón de identidad del sitio (recuadro de identidad)">
@@ -362,22 +363,18 @@
 
 <!ENTITY Ctr_experttweaks	"Avanzadas">
 <!ENTITY Ctr_fx34loop		"Desmarcar esto retira las características de 'llamada y conversación'.">
-<!ENTITY Ctr_fx38reader		"Desmarcar esto deshabilita la 'vista de lectura' y elimina su icono de la barra de direcciones.">
 <!ENTITY Ctr_fx38pocket		"Desmarcar esto deshabilita el servicio de guardado 'Pocket' y elimina su botón.">
 <!ENTITY Ctr_fx38pocket2	"Hacerlo con el botón 'Pocket' en 'Personalizar' elimina sus menús en marcadores y vista de lectura.">
 <!ENTITY Ctr_e_loop			"Hello / Llamada y conversación / Loop">
 <!ENTITY Ctr_e_readermode	"Modo de vista de lectura">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Icono de reproducción de audio en las pestañas">
-<!ENTITY Ctr_fx42tabsaudico	"Desmarcar esto retira el 'icono de reproducción de audio' de las pestañas.">
 <!ENTITY Ctr_e_containertab	"Pestañas contenedor">
-<!ENTITY Ctr_fx50containert	"Desmarcar esto suprime las 'pestañas contenedor'.">
 <!ENTITY Ctr_e_findbarhl	"Resaltado de la barra de herramientas de búsqueda.">
 <!ENTITY Ctr_fx50findbarhl	"Desmarcar estos ajustes suprime las funciones de 'resaltado' de la barra de herramientas de búsqueda.">
 <!ENTITY Ctr_e_flyweb		"Flyweb">
-<!ENTITY Ctr_fx50flyweb		"Desmarcar esta preferencia deshabilita 'Flyweb'.">
 <!ENTITY Ctr_e_oneoffsearch	"Autocomplete popups search selection">
-<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes location bar popups search selection.">
+<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes search selection from location bars autocomplete popup.">
 
 
 <!ENTITY Ctr_pw_settings	"Configuración">

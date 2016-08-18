@@ -1155,6 +1155,11 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("altreaderico") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("altreaderico",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("altreaderico",false);
 		  break;
+		  
+		  case "hideurlzoom":
+			if (branch.getBoolPref("hideurlzoom") && classicthemerestorerjs.ctr.appversion >= 51) classicthemerestorerjs.ctr.loadUnloadCSS("hideurlzoom",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("hideurlzoom",false);
+		  break;
 
 		  case "altautocompl":
 			if (branch.getBoolPref("altautocompl") && classicthemerestorerjs.ctr.appversion >= 48) classicthemerestorerjs.ctr.loadUnloadCSS("altautocompl",true);
@@ -3995,6 +4000,7 @@ classicthemerestorerjs.ctr = {
 		case "urlbardropm": 		manageCSS("urlbar_dropm.css"); 			break;
 		case "urlbardropm2": 		manageCSS("urlbar_dropm2.css"); 		break;
 		case "altreaderico": 		manageCSS("alt_reader_icons.css");		break;
+		case "hideurlzoom": 		manageCSS("hide_ulbar_zoom.css");		break;
 		case "altautocompl": 		manageCSS("alt_autocomplete.css");		break;
 		case "autocompl_it": 		manageCSS("alt_autocompl_items.css");	break;
 		case "autocompl_it2": 		manageCSS("alt_autocompl_items2.css");	break;

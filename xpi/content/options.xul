@@ -125,9 +125,10 @@
 		<preference id="ctraddon_urlbardropm"	name="extensions.classicthemerestorer.urlbardropm"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_urlbardropm2"	name="extensions.classicthemerestorer.urlbardropm2"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_altreaderico"	name="extensions.classicthemerestorer.altreaderico"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_hideurlzoom"	name="extensions.classicthemerestorer.hideurlzoom"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_altautocompl"	name="extensions.classicthemerestorer.altautocompl"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_autocompl_it"	name="extensions.classicthemerestorer.autocompl_it"	type="bool"		instantApply="true"/>
-		<preference id="ctraddon_autocompl_it2"	name="extensions.classicthemerestorer.autocompl_it2" type="bool"		instantApply="true"/>
+		<preference id="ctraddon_autocompl_it2"	name="extensions.classicthemerestorer.autocompl_it2" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_autocompl_hlb"	name="extensions.classicthemerestorer.autocompl_hlb" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_autocompl_hlu"	name="extensions.classicthemerestorer.autocompl_hlu" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_autocompl_hli"	name="extensions.classicthemerestorer.autocompl_hli" type="bool"	instantApply="true"/>
@@ -353,7 +354,7 @@
 	  <radio value="ctraddon_generaluibox3"	label="&Ctr_ui; (3)"		class="ctraddontab"/>
 	  <radio value="ctraddon_prefpagebox"	label="&Ctr_prefpage;"		class="ctraddontab"/>
 	  <radio value="ctraddon_addonmngrbox"	label="&Ctr_addonmanager;"	class="ctraddontab"/>
-	  <radio value="ctraddon_locationbbox"	label="&Ctr_urlbar; (1)"	class="ctraddontab"/>
+	  <radio value="ctraddon_locationbbox"	label="&Ctr_urlbar; (1)"	class="ctraddontab ctraddon_new_in_v51"/>
 	  <radio value="ctraddon_locationbbox2"	label="&Ctr_urlbar; (2)"	class="ctraddontab"/>
 	  <radio value="ctraddon_locationbbox3"	label="&Ctr_urlbar; (3)"	class="ctraddontab ctraddon_new_in_v48 ctraddon_new_in_v50"/>
 	  <radio value="ctraddon_locationbbox4"	label="&Ctr_urlbar; / &Ctr_searchbar;" class="ctraddontab"/>
@@ -1108,7 +1109,11 @@
 		<checkbox label="&Ctr_urlbardropm;"	preference="ctraddon_urlbardropm"  id="ctraddon_pw_urlbardropm"/>
 		<checkbox label="&Ctr_urlbardropm2;" preference="ctraddon_urlbardropm2"  id="ctraddon_pw_urlbardropm2"/>
 		<checkbox label="&Ctr_altreaderico;" preference="ctraddon_altreaderico"  id="ctraddon_pw_altreaderico"/>
+		<checkbox label="&Ctr_hideurlzoom;" preference="ctraddon_hideurlzoom"  id="ctraddon_pw_hideurlzoom" class="ctraddon_new_in_v51"/>
 		<checkbox label="&Ctr_hideprbutton;" preference="ctraddon_hideprbutton" id="ctraddon_pw_urlbarpblocked"/>
+	  </groupbox>
+
+	  <groupbox>
 		<checkbox label="&Ctr_extraurlkeycb;&openCmd.commandkey; &amp; Alt+&urlbar.accesskey; [Windows/Linux])"	preference="ctraddon_extraurlkeycb" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwExtraUrlbar(true);} else {classicthemerestorerjso.ctr.ctrpwExtraUrlbar(false);} classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<hbox class="ctraddonsuboption">
 		  <menulist preference="ctraddon_extraurltarget" id="ctraddon_extraurltarget_list">
@@ -1452,7 +1457,6 @@
 	  <groupbox id="ctraddon_pw_readermodegb">
 		<caption  label="&Ctr_e_readermode;" class="ctraddon_topic"/>
 		<checkbox label="about:config &gt;&gt; reader.parse-on-load.enabled" preference="ctraddon_readermode" id="ctraddon_pw_readermode"/>
-		<description class="ctraddonsuboption acprefdesc">&Ctr_fx38reader;</description>
 	  </groupbox>
 
 	  <groupbox id="ctraddon_pw_pocketgb">
@@ -1466,13 +1470,11 @@
 	  <groupbox id="ctraddon_pw_tabsaudioicogb">
 		<caption  label="&Ctr_e_tabsaudioico;" class="ctraddon_topic"/>
 		<checkbox label="about:config &gt;&gt; browser.tabs.showAudioPlayingIcon" preference="ctraddon_tabsaudioico" id="ctraddon_pw_tabsaudioico"/>
-		<description class="ctraddonsuboption acprefdesc">&Ctr_fx42tabsaudico;</description>
 	  </groupbox>
 	  
 	  <groupbox id="ctraddon_pw_containertabgb">
 		<caption  label="&Ctr_e_containertab;" class="ctraddon_topic"/>
 		<checkbox label="about:config &gt;&gt; privacy.userContext.enabled" preference="ctraddon_containertab" id="ctraddon_pw_containertab" class="ctraddon_new_in_v50"/>
-		<description class="ctraddonsuboption acprefdesc">&Ctr_fx50containert;</description>
 	  </groupbox>
 	  
 	  <groupbox id="ctraddon_pw_findbarhlgb">
@@ -1485,7 +1487,6 @@
 	  <groupbox id="ctraddon_pw_flywebgb">
 		<caption  label="&Ctr_e_flyweb;" class="ctraddon_topic"/>
 		<checkbox label="about:config &gt;&gt; dom.flyweb.enabled" preference="ctraddon_flyweb" id="ctraddon_pw_flyweb" class="ctraddon_new_in_v50"/>
-		<description class="ctraddonsuboption acprefdesc">&Ctr_fx50flyweb;</description>
 	  </groupbox>
 	  
 	  <groupbox id="ctraddon_pw_oneoffsearchgb">

@@ -187,7 +187,7 @@
 <!ENTITY Ctr_bmbutton		"书签菜单按钮">
 <!ENTITY Ctr_hiderecentbm	"书签弹出菜单: 隐藏最近添加的书签">
 <!ENTITY Ctr_hideeditbm		"书签星星图标: 隐藏弹出菜单(如果页面未添加到书签)">
-<!ENTITY Ctr_oldplacesbut	"Bookmarks on toolbar: old appearance">
+<!ENTITY Ctr_oldplacesbut	"Bookmark items and folders on toolbar: old appearance">
 <!ENTITY Ctr_bmbutpanelm	"弹出式菜单: 面板式菜单外观">
 <!ENTITY Ctr_bmbunsortbm	"弹出式菜单: “未分类书签”子菜单">
 <!ENTITY Ctr_bmbunsortbm2	"菜单在书签之上">
@@ -250,6 +250,7 @@
 <!ENTITY Ctr_urlbardropm	"尽可能移动下拉按钮到最后的位置">
 <!ENTITY Ctr_urlbardropm2	"下拉按钮总是可见">
 <!ENTITY Ctr_altreaderico	"备选的 “阅读模式” 图标">
+<!ENTITY Ctr_hideurlzoom	"Hide zoom button (if present)">
 <!ENTITY Ctr_hideprbutton	"当弹出窗口被阻止时隐藏通知图标">
 <!ENTITY Ctr_locsearchbw10	"减小地址栏与搜索栏高度(实验性)">
 <!ENTITY Ctr_urlbar_ib		"网站身份标识按钮 (身份标识框)">
@@ -362,22 +363,18 @@
 
 <!ENTITY Ctr_experttweaks	"高级">
 <!ENTITY Ctr_fx34loop		"不选中此项以移除它们。">
-<!ENTITY Ctr_fx38reader		"不选中此项以禁用它并从地址栏移除图标。">
 <!ENTITY Ctr_fx38pocket		"不选中此项以禁用它并从地址栏移除图标。">
 <!ENTITY Ctr_fx38pocket2	"注意: 在禁用该选项前移动“Pocket”按钮到 “定制面板” 同时会从书签和阅读菜单移除“Pocket”">
 <!ENTITY Ctr_e_loop			"呼叫与会话">
 <!ENTITY Ctr_e_readermode	"阅读模式">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"标签页上显示正在播放音频图标">
-<!ENTITY Ctr_fx42tabsaudico	"不选中此项，从标签页上移除“正在播放音频图标”。">
 <!ENTITY Ctr_e_containertab	"容器标签页">
-<!ENTITY Ctr_fx50containert	"不选中此项以移除“容器标签页”。">
 <!ENTITY Ctr_e_findbarhl	"搜索栏高亮">
 <!ENTITY Ctr_fx50findbarhl	"不选中此项以移除搜索栏“高亮”功能。">
 <!ENTITY Ctr_e_flyweb		"Flyweb">
-<!ENTITY Ctr_fx50flyweb		"不选中此项以禁用“Flyweb”。">
 <!ENTITY Ctr_e_oneoffsearch	"Autocomplete popups search selection">
-<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes location bar popups search selection.">
+<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes search selection from location bars autocomplete popup.">
 
 
 <!ENTITY Ctr_pw_settings	"设置">

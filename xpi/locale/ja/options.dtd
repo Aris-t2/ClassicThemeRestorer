@@ -125,7 +125,7 @@
 <!ENTITY Ctr_altoptionswh	"高さ:">
 <!ENTITY Ctr_altoptionsi	"オプションウィンドウは、すべてのツールバーが隠されたブラウザウィンドウであり、ダイアログではありません。このウィンドウを開いて「現在のページを使用」機能を使用すると、オプションウィンドウの URL(about:preferences) が追加されます。オプションツールバーボタンは、オプションウィンドウを開けるように新しいものに置き換えられます。">
 <!ENTITY Ctr_options_rem	"最後に開いたカテゴリを記憶する">
-<!ENTITY Ctr_aboutpages		"General 'about:' pages: alternative appearance">
+<!ENTITY Ctr_aboutpages		"[about:] ページ全般: 替わりの外観で置き換える">
 <!ENTITY Ctr_svgfilters		"デフォルトのツールバーボタンのアイコンを SVG カラーにする">
 <!ENTITY Ctr_wincontrols	"フルスクリーン用ウィンドウ制御ボタンを移動可能にする">
 <!ENTITY Ctr_puibuttonsep	"メニューボタンパネルのセパレーター">
@@ -187,7 +187,7 @@
 <!ENTITY Ctr_bmbutton		"ブックマークメニューボタン">
 <!ENTITY Ctr_hiderecentbm	"ブックマークポップアップ: 「最近ブックマークしたページ」を隠す">
 <!ENTITY Ctr_hideeditbm		"ブックマークスター: ポップアップを隠す (ページがブックマークされていない場合)">
-<!ENTITY Ctr_oldplacesbut	"Bookmarks on toolbar: old appearance">
+<!ENTITY Ctr_oldplacesbut	"ツールバー上のブックマーク: 古い外観で置き換える">
 <!ENTITY Ctr_bmbutpanelm	"ポップアップ: パネルメニューで表示する">
 <!ENTITY Ctr_bmbunsortbm	"ポップアップ: 未整理のブックマークをメニューとして表示">
 <!ENTITY Ctr_bmbunsortbm2	"メニュー上部に表示">
@@ -250,6 +250,7 @@
 <!ENTITY Ctr_urlbardropm	"ドロップマーカーを後ろの可能な位置に移す">
 <!ENTITY Ctr_urlbardropm2	"ドロップマーカーを常に表示する">
 <!ENTITY Ctr_altreaderico	"替わりのリーダーアイコンで置き換える">
+<!ENTITY Ctr_hideurlzoom	"Hide zoom button (if present)">
 <!ENTITY Ctr_hideprbutton	"ポップアップブロックの通知アイコンを隠す">
 <!ENTITY Ctr_locsearchbw10	"ロケーションバーと検索バーの高さを減らす (実験的)">
 <!ENTITY Ctr_urlbar_ib		"サイト認証ボタン (identity box)">
@@ -362,20 +363,16 @@
 
 <!ENTITY Ctr_experttweaks	"拡張設定">
 <!ENTITY Ctr_fx34loop		"この設定をオフにすると、 &brandShortName; Helloの機能を無効にします。">
-<!ENTITY Ctr_fx38reader		"この設定をオフにすると、リーダーモードを無効にし、ロケーションバーからアイコンを除去します。">
 <!ENTITY Ctr_fx38pocket		"この設定をオフにすると、Pocket 機能を無効にし、ツールバーから Pocket ボタンを削除します。">
 <!ENTITY Ctr_fx38pocket2	"注：ブックマークメニューとリーダーメニューのポップアップからすべての Pocket 関連のエントリを削除する前に、カスタマイズモードで「その他のツールと機能」領域に Pocket ボタンを移動してください。">
 <!ENTITY Ctr_e_loop			"&brandShortName; Hello">
 <!ENTITY Ctr_e_readermode	"リーダーモード">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"タブのサウンド再生アイコン">
-<!ENTITY Ctr_fx42tabsaudico	"この設定をオフにすると、サウンド再生アイコンをタブから除去します。">
 <!ENTITY Ctr_e_containertab	"コンテナタブ">
-<!ENTITY Ctr_fx50containert	"この設定をオフにすると、コンテナタブを無効にします。">
 <!ENTITY Ctr_e_findbarhl	"検索バーハイライト">
 <!ENTITY Ctr_fx50findbarhl	"この設定をオフにすると、検索バーのハイライト機能を無効にします。">
 <!ENTITY Ctr_e_flyweb		"FlyWeb">
-<!ENTITY Ctr_fx50flyweb		"この設定をオフにすると、FlyWeb を無効にします。">
 <!ENTITY Ctr_e_oneoffsearch	"自動補完候補リストの検索エンジン">
 <!ENTITY Ctr_fx51OOSeach	"この設定をオフにすると、ロケーションバーの自動補完候補リストに検索エンジンを表示しません。">
 

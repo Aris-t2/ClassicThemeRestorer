@@ -187,7 +187,7 @@
 <!ENTITY Ctr_bmbutton		"Κουμπί-μενού σελιδοδεικτών">
 <!ENTITY Ctr_hiderecentbm	"Αναδυόμενο σελιδοδεικτών: απόκρυψη πρόσφατα προστεθέντων σελιδοδεικτών">
 <!ENTITY Ctr_hideeditbm		"Αστέρι σελιδοδεικτών: απόκρυψη αναδυόμενου (αν η σελίδα δεν είναι στους σελιδοδείκτες)">
-<!ENTITY Ctr_oldplacesbut	"Bookmarks on toolbar: old appearance">
+<!ENTITY Ctr_oldplacesbut	"Bookmark items and folders on toolbar: old appearance">
 <!ENTITY Ctr_bmbutpanelm	"Αναδυόμενο: εμφάνιση ως μενού πίνακα">
 <!ENTITY Ctr_bmbunsortbm	"Αναδυόμενο: υπομενού «Αταξινόμητοι σελιδοδείκτες»">
 <!ENTITY Ctr_bmbunsortbm2	"Πάνω από τους σελιδοδείκτες">
@@ -250,6 +250,7 @@
 <!ENTITY Ctr_urlbardropm	"Μετακίνηση του δείκτη ανάπτυξης στην τελευταία δυνατή θέση">
 <!ENTITY Ctr_urlbardropm2	"Να είναι πάντα ορατός ο δείκτης ανάπτυξης">
 <!ENTITY Ctr_altreaderico	"Εναλλακτικά εικονίδια «λειτουργίας ανάγνωσης»">
+<!ENTITY Ctr_hideurlzoom	"Hide zoom button (if present)">
 <!ENTITY Ctr_hideprbutton	"Απόκρυψη εικονιδίου ειδοποίησης φραγής αναδυόμενου παραθύρου">
 <!ENTITY Ctr_locsearchbw10	"Μείωση ύψους γραμμών τοποθεσιών και αναζήτησης (πειραματικό)">
 <!ENTITY Ctr_urlbar_ib		"Κουμπί ταυτοποίησης τοποθεσιών (πλαίσιο ταυτοποίησης)">
@@ -362,22 +363,18 @@
 
 <!ENTITY Ctr_experttweaks	"Προηγμένες">
 <!ENTITY Ctr_fx34loop		"Αποεπιλέγοντας αυτή την προτίμηση απομακρύνονται οι δυνατότητες «κλήσης και συνομιλίας».">
-<!ENTITY Ctr_fx38reader		"Αποεπιλέγοντας αυτή την προτίμηση απενεργοποιείται η «λειτουργία ανάγνωσης» και απομακρύνεται το εικονίδιό της από τη γραμμή τοποθεσιών.">
 <!ENTITY Ctr_fx38pocket		"Αποεπιλέγοντας αυτή την προτίμηση απενεργοποιείται το χαρακτηριστικό «Pocket» και απομακρύνεται το κουμπί του από τις εργαλειοθήκες.">
 <!ENTITY Ctr_fx38pocket2	"Σημείωση: Μετακινώντας το κουμπί του «Pocket» στην παλέτα προσαρμογής πριν από την απενεργοποίηση αυτής της προτίμησης, απομακρύνονται επίσης και οι καταχωρίσεις του «Pocket» από τα μενού σελιδοδεικτών και αναγνώστη.">
 <!ENTITY Ctr_e_loop			"Hello / Loop / Κλήση και συνομιλία">
 <!ENTITY Ctr_e_readermode	"Λειτουργία ανάγνωσης">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Εικονίδιο αναπαραγωγής ήχου σε καρτέλες">
-<!ENTITY Ctr_fx42tabsaudico	"Αποεπιλέγοντας αυτή την προτίμηση απομακρύνεται το εικονίδιο αναπαραγωγής ήχου από τις καρτέλες.">
-<!ENTITY Ctr_e_containertab	"Container Tabs">
-<!ENTITY Ctr_fx50containert	"Αποεπιλέγοντας αυτή την προτίμηση απομακρύνεται η δυνατότητα «Container Tabs».">
+<!ENTITY Ctr_e_containertab	"«Container Tabs»">
 <!ENTITY Ctr_e_findbarhl	"Επισημάνσεις γραμμής εύρεσης">
 <!ENTITY Ctr_fx50findbarhl	"Αποεπιλέγοντας αυτή την προτίμηση απομακρύνονται οι δυνατότητες επισήμανσης της γραμμής εύρεσης.">
-<!ENTITY Ctr_e_flyweb		"Flyweb">
-<!ENTITY Ctr_fx50flyweb		"Αποεπιλέγοντας αυτή την προτίμηση απενεργοποιείται το «Flyweb».">
+<!ENTITY Ctr_e_flyweb		"«Flyweb»">
 <!ENTITY Ctr_e_oneoffsearch	"Autocomplete popups search selection">
-<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes location bar popups search selection.">
+<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes search selection from location bars autocomplete popup.">
 
 
 <!ENTITY Ctr_pw_settings	"Ρυθμίσεις">

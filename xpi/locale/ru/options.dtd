@@ -187,7 +187,7 @@
 <!ENTITY Ctr_bmbutton		"Кнопка меню закладок">
 <!ENTITY Ctr_hiderecentbm	"Всплывающее меню: скрыть недавно добавленные закладки">
 <!ENTITY Ctr_hideeditbm		"Звездочка закладок: скрыть всплывающее окно (если страница не в закладках)">
-<!ENTITY Ctr_oldplacesbut	"Bookmarks on toolbar: old appearance">
+<!ENTITY Ctr_oldplacesbut	"Bookmark items and folders on toolbar: old appearance">
 <!ENTITY Ctr_bmbutpanelm	"Всплывающее меню: вид панели меню">
 <!ENTITY Ctr_bmbunsortbm	"Всплывающее меню: подменю «Неподшитые закладки»">
 <!ENTITY Ctr_bmbunsortbm2	"Меню над закладками">
@@ -250,6 +250,7 @@
 <!ENTITY Ctr_urlbardropm	"Переместить дропмаркер до последней возможной позиции">
 <!ENTITY Ctr_urlbardropm2	"Всегда показывать дропмаркер">
 <!ENTITY Ctr_altreaderico	"Альтернативный значок «Чтения»">
+<!ENTITY Ctr_hideurlzoom	"Hide zoom button (if present)">
 <!ENTITY Ctr_hideprbutton	"Скрыть значок уведомления, когда блокируется всплывающее окно">
 <!ENTITY Ctr_locsearchbw10	"Уменьшить высоту панелей адреса и поиска (экспериментально)">
 <!ENTITY Ctr_urlbar_ib		"Кнопка подлинности сайта">
@@ -362,22 +363,18 @@
 
 <!ENTITY Ctr_experttweaks	"Продвинутые">
 <!ENTITY Ctr_fx34loop		"Отключение параметра убирает эту функцию.">
-<!ENTITY Ctr_fx38reader		"Отключение этого параметра выключает этот режим и убирает значок из адресной строки.">
 <!ENTITY Ctr_fx38pocket		"Отключение параметра убирает эту функцию и кнопку на панели инструментов.">
 <!ENTITY Ctr_fx38pocket2	"Примечание: Перемещение кнопки «Pocket» на страницу «Настройка &brandShortName;» перед отключением этой опции также убирает надписи «Pocket» в закладках и режиме чтения.">
 <!ENTITY Ctr_e_loop			"Hello / Вызов и разговор / Loop">
 <!ENTITY Ctr_e_readermode	"Режим чтения">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Значок воспроизведения аудио на вкладках">
-<!ENTITY Ctr_fx42tabsaudico	"Отключение параметра убирает значок «Воспроизведение аудио» с вкладок.">
 <!ENTITY Ctr_e_containertab	"Контейнер вкладок">
-<!ENTITY Ctr_fx50containert	"Отключение параметра убирает «Контейнер вкладок».">
 <!ENTITY Ctr_e_findbarhl	"Подсветка панели поиска">
 <!ENTITY Ctr_fx50findbarhl	"Отключение параметра убирает функцию «подсветки» панели поиска.">
 <!ENTITY Ctr_e_flyweb		"FlyWeb">
-<!ENTITY Ctr_fx50flyweb		"Отключение параметра выключает «FlyWeb».">
 <!ENTITY Ctr_e_oneoffsearch	"Autocomplete popups search selection">
-<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes location bar popups search selection.">
+<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes search selection from location bars autocomplete popup.">
 
 
 <!ENTITY Ctr_pw_settings	"Настройки">

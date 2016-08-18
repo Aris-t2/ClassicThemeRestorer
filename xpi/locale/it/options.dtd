@@ -187,7 +187,7 @@
 <!ENTITY Ctr_bmbutton		"Menu del pulsante segnalibri">
 <!ENTITY Ctr_hiderecentbm	"Popup segnalibri: nascondi i segnalibri aggiunti di recente">
 <!ENTITY Ctr_hideeditbm		"Stella dei segnalibri: nascondi popup (se la pagina non è nei segnalibri)">
-<!ENTITY Ctr_oldplacesbut	"Bookmarks on toolbar: old appearance">
+<!ENTITY Ctr_oldplacesbut	"Bookmark items and folders on toolbar: old appearance">
 <!ENTITY Ctr_bmbutpanelm	"Aspetto del menu a pannello">
 <!ENTITY Ctr_bmbunsortbm	"Menu dei 'Segnalibri non catalogati'">
 <!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
@@ -250,6 +250,7 @@
 <!ENTITY Ctr_urlbardropm	"Sposta il dropmarker nella posizione più lontana possibile">
 <!ENTITY Ctr_urlbardropm2	"Dropmarker sempre visibile">
 <!ENTITY Ctr_altreaderico	"Icone alternative della modalità di lettura">
+<!ENTITY Ctr_hideurlzoom	"Hide zoom button (if present)">
 <!ENTITY Ctr_hideprbutton	"Nascondi l’icona di notifica quando un popup viene bloccato">
 <!ENTITY Ctr_locsearchbw10	"Riduci l'altezza delle barre degli indirizzi e di ricerca (sperimentale)">
 <!ENTITY Ctr_urlbar_ib		"Pulsante delle connessioni sicure (riquadro di verifica)">
@@ -362,22 +363,18 @@
 
 <!ENTITY Ctr_experttweaks	"Avanzate">
 <!ENTITY Ctr_fx34loop		"Deselezionando questa preferenza vengono rimosse le funzioni di chiamata e conversazione (Firefox Hello).">
-<!ENTITY Ctr_fx38reader		"Deselezionando questa preferenza viene disattivata la modalità lettura e viene eliminata l’icona dalla barra degli indirizzi.">
 <!ENTITY Ctr_fx38pocket		"Deselezionando questa preferenza viene disattivata la funzione Pocket e rimossa l’icona dalle barre degli strumenti.">
 <!ENTITY Ctr_fx38pocket2	"Nota: muovendo il pulsante 'Pocket' nella personalizzazione prima di disattivare questa opzione, Pocket viene rimosso dai segnalibri e dal menu di lettura.">
 <!ENTITY Ctr_e_loop			"Chiamate e conversazioni (Hello)">
 <!ENTITY Ctr_e_readermode	"Modalità lettura">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Icone altoparlanti nelle schede">
-<!ENTITY Ctr_fx42tabsaudico	"Deselezionando questa preferenza vengono rimosse le icone degli altoparlanti nelle schede che stanno riproducendo dei suoni.">
 <!ENTITY Ctr_e_containertab	"Container Tabs">
-<!ENTITY Ctr_fx50containert	"Unchecking this preference removes 'container tabs'.">
 <!ENTITY Ctr_e_findbarhl	"Findbar highlighting">
 <!ENTITY Ctr_fx50findbarhl	"Unchecking these preferences removes findbars 'highlight' features.">
 <!ENTITY Ctr_e_flyweb		"Flyweb">
-<!ENTITY Ctr_fx50flyweb		"Unchecking this preference disables 'flyweb'.">
 <!ENTITY Ctr_e_oneoffsearch	"Autocomplete popups search selection">
-<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes location bar popups search selection.">
+<!ENTITY Ctr_fx51OOSeach	"Unchecking this preference removes search selection from location bars autocomplete popup.">
 
 
 <!ENTITY Ctr_pw_settings	"Impostazioni">
