@@ -1189,8 +1189,12 @@ classicthemerestorerjs.ctr = {
 		  break;
 	  
 		  case "autocompl_hlb":
-			if (branch.getBoolPref("autocompl_hlb")) classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hlb",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hlb",false);
+			if (branch.getBoolPref("autocompl_hlb")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hlb",true);
+			  
+			  if (branch.getBoolPref("autocompl_hln")) branch.setBoolPref("autocompl_hln",false);
+			}
+			else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hlb",false);
 		  break;
 
 		  case "autocompl_hlu":
@@ -1201,6 +1205,15 @@ classicthemerestorerjs.ctr = {
 		  case "autocompl_hli":
 			if (branch.getBoolPref("autocompl_hli")) classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hli",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hli",false);
+		  break;
+		  
+		  case "autocompl_hln":
+			if (branch.getBoolPref("autocompl_hln")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hln",true);
+			  
+			  if (branch.getBoolPref("autocompl_hlb")) branch.setBoolPref("autocompl_hlb",false);
+			}
+			else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hln",false);
 		  break;
 
 		  case "autocompl_sep":
@@ -4007,6 +4020,7 @@ classicthemerestorerjs.ctr = {
 		case "autocompl_hlb": 		manageCSS("alt_autocompl_hl_b.css");	break;
 		case "autocompl_hlu": 		manageCSS("alt_autocompl_hl_u.css");	break;
 		case "autocompl_hli": 		manageCSS("alt_autocompl_hl_i.css");	break;
+		case "autocompl_hln": 		manageCSS("alt_autocompl_hl_n.css");	break;
 		case "autocompl_sep": 		manageCSS("alt_autocompl_sep.css");		break;
 		case "autocompl_rhl": 		manageCSS("alt_autocompl_rhl.css");		break;
 		case "locsearchbw10": 		manageCSS("locationsearchbarw10.css");	break;
@@ -6134,9 +6148,13 @@ classicthemerestorerjs.ctr = {
 	  var w = (screen.availWidth-wwidth)/2;
 	  var h = (screen.availHeight-wheight)/2;
 	  
-	  if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt')
-		classicthemerestorerjs.ctr.ctrcontentprefswin = window.open('about:preferences', '', 'width='+wwidth+',height='+wheight+',top='+h+',left='+w+',resizable=yes');
-	  else openPreferences();
+	  if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win' || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt') {
+		
+		if(which=='search')		
+		  classicthemerestorerjs.ctr.ctrcontentprefswin = window.open('about:preferences#search', '', 'width='+wwidth+',height='+wheight+',top='+h+',left='+w+',resizable=yes');
+	    else classicthemerestorerjs.ctr.ctrcontentprefswin = window.open('about:preferences', '', 'width='+wwidth+',height='+wheight+',top='+h+',left='+w+',resizable=yes');
+
+	  } else openPreferences();
 
   },
   

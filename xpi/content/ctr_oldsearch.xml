@@ -413,9 +413,9 @@
 			
 			if(classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win'
 			  || classicthemerestorerjs.ctr.prefs.getCharPref('altoptions')=='options_win_alt'){
-				classicthemerestorerjs.ctr.openContentPrefsInWin();
+				classicthemerestorerjs.ctr.openContentPrefsInWin('search');
 			} else {
-			  gBrowser.selectedTab = gBrowser.addTab('about:preferences#search');
+			  openPreferences("paneSearch");
 			}
         ]]></body>
       </method>

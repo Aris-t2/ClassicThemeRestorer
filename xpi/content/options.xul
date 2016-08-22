@@ -132,6 +132,7 @@
 		<preference id="ctraddon_autocompl_hlb"	name="extensions.classicthemerestorer.autocompl_hlb" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_autocompl_hlu"	name="extensions.classicthemerestorer.autocompl_hlu" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_autocompl_hli"	name="extensions.classicthemerestorer.autocompl_hli" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_autocompl_hln"	name="extensions.classicthemerestorer.autocompl_hln" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_autocompl_sep"	name="extensions.classicthemerestorer.autocompl_sep" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_autocompl_rhl"	name="extensions.classicthemerestorer.autocompl_rhl" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_cresultshcb"	name="extensions.classicthemerestorer.cresultshcb"	type="bool"		instantApply="true"/>
@@ -1179,6 +1180,7 @@
 		
 		<description id="ctraddon_lbsugres" class="ctraddon_font1">&Ctr_autocompl_hl;</description>
 		<hbox>
+		  <checkbox label="&Ctr_bold;" preference="ctraddon_autocompl_hln" id="ctraddon_pw_autocompl_hln"/>
 		  <checkbox label="&Ctr_bold;" preference="ctraddon_autocompl_hlb" id="ctraddon_pw_autocompl_hlb"/>
 		  <checkbox label="&Ctr_italic;" preference="ctraddon_autocompl_hli" id="ctraddon_pw_autocompl_hli"/>
 		  <checkbox label="&Ctr_underlined;" preference="ctraddon_autocompl_hlu" id="ctraddon_pw_autocompl_hlu"/>

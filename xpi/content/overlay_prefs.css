@@ -473,10 +473,11 @@ radio.ctraddontab .radio-check-box1 {
   min-height:16px !important;
 }
 
-#ctraddon_pw_stopreload label {
+#ctraddon_pw_stopreload label,
+#ctraddon_pw_hideurelstop label {
   background: url('chrome://classic_theme_restorer/content/images/stop_mac.png') no-repeat left,
 			  url('chrome://classic_theme_restorer/content/images/reload_mac.png') no-repeat 4% 50% !important;
-  padding-left:36px !important;
+  padding-left:40px !important;
   min-height:16px !important;
 }
 
@@ -494,13 +495,6 @@ radio.ctraddontab .radio-check-box1 {
 
 #ctraddon_starinurl_info {
   background:url('chrome://classic_theme_restorer/content/images/bookmarksbutton_default.png') no-repeat left !important;
-  padding-left:36px !important;
-  min-height:16px !important;
-}
-
-#ctraddon_pw_hideurelstop label{
-  background: url('chrome://classic_theme_restorer/content/images/stop_mac.png') no-repeat left,
-			  url('chrome://classic_theme_restorer/content/images/reload_mac.png') no-repeat 4% 50% !important;
   padding-left:36px !important;
   min-height:16px !important;
 }
@@ -752,4 +746,9 @@ radio.ctraddontab .radio-check-box1 {
   background:url('chrome://classic_theme_restorer/content/images/appmenu_ctr.png') no-repeat right !important;
   padding-right:20px !important;
   min-height:18px !important;
+}
+
+/*other*/
+#ctraddon_pw_autocompl_hln {
+  text-decoration: line-through !important;
 }
