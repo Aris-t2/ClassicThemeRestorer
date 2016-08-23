@@ -216,7 +216,6 @@
 			var cheight = Services.prefs.getBranch("extensions.classicthemerestorer.").getIntPref("cresultsh");
 			
 			// urlbars bottom position
-			//var urlbbotpos = document.getElementById("urlbar").boxObject.screenY + document.getElementById("urlbar").boxObject.height;
 			var urlbbotpos = document.getElementById("urlbar").boxObject.screenY + document.getElementById("urlbar").boxObject.height - window.screen.top;
 			
 			try{

@@ -1,7 +1,7 @@
 <!ENTITY % overlayDTD
     SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
   %overlayDTD;
-<!-- Do not edit above this line and do not edit the variable '&brandShortName;' inside translated strings -->
+<!-- Ne pas éditer au-dessus de cette ligne, et ne pas modifier la variable « &brandShortName; » à l'intérieur des chaînes de caractères traduites -->
 
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
@@ -125,7 +125,7 @@
 <!ENTITY Ctr_altoptionswh	"Hauteur :">
 <!ENTITY Ctr_altoptionsi	"La fenêtre simulée des options n'est plus une boite de dialogue mais une « fenêtre du navigateur » avec toutes les barres d'outils masquées. La fonctionnalité « Utiliser la page actuelle » ajoute seulement les URL des pages ouvertes dans la fenêtre actuelle, qui est uniquement « about:preferences » dans ce cas. Le bouton de barre d'outils « Options » est remplacé par un nouveau afin de pouvoir ouvrir les options dans une fenêtre.">
 <!ENTITY Ctr_options_rem	"Mémoriser la dernière catégorie sélectionnée">
-<!ENTITY Ctr_aboutpages		"General 'about:' pages: alternative appearance">
+<!ENTITY Ctr_aboutpages		"Certaines pages « about: » : apparence alternative">
 <!ENTITY Ctr_svgfilters		"Couleurs SVG pour les icônes des boutons de barres d'outils par défaut">
 <!ENTITY Ctr_wincontrols	"Rendre mobiles les commandes de la fenêtre en plein écran">
 <!ENTITY Ctr_puibuttonsep	"Séparateur du bouton de menu :">
@@ -187,7 +187,7 @@
 <!ENTITY Ctr_bmbutton		"Bouton de menu des marque-pages">
 <!ENTITY Ctr_hiderecentbm	"Menu déroulant des marque-pages : masquer les marque-pages récemment ajoutés">
 <!ENTITY Ctr_hideeditbm		"Étoile des marque-pages : masquer le menu déroulant (si la page n'a pas été marquée)">
-<!ENTITY Ctr_oldplacesbut	"Bookmark items and folders on toolbar: old appearance">
+<!ENTITY Ctr_oldplacesbut	"Éléments et dossiers de marque-pages sur une barre d'outil : ancienne apparence">
 <!ENTITY Ctr_bmbutpanelm	"Menu déroulant : apparence de menu de type « panneau »">
 <!ENTITY Ctr_bmbunsortbm	"Menu déroulant : menu « Autres marque-pages »">
 <!ENTITY Ctr_bmbunsortbm2	"Menu au-dessus des marque-pages">
@@ -250,7 +250,7 @@
 <!ENTITY Ctr_urlbardropm	"Déplacer la liste déroulante à la dernière position possible">
 <!ENTITY Ctr_urlbardropm2	"Rendre le bouton de liste déroulante toujours visible">
 <!ENTITY Ctr_altreaderico	"Utiliser des icônes alternatives pour le « mode lecture »">
-<!ENTITY Ctr_hideurlzoom	"Hide zoom button (if present)">
+<!ENTITY Ctr_hideurlzoom	"Masquer le bouton de zoom (si présent)">
 <!ENTITY Ctr_hideprbutton	"Masquer l'icône de notification lorsqu'une fenêtre surgissante est bloquée">
 <!ENTITY Ctr_locsearchbw10	"Réduire la hauteur des barres d'adresse et de recherche (expérimental)">
 <!ENTITY Ctr_urlbar_ib		"Bouton d'identité des sites (boite d'identité)">
@@ -407,14 +407,14 @@
 <!ENTITY Ctr_openInNewTab				"Ouvrir les entrées dans un nouvel onglet">
 <!ENTITY Ctr_openInNewWindow			"Ouvrir les entrées dans une nouvelle fenêtre">
 
-<!-- For page context entries. Have to be adjusted for every locale! -->
+<!-- Pour les entrées contextuelles des pages. Doivent être adaptées pour chaque langue ! -->
 <!ENTITY backCmd.accesskey				"d">
 <!ENTITY forwardCmd.accesskey			"a">
 <!ENTITY reloadCmd.accesskey			"c">
 <!ENTITY stopCmd.accesskey				"r">
 <!ENTITY bookmarkPageCmd2.accesskey		"M">
 
-<!-- Fallback entities. Leave empty! -->
+<!-- Entitées de secours. Laisser vide ! -->
 <!ENTITY openCmd.commandkey				"">
 <!ENTITY urlbar.accesskey				"">
 <!ENTITY urlbar.placeholder2			"">

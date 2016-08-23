@@ -1167,8 +1167,19 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "urlresults": case "autocompl_it":
-			if (branch.getBoolPref("urlresults")) classicthemerestorerjs.ctr.loadUnloadCSS("urlresults",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("urlresults",false);
+			if (branch.getBoolPref("urlresults")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("urlresults",true);
+			  
+			  if(branch.getBoolPref("altautocompl")==false) {
+				classicthemerestorerjs.ctr.ctrGetId('PopupAutoCompleteRichResult').addEventListener("popupshown", function unlockACPopupHeight(event){
+				  try {
+					var navbarpos = document.getElementById("nav-bar").boxObject.screenY + document.getElementById("nav-bar").boxObject.height - window.screen.top;
+					classicthemerestorerjs.ctr.ctrGetId('PopupAutoCompleteRichResult').setAttribute("maxheight",document.getElementById("main-window").boxObject.height-navbarpos);
+				  } catch(e){}
+				}, false);
+			  }
+			  
+			} else classicthemerestorerjs.ctr.loadUnloadCSS("urlresults",false);
 		  
 			if (branch.getBoolPref("autocompl_it") && branch.getBoolPref("urlresults")
 				&& classicthemerestorerjs.ctr.appversion >= 48

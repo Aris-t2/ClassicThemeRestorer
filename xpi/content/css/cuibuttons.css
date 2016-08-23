@@ -80,6 +80,12 @@
 		  -moz-padding-end: 0px !important;
 		}
 	}
+	
+	#main-window[defaultfxtheme="true"] .customizationmode-button .button-box{
+	  -moz-padding-start: 2px !important;
+	  -moz-padding-end: 2px !important;
+	}
+
 	.customizationmode-button{
 	  min-width: 0 !important;
 	}
