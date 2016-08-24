@@ -2789,10 +2789,7 @@ classicthemerestorerjs.ctr = {
 		var newpos = urlbarpos - navbarpos;
 		
 		if(newpos>=0)
-		  document.getElementById('PopupAutoCompleteRichResult').style.marginTop = ""+newpos+"px";
-		  
-		console.log(document.querySelector('#urlbar-container').parentNode.parentNode.id);
-	  
+		  document.getElementById('PopupAutoCompleteRichResult').style.marginTop = ""+newpos+"px";  
 	  }
 	
 	}, false);
