@@ -1,4 +1,3 @@
-@import url(chrome://ctraddon_os_special/skin/navbar_compact_extra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
@@ -7,13 +6,10 @@
 	#nav-bar-customization-target > toolbarbutton toolbarbutton,
 	#nav-bar-customization-target > #bookmarks-menu-button .toolbarbutton-menubutton-dropmarker,
 	#nav-bar-customization-target > toolbarbutton,
+	#nav-bar-customization-target,
 	#nav-bar-overflow-button {
-	  padding-top:0px !important;
-	  padding-bottom:0px !important;
-	}
-	
-	#nav-bar[mode="text"] #nav-bar-customization-target > toolbarbutton[type="menu"] .dropmarker-icon {
-	  display: none !important;
+	  margin-top:-1px !important;
+	  margin-bottom: -1px !important;
 	}
 
 }

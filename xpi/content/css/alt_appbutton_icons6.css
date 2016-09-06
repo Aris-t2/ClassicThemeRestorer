@@ -1,0 +1,9 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	
+	#ctraddon_appbutton > .toolbarbutton-icon {
+	  list-style-image: url("chrome://browser/skin/Toolbar-inverted.png") !important;
+	  -moz-image-region: rect(0px, 486px, 18px, 468px) !important;
+	}
+}

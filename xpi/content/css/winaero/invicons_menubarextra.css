@@ -1,1 +1,141 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#toolbar-menubar :-moz-any(#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_bookmarks-menu-toolbar-button,#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_go-button) .toolbarbutton-icon,
+	#toolbar-menubar :-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button:not([starred]), #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #web-apps-button),
+	#toolbar-menubar #panic-button:not([open]),
+	#toolbar-menubar #pocket-button:not([open]),
+	#toolbar-menubar #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+	  list-style-image: url(chrome://browser/skin/Toolbar-inverted.png) !important;
+	}
+	#toolbar-menubar #sync-button[status="active"],
+	#toolbar-menubar #sync-button[status="active"]:hover:active:not([disabled="true"]) {
+	  list-style-image: url("chrome://browser/skin/syncProgress-toolbar-inverted.png") !important;
+	}
+	#toolbar-menubar #downloads-button:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon {
+	  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"),
+								  0, 198, 18, 180) center no-repeat !important;
+	}
+	#toolbar-menubar #downloads-button:not([counter]):not([attention]) > #downloads-indicator-anchor > #downloads-button-progress-area > #downloads-indicator-counter {
+	  background-image: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"), 0, 198, 18, 180) !important;
+	}
+	#toolbar-menubar .toolbarbutton-1 > .toolbarbutton-menu-dropmarker,
+	#toolbar-menubar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
+	  list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png") !important;
+	}
+	#toolbar-menubar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-up,
+	#toolbar-menubar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-down {
+	  list-style-image: url(chrome://browser/skin/tabbrowser/tab-arrow-left-inverted.png) !important;
+	}
+	#toolbar-menubar > #alltabs-button,
+	#toolbar-menubar > toolbarpaletteitem > #alltabs-button {
+	  list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png") !important;
+	}
+	#toolbar-menubar #switch-to-metro-button[cui-areatype="toolbar"] {
+	  list-style-image: url(chrome://browser/skin/Metro_Glyph-inverted.png) !important;
+	}
+	
+	#toolbar-menubar #ctraddon_back-button:not([cui-areatype="menu-panel"]) {
+	  -moz-image-region: rect(0, 54px, 18px, 36px) !important;
+	}
+	#toolbar-menubar #ctraddon_go-button:not([cui-areatype="menu-panel"])
+	#toolbar-menubar #ctraddon_forward-button:not([cui-areatype="menu-panel"]) {
+	  -moz-image-region: rect(0, 72px, 18px, 54px) !important;
+	}
+	#toolbar-menubar #ctraddon_stop-button:not([cui-areatype="menu-panel"]){
+	  -moz-image-region: rect(0, 108px, 18px, 90px) !important;
+	}
+	#toolbar-menubar #ctraddon_reload-button:not([cui-areatype="menu-panel"]){
+	  -moz-image-region: rect(0, 90px, 18px, 72px) !important;
+	}
+	#toolbar-menubar #ctraddon_bookmarks-menu-toolbar-button:not([cui-areatype="menu-panel"]),
+	#toolbar-menubar #ctraddon_bookmarks-button:not([cui-areatype="menu-panel"]) {
+	  -moz-image-region: rect(0, 162px, 18px, 144px) !important;
+	}
+	#toolbar-menubar #ctraddon_history-button:not([cui-areatype="menu-panel"]),
+	#toolbar-menubar #ctraddon_history-menu-toolbar-button:not([cui-areatype="menu-panel"]){
+	  -moz-image-region: rect(0, 180px, 18px, 162px) !important;
+	}
+	#toolbar-menubar toolbarbutton[id^="loop-"]:not([cui-areatype="menu-panel"]):not([state="error"]):not([state="action"]):not([state="active"]) > .toolbarbutton-badge-container,
+	#toolbar-menubar toolbarbutton[id^="loop-"]:not([cui-areatype="menu-panel"]):not([state="error"]):not([state="action"]):not([state="active"]) > .toolbarbutton-badge-stack {
+	  list-style-image: url(chrome://loop/skin/toolbar-inverted.png) !important;
+	}
+	
+	#main-window[fx46plus="true"] #toolbar-menubar #pocket-button:not([open]) {
+	  -moz-image-region: rect(0, 774px, 18px, 756px) !important;
+	}
+	
+	@media (min-resolution: 1.1dppx) {
+		
+		#main-window #toolbar-menubar :-moz-any(#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_bookmarks-menu-toolbar-button,#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_go-button) .toolbarbutton-icon,
+		#main-window #toolbar-menubar :-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button:not([starred]), #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #web-apps-button),
+		#main-window #toolbar-menubar #panic-button:not([open]),
+		#main-window #toolbar-menubar #pocket-button:not([open]),
+		#main-window #toolbar-menubar #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+		  list-style-image: url(chrome://browser/skin/Toolbar-inverted@2x.png) !important;
+		}
+		#main-window #toolbar-menubar #sync-button[status="active"],
+		#main-window #toolbar-menubar #sync-button[status="active"]:hover:active:not([disabled="true"]) {
+		  list-style-image: url("chrome://browser/skin/syncProgress-toolbar-inverted@2x.png") !important;
+		}
+		#main-window #toolbar-menubar #downloads-button:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon {
+		  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted@2x.png"), 0, 396, 36, 360) center no-repeat !important;
+		  background-size: 18px !important;
+		}
+		#main-window #toolbar-menubar #downloads-button[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
+		  background-image: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted@2x.png"), 36, 396, 72, 360) !important;
+		}
+		#main-window #toolbar-menubar .toolbarbutton-1 > .toolbarbutton-menu-dropmarker,
+		#main-window #toolbar-menubar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
+		  list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png") !important;
+		}
+		#main-window #toolbar-menubar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-up,
+		#main-window #toolbar-menubar > #tabbrowser-tabs > .tabbrowser-arrowscrollbox > .scrollbutton-down {
+		  list-style-image: url(chrome://browser/skin/tabbrowser/tab-arrow-left-inverted@2x.png) !important;
+		}
+		#main-window #toolbar-menubar > #alltabs-button,
+		#main-window #toolbar-menubar > toolbarpaletteitem > #alltabs-button {
+		  list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png") !important;
+		}
+		
+		#main-window #toolbar-menubar #ctraddon_back-button:not([cui-areatype="menu-panel"]) {
+		  -moz-image-region: rect(0, 108px, 36px, 72px) !important;
+		}
+		#main-window #toolbar-menubar #ctraddon_go-button:not([cui-areatype="menu-panel"]),
+		#main-window #toolbar-menubar #ctraddon_forward-button:not([cui-areatype="menu-panel"]) {
+		  -moz-image-region: rect(0, 144px, 36px, 108px) !important;
+		}
+		#main-window #toolbar-menubar #ctraddon_stop-button:not([cui-areatype="menu-panel"]){
+		  -moz-image-region: rect(0, 216px, 36px, 180px) !important;
+		}
+		#main-window #toolbar-menubar #ctraddon_reload-button:not([cui-areatype="menu-panel"]){
+		  -moz-image-region: rect(0, 180px, 36px, 144px) !important;
+		}
+		#main-window #toolbar-menubar #ctraddon_bookmarks-menu-toolbar-button:not([cui-areatype="menu-panel"]),
+		#main-window #toolbar-menubar #ctraddon_bookmarks-button:not([cui-areatype="menu-panel"]) {
+		  -moz-image-region: rect(0, 288px, 36px, 252px) !important;
+		}
+		#main-window #toolbar-menubar #ctraddon_history-button:not([cui-areatype="menu-panel"]),
+		#main-window #toolbar-menubar #ctraddon_history-menu-toolbar-button:not([cui-areatype="menu-panel"]){
+		  -moz-image-region: rect(0, 360px, 36px, 324px) !important;
+		}
+
+		#toolbar-menubar toolbarbutton[id^="loop-"]:not([cui-areatype="menu-panel"]):not([state="error"]):not([state="action"]):not([state="active"]) > .toolbarbutton-badge-container,
+		#toolbar-menubar toolbarbutton[id^="loop-"]:not([cui-areatype="menu-panel"]):not([state="error"]):not([state="action"]):not([state="active"]) > .toolbarbutton-badge-stack {
+		  list-style-image: url(chrome://loop/skin/toolbar-inverted@2x.png) !important;
+		}
+		#main-window[fx46plus="true"] #toolbar-menubar #pocket-button:not([open]) {
+		  -moz-image-region: rect(0, 1548px, 36px, 1512px) !important;
+		}
+		
+		#main-window #toolbar-menubar #ctraddon_bookmarks-menu-toolbar-button .toolbarbutton-icon {
+		  width: 18px !important;
+		}
+
+		#main-window #toolbar-menubar #ctraddon_bookmarks-button .toolbarbutton-icon {
+		  width: 18px !important;
+		}
+	}
+	
+}

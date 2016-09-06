@@ -46,6 +46,7 @@ pref("extensions.classicthemerestorer.combrelstop",false);
 pref("extensions.classicthemerestorer.activndicat",false);
 pref("extensions.classicthemerestorer.nbisizedelay",0);
 pref("extensions.classicthemerestorer.findbar","findbar_default");
+pref("extensions.classicthemerestorer.findb_hide_ws",false);
 pref("extensions.classicthemerestorer.nav_txt_ico","icons");
 pref("extensions.classicthemerestorer.iat_notf_vt",false);
 pref("extensions.classicthemerestorer.wincontrols",false);
@@ -77,6 +78,7 @@ pref("extensions.classicthemerestorer.am_highlight",false);
 pref("extensions.classicthemerestorer.am_buticons",false);
 pref("extensions.classicthemerestorer.am_hovshowb",false);
 pref("extensions.classicthemerestorer.alt_addonsp",false);
+pref("extensions.classicthemerestorer.am_showrecup",false);
 pref("extensions.classicthemerestorer.hideeditbm",false);
 pref("extensions.classicthemerestorer.oldplacesbut",false);
 pref("extensions.classicthemerestorer.bmbutpanelm",false);
@@ -297,6 +299,9 @@ pref("extensions.classicthemerestorer.tabfita_act",false);
 pref("extensions.classicthemerestorer.tabfita_pen",false);
 pref("extensions.classicthemerestorer.tabfita_unr",false);
 pref("extensions.classicthemerestorer.tabfita_hov",false);
+
+pref("extensions.classicthemerestorer.tablowopa_pen",false);
+pref("extensions.classicthemerestorer.tablowopa_unr",false);
 
 pref("extensions.classicthemerestorer.tabc_act_tb",false);
 pref("extensions.classicthemerestorer.tabc_hov_unr",false);

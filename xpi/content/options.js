@@ -406,6 +406,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_anewtaburlpurlbox').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_cresultshbox').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_aboutpages').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_ctrltabprev').style.visibility = 'collapse';
 	}
 
 	if (this.appversion >= 48) {
@@ -437,6 +438,8 @@ classicthemerestorerjso.ctr = {
 	if (this.appversion < 51) {
 	  document.getElementById('ctraddon_pw_oneoffsearchgb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_hideurlzoom').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_dl_pm_drop').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_dl_pm_dropdes').style.visibility = 'collapse';
 	}
 	
 	function PrefListener(branch_name, callback) {

@@ -235,6 +235,18 @@ radio.ctraddontab .radio-check-box1 {
   margin-left: 0;
   margin-right: 0;
 }
+#ctraddon_altabico_white_pm{
+  list-style-image: url("chrome://browser/skin/Toolbar-inverted.png");
+  -moz-image-region: rect(0px, 486px, 18px, 468px);
+  margin-left: 0;
+  margin-right: 0;
+}
+#ctraddon_altabico_dark_pm{
+  list-style-image: url("chrome://browser/skin/Toolbar.png");
+  -moz-image-region: rect(0px, 486px, 18px, 468px);
+  margin-left: 0;
+  margin-right: 0;
+}
 
 /* -mox-padding-start is useless in this case, because Firefox does not allow something like 
    #itemid:-moz-locale-dir(rtl) for background-position on preference windows anyway.
@@ -604,7 +616,8 @@ radio.ctraddontab .radio-check-box1 {
 }
 
 #ctraddon_pw_xpinstallui label,
-#ctraddon_pw_alt_addonsm label {
+#ctraddon_pw_alt_addonsm label ,
+#ctraddon_pw_am_showrecup label{
   background:url('chrome://classic_theme_restorer/content/images/appmenu_addons.png') no-repeat left !important;
   padding-left:20px !important;
   min-height:16px !important;
@@ -617,7 +630,7 @@ radio.ctraddontab .radio-check-box1 {
 #ctraddon_pw_am_compact2 label,
 #ctraddon_pw_am_highlight label ,
 #ctraddon_pw_am_buticons label,
-#ctraddon_pw_am_hovshowb label{
+#ctraddon_pw_am_hovshowb label {
   background:url('chrome://classic_theme_restorer/content/images/appmenu_addons_lin.png') no-repeat left !important;
   padding-left:20px !important;
   min-height:16px !important;
