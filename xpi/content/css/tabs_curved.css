@@ -32,7 +32,12 @@
 						url(chrome://classic_theme_restorer/content/images/ntab-hov-middle.png),
 						url(chrome://classic_theme_restorer/content/images/ntab-hov-end.png) !important;
 	}
-	
+
+	#main-window[fx51plus="true"] .tabbrowser-tab::after,
+	#main-window[fx51plus="true"] .tabbrowser-tab::before {
+	  opacity: 0 !important;
+	}
+
 	#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
 	.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
 	#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {

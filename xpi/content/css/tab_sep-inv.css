@@ -1,6 +1,12 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
+	
+	#main-window[fx51plus="true"] .tabbrowser-tab::after,
+	#main-window[fx51plus="true"] .tabbrowser-tab::before {
+	  opacity: 0 !important;
+	  border-left: 0px solid transparent !important;
+	}
 
 	#main-window #navigator-toolbox #TabsToolbar #tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
 	#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:not([visuallyselected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,

@@ -59,6 +59,11 @@
 	#TabsToolbar:not(:-moz-lwtheme)::before {
 	  box-shadow: none !important;
 	}
+	
+	#main-window[fx51plus="true"] .tabbrowser-tab::after,
+	#main-window[fx51plus="true"] .tabbrowser-tab::before {
+	  opacity: 0 !important;
+	}
 
 	#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after:not(:-moz-lwtheme),
 	.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before:not(:-moz-lwtheme),

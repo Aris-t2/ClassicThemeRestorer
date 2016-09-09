@@ -306,6 +306,11 @@
 	  background-position: 0px 2px !important;
 	  background-size: calc(100% - 0px) calc(100% - 1px) !important;
 	}
+	
+	#main-window[fx51plus="true"] .tabbrowser-tab::after,
+	#main-window[fx51plus="true"] .tabbrowser-tab::before {
+	  opacity: 0 !important;
+	}
 
 	#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
 	.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,

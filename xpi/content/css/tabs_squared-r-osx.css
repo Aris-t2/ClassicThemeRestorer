@@ -307,6 +307,11 @@
 	  border-top-right-radius: 0px !important;
 	  border-top-left-radius: 0px !important;
 	}
+	
+	#main-window[fx51plus="true"] .tabbrowser-tab::after,
+	#main-window[fx51plus="true"] .tabbrowser-tab::before {
+	  opacity: 0 !important;
+	}
 
 	#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
 	.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
