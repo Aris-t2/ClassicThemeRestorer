@@ -293,3 +293,8 @@
 	#appmenu-popup #webDeveloperMenu:not(.menu-iconic) > label {
 	  -moz-padding-start: 22px !important;
 	}
+	
+	/* disable window dragging feature tab bar in customizing mode, if springs, seperators or spacers are on it */
+	#main-window[tabsintitlebar][customizing="true"] #TabsToolbar:-moz-any([currentset*="customizableui-special-spring"],[currentset*="customizableui-special-separator"],[currentset*="customizableui-special-spacer"]){
+	  -moz-window-dragging: no-drag !important;
+	}

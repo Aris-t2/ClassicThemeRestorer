@@ -436,13 +436,6 @@
 	  border-style: none;
 	}
 	
-	/* fix recent icon stretching*/
-    /*#nav-bar .toolbarbutton-1:not([type=menu-button]),
-    #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button,
-    #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
-      -moz-box-align: center !important;
-    }*/
-
 	/* temporal fix for Win8s minimize button in some cases */
 	@media (-moz-windows-default-theme) {
 	  @media all and (-moz-windows-theme:aero) {
@@ -458,4 +451,9 @@
 	#main-window .ctraddon_linuxonly,
 	#main-window .ctraddon_maconly{
 	  visibility: collapse !important;
+	}
+	
+	/* disable window dragging feature for menu bar and tab bar in customizing mode, if springs, seperators or spacers are on them */
+	#main-window[tabsintitlebar][customizing="true"] :-moz-any(#toolbar-menubar,#TabsToolbar):-moz-any([currentset*="customizableui-special-spring"],[currentset*="customizableui-special-separator"],[currentset*="customizableui-special-spacer"]){
+	  -moz-window-dragging: no-drag !important;
 	}

@@ -289,10 +289,10 @@
 		}
 	}}}
 	
-	#main-window[tabsontop="false"] #navigator-toolbox #TabsToolbar #tabbrowser-tabs .tabbrowser-tab[pinned],
+	/*#main-window[tabsontop="false"] #navigator-toolbox #TabsToolbar #tabbrowser-tabs .tabbrowser-tab[pinned],
 	#main-window[tabsontop="false"] #navigator-toolbox #TabsToolbar #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned] {
 	  clip: rect(0px, auto, 25.5px, 0px) !important;
-	}
+	}*/
 
     #main-window[tabsontop="false"] #navigator-toolbox #TabsToolbar .toolbarbutton-1,
 	#main-window[tabsontop="false"] #navigator-toolbox #TabsToolbar .scrollbutton-up,
