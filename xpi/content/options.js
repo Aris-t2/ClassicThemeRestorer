@@ -440,6 +440,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_hideurlzoom').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_dl_pm_drop').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_dl_pm_dropdes').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_toptb_oldpad').style.visibility = 'collapse';
 	}
 	
 	function PrefListener(branch_name, callback) {

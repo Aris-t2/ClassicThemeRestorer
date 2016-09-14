@@ -182,6 +182,7 @@ pref("extensions.classicthemerestorer.hidenavbar",false);
 pref("extensions.classicthemerestorer.nonavbarbg",false);
 pref("extensions.classicthemerestorer.nonavborder",false);
 pref("extensions.classicthemerestorer.nonavtbborder",false);
+pref("extensions.classicthemerestorer.toptb_oldpad",false);
 pref("extensions.classicthemerestorer.hidesbclose",false);
 pref("extensions.classicthemerestorer.notextshadow",false);
 pref("extensions.classicthemerestorer.chevronfix",false);
