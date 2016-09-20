@@ -55,6 +55,7 @@
 	#ctraddon_go-button .toolbarbutton-icon,
 	.search-go-button,
 	#downloads-button .toolbarbutton-icon,
+	#downloads-button[indicator="true"]:not([attention="success"]) #downloads-indicator-icon,
 	#go-button:hover,
 	#urlbar-go-button:hover,
 	#zoom-in-button .toolbarbutton-icon,
