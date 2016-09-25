@@ -1202,13 +1202,15 @@ classicthemerestorerjso.ctr = {
 	this.prefs.setBoolPref("hideurlsrg",true);
 
 	this.prefs.setBoolPref("oldsearch",true);
+
+	if(this.appversion >= 48) {
+	  this.prefs.setBoolPref("altautocompl",true);
+	  this.prefs.setBoolPref("aboutpages",true);
+	}
 	
 	if(this.appversion >= 50)
 	  this.prefs.setBoolPref("oldplacesbut",true);
-
-	if(this.appversion >= 48)
-	  this.prefs.setBoolPref("altautocompl",true);
-	
+  
 	setTimeout(function(){
 		Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref("starinurl",true);
 		Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref("feedinurl",true);
@@ -1232,6 +1234,9 @@ classicthemerestorerjso.ctr = {
 	this.prefs.setBoolPref("toolsitem",false);
 	this.prefs.setBoolPref("cuibuttons",false);
 	this.prefs.setBoolPref("addonversion",false);
+	this.prefs.setCharPref("altoptions",'options_default');
+	this.prefs.setBoolPref("alt_addonsm",false);
+	this.prefs.setBoolPref("am_highlight",false);
 	
 	this.needsBrowserRestart();
 

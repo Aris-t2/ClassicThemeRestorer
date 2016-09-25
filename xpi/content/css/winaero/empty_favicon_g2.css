@@ -16,8 +16,8 @@
 	-moz-image-region: rect(0px, 16px, 16px, 0px) !important;
   }
 
-  #main-window[fx48plus="true"] #PopupAutoCompleteRichResult .ac-site-icon:not([src]),
-  #main-window[fx48plus="true"] #PopupAutoCompleteRichResult .ac-site-icon[src=""],
+  #main-window[fx48plus="true"] #PopupAutoCompleteRichResult .ac-site-icon:not([src]):not([type="searchengine"]),
+  #main-window[fx48plus="true"] #PopupAutoCompleteRichResult .ac-site-icon[src=""]:not([type="searchengine"]),
   #PopupAutoCompleteRichResult .ac-site-icon[src^="chrome://mozapps/skin/places/defaultFavicon.png"] {
 	width: 0 !important;
 	-moz-padding-end: 16px !important;

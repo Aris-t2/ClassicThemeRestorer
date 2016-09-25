@@ -152,6 +152,8 @@
 		<preference id="ctraddon_iblabels"		name="extensions.classicthemerestorer.iblabels"		type="bool"		instantApply="true"/>
 		<preference id="ctraddon_findbar"		name="extensions.classicthemerestorer.findbar"		type="string"	instantApply="true"/>
 		<preference id="ctraddon_findb_hide_ws"	name="extensions.classicthemerestorer.findb_hide_ws" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_findb_widthcb"	name="extensions.classicthemerestorer.findb_widthcb" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_findb_widthva"	name="extensions.classicthemerestorer.findb_widthva" type="int"		instantApply="true"/>
 		<preference id="ctraddon_nav_txt_ico"	name="extensions.classicthemerestorer.nav_txt_ico" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_iat_notf_vt"	name="extensions.classicthemerestorer.iat_notf_vt"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_closeicong"	name="extensions.classicthemerestorer.closeicong"	type="string"	instantApply="true"/>
@@ -372,6 +374,7 @@
 	  <radio value="ctraddon_toolbarsbox2"	label="&Ctr_toolbars; (2)"	class="ctraddontab"/>
 	  <radio value="ctraddon_toolbarsbox3"	label="&Ctr_toolbars; (3)"	class="ctraddontab ctraddon_new_in_v51"/>
 	  <radio value="ctraddon_experttweaks"	label="&Ctr_experttweaks;"	id="ctraddon_experttweakstab" class="ctraddontab ctraddon_new_in_v50 ctraddon_new_in_v51"/>
+	  <radio value="ctraddon_animationbox"	label="&Ctr_animation;"		class="ctraddontab"/>
 	  <radio value="ctraddon_ctraddonbox"	label="&Ctr_title;"			class="ctraddontab"/>
 	  <label value=""/>
 	  <description id="ctraddon_pw_radiorestart">&Ctr_rr;</description>
@@ -1423,6 +1426,11 @@
 				<menuitem value="findbar_topa"	  label="&Ctr_findbar_topa;"/>
 			</menupopup>
 		</menulist>
+		<hbox align="center">
+		  <checkbox label="&Ctr_findbar_width;"	preference="ctraddon_findb_widthcb" id="ctraddon_pw_findb_widthcb"/>
+		  <textbox size="3" maxlength="3" preference="ctraddon_findb_widthva" type="number" min="0" max="999" id="ctraddon_pw_findb_widthva"/>
+		  <label value="px"/>
+		</hbox>
 	  </groupbox>
 
 	</box>
@@ -1470,6 +1478,23 @@
 
 	</box>
 	
+	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_animationbox">
+
+	  <groupbox>
+		<caption  label="&Ctr_animation;" class="ctraddon_topic"/>
+		<checkbox label="&Ctr_bmanimation;"		preference="ctraddon_bmanimation" id="ctraddon_pw_bmanimation"/>
+		<checkbox label="&Ctr_pananimation;"	preference="ctraddon_pananimation" id="ctraddon_pw_pananimation"/>
+		<checkbox label="&Ctr_tabanimation;"	preference="ctraddon_tabsanimate"/>
+		<description class="ctraddonsuboption">about:config &gt;&gt; browser.tabs.animate</description>
+		<checkbox label="&Ctr_dlanimation;"		preference="ctraddon_dlanimate"/>
+		<description class="ctraddonsuboption">about:config &gt;&gt; browser.download.animateNotifications</description>
+		<checkbox label="&Ctr_fsanimation;"		preference="ctraddon_fsanimation" id="ctraddon_pw_fsanimation"/>
+		<description class="ctraddonsuboption">about:config &gt;&gt; browser.fullscreen.animate</description>
+		<checkbox label="&Ctr_fsaduration;"		preference="ctraddon_fsaduration" id="ctraddon_pw_fsaduration"/>
+		<description class="ctraddonsuboption">about:config &gt;&gt; full-screen-api.transition-duration.*</description>
+	  </groupbox>
+	</box>
+
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_experttweaks">
 
 	  <groupbox id="ctraddon_pw_loopcallgb">
@@ -1522,20 +1547,6 @@
 	</box>
 
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_ctraddonbox">
-
-	  <groupbox>
-		<caption  label="&Ctr_animation;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_bmanimation;"		preference="ctraddon_bmanimation" id="ctraddon_pw_bmanimation"/>
-		<checkbox label="&Ctr_pananimation;"	preference="ctraddon_pananimation" id="ctraddon_pw_pananimation"/>
-		<checkbox label="&Ctr_tabanimation;"	preference="ctraddon_tabsanimate"/>
-		<description class="ctraddonsuboption">about:config &gt;&gt; browser.tabs.animate</description>
-		<checkbox label="&Ctr_dlanimation;"		preference="ctraddon_dlanimate"/>
-		<description class="ctraddonsuboption">about:config &gt;&gt; browser.download.animateNotifications</description>
-		<checkbox label="&Ctr_fsanimation;"		preference="ctraddon_fsanimation" id="ctraddon_pw_fsanimation"/>
-		<description class="ctraddonsuboption">about:config &gt;&gt; browser.fullscreen.animate</description>
-		<checkbox label="&Ctr_fsaduration;"		preference="ctraddon_fsaduration" id="ctraddon_pw_fsaduration"/>
-		<description class="ctraddonsuboption">about:config &gt;&gt; full-screen-api.transition-duration.*</description>
-	  </groupbox>
 	  
 	  <groupbox>
 		<caption  label="&Ctr_title;" class="ctraddon_topic"/>

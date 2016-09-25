@@ -16,7 +16,7 @@ if (typeof classicthemerestorerjs == "undefined") {var classicthemerestorerjs = 
 if (!classicthemerestorerjs.ctr) {classicthemerestorerjs.ctr = {};};
 
 classicthemerestorerjs.ctr = {
- 
+
   // initialize custom sheets for tab color settings
   ctabsheet_def:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   ctabsheet_act:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
@@ -53,6 +53,8 @@ classicthemerestorerjs.ctr = {
   aerocolors:			Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
   tabheight:			Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  
+  findbarwidth:			Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
   locsearchbarsize:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   locsearchbarradius:	Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
@@ -1200,8 +1202,25 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "autocompl_it2":
-			if (branch.getBoolPref("autocompl_it2") && classicthemerestorerjs.ctr.appversion >= 50) classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_it2",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_it2",false);
+			if (branch.getBoolPref("autocompl_it2") && classicthemerestorerjs.ctr.appversion >= 50) {
+			  
+			  document.getElementById('PopupAutoCompleteRichResult').addEventListener("popupshowing", function unlockACPopupHeight(event){
+				
+				//get inner 'autocomplete richlistbox' of '#PopupAutoCompleteRichResult' panel
+				var acrichlistbox = document.getElementById("PopupAutoCompleteRichResult").boxObject.firstChild.nextSibling;
+				
+				var ACObserver = new MutationObserver(function(mutations) {
+				  mutations.forEach(function(mutation) {
+					document.getElementById("PopupAutoCompleteRichResult").setAttribute('ctrsubboxstyle', acrichlistbox.getAttribute('style'));
+				  });    
+				});
+				
+				ACObserver.observe(acrichlistbox, { attributes: true, attributeFilter: ['style'] });
+			  }, false);
+			  
+			  classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_it2",true);
+			}
+			else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_it2",false);
 		  break;
 	  
 		  case "autocompl_hlb":
@@ -1275,6 +1294,15 @@ classicthemerestorerjs.ctr = {
 					if(!gFindBar.hidden) gFindBar.close();
 				}, false);
 			}
+		  break;
+		  
+		  case "findb_widthcb":
+			if (branch.getBoolPref("findb_widthcb")) classicthemerestorerjs.ctr.loadUnloadCSS("findb_widthva",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("findb_widthva",false);
+		  break;
+		  
+		  case "findb_widthva":
+			if (branch.getBoolPref("findb_widthcb")) classicthemerestorerjs.ctr.loadUnloadCSS("findb_widthva",true);
 		  break;
 		  
 		  case "nav_txt_ico":
@@ -4754,6 +4782,25 @@ classicthemerestorerjs.ctr = {
 			}
 		
 		break;
+		
+		case "findb_widthva":
+			removeOldSheet(this.findbarwidth);
+			
+			if(enable==true && this.prefs.getBoolPref('findb_widthcb')){
+			
+				this.findbarwidth=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					findbar .findbar-textbox{\
+					  min-width: unset !important;\
+					  width: '+this.prefs.getIntPref('findb_widthva')+'px !important;\
+					  max-width: unset !important;\
+					}\
+				'), null, null);
+				
+				applyNewSheet(this.findbarwidth);
+			
+			}
+		
+		break;
 
 		case "tabcolor_def":
 
@@ -6173,7 +6220,9 @@ classicthemerestorerjs.ctr = {
 			return;
 		  }
 		}
+
 		window.open(aAddon.optionsURL,'', 'chrome').focus();
+		
 	});
   },
 
