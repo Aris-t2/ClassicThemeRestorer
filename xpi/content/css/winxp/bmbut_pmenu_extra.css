@@ -12,4 +12,10 @@
 	#main-window[fx51plus="true"] #ctraddon_BMB_bookmarksPopup #ctraddon_BMB_subscribeToPageSubmenuMenupopup {
 	  border: 1px solid var(--panel-arrowcontent-border-color) !important;
 	}
+	
+	#main-window[fx52plus="true"] #ctraddon_BMB_bookmarksPopup menupopup[placespopup=true] > hbox,
+	#main-window[fx52plus="true"] #ctraddon_BMB_bookmarksPopup #ctraddon_BMB_subscribeToPageSubmenuMenupopup {
+	  background: var(--arrowpanel-background) !important;
+	  border: 1px solid var(--arrowpanel-border-color) !important;
+	}
 }

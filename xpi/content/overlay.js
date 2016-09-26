@@ -122,6 +122,7 @@ classicthemerestorerjs.ctr = {
 	try{if (this.appversion >= 48) document.getElementById("main-window").setAttribute('fx48plus',true);} catch(e){}
 	try{if (this.appversion >= 50) document.getElementById("main-window").setAttribute('fx50plus',true);} catch(e){}
 	try{if (this.appversion >= 51) document.getElementById("main-window").setAttribute('fx51plus',true);} catch(e){}
+	try{if (this.appversion >= 52) document.getElementById("main-window").setAttribute('fx52plus',true);} catch(e){}
 
 	// add CTR version number to '#main-window' node, so other add-ons/themes can easier distinguish between versions
 	AddonManager.getAddonByID('ClassicThemeRestorer@ArisT2Noia4dev', function(addon) {
@@ -357,13 +358,7 @@ classicthemerestorerjs.ctr = {
 			classicthemerestorerjs.ctr.loadUnloadCSS('tabs_devedextra',false);
 
 			var devtheme=false;
-
-			try {
-			  if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
-				devtheme=true;
-			  }
-			} catch(e) {}
-			
+		
 			if(classicthemerestorerjs.ctr.fxdevelopertheme==true) devtheme=true;
 
 			if (branch.getCharPref("tabs")!="tabs_default" && classicthemerestorerjs.ctr.fxdefaulttheme==true && devtheme==false){
@@ -657,13 +652,7 @@ classicthemerestorerjs.ctr = {
 		  case "aerocolors": case "aerocolorsg":
 		 
 			var devtheme=false;
-
-			try {
-			  if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
-				devtheme=true;
-			  }
-			} catch(e) {}
-			
+	
 			if(classicthemerestorerjs.ctr.fxdevelopertheme==true) devtheme=true;
 	
 			if (branch.getBoolPref("aerocolors") && classicthemerestorerjs.ctr.fxdefaulttheme==true && devtheme==false) {
@@ -2066,6 +2055,14 @@ classicthemerestorerjs.ctr = {
 		  case "alt_addonsm":
 			if (branch.getBoolPref("alt_addonsm") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("alt_addonsm",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("alt_addonsm",false);
+
+			var devtheme=false;
+			if(classicthemerestorerjs.ctr.fxdevelopertheme==true) devtheme=true;
+			
+			if (branch.getBoolPref("aerocolors") && classicthemerestorerjs.ctr.fxdefaulttheme==true && devtheme==false) { 
+			  classicthemerestorerjs.ctr.loadUnloadCSS("aerocolors",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("aerocolors",true);
+			}
 		  break;
 
 		  case "addonversion":
@@ -2137,6 +2134,24 @@ classicthemerestorerjs.ctr = {
 		  case "bmbnounsort":
 			if (branch.getBoolPref("bmbnounsort")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbnounsort",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbnounsort",false);
+			  
+			// for MacOSX: hide item using js instead of css or it won't work
+			if (classicthemerestorerjs.ctr.osstring=="Darwin"){
+				if (branch.getBoolPref("bmbnounsort")) {
+					setTimeout(function(){
+					  try{
+						document.getElementById("menu_unsortedBookmarks").collapsed = true;
+					  } catch(e){}
+					},500);
+				}
+				else {
+				  setTimeout(function(){
+					try{
+					  document.getElementById("menu_unsortedBookmarks").collapsed = false;
+					} catch(e){}
+				  },500);
+				}
+			}
 		  break;
 
 		  case "bmbutnotext":
@@ -4426,7 +4441,8 @@ classicthemerestorerjs.ctr = {
 						#main-window[defaultfxtheme="true"][tabsontop="false"] #TabsToolbar:not(:-moz-lwtheme),\
 						#main-window[defaultfxtheme="true"] :not(#theFoxOnlyBetter-slimChrome-toolbars) > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar):not(.devtools-tabbar):not(#developer-toolbar):not(.devtools-responsiveui-toolbar):not(#puzzleBars-urlbar-bar):not(#theFoxOnlyBetter-skyLights-container):not(#theFoxOnlyBetter-slimChrome-slimmer),\
 						#main-window[defaultfxtheme="true"] #theFoxOnlyBetter-slimChrome-container > *:not(#theFoxOnlyBetter-slimChrome-toolbars-bottom):not(:-moz-lwtheme),\
-						#main-window[defaultfxtheme="true"] #ctraddon_urlextrabar:not(:-moz-lwtheme){\
+						#main-window[defaultfxtheme="true"] #ctraddon_urlextrabar:not(:-moz-lwtheme),\
+						#main-window[defaultfxtheme="true"] findbar{\
 						  background-image:unset !important;\
 						  background-color:'+main_ab_color+' !important;\
 						}\
@@ -4790,7 +4806,7 @@ classicthemerestorerjs.ctr = {
 			
 				this.findbarwidth=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
 					findbar .findbar-textbox{\
-					  min-width: unset !important;\
+					  min-width: '+this.prefs.getIntPref('findb_widthva')+'px !important;\
 					  width: '+this.prefs.getIntPref('findb_widthva')+'px !important;\
 					  max-width: unset !important;\
 					}\
