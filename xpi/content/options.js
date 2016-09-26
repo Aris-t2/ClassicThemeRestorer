@@ -401,6 +401,7 @@ classicthemerestorerjso.ctr = {
 	if (this.appversion < 48) {
 	  document.getElementById('ctraddon_pw_altautocompl').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_autocompl_it').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_autocompl_title').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_autocompl_rhl').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_anewtaburlpcb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_anewtaburlpurlbox').style.visibility = 'collapse';
@@ -898,7 +899,7 @@ classicthemerestorerjso.ctr = {
 	else which=true;
 	
     document.getElementById('ctraddon_pw_autocompl_it').disabled = which;
-
+    document.getElementById('ctraddon_pw_autocompl_title').disabled = which;
   },
   
   ctrpwAltAutocomplete: function(which) {
