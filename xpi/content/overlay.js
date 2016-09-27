@@ -1162,7 +1162,7 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("altautocompl",false);
 		  break;
 		  
-		  case "urlresults": case "autocompl_it":
+		  case "urlresults": case "autocompl_it": case "autocompl_title":
 			if (branch.getBoolPref("urlresults")) {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("urlresults",true);
 			  
@@ -1182,6 +1182,13 @@ classicthemerestorerjs.ctr = {
 					&& classicthemerestorerjs.ctr.appversion < 50)
 						classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_it",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_it",false);
+
+      if (branch.getBoolPref("autocompl_title") && branch.getBoolPref("urlresults")
+				&& classicthemerestorerjs.ctr.appversion >= 48
+					&& classicthemerestorerjs.ctr.appversion < 50
+						&& branch.getBoolPref("altautocompl")==false)
+							classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_title",true);
+				else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_title",false);
 		  break;
 		  
 		  case "cresultshcb":  
@@ -4115,6 +4122,7 @@ classicthemerestorerjs.ctr = {
 		case "autocompl_hli": 		manageCSS("alt_autocompl_hl_i.css");	break;
 		case "autocompl_hln": 		manageCSS("alt_autocompl_hl_n.css");	break;
 		case "autocompl_sep": 		manageCSS("alt_autocompl_sep.css");		break;
+		case "autocompl_title": 		manageCSS("alt_autocompl_title.css");		break;
 		case "autocompl_rhl": 		manageCSS("alt_autocompl_rhl.css");		break;
 		case "locsearchbw10": 		manageCSS("locationsearchbarw10.css");	break;
 		case "combrelstop":			manageCSS("combrelstop.css");			break;

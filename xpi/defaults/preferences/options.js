@@ -144,6 +144,7 @@ pref("extensions.classicthemerestorer.autocompl_hli",false);
 pref("extensions.classicthemerestorer.autocompl_hln",false);
 pref("extensions.classicthemerestorer.autocompl_sep",false);
 pref("extensions.classicthemerestorer.autocompl_rhl",false);
+pref("extensions.classicthemerestorer.autocompl_title",false);
 
 pref("extensions.classicthemerestorer.ib_nohovcolor",false);
 pref("extensions.classicthemerestorer.ib_graycolor",false);
