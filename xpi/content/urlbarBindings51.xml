@@ -1149,6 +1149,10 @@
           let separatorURLActionWidth =
             separatorRect.width + Math.max(urlRect.width, actionRect.width);
 
+          // Total width for the title and URL/action is the width of the item
+          // minus the start of the title text minus a little extra padding.
+          // This extra padding amount is basically arbitrary but keeps the text
+          // from getting too close to the popup's edge.
           let extraPadding = 30;
           let dir = this.getAttribute("dir");
           let titleStart = dir == "rtl" ? itemRect.right - titleRect.right
@@ -1162,7 +1166,8 @@
           let titleTagsWidth = titleRect.width + tagsRect.width;
           if (titleTagsWidth + separatorURLActionWidth > itemWidth) {
 
-            let titleTagsPct = 1.00;
+            // The percentage of the item width allocated to the title and tags.
+            let titleTagsPct = 0.66;
 
             let titleTagsAvailable = itemWidth - separatorURLActionWidth;
             let titleTagsMaxWidth = Math.max(
@@ -1182,20 +1187,17 @@
                 tagsAvailable,
                 titleTagsMaxWidth * (1 - titlePct)
               );
-              this._titleText.style.maxWidth = (-16 + titleMaxWidth) + "px";
-              this._tagsText.style.maxWidth = titleMaxWidth + "px";
+              this._titleText.style.maxWidth = (-62 + itemRect.width) + "px";
+              this._tagsText.style.maxWidth = tagsMaxWidth + "px";
             }
-            let urlActionMaxWidth = Math.max(
-              itemWidth - titleTagsWidth,
-              itemWidth * (1 - titleTagsPct)
-            );
+
             let titleMaxWidth = Math.max(
               (titleTagsMaxWidth - tagsRect.width),
               titleTagsMaxWidth * 0.33
             );
-            urlActionMaxWidth -= separatorRect.width;
-			this._urlText.style.maxWidth = titleMaxWidth + "px";
-            this._actionText.style.maxWidth = titleMaxWidth + "px";
+
+            this._urlText.style.maxWidth = (-62 + itemRect.width) + "px";
+            this._actionText.style.maxWidth = (-62 + itemRect.width) + "px";
           }
         ]]></body>
       </method>

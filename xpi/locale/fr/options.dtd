@@ -1,7 +1,7 @@
 <!ENTITY % overlayDTD
     SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
   %overlayDTD;
-<!-- Ne pas éditer au-dessus de cette ligne, et ne pas modifier la variable « &brandShortName; » à l'intérieur des chaînes de caractères traduites -->
+<!-- Do not edit above this line and do not edit the variable '&brandShortName;' inside translated strings -->
 
 <!ENTITY Ctr_title			"Classic Theme Restorer">
 
@@ -48,7 +48,7 @@
 <!ENTITY Ctr_tabwidthcla	"(classique)">
 <!ENTITY Ctr_tabminheight	"Hauteur :">
 <!ENTITY Ctr_tabheightinfo	"Des valeurs faibles causeront des erreurs dans le mode « Agrandi » !">
-<!ENTITY Ctr_ctrltabprev	"Preview tabs using 'Ctrl + Tab'">
+<!ENTITY Ctr_ctrltabprev	"Prévisualiser les onglets avec « Ctrl + Tab »">
 <!ENTITY Ctr_tabmaxwidth	"Largeur maximale :">
 <!ENTITY Ctr_tabminwidth	"Largeur minimale :">
 <!ENTITY Ctr_tabwidthinfo	"La largeur des onglets est contrôlée par Tab Mix Plus.">
@@ -124,7 +124,7 @@
 <!ENTITY Ctr_altoptionsw	"Ouvrir dans une fenêtre">
 <!ENTITY Ctr_altoptionsww	"Largeur :">
 <!ENTITY Ctr_altoptionswh	"Hauteur :">
-<!ENTITY Ctr_altoptionsi	"La fenêtre simulée des options n'est plus une boite de dialogue mais une « fenêtre du navigateur » avec toutes les barres d'outils masquées. La fonctionnalité « Utiliser la page actuelle » ajoute seulement les URL des pages ouvertes dans la fenêtre actuelle, qui est uniquement « about:preferences » dans ce cas. Le bouton de barre d'outils « Options » est remplacé par un nouveau afin de pouvoir ouvrir les options dans une fenêtre.">
+<!ENTITY Ctr_altoptionsi	"La fenêtre simulée des options n'est plus une boite de dialogue mais une fenêtre du navigateur avec toutes les barres d'outils masquées. La fonctionnalité « Utiliser la page actuelle » ajoute seulement les URL des pages ouvertes dans la fenêtre actuelle, qui est uniquement « about:preferences » dans ce cas. Le bouton de barre d'outils « Options » est remplacé par un nouveau afin de pouvoir ouvrir les options dans une fenêtre.">
 <!ENTITY Ctr_options_rem	"Mémoriser la dernière catégorie sélectionnée">
 <!ENTITY Ctr_aboutpages		"Certaines pages « about: » : apparence alternative">
 <!ENTITY Ctr_svgfilters		"Couleurs SVG pour les icônes des boutons de barres d'outils par défaut">
@@ -150,8 +150,9 @@
 <!ENTITY Ctr_navlargeicons	"Grandes icônes">
 <!ENTITY Ctr_nbisizedelay0	"">
 <!ENTITY Ctr_nbisizedelay	"ms (1000 ms = 1 s) de retard d'initialisation, au démarrage du navigateur">
-<!ENTITY Ctr_findbar		"Findbar">
-<!ENTITY Ctr_findbar_hws	"Close findbar when scrolling page">
+<!ENTITY Ctr_findbar		"Barre de recherche">
+<!ENTITY Ctr_findbar_hws	"Fermer la barre de recherche lors du défilement de la page">
+<!ENTITY Ctr_findbar_width	"Findboxes width">
 <!ENTITY Ctr_findbarpos		"Position de la barre de recherche :">
 <!ENTITY Ctr_findbar_def	"En bas (par défaut)">
 <!ENTITY Ctr_findbar_top	"En haut">
@@ -178,7 +179,7 @@
 <!ENTITY Ctr_osearch_dm		"Réduire la taille du bouton de liste déroulante">
 <!ENTITY Ctr_addonmanager	"Gestionnaire de modules">
 <!ENTITY Ctr_alt_addonsp	"Page « Plus » : ordre alternatif">
-<!ENTITY Ctr_am_showrecup	"Always show 'Recent updates' category">
+<!ENTITY Ctr_am_showrecup	"Toujours afficher la catégorie « Mises à jour récentes »">
 <!ENTITY Ctr_alt_addonsm	"Apparence alternative">
 <!ENTITY Ctr_am_nowarning	"Listes de modules : masquer les avertissements">
 <!ENTITY Ctr_am_compact		"Listes de modules : vue compacte">
@@ -192,7 +193,7 @@
 <!ENTITY Ctr_hiderecentbm	"Menu déroulant des marque-pages : masquer les marque-pages récemment ajoutés">
 <!ENTITY Ctr_hideeditbm		"Étoile des marque-pages : masquer le menu déroulant (si la page n'a pas été marquée)">
 <!ENTITY Ctr_oldplacesbut	"Éléments et dossiers de marque-pages sur une barre d'outil : ancienne apparence">
-<!ENTITY Ctr_dl_pm_drop		"Download buttons panel: show dropmarker">
+<!ENTITY Ctr_dl_pm_drop		"Panneau du bouton d'état du téléchargement : afficher la flèche de menu déroulant">
 <!ENTITY Ctr_bmbutpanelm	"Menu déroulant : apparence de menu de type « panneau »">
 <!ENTITY Ctr_bmbunsortbm	"Menu déroulant : menu « Autres marque-pages »">
 <!ENTITY Ctr_bmbunsortbm2	"Menu au-dessus des marque-pages">
@@ -241,9 +242,9 @@
 <!ENTITY Ctr_bold			"Gras">
 <!ENTITY Ctr_italic			"Italique">
 <!ENTITY Ctr_underlined		"Souligné">
-<!ENTITY Ctr_notabhov		"Les paramètres activés supplantent les paramètres « Survolé »">
-<!ENTITY Ctr_tablowopa		"Reduce tab visibility">
-<!ENTITY Ctr_tabc_act_tb	"Couleur d'arrière-plan pour les barres d'outils">
+<!ENTITY Ctr_notabhov		"Remplacer les paramètres « Survolé » par les paramètres activés">
+<!ENTITY Ctr_tablowopa		"Réduire la visibilité">
+<!ENTITY Ctr_tabc_act_tb	"Utiliser la couleur d'arrière-plan pour les barres d'outils">
 
 <!ENTITY Ctr_urlbar			"Barre d'adresse">
 <!ENTITY Ctr_starinurl		"Afficher l'étoile">
@@ -282,6 +283,7 @@
 <!ENTITY Ctr_autocompl_it	"Supprimer les éléments « Rechercher avec » et « Consulter » (si présents)">
 <!ENTITY Ctr_autocompl_hl	"Mettre les correspondances de texte dans les résultats en :">
 <!ENTITY Ctr_autocompl_rhl	"Utiliser des couleurs Aero pour les résultats surlignés">
+<!ENTITY Ctr_autocompl_not	"Hide page title">
 <!ENTITY Ctr_autocompl_sep	"Afficher un séparateur entre les résultats">
 <!ENTITY Ctr_lbsugresi		"Désactiver la limite de hauteur">
 <!ENTITY Ctr_cresultshcb	"Limite de hauteur personnalisée :">
@@ -339,7 +341,7 @@
 <!ENTITY Ctr_nonavbarbg2	"Toutes les barres d'outils en mode « Interface Réduite » du module « Beyond Australis » sont affectées.">
 <!ENTITY Ctr_nonavborder	"Ajouter une bordure supérieure à la barre d'outils">
 <!ENTITY Ctr_nonavtbborder	"Barres d'outils supérieures : enlever les bordures">
-<!ENTITY Ctr_toptb_oldpad	"Top toolbars: old left and right padding">
+<!ENTITY Ctr_toptb_oldpad	"Barres d'outils supérieures : utiliser les anciens espacements à gauche et à droite">
 <!ENTITY Ctr_hidesbclose	"Barres latérales : masquer le bouton de fermeture">
 <!ENTITY Ctr_notextshadow	"Masquer l'ombre du texte de barre d'outils ainsi que l'ombre du texte des onglets">
 <!ENTITY Ctr_chevronfix		"Barre de navigation : masquer le bouton « Plus d'outils »">
@@ -407,21 +409,21 @@
 <!ENTITY appMenuGettingStarted.label	"Commencer">
 <!ENTITY goCmd.label					"Se rendre à la page indiquée dans la barre d'adresse">
 <!ENTITY Ctr_menu_restart.label			"Redémarrer">
-<!ENTITY Ctr_restartapp					"Afficher « Redémarrer » dans le menu « Fichier » et dans le menu de l'ancien bouton &brandShortName;">
+<!ENTITY Ctr_restartapp					"Afficher « Redémarrer » dans le menu « Fichier » et dans celui de l'ancien bouton &brandShortName;">
 <!ENTITY Ctr_ctrnewinv					"Souligner les nouvelles options de la version actuelle de &brandShortName;">
 
 <!ENTITY Ctr_openInCurrentTab			"Ouvrir les entrées dans l'onglet actuel">
 <!ENTITY Ctr_openInNewTab				"Ouvrir les entrées dans un nouvel onglet">
 <!ENTITY Ctr_openInNewWindow			"Ouvrir les entrées dans une nouvelle fenêtre">
 
-<!-- Pour les entrées contextuelles des pages. Doivent être adaptées pour chaque langue ! -->
+<!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"d">
 <!ENTITY forwardCmd.accesskey			"a">
 <!ENTITY reloadCmd.accesskey			"c">
 <!ENTITY stopCmd.accesskey				"r">
 <!ENTITY bookmarkPageCmd2.accesskey		"M">
 
-<!-- Entitées de secours. Laisser vide ! -->
+<!-- Fallback entities. Leave empty! -->
 <!ENTITY openCmd.commandkey				"">
 <!ENTITY urlbar.accesskey				"">
 <!ENTITY urlbar.placeholder2			"">

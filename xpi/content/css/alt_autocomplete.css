@@ -22,11 +22,11 @@
 	#main-window[fx51plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings51.xml#autocomplete-richlistitem") !important;
 	}
-	
+
 	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
 	  -moz-box-orient: vertical !important;
-	  overflow: -moz-hidden-unscrollable !important;
+	  /*overflow: -moz-hidden-unscrollable !important;*/
 	  min-height: unset !important;
 	  height: unset !important;
 	  max-height: unset !important;
@@ -39,7 +39,7 @@
 	  display:none !important;
 	  visibility: collapse !important;
 	}
-	
+
 	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem :-moz-any(.ac-site-icon,.ac-title,.ac-action,.ac-url),
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem :-moz-any(.ac-site-icon,.ac-title,.ac-action,.ac-url){
 	  -moz-margin-start: unset !important;
@@ -71,7 +71,7 @@
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-url{
 	  -moz-margin-start: 21px !important;
 	}
-	
+
 	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-action[actiontype=searchengine]:not([selected]),
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-action[actiontype=searchengine]:not([selected]) {
 	  display: block !important;

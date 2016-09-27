@@ -16,7 +16,7 @@ if (typeof classicthemerestorerjs == "undefined") {var classicthemerestorerjs = 
 if (!classicthemerestorerjs.ctr) {classicthemerestorerjs.ctr = {};};
 
 classicthemerestorerjs.ctr = {
- 
+
   // initialize custom sheets for tab color settings
   ctabsheet_def:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   ctabsheet_act:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
@@ -53,6 +53,8 @@ classicthemerestorerjs.ctr = {
   aerocolors:			Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
   tabheight:			Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  
+  findbarwidth:			Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
   locsearchbarsize:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   locsearchbarradius:	Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
@@ -120,6 +122,7 @@ classicthemerestorerjs.ctr = {
 	try{if (this.appversion >= 48) document.getElementById("main-window").setAttribute('fx48plus',true);} catch(e){}
 	try{if (this.appversion >= 50) document.getElementById("main-window").setAttribute('fx50plus',true);} catch(e){}
 	try{if (this.appversion >= 51) document.getElementById("main-window").setAttribute('fx51plus',true);} catch(e){}
+	try{if (this.appversion >= 52) document.getElementById("main-window").setAttribute('fx52plus',true);} catch(e){}
 
 	// add CTR version number to '#main-window' node, so other add-ons/themes can easier distinguish between versions
 	AddonManager.getAddonByID('ClassicThemeRestorer@ArisT2Noia4dev', function(addon) {
@@ -355,13 +358,7 @@ classicthemerestorerjs.ctr = {
 			classicthemerestorerjs.ctr.loadUnloadCSS('tabs_devedextra',false);
 
 			var devtheme=false;
-
-			try {
-			  if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
-				devtheme=true;
-			  }
-			} catch(e) {}
-			
+		
 			if(classicthemerestorerjs.ctr.fxdevelopertheme==true) devtheme=true;
 
 			if (branch.getCharPref("tabs")!="tabs_default" && classicthemerestorerjs.ctr.fxdefaulttheme==true && devtheme==false){
@@ -655,13 +652,7 @@ classicthemerestorerjs.ctr = {
 		  case "aerocolors": case "aerocolorsg":
 		 
 			var devtheme=false;
-
-			try {
-			  if(Services.prefs.getBranch("browser.devedition.theme.").getBoolPref('enabled')!=false){
-				devtheme=true;
-			  }
-			} catch(e) {}
-			
+	
 			if(classicthemerestorerjs.ctr.fxdevelopertheme==true) devtheme=true;
 	
 			if (branch.getBoolPref("aerocolors") && classicthemerestorerjs.ctr.fxdefaulttheme==true && devtheme==false) {
@@ -1167,7 +1158,7 @@ classicthemerestorerjs.ctr = {
 		  break;
 
 		  case "altautocompl":
-			if (branch.getBoolPref("altautocompl") && classicthemerestorerjs.ctr.appversion >= 48) classicthemerestorerjs.ctr.loadUnloadCSS("altautocompl",true);
+			if (branch.getBoolPref("altautocompl") && branch.getBoolPref("autocompl_not")==false && classicthemerestorerjs.ctr.appversion >= 48) classicthemerestorerjs.ctr.loadUnloadCSS("altautocompl",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("altautocompl",false);
 		  break;
 		  
@@ -1200,8 +1191,25 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "autocompl_it2":
-			if (branch.getBoolPref("autocompl_it2") && classicthemerestorerjs.ctr.appversion >= 50) classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_it2",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_it2",false);
+			if (branch.getBoolPref("autocompl_it2") && classicthemerestorerjs.ctr.appversion >= 50) {
+			  
+			  document.getElementById('PopupAutoCompleteRichResult').addEventListener("popupshowing", function unlockACPopupHeight(event){
+				
+				//get inner 'autocomplete richlistbox' of '#PopupAutoCompleteRichResult' panel
+				var acrichlistbox = document.getElementById("PopupAutoCompleteRichResult").boxObject.firstChild.nextSibling;
+				
+				var ACObserver = new MutationObserver(function(mutations) {
+				  mutations.forEach(function(mutation) {
+					document.getElementById("PopupAutoCompleteRichResult").setAttribute('ctrsubboxstyle', acrichlistbox.getAttribute('style'));
+				  });    
+				});
+				
+				ACObserver.observe(acrichlistbox, { attributes: true, attributeFilter: ['style'] });
+			  }, false);
+			  
+			  classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_it2",true);
+			}
+			else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_it2",false);
 		  break;
 	  
 		  case "autocompl_hlb":
@@ -1230,6 +1238,26 @@ classicthemerestorerjs.ctr = {
 			  if (branch.getBoolPref("autocompl_hlb")) branch.setBoolPref("autocompl_hlb",false);
 			}
 			else classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_hln",false);
+		  break;
+		  
+		  case "autocompl_not":
+			if (branch.getBoolPref("autocompl_not") && classicthemerestorerjs.ctr.appversion >= 48) {
+				
+			  if (branch.getBoolPref("altautocompl")) {
+			    classicthemerestorerjs.ctr.loadUnloadCSS("altautocompl",false);
+				classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_no_t1",false);
+				classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_no_t2",true);  // for alt ac popup
+			  } else {
+			    classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_no_t1",true); // for default ac popup
+				classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_no_t2",false);
+			  }
+			} else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_no_t1",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("autocompl_no_t2",false);
+			  
+			  if (branch.getBoolPref("altautocompl"))
+			    classicthemerestorerjs.ctr.loadUnloadCSS("altautocompl",true);
+			}
 		  break;
 
 		  case "autocompl_sep":
@@ -1275,6 +1303,15 @@ classicthemerestorerjs.ctr = {
 					if(!gFindBar.hidden) gFindBar.close();
 				}, false);
 			}
+		  break;
+		  
+		  case "findb_widthcb":
+			if (branch.getBoolPref("findb_widthcb")) classicthemerestorerjs.ctr.loadUnloadCSS("findb_widthva",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("findb_widthva",false);
+		  break;
+		  
+		  case "findb_widthva":
+			if (branch.getBoolPref("findb_widthcb")) classicthemerestorerjs.ctr.loadUnloadCSS("findb_widthva",true);
 		  break;
 		  
 		  case "nav_txt_ico":
@@ -2038,6 +2075,14 @@ classicthemerestorerjs.ctr = {
 		  case "alt_addonsm":
 			if (branch.getBoolPref("alt_addonsm") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("alt_addonsm",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("alt_addonsm",false);
+
+			var devtheme=false;
+			if(classicthemerestorerjs.ctr.fxdevelopertheme==true) devtheme=true;
+			
+			if (branch.getBoolPref("aerocolors") && classicthemerestorerjs.ctr.fxdefaulttheme==true && devtheme==false) { 
+			  classicthemerestorerjs.ctr.loadUnloadCSS("aerocolors",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("aerocolors",true);
+			}
 		  break;
 
 		  case "addonversion":
@@ -2109,6 +2154,24 @@ classicthemerestorerjs.ctr = {
 		  case "bmbnounsort":
 			if (branch.getBoolPref("bmbnounsort")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbnounsort",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbnounsort",false);
+			  
+			// for MacOSX: hide item using js instead of css or it won't work
+			if (classicthemerestorerjs.ctr.osstring=="Darwin"){
+				if (branch.getBoolPref("bmbnounsort")) {
+					setTimeout(function(){
+					  try{
+						document.getElementById("menu_unsortedBookmarks").collapsed = true;
+					  } catch(e){}
+					},500);
+				}
+				else {
+				  setTimeout(function(){
+					try{
+					  document.getElementById("menu_unsortedBookmarks").collapsed = false;
+					} catch(e){}
+				  },500);
+				}
+			}
 		  break;
 
 		  case "bmbutnotext":
@@ -4072,6 +4135,8 @@ classicthemerestorerjs.ctr = {
 		case "autocompl_hli": 		manageCSS("alt_autocompl_hl_i.css");	break;
 		case "autocompl_hln": 		manageCSS("alt_autocompl_hl_n.css");	break;
 		case "autocompl_sep": 		manageCSS("alt_autocompl_sep.css");		break;
+		case "autocompl_no_t1": 	manageCSS("autocompl_no_title1.css");	break;
+		case "autocompl_no_t2": 	manageCSS("autocompl_no_title2.css");	break;
 		case "autocompl_rhl": 		manageCSS("alt_autocompl_rhl.css");		break;
 		case "locsearchbw10": 		manageCSS("locationsearchbarw10.css");	break;
 		case "combrelstop":			manageCSS("combrelstop.css");			break;
@@ -4398,7 +4463,8 @@ classicthemerestorerjs.ctr = {
 						#main-window[defaultfxtheme="true"][tabsontop="false"] #TabsToolbar:not(:-moz-lwtheme),\
 						#main-window[defaultfxtheme="true"] :not(#theFoxOnlyBetter-slimChrome-toolbars) > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar):not(.devtools-tabbar):not(#developer-toolbar):not(.devtools-responsiveui-toolbar):not(#puzzleBars-urlbar-bar):not(#theFoxOnlyBetter-skyLights-container):not(#theFoxOnlyBetter-slimChrome-slimmer),\
 						#main-window[defaultfxtheme="true"] #theFoxOnlyBetter-slimChrome-container > *:not(#theFoxOnlyBetter-slimChrome-toolbars-bottom):not(:-moz-lwtheme),\
-						#main-window[defaultfxtheme="true"] #ctraddon_urlextrabar:not(:-moz-lwtheme){\
+						#main-window[defaultfxtheme="true"] #ctraddon_urlextrabar:not(:-moz-lwtheme),\
+						#main-window[defaultfxtheme="true"] findbar{\
 						  background-image:unset !important;\
 						  background-color:'+main_ab_color+' !important;\
 						}\
@@ -4750,6 +4816,25 @@ classicthemerestorerjs.ctr = {
 				'), null, null);
 				
 				applyNewSheet(this.tabheight);
+			
+			}
+		
+		break;
+		
+		case "findb_widthva":
+			removeOldSheet(this.findbarwidth);
+			
+			if(enable==true && this.prefs.getBoolPref('findb_widthcb')){
+			
+				this.findbarwidth=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					findbar .findbar-textbox{\
+					  min-width: '+this.prefs.getIntPref('findb_widthva')+'px !important;\
+					  width: '+this.prefs.getIntPref('findb_widthva')+'px !important;\
+					  max-width: unset !important;\
+					}\
+				'), null, null);
+				
+				applyNewSheet(this.findbarwidth);
 			
 			}
 		
@@ -6173,7 +6258,9 @@ classicthemerestorerjs.ctr = {
 			return;
 		  }
 		}
+
 		window.open(aAddon.optionsURL,'', 'chrome').focus();
+		
 	});
   },
 
