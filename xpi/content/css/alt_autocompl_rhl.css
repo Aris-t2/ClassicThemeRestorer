@@ -56,5 +56,10 @@
 	  border-top: 1px solid transparent !important;
 	  border-bottom: 1px solid transparent !important;
 	}
+	
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistbox,
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistbox {
+	  padding: 1px !important;
+	}
 
 }

@@ -37,7 +37,9 @@
 
 	/* this will remove the tiny popup lines visible after the "search with..." and "visit" items get hidden */
 	panel[type="autocomplete-richlistbox"][ctrsubboxstyle="height: 0px;"],
-	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"][ctrsubboxstyle="height: 0px;"]
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"][ctrsubboxstyle="height: 0px;"],
+	panel[type="autocomplete-richlistbox"][ctrsubboxstyle="height: 2px;"],
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"][ctrsubboxstyle="height: 2px;"],
 	panel[type="autocomplete-richlistbox"][ctrsubboxstyle="height: 8px;"],
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"][ctrsubboxstyle="height: 8px;"] {
       margin-left: -10000000000px !important;
