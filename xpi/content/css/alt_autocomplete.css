@@ -7,26 +7,25 @@
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings.xml#urlbar-rich-result-popup") !important;
 	}
-
+	
 	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings.xml#autocomplete-richlistitem") !important;
 	}
-	
-	#main-window[fx51plus="true"] panel[type="autocomplete-richlistbox"],
-	#main-window[fx51plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
+
+	#main-window[fx50plus="true"] panel[type="autocomplete-richlistbox"],
+	#main-window[fx50plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings51.xml#urlbar-rich-result-popup") !important;
 	}
-	
-	#main-window[fx51plus="true"] panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem,
-	#main-window[fx51plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
+
+	#main-window[fx50plus="true"] panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem,
+	#main-window[fx50plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings51.xml#autocomplete-richlistitem") !important;
 	}
 
 	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
 	  -moz-box-orient: vertical !important;
-	  /*overflow: -moz-hidden-unscrollable !important;*/
 	  min-height: unset !important;
 	  height: unset !important;
 	  max-height: unset !important;
