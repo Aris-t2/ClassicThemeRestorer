@@ -1,3 +1,4 @@
+@import url(chrome://ctraddon_os_special/skin/autocompl_no_title2extra.css);
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 @-moz-document url(chrome://browser/content/browser.xul) {
@@ -22,6 +23,11 @@
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem:not(:-moz-any([collapse="true"],[actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"])) :-moz-any(.ac-url, .ac-action){
 	  -moz-margin-start: -6px !important;
 	  margin-top:-3px !important;
+	}
+	
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-site-icon,
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-site-icon {
+	  -moz-margin-start: 4px !important;
 	}
 
 	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem:not([collapse="true"]) .ac-type-icon,

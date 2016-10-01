@@ -48,23 +48,25 @@
 	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-type-icon,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-type-icon {
 	  margin-inline-start: 4px !important;
-	  margin-inline-end: unset !important;  
+	  margin-inline-end: 4px !important;
 	}
 
 	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-site-icon,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-site-icon {
-	  -moz-margin-start: 1px !important;
+	  -moz-margin-start: 4px !important;
 	}
 
 	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-title,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-title{
-	  -moz-margin-start: 4px !important;
-	  margin-top:-2px !important;
+	  -moz-margin-start: 5px !important;
+	  margin-top: -3px !important;
 	}
-
+	
 	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem :-moz-any(.ac-url, .ac-action),
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem :-moz-any(.ac-url, .ac-action){
-	  -moz-margin-start: 21px !important;
+	  -moz-margin-start: 25px !important;
+	  margin-top: 1px !important;
+	  padding-bottom: 1px !important;
 	}
 
 	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-action[actiontype=searchengine]:not([selected]),
