@@ -1419,6 +1419,11 @@
 	  <groupbox>
 		<caption  label="&Ctr_findbar;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_findbar_hws;" preference="ctraddon_findb_hide_ws" id="ctraddon_pw_findb_hide_ws" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+		<hbox align="center">
+		  <checkbox label="&Ctr_findbar_width;"	preference="ctraddon_findb_widthcb" id="ctraddon_pw_findb_widthcb"/>
+		  <textbox size="3" maxlength="3" preference="ctraddon_findb_widthva" type="number" min="0" max="999" id="ctraddon_pw_findb_widthva"/>
+		  <label value="px"/>
+		</hbox>
 		<description class="ctraddon_font1">&Ctr_findbarpos;</description>
 		<menulist preference="ctraddon_findbar">
 			<menupopup>
@@ -1428,11 +1433,6 @@
 				<menuitem value="findbar_topa"	  label="&Ctr_findbar_topa;"/>
 			</menupopup>
 		</menulist>
-		<hbox align="center">
-		  <checkbox label="&Ctr_findbar_width;"	preference="ctraddon_findb_widthcb" id="ctraddon_pw_findb_widthcb"/>
-		  <textbox size="3" maxlength="3" preference="ctraddon_findb_widthva" type="number" min="0" max="999" id="ctraddon_pw_findb_widthva"/>
-		  <label value="px"/>
-		</hbox>
 	  </groupbox>
 
 	</box>

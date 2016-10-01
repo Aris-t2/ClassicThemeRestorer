@@ -1,0 +1,9 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	#main-window[defaultfxtheme="true"] panel[type="autocomplete-richlistbox"],
+	#main-window[defaultfxtheme="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
+	  -moz-appearance: menupopup !important;
+	  color: MenuText;
+	}
+}
