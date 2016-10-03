@@ -3,19 +3,25 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	/* Richlist item code for Firefox 48 and 49 */
+	/* Firefox 48/49 popup code */
+	panel[type="autocomplete-richlistbox"],
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
+	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings.xml#urlbar-rich-result-popup") !important;
+	}
+
+	/* Firefox 48/49 richlist item code */
 	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings.xml#autocomplete-richlistitem") !important;
 	}
 	
-	/* Firefox 51 popup code works fine with Firefox 48+ */
-	panel[type="autocomplete-richlistbox"],
-	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
+	/* Firefox 50 beta2+ popup code (50b1 not supported anymore) */
+	#main-window[fx50plus="true"] panel[type="autocomplete-richlistbox"],
+	#main-window[fx50plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings51.xml#urlbar-rich-result-popup") !important;
 	}
 
-	/* Richlist item code for Firefox 50 beta2+ and 51+; (50b1 not supported anymore)*/
+	/* Firefox 50 beta2+ richlist item code (50b1 not supported anymore) */
 	#main-window[fx50plus="true"] panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem,
 	#main-window[fx50plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings51.xml#autocomplete-richlistitem") !important;
@@ -66,6 +72,10 @@
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem :-moz-any(.ac-url, .ac-action){
 	  -moz-margin-start: 25px !important;
 	  margin-top: 1px !important;
+	}
+	
+	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-url,
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-url{
 	  padding-bottom: 1px !important;
 	}
 

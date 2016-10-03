@@ -26,6 +26,11 @@
 
   <binding id="urlbar-rich-result-popup" extends="chrome://global/content/bindings/autocomplete.xml#autocomplete-rich-result-popup">
 
+    <resources>
+      <stylesheet src="chrome://browser/content/search/searchbarBindings.css"/>
+      <stylesheet src="chrome://browser/skin/searchbar.css"/>
+    </resources>
+
     <content ignorekeys="true" level="top" consumeoutsideclicks="never"
              aria-owns="richlistbox">
       <xul:hbox anonid="search-suggestions-notification"
@@ -58,6 +63,8 @@
         <xul:vbox anonid="one-off-search-buttons"
                   class="search-one-offs"
                   compact="true"
+                  includecurrentengine="true"
+                  disabletab="true"
                   flex="1"/>
       </xul:hbox>
     </content>
@@ -106,9 +113,6 @@
       <method name="dismissSearchSuggestionsNotification">
         <parameter name="enableSuggestions"/>
         <body><![CDATA[
-          // Make sure the urlbar is focused.  It won't be, for example, if the
-          // user used an accesskey to make an opt-in choice.  mIgnoreFocus
-          // prevents the text from being selected.
           this.input.mIgnoreFocus = true;
           this.input.focus();
           this.input.mIgnoreFocus = false;
@@ -119,7 +123,6 @@
           Services.prefs.setBoolPref(
             "browser.urlbar.userMadeSearchSuggestionsChoice", true
           );
-          // The input's pref observer will now hide the notification.
         ]]></body>
       </method>
 
@@ -134,13 +137,6 @@
 
           let newIndex = index + (reverse ? -1 : 1) * amount;
 
-          // We only want to wrap if navigation is in any direction by one item,
-          // otherwise we clamp to one end of the list.
-          // ie, hitting page-down will only cause is to wrap if we're already
-          // at one end of the list.
-
-          // Allow the selection to be removed if the first result is not a
-          // heuristic result.
           if (!this._isFirstResultHeuristic) {
             if (reverse && index == -1 || newIndex > maxRow && index != maxRow)
               newIndex = maxRow;
@@ -153,7 +149,6 @@
             return newIndex;
           }
 
-          // Otherwise do not allow the selection to be removed.
           if (newIndex < 0) {
             newIndex = index > 0 ? 0 : maxRow;
           } else if (newIndex > maxRow) {
@@ -166,9 +161,6 @@
       <property name="_isFirstResultHeuristic" readonly="true">
         <getter>
           <![CDATA[
-            // The popup usually has a special "heuristic" first result (added
-            // by UnifiedComplete.js) that is automatically selected when the
-            // popup opens.
             return this.input.mController.matchCount > 0 &&
                    this.input.mController
                              .getStyleAt(0)
@@ -196,12 +188,28 @@
         <parameter name="aElement"/>
         <body>
           <![CDATA[
-          // initially the panel is hidden
-          // to avoid impacting startup / new window performance
           aInput.popup.hidden = false;
 
-          if (aInput.shouldShowSearchSuggestionsNotification) {
+          let showNotification = aInput.shouldShowSearchSuggestionsNotification;
+          if (showNotification) {
+            let prefs = aInput._prefs;
+            let date = parseInt((new Date()).toLocaleFormat("%Y%m%d"));
+            let previousDate = prefs.getIntPref("lastSuggestionsPromptDate");
+            if (previousDate < date) {
+              let remainingDays =
+                prefs.getIntPref("daysBeforeHidingSuggestionsPrompt") - 1;
+              prefs.setIntPref("daysBeforeHidingSuggestionsPrompt",
+                               remainingDays);
+              prefs.setIntPref("lastSuggestionsPromptDate", date);
+              if (!remainingDays)
+                showNotification = false;
+            }
+          }
+
+          if (showNotification) {
             this._showSearchSuggestionsNotification();
+          } else if (this.classList.contains("showSearchSuggestionsNotification")) {
+            this._hideSearchSuggestionsNotification();
           }
 
           this._openAutocompletePopup(aInput, aElement);
@@ -260,11 +268,6 @@
 			} else {
 			  this.setAttribute("maxheight", height);
 			}
-			
-			/*var currentbox = document.getAnonymousElementByAttribute(this, "anonid", "richlistbox");
-			
-			if(currentbox.getAttribute('style')=="height: 0px;" || currentbox.getAttribute('style')=="height: 8px;")
-			  this.closePopup();*/
 			  
 		  }
 	  
@@ -280,14 +283,12 @@
       <method name="_updateFooterVisibility">
         <body>
           <![CDATA[
-            this.footer.collapsed = this._matchCount == 0;
+          this.footer.collapsed = this._matchCount == 0;
           ]]>
         </body>
       </method>
 
       <method name="_showSearchSuggestionsNotification">
-        <parameter name="aInput"/>
-        <parameter name="aElement"/>
         <body>
           <![CDATA[
           this.richlistbox.flex = 0;
@@ -315,7 +316,6 @@
           }
           this._hideSearchSuggestionsNotificationWithAnimation().then(() => {
             if (enableSuggestions && this.input.textValue) {
-
               this.input.controller.startSearch(this.input.textValue);
             }
           });
@@ -330,6 +330,7 @@
           this.richlistbox.flex = 1;
           this.removeAttribute("dontanimate");
           if (this._matchCount) {
+            // Update popup height.
             this._invalidate();
           } else {
             this.closePopup();
@@ -365,54 +366,30 @@
         </body>
       </method>
 
-      <method name="onPopupClick">
-        <parameter name="aEvent"/>
-        <body>
-          <![CDATA[
-
-          if (aEvent.button == 2)
-            return;
-
-          var controller = this.view.QueryInterface(Components.interfaces.nsIAutoCompleteController);
-
-          if (aEvent.button == 0 && !aEvent.shiftKey && !aEvent.ctrlKey &&
-              !aEvent.altKey && !aEvent.metaKey) {
-            controller.handleEnter(true);
-            return;
-          }
-
-          if (gURLBar && this.mInput == gURLBar) {
-            var url = controller.getValueAt(this.selectedIndex);
-            var options = {};
-
-            this.closePopup();
-            controller.handleEscape();
-
-            let action = this.mInput._parseActionUrl(url);
-            if (action) {
-              switch (action.type) {
-                case "switchtab": // Fall through.
-                case "keyword": // Fall through.
-                case "visiturl": {
-                  url = action.params.url;
-                  break;
-                }
-                case "searchengine": {
-                  [url, options.postData] =
-                    this.input._parseAndRecordSearchEngineAction(action);
-                  break;
-                }
-                default: {
-                  return;
-                }
-              }
-            }
-
-            openUILink(url, aEvent, options);
-          }
-        ]]>
-        </body>
+      <method name="_selectedOneOffChanged">
+        <body><![CDATA[
+        ]]></body>
       </method>
+
+      <method name="handleKeyPress">
+        <parameter name="aEvent"/>
+        <body><![CDATA[
+        ]]></body>
+      </method>
+
+      <method name="handleOneOffSearch">
+        <parameter name="event"/>
+        <parameter name="engine"/>
+        <parameter name="where"/>
+        <parameter name="params"/>
+        <body><![CDATA[
+        ]]></body>
+      </method>
+
+      <property name="overrideSearchEngineName" readonly="true">
+        <getter><![CDATA[
+        ]]></getter>
+      </property>
 
       <method name="createResultLabel">
         <parameter name="item"/>
@@ -443,7 +420,6 @@
             let types = item.getAttribute("type").split(/\s+/);
             let type = types.find(type => type != "action" && type != "heuristic");
             try {
-
               parts.push(this._bundle.GetStringFromName(type + "ResultLabel"));
             } catch (e) {}
 
@@ -451,68 +427,50 @@
           ]]>
         </body>
       </method>
-	  
-      <method name="_visuallySelectedOneOffChanged">
-        <body><![CDATA[
-        ]]></body>
-      </method>
-
-      <method name="handleKeyPress">
-        <parameter name="aEvent"/>
-        <body><![CDATA[
-          /*return aEvent.defaultPrevented;*/
-        ]]></body>
-      </method>
-
-      <method name="handleOneOffSearch">
-        <parameter name="event"/>
-        <parameter name="engine"/>
-        <parameter name="where"/>
-        <parameter name="params"/>
-        <body><![CDATA[
-        ]]></body>
-      </method>
-
-      <property name="overrideSearchEngineName" readonly="true">
-        <getter><![CDATA[
-        ]]></getter>
-      </property>
 
       <method name="onResultsAdded">
         <body>
           <![CDATA[
-		  
             if (this.selectedIndex == -1 && this._isFirstResultHeuristic) {
-              this._ignoreNextSelect = true;
-
               this.richlistbox.suppressMenuItemEvent = true;
-
               this.selectedIndex = 0;
               this.richlistbox.suppressMenuItemEvent = false;
-              this._ignoreNextSelect = false;
             }
 
             this.input.gotResultForCurrentQuery = true;
-            if (this.input.handleEnterWhenGotResult) {
-              this.input.handleEnterWhenGotResult = false;
-              this.input.mController.handleEnter(false);
+
+            if (this.input.handleEnterInstance) {
+              let instance = this.input.handleEnterInstance;
+              this.input.handleEnterInstance = null;
+              setTimeout(() => {
+                if (this.input.mController.searchString == instance.searchString) {
+                  this.input.mController.handleEnter(false, instance.event);
+                }
+              }, 0);
             }
           ]]>
         </body>
       </method>
 
+      <method name="_onSearchBegin">
+        <body><![CDATA[
+          this.selectedIndex = 0;
+        ]]></body>
+      </method>
+
     </implementation>
     <handlers>
 
-      <handler event="OneOffsVisuallySelectedButtonChanged"><![CDATA[
+      <handler event="SelectedOneOffButtonChanged"><![CDATA[
       ]]></handler>
+
       <handler event="mousedown"><![CDATA[
         event.preventDefault();
       ]]></handler>
 
     </handlers>
   </binding>
-
+ 
   <binding id="autocomplete-richlistitem" extends="chrome://global/content/bindings/richlistbox.xml#richlistitem">
 
     <content align="start"
