@@ -3,8 +3,15 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
+	/* Firefox 48/49 popup code */
 	panel[type="autocomplete-richlistbox"],
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
+	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings.xml#urlbar-rich-result-popup") !important;
+	}
+	
+	/* Firefox 50 beta2+ popup code (50b1 not supported anymore) */
+	#main-window[fx50plus="true"] panel[type="autocomplete-richlistbox"],
+	#main-window[fx50plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings51.xml#urlbar-rich-result-popup") !important;
 	}
 
