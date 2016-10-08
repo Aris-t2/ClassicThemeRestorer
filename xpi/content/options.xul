@@ -90,7 +90,9 @@
 		<preference id="ctraddon_nosnippets"	name="extensions.classicthemerestorer.nosnippets"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_ctroldsearch"	name="extensions.classicthemerestorer.ctroldsearch"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_ctroldsearchc"	name="extensions.classicthemerestorer.ctroldsearchc" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_ctrosearchct"	name="extensions.classicthemerestorer.ctrosearchct"	 type="int"		instantApply="true"/>
 		<preference id="ctraddon_ctroldsearchr"	name="extensions.classicthemerestorer.ctroldsearchr" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_ctrosearchrt"	name="extensions.classicthemerestorer.ctrosearchrt"	 type="int"		instantApply="true"/>
 		<preference id="ctraddon_osearch_dm"	name="extensions.classicthemerestorer.osearch_dm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_osearch_meoit"	name="extensions.classicthemerestorer.osearch_meoit" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_osearch_iwidth" name="extensions.classicthemerestorer.osearch_iwidth" type="bool"	instantApply="true"/>
@@ -1187,7 +1189,7 @@
 	  <groupbox>
 
 	    <caption  label="&Ctr_autocomplete;" class="ctraddon_topic"/>
-		<checkbox label="&Ctr_altautocompl;" preference="ctraddon_altautocompl"  id="ctraddon_pw_altautocompl" class="ctraddon_new_in_v48" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwAltAutocomplete(true);} else {classicthemerestorerjso.ctr.ctrpwAltAutocomplete(false);} classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+		<checkbox label="&Ctr_altautocompl;" preference="ctraddon_altautocompl"  id="ctraddon_pw_altautocompl" class="ctraddon_new_in_v48" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		<checkbox label="&Ctr_autocompl_it;" preference="ctraddon_autocompl_it2" id="ctraddon_pw_autocompl_it2" class="ctraddon_new_in_v50"/>
 		<checkbox label="&Ctr_urlbar_uc;" preference="ctraddon_urlbar_uc" id="ctraddon_pw_urlbar_uc"/>
 		<description class="ctraddonsuboption" id="ctraddon_pw_urlbar_uc_desc">about:config &gt;&gt; browser.urlbar.unifiedcomplete</description>
@@ -1280,10 +1282,18 @@
 		<description class="ctraddonsuboption">about:config &gt;&gt; browser.search.openintab</description>
 		<checkbox label="&Ctr_osearch_dm;"		preference="ctraddon_osearch_dm" id="ctraddon_pw_osearch_dm" class="ctraddon_winmaconly"/>
 		<checkbox label="&Ctr_ctroldsearchc;"	preference="ctraddon_ctroldsearchc" id="ctraddon_pw_ctroldsearchc"/>
+		<hbox align="center" class="ctraddonsuboption">
+		  <textbox id="ctraddon_pw_ctroldsearchcdelay" size="4" maxlength="4" preference="ctraddon_ctrosearchct" type="number" min="0" max="9999"/>
+		  <description>&Ctr_nbisizedelay; &Ctr_ctrosearchdel;</description>
+		</hbox>
 		<checkbox label="&Ctr_ctroldsearchr;"	preference="ctraddon_ctroldsearchr" id="ctraddon_pw_ctroldsearchr"/>
+		<hbox align="center" class="ctraddonsuboption">
+		  <textbox id="ctraddon_pw_ctroldsearchrdelay" size="4" maxlength="4" preference="ctraddon_ctrosearchrt" type="number" min="0" max="9999"/>
+		  <description>&Ctr_nbisizedelay; &Ctr_ctrosearchdel;</description>
+		</hbox>
 		<checkbox label="&Ctr_osearch_meoit;"	preference="ctraddon_osearch_meoit" id="ctraddon_pw_osearch_meoit"/>
 		<checkbox label="&Ctr_osearch_iwidth;"	preference="ctraddon_osearch_iwidth" id="ctraddon_pw_osearch_iwidth"/>
-		<checkbox label="&Ctr_osearch_cwidth;"	preference="ctraddon_osearch_cwidth" id="ctraddon_pw_osearch_cwidth" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwSearchPopupSize(true);} else {classicthemerestorerjso.ctr.ctrpwSearchPopupSize(false);}"/>
+		<checkbox label="&Ctr_osearch_cwidth;"	preference="ctraddon_osearch_cwidth" id="ctraddon_pw_osearch_cwidth"/>
 		<hbox class="ctraddonsuboption"  id="ctraddon_pw_os_spsize_box" align="center">
 		  <label value="&Ctr_tabminwidth; "/>
 		  <textbox size="4" maxlength="4" preference="ctraddon_os_spsize_minw" type="number" min="0" max="4000" id="ctraddon_os_spsize_minw"/>

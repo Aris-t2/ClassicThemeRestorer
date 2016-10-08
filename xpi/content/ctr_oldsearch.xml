@@ -480,14 +480,27 @@
 
           if (where == "tab-background")
             this.focus();
-			
+
 		  // clear input after search
-		  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("ctroldsearchc"))
-		    textBox.value="";
-			
+		  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("ctroldsearchc")) {
+			if (Services.prefs.getBranch("extensions.classicthemerestorer.").getIntPref("ctrosearchct")!=0) {
+		  	  setTimeout(function(){
+				textBox.value="";
+			  },Services.prefs.getBranch("extensions.classicthemerestorer.").getIntPref("ctrosearchct"));
+			} else textBox.value="";
+		  }
+	  
 		  // revent to default engine after search
-		  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("ctroldsearchr"))
-			this.currentEngine = this.engines[0];
+		  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("ctroldsearchr")) {
+		  	if (Services.prefs.getBranch("extensions.classicthemerestorer.").getIntPref("ctrosearchrt")!=0) {
+			  setTimeout(function(){
+				var ctr_searchservice = Components.classes["@mozilla.org/browser/search-service;1"]
+										.getService(Components.interfaces.nsIBrowserSearchService);
+				ctr_searchservice.defaultEngine = ctr_searchservice.getVisibleEngines()[0];
+			  },Services.prefs.getBranch("extensions.classicthemerestorer.").getIntPref("ctrosearchrt"));
+			} else this.currentEngine = this.engines[0];
+		  }
+
         ]]></body>
       </method>
 
