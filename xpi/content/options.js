@@ -506,21 +506,51 @@ classicthemerestorerjso.ctr = {
 		switch (name) {
 
 		  case "ctabmwidth": case "ctabwidth":
-		  
 		    if(branch.getIntPref("ctabmwidth")<48 || branch.getIntPref("ctabwidth")<48 )
 			  document.getElementById('ctraddon_pw_tabwidthinfo3').style.visibility = 'visible';
 			else
 			  document.getElementById('ctraddon_pw_tabwidthinfo3').style.visibility = 'collapse';
-		  
 		  break;
 		  
 		  case "ctabheightcb":
-		  
 		    if(branch.getBoolPref("ctabheightcb"))
 			  document.getElementById('ctraddon_pw_tabheightinfo').style.visibility = 'visible';
 			else
 			  document.getElementById('ctraddon_pw_tabheightinfo').style.visibility = 'collapse';
+		  break;
 		  
+		  case "altautocompl":
+		    if(branch.getBoolPref("altautocompl")) {
+			  document.getElementById('ctraddon_pw_cresultshcb').disabled = false;
+			  document.getElementById('ctraddon_pw_cresultsh').disabled = false;
+			} else {
+			  document.getElementById('ctraddon_pw_cresultshcb').disabled = true;
+			  document.getElementById('ctraddon_pw_cresultsh').disabled = true;
+			}
+		  break;
+		  
+		  case "ctroldsearchc":
+		    if(branch.getBoolPref("ctroldsearchc"))
+			  document.getElementById('ctraddon_pw_ctroldsearchcdelay').disabled = false;
+			else
+			  document.getElementById('ctraddon_pw_ctroldsearchcdelay').disabled = true;
+		  break;
+		  
+		  case "ctroldsearchr":
+		    if(branch.getBoolPref("ctroldsearchr"))
+			  document.getElementById('ctraddon_pw_ctroldsearchrdelay').disabled = false;
+			else
+			  document.getElementById('ctraddon_pw_ctroldsearchrdelay').disabled = true;
+		  break;
+		  
+		  case "osearch_cwidth":
+		    if(branch.getBoolPref("osearch_cwidth")) {
+			  document.getElementById('ctraddon_os_spsize_minw').disabled = false;
+			  document.getElementById('ctraddon_os_spsize_maxw').disabled = false;
+			} else {
+			  document.getElementById('ctraddon_os_spsize_minw').disabled = true;
+			  document.getElementById('ctraddon_os_spsize_maxw').disabled = true;
+			}
 		  break;
 
 		}
@@ -575,11 +605,9 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwUnsortBM(this.prefs.getBoolPref("bmbunsortbm"));
 	this.ctrpwHideUrlStopRel(this.prefs.getBoolPref("hideurelstop"));
 	this.ctrpwExtraUrlbar(this.prefs.getBoolPref("extraurlkeycb"));
-	this.ctrpwSearchPopupSize(this.prefs.getBoolPref("osearch_cwidth"));
 	this.ctrpwAeroColors(this.prefs.getBoolPref("aerocolors"));
 	this.ctrpwOldTopLevelImg(this.prefs.getBoolPref("oldtoplevimg"));
 	this.ctrpwAutoCompleteHeight(this.prefs.getBoolPref("urlresults"));
-	this.ctrpwAltAutocomplete(this.prefs.getBoolPref("altautocompl"));
 	
 	var closetab_value = this.prefs.getCharPref("closetab");
   
@@ -704,11 +732,9 @@ classicthemerestorerjso.ctr = {
 	var itemvis = 'collapse';
 	
     if(which==true) {
-	  which=false;
-	  itemvis = 'visible';
+	  which=false; itemvis = 'visible';
 	} else {
-	  which=true;
-	  itemvis = 'collapse';
+	  which=true; itemvis = 'collapse';
 	}
 	
     document.getElementById('ctraddon_pw_hide_bf_popup').disabled = which;
@@ -857,16 +883,7 @@ classicthemerestorerjso.ctr = {
 	
     document.getElementById('ctraddon_extraurltarget_list').disabled = which;
   },
-  
-  ctrpwSearchPopupSize: function(which) {
-	
-    if(which==true) which=false;
-	else which=true;
-	
-	document.getElementById('ctraddon_os_spsize_minw').disabled = which;
-	document.getElementById('ctraddon_os_spsize_maxw').disabled = which;
-  },
-  
+
   ctrpwAeroColors: function(which) {
 	var itemvis = 'collapse';
 	
@@ -902,15 +919,6 @@ classicthemerestorerjso.ctr = {
 
   },
   
-  ctrpwAltAutocomplete: function(which) {
-	
-    if(which==true) which=false;
-	else which=true;
-	
-    document.getElementById('ctraddon_pw_cresultshcb').disabled = which;
-	document.getElementById('ctraddon_pw_cresultsh').disabled = which;
-  },
-
   ctrpwCtrOldSearch: function(which) {
 	
     if(which==true) which=false;
@@ -928,6 +936,16 @@ classicthemerestorerjso.ctr = {
 	} else {
 	  document.getElementById('ctraddon_os_spsize_minw').disabled = true;
 	  document.getElementById('ctraddon_os_spsize_maxw').disabled = true;
+	}
+	if(this.prefs.getBoolPref("ctroldsearchc") && which == false) {
+	  document.getElementById('ctraddon_pw_ctroldsearchcdelay').disabled = false;
+	} else {
+	  document.getElementById('ctraddon_pw_ctroldsearchcdelay').disabled = true;
+	}
+	if(this.prefs.getBoolPref("ctroldsearchr") && which == false) {
+	  document.getElementById('ctraddon_pw_ctroldsearchrdelay').disabled = false;
+	} else {
+	  document.getElementById('ctraddon_pw_ctroldsearchrdelay').disabled = true;
 	}
 	
   },

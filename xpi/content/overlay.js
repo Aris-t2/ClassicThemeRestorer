@@ -3505,24 +3505,24 @@ classicthemerestorerjs.ctr = {
 			var titlebartitle = document.createElement("toolbarbutton");
 			titlebartitle.setAttribute("id", "ctraddon_titlebartitle");
 			titlebartitle.setAttribute("ordinal", "0");
-			titlebartitle.setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
+			titlebartitle.setAttribute("label", gBrowser.contentTitle);
 
 			document.getElementById("titlebar-content").appendChild(titlebartitle);
 
 			window.addEventListener("load", function update_title() {
-			   document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
+			   document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.contentTitle);
 			}, false);
 			window.addEventListener("DOMContentLoaded", function update_title() {
-			  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
+			  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.contentTitle);
 			}, false);
 			window.addEventListener("TabOpen", function update_title() {
-			  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
+			  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.contentTitle);
 			}, false);
 			window.addEventListener("TabSelect", function update_title() {
-			  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
+			  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.contentTitle);
 			}, false);
 			window.addEventListener("TabAttrModified", function update_title() {
-			  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.selectedTab.getAttribute("label"));
+			  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.contentTitle);
 			}, false);
 
 		  } catch(e) {}
