@@ -504,6 +504,13 @@ classicthemerestorerjso.ctr = {
 	  "extensions.classicthemerestorer.",
 	  function(branch, name) {
 		switch (name) {
+			
+		  case "tttitlebar":
+		    if(branch.getBoolPref("tttitlebar"))
+			  document.getElementById('ctraddon_pw_tttitlebar_c').disabled = false;
+			else
+			  document.getElementById('ctraddon_pw_tttitlebar_c').disabled = true;
+		  break;
 
 		  case "ctabmwidth": case "ctabwidth":
 		    if(branch.getIntPref("ctabmwidth")<48 || branch.getIntPref("ctabwidth")<48 )
