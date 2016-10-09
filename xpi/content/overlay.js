@@ -442,6 +442,11 @@ classicthemerestorerjs.ctr = {
 			else classicthemerestorerjs.ctr.loadUnloadCSS("square_edges",false);
 		  break;
 		  
+		  case "tttitlebar_c":
+			if (branch.getBoolPref("tttitlebar_c") && branch.getBoolPref("tttitlebar")) classicthemerestorerjs.ctr.loadUnloadCSS("tttitlebar_c",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("tttitlebar_c",false);
+		  break;
+		  
 		  case "ctabheightcb":
 			if (branch.getBoolPref("ctabheightcb")) classicthemerestorerjs.ctr.loadUnloadCSS("ctabheight",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("ctabheight",false);
@@ -2775,7 +2780,7 @@ classicthemerestorerjs.ctr = {
 	// this button can only be placed on Firefox titlebar using Windows OS
 	if(classicthemerestorerjs.ctr.osstring == "WINNT"){
 	
-		var buttontitle = "Firefox"; // init with default title
+		var buttontitle = Services.appinfo.name; // init with default title
 		var custombuttontitle = Services.prefs.getBranch("extensions.classicthemerestorer.").getCharPref('appbuttontxt');
 		
 		var converter = Cc["@mozilla.org/intl/scriptableunicodeconverter"].createInstance(Ci.nsIScriptableUnicodeConverter);
@@ -3501,29 +3506,31 @@ classicthemerestorerjs.ctr = {
 		 if(classicthemerestorerjs.ctr.osstring=="WINNT" && classicthemerestorerjs.ctr.fxdefaulttheme==true) {
 
 		  try {
-
+		
+			var titlebarspacer1 = document.createElement("spacer");
+			titlebarspacer1.setAttribute("id", "ctraddon_titlebarspacer");
+			titlebarspacer1.setAttribute("ordinal", "0");
+			titlebarspacer1.setAttribute("flex", "1");
+			
 			var titlebartitle = document.createElement("toolbarbutton");
 			titlebartitle.setAttribute("id", "ctraddon_titlebartitle");
 			titlebartitle.setAttribute("ordinal", "0");
-			titlebartitle.setAttribute("label", gBrowser.contentTitle);
-
+			titlebartitle.setAttribute("label", gBrowser.contentTitle || Services.appinfo.name);
+			
+			document.getElementById("titlebar-content").appendChild(titlebarspacer1);
 			document.getElementById("titlebar-content").appendChild(titlebartitle);
 
-			window.addEventListener("load", function update_title() {
-			   document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.contentTitle);
-			}, false);
-			window.addEventListener("DOMContentLoaded", function update_title() {
-			  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.contentTitle);
-			}, false);
-			window.addEventListener("TabOpen", function update_title() {
-			  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.contentTitle);
-			}, false);
-			window.addEventListener("TabSelect", function update_title() {
-			  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.contentTitle);
-			}, false);
-			window.addEventListener("TabAttrModified", function update_title() {
-			  document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.contentTitle);
-			}, false);
+			window.addEventListener("load", update_title, false);
+			window.addEventListener("DOMContentLoaded", update_title, false);
+			window.addEventListener("TabOpen", update_title, false);
+			window.addEventListener("TabSelect", update_title, false);
+			window.addEventListener("TabAttrModified", update_title, false);
+			
+			function update_title() {
+			  if (gBrowser.contentTitle=="")
+			    document.getElementById("ctraddon_titlebartitle").setAttribute("label", Services.appinfo.name);
+			  else document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.contentTitle);
+			}
 
 		  } catch(e) {}
 		  
@@ -3924,6 +3931,7 @@ classicthemerestorerjs.ctr = {
 	
 		case "square_edges": 			manageCSS("tabssquare_edges.css");  	break;
 		case "tttitlebar": 				manageCSS("tabsttitleintitlebar.css");  break;
+		case "tttitlebar_c": 			manageCSS("tabsttitleintitlebar_centered.css");  break;
 		
 		case "closetab_active": 		manageCSS("closetab_active.css");  		break;
 		case "closetab_none": 			manageCSS("closetab_none.css");  		break;

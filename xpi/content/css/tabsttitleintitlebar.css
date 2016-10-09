@@ -15,6 +15,11 @@
 	#ctraddon_titlebartitle:-moz-locale-dir(rtl) {
 	  float:right;
 	}
+	
+	#ctraddon_titlebarspacer {
+	  visibility: collapse;
+	}
+	
 	/* adjust length for different window sizes */
 	@media not all and (min-width: 2000px) {
 	  #ctraddon_titlebartitle {

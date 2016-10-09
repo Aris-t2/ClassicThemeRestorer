@@ -54,6 +54,7 @@
 		<preference id="ctraddon_tabsontop"		name="extensions.classicthemerestorer.tabsontop" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_square_edges"	name="extensions.classicthemerestorer.square_edges" type="bool"		instantApply="true"/>
 		<preference id="ctraddon_tttitlebar"	name="extensions.classicthemerestorer.tttitlebar"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_tttitlebar_c"	name="extensions.classicthemerestorer.tttitlebar_c"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_ctabheightcb"	name="extensions.classicthemerestorer.ctabheightcb"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_ctabheight"	name="extensions.classicthemerestorer.ctabheight"	type="int"		instantApply="true"/>
 		
@@ -425,7 +426,10 @@
 		</menulist>
 		
 		<checkbox label="&Ctr_square_edges;"	preference="ctraddon_square_edges" id="ctraddon_pw_square_edges"/>
-		<checkbox label="&Ctr_tttitlebar;"		preference="ctraddon_tttitlebar" id="ctraddon_pw_tttitlebar"  class="ctraddon_windowsonly" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
+		<hbox class="ctraddon_windowsonly">
+		  <checkbox label="&Ctr_tttitlebar;"	preference="ctraddon_tttitlebar" id="ctraddon_pw_tttitlebar" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
+		  <checkbox label="&Ctr_centered;"		preference="ctraddon_tttitlebar_c" id="ctraddon_pw_tttitlebar_c"/>
+		</hbox>
 		
 		<description class="ctraddon_font1">&Ctr_emptytfavico;</description>
 		<radiogroup preference="ctraddon_emptyfavico_t" id="ctraddon_pw_emptyfavico_t" orient="horizontal" value="">
@@ -1283,12 +1287,12 @@
 		<checkbox label="&Ctr_osearch_dm;"		preference="ctraddon_osearch_dm" id="ctraddon_pw_osearch_dm" class="ctraddon_winmaconly"/>
 		<checkbox label="&Ctr_ctroldsearchc;"	preference="ctraddon_ctroldsearchc" id="ctraddon_pw_ctroldsearchc"/>
 		<hbox align="center" class="ctraddonsuboption">
-		  <textbox id="ctraddon_pw_ctroldsearchcdelay" size="4" maxlength="4" preference="ctraddon_ctrosearchct" type="number" min="0" max="9999"/>
+		  <textbox id="ctraddon_pw_ctroldsearchcdelay" size="5" maxlength="5" preference="ctraddon_ctrosearchct" type="number" min="0" max="99999"/>
 		  <description>&Ctr_nbisizedelay; &Ctr_ctrosearchdel;</description>
 		</hbox>
 		<checkbox label="&Ctr_ctroldsearchr;"	preference="ctraddon_ctroldsearchr" id="ctraddon_pw_ctroldsearchr"/>
 		<hbox align="center" class="ctraddonsuboption">
-		  <textbox id="ctraddon_pw_ctroldsearchrdelay" size="4" maxlength="4" preference="ctraddon_ctrosearchrt" type="number" min="0" max="9999"/>
+		  <textbox id="ctraddon_pw_ctroldsearchrdelay" size="5" maxlength="5" preference="ctraddon_ctrosearchrt" type="number" min="0" max="99999"/>
 		  <description>&Ctr_nbisizedelay; &Ctr_ctrosearchdel;</description>
 		</hbox>
 		<checkbox label="&Ctr_osearch_meoit;"	preference="ctraddon_osearch_meoit" id="ctraddon_pw_osearch_meoit"/>
