@@ -3520,17 +3520,26 @@ classicthemerestorerjs.ctr = {
 			document.getElementById("titlebar-content").appendChild(titlebarspacer1);
 			document.getElementById("titlebar-content").appendChild(titlebartitle);
 
-			window.addEventListener("load", update_title, false);
-			window.addEventListener("DOMContentLoaded", update_title, false);
-			window.addEventListener("TabOpen", update_title, false);
-			window.addEventListener("TabSelect", update_title, false);
-			window.addEventListener("TabAttrModified", update_title, false);
-			
-			function update_title() {
-			  if (gBrowser.contentTitle=="")
-			    document.getElementById("ctraddon_titlebartitle").setAttribute("label", Services.appinfo.name);
+			window.addEventListener("load", function update_title() {
+			  if (gBrowser.contentTitle=="") document.getElementById("ctraddon_titlebartitle").setAttribute("label", Services.appinfo.name);
 			  else document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.contentTitle);
-			}
+			}, false);
+			window.addEventListener("DOMContentLoaded", function update_title() {
+			  if (gBrowser.contentTitle=="") document.getElementById("ctraddon_titlebartitle").setAttribute("label", Services.appinfo.name);
+			  else document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.contentTitle);
+			}, false);
+			window.addEventListener("TabOpen", function update_title() {
+			  if (gBrowser.contentTitle=="") document.getElementById("ctraddon_titlebartitle").setAttribute("label", Services.appinfo.name);
+			  else document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.contentTitle);
+			}, false);
+			window.addEventListener("TabSelect", function update_title() {
+			  if (gBrowser.contentTitle=="") document.getElementById("ctraddon_titlebartitle").setAttribute("label", Services.appinfo.name);
+			  else document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.contentTitle);
+			}, false);
+			window.addEventListener("TabAttrModified", function update_title() {
+			  if (gBrowser.contentTitle=="") document.getElementById("ctraddon_titlebartitle").setAttribute("label", Services.appinfo.name);
+			  else document.getElementById("ctraddon_titlebartitle").setAttribute("label", gBrowser.contentTitle);
+			}, false);
 
 		  } catch(e) {}
 		  

@@ -1287,12 +1287,12 @@
 		<checkbox label="&Ctr_osearch_dm;"		preference="ctraddon_osearch_dm" id="ctraddon_pw_osearch_dm" class="ctraddon_winmaconly"/>
 		<checkbox label="&Ctr_ctroldsearchc;"	preference="ctraddon_ctroldsearchc" id="ctraddon_pw_ctroldsearchc"/>
 		<hbox align="center" class="ctraddonsuboption">
-		  <textbox id="ctraddon_pw_ctroldsearchcdelay" size="5" maxlength="5" preference="ctraddon_ctrosearchct" type="number" min="0" max="99999"/>
+		  <textbox id="ctraddon_pw_ctroldsearchcdelay" size="6" maxlength="6" preference="ctraddon_ctrosearchct" type="number" min="0" max="999999"/>
 		  <description>&Ctr_nbisizedelay; &Ctr_ctrosearchdel;</description>
 		</hbox>
 		<checkbox label="&Ctr_ctroldsearchr;"	preference="ctraddon_ctroldsearchr" id="ctraddon_pw_ctroldsearchr"/>
 		<hbox align="center" class="ctraddonsuboption">
-		  <textbox id="ctraddon_pw_ctroldsearchrdelay" size="5" maxlength="5" preference="ctraddon_ctrosearchrt" type="number" min="0" max="99999"/>
+		  <textbox id="ctraddon_pw_ctroldsearchrdelay" size="6" maxlength="6" preference="ctraddon_ctrosearchrt" type="number" min="0" max="999999"/>
 		  <description>&Ctr_nbisizedelay; &Ctr_ctrosearchdel;</description>
 		</hbox>
 		<checkbox label="&Ctr_osearch_meoit;"	preference="ctraddon_osearch_meoit" id="ctraddon_pw_osearch_meoit"/>
