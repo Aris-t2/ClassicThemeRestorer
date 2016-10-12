@@ -2471,7 +2471,7 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "hightabpososx":
-			if (branch.getBoolPref("hightabpososx") && classicthemerestorerjs.ctr.fxdefaulttheme==true){
+			if (branch.getBoolPref("hightabpososx") && branch.getBoolPref("hidetbwot")==false && classicthemerestorerjs.ctr.fxdefaulttheme==true){
 			  classicthemerestorerjs.ctr.loadUnloadCSS("hightabpososx",true);
 			  branch.setBoolPref("appbutmhi",false);
 			}
@@ -3181,8 +3181,13 @@ classicthemerestorerjs.ctr = {
 			  recentWindow.document.getElementById("TabsToolbar").style.marginTop="unset";
 			  if(tabsontop == 'false' || tabsontop == 'false2')
 			    recentWindow.document.getElementById("titlebar").style.marginBottom="-28px";
-			  else
-				recentWindow.document.getElementById("titlebar").style.marginBottom="-10px";
+			  else{
+				if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hightabpososx")) {
+				  recentWindow.document.getElementById("titlebar").style.marginBottom="-10px";
+				} else {
+				  recentWindow.document.getElementById("titlebar").style.marginBottom="0px";
+				}
+			  }
 			} else {
 			  recentWindow.document.getElementById("titlebar").style.paddingBottom="28px";
 			}
@@ -3212,7 +3217,12 @@ classicthemerestorerjs.ctr = {
 			recentWindow.document.getElementById("toolbar-menubar").style.marginBottom="unset";		
 		  else if(classicthemerestorerjs.ctr.osstring=="Darwin" && tabsintitlebar==true) {
 			if(classicthemerestorerjs.ctr.appversion >= 47) {
-			  recentWindow.document.getElementById("TabsToolbar").style.marginTop="-10px";
+			  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hightabpososx")) {
+			    recentWindow.document.getElementById("TabsToolbar").style.marginTop="-10px";
+			  } else {
+				recentWindow.document.getElementById("TabsToolbar").style.marginTop="0px";
+			  }
+
 			  recentWindow.document.getElementById("titlebar").style.marginBottom="-28px";
 			} else {
 			  recentWindow.document.getElementById("titlebar").style.paddingBottom="unset";

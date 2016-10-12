@@ -15,7 +15,7 @@
 <!ENTITY Ctr_windowcontrols	"Réduire/Restaurer/Fermer (plein écran)">
 <!ENTITY Ctr_rr				"Redémarrage nécessaire !">
 <!ENTITY Ctr_window			"fenêtre">
-<!ENTITY Ctr_centered		"Centered">
+<!ENTITY Ctr_centered		"Centrer ce titre">
 
 <!ENTITY Ctr_cuibuttons		"Boutons :">
 <!ENTITY Ctr_cuibutnormal	"Taille normale">
@@ -36,7 +36,7 @@
 <!ENTITY Ctr_tabs1m			"Onglets rectangulaires (« Australisés »)">
 <!ENTITY Ctr_tabs2			"Onglets arrondis (alternatifs)">
 <!ENTITY Ctr_tabs3			"Onglets arrondis (alternatifs Aero)">
-<!ENTITY Ctr_tabforminfo	"L'apparence des onglets est contrôlé par le thème actuel.">
+<!ENTITY Ctr_tabforminfo	"L'apparence des onglets est contrôlée par le thème actuel.">
 <!ENTITY Ctr_coltabsinfo	"L'apparence des onglets n'est pas totalement compatible avec le module « ColorfulTabs » !">
 <!ENTITY Ctr_tabsontop0		"Onglets au-dessus (réglage par défaut)">
 <!ENTITY Ctr_tabsontop1		"Onglets au-dessus --- attribut [tabsontop=true]">
@@ -56,7 +56,7 @@
 <!ENTITY Ctr_tabwidthinfo2	"La largeur des onglets est contrôlée par Tab Utilities.">
 <!ENTITY Ctr_tabwidthinfo3	"Les valeurs au-dessous de 48px causeront des erreurs dans la plupart des cas !">
 <!ENTITY Ctr_square_edges	"Coins supérieurs carrés">
-<!ENTITY Ctr_tttitlebar		"Afficher le titre de l'onglet dans la barre de titre de &brandShortName;">
+<!ENTITY Ctr_tttitlebar		"Afficher le titre de l'onglet actuel dans la barre de titre de &brandShortName;">
 <!ENTITY Ctr_tabinsertion	"Insérer les onglets liés à la suite de l'onglet actuel">
 <!ENTITY Ctr_emptytfavico	"Afficher un Favicon (pour les pages qui n'en proposent pas) :">
 <!ENTITY Ctr_emptytfavico_n	"Non">
@@ -136,7 +136,7 @@
 <!ENTITY Ctr_puibut_r_sep	"À droite">
 <!ENTITY Ctr_html5warning	"Afficher l'avertissement de passage en plein écran pour les vidéos HTML5">
 <!ENTITY Ctr_oldtoplevimg	"Apparence classique des images, avec un arrière-plan blanc">
-<!ENTITY Ctr_altalertbox	"« Boites de notification » : apparence alternative">
+<!ENTITY Ctr_altalertbox	"Boites de notification : apparence alternative">
 <!ENTITY Ctr_emptygfavico	"Remplacer le Favicon générique :">
 <!ENTITY Ctr_mstatusbar		"Rendre mobile le panneau de la barre d'état">
 <!ENTITY Ctr_mstatusbars4e	"Le panneau de la barre d'état est contrôlé par « Status-4-Evar ».">
@@ -149,11 +149,11 @@
 <!ENTITY Ctr_hideprivmask	"Navigation privée : cacher l'indicateur « masque »">
 <!ENTITY Ctr_navsmallicons	"Petites icônes">
 <!ENTITY Ctr_navlargeicons	"Grandes icônes">
-<!ENTITY Ctr_nbisizedelay0	"">
-<!ENTITY Ctr_nbisizedelay	"ms (1000 ms = 1 s) de retard d'initialisation, au démarrage du navigateur">
+<!ENTITY Ctr_nbisizedelay0	"Le réglage ci-dessus modifie le délai d'initialisation au démarrage du navigateur.">
+<!ENTITY Ctr_nbisizedelay	"ms de délai (1000 ms = 1 s)">
 <!ENTITY Ctr_findbar		"Barre de recherche">
 <!ENTITY Ctr_findbar_hws	"Fermer la barre de recherche lors du défilement de la page">
-<!ENTITY Ctr_findbar_width	"Findboxes width: ">
+<!ENTITY Ctr_findbar_width	"Largeur de la boite de recherche :">
 <!ENTITY Ctr_findbarpos		"Position de la barre de recherche :">
 <!ENTITY Ctr_findbar_def	"En bas (par défaut)">
 <!ENTITY Ctr_findbar_top	"En haut">
@@ -170,10 +170,10 @@
 <!ENTITY Ctr_alt_newtabp	"Page « Nouvel onglet » (about:newtab) : apparence alternative">
 <!ENTITY Ctr_nosnippets		"Page de démarrage par défaut (about:home) : masquer les astuces">
 <!ENTITY Ctr_search_ui		"Barre de recherche">
-<!ENTITY Ctr_ctroldsearch	"Utiliser l'ancienne interface de barre de recherche">
-<!ENTITY Ctr_ctroldsearchc	"Effacer le contenu de la barre après une recherche">
-<!ENTITY Ctr_ctroldsearchr	"Après une recherche, revenir au premier moteur de recherche de la liste">
-<!ENTITY Ctr_ctrosearchdel	"delay">
+<!ENTITY Ctr_ctroldsearch	"Ancienne interface de barre de recherche">
+<!ENTITY Ctr_ctroldsearchc	"Suite à une recherche, effacer le contenu de la barre après...">
+<!ENTITY Ctr_ctroldsearchr	"Suite une recherche, revenir au premier moteur de la liste après...">
+<!ENTITY Ctr_ctrosearchdel	"">
 <!ENTITY Ctr_search_oit		"Ouvrir la recherche dans un nouvel onglet">
 <!ENTITY Ctr_osearch_meoit	"Clic milieu : rechercher dans un nouvel « onglet au premier plan »">
 <!ENTITY Ctr_osearch_iwidth	"Ajuster automatiquement la largeur de la fenêtre surgissante">
@@ -285,7 +285,7 @@
 <!ENTITY Ctr_autocompl_it	"Supprimer les éléments « Rechercher avec » et « Consulter » (si présents)">
 <!ENTITY Ctr_autocompl_hl	"Mettre les correspondances de texte dans les résultats en :">
 <!ENTITY Ctr_autocompl_rhl	"Utiliser des couleurs Aero pour les résultats surlignés">
-<!ENTITY Ctr_autocompl_not	"Hide page title">
+<!ENTITY Ctr_autocompl_not	"Masquer les titres des pages">
 <!ENTITY Ctr_autocompl_sep	"Afficher un séparateur entre les résultats">
 <!ENTITY Ctr_lbsugresi		"Désactiver la limite de hauteur">
 <!ENTITY Ctr_cresultshcb	"Limite de hauteur personnalisée :">
