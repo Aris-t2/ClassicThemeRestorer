@@ -72,5 +72,10 @@
 	  box-shadow: none !important;
 	  border: none !important;
 	}
+	
+	/* force min/max/close to be accessible*/
+	#titlebar-buttonbox {
+	  z-index: 99999 !important;
+	}
 
 }

@@ -55,34 +55,7 @@ classicthemerestorerjso.ctr = {
 	// disable and hide items not usable on third party themes
 	if (!this.fxdefaulttheme) {
 		document.getElementById('ctraddon_pw_tabmenulist').disabled = true;
-		document.getElementById('ctraddon_abhigher').disabled = true;
-		document.getElementById('ctraddon_pw_smallnavbut').disabled = true;
-		document.getElementById('ctraddon_pw_iconsbig').disabled = true;
-		document.getElementById('ctraddon_pw_altmenubar').disabled = true;
-		document.getElementById('ctraddon_pw_menubarnofog').disabled = true;
-		document.getElementById('ctraddon_pw_tabmokcolor').disabled = true;
-		document.getElementById('ctraddon_pw_tabmokcolor2').disabled = true;
-		document.getElementById('ctraddon_pw_tabmokcolor4').disabled = true;
-		document.getElementById('ctraddon_pw_panelmenucolor').disabled = true;
-		document.getElementById('ctraddon_pw_nobookbarbg').disabled = true;
-		document.getElementById('ctraddon_pw_nonavborder').disabled = true;
-		document.getElementById('ctraddon_pw_nonavtbborder').disabled = true;
-		document.getElementById('ctraddon_pw_alttabstb').disabled = true;
-		document.getElementById('ctraddon_pw_alttabstb2').disabled = true;
-		document.getElementById('ctraddon_pw_ib_graycolor').disabled = true;
-		document.getElementById('ctraddon_pw_verifiedcolors').disabled = true;
 		document.getElementById('ctraddon_pw_colors_ntab_t').disabled = true;
-		document.getElementById('ctraddon_pw_notabfog').disabled = true;
-		document.getElementById('ctraddon_pw_notabbg').disabled = true;
-		document.getElementById('ctraddon_pw_noaddonbarbg').disabled = true;
-		document.getElementById('ctraddon_pw_noconicons').disabled = true;
-		document.getElementById('ctraddon_pw_closeonleft').disabled = true;
-		document.getElementById('ctraddon_pw_nbcompact').disabled = true;
-		document.getElementById('ctraddon_pw_tabc_act_tb').disabled = true;
-		document.getElementById('ctraddon_pw_aerocolors').disabled = true;
-		document.getElementById('ctraddon_pw_tbsep_winc').disabled = true;
-		document.getElementById('ctraddon_pw_alt_addonsm').disabled = true;
-		document.getElementById('ctraddon_pw_tttitlebar').disabled = true;
 
 		document.getElementById('ctraddon_abhigher').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_smallnavbut').style.visibility = 'collapse';
@@ -93,7 +66,6 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_ccol_act_cp2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_ccol_act_b1').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_ccol_act_b2').style.visibility = 'collapse';
-
 		document.getElementById('ctraddon_pw_altmenubar').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_menubarnofog').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabmokcolor').style.visibility = 'collapse';
@@ -120,27 +92,34 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_tabc_act_tb').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_aerocolors').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tbsep_winc').style.visibility = 'collapse';
-		document.getElementById('ctraddon_pw_alt_addonsm').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_transpttbw10').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_transpttbew10').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_locsearchbw10').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_bookmarksbargroup2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabstoolbargroup').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_menubargroup2').style.visibility = 'collapse';
-		document.getElementById('ctraddon_pw_hightabpososx').style.visibility = 'collapse';
-		document.getElementById('ctraddon_altoptions_list').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_hightabpososx').style.visibility = 'collapse';	
 		document.getElementById('ctraddon_pw_tttitlebar').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_am_compact').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_am_compact2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_ib_nohovcolor').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_altreaderico').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_alt_addonsm').style.visibility = 'collapse';
+		document.getElementById('ctraddon_altoptions_list').style.visibility = 'collapse';
+		
 	} else {
 		document.getElementById('ctraddon_pw_themes_note').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_special_font').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'collapse';
-		document.getElementById('ctraddon_altoptions_list2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_dblclnewtabdes').style.visibility = 'collapse';
+		document.getElementById('ctraddon_altoptions_list2').style.visibility = 'collapse';
 	};
+	
+	if(Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org') {
+	  document.getElementById('ctraddon_altoptions_list').style.visibility = 'visible';
+	  document.getElementById('ctraddon_pw_alt_addonsm').style.visibility = 'visible';
+	  document.getElementById('ctraddon_altoptions_list2').style.visibility = 'collapse';
+	}
 
 	// ColorfulTabs info label
 	document.getElementById('ctraddon_coltabsinfo').style.visibility = 'collapse';
