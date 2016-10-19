@@ -2825,11 +2825,11 @@ classicthemerestorerjs.ctr = {
 			app_popup.addEventListener("popupshown", function onCtrTitleAppmenuPopupShown(event){
 			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
 			    classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton2').setAttribute("open", "true");
+				setTimeout(function(){
 				  try {
-					setTimeout(function(){
-					  document.getElementById("appmenu_webDeveloper").appendChild(document.getElementById("menuWebDeveloperPopup"));
-					},200);
+					document.getElementById("appmenu_webDeveloper").appendChild(document.getElementById("menuWebDeveloperPopup"));
 				  } catch(e){}
+				},200);
 			  }
 			}, false);
 			
@@ -2837,11 +2837,11 @@ classicthemerestorerjs.ctr = {
 			app_popup.addEventListener("popuphidden", function onCtrTitleAppmenuPopupHidden(event){
 			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
 			    classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton2').removeAttribute("open");
-				try {
-				  setTimeout(function(){
+				setTimeout(function(){
+				  try {
 					document.getElementById("webDeveloperMenu").appendChild(document.getElementById("menuWebDeveloperPopup"));
-				  },200);
-				} catch(e){}
+				  } catch(e){}
+				},200);
 			  }
 			}, false);
 
@@ -3597,8 +3597,7 @@ classicthemerestorerjs.ctr = {
   // move 'Tools' menus dev tools into application buttons popup 
   moveDevtoolsmenu: function(){
 	
-	window.addEventListener("DOMContentLoaded", function _moveDevtoolsmenu(){
-	  setTimeout(function(){
+	setTimeout(function(){
 		
 		document.getElementById("ctraddon_appbutton").addEventListener("mousedown", function() {
 
@@ -3607,29 +3606,29 @@ classicthemerestorerjs.ctr = {
 			//add attribute 'open'
 			app_popup.addEventListener("popupshown", function onCtrTitleAppmenuPopupShown(event){
 			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
-				try {
-				  setTimeout(function(){
+				setTimeout(function(){
+				  try {
 					document.getElementById("appmenu_webDeveloper").appendChild(document.getElementById("menuWebDeveloperPopup"));
-				  },200);
-				} catch(e){}
+				  } catch(e){}
+				},200);
 			  }
 			}, false);
 			
 			// remove attribute 'open'
 			app_popup.addEventListener("popuphidden", function onCtrTitleAppmenuPopupHidden(event){
 			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
-				try {
-				  setTimeout(function(){
+				setTimeout(function(){
+				  try {
 					document.getElementById("webDeveloperMenu").appendChild(document.getElementById("menuWebDeveloperPopup"));
-				  },200);
-				} catch(e){}
+				  } catch(e){}
+				},200);
 			  }
 			}, false);
 
 		}, false);
 
-	  },500);
-	},false);
+	},500);
+
   },
   
   // prevent browser from disablning CTRs reload button for no reason
