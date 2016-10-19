@@ -2,20 +2,20 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 	
-	panel[type="autocomplete-richlistbox"] richlistitem[actiontype="visiturl"],
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="visiturl"],
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="visiturl"],
-	panel[type="autocomplete-richlistbox"] richlistitem[actiontype="searchengine"],
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="searchengine"],
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="searchengine"],
-	panel[type="autocomplete-richlistbox"] richlistitem[type="autofill heuristic"],
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[type="autofill heuristic"],
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[type="autofill heuristic"] {
 	  display:none !important;
 	}
 	
-	panel[type="autocomplete-richlistbox"] richlistitem[actiontype="visiturl"] + richlistitem:not([collapse="true"]),
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="visiturl"] + richlistitem:not([collapse="true"]),
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="visiturl"] + richlistitem:not([collapse="true"]),
-	panel[type="autocomplete-richlistbox"] richlistitem[actiontype="searchengine"] + richlistitem:not([collapse="true"]),
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="searchengine"] + richlistitem:not([collapse="true"]),
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="searchengine"] + richlistitem:not([collapse="true"]),
-	panel[type="autocomplete-richlistbox"] richlistitem[type="autofill heuristic"] + richlistitem:not([collapse="true"]),
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[type="autofill heuristic"] + richlistitem:not([collapse="true"]),
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[type="autofill heuristic"] + richlistitem:not([collapse="true"]) {
 	  border-top: 1px solid transparent !important;
 	  border-bottom: 1px solid transparent !important;
@@ -23,22 +23,22 @@
 	
 	@media not all and (-moz-windows-classic) {
 	
-		panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem:not([collapse="true"]),
+		panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem:not([collapse="true"]),
 		#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem:not([collapse="true"]) {
 		  margin: 0px 4px 0px 4px !important;
 		}
 
-		panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem:not([collapse="true"]):nth-of-type(2),
+		panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem:not([collapse="true"]):nth-of-type(2),
 		#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem:not([collapse="true"]):nth-of-type(2) {
 		  margin: 4px 4px 0px 4px !important;
 		}
 
-		panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem:not([collapse="true"]):last-of-type,
+		panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem:not([collapse="true"]):last-of-type,
 		#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem:not([collapse="true"]):last-of-type {
 		  margin: 0px 4px 4px 4px !important;
 		}
 
-		panel[type="autocomplete-richlistbox"] .autocomplete-richlistbox,
+		panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistbox,
 		#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistbox {
 		  padding: 0 !important;
 		}
