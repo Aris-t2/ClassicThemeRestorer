@@ -4038,7 +4038,7 @@ classicthemerestorerjs.ctr = {
 			}
 			if(enable==false && this.prefs.getBoolPref("smallnavbut")==true){
 				enable=true;
-				manageCSS("smallnavbut.css");
+				if(this.fxdefaulttheme) manageCSS("smallnavbut.css");
 				enable=false;
 			}
 			manageCSS("mode_icons_and_text.css");
@@ -4054,7 +4054,7 @@ classicthemerestorerjs.ctr = {
 			}
 			if(enable==false && this.prefs.getBoolPref("smallnavbut")==true){
 				enable=true;
-				manageCSS("smallnavbut.css");
+				if(this.fxdefaulttheme) manageCSS("smallnavbut.css");
 				enable=false;
 			}
 			manageCSS("mode_icons_and_text2.css");
@@ -4070,7 +4070,7 @@ classicthemerestorerjs.ctr = {
 			}
 			if(enable==false && this.prefs.getBoolPref("smallnavbut")==true){
 				enable=true;
-				manageCSS("smallnavbut.css");
+				if(this.fxdefaulttheme) manageCSS("smallnavbut.css");
 				enable=false;
 			}
 			if (classicthemerestorerjs.ctr.osstring=="Darwin") manageCSS("mode_icons_and_text.css");
@@ -4087,7 +4087,7 @@ classicthemerestorerjs.ctr = {
 			}
 			if(enable==false && this.prefs.getBoolPref("smallnavbut")==true){
 				enable=true;
-				manageCSS("smallnavbut.css");
+				if(this.fxdefaulttheme) manageCSS("smallnavbut.css");
 				enable=false;
 			}
 			if (classicthemerestorerjs.ctr.osstring=="Darwin") manageCSS("mode_icons_and_text2.css");
