@@ -94,6 +94,9 @@
 		<preference id="ctraddon_ctrosearchct"	name="extensions.classicthemerestorer.ctrosearchct"	 type="int"		instantApply="true"/>
 		<preference id="ctraddon_ctroldsearchr"	name="extensions.classicthemerestorer.ctroldsearchr" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_ctrosearchrt"	name="extensions.classicthemerestorer.ctrosearchrt"	 type="int"		instantApply="true"/>
+		<preference id="ctraddon_search_ant"	name="extensions.classicthemerestorer.search_ant"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_search_abl"	name="extensions.classicthemerestorer.search_abl"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_search_aho"	name="extensions.classicthemerestorer.search_aho"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_osearch_dm"	name="extensions.classicthemerestorer.osearch_dm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_osearch_meoit"	name="extensions.classicthemerestorer.osearch_meoit" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_osearch_iwidth" name="extensions.classicthemerestorer.osearch_iwidth" type="bool"	instantApply="true"/>
@@ -1284,6 +1287,11 @@
 		<checkbox label="&Ctr_ctroldsearch;"	preference="ctraddon_ctroldsearch" id="ctraddon_pw_ctroldsearch" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(true);} else {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(false);}"/>
 		<checkbox label="&Ctr_search_oit;"		preference="ctraddon_search_oit" id="ctraddon_pw_search_oit" />
 		<description class="ctraddonsuboption">about:config &gt;&gt; browser.search.openintab</description>
+		<hbox class="ctraddonsuboption">
+		  <checkbox label="about:newtab"		preference="ctraddon_search_ant" id="ctraddon_pw_search_ant"/>
+		  <checkbox label="about:blank"			preference="ctraddon_search_abl" id="ctraddon_pw_search_abl"/>
+		  <checkbox label="about:home"			preference="ctraddon_search_aho" id="ctraddon_pw_search_aho"/>
+		</hbox>
 		<checkbox label="&Ctr_osearch_dm;"		preference="ctraddon_osearch_dm" id="ctraddon_pw_osearch_dm" class="ctraddon_winmaconly"/>
 		<checkbox label="&Ctr_ctroldsearchc;"	preference="ctraddon_ctroldsearchc" id="ctraddon_pw_ctroldsearchc"/>
 		<hbox align="center" class="ctraddonsuboption">

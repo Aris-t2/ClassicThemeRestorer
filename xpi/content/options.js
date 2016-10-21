@@ -916,6 +916,10 @@ classicthemerestorerjso.ctr = {
     document.getElementById('ctraddon_pw_osearch_iwidth').disabled = which;
     document.getElementById('ctraddon_pw_osearch_meoit').disabled = which;
 	document.getElementById('ctraddon_pw_osearch_cwidth').disabled = which;
+	document.getElementById('ctraddon_pw_search_ant').disabled = which;
+	document.getElementById('ctraddon_pw_search_abl').disabled = which;
+	document.getElementById('ctraddon_pw_search_aho').disabled = which;
+	
 	if(this.prefs.getBoolPref("osearch_cwidth") && which == false) {
 	  document.getElementById('ctraddon_os_spsize_minw').disabled = false;
 	  document.getElementById('ctraddon_os_spsize_maxw').disabled = false;

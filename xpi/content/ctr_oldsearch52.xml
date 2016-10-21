@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 
 <!--
-	This is a duplicate of default 'search.xml' taken from Firefox 41.
-    A few checks for deprecated boolean preferences had to be removed
-	for this to work on Firefox 43+. Additionally 'open-engine-manager' 
-	button points to default in-content search preferences.
-	'OneoffUI' binding, checks of oneoff items and telemetry code also got removed.
-	All "< ! - -  ### - - >" comments got removed to reduce file size.
+	This is a clone of 'ctr_oldsearch.xml' with only one difference:
+    inside xul:textbox
+				autocompletepopup="PopupAutoComplete"
+	was repaced by	
+				autocompletepopup="PopupSearchAutoComplete"
+	to use default searches popup as base.
 -->
 
 <!DOCTYPE bindings [
@@ -448,11 +448,30 @@
           var where = "current";
 		  var newTabPref = Services.prefs.getBranch("browser.search.").getBoolPref("openintab");
 		  
-		  Components.utils.import("resource://gre/modules/Services.jsm", {})
+		  Components.utils.import("resource://gre/modules/Services.jsm", {});
+		  
+		  var {NewTabURL} = Components.utils.import("resource:///modules/NewTabURL.jsm", {});
+		  var ctr_newtaburl = NewTabURL.get();
+		  var ctr_blankpage = "about:blank";
+		  var ctr_ahomepage = "about:home";
 		  
 		  // force search to open in a new tab, if the corresponding browser preference it active
 		  try {
-			if(newTabPref) where = "tab";
+			if(newTabPref) {
+			  
+			  if(!Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("search_ant") &&
+				gBrowser.currentURI.spec==ctr_newtaburl)
+				  where = "current";
+			  else if(!Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("search_abl") &&
+				gBrowser.currentURI.spec==ctr_blankpage)
+				  where = "current";
+			  else if(!Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("search_aho") &&
+				gBrowser.currentURI.spec==ctr_ahomepage)
+				  where = "current";
+			  else where = "tab";
+			  
+			}
+			
 		  } catch(e) {}
 
           // Open ctrl/cmd clicks on one-off buttons in a new background tab.

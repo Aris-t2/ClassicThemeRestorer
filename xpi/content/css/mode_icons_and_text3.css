@@ -253,5 +253,15 @@
 		  width: 18px !important;
 		}
 	}
+	
+	/*LastPass*/
+	#navigator-toolbox toolbar:not(#TabsToolbar) #lpt_lastpass-compact-btn:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text,
+	#ctraddon_addon-bar #lpt_lastpass-compact-btn:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text	{
+	  display: -moz-box !important;
+	}
+
+	#navigator-toolbox toolbar:not(#TabsToolbar) #lpt_lastpass-compact-btn	{
+      padding-top: 6px !important;
+	}
 
 }

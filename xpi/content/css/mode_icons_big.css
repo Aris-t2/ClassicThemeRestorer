@@ -7,6 +7,10 @@
 	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
 	
+	#main-window[fx52plus="true"] #nav-bar :-moz-any(#home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button,#e10s-button,#panic-button,#web-apps-button)[cui-areatype="toolbar"] {
+	  list-style-image: url(chrome://browser/skin/menuPanel.svg) !important;
+	}
+	
 	#nav-bar #ctraddon_back-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel3.png) !important;
@@ -57,6 +61,13 @@
 	  width:32px !important;
 	  height:32px !important;
 	  background: -moz-image-rect(url("chrome://browser/skin/menuPanel.png"),
+					0, 256, 32, 224) center no-repeat !important;
+	}
+	
+	#main-window[fx52plus="true"] #nav-bar #downloads-indicator-icon {
+	  width:32px !important;
+	  height:32px !important;
+	  background: -moz-image-rect(url("chrome://browser/skin/menuPanel.svg"),
 					0, 256, 32, 224) center no-repeat !important;
 	}
 
@@ -182,6 +193,11 @@
 	  list-style-image: url("chrome://browser/skin/menuPanel.png") !important;
 	  -moz-image-region: rect(0px, 992px, 32px, 960px) !important;
 	}
+	
+	#main-window[fx52plus="true"] #nav-bar #pocket-button[cui-areatype="toolbar"] {
+	  list-style-image: url("chrome://browser/skin/menuPanel.svg") !important;
+	  -moz-image-region: rect(0px, 992px, 32px, 960px) !important;
+	}
 
 	/* fixes bug with tabview buttons wrong panel icon */
 	#nav-bar #tabview-button[cui-areatype="toolbar"],
@@ -190,16 +206,33 @@
 	  -moz-image-region: rect(0px, 608px, 32px, 576px) !important;
 	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
+	
+	#main-window[fx52plus="true"] #nav-bar #tabview-button[cui-areatype="toolbar"],
+	#main-window[fx52plus="true"] #tabview-button[cui-areatype="menu-panel"],
+	#main-window[fx52plus="true"] toolbarpaletteitem[place="palette"] > #tabview-button {
+	  -moz-image-region: rect(0px, 608px, 32px, 576px) !important;
+	  list-style-image: url(chrome://browser/skin/menuPanel.svg) !important;
+	}
 
 	/* extra buttons from CTR add-on*/
 	#nav-bar #ctraddon_stop-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
 	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
+	
+	#main-window[fx52plus="true"] #ctraddon_stop-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
+	  list-style-image: url(chrome://browser/skin/menuPanel.svg) !important;
+	}
 
 	#nav-bar #ctraddon_reload-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
 	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
+	}
+	
+	#main-window[fx52plus="true"] #ctraddon_reload-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
+	  list-style-image: url(chrome://browser/skin/menuPanel.svg) !important;
 	}
 	
 	#nav-bar #ctraddon_restart-button > .toolbarbutton-icon{
