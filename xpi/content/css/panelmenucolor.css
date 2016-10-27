@@ -5,7 +5,9 @@
 	.panel-subviews,
 	#BMB_bookmarksPopup menupopup box,
 	#ctraddon_BMB_bookmarksPopup[panelopen="true"] menupopup[placespopup=true] > hbox,
-	#ctraddon_BMB_bookmarksPopup[panelopen="true"] #ctraddon_BMB_subscribeToPageSubmenuMenupopup {
+	#ctraddon_BMB_bookmarksPopup[panelopen="true"] #ctraddon_BMB_subscribeToPageSubmenuMenupopup,
+	#main-window[fx52plus="true"] #ctraddon_BMB_bookmarksPopup[panelopen="true"] menupopup[placespopup=true] > hbox,
+	#main-window[fx52plus="true"] #ctraddon_BMB_bookmarksPopup[panelopen="true"] #ctraddon_BMB_subscribeToPageSubmenuMenupopup {
 	  background: linear-gradient(white, -moz-dialog 30px) !important;    
 	}
 }

@@ -7,7 +7,7 @@
 	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
 	
-	#main-window[fx52plus="true"] #nav-bar :-moz-any(#home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button,#e10s-button,#panic-button,#web-apps-button)[cui-areatype="toolbar"] {
+	#main-window[fx51plus="true"] #nav-bar :-moz-any(#home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button,#e10s-button,#panic-button,#web-apps-button)[cui-areatype="toolbar"] {
 	  list-style-image: url(chrome://browser/skin/menuPanel.svg) !important;
 	}
 	
@@ -16,10 +16,21 @@
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel3.png) !important;
 	}
 	
+	#main-window[fx51plus="true"] #nav-bar #ctraddon_back-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel3_2.png) !important;
+	}
+	
 	#nav-bar #ctraddon_go-button > .toolbarbutton-icon,
 	#nav-bar #ctraddon_forward-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel3.png) !important;
+	}
+	
+	#main-window[fx51plus="true"] #nav-bar #ctraddon_go-button > .toolbarbutton-icon,
+	#main-window[fx51plus="true"] #nav-bar #ctraddon_forward-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel3_2.png) !important;
 	}
 
 	#nav-bar #home-button[cui-areatype="toolbar"] {
@@ -64,7 +75,7 @@
 					0, 256, 32, 224) center no-repeat !important;
 	}
 	
-	#main-window[fx52plus="true"] #nav-bar #downloads-indicator-icon {
+	#main-window[fx51plus="true"] #nav-bar #downloads-indicator-icon {
 	  width:32px !important;
 	  height:32px !important;
 	  background: -moz-image-rect(url("chrome://browser/skin/menuPanel.svg"),
@@ -144,8 +155,17 @@
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/appbutton_menuPanel.png) !important;
 	}
 	
+	#main-window[fx51plus="true"] #nav-bar #ctraddon_appbutton > .toolbarbutton-icon{
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/appbutton_menuPanel_2.png) !important;
+	}
+
 	#nav-bar #PanelUI-menu-button {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
+	  -moz-image-region: rect(0px, 32px, 32px, 0px) !important;
+	}
+	
+	#main-window[fx51plus="true"] #nav-bar #PanelUI-menu-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2_2.png") !important;
 	  -moz-image-region: rect(0px, 32px, 32px, 0px) !important;
 	}
 
@@ -154,8 +174,18 @@
 	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
 	}
 
+	#main-window[fx51plus="true"] #nav-bar #cut-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2_2.png") !important;
+	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
+	}
+
 	#nav-bar #copy-button {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
+	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
+	}
+	
+	#main-window[fx51plus="true"] #nav-bar #copy-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2_2.png") !important;
 	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
 	}
 
@@ -164,8 +194,18 @@
 	  -moz-image-region: rect(0px, 128px, 32px, 96px) !important;
 	}
 
+	#main-window[fx51plus="true"] #nav-bar #paste-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2_2.png") !important;
+	  -moz-image-region: rect(0px, 128px, 32px, 96px) !important;
+	}
+
 	#nav-bar #zoom-out-button {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
+	  -moz-image-region: rect(0px, 160px, 32px, 128px) !important;
+	}
+	
+	#main-window[fx51plus="true"] #nav-bar #zoom-out-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2_2.png") !important;
 	  -moz-image-region: rect(0px, 160px, 32px, 128px) !important;
 	}
 
@@ -174,8 +214,18 @@
 	  -moz-image-region: rect(0px, 192px, 32px, 160px) !important;
 	}
 
+	#main-window[fx51plus="true"] #nav-bar #zoom-in-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2_2.png") !important;
+	  -moz-image-region: rect(0px, 192px, 32px, 160px) !important;
+	}
+
 	#nav-bar #webrtc-status-button {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
+	  -moz-image-region: rect(0px, 224px, 32px, 192px) !important;
+	}
+	
+	#main-window[fx51plus="true"] #nav-bar #webrtc-status-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2_2.png") !important;
 	  -moz-image-region: rect(0px, 224px, 32px, 192px) !important;
 	}
 
@@ -183,9 +233,19 @@
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
 	  -moz-image-region: rect(0px, 256px, 32px, 224px) !important;
 	}
+
+	#main-window[fx51plus="true"] #nav-bar-overflow-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2_2.png") !important;
+	  -moz-image-region: rect(0px, 256px, 32px, 224px) !important;
+	}
 	
 	#nav-bar #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2.png") !important;
+	  -moz-image-region: rect(0px, 288px, 32px, 256px) !important;
+	}
+	
+	#main-window[fx51plus="true"] #nav-bar #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/menuPanel2_2.png") !important;
 	  -moz-image-region: rect(0px, 288px, 32px, 256px) !important;
 	}
 
@@ -194,7 +254,7 @@
 	  -moz-image-region: rect(0px, 992px, 32px, 960px) !important;
 	}
 	
-	#main-window[fx52plus="true"] #nav-bar #pocket-button[cui-areatype="toolbar"] {
+	#main-window[fx51plus="true"] #nav-bar #pocket-button[cui-areatype="toolbar"] {
 	  list-style-image: url("chrome://browser/skin/menuPanel.svg") !important;
 	  -moz-image-region: rect(0px, 992px, 32px, 960px) !important;
 	}
@@ -207,9 +267,9 @@
 	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
 	
-	#main-window[fx52plus="true"] #nav-bar #tabview-button[cui-areatype="toolbar"],
-	#main-window[fx52plus="true"] #tabview-button[cui-areatype="menu-panel"],
-	#main-window[fx52plus="true"] toolbarpaletteitem[place="palette"] > #tabview-button {
+	#main-window[fx51plus="true"] #nav-bar #tabview-button[cui-areatype="toolbar"],
+	#main-window[fx51plus="true"] #tabview-button[cui-areatype="menu-panel"],
+	#main-window[fx51plus="true"] toolbarpaletteitem[place="palette"] > #tabview-button {
 	  -moz-image-region: rect(0px, 608px, 32px, 576px) !important;
 	  list-style-image: url(chrome://browser/skin/menuPanel.svg) !important;
 	}
@@ -220,7 +280,7 @@
 	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
 	
-	#main-window[fx52plus="true"] #ctraddon_stop-button > .toolbarbutton-icon{
+	#main-window[fx51plus="true"] #ctraddon_stop-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
 	  list-style-image: url(chrome://browser/skin/menuPanel.svg) !important;
 	}
@@ -230,7 +290,7 @@
 	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
 	
-	#main-window[fx52plus="true"] #ctraddon_reload-button > .toolbarbutton-icon{
+	#main-window[fx51plus="true"] #ctraddon_reload-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
 	  list-style-image: url(chrome://browser/skin/menuPanel.svg) !important;
 	}
@@ -243,18 +303,34 @@
 	  -moz-image-region: rect(0px, 32px, 32px, 0px) !important;
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/history_sidebar.png) !important;
 	}
+	#main-window[fx51plus="true"] #nav-bar #ctraddon_history-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 32px, 32px, 0px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/history_sidebar_2.png) !important;
+	}
 	#nav-bar #ctraddon_history-menu-toolbar-button > .toolbarbutton-icon {
 	  -moz-image-region: rect(0px, 32px, 32px, 0px) !important;
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/history_menu.png) !important;
+	}
+	#main-window[fx51plus="true"] #nav-bar #ctraddon_history-menu-toolbar-button > .toolbarbutton-icon {
+	  -moz-image-region: rect(0px, 32px, 32px, 0px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/history_menu_2.png) !important;
 	}
 	/* star icon instead of old bookmarks icon */
 	#nav-bar #ctraddon_bookmarks-menu-toolbar-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 32px, 32px, 0px) !important;
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/bookmarks_menu.png) !important;
 	}
+	#main-window[fx51plus="true"] #nav-bar #ctraddon_bookmarks-menu-toolbar-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 32px, 32px, 0px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/bookmarks_menu_2.png) !important;
+	}
 	#nav-bar #ctraddon_bookmarks-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 32px, 32px, 0px) !important;
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/bookmarks_sidebar.png) !important;
+	}
+	#main-window[fx51plus="true"] #nav-bar #ctraddon_bookmarks-button > .toolbarbutton-icon{
+	  -moz-image-region: rect(0px, 32px, 32px, 0px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/bookmarks_sidebar_2.png) !important;
 	}
 	
 	/*call button*/

@@ -27,6 +27,7 @@
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings51.xml#autocomplete-richlistitem") !important;
 	}
 
+	/* restyle popup items */
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
 	  -moz-box-orient: vertical !important;

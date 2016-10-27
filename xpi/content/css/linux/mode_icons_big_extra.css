@@ -6,6 +6,10 @@
 	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
 	
+	#main-window[fx51plus="true"] #nav-bar :-moz-any(#back-button, #forward-button)[cui-areatype="toolbar"] {
+	  list-style-image: url(chrome://browser/skin/menuPanel.svg) !important;
+	}
+	
 	#nav-bar #back-button:not(:hover) > .toolbarbutton-icon,
 	#nav-bar #forward-button:not(:hover) > .toolbarbutton-icon,
 	#nav-bar #back-button:hover[disabled] > .toolbarbutton-icon,
@@ -64,12 +68,21 @@
 	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel3.png) !important;
 	}
-
+	#main-window[fx51plus="true"] #nav-bar #forward-button{
+	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel3_2.png) !important;
+	}
+	
 	/* prevents small button mode from altering image region */
 	#nav-bar #urlbar-container #back-button:not([cui-areatype="menu-panel"]),
 	#nav-bar #back-button{
 	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel3.png) !important;
+	}
+	#main-window[fx51plus="true"] #nav-bar #urlbar-container #back-button:not([cui-areatype="menu-panel"]),
+	#main-window[fx51plus="true"] #nav-bar #back-button{
+	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/menuPanel3_2.png) !important;
 	}
 
 	/* remove back/forward buttons clipping */

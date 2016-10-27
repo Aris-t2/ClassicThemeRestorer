@@ -6108,6 +6108,10 @@ classicthemerestorerjs.ctr = {
 					  margin-left: '+this.prefs.getIntPref('navbarmar_l')+'px !important;\
 					  margin-right: '+this.prefs.getIntPref('navbarmar_r')+'px !important;\
 					}\
+					/* force min/max/close to be accessible*/\
+					#titlebar-buttonbox {\
+					  z-index: 99999 !important;\
+					}\
 				'), null, null);
 				
 				applyNewSheet(this.navbarpadding);

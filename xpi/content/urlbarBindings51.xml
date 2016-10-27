@@ -95,6 +95,11 @@
 
       <field name="_oneOffSearchesEnabled">false</field>
 
+      <field name="_overrideValue">null</field>
+      <property name="overrideValue"
+                onget="return this._overrideValue;"
+                onset="this._overrideValue = val; return val;"/>
+
       <method name="enableOneOffSearches">
         <parameter name="enable"/>
         <body><![CDATA[
@@ -291,6 +296,7 @@
       <method name="_showSearchSuggestionsNotification">
         <body>
           <![CDATA[
+
           this.richlistbox.flex = 0;
           this.setAttribute("dontanimate", "true");
 
@@ -433,7 +439,7 @@
           <![CDATA[
             if (this.selectedIndex == -1 && this._isFirstResultHeuristic) {
               this.richlistbox.suppressMenuItemEvent = true;
-              this.selectedIndex = 0;
+              this.input.controller.setInitiallySelectedIndex(0);
               this.richlistbox.suppressMenuItemEvent = false;
             }
 
@@ -442,9 +448,12 @@
             if (this.input.handleEnterInstance) {
               let instance = this.input.handleEnterInstance;
               this.input.handleEnterInstance = null;
+
               setTimeout(() => {
-                if (this.input.mController.searchString == instance.searchString) {
-                  this.input.mController.handleEnter(false, instance.event);
+                let { event, searchString } = instance;
+                if (this.input.mController.searchString == searchString) {
+                  this.input.maybeCanonizeURL(event, searchString);
+                  this.input.mController.handleEnter(false, event);
                 }
               }, 0);
             }
@@ -454,7 +463,6 @@
 
       <method name="_onSearchBegin">
         <body><![CDATA[
-          this.selectedIndex = 0;
         ]]></body>
       </method>
 
@@ -470,7 +478,7 @@
 
     </handlers>
   </binding>
- 
+
   <binding id="autocomplete-richlistitem" extends="chrome://global/content/bindings/richlistbox.xml#richlistitem">
 
     <content align="start"

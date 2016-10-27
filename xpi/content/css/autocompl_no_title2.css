@@ -14,7 +14,7 @@
 	#main-window[fx50plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings51.xml#urlbar-rich-result-popup") !important;
 	}
-
+	
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem:not(:-moz-any([collapse="true"],[actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"])) .ac-title,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem:not(:-moz-any([collapse="true"],[actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"])) .ac-title,
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem:not([collapse="true"]) .ac-separator,
