@@ -95,26 +95,9 @@
 
       <field name="_oneOffSearchesEnabled">false</field>
 
-      <field name="_overrideValue">null</field>
-      <property name="overrideValue"
-                onget="return this._overrideValue;"
-                onset="this._overrideValue = val; return val;"/>
-
       <method name="enableOneOffSearches">
         <parameter name="enable"/>
         <body><![CDATA[
-          this._oneOffSearchesEnabled = enable;
-          if (enable) {
-            this.oneOffSearchButtons.style.display = "-moz-box";
-            this.oneOffSearchButtons.popup = this;
-            this.oneOffSearchButtons.textbox = this.input;
-            this.oneOffSearchButtons.telemetryOrigin = "urlbar";
-          } else {
-            this.oneOffSearchButtons.style.display = "none";
-            this.oneOffSearchButtons.popup = null;
-            this.oneOffSearchButtons.textbox = null;
-            this.oneOffSearchButtons.telemetryOrigin = null;
-          }
         ]]></body>
       </method>
 
@@ -294,7 +277,6 @@
 		  else
             this.openPopup(aElement, "after_start", 0, -1, false, false);
 
-
         ]]></body>
       </method>
 
@@ -386,28 +368,12 @@
 
       <method name="_selectedOneOffChanged">
         <body><![CDATA[
-          for (let item of this.richlistbox.childNodes) {
-            if (item.collapsed) {
-              break;
-            }
-            let url = item.getAttribute("url");
-            if (url) {
-              let action = item._parseActionUrl(url);
-              if (action && action.type == "searchengine") {
-                item._adjustAcItem();
-              }
-            }
-          }
         ]]></body>
       </method>
 
       <method name="handleKeyPress">
         <parameter name="aEvent"/>
         <body><![CDATA[
-          this.oneOffSearchButtons.handleKeyPress(aEvent, this._matchCount,
-                                                  !this._isFirstResultHeuristic,
-                                                  gBrowser.userTypedValue);
-          return aEvent.defaultPrevented;
         ]]></body>
       </method>
 
@@ -417,15 +383,11 @@
         <parameter name="where"/>
         <parameter name="params"/>
         <body><![CDATA[
-          this.input.handleCommand(event, where, params);
         ]]></body>
       </method>
 
-
       <property name="overrideSearchEngineName" readonly="true">
         <getter><![CDATA[
-          let button = this.oneOffSearchButtons.selectedButton;
-          return button && button.engine && button.engine.name;
         ]]></getter>
       </property>
 
@@ -471,8 +433,7 @@
           <![CDATA[
             if (this.selectedIndex == -1 && this._isFirstResultHeuristic) {
               this.richlistbox.suppressMenuItemEvent = true;
-
-              this.input.controller.setInitiallySelectedIndex(0);
+              this.selectedIndex = 0;
               this.richlistbox.suppressMenuItemEvent = false;
             }
 
@@ -481,12 +442,9 @@
             if (this.input.handleEnterInstance) {
               let instance = this.input.handleEnterInstance;
               this.input.handleEnterInstance = null;
-              
-			  setTimeout(() => {
-                let { event, searchString } = instance;
-                if (this.input.mController.searchString == searchString) {
-                  this.input.maybeCanonizeURL(event, searchString);
-                  this.input.mController.handleEnter(false, event);
+              setTimeout(() => {
+                if (this.input.mController.searchString == instance.searchString) {
+                  this.input.mController.handleEnter(false, instance.event);
                 }
               }, 0);
             }
@@ -496,8 +454,7 @@
 
       <method name="_onSearchBegin">
         <body><![CDATA[
-          this.input.controller.setInitiallySelectedIndex(0);
-          this.overrideValue = null;
+          this.selectedIndex = 0;
         ]]></body>
       </method>
 
@@ -505,7 +462,6 @@
     <handlers>
 
       <handler event="SelectedOneOffButtonChanged"><![CDATA[
-        this._selectedOneOffChanged();
       ]]></handler>
 
       <handler event="mousedown"><![CDATA[
@@ -514,7 +470,7 @@
 
     </handlers>
   </binding>
-
+ 
   <binding id="autocomplete-richlistitem" extends="chrome://global/content/bindings/richlistbox.xml#richlistitem">
 
     <content align="start"

@@ -416,7 +416,8 @@ classicthemerestorerjso.ctr = {
 	}
 
 	if (this.appversion < 51) {
-	  document.getElementById('ctraddon_pw_oneoffsearchgb').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_oneoffsearch').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_oneoffsearch_desc').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_hideurlzoom').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_dl_pm_drop').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_dl_pm_dropdes').style.visibility = 'collapse';

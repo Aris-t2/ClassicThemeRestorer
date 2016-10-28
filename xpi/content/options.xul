@@ -374,13 +374,13 @@
 	  <radio value="ctraddon_addonmngrbox"	label="&Ctr_addonmanager;"	class="ctraddontab"/>
 	  <radio value="ctraddon_locationbbox"	label="&Ctr_urlbar; (1)"	class="ctraddontab ctraddon_new_in_v51"/>
 	  <radio value="ctraddon_locationbbox2"	label="&Ctr_urlbar; (2)"	class="ctraddontab"/>
-	  <radio value="ctraddon_locationbbox3"	label="&Ctr_urlbar; (3)"	class="ctraddontab ctraddon_new_in_v48 ctraddon_new_in_v50"/>
+	  <radio value="ctraddon_locationbbox3"	label="&Ctr_urlbar; (3)"	class="ctraddontab ctraddon_new_in_v48 ctraddon_new_in_v50 ctraddon_new_in_v51"/>
 	  <radio value="ctraddon_locationbbox4"	label="&Ctr_urlbar; / &Ctr_searchbar;" class="ctraddontab"/>
 	  <radio value="ctraddon_searchuibox"	label="&Ctr_searchbar;"		class="ctraddontab"/>
 	  <radio value="ctraddon_toolbarsbox"	label="&Ctr_toolbars; (1)"	class="ctraddontab"/>
 	  <radio value="ctraddon_toolbarsbox2"	label="&Ctr_toolbars; (2)"	class="ctraddontab"/>
 	  <radio value="ctraddon_toolbarsbox3"	label="&Ctr_toolbars; (3)"	class="ctraddontab ctraddon_new_in_v51"/>
-	  <radio value="ctraddon_experttweaks"	label="&Ctr_experttweaks;"	id="ctraddon_experttweakstab" class="ctraddontab ctraddon_new_in_v50 ctraddon_new_in_v51"/>
+	  <radio value="ctraddon_experttweaks"	label="&Ctr_experttweaks;"	id="ctraddon_experttweakstab" class="ctraddontab ctraddon_new_in_v50"/>
 	  <radio value="ctraddon_animationbox"	label="&Ctr_animation;"		class="ctraddontab"/>
 	  <radio value="ctraddon_ctraddonbox"	label="&Ctr_title;"			class="ctraddontab"/>
 	  <label value=""/>
@@ -1211,6 +1211,9 @@
 		  <label value="px"/>
 		</hbox>
 		
+		<checkbox label="&Ctr_acompl_search;" preference="ctraddon_oneoffsearch" id="ctraddon_pw_oneoffsearch" class="ctraddon_new_in_v51"/>
+		<description class="ctraddonsuboption" id="ctraddon_pw_oneoffsearch_desc">about:config &gt;&gt; browser.urlbar.oneOffSearches</description>
+		
 		<description id="ctraddon_lbsugres" class="ctraddon_font1">&Ctr_autocompl_hl;</description>
 		<hbox>
 		  <checkbox label="&Ctr_bold;" preference="ctraddon_autocompl_hln" id="ctraddon_pw_autocompl_hln"/>
@@ -1220,11 +1223,11 @@
 		</hbox>
 
 		<description id="ctraddon_lbsugres" class="ctraddon_font1">&Ctr_lbsugres;</description>
-		<description>about:config &gt;&gt; browser.urlbar.maxRichResults</description>
 		<hbox id="ctraddon_pw_lbsugresbox" align="center">
 		  <textbox size="4" maxlength="4" preference="ctraddon_urlresultsl" type="number" min="0" onchange="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		  <label value=" 10 &Ctr_tabwidthdef; / 12 (&brandShortName; 45-47)"/>
 		</hbox>
+		<description class="ctraddonsuboption">about:config &gt;&gt; browser.urlbar.maxRichResults</description>
 
 	  </groupbox>
 	  
@@ -1560,12 +1563,6 @@
 	  <groupbox id="ctraddon_pw_flywebgb">
 		<caption  label="&Ctr_e_flyweb;" class="ctraddon_topic"/>
 		<checkbox label="about:config &gt;&gt; dom.flyweb.enabled" preference="ctraddon_flyweb" id="ctraddon_pw_flyweb" class="ctraddon_new_in_v50"/>
-	  </groupbox>
-	  
-	  <groupbox id="ctraddon_pw_oneoffsearchgb">
-		<caption  label="&Ctr_e_oneoffsearch;" class="ctraddon_topic"/>
-		<checkbox label="about:config &gt;&gt; browser.urlbar.oneOffSearches" preference="ctraddon_oneoffsearch" id="ctraddon_pw_oneoffsearch" class="ctraddon_new_in_v51"/>
-		<description class="ctraddonsuboption acprefdesc">&Ctr_fx51OOSeach;</description>
 	  </groupbox>
 	  
 	</box>
