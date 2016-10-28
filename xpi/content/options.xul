@@ -94,6 +94,9 @@
 		<preference id="ctraddon_ctrosearchct"	name="extensions.classicthemerestorer.ctrosearchct"	 type="int"		instantApply="true"/>
 		<preference id="ctraddon_ctroldsearchr"	name="extensions.classicthemerestorer.ctroldsearchr" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_ctrosearchrt"	name="extensions.classicthemerestorer.ctrosearchrt"	 type="int"		instantApply="true"/>
+		<preference id="ctraddon_search_ant"	name="extensions.classicthemerestorer.search_ant"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_search_abl"	name="extensions.classicthemerestorer.search_abl"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_search_aho"	name="extensions.classicthemerestorer.search_aho"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_osearch_dm"	name="extensions.classicthemerestorer.osearch_dm"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_osearch_meoit"	name="extensions.classicthemerestorer.osearch_meoit" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_osearch_iwidth" name="extensions.classicthemerestorer.osearch_iwidth" type="bool"	instantApply="true"/>
@@ -371,13 +374,13 @@
 	  <radio value="ctraddon_addonmngrbox"	label="&Ctr_addonmanager;"	class="ctraddontab"/>
 	  <radio value="ctraddon_locationbbox"	label="&Ctr_urlbar; (1)"	class="ctraddontab ctraddon_new_in_v51"/>
 	  <radio value="ctraddon_locationbbox2"	label="&Ctr_urlbar; (2)"	class="ctraddontab"/>
-	  <radio value="ctraddon_locationbbox3"	label="&Ctr_urlbar; (3)"	class="ctraddontab ctraddon_new_in_v48 ctraddon_new_in_v50"/>
+	  <radio value="ctraddon_locationbbox3"	label="&Ctr_urlbar; (3)"	class="ctraddontab ctraddon_new_in_v48 ctraddon_new_in_v50 ctraddon_new_in_v51"/>
 	  <radio value="ctraddon_locationbbox4"	label="&Ctr_urlbar; / &Ctr_searchbar;" class="ctraddontab"/>
 	  <radio value="ctraddon_searchuibox"	label="&Ctr_searchbar;"		class="ctraddontab"/>
 	  <radio value="ctraddon_toolbarsbox"	label="&Ctr_toolbars; (1)"	class="ctraddontab"/>
 	  <radio value="ctraddon_toolbarsbox2"	label="&Ctr_toolbars; (2)"	class="ctraddontab"/>
 	  <radio value="ctraddon_toolbarsbox3"	label="&Ctr_toolbars; (3)"	class="ctraddontab ctraddon_new_in_v51"/>
-	  <radio value="ctraddon_experttweaks"	label="&Ctr_experttweaks;"	id="ctraddon_experttweakstab" class="ctraddontab ctraddon_new_in_v50 ctraddon_new_in_v51"/>
+	  <radio value="ctraddon_experttweaks"	label="&Ctr_experttweaks;"	id="ctraddon_experttweakstab" class="ctraddontab ctraddon_new_in_v50"/>
 	  <radio value="ctraddon_animationbox"	label="&Ctr_animation;"		class="ctraddontab"/>
 	  <radio value="ctraddon_ctraddonbox"	label="&Ctr_title;"			class="ctraddontab"/>
 	  <label value=""/>
@@ -493,8 +496,8 @@
 		<description class="ctraddonsuboption">about:config &gt;&gt; browser.tabs.insertRelatedAfterCurrent</description>
 		<checkbox label="&Ctr_dblclnewtab;"	preference="ctraddon_dblclnewtab" id="ctraddon_pw_dblclnewtab" class="ctraddon_windowsonly"/>
 		<description id="ctraddon_pw_dblclnewtabdes" class="ctraddonsuboption ctraddon_windowsonly">&Ctr_dblclnewtabdes;</description>
-		<checkbox label="&Ctr_hightabpos;"	preference="ctraddon_hightabpososx" id="ctraddon_pw_hightabpososx"/>
 		<checkbox label="&Ctr_showalltabsb;" preference="ctraddon_showalltabsb" id="ctraddon_pw_showalltabsb"/>
+		<checkbox label="&Ctr_hightabpos;"	preference="ctraddon_hightabpososx" id="ctraddon_pw_hightabpososx"/>
 		<checkbox label="&Ctr_hidetbwot;"	preference="ctraddon_hidetbwot" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(true);} else {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(false);} classicthemerestorerjso.ctr.needsBrowserRestart();"/>
 		<checkbox label="&Ctr_hidetbwote;"	preference="ctraddon_hidetbwote" class="ctraddonsuboption" id="ctraddon_pw_hidetbwote"/>
 		<description id="ctraddon_pw_hidetbwote_winc" class="ctraddonsuboption2 ctraddon_windowsonly">&Ctr_hidetbwote_i;</description>
@@ -831,7 +834,7 @@
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_appbuttonbox">
 
 	  <hbox><checkbox label="&Ctr_tabsintitlebar;"	preference="ctraddon_tabsintitlebar" id="ctraddon_tabs_in_titlebar" tooltiptext="browser.tabs.drawInTitlebar"/></hbox>
-	  <description class="ctraddonsuboption">about:config &gt;&gt; browser.tabs.drawInTitlebar</description>
+	  <description class="ctraddonsuboption ctraddon_winmaconly">about:config &gt;&gt; browser.tabs.drawInTitlebar</description>
 
 	  <groupbox>
 		<caption  label="&Ctr_appbutton;" class="ctraddon_topic" id="ctraddon_pw_appbuttonname"/>
@@ -1208,6 +1211,9 @@
 		  <label value="px"/>
 		</hbox>
 		
+		<checkbox label="&Ctr_acompl_search;" preference="ctraddon_oneoffsearch" id="ctraddon_pw_oneoffsearch" class="ctraddon_new_in_v51"/>
+		<description class="ctraddonsuboption" id="ctraddon_pw_oneoffsearch_desc">about:config &gt;&gt; browser.urlbar.oneOffSearches</description>
+		
 		<description id="ctraddon_lbsugres" class="ctraddon_font1">&Ctr_autocompl_hl;</description>
 		<hbox>
 		  <checkbox label="&Ctr_bold;" preference="ctraddon_autocompl_hln" id="ctraddon_pw_autocompl_hln"/>
@@ -1217,11 +1223,11 @@
 		</hbox>
 
 		<description id="ctraddon_lbsugres" class="ctraddon_font1">&Ctr_lbsugres;</description>
-		<description>about:config &gt;&gt; browser.urlbar.maxRichResults</description>
 		<hbox id="ctraddon_pw_lbsugresbox" align="center">
 		  <textbox size="4" maxlength="4" preference="ctraddon_urlresultsl" type="number" min="0" onchange="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 		  <label value=" 10 &Ctr_tabwidthdef; / 12 (&brandShortName; 45-47)"/>
 		</hbox>
+		<description class="ctraddonsuboption">about:config &gt;&gt; browser.urlbar.maxRichResults</description>
 
 	  </groupbox>
 	  
@@ -1284,6 +1290,11 @@
 		<checkbox label="&Ctr_ctroldsearch;"	preference="ctraddon_ctroldsearch" id="ctraddon_pw_ctroldsearch" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(true);} else {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(false);}"/>
 		<checkbox label="&Ctr_search_oit;"		preference="ctraddon_search_oit" id="ctraddon_pw_search_oit" />
 		<description class="ctraddonsuboption">about:config &gt;&gt; browser.search.openintab</description>
+		<hbox class="ctraddonsuboption">
+		  <checkbox label="about:newtab"		preference="ctraddon_search_ant" id="ctraddon_pw_search_ant"/>
+		  <checkbox label="about:blank"			preference="ctraddon_search_abl" id="ctraddon_pw_search_abl"/>
+		  <checkbox label="about:home"			preference="ctraddon_search_aho" id="ctraddon_pw_search_aho"/>
+		</hbox>
 		<checkbox label="&Ctr_osearch_dm;"		preference="ctraddon_osearch_dm" id="ctraddon_pw_osearch_dm" class="ctraddon_winmaconly"/>
 		<checkbox label="&Ctr_ctroldsearchc;"	preference="ctraddon_ctroldsearchc" id="ctraddon_pw_ctroldsearchc"/>
 		<hbox align="center" class="ctraddonsuboption">
@@ -1554,12 +1565,6 @@
 		<checkbox label="about:config &gt;&gt; dom.flyweb.enabled" preference="ctraddon_flyweb" id="ctraddon_pw_flyweb" class="ctraddon_new_in_v50"/>
 	  </groupbox>
 	  
-	  <groupbox id="ctraddon_pw_oneoffsearchgb">
-		<caption  label="&Ctr_e_oneoffsearch;" class="ctraddon_topic"/>
-		<checkbox label="about:config &gt;&gt; browser.urlbar.oneOffSearches" preference="ctraddon_oneoffsearch" id="ctraddon_pw_oneoffsearch" class="ctraddon_new_in_v51"/>
-		<description class="ctraddonsuboption acprefdesc">&Ctr_fx51OOSeach;</description>
-	  </groupbox>
-	  
 	</box>
 
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_ctraddonbox">
@@ -1625,7 +1630,7 @@
   
   <hbox align="center" style="padding-top:5px;">
     <button label="&Ctr_pw_settings;" popup="ctr_pw_settingsPopup"/>
-	<button label="Classic Toolbar Buttons" class="ctraddon_windowsonly" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://addons.mozilla.org/addon/cstbb/versions/'); };"/>
+	<button label="Classic Toolbar Buttons" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://addons.mozilla.org/addon/cstbb/versions/'); };"/>
 	<spacer flex="1" />
 	<button label="&Ctr_support;" id="ctraddon_support"  popup="ctr_pw_supportPopup"/>
 	<button dlgtype="accept" id="ctraddon_pw_okbutton"/>

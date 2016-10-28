@@ -45,19 +45,19 @@
 	  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png") !important;
 	}
 	
-	panel[type="autocomplete-richlistbox"] richlistitem[selected="true"]:not([collapse="true"]),
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[selected="true"]:not([collapse="true"]),
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[selected="true"]:not([collapse="true"]) {
 	  border-top: 1px solid transparent !important;
 	  border-bottom: 1px solid transparent !important;
 	}
 
-	panel[type="autocomplete-richlistbox"] richlistitem[selected="true"] + richlistitem:not([collapse="true"]),
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[selected="true"] + richlistitem:not([collapse="true"]),
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[selected="true"] + richlistitem:not([collapse="true"]) {
 	  border-top: 1px solid transparent !important;
 	  border-bottom: 1px solid transparent !important;
 	}
 	
-	panel[type="autocomplete-richlistbox"] .autocomplete-richlistbox,
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistbox,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistbox {
 	  padding: 1px !important;
 	}

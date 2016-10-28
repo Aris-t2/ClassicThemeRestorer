@@ -15,7 +15,7 @@
 <!ENTITY Ctr_windowcontrols	"Min/Max/Cerrar (pantalla completa)">
 <!ENTITY Ctr_rr				"¡Requiere reiniciar!">
 <!ENTITY Ctr_window			"ventana">
-<!ENTITY Ctr_centered		"Centered">
+<!ENTITY Ctr_centered		"Centrado">
 
 <!ENTITY Ctr_cuibuttons		"Botones">
 <!ENTITY Ctr_cuibutnormal	"Normales">
@@ -82,9 +82,9 @@
 <!ENTITY Ctr_appbutton0		"Botón deshabilitado">
 <!ENTITY Ctr_appbutton1		"Botón en la barra de herramientas">
 <!ENTITY Ctr_appbutton1wt	"Botón en la barra de herramientas (sólo texto)">
-<!ENTITY Ctr_appbutton2		"Botón en la barra de título [de &brandShortName;]">
-<!ENTITY Ctr_appbutton2h	"Botón en la barra de título [de &brandShortName;] (oculto)">
-<!ENTITY Ctr_appbutton2io	"Botón en la barra de título [de &brandShortName;] (sólo icono)">
+<!ENTITY Ctr_appbutton2		"Botón en la barra de título de &brandShortName;">
+<!ENTITY Ctr_appbutton2h	"Botón en la barra de título de &brandShortName; (oculto)">
+<!ENTITY Ctr_appbutton2io	"Botón en la barra de título de &brandShortName; (sólo icono)">
 <!ENTITY Ctr_paneluibtweak	"A modo de botón de menú de panel principal...">
 <!ENTITY Ctr_paneluibtweak2	"A modo de botón de menú de panel principal para la barra de pestañas (sólo icono)...">
 <!ENTITY Ctr_paneluibtweak3	"... cuando tal botón esté en la barra de pestañas">
@@ -123,8 +123,8 @@
 <!ENTITY Ctr_altoptionsd	"Apariencia predeterminada">
 <!ENTITY Ctr_altoptionsp	"Apariencia alternativa">
 <!ENTITY Ctr_altoptionsw	"Abrir página de opciones en una ventana">
-<!ENTITY Ctr_altoptionsww	"Ancho">
-<!ENTITY Ctr_altoptionswh	"Alto">
+<!ENTITY Ctr_altoptionsww	"Ancho:">
+<!ENTITY Ctr_altoptionswh	"Alto:">
 <!ENTITY Ctr_altoptionsi	"La ventana simulada de opciones ya no es un cuadro de diálogo sino una 'ventana de navegador' con todas las barras de herramientas ocultas. La característica 'Usar página actual' como página de inicio sólo añade URLs de páginas abiertas en la ventana actual, que en este caso sólo es 'about:preferences'. El botón de barra de herramientas 'Opciones' se sustituye por uno nuevo para poder abrir las opciones en una ventana.">
 <!ENTITY Ctr_options_rem	"Recordar la última categoría seleccionada">
 <!ENTITY Ctr_aboutpages		"Páginas 'about:' generales: Apariencia alternativa">
@@ -149,7 +149,7 @@
 <!ENTITY Ctr_hideprivmask	"Navegación privada: Ocultar indicador de máscara">
 <!ENTITY Ctr_navsmallicons	"Iconos pequeños">
 <!ENTITY Ctr_navlargeicons	"Iconos grandes">
-<!ENTITY Ctr_nbisizedelay0	"Retardo de la activación al inicio">
+<!ENTITY Ctr_nbisizedelay0	"de retardo de la activación al inicio">
 <!ENTITY Ctr_nbisizedelay	"ms (1000 ms = 1 seg)">
 <!ENTITY Ctr_findbar		"Barra de herramientas de búsqueda">
 <!ENTITY Ctr_findbar_hws	"Cerrar la barra de herramientas de búsqueda al desplazar la página">
@@ -173,7 +173,7 @@
 <!ENTITY Ctr_ctroldsearch	"Menú antiguo de la barra de búsqueda">
 <!ENTITY Ctr_ctroldsearchc	"Limpiar barra de búsqueda después de buscar">
 <!ENTITY Ctr_ctroldsearchr	"Volver al primer motor de búsqueda de la lista después de buscar">
-<!ENTITY Ctr_ctrosearchdel	"Retardo de la activación">
+<!ENTITY Ctr_ctrosearchdel	"de retardo">
 <!ENTITY Ctr_search_oit		"Abrir búsqueda en una nueva pestaña">
 <!ENTITY Ctr_osearch_meoit	"Clic central: Realiza la búsqueda en una nueva 'pestaña en primer plano'">
 <!ENTITY Ctr_osearch_iwidth	"Ajustar automáticamente la anchura del menú emergente">
@@ -283,7 +283,8 @@
 <!ENTITY Ctr_urlbar_uc		"Deshabilitar 'Autocompletado unificado'">
 <!ENTITY Ctr_altautocompl	"Apariencia alternativa">
 <!ENTITY Ctr_autocompl_it	"Eliminar los elementos 'Buscar con...' y 'Visitar' (si están presentes)">
-<!ENTITY Ctr_autocompl_hl	"Marcado de coincidencias">
+<!ENTITY Ctr_acompl_search	"Show search engines">
+<!ENTITY Ctr_autocompl_hl	"Resaltado de coincidencias">
 <!ENTITY Ctr_autocompl_rhl	"Colores Aero para resultados destacados">
 <!ENTITY Ctr_autocompl_not	"Ocultar título de página">
 <!ENTITY Ctr_autocompl_sep	"Mostrar separador entre resultados">
@@ -384,8 +385,6 @@
 <!ENTITY Ctr_e_findbarhl	"Función de resaltado de la barra de herramientas de búsqueda.">
 <!ENTITY Ctr_fx50findbarhl	"Desmarcarlas deshabilita el resaltado: estilo modal (con atenuación) / de todas las coincidencias">
 <!ENTITY Ctr_e_flyweb		"Flyweb">
-<!ENTITY Ctr_e_oneoffsearch	"Selección de búsqueda en menús emergentes de autocompletado">
-<!ENTITY Ctr_fx51OOSeach	"Desmarcar esto elimina el selector de búsqueda del menú de autocompletado de las barras de direcciones.">
 
 
 <!ENTITY Ctr_pw_settings	"Configuración">

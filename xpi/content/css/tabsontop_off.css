@@ -86,6 +86,12 @@
 	  border: none !important;
 	}
 
+	/* colorize tabs toolbar for developer edition theme */
+	#main-window[developertheme="true"][defaultfxtheme="true"][tabsontop="false"] #navigator-toolbox::after,
+	#main-window[developertheme="true"][defaultfxtheme="true"][tabsontop="false"] #TabsToolbar{
+	  background-color:var(--chrome-secondary-background-color) !important;
+	}
+
 	/* TMP multibar support */
 	#TabsToolbar[multibar]:not(:-moz-lwtheme)  {
 	  margin-bottom: -3px !important;
@@ -93,15 +99,9 @@
 	#TabsToolbar[multibar]:-moz-lwtheme  {
 	  margin-bottom: -2px !important;
 	}
-	
-	/* colorize tabs toolbar for developer edition theme */
-	#main-window[developertheme="true"][defaultfxtheme="true"][tabsontop="false"] #navigator-toolbox::after,
-	#main-window[developertheme="true"][defaultfxtheme="true"][tabsontop="false"] #TabsToolbar{
-		background-color:var(--chrome-secondary-background-color) !important;
-	}
-	
-	/* Windows 10 tweaks */
+
 	@media (-moz-os-version: windows-win10) {
+	  #TabsToolbar[multibar]:not(:-moz-lwtheme),
 	  #TabsToolbar:not([multibar]):-moz-lwtheme  {
 		margin-bottom: -1px !important;
 	  }

@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 
 <!--
-	This is a duplicate of default 'search.xml' taken from Firefox 41.
-    A few checks for deprecated boolean preferences had to be removed
-	for this to work on Firefox 43+. Additionally 'open-engine-manager' 
-	button points to default in-content search preferences.
-	'OneoffUI' binding, checks of oneoff items and telemetry code also got removed.
-	All "< ! - -  ### - - >" comments got removed to reduce file size.
+	This is a clone of 'ctr_oldsearch.xml' with only one difference:
+    inside xul:textbox
+				autocompletepopup="PopupAutoComplete"
+	was repaced by	
+				autocompletepopup="PopupSearchAutoComplete"
+	to use default searches popup as base.
 -->
 
 <!DOCTYPE bindings [
@@ -34,7 +34,7 @@
                    anonid="searchbar-textbox"
                    type="autocomplete"
                    flex="1"
-                   autocompletepopup="PopupAutoComplete"
+                   autocompletepopup="PopupSearchAutoComplete"
                    autocompletesearch="search-autocomplete"
                    autocompletesearchparam="searchbar-history"
                    maxrows="10"

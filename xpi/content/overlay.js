@@ -2471,7 +2471,7 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "hightabpososx":
-			if (branch.getBoolPref("hightabpososx") && classicthemerestorerjs.ctr.fxdefaulttheme==true){
+			if (branch.getBoolPref("hightabpososx") && branch.getBoolPref("hidetbwot")==false && classicthemerestorerjs.ctr.fxdefaulttheme==true){
 			  classicthemerestorerjs.ctr.loadUnloadCSS("hightabpososx",true);
 			  branch.setBoolPref("appbutmhi",false);
 			}
@@ -2825,9 +2825,11 @@ classicthemerestorerjs.ctr = {
 			app_popup.addEventListener("popupshown", function onCtrTitleAppmenuPopupShown(event){
 			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
 			    classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton2').setAttribute("open", "true");
+				setTimeout(function(){
 				  try {
-					document.getElementById("appmenuPrimaryPane").insertBefore(document.getElementById("webDeveloperMenu"), document.getElementById("appmenu_webDeveloper"));
+					document.getElementById("appmenu_webDeveloper").appendChild(document.getElementById("menuWebDeveloperPopup"));
 				  } catch(e){}
+				},200);
 			  }
 			}, false);
 			
@@ -2835,9 +2837,11 @@ classicthemerestorerjs.ctr = {
 			app_popup.addEventListener("popuphidden", function onCtrTitleAppmenuPopupHidden(event){
 			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
 			    classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton2').removeAttribute("open");
-				try {
-				  document.getElementById("menu_ToolsPopup").insertBefore(document.getElementById("webDeveloperMenu"), document.getElementById("menu_pageInfo"));
-				} catch(e){}
+				setTimeout(function(){
+				  try {
+					document.getElementById("webDeveloperMenu").appendChild(document.getElementById("menuWebDeveloperPopup"));
+				  } catch(e){}
+				},200);
 			  }
 			}, false);
 
@@ -3181,8 +3185,13 @@ classicthemerestorerjs.ctr = {
 			  recentWindow.document.getElementById("TabsToolbar").style.marginTop="unset";
 			  if(tabsontop == 'false' || tabsontop == 'false2')
 			    recentWindow.document.getElementById("titlebar").style.marginBottom="-28px";
-			  else
-				recentWindow.document.getElementById("titlebar").style.marginBottom="-10px";
+			  else{
+				if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hightabpososx")) {
+				  recentWindow.document.getElementById("titlebar").style.marginBottom="-10px";
+				} else {
+				  recentWindow.document.getElementById("titlebar").style.marginBottom="0px";
+				}
+			  }
 			} else {
 			  recentWindow.document.getElementById("titlebar").style.paddingBottom="28px";
 			}
@@ -3212,7 +3221,12 @@ classicthemerestorerjs.ctr = {
 			recentWindow.document.getElementById("toolbar-menubar").style.marginBottom="unset";		
 		  else if(classicthemerestorerjs.ctr.osstring=="Darwin" && tabsintitlebar==true) {
 			if(classicthemerestorerjs.ctr.appversion >= 47) {
-			  recentWindow.document.getElementById("TabsToolbar").style.marginTop="-10px";
+			  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("hightabpososx")) {
+			    recentWindow.document.getElementById("TabsToolbar").style.marginTop="-10px";
+			  } else {
+				recentWindow.document.getElementById("TabsToolbar").style.marginTop="0px";
+			  }
+
 			  recentWindow.document.getElementById("titlebar").style.marginBottom="-28px";
 			} else {
 			  recentWindow.document.getElementById("titlebar").style.paddingBottom="unset";
@@ -3592,24 +3606,29 @@ classicthemerestorerjs.ctr = {
 			//add attribute 'open'
 			app_popup.addEventListener("popupshown", function onCtrTitleAppmenuPopupShown(event){
 			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
-				try {
-				  document.getElementById("appmenuPrimaryPane").insertBefore(document.getElementById("webDeveloperMenu"), document.getElementById("appmenu_webDeveloper"));
-				} catch(e){}
+				setTimeout(function(){
+				  try {
+					document.getElementById("appmenu_webDeveloper").appendChild(document.getElementById("menuWebDeveloperPopup"));
+				  } catch(e){}
+				},200);
 			  }
 			}, false);
 			
 			// remove attribute 'open'
 			app_popup.addEventListener("popuphidden", function onCtrTitleAppmenuPopupHidden(event){
 			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
-				try {
-				  document.getElementById("menu_ToolsPopup").insertBefore(document.getElementById("webDeveloperMenu"), document.getElementById("menu_pageInfo"));
-				} catch(e){}
+				setTimeout(function(){
+				  try {
+					document.getElementById("webDeveloperMenu").appendChild(document.getElementById("menuWebDeveloperPopup"));
+				  } catch(e){}
+				},200);
 			  }
 			}, false);
 
 		}, false);
 
 	},500);
+
   },
   
   // prevent browser from disablning CTRs reload button for no reason
@@ -4019,7 +4038,7 @@ classicthemerestorerjs.ctr = {
 			}
 			if(enable==false && this.prefs.getBoolPref("smallnavbut")==true){
 				enable=true;
-				manageCSS("smallnavbut.css");
+				if(this.fxdefaulttheme) manageCSS("smallnavbut.css");
 				enable=false;
 			}
 			manageCSS("mode_icons_and_text.css");
@@ -4035,7 +4054,7 @@ classicthemerestorerjs.ctr = {
 			}
 			if(enable==false && this.prefs.getBoolPref("smallnavbut")==true){
 				enable=true;
-				manageCSS("smallnavbut.css");
+				if(this.fxdefaulttheme) manageCSS("smallnavbut.css");
 				enable=false;
 			}
 			manageCSS("mode_icons_and_text2.css");
@@ -4051,7 +4070,7 @@ classicthemerestorerjs.ctr = {
 			}
 			if(enable==false && this.prefs.getBoolPref("smallnavbut")==true){
 				enable=true;
-				manageCSS("smallnavbut.css");
+				if(this.fxdefaulttheme) manageCSS("smallnavbut.css");
 				enable=false;
 			}
 			if (classicthemerestorerjs.ctr.osstring=="Darwin") manageCSS("mode_icons_and_text.css");
@@ -4068,7 +4087,7 @@ classicthemerestorerjs.ctr = {
 			}
 			if(enable==false && this.prefs.getBoolPref("smallnavbut")==true){
 				enable=true;
-				manageCSS("smallnavbut.css");
+				if(this.fxdefaulttheme) manageCSS("smallnavbut.css");
 				enable=false;
 			}
 			if (classicthemerestorerjs.ctr.osstring=="Darwin") manageCSS("mode_icons_and_text2.css");
@@ -6088,6 +6107,10 @@ classicthemerestorerjs.ctr = {
 					#main-window:not([customizing]) #nav-bar {\
 					  margin-left: '+this.prefs.getIntPref('navbarmar_l')+'px !important;\
 					  margin-right: '+this.prefs.getIntPref('navbarmar_r')+'px !important;\
+					}\
+					/* force min/max/close to be accessible*/\
+					#titlebar-buttonbox {\
+					  z-index: 99999 !important;\
 					}\
 				'), null, null);
 				

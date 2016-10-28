@@ -51,9 +51,9 @@
 	
 	@media not all and (min-resolution: 1.1dppx) {
 
-		#main-window[defaultfxtheme="true"][fx48plus="true"] panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-type-icon[type=bookmark],
+		#main-window[defaultfxtheme="true"][fx48plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem .ac-type-icon[type=bookmark],
 		#main-window[defaultfxtheme="true"][fx48plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-type-icon[type=bookmark],
-		#main-window[defaultfxtheme="true"][fx48plus="true"] panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-type-icon[type=bookmark][selected][current],
+		#main-window[defaultfxtheme="true"][fx48plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem .ac-type-icon[type=bookmark][selected][current],
 		#main-window[defaultfxtheme="true"][fx48plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-type-icon[type=bookmark][selected][current] {
 		  list-style-image: url("chrome://classic_theme_restorer/content/images/appmenu_bookmarks.png") !important;
 		}

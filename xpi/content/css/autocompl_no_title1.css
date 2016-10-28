@@ -2,11 +2,11 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem:not(:-moz-any([collapse="true"],[actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"])) .ac-title,
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem:not(:-moz-any([collapse="true"],[actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"])) .ac-title,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem:not(:-moz-any([collapse="true"],[actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"])) .ac-title,
-	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem:not([collapse="true"]) .ac-separator,
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem:not([collapse="true"]) .ac-separator,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem:not([collapse="true"]) .ac-separator,
-	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem:-moz-any([actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"]) :-moz-any(.ac-url, .ac-action),
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem:-moz-any([actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"]) :-moz-any(.ac-url, .ac-action),
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem:-moz-any([actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"]) :-moz-any(.ac-url, .ac-action){
 	  display: none !important;
 	}

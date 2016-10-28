@@ -246,7 +246,7 @@
 					onclick="if(classicthemerestorerjs.ctr.prefs.getBoolPref('appbclmmenus')
 								&amp;&amp; event.button=='0'
 								&amp;&amp; event.originalTarget.getAttribute('splitmenu')=='true')
-								{BrowserOpenNewTabOrWindow(event);document.getElementById('appmenu-popup').hidePopup();}"
+								{BrowserOpenTab(event);document.getElementById('appmenu-popup').hidePopup();}"
 					class="menu-iconic">
 				<menupopup id="ctraddon_menu_newTabmenupopup">
 					<menuitem id="appmenu_newTab_popup"
@@ -377,8 +377,15 @@
 			</menu>
 
 			<menuseparator/>
-
-			<menu id="appmenu_webDeveloper"/>
+			
+			<menu id="appmenu_webDeveloper"
+                  label="&webDeveloperMenu.label;"
+				  splitmenu="true"
+				  onclick="if(classicthemerestorerjs.ctr.prefs.getBoolPref('appbclmmenus')
+							&amp;&amp; event.button=='0'
+							&amp;&amp; event.originalTarget.getAttribute('splitmenu')=='true')
+							{gDevToolsBrowser.toggleToolboxCommand(gBrowser);document.getElementById('appmenu-popup').hidePopup();}"
+				  class="menu-iconic"/>
 
 			<menuseparator/>
 

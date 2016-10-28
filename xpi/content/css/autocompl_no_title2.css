@@ -4,52 +4,58 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	/* Firefox 48/49 popup code */
-	panel[type="autocomplete-richlistbox"],
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete),
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings.xml#urlbar-rich-result-popup") !important;
 	}
 	
-	/* Firefox 50 beta2+ popup code (50b1 not supported anymore) */
-	#main-window[fx50plus="true"] panel[type="autocomplete-richlistbox"],
+	/* Firefox 50 popup code (50b1 not supported anymore) */
+	#main-window[fx50plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete),
 	#main-window[fx50plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
+	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings50.xml#urlbar-rich-result-popup") !important;
+	}
+	
+	/* Firefox 51 */
+	#main-window[fx51plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete),
+	#main-window[fx51plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings51.xml#urlbar-rich-result-popup") !important;
 	}
-
-	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem:not(:-moz-any([collapse="true"],[actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"])) .ac-title,
+	
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem:not(:-moz-any([collapse="true"],[actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"])) .ac-title,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem:not(:-moz-any([collapse="true"],[actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"])) .ac-title,
-	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem:not([collapse="true"]) .ac-separator,
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem:not([collapse="true"]) .ac-separator,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem:not([collapse="true"]) .ac-separator,
-	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem:-moz-any([actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"]) :-moz-any(.ac-url, .ac-action),
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem:-moz-any([actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"]) :-moz-any(.ac-url, .ac-action),
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem:-moz-any([actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"]) :-moz-any(.ac-url, .ac-action){
 	  display: none !important;
 	}
 	
-	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem:-moz-any([actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"]) .ac-title,
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem:-moz-any([actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"]) .ac-title,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem:-moz-any([actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"]) .ac-title,
-	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem:not(:-moz-any([collapse="true"],[actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"])) :-moz-any(.ac-url, .ac-action),
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem:not(:-moz-any([collapse="true"],[actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"])) :-moz-any(.ac-url, .ac-action),
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem:not(:-moz-any([collapse="true"],[actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"])) :-moz-any(.ac-url, .ac-action){
 	  -moz-margin-start: -6px !important;
 	  margin-top:-3px !important;
 	}
 	
-	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem .ac-site-icon,
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem .ac-site-icon,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem .ac-site-icon {
 	  -moz-margin-start: 4px !important;
 	}
 
-	panel[type="autocomplete-richlistbox"] .autocomplete-richlistitem:not([collapse="true"]) .ac-type-icon,
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem:not([collapse="true"]) .ac-type-icon,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem:not([collapse="true"]) .ac-type-icon {
 	  -moz-box-ordinal-group: 1000000 !important;
 	}
 	
-	panel[type="autocomplete-richlistbox"] .search-one-offs,
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .search-one-offs,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .search-one-offs {
 	  visibility: collapse !important;
 	  display: none !important;
 	}
 	
 	@media all and (-moz-windows-classic) {
-	  panel[type="autocomplete-richlistbox"] .autocomplete-richlistbox,
+	  panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistbox,
 	  #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistbox {
 		padding: 0 !important;
 	  }
