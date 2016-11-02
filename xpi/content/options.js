@@ -582,7 +582,6 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwHidetbwotExtra(this.prefs.getBoolPref("hidetbwot"));
 	this.altTabsToolbarBgExtra(this.prefs.getBoolPref("alttabstb"));
 	this.ctrpwModeextra(this.prefs.getCharPref("nav_txt_ico"));
-	this.currentTabAppearance(this.prefs.getCharPref("tabs"));
 	this.currentAboutPrefs(this.prefs.getCharPref("altoptions"));
 	this.ctrpwTranspTbW10(this.prefs.getBoolPref("transpttbw10"));
 	this.ctrpwNavBarPadding(this.prefs.getBoolPref("navbarpad"));
@@ -672,7 +671,21 @@ classicthemerestorerjso.ctr = {
 	  this.prefs.setBoolPref('aerocolors',false);
  
 	this.hideThemeInfoForTabs();
-	this.unsetTabColorsAndMore();
+
+	this.prefs.setBoolPref('tabcolor_def',false);
+	this.prefs.setBoolPref('tabcolor_act',false);
+	this.prefs.setBoolPref('tabcolor_pen',false);
+	this.prefs.setBoolPref('tabcolor_unr',false);
+	this.prefs.setBoolPref('tabcolor_hov',false);
+	this.prefs.setBoolPref('ntabcolor_def',false);
+	this.prefs.setBoolPref('ntabcolor_hov',false);
+	
+	if(this.prefs.getBoolPref('closeonleft')) {
+	  this.prefs.setBoolPref('closeonleft',false);
+	  setTimeout(function(){
+		Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('closeonleft',true);
+	  },20);
+	}
 
   },
  
@@ -692,23 +705,6 @@ classicthemerestorerjso.ctr = {
 	},100);
   },
 
-  unsetTabColorsAndMore: function() {
-	this.prefs.setBoolPref('tabcolor_def',false);
-	this.prefs.setBoolPref('tabcolor_act',false);
-	this.prefs.setBoolPref('tabcolor_pen',false);
-	this.prefs.setBoolPref('tabcolor_unr',false);
-	this.prefs.setBoolPref('tabcolor_hov',false);
-	this.prefs.setBoolPref('ntabcolor_def',false);
-	this.prefs.setBoolPref('ntabcolor_hov',false);
-	
-	if(this.prefs.getBoolPref('closeonleft')) {
-	  this.prefs.setBoolPref('closeonleft',false);
-	  setTimeout(function(){
-		Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('closeonleft',true);
-	  },20);
-	}
-  },
-  
   ctrpwFaviconextra: function(which) {
 	if(which==true) which=false; else which=true;
 	document.getElementById('ctraddon_padlock_extra').disabled = which;
@@ -1122,18 +1118,7 @@ classicthemerestorerjso.ctr = {
 	}
   
   },
-  
-  currentTabAppearance: function(which) {
-	
-	if(which=="tabs_squaredc2" || which=="tabs_squared2c2") {
-	  document.getElementById('ctraddon_pw_square_edges').disabled = false;
-	  document.getElementById('ctraddon_pw_square_edges').style.visibility = 'visible';
-	} else {
-	  document.getElementById('ctraddon_pw_square_edges').disabled = true;
-	  document.getElementById('ctraddon_pw_square_edges').style.visibility = 'collapse';
-	}
-  },
-  
+ 
   currentAboutPrefs: function(which) {
 	
 	if(which=="options_win" || which=="options_win_alt") {

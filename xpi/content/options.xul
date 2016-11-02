@@ -404,13 +404,13 @@
 
 		<menulist preference="ctraddon_tabs" id="ctraddon_pw_tabmenulist">
 			<menupopup>
-				<menuitem value="tabs_default"	 label="&Ctr_tabs0;"		oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore(); classicthemerestorerjso.ctr.currentTabAppearance('tabs_default');"/>
-				<menuitem value="tabs_squared"	 label="&Ctr_tabs1;"		oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore(); classicthemerestorerjso.ctr.currentTabAppearance('tabs_squared');"/>
-				<menuitem value="tabs_squaredc2" label="&Ctr_tabs1; (v2)"	oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore(); classicthemerestorerjso.ctr.currentTabAppearance('tabs_squaredc2');"/>
-				<menuitem value="tabs_squared2"	 label="&Ctr_tabs1m;"		oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore(); classicthemerestorerjso.ctr.currentTabAppearance('tabs_squared2');"/>
-				<menuitem value="tabs_squared2c2" label="&Ctr_tabs1m; (v2)"	oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore(); classicthemerestorerjso.ctr.currentTabAppearance('tabs_squared2c2');"/>
-				<menuitem value="tabs_curved" 	 label="&Ctr_tabs2;"		oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore(); classicthemerestorerjso.ctr.currentTabAppearance('tabs_curved');"/>
-				<menuitem value="tabs_curvedall" label="&Ctr_tabs3;"		oncommand="classicthemerestorerjso.ctr.unsetTabColorsAndMore(); classicthemerestorerjso.ctr.currentTabAppearance('tabs_curvedall');" id="tabs_curvedall"/>
+				<menuitem value="tabs_default"	  label="&Ctr_tabs0;"/>
+				<menuitem value="tabs_squared"	  label="&Ctr_tabs1;"/>
+				<menuitem value="tabs_squaredc2"  label="&Ctr_tabs1; (v2)"/>
+				<menuitem value="tabs_squared2"	  label="&Ctr_tabs1m;"/>
+				<menuitem value="tabs_squared2c2" label="&Ctr_tabs1m; (v2)"/>
+				<menuitem value="tabs_curved" 	  label="&Ctr_tabs2;"/>
+				<menuitem value="tabs_curvedall"  label="&Ctr_tabs3;" id="tabs_curvedall"/>
 			</menupopup>
 		</menulist>
 
