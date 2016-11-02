@@ -2529,11 +2529,15 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "hightabpososx":
-			if (branch.getBoolPref("hightabpososx") && branch.getBoolPref("hidetbwot")==false && classicthemerestorerjs.ctr.fxdefaulttheme==true){
+			
+			if (branch.getBoolPref("hightabpososx") && classicthemerestorerjs.ctr.osstring!="Darwin" && classicthemerestorerjs.ctr.fxdefaulttheme==true){
 			  classicthemerestorerjs.ctr.loadUnloadCSS("hightabpososx",true);
 			  branch.setBoolPref("appbutmhi",false);
-			}
-			else classicthemerestorerjs.ctr.loadUnloadCSS("hightabpososx",false);
+			} else if (branch.getBoolPref("hightabpososx") && branch.getBoolPref("hidetbwot")==false && classicthemerestorerjs.ctr.fxdefaulttheme==true) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("hightabpososx",true);
+			  branch.setBoolPref("appbutmhi",false);
+			} else classicthemerestorerjs.ctr.loadUnloadCSS("hightabpososx",false);
+
 		  break;
 		  
 		  case "showalltabsb":
