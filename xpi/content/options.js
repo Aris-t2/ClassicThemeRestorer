@@ -22,8 +22,11 @@ classicthemerestorerjso.ctr = {
   tmp_tu_active:	false,
   // Exclude all preferences we don't want to sync, export or import.
   blacklist: [
-	"extensions.classicthemerestorer.pref_actindx",
-	"extensions.classicthemerestorer.pref_actindx2",
+	"extensions.classicthemerestorer.pw_actidx_c",
+	"extensions.classicthemerestorer.pw_actidx_t",
+	"extensions.classicthemerestorer.pw_actidx_tc",
+	"extensions.classicthemerestorer.pw_actidx_g",
+	"extensions.classicthemerestorer.pw_actidx_tb",
 	"extensions.classicthemerestorer.ctrreset"
 	],
 
@@ -49,8 +52,11 @@ classicthemerestorerjso.ctr = {
 	} catch(e){}
 	
 	// restore last selected categories/tabs
-	document.getElementById("CtrRadioGroup").selectedIndex = this.prefs.getIntPref('pref_actindx');
-	document.getElementById("ctraddon_tabcolor_tabs").selectedIndex = this.prefs.getIntPref('pref_actindx2');
+	document.getElementById("CtrRadioGroup").selectedIndex = this.prefs.getIntPref('pw_actidx_c');
+	document.getElementById("ctraddon_pw_tabs_tabs").selectedIndex = this.prefs.getIntPref('pw_actidx_t');
+	document.getElementById("ctraddon_tabcolor_tabs").selectedIndex = this.prefs.getIntPref('pw_actidx_tc');
+	document.getElementById("ctraddon_pw_generalui_tabs").selectedIndex = this.prefs.getIntPref('pw_actidx_g');
+	document.getElementById("ctraddon_pw_toolbars_tabs").selectedIndex = this.prefs.getIntPref('pw_actidx_tb');
 	
 	// disable and hide items not usable on third party themes
 	if (!this.fxdefaulttheme) {
@@ -645,8 +651,11 @@ classicthemerestorerjso.ctr = {
 	}
 	
 	// save last selected categories/tabs
-	this.prefs.setIntPref('pref_actindx',document.getElementById("CtrRadioGroup").selectedIndex);
-	this.prefs.setIntPref('pref_actindx2',document.getElementById("ctraddon_tabcolor_tabs").selectedIndex);
+	this.prefs.setIntPref('pw_actidx_c',document.getElementById("CtrRadioGroup").selectedIndex);
+	this.prefs.setIntPref('pw_actidx_t',document.getElementById("ctraddon_pw_tabs_tabs").selectedIndex);
+	this.prefs.setIntPref('pw_actidx_tc',document.getElementById("ctraddon_tabcolor_tabs").selectedIndex);
+	this.prefs.setIntPref('pw_actidx_g',document.getElementById("ctraddon_pw_generalui_tabs").selectedIndex);
+	this.prefs.setIntPref('pw_actidx_tb',document.getElementById("ctraddon_pw_toolbars_tabs").selectedIndex);
 
 	return true;
   },
