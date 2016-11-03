@@ -22,8 +22,11 @@ classicthemerestorerjso.ctr = {
   tmp_tu_active:	false,
   // Exclude all preferences we don't want to sync, export or import.
   blacklist: [
-	"extensions.classicthemerestorer.pref_actindx",
-	"extensions.classicthemerestorer.pref_actindx2",
+	"extensions.classicthemerestorer.pw_actidx_c",
+	"extensions.classicthemerestorer.pw_actidx_t",
+	"extensions.classicthemerestorer.pw_actidx_tc",
+	"extensions.classicthemerestorer.pw_actidx_g",
+	"extensions.classicthemerestorer.pw_actidx_tb",
 	"extensions.classicthemerestorer.ctrreset"
 	],
 
@@ -49,8 +52,11 @@ classicthemerestorerjso.ctr = {
 	} catch(e){}
 	
 	// restore last selected categories/tabs
-	document.getElementById("CtrRadioGroup").selectedIndex = this.prefs.getIntPref('pref_actindx');
-	document.getElementById("ctraddon_tabcolor_tabs").selectedIndex = this.prefs.getIntPref('pref_actindx2');
+	document.getElementById("CtrRadioGroup").selectedIndex = this.prefs.getIntPref('pw_actidx_c');
+	document.getElementById("ctraddon_pw_tabs_tabs").selectedIndex = this.prefs.getIntPref('pw_actidx_t');
+	document.getElementById("ctraddon_tabcolor_tabs").selectedIndex = this.prefs.getIntPref('pw_actidx_tc');
+	document.getElementById("ctraddon_pw_generalui_tabs").selectedIndex = this.prefs.getIntPref('pw_actidx_g');
+	document.getElementById("ctraddon_pw_toolbars_tabs").selectedIndex = this.prefs.getIntPref('pw_actidx_tb');
 	
 	// disable and hide items not usable on third party themes
 	if (!this.fxdefaulttheme) {
@@ -582,7 +588,6 @@ classicthemerestorerjso.ctr = {
 	this.ctrpwHidetbwotExtra(this.prefs.getBoolPref("hidetbwot"));
 	this.altTabsToolbarBgExtra(this.prefs.getBoolPref("alttabstb"));
 	this.ctrpwModeextra(this.prefs.getCharPref("nav_txt_ico"));
-	this.currentTabAppearance(this.prefs.getCharPref("tabs"));
 	this.currentAboutPrefs(this.prefs.getCharPref("altoptions"));
 	this.ctrpwTranspTbW10(this.prefs.getBoolPref("transpttbw10"));
 	this.ctrpwNavBarPadding(this.prefs.getBoolPref("navbarpad"));
@@ -646,8 +651,11 @@ classicthemerestorerjso.ctr = {
 	}
 	
 	// save last selected categories/tabs
-	this.prefs.setIntPref('pref_actindx',document.getElementById("CtrRadioGroup").selectedIndex);
-	this.prefs.setIntPref('pref_actindx2',document.getElementById("ctraddon_tabcolor_tabs").selectedIndex);
+	this.prefs.setIntPref('pw_actidx_c',document.getElementById("CtrRadioGroup").selectedIndex);
+	this.prefs.setIntPref('pw_actidx_t',document.getElementById("ctraddon_pw_tabs_tabs").selectedIndex);
+	this.prefs.setIntPref('pw_actidx_tc',document.getElementById("ctraddon_tabcolor_tabs").selectedIndex);
+	this.prefs.setIntPref('pw_actidx_g',document.getElementById("ctraddon_pw_generalui_tabs").selectedIndex);
+	this.prefs.setIntPref('pw_actidx_tb',document.getElementById("ctraddon_pw_toolbars_tabs").selectedIndex);
 
 	return true;
   },
@@ -672,7 +680,21 @@ classicthemerestorerjso.ctr = {
 	  this.prefs.setBoolPref('aerocolors',false);
  
 	this.hideThemeInfoForTabs();
-	this.unsetTabColorsAndMore();
+
+	this.prefs.setBoolPref('tabcolor_def',false);
+	this.prefs.setBoolPref('tabcolor_act',false);
+	this.prefs.setBoolPref('tabcolor_pen',false);
+	this.prefs.setBoolPref('tabcolor_unr',false);
+	this.prefs.setBoolPref('tabcolor_hov',false);
+	this.prefs.setBoolPref('ntabcolor_def',false);
+	this.prefs.setBoolPref('ntabcolor_hov',false);
+	
+	if(this.prefs.getBoolPref('closeonleft')) {
+	  this.prefs.setBoolPref('closeonleft',false);
+	  setTimeout(function(){
+		Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('closeonleft',true);
+	  },20);
+	}
 
   },
  
@@ -692,23 +714,6 @@ classicthemerestorerjso.ctr = {
 	},100);
   },
 
-  unsetTabColorsAndMore: function() {
-	this.prefs.setBoolPref('tabcolor_def',false);
-	this.prefs.setBoolPref('tabcolor_act',false);
-	this.prefs.setBoolPref('tabcolor_pen',false);
-	this.prefs.setBoolPref('tabcolor_unr',false);
-	this.prefs.setBoolPref('tabcolor_hov',false);
-	this.prefs.setBoolPref('ntabcolor_def',false);
-	this.prefs.setBoolPref('ntabcolor_hov',false);
-	
-	if(this.prefs.getBoolPref('closeonleft')) {
-	  this.prefs.setBoolPref('closeonleft',false);
-	  setTimeout(function(){
-		Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('closeonleft',true);
-	  },20);
-	}
-  },
-  
   ctrpwFaviconextra: function(which) {
 	if(which==true) which=false; else which=true;
 	document.getElementById('ctraddon_padlock_extra').disabled = which;
@@ -1122,18 +1127,7 @@ classicthemerestorerjso.ctr = {
 	}
   
   },
-  
-  currentTabAppearance: function(which) {
-	
-	if(which=="tabs_squaredc2" || which=="tabs_squared2c2") {
-	  document.getElementById('ctraddon_pw_square_edges').disabled = false;
-	  document.getElementById('ctraddon_pw_square_edges').style.visibility = 'visible';
-	} else {
-	  document.getElementById('ctraddon_pw_square_edges').disabled = true;
-	  document.getElementById('ctraddon_pw_square_edges').style.visibility = 'collapse';
-	}
-  },
-  
+ 
   currentAboutPrefs: function(which) {
 	
 	if(which=="options_win" || which=="options_win_alt") {

@@ -248,8 +248,11 @@ pref("extensions.classicthemerestorer.nodevtheme2",false);
 pref("extensions.classicthemerestorer.ctr_english",false);
 pref("extensions.classicthemerestorer.restartapp",true);
 pref("extensions.classicthemerestorer.ctrnewinv",true);
-pref("extensions.classicthemerestorer.pref_actindx",3);
-pref("extensions.classicthemerestorer.pref_actindx2",0);
+pref("extensions.classicthemerestorer.pw_actidx_c",1);
+pref("extensions.classicthemerestorer.pw_actidx_t",0);
+pref("extensions.classicthemerestorer.pw_actidx_tc",0);
+pref("extensions.classicthemerestorer.pw_actidx_g",0);
+pref("extensions.classicthemerestorer.pw_actidx_tb",0);
 
 // Tab color settings
 pref("extensions.classicthemerestorer.tabcolor_def",false);

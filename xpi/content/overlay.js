@@ -380,6 +380,64 @@ classicthemerestorerjs.ctr = {
 				classicthemerestorerjs.ctr.loadUnloadCSS("square_edges",true);
 			  }
 			}
+			
+			/* tab color changes */	
+			if(branch.getBoolPref('tabcolor_def')) {
+			  branch.setBoolPref('tabcolor_def',false);
+			  setTimeout(function(){
+				Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('tabcolor_def',true);
+			  },200);
+			}
+			
+			if(branch.getBoolPref('tabcolor_act')) {
+			  branch.setBoolPref('tabcolor_act',false);
+			  setTimeout(function(){
+				Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('tabcolor_act',true);
+			  },200);
+			}
+			
+			if(branch.getBoolPref('tabcolor_pen')) {
+			  branch.setBoolPref('tabcolor_pen',false);
+			  setTimeout(function(){
+				Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('tabcolor_pen',true);
+			  },200);
+			}
+			
+			if(branch.getBoolPref('tabcolor_unr')) {
+			  branch.setBoolPref('tabcolor_unr',false);
+			  setTimeout(function(){
+				Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('tabcolor_unr',true);
+			  },200);
+			}
+			
+			if(branch.getBoolPref('tabcolor_hov')) {
+			  branch.setBoolPref('tabcolor_hov',false);
+			  setTimeout(function(){
+				Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('tabcolor_hov',true);
+			  },200);
+			}
+
+			if(branch.getBoolPref('ntabcolor_def')) {
+			  branch.setBoolPref('ntabcolor_def',false);
+			  setTimeout(function(){
+				Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('ntabcolor_def',true);
+			  },200);
+			}
+
+			if(branch.getBoolPref('ntabcolor_hov')) {
+			  branch.setBoolPref('ntabcolor_hov',false);
+			  setTimeout(function(){
+				Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('ntabcolor_hov',true);
+			  },200);
+			}
+			
+			/* */
+			if(branch.getBoolPref('closeonleft')) {
+			  branch.setBoolPref('closeonleft',false);
+			  setTimeout(function(){
+				Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('closeonleft',true);
+			  },20);
+			}
 				  
 		  break;
 		  
@@ -2471,11 +2529,15 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "hightabpososx":
-			if (branch.getBoolPref("hightabpososx") && branch.getBoolPref("hidetbwot")==false && classicthemerestorerjs.ctr.fxdefaulttheme==true){
+			
+			if (branch.getBoolPref("hightabpososx") && classicthemerestorerjs.ctr.osstring!="Darwin" && classicthemerestorerjs.ctr.fxdefaulttheme==true){
 			  classicthemerestorerjs.ctr.loadUnloadCSS("hightabpososx",true);
 			  branch.setBoolPref("appbutmhi",false);
-			}
-			else classicthemerestorerjs.ctr.loadUnloadCSS("hightabpososx",false);
+			} else if (branch.getBoolPref("hightabpososx") && branch.getBoolPref("hidetbwot")==false && classicthemerestorerjs.ctr.fxdefaulttheme==true) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("hightabpososx",true);
+			  branch.setBoolPref("appbutmhi",false);
+			} else classicthemerestorerjs.ctr.loadUnloadCSS("hightabpososx",false);
+
 		  break;
 		  
 		  case "showalltabsb":
@@ -4414,6 +4476,12 @@ classicthemerestorerjs.ctr = {
 				}
 				else if(this.prefs.getCharPref('tabs')=='tabs_curved'){
 					aero_color_tabs  = '\
+						#main-window[fx51plus="true"] #tabbrowser-tabs::after,\
+						#main-window[fx51plus="true"] #tabbrowser-tabs::before,\
+						#main-window[fx51plus="true"] .tabbrowser-tab::after,\
+						#main-window[fx51plus="true"] .tabbrowser-tab::before {\
+						  opacity: 0 !important;\
+						}\
 						#main-window .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-stack .tab-background-middle,\
 						#main-window .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-start,\
 						#main-window .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-end{\
@@ -4424,17 +4492,17 @@ classicthemerestorerjs.ctr = {
 						#main-window .tabbrowser-tab:not(:-moz-lwtheme):not([visuallyselected=true]):hover .tab-background-end {\
 						  background-image: linear-gradient(transparent, transparent 2px, #e5effa 0px, #dce7f3,#d0dce8), none !important;\
 						}\
-						#main-window .tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						#main-window .tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
+						#main-window .tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
+						#main-window .tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.svg),linear-gradient(transparent, transparent 2px,#fbfdff 2px, #eaf2fb) !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
 						}\
-						#main-window .tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						#main-window .tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
+						#main-window .tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
+						#main-window .tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.svg),linear-gradient(transparent, transparent 2px,#fbfdff 2px, #eaf2fb) !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
-						#main-window .tab-background-middle[visuallyselected=true]:not(:-moz-lwtheme) {\
+						#main-window .tab-background-middle[selected=true]:not(:-moz-lwtheme) {\
 						  background-color: transparent !important;\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png),linear-gradient(transparent, transparent 2px,#fbfdff 2px, #eaf2fb), none !important;\
 						}\
@@ -4470,17 +4538,17 @@ classicthemerestorerjs.ctr = {
 				}
 				else if(this.prefs.getCharPref('tabs')=='tabs_default'){
 					aero_color_tabs  = '\
-						#main-window .tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						#main-window .tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
+						#main-window .tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
+						#main-window .tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.svg),linear-gradient(transparent, transparent 2px,#fbfdff 2px, #eaf2fb) !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
 						}\
-						#main-window .tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						#main-window .tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
+						#main-window .tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
+						#main-window .tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.svg),linear-gradient(transparent, transparent 2px,#fbfdff 2px, #eaf2fb) !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
-						#main-window .tab-background-middle[visuallyselected=true]:not(:-moz-lwtheme) {\
+						#main-window .tab-background-middle[selected=true]:not(:-moz-lwtheme) {\
 						  background-color: transparent !important;\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png),linear-gradient(transparent, transparent 2px,#fbfdff 2px, #eaf2fb), none !important;\
 						}\
@@ -4880,7 +4948,7 @@ classicthemerestorerjs.ctr = {
 
 			removeOldSheet(this.ctabsheet_def);
 			
-			if(enable==true){
+			if(enable==true && this.prefs.getCharPref('tabs')!='tabs_default' && this.prefs.getCharPref('tabs')!='tabs_squared2' && this.prefs.getCharPref('tabs')!='tabs_squared2c2' && this.prefs.getCharPref('tabs')!='tabs_curvedall'){
 			
 				if (this.prefs.getCharPref('tabs')=='tabs_squared') {
 				
@@ -4913,17 +4981,17 @@ classicthemerestorerjs.ctr = {
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:-moz-lwtheme:not([visuallyselected=true]):not(:hover) .tab-background-end{\
 						  background-image: linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctab1')+' 0px, '+this.prefs.getCharPref('ctab2')+'), none !important;\
 						}\
-						.tabbrowser-tab:-moz-lwtheme:not(:hover) > .tab-stack > .tab-background:not([selected=true]) {\
+						.tabbrowser-tab:-moz-lwtheme:not(:hover) > .tab-stack > .tab-background:not([visuallyselected=true]) {\
 						  background-position: left bottom, 30px bottom, right bottom;\
 						  background-repeat: no-repeat;\
 						  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;\
 						}\
-						.tabbrowser-tab:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),\
-						.tabbrowser-tab:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl) {\
+						.tabbrowser-tab:-moz-lwtheme:not([visuallyselected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),\
+						.tabbrowser-tab:-moz-lwtheme:not([visuallyselected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl) {\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
 						}\
-						.tabbrowser-tab:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),\
-						.tabbrowser-tab:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl) {\
+						.tabbrowser-tab:-moz-lwtheme:not([visuallyselected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),\
+						.tabbrowser-tab:-moz-lwtheme:not([visuallyselected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl) {\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
 					'), null, null);
@@ -4939,7 +5007,7 @@ classicthemerestorerjs.ctr = {
 
 			removeOldSheet(this.ctabsheet_act);
 			
-			if(enable==true){
+			if(enable==true && this.prefs.getCharPref('tabs')!='tabs_curvedall'){
 			
 				var tabc_act_tb_sheet = '';
 				if (this.prefs.getBoolPref('tabc_act_tb')) {
@@ -5016,52 +5084,58 @@ classicthemerestorerjs.ctr = {
 				else if (this.prefs.getCharPref('tabs')=='tabs_curved') {
 				
 					this.ctabsheet_act=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-lwtheme::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-lwtheme::before {\
+						#main-window[fx51plus="true"] #tabbrowser-tabs::after,\
+						#main-window[fx51plus="true"] #tabbrowser-tabs::before,\
+						#main-window[fx51plus="true"] .tabbrowser-tab::after,\
+						#main-window[fx51plus="true"] .tabbrowser-tab::before {\
+						  opacity: 0 !important;\
+						}\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-lwtheme::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-lwtheme::before {\
 						  background-image: unset !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before {\
 						  clip-path: unset !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[visuallyselected=true],\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[visuallyselected=true]:-moz-lwtheme {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[selected=true],\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[selected=true]:-moz-lwtheme {\
 						  background-color: unset !important;\
 						  background-image: unset !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-lwtheme::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-lwtheme::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[visuallyselected=true]:-moz-lwtheme {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-lwtheme::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-lwtheme::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[selected=true]:-moz-lwtheme {\
 						  background-color: unset !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before {\
 						  background: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before {\
 						  background: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[visuallyselected=true]:-moz-lwtheme,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[visuallyselected=true]:not(:-moz-lwtheme) {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[selected=true]:-moz-lwtheme,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[selected=true]:not(:-moz-lwtheme) {\
 						  background-color: transparent !important;\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+'), none !important;\
 						}\
@@ -5073,52 +5147,52 @@ classicthemerestorerjs.ctr = {
 				else if (this.prefs.getCharPref('tabs')=='tabs_default') {
 				
 					this.ctabsheet_act=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-lwtheme::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-lwtheme::before {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-lwtheme::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-lwtheme::before {\
 						  background-image: unset !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before {\
 						  clip-path: unset !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[visuallyselected=true],\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[visuallyselected=true]:-moz-lwtheme {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[selected=true],\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[selected=true]:-moz-lwtheme {\
 						  background-color: unset !important;\
 						  background-image: unset !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-lwtheme::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-lwtheme::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[visuallyselected=true]:-moz-lwtheme {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-lwtheme::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-lwtheme::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[selected=true]:-moz-lwtheme {\
 						  background-color: unset !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before {\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before {\
 						  background: url(chrome://browser/skin/tabbrowser/tab-stroke-start.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[visuallyselected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[visuallyselected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-end[selected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-start[selected=true]:-moz-locale-dir(rtl):-moz-lwtheme::before {\
 						  background: url(chrome://browser/skin/tabbrowser/tab-stroke-end.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+') !important;\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[visuallyselected=true]:-moz-lwtheme,\
-						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[visuallyselected=true]:not(:-moz-lwtheme) {\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[selected=true]:-moz-lwtheme,\
+						#main-window #navigator-toolbox #TabsToolbar .tab-background-middle[selected=true]:not(:-moz-lwtheme) {\
 						  background-color: transparent !important;\
 						  background-image: url(chrome://browser/skin/tabbrowser/tab-active-middle.png),linear-gradient(transparent, transparent 2px,'+this.prefs.getCharPref('ctabact1')+' 2px, '+this.prefs.getCharPref('ctabact2')+'), none !important;\
 						}\
@@ -5136,7 +5210,7 @@ classicthemerestorerjs.ctr = {
 
 			removeOldSheet(this.ctabsheet_hov);
 			
-			if(enable==true){
+			if(enable==true && this.prefs.getCharPref('tabs')!='tabs_default' && this.prefs.getCharPref('tabs')!='tabs_squared2' && this.prefs.getCharPref('tabs')!='tabs_squared2c2' && this.prefs.getCharPref('tabs')!='tabs_curvedall'){
 		
 				if (this.prefs.getCharPref('tabs')=='tabs_squared') {
 				
@@ -5169,17 +5243,17 @@ classicthemerestorerjs.ctr = {
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab:-moz-lwtheme:not([visuallyselected=true]):hover .tab-background-end {\
 						  background-image: linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctabhov1')+' 0px, '+this.prefs.getCharPref('ctabhov2')+'), none !important;\
 						}\
-						.tabbrowser-tab:-moz-lwtheme:hover > .tab-stack > .tab-background:not([selected=true]){\
+						.tabbrowser-tab:-moz-lwtheme:hover > .tab-stack > .tab-background:not([visuallyselected=true]){\
 						  background-position: left bottom, 30px bottom, right bottom;\
 						  background-repeat: no-repeat;\
 						  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;\
 						}\
-						.tabbrowser-tab:-moz-lwtheme:not([selected=true]):hover .tab-background-start:-moz-locale-dir(ltr),\
-						.tabbrowser-tab:-moz-lwtheme:not([selected=true]):hover .tab-background-end:-moz-locale-dir(rtl) {\
+						.tabbrowser-tab:-moz-lwtheme:not([visuallyselected=true]):hover .tab-background-start:-moz-locale-dir(ltr),\
+						.tabbrowser-tab:-moz-lwtheme:not([visuallyselected=true]):hover .tab-background-end:-moz-locale-dir(rtl) {\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
 						}\
-						.tabbrowser-tab:-moz-lwtheme:not([selected=true]):hover .tab-background-end:-moz-locale-dir(ltr),\
-						.tabbrowser-tab:-moz-lwtheme:not([selected=true]):hover .tab-background-start:-moz-locale-dir(rtl) {\
+						.tabbrowser-tab:-moz-lwtheme:not([visuallyselected=true]):hover .tab-background-end:-moz-locale-dir(ltr),\
+						.tabbrowser-tab:-moz-lwtheme:not([visuallyselected=true]):hover .tab-background-start:-moz-locale-dir(rtl) {\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
 					'), null, null);
@@ -5195,7 +5269,7 @@ classicthemerestorerjs.ctr = {
 
 			removeOldSheet(this.ctabsheet_pen);
 			
-			if(enable==true){
+			if(enable==true && this.prefs.getCharPref('tabs')!='tabs_default' && this.prefs.getCharPref('tabs')!='tabs_squared2' && this.prefs.getCharPref('tabs')!='tabs_squared2c2' && this.prefs.getCharPref('tabs')!='tabs_curvedall'){
 		
 				if (this.prefs.getCharPref('tabs')=='tabs_squared') {
 				
@@ -5257,22 +5331,22 @@ classicthemerestorerjs.ctr = {
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:-moz-lwtheme:not([visuallyselected=true]):hover .tab-background-end{\
 						  background-image: linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctabpen1')+' 0px, '+this.prefs.getCharPref('ctabpen2')+'), none !important;\
 						}\
-						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):hover > .tab-stack > .tab-background:not([selected=true]),\
-						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) > .tab-stack > .tab-background:not([selected=true]){\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([visuallyselected=true]):hover > .tab-stack > .tab-background:not([visuallyselected=true]),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) > .tab-stack > .tab-background:not([visuallyselected=true]){\
 						  background-position: left bottom, 30px bottom, right bottom;\
 						  background-repeat: no-repeat;\
 						  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;\
 						}\
-						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start:-moz-locale-dir(ltr),\
-						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end:-moz-locale-dir(rtl),\
-						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),\
-						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl) {\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([visuallyselected=true]):hover .tab-background-start:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([visuallyselected=true]):hover .tab-background-end:-moz-locale-dir(rtl),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl) {\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
 						}\
-						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-end:-moz-locale-dir(ltr),\
-						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):hover .tab-background-start:-moz-locale-dir(rtl),\
-						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),\
-						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl) {\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([visuallyselected=true]):hover .tab-background-end:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([visuallyselected=true]):hover .tab-background-start:-moz-locale-dir(rtl),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl) {\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
 					'), null, null);
@@ -5287,17 +5361,17 @@ classicthemerestorerjs.ctr = {
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[pending]:-moz-lwtheme:not([visuallyselected=true]):not(:hover) .tab-background-end {\
 						  background-image: linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctabpen1')+' 0px, '+this.prefs.getCharPref('ctabpen2')+'), none !important;\
 						}\
-						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) > .tab-stack > .tab-background:not([selected=true]){\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) > .tab-stack > .tab-background:not([visuallyselected=true]){\
 						  background-position: left bottom, 30px bottom, right bottom;\
 						  background-repeat: no-repeat;\
 						  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;\
 						}\
-						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),\
-						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl) {\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl) {\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
 						}\
-						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),\
-						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl) {\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[pending]:not(:-moz-lwtheme):not([visuallyselected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl) {\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
 					'), null, null);
@@ -5314,7 +5388,7 @@ classicthemerestorerjs.ctr = {
 
 			removeOldSheet(this.ctabsheet_unr);
 			
-			if(enable==true){
+			if(enable==true && this.prefs.getCharPref('tabs')!='tabs_default' && this.prefs.getCharPref('tabs')!='tabs_squared2' && this.prefs.getCharPref('tabs')!='tabs_squared2c2' && this.prefs.getCharPref('tabs')!='tabs_curvedall'){
 		
 				if (this.prefs.getCharPref('tabs')=='tabs_squared') {
 				
@@ -5381,22 +5455,22 @@ classicthemerestorerjs.ctr = {
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:-moz-lwtheme:not([visuallyselected=true]):hover .tab-background-end {\
 						  background-image: linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctabunr1')+' 0px, '+this.prefs.getCharPref('ctabunr2')+'), none !important;\
 						}\
-						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):hover > .tab-stack > .tab-background:not([selected=true]),\
-						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) > .tab-stack > .tab-background:not([selected=true]){\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([visuallyselected=true]):hover > .tab-stack > .tab-background:not([visuallyselected=true]),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([visuallyselected=true]):not(:hover) > .tab-stack > .tab-background:not([visuallyselected=true]){\
 						  background-position: left bottom, 30px bottom, right bottom;\
 						  background-repeat: no-repeat;\
 						  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;\
 						}\
-						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):hover .tab-background-start:-moz-locale-dir(ltr),\
-						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):hover .tab-background-end:-moz-locale-dir(rtl),\
-						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),\
-						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl) {\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([visuallyselected=true]):hover .tab-background-start:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([visuallyselected=true]):hover .tab-background-end:-moz-locale-dir(rtl),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([visuallyselected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([visuallyselected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl) {\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
 						}\
-						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):hover .tab-background-end:-moz-locale-dir(ltr),\
-						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):hover .tab-background-start:-moz-locale-dir(rtl),\
-						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),\
-						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl) {\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([visuallyselected=true]):hover .tab-background-end:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([visuallyselected=true]):hover .tab-background-start:-moz-locale-dir(rtl),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([visuallyselected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([visuallyselected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl) {\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
 					'), null, null);
@@ -5412,17 +5486,17 @@ classicthemerestorerjs.ctr = {
 						#main-window #navigator-toolbox #TabsToolbar .tabbrowser-tab[unread]:-moz-lwtheme:not([visuallyselected=true]):not(:hover) .tab-background-end{\
 						  background-image: linear-gradient(transparent, transparent 2px, '+this.prefs.getCharPref('ctabunr1')+' 0px, '+this.prefs.getCharPref('ctabunr2')+'), none !important;\
 						}\
-						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) > .tab-stack > .tab-background:not([selected=true]){\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([visuallyselected=true]):not(:hover) > .tab-stack > .tab-background:not([visuallyselected=true]){\
 						  background-position: left bottom, 30px bottom, right bottom;\
 						  background-repeat: no-repeat;\
 						  background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100%;\
 						}\
-						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),\
-						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl) {\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([visuallyselected=true]):not(:hover) .tab-background-start:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([visuallyselected=true]):not(:hover) .tab-background-end:-moz-locale-dir(rtl) {\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-start) !important;\
 						}\
-						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),\
-						.tabbrowser-tab[unread]:-moz-lwtheme:not([selected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl) {\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([visuallyselected=true]):not(:hover) .tab-background-end:-moz-locale-dir(ltr),\
+						.tabbrowser-tab[unread]:-moz-lwtheme:not([visuallyselected=true]):not(:hover) .tab-background-start:-moz-locale-dir(rtl) {\
 						  clip-path: url(chrome://browser/content/browser.xul#tab-curve-clip-path-end) !important;\
 						}\
 					'), null, null);
@@ -5440,7 +5514,7 @@ classicthemerestorerjs.ctr = {
 
 			removeOldSheet(this.cntabsheet_def);
 			
-			if(enable==true){
+			if(enable==true && this.prefs.getCharPref('tabs')!='tabs_default' && this.prefs.getCharPref('tabs')!='tabs_squared2' && this.prefs.getCharPref('tabs')!='tabs_squared2c2' && this.prefs.getCharPref('tabs')!='tabs_curved' && this.prefs.getCharPref('tabs')!='tabs_curvedall'){
 		
 				if (this.prefs.getCharPref('tabs')=='tabs_squared') {
 				
@@ -5471,7 +5545,7 @@ classicthemerestorerjs.ctr = {
 
 			removeOldSheet(this.cntabsheet_hov);
 			
-			if(enable==true){
+			if(enable==true && this.prefs.getCharPref('tabs')!='tabs_default' && this.prefs.getCharPref('tabs')!='tabs_squared2' && this.prefs.getCharPref('tabs')!='tabs_squared2c2' && this.prefs.getCharPref('tabs')!='tabs_curved' && this.prefs.getCharPref('tabs')!='tabs_curvedall'){
 		
 				if (this.prefs.getCharPref('tabs')=='tabs_squared') {
 				

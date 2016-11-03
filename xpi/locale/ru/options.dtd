@@ -16,6 +16,7 @@
 <!ENTITY Ctr_rr				"Перезапустите &brandShortName;!">
 <!ENTITY Ctr_window			"окно">
 <!ENTITY Ctr_centered		"По центру">
+<!ENTITY Ctr_page			"Page">
 
 <!ENTITY Ctr_cuibuttons		"Кнопки:">
 <!ENTITY Ctr_cuibutnormal	"Обычные">
@@ -54,7 +55,7 @@
 <!ENTITY Ctr_tabminwidth	"Мин. ширина:">
 <!ENTITY Ctr_tabwidthinfo	"Минимальная и максимальная ширина вкладок изменяется расширением 'TabMixPlus'">
 <!ENTITY Ctr_tabwidthinfo2	"Минимальная и максимальная ширина вкладок изменяется расширением 'TabUtilities'">
-<!ENTITY Ctr_tabwidthinfo3	"Значение ниже 48px вызовет сбои в большинстве случаев!">
+<!ENTITY Ctr_tabwidthinfo3	"Значение ниже 48 пикселей в большинстве случаев вызовет сбои!">
 <!ENTITY Ctr_square_edges	"Верхние углы квадратные">
 <!ENTITY Ctr_tttitlebar		"Название вкладки в заголовке &brandShortName;">
 <!ENTITY Ctr_tabinsertion	"Открывать связанную вкладку после текущей вкладки">
@@ -84,10 +85,10 @@
 <!ENTITY Ctr_appbutton1wt	"в панели инструментов (только текст)">
 <!ENTITY Ctr_appbutton2		"в панели заголовка">
 <!ENTITY Ctr_appbutton2h	"в панели заголовка (скрыта)">
-<!ENTITY Ctr_appbutton2io	"в панели заголовка (только значки)">
-<!ENTITY Ctr_paneluibtweak	"Оранжевая кнопка меню">
-<!ENTITY Ctr_paneluibtweak2	"Оранжевая кнопка меню (только значки)">
-<!ENTITY Ctr_paneluibtweak3	"...на панели вкладок">
+<!ENTITY Ctr_appbutton2io	"в панели заголовка (только значок)">
+<!ENTITY Ctr_paneluibtweak	"Вид кнопки меню как у кнопки &brandShortName;…">
+<!ENTITY Ctr_paneluibtweak2	"Вид кнопки меню как у кнопки &brandShortName; (только значок)…">
+<!ENTITY Ctr_paneluibtweak3	"… если расположена на панели вкладок">
 <!ENTITY Ctr_appbuttonc_o	"Оранжевая кнопка (по умолчанию)">
 <!ENTITY Ctr_appbuttonc_a	"Синяя кнопка (Aurora)">
 <!ENTITY Ctr_appbuttonc_n	"Чёрная кнопка (Nightly)">
@@ -100,8 +101,8 @@
 <!ENTITY Ctr_appbuttonc_wh	"Белая кнопка">
 <!ENTITY Ctr_appbuttonc_cu	"Пользовательский цвет кнопки">
 <!ENTITY Ctr_appbuttonct	"Пользовательский цвет кнопки на панели инструментов">
-<!ENTITY Ctr_appbuttonI1	"рекомендуется перезапуск">
-<!ENTITY Ctr_appbuttonI1e	"не видно в строке заголовка операционной системы">
+<!ENTITY Ctr_appbuttonI1	"Рекомендуется перезапуск">
+<!ENTITY Ctr_appbuttonI1e	"Кнопка &brandShortName; не отображается в строке заголовка ОС Windows!">
 <!ENTITY Ctr_appbuttonI2	"Цвета кнопок, видимые только на панели заголовка и вкладок!">
 <!ENTITY Ctr_appbutmhi		"Высокое положение (если на панели вкладок)">
 <!ENTITY Ctr_appbautocol	"Установить цвет автоматически: По умолчанию/Aurora/Nightly">
@@ -264,14 +265,14 @@
 <!ENTITY Ctr_locsearchbw10	"Уменьшить высоту панелей адреса и поиска (экспериментально)">
 <!ENTITY Ctr_urlbar_ib		"Кнопка подлинности сайта">
 <!ENTITY Ctr_ib_nohovcolor	"Не показывать серый цвет при наведении">
-<!ENTITY Ctr_ib_graycolor	"Серый цвет для неопознанных и «Сhrome» страниц">
+<!ENTITY Ctr_ib_graycolor	"Серый цвет для неопознанных и «Chrome» страниц">
 <!ENTITY Ctr_verifiedcolors	"Цвет кнопки для проверенных веб-сайтов, защищённых и не защищённых соединений">
 <!ENTITY Ctr_ibinfoico		"Заменить «i»-значок на глобус">
 <!ENTITY Ctr_ibinfoico2		"Скрыть «i»-значок (если возможно)">
 <!ENTITY Ctr_iblabels		"Скрыть метки">
 <!ENTITY Ctr_faviconurl		"Значок в адресной строке">
 <!ENTITY Ctr_padlock		"Замок">
-<!ENTITY Ctr_padlock_hid	"Скрыть замок">
+<!ENTITY Ctr_padlock_hid	"скрывать">
 <!ENTITY Ctr_padlock_def	"по умолчанию">
 <!ENTITY Ctr_padlock_cla	"классический">
 <!ENTITY Ctr_padlock_mod	"модерн">
@@ -281,8 +282,8 @@
 <!ENTITY Ctr_searchbar		"Строка поиска">
 <!ENTITY Ctr_autocomplete	"Автозавершение">
 <!ENTITY Ctr_altautocompl	"Альтернативный внешний вид">
-<!ENTITY Ctr_autocompl_it	"Удалить пункты «Искать в...» и «Посетить» (при наличии)">
-<!ENTITY Ctr_acompl_search	"Show search engines">
+<!ENTITY Ctr_autocompl_it	"Удалить пункты «Искать в…» и «Посетить» (при наличии)">
+<!ENTITY Ctr_acompl_search	"Показать поисковые системы">
 <!ENTITY Ctr_autocompl_hl	"Выделение текстовых результатов">
 <!ENTITY Ctr_autocompl_rhl	"«Aero» цвета выделения результатов">
 <!ENTITY Ctr_autocompl_not	"Скрывать заголовок страницы">
