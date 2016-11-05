@@ -2891,7 +2891,7 @@ classicthemerestorerjs.ctr = {
 				  try {
 					document.getElementById("appmenu_webDeveloper").appendChild(document.getElementById("menuWebDeveloperPopup"));
 				  } catch(e){}
-				},200);
+				},600);
 			  }
 			}, false);
 			
@@ -2903,7 +2903,7 @@ classicthemerestorerjs.ctr = {
 				  try {
 					document.getElementById("webDeveloperMenu").appendChild(document.getElementById("menuWebDeveloperPopup"));
 				  } catch(e){}
-				},200);
+				},600);
 			  }
 			}, false);
 
@@ -3659,9 +3659,10 @@ classicthemerestorerjs.ctr = {
   // move 'Tools' menus dev tools into application buttons popup 
   moveDevtoolsmenu: function(){
 	
-	setTimeout(function(){
-		
-		document.getElementById("ctraddon_appbutton").addEventListener("mousedown", function() {
+	//setTimeout(function(){
+	window.addEventListener("DOMContentLoaded", function toggleNavBarSwitch(event){
+
+		classicthemerestorerjs.ctr.ctrGetId("ctraddon_appbutton").addEventListener("mousedown", function() {
 
 			var app_popup = classicthemerestorerjs.ctr.ctrGetId('appmenu-popup');
 			
@@ -3672,7 +3673,7 @@ classicthemerestorerjs.ctr = {
 				  try {
 					document.getElementById("appmenu_webDeveloper").appendChild(document.getElementById("menuWebDeveloperPopup"));
 				  } catch(e){}
-				},200);
+				},650);
 			  }
 			}, false);
 			
@@ -3683,13 +3684,14 @@ classicthemerestorerjs.ctr = {
 				  try {
 					document.getElementById("webDeveloperMenu").appendChild(document.getElementById("menuWebDeveloperPopup"));
 				  } catch(e){}
-				},200);
+				},650);
 			  }
 			}, false);
 
 		}, false);
 
-	},500);
+	},false);
+	//},1500);
 
   },
   
