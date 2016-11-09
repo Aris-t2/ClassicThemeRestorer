@@ -167,14 +167,16 @@ pref("extensions.classicthemerestorer.extraurlkeycb",false);
 pref("extensions.classicthemerestorer.extraurltarget",'tab');
 pref("extensions.classicthemerestorer.locsearchbw10",false);
 
-pref("extensions.classicthemerestorer.lbsbsize",false);
+pref("extensions.classicthemerestorer.lb_width",false);
 pref("extensions.classicthemerestorer.lbsize_minw",200);
 pref("extensions.classicthemerestorer.lbsize_maxw",4000);
+pref("extensions.classicthemerestorer.sb_width",false);
 pref("extensions.classicthemerestorer.sbsize_minw",200);
 pref("extensions.classicthemerestorer.sbsize_maxw",4000);
-pref("extensions.classicthemerestorer.lbsbradius",false);
+pref("extensions.classicthemerestorer.lb_roundness",false);
 pref("extensions.classicthemerestorer.lbradius_left",0);
 pref("extensions.classicthemerestorer.lbradius_right",0);
+pref("extensions.classicthemerestorer.sb_roundness",false);
 pref("extensions.classicthemerestorer.sbradius_left",0);
 pref("extensions.classicthemerestorer.sbradius_right",0);
 
@@ -253,6 +255,8 @@ pref("extensions.classicthemerestorer.pw_actidx_t",0);
 pref("extensions.classicthemerestorer.pw_actidx_tc",0);
 pref("extensions.classicthemerestorer.pw_actidx_g",0);
 pref("extensions.classicthemerestorer.pw_actidx_tb",0);
+pref("extensions.classicthemerestorer.pw_actidx_lb",0);
+pref("extensions.classicthemerestorer.pw_actidx_sb",0);
 
 // Tab color settings
 pref("extensions.classicthemerestorer.tabcolor_def",false);

@@ -44,6 +44,8 @@
   min-height:16px !important;
 }
 
-#ctraddon_tabcolor_tabs tab[selected="true"] {
+#ClassicTRoptionsPane tabbox tab[selected="true"] label {
   font-weight: bold !important;
+  border-top: 1px solid Highlight !important;
+  margin-top: -1px !important;
 }

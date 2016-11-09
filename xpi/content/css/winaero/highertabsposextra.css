@@ -5,6 +5,11 @@
 	#main-window:not([tabsontop="false"]) #TabsToolbar:not([tabsontop="false"]):not(:-moz-lwtheme) {
 	  margin-top:0px !important;
 	}
+	@media all and (-moz-windows-classic) {
+		#main-window[sizemode="normal"]:not([tabsontop="false"]) #navigator-toolbox:not([tabsontop="false"]) #TabsToolbar:not([tabsontop="false"]):not(:-moz-lwtheme) {
+		  margin-top:-1px !important;
+		}
+	}
 	#main-window[sizemode="normal"]:not([tabsontop="false"]) #TabsToolbar:not([tabsontop="false"]):-moz-lwtheme {
 	  margin-top:2px !important;
 	}
