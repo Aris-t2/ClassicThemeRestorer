@@ -56,8 +56,10 @@ classicthemerestorerjs.ctr = {
   
   findbarwidth:			Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
-  locsearchbarsize:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-  locsearchbarradius:	Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  locationbarsize:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  searchbarsize:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  locationbarradius:	Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  searchbarradius:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   searchpopupwidth:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
   navbarpadding:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
@@ -838,18 +840,32 @@ classicthemerestorerjs.ctr = {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("navbarpad",false);
 		  break;
 		  
-		  case "lbsbsize": case "lbsize_minw": case "lbsize_maxw": case "sbsize_minw": case "sbsize_maxw":
-		    if (branch.getBoolPref("lbsbsize")) 
-			  classicthemerestorerjs.ctr.loadUnloadCSS("lbsbsize",true);
+		  case "lb_width": case "lbsize_minw": case "lbsize_maxw":
+		    if (branch.getBoolPref("lb_width")) 
+			  classicthemerestorerjs.ctr.loadUnloadCSS("lb_width",true);
 		    else
-			  classicthemerestorerjs.ctr.loadUnloadCSS("lbsbsize",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("lb_width",false);
 		  break;
 		  
-		  case "lbsbradius": case "lbradius_left": case "lbradius_right": case "sbradius_left": case "sbradius_right":
-		    if (branch.getBoolPref("lbsbradius")) 
-			  classicthemerestorerjs.ctr.loadUnloadCSS("lbsbradius",true);
+		  case "sb_width": case "sbsize_minw": case "sbsize_maxw":
+		    if (branch.getBoolPref("sb_width")) 
+			  classicthemerestorerjs.ctr.loadUnloadCSS("sb_width",true);
 		    else
-			  classicthemerestorerjs.ctr.loadUnloadCSS("lbsbradius",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("sb_width",false);
+		  break;
+		  
+		  case "lb_roundness": case "lbradius_left": case "lbradius_right":
+		    if (branch.getBoolPref("lb_roundness")) 
+			  classicthemerestorerjs.ctr.loadUnloadCSS("lb_roundness",true);
+		    else
+			  classicthemerestorerjs.ctr.loadUnloadCSS("lb_roundness",false);
+		  break;
+		  
+		  case "sb_roundness": case "sbradius_left": case "sbradius_right":
+		    if (branch.getBoolPref("sb_roundness")) 
+			  classicthemerestorerjs.ctr.loadUnloadCSS("sb_roundness",true);
+		    else
+			  classicthemerestorerjs.ctr.loadUnloadCSS("sb_roundness",false);
 		  break;
 
 		  case "backforward":
@@ -6097,31 +6113,44 @@ classicthemerestorerjs.ctr = {
 
 		break;
 		
-		case "lbsbsize":
-			removeOldSheet(this.locsearchbarsize);
+		case "lb_width":
+			removeOldSheet(this.locationbarsize);
 			
-			if(enable==true && this.prefs.getBoolPref('lbsbsize')){
+			if(enable==true && this.prefs.getBoolPref('lb_width')){
 		
-				this.locsearchbarsize=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+				this.locationbarsize=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
 					#urlbar-container {\
 					  min-width: '+this.prefs.getIntPref('lbsize_minw')+'px !important;\
 					  max-width: '+this.prefs.getIntPref('lbsize_maxw')+'px !important;\
 					}\
+				'), null, null);
+				
+				applyNewSheet(this.locationbarsize);
+			}
+		
+		break;
+		
+		case "sb_width":
+			removeOldSheet(this.searchbarsize);
+			
+			if(enable==true && this.prefs.getBoolPref('sb_width')){
+		
+				this.searchbarsize=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
 					#search-container {\
 					  min-width: '+this.prefs.getIntPref('sbsize_minw')+'px !important;\
 					  max-width: '+this.prefs.getIntPref('sbsize_maxw')+'px !important;\
 					}\
 				'), null, null);
 				
-				applyNewSheet(this.locsearchbarsize);
+				applyNewSheet(this.searchbarsize);
 			}
 		
 		break;
 		
-		case "lbsbradius":
-			removeOldSheet(this.locsearchbarradius);
+		case "lb_roundness":
+			removeOldSheet(this.locationbarradius);
 			
-			if(enable==true && this.prefs.getBoolPref('lbsbradius')){
+			if(enable==true && this.prefs.getBoolPref('lb_roundness')){
 		
 				var locborraiusextra_l='';
 				var locborraiusextra_r='';
@@ -6146,7 +6175,7 @@ classicthemerestorerjs.ctr = {
 				  ';
 				}
 				
-				this.locsearchbarradius=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+				this.locationbarradius=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
 					#urlbar,\
 					#urlbar .autocomplete-textbox-container {\
 					  border-top-left-radius: '+this.prefs.getIntPref('lbradius_left')+'px !important;\
@@ -6154,6 +6183,21 @@ classicthemerestorerjs.ctr = {
 					  border-top-right-radius: '+this.prefs.getIntPref('lbradius_right')+'px !important;\
 					  border-bottom-right-radius: '+this.prefs.getIntPref('lbradius_right')+'px !important;\
 					}\
+					'+locborraiusextra_l+'\
+					'+locborraiusextra_r+'\
+				'), null, null);
+				
+				applyNewSheet(this.locationbarradius);
+			}
+		
+		break;
+		
+		case "sb_roundness":
+			removeOldSheet(this.searchbarradius);
+			
+			if(enable==true && this.prefs.getBoolPref('sb_roundness')){
+		
+				this.searchbarradius=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
 					.searchbar-textbox,\
 					.searchbar-textbox .autocomplete-textbox-container{\
 					  border-top-left-radius: '+this.prefs.getIntPref('sbradius_left')+'px !important;\
@@ -6161,11 +6205,9 @@ classicthemerestorerjs.ctr = {
 					  border-top-right-radius: '+this.prefs.getIntPref('sbradius_right')+'px !important;\
 					  border-bottom-right-radius: '+this.prefs.getIntPref('sbradius_right')+'px !important;\
 					}\
-					'+locborraiusextra_l+'\
-					'+locborraiusextra_r+'\
 				'), null, null);
 				
-				applyNewSheet(this.locsearchbarradius);
+				applyNewSheet(this.searchbarradius);
 			}
 		
 		break;
@@ -6382,7 +6424,8 @@ classicthemerestorerjs.ctr = {
 
   // open prefwindow and specific category
   additionalToolbars: function(){
-	Services.prefs.getBranch("extensions.classicthemerestorer.").setIntPref('pref_actindx',14);
+	Services.prefs.getBranch("extensions.classicthemerestorer.").setIntPref('pw_actidx_c',7);
+	Services.prefs.getBranch("extensions.classicthemerestorer.").setIntPref('pw_actidx_tb',0);
 	
 	setTimeout(function(){
 	  classicthemerestorerjs.ctr.openCTRPreferences();

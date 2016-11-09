@@ -57,6 +57,8 @@ classicthemerestorerjso.ctr = {
 	document.getElementById("ctraddon_tabcolor_tabs").selectedIndex = this.prefs.getIntPref('pw_actidx_tc');
 	document.getElementById("ctraddon_pw_generalui_tabs").selectedIndex = this.prefs.getIntPref('pw_actidx_g');
 	document.getElementById("ctraddon_pw_toolbars_tabs").selectedIndex = this.prefs.getIntPref('pw_actidx_tb');
+	document.getElementById("ctraddon_pw_locationbar_tabs").selectedIndex = this.prefs.getIntPref('pw_actidx_lb');
+	document.getElementById("ctraddon_pw_searchbar_tabs").selectedIndex = this.prefs.getIntPref('pw_actidx_sb');
 	
 	// disable and hide items not usable on third party themes
 	if (!this.fxdefaulttheme) {
@@ -591,8 +593,10 @@ classicthemerestorerjso.ctr = {
 	this.currentAboutPrefs(this.prefs.getCharPref("altoptions"));
 	this.ctrpwTranspTbW10(this.prefs.getBoolPref("transpttbw10"));
 	this.ctrpwNavBarPadding(this.prefs.getBoolPref("navbarpad"));
-	this.ctrpwLocationSearchbarSize(this.prefs.getBoolPref("lbsbsize"));
-	this.ctrpwLocationSearchbarRadius(this.prefs.getBoolPref("lbsbradius"));
+	this.ctrpwLocationbarSize(this.prefs.getBoolPref("lb_width"));
+	this.ctrpwSearchbarSize(this.prefs.getBoolPref("sb_width"));
+	this.ctrpwLocationbarRadius(this.prefs.getBoolPref("lb_roundness"));
+	this.ctrpwSearchbarRadius(this.prefs.getBoolPref("sb_roundness"));
 	if (this.fxdefaulttheme) this.ctrpwCompactAddonList(this.prefs.getBoolPref("am_compact"));
 	this.ctrpwUnsortBM(this.prefs.getBoolPref("bmbunsortbm"));
 	this.ctrpwHideUrlStopRel(this.prefs.getBoolPref("hideurelstop"));
@@ -656,6 +660,8 @@ classicthemerestorerjso.ctr = {
 	this.prefs.setIntPref('pw_actidx_tc',document.getElementById("ctraddon_tabcolor_tabs").selectedIndex);
 	this.prefs.setIntPref('pw_actidx_g',document.getElementById("ctraddon_pw_generalui_tabs").selectedIndex);
 	this.prefs.setIntPref('pw_actidx_tb',document.getElementById("ctraddon_pw_toolbars_tabs").selectedIndex);
+	this.prefs.setIntPref('pw_actidx_lb',document.getElementById("ctraddon_pw_locationbar_tabs").selectedIndex);
+	this.prefs.setIntPref('pw_actidx_sb',document.getElementById("ctraddon_pw_searchbar_tabs").selectedIndex);
 
 	return true;
   },
@@ -803,28 +809,42 @@ classicthemerestorerjso.ctr = {
 	document.getElementById('ctraddon_pw_navbarmar_lr').style.visibility = itemvis;
   },
   
-  ctrpwLocationSearchbarSize: function(which) {
+  ctrpwLocationbarSize: function(which) {
 	
     if(which==true) which=false;
 	else which=true;
 	
-    document.getElementById('ctraddon_pw_lbsbsize_lb').disabled = which;
-    document.getElementById('ctraddon_pw_lbsbsize_sb').disabled = which;
+    document.getElementById('ctraddon_pw_lb_width').disabled = which;
 	document.getElementById('ctraddon_lbsize_minw').disabled = which;
 	document.getElementById('ctraddon_lbsize_maxw').disabled = which;
+  },
+  
+  ctrpwSearchbarSize: function(which) {
+	
+    if(which==true) which=false;
+	else which=true;
+	
+    document.getElementById('ctraddon_pw_sb_width').disabled = which;
 	document.getElementById('ctraddon_sbsize_minw').disabled = which;
 	document.getElementById('ctraddon_sbsize_maxw').disabled = which;
   },
   
-  ctrpwLocationSearchbarRadius: function(which) {
+  ctrpwLocationbarRadius: function(which) {
 	
     if(which==true) which=false;
 	else which=true;
 	
     document.getElementById('ctraddon_pw_lbsbradius_lb').disabled = which;
-    document.getElementById('ctraddon_pw_lbsbradius_sb').disabled = which;
 	document.getElementById('ctraddon_lbradius_left').disabled = which;
 	document.getElementById('ctraddon_lbradius_right').disabled = which;
+  },
+  
+  ctrpwSearchbarRadius: function(which) {
+	
+    if(which==true) which=false;
+	else which=true;
+	
+    document.getElementById('ctraddon_pw_lbsbradius_sb').disabled = which;
 	document.getElementById('ctraddon_sbradius_left').disabled = which;
 	document.getElementById('ctraddon_sbradius_right').disabled = which;
   },
