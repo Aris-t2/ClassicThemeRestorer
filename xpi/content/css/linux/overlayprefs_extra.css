@@ -1,5 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
+#ClassicTRoptionsPane.ctraddon_winmaconly,
 #ClassicTRoptionsPane .ctraddon_maconly,
 #ClassicTRoptionsPane .ctraddon_windowsonly{
   visibility: collapse !important;
@@ -12,7 +13,6 @@
 #ctraddon_pw_menubarnofog,
 #ctraddon_pw_altmenubar,
 #ctraddon_tabs_in_titlebar,
-.ctraddon_winmaconly,
 #ctraddon_appbutton_list1{
   visibility: collapse !important;
   display:none !important;

@@ -371,7 +371,7 @@
 	  <radio value="ctraddon_generaluibox"	label="&Ctr_ui;"			class="ctraddontab ctraddon_new_in_v47 ctraddon_new_in_v48 ctraddon_new_in_v49 ctraddon_new_in_v50 ctraddon_new_in_v51"/>
 	  <radio value="ctraddon_prefpagebox"	label="&Ctr_prefpage;"		class="ctraddontab"/>
 	  <radio value="ctraddon_addonmngrbox"	label="&Ctr_addonmanager;"	class="ctraddontab"/>
-	  <radio value="ctraddon_locationbbox"	label="&Ctr_urlbar;"		class="ctraddontab ctraddon_new_in_v51"/>
+	  <radio value="ctraddon_locationbbox"	label="&Ctr_urlbar;"		class="ctraddontab ctraddon_new_in_v48 ctraddon_new_in_v50 ctraddon_new_in_v51"/>
 	  <radio value="ctraddon_searchuibox"	label="&Ctr_searchbar;"		class="ctraddontab"/>
 	  <radio value="ctraddon_toolbarsbox"	label="&Ctr_toolbars;"		class="ctraddontab ctraddon_new_in_v51"/>
 	  <radio value="ctraddon_experttweaks"	label="&Ctr_experttweaks;"	id="ctraddon_experttweakstab" class="ctraddontab ctraddon_new_in_v50"/>
@@ -491,6 +491,9 @@
 				
 				<checkbox label="&Ctr_ctrltabprev;" preference="ctraddon_ctrltabprev" id="ctraddon_pw_ctrltabprev" class="ctraddon_new_in_v48"/>
 				<description class="ctraddonsuboption">about:config &gt;&gt; browser.ctrlTab.previews</description>
+				
+				<checkbox label="&Ctr_tabanimation;" preference="ctraddon_tabsanimate"/>
+				<description class="ctraddonsuboption">about:config &gt;&gt; browser.tabs.animate</description>
 
 			  </groupbox>
 
@@ -943,7 +946,6 @@
 			<tab label="&Ctr_page; 2" class="ctraddon_new_in_v47 ctraddon_new_in_v49 ctraddon_new_in_v50 ctraddon_new_in_v51"/>
 			<tab label="&Ctr_page; 3"/>
 			<tab label="&Ctr_page; 4"/>
-			<tab label="&Ctr_animation;"/>
 		</tabs>
 
 		<tabpanels id="ctraddon_pw_generalui_tabpanels" flex="1">
@@ -983,6 +985,7 @@
 					</menupopup>
 				  </menulist>
 				</hbox>
+
 				<checkbox label="&Ctr_html5warning;"	preference="ctraddon_html5warning" id="ctraddon_pw_html5warning"/>
 				<description class="ctraddonsuboption">about:config &gt;&gt; full-screen-api.warning.*</description>
 				<checkbox label="&Ctr_locsearchbw10;" preference="ctraddon_locsearchbw10"  id="ctraddon_pw_locsearchbw10"/>
@@ -1001,25 +1004,16 @@
 				<checkbox label="&Ctr_panelmenucol;"	preference="ctraddon_panelmenucol" id="ctraddon_pw_panelmenucolor"/>
 				<checkbox label="&Ctr_cpanelmenus;"		preference="ctraddon_cpanelmenus"/>
 				<checkbox label="&Ctr_menupopupscr;"	preference="ctraddon_menupopupscr"/>
+				<checkbox label="&Ctr_pananimation;"	preference="ctraddon_pananimation" id="ctraddon_pw_pananimation"/>
 				<checkbox label="&Ctr_hiderecentbm;"	preference="ctraddon_hiderecentbm" id="ctraddon_pw_hiderecentbm" class="ctraddon_new_in_v49"/>
 				<description id="ctraddon_pw_hiderecentbmdes" class="ctraddonsuboption">about:config &gt;&gt; browser.bookmarks.showRecentlyBookmarked</description>
 				<checkbox label="&Ctr_hideeditbm;"		preference="ctraddon_hideeditbm" id="ctraddon_pw_hideeditbm" class="ctraddon_new_in_v47" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 				<checkbox label="&Ctr_oldplacesbut;"	preference="ctraddon_oldplacesbut" id="ctraddon_pw_oldplacesbut" class="ctraddon_winlinonly ctraddon_new_in_v50"/>
 				<checkbox label="&Ctr_dl_pm_drop;"		preference="ctraddon_dl_pm_drop" id="ctraddon_pw_dl_pm_drop" class="ctraddon_new_in_v51"/>
 				<description id="ctraddon_pw_dl_pm_dropdes" class="ctraddonsuboption">about:config &gt;&gt; browser.download.showPanelDropmarker</description>
+				<checkbox label="&Ctr_dlanimation;"		preference="ctraddon_dlanimate"/>
+				<description class="ctraddonsuboption">about:config &gt;&gt; browser.download.animateNotifications</description>
 				
-			  </groupbox>
-			  
-
-			  <groupbox>
-				<caption  label="&Ctr_navthrobber;" class="ctraddon_topic"/>
-				<checkbox label="&Ctr_navthrobber;"	preference="ctraddon_activndicat" id="ctraddon_pw_activitythrobber"/>
-				<description>&Ctr_navthrobber1;</description>
-				<hbox>
-				  <label value=""/>
-				  <textbox id="ctraddon_pw_athrobberurlbox" preference="ctraddon_athrobberurl" size="auto" flex="1" type="autocomplete" placeholder="&Ctr_navthrobber2;"/>
-				  <label value=""/>
-				</hbox>
 			  </groupbox>
 
 		  </tabpanel>
@@ -1028,6 +1022,8 @@
 			  <groupbox>
 
 			    <caption  label="&Ctr_ui;" class="ctraddon_topic"/>
+				<checkbox label="&Ctr_bmanimation;"		preference="ctraddon_bmanimation" id="ctraddon_pw_bmanimation"/>
+				
 				<description class="ctraddon_font1">&Ctr_bmbutton;</description>
 				<checkbox label="&Ctr_bmbutpanelm;"		preference="ctraddon_bmbutpanelm" id="ctraddon_pw_bmbutpanelm"/>
 				<checkbox label="&Ctr_bmbunsortbm;"		preference="ctraddon_bmbunsortbm" id="ctraddon_pw_bmbunsortbm" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwUnsortBM(true);} else {classicthemerestorerjso.ctr.ctrpwUnsortBM(false);}"/>
@@ -1060,6 +1056,18 @@
 				</radiogroup>
 
 			  </groupbox>
+
+			  <groupbox>
+				<caption  label="&Ctr_navthrobber;" class="ctraddon_topic"/>
+				<checkbox label="&Ctr_navthrobber;"	preference="ctraddon_activndicat" id="ctraddon_pw_activitythrobber"/>
+				<description>&Ctr_navthrobber1;</description>
+				<hbox>
+				  <label value=""/>
+				  <textbox id="ctraddon_pw_athrobberurlbox" preference="ctraddon_athrobberurl" size="auto" flex="1" type="autocomplete" placeholder="&Ctr_navthrobber2;"/>
+				  <label value=""/>
+				</hbox>
+			  </groupbox>
+
 		  </tabpanel>
 		  
 		  <tabpanel orient="vertical">
@@ -1073,6 +1081,11 @@
 				<checkbox label="&Ctr_hidezoomres;"		preference="ctraddon_hidezoomres"/>
 				<checkbox label="&Ctr_noresizerxp;"		preference="ctraddon_noresizerxp" id="ctraddon_pw_noresizerxp"/>
 				<checkbox label="&Ctr_tbconmenu;"		preference="ctraddon_tbconmenu"	  id="ctraddon_pw_tbconmenu"/>
+				
+				<checkbox label="&Ctr_fsanimation;"		preference="ctraddon_fsanimation" id="ctraddon_pw_fsanimation"/>
+				<description class="ctraddonsuboption">about:config &gt;&gt; browser.fullscreen.animate</description>
+				<checkbox label="&Ctr_fsaduration;"		preference="ctraddon_fsaduration" id="ctraddon_pw_fsaduration"/>
+				<description class="ctraddonsuboption">about:config &gt;&gt; full-screen-api.transition-duration.*</description>
 			  </groupbox>
 
 			  <groupbox id="ctraddon_pw_invertedicons">
@@ -1097,21 +1110,6 @@
 
 		  </tabpanel>
 		  
-		  <tabpanel orient="vertical">
-			<groupbox>
-				<caption  label="&Ctr_animation;" class="ctraddon_topic"/>
-				<checkbox label="&Ctr_bmanimation;"		preference="ctraddon_bmanimation" id="ctraddon_pw_bmanimation"/>
-				<checkbox label="&Ctr_pananimation;"	preference="ctraddon_pananimation" id="ctraddon_pw_pananimation"/>
-				<checkbox label="&Ctr_tabanimation;"	preference="ctraddon_tabsanimate"/>
-				<description class="ctraddonsuboption">about:config &gt;&gt; browser.tabs.animate</description>
-				<checkbox label="&Ctr_dlanimation;"		preference="ctraddon_dlanimate"/>
-				<description class="ctraddonsuboption">about:config &gt;&gt; browser.download.animateNotifications</description>
-				<checkbox label="&Ctr_fsanimation;"		preference="ctraddon_fsanimation" id="ctraddon_pw_fsanimation"/>
-				<description class="ctraddonsuboption">about:config &gt;&gt; browser.fullscreen.animate</description>
-				<checkbox label="&Ctr_fsaduration;"		preference="ctraddon_fsaduration" id="ctraddon_pw_fsaduration"/>
-				<description class="ctraddonsuboption">about:config &gt;&gt; full-screen-api.transition-duration.*</description>
-			</groupbox>
-		  </tabpanel>
 		</tabpanels>
 	  </tabbox>
 

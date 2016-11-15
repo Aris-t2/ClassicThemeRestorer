@@ -27,6 +27,8 @@ classicthemerestorerjso.ctr = {
 	"extensions.classicthemerestorer.pw_actidx_tc",
 	"extensions.classicthemerestorer.pw_actidx_g",
 	"extensions.classicthemerestorer.pw_actidx_tb",
+	"extensions.classicthemerestorer.pw_actidx_lb",
+	"extensions.classicthemerestorer.pw_actidx_sb",
 	"extensions.classicthemerestorer.ctrreset"
 	],
 
