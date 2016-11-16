@@ -47,8 +47,8 @@
 	  border-color: Highlight !important;
 	}
 
-	window:not([chromehidden~="toolbar"]) #urlbar-container,
-	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] {
+	window:not([chromehidden~="toolbar"]) * toolbar #urlbar-container,
+	window:not([chromehidden~="toolbar"]) * toolbar #urlbar-container[forwarddisabled] {
 	  -moz-margin-start: 4px !important;
 	}
 

@@ -135,8 +135,8 @@
 	  transition-delay: 0s !important;
 	}
 
-	window:not([chromehidden~="toolbar"]) #urlbar-container,
-	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] {
+	#urlbar-container,
+	#urlbar-container[forwarddisabled] {
 	  -moz-margin-start: 4px !important;
 	}
 	

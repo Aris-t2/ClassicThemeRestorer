@@ -27,8 +27,8 @@
 	  transition: none !important;
 	}
 
-    #main-window:not([chromehidden~="toolbar"]) #nav-bar #urlbar-container,
-	#main-window:not([chromehidden~="toolbar"]) #nav-bar #urlbar-container[forwarddisabled] {
+    #nav-bar #urlbar-container,
+	#nav-bar #urlbar-container[forwarddisabled] {
 	  -moz-margin-start: 2px !important;
 	}
 

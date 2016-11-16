@@ -1,8 +1,27 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @-moz-document url(chrome://browser/content/browser.xul){
  
-	#PlacesToolbar toolbarbutton {
-	  -moz-appearance: toolbarbutton !important;
+	@media not all and (-moz-windows-classic) {
+	  #PlacesToolbar toolbarbutton {
+		-moz-appearance: toolbarbutton !important;
+	  }
+	}
+	
+	@media all and (-moz-windows-classic) {
+	  #PlacesToolbar toolbarbutton:not([disabled]):hover{
+		border-top: 1px solid white !important;
+		border-right: 1px solid #808080 !important;
+		border-left: 1px solid white !important;
+		border-bottom: 1px solid #808080 !important;
+		background: unset !important;
+	  }
+	  #PlacesToolbar toolbarbutton:not([disabled]):-moz-any([checked],[open],:active,:hover:active) {
+		border-top: 1px solid #808080 !important;
+		border-right: 1px solid white !important;
+		border-left: 1px solid #808080 !important;
+		border-bottom: 1px solid white !important;
+		background: unset !important;
+	  }
 	}
 
 }
