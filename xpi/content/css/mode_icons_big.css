@@ -415,5 +415,11 @@
 	  width: unset !important;
 	  max-width: unset !important;
 	}
+	
+	/* Action & toggle buttons */
+	#nav-bar toolbarbutton[id^="action-button-"] .toolbarbutton-icon,
+	#nav-bar toolbarbutton[id^="toggle-button-"] .toolbarbutton-icon {
+	  width: 16px !important;
+	}
 
 }

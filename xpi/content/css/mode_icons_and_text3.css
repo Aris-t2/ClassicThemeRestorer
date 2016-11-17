@@ -257,5 +257,11 @@
 	#navigator-toolbox toolbar:not(#TabsToolbar) #lpt_lastpass-compact-btn	{
       padding-top: 6px !important;
 	}
+	
+	/* Action & toggle buttons */
+	#nav-bar toolbarbutton[id^="action-button-"] .toolbarbutton-icon,
+	#nav-bar toolbarbutton[id^="toggle-button-"] .toolbarbutton-icon {
+	  width: 16px !important;
+	}
 
 }
