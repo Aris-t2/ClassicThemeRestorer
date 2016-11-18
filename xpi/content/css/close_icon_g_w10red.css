@@ -10,6 +10,18 @@
 *:not(#TabsToolbar):not(.tab-content) > .close-icon:hover:active {
   -moz-image-region: rect(0, 60px, 20px, 40px) !important;
 }
+@media (min-resolution: 1.1dppx) {
+  *:not(#TabsToolbar):not(.tab-content) > .close-icon {
+	list-style-image: url("chrome://classic_theme_restorer/content/images/close_w10red_2x.png") !important;
+	-moz-image-region: rect(0, 40px, 40px, 0) !important;
+  }
+  *:not(#TabsToolbar):not(.tab-content) > .close-icon:hover {
+	-moz-image-region: rect(0, 80px, 40px, 40px) !important;
+  }
+  *:not(#TabsToolbar):not(.tab-content) > .close-icon:hover:active {
+	-moz-image-region: rect(0, 120px, 40px, 80px) !important;
+  }
+}
 *:not(#TabsToolbar):not(.tab-content) > .close-icon > .toolbarbutton-icon {
   width: 16px !important;
 }
