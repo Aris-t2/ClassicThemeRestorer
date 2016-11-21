@@ -15,8 +15,8 @@
 <!ENTITY Ctr_windowcontrols	"最小化/最大化/關閉 (全螢幕)">
 <!ENTITY Ctr_rr				"需重啟 &brandShortName;!">
 <!ENTITY Ctr_window			"視窗">
-<!ENTITY Ctr_centered		"Centered">
-<!ENTITY Ctr_page			"Page">
+<!ENTITY Ctr_centered		"文字置中">
+<!ENTITY Ctr_page			"分項">
 
 <!ENTITY Ctr_cuibuttons		"按鈕">
 <!ENTITY Ctr_cuibutnormal	"標準圖示">
@@ -50,7 +50,7 @@
 <!ENTITY Ctr_tabwidthcla	"(經典傳統)">
 <!ENTITY Ctr_tabminheight	"高度:">
 <!ENTITY Ctr_tabheightinfo	"在視窗最大化模式下，過小的值可能導致故障!">
-<!ENTITY Ctr_ctrltabprev	"Preview tabs using 'Ctrl + Tab'">
+<!ENTITY Ctr_ctrltabprev	"使用 「Ctrl + Tab」預覽分頁">
 <!ENTITY Ctr_tabmaxwidth	"最大寬度:">
 <!ENTITY Ctr_tabminwidth	"最小寬度:">
 <!ENTITY Ctr_tabwidthinfo	"分頁的最小和最大寬度由 Tab Mix Plus 控制">
@@ -59,8 +59,8 @@
 <!ENTITY Ctr_square_edges	"使分頁標籤四角為嚴格直角">
 <!ENTITY Ctr_tttitlebar		"將分頁標題文字顯示於 &brandShortName; 標題列">
 <!ENTITY Ctr_tabinsertion	"在網頁上點選連結時，將新分頁開啟於目前分頁的旁邊，即把預設行為 [a][b][c][1][2][3] 改為 [a][1][2][3][b][c]">
-<!ENTITY Ctr_emptytfavico	"Show favicon (if a site does not offer one)">
-<!ENTITY Ctr_emptytfavico_n	"None">
+<!ENTITY Ctr_emptytfavico	"(當網站未提供圖示時)顯示替代網站圖示">
+<!ENTITY Ctr_emptytfavico_n	"無">
 <!ENTITY Ctr_emptytfavico_g	"Generic">
 <!ENTITY Ctr_noemptypticon	"從釘選分頁移除空圖示">
 <!ENTITY Ctr_closetab_0		"關閉按鈕">
@@ -72,12 +72,12 @@
 <!ENTITY Ctr_closetab_hfot	"只有一個分頁時，則隱藏關閉按鈕">
 <!ENTITY Ctr_closei_def		"預設圖示">
 <!ENTITY Ctr_closeonleft	"關閉按鈕置於分頁左側">
-<!ENTITY Ctr_closetabbig	"Bigger icon (20x20px)">
+<!ENTITY Ctr_closetabbig	"大圖示 (20x20px)">
 <!ENTITY Ctr_close_wwltab	"關閉最後一個分頁時，也關閉視窗">
 
 <!ENTITY Ctr_hctpinfotab	"一些分頁設定不相容於 Hide Caption Titlebar Plus 擴充套件。">
 <!ENTITY Ctr_hctpinfoab		"「顯示在標題列」設定不相容於 Hide Caption Titlebar Plus 擴充套件。">
-<!ENTITY Ctr_tobainfotab	"The add-on 'Tabs on Bottom' is not compatible with '&Ctr_title;' and should be disabled. Use available '&Ctr_cuitabsnontop;' settings instead!">
+<!ENTITY Ctr_tobainfotab	"擴充套件 Tabs on Bottom 與 &Ctr_title; 不相容，您應該停用前者，並以本套件的 「&Ctr_cuitabsnontop;」設定替代之！">
 
 <!ENTITY Ctr_appbutton		"應用程式按鈕 (火狐橙按鈕)">
 <!ENTITY Ctr_appbutton0		"不顯示">
@@ -100,7 +100,7 @@
 <!ENTITY Ctr_appbuttonc_pu	"紫色按鈕">
 <!ENTITY Ctr_appbuttonc_wh	"白色按鈕">
 <!ENTITY Ctr_appbuttonc_cu	"自訂按鈕顏色">
-<!ENTITY Ctr_appbuttonct	"Custom button color for button on toolbar">
+<!ENTITY Ctr_appbuttonct	"自訂按鈕顏色〈當其位於工具列時〉">
 <!ENTITY Ctr_appbuttonI1	"建議重啟瀏覽器!">
 <!ENTITY Ctr_appbuttonI1e	"在作業系統標題列上不可見">
 <!ENTITY Ctr_appbuttonI2	"此項設定僅生效於標題列與分頁列!">
@@ -128,17 +128,17 @@
 <!ENTITY Ctr_altoptionswh	"高度">
 <!ENTITY Ctr_altoptionsi	"本套件模擬選項視窗將會是一個隱藏所有工具列的「瀏覽器視窗」。 若你在 [選項視窗]/[一般]/[首頁] 的設定頁內按下「使用目前頁面」按鈕，會將首頁網址設定變更為「about:preferences」，而非主瀏覽視窗的所有分頁。本套件會新增一個工具列按鈕，名為「選項(視窗)」，若你是第一次開啟本設定的話，可以在介面自訂模式中找到該按鈕。">
 <!ENTITY Ctr_options_rem	"記住上次選擇的選項分頁">
-<!ENTITY Ctr_aboutpages		"General 'about:' pages: alternative appearance">
+<!ENTITY Ctr_aboutpages		"「about:」系列頁面: 換個外觀">
 <!ENTITY Ctr_svgfilters		"改變預設工具列按鈕圖示顏色">
 <!ENTITY Ctr_wincontrols	"可移動的全螢幕視窗控制項">
-<!ENTITY Ctr_puibuttonsep	"Menu button separator">
-<!ENTITY Ctr_puibut_no_sep	"Hidden">
-<!ENTITY Ctr_puibut_l_sep	"Left">
-<!ENTITY Ctr_puibut_r_sep	"Right">
-<!ENTITY Ctr_html5warning	"HTML5 full screen warning">
+<!ENTITY Ctr_puibuttonsep	"選單按鈕分隔線">
+<!ENTITY Ctr_puibut_no_sep	"隱藏">
+<!ENTITY Ctr_puibut_l_sep	"左側">
+<!ENTITY Ctr_puibut_r_sep	"右側">
+<!ENTITY Ctr_html5warning	"HTML5 全螢幕警告">
 <!ENTITY Ctr_oldtoplevimg	"「頂層網域」圖示: 經典外觀">
 <!ENTITY Ctr_altalertbox	"「警示方塊」: 換個外觀">
-<!ENTITY Ctr_emptygfavico	"Replace generic favicon">
+<!ENTITY Ctr_emptygfavico	"〈原網站未提供圖示時〉所使用的替代書籤圖示">
 <!ENTITY Ctr_mstatusbar		"使狀態列可移動">
 <!ENTITY Ctr_mstatusbars4e	"狀態列由 Status-4-Evar 控制">
 <!ENTITY Ctr_mstatusbartpp	"狀態列由 The Puzzle Piece 控制">
@@ -150,11 +150,11 @@
 <!ENTITY Ctr_hideprivmask	"隱私瀏覽模式下，隱藏面具圖示">
 <!ENTITY Ctr_navsmallicons	"小圖示">
 <!ENTITY Ctr_navlargeicons	"大圖示">
-<!ENTITY Ctr_nbisizedelay0	"瀏覽器啟動後的初始化延遲">
+<!ENTITY Ctr_nbisizedelay0	"瀏覽器啟動後的初始化延時">
 <!ENTITY Ctr_nbisizedelay	"毫秒 (1000 毫秒 = 1 秒)">
-<!ENTITY Ctr_findbar		"Findbar">
-<!ENTITY Ctr_findbar_hws	"Close findbar when scrolling page">
-<!ENTITY Ctr_findbar_width	"Findboxes width: ">
+<!ENTITY Ctr_findbar		"尋找列">
+<!ENTITY Ctr_findbar_hws	"捲動頁面時，自動關閉尋找列">
+<!ENTITY Ctr_findbar_width	"尋找列輸入框寬度: ">
 <!ENTITY Ctr_findbarpos		"尋找列位於">
 <!ENTITY Ctr_findbar_def	"預設位置">
 <!ENTITY Ctr_findbar_top	"頂部">
@@ -164,43 +164,43 @@
 <!ENTITY Ctr_nav_txt_ico1	"顯示大圖示">
 <!ENTITY Ctr_nav_txt_ico2	"顯示圖示與文字">
 <!ENTITY Ctr_nav_txt_ico3	"僅顯示文字">
-<!ENTITY Ctr_nav_txt_exp	"Classic attributes (experimental):">
+<!ENTITY Ctr_nav_txt_exp	"傳統屬性 (實驗性):">
 <!ENTITY Ctr_iat_notf_vt	"排除垂直工具列">
 <!ENTITY Ctr_cpanelmenus	"緊湊的面板選單(書籤、歷史等等.)">
 <!ENTITY Ctr_hidezoomres	"當縮放控制按鈕置於工具列上時，隱藏工具列上的縮放重設按鈕">
 <!ENTITY Ctr_alt_newtabp	"新分頁(九宮頁面) (about:newtab): 換個外觀">
-<!ENTITY Ctr_nosnippets		"Start page (about:home): hide snippets">
-<!ENTITY Ctr_search_ui		"Search">
+<!ENTITY Ctr_nosnippets		"首頁 (about:home): 隱藏連向 addons.mozilla.org 的連結與敘述">
+<!ENTITY Ctr_search_ui		"搜尋">
 <!ENTITY Ctr_ctroldsearch	"傳統搜尋列">
-<!ENTITY Ctr_ctroldsearchc	"搜尋後清除搜尋列">
-<!ENTITY Ctr_ctroldsearchr	"Revert to first search engine in list after search">
-<!ENTITY Ctr_ctrosearchdel	"delay">
-<!ENTITY Ctr_search_oit		"Open search in new tab">
-<!ENTITY Ctr_osearch_meoit	"Middle-clicks: search in new 'foreground tab'">
-<!ENTITY Ctr_osearch_iwidth	"Automatically adjust popup width">
-<!ENTITY Ctr_osearch_cwidth	"Custom width for search popups">
-<!ENTITY Ctr_osearch_dm		"Small dropmarker">
+<!ENTITY Ctr_ctroldsearchc	"搜尋後，清除搜尋列">
+<!ENTITY Ctr_ctroldsearchr	"搜尋後，搜尋列歸位至第一個搜尋引擎">
+<!ENTITY Ctr_ctrosearchdel	"延時">
+<!ENTITY Ctr_search_oit		"於新分頁開啟搜尋結果">
+<!ENTITY Ctr_osearch_meoit	"中鍵點擊: 於前景新分頁開啟搜尋結果">
+<!ENTITY Ctr_osearch_iwidth	"自動調整搜尋建議框的寬度">
+<!ENTITY Ctr_osearch_cwidth	"自訂搜尋建議框的寬度">
+<!ENTITY Ctr_osearch_dm		"縮小下拉式三角按鈕">
 <!ENTITY Ctr_addonmanager	"附加元件管理員">
 <!ENTITY Ctr_alt_addonsp	"「更多資訊」頁面: 換個項目順序">
-<!ENTITY Ctr_am_showrecup	"Always show 'Recent updates' category">
+<!ENTITY Ctr_am_showrecup	"永遠顯示「最近的更新」分項">
 <!ENTITY Ctr_alt_addonsm	"換個外觀">
 <!ENTITY Ctr_am_nowarning	"附加元件清單: 隱藏警告">
 <!ENTITY Ctr_am_compact		"附加元件清單: 緊湊風格">
 <!ENTITY Ctr_am_compact2	"緊湊風格 +">
-<!ENTITY Ctr_am_highlight	"Add-on lists: highlight entry on hover">
-<!ENTITY Ctr_am_buticons	"Add-on lists: replace button labels with icons">
-<!ENTITY Ctr_am_hovshowb	"Add-on lists: only show buttons on 'hover'">
+<!ENTITY Ctr_am_highlight	"附加元件清單: 著色強調滑鼠指到的項目">
+<!ENTITY Ctr_am_buticons	"附加元件清單: 用圖示按鈕取代文字按鈕">
+<!ENTITY Ctr_am_hovshowb	"附加元件清單: 只在滑鼠指到項目時，顯示該項目的功能按鈕">
 <!ENTITY Ctr_addonversion	"附加元件清單: 顯示附加元件版本號">
 <!ENTITY Ctr_xpinstallui	"使用傳統彈出式的附加元件安裝視窗">
 <!ENTITY Ctr_bmbutton		"書籤選單按鈕">
-<!ENTITY Ctr_hiderecentbm	"Bookmarks popup: hide recently added bookmarks">
-<!ENTITY Ctr_hideeditbm		"Bookmarks star: hide popup (if page is not bookmarked)">
-<!ENTITY Ctr_oldplacesbut	"Bookmark items and folders on toolbar: old appearance">
-<!ENTITY Ctr_dl_pm_drop		"Download buttons panel: show dropmarker">
+<!ENTITY Ctr_hiderecentbm	"彈出式書籤選單: 隱藏「最近加入的書籤」">
+<!ENTITY Ctr_hideeditbm		"星形書籤按鈕: 不顯示彈出式書籤編輯框 (當網頁加入書籤時)">
+<!ENTITY Ctr_oldplacesbut	"書籤工具列上的書籤項目和資料夾: 傳統外觀">
+<!ENTITY Ctr_dl_pm_drop		"下載按鈕面板: 顯示下拉式三角按鈕">
 <!ENTITY Ctr_bmbutpanelm	"彈出式書籤選單: 書籤選單使用和面板選單同風格的外觀">
 <!ENTITY Ctr_bmbunsortbm	"彈出式書籤選單: 「未排序書籤」項目附加子選單">
-<!ENTITY Ctr_bmbunsortbm2	"Menu above bookmarks">
-<!ENTITY Ctr_bmbviewbmsb	"Popup: show 'View Sidebar'">
+<!ENTITY Ctr_bmbunsortbm2	"改變其位置至書籤之上">
+<!ENTITY Ctr_bmbviewbmsb	"彈出式書籤選單: 顯示「檢視書籤欄」">
 <!ENTITY Ctr_bmbviewbmtb	"彈出式書籤選單: 顯示「檢視書籤工具列」項目">
 <!ENTITY Ctr_bmbnounsort	"彈出式書籤選單: 隱藏「未排序書籤」項目">
 <!ENTITY Ctr_bmbutnotext	"當此按鈕位於書籤列時，隱藏按鈕文字標籤">
@@ -222,7 +222,7 @@
 <!ENTITY Ctr_navthrobber2	"填入網址或留空">
 <!ENTITY Ctr_anewtaburl		"新分頁網址">
 <!ENTITY Ctr_anewtaburlcb	"自訂新分頁網址 (預設值: 「about:newtab」)">
-<!ENTITY Ctr_anewtaburlpcb	"Custom private new tab page url (default: 'about:privatebrowsing')">
+<!ENTITY Ctr_anewtaburlpcb	"自訂隱私新分頁網址 (預設值: 'about:privatebrowsing')">
 
 <!ENTITY Ctr_tab_tf_info1	"可使用色彩名稱, hexcodes, rgb(a) 和 hsl(a) 值.">
 <!ENTITY Ctr_tab_tf_info2	"沒有防呆機制（輸入無效值，不會有警告）!">
@@ -244,9 +244,9 @@
 <!ENTITY Ctr_ntabhov		"新分頁 (懸停)">
 <!ENTITY Ctr_bold			"粗體">
 <!ENTITY Ctr_italic			"斜體">
-<!ENTITY Ctr_underlined		"Underlined">
+<!ENTITY Ctr_underlined		"底線">
 <!ENTITY Ctr_notabhov		"優先權高於「分頁(懸停)」的設定">
-<!ENTITY Ctr_tablowopa		"Reduce tab visibility">
+<!ENTITY Ctr_tablowopa		"減少分頁顯目度">
 <!ENTITY Ctr_tabc_act_tb	"將目前分頁的背景顏色套用到工具列上">
 
 <!ENTITY Ctr_urlbar			"網址列">
@@ -254,22 +254,22 @@
 <!ENTITY Ctr_starinurlinfo	"原書籤按鈕將被隱藏">
 <!ENTITY Ctr_feedinurl		"網址列中顯示消息來源訂閱按鈕">
 <!ENTITY Ctr_hideurelstop	"隱藏網址列中的停止與重新載入按鈕">
-<!ENTITY Ctr_hideurelstop2	"Always show 'go' button">
+<!ENTITY Ctr_hideurelstop2	"顯示「衝」按鈕">
 <!ENTITY Ctr_hideurlgo		"隱藏「衝」按鈕">
 <!ENTITY Ctr_hideurlsrg		"隱藏「重新載入、停止載入、衝」按鈕兩側的分隔線和空白">
 <!ENTITY Ctr_urlbardropm	"將下拉式三角按鈕儘可能地移動到網址列最末端">
-<!ENTITY Ctr_urlbardropm2	"Make dropmarker always visible">
+<!ENTITY Ctr_urlbardropm2	"永遠顯示下拉式三角按鈕">
 <!ENTITY Ctr_altreaderico	"換個「閱讀模式」圖示">
-<!ENTITY Ctr_hideurlzoom	"Hide zoom button (if present)">
+<!ENTITY Ctr_hideurlzoom	"隱藏縮放按鈕 (若能隱藏)">
 <!ENTITY Ctr_hideprbutton	"當彈出型廣告視窗被封鎖時，不顯示通知圖示">
 <!ENTITY Ctr_locsearchbw10	"減少網址列和搜尋列高度 (實驗性)">
-<!ENTITY Ctr_urlbar_ib		"網站識別鈕">
+<!ENTITY Ctr_urlbar_ib		"網站識別鈕〈身份區塊〉">
 <!ENTITY Ctr_ib_nohovcolor	"懸停時，不著上灰色底">
-<!ENTITY Ctr_ib_graycolor	"Gray color for unknown identity and chrome pages">
-<!ENTITY Ctr_verifiedcolors	"Button colors for verified websites, secure and not secure connections">
-<!ENTITY Ctr_ibinfoico		"Replace 'i'-icon with globe icon">
-<!ENTITY Ctr_ibinfoico2		"Hide 'i'-icon (if possible)">
-<!ENTITY Ctr_iblabels		"Hide labels">
+<!ENTITY Ctr_ib_graycolor	"未識別的網站和 chrome 頁面著上灰色">
+<!ENTITY Ctr_verifiedcolors	"已驗證的網站，安全 和不安全的連結著上不同按鈕顏色">
+<!ENTITY Ctr_ibinfoico		"用地球圖示取代 'i'-圖示">
+<!ENTITY Ctr_ibinfoico2		"隱藏 'i'-圖示 (如有可能)">
+<!ENTITY Ctr_iblabels		"隱藏文字標籤">
 <!ENTITY Ctr_faviconurl		"網址列顯示網站圖示">
 <!ENTITY Ctr_padlock		"鎖頭">
 <!ENTITY Ctr_padlock_hid	"隱藏">
@@ -277,22 +277,22 @@
 <!ENTITY Ctr_padlock_cla	"經典風格">
 <!ENTITY Ctr_padlock_mod	"現代風格">
 <!ENTITY Ctr_padlock_ext	"在有效的「about:」頁面顯示「&brandShortName;」圖示">
-<!ENTITY Ctr_icopageinfo	"Favicon/globe-/'i'-icon: 'click' opens 'page info window'">
+<!ENTITY Ctr_icopageinfo	"按下圖示，則開啟「頁面資訊」視窗">
 <!ENTITY Ctr_lbsbsize		"自訂網址列與搜尋列的寬度">
 <!ENTITY Ctr_searchbar		"搜尋列">
-<!ENTITY Ctr_autocomplete	"Autocomplete popup">
-<!ENTITY Ctr_altautocompl	"Alternative appearance">
-<!ENTITY Ctr_autocompl_it	"Remove 'Search with...' and 'Visit' items (if present)">
-<!ENTITY Ctr_acompl_search	"Show search engines">
-<!ENTITY Ctr_autocompl_hl	"Highlighting of text hits">
-<!ENTITY Ctr_autocompl_rhl	"Aero colors for highlighted results">
-<!ENTITY Ctr_autocompl_not	"Hide page title">
-<!ENTITY Ctr_autocompl_sep	"Show separator between results">
-<!ENTITY Ctr_urlbar_uc		"Disable 'unified autocomplete' feature">
-<!ENTITY Ctr_lbsugresi		"Disable height limit">
-<!ENTITY Ctr_cresultshcb	"Custom height limit: ">
-<!ENTITY Ctr_lbsugres		"Number of results">
-<!ENTITY Ctr_lbsbradius		"Custom border roundness">
+<!ENTITY Ctr_autocomplete	"自動完成下拉式清單">
+<!ENTITY Ctr_altautocompl	"換個外觀">
+<!ENTITY Ctr_autocompl_it	"移除「使用...進行搜尋」和「前往」項目 (若能移除)">
+<!ENTITY Ctr_acompl_search	"顯示搜尋引擎">
+<!ENTITY Ctr_autocompl_hl	"強調顯示與輸入相符的字樣">
+<!ENTITY Ctr_autocompl_rhl	"變更條目強調色為天青色(Aero)">
+<!ENTITY Ctr_autocompl_not	"隱藏網頁標題">
+<!ENTITY Ctr_autocompl_sep	"在清單的各條目間顯示分隔線 ">
+<!ENTITY Ctr_urlbar_uc		"停用「通用自動完成」功能">
+<!ENTITY Ctr_lbsugresi		"停用高度限制">
+<!ENTITY Ctr_cresultshcb	"自訂高度限制: ">
+<!ENTITY Ctr_lbsugres		"清單的項目數量">
+<!ENTITY Ctr_lbsbradius		"自訂邊框弧度">
 
 <!ENTITY Ctr_menubar_items	"選單列併入">
 <!ENTITY Ctr_extrabar		"新增工具列">
@@ -312,15 +312,15 @@
 
 <!ENTITY Ctr_toolbars		"工具列">
 <!ENTITY Ctr_dblclnewtab	"在分頁列上連按兩下，則開啟新分頁">
-<!ENTITY Ctr_dblclnewtabdes	"Not suitable for all complete themes while Windows titlebar is active.">
+<!ENTITY Ctr_dblclnewtabdes	"當 Windows 標題列作用時，不適用於所有完整佈景主題。">
 <!ENTITY Ctr_hidetbwot		"當只有一個分頁時，隱藏分頁工具列">
 <!ENTITY Ctr_hidetbwote		"減少啟動時的隱藏延遲時間">
 <!ENTITY Ctr_hidetbwote_i	"可能導致分頁工具列故障">
-<!ENTITY Ctr_hidetbwote2	"Automatically adjust titlebar space">
+<!ENTITY Ctr_hidetbwote2	"自動調整標題列空間">
 <!ENTITY Ctr_notabfog		"移除背景模糊 (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_notabbg		"移除背景色彩 (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_hightabpos		"縮小分頁列上方空間 (如有可能)">
-<!ENTITY Ctr_showalltabsb	"Always show 'all tabs' button">
+<!ENTITY Ctr_showalltabsb	"永遠顯示「列出所有分頁」按鈕">
 <!ENTITY Ctr_alttabstb		"換個背景色彩">
 <!ENTITY Ctr_alttabstb2		"在視窗最大化模式下 (分頁列置頂)">
 
@@ -330,7 +330,7 @@
 <!ENTITY Ctr_menubarnofog	"移除背景色彩/模糊 (Windows AeroGlass / Win8)">
 
 <!ENTITY Ctr_aerocolors		"將主工具列和分頁著上天藍色(Aero Blue)">
-<!ENTITY Ctr_aerocolorsg	"Grey-blue Aero colors">
+<!ENTITY Ctr_aerocolorsg	"灰藍色(Aero Grey-blue)">
 <!ENTITY Ctr_transpttbw10	"標題列/選單列/分頁列: 移除背景色彩">
 <!ENTITY Ctr_transpttbew10	"對一些 OS 佈景的附加調整">
 <!ENTITY Ctr_transptcw10	"隱藏作業系統預設的 最小化/最大化/關閉 按鈕">
@@ -345,15 +345,15 @@
 <!ENTITY Ctr_nonavbarbg2	"「Beyond Australis」套件之精簡介面(Slim Chrome)的工具列都受影響。">
 <!ENTITY Ctr_nonavborder	"書籤列: 顯示上邊框">
 <!ENTITY Ctr_nonavtbborder	"頂部工具列: 移除工具列邊框">
-<!ENTITY Ctr_toptb_oldpad	"Top toolbars: old left and right padding">
+<!ENTITY Ctr_toptb_oldpad	"頂部工具列: 傳統左右邊框內間距">
 <!ENTITY Ctr_hidesbclose	"側邊欄: 隱藏側邊欄關閉按鈕">
 <!ENTITY Ctr_notextshadow	"工具列: 隱藏工具列和分頁的文字陰影">
 <!ENTITY Ctr_chevronfix		"瀏覽工具列: 隱藏工具列末端的雙右箭頭 (「更多工具...」按鈕)">
 <!ENTITY Ctr_tbsep_winc		"頂部工具列: 加上工具列分隔線">
 
-<!ENTITY Ctr_closeabarbut	"隱藏附加元件關閉按鈕">
-<!ENTITY Ctr_highaddonsbar	"增加附加元件列高度">
-<!ENTITY Ctr_lessaddonsbar	"Decrease height">
+<!ENTITY Ctr_closeabarbut	"附加元件列: 隱藏關閉按鈕">
+<!ENTITY Ctr_highaddonsbar	"增加高度">
+<!ENTITY Ctr_lessaddonsbar	"減少高度">
 <!ENTITY Ctr_addonbarfs		"全螢幕模式下懸停顯示">
 
 <!ENTITY Ctr_tabthrobber	"預設分頁載入圖示動畫 (進度指示器)">
@@ -379,12 +379,12 @@
 <!ENTITY Ctr_fx38pocket2	"註: 若「Pocket」按鈕在自訂模式面板中，同樣會被移除。">
 <!ENTITY Ctr_e_loop			"Hello 即時通訊">
 <!ENTITY Ctr_e_readermode	"閱讀模式">
-<!ENTITY Ctr_e_geolocation	"Geolocation">
+<!ENTITY Ctr_e_geolocation	"地理位置定位">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"分頁靜音按鈕">
-<!ENTITY Ctr_e_containertab	"Container Tabs">
-<!ENTITY Ctr_e_findbarhl	"Findbar highlighting">
-<!ENTITY Ctr_fx50findbarhl	"Unchecking these preferences removes findbars 'highlight' features.">
+<!ENTITY Ctr_e_containertab	"容器分頁">
+<!ENTITY Ctr_e_findbarhl	"尋找列著色強調">
+<!ENTITY Ctr_fx50findbarhl	"取消勾選這個核取方塊，則可移除尋找列「著色強調」功能。">
 <!ENTITY Ctr_e_flyweb		"Flyweb">
 
 
@@ -400,23 +400,23 @@
 <!ENTITY Ctr_special_font	"背景色彩設定僅生效於預設佈景主題!">
 <!ENTITY Ctr_special_info	"部份選項僅在某些情況下提供視覺上的變化!">
 <!ENTITY Ctr_special_info2	"設定僅在 &brandShortName; 的預設佈景主題下測試，因此可能不生效於第三方佈景主題!">
-<!ENTITY Ctr_special_acr	"Only report issues through official support channels and not by using 'Add-on Compatibility Reporter'!">
-<!ENTITY Ctr_support		"Support">
-<!ENTITY Ctr_support_forum1	"MozillaZine (English forum)">
-<!ENTITY Ctr_support_forum2	"Camp Firefox (German forum)">
-<!ENTITY Ctr_github_issues	"Report issue on Github">
-<!ENTITY Ctr_newversion		"Check for new version">
+<!ENTITY Ctr_special_acr	"請通過官方渠道回報問題，不要用「Add-on Compatibility Reporter」！">
+<!ENTITY Ctr_support		"支援">
+<!ENTITY Ctr_support_forum1	"MozillaZine (英文論壇)">
+<!ENTITY Ctr_support_forum2	"Camp Firefox (德文論壇)">
+<!ENTITY Ctr_github_issues	"在 Github 回報問題">
+<!ENTITY Ctr_newversion		"檢查新版本">
 
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"Getting started">
 <!ENTITY goCmd.label					"Go">
-<!ENTITY Ctr_menu_restart.label			"Restart">
-<!ENTITY Ctr_restartapp					"'Restart' in &brandShortName;-menu and file menu">
-<!ENTITY Ctr_ctrnewinv					"Underline new options for current &brandShortName; version">
+<!ENTITY Ctr_menu_restart.label			"重啟">
+<!ENTITY Ctr_restartapp					"&brandShortName;-選單和「檔案」選單裡顯示「重啟」按鈕">
+<!ENTITY Ctr_ctrnewinv					"為目前 &brandShortName; 版本的新設定項畫上底線">
 
-<!ENTITY Ctr_openInCurrentTab			"Open inputs in current tab">
-<!ENTITY Ctr_openInNewTab				"Open inputs in a new tab">
-<!ENTITY Ctr_openInNewWindow			"Open inputs in a new window">
+<!ENTITY Ctr_openInCurrentTab			"在目前分頁開啟輸入結果">
+<!ENTITY Ctr_openInNewTab				"在新分頁開啟輸入結果">
+<!ENTITY Ctr_openInNewWindow			"在新視窗開啟輸入結果">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"B">
