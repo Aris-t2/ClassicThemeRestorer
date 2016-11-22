@@ -450,11 +450,13 @@
 				</radiogroup>
 				
 				<checkbox label="&Ctr_noemptypticon;"	preference="ctraddon_noemptypticon" id="ctraddon_pw_tab_noemptypticon"/>
+				
+				<description class="ctraddon_font1">&Ctr_tabthrobber;</description>
 				<radiogroup preference="ctraddon_tabthrobber" id="ctraddon_pw_tabthrobber" orient="horizontal" value="">
-					<radio value="throbber_default" label="&Ctr_tabthrobber;" id="ctraddon_closeicon_def"/>
-					<radio value="throbber_alt"		label=""	id="ctraddon_pw_tabthrobber_alt"/>
-					<radio value="throbber_fx39"	label=""	id="ctraddon_pw_tabthrobber_f39"/>
-					<radio value="throbber_nav"		label=""	id="ctraddon_pw_tabthrobber_nav"/>
+					<radio value="throbber_default" label="&Ctr_tabwidthdef;" id="ctraddon_pw_tabthrobber_def"/>
+					<radio value="throbber_alt"		label="" id="ctraddon_pw_tabthrobber_alt"/>
+					<radio value="throbber_fx39"	label="" id="ctraddon_pw_tabthrobber_f39"/>
+					<radio value="throbber_nav"		label="" id="ctraddon_pw_tabthrobber_nav"/>
 				</radiogroup>
 				
 				<description id="ctraddon_pw_tabwidthinfo"  class="ctraddon_topic">&Ctr_tabwidthinfo;</description>
@@ -488,6 +490,9 @@
 				  <label value="px"/>
 				</hbox>
 				<description id="ctraddon_pw_tabheightinfo" class="ctraddon_topic">&Ctr_tabheightinfo;</description>
+
+				<checkbox label="&Ctr_e_tabsaudioico;" preference="ctraddon_tabsaudioico" id="ctraddon_pw_tabsaudioico"/>
+				<description class="ctraddonsuboption">about:config &gt;&gt; browser.tabs.showAudioPlayingIcon</description>
 				
 				<checkbox label="&Ctr_ctrltabprev;" preference="ctraddon_ctrltabprev" id="ctraddon_pw_ctrltabprev" class="ctraddon_new_in_v48"/>
 				<description class="ctraddonsuboption">about:config &gt;&gt; browser.ctrlTab.previews</description>
@@ -1125,9 +1130,10 @@
 
 		<radiogroup preference="ctraddon_altoptions" id="ctraddon_altoptions_list" orient="vertical" value="">
 			<radio value="options_default"	label="&Ctr_altoptionsd;" id="ctraddon_pw_altoptions_default" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_default');"/>
-			<radio value="options_alt"	 	label="&Ctr_altoptionsp;" id="ctraddon_pw_options_alt" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_alt');"/>
-			<radio value="options_alt2"	 	label="&Ctr_altoptionsp; (v2)" id="ctraddon_pw_options_alt2" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_alt2');"/>
-			<radio value="options_alt3"	 	label="&Ctr_altoptionsp; (v3)" id="ctraddon_pw_options_alt3" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_alt3');"/>
+			<radio value="options_alt"	 	label="&Ctr_altoptionsp; [&Ctr_altoptions_vm;]" id="ctraddon_pw_options_alt" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_alt');"/>
+			<radio value="options_alt2"	 	label="&Ctr_altoptionsp; [&Ctr_altoptions_hm;]" id="ctraddon_pw_options_alt2" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_alt2');"/>
+			<radio value="options_alt3"	 	label="&Ctr_altoptionsp; (v2) [&Ctr_altoptions_hm;]" id="ctraddon_pw_options_alt3" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_alt3');"/>
+			<radio value="options_alt4"	 	label="&Ctr_altoptionsp; (v3) [&Ctr_altoptions_vm;]" id="ctraddon_pw_options_alt4" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_alt4');"/>
 			<radio value="options_win"		label="&Ctr_altoptionsw;" id="ctraddon_pw_options_win" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_win');"/>
 			<radio value="options_win_alt"	label="&Ctr_altoptionsw; (v2)" id="ctraddon_pw_options_win_alt" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_win_alt');"/>
 		</radiogroup>
@@ -1627,11 +1633,6 @@
 		<description id="ctraddon_pw_pocket_descr" class="ctraddonsuboption acprefdesc">&Ctr_fx38pocket2;</description>
 	  </groupbox>
 
-	  <groupbox id="ctraddon_pw_tabsaudioicogb">
-		<caption  label="&Ctr_e_tabsaudioico;" class="ctraddon_topic"/>
-		<checkbox label="about:config &gt;&gt; browser.tabs.showAudioPlayingIcon" preference="ctraddon_tabsaudioico" id="ctraddon_pw_tabsaudioico"/>
-	  </groupbox>
-	  
 	  <groupbox id="ctraddon_pw_containertabgb">
 		<caption  label="&Ctr_e_containertab;" class="ctraddon_topic"/>
 		<checkbox label="about:config &gt;&gt; privacy.userContext.enabled" preference="ctraddon_containertab" id="ctraddon_pw_containertab" class="ctraddon_new_in_v50"/>
@@ -1715,6 +1716,7 @@
   <hbox align="center" style="padding-top:5px;">
     <button label="&Ctr_pw_settings;" popup="ctr_pw_settingsPopup"/>
 	<button label="Classic Toolbar Buttons" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://addons.mozilla.org/addon/cstbb/versions/'); };"/>
+	<button label="CustomizeMyBird" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://addons.mozilla.org/addon/customizemybird/'); };"/>
 	<spacer flex="1" />
 	<button label="&Ctr_support;" id="ctraddon_support"  popup="ctr_pw_supportPopup"/>
 	<button dlgtype="accept" id="ctraddon_pw_okbutton"/>
