@@ -2,7 +2,7 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#main-window[fx50plus="true"][defaultfxtheme="true"] #forward-button[disabled="true"] + #urlbar #identity-icon {
+	#main-window[fx50plus="true"][defaultfxtheme="true"]:not([chromehidden~="toolbar"]) #forward-button[disabled="true"] + #urlbar #identity-icon {
 	  margin-inline-start: -6px !important;
 	}
 	
@@ -101,14 +101,14 @@
 	}
 	/* END: urlbar border tweaking (default theme does not provide left urlbar border) */
 
-	#main-window * toolbar #urlbar-container,
-	#main-window * toolbar #urlbar-container[forwarddisabled] {
+	#main-window:not([chromehidden~="toolbar"]) * toolbar #urlbar-container,
+	#main-window:not([chromehidden~="toolbar"]) * toolbar #urlbar-container[forwarddisabled] {
 	  -moz-margin-start: 10px !important;
 	}
 
 	@media (-moz-os-version: windows-win10) {
-		#main-window * toolbar #urlbar-container,
-		#main-window * toolbar #urlbar-container[forwarddisabled] {
+		#main-window:not([chromehidden~="toolbar"]) * toolbar #urlbar-container,
+		#main-window:not([chromehidden~="toolbar"]) * toolbar #urlbar-container[forwarddisabled] {
 		  -moz-margin-start: 12px !important;
 		}
 	}

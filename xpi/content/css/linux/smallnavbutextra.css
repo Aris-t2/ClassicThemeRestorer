@@ -17,6 +17,7 @@
 	  transition-property:  none !important;
 	  transition-delay: 0s !important;
 	}
+
 	#nav-bar #urlbar-container,
 	#nav-bar #urlbar-container[forwarddisabled] {
 	  margin-left: 1px !important;
@@ -50,7 +51,7 @@
       transition-duration: 0ms !important;
 	}
 
-	#main-window[fx50plus="true"][defaultfxtheme="true"] #forward-button[disabled="true"] + #urlbar #identity-icon {
+	#main-window[fx50plus="true"][defaultfxtheme="true"]:not([chromehidden~="toolbar"]) #forward-button[disabled="true"] + #urlbar #identity-icon {
 	  margin-inline-start: -6px !important;
 	}
 

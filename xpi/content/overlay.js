@@ -904,6 +904,7 @@ classicthemerestorerjs.ctr = {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("options_alt",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("options_alt2",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("options_alt3",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("options_alt4",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("options_win",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("options_win_alt",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("options_win_ct",false);
@@ -4214,6 +4215,7 @@ classicthemerestorerjs.ctr = {
 		case "options_alt": 		manageCSS("alt_optionspage.css");		break;
 		case "options_alt2": 		manageCSS("alt_optionswindow.css");		break;
 		case "options_alt3": 		manageCSS("alt_optionswindow2.css");	break;
+		case "options_alt4": 		manageCSS("alt_optionspage2.css");		break;
 		case "options_win": 		manageCSS("alt_optionswindow.css");		break;
 		case "options_win_alt": 	manageCSS("alt_optionswindow2.css");	break;
 		case "options_win_ct": 		manageCSS("alt_optionswindow_ct.css");	break;
@@ -6158,7 +6160,8 @@ classicthemerestorerjs.ctr = {
 				if (this.prefs.getIntPref('lbradius_left')!=0) {
 				  locborraiusextra_l='\
 				    #urlbar:-moz-locale-dir(ltr) #notification-popup-box:not([hidden="true"]),\
-					#urlbar:-moz-locale-dir(ltr) #notification-popup-box[hidden="true"] + box{\
+					#urlbar:-moz-locale-dir(ltr) #notification-popup-box[hidden="true"] + box,\
+					#urlbar:-moz-locale-dir(ltr) box[role="button"]:first-of-type {\
 					  border-top-left-radius: '+this.prefs.getIntPref('lbradius_left')+'px !important;\
 					  border-bottom-left-radius: '+this.prefs.getIntPref('lbradius_left')+'px !important;\
 					}\
@@ -6168,7 +6171,8 @@ classicthemerestorerjs.ctr = {
 				if (this.prefs.getIntPref('lbradius_right')!=0) {
 				  locborraiusextra_r='\
 					#urlbar:-moz-locale-dir(rtl) #notification-popup-box:not([hidden="true"]),\
-					#urlbar:-moz-locale-dir(rtl) #notification-popup-box[hidden="true"] + box{\
+					#urlbar:-moz-locale-dir(rtl) #notification-popup-box[hidden="true"] + box,\
+					#urlbar:-moz-locale-dir(rtl) box[role="button"]:first-of-type{\
 					  border-top-right-radius: '+this.prefs.getIntPref('lbradius_right')+'px !important;\
 					  border-bottom-right-radius: '+this.prefs.getIntPref('lbradius_right')+'px !important;\
 					}\
