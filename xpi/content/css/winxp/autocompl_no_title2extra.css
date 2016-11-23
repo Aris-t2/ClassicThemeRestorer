@@ -1,0 +1,8 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistbox,
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistbox {
+	  padding: 0 !important;
+	}
+}

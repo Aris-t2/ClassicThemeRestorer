@@ -1282,7 +1282,7 @@
 			<groupbox>
 
 				<caption  label="&Ctr_autocomplete;" class="ctraddon_topic"/>
-				<checkbox label="&Ctr_altautocompl;" preference="ctraddon_altautocompl"  id="ctraddon_pw_altautocompl" class="ctraddon_new_in_v48" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+				<checkbox label="&Ctr_altautocompl; &Ctr_tabwidthcla;" preference="ctraddon_altautocompl"  id="ctraddon_pw_altautocompl" class="ctraddon_new_in_v48" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 				<checkbox label="&Ctr_autocompl_it;" preference="ctraddon_autocompl_it2" id="ctraddon_pw_autocompl_it2" class="ctraddon_new_in_v50"/>
 				<checkbox label="&Ctr_urlbar_uc;" preference="ctraddon_urlbar_uc" id="ctraddon_pw_urlbar_uc"/>
 				<description class="ctraddonsuboption" id="ctraddon_pw_urlbar_uc_desc">about:config &gt;&gt; browser.urlbar.unifiedcomplete</description>
