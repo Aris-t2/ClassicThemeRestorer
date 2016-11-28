@@ -439,26 +439,6 @@
 				  <checkbox label="&Ctr_centered;"		preference="ctraddon_tttitlebar_c" id="ctraddon_pw_tttitlebar_c"/>
 				</hbox>
 				
-				<description class="ctraddon_font1">&Ctr_emptytfavico;</description>
-				<radiogroup preference="ctraddon_emptyfavico_t" id="ctraddon_pw_emptyfavico_t" orient="horizontal" value="">
-					<radio value="emptyfavico_t_none"	label="&Ctr_emptytfavico_n;" id="ctraddon_emptyfavico_t_none"/>
-					<radio value="emptyfavico_t_gen"	label="&Ctr_tabwidthdef;"	id="ctraddon_emptyfavico_t_gen"/>
-					<radio value="emptyfavico_t_gen2"	label=""	id="ctraddon_emptyfavico_t_gen2"/>
-					<radio value="emptyfavico_t_dot"	label=""	id="ctraddon_emptyfavico_t_dot"/>
-					<radio value="emptyfavico_t_dot2"	label=""	id="ctraddon_emptyfavico_t_dot2"/>
-					<radio value="emptyfavico_t_sheet"	label=""	id="ctraddon_emptyfavico_t_sheet"/>
-				</radiogroup>
-				
-				<checkbox label="&Ctr_noemptypticon;"	preference="ctraddon_noemptypticon" id="ctraddon_pw_tab_noemptypticon"/>
-				
-				<description class="ctraddon_font1">&Ctr_tabthrobber;</description>
-				<radiogroup preference="ctraddon_tabthrobber" id="ctraddon_pw_tabthrobber" orient="horizontal" value="">
-					<radio value="throbber_default" label="&Ctr_tabwidthdef;" id="ctraddon_pw_tabthrobber_def"/>
-					<radio value="throbber_alt"		label="" id="ctraddon_pw_tabthrobber_alt"/>
-					<radio value="throbber_fx39"	label="" id="ctraddon_pw_tabthrobber_f39"/>
-					<radio value="throbber_nav"		label="" id="ctraddon_pw_tabthrobber_nav"/>
-				</radiogroup>
-				
 				<description id="ctraddon_pw_tabwidthinfo"  class="ctraddon_topic">&Ctr_tabwidthinfo;</description>
 				<description id="ctraddon_pw_tabwidthinfo2" class="ctraddon_topic">&Ctr_tabwidthinfo2;</description>
 				<description id="ctraddon_pw_tabwidthinfo3" class="ctraddon_topic">&Ctr_tabwidthinfo3;</description>
@@ -499,7 +479,27 @@
 				
 				<checkbox label="&Ctr_tabanimation;" preference="ctraddon_tabsanimate"/>
 				<description class="ctraddonsuboption">about:config &gt;&gt; browser.tabs.animate</description>
+				<checkbox label="&Ctr_noemptypticon;"	preference="ctraddon_noemptypticon" id="ctraddon_pw_tab_noemptypticon"/>
 
+				<description class="ctraddon_font1">&Ctr_emptytfavico;</description>
+				<radiogroup preference="ctraddon_emptyfavico_t" id="ctraddon_pw_emptyfavico_t" orient="horizontal" value="">
+					<radio value="emptyfavico_t_none"	label="&Ctr_emptytfavico_n;" id="ctraddon_emptyfavico_t_none"/>
+					<radio value="emptyfavico_t_gen"	label="&Ctr_tabwidthdef;"	id="ctraddon_emptyfavico_t_gen"/>
+					<radio value="emptyfavico_t_gen2"	label=""	id="ctraddon_emptyfavico_t_gen2"/>
+					<radio value="emptyfavico_t_dot"	label=""	id="ctraddon_emptyfavico_t_dot"/>
+					<radio value="emptyfavico_t_dot2"	label=""	id="ctraddon_emptyfavico_t_dot2"/>
+					<radio value="emptyfavico_t_sheet"	label=""	id="ctraddon_emptyfavico_t_sheet"/>
+				</radiogroup>
+
+				<description class="ctraddon_font1">&Ctr_tabthrobber;</description>
+				<radiogroup preference="ctraddon_tabthrobber" id="ctraddon_pw_tabthrobber" orient="horizontal" value="">
+					<radio value="throbber_default" label="&Ctr_tabwidthdef;" id="ctraddon_pw_tabthrobber_def"/>
+					<radio value="throbber_alt"		label="" id="ctraddon_pw_tabthrobber_alt"/>
+					<radio value="throbber_fx39"	label="" id="ctraddon_pw_tabthrobber_f39"/>
+					<radio value="throbber_ub"		label="" id="ctraddon_pw_tabthrobber_ub"/>
+					<radio value="throbber_nav"		label="" id="ctraddon_pw_tabthrobber_nav"/>
+				</radiogroup>
+				
 			  </groupbox>
 
 		  </tabpanel>
