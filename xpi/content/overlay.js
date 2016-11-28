@@ -2342,6 +2342,7 @@ classicthemerestorerjs.ctr = {
 			classicthemerestorerjs.ctr.loadUnloadCSS('throbber_alt',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('throbber_fx39',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('throbber_nav',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('throbber_ub',false);
 			
 			if (branch.getCharPref("tabthrobber")!="throbber_default"){
 			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("tabthrobber"),true);
@@ -4382,6 +4383,7 @@ classicthemerestorerjs.ctr = {
 		case "throbber_alt": 		manageCSS("throbberalt.css");			break;
 		case "throbber_fx39": 		manageCSS("throbberalt2.css");			break;
 		case "throbber_nav": 		manageCSS("throbberalt3.css");			break;
+		case "throbber_ub": 		manageCSS("throbberalt4.css");			break;
 		case "bmanimation": 		manageCSS("hidebmanimation.css");		break;
 		case "pananimation": 		manageCSS("hidepanelanimation.css");	break;
 		case "cpanelmenus": 		manageCSS("compactpanelmenus.css");		break;
