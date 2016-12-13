@@ -1,0 +1,15 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@-moz-document url(chrome://browser/content/browser.xul) {
+	
+	/* Fx53+: remove ugly blur from tab text, see #658467 and #1322897 */
+	#main-window[fx53plus="true"] .tab-label-container[textoverflow]:not([pinned]) {
+	  mask-image: unset !important;
+	}
+	#main-window[fx53plus="true"] .tab-label-container[textoverflow]:not([pinned])::after{
+	 content: "" !important;
+	}
+	#main-window[fx53plus="true"] .tab-label-container[textoverflow]:not([pinned]) .tab-text {
+	  white-space: unset !important;
+	}
+
+}
