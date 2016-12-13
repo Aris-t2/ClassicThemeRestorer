@@ -433,6 +433,10 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_dl_pm_dropdes').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_toptb_oldpad').style.visibility = 'collapse';
 	}
+
+	if (this.appversion < 53) {
+	  document.getElementById('ctraddon_pw_ttnooverfl').style.visibility = 'collapse';
+	}
 	
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get
@@ -1263,6 +1267,7 @@ classicthemerestorerjso.ctr = {
 	this.prefs.setCharPref("altoptions",'options_default');
 	this.prefs.setBoolPref("alt_addonsm",false);
 	this.prefs.setBoolPref("am_highlight",false);
+	this.prefs.setBoolPref("ttnooverfl",false);
 	
 	this.needsBrowserRestart();
 

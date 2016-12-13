@@ -125,6 +125,7 @@ classicthemerestorerjs.ctr = {
 	try{if (this.appversion >= 50) document.getElementById("main-window").setAttribute('fx50plus',true);} catch(e){}
 	try{if (this.appversion >= 51) document.getElementById("main-window").setAttribute('fx51plus',true);} catch(e){}
 	try{if (this.appversion >= 52) document.getElementById("main-window").setAttribute('fx52plus',true);} catch(e){}
+	try{if (this.appversion >= 53) document.getElementById("main-window").setAttribute('fx53plus',true);} catch(e){}
 
 	// add CTR version number to '#main-window' node, so other add-ons/themes can easier distinguish between versions
 	AddonManager.getAddonByID('ClassicThemeRestorer@ArisT2Noia4dev', function(addon) {
@@ -505,6 +506,11 @@ classicthemerestorerjs.ctr = {
 		  case "tttitlebar_c":
 			if (branch.getBoolPref("tttitlebar_c") && branch.getBoolPref("tttitlebar")) classicthemerestorerjs.ctr.loadUnloadCSS("tttitlebar_c",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("tttitlebar_c",false);
+		  break;
+		  
+		  case "ttnooverfl":
+			if (branch.getBoolPref("ttnooverfl") && classicthemerestorerjs.ctr.appversion >= 53) classicthemerestorerjs.ctr.loadUnloadCSS("ttnooverfl",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("ttnooverfl",false);
 		  break;
 		  
 		  case "ctabheightcb":
@@ -2685,12 +2691,15 @@ classicthemerestorerjs.ctr = {
 				classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv50",true);
 			  else if (classicthemerestorerjs.ctr.appversion == 51)
 				classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv51",true);
+			  else if (classicthemerestorerjs.ctr.appversion == 53)
+				classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv53",true);
 			}
 			else { 
 			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv47",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv48",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv50",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv51",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv53",false);
 			}
 		  break;
 		  
@@ -4042,6 +4051,7 @@ classicthemerestorerjs.ctr = {
 		case "square_edges": 			manageCSS("tabssquare_edges.css");  	break;
 		case "tttitlebar": 				manageCSS("tabsttitleintitlebar.css");  break;
 		case "tttitlebar_c": 			manageCSS("tabsttitleintitlebar_centered.css");  break;
+		case "ttnooverfl": 				manageCSS("tabtitle_nooverflow.css");  	break;
 		
 		case "closetab_active": 		manageCSS("closetab_active.css");  		break;
 		case "closetab_none": 			manageCSS("closetab_none.css");  		break;
@@ -4399,6 +4409,7 @@ classicthemerestorerjs.ctr = {
 		case "ctrnewinv48":			manageCSS("ctraddon_new_in_v48.css");	break;
 		case "ctrnewinv50":			manageCSS("ctraddon_new_in_v50.css");	break;
 		case "ctrnewinv51":			manageCSS("ctraddon_new_in_v51.css");	break;
+		case "ctrnewinv53":			manageCSS("ctraddon_new_in_v53.css");	break;
 		
 		case "cuibuttons":			manageCSS("cuibuttons.css");			break;
 		

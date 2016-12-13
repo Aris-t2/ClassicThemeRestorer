@@ -56,6 +56,7 @@
 		<preference id="ctraddon_square_edges"	name="extensions.classicthemerestorer.square_edges" type="bool"		instantApply="true"/>
 		<preference id="ctraddon_tttitlebar"	name="extensions.classicthemerestorer.tttitlebar"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_tttitlebar_c"	name="extensions.classicthemerestorer.tttitlebar_c"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_ttnooverfl"	name="extensions.classicthemerestorer.ttnooverfl"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_ctabheightcb"	name="extensions.classicthemerestorer.ctabheightcb"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_ctabheight"	name="extensions.classicthemerestorer.ctabheight"	type="int"		instantApply="true"/>
 		
@@ -366,7 +367,7 @@
   <radiogroup id="CtrRadioGroup" class="ctraddontabs" orient="vertical" flex="1"
 	value="ctraddon_tabsbox" oncommand="classicthemerestorerjso.ctr.onCtrPanelSelect();">
 
-	  <radio value="ctraddon_tabsbox" 		label="&Ctr_tabs;"			class="ctraddontab ctraddon_new_in_v48"/>
+	  <radio value="ctraddon_tabsbox" 		label="&Ctr_tabs;"			class="ctraddontab ctraddon_new_in_v48 ctraddon_new_in_v53"/>
 	  <radio value="ctraddon_appbuttonbox" 	label="&Ctr_appbutton;"		class="ctraddontab"/>
 	  <radio value="ctraddon_generaluibox"	label="&Ctr_ui;"			class="ctraddontab ctraddon_new_in_v47 ctraddon_new_in_v48 ctraddon_new_in_v49 ctraddon_new_in_v50 ctraddon_new_in_v51"/>
 	  <radio value="ctraddon_prefpagebox"	label="&Ctr_prefpage;"		class="ctraddontab"/>
@@ -389,7 +390,7 @@
 
 	  <tabbox flex="1">
 		<tabs id="ctraddon_pw_tabs_tabs">
-			<tab label="&Ctr_page; 1" class="ctraddon_new_in_v48"/>
+			<tab label="&Ctr_page; 1" class="ctraddon_new_in_v48 ctraddon_new_in_v53"/>
 			<tab label="&Ctr_page; 2" class="ctraddon_new_in_v48"/>
 			<tab label="&Ctr_page; 3"/>
 			<tab label="&Ctr_tabcolors_t;"/>
@@ -438,6 +439,7 @@
 				  <checkbox label="&Ctr_tttitlebar;"	preference="ctraddon_tttitlebar" id="ctraddon_pw_tttitlebar" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
 				  <checkbox label="&Ctr_centered;"		preference="ctraddon_tttitlebar_c" id="ctraddon_pw_tttitlebar_c"/>
 				</hbox>
+				<checkbox label="&Ctr_ttnooverfl;"		preference="ctraddon_ttnooverfl" id="ctraddon_pw_ttnooverfl" class="ctraddon_new_in_v53"/>
 				
 				<description id="ctraddon_pw_tabwidthinfo"  class="ctraddon_topic">&Ctr_tabwidthinfo;</description>
 				<description id="ctraddon_pw_tabwidthinfo2" class="ctraddon_topic">&Ctr_tabwidthinfo2;</description>
