@@ -1242,6 +1242,11 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("hideurlzoom") && classicthemerestorerjs.ctr.appversion >= 51) classicthemerestorerjs.ctr.loadUnloadCSS("hideurlzoom",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("hideurlzoom",false);
 		  break;
+		  
+		  case "urlbardark":
+			if (branch.getBoolPref("urlbardark") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("urlbardark",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("urlbardark",false);
+		  break;
 
 		  case "altautocompl":
 			if (branch.getBoolPref("altautocompl") && branch.getBoolPref("autocompl_not")==false && classicthemerestorerjs.ctr.appversion >= 48) classicthemerestorerjs.ctr.loadUnloadCSS("altautocompl",true);
@@ -2108,6 +2113,11 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("osearch_dm") && branch.getBoolPref("ctroldsearch"))
 				classicthemerestorerjs.ctr.loadUnloadCSS("osearch_dm",true);
 			else classicthemerestorerjs.ctr.loadUnloadCSS("osearch_dm",false);
+		  break;
+		  
+		  case "searchbardark":
+			if (branch.getBoolPref("searchbardark") && classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("searchbardark",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("searchbardark",false);
 		  break;
 
 		  case "am_nowarning":
@@ -4256,6 +4266,7 @@ classicthemerestorerjs.ctr = {
 		case "urlbardropm2": 		manageCSS("urlbar_dropm2.css"); 		break;
 		case "altreaderico": 		manageCSS("alt_reader_icons.css");		break;
 		case "hideurlzoom": 		manageCSS("hide_ulbar_zoom.css");		break;
+		case "urlbardark": 			manageCSS("urlbar_darkbg.css");			break;
 		case "altautocompl": 		manageCSS("alt_autocomplete.css");		break;
 		case "autocompl_it": 		manageCSS("alt_autocompl_items.css");	break;
 		case "autocompl_it2": 		manageCSS("alt_autocompl_items2.css");	break;
@@ -4318,6 +4329,7 @@ classicthemerestorerjs.ctr = {
 		case "ctroldsearch": 		manageCSS("oldsearch.css");				break;
 		case "osearch_iwidth": 		manageCSS("oldsearch_iwidth.css");		break;
 		case "osearch_dm": 			manageCSS("oldsearch_dm.css");			break;
+		case "searchbardark": 		manageCSS("searchbar_darkbg.css");		break;
 		case "am_nowarning":		manageCSS("am_nowarnings.css");			break;
 		case "am_compact":			manageCSS("am_compact.css");			break;
 		case "am_compact2":			manageCSS("am_compact2.css");			break;
