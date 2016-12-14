@@ -6,6 +6,13 @@
 	#urlbar-wrapper #urlbar[pageproxystate="valid"] .chromeUI {
       background: linear-gradient(#fcfcfc,#d4d4d4) !important;
       border-image-source: none !important;
+	  color: black !important;
+	}
+	
+	#urlbar-wrapper #urlbar[pageproxystate="invalid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked) #identity-icon,
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked) #identity-icon, 
+	#urlbar-wrapper #urlbar[pageproxystate="valid"] .chromeUI #identity-icon{
+      background-color: unset !important;
 	}
 	
 	#main-window:not([fx50plus="true"]) #urlbar-wrapper #urlbar[pageproxystate="invalid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked),

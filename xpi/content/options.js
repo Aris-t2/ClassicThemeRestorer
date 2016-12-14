@@ -116,7 +116,8 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_altreaderico').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_alt_addonsm').style.visibility = 'collapse';
 		document.getElementById('ctraddon_altoptions_list').style.visibility = 'collapse';
-		
+		document.getElementById('ctraddon_pw_urlbardark').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_searchbardark').style.visibility = 'collapse';
 	} else {
 		document.getElementById('ctraddon_pw_themes_note').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_special_font').style.visibility = 'collapse';
