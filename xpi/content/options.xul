@@ -95,6 +95,7 @@
 		<preference id="ctraddon_ctroldsearchc"	name="extensions.classicthemerestorer.ctroldsearchc" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_ctrosearchct"	name="extensions.classicthemerestorer.ctrosearchct"	 type="int"		instantApply="true"/>
 		<preference id="ctraddon_ctroldsearchr"	name="extensions.classicthemerestorer.ctroldsearchr" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_searchbardark"	name="extensions.classicthemerestorer.searchbardark" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_ctrosearchrt"	name="extensions.classicthemerestorer.ctrosearchrt"	 type="int"		instantApply="true"/>
 		<preference id="ctraddon_search_ant"	name="extensions.classicthemerestorer.search_ant"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_search_abl"	name="extensions.classicthemerestorer.search_abl"	 type="bool"	instantApply="true"/>
@@ -137,6 +138,7 @@
 		<preference id="ctraddon_urlbardropm2"	name="extensions.classicthemerestorer.urlbardropm2"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_altreaderico"	name="extensions.classicthemerestorer.altreaderico"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_hideurlzoom"	name="extensions.classicthemerestorer.hideurlzoom"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_urlbardark"	name="extensions.classicthemerestorer.urlbardark"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_altautocompl"	name="extensions.classicthemerestorer.altautocompl"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_autocompl_it"	name="extensions.classicthemerestorer.autocompl_it"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_autocompl_it2"	name="extensions.classicthemerestorer.autocompl_it2" type="bool"	instantApply="true"/>
@@ -1211,6 +1213,7 @@
 				<checkbox label="&Ctr_urlbardropm;"	preference="ctraddon_urlbardropm"  id="ctraddon_pw_urlbardropm"/>
 				<checkbox label="&Ctr_urlbardropm2;" preference="ctraddon_urlbardropm2"  id="ctraddon_pw_urlbardropm2"/>
 				<checkbox label="&Ctr_altreaderico;" preference="ctraddon_altreaderico"  id="ctraddon_pw_altreaderico"/>
+				<checkbox label="&Ctr_urlbardark;" preference="ctraddon_urlbardark"  id="ctraddon_pw_urlbardark"/>
 				<checkbox label="&Ctr_hideurlzoom;" preference="ctraddon_hideurlzoom"  id="ctraddon_pw_hideurlzoom" class="ctraddon_new_in_v51"/>
 				<checkbox label="&Ctr_hideprbutton;" preference="ctraddon_hideprbutton" id="ctraddon_pw_urlbarpblocked"/>
 				
@@ -1365,6 +1368,7 @@
 				  <textbox id="ctraddon_pw_ctroldsearchrdelay" size="6" maxlength="6" preference="ctraddon_ctrosearchrt" type="number" min="0" max="999999"/>
 				  <description>&Ctr_nbisizedelay; &Ctr_ctrosearchdel;</description>
 				</hbox>
+				<checkbox label="&Ctr_urlbardark;"	preference="ctraddon_searchbardark" id="ctraddon_pw_searchbardark"/>
 			</groupbox>
 			
 			<groupbox>
