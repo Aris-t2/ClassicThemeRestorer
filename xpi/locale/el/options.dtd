@@ -58,7 +58,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Τιμές κάτω από 48px θα προκαλέσουν δυσλειτουργίες στις περισσότερες περιπτώσεις!">
 <!ENTITY Ctr_square_edges	"Τετραγωνισμένες γωνίες κορυφής">
 <!ENTITY Ctr_tttitlebar		"Τίτλος καρτέλας στη γραμμή τίτλου του &brandShortName;">
-<!ENTITY Ctr_ttnooverfl		"Remove overflow effect from long tab titles">
+<!ENTITY Ctr_ttnooverfl		"Απομάκρυνση του εφφέ υπερχείλισης από μεγάλους τίτλους καρτελών">
 <!ENTITY Ctr_tabinsertion	"Εισαγωγή συναφούς καρτέλας μετά την τρέχουσα καρτέλα">
 <!ENTITY Ctr_emptytfavico	"Εμφάνιση εικονιδίου (αν ένας ιστότοπος δεν διαθέτει εικονίδιο)">
 <!ENTITY Ctr_emptytfavico_n	"Οικοσελίδας">
@@ -90,17 +90,18 @@
 <!ENTITY Ctr_paneluibtweak	"Εμφάνιση κουμπιού-μενού ως κουμπί &brandShortName;…">
 <!ENTITY Ctr_paneluibtweak2	"Εμφάνιση κουμπιού-μενού ως κουμπί &brandShortName; (μόνο εικονίδιο)…">
 <!ENTITY Ctr_paneluibtweak3	"…όταν βρίσκεται στην εργαλειοθήκη καρτελών">
-<!ENTITY Ctr_appbuttonc_o	"Πορτοκαλί χρώμα κουμπιού (προεπιλογή)">
-<!ENTITY Ctr_appbuttonc_a	"Μπλε χρώμα κουμπιού (Aurora)">
-<!ENTITY Ctr_appbuttonc_n	"Μαύρο χρώμα κουμπιού (Nightly)">
-<!ENTITY Ctr_appbuttonc_t	"Διαφανές κουμπί">
-<!ENTITY Ctr_appbuttonc_p	"Μπλε χρώμα κουμπιού (Palemoon)">
-<!ENTITY Ctr_appbuttonc_r	"Κόκκινο χρώμα κουμπιού">
-<!ENTITY Ctr_appbuttonc_g	"Πράσινο χρώμα κουμπιού">
-<!ENTITY Ctr_appbuttonc_gr	"Γκρι χρώμα κουμπιού">
-<!ENTITY Ctr_appbuttonc_pu	"Πορφυρό χρώμα κουμπιού">
-<!ENTITY Ctr_appbuttonc_wh	"Άσπρο χρώμα κουμπιού">
-<!ENTITY Ctr_appbuttonc_cu	"Προσαρμοσμένο χρώμα κουμπιού">
+<!ENTITY Ctr_appbuttonc		"Χρώμα κουμπιού">
+<!ENTITY Ctr_appbuttonc_o	"Πορτοκαλί (προεπιλογή)">
+<!ENTITY Ctr_appbuttonc_a	"Μπλε (Aurora)">
+<!ENTITY Ctr_appbuttonc_n	"Μαύρο (Nightly)">
+<!ENTITY Ctr_appbuttonc_t	"Διαφανές">
+<!ENTITY Ctr_appbuttonc_p	"Μπλε (Palemoon)">
+<!ENTITY Ctr_appbuttonc_r	"Κόκκινο">
+<!ENTITY Ctr_appbuttonc_g	"Πράσινο">
+<!ENTITY Ctr_appbuttonc_gr	"Γκρι">
+<!ENTITY Ctr_appbuttonc_pu	"Πορφυρό">
+<!ENTITY Ctr_appbuttonc_wh	"Άσπρο">
+<!ENTITY Ctr_appbuttonc_cu	"Προσαρμοσμένο">
 <!ENTITY Ctr_appbuttonct	"Προσαρμοσμένο χρώμα κουμπιού για το κουμπί σε εργαλειοθήκη">
 <!ENTITY Ctr_appbuttonI1	"Συνιστάται επανεκκίνηση">
 <!ENTITY Ctr_appbuttonI1e	"Ορατό μόνο στη γραμμή τίτλου του &brandShortName;, όχι σε αυτή του Λ.Σ. Windows!">
@@ -125,8 +126,8 @@
 <!ENTITY Ctr_altoptionsd	"Προεπιλεγμένη εμφάνιση">
 <!ENTITY Ctr_altoptionsp	"Εναλλακτική εμφάνιση">
 <!ENTITY Ctr_altoptionsw	"Άνοιγμα σελίδας επιλογών σε παράθυρο">
-<!ENTITY Ctr_altoptions_hm	"horizontal menu">
-<!ENTITY Ctr_altoptions_vm	"vertical menu">
+<!ENTITY Ctr_altoptions_hm	"οριζόντιο μενού">
+<!ENTITY Ctr_altoptions_vm	"κατακόρυφο μενού">
 <!ENTITY Ctr_altoptionsww	"Εύρος:">
 <!ENTITY Ctr_altoptionswh	"Ύψος:">
 <!ENTITY Ctr_altoptionsi	"Το προσομοιωμένο παράθυρο επιλογών δεν είναι πια παράθυρο διαλόγου, αλλά ένα «παράθυρο περιηγητή» με όλες τις εργαλειοθήκες σε απόκρυψη. Το χαρακτηριστικό «Χρήση τρέχουσας σελίδας» προσθέτει μόνο τις διευθύνσεις URL των ανοιγμένων στο τρέχον παράθυρο σελίδων, που είναι μόνο «about:preferences» σε αυτή την περίπτωση. Το κουμπί εργαλειοθήκης «Επιλογές» αντικαθίσταται από ένα νέο, για να είναι δυνατόν το άνοιγμα επιλογών σε παράθυρο.">
@@ -264,7 +265,7 @@
 <!ENTITY Ctr_urlbardropm2	"Να είναι πάντα ορατός ο δείκτης ανάπτυξης">
 <!ENTITY Ctr_altreaderico	"Εναλλακτικά εικονίδια «λειτουργίας ανάγνωσης»">
 <!ENTITY Ctr_hideurlzoom	"Απόκρυψη κουμπιού μεγέθυνσης (αν υπάρχει)">
-<!ENTITY Ctr_urlbardark		"Dark background color">
+<!ENTITY Ctr_urlbardark		"Σκοτεινό χρώμα φόντου">
 <!ENTITY Ctr_hideprbutton	"Απόκρυψη εικονιδίου ειδοποίησης κατά τη φραγή αναδυόμενου παραθύρου">
 <!ENTITY Ctr_locsearchbw10	"Μείωση ύψους γραμμών τοποθεσιών και αναζήτησης (πειραματικό)">
 <!ENTITY Ctr_urlbar_ib		"Κουμπί ταυτοποίησης τοποθεσιών">
