@@ -4,6 +4,8 @@
 	
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="visiturl"],
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="visiturl"],
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="visiturl"][originaltype="action visiturl heuristic"],
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="visiturl"][originaltype="action visiturl heuristic"],
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="searchengine"][originaltype="action searchengine heuristic"],
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="searchengine"][originaltype="action searchengine heuristic"],
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="searchengine"][originaltype="action searchengine"],
@@ -12,6 +14,8 @@
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[type="autofill heuristic"],
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="visiturl"] *,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="visiturl"] *,
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="visiturl"][originaltype="action visiturl heuristic"] *,
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="visiturl"][originaltype="action visiturl heuristic"] *,
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="searchengine"][originaltype="action searchengine heuristic"] *,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="searchengine"][originaltype="action searchengine heuristic"] *,
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="searchengine"][originaltype="action searchengine"] *,
@@ -22,10 +26,13 @@
 	  height: 0 !important;
 	  max-height: 0 !important;
 	  visibility: collapse !important;
+	  display:none !important;
 	}
 	
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="visiturl"] + richlistitem:not([collapse="true"]),
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="visiturl"] + richlistitem:not([collapse="true"]),
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="visiturl"][originaltype="action visiturl heuristic"] + richlistitem:not([collapse="true"]),
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="visiturl"][originaltype="action visiturl heuristic"] + richlistitem:not([collapse="true"]),
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="searchengine"][originaltype="action searchengine heuristic"] + richlistitem:not([collapse="true"]),
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="searchengine"][originaltype="action searchengine heuristic"] + richlistitem:not([collapse="true"]),
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="searchengine"][originaltype="action searchengine"] + richlistitem:not([collapse="true"]),

@@ -2412,7 +2412,7 @@ classicthemerestorerjs.ctr = {
 				}
 		  break;
 
-		  case "anewtaburlcb": case "anewtaburl":
+		  /*case "anewtaburlcb": case "anewtaburl":
 
 		    if (branch.getBoolPref("anewtaburlcb")) {
 				
@@ -2436,6 +2436,16 @@ classicthemerestorerjs.ctr = {
 				classicthemerestorerjs.ctr.altnewtabpageOn = false;
 			}
 
+		  break;*/
+		  
+		  case "anewtaburlcb":
+		  
+			if (branch.getBoolPref("anewtaburlcb")) {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("anewtaburlcb",true);
+			  classicthemerestorerjs.ctr.newTabPageForwarding();
+			}
+			else classicthemerestorerjs.ctr.loadUnloadCSS("anewtaburlcb",false);
+		  
 		  break;
 		  
 		  case "anewtaburlpcb":
@@ -3341,6 +3351,27 @@ classicthemerestorerjs.ctr = {
 	  }
 
 	}
+
+  },
+  
+  // forward new tab to custom url
+  newTabPageForwarding: function() {
+	  
+	function _newTabPageForwarding(){
+		
+	  var newURL = classicthemerestorerjs.ctr.prefs.getCharPref("anewtaburl");
+	  var defaultURL='about:newtab';
+				
+	  if (newURL=='') newURL=defaultURL;
+	  
+	  if(gBrowser.currentURI.spec==defaultURL) openUILinkIn(newURL, "current");
+
+	}
+	
+	window.addEventListener("TabClose", _newTabPageForwarding, false);  
+	window.addEventListener("TabOpen", _newTabPageForwarding, false);
+	window.addEventListener("load", _newTabPageForwarding, false);
+	window.addEventListener("DOMContentLoaded", _newTabPageForwarding, false);
 
   },
   
@@ -4387,6 +4418,7 @@ classicthemerestorerjs.ctr = {
 		case "tabmokcolor2": 		manageCSS("tabmokcolor2.css");			break;
 		case "tabmokcolor4": 		manageCSS("tabmokcolor4.css");			break;
 		
+		case "anewtaburlcb": 		manageCSS("no_newtab_page.css");		break;
 		case "anewtaburlpcb": 		manageCSS("no_pbrowsing_page.css");		break;
 		
 		case "padlock_default": 	manageCSS("padlock_default.css");		break;
