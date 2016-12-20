@@ -26,7 +26,7 @@
 	  height: 0 !important;
 	  max-height: 0 !important;
 	  visibility: collapse !important;
-	  display:none !important;
+	  /*display:none !important;*/
 	}
 	
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="visiturl"] + richlistitem:not([collapse="true"]),
@@ -55,12 +55,12 @@
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"][ctrsubboxstyle="height: 2px;"],
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete)[ctrsubboxstyle="height: 8px;"],
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"][ctrsubboxstyle="height: 8px;"],
-	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete)[ctrsubboxstyle="height: 42px;"],
-	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"][ctrsubboxstyle="height: 42px;"],
-	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete)[ctrsubboxstyle="height: 45px;"],
-	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"][ctrsubboxstyle="height: 45px;"],
-	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete)[ctrsubboxstyle="height: 49px;"],
-	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"][ctrsubboxstyle="height: 49px;"] {
+	#main-window[fx52plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete)[ctrsubboxstyle="height: 42px;"],
+	#main-window[fx52plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"][ctrsubboxstyle="height: 42px;"],
+	#main-window[fx52plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete)[ctrsubboxstyle="height: 45px;"],
+	#main-window[fx52plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"][ctrsubboxstyle="height: 45px;"],
+	#main-window[fx52plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete)[ctrsubboxstyle="height: 49px;"],
+	#main-window[fx52plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"][ctrsubboxstyle="height: 49px;"] {
       margin-left: -10000000000px !important;
 	}
 }

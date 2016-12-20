@@ -532,7 +532,7 @@
 			  
 			  <groupbox id="ctraddon_pw_anewtaburlgbox">
 				<caption  label="&Ctr_anewtaburl;" class="ctraddon_topic"/>
-				<checkbox label="&Ctr_anewtaburlcb;"	preference="ctraddon_anewtaburlcb" id="ctraddon_pw_anewtaburlcb" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
+				<checkbox label="&Ctr_anewtaburlcb;"	preference="ctraddon_anewtaburlcb" id="ctraddon_pw_anewtaburlcb"/>
 				<hbox>
 				  <label value=""/>
 				  <textbox id="ctraddon_pw_anewtaburlbox" preference="ctraddon_anewtaburl" size="auto" flex="1" type="autocomplete" placeholder=""/>
