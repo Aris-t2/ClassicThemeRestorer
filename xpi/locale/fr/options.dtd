@@ -58,7 +58,7 @@
 <!ENTITY Ctr_tabwidthinfo3	"Les valeurs au-dessous de 48px causeront des erreurs dans la plupart des cas !">
 <!ENTITY Ctr_square_edges	"Coins supérieurs carrés">
 <!ENTITY Ctr_tttitlebar		"Afficher le titre de l'onglet actuel dans la barre de titre de &brandShortName;">
-<!ENTITY Ctr_ttnooverfl		"Remove overflow effect from long tab titles">
+<!ENTITY Ctr_ttnooverfl		"Supprimer l'effet de débordement des titres d'onglets longs">
 <!ENTITY Ctr_tabinsertion	"Insérer les onglets liés à la suite de l'onglet actuel">
 <!ENTITY Ctr_emptytfavico	"Afficher un Favicon (pour les pages qui n'en proposent pas) :">
 <!ENTITY Ctr_emptytfavico_n	"Non">
@@ -90,18 +90,18 @@
 <!ENTITY Ctr_paneluibtweak	" Donner son apparence au bouton de menu...">
 <!ENTITY Ctr_paneluibtweak2	" Donner son apparence (seulement l'icône) au bouton de menu...">
 <!ENTITY Ctr_paneluibtweak3	"... si ce dernier se trouve sur la barre des onglets">
-<!ENTITY Ctr_appbuttonc		"De couleur">
+<!ENTITY Ctr_appbuttonc		"Bouton...">
 <!ENTITY Ctr_appbuttonc_o	"Orange (style par défaut)">
-<!ENTITY Ctr_appbuttonc_a	"Bleue (style Aurora)">
-<!ENTITY Ctr_appbuttonc_n	"Noire (style Nightly)">
+<!ENTITY Ctr_appbuttonc_a	"Bleu (style Aurora)">
+<!ENTITY Ctr_appbuttonc_n	"Bleu marine (style Nightly)">
 <!ENTITY Ctr_appbuttonc_t	"Transparent">
-<!ENTITY Ctr_appbuttonc_p	"Bleue (style Palemoon)">
+<!ENTITY Ctr_appbuttonc_p	"Bleu (style Palemoon)">
 <!ENTITY Ctr_appbuttonc_r	"Rouge">
-<!ENTITY Ctr_appbuttonc_g	"Verte">
-<!ENTITY Ctr_appbuttonc_gr	"Grise">
-<!ENTITY Ctr_appbuttonc_pu	"Pourpre">
-<!ENTITY Ctr_appbuttonc_wh	"Blanche">
-<!ENTITY Ctr_appbuttonc_cu	"Personnalisée">
+<!ENTITY Ctr_appbuttonc_g	"Vert">
+<!ENTITY Ctr_appbuttonc_gr	"Gris">
+<!ENTITY Ctr_appbuttonc_pu	"Violet">
+<!ENTITY Ctr_appbuttonc_wh	"Blanc">
+<!ENTITY Ctr_appbuttonc_cu	"De couleur personnalisée">
 <!ENTITY Ctr_appbuttonct	"Personnaliser la couleur du bouton s'il est sur une barre d'outils">
 <!ENTITY Ctr_appbuttonI1	"Redémarrage recommandé">
 <!ENTITY Ctr_appbuttonI1e	"Uniquement visible sur la barre de titre de &brandShortName;, pas sur la barre de titre de Windows !">
@@ -126,8 +126,8 @@
 <!ENTITY Ctr_altoptionsd	"Apparence par défaut">
 <!ENTITY Ctr_altoptionsp	"Apparence alternative">
 <!ENTITY Ctr_altoptionsw	"Ouvrir dans une fenêtre">
-<!ENTITY Ctr_altoptions_hm	"horizontal menu">
-<!ENTITY Ctr_altoptions_vm	"vertical menu">
+<!ENTITY Ctr_altoptions_hm	"menu horizontal">
+<!ENTITY Ctr_altoptions_vm	"menu vertical">
 <!ENTITY Ctr_altoptionsww	"Largeur :">
 <!ENTITY Ctr_altoptionswh	"Hauteur :">
 <!ENTITY Ctr_altoptionsi	"La fenêtre simulée des options n'est plus une boite de dialogue mais une fenêtre du navigateur avec toutes les barres d'outils masquées. La fonctionnalité « Utiliser la page actuelle » ajoute seulement les URL des pages ouvertes dans la fenêtre actuelle, qui est uniquement « about:preferences » dans ce cas. Le bouton de barre d'outils « Options » est remplacé par un nouveau afin de pouvoir ouvrir les options dans une fenêtre.">
@@ -177,7 +177,7 @@
 <!ENTITY Ctr_search_ui		"Barre de recherche">
 <!ENTITY Ctr_ctroldsearch	"Ancienne interface de barre de recherche">
 <!ENTITY Ctr_ctroldsearchc	"Suite à une recherche, effacer le contenu de la barre après...">
-<!ENTITY Ctr_ctroldsearchr	"Suite une recherche, revenir au premier moteur de la liste après...">
+<!ENTITY Ctr_ctroldsearchr	"Suite à une recherche, revenir au premier moteur de la liste après...">
 <!ENTITY Ctr_ctrosearchdel	"">
 <!ENTITY Ctr_search_oit		"Ouvrir la recherche dans un nouvel onglet">
 <!ENTITY Ctr_osearch_meoit	"Clic milieu : rechercher dans un nouvel « onglet au premier plan »">
@@ -265,7 +265,7 @@
 <!ENTITY Ctr_urlbardropm2	"Rendre le bouton de liste déroulante toujours visible">
 <!ENTITY Ctr_altreaderico	"Utiliser des icônes alternatives pour le « mode lecture »">
 <!ENTITY Ctr_hideurlzoom	"Masquer le bouton de zoom (si présent)">
-<!ENTITY Ctr_urlbardark		"Dark background color">
+<!ENTITY Ctr_urlbardark		"Utiliser un arrière-plan noir">
 <!ENTITY Ctr_hideprbutton	"Masquer l'icône de notification lorsqu'une fenêtre surgissante est bloquée">
 <!ENTITY Ctr_locsearchbw10	"Réduire la hauteur des barres d'adresse et de recherche (expérimental)">
 <!ENTITY Ctr_urlbar_ib		"Bouton d'identité des sites">
@@ -386,7 +386,7 @@
 <!ENTITY Ctr_e_readermode	"Mode lecture">
 <!ENTITY Ctr_e_geolocation	"Géolocalisation">
 <!ENTITY Ctr_e_pocket		"Pocket">
-<!ENTITY Ctr_e_tabsaudioico	"Icône de lecture audio sur les onglets">
+<!ENTITY Ctr_e_tabsaudioico	"Icône de lecture audio">
 <!ENTITY Ctr_e_containertab	"Onglets conteneurs">
 <!ENTITY Ctr_e_findbarhl	"Surlignage avancé de la barre de recherche">
 <!ENTITY Ctr_fx50findbarhl	"Décocher ces paramètres désactive les fonctionnalités de surlignage avancées de la barre de recherche.">
@@ -430,7 +430,7 @@
 <!ENTITY stopCmd.accesskey				"r">
 <!ENTITY bookmarkPageCmd2.accesskey		"M">
 
-<!-- Fallback entities. Leave empty! -->
+<!-- Fallback entities. Do not change! -->
 <!ENTITY openCmd.commandkey				"">
 <!ENTITY urlbar.accesskey				"">
 <!ENTITY urlbar.placeholder2			"">

@@ -2437,7 +2437,7 @@ classicthemerestorerjs.ctr = {
 			}
 
 		  break;
-		  
+  
 		  case "anewtaburlpcb":
 		  
 			if (branch.getBoolPref("anewtaburlpcb") && classicthemerestorerjs.ctr.appversion >= 48) {
@@ -3343,6 +3343,7 @@ classicthemerestorerjs.ctr = {
 	}
 
   },
+  
   
   // forward new private browsing tab to custom url
   newPrivateTabPageForwarding: function() {

@@ -101,5 +101,12 @@
 	#connection-icon {
 	  filter: unset !important;
 	}
+	
+	@media (-moz-os-version: windows-win10) {
+		.urlbar-textbox-container {
+		  margin-top: -1px !important;
+		  margin-bottom: -1px !important;
+		}
+	}
 
 }
