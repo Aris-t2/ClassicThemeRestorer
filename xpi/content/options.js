@@ -130,6 +130,9 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_altoptions_list').style.visibility = 'visible';
 	  document.getElementById('ctraddon_pw_alt_addonsm').style.visibility = 'visible';
 	  document.getElementById('ctraddon_altoptions_list2').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_ib_graycolor').style.visibility = 'visible';
+	  document.getElementById('ctraddon_pw_ib_nohovcolor').style.visibility = 'visible';
+	  document.getElementById('ctraddon_pw_verifiedcolors').style.visibility = 'visible';
 	}
 
 	// ColorfulTabs info label

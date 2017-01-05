@@ -57,6 +57,7 @@
 		<preference id="ctraddon_tttitlebar"	name="extensions.classicthemerestorer.tttitlebar"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_tttitlebar_c"	name="extensions.classicthemerestorer.tttitlebar_c"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_ttnooverfl"	name="extensions.classicthemerestorer.ttnooverfl"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_tabtitlepos"	name="extensions.classicthemerestorer.tabtitlepos" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_ctabheightcb"	name="extensions.classicthemerestorer.ctabheightcb"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_ctabheight"	name="extensions.classicthemerestorer.ctabheight"	type="int"		instantApply="true"/>
 		
@@ -411,6 +412,7 @@
 				<description id="ctraddon_tobinfotab" class="ctraddon_topic">&Ctr_tobainfotab;</description>
 
 				<hbox align="center">
+				  <description class="ctraddon_font1">&Ctr_appearance;</description>
 				  <menulist preference="ctraddon_tabs" id="ctraddon_pw_tabmenulist">
 					<menupopup>
 						<menuitem value="tabs_default"	  label="&Ctr_tabs0;"/>
@@ -425,6 +427,7 @@
 				</hbox>
 
 				<hbox align="center">
+				  <description class="ctraddon_font1">&Ctr_position;</description>
 				  <menulist preference="ctraddon_tabsontop">
 					<menupopup>
 						<menuitem value="unset"	 label="&Ctr_tabsontop0;"/>
@@ -446,6 +449,18 @@
 				  <checkbox label="&Ctr_centered;"		preference="ctraddon_tttitlebar_c" id="ctraddon_pw_tttitlebar_c"/>
 				</hbox>
 				<checkbox label="&Ctr_ttnooverfl;"		preference="ctraddon_ttnooverfl" id="ctraddon_pw_ttnooverfl" class="ctraddon_new_in_v53"/>
+	
+				<hbox align="center">
+				  <description class="ctraddon_font1">&Ctr_tabtitle;</description>
+				  <menulist preference="ctraddon_tabtitlepos" id="ctraddon_pw_ctabtitlepos">
+					<menupopup>
+						<menuitem value="tabtitlepos_default"	label="&Ctr_tabwidthdef;"/>
+						<menuitem value="tabtitlepos_left"		label="&Ctr_left;"/>
+						<menuitem value="tabtitlepos_centered"	label="&Ctr_centered;"/>
+						<menuitem value="tabtitlepos_right"		label="&Ctr_right;"/>
+					</menupopup>
+				  </menulist>
+				</hbox>
 				
 				<description id="ctraddon_pw_tabwidthinfo"  class="ctraddon_topic">&Ctr_tabwidthinfo;</description>
 				<description id="ctraddon_pw_tabwidthinfo2" class="ctraddon_topic">&Ctr_tabwidthinfo2;</description>
@@ -553,6 +568,7 @@
 			  <groupbox>
 				<caption  label="&Ctr_closetab_0;" class="ctraddon_topic"/>
 				<hbox align="center">
+				  <description class="ctraddon_font1">&Ctr_position;</description>
 				  <menulist preference="ctraddon_closetab" id="ctraddon_pw_closetab">
 					<menupopup>
 						<menuitem value="closetab_default"	label="&Ctr_tabwidthdef;" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
@@ -871,8 +887,9 @@
 		
 		<description id="ctraddon_hctpinfoab" class="ctraddon_topic">&Ctr_hctpinfoab;</description>
 		
-		<hbox align="center">
-		  <menulist preference="ctraddon_appbutton" id="ctraddon_appbutton_list1">
+		<hbox align="center" id="ctraddon_appbutton_list1">
+		  <description class="ctraddon_font1">&Ctr_position;</description>
+		  <menulist preference="ctraddon_appbutton">
 			<menupopup>
 				<menuitem value="appbutton_off"	  label="&Ctr_appbutton0;"			oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_off',true)"/>
 				<menuitem value="appbutton_v1"	  label="&Ctr_appbutton1;"			oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v1',true)"/>
@@ -893,8 +910,9 @@
 		  </menulist>
 		</hbox>
 		
-		<hbox align="center">
-		  <menulist preference="ctraddon_appbutton" id="ctraddon_appbutton_list2">
+		<hbox align="center" id="ctraddon_appbutton_list2">
+		  <description class="ctraddon_font1">&Ctr_position;</description>
+		  <menulist preference="ctraddon_appbutton">
 			<menupopup>
 				<menuitem value="appbutton_off"	 label="&Ctr_appbutton0;"	oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_off',true)"/>
 				<menuitem value="appbutton_v1"	 label="&Ctr_appbutton1;"	oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v1',true)"/>
