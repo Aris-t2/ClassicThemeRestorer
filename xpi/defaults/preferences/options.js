@@ -16,6 +16,7 @@ pref("extensions.classicthemerestorer.closeicon",'closeicon_default');
 pref("extensions.classicthemerestorer.tttitlebar",false);
 pref("extensions.classicthemerestorer.tttitlebar_c",false);
 pref("extensions.classicthemerestorer.ttnooverfl",false);
+pref("extensions.classicthemerestorer.tabtitlepos",'tabtitlepos_default');
 
 //Appbutton settings
 pref("extensions.classicthemerestorer.appbutton",'appbutton_v1');

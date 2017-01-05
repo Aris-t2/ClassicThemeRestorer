@@ -1,5 +1,4 @@
 @import url(chrome://ctraddon_os_special/skin/alt_optionswindow2extra.css);
-@import url(chrome://ctraddon_os_special/skin/alt_optionswindow2extra.css);
 
 @-moz-document url(about:preferences),url-prefix(about:preferences){
  	
@@ -27,7 +26,7 @@
 	
 	#dialogBox {
 	  min-width: unset !important;
-	  min-height: unset !important;
+	  /*min-height: unset !important;*/
 	}
 
 	/* main colors category items */

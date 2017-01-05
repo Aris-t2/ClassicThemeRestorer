@@ -17,6 +17,10 @@
 <!ENTITY Ctr_window			"Fenster">
 <!ENTITY Ctr_centered		"Zentriert">
 <!ENTITY Ctr_page			"Seite">
+<!ENTITY Ctr_position		"Position">
+<!ENTITY Ctr_appearance		"Aussehen">
+<!ENTITY Ctr_left			"Links">
+<!ENTITY Ctr_right			"Rechts">
 
 <!ENTITY Ctr_cuibuttons		"Schaltflächen">
 <!ENTITY Ctr_cuibutnormal	"Normal">
@@ -40,10 +44,10 @@
 <!ENTITY Ctr_tabforminfo	"Das aktive Thema bestimmt die Tabdarstellung.">
 <!ENTITY Ctr_coltabsinfo	"Tabdarstellung ist zur Erweiterung 'ColorfulTabs' nicht vollständig kompatibel!">
 <!ENTITY Ctr_tabsontop0		"Tabs oben (Standard)">
-<!ENTITY Ctr_tabsontop1		"Tabs oben --- '[tabsontop=true]'-Attribut gesetzt">
-<!ENTITY Ctr_tabsontop2		"Tabs unten (v1) --- '[tabsontop=false]'-Attribut gesetzt">
-<!ENTITY Ctr_tabsontop3		"Tabs unten (v2) --- '[tabsontop=false]'-Attribut gesetzt">
-<!ENTITY Ctr_tabsontopW1	"v2 ist nur für einige Erweiterungen und vollständige Themen sinnvoll!">
+<!ENTITY Ctr_tabsontop1		"Tabs oben - [tabsontop=true]-Attribut gesetzt">
+<!ENTITY Ctr_tabsontop2		"Tabs unten (v1) - [tabsontop=false]-Attribut gesetzt">
+<!ENTITY Ctr_tabsontop3		"Tabs unten (v2) - [tabsontop=false]-Attribut gesetzt *">
+<!ENTITY Ctr_tabsontopW1	"* nur für einige Erweiterungen und vollständige Themes!">
 <!ENTITY Ctr_tabsontopI1	"[tabsontop=true/false]-Attribut wird gesetzt für">
 <!ENTITY Ctr_tabsintitlebar	"&brandShortName;-Titelleiste anstatt der Betriebssystem-Titelleiste verwenden">
 <!ENTITY Ctr_tabwidthdef	"(Standard)">
@@ -59,8 +63,9 @@
 <!ENTITY Ctr_square_edges	"Eckige obere Tabränder">
 <!ENTITY Ctr_tttitlebar		"Tabtitel in der &brandShortName;-Titelleiste">
 <!ENTITY Ctr_ttnooverfl		"Überblendeffekt von langen Tabtiteln entfernen">
+<!ENTITY Ctr_tabtitle		"Position des Tabtitels">
 <!ENTITY Ctr_tabinsertion	"Verwandten Tab nach aktivem Tab einfügen">
-<!ENTITY Ctr_emptytfavico	"Lesezeichensymbol auf Tabs zeigen (falls keines vorhanden ist)">
+<!ENTITY Ctr_emptytfavico	"Lesezeichensymbol auf Tabs anzeigen (falls keines vorhanden ist)">
 <!ENTITY Ctr_emptytfavico_n	"Kein Symbol">
 <!ENTITY Ctr_emptytfavico_g	"Allgemein">
 <!ENTITY Ctr_noemptypticon	"Leeres Lesezeichensymbol auf angehefteten Tabs verstecken">
@@ -317,7 +322,7 @@
 
 <!ENTITY Ctr_toolbars		"Leisten">
 <!ENTITY Ctr_dblclnewtab	"Doppelklick auf Leiste öffnet einen neuen Tab">
-<!ENTITY Ctr_dblclnewtabdes	"Nicht geignet für alle vollständigen Themen bei aktiver Windows Titelleiste!">
+<!ENTITY Ctr_dblclnewtabdes	"Nicht geignet für alle vollständigen Themes bei aktiver Windows Titelleiste!">
 <!ENTITY Ctr_hidetbwot		"Leiste mit nur einem sichtbaren Tab verstecken">
 <!ENTITY Ctr_hidetbwote		"Verzögerung beim Start reduzieren">
 <!ENTITY Ctr_hidetbwote_i	"Hintergrundfarbe der Tableiste könnte fehlerhaft sein.">
@@ -337,7 +342,7 @@
 <!ENTITY Ctr_aerocolors		"Blaue 'Aero'-Farben für Leisten (und Tabs)">
 <!ENTITY Ctr_aerocolorsg	"Grau-blaue 'Aero'-Farben">
 <!ENTITY Ctr_transpttbw10	"Titel-/Menü-/Tableiste: Hintergrundfarbe entfernen">
-<!ENTITY Ctr_transpttbew10	"Weitere Anpassungen für einige OS-Themen">
+<!ENTITY Ctr_transpttbew10	"Weitere Anpassungen für einige OS-Themes">
 <!ENTITY Ctr_transptcw10	"Standardschaltflächen 'Minimieren/Maximieren/Schließen' verstecken">
 <!ENTITY Ctr_hidenavbar		"Leiste verstecken">
 <!ENTITY Ctr_navbarpad		"Zusätzliche Abstände links und rechts">
@@ -404,7 +409,7 @@
 
 <!ENTITY Ctr_special_font	"Hintergrundfarbeinstellungen sind nur für das Standard-Thema vorhanden!">
 <!ENTITY Ctr_special_info	"Einige Optionen haben nur in bestimmten Fällen sichtbare Auswirkungen!">
-<!ENTITY Ctr_special_info2	"Vollständiges 'Thema' erkannt! Einige Einstellungen funktionieren nicht mit Themen!">
+<!ENTITY Ctr_special_info2	"'Vollständiges Theme' erkannt! Einige Einstellungen funktionieren nicht mit Themes!">
 <!ENTITY Ctr_special_acr	"Probleme nur über offizielle Hilfskanäle melden und nicht über 'Add-on Compatibility Reporter'!">
 <!ENTITY Ctr_support		"Hilfe">
 <!ENTITY Ctr_support_forum1	"MozillaZine (Englisches Forum)">

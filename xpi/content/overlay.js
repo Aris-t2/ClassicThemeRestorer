@@ -513,6 +513,17 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("ttnooverfl",false);
 		  break;
 		  
+		  case "tabtitlepos":
+		  
+			classicthemerestorerjs.ctr.loadUnloadCSS('tabtitlepos_left',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('tabtitlepos_centered',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('tabtitlepos_right',false);
+			
+			if (branch.getCharPref("tabtitlepos")!="tabtitlepos_default")
+			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("tabtitlepos"),true);
+
+		  break;
+		  
 		  case "ctabheightcb":
 			if (branch.getBoolPref("ctabheightcb")) classicthemerestorerjs.ctr.loadUnloadCSS("ctabheight",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("ctabheight",false);
@@ -4063,6 +4074,10 @@ classicthemerestorerjs.ctr = {
 		case "tttitlebar": 				manageCSS("tabsttitleintitlebar.css");  break;
 		case "tttitlebar_c": 			manageCSS("tabsttitleintitlebar_centered.css");  break;
 		case "ttnooverfl": 				manageCSS("tabtitle_nooverflow.css");  	break;
+		
+		case "tabtitlepos_left": 		manageCSS("tabtitlepos_left.css");  	break;
+		case "tabtitlepos_centered": 	manageCSS("tabtitlepos_centered.css");	break;
+		case "tabtitlepos_right": 		manageCSS("tabtitlepos_right.css");  	break;
 		
 		case "closetab_active": 		manageCSS("closetab_active.css");  		break;
 		case "closetab_none": 			manageCSS("closetab_none.css");  		break;

@@ -67,10 +67,13 @@
 	}
 
 	/* Personas support */
+	toolbar[id^=ctraddon_extra-bar]:-moz-lwtheme,
+	#PersonalToolbar:-moz-lwtheme,
 	#nav-bar:-moz-lwtheme {
 	  background-image: none !important;
 	  box-shadow: none !important;
-	  border: none !important;
+	  border-top: none !important;
+	  border-bottom: none !important;
 	}
 
 }
