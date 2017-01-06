@@ -33,6 +33,8 @@ pref("extensions.classicthemerestorer.appbuttontxt",'');
 
 pref("extensions.classicthemerestorer.cappbutc1",'#00FF00');
 pref("extensions.classicthemerestorer.cappbutc2",'#007700');
+pref("extensions.classicthemerestorer.cappbutpc1",'#CC33CC');
+pref("extensions.classicthemerestorer.cappbutpc2",'#993399');
 
 //General UI
 pref("extensions.classicthemerestorer.smallnavbut",false);
