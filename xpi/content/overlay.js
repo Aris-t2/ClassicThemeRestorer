@@ -698,7 +698,7 @@ classicthemerestorerjs.ctr = {
 
 		  break;
 		  
-		  case "cappbutc1": case "cappbutc2":
+		  case "cappbutc1": case "cappbutc2": case "cappbutpc1": case "cappbutpc2":
 			if (branch.getCharPref("appbuttonc")=="appbuttonc_custom") classicthemerestorerjs.ctr.loadUnloadCSS("appbuttonc_custom",true);
 		  break;
 		  
@@ -4792,14 +4792,14 @@ classicthemerestorerjs.ctr = {
 						}\
 						#main-window[privatebrowsingmode=temporary] toolbar:not(#TabsToolbar) #ctraddon_appbutton .toolbarbutton-icon,\
 						#main-window[privatebrowsingmode=temporary] toolbar:not(#TabsToolbar) #ctraddon_appbutton .toolbarbutton-text{\
-						  background-image: linear-gradient(rgb(153,38,211), rgb(105,19,163) 95%) !important;\
+						  background-image: linear-gradient('+this.prefs.getCharPref('cappbutpc1')+', '+this.prefs.getCharPref('cappbutpc2')+' 95%) !important;\
 						  border-color: rgba(43,8,65,.9) !important;\
 						}\
 						#main-window[privatebrowsingmode=temporary] toolbar:not(#TabsToolbar) #ctraddon_appbutton:hover:not(:active):not([open]) .toolbarbutton-icon,\
 						#main-window[privatebrowsingmode=temporary] toolbar:not(#TabsToolbar) #ctraddon_appbutton:hover:not(:active):not([open]) .toolbarbutton-text{\
 						  background-image: radial-gradient(farthest-side at center bottom, rgba(240,193,255,.5) 10%, rgba(240,193,255,0) 70%),\
 											radial-gradient(farthest-side at center bottom, rgb(192,81,247), rgba(236,172,255,0)),\
-											linear-gradient(rgb(144,20,207), rgb(95,0,158) 95%) !important;\
+											linear-gradient('+this.prefs.getCharPref('cappbutpc1')+', '+this.prefs.getCharPref('cappbutpc2')+' 95%) !important;\
 						  border-color: rgba(43,8,65,.9) !important;\
 						  box-shadow: 0 1px 0 rgba(255,255,255,.1) inset,\
 									  0 0 2px 1px rgba(240,193,255,.7) inset,\
@@ -4809,7 +4809,7 @@ classicthemerestorerjs.ctr = {
 						#main-window[privatebrowsingmode=temporary] toolbar:not(#TabsToolbar) #ctraddon_appbutton[open] .toolbarbutton-icon,\
 						#main-window[privatebrowsingmode=temporary] toolbar:not(#TabsToolbar) #ctraddon_appbutton:hover:active .toolbarbutton-text,\
 						#main-window[privatebrowsingmode=temporary] toolbar:not(#TabsToolbar) #ctraddon_appbutton[open] .toolbarbutton-text{\
-						  background-image: linear-gradient(rgb(144,20,207), rgb(95,0,158) 95%) !important;\
+						  background-image: linear-gradient('+this.prefs.getCharPref('cappbutpc1')+', '+this.prefs.getCharPref('cappbutpc2')+' 95%) !important;\
 						}\
 						toolbar:not(#TabsToolbar) #ctraddon_appbutton .toolbarbutton-text {\
 						  color:white !important;\
@@ -4854,14 +4854,14 @@ classicthemerestorerjs.ctr = {
 						}\
 						#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctraddon_appbutton,\
 						#main-window[privatebrowsingmode=temporary] #ctraddon_appbutton2{\
-						  background-image: linear-gradient(rgb(153,38,211), rgb(105,19,163) 95%) !important;\
+						  background-image: linear-gradient('+this.prefs.getCharPref('cappbutpc1')+', '+this.prefs.getCharPref('cappbutpc2')+' 95%) !important;\
 						  border-color: rgba(43,8,65,.9) !important;\
 						}\
 						#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctraddon_appbutton:hover:not(:active):not([open]),\
 						#main-window[privatebrowsingmode=temporary] #ctraddon_appbutton2:hover:not(:active):not([open]){\
 						  background-image: radial-gradient(farthest-side at center bottom, rgba(240,193,255,.5) 10%, rgba(240,193,255,0) 70%),\
 											radial-gradient(farthest-side at center bottom, rgb(192,81,247), rgba(236,172,255,0)),\
-											linear-gradient(rgb(144,20,207), rgb(95,0,158) 95%) !important;\
+											linear-gradient('+this.prefs.getCharPref('cappbutpc1')+', '+this.prefs.getCharPref('cappbutpc2')+' 95%) !important;\
 						  border-color: rgba(43,8,65,.9) !important;\
 						  box-shadow: 0 1px 0 rgba(255,255,255,.1) inset,\
 									  0 0 2px 1px rgba(240,193,255,.7) inset,\
@@ -4871,7 +4871,7 @@ classicthemerestorerjs.ctr = {
 						#main-window[privatebrowsingmode=temporary] #TabsToolbar #ctraddon_appbutton[open],\
 						#main-window[privatebrowsingmode=temporary] #ctraddon_appbutton2:hover:active,\
 						#main-window[privatebrowsingmode=temporary]  #ctraddon_appbutton2[open] {\
-						  background-image: linear-gradient(rgb(144,20,207), rgb(95,0,158) 95%) !important;\
+						  background-image: linear-gradient('+this.prefs.getCharPref('cappbutpc1')+', '+this.prefs.getCharPref('cappbutpc2')+' 95%) !important;\
 						}\
 					}\
 					@-moz-document url(chrome://classic_theme_restorer/content/options.xul) {\

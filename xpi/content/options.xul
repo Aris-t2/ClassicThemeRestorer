@@ -82,7 +82,9 @@
 		
 		<preference id="ctraddon_cappbutc1"		name="extensions.classicthemerestorer.cappbutc1"	type="string"	instantApply="true"/>
 		<preference id="ctraddon_cappbutc2"		name="extensions.classicthemerestorer.cappbutc2"	type="string"	instantApply="true"/>
-
+		<preference id="ctraddon_cappbutpc1"	name="extensions.classicthemerestorer.cappbutpc1"	type="string"	instantApply="true"/>
+		<preference id="ctraddon_cappbutpc2"	name="extensions.classicthemerestorer.cappbutpc2"	type="string"	instantApply="true"/>
+		
 		<preference id="ctraddon_nbisizedelay"	name="extensions.classicthemerestorer.nbisizedelay" type="int"		instantApply="true"/>
 		<preference id="ctraddon_smallnavbut"	name="extensions.classicthemerestorer.smallnavbut"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_hide_bf_popup"	name="extensions.classicthemerestorer.hide_bf_popup" type="bool"	instantApply="true"/>
@@ -924,7 +926,7 @@
 		<description>&Ctr_appbuttonI1e;</description>
 
 		<hbox align="center">
-		 <description class="ctraddon_font1">&Ctr_appbuttonc;</description>
+		  <description class="ctraddon_font1">&Ctr_appbuttonc;</description>
 		  <menulist preference="ctraddon_appbuttonc" id="ctraddon_appbutcolor_list">
 			<menupopup>
 				<menuitem value="appbuttonc_orange"	 label="&Ctr_appbuttonc_o;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonColorExtra('appbuttonc_orange')" id="ctraddon_pw_appbuttonc_orange"/>
@@ -942,14 +944,25 @@
 		  </menulist>
 		</hbox>
 		
-		<hbox>
+		<hbox align="center" class="ctraddonsuboption">
 			<textbox preference="ctraddon_cappbutc1" id="ctraddon_pw_cappbutc1"/>
 			<colorpicker preference="ctraddon_cappbutc1" type="button" id="ctraddon_pw_cappbutc1cp"/>
 			<textbox preference="ctraddon_cappbutc2" id="ctraddon_pw_cappbutc2"/>
 			<colorpicker preference="ctraddon_cappbutc2" type="button" id="ctraddon_pw_cappbutc2cp"/>
 		</hbox>
-		
-		<description>&Ctr_appbuttonI2;</description>
+		<hbox align="center" class="ctraddonsuboption">
+			<textbox preference="ctraddon_cappbutpc1" id="ctraddon_pw_cappbutpc1"/>
+			<colorpicker preference="ctraddon_cappbutpc1" type="button" id="ctraddon_pw_cappbutpc1cp"/>
+			<textbox preference="ctraddon_cappbutpc2" id="ctraddon_pw_cappbutpc2"/>
+			<colorpicker preference="ctraddon_cappbutpc2" type="button" id="ctraddon_pw_cappbutpc2cp"/>
+			<description class="ctraddon_font1">&Ctr_privmode;</description>
+		</hbox>
+
+		<hbox align="center">
+			<description id="ctraddon_pw_appbutonclab" class="ctraddon_font1">&Ctr_appbutonclab;</description>
+			<textbox id="ctraddon_pw_appbuttontxt" preference="ctraddon_appbuttontxt" size="auto" flex="1" type="autocomplete" placeholder="&Ctr_appbutonclab2;" onkeydown="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+			<label value=""/>
+		</hbox>
 
 		<radiogroup preference="ctraddon_altabico" id="ctraddon_altabico_list" orient="horizontal" value="">
 			<radio label="" value="altabico_white" 		id="ctraddon_altabico_white"/>
@@ -967,12 +980,6 @@
 		<checkbox label="&Ctr_appbutbdl;"	 preference="ctraddon_appbutbdl" id="ctraddon_appbutbdl"/>
 		<checkbox label="&Ctr_dblclclosefx;" preference="ctraddon_dblclclosefx" id="ctraddon_dblclclosefx" class="ctraddon_windowsonly"/>
 		<checkbox label="&Ctr_appbclmmenus;" preference="ctraddon_appbclmmenus" id="ctraddon_appbclmmenus"/>
-	    
-		<hbox>
-			<description id="ctraddon_pw_appbutonclab" class="ctraddon_font1">&Ctr_appbutonclab;</description>
-			<textbox id="ctraddon_pw_appbuttontxt" preference="ctraddon_appbuttontxt" size="auto" flex="1" type="autocomplete" placeholder="&Ctr_appbutonclab2;" onkeydown="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
-			<label value=""/>
-		</hbox>
 		
 	  </groupbox>
 
