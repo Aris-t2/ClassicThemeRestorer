@@ -413,8 +413,9 @@
 				<description id="ctraddon_hctpinfotab" class="ctraddon_topic">&Ctr_hctpinfotab;</description>
 				<description id="ctraddon_tobinfotab" class="ctraddon_topic">&Ctr_tobainfotab;</description>
 
+				<description class="ctraddon_font1">&Ctr_appearance;</description>
 				<hbox align="center">
-				  <description class="ctraddon_font1">&Ctr_appearance;</description>
+				  
 				  <menulist preference="ctraddon_tabs" id="ctraddon_pw_tabmenulist">
 					<menupopup>
 						<menuitem value="tabs_default"	  label="&Ctr_tabs0;"/>
@@ -428,8 +429,9 @@
 				  </menulist>
 				</hbox>
 
+				<description class="ctraddon_font1">&Ctr_position;</description>
 				<hbox align="center">
-				  <description class="ctraddon_font1">&Ctr_position;</description>
+				  
 				  <menulist preference="ctraddon_tabsontop">
 					<menupopup>
 						<menuitem value="unset"	 label="&Ctr_tabsontop0;"/>
@@ -889,8 +891,9 @@
 		
 		<description id="ctraddon_hctpinfoab" class="ctraddon_topic">&Ctr_hctpinfoab;</description>
 		
+		<description class="ctraddon_font1" id="ctraddon_appbutton_list1desc">&Ctr_position;</description>
 		<hbox align="center" id="ctraddon_appbutton_list1">
-		  <description class="ctraddon_font1">&Ctr_position;</description>
+		  
 		  <menulist preference="ctraddon_appbutton">
 			<menupopup>
 				<menuitem value="appbutton_off"	  label="&Ctr_appbutton0;"			oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_off',true)"/>
@@ -912,8 +915,9 @@
 		  </menulist>
 		</hbox>
 		
+		<description class="ctraddon_font1" id="ctraddon_appbutton_list2desc">&Ctr_position;</description>
 		<hbox align="center" id="ctraddon_appbutton_list2">
-		  <description class="ctraddon_font1">&Ctr_position;</description>
+		  
 		  <menulist preference="ctraddon_appbutton">
 			<menupopup>
 				<menuitem value="appbutton_off"	 label="&Ctr_appbutton0;"	oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_off',true)"/>
