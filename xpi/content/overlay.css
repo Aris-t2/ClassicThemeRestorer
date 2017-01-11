@@ -273,7 +273,7 @@
 	  background:url("chrome://classic_theme_restorer/content/images/toolbarbutton-dropdown-arrow.png") center no-repeat;
 	}
 	
-	#customization-palette #ctraddon_window-controls{
+	#main-window:not([fx51plus="true"]) #customization-palette #ctraddon_window-controls{
 	  background: url("chrome://classic_theme_restorer/content/images/windowControls.png") center no-repeat;
 	  border:none;
 	  min-width:100px;

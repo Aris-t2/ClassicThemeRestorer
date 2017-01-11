@@ -363,6 +363,9 @@
 		<preference id="ctraddon_aboutprefsww"	name="extensions.classicthemerestorer.aboutprefsww" type="int"		instantApply="true"/>
 		<preference id="ctraddon_aboutprefswh"	name="extensions.classicthemerestorer.aboutprefswh" type="int"		instantApply="true"/>
 		<preference id="ctraddon_optionsrem"	name="extensions.classicthemerestorer.optionsrem"	type="bool"		instantApply="true"/>
+		
+		<preference id="ctraddon_cssoverride"	name="extensions.classicthemerestorer.cssoverride" 	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_cssoverridec"	name="extensions.classicthemerestorer.cssoverridec" type="string"	instantApply="true"/>
 
 	</preferences>
 
@@ -1736,6 +1739,9 @@
 		<checkbox label="&Ctr_ctrnewinv;"		preference="ctraddon_ctrnewinv"   id="ctraddon_pw_ctrnewinv"/>
 		<checkbox label="&Ctr_cuibotbuttons;"	preference="ctraddon_cuibuttons"  id="ctraddon_pw_cuibuttons"/>
 		<checkbox label="&Ctr_nodevtheme;"		preference="ctraddon_nodevtheme2" id="ctraddon_pw_nodevtheme2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+		<checkbox label="&Ctr_cssoverride;"		preference="ctraddon_cssoverride" id="ctraddon_pw_cssoverride"/>
+		<description class="ctraddonsuboption">&Ctr_cssoverride2;</description>
+		<textbox rows="10" multiline="true" 	preference="ctraddon_cssoverridec" id="ctraddon_pw_cssoverridec" />
 	  </groupbox>
 
 	</box>

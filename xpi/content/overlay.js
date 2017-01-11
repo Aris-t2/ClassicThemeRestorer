@@ -61,6 +61,7 @@ classicthemerestorerjs.ctr = {
   locationbarradius:	Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   searchbarradius:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   searchpopupwidth:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  cssoverridesheet:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
   navbarpadding:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
@@ -2747,6 +2748,11 @@ classicthemerestorerjs.ctr = {
 				}
 			}
 
+		  break;
+		  
+		  case "cssoverride": case "cssoverridec":
+			if (branch.getBoolPref("cssoverride")) classicthemerestorerjs.ctr.loadUnloadCSS("cssoverride",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("cssoverride",false);
 		  break;
 
 		}
@@ -6296,6 +6302,21 @@ classicthemerestorerjs.ctr = {
 				'), null, null);
 				
 				applyNewSheet(this.searchpopupwidth);
+			}
+		
+		break;
+		
+		case "cssoverride":
+			removeOldSheet(this.cssoverridesheet);
+			
+			if(enable==true && this.prefs.getBoolPref('cssoverride')){			
+				
+				this.cssoverridesheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					/*AGENT_SHEET*/\
+					'+this.prefs.getCharPref('cssoverridec')+'\
+				'), null, null);
+				
+				applyNewSheet(this.cssoverridesheet);
 			}
 		
 		break;
