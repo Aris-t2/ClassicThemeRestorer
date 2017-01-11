@@ -363,6 +363,9 @@
 		<preference id="ctraddon_aboutprefsww"	name="extensions.classicthemerestorer.aboutprefsww" type="int"		instantApply="true"/>
 		<preference id="ctraddon_aboutprefswh"	name="extensions.classicthemerestorer.aboutprefswh" type="int"		instantApply="true"/>
 		<preference id="ctraddon_optionsrem"	name="extensions.classicthemerestorer.optionsrem"	type="bool"		instantApply="true"/>
+		
+		<preference id="ctraddon_cssoverride"	name="extensions.classicthemerestorer.cssoverride" 	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_cssoverridec"	name="extensions.classicthemerestorer.cssoverridec" type="string"	instantApply="true"/>
 
 	</preferences>
 
@@ -413,8 +416,9 @@
 				<description id="ctraddon_hctpinfotab" class="ctraddon_topic">&Ctr_hctpinfotab;</description>
 				<description id="ctraddon_tobinfotab" class="ctraddon_topic">&Ctr_tobainfotab;</description>
 
+				<description class="ctraddon_font1">&Ctr_appearance;</description>
 				<hbox align="center">
-				  <description class="ctraddon_font1">&Ctr_appearance;</description>
+				  
 				  <menulist preference="ctraddon_tabs" id="ctraddon_pw_tabmenulist">
 					<menupopup>
 						<menuitem value="tabs_default"	  label="&Ctr_tabs0;"/>
@@ -428,8 +432,9 @@
 				  </menulist>
 				</hbox>
 
+				<description class="ctraddon_font1">&Ctr_position;</description>
 				<hbox align="center">
-				  <description class="ctraddon_font1">&Ctr_position;</description>
+				  
 				  <menulist preference="ctraddon_tabsontop">
 					<menupopup>
 						<menuitem value="unset"	 label="&Ctr_tabsontop0;"/>
@@ -889,8 +894,9 @@
 		
 		<description id="ctraddon_hctpinfoab" class="ctraddon_topic">&Ctr_hctpinfoab;</description>
 		
+		<description class="ctraddon_font1" id="ctraddon_appbutton_list1desc">&Ctr_position;</description>
 		<hbox align="center" id="ctraddon_appbutton_list1">
-		  <description class="ctraddon_font1">&Ctr_position;</description>
+		  
 		  <menulist preference="ctraddon_appbutton">
 			<menupopup>
 				<menuitem value="appbutton_off"	  label="&Ctr_appbutton0;"			oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_off',true)"/>
@@ -912,8 +918,9 @@
 		  </menulist>
 		</hbox>
 		
+		<description class="ctraddon_font1" id="ctraddon_appbutton_list2desc">&Ctr_position;</description>
 		<hbox align="center" id="ctraddon_appbutton_list2">
-		  <description class="ctraddon_font1">&Ctr_position;</description>
+		  
 		  <menulist preference="ctraddon_appbutton">
 			<menupopup>
 				<menuitem value="appbutton_off"	 label="&Ctr_appbutton0;"	oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_off',true)"/>
@@ -1732,6 +1739,9 @@
 		<checkbox label="&Ctr_ctrnewinv;"		preference="ctraddon_ctrnewinv"   id="ctraddon_pw_ctrnewinv"/>
 		<checkbox label="&Ctr_cuibotbuttons;"	preference="ctraddon_cuibuttons"  id="ctraddon_pw_cuibuttons"/>
 		<checkbox label="&Ctr_nodevtheme;"		preference="ctraddon_nodevtheme2" id="ctraddon_pw_nodevtheme2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+		<checkbox label="&Ctr_cssoverride;"		preference="ctraddon_cssoverride" id="ctraddon_pw_cssoverride"/>
+		<description class="ctraddonsuboption">&Ctr_cssoverride2;</description>
+		<textbox rows="10" multiline="true" 	preference="ctraddon_cssoverridec" id="ctraddon_pw_cssoverridec" />
 	  </groupbox>
 
 	</box>

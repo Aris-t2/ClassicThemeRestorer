@@ -338,6 +338,10 @@ pref("extensions.classicthemerestorer.aboutprefsInd",0);
 pref("extensions.classicthemerestorer.aboutprefsww",850);
 pref("extensions.classicthemerestorer.aboutprefswh",670);
 
+// css override
+pref("extensions.classicthemerestorer.cssoverride",false);
+pref("extensions.classicthemerestorer.cssoverridec",'');
+
 // first run/reset preference
 pref("extensions.classicthemerestorer.ctrreset",true);
 
