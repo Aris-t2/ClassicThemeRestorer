@@ -63,7 +63,9 @@
 <!ENTITY Ctr_tabwidthinfo3	"Wartości poniżej 48 pikseli w większości przypadków spowodują usterki!">
 <!ENTITY Ctr_square_edges	"Kwadratowe górne rogi">
 <!ENTITY Ctr_tttitlebar		"Tytuł karty na pasku tytułu programu &brandShortName;">
-<!ENTITY Ctr_ttnooverfl		"Usuń efekt przepełnienia z długich tytułów kart">
+<!ENTITY Ctr_ttoverflow		"Long tab titles">
+<!ENTITY Ctr_ttoverfl_def	"Default overflow effect">
+<!ENTITY Ctr_ttoverfl_no	"No overflow effect">
 <!ENTITY Ctr_tabtitle		"Pozycja tytułu karty">
 <!ENTITY Ctr_tabinsertion	"Wstaw powiązaną kartę za kartą bieżącą">
 <!ENTITY Ctr_emptytfavico	"Pokaż ikonę ulubionych (jeżeli strona nie zaoferuje żadnej)">
@@ -212,6 +214,7 @@
 <!ENTITY Ctr_bmbviewbmsb	"Menu podręczne: pokaż 'Wyświetl panel zakładek'">
 <!ENTITY Ctr_bmbviewbmtb	"Menu podręczne: pokaż 'Wyświetl pasek zakładek'">
 <!ENTITY Ctr_bmbnounsort	"Menu podręczne: ukryj 'Pozostałe zakładki'">
+<!ENTITY Ctr_bmbutclpopup	"Popup: only show 'Bookmark this page' and bookmarks">
 <!ENTITY Ctr_bmbutnotext	"Ukryj etykietę na pasku zakładek">
 <!ENTITY Ctr_skipprintpr	"Przycisk drukowania: pomiń podgląd wydruku">
 <!ENTITY Ctr_tbconmenu		"Menu kontekstowe paska narzędzi: ukryj 'Przenieś do menu', 'Usuń z paska narzędzi', 'Odśwież wszystkie karty', 'Dodaj zakładki do wszystkich kart...' oraz 'Przywróć zamkniętą kartę'">
@@ -415,7 +418,8 @@
 <!ENTITY Ctr_support_forum1	"MozillaZine (forum w języku angielskim)">
 <!ENTITY Ctr_support_forum2	"Camp Firefox (forum w języku niemieckim)">
 <!ENTITY Ctr_github_issues	"Zgłoś problem na GitHubie">
-<!ENTITY Ctr_newversion		"Sprawdź, czy jest nowa wersja">
+<!ENTITY Ctr_newversion		"Latest CTR version">
+<!ENTITY Ctr_newversion2	"Latest CTR beta">
 
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"Pierwsze kroki">
@@ -423,8 +427,8 @@
 <!ENTITY Ctr_menu_restart.label			"Zrestartuj">
 <!ENTITY Ctr_restartapp					"Pokaż 'Zrestartuj' w menu programu &brandShortName; oraz w menu Plik">
 <!ENTITY Ctr_ctrnewinv					"Podkreśl nowe opcje dla bieżącej wersji programu &brandShortName;">
-<!ENTITY Ctr_cssoverride				"Custom css code">
-<!ENTITY Ctr_cssoverride2				"Css code will not be checked for errors!">
+<!ENTITY Ctr_cssoverride				"Niestandardowy kod CSS">
+<!ENTITY Ctr_cssoverride2				"Kod CSS nie będzie sprawdzony pod kątem błędów!">
 
 <!ENTITY Ctr_openInCurrentTab			"Otwórz dane wejściowe w bieżącej karcie">
 <!ENTITY Ctr_openInNewTab				"Otwórz dane wejściowe w nowej karcie">

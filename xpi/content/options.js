@@ -439,7 +439,7 @@ classicthemerestorerjso.ctr = {
 	}
 
 	if (this.appversion < 53) {
-	  document.getElementById('ctraddon_pw_ttnooverfl').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_ttoverflow').style.visibility = 'collapse';
 	}
 	
 	function PrefListener(branch_name, callback) {
@@ -1279,7 +1279,7 @@ classicthemerestorerjso.ctr = {
 	this.prefs.setCharPref("altoptions",'options_default');
 	this.prefs.setBoolPref("alt_addonsm",false);
 	this.prefs.setBoolPref("am_highlight",false);
-	this.prefs.setBoolPref("ttnooverfl",false);
+	this.prefs.setCharPref("ttoverflow",'default');
 	
 	this.needsBrowserRestart();
 

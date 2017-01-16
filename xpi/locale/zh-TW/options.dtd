@@ -63,7 +63,9 @@
 <!ENTITY Ctr_tabwidthinfo3	"小於 48px 的值有可能導致故障!">
 <!ENTITY Ctr_square_edges	"使分頁標籤四角為嚴格直角">
 <!ENTITY Ctr_tttitlebar		"將分頁標題文字顯示於 &brandShortName; 標題列">
-<!ENTITY Ctr_ttnooverfl		"Remove overflow effect from long tab titles">
+<!ENTITY Ctr_ttoverflow		"Long tab titles">
+<!ENTITY Ctr_ttoverfl_def	"Default overflow effect">
+<!ENTITY Ctr_ttoverfl_no	"No overflow effect">
 <!ENTITY Ctr_tabtitle		"Tab title position">
 <!ENTITY Ctr_tabinsertion	"在網頁上點選連結時，將新分頁開啟於目前分頁的旁邊，即把預設行為 [a][b][c][1][2][3] 改為 [a][1][2][3][b][c]">
 <!ENTITY Ctr_emptytfavico	"(當網站未提供圖示時)顯示替代網站圖示">
@@ -212,6 +214,7 @@
 <!ENTITY Ctr_bmbviewbmsb	"彈出式書籤選單: 顯示「檢視書籤欄」">
 <!ENTITY Ctr_bmbviewbmtb	"彈出式書籤選單: 顯示「檢視書籤工具列」項目">
 <!ENTITY Ctr_bmbnounsort	"彈出式書籤選單: 隱藏「未排序書籤」項目">
+<!ENTITY Ctr_bmbutclpopup	"Popup: only show 'Bookmark this page' and bookmarks">
 <!ENTITY Ctr_bmbutnotext	"當此按鈕位於書籤列時，隱藏按鈕文字標籤">
 <!ENTITY Ctr_skipprintpr	"列印按鈕: 跳過列印預覽">
 <!ENTITY Ctr_tbconmenu		"工具列右鍵選單: 隱藏 「移動至選單」、「自工具列移除」、「重新載入所有分頁」、「將所有分頁加入書籤」和「復原已關閉分頁」項目">
@@ -415,7 +418,8 @@
 <!ENTITY Ctr_support_forum1	"MozillaZine (英文論壇)">
 <!ENTITY Ctr_support_forum2	"Camp Firefox (德文論壇)">
 <!ENTITY Ctr_github_issues	"在 Github 回報問題">
-<!ENTITY Ctr_newversion		"檢查新版本">
+<!ENTITY Ctr_newversion		"Latest CTR version">
+<!ENTITY Ctr_newversion2	"Latest CTR beta">
 
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"Getting started">

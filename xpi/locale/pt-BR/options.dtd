@@ -63,7 +63,9 @@
 <!ENTITY Ctr_tabwidthinfo3	"Valores abaixo de 48px causarão falhas na maioria dos casos!">
 <!ENTITY Ctr_square_edges	"Cantos superiores quadrados">
 <!ENTITY Ctr_tttitlebar		"Título da aba na barra de título &brandShortName;">
-<!ENTITY Ctr_ttnooverfl		"Remove overflow effect from long tab titles">
+<!ENTITY Ctr_ttoverflow		"Long tab titles">
+<!ENTITY Ctr_ttoverfl_def	"Default overflow effect">
+<!ENTITY Ctr_ttoverfl_no	"No overflow effect">
 <!ENTITY Ctr_tabtitle		"Tab title position">
 <!ENTITY Ctr_tabinsertion	"Inserir a aba relacionada depois da aba atual">
 <!ENTITY Ctr_emptytfavico	"Exibir favicon (se o site não oferecer um)">
@@ -212,6 +214,7 @@
 <!ENTITY Ctr_bmbviewbmsb	"Popup: exibir 'Ver Barra Lateral de Favoritos'">
 <!ENTITY Ctr_bmbviewbmtb	"Popup: exibir 'Ver Barra de Favoritos'">
 <!ENTITY Ctr_bmbnounsort	"Popup: ocultar 'Outros Favoritos'">
+<!ENTITY Ctr_bmbutclpopup	"Popup: only show 'Bookmark this page' and bookmarks">
 <!ENTITY Ctr_bmbutnotext	"Ocultar rótulo na barra de favoritos">
 <!ENTITY Ctr_skipprintpr	"Botão Imprimir: ignorar pré-visualização da impressão">
 <!ENTITY Ctr_tbconmenu		"Menu de contexto da barra de ferramentas: ocultar 'mover para o menu', 'remover da barra de ferramentas', 'recarregar/adicionar todas as abas aos favoritos' e 'desfazer fechar aba'">
@@ -415,7 +418,8 @@
 <!ENTITY Ctr_support_forum1	"MozillaZine (fórum em Inglês)">
 <!ENTITY Ctr_support_forum2	"Camp Firefox (fórum Alemão)">
 <!ENTITY Ctr_github_issues	"Reportar problema no Github">
-<!ENTITY Ctr_newversion		"Verificar nova versão">
+<!ENTITY Ctr_newversion		"Latest CTR version">
+<!ENTITY Ctr_newversion2	"Latest CTR beta">
 
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"Guia rápido">

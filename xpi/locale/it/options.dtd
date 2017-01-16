@@ -63,7 +63,9 @@
 <!ENTITY Ctr_tabwidthinfo3	"Valori inferiori a 48px provocheranno anomalie nella maggior parte dei casi!">
 <!ENTITY Ctr_square_edges	"Angoli superiori spigolosi">
 <!ENTITY Ctr_tttitlebar		"Titolo scheda nella barra del titolo di &brandShortName;">
-<!ENTITY Ctr_ttnooverfl		"Remove overflow effect from long tab titles">
+<!ENTITY Ctr_ttoverflow		"Long tab titles">
+<!ENTITY Ctr_ttoverfl_def	"Default overflow effect">
+<!ENTITY Ctr_ttoverfl_no	"No overflow effect">
 <!ENTITY Ctr_tabtitle		"Tab title position">
 <!ENTITY Ctr_tabinsertion	"Inserisci la scheda correlata dopo la scheda corrente">
 <!ENTITY Ctr_emptytfavico	"Mostra favicon (quando un sito ne è privo)">
@@ -212,6 +214,7 @@
 <!ENTITY Ctr_bmbviewbmsb	"Mostra 'Visualizza barra laterale segnalibri'">
 <!ENTITY Ctr_bmbviewbmtb	"Mostra 'Visualizza Barra dei segnalibri'">
 <!ENTITY Ctr_bmbnounsort	"Nascondi 'Segnalibri non catalogati'">
+<!ENTITY Ctr_bmbutclpopup	"Popup: only show 'Bookmark this page' and bookmarks">
 <!ENTITY Ctr_bmbutnotext	"Nascondi etichetta della barra dei segnalibri">
 <!ENTITY Ctr_skipprintpr	"Pulsante stampa: salta l’anteprima di stampa">
 <!ENTITY Ctr_tbconmenu		"Menu contestuale della barra degli strumenti: nascondi 'Sposta nel menu', 'Rimuovi dalla barra degli strumenti', 'Ricarica/ tutte le schede nei segnalibri' e 'Riapri scheda chiusa'">
@@ -415,7 +418,8 @@
 <!ENTITY Ctr_support_forum1	"MozillaZine (forum inglese)">
 <!ENTITY Ctr_support_forum2	"Camp Firefox (forum tedesco)">
 <!ENTITY Ctr_github_issues	"Segnala un problema su Github">
-<!ENTITY Ctr_newversion		"Controllo aggiornamenti">
+<!ENTITY Ctr_newversion		"Latest CTR version">
+<!ENTITY Ctr_newversion2	"Latest CTR beta">
 
 <!ENTITY Ctr_addon-bar.accesskey		"B">
 <!ENTITY appMenuGettingStarted.label	"Primi passi">

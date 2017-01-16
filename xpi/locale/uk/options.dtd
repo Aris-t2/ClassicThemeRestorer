@@ -17,11 +17,11 @@
 <!ENTITY Ctr_window			"вікно">
 <!ENTITY Ctr_centered		"По центру">
 <!ENTITY Ctr_page			"Сторінка">
-<!ENTITY Ctr_position		"Position">
-<!ENTITY Ctr_appearance		"Appearance">
-<!ENTITY Ctr_left			"Left">
-<!ENTITY Ctr_right			"Right">
-<!ENTITY Ctr_privmode		"(private window)">
+<!ENTITY Ctr_position		"Позиція">
+<!ENTITY Ctr_appearance		"Вигляд">
+<!ENTITY Ctr_left			"Зліва">
+<!ENTITY Ctr_right			"Зправа">
+<!ENTITY Ctr_privmode		"(приватне вікно)">
 
 <!ENTITY Ctr_cuibuttons		"Кнопки">
 <!ENTITY Ctr_cuibutnormal	"Нормальні">
@@ -63,8 +63,10 @@
 <!ENTITY Ctr_tabwidthinfo3	"Значення нижче 48пікс викличе збої в більшості випадків!">
 <!ENTITY Ctr_square_edges	"Квадратні верхні кути">
 <!ENTITY Ctr_tttitlebar		"Заголовок вкладки на панелі заголовку &brandShortName;">
-<!ENTITY Ctr_ttnooverfl		"Remove overflow effect from long tab titles">
-<!ENTITY Ctr_tabtitle		"Tab title position">
+<!ENTITY Ctr_ttoverflow		"Long tab titles">
+<!ENTITY Ctr_ttoverfl_def	"Default overflow effect">
+<!ENTITY Ctr_ttoverfl_no	"No overflow effect">
+<!ENTITY Ctr_tabtitle		"Позиція заголовку вкладки">
 <!ENTITY Ctr_tabinsertion	"Вставити відповідну вкладку після поточної вкладки">
 <!ENTITY Ctr_emptytfavico	"Показувати іконку сайту (якщо сайт не пропонує його)">
 <!ENTITY Ctr_emptytfavico_n	"Немає">
@@ -212,6 +214,7 @@
 <!ENTITY Ctr_bmbviewbmsb	"Спливаюче вікно: показати «Огляд в бічній панелі»">
 <!ENTITY Ctr_bmbviewbmtb	"Спливаюче вікно: показати «Огляд панелі»">
 <!ENTITY Ctr_bmbnounsort	"Спливаюче вікно: приховати «несортовані закладки»">
+<!ENTITY Ctr_bmbutclpopup	"Popup: only show 'Bookmark this page' and bookmarks">
 <!ENTITY Ctr_bmbutnotext	"Приховати ярлик на панелі закладок">
 <!ENTITY Ctr_skipprintpr	"Кнопка «Друк»: пропустити передогляд друку">
 <!ENTITY Ctr_tbconmenu		"Контекстне меню панелей: приховати «Перенести в меню», «Вилучити з панелі», «Оновити/закласти всі вкладки» та «Повернути закриту вкладку»">
@@ -270,7 +273,7 @@
 <!ENTITY Ctr_urlbardropm2	"Зробити позначку випадного списку завжди видимою">
 <!ENTITY Ctr_altreaderico	"Альтернативні іконки «Читача»">
 <!ENTITY Ctr_hideurlzoom	"Приховати кнопку зміни розміру (якщо є)">
-<!ENTITY Ctr_urlbardark		"Dark background color">
+<!ENTITY Ctr_urlbardark		"Темний колір тла">
 <!ENTITY Ctr_hideprbutton	"Приховати інфо кнопку «спливаюче вікно блоковано»">
 <!ENTITY Ctr_locsearchbw10	"Зменшити висоту панелей рядку адреси та пошуку (експериментальне)">
 <!ENTITY Ctr_urlbar_ib		"Індикатори справжності панелі рядку адреси">
@@ -415,7 +418,8 @@
 <!ENTITY Ctr_support_forum1	"MozillaZine (форум англійською мовою)">
 <!ENTITY Ctr_support_forum2	"Camp Firefox (форум німецькою мовою)">
 <!ENTITY Ctr_github_issues	"Доповісти про проблему на Github">
-<!ENTITY Ctr_newversion		"Перевірити на нову версію">
+<!ENTITY Ctr_newversion		"Latest CTR version">
+<!ENTITY Ctr_newversion2	"Latest CTR beta">
 
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"Початок роботи">
@@ -423,8 +427,8 @@
 <!ENTITY Ctr_menu_restart.label			"Рестарт">
 <!ENTITY Ctr_restartapp					"«Рестарт» в кнопці програми та в меню «Файл»">
 <!ENTITY Ctr_ctrnewinv					"Підкреслені нові опції для поточної версії &brandShortName;">
-<!ENTITY Ctr_cssoverride				"Custom css code">
-<!ENTITY Ctr_cssoverride2				"Css code will not be checked for errors!">
+<!ENTITY Ctr_cssoverride				"Налаштовуваний css код">
+<!ENTITY Ctr_cssoverride2				"Css код не буде перевірено на помилки!">
 
 <!ENTITY Ctr_openInCurrentTab			"Відкрити вхідні дані в поточній вкладці">
 <!ENTITY Ctr_openInNewTab				"Відкрити вхідні дані в новій вкладці">
