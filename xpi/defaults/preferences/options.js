@@ -15,7 +15,7 @@ pref("extensions.classicthemerestorer.closetabbig",false);
 pref("extensions.classicthemerestorer.closeicon",'closeicon_default');
 pref("extensions.classicthemerestorer.tttitlebar",false);
 pref("extensions.classicthemerestorer.tttitlebar_c",false);
-pref("extensions.classicthemerestorer.ttnooverfl",false);
+pref("extensions.classicthemerestorer.ttoverflow",'ttoverfl_def');
 pref("extensions.classicthemerestorer.tabtitlepos",'tabtitlepos_default');
 
 //Appbutton settings
@@ -102,6 +102,7 @@ pref("extensions.classicthemerestorer.bmbviewbmtb",false);
 pref("extensions.classicthemerestorer.bmbviewbmsb",false);
 pref("extensions.classicthemerestorer.bmbnounsort",false);
 pref("extensions.classicthemerestorer.bmbutnotext",false);
+pref("extensions.classicthemerestorer.bmbutclpopup",false);
 pref("extensions.classicthemerestorer.skipprintpr",false);
 pref("extensions.classicthemerestorer.tbconmenu",false);
 pref("extensions.classicthemerestorer.noresizerxp",false);

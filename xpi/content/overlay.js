@@ -509,9 +509,14 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("tttitlebar_c",false);
 		  break;
 		  
-		  case "ttnooverfl":
-			if (branch.getBoolPref("ttnooverfl") && classicthemerestorerjs.ctr.appversion >= 53) classicthemerestorerjs.ctr.loadUnloadCSS("ttnooverfl",true);
-			  else classicthemerestorerjs.ctr.loadUnloadCSS("ttnooverfl",false);
+		  case "ttoverflow":
+		  
+			classicthemerestorerjs.ctr.loadUnloadCSS('ttoverfl_no1',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('ttoverfl_no2',false);
+
+			if (branch.getCharPref("ttoverflow")!="default" && classicthemerestorerjs.ctr.appversion >= 53)
+				classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("ttoverflow"),true);
+
 		  break;
 		  
 		  case "tabtitlepos":
@@ -2280,6 +2285,11 @@ classicthemerestorerjs.ctr = {
 				  },500);
 				}
 			}
+		  break;
+		  
+		  case "bmbutclpopup":
+			if (branch.getBoolPref("bmbutclpopup")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbutclpopup",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbutclpopup",false);
 		  break;
 
 		  case "bmbutnotext":
@@ -4079,7 +4089,8 @@ classicthemerestorerjs.ctr = {
 		case "square_edges": 			manageCSS("tabssquare_edges.css");  	break;
 		case "tttitlebar": 				manageCSS("tabsttitleintitlebar.css");  break;
 		case "tttitlebar_c": 			manageCSS("tabsttitleintitlebar_centered.css");  break;
-		case "ttnooverfl": 				manageCSS("tabtitle_nooverflow.css");  	break;
+		case "ttoverfl_no1": 			manageCSS("tabtitle_nooverflow.css");  	break;
+		case "ttoverfl_no2": 			manageCSS("tabtitle_nooverflow2.css");  break;
 		
 		case "tabtitlepos_left": 		manageCSS("tabtitlepos_left.css");  	break;
 		case "tabtitlepos_centered": 	manageCSS("tabtitlepos_centered.css");	break;
@@ -4374,6 +4385,7 @@ classicthemerestorerjs.ctr = {
 		case "bmbviewbmsb": 		manageCSS("bmbut_bmbviewbmsb.css");		break;
 		case "bmbviewbmtb": 		manageCSS("bmbut_bmbviewbmtb.css");		break;
 		case "bmbnounsort": 		manageCSS("bmbut_bmbnounsort.css");		break;
+		case "bmbutclpopup": 		manageCSS("bmbut_cleanpopup.css");		break;
 		case "bmbutnotext": 		manageCSS("bmbut_no_label.css");		break;
 		case "tbconmenu": 			manageCSS("tbconmenu.css");				break;
 		case "noresizerxp": 		manageCSS("no_resizer_xp.css");			break;

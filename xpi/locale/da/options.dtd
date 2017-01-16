@@ -63,7 +63,9 @@
 <!ENTITY Ctr_tabwidthinfo3	"Værdier under 48 px vil for det meste give fejl i grafikken!">
 <!ENTITY Ctr_square_edges	"Firkantede øverste hjørner">
 <!ENTITY Ctr_tttitlebar		"Fanebladstitel i &brandShortName;-titellinje">
-<!ENTITY Ctr_ttnooverfl		"Remove overflow effect from long tab titles">
+<!ENTITY Ctr_ttoverflow		"Long tab titles">
+<!ENTITY Ctr_ttoverfl_def	"Default overflow effect">
+<!ENTITY Ctr_ttoverfl_no	"No overflow effect">
 <!ENTITY Ctr_tabtitle		"Tab title position">
 <!ENTITY Ctr_tabinsertion	"Indsæt relaterede faneblad efter aktive faneblad">
 <!ENTITY Ctr_emptytfavico	"Vis favicon (hvis stedet ikke tilbyder et)">
@@ -212,6 +214,7 @@
 <!ENTITY Ctr_bmbviewbmsb	"Pop-op: vis 'Vis bogmærker i sidepanel'">
 <!ENTITY Ctr_bmbviewbmtb	"Pop-op: vis 'Vis bogmærkelinjen'">
 <!ENTITY Ctr_bmbnounsort	"Pop-op: skjul 'Usorterede bogmærker'">
+<!ENTITY Ctr_bmbutclpopup	"Popup: only show 'Bookmark this page' and bookmarks">
 <!ENTITY Ctr_bmbutnotext	"Skjul etiket på bogmærkelinje">
 <!ENTITY Ctr_skipprintpr	"Udskriv-knap: spring vis udskrift over">
 <!ENTITY Ctr_tbconmenu		"Værktøjslinjens genvejsmenu: skjul 'flyt til menu', 'fjern fra værktøjslinje', 'genindlæs/bogmærk alle faneblade' og 'fortryd lukning af faneblade">
@@ -415,7 +418,8 @@
 <!ENTITY Ctr_support_forum1	"MozillaZine (engelsk forum)">
 <!ENTITY Ctr_support_forum2	"Camp Firefox (tysk forum)">
 <!ENTITY Ctr_github_issues	"Rapportér problem på Github">
-<!ENTITY Ctr_newversion		"Tjek om der er en ny version">
+<!ENTITY Ctr_newversion		"Latest CTR version">
+<!ENTITY Ctr_newversion2	"Latest CTR beta">
 
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"I gang">

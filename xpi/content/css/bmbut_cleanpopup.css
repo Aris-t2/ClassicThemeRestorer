@@ -1,0 +1,24 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_viewBookmarksSidebar,
+	#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_viewBookmarksToolbar,
+	#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_viewBookmarksToolbar + menuseparator,
+	#ctraddon_BMB_bookmarksPopup #BMB_bookmarksShowAll,
+	#ctraddon_BMB_bookmarksPopup #BMB_bookmarksShowAll + menuseparator,
+	#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_subscribeToPageMenuitem,
+	#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_subscribeToPageMenupopup,
+	#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_subscribeToPageMenupopup + menuseparator,
+	#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_bookmarksToolbar,
+	#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_unsortedBookmarks_m,
+	/*#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_unsortedBookmarks_m + menuseparator,*/
+	#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_unsortedBookmarks_m + menuseparator + menuseparator,
+	#ctraddon_BMB_bookmarksPopup .small-separator,
+	#ctraddon_BMB_bookmarksPopup .hide-if-empty-places-result,
+	#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_unsortedBookmarks,
+	#ctraddon_BMB_bookmarksPopup #ctraddon_BMB_unsortedBookmarks_m2 {
+	  visibility: collapse !important;
+	}
+
+}

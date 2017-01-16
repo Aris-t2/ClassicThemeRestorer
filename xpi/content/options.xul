@@ -56,7 +56,7 @@
 		<preference id="ctraddon_square_edges"	name="extensions.classicthemerestorer.square_edges" type="bool"		instantApply="true"/>
 		<preference id="ctraddon_tttitlebar"	name="extensions.classicthemerestorer.tttitlebar"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_tttitlebar_c"	name="extensions.classicthemerestorer.tttitlebar_c"	type="bool"		instantApply="true"/>
-		<preference id="ctraddon_ttnooverfl"	name="extensions.classicthemerestorer.ttnooverfl"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_ttoverflow"	name="extensions.classicthemerestorer.ttoverflow"	type="string"	instantApply="true"/>
 		<preference id="ctraddon_tabtitlepos"	name="extensions.classicthemerestorer.tabtitlepos" 	type="string"	instantApply="true"/>
 		<preference id="ctraddon_ctabheightcb"	name="extensions.classicthemerestorer.ctabheightcb"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_ctabheight"	name="extensions.classicthemerestorer.ctabheight"	type="int"		instantApply="true"/>
@@ -288,6 +288,7 @@
 		<preference id="ctraddon_bmbviewbmtb"	name="extensions.classicthemerestorer.bmbviewbmtb"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbnounsort"	name="extensions.classicthemerestorer.bmbnounsort"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbutnotext"	name="extensions.classicthemerestorer.bmbutnotext"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_bmbutclpopup"	name="extensions.classicthemerestorer.bmbutclpopup"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_skipprintpr"	name="extensions.classicthemerestorer.skipprintpr"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_tbconmenu"		name="extensions.classicthemerestorer.tbconmenu"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_noresizerxp"	name="extensions.classicthemerestorer.noresizerxp"	 type="bool"	instantApply="true"/>
@@ -384,6 +385,7 @@
 	  <radio value="ctraddon_searchuibox"	label="&Ctr_searchbar;"		class="ctraddontab"/>
 	  <radio value="ctraddon_toolbarsbox"	label="&Ctr_toolbars;"		class="ctraddontab ctraddon_new_in_v51"/>
 	  <radio value="ctraddon_experttweaks"	label="&Ctr_experttweaks;"	id="ctraddon_experttweakstab" class="ctraddontab ctraddon_new_in_v50"/>
+	  <radio value="ctraddon_cssbox"		label="&Ctr_cssoverride;"	class="ctraddontab"/>
 	  <radio value="ctraddon_ctraddonbox"	label="&Ctr_title;"			class="ctraddontab"/>
 	  <label value=""/>
 	  <description id="ctraddon_pw_radiorestart">&Ctr_rr;</description>
@@ -455,7 +457,17 @@
 				  <checkbox label="&Ctr_tttitlebar;"	preference="ctraddon_tttitlebar" id="ctraddon_pw_tttitlebar" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
 				  <checkbox label="&Ctr_centered;"		preference="ctraddon_tttitlebar_c" id="ctraddon_pw_tttitlebar_c"/>
 				</hbox>
-				<checkbox label="&Ctr_ttnooverfl;"		preference="ctraddon_ttnooverfl" id="ctraddon_pw_ttnooverfl" class="ctraddon_new_in_v53"/>
+				
+				<hbox align="center" id="ctraddon_pw_ttoverflow">
+				  <description class="ctraddon_font1 ctraddon_new_in_v53">&Ctr_ttoverflow;</description>
+				  <menulist preference="ctraddon_ttoverflow">
+					<menupopup>
+						<menuitem value="ttoverfl_def"	label="&Ctr_ttoverfl_def;"/>
+						<menuitem value="ttoverfl_no1"	label="&Ctr_ttoverfl_no;"/>
+						<menuitem value="ttoverfl_no2"	label="&Ctr_ttoverfl_no; (v2)"/>
+					</menupopup>
+				  </menulist>
+				</hbox>
 	
 				<hbox align="center">
 				  <description class="ctraddon_font1">&Ctr_tabtitle;</description>
@@ -1085,6 +1097,7 @@
 				<checkbox label="&Ctr_bmbviewbmsb;"		preference="ctraddon_bmbviewbmsb" id="ctraddon_pw_bmbviewbmsb"/>
 				<checkbox label="&Ctr_bmbviewbmtb;"		preference="ctraddon_bmbviewbmtb" id="ctraddon_pw_bmbviewbmtb"/>
 				<checkbox label="&Ctr_bmbnounsort;"		preference="ctraddon_bmbnounsort" id="ctraddon_pw_bmbnounsort"/>
+				<checkbox label="&Ctr_bmbutclpopup;"	preference="ctraddon_bmbutclpopup" id="ctraddon_pw_bmbutclpopup"/>
 				<checkbox label="&Ctr_bmbutnotext;"		preference="ctraddon_bmbutnotext" id="ctraddon_pw_bmbutnotext"/>
 
 				<description class="ctraddon_font1">&Ctr_emptygfavico;</description>
@@ -1723,6 +1736,14 @@
 	  
 	</box>
 
+	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_cssbox">
+	  
+		<checkbox label="&Ctr_cssoverride;"		preference="ctraddon_cssoverride" id="ctraddon_pw_cssoverride"/>
+		<description class="ctraddonsuboption">&Ctr_cssoverride2;</description>
+		<textbox rows="25" multiline="true" 	preference="ctraddon_cssoverridec" id="ctraddon_pw_cssoverridec" />
+
+	</box>
+
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_ctraddonbox">
 	  
 	  <groupbox>
@@ -1739,9 +1760,6 @@
 		<checkbox label="&Ctr_ctrnewinv;"		preference="ctraddon_ctrnewinv"   id="ctraddon_pw_ctrnewinv"/>
 		<checkbox label="&Ctr_cuibotbuttons;"	preference="ctraddon_cuibuttons"  id="ctraddon_pw_cuibuttons"/>
 		<checkbox label="&Ctr_nodevtheme;"		preference="ctraddon_nodevtheme2" id="ctraddon_pw_nodevtheme2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
-		<checkbox label="&Ctr_cssoverride;"		preference="ctraddon_cssoverride" id="ctraddon_pw_cssoverride"/>
-		<description class="ctraddonsuboption">&Ctr_cssoverride2;</description>
-		<textbox rows="10" multiline="true" 	preference="ctraddon_cssoverridec" id="ctraddon_pw_cssoverridec" />
 	  </groupbox>
 
 	</box>
@@ -1778,6 +1796,7 @@
   <popupset>
 	<menupopup id="ctr_pw_supportPopup" position="before_end">
 		<menuitem class="menuitem-iconic" label="&Ctr_newversion;" id="ctraddon_newversion" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://addons.mozilla.org/addon/classicthemerestorer/versions/'); };"/>
+		<menuitem class="menuitem-iconic" label="&Ctr_newversion2;" id="ctraddon_newversion2" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://addons.mozilla.org/addon/classicthemerestorer/versions/beta'); };"/>
 		<menuseparator/>
 		<menuitem class="menuitem-iconic" label="&Ctr_support_forum1;" id="ctr_pw_support_forum1" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('http://forums.mozillazine.org/viewtopic.php?t=2827985'); };"/>
 		<menuitem class="menuitem-iconic" label="&Ctr_support_forum2;" id="ctr_pw_support_forum2" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://www.camp-firefox.de/forum/viewtopic.php?t=108235'); };"/>

@@ -63,7 +63,9 @@
 <!ENTITY Ctr_tabwidthinfo3	"Väiksemad väärtused kui 48px põhjustavad enamusel juhtudel vigu!">
 <!ENTITY Ctr_square_edges	"Kandilised ülemised nurgad">
 <!ENTITY Ctr_tttitlebar		"Kaardi pealkiri &brandShortName;i tiitliribal">
-<!ENTITY Ctr_ttnooverfl		"Eemalda pikkadest kaardi pealkirjadest ületäite efekt">
+<!ENTITY Ctr_ttoverflow		"Long tab titles">
+<!ENTITY Ctr_ttoverfl_def	"Default overflow effect">
+<!ENTITY Ctr_ttoverfl_no	"No overflow effect">
 <!ENTITY Ctr_tabtitle		"Tab title position">
 <!ENTITY Ctr_tabinsertion	"Pane seotud kaardid praeguse järele">
 <!ENTITY Ctr_emptytfavico	"Näita lehe ikooni (kui sait seda ei paku)">
@@ -212,6 +214,7 @@
 <!ENTITY Ctr_bmbviewbmsb	"Menüühüpik: näita kirjet 'Kuva järjehoidjate külgriba'">
 <!ENTITY Ctr_bmbviewbmtb	"Menüühüpik: näita kirjet 'Kuva järjehoidjariba'">
 <!ENTITY Ctr_bmbnounsort	"Menüühüpik: peida kirje 'Muud järjehoidjad'">
+<!ENTITY Ctr_bmbutclpopup	"Popup: only show 'Bookmark this page' and bookmarks">
 <!ENTITY Ctr_bmbutnotext	"Peida järjehoidjaribal sildid">
 <!ENTITY Ctr_skipprintpr	"Printimise nupp: jäta vahele printimise eelvaade">
 <!ENTITY Ctr_tbconmenu		"Tööriistariba kontekstimenüü: peida kirjed 'liiguta menüüsse', 'eemalda tööriistamenüült', 'laadi uuesti/lisa järjehoidjatesse kõik kaardid' ja 'võta kaardi sulgemine tagasi'">
@@ -415,7 +418,8 @@
 <!ENTITY Ctr_support_forum1	"MozillaZine (ingliskeelne foorum)">
 <!ENTITY Ctr_support_forum2	"Camp Firefox (saksakeelne foorum)">
 <!ENTITY Ctr_github_issues	"Teavita veast teenuse Github kaudu">
-<!ENTITY Ctr_newversion		"Vaata, kas on uut versiooni">
+<!ENTITY Ctr_newversion		"Latest CTR version">
+<!ENTITY Ctr_newversion2	"Latest CTR beta">
 
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"Alustamine">

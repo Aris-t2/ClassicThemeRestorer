@@ -63,7 +63,9 @@
 <!ENTITY Ctr_tabwidthinfo3	"Werte unter 48 px sorgen meistens für eine fehlerhafte Darstellung!">
 <!ENTITY Ctr_square_edges	"Eckige obere Tabränder">
 <!ENTITY Ctr_tttitlebar		"Tabtitel in der &brandShortName;-Titelleiste">
-<!ENTITY Ctr_ttnooverfl		"Überblendeffekt von langen Tabtiteln entfernen">
+<!ENTITY Ctr_ttoverflow		"Lange Tabtitel">
+<!ENTITY Ctr_ttoverfl_def	"Standard Überblendeffekt">
+<!ENTITY Ctr_ttoverfl_no	"Kein Überblendeffekt">
 <!ENTITY Ctr_tabtitle		"Position des Tabtitels">
 <!ENTITY Ctr_tabinsertion	"Verwandten Tab nach aktivem Tab einfügen">
 <!ENTITY Ctr_emptytfavico	"Lesezeichensymbol auf Tabs anzeigen (falls keines vorhanden ist)">
@@ -212,6 +214,7 @@
 <!ENTITY Ctr_bmbviewbmsb	"Aufklappmenü: 'Lesezeichen-Seitenleiste' anzeigen">
 <!ENTITY Ctr_bmbviewbmtb	"Aufklappmenü: 'Lesezeichen-Symbolleiste' anzeigen">
 <!ENTITY Ctr_bmbnounsort	"Aufklappmenü: 'Weitere Lesezeichen' verstecken">
+<!ENTITY Ctr_bmbutclpopup	"Aufklappmenü: nur 'Lesezeichen hinzufügen' und Lesezeichen anzeigen">
 <!ENTITY Ctr_bmbutnotext	"Text auch auf der Lesezeichen-Symbolleiste verstecken">
 <!ENTITY Ctr_skipprintpr	"Drucken-Schaltfläche: Druckvorschau überspringen">
 <!ENTITY Ctr_tbconmenu		"Leistenkontextmenü: 'In Menü verschieben', 'Aus Symbolleiste entfernen', 'Alle Tabs neu laden', 'Lesezeichen für alle Tabs hinzufügen …' und 'Geschlossenen Tab wiederherstellen' verstecken">
@@ -415,7 +418,8 @@
 <!ENTITY Ctr_support_forum1	"MozillaZine (Englisches Forum)">
 <!ENTITY Ctr_support_forum2	"Camp Firefox (Deutsches Forum)">
 <!ENTITY Ctr_github_issues	"Problem melden auf Github">
-<!ENTITY Ctr_newversion		"Neue Version suchen">
+<!ENTITY Ctr_newversion		"Neuste CTR Version">
+<!ENTITY Ctr_newversion2	"Neuste CTR Beta Version">
 
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"Erste Schritte">
