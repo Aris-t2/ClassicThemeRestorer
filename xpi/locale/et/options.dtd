@@ -17,11 +17,11 @@
 <!ENTITY Ctr_window			"aken">
 <!ENTITY Ctr_centered		"Keskele joondatud">
 <!ENTITY Ctr_page			"Leht">
-<!ENTITY Ctr_position		"Position">
-<!ENTITY Ctr_appearance		"Appearance">
-<!ENTITY Ctr_left			"Left">
-<!ENTITY Ctr_right			"Right">
-<!ENTITY Ctr_privmode		"(private window)">
+<!ENTITY Ctr_position		"Asukoht">
+<!ENTITY Ctr_appearance		"Välimus">
+<!ENTITY Ctr_left			"Vasakule">
+<!ENTITY Ctr_right			"Paremale">
+<!ENTITY Ctr_privmode		"(privaatne aken)">
 
 <!ENTITY Ctr_cuibuttons		"Nupud">
 <!ENTITY Ctr_cuibutnormal	"Tavalised">
@@ -63,10 +63,10 @@
 <!ENTITY Ctr_tabwidthinfo3	"Väiksemad väärtused kui 48px põhjustavad enamusel juhtudel vigu!">
 <!ENTITY Ctr_square_edges	"Kandilised ülemised nurgad">
 <!ENTITY Ctr_tttitlebar		"Kaardi pealkiri &brandShortName;i tiitliribal">
-<!ENTITY Ctr_ttoverflow		"Long tab titles">
-<!ENTITY Ctr_ttoverfl_def	"Default overflow effect">
-<!ENTITY Ctr_ttoverfl_no	"No overflow effect">
-<!ENTITY Ctr_tabtitle		"Tab title position">
+<!ENTITY Ctr_ttoverflow		"Pikad kaardi pealkirjad">
+<!ENTITY Ctr_ttoverfl_def	"Vaikimisi ületäite efekt">
+<!ENTITY Ctr_ttoverfl_no	"Ületäite efekti ei kasutata">
+<!ENTITY Ctr_tabtitle		"Kaardi pealkirja joondus">
 <!ENTITY Ctr_tabinsertion	"Pane seotud kaardid praeguse järele">
 <!ENTITY Ctr_emptytfavico	"Näita lehe ikooni (kui sait seda ei paku)">
 <!ENTITY Ctr_emptytfavico_n	"Pole">
@@ -112,7 +112,7 @@
 <!ENTITY Ctr_appbuttonc_cu	"Kohandatud">
 <!ENTITY Ctr_appbuttonct	"Kohandatud värvi nupp, kui see asub tööriistaribal">
 <!ENTITY Ctr_appbuttonI1	"Taaskäivitamine soovitatav">
-<!ENTITY Ctr_appbuttonI1e	"Nähtav ainult &brandShortName;i tiitliribal, mitte Windows OS-i tiitliribal!">
+<!ENTITY Ctr_appbuttonI1e	"Nähtav ainult &brandShortName;i tiitliribal ja mitte Windows OS-i tiitliribal!">
 <!ENTITY Ctr_appbutmhi		"Kõrgem asukoht (kui asub kaartide ribal)">
 <!ENTITY Ctr_appbautocol	"Määra brauseri uuendustekanali värvid (vaikimisi/Aurora/Nightly) automaatselt">
 <!ENTITY Ctr_appbutbdl		"Peida piirjooned ja taustavärvid">
@@ -214,7 +214,7 @@
 <!ENTITY Ctr_bmbviewbmsb	"Menüühüpik: näita kirjet 'Kuva järjehoidjate külgriba'">
 <!ENTITY Ctr_bmbviewbmtb	"Menüühüpik: näita kirjet 'Kuva järjehoidjariba'">
 <!ENTITY Ctr_bmbnounsort	"Menüühüpik: peida kirje 'Muud järjehoidjad'">
-<!ENTITY Ctr_bmbutclpopup	"Popup: only show 'Bookmark this page' and bookmarks">
+<!ENTITY Ctr_bmbutclpopup	"Menüühüpik: näita ainult 'Lisa see leht järjehoidjatesse' ja järjehoidjaid">
 <!ENTITY Ctr_bmbutnotext	"Peida järjehoidjaribal sildid">
 <!ENTITY Ctr_skipprintpr	"Printimise nupp: jäta vahele printimise eelvaade">
 <!ENTITY Ctr_tbconmenu		"Tööriistariba kontekstimenüü: peida kirjed 'liiguta menüüsse', 'eemalda tööriistamenüült', 'laadi uuesti/lisa järjehoidjatesse kõik kaardid' ja 'võta kaardi sulgemine tagasi'">
@@ -418,8 +418,8 @@
 <!ENTITY Ctr_support_forum1	"MozillaZine (ingliskeelne foorum)">
 <!ENTITY Ctr_support_forum2	"Camp Firefox (saksakeelne foorum)">
 <!ENTITY Ctr_github_issues	"Teavita veast teenuse Github kaudu">
-<!ENTITY Ctr_newversion		"Latest CTR version">
-<!ENTITY Ctr_newversion2	"Latest CTR beta">
+<!ENTITY Ctr_newversion		"Uusim CTR-i versioon">
+<!ENTITY Ctr_newversion2	"Uusim CTR-i beetaversioon">
 
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"Alustamine">
@@ -427,8 +427,8 @@
 <!ENTITY Ctr_menu_restart.label			"Taaskäivita">
 <!ENTITY Ctr_restartapp					"Näita &brandShortName;i nupu menüüs ja menüüs Fail kirjet 'Taaskäivita'">
 <!ENTITY Ctr_ctrnewinv					"Jooni alla sätted, mis on &brandShortName;i praeguses versioonis uued">
-<!ENTITY Ctr_cssoverride				"Custom css code">
-<!ENTITY Ctr_cssoverride2				"Css code will not be checked for errors!">
+<!ENTITY Ctr_cssoverride				"Kohandatud CSS-kood">
+<!ENTITY Ctr_cssoverride2				"CSS-koodist ei kontrollita vigu!">
 
 <!ENTITY Ctr_openInCurrentTab			"Ava sisestused praegusel kaardil">
 <!ENTITY Ctr_openInNewTab				"Ava sisestused uuel kaardil">
