@@ -17,11 +17,11 @@
 <!ENTITY Ctr_window			"ventana">
 <!ENTITY Ctr_centered		"Centrado">
 <!ENTITY Ctr_page			"Página">
-<!ENTITY Ctr_position		"Position">
-<!ENTITY Ctr_appearance		"Appearance">
-<!ENTITY Ctr_left			"Left">
-<!ENTITY Ctr_right			"Right">
-<!ENTITY Ctr_privmode		"(private window)">
+<!ENTITY Ctr_position		"Posición">
+<!ENTITY Ctr_appearance		"Apariencia">
+<!ENTITY Ctr_left			"Izquierda">
+<!ENTITY Ctr_right			"Derecha">
+<!ENTITY Ctr_privmode		"(ventana privada)">
 
 <!ENTITY Ctr_cuibuttons		"Botones">
 <!ENTITY Ctr_cuibutnormal	"Normales">
@@ -63,10 +63,10 @@
 <!ENTITY Ctr_tabwidthinfo3	"¡Los valores por debajo de 48px causarán problemas en la mayoría de los casos!">
 <!ENTITY Ctr_square_edges	"Esquinas superiores cuadradas">
 <!ENTITY Ctr_tttitlebar		"Título de pestaña en la barra de título de &brandShortName;">
-<!ENTITY Ctr_ttoverflow		"Long tab titles">
-<!ENTITY Ctr_ttoverfl_def	"Default overflow effect">
-<!ENTITY Ctr_ttoverfl_no	"No overflow effect">
-<!ENTITY Ctr_tabtitle		"Tab title position">
+<!ENTITY Ctr_ttoverflow		"Títulos largos de pestaña">
+<!ENTITY Ctr_ttoverfl_def	"Efecto de desbordamiento predeterminado">
+<!ENTITY Ctr_ttoverfl_no	"Sin efecto de desbordamiento">
+<!ENTITY Ctr_tabtitle		"Posición del título de pestaña">
 <!ENTITY Ctr_tabinsertion	"Insertar pestaña asociada tras la actual">
 <!ENTITY Ctr_emptytfavico	"Mostrar favicon (si un sitio no ofrece uno)">
 <!ENTITY Ctr_emptytfavico_n	"Ninguno">
@@ -96,7 +96,7 @@
 <!ENTITY Ctr_appbutton2h	"Botón en la barra de título de &brandShortName; (oculto)">
 <!ENTITY Ctr_appbutton2io	"Botón en la barra de título de &brandShortName; (sólo icono)">
 <!ENTITY Ctr_paneluibtweak	"A modo de botón de menú de panel principal...">
-<!ENTITY Ctr_paneluibtweak2	"A modo de botón de menú de panel principal para la barra de pestañas (sólo icono)...">
+<!ENTITY Ctr_paneluibtweak2	"A modo de botón de menú de panel principal (sólo icono)...">
 <!ENTITY Ctr_paneluibtweak3	"... cuando tal botón esté en la barra de pestañas">
 <!ENTITY Ctr_appbuttonc_o	"Color de botón naranja (predeterminado)">
 <!ENTITY Ctr_appbuttonc		"Color de botón">
@@ -133,8 +133,8 @@
 <!ENTITY Ctr_altoptionsd	"Apariencia predeterminada">
 <!ENTITY Ctr_altoptionsp	"Apariencia alternativa">
 <!ENTITY Ctr_altoptionsw	"Abrir página de opciones en una ventana">
-<!ENTITY Ctr_altoptions_hm	"horizontal menu">
-<!ENTITY Ctr_altoptions_vm	"vertical menu">
+<!ENTITY Ctr_altoptions_hm	"menú horizontal">
+<!ENTITY Ctr_altoptions_vm	"menú vertical">
 <!ENTITY Ctr_altoptionsww	"Ancho:">
 <!ENTITY Ctr_altoptionswh	"Alto:">
 <!ENTITY Ctr_altoptionsi	"La ventana simulada de opciones ya no es un cuadro de diálogo sino una 'ventana de navegador' con todas las barras de herramientas ocultas. La característica 'Usar página actual' como página de inicio sólo añade URLs de páginas abiertas en la ventana actual, que en este caso sólo es 'about:preferences'. El botón de barra de herramientas 'Opciones' se sustituye por uno nuevo para poder abrir las opciones en una ventana.">
@@ -209,12 +209,12 @@
 <!ENTITY Ctr_oldplacesbut	"Elementos y carpetas de Marcadores en la barra de herramientas: Apariencia antigua">
 <!ENTITY Ctr_dl_pm_drop		"Panel de los botones 'Descargas': Mostrar flecha de despliegue de menú ">
 <!ENTITY Ctr_bmbutpanelm	"Estilo de panel para el menú emergente ">
-<!ENTITY Ctr_bmbunsortbm	"Mostrar submenú 'Marcadores no ordenados'">
+<!ENTITY Ctr_bmbunsortbm	"Mostrar menú 'Otros marcadores'">
 <!ENTITY Ctr_bmbunsortbm2	"Menú por encima de los marcadores">
-<!ENTITY Ctr_bmbviewbmsb	"Mostrar 'Ver barra lateral'">
-<!ENTITY Ctr_bmbviewbmtb	"Mostrar 'Ver barra de herramientas'">
-<!ENTITY Ctr_bmbnounsort	"Ocultar 'Marcadores no ordenados'">
-<!ENTITY Ctr_bmbutclpopup	"Popup: only show 'Bookmark this page' and bookmarks">
+<!ENTITY Ctr_bmbviewbmsb	"Mostrar 'Ver el panel lateral de marcadores'">
+<!ENTITY Ctr_bmbviewbmtb	"Mostrar 'Ver la barra de marcadores'">
+<!ENTITY Ctr_bmbnounsort	"Ocultar 'Otros marcadores'">
+<!ENTITY Ctr_bmbutclpopup	"Sólo mostrar 'Añadir esta página a marcadores' y los marcadores">
 <!ENTITY Ctr_bmbutnotext	"Ocultar etiquetas en la barra de marcadores">
 <!ENTITY Ctr_skipprintpr	"Botón Imprimir: Omitir previsualización de la impresión">
 <!ENTITY Ctr_tbconmenu		"Menú contextual de barra de herramientas: Ocultar 'Mover al menú', 'Eliminar de la barra de herramientas', 'Recargar todas las pestañas', 'Añadir pestañas a marcadores...' y 'Deshacer el cierre de la última pestaña'">
@@ -273,7 +273,7 @@
 <!ENTITY Ctr_urlbardropm2	"Hacer siempre visible la flecha de despliegue">
 <!ENTITY Ctr_altreaderico	"Iconos de 'Vista de lectura' alternativos">
 <!ENTITY Ctr_hideurlzoom	"Ocultar botón de zoom (si está presente)">
-<!ENTITY Ctr_urlbardark		"Dark background color">
+<!ENTITY Ctr_urlbardark		"Color de fondo oscuro">
 <!ENTITY Ctr_hideprbutton	"Ocultar icono de notificación cuando se bloquee una ventana emergente">
 <!ENTITY Ctr_locsearchbw10	"Reducir altura de barras de direcciones y de búsqueda (experimental)">
 <!ENTITY Ctr_urlbar_ib		"Botón de identidad del sitio">
@@ -392,7 +392,7 @@
 <!ENTITY Ctr_fx38pocket2	"Hacerlo con el botón 'Pocket' en 'Personalizar' elimina sus menús en marcadores y vista de lectura.">
 <!ENTITY Ctr_e_loop			"Hello / Llamada y conversación / Loop">
 <!ENTITY Ctr_e_readermode	"Modo de vista de lectura">
-<!ENTITY Ctr_e_geolocation	"Geolocation">
+<!ENTITY Ctr_e_geolocation	"Geolocalización">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Icono de reproducción de audio en las pestañas">
 <!ENTITY Ctr_e_containertab	"Pestañas contenedor">
@@ -418,8 +418,8 @@
 <!ENTITY Ctr_support_forum1	"MozillaZine (foro en inglés)">
 <!ENTITY Ctr_support_forum2	"Camp Firefox (foro en alemán)">
 <!ENTITY Ctr_github_issues	"Informar de problema (issue) en GitHub">
-<!ENTITY Ctr_newversion		"Latest CTR version">
-<!ENTITY Ctr_newversion2	"Latest CTR beta">
+<!ENTITY Ctr_newversion		"Versión de CTR más reciente">
+<!ENTITY Ctr_newversion2	"Beta de CTR más reciente">
 
 <!ENTITY Ctr_addon-bar.accesskey		"C">
 <!ENTITY appMenuGettingStarted.label	"Comenzar">
@@ -427,8 +427,8 @@
 <!ENTITY Ctr_menu_restart.label			"Reiniciar">
 <!ENTITY Ctr_restartapp					"'Reiniciar' en el menú de &brandShortName; y el menú 'Archivo'">
 <!ENTITY Ctr_ctrnewinv					"Subrayar opciones nuevas para la actual versión de &brandShortName;">
-<!ENTITY Ctr_cssoverride				"Custom css code">
-<!ENTITY Ctr_cssoverride2				"Css code will not be checked for errors!">
+<!ENTITY Ctr_cssoverride				"Código CSS personalizado">
+<!ENTITY Ctr_cssoverride2				"¡El código CSS no se revisará en busca de errores!">
 
 <!ENTITY Ctr_openInCurrentTab			"Abrir entradas en la pestaña actual">
 <!ENTITY Ctr_openInNewTab				"Abrir entradas en una nueva pestaña">

@@ -974,9 +974,9 @@
 			<colorpicker preference="ctraddon_cappbutpc1" type="button" id="ctraddon_pw_cappbutpc1cp"/>
 			<textbox preference="ctraddon_cappbutpc2" id="ctraddon_pw_cappbutpc2"/>
 			<colorpicker preference="ctraddon_cappbutpc2" type="button" id="ctraddon_pw_cappbutpc2cp"/>
-			<description class="ctraddon_font1">&Ctr_privmode;</description>
 		</hbox>
-
+		<description class="ctraddonsuboption ctraddon_font1">&Ctr_privmode;</description>
+			
 		<hbox align="center">
 			<description id="ctraddon_pw_appbutonclab" class="ctraddon_font1">&Ctr_appbutonclab;</description>
 			<textbox id="ctraddon_pw_appbuttontxt" preference="ctraddon_appbuttontxt" size="auto" flex="1" type="autocomplete" placeholder="&Ctr_appbutonclab2;" onkeydown="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
