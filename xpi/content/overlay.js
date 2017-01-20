@@ -3394,9 +3394,13 @@ classicthemerestorerjs.ctr = {
 				
 	  if (newURLp=='') newURLp='about:privatebrowsing';
 	  
-	  setTimeout(function(){
-		if(gBrowser.currentURI.spec=="about:privatebrowsing") openUILinkIn(newURLp, "current");
-	  },500);
+	  try{
+		setTimeout(function(){
+		  if(gBrowser.currentURI.spec=="about:privatebrowsing" ||
+			document.getElementById("main-window").hasAttribute("privateTab-selectedTabIsPrivate")
+		  ) openUILinkIn(newURLp, "current");
+		},500);
+	  } catch(e){}
 	}
 	
 	window.addEventListener("TabClose", _newPrivateTabPageForwarding, false);  
