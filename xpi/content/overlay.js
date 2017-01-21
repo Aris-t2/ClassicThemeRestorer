@@ -3391,13 +3391,15 @@ classicthemerestorerjs.ctr = {
 	function _newPrivateTabPageForwarding(){
 		
 	  var newURLp = classicthemerestorerjs.ctr.prefs.getCharPref("anewtaburlp");
+	  var defaultNewTabPage = 'about:newtab';
 				
 	  if (newURLp=='') newURLp='about:privatebrowsing';
 	  
 	  try{
 		setTimeout(function(){
 		  if(gBrowser.currentURI.spec=="about:privatebrowsing" ||
-			document.getElementById("main-window").hasAttribute("privateTab-selectedTabIsPrivate")
+			(gBrowser.currentURI.spec==defaultNewTabPage && 
+			  document.getElementById("main-window").hasAttribute("privateTab-selectedTabIsPrivate"))
 		  ) openUILinkIn(newURLp, "current");
 		},500);
 	  } catch(e){}
