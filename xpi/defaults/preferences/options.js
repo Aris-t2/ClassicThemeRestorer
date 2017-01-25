@@ -98,6 +98,7 @@ pref("extensions.classicthemerestorer.oldplacesbut",false);
 pref("extensions.classicthemerestorer.bmbutpanelm",false);
 pref("extensions.classicthemerestorer.bmbunsortbm",false);
 pref("extensions.classicthemerestorer.bmbunsortbm2",true);
+pref("extensions.classicthemerestorer.bmbutnotb",false);
 pref("extensions.classicthemerestorer.bmbviewbmtb",false);
 pref("extensions.classicthemerestorer.bmbviewbmsb",false);
 pref("extensions.classicthemerestorer.bmbnounsort",false);

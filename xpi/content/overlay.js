@@ -2273,6 +2273,11 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbviewbmtb",false);
 		  break;
 		  
+		  case "bmbutnotb":
+			if (branch.getBoolPref("bmbutnotb")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbutnotb",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbutnotb",false);
+		  break;
+		  
 		  case "bmbnounsort":
 			if (branch.getBoolPref("bmbnounsort")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbnounsort",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbnounsort",false);
@@ -4407,6 +4412,7 @@ classicthemerestorerjs.ctr = {
 		case "bmbunsortbm2": 		manageCSS("bmbut_unsortedbookm2.css");	break;
 		case "bmbviewbmsb": 		manageCSS("bmbut_bmbviewbmsb.css");		break;
 		case "bmbviewbmtb": 		manageCSS("bmbut_bmbviewbmtb.css");		break;
+		case "bmbutnotb": 			manageCSS("bmbut_bmbnotb.css");			break;
 		case "bmbnounsort": 		manageCSS("bmbut_bmbnounsort.css");		break;
 		case "bmbutclpopup": 		manageCSS("bmbut_cleanpopup.css");		break;
 		case "bmbutnotext": 		manageCSS("bmbut_no_label.css");		break;

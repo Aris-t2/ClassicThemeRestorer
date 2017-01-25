@@ -286,6 +286,7 @@
 		<preference id="ctraddon_bmbunsortbm2"	name="extensions.classicthemerestorer.bmbunsortbm2"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbviewbmsb"	name="extensions.classicthemerestorer.bmbviewbmsb"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbviewbmtb"	name="extensions.classicthemerestorer.bmbviewbmtb"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_bmbutnotb"		name="extensions.classicthemerestorer.bmbutnotb"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbnounsort"	name="extensions.classicthemerestorer.bmbnounsort"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbutnotext"	name="extensions.classicthemerestorer.bmbutnotext"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_bmbutclpopup"	name="extensions.classicthemerestorer.bmbutclpopup"	 type="bool"	instantApply="true"/>
@@ -1012,6 +1013,7 @@
 			<tab label="&Ctr_page; 2" class="ctraddon_new_in_v47 ctraddon_new_in_v49 ctraddon_new_in_v50 ctraddon_new_in_v51"/>
 			<tab label="&Ctr_page; 3"/>
 			<tab label="&Ctr_page; 4"/>
+			<tab label="&Ctr_page; 5"/>
 		</tabs>
 
 		<tabpanels id="ctraddon_pw_generalui_tabpanels" flex="1">
@@ -1096,31 +1098,10 @@
 				<checkbox label="&Ctr_bmbunsortbm2;"	preference="ctraddon_bmbunsortbm2" id="ctraddon_pw_bmbunsortbm2" class="ctraddonsuboption"/>
 				<checkbox label="&Ctr_bmbviewbmsb;"		preference="ctraddon_bmbviewbmsb" id="ctraddon_pw_bmbviewbmsb"/>
 				<checkbox label="&Ctr_bmbviewbmtb;"		preference="ctraddon_bmbviewbmtb" id="ctraddon_pw_bmbviewbmtb"/>
+				<checkbox label="&Ctr_bmbutnotb;"		preference="ctraddon_bmbutnotb" id="ctraddon_pw_bmbutnotb"/>
 				<checkbox label="&Ctr_bmbnounsort;"		preference="ctraddon_bmbnounsort" id="ctraddon_pw_bmbnounsort"/>
 				<checkbox label="&Ctr_bmbutclpopup;"	preference="ctraddon_bmbutclpopup" id="ctraddon_pw_bmbutclpopup"/>
 				<checkbox label="&Ctr_bmbutnotext;"		preference="ctraddon_bmbutnotext" id="ctraddon_pw_bmbutnotext"/>
-
-				<description class="ctraddon_font1">&Ctr_emptygfavico;</description>
-				<radiogroup preference="ctraddon_emptyfavico_g" id="ctraddon_pw_emptyfavico_g" orient="horizontal" value="">
-					<radio value="emptyfavico_g_def"	label="&Ctr_tabwidthdef;" id="ctraddon_emptyfavico_g_def"/>
-					<radio value="emptyfavico_g_def2"	label=""	id="ctraddon_emptyfavico_g_def2"/>
-					<radio value="emptyfavico_g_dot"	label=""	id="ctraddon_emptyfavico_g_dot"/>
-					<radio value="emptyfavico_g_dot2"	label=""	id="ctraddon_emptyfavico_g_dot2"/>
-					<radio value="emptyfavico_g_sheet"	label=""	id="ctraddon_emptyfavico_g_sheet"/>
-				</radiogroup>
-
-				<description class="ctraddon_font1">&Ctr_closegeneral;</description>
-				<radiogroup preference="ctraddon_closeicong" id="ctraddon_pw_closeicong" orient="horizontal" value="">
-					<radio value="closeicong_default" label="&Ctr_closei_def;" id="ctraddon_closeicong_def"/>
-					<radio value="closeicong_red"	  label=""	id="ctraddon_closeicong_red"/>
-					<radio value="closeicong_w7"	  label=""	id="ctraddon_closeicong_w7"/>
-					<radio value="closeicong_w7v2"	  label=""	id="ctraddon_closeicong_w7v2"/>
-					<radio value="closeicong_w8"	  label=""	id="ctraddon_closeicong_w8"/>
-					<radio value="closeicong_w10"	  label=""	id="ctraddon_closeicong_w10"/>
-					<radio value="closeicong_w10i"	  label=""	id="ctraddon_closeicong_w10i"/>
-					<radio value="closeicong_w10red"  label=""	id="ctraddon_closeicong_w10red"/>
-					<radio value="closeicong_gc"	  label=""	id="ctraddon_closeicong_gc"/>
-				</radiogroup>
 
 			  </groupbox>
 
@@ -1153,6 +1134,36 @@
 				<description class="ctraddonsuboption">about:config &gt;&gt; browser.fullscreen.animate</description>
 				<checkbox label="&Ctr_fsaduration;"		preference="ctraddon_fsaduration" id="ctraddon_pw_fsaduration"/>
 				<description class="ctraddonsuboption">about:config &gt;&gt; full-screen-api.transition-duration.*</description>
+			  </groupbox>
+
+		  </tabpanel>
+		  
+		  <tabpanel orient="vertical">
+			  <groupbox>
+				<caption  label="&Ctr_ui;" class="ctraddon_topic"/>
+
+				<description class="ctraddon_font1">&Ctr_emptygfavico;</description>
+				<radiogroup preference="ctraddon_emptyfavico_g" id="ctraddon_pw_emptyfavico_g" orient="horizontal" value="">
+					<radio value="emptyfavico_g_def"	label="&Ctr_tabwidthdef;" id="ctraddon_emptyfavico_g_def"/>
+					<radio value="emptyfavico_g_def2"	label=""	id="ctraddon_emptyfavico_g_def2"/>
+					<radio value="emptyfavico_g_dot"	label=""	id="ctraddon_emptyfavico_g_dot"/>
+					<radio value="emptyfavico_g_dot2"	label=""	id="ctraddon_emptyfavico_g_dot2"/>
+					<radio value="emptyfavico_g_sheet"	label=""	id="ctraddon_emptyfavico_g_sheet"/>
+				</radiogroup>
+
+				<description class="ctraddon_font1">&Ctr_closegeneral;</description>
+				<radiogroup preference="ctraddon_closeicong" id="ctraddon_pw_closeicong" orient="horizontal" value="">
+					<radio value="closeicong_default" label="&Ctr_closei_def;" id="ctraddon_closeicong_def"/>
+					<radio value="closeicong_red"	  label=""	id="ctraddon_closeicong_red"/>
+					<radio value="closeicong_w7"	  label=""	id="ctraddon_closeicong_w7"/>
+					<radio value="closeicong_w7v2"	  label=""	id="ctraddon_closeicong_w7v2"/>
+					<radio value="closeicong_w8"	  label=""	id="ctraddon_closeicong_w8"/>
+					<radio value="closeicong_w10"	  label=""	id="ctraddon_closeicong_w10"/>
+					<radio value="closeicong_w10i"	  label=""	id="ctraddon_closeicong_w10i"/>
+					<radio value="closeicong_w10red"  label=""	id="ctraddon_closeicong_w10red"/>
+					<radio value="closeicong_gc"	  label=""	id="ctraddon_closeicong_gc"/>
+				</radiogroup>
+
 			  </groupbox>
 
 			  <groupbox id="ctraddon_pw_invertedicons">
