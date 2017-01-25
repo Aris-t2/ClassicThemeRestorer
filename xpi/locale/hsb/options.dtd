@@ -17,11 +17,11 @@
 <!ENTITY Ctr_window			"wokno">
 <!ENTITY Ctr_centered		"Centrowano">
 <!ENTITY Ctr_page			"Strona">
-<!ENTITY Ctr_position		"Position">
-<!ENTITY Ctr_appearance		"Appearance">
-<!ENTITY Ctr_left			"Left">
-<!ENTITY Ctr_right			"Right">
-<!ENTITY Ctr_privmode		"(private window)">
+<!ENTITY Ctr_position		"Pozicija">
+<!ENTITY Ctr_appearance		"Napohlad">
+<!ENTITY Ctr_left			"Nalěwo">
+<!ENTITY Ctr_right			"Naprawo">
+<!ENTITY Ctr_privmode		"(priwatne wokno)">
 
 <!ENTITY Ctr_cuibuttons		"Tłóčatka">
 <!ENTITY Ctr_cuibutnormal	"Normalny">
@@ -63,10 +63,10 @@
 <!ENTITY Ctr_tabwidthinfo3	"Hódnoty pod 48px w najwjace padach zwobraznjenske zmylki zawinuja!">
 <!ENTITY Ctr_square_edges	"Kwadratiske hornje róžki">
 <!ENTITY Ctr_tttitlebar		"Rajtarkowy titul w titulne lajsće &brandShortName;">
-<!ENTITY Ctr_ttoverflow		"Long tab titles">
-<!ENTITY Ctr_ttoverfl_def	"Default overflow effect">
-<!ENTITY Ctr_ttoverfl_no	"No overflow effect">
-<!ENTITY Ctr_tabtitle		"Tab title position">
+<!ENTITY Ctr_ttoverflow		"Dołhe rajtarkowe titule">
+<!ENTITY Ctr_ttoverfl_def	"Standardne přeblendowanje">
+<!ENTITY Ctr_ttoverfl_no	"Žane přeblendowanje">
+<!ENTITY Ctr_tabtitle		"Pozicija rajtarkoweho titula">
 <!ENTITY Ctr_tabinsertion	"Přiwuzny rajtark za aktualnym rajtarkom zasadźić">
 <!ENTITY Ctr_emptytfavico	"Faworitowy symbol pokazać (jeli sydło žadyn njepodawa)">
 <!ENTITY Ctr_emptytfavico_n	"Žadyn">
@@ -110,9 +110,9 @@
 <!ENTITY Ctr_appbuttonc_pu	"Purpur">
 <!ENTITY Ctr_appbuttonc_wh	"Běły">
 <!ENTITY Ctr_appbuttonc_cu	"Swójska">
-<!ENTITY Ctr_appbuttonct	"Swójska barba za tłóčatko na symbolowej lajsće">
+<!ENTITY Ctr_appbuttonct	"Swójska barba za tłóčatko (jeli tłóčatko je na symbolowej lajsće">
 <!ENTITY Ctr_appbuttonI1	"Nowy start doporučeny">
-<!ENTITY Ctr_appbuttonI1e	"Jenož widźomny w titulnej lajsće &brandShortName;, nic na titulnej lajsće dźěłoweho systema Windows!">
+<!ENTITY Ctr_appbuttonI1e	"Tłóčatko &brandShortName; je jenož widźomne na titulnej lajsće &brandShortName; a nic na titulnej lajsće dźěłoweho systema!">
 <!ENTITY Ctr_appbutmhi		"Wyša pozicija (jeli je na rajtarkowej lajsće)">
 <!ENTITY Ctr_appbautocol	"Barbu wobhladowakoweho kanala awtomatisce nastajić (standard/Aurora/Nightly)">
 <!ENTITY Ctr_appbutbdl		"Ramiki a pozadkowe barby schować">
@@ -213,8 +213,9 @@
 <!ENTITY Ctr_bmbunsortbm2	"Meni nad zapołožkami">
 <!ENTITY Ctr_bmbviewbmsb	"Wuskakowacy meni: 'Bóčnicu zapołožkow pokazać' pokazać">
 <!ENTITY Ctr_bmbviewbmtb	"Wuskakowacy meni: 'Lajstu zapołožkow pokazać' pokazać">
+<!ENTITY Ctr_bmbutnotb		"Popup: hide 'Bookmarks Toolbar' menu">
 <!ENTITY Ctr_bmbnounsort	"Wuskakowacy meni: 'Druhe zapołožki' schować">
-<!ENTITY Ctr_bmbutclpopup	"Popup: only show 'Bookmark this page' and bookmarks">
+<!ENTITY Ctr_bmbutclpopup	"Wuskakowacy meni: jenož 'Tutu stronu jako zapołožku składować' a zapołožki pokazać">
 <!ENTITY Ctr_bmbutnotext	"Tekst na lajśce zapołožkow schować">
 <!ENTITY Ctr_skipprintpr	"Ćišćerske tłóčatko: Ćišćerski přehlad přeskočić">
 <!ENTITY Ctr_tbconmenu		"Kontekstowy meni symboloweje lajsty: 'Do menija přesunyć', 'Ze symboloweje lajsty wotstronić', 'Wšě rajtarki znowa začitać/jako zapołožki składować' a 'Začinjenje rajtarka cofnyć' schować">
@@ -418,8 +419,8 @@
 <!ENTITY Ctr_support_forum1	"MozillaZine (jendźelski forum)">
 <!ENTITY Ctr_support_forum2	"Camp Firefox (němski forum)">
 <!ENTITY Ctr_github_issues	"Problem na Github zdźělić">
-<!ENTITY Ctr_newversion		"Latest CTR version">
-<!ENTITY Ctr_newversion2	"Latest CTR beta">
+<!ENTITY Ctr_newversion		"Najnowša CTR-wersija">
+<!ENTITY Ctr_newversion2	"Najnowša CTR beta">
 
 <!ENTITY Ctr_addon-bar.accesskey		"d">
 <!ENTITY appMenuGettingStarted.label	"Prěnje kroki">
@@ -427,8 +428,8 @@
 <!ENTITY Ctr_menu_restart.label			"Znowa startować">
 <!ENTITY Ctr_restartapp					"Znowa startować w meniju '&brandShortName;' a w meniju 'Dataja' pokazać">
 <!ENTITY Ctr_ctrnewinv					"Nowe wersije za aktualnu wersiju &brandShortName; podšmórnyć">
-<!ENTITY Ctr_cssoverride				"Custom css code">
-<!ENTITY Ctr_cssoverride2				"Css code will not be checked for errors!">
+<!ENTITY Ctr_cssoverride				"Swójski CSS-kod">
+<!ENTITY Ctr_cssoverride2				"CSS-kod njebudźe so za zmylkami přepruwować!">
 
 <!ENTITY Ctr_openInCurrentTab			"Zapodaća w aktualnym rajtarku wočinić">
 <!ENTITY Ctr_openInNewTab				"Zapodaća w nowym rajtarku wočinić">

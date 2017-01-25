@@ -17,11 +17,11 @@
 <!ENTITY Ctr_window			"Janela">
 <!ENTITY Ctr_centered		"Centralizado">
 <!ENTITY Ctr_page			"Página">
-<!ENTITY Ctr_position		"Position">
-<!ENTITY Ctr_appearance		"Appearance">
-<!ENTITY Ctr_left			"Left">
-<!ENTITY Ctr_right			"Right">
-<!ENTITY Ctr_privmode		"(private window)">
+<!ENTITY Ctr_position		"Posição">
+<!ENTITY Ctr_appearance		"Aparência">
+<!ENTITY Ctr_left			"Esquerda">
+<!ENTITY Ctr_right			"Direita">
+<!ENTITY Ctr_privmode		"(janela privativa)">
 
 <!ENTITY Ctr_cuibuttons		"Botões">
 <!ENTITY Ctr_cuibutnormal	"Normais">
@@ -48,7 +48,7 @@
 <!ENTITY Ctr_tabsontop1		"Abas no topo - definida [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Abas embaixo (v1) - definida [tabsontop=false]">
 <!ENTITY Ctr_tabsontop3		"Abas embaixo (v2) - definida [tabsontop=false]">
-<!ENTITY Ctr_tabsontopW1	"v2 é só para alguns complementos e temas completos!">
+<!ENTITY Ctr_tabsontopW1	"v2 é somente para alguns complementos e temas completos!">
 <!ENTITY Ctr_tabsontopI1	"Adicionar atributos [tabsontop=true/false] para">
 <!ENTITY Ctr_tabsintitlebar	"Barra de título do &brandShortName;">
 <!ENTITY Ctr_tabwidthdef	"(padrão)">
@@ -63,10 +63,10 @@
 <!ENTITY Ctr_tabwidthinfo3	"Valores abaixo de 48px causarão falhas na maioria dos casos!">
 <!ENTITY Ctr_square_edges	"Cantos superiores quadrados">
 <!ENTITY Ctr_tttitlebar		"Título da aba na barra de título &brandShortName;">
-<!ENTITY Ctr_ttoverflow		"Long tab titles">
-<!ENTITY Ctr_ttoverfl_def	"Default overflow effect">
-<!ENTITY Ctr_ttoverfl_no	"No overflow effect">
-<!ENTITY Ctr_tabtitle		"Tab title position">
+<!ENTITY Ctr_ttoverflow		"Títulos longos em abas">
+<!ENTITY Ctr_ttoverfl_def	"Efeito de excesso padrão">
+<!ENTITY Ctr_ttoverfl_no	"Sem efeito de excesso">
+<!ENTITY Ctr_tabtitle		"Posição do título da aba">
 <!ENTITY Ctr_tabinsertion	"Inserir a aba relacionada depois da aba atual">
 <!ENTITY Ctr_emptytfavico	"Exibir favicon (se o site não oferecer um)">
 <!ENTITY Ctr_emptytfavico_n	"Nenhum">
@@ -110,9 +110,9 @@
 <!ENTITY Ctr_appbuttonc_pu	"Roxo">
 <!ENTITY Ctr_appbuttonc_wh	"Branco">
 <!ENTITY Ctr_appbuttonc_cu	"Personalizada">
-<!ENTITY Ctr_appbuttonct	"Cor personalizada do botão na barra de ferramentas">
+<!ENTITY Ctr_appbuttonct	"Cor personalizada (para botão na barra de ferramentas)">
 <!ENTITY Ctr_appbuttonI1	"Recomenda-se reiniciar">
-<!ENTITY Ctr_appbuttonI1e	"Invisível na barra de título do sistema operacional">
+<!ENTITY Ctr_appbuttonI1e	"Botão &brandShortName; somente visível na barra de título do &brandShortName; e não no sistema operacional!">
 <!ENTITY Ctr_appbutmhi		"Posição no topo (se na barra de abas)">
 <!ENTITY Ctr_appbautocol	"Definir cor padrão / Aurora / Nightly automaticamente">
 <!ENTITY Ctr_appbutbdl		"Ocultar as bordas e cores do fundo">
@@ -213,8 +213,9 @@
 <!ENTITY Ctr_bmbunsortbm2	"Menu acima dos favoritos">
 <!ENTITY Ctr_bmbviewbmsb	"Popup: exibir 'Ver Barra Lateral de Favoritos'">
 <!ENTITY Ctr_bmbviewbmtb	"Popup: exibir 'Ver Barra de Favoritos'">
+<!ENTITY Ctr_bmbutnotb		"Popup: hide 'Bookmarks Toolbar' menu">
 <!ENTITY Ctr_bmbnounsort	"Popup: ocultar 'Outros Favoritos'">
-<!ENTITY Ctr_bmbutclpopup	"Popup: only show 'Bookmark this page' and bookmarks">
+<!ENTITY Ctr_bmbutclpopup	"Popup: exibir somente 'Adicionar aos favoritos' e favoritos">
 <!ENTITY Ctr_bmbutnotext	"Ocultar rótulo na barra de favoritos">
 <!ENTITY Ctr_skipprintpr	"Botão Imprimir: ignorar pré-visualização da impressão">
 <!ENTITY Ctr_tbconmenu		"Menu de contexto da barra de ferramentas: ocultar 'mover para o menu', 'remover da barra de ferramentas', 'recarregar/adicionar todas as abas aos favoritos' e 'desfazer fechar aba'">
@@ -273,7 +274,7 @@
 <!ENTITY Ctr_urlbardropm2	"Tornar marcador sempre visível">
 <!ENTITY Ctr_altreaderico	"Ícones alternativos do 'Leitor'">
 <!ENTITY Ctr_hideurlzoom	"Ocultar botão de zoom (se disponível)">
-<!ENTITY Ctr_urlbardark		"Dark background color">
+<!ENTITY Ctr_urlbardark		"Cor escura de fundo">
 <!ENTITY Ctr_hideprbutton	"Ocultar o Ícone de notificação quando um pop-up ficar bloqueado">
 <!ENTITY Ctr_locsearchbw10	"Reduzir altura das barras de localização e barras de pesquisa (experimental)">
 <!ENTITY Ctr_urlbar_ib		"Botão de identidade do site">
@@ -418,8 +419,8 @@
 <!ENTITY Ctr_support_forum1	"MozillaZine (fórum em Inglês)">
 <!ENTITY Ctr_support_forum2	"Camp Firefox (fórum Alemão)">
 <!ENTITY Ctr_github_issues	"Reportar problema no Github">
-<!ENTITY Ctr_newversion		"Latest CTR version">
-<!ENTITY Ctr_newversion2	"Latest CTR beta">
+<!ENTITY Ctr_newversion		"Versão CTR mais recente">
+<!ENTITY Ctr_newversion2	"Versão beta CTR mais recente">
 
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"Guia rápido">
@@ -427,8 +428,8 @@
 <!ENTITY Ctr_menu_restart.label			"Reiniciar">
 <!ENTITY Ctr_restartapp					"Exibir 'Reiniciar' no menu &brandShortName; e menu Arquivo">
 <!ENTITY Ctr_ctrnewinv					"Sublinhar novas opções da atual versão do &brandShortName;">
-<!ENTITY Ctr_cssoverride				"Custom css code">
-<!ENTITY Ctr_cssoverride2				"Css code will not be checked for errors!">
+<!ENTITY Ctr_cssoverride				"Código CSS personalizado">
+<!ENTITY Ctr_cssoverride2				"O código CSS não será verificado por erros!">
 
 <!ENTITY Ctr_openInCurrentTab			"Abrir entradas na aba atual">
 <!ENTITY Ctr_openInNewTab				"Abrir entradas em uma nova aba">

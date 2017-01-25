@@ -48,7 +48,11 @@ classicthemerestorerjso.ctr = {
 	} catch(e){}
 	
 	try{
-		if(Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org') {
+		if(Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org'
+			|| Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-compact-dark@mozilla.org'
+			|| Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-compact-light@mozilla.org'
+		  )
+		{
 		  this.fxdefaulttheme=false;
 		}
 	} catch(e){}
@@ -126,7 +130,10 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_altoptions_list2').style.visibility = 'collapse';
 	};
 	
-	if(Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org') {
+	if(Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org'
+		|| Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-compact-dark@mozilla.org'
+		|| Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-compact-light@mozilla.org'
+	  ) {
 	  document.getElementById('ctraddon_altoptions_list').style.visibility = 'visible';
 	  document.getElementById('ctraddon_pw_alt_addonsm').style.visibility = 'visible';
 	  document.getElementById('ctraddon_altoptions_list2').style.visibility = 'collapse';
@@ -574,8 +581,11 @@ classicthemerestorerjso.ctr = {
 		  
 		    if (classicthemerestorerjso.ctr.appversion >= 47 && branch.getBoolPref("drawInTitlebar")==false
 			  && (classicthemerestorerjso.ctr.fxdefaulttheme
-			    || Services.prefs.getBranch("lightweightThemes.")
-				  .getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org')) {
+			      || Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org'
+				  || Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-compact-dark@mozilla.org'
+				  || Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-compact-light@mozilla.org'
+				 )
+			   ) {
 			  document.getElementById('ctraddon_pw_dblclnewtab').disabled = true;
 			  document.getElementById('ctraddon_pw_dblclnewtabdes').style.visibility = 'collapse';
 			} else {
@@ -718,7 +728,11 @@ classicthemerestorerjso.ctr = {
 	setTimeout(function(){
 
 	  try {
-		if(Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org'){
+		if(Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org'
+			|| Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-compact-dark@mozilla.org'
+			|| Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-compact-light@mozilla.org'
+		  )
+		{
 		  document.getElementById('ctraddon_pw_tabforminfo').style.visibility = 'visible';
 		  document.getElementById('ctraddon_pw_tabmenulist').disabled = true;
 		} else if(classicthemerestorerjso.ctr.fxdefaulttheme) {

@@ -17,11 +17,11 @@
 <!ENTITY Ctr_window			"window">
 <!ENTITY Ctr_centered		"已居中">
 <!ENTITY Ctr_page			"页面">
-<!ENTITY Ctr_position		"Position">
-<!ENTITY Ctr_appearance		"Appearance">
-<!ENTITY Ctr_left			"Left">
-<!ENTITY Ctr_right			"Right">
-<!ENTITY Ctr_privmode		"(private window)">
+<!ENTITY Ctr_position		"位置">
+<!ENTITY Ctr_appearance		"外观">
+<!ENTITY Ctr_left			"左">
+<!ENTITY Ctr_right			"右">
+<!ENTITY Ctr_privmode		"(隐私浏览窗口)">
 
 <!ENTITY Ctr_cuibuttons		"按钮">
 <!ENTITY Ctr_cuibutnormal	"标准">
@@ -63,10 +63,10 @@
 <!ENTITY Ctr_tabwidthinfo3	"小于48px的值在多数情况下可能出现问题!">
 <!ENTITY Ctr_square_edges	"方形顶部边角">
 <!ENTITY Ctr_tttitlebar		"在 &brandShortName; 标题栏显示标签页标题">
-<!ENTITY Ctr_ttoverflow		"Long tab titles">
-<!ENTITY Ctr_ttoverfl_def	"Default overflow effect">
-<!ENTITY Ctr_ttoverfl_no	"No overflow effect">
-<!ENTITY Ctr_tabtitle		"Tab title position">
+<!ENTITY Ctr_ttoverflow		"较长标签页标题">
+<!ENTITY Ctr_ttoverfl_def	"默认溢出效果">
+<!ENTITY Ctr_ttoverfl_no	"出溢出效果">
+<!ENTITY Ctr_tabtitle		"标签页标题位置">
 <!ENTITY Ctr_tabinsertion	"在当前标签页后插入关联标签页">
 <!ENTITY Ctr_emptytfavico	"显示网站图标 (如果网站未提供)">
 <!ENTITY Ctr_emptytfavico_n	"无">
@@ -213,8 +213,9 @@
 <!ENTITY Ctr_bmbunsortbm2	"菜单在书签之上">
 <!ENTITY Ctr_bmbviewbmsb	"弹出式菜单: 显示“查看侧边栏”">
 <!ENTITY Ctr_bmbviewbmtb	"弹出式菜单: 显示“查看工具栏”">
+<!ENTITY Ctr_bmbutnotb		"Popup: hide 'Bookmarks Toolbar' menu">
 <!ENTITY Ctr_bmbnounsort	"弹出式菜单: 隐藏“未分类书签”">
-<!ENTITY Ctr_bmbutclpopup	"Popup: only show 'Bookmark this page' and bookmarks">
+<!ENTITY Ctr_bmbutclpopup	"弹出式菜单: 仅显示“将此页加为书签”和书签">
 <!ENTITY Ctr_bmbutnotext	"隐藏书签工具栏上的文本标签">
 <!ENTITY Ctr_skipprintpr	"打印按钮: 跳过打印预览">
 <!ENTITY Ctr_tbconmenu		"工具栏右键菜单: 隐藏 “移动到菜单”, “从工具栏移除”, “重新载入所有标签页/将全部标签页加为书签” 与 “恢复关闭的标签页”">
@@ -262,7 +263,7 @@
 <!ENTITY Ctr_tabc_act_tb	"工具栏使用背景色">
 
 <!ENTITY Ctr_urlbar			"地址栏">
-<!ENTITY Ctr_starinurl		"五星按钮">
+<!ENTITY Ctr_starinurl		"五角星按钮">
 <!ENTITY Ctr_starinurlinfo	"默认书签菜单按钮被隐藏">
 <!ENTITY Ctr_feedinurl		"RSS源按钮">
 <!ENTITY Ctr_hideurelstop	"隐藏停止和重新载入按钮">
@@ -418,8 +419,8 @@
 <!ENTITY Ctr_support_forum1	"MozillaZine (英语论坛)">
 <!ENTITY Ctr_support_forum2	"Camp Firefox (德语论坛)">
 <!ENTITY Ctr_github_issues	"在 Github 上汇报 Issue">
-<!ENTITY Ctr_newversion		"Latest CTR version">
-<!ENTITY Ctr_newversion2	"Latest CTR beta">
+<!ENTITY Ctr_newversion		"最新 CTR 版本">
+<!ENTITY Ctr_newversion2	"最新 CTR 测试版">
 
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"开始使用">
@@ -427,8 +428,8 @@
 <!ENTITY Ctr_menu_restart.label			"重启">
 <!ENTITY Ctr_restartapp					"在应用菜单和文件菜单中显示 “重启”">
 <!ENTITY Ctr_ctrnewinv					"为当前 &brandShortName; 版本的新选项添加下划线">
-<!ENTITY Ctr_cssoverride				"Custom css code">
-<!ENTITY Ctr_cssoverride2				"Css code will not be checked for errors!">
+<!ENTITY Ctr_cssoverride				"自定义 CSS 代码">
+<!ENTITY Ctr_cssoverride2				"不会对 CSS 代码进行错误检查!">
 
 <!ENTITY Ctr_openInCurrentTab			"在当前标签页打开输入">
 <!ENTITY Ctr_openInNewTab				"在新标签页打开输入">

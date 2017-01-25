@@ -223,8 +223,11 @@ classicthemerestorerjs.ctr = {
 
 		  case "selectedThemeID":
 			try{
-			  if (branch.getCharPref("selectedThemeID")=='firefox-devedition@mozilla.org' 
-				&& Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("nodevtheme2")==false) {
+			  if (
+				(branch.getCharPref("selectedThemeID")=='firefox-devedition@mozilla.org'
+					|| branch.getCharPref("selectedThemeID")=='firefox-compact-dark@mozilla.org'
+					|| branch.getCharPref("selectedThemeID")=='firefox-compact-light@mozilla.org'
+				) && Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("nodevtheme2")==false) {
 				
 				classicthemerestorerjs.ctr.fxdevelopertheme=true;
 			  
@@ -244,6 +247,10 @@ classicthemerestorerjs.ctr = {
 				if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref('aerocolors'))
 				  Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('aerocolors',false);
 			
+				// make sure previous interval gets cleared before new one can be 'started', when
+				// switching between dark and light compact themes in Firefox 53+
+				clearInterval(classicthemerestorerjs.ctr.devthemeinterval);
+				
 				classicthemerestorerjs.ctr.devthemeinterval = setInterval(function(){
 				  
 				  var selectedThemeID = null;
@@ -251,7 +258,9 @@ classicthemerestorerjs.ctr = {
 					selectedThemeID = Services.prefs.getBranch("lightweightThemes.").getCharPref("selectedThemeID");
 				  } catch (e) {}
 				  
-				  if (selectedThemeID=='firefox-devedition@mozilla.org') {
+				  if (selectedThemeID=='firefox-devedition@mozilla.org' 
+					|| selectedThemeID=='firefox-compact-dark@mozilla.org'
+					|| selectedThemeID=='firefox-compact-light@mozilla.org') {
 					document.getElementById("main-window").setAttribute('developertheme',true);
 				  } else {
 					document.getElementById("main-window").setAttribute('developertheme',false);
@@ -2264,6 +2273,11 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbviewbmtb",false);
 		  break;
 		  
+		  case "bmbutnotb":
+			if (branch.getBoolPref("bmbutnotb")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbutnotb",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbutnotb",false);
+		  break;
+		  
 		  case "bmbnounsort":
 			if (branch.getBoolPref("bmbnounsort")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbnounsort",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbnounsort",false);
@@ -2489,9 +2503,13 @@ classicthemerestorerjs.ctr = {
 					{
 
 					  if(classicthemerestorerjs.ctr.appversion >= 47 && Services.prefs.getBranch("browser.tabs.").getBoolPref("drawInTitlebar")==false
-						&& (classicthemerestorerjs.ctr.fxdefaulttheme==true || Services.prefs.getBranch("lightweightThemes.")
-						  .getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org')) {
-							//do nothing
+						&& (classicthemerestorerjs.ctr.fxdefaulttheme==true
+							|| Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org'
+							|| Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-compact-dark@mozilla.org'
+							|| Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-compact-light@mozilla.org'
+						   )
+						) {
+						//do nothing
 					  } else {
 						BrowserOpenTab();
 
@@ -3378,12 +3396,18 @@ classicthemerestorerjs.ctr = {
 	function _newPrivateTabPageForwarding(){
 		
 	  var newURLp = classicthemerestorerjs.ctr.prefs.getCharPref("anewtaburlp");
+	  var defaultNewTabPage = 'about:newtab';
 				
 	  if (newURLp=='') newURLp='about:privatebrowsing';
 	  
-	  setTimeout(function(){
-		if(gBrowser.currentURI.spec=="about:privatebrowsing") openUILinkIn(newURLp, "current");
-	  },500);
+	  try{
+		setTimeout(function(){
+		  if(gBrowser.currentURI.spec=="about:privatebrowsing" ||
+			(gBrowser.currentURI.spec==defaultNewTabPage && 
+			  document.getElementById("main-window").hasAttribute("privateTab-selectedTabIsPrivate"))
+		  ) openUILinkIn(newURLp, "current");
+		},500);
+	  } catch(e){}
 	}
 	
 	window.addEventListener("TabClose", _newPrivateTabPageForwarding, false);  
@@ -3624,7 +3648,11 @@ classicthemerestorerjs.ctr = {
 	if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("nodevtheme2")) {
 
 	  try {
-		if (Services.prefs.getBranch("lightweightThemes.").getCharPref("selectedThemeID")=='firefox-devedition@mozilla.org') {
+		if (Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-devedition@mozilla.org'
+			|| Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-compact-dark@mozilla.org'
+			|| Services.prefs.getBranch("lightweightThemes.").getCharPref('selectedThemeID')=='firefox-compact-light@mozilla.org'
+		   )
+		{
 		 var {LightweightThemeManager} = Cu.import("resource://gre/modules/LightweightThemeManager.jsm", {});
 		  LightweightThemeManager.themeChanged(null);
 		  Services.prefs.getBranch("lightweightThemes.").deleteBranch("selectedThemeID");
@@ -4384,6 +4412,7 @@ classicthemerestorerjs.ctr = {
 		case "bmbunsortbm2": 		manageCSS("bmbut_unsortedbookm2.css");	break;
 		case "bmbviewbmsb": 		manageCSS("bmbut_bmbviewbmsb.css");		break;
 		case "bmbviewbmtb": 		manageCSS("bmbut_bmbviewbmtb.css");		break;
+		case "bmbutnotb": 			manageCSS("bmbut_bmbnotb.css");			break;
 		case "bmbnounsort": 		manageCSS("bmbut_bmbnounsort.css");		break;
 		case "bmbutclpopup": 		manageCSS("bmbut_cleanpopup.css");		break;
 		case "bmbutnotext": 		manageCSS("bmbut_no_label.css");		break;

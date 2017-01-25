@@ -121,6 +121,10 @@
 	  font-size:80% !important;
 	}
 	
+	.main-content .textbox-contextmenu label{
+	  font-size:100% !important;
+	}
+	
 	.main-content {
 	  margin-top: 20px !important;
 	  margin-bottom: 10px !important;
@@ -461,6 +465,17 @@
 	#advancedPrefs #tabsElement tab,
 	#advancedPrefs #tabsElement {
 	  min-height: unset !important;
+	}
+	
+	/* 'Data choices' items - width*/
+	#telemetryDataDesc{
+	  min-width: 0px !important;
+	  width: 400px !important;
+	  max-width: 400px !important;
+	}
+	#dataChoicesPanel label {
+	  min-width: 0px !important;
+	  max-width: 400px !important;
 	}
 
 	@media all and (-moz-windows-classic) {

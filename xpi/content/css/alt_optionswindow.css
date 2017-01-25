@@ -71,7 +71,17 @@
 	
 	#dialogBox {
 	  min-width: unset !important;
-	  /*min-height: unset !important;*/
+	}
+	
+	/* 'Data choices' items - width*/
+	#telemetryDataDesc{
+	  min-width: 0px !important;
+	  width: 400px !important;
+	  max-width: 400px !important;
+	}
+	#dataChoicesPanel label {
+	  min-width: 0px !important;
+	  max-width: 400px !important;
 	}
 
 	@media (min-resolution: 1.1dppx) {
