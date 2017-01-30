@@ -2,6 +2,9 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
+	#BMB_bookmarksToolbar,
+	#bookmarksToolbarFolderMenu,
+	#bookmarksToolbarFolderMenu + menuseparator,
 	#ctraddon_BMB_bookmarksToolbar,
 	#ctraddon_BMB_bookmarksToolbar + #ctraddon_BMB_unsortedBookmarks_m + menuseparator{
 	  visibility: collapse !important;

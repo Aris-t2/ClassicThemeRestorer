@@ -11,6 +11,10 @@
 	  -moz-binding: url("chrome://classic_theme_restorer/content/ctr_oldsearch.xml#searchbar-textbox") !important;
 	}
 	
+	#main-window[fx51plus="true"]:not([fx52plus="true"])[searchwp-moz-platform] searchbar {
+	  -moz-binding: url("chrome://classic_theme_restorer/content/ctr_oldsearch52.xml#searchbar") !important;
+	}
+	
 	#main-window[fx52plus="true"] searchbar {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/ctr_oldsearch52.xml#searchbar") !important;
 	}

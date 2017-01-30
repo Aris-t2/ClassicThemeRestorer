@@ -11,6 +11,12 @@
       padding: 0 10px 13px 10px;
 	  margin-top:-8px;
 	}
+	
+	@media (-moz-os-version: windows-xp) {
+	  #main-window[defaultfxtheme="true"] #ctraddon_cuibuttonsbox{
+		background-color: -moz-Dialog;
+	  }
+	}
 
 	/* customize area buttons */
 	#main-window[defaultfxtheme="true"] #ctraddon_cui-smallnavbut-button1,
