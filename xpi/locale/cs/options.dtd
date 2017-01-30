@@ -15,13 +15,13 @@
 <!ENTITY Ctr_windowcontrols	"Min/max/zavřít (Fullscreen)">
 <!ENTITY Ctr_rr				"Restartujte &brandShortName;!">
 <!ENTITY Ctr_window			"okno">
-<!ENTITY Ctr_centered		"Centered">
-<!ENTITY Ctr_page			"Page">
-<!ENTITY Ctr_position		"Position">
-<!ENTITY Ctr_appearance		"Appearance">
-<!ENTITY Ctr_left			"Left">
-<!ENTITY Ctr_right			"Right">
-<!ENTITY Ctr_privmode		"(private window)">
+<!ENTITY Ctr_centered		"Vycentrováno">
+<!ENTITY Ctr_page			"Strana">
+<!ENTITY Ctr_position		"Umístění">
+<!ENTITY Ctr_appearance		"Vzhled">
+<!ENTITY Ctr_left			"Vlevo">
+<!ENTITY Ctr_right			"Vpravo">
+<!ENTITY Ctr_privmode		"(anonymní okno)">
 
 <!ENTITY Ctr_cuibuttons		"Tlačítka">
 <!ENTITY Ctr_cuibutnormal	"Normální">
@@ -55,7 +55,7 @@
 <!ENTITY Ctr_tabwidthcla	"(klasický)">
 <!ENTITY Ctr_tabminheight	"Výška:">
 <!ENTITY Ctr_tabheightinfo	"Nízká čísla působí chyby v maximalizovaném módu!">
-<!ENTITY Ctr_ctrltabprev	"Preview tabs using 'Ctrl + Tab'">
+<!ENTITY Ctr_ctrltabprev	"Náhled panelu při použití 'Ctrl + Tab'">
 <!ENTITY Ctr_tabmaxwidth	"Max-šířka:">
 <!ENTITY Ctr_tabminwidth	"Min-šířka:">
 <!ENTITY Ctr_tabwidthinfo	"Šířka panelů (min-width a max-width) je určena doplňkem TabMixPlus">
@@ -63,10 +63,10 @@
 <!ENTITY Ctr_tabwidthinfo3	"Hodnoty pod 48px působí většinou chyby!">
 <!ENTITY Ctr_square_edges	"Hranaté horní rohy">
 <!ENTITY Ctr_tttitlebar		"Název panelu v &brandShortName; liště aplikace">
-<!ENTITY Ctr_ttoverflow		"Long tab titles">
-<!ENTITY Ctr_ttoverfl_def	"Default overflow effect">
-<!ENTITY Ctr_ttoverfl_no	"No overflow effect">
-<!ENTITY Ctr_tabtitle		"Tab title position">
+<!ENTITY Ctr_ttoverflow		"Dlouhé názvy panelů">
+<!ENTITY Ctr_ttoverfl_def	"Defaultní efekt přetečení">
+<!ENTITY Ctr_ttoverfl_no	"Bez efektu přetečení">
+<!ENTITY Ctr_tabtitle		"Pozice názvu panelu">
 <!ENTITY Ctr_tabinsertion	"Vložit související panel za aktuální">
 <!ENTITY Ctr_emptytfavico	"Zobrazit faviconu (v případě, že ji stránka nenabízí)">
 <!ENTITY Ctr_emptytfavico_n	"Žádná">
@@ -86,7 +86,7 @@
 
 <!ENTITY Ctr_hctpinfotab	"Některá nastavení nejsou kompatibilní s rozšířením 'Hide Caption Titlebar Plus'.">
 <!ENTITY Ctr_hctpinfoab		"Tlačítko aplikace není kompatibilní s rozšířením 'Hide Caption Titlebar Plus'.">
-<!ENTITY Ctr_tobainfotab	"The add-on 'Tabs on Bottom' is not compatible with '&Ctr_title;' and should be disabled. Use available '&Ctr_cuitabsnontop;' settings instead!">
+<!ENTITY Ctr_tobainfotab	"Rozšíření 'Tabs on Bottom' není kompatibilní s '&Ctr_title;' a bude vypnuto. Použijte náhradní '&Ctr_cuitabsnontop;' nastavení!">
 
 <!ENTITY Ctr_appbutton		"Tlačítko aplikace">
 <!ENTITY Ctr_appbutton0		"Tlačítko zakázáno">
@@ -133,13 +133,13 @@
 <!ENTITY Ctr_altoptionsd	"Výchozí vzhled">
 <!ENTITY Ctr_altoptionsp	"Alternativní vzhled">
 <!ENTITY Ctr_altoptionsw	"Otevřít stránku nastavení v okně">
-<!ENTITY Ctr_altoptions_hm	"horizontal menu">
-<!ENTITY Ctr_altoptions_vm	"vertical menu">
+<!ENTITY Ctr_altoptions_hm	"horizontální menu">
+<!ENTITY Ctr_altoptions_vm	"vertikální menu">
 <!ENTITY Ctr_altoptionsww	"Šířka">
 <!ENTITY Ctr_altoptionswh	"Výška">
 <!ENTITY Ctr_altoptionsi	"V simulaci nastavení už není dialogové okno, ale 'okno prohlížeče' s lištami je skryto. Volba 'Použít stávající stránku' přidávající URL stránek, otevřených v současném okně, je dostupná přes 'about:preferences'. Tlačítko 'Možnosti' je nahrazeno novým, aby bylo možné otevírat možnosti v okně.">
 <!ENTITY Ctr_options_rem	"Pamatovat poslední zvolenou kategorii">
-<!ENTITY Ctr_aboutpages		"General 'about:' pages: alternative appearance">
+<!ENTITY Ctr_aboutpages		"Hlavní 'about:' stránky: alternativní vzhled">
 <!ENTITY Ctr_svgfilters		"SVG barvy pro defaultní ikony tlačítek lišty">
 <!ENTITY Ctr_wincontrols	"Přesunutelné ovládací prvky okna v režimu celé obrazovky">
 <!ENTITY Ctr_puibuttonsep	"Oddělovač tlačítka menu">
@@ -148,7 +148,7 @@
 <!ENTITY Ctr_puibut_r_sep	"Vpravo">
 <!ENTITY Ctr_html5warning	"Varování HTML5 při full screenu">
 <!ENTITY Ctr_oldtoplevimg	"'Top level domain' obrázků: klasický vzhled">
-<!ENTITY Ctr_altalertbox	"'Alert box': alternativní vzhled">
+<!ENTITY Ctr_altalertbox	"'Okno s upozorněním': alternativní vzhled">
 <!ENTITY Ctr_emptygfavico	"Nahradit původní faviconu">
 <!ENTITY Ctr_mstatusbar		"Přesunutelný stavový řádek">
 <!ENTITY Ctr_mstatusbars4e	"Stavový řádek je nastaven pomocí rozšíření 'Status-4-Evar'">
@@ -163,9 +163,9 @@
 <!ENTITY Ctr_navlargeicons	"Velké ikony">
 <!ENTITY Ctr_nbisizedelay0	"Prodlevy před spuštěním">
 <!ENTITY Ctr_nbisizedelay	"ms (1000 ms = 1 sec)">
-<!ENTITY Ctr_findbar		"Findbar">
-<!ENTITY Ctr_findbar_hws	"Close findbar when scrolling page">
-<!ENTITY Ctr_findbar_width	"Findboxes width: ">
+<!ENTITY Ctr_findbar		"Hledání">
+<!ENTITY Ctr_findbar_hws	"Zavřít okno vyhledávání při rolování stránky">
+<!ENTITY Ctr_findbar_width	"Vyhledávání - šířka pole: ">
 <!ENTITY Ctr_findbarpos		"Lišta vyhledávání">
 <!ENTITY Ctr_findbar_def	"Výchozí umístění">
 <!ENTITY Ctr_findbar_top	"Nahoře">
@@ -180,13 +180,13 @@
 <!ENTITY Ctr_cpanelmenus	"Nabídky panelů: kompaktní zobrazení (záložky, historie atd.)">
 <!ENTITY Ctr_hidezoomres	"Přiblížit prvky na liště: skrýt tlačítko pro obnovení lupy">
 <!ENTITY Ctr_alt_newtabp	"Nový panel (about:newtab): alternativní vzhled">
-<!ENTITY Ctr_nosnippets		"Start page (about:home): hide snippets">
+<!ENTITY Ctr_nosnippets		"Startovní stránka (about:home): skrýt snippets">
 <!ENTITY Ctr_search_ui		"Vyhledávání">
 <!ENTITY Ctr_ctroldsearch	"Starý styl vyhledávání">
-<!ENTITY Ctr_ctroldsearchd	"Not compatible to other search add-ons!">
+<!ENTITY Ctr_ctroldsearchd	"Nekompatibilní s ostatními vyhledávacími rozšířeními!">
 <!ENTITY Ctr_ctroldsearchc	"Po vyhledávání vyčistit pole hledání">
 <!ENTITY Ctr_ctroldsearchr	"Po vyhledávání přejít k prvnímu vyhledávači v seznamu">
-<!ENTITY Ctr_ctrosearchdel	"delay">
+<!ENTITY Ctr_ctrosearchdel	"prodleva">
 <!ENTITY Ctr_search_oit		"Otevřít vyhledávání v novém panelu">
 <!ENTITY Ctr_osearch_meoit	"Klik kolečkem myši: prohledávat nové panely 'na pozadí'">
 <!ENTITY Ctr_osearch_iwidth	"Automatická šířka popup okna">
@@ -194,7 +194,7 @@
 <!ENTITY Ctr_osearch_dm		"Malá rozevírací šipka">
 <!ENTITY Ctr_addonmanager	"Správce rozšíření">
 <!ENTITY Ctr_alt_addonsp	"Stránka rozšíření lišty 'další info': alternativní vzhled">
-<!ENTITY Ctr_am_showrecup	"Always show 'Recent updates' category">
+<!ENTITY Ctr_am_showrecup	"Vždy zobrazit kategorii 'Poslední aktualizace'">
 <!ENTITY Ctr_alt_addonsm	"Správce rozšíření: alternativní vzhled">
 <!ENTITY Ctr_am_nowarning	"Správce rozšíření: skrývat varování">
 <!ENTITY Ctr_am_compact		"Správce doplňků: kompaktní vzhled">
@@ -207,16 +207,16 @@
 <!ENTITY Ctr_bmbutton		"Tlačítko menu záložek">
 <!ENTITY Ctr_hiderecentbm	"Záložky (bublina): skrýt posledně přidané záložky">
 <!ENTITY Ctr_hideeditbm		"Hvězdička záložek: skrýt bublinu (pokud stránka není v záložkách)">
-<!ENTITY Ctr_oldplacesbut	"Bookmark items and folders on toolbar: old appearance">
-<!ENTITY Ctr_dl_pm_drop		"Download buttons panel: show dropmarker">
+<!ENTITY Ctr_oldplacesbut	"Složka záložek v panelu: starý vzhled">
+<!ENTITY Ctr_dl_pm_drop		"Tlačítko panelu stahování: zobrazit šipečku">
 <!ENTITY Ctr_bmbutpanelm	"Popup: panel menu vzhledu">
 <!ENTITY Ctr_bmbunsortbm	"Popup: 'Netříděné záložky' v submenu">
 <!ENTITY Ctr_bmbunsortbm2	"Menu nad záložkami">
 <!ENTITY Ctr_bmbviewbmsb	"Popup: ukázat 'Zobrazit postranní panel'">
 <!ENTITY Ctr_bmbviewbmtb	"Popup: ukázat 'Zobrazit lištu'">
-<!ENTITY Ctr_bmbutnotb		"Popup: hide 'Bookmarks Toolbar' menu">
+<!ENTITY Ctr_bmbutnotb		"Popup: skrýt menu 'Lišta záložek'">
 <!ENTITY Ctr_bmbnounsort	"Popup: skrýt 'Netříděné záložky'">
-<!ENTITY Ctr_bmbutclpopup	"Popup: only show 'Bookmark this page' and bookmarks">
+<!ENTITY Ctr_bmbutclpopup	"Popup: zobrazit pouze 'Uložit stránku do záložek a záložky">
 <!ENTITY Ctr_bmbutnotext	"Skrýt návěští na liště záložek">
 <!ENTITY Ctr_skipprintpr	"Tlačítko tisku: přeskočit náhled tisku">
 <!ENTITY Ctr_tbconmenu		"Kontextové menu položek lišty: skrýt 'přesunout do nabídky', 'odebrat z lišty', 'obnovit/přidat do záložek všechny panely' a 'obnovit zavřený panel'">
@@ -236,7 +236,7 @@
 <!ENTITY Ctr_navthrobber2	"Zadejte url nebo ponechte prázdné">
 <!ENTITY Ctr_anewtaburl		"Adresa stránky v novém panelu">
 <!ENTITY Ctr_anewtaburlcb	"Volitelná adresa nového panelu (defaultně: 'about:newtab')">
-<!ENTITY Ctr_anewtaburlpcb	"Custom private new tab page url (default: 'about:privatebrowsing')">
+<!ENTITY Ctr_anewtaburlpcb	"Volitelná stránka anonymního okna (defaultně: 'about:privatebrowsing')">
 
 <!ENTITY Ctr_tab_tf_info1	"Podporovány jsou názvy barev, hex, rgb(a) a hsl(a) hodnoty.">
 <!ENTITY Ctr_tab_tf_info2	"Vstupy nejsou validovány!">
@@ -260,7 +260,7 @@
 <!ENTITY Ctr_italic			"Kurzíva">
 <!ENTITY Ctr_underlined		"Underlined">
 <!ENTITY Ctr_notabhov		"Zvoleným nastavením přepsat 'najetí myši'">
-<!ENTITY Ctr_tablowopa		"Reduce tab visibility">
+<!ENTITY Ctr_tablowopa		"Redukovat viditelnost panelu">
 <!ENTITY Ctr_tabc_act_tb	"Barva pozadí lišt">
 
 <!ENTITY Ctr_urlbar			"Adresní řádek">
@@ -274,8 +274,8 @@
 <!ENTITY Ctr_urlbardropm	"Přesunout šipku na poslední pozici vpravo">
 <!ENTITY Ctr_urlbardropm2	"Rozevírací šipka vždy viditelná">
 <!ENTITY Ctr_altreaderico	"Alternativní ikona 'Readeru'">
-<!ENTITY Ctr_hideurlzoom	"Hide zoom button (if present)">
-<!ENTITY Ctr_urlbardark		"Dark background color">
+<!ENTITY Ctr_hideurlzoom	"Zkrýt tlačítko zoom/lupa (pokud existuje)">
+<!ENTITY Ctr_urlbardark		"Tmavé pozadí">
 <!ENTITY Ctr_hideprbutton	"Nezobrazovat upozornění při blokování vyskakovacích oken">
 <!ENTITY Ctr_locsearchbw10	"Snížit výšku adresního řádku a vyhledávače (experimentální)">
 <!ENTITY Ctr_urlbar_ib		"Tlačítko identity webu">
@@ -298,14 +298,14 @@
 <!ENTITY Ctr_autocomplete	"Okno autokompletace">
 <!ENTITY Ctr_altautocompl	"Alternativní vzhled">
 <!ENTITY Ctr_autocompl_it	"Odstranit položky 'Vyhledat pomocí...' a 'Navštívit' (pokud se vyskytují)">
-<!ENTITY Ctr_acompl_search	"Show search engines">
-<!ENTITY Ctr_autocompl_hl	"Highlighting of text hits">
-<!ENTITY Ctr_autocompl_rhl	"Aero colors for highlighted results">
-<!ENTITY Ctr_autocompl_not	"Hide page title">
-<!ENTITY Ctr_autocompl_sep	"Show separator between results">
+<!ENTITY Ctr_acompl_search	"Zobrazit vyhledávací moduly">
+<!ENTITY Ctr_autocompl_hl	"Zvýraznit nalezené výsledky">
+<!ENTITY Ctr_autocompl_rhl	"Barvy Aero pro zvýrazněné výsledky">
+<!ENTITY Ctr_autocompl_not	"Skrýt titulek stránky">
+<!ENTITY Ctr_autocompl_sep	"Zobrazit oddělovač mezi výsledky">
 <!ENTITY Ctr_urlbar_uc		"Zakázat automatické doplňování">
 <!ENTITY Ctr_lbsugresi		"Zrušit limit pro výšku">
-<!ENTITY Ctr_cresultshcb	"Custom height limit: ">
+<!ENTITY Ctr_cresultshcb	"Limit uživatelského nastavení výšky: ">
 <!ENTITY Ctr_lbsugres		"Počet výsledků">
 <!ENTITY Ctr_lbsbradius		"Volitelné zaoblení">
 
@@ -327,17 +327,17 @@
 
 <!ENTITY Ctr_toolbars		"Nastavení lišt">
 <!ENTITY Ctr_dblclnewtab	"Dvojklik otevře nový panel">
-<!ENTITY Ctr_dblclnewtabdes	"Not suitable for all complete themes while Windows titlebar is active.">
+<!ENTITY Ctr_dblclnewtabdes	"Není vhodné pro všechna hotová témata vzhledu pokud je aktivní lišta Windows.">
 <!ENTITY Ctr_hidetbwot		"Skrývat lištu s pouze jedním panelem">
 <!ENTITY Ctr_hidetbwote		"Snížení prodlevy skrytí při spouštění">
 <!ENTITY Ctr_hidetbwote_i	"Může způsobit chyby na liště panelů">
-<!ENTITY Ctr_hidetbwote2	"Automatically adjust titlebar space">
+<!ENTITY Ctr_hidetbwote2	"Automaticky nastavit místo pro tlačítko">
 <!ENTITY Ctr_notabfog		"Odstranit zamlžené pozadí (Windows AeroGlass/8)">
 <!ENTITY Ctr_notabbg		"Odstranit barvu pozadí (Windows AeroGlass/8)">
 <!ENTITY Ctr_hightabpos		"Zmenšit prostor nad lištou nástrojů (pokud lze)">
-<!ENTITY Ctr_showalltabsb	"Always show 'all tabs' button">
+<!ENTITY Ctr_showalltabsb	"Vždy zobrazit tlačítko 'všechny panely'">
 <!ENTITY Ctr_alttabstb		"Alternativní barva pozadí">
-<!ENTITY Ctr_alttabstb2		"V maximalizovaném okně (tabs on top)">
+<!ENTITY Ctr_alttabstb2		"V maximalizovaném okně (panely nahoře)">
 
 <!ENTITY Ctr_altmenubar		"Přidat barvu pozadí (lišta záhlaví OS)">
 <!ENTITY Ctr_altmenubarpos	"Alternativní umístění">
@@ -345,7 +345,7 @@
 <!ENTITY Ctr_menubarnofog	"Odstranit barevné/zamlžené pozadí (Windows AeroGlass/8)">
 
 <!ENTITY Ctr_aerocolors		"Barvy 'Blue Aero' pro hlavní lištu a panely">
-<!ENTITY Ctr_aerocolorsg	"Grey-blue Aero colors">
+<!ENTITY Ctr_aerocolorsg	"Šedomodré barvy Aero">
 <!ENTITY Ctr_transpttbw10	"Lišta title/menu/tabs: odstranit barvu pozadí">
 <!ENTITY Ctr_transpttbew10	"Další tweaky pro některá témata OS">
 <!ENTITY Ctr_transptcw10	"Skrýt defaultní OS tlačítka min/max/close">
@@ -360,7 +360,7 @@
 <!ENTITY Ctr_nonavbarbg2	"Budou ovlivněna rozšíření 'Beyond Australis' a 'Slim Chrome'.">
 <!ENTITY Ctr_nonavborder	"Lišta záložek: přidat horní okraj lišty">
 <!ENTITY Ctr_nonavtbborder	"Vrchní lišty: odstranit okraje lišt">
-<!ENTITY Ctr_toptb_oldpad	"Top toolbars: old left and right padding">
+<!ENTITY Ctr_toptb_oldpad	"Horní lišty: postaru místo nalevo a napravo">
 <!ENTITY Ctr_hidesbclose	"Postranní panely: skrýt zavírací tlačítka">
 <!ENTITY Ctr_notextshadow	"Lišty: zrušit stínování textu lišty a panelu">
 <!ENTITY Ctr_chevronfix		"Navigační lišta: skrýt dvojšipku ('Další nástroje') na konci lišty">
@@ -394,12 +394,12 @@
 <!ENTITY Ctr_fx38pocket2	"Poznámka: Přetažením tlačítka 'Pocket' do 'nastavení lišty' před změnou této předvolby zde, se odstraní vstupy v 'Pocket' z menu záložky a čtečky.">
 <!ENTITY Ctr_e_loop			"Hello / Loop / Volání a konverzace">
 <!ENTITY Ctr_e_readermode	"Mód čtečky">
-<!ENTITY Ctr_e_geolocation	"Geolocation">
+<!ENTITY Ctr_e_geolocation	"Geolokace">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Ikona audio na panelech">
 <!ENTITY Ctr_e_containertab	"Container Tabs">
-<!ENTITY Ctr_e_findbarhl	"Findbar highlighting">
-<!ENTITY Ctr_fx50findbarhl	"Unchecking these preferences removes findbars 'highlight' features.">
+<!ENTITY Ctr_e_findbarhl	"Zvýraznění okna vyhledávání">
+<!ENTITY Ctr_fx50findbarhl	"Nezatržení předvolby odstraní zvýraznění vyhledávání.">
 <!ENTITY Ctr_e_flyweb		"Flyweb">
 
 
@@ -429,12 +429,12 @@
 <!ENTITY Ctr_menu_restart.label			"Restart">
 <!ENTITY Ctr_restartapp					"'Restart' in &brandShortName;-menu and file menu">
 <!ENTITY Ctr_ctrnewinv					"Underline new options for current &brandShortName; version">
-<!ENTITY Ctr_cssoverride				"Custom css code">
-<!ENTITY Ctr_cssoverride2				"Css code will not be checked for errors!">
+<!ENTITY Ctr_cssoverride				"Vlastní CSS kódy">
+<!ENTITY Ctr_cssoverride2				"CSS kód není kontrolován na chyby!">
 
-<!ENTITY Ctr_openInCurrentTab			"Open inputs in current tab">
-<!ENTITY Ctr_openInNewTab				"Open inputs in a new tab">
-<!ENTITY Ctr_openInNewWindow			"Open inputs in a new window">
+<!ENTITY Ctr_openInCurrentTab			"Otevřít vstupy v aktuálním panelu">
+<!ENTITY Ctr_openInNewTab				"Otevřít vstupy v novém panelu">
+<!ENTITY Ctr_openInNewWindow			"Otevřít vstupy v novém okně">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"Z">
