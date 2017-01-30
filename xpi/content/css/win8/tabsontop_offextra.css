@@ -44,7 +44,7 @@
 	  background: #f6f6f6 !important;
 	}
 	
-	#main-window[defaultfxtheme="true"][tabsontop="false"] #TabsToolbar:not(:-moz-lwtheme) {
+	#main-window[defaultfxtheme="true"][tabsontop="false"]:not([developertheme="true"]) #TabsToolbar:not(:-moz-lwtheme) {
 	  border-bottom: 1px solid hsla(209,67%,12%,0.25) !important;
 	}
 	

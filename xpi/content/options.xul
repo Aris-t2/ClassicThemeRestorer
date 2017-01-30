@@ -1427,6 +1427,7 @@
 			<groupbox>
 				<caption  label="&Ctr_searchbar;" class="ctraddon_topic"/>
 				<checkbox label="&Ctr_ctroldsearch;"	preference="ctraddon_ctroldsearch" id="ctraddon_pw_ctroldsearch" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(true);} else {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(false);}"/>
+				<description class="ctraddonsuboption">&Ctr_ctroldsearchd;</description>
 				<checkbox label="&Ctr_search_oit;"		preference="ctraddon_search_oit" id="ctraddon_pw_search_oit" />
 				<description class="ctraddonsuboption">about:config &gt;&gt; browser.search.openintab</description>
 				<hbox class="ctraddonsuboption">
@@ -1811,7 +1812,7 @@
 		<menuseparator/>
 		<menuitem class="menuitem-iconic" label="&Ctr_support_forum1;" id="ctr_pw_support_forum1" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('http://forums.mozillazine.org/viewtopic.php?t=2827985'); };"/>
 		<menuitem class="menuitem-iconic" label="&Ctr_support_forum2;" id="ctr_pw_support_forum2" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://www.camp-firefox.de/forum/viewtopic.php?t=108235'); };"/>
-		<menuitem class="menuitem-iconic" label="&Ctr_github_issues;" id="ctr_pw_support_git" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://github.com/Aris-t2/ClassicThemeRestorer/issues');};"/>
+		<menuitem class="menuitem-iconic" label="&Ctr_github_issues;" id="ctr_pw_support_git" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://github.com/Aris-t2/ClassicThemeRestorer/issues/320');};"/>
 		<menuseparator/>
 		<menuitem class="menuitem-iconic" label="aris-addons [@] gmx [.] net" id="ctr_pw_em_con"/>
 	</menupopup>
