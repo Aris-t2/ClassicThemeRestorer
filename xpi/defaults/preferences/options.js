@@ -255,7 +255,6 @@ pref("extensions.classicthemerestorer.contextitem",false);
 pref("extensions.classicthemerestorer.puictrbutton",false);
 pref("extensions.classicthemerestorer.cuibuttons",true);
 pref("extensions.classicthemerestorer.nodevtheme2",false);
-pref("extensions.classicthemerestorer.ctr_english",false);
 pref("extensions.classicthemerestorer.restartapp",true);
 pref("extensions.classicthemerestorer.ctrnewinv",true);
 pref("extensions.classicthemerestorer.pw_actidx_c",1);
@@ -265,6 +264,9 @@ pref("extensions.classicthemerestorer.pw_actidx_g",0);
 pref("extensions.classicthemerestorer.pw_actidx_tb",0);
 pref("extensions.classicthemerestorer.pw_actidx_lb",0);
 pref("extensions.classicthemerestorer.pw_actidx_sb",0);
+
+// Advanced
+pref("extensions.classicthemerestorer.oldfontgfx",false);
 
 // Tab color settings
 pref("extensions.classicthemerestorer.tabcolor_def",false);

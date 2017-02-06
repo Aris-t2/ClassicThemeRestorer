@@ -368,6 +368,8 @@
 		
 		<preference id="ctraddon_cssoverride"	name="extensions.classicthemerestorer.cssoverride" 	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_cssoverridec"	name="extensions.classicthemerestorer.cssoverridec" type="string"	instantApply="true"/>
+		
+		<preference id="ctraddon_oldfontgfx"	name="extensions.classicthemerestorer.oldfontgfx" 	type="bool"		instantApply="true"/>
 
 	</preferences>
 
@@ -970,13 +972,13 @@
 			<textbox preference="ctraddon_cappbutc2" id="ctraddon_pw_cappbutc2"/>
 			<colorpicker preference="ctraddon_cappbutc2" type="button" id="ctraddon_pw_cappbutc2cp"/>
 		</hbox>
+		<description class="ctraddonsuboption ctraddon_font1">&Ctr_privmode;</description>
 		<hbox align="center" class="ctraddonsuboption">
 			<textbox preference="ctraddon_cappbutpc1" id="ctraddon_pw_cappbutpc1"/>
 			<colorpicker preference="ctraddon_cappbutpc1" type="button" id="ctraddon_pw_cappbutpc1cp"/>
 			<textbox preference="ctraddon_cappbutpc2" id="ctraddon_pw_cappbutpc2"/>
 			<colorpicker preference="ctraddon_cappbutpc2" type="button" id="ctraddon_pw_cappbutpc2cp"/>
 		</hbox>
-		<description class="ctraddonsuboption ctraddon_font1">&Ctr_privmode;</description>
 			
 		<hbox align="center">
 			<description id="ctraddon_pw_appbutonclab" class="ctraddon_font1">&Ctr_appbutonclab;</description>
@@ -1744,6 +1746,11 @@
 	  <groupbox id="ctraddon_pw_flywebgb">
 		<caption  label="&Ctr_e_flyweb;" class="ctraddon_topic"/>
 		<checkbox label="about:config &gt;&gt; dom.flyweb.enabled" preference="ctraddon_flyweb" id="ctraddon_pw_flyweb" class="ctraddon_new_in_v50"/>
+	  </groupbox>
+
+	  <groupbox id="ctraddon_pw_oldfontgfxg">
+		<caption  label="&Ctr_e_oldfontgfx;" class="ctraddon_topic"/>
+		<checkbox label="about:config &gt;&gt; gfx.*.azure.backends &gt;&gt; direct2d1.1,cairo,skia" preference="ctraddon_oldfontgfx" id="ctraddon_pw_oldfontgfx" class="ctraddon_new_in_v52"  oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 	  </groupbox>
 	  
 	</box>

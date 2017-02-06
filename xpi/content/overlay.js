@@ -79,6 +79,7 @@ classicthemerestorerjs.ctr = {
   
   fullscreeduration:	false,
   html5warning:			false,
+  oldfontgfxOn:			false,
   moveStarIntoUrlbar:	false,
   moveFeedIntoUrlbar:	false,
   altnewtabpageOn:		false,
@@ -2683,6 +2684,25 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("invicoaddonbar",false);
 		  break;
 		  //inv icons END
+		  
+		  case "oldfontgfx":
+		  
+			if(classicthemerestorerjs.ctr.osstring=="WINNT"){
+				if (!branch.getBoolPref("oldfontgfx") && classicthemerestorerjs.ctr.appversion >= 52) {
+				  if (classicthemerestorerjs.ctr.oldfontgfxOn == true) {
+					try {
+					  Services.prefs.getBranch("gfx.content.azure.").setCharPref('backends','direct2d1.1,skia,cairo');
+					  Services.prefs.getBranch("gfx.canvas.azure.").setCharPref('backends','direct2d1.1,skia,cairo');
+					} catch(e){}
+				  }
+				} else {
+					classicthemerestorerjs.ctr.oldfontgfxOn = true;
+					try {
+					  Services.prefs.getBranch("gfx.content.azure.").setCharPref('backends','direct2d1.1,cairo,skia');
+					  Services.prefs.getBranch("gfx.canvas.azure.").setCharPref('backends','direct2d1.1,cairo,skia');
+					} catch(e){}
+				}
+			}
 		  
 		  case "toolsitem":
 			

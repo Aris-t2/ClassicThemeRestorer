@@ -141,7 +141,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_ib_nohovcolor').style.visibility = 'visible';
 	  document.getElementById('ctraddon_pw_verifiedcolors').style.visibility = 'visible';
 	}
-
+	
 	// ColorfulTabs info label
 	document.getElementById('ctraddon_coltabsinfo').style.visibility = 'collapse';
 
@@ -443,6 +443,10 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_dl_pm_drop').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_dl_pm_dropdes').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_toptb_oldpad').style.visibility = 'collapse';
+	}
+	
+	if (this.appversion < 52 || !this.oswindows) {
+	  document.getElementById('ctraddon_pw_oldfontgfxg').style.visibility = 'collapse';
 	}
 
 	if (this.appversion < 53) {
