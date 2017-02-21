@@ -17,11 +17,11 @@
 <!ENTITY Ctr_window			"la finestra">
 <!ENTITY Ctr_centered		"Centrato">
 <!ENTITY Ctr_page			"Pagina">
-<!ENTITY Ctr_position		"Position">
-<!ENTITY Ctr_appearance		"Appearance">
-<!ENTITY Ctr_left			"Left">
-<!ENTITY Ctr_right			"Right">
-<!ENTITY Ctr_privmode		"(private window)">
+<!ENTITY Ctr_position		"Posizione">
+<!ENTITY Ctr_appearance		"Aspetto">
+<!ENTITY Ctr_left			"Sinistra">
+<!ENTITY Ctr_right			"Destra">
+<!ENTITY Ctr_privmode		"(fiestra anonima)">
 
 <!ENTITY Ctr_cuibuttons		"Pulsanti">
 <!ENTITY Ctr_cuibutnormal	"Normali">
@@ -63,10 +63,10 @@
 <!ENTITY Ctr_tabwidthinfo3	"Valori inferiori a 48px provocheranno anomalie nella maggior parte dei casi!">
 <!ENTITY Ctr_square_edges	"Angoli superiori spigolosi">
 <!ENTITY Ctr_tttitlebar		"Titolo scheda nella barra del titolo di &brandShortName;">
-<!ENTITY Ctr_ttoverflow		"Long tab titles">
-<!ENTITY Ctr_ttoverfl_def	"Default overflow effect">
-<!ENTITY Ctr_ttoverfl_no	"No overflow effect">
-<!ENTITY Ctr_tabtitle		"Tab title position">
+<!ENTITY Ctr_ttoverflow		"Titoli delle schede estesi">
+<!ENTITY Ctr_ttoverfl_def	"Effetto di overflow predefinito">
+<!ENTITY Ctr_ttoverfl_no	"Nessun effetto di overflow">
+<!ENTITY Ctr_tabtitle		"Posizione del titolo della scheda">
 <!ENTITY Ctr_tabinsertion	"Inserisci la scheda correlata dopo la scheda corrente">
 <!ENTITY Ctr_emptytfavico	"Mostra favicon (quando un sito ne è privo)">
 <!ENTITY Ctr_emptytfavico_n	"Nessuna">
@@ -133,8 +133,8 @@
 <!ENTITY Ctr_altoptionsd	"Aspetto predefinito">
 <!ENTITY Ctr_altoptionsp	"Aspetto alternativo">
 <!ENTITY Ctr_altoptionsw	"Aprire la pagina Opzioni in una finestra">
-<!ENTITY Ctr_altoptions_hm	"horizontal menu">
-<!ENTITY Ctr_altoptions_vm	"vertical menu">
+<!ENTITY Ctr_altoptions_hm	"menu orizzontale">
+<!ENTITY Ctr_altoptions_vm	"menu verticale">
 <!ENTITY Ctr_altoptionsww	"Larghezza">
 <!ENTITY Ctr_altoptionswh	"Altezza">
 <!ENTITY Ctr_altoptionsi	"La finestra delle opzioni non si presenta più come un dialogo ma come una finestra del browser con tutte le barre degli strumenti nascoste. La caratteristica 'Usa la pagina corrente' aggiunge gli url delle pagine aperte nella finestra corrente, che in questo caso è solo 'about:preferences'. Il pulsante delle 'opzioni' è sostituito da uno nuovo che è in grado di aprire le opzioni in una finestra.">
@@ -183,7 +183,7 @@
 <!ENTITY Ctr_nosnippets		"Pagina iniziale (about:home): nascondi gli snippet">
 <!ENTITY Ctr_search_ui		"Ricerca">
 <!ENTITY Ctr_ctroldsearch	"Ricerca vecchio stile">
-<!ENTITY Ctr_ctroldsearchd	"Not compatible to other search add-ons!">
+<!ENTITY Ctr_ctroldsearchd	"Non compatibile con altri componenti di ricerca!">
 <!ENTITY Ctr_ctroldsearchc	"Pulisci la casella di ricerca dopo aver effettuato la ricerca">
 <!ENTITY Ctr_ctroldsearchr	"Ripristina il primo motore di ricerca dell'elenco dopo aver effettuato la ricerca">
 <!ENTITY Ctr_ctrosearchdel	"Ritardo esecuzione in ms">
@@ -214,9 +214,9 @@
 <!ENTITY Ctr_bmbunsortbm2	"Menu sopra i segnalibri">
 <!ENTITY Ctr_bmbviewbmsb	"Mostra 'Visualizza barra laterale segnalibri'">
 <!ENTITY Ctr_bmbviewbmtb	"Mostra 'Visualizza Barra dei segnalibri'">
-<!ENTITY Ctr_bmbutnotb		"Popup: hide 'Bookmarks Toolbar' menu">
+<!ENTITY Ctr_bmbutnotb		"Nascondi il menu 'Barra dei segnalibri'">
 <!ENTITY Ctr_bmbnounsort	"Nascondi 'Segnalibri non catalogati'">
-<!ENTITY Ctr_bmbutclpopup	"Popup: only show 'Bookmark this page' and bookmarks">
+<!ENTITY Ctr_bmbutclpopup	"Mostra solamente 'Aggiungi pagina ai segnalibri' e i segnalibri">
 <!ENTITY Ctr_bmbutnotext	"Nascondi etichetta della barra dei segnalibri">
 <!ENTITY Ctr_skipprintpr	"Pulsante stampa: salta l’anteprima di stampa">
 <!ENTITY Ctr_tbconmenu		"Menu contestuale della barra degli strumenti: nascondi 'Sposta nel menu', 'Rimuovi dalla barra degli strumenti', 'Ricarica/ tutte le schede nei segnalibri' e 'Riapri scheda chiusa'">
@@ -275,7 +275,7 @@
 <!ENTITY Ctr_urlbardropm2	"Dropmarker sempre visibile">
 <!ENTITY Ctr_altreaderico	"Icone alternative della modalità di lettura">
 <!ENTITY Ctr_hideurlzoom	"Nascondi il pulsante dello zoom (se presente)">
-<!ENTITY Ctr_urlbardark		"Dark background color">
+<!ENTITY Ctr_urlbardark		"Colore di sfondo scuro">
 <!ENTITY Ctr_hideprbutton	"Nascondi l’icona di notifica quando un popup viene bloccato">
 <!ENTITY Ctr_locsearchbw10	"Riduci l'altezza delle barre degli indirizzi e di ricerca (sperimentale)">
 <!ENTITY Ctr_urlbar_ib		"Pulsante delle connessioni sicure">
@@ -360,7 +360,7 @@
 <!ENTITY Ctr_nonavbarbg2	"Ha effetto su tutte le barre del componente 'Beyond Australis' di Slim Chrome.">
 <!ENTITY Ctr_nonavborder	"Aggiungi bordo superiore alla barra dei segnalibri">
 <!ENTITY Ctr_nonavtbborder	"Rimuovi i bordi alle barre degli strumenti posizionate in alto">
-<!ENTITY Ctr_toptb_oldpad	"Top toolbars: old left and right padding">
+<!ENTITY Ctr_toptb_oldpad	"Barre in alto: margini destro e sinistro classici">
 <!ENTITY Ctr_hidesbclose	"Barre laterali: nascondi il pulsante di chiusura">
 <!ENTITY Ctr_notextshadow	"Barre degli strumenti: nascondi ombreggiatura del testo delle barre e delle schede">
 <!ENTITY Ctr_chevronfix		"Barra di navigazione: nascondi la doppia freccia ('Altri strumenti') all’estremità ">
@@ -401,7 +401,7 @@
 <!ENTITY Ctr_e_findbarhl	"Evidenziamento della barra per la ricerca nel testo">
 <!ENTITY Ctr_fx50findbarhl	"Deselezionando queste preferenze vengono rimosse le caratteristiche di evidenziamento della barra per la ricerca nel testo.">
 <!ENTITY Ctr_e_flyweb		"Flyweb">
-<!ENTITY Ctr_e_oldfontgfx	"Old font rendering">
+<!ENTITY Ctr_e_oldfontgfx	"Rendering classico dei caratteri">
 
 
 <!ENTITY Ctr_pw_settings	"Impostazioni">
@@ -430,8 +430,8 @@
 <!ENTITY Ctr_menu_restart.label			"Riavvia">
 <!ENTITY Ctr_restartapp					"'Riavvia' nel menu del Pulsante &brandShortName; e nel menu File">
 <!ENTITY Ctr_ctrnewinv					"Sottolinea le nuove opzioni della versione corrente di &brandShortName;">
-<!ENTITY Ctr_cssoverride				"Custom css code">
-<!ENTITY Ctr_cssoverride2				"Css code will not be checked for errors!">
+<!ENTITY Ctr_cssoverride				"Codice css personalizzato">
+<!ENTITY Ctr_cssoverride2				"Il codice css non sarà verificato per la presenza di errori!">
 
 <!ENTITY Ctr_openInCurrentTab			"Apri l'indirizzo nella scheda corrente">
 <!ENTITY Ctr_openInNewTab				"Apri l'indirizzo in una nuova scheda">

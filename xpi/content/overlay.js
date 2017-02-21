@@ -128,6 +128,7 @@ classicthemerestorerjs.ctr = {
 	try{if (this.appversion >= 51) document.getElementById("main-window").setAttribute('fx51plus',true);} catch(e){}
 	try{if (this.appversion >= 52) document.getElementById("main-window").setAttribute('fx52plus',true);} catch(e){}
 	try{if (this.appversion >= 53) document.getElementById("main-window").setAttribute('fx53plus',true);} catch(e){}
+	try{if (this.appversion >= 54) document.getElementById("main-window").setAttribute('fx54plus',true);} catch(e){}
 
 	// add CTR version number to '#main-window' node, so other add-ons/themes can easier distinguish between versions
 	AddonManager.getAddonByID('ClassicThemeRestorer@ArisT2Noia4dev', function(addon) {
@@ -2687,8 +2688,8 @@ classicthemerestorerjs.ctr = {
 		  
 		  case "oldfontgfx":
 		  
-			if(classicthemerestorerjs.ctr.osstring=="WINNT"){
-				if (!branch.getBoolPref("oldfontgfx") && classicthemerestorerjs.ctr.appversion >= 52) {
+			if(classicthemerestorerjs.ctr.osstring=="WINNT" && classicthemerestorerjs.ctr.appversion >= 52){
+				if (!branch.getBoolPref("oldfontgfx")) {
 				  if (classicthemerestorerjs.ctr.oldfontgfxOn == true) {
 					try {
 					  Services.prefs.getBranch("gfx.content.azure.").setCharPref('backends','direct2d1.1,skia,cairo');
@@ -3409,7 +3410,6 @@ classicthemerestorerjs.ctr = {
 
   },
   
-  
   // forward new private browsing tab to custom url
   newPrivateTabPageForwarding: function() {
 	  
@@ -3417,23 +3417,29 @@ classicthemerestorerjs.ctr = {
 		
 	  var newURLp = classicthemerestorerjs.ctr.prefs.getCharPref("anewtaburlp");
 	  var defaultNewTabPage = 'about:newtab';
+	  var defaultPrivateNewTabPage = 'about:privatebrowsing';
+	  
+	  if (newURLp=='') newURLp=defaultPrivateNewTabPage;
 				
-	  if (newURLp=='') newURLp='about:privatebrowsing';
+	  if (newURLp==defaultPrivateNewTabPage) {
+		classicthemerestorerjs.ctr.loadUnloadCSS("anewtaburlpcb",false);
+	  } else classicthemerestorerjs.ctr.loadUnloadCSS("anewtaburlpcb",true);
 	  
 	  try{
 		setTimeout(function(){
-		  if(gBrowser.currentURI.spec=="about:privatebrowsing" ||
-			(gBrowser.currentURI.spec==defaultNewTabPage && 
-			  document.getElementById("main-window").hasAttribute("privateTab-selectedTabIsPrivate"))
+		  if(
+		    (gBrowser.currentURI.spec==defaultPrivateNewTabPage && newURLp!=defaultPrivateNewTabPage)
+			||
+			(document.getElementById("main-window").hasAttribute("privateTab-selectedTabIsPrivate") &&
+			  gBrowser.currentURI.spec==defaultNewTabPage && defaultNewTabPage!=newURLp
+			)
 		  ) openUILinkIn(newURLp, "current");
-		},500);
+		},100);
 	  } catch(e){}
+
 	}
-	
-	window.addEventListener("TabClose", _newPrivateTabPageForwarding, false);  
-	window.addEventListener("TabOpen", _newPrivateTabPageForwarding, false);
-	window.addEventListener("load", _newPrivateTabPageForwarding, false);
-	window.addEventListener("DOMContentLoaded", _newPrivateTabPageForwarding, false);
+
+	window.addEventListener("TabAttrModified", _newPrivateTabPageForwarding, false);
 
   },
   
