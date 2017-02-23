@@ -611,6 +611,18 @@
         ]]>
       </constructor>
 
+      <method name="_cleanup">
+        <body>
+        <![CDATA[
+          this.removeAttribute("url");
+          this.removeAttribute("image");
+          this.removeAttribute("title");
+          this.removeAttribute("text");
+          this.removeAttribute("displayurl");
+        ]]>
+        </body>
+      </method>
+
       <property name="label" readonly="true">
         <getter>
           <![CDATA[
@@ -742,6 +754,9 @@
         <parameter name="aNoEmphasis"/>
         <body>
           <![CDATA[
+          if (!aDescriptionElement) {
+            return;
+          }
           while (aDescriptionElement.hasChildNodes())
             aDescriptionElement.removeChild(aDescriptionElement.firstChild);
 
@@ -770,6 +785,7 @@
           let next;
           let start = 0;
           let len = indices.length;
+
           for (let i = indices[0] == 0 ? 1 : 0; i < len; i++) {
             next = indices[i];
             let spanText = text.substr(start, next - start);
@@ -920,17 +936,58 @@
         </body>
       </method>
 
+      <method name="_onChanged">
+        <body>
+          <![CDATA[
+            let iconChanged = item.adjustSiteIconStart(this.popup._siteIconStart);
+
+            if (iconChanged) {
+              item.handleOverUnderflow();
+            }
+          ]]>
+        </body>
+      </method>
+
+
+      <method name="_reuseAcItem">
+        <body>
+          <![CDATA[
+            let action = this._parseActionUrl(this.getAttribute("url"));
+            let popup = this.parentNode.parentNode;
+
+            if (!action ||
+                action.type != "searchengine" ||
+                !popup.overrideSearchEngineName ||
+                action.params.engineName == popup.overrideSearchEngineName) {
+
+              this.collapsed = false;
+              this.adjustSiteIconStart(popup._siteIconStart);
+              this.handleOverUnderflow();
+
+              return true;
+            }
+
+            return false;
+          ]]>
+        </body>
+      </method>
 
 
       <method name="_adjustAcItem">
         <body>
           <![CDATA[
+          this.setAttribute("url", this.getAttribute("ac-value"));
+          this.setAttribute("image", this.getAttribute("ac-image"));
+          this.setAttribute("title", this.getAttribute("ac-comment"));
+          this.setAttribute("text", this.getAttribute("ac-text"));
+
           let popup = this.parentNode.parentNode;
           if (!popup.popupOpen) {
             this._removeMaxWidths();
           }
 
           let title = this.getAttribute("title");
+          let titleLooksLikeUrl = false;
 
           let displayUrl;
           let originalUrl = this.getAttribute("url");
@@ -951,7 +1008,7 @@
             action = {
               type: "visiturl",
               params: {
-                url: originalUrl,
+                url: this.getAttribute("title"),
               },
             };
           }
@@ -1021,8 +1078,13 @@
               emphasiseUrl = false;
               displayUrl = this._unescapeUrl(action.params.url);
               title = displayUrl;
+              titleLooksLikeUrl = true;
               let visitStr = this._stringBundle.GetStringFromName("visit");
               this._setUpDescription(this._actionText, visitStr, true);
+            } else if (action.type == "extension") {
+              let content = action.params.content;
+              displayUrl = content;
+              this._setUpDescription(this._actionText, content, true);
             }
           }
 
@@ -1033,7 +1095,6 @@
                       originalUrl;
             displayUrl = this._unescapeUrl(url);
           }
-
           if (popup.textRunsMaxLen) {
             displayUrl = displayUrl.substr(0, popup.textRunsMaxLen);
           }
@@ -1041,8 +1102,9 @@
 
           if (!title) {
             title = displayUrl;
+            titleLooksLikeUrl = true;
             try {
-              let uri = Services.io.newURI(originalUrl, null, null);
+              let uri = Services.io.newURI(originalUrl);
               if (uri.host)
                 title = uri.host;
             } catch (e) {}
@@ -1084,13 +1146,18 @@
 
           this.setAttribute("type", type);
 
+          if (titleLooksLikeUrl) {
+            this._titleText.setAttribute("lookslikeurl", "true");
+          } else {
+            this._titleText.removeAttribute("lookslikeurl");
+          }
+
           if (Array.isArray(title)) {
             if (popup.textRunsMaxLen) {
               title = title.map(t => t.substr(0, popup.textRunsMaxLen));
             }
             this._setUpEmphasisedSections(this._titleText, title);
           } else {
-
             if (popup.textRunsMaxLen) {
               title = title.substr(0, popup.textRunsMaxLen);
             }
@@ -1151,10 +1218,11 @@
           let separatorURLActionWidth =
             separatorRect.width + Math.max(urlRect.width, actionRect.width);
 
-          let extraPadding = 30;
+		  let extraPadding = 30;
           let dir = this.getAttribute("dir");
           let titleStart = dir == "rtl" ? itemRect.right - titleRect.right
                                         : titleRect.left - itemRect.left;
+
           let itemWidth = itemRect.width - titleStart - extraPadding;
 
           if (this._tags.hasAttribute("empty")) {
@@ -1187,12 +1255,11 @@
               this._titleText.style.maxWidth = (-62 + itemRect.width) + "px";
               this._tagsText.style.maxWidth = tagsMaxWidth + "px";
             }
-
             let titleMaxWidth = Math.max(
               (titleTagsMaxWidth - tagsRect.width),
               titleTagsMaxWidth * 0.33
             );
-
+			
             this._urlText.style.maxWidth = (-62 + itemRect.width) + "px";
             this._actionText.style.maxWidth = (-62 + itemRect.width) + "px";
           }
@@ -1217,7 +1284,7 @@
           let [, type, params] = aUrl.match(/^moz-action:([^,]+),(.*)$/);
 
           let action = {
-            type: type,
+            type,
           };
 
           try {
@@ -1236,4 +1303,5 @@
       </method>
     </implementation>
   </binding>
+ 
   </bindings>

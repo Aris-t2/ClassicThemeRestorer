@@ -719,3 +719,9 @@
 	  padding: unset !important;
 	  margin: unset !important;
 	}
+	
+	/* temp fix for Mozdevs menu button f-up */
+	/*#main-window[fx54plus="true"] :-moz-any(.toolbarbutton-1,#ctraddon_appbutton2):-moz-any([type="menu"],[type="menu-button"]) :-moz-any(dropmarker,.toolbarbutton-menu-dropmarker){
+	  background: none !important;
+	  border: none !important;
+	}*/

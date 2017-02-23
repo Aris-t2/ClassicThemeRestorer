@@ -38,6 +38,18 @@
 	#main-window[fx51plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings51.xml#autocomplete-richlistitem") !important;
 	}
+	
+	/* Firefox 54 popup code */
+	#main-window[fx54plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete),
+	#main-window[fx54plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
+	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings54.xml#urlbar-rich-result-popup") !important;
+	}
+
+	/* Firefox 54 richlist item code */
+	#main-window[fx54plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem,
+	#main-window[fx54plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
+	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings54.xml#autocomplete-richlistitem") !important;
+	}
 
 	/* restyle popup items */
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem,
@@ -118,7 +130,7 @@
 	
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem #ibox-spacer,
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem #ibox-spacer {
-	  width:100000px !important;
+	  width: 100000px !important;
 	}
 
 }
