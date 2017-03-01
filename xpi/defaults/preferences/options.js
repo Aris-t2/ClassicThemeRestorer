@@ -74,6 +74,7 @@ pref("extensions.classicthemerestorer.ctrosearchct",0);
 pref("extensions.classicthemerestorer.ctroldsearchr",false);
 pref("extensions.classicthemerestorer.ctrosearchrt",0);
 pref("extensions.classicthemerestorer.osearch_meoit",false);
+pref("extensions.classicthemerestorer.osearch_meoit2",true);
 pref("extensions.classicthemerestorer.search_ant",true);
 pref("extensions.classicthemerestorer.search_abl",true);
 pref("extensions.classicthemerestorer.search_aho",true);

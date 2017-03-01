@@ -479,6 +479,11 @@
             if (aEvent.button == 2)
               return;
             where = whereToOpenLink(aEvent, false, true);
+			
+			if (aEvent.button == 1) {
+              if(!Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("osearch_meoit2"))
+			    where = "tab-background";
+			}
           }
           else {
             if ((aEvent instanceof KeyboardEvent) && aEvent.altKey) {

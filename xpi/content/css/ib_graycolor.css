@@ -43,6 +43,30 @@
 	  border-image: unset !important;
 	}
 	
+	#main-window[developertheme="true"][lwthemetextcolor="bright"] #urlbar-wrapper #urlbar[pageproxystate="invalid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked),
+	#main-window[developertheme="true"][lwthemetextcolor="bright"] #urlbar-wrapper #urlbar[pageproxystate="valid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked), 
+	#main-window[developertheme="true"][lwthemetextcolor="bright"] #urlbar-wrapper #urlbar[pageproxystate="valid"] .chromeUI {
+      background: linear-gradient(#505050,#424242) !important;
+	  color: white !important;
+	}
+	
+	#main-window[developertheme="true"][lwthemetextcolor="bright"] #urlbar-wrapper #urlbar[pageproxystate="invalid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked):hover,
+	#main-window[developertheme="true"][lwthemetextcolor="bright"] #urlbar-wrapper #urlbar[pageproxystate="valid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked):hover,
+	#main-window[developertheme="true"][lwthemetextcolor="bright"] #urlbar-wrapper #urlbar[pageproxystate="valid"] .chromeUI:hover {
+	  background: linear-gradient(#5d5d5d,#505050) !important;
+	}
+
+	#main-window[developertheme="true"][lwthemetextcolor="bright"] #urlbar-wrapper #urlbar[pageproxystate="invalid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked)[open="true"],
+	#main-window[developertheme="true"][lwthemetextcolor="bright"] #urlbar-wrapper #urlbar[pageproxystate="invalid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked):hover:active,
+	#main-window[developertheme="true"][lwthemetextcolor="bright"] #urlbar-wrapper #urlbar[pageproxystate="valid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked)[open="true"],
+	#main-window[developertheme="true"][lwthemetextcolor="bright"] #urlbar-wrapper #urlbar[pageproxystate="valid"] .unknownIdentity:not(.mixedDisplayContentLoadedActiveBlocked):hover:active,
+	#main-window[developertheme="true"][lwthemetextcolor="bright"] #urlbar-wrapper #urlbar[pageproxystate="valid"] .chromeUI[open="true"],
+	#main-window[developertheme="true"][lwthemetextcolor="bright"] #urlbar-wrapper #urlbar[pageproxystate="valid"] .chromeUI:hover:active {
+	  background: linear-gradient(#616161,#505050) !important;
+	  box-shadow: 0 1px 1px hsla(0,0%,48%,1.0) inset,
+				  0 1px 3px 1px hsla(0,0%,48%,1.0) inset !important;
+	}
+	
 	@media (-moz-os-version: windows-win10) {
 		.urlbar-textbox-container {
 		  margin-top: -1px !important;

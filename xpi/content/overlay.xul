@@ -835,6 +835,12 @@
                    title="&brandShortName;">
       </toolbaritem>
 
+	  <!--### creates a movable private browsing item ###-->
+	  <toolbaritem id="ctraddon_pmask-item"
+                   class="chromeclass-toolbar-additional"
+                   removable="true"
+				   overflows="false">
+      </toolbaritem>
 
 	  <!--### navigation throbber / animation button ###-->			   
 	  <toolbaritem id="ctraddon_navigator-throbber"
