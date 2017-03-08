@@ -947,6 +947,7 @@ classicthemerestorerjso.ctr = {
     document.getElementById('ctraddon_pw_osearch_dm').disabled = which;
     document.getElementById('ctraddon_pw_osearch_iwidth').disabled = which;
     document.getElementById('ctraddon_pw_osearch_meoit').disabled = which;
+	document.getElementById('ctraddon_pw_osearch_meoit2').disabled = which;
 	document.getElementById('ctraddon_pw_osearch_cwidth').disabled = which;
 	document.getElementById('ctraddon_pw_search_ant').disabled = which;
 	document.getElementById('ctraddon_pw_search_abl').disabled = which;
