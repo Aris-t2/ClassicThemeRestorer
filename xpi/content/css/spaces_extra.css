@@ -12,6 +12,11 @@
 	toolbarpaletteitem[place="palette"] > toolbarspacer{
 	  background: url("chrome://classic_theme_restorer/content/images/space1.png") center no-repeat;
 	}
+	
+	toolbarpaletteitem[place="palette"] > toolbarseparator{
+	  background: url("chrome://classic_theme_restorer/content/images/separator.png") center no-repeat;
+	}
+	
 	/* on toolbar */
 	toolbarpaletteitem[place="toolbar"] > toolbarspring{
 	  background: url("chrome://classic_theme_restorer/content/images/flex_space.png") white center no-repeat;
@@ -64,6 +69,29 @@
 	  height: 67px !important;
       width: 89px !important;
       padding-top: 38px !important;
+	}
+	
+	/* Fix separator visibility on Firefox 54+ and Windows Classic visual style */
+	@media (-moz-windows-classic) {
+		#main-window[fx54plus="true"] toolbar toolbarseparator{
+		  min-width: 5px !important;
+		  width: 5px !important;
+		  background: url("chrome://classic_theme_restorer/content/images/separator.png") center no-repeat !important;
+		  background-size: 5px 80% !important;
+		}
+		
+		#main-window[fx54plus="true"] toolbarpaletteitem[place="palette"] > toolbarseparator{
+		  min-width: 5px !important;
+		  width: 5px !important;
+		}
+		
+		#main-window[fx54plus="true"] toolbarpaletteitem[place="toolbar"] > toolbarseparator{
+		  background: url("chrome://classic_theme_restorer/content/images/separator.png") center no-repeat !important;
+		}
+		
+		#main-window[fx54plus="true"]:-moz-lwtheme-brighttext toolbarpaletteitem[place="toolbar"] > toolbarseparator{
+		  background: url("chrome://classic_theme_restorer/content/images/separator.png") center no-repeat !important;
+		}
 	}
 
 }

@@ -25,6 +25,11 @@
 	  background:url("chrome://global/skin/throbber/throbber-spin.png") center no-repeat !important;
 	}
 	
+	#main-window[currenttheme^="LavaFox"] #navigator-toolbox #addon-bar,
+	#main-window[currenttheme^="BlackFox"] #navigator-toolbox #addon-bar {
+	  display:none !important;
+	}
+	
 	/* Support for Alfred Kaysers Themes 'Walnut, Walnut2, Littlefox, Nautipolis, Metal, Microfox & Bricks' */
 	#main-window[currenttheme="walnut"] toolbar #ctraddon_back-button .toolbarbutton-multiline-text,
 	#main-window[currenttheme="walnut"] toolbar #ctraddon_forward-button .toolbarbutton-multiline-text,

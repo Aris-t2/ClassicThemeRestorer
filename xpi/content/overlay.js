@@ -2278,11 +2278,35 @@ classicthemerestorerjs.ctr = {
 		  case "bmbutnotb":
 			if (branch.getBoolPref("bmbutnotb")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbutnotb",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbutnotb",false);
+			  
+			if (branch.getBoolPref("bmbutnotb") && branch.getBoolPref("bmbnounsort")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbutnotbuns",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbutnotbuns",false);
+			  
+			// for MacOSX: hide item using js instead of css or it won't work
+			if (classicthemerestorerjs.ctr.osstring=="Darwin"){
+				if (branch.getBoolPref("bmbutnotb")) {
+					setTimeout(function(){
+					  try{
+						document.getElementById("bookmarksToolbarFolderMenu").collapsed = true;
+					  } catch(e){}
+					},500);
+				}
+				else {
+				  setTimeout(function(){
+					try{
+					  document.getElementById("bookmarksToolbarFolderMenu").collapsed = false;
+					} catch(e){}
+				  },500);
+				}
+			}
 		  break;
 		  
 		  case "bmbnounsort":
 			if (branch.getBoolPref("bmbnounsort")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbnounsort",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbnounsort",false);
+			  
+			if (branch.getBoolPref("bmbutnotb") && branch.getBoolPref("bmbnounsort")) classicthemerestorerjs.ctr.loadUnloadCSS("bmbutnotbuns",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("bmbutnotbuns",false);
 			  
 			// for MacOSX: hide item using js instead of css or it won't work
 			if (classicthemerestorerjs.ctr.osstring=="Darwin"){
@@ -4440,6 +4464,7 @@ classicthemerestorerjs.ctr = {
 		case "bmbviewbmtb": 		manageCSS("bmbut_bmbviewbmtb.css");		break;
 		case "bmbutnotb": 			manageCSS("bmbut_bmbnotb.css");			break;
 		case "bmbnounsort": 		manageCSS("bmbut_bmbnounsort.css");		break;
+		case "bmbutnotbuns": 		manageCSS("bmbut_bmbutnotbuns.css");	break;
 		case "bmbutclpopup": 		manageCSS("bmbut_cleanpopup.css");		break;
 		case "bmbutnotext": 		manageCSS("bmbut_no_label.css");		break;
 		case "tbconmenu": 			manageCSS("tbconmenu.css");				break;
