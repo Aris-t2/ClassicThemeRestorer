@@ -122,6 +122,8 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_altoptions_list').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_urlbardark').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_searchbardark').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_altdlprogbar').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_altalertbox').style.visibility = 'collapse';
 	} else {
 		document.getElementById('ctraddon_pw_themes_note').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_special_font').style.visibility = 'collapse';
@@ -140,6 +142,8 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_ib_graycolor').style.visibility = 'visible';
 	  document.getElementById('ctraddon_pw_ib_nohovcolor').style.visibility = 'visible';
 	  document.getElementById('ctraddon_pw_verifiedcolors').style.visibility = 'visible';
+	  document.getElementById('ctraddon_pw_altdlprogbar').style.visibility = 'visible';
+	  document.getElementById('ctraddon_pw_altalertbox').style.visibility = 'visible';
 	}
 	
 	// ColorfulTabs info label
@@ -445,10 +449,15 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_toptb_oldpad').style.visibility = 'collapse';
 	}
 	
-	if (this.appversion < 52 || !this.oswindows) {
+	if (!this.oswindows) {
 	  document.getElementById('ctraddon_pw_oldfontgfxg').style.visibility = 'collapse';
 	}
-
+	
+	if (this.appversion < 52) {
+	  document.getElementById('ctraddon_pw_oldfontgfxg').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_altdlprogbar').style.visibility = 'collapse';
+	}
+	
 	if (this.appversion < 53) {
 	  document.getElementById('ctraddon_pw_ttoverflow').style.visibility = 'collapse';
 	}

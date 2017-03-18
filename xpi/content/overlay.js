@@ -1005,6 +1005,12 @@ classicthemerestorerjs.ctr = {
 			}
 
 		  break;
+		  
+		  case "altdlprogbar":
+			if (branch.getBoolPref("altdlprogbar") && classicthemerestorerjs.ctr.appversion >= 52
+				&& classicthemerestorerjs.ctr.fxdefaulttheme==true) classicthemerestorerjs.ctr.loadUnloadCSS("altdlprogbar",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("altdlprogbar",false);
+		  break;
 
 		  case "altalertbox":
 			if (branch.getBoolPref("altalertbox")
@@ -4363,6 +4369,7 @@ classicthemerestorerjs.ctr = {
 		case "puib_rightsep": 		manageCSS("puibutton_rightsep.css");	break;
 		case "oldtoplevimg": 		manageCSS("old_toplevel_img.css");		break;
 		case "oldtoplevimg2": 		manageCSS("old_toplevel_img2.css");		break;
+		case "altdlprogbar": 		manageCSS("alt_dlprogressbar.css");		break;
 		case "altalertbox": 		manageCSS("alt_alertboxfx44.css");		break;
 		case "navthrobber": 		manageCSS("navthrobber.css");			break;
 		case "hideprbutton": 		manageCSS("hidepagereportbutton.css");	break;

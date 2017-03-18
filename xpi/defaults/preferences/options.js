@@ -61,6 +61,7 @@ pref("extensions.classicthemerestorer.wincontrols",false);
 pref("extensions.classicthemerestorer.puibuttonsep",'puib_nosep');
 pref("extensions.classicthemerestorer.oldtoplevimg",false);
 pref("extensions.classicthemerestorer.oldtoplevimg2",false);
+pref("extensions.classicthemerestorer.altdlprogbar",false);
 pref("extensions.classicthemerestorer.altalertbox",false);
 pref("extensions.classicthemerestorer.emptyfavico_g",'emptyfavico_g_def');
 pref("extensions.classicthemerestorer.panelmenucol",false);

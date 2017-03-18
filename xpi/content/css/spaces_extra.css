@@ -73,23 +73,23 @@
 	
 	/* Fix separator visibility on Firefox 54+ and Windows Classic visual style */
 	@media (-moz-windows-classic) {
-		#main-window[fx54plus="true"] toolbar toolbarseparator{
+		#main-window[fx54plus="true"][defaultfxtheme="true"] toolbar toolbarseparator{
 		  min-width: 5px !important;
 		  width: 5px !important;
 		  background: url("chrome://classic_theme_restorer/content/images/separator.png") center no-repeat !important;
 		  background-size: 5px 80% !important;
 		}
 		
-		#main-window[fx54plus="true"] toolbarpaletteitem[place="palette"] > toolbarseparator{
+		#main-window[fx54plus="true"][defaultfxtheme="true"] toolbarpaletteitem[place="palette"] > toolbarseparator{
 		  min-width: 5px !important;
 		  width: 5px !important;
 		}
 		
-		#main-window[fx54plus="true"] toolbarpaletteitem[place="toolbar"] > toolbarseparator{
+		#main-window[fx54plus="true"][defaultfxtheme="true"] toolbarpaletteitem[place="toolbar"] > toolbarseparator{
 		  background: url("chrome://classic_theme_restorer/content/images/separator.png") center no-repeat !important;
 		}
 		
-		#main-window[fx54plus="true"]:-moz-lwtheme-brighttext toolbarpaletteitem[place="toolbar"] > toolbarseparator{
+		#main-window[fx54plus="true"][defaultfxtheme="true"]:-moz-lwtheme-brighttext toolbarpaletteitem[place="toolbar"] > toolbarseparator{
 		  background: url("chrome://classic_theme_restorer/content/images/separator.png") center no-repeat !important;
 		}
 	}

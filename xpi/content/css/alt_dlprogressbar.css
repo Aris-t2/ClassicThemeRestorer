@@ -1,0 +1,12 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	
+	#downloadsPanel .progress-bar {
+	  background: linear-gradient(white, #cdffcd 1px, #01d429 50%, #1ce233) !important;
+	  border: 1px solid #a0a0a0 !important;
+	}
+	#downloadsPanel progressmeter .progress-remainder{
+	  background: linear-gradient(white, #efefef 1px, #cacaca 50%, #d5d5d5) !important;
+	}
+}
