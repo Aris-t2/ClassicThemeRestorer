@@ -3780,29 +3780,39 @@ classicthemerestorerjs.ctr = {
   removeContextItemsFromLocationbarContext: function(){
 
 	var mov_urlbar_container = classicthemerestorerjs.ctr.ctrGetId("urlbar-container");
-	var mov_urlbar_wrapper = classicthemerestorerjs.ctr.ctrGetId("urlbar-wrapper")
 	
-	classicthemerestorerjs.ctr.ctrGetId("urlbar-container").addEventListener("mousedown", function openContextMenuPopup(event) {
+	window.addEventListener("mousedown", function openContextMenuPopup(event) {
 
-	  if(event.button==2 && event.target.parentNode.parentNode == mov_urlbar_container
-		|| event.target.parentNode.parentNode.parentNode == mov_urlbar_container
-		|| event.target.parentNode.parentNode == mov_urlbar_wrapper
-		|| event.target.parentNode.parentNode.parentNode == mov_urlbar_wrapper) {
-		
+	  if(event.button==2 && mov_urlbar_container.contains(event.target)) {
+
 		var toolbarcontext_popup = classicthemerestorerjs.ctr.ctrGetId('toolbar-context-menu');
-		
+
 		toolbarcontext_popup.addEventListener("popupshown", function onCtrToolbarContextPopupShown(){
+		  try {
 			toolbarcontext_popup.firstChild.setAttribute("disabled", "true");
 			toolbarcontext_popup.firstChild.nextSibling.setAttribute("disabled", "true");
-			
 			toolbarcontext_popup.removeEventListener("popupshown", onCtrToolbarContextPopupShown, false);
-			
+		  } catch(e){}
+
 		}, false);
 		
+	  } else {
+		var toolbarcontext_popup = classicthemerestorerjs.ctr.ctrGetId('toolbar-context-menu');
+
+		toolbarcontext_popup.addEventListener("popupshown", function onCtrToolbarContextPopupShown2(){
+		  try {
+			if(toolbarcontext_popup.firstChild.getAttribute("disabled")=="true") {
+			  toolbarcontext_popup.firstChild.setAttribute("disabled", "false");
+			  toolbarcontext_popup.firstChild.nextSibling.setAttribute("disabled", "false");
+			}
+			toolbarcontext_popup.removeEventListener("popupshown", onCtrToolbarContextPopupShown2, false);
+		  } catch(e){}
+			
+		}, false);
 	  }
 
 	}, false);
-	  
+
   },
   
   // move 'Tools' menus dev tools into application buttons popup 
