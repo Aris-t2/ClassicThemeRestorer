@@ -134,16 +134,4 @@
 	  margin-bottom: -4px !important;
 	}
 	
-	@media (-moz-windows-theme:aero) {
-		
-		#main-window[fx52plus="true"] #PopupSearchAutoComplete .search-panel-tree .autocomplete-treebody::-moz-tree-cell(fromhistory),
-		#main-window[fx52plus="true"] #PopupSearchAutoComplete .search-panel-tree .autocomplete-treebody::-moz-tree-cell-text(fromhistory){
-		  opacity: .5 !important;
-		}
-
-		#main-window[fx52plus="true"] #PopupSearchAutoComplete .search-panel-tree .autocomplete-treebody::-moz-tree-cell(fromhistory,selected),
-		#main-window[fx52plus="true"] #PopupSearchAutoComplete .search-panel-tree .autocomplete-treebody::-moz-tree-cell-text(fromhistory,selected){
-		  opacity: 1.0 !important;
-		}
-	}
 }

@@ -89,6 +89,7 @@
 		<preference id="ctraddon_smallnavbut"	name="extensions.classicthemerestorer.smallnavbut"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_hide_bf_popup"	name="extensions.classicthemerestorer.hide_bf_popup" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_nbcompact"		name="extensions.classicthemerestorer.nbcompact"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_nbcompact2"	name="extensions.classicthemerestorer.nbcompact"	type="bool"		instantApply="true" inverted="true"/>
 		<preference id="ctraddon_hidenavbar"	name="extensions.classicthemerestorer.hidenavbar"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_backforward"	name="extensions.classicthemerestorer.backforward"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_noconicons"	name="extensions.classicthemerestorer.noconicons"	type="bool"		instantApply="true"/>
@@ -1030,6 +1031,7 @@
 				<checkbox label="&Ctr_bf_space;"		preference="ctraddon_bf_space" id="ctraddon_pw_bf_space" class="ctraddonsuboption"/>
 				<checkbox label="&Ctr_hide_bf_popup;"	preference="ctraddon_hide_bf_popup" id="ctraddon_pw_hide_bf_popup" class="ctraddonsuboption"/>
 				<checkbox label="&Ctr_nbcompact;"		preference="ctraddon_nbcompact" id="ctraddon_pw_nbcompact" class="ctraddonsuboption"/>
+				<checkbox label="&Ctr_nbcompact;"		preference="ctraddon_nbcompact2" id="ctraddon_pw_nbcompact2" class="ctraddonsuboption"/>
 				
 				<checkbox label="&Ctr_mstatusbar;"		preference="ctraddon_statusbar" id="ctraddon_pw_statusbar" oncommand="classicthemerestorerjso.ctr.ctrMovStatusextra()"/>
 				<description class="ctraddon_topic ctraddonsuboption" id="ctraddon_pw_statusbar_s4e_info">&Ctr_mstatusbars4e;</description>

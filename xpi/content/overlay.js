@@ -4358,7 +4358,11 @@ classicthemerestorerjs.ctr = {
 		
 		case "hidenavbar": 			manageCSS("hidenavbar.css");  			break;
 		case "backforward":			manageCSS("back-forward.css");			break;
-		case "nbcompact":			manageCSS("navbar_compact.css");		break;
+		case "nbcompact":
+			if(classicthemerestorerjs.ctr.appversion < 54)
+			  manageCSS("navbar_compact.css");
+		    else manageCSS("navbar_compact2.css");	
+		break;
 		case "noconicons": 			manageCSS("nocontexticons.css");		break;
 		case "options_alt": 		manageCSS("alt_optionspage.css");		break;
 		case "options_alt2": 		manageCSS("alt_optionswindow.css");		break;

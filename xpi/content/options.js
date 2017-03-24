@@ -103,6 +103,7 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_noconicons').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_closeonleft').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_nbcompact').style.visibility = 'collapse';
+		document.getElementById('ctraddon_pw_nbcompact2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabc_act_tb').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_aerocolors').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tbsep_winc').style.visibility = 'collapse';
@@ -462,6 +463,15 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_ttoverflow').style.visibility = 'collapse';
 	}
 	
+	if (this.appversion < 54) {
+	  document.getElementById('ctraddon_pw_nbcompact2').style.visibility = 'collapse';
+	}
+	
+	if (this.appversion >= 54) {
+	  document.getElementById('ctraddon_pw_nbcompact').style.visibility = 'collapse';
+	}
+	
+	
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get
 	  // garbage collected.
@@ -792,8 +802,10 @@ classicthemerestorerjso.ctr = {
 	document.getElementById('ctraddon_pw_hide_bf_popup').style.visibility = itemvis;
 	document.getElementById('ctraddon_pw_bf_space').style.visibility = itemvis;
 	if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref('smallnavbut')==false){
-	  document.getElementById('ctraddon_pw_nbcompact').disabled = which;
-	  document.getElementById('ctraddon_pw_nbcompact').style.visibility = itemvis;
+	  if (this.appversion < 54) document.getElementById('ctraddon_pw_nbcompact').disabled = which;
+	  if (this.appversion < 54) document.getElementById('ctraddon_pw_nbcompact').style.visibility = itemvis;
+	  if (this.appversion >= 54) document.getElementById('ctraddon_pw_nbcompact2').disabled = which;
+	  if (this.appversion >= 54) document.getElementById('ctraddon_pw_nbcompact2').style.visibility = itemvis;
 	}
   },
   
@@ -806,8 +818,10 @@ classicthemerestorerjso.ctr = {
 	  } else {
 		which=true; itemvis = 'collapse';
 	  }
-	  document.getElementById('ctraddon_pw_nbcompact').disabled = which;
-	  document.getElementById('ctraddon_pw_nbcompact').style.visibility = itemvis;
+	  if (this.appversion < 54) document.getElementById('ctraddon_pw_nbcompact').disabled = which;
+	  if (this.appversion < 54) document.getElementById('ctraddon_pw_nbcompact').style.visibility = itemvis;
+	  if (this.appversion >= 54) document.getElementById('ctraddon_pw_nbcompact2').disabled = which;
+	  if (this.appversion >= 54) document.getElementById('ctraddon_pw_nbcompact2').style.visibility = itemvis;
 	}
   },
   
