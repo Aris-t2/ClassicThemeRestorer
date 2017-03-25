@@ -145,6 +145,19 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_verifiedcolors').style.visibility = 'visible';
 	  document.getElementById('ctraddon_pw_altdlprogbar').style.visibility = 'visible';
 	  document.getElementById('ctraddon_pw_altalertbox').style.visibility = 'visible';
+	  document.getElementById('ctraddon_pw_tabc_act_tb').style.visibility = 'visible';
+	  document.getElementById('ctraddon_pw_invertedicons').style.visibility = 'visible';
+	  document.getElementById('ctraddon_pw_altreaderico').style.visibility = 'visible';
+	  document.getElementById('ctraddon_pw_urlbardark').style.visibility = 'visible';
+	  document.getElementById('ctraddon_pw_searchbardark').style.visibility = 'visible';
+	  document.getElementById('ctraddon_pw_altdlprogbar').style.visibility = 'visible';
+	  document.getElementById('ctraddon_pw_menubargroup2').style.visibility = 'visible';
+	  document.getElementById('ctraddon_pw_menubarnofog').style.visibility = 'visible';
+	  document.getElementById('ctraddon_pw_am_compact').style.visibility = 'visible';
+	  if(this.prefs.getBoolPref("am_compact"))
+	    document.getElementById('ctraddon_pw_am_compact2').style.visibility = 'visible';
+	  
+	  document.getElementById('ctraddon_pw_colors_ntab_t').disabled = false;
 	}
 	
 	// ColorfulTabs info label
