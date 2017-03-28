@@ -289,10 +289,11 @@
 		}
 	}}}
 	
-	/*#main-window[tabsontop="false"] #navigator-toolbox #TabsToolbar #tabbrowser-tabs .tabbrowser-tab[pinned],
-	#main-window[tabsontop="false"] #navigator-toolbox #TabsToolbar #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned] {
-	  clip: rect(0px, auto, 25.5px, 0px) !important;
-	}*/
+	/* container tabs - top line indicator */
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][data-identity-color] /* .tab-content */{
+	  box-shadow: 0px 2px 0px var(--identity-tab-color) inset !important;
+	}
+	/**/
 
     #main-window[tabsontop="false"] #navigator-toolbox #TabsToolbar .toolbarbutton-1,
 	#main-window[tabsontop="false"] #navigator-toolbox #TabsToolbar .scrollbutton-up,
