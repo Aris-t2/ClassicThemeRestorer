@@ -444,7 +444,8 @@ classicthemerestorerjso.ctr = {
 	
 	if (this.appversion < 50) {
 	  document.getElementById('ctraddon_pw_containertabgb').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_findbarhlgb').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_findbarhl').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_findbarhldesc').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_flywebgb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_autocompl_it2').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_oldplacesbut').style.visibility = 'collapse';
@@ -482,6 +483,10 @@ classicthemerestorerjso.ctr = {
 	
 	if (this.appversion >= 54) {
 	  document.getElementById('ctraddon_pw_nbcompact').style.visibility = 'collapse';
+	}
+	
+	if (this.appversion < 55) {
+	  document.getElementById('ctraddon_pw_resfprintinggb').style.visibility = 'collapse';
 	}
 	
 	

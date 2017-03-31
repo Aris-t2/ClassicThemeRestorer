@@ -2794,6 +2794,8 @@ classicthemerestorerjs.ctr = {
 				classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv51",true);
 			  else if (classicthemerestorerjs.ctr.appversion == 53)
 				classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv53",true);
+			  else if (classicthemerestorerjs.ctr.appversion == 55)
+				classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv55",true);
 			}
 			else { 
 			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv47",false);
@@ -2801,6 +2803,7 @@ classicthemerestorerjs.ctr = {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv50",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv51",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv53",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv55",false);
 			}
 		  break;
 		  
@@ -3789,26 +3792,36 @@ classicthemerestorerjs.ctr = {
 
 		toolbarcontext_popup.addEventListener("popupshown", function onCtrToolbarContextPopupShown(){
 		  try {
-			toolbarcontext_popup.firstChild.setAttribute("disabled", "true");
-			toolbarcontext_popup.firstChild.nextSibling.setAttribute("disabled", "true");
+			if(toolbarcontext_popup.firstChild.getAttribute('class')=='customize-context-moveToPanel') {
+			  toolbarcontext_popup.firstChild.setAttribute("disabled", "true");
+			  toolbarcontext_popup.firstChild.nextSibling.setAttribute("disabled", "true");
+
+			}
 			toolbarcontext_popup.removeEventListener("popupshown", onCtrToolbarContextPopupShown, false);
 		  } catch(e){}
 
 		}, false);
+		
+		classicthemerestorerjs.ctr.loadUnloadCSS("noconitems",true);
 		
 	  } else {
 		var toolbarcontext_popup = classicthemerestorerjs.ctr.ctrGetId('toolbar-context-menu');
 
 		toolbarcontext_popup.addEventListener("popupshown", function onCtrToolbarContextPopupShown2(){
 		  try {
-			if(toolbarcontext_popup.firstChild.getAttribute("disabled")=="true") {
+			if(toolbarcontext_popup.firstChild.getAttribute("disabled")=="true"
+			  && toolbarcontext_popup.firstChild.getAttribute('class')=='customize-context-moveToPanel') {
 			  toolbarcontext_popup.firstChild.setAttribute("disabled", "false");
 			  toolbarcontext_popup.firstChild.nextSibling.setAttribute("disabled", "false");
+			
 			}
 			toolbarcontext_popup.removeEventListener("popupshown", onCtrToolbarContextPopupShown2, false);
 		  } catch(e){}
 			
 		}, false);
+		
+		classicthemerestorerjs.ctr.loadUnloadCSS("noconitems",false);
+		
 	  }
 
 	}, false);
@@ -4364,6 +4377,7 @@ classicthemerestorerjs.ctr = {
 		    else manageCSS("navbar_compact2.css");	
 		break;
 		case "noconicons": 			manageCSS("nocontexticons.css");		break;
+		case "noconitems": 			manageCSS("nocontextitems.css");		break;
 		case "options_alt": 		manageCSS("alt_optionspage.css");		break;
 		case "options_alt2": 		manageCSS("alt_optionswindow.css");		break;
 		case "options_alt3": 		manageCSS("alt_optionswindow2.css");	break;
@@ -4557,6 +4571,7 @@ classicthemerestorerjs.ctr = {
 		case "ctrnewinv50":			manageCSS("ctraddon_new_in_v50.css");	break;
 		case "ctrnewinv51":			manageCSS("ctraddon_new_in_v51.css");	break;
 		case "ctrnewinv53":			manageCSS("ctraddon_new_in_v53.css");	break;
+		case "ctrnewinv55":			manageCSS("ctraddon_new_in_v55.css");	break;
 		
 		case "cuibuttons":			manageCSS("cuibuttons.css");			break;
 		

@@ -42,8 +42,8 @@
 		<preference id="ctraddon_urlbar_uc"		name="browser.urlbar.unifiedcomplete"				type="bool"		instantApply="true" inverted="true"/>
 		<preference id="ctraddon_containertab"	name="privacy.userContext.enabled"					type="bool"		instantApply="true"/>
 		<preference id="ctraddon_findbarhl1"	name="findbar.modalHighlight"						type="bool"		instantApply="true"/>
-		<preference id="ctraddon_findbarhl2"	name="findbar.highlightAll"							type="bool"		instantApply="true"/>
 		<preference id="ctraddon_flyweb"		name="dom.flyweb.enabled"							type="bool"		instantApply="true"/>
+		<preference id="ctraddon_resfprinting"	name="privacy.resistFingerprinting"					type="bool"		instantApply="true"/>
 		<preference id="ctraddon_geolocation"	name="geo.enabled"									type="bool"		instantApply="true"/>
 		<preference id="ctraddon_oneoffsearch"	name="browser.urlbar.oneOffSearches"				type="bool"		instantApply="true"/>
 		<preference id="ctraddon_hiderecentbm"	name="browser.bookmarks.showRecentlyBookmarked"		type="bool"		instantApply="true" inverted="true"/>
@@ -390,7 +390,7 @@
 	  <radio value="ctraddon_locationbbox"	label="&Ctr_urlbar;"		class="ctraddontab ctraddon_new_in_v48 ctraddon_new_in_v50 ctraddon_new_in_v51"/>
 	  <radio value="ctraddon_searchuibox"	label="&Ctr_searchbar;"		class="ctraddontab"/>
 	  <radio value="ctraddon_toolbarsbox"	label="&Ctr_toolbars;"		class="ctraddontab ctraddon_new_in_v51"/>
-	  <radio value="ctraddon_experttweaks"	label="&Ctr_experttweaks;"	id="ctraddon_experttweakstab" class="ctraddontab ctraddon_new_in_v50"/>
+	  <radio value="ctraddon_experttweaks"	label="&Ctr_experttweaks;"	id="ctraddon_experttweakstab" class="ctraddontab ctraddon_new_in_v50 ctraddon_new_in_v55"/>
 	  <radio value="ctraddon_cssbox"		label="&Ctr_cssoverride;"	class="ctraddontab"/>
 	  <radio value="ctraddon_ctraddonbox"	label="&Ctr_title;"			class="ctraddontab"/>
 	  <label value=""/>
@@ -1017,7 +1017,7 @@
 			<tab label="&Ctr_page; 1" class="ctraddon_new_in_v48"/>
 			<tab label="&Ctr_page; 2" class="ctraddon_new_in_v47 ctraddon_new_in_v49 ctraddon_new_in_v50 ctraddon_new_in_v51"/>
 			<tab label="&Ctr_page; 3"/>
-			<tab label="&Ctr_page; 4"/>
+			<tab label="&Ctr_page; 4" class="ctraddon_new_in_v50"/>
 			<tab label="&Ctr_page; 5"/>
 		</tabs>
 
@@ -1141,6 +1141,9 @@
 				<description class="ctraddonsuboption">about:config &gt;&gt; browser.fullscreen.animate</description>
 				<checkbox label="&Ctr_fsaduration;"		preference="ctraddon_fsaduration" id="ctraddon_pw_fsaduration"/>
 				<description class="ctraddonsuboption">about:config &gt;&gt; full-screen-api.transition-duration.*</description>
+				
+				<checkbox label="&Ctr_findbarhl;" preference="ctraddon_findbarhl1" id="ctraddon_pw_findbarhl" class="ctraddon_new_in_v50"/>
+				<description class="ctraddonsuboption" id="ctraddon_pw_findbarhldesc">about:config &gt;&gt; findbar.modalHighlight</description>
 			  </groupbox>
 
 		  </tabpanel>
@@ -1746,18 +1749,16 @@
 		<checkbox label="about:config &gt;&gt; privacy.userContext.enabled" preference="ctraddon_containertab" id="ctraddon_pw_containertab" class="ctraddon_new_in_v50"/>
 	  </groupbox>
 	  
-	  <groupbox id="ctraddon_pw_findbarhlgb">
-		<caption  label="&Ctr_e_findbarhl;" class="ctraddon_topic"/>
-		<checkbox label="about:config &gt;&gt; findbar.modalHighlight" preference="ctraddon_findbarhl1" id="ctraddon_pw_findbarhl1" class="ctraddon_new_in_v50"/>
-		<checkbox label="about:config &gt;&gt; findbar.highlightAll" preference="ctraddon_findbarhl2" id="ctraddon_pw_findbarhl2" class="ctraddon_new_in_v50"/>
-		<description class="ctraddonsuboption acprefdesc">&Ctr_fx50findbarhl;</description>
-	  </groupbox>
-	  
 	  <groupbox id="ctraddon_pw_flywebgb">
 		<caption  label="&Ctr_e_flyweb;" class="ctraddon_topic"/>
 		<checkbox label="about:config &gt;&gt; dom.flyweb.enabled" preference="ctraddon_flyweb" id="ctraddon_pw_flyweb" class="ctraddon_new_in_v50"/>
 	  </groupbox>
 
+	  <groupbox id="ctraddon_pw_resfprintinggb">
+		<caption  label="&Ctr_e_resfprinting;" class="ctraddon_topic"/>
+		<checkbox label="about:config &gt;&gt; privacy.resistFingerprinting" preference="ctraddon_resfprinting" id="ctraddon_pw_resfprinting" class="ctraddon_new_in_v55"/>
+	  </groupbox>
+	  
 	  <groupbox id="ctraddon_pw_oldfontgfxg">
 		<caption  label="&Ctr_e_oldfontgfx;" class="ctraddon_topic"/>
 		<checkbox label="about:config &gt;&gt; gfx.*.azure.backends &gt;&gt; direct2d1.1,cairo,skia" preference="ctraddon_oldfontgfx" id="ctraddon_pw_oldfontgfx" class="ctraddon_new_in_v52"  oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
