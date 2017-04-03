@@ -19,15 +19,20 @@
 	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#b3b3b3,#cfcfcf,#dedede,#e5e5e5);
 	}
 	
-	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][style][selected="true"]:not(:-moz-lwtheme) {
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][data-identity-color][selected="true"]:not(:-moz-lwtheme) {
 	  background-image: linear-gradient(to top,#eaeaea,#e2e2e2,#ededed,#fcfcfc) !important;
 	}
-	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][style]:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][data-identity-color]:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
 	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top, #a1a1a1,#c0c0c0,#cccccc,#d4d4d4) !important;
 	}
-	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][style]:not([selected="true"]):hover:not(:-moz-lwtheme) {
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][data-identity-color]:not([selected="true"]):hover:not(:-moz-lwtheme) {
 	  background-image: linear-gradient(to top, #676f76 0px, transparent 1px),linear-gradient(to top,#b3b3b3,#cfcfcf,#dedede,#e5e5e5) !important;
 	}
+	/* container tabs - top line indicator */
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][data-identity-color] /* .tab-content */{
+	  box-shadow: 0px 2px 0px var(--identity-tab-color) inset !important;
+	}
+	/**/
 	
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover),
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):hover{

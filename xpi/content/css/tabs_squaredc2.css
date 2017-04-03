@@ -169,6 +169,12 @@
 	  background-image: none !important;
 	  background-color: unset !important;
 	}
+	
+	/* container tabs - top line indicator */
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][data-identity-color]  .tab-content {
+	  box-shadow: 0px 1px 0px var(--identity-tab-color) inset !important;
+	}
+	/**/
 
 	/* tab image, throbber, close button position*/
 	#TabsToolbar .tabbrowser-tab:not([pinned]) .tab-close-button{

@@ -30,9 +30,9 @@
 <!ENTITY Ctr_cuiico			"アイコン">
 <!ENTITY Ctr_cuiicotxt		"アイコン+テキスト">
 <!ENTITY Ctr_cuitxt			"テキスト">
-<!ENTITY Ctr_cuitabsnontop	"タブを下にする">
+<!ENTITY Ctr_cuitabsnontop	"タブを下に表示する">
 
-<!ENTITY Ctr_tnot			"(タブを上にする)">
+<!ENTITY Ctr_tnot			"(タブを上に表示する)">
 
 <!ENTITY Ctr_tabcolors_t	"タブの配色">
 
@@ -44,10 +44,10 @@
 <!ENTITY Ctr_tabs3			"丸いタブ (別バージョン Aero)">
 <!ENTITY Ctr_tabforminfo	"タブのスタイルは現在のテーマで制御されます。">
 <!ENTITY Ctr_coltabsinfo	"タブのスタイルは ColorfulTabs とは完全な互換性はありません！">
-<!ENTITY Ctr_tabsontop0		"タブを上にする (デフォルト)">
-<!ENTITY Ctr_tabsontop1		"タブを上にする - [tabsontop=true] 属性">
-<!ENTITY Ctr_tabsontop2		"タブを下にする (v1) - [tabsontop=false] 属性">
-<!ENTITY Ctr_tabsontop3		"タブを下にする (v2) - [tabsontop=false] 属性">
+<!ENTITY Ctr_tabsontop0		"タブを上に表示する (デフォルト)">
+<!ENTITY Ctr_tabsontop1		"タブを上に表示する - [tabsontop=true] 属性">
+<!ENTITY Ctr_tabsontop2		"タブを下に表示する (v1) - [tabsontop=false] 属性">
+<!ENTITY Ctr_tabsontop3		"タブを下に表示する (v2) - [tabsontop=false] 属性">
 <!ENTITY Ctr_tabsontopW1	"v2 はいくつかのアドオンと完全なテーマ以外に互換性はありません！">
 <!ENTITY Ctr_tabsontopI1	"以下の項目に属性 [tabsontop=true/false] 属性 を加える">
 <!ENTITY Ctr_tabsintitlebar	"&brandShortName; タイトルバー">
@@ -117,7 +117,7 @@
 <!ENTITY Ctr_appbautocol	"自動的に色を変更する (デフォルト / Aurora / Nightly)">
 <!ENTITY Ctr_appbutbdl		"枠線と背景色を隠す">
 <!ENTITY Ctr_dblclclosefx	"ダブルクリックで現在のウィンドウを閉じる">
-<!ENTITY Ctr_appbclmmenus	"ボタンメニュー内をクリッカブルメニューにする (新しいタブ、印刷など)">
+<!ENTITY Ctr_appbclmmenus	"ボタンメニュー内をクリッカブルメニューに変更する (新しいタブ、印刷など)">
 <!ENTITY Ctr_appbutonclab	"タイトル">
 <!ENTITY Ctr_appbutonclab2	"アプリケーションボタンのタイトルを入力するか、空欄のままにしてください">
 
@@ -130,27 +130,27 @@
 <!ENTITY Ctr_bf_space		"ボタン間のスペースを減らす (可能であれば)">
 <!ENTITY Ctr_noconicons		"ページの右クリックメニュー：アイコン(戻る、進む、停止、ブックマーク)をメニュー項目で置換する">
 <!ENTITY Ctr_prefpage		"オプションページ・ウィンドウ">
-<!ENTITY Ctr_altoptionsd	"デフォルトの外観">
-<!ENTITY Ctr_altoptionsp	"替わりの外観で置き換える">
-<!ENTITY Ctr_altoptionsw	"オプションページをウィンドウで表示">
+<!ENTITY Ctr_altoptionsd	"デフォルトのデザイン">
+<!ENTITY Ctr_altoptionsp	"デザインを変更する">
+<!ENTITY Ctr_altoptionsw	"オプションページをウィンドウで表示する">
 <!ENTITY Ctr_altoptions_hm	"横メニュー">
 <!ENTITY Ctr_altoptions_vm	"縦メニュー">
 <!ENTITY Ctr_altoptionsww	"幅:">
 <!ENTITY Ctr_altoptionswh	"高さ:">
 <!ENTITY Ctr_altoptionsi	"オプションウィンドウは、すべてのツールバーが隠されたブラウザウィンドウであり、ダイアログではありません。このウィンドウを開いて「現在のページを使用」機能を使用すると、オプションウィンドウの URL(about:preferences) が追加されます。オプションツールバーボタンは、オプションウィンドウを開けるように新しいものに置き換えられます。">
 <!ENTITY Ctr_options_rem	"最後に開いたカテゴリを記憶する">
-<!ENTITY Ctr_aboutpages		"[about:] ページ全般: 替わりの外観で置き換える">
-<!ENTITY Ctr_svgfilters		"デフォルトのツールバーボタンのアイコンを SVG カラーにする">
+<!ENTITY Ctr_aboutpages		"[about:] ページ全般: デザインを変更する">
+<!ENTITY Ctr_svgfilters		"デフォルトのツールバーボタンのアイコンを SVG カラーに変更する">
 <!ENTITY Ctr_wincontrols	"フルスクリーン用ウィンドウ制御ボタンを移動可能にする">
 <!ENTITY Ctr_puibuttonsep	"メニューボタンパネルのセパレーター">
 <!ENTITY Ctr_puibut_no_sep	"隠す">
 <!ENTITY Ctr_puibut_l_sep	"左">
 <!ENTITY Ctr_puibut_r_sep	"右">
 <!ENTITY Ctr_html5warning	"HTML5 フルスクリーン警告を表示する">
-<!ENTITY Ctr_oldtoplevimg	"トップレベルドメインイメージ: 古い外観で置き換える">
-<!ENTITY Ctr_altdlprogbar	"Alternative appearance for download progress bar">
-<!ENTITY Ctr_altalertbox	"ダイアログ: 替わりの外観で置き換える">
-<!ENTITY Ctr_emptygfavico	"空ファビコンを置き換える">
+<!ENTITY Ctr_oldtoplevimg	"画像表示時の背景色を白に変更する">
+<!ENTITY Ctr_altdlprogbar	"ダウンロードのプログレスバーのデザインを変更する">
+<!ENTITY Ctr_altalertbox	"ダイアログ: デザインを変更する">
+<!ENTITY Ctr_emptygfavico	"空ファビコンを変更する">
 <!ENTITY Ctr_mstatusbar		"ステータスバーパネルを移動可能にする">
 <!ENTITY Ctr_mstatusbars4e	"ステータスバーパネルは Status-4-Evar で制御されます。">
 <!ENTITY Ctr_mstatusbartpp	"ステータスバーパネルは ThePuzzlePiece で制御されます。">
@@ -158,7 +158,7 @@
 <!ENTITY Ctr_mstatusbarabr	"ステータスバーパネルは The Addon Bar (Restored) で制御されます。">
 <!ENTITY Ctr_combrelstop	"中止ボタンと再読み込みボタンを組み合わせる">
 <!ENTITY Ctr_stoprel1		"重要：停止ボタンの後ろに再読み込みボタンを設置します">
-<!ENTITY Ctr_panelmenucol	"メニューボタンパネル：背景色を変える">
+<!ENTITY Ctr_panelmenucol	"メニューボタンパネル：背景色を変更する">
 <!ENTITY Ctr_hideprivmask	"プライベートブラウジング: マスク表示を隠す">
 <!ENTITY Ctr_navsmallicons	"小さなアイコン">
 <!ENTITY Ctr_navlargeicons	"大きなアイコン">
@@ -180,44 +180,44 @@
 <!ENTITY Ctr_iat_notf_vt	"垂直ツールバーを除外する">
 <!ENTITY Ctr_cpanelmenus	"メニューボタンパネル：コンパクトビュー (ブックマーク、履歴など)">
 <!ENTITY Ctr_hidezoomres	"ズームボタン: リセットボタンを隠す（ツールバー上にある時のみ）">
-<!ENTITY Ctr_alt_newtabp	"新しいタブページ (about:newtab): 替わりの外観で置き換える">
+<!ENTITY Ctr_alt_newtabp	"新しいタブページ (about:newtab): デザインを変更する">
 <!ENTITY Ctr_nosnippets		"スタートページ (about:home): スニペットを隠す">
 <!ENTITY Ctr_search_ui		"検索バー">
 <!ENTITY Ctr_ctroldsearch	"古い検索スタイル">
-<!ENTITY Ctr_ctroldsearchd	"Not compatible to other search add-ons!">
+<!ENTITY Ctr_ctroldsearchd	"他の検索アドオンとは互換性がありません！">
 <!ENTITY Ctr_ctroldsearchc	"検索後に検索ボックスを消去する">
 <!ENTITY Ctr_ctroldsearchr	"検索後にリスト最上位の検索エンジンに変更する">
 <!ENTITY Ctr_ctrosearchdel	"検索後も保持する">
 <!ENTITY Ctr_search_oit		"検索結果を新しいタブで開く">
 <!ENTITY Ctr_osearch_meoit	"中クリック: 検索結果を新しい新しいタブで開く">
-<!ENTITY Ctr_osearch_meoit1	"Search engine">
-<!ENTITY Ctr_osearch_meoit2	"Search glass">
+<!ENTITY Ctr_osearch_meoit1	"検索エンジン">
+<!ENTITY Ctr_osearch_meoit2	"検索虫眼鏡アイコン">
 <!ENTITY Ctr_osearch_iwidth	"ポップアップの幅を合わせる">
 <!ENTITY Ctr_osearch_cwidth	"ポップアップの幅を指定する">
 <!ENTITY Ctr_osearch_dm		"小さなドロップマーカー">
 <!ENTITY Ctr_addonmanager	"アドオンマネージャ">
 <!ENTITY Ctr_alt_addonsp	"詳細情報: 順序を変える">
 <!ENTITY Ctr_am_showrecup	"最近の更新カテゴリを常に表示する">
-<!ENTITY Ctr_alt_addonsm	"替わりの外観で置き換える">
+<!ENTITY Ctr_alt_addonsm	"デザインを変更する">
 <!ENTITY Ctr_am_nowarning	"アドオンリスト: 警告を隠す">
 <!ENTITY Ctr_am_compact		"アドオンリスト: コンパクトビュー">
 <!ENTITY Ctr_am_compact2	"コンパクトビュー＋">
 <!ENTITY Ctr_am_highlight	"アドオンリスト: カーソルを乗せた時ハイライトする">
-<!ENTITY Ctr_am_buticons	"アドオンリスト: ボタンをアイコンに置き換える">
+<!ENTITY Ctr_am_buticons	"アドオンリスト: ボタンをアイコンに変更する">
 <!ENTITY Ctr_am_hovshowb	"アドオンリスト: カーソルを乗せた時ボタンを表示する">
 <!ENTITY Ctr_addonversion	"アドオンリスト: アドオンのバージョンを表示する">
 <!ENTITY Ctr_xpinstallui	"古いアドオンインストールウィンドウ">
 <!ENTITY Ctr_bmbutton		"ブックマークメニューボタン">
 <!ENTITY Ctr_hiderecentbm	"ブックマークポップアップ: 「最近ブックマークしたページ」を隠す">
 <!ENTITY Ctr_hideeditbm		"ブックマークスター: ポップアップを隠す (ページがブックマークされていない場合)">
-<!ENTITY Ctr_oldplacesbut	"ツールバー上のブックマーク: 古い外観で置き換える">
+<!ENTITY Ctr_oldplacesbut	"ツールバー上のブックマーク: デザインを変更する">
 <!ENTITY Ctr_dl_pm_drop		"ダウンロードボタンパネル: ドロップマーカーを表示する">
 <!ENTITY Ctr_bmbutpanelm	"ポップアップ: パネルメニューで表示する">
 <!ENTITY Ctr_bmbunsortbm	"ポップアップ: 「他のブックマーク」を表示する">
 <!ENTITY Ctr_bmbunsortbm2	"メニュー上部に表示">
 <!ENTITY Ctr_bmbviewbmsb	"ポップアップ: 「ブックマークサイドバーを表示」を表示する">
 <!ENTITY Ctr_bmbviewbmtb	"ポップアップ: 「ブックマークツールバーを表示」を表示する">
-<!ENTITY Ctr_bmbutnotb		"Popup: hide 'Bookmarks Toolbar' menu">
+<!ENTITY Ctr_bmbutnotb		"ポップアップ: 「ブックマークツールバー」を隠す">
 <!ENTITY Ctr_bmbnounsort	"ポップアップ: 「他のブックマーク」を隠す">
 <!ENTITY Ctr_bmbutclpopup	"ポップアップ: 「このページをブックマーク」とブックマークのみを表示する">
 <!ENTITY Ctr_bmbutnotext	"ブックマークツールバーのテキストを隠す">
@@ -231,9 +231,9 @@
 
 <!ENTITY Ctr_tabsep_def		"デフォルトのタブセパレーター">
 <!ENTITY Ctr_fxmockup		"&brandShortName; モックアップ">
-<!ENTITY Ctr_tabmokcolor	"タブのボタンを白色にする (閉じる、新しいタブを開く、タブグループ、タブを一覧表示)">
+<!ENTITY Ctr_tabmokcolor	"タブのボタンを白色に変更する (閉じる、新しいタブを開く、タブグループ、タブを一覧表示)">
 <!ENTITY Ctr_tabmokcolor2	"非アクティブタブを白色の文字にして、灰色の影をつける">
-<!ENTITY Ctr_tabmokcolor4	"空ファビコンを白色にする">
+<!ENTITY Ctr_tabmokcolor4	"空ファビコンを白色に変更する">
 
 <!ENTITY Ctr_navthrobber1	"アクティビティインジケーターをクリックした時、指定したURLを開く:">
 <!ENTITY Ctr_navthrobber2	"URL を入力するか、空欄のままにしてください">
@@ -276,16 +276,16 @@
 <!ENTITY Ctr_hideurlsrg		"中止・再読み込み・移動ボタンのセパレーターとスペースを隠す">
 <!ENTITY Ctr_urlbardropm	"ドロップマーカーを後ろの可能な位置に移す">
 <!ENTITY Ctr_urlbardropm2	"ドロップマーカーを常に表示する">
-<!ENTITY Ctr_altreaderico	"替わりのリーダーアイコンで置き換える">
+<!ENTITY Ctr_altreaderico	"リーダーアイコンを変更する">
 <!ENTITY Ctr_hideurlzoom	"ズームボタンを隠す (表示されている場合)">
-<!ENTITY Ctr_urlbardark		"暗い背景色にする">
+<!ENTITY Ctr_urlbardark		"暗い背景色に変更する">
 <!ENTITY Ctr_hideprbutton	"ポップアップブロックの通知アイコンを隠す">
 <!ENTITY Ctr_locsearchbw10	"ロケーションバーと検索バーの高さを減らす (実験的)">
 <!ENTITY Ctr_urlbar_ib		"サイト認証ボタン">
 <!ENTITY Ctr_ib_nohovcolor	"カーソルを乗せた時に色を変えない">
 <!ENTITY Ctr_ib_graycolor	"Web サイトの識別情報を取得できない時はグレーで表示する">
 <!ENTITY Ctr_verifiedcolors	"審査済みのウェブサイト、安全な接続、安全でない接続でボタンの色を分ける">
-<!ENTITY Ctr_ibinfoico		"ｉアイコンを地球アイコンで置き換える">
+<!ENTITY Ctr_ibinfoico		"ｉアイコンを地球アイコンに変更する">
 <!ENTITY Ctr_ibinfoico2		"ｉアイコンを隠す (可能ならば)">
 <!ENTITY Ctr_iblabels		"テキストを隠す">
 <!ENTITY Ctr_faviconurl		"ロケーションバーにファビコンを表示する">
@@ -299,11 +299,11 @@
 <!ENTITY Ctr_lbsbsize		"幅を指定する">
 <!ENTITY Ctr_searchbar		"検索バー">
 <!ENTITY Ctr_autocomplete	"自動補完リスト">
-<!ENTITY Ctr_altautocompl	"替わりの補完候補機能で置き換える">
+<!ENTITY Ctr_altautocompl	"補完候補機能を変更する">
 <!ENTITY Ctr_autocompl_it	"「…で検索」と「…を開く」を表示しない (可能ならば)">
 <!ENTITY Ctr_acompl_search	"検索エンジンを表示する">
 <!ENTITY Ctr_autocompl_hl	"一致部分を強調表示する">
-<!ENTITY Ctr_autocompl_rhl	"検索結果のハイライト色を Aero カラーにする">
+<!ENTITY Ctr_autocompl_rhl	"検索結果のハイライト色を Aero カラーに変更する">
 <!ENTITY Ctr_autocompl_not	"ページタイトルを隠す">
 <!ENTITY Ctr_autocompl_sep	"結果を境界線で区切る">
 <!ENTITY Ctr_urlbar_uc		"検索候補機能を統合しない">
@@ -316,7 +316,7 @@
 <!ENTITY Ctr_extrabar		"追加のツールバー">
 <!ENTITY Ctr_extrabar0		"追加のツールバー">
 <!ENTITY Ctr_extrabar1		"追加のツールバー">
-<!ENTITY Ctr_extrabarinfo	"「タブを上にする」と「タブを下にする」では追加のツールバーの順序はランダムに切り替わります。設定の反映には &brandShortName; の再起動が必要です。">
+<!ENTITY Ctr_extrabarinfo	"「タブを上に表示する」と「タブを下に表示する」では追加のツールバーの順序はランダムに切り替わります。設定の反映には &brandShortName; の再起動が必要です。">
 
 <!ENTITY Ctr_invicons		"反転アイコン">
 <!ENTITY Ctr_menubar		"メニューバー">
@@ -339,7 +339,7 @@
 <!ENTITY Ctr_notabbg		"背景色を取り除く (Windows AeroGlass / Win8)">
 <!ENTITY Ctr_hightabpos		"ツールバーの上部の間隔を減らす (可能ならば)">
 <!ENTITY Ctr_showalltabsb	"タブ一覧ボタンを常に表示する">
-<!ENTITY Ctr_alttabstb		"替わりの背景色にする">
+<!ENTITY Ctr_alttabstb		"背景色を変更する">
 <!ENTITY Ctr_alttabstb2		"最大化した時 (タブが上部の時)">
 
 <!ENTITY Ctr_altmenubar		"背景色を加える (システムのタイトルバー)">
@@ -347,8 +347,8 @@
 <!ENTITY Ctr_altmenubarpos2	"&brandShortName; タイトルバーの下">
 <!ENTITY Ctr_menubarnofog	"背景色とぼかしを取り除く (Windows AeroGlass / Win8)">
 
-<!ENTITY Ctr_aerocolors		"ツールバーとタブを Aero カラーにする">
-<!ENTITY Ctr_aerocolorsg	"グレー系の Aero カラーにする">
+<!ENTITY Ctr_aerocolors		"ツールバーとタブを Aero カラーに変更する">
+<!ENTITY Ctr_aerocolorsg	"グレー系の Aero カラーに変更する">
 <!ENTITY Ctr_transpttbw10	"タイトル/メニュー/タブ ツールバー: 背景色を取り除く">
 <!ENTITY Ctr_transpttbew10	"いくつかのシステムテーマのための追加の微調整">
 <!ENTITY Ctr_transptcw10	"システムデフォルトのボタンを隠す (最小化/最大化/閉じる)">
@@ -381,6 +381,7 @@
 <!ENTITY Ctr_dlanimation	"ダウンロード通知をアニメーションする">
 <!ENTITY Ctr_fsanimation	"フルスクリーンアニメーション">
 <!ENTITY Ctr_fsaduration	"HTML5コンテンツのフルスクリーンアニメーション">
+<!ENTITY Ctr_findbarhl		"Findbar: animate result highlighting">
 
 <!ENTITY Ctr_toolsitem		"ツールメニューに表示する">
 <!ENTITY Ctr_appmenuitem	"&brandShortName; メニューに表示する">
@@ -401,10 +402,9 @@
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"タブのサウンド再生アイコン">
 <!ENTITY Ctr_e_containertab	"コンテナタブ">
-<!ENTITY Ctr_e_findbarhl	"検索バーハイライト">
-<!ENTITY Ctr_fx50findbarhl	"この設定をオフにすると、検索バーのハイライト機能を無効にします。">
 <!ENTITY Ctr_e_flyweb		"FlyWeb">
-<!ENTITY Ctr_e_oldfontgfx	"Old font rendering">
+<!ENTITY Ctr_e_resfprinting "Anti fingerprinting protection">
+<!ENTITY Ctr_e_oldfontgfx	"古いフォントレンダリング">
 
 
 <!ENTITY Ctr_pw_settings	"設定">

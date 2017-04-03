@@ -19,7 +19,11 @@
 						url(chrome://classic_theme_restorer/content/images/ntab-hov-middle-r.png),
 						url(chrome://classic_theme_restorer/content/images/ntab-hov-start-r.png) !important;
 	}
-	
+
+	#main-window[fx51plus="true"] .tabbrowser-tab::after,
+	#main-window[fx51plus="true"] .tabbrowser-tab::before {
+	  opacity: 0 !important;
+	}
 
 	#main-window .tabbrowser-tab:not(:-moz-lwtheme):hover > .tab-stack > .tab-background:not([visuallyselected=true]),
 	#main-window .tabbrowser-tab:not(:-moz-lwtheme):not(:hover) > .tab-stack > .tab-background:not([visuallyselected=true]) {
@@ -110,6 +114,17 @@
 	#main-window[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #toolbar-menubar:-moz-any([autohide="true"][inactive], :not([autohide])) + #TabsToolbar .tab-background-middle:not([selected=true]) {
 	  clip-path: none !important;
 	}
+	
+	/* container tabs - top line indicator */
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][data-identity-color] .tab-text {
+	  box-shadow: 0px -1px 0px var(--identity-tab-color) inset !important;
+	}
+	/**/ 
+	
+	/* dev/nightly */
+	/*#main-window[fx54plus="true"] toolbar:not(:-moz-lwtheme) {
+	  background: unset !important;
+	}*/
 
 }
 

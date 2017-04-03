@@ -37,17 +37,17 @@
 	  background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.2) 4px, hsla(0,0%,75%,.2) 80%);
 	}
 	
-	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][style][selected="true"]:not(:-moz-lwtheme) {
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][data-identity-color][selected="true"]:not(:-moz-lwtheme) {
 	  background-image: linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%),
 						linear-gradient(-moz-dialog, -moz-dialog) !important;
 	}
-	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][style][selected="true"]:-moz-lwtheme{
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][data-identity-color][selected="true"]:-moz-lwtheme{
 	  background-image: linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%) !important;
 	}
-	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][style]:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][data-identity-color]:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
 	  background-image: linear-gradient(hsla(0,0%,100%,.2), hsla(0,0%,45%,.2) 2px, hsla(0,0%,32%,.2) 80%) !important;
 	}
-	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][style]:not([selected="true"]):hover:not(:-moz-lwtheme) {
+	#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][data-identity-color]:not([selected="true"]):hover:not(:-moz-lwtheme) {
 	  background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.2) 4px, hsla(0,0%,75%,.2) 80%) !important;
 	}
 	
