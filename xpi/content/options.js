@@ -166,6 +166,9 @@ classicthemerestorerjso.ctr = {
 	// radio restart label
 	document.getElementById('ctraddon_pw_radiorestart').style.visibility = 'collapse';
 	
+	// import / export label
+	document.getElementById('ctraddon_pw_impexpinfo').style.visibility = 'collapse';
+	
 	// tab height/width
 	document.getElementById('ctraddon_pw_tabheightinfo').style.visibility = 'collapse';
 	document.getElementById('ctraddon_pw_tabwidthinfo').style.visibility = 'collapse';
@@ -487,6 +490,8 @@ classicthemerestorerjso.ctr = {
 	
 	if (this.appversion < 55) {
 	  document.getElementById('ctraddon_pw_resfprintinggb').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_searchbar').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_searchbardesc').style.visibility = 'collapse';
 	}
 	
 	
@@ -1407,6 +1412,9 @@ classicthemerestorerjso.ctr = {
         classicthemerestorerjso.ctr.saveToFile(preferenceArray, aPattern);
         // Clear preferenceArray after export.
         preferenceArray = [];
+
+		document.getElementById('ctraddon_pw_impexpinfo').style.visibility = 'visible';
+
         return true;
     },
 	
@@ -1491,8 +1499,11 @@ classicthemerestorerjso.ctr = {
 			  }
 			}
 		}
-		
-		this.needsBrowserRestart();		
+
+		this.needsBrowserRestart();	
+
+		document.getElementById('ctraddon_pw_impexpinfo').style.visibility = 'visible';
+
 		return true;
 	},
 	
