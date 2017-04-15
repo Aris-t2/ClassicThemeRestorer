@@ -1,7 +1,9 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 	
 	/* Aero-like appearance */
-	.autocomplete-richlistitem[selected="true"] {
+	#main-window[fx55plus="true"] .autocomplete-richlistitem[selected="true"],
+	#main-window[fx55plus="true"] .autocomplete-richlistitem[selected="true"][current="true"],
+	.autocomplete-richlistitem:hover {
 	  color: inherit !important;
 	  background-color: transparent !important;
 	  background-image:

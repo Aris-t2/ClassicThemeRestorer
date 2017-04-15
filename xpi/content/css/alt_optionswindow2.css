@@ -64,6 +64,11 @@
 	  -moz-margin-start: 6px !important;
 	}
 	
+	/* empty containers group*/
+	#mainPrefPane:not([fx55plus="true"]) .main-content #browserContainersGroup{
+	  -moz-appearance: unset !important;
+	}
+	
 	/* category icons */
 	#category-search-results .category-icon,
 	#category-search .category-icon {
@@ -428,7 +433,7 @@
 	  max-width: 550px !important;
 	}
 	
-	/* adjust first groupbox on privacy category*/
+	/* adjust first groupbox on privacy/sync category*/
 	#mainPrefPane[fx46plus="true"] groupbox#trackingGroup{
 	  margin-top: 11px !important;
 	}
@@ -452,6 +457,49 @@
 	  margin-top: -11px !important;
 	  -moz-margin-start: unset !important;
 	  -moz-margin-end: 30px !important;
+	}
+	
+	#mainPrefPane[fx49plus="true"] #trackingGroup * {
+	  background: unset !important;
+	}
+
+	#mainPrefPane[fx49plus="true"] #trackingGroup * caption label {
+	  background: -moz-Dialog !important;
+	  margin-top: -11px !important;
+	  -moz-margin-start: -5px !important;
+	}
+	
+	#mainPrefPane[fx49plus="true"] groupbox#noFxaGroup{
+	  margin-top: 9px !important;
+	}
+	#mainPrefPane[fx49plus="true"] #noFxaCaption {
+	  background: -moz-Dialog !important;
+	  margin-top: -9px !important;
+	}
+	
+	#mainPrefPane[fx55plus="true"] groupbox#browserContainersGroup,
+	#mainPrefPane[fx55plus="true"] groupbox#trackingGroup{
+	  margin-top: 11px !important;
+	}
+	#mainPrefPane[fx55plus="true"] #browserContainersGroup *,	
+	#mainPrefPane[fx55plus="true"] #trackingGroup * {
+	  background: unset !important;
+	}
+	#mainPrefPane[fx55plus="true"] #browserContainersGroup * caption label,
+	#mainPrefPane[fx55plus="true"] #trackingGroup * caption label {
+	  background: -moz-Dialog !important;
+	  margin-top: -11px !important;
+	  -moz-margin-start: -5px !important;
+	}
+	#mainPrefPane[fx55plus="true"] #browserContainersGroup * caption label label {
+	  -moz-margin-start: 5px !important;
+	}
+	#mainPrefPane[fx55plus="true"] groupbox#noFxaGroup{
+	  margin-top: 9px !important;
+	}
+	#mainPrefPane[fx55plus="true"] #noFxaCaption {
+	  background: -moz-Dialog !important;
+	  margin-top: -9px !important;
 	}
 	
 	/* advanced category tabs */

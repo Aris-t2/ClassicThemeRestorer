@@ -125,4 +125,27 @@
       padding-top: 5px !important;
 	}
 	
+	/* cui buttons */
+	#ctraddon_cui-icons-button {
+	  background:#fbfbfb !important;
+	}
+	#ctraddon_cui-iconstext-button {
+	  background:#fbfbfb !important;
+	}
+	#ctraddon_cui-textonly-button {
+	  background:#dadada !important;
+	}
+	
+	@media all and (-moz-windows-classic) {
+		#ctraddon_cui-icons-button * {
+		  background: unset !important;
+		}
+		#ctraddon_cui-iconstext-button * {
+		  background: unset !important;
+		}
+		#ctraddon_cui-textonly-button * {
+		  background: #e7e3db !important;
+		}
+	}
+	
 }

@@ -39,43 +39,51 @@ ctrAboutPrefs = {
 		var currentWindow = windowsService.getMostRecentWindow('navigator:browser');
 		var browser = currentWindow.getBrowser();
 		
+
 		if(browser.contentDocument.location.href=='about:preferences') {
 		  gotoPref(prefslocation);
 		}
 		
 	  },80);
   
-	  var observer = new MutationObserver(function(mutations) {
-		mutations.forEach(function(mutation) {
-
-		   try{ 
-		     Services.prefs.getBranch('extensions.classicthemerestorer.').setCharPref('aboutprefs',document.getElementById("categories").getAttribute("last-selected"));
-		   } catch(e) {}
-			
-		});    
-	  });
-
-	  observer.observe(document.querySelector('#categories'), { attributes: true, attributeFilter: ['last-selected'] });
+	  // delay category name saving
+	  setTimeout(function(){
 	  
-	  /* advanced prefs area */
-	  window.addEventListener("DOMContentLoaded", function aboutprefsIndex(event){
-		window.removeEventListener("DOMContentLoaded", aboutprefsIndex, false);
-		  try{
-			document.getElementById("advancedPrefs").selectedIndex = Services.prefs.getBranch('extensions.classicthemerestorer.').getIntPref('aboutprefsInd');
-		  } catch(e) {}
-		  
-		  var observer2 = new MutationObserver(function(mutations) {
+		  var observer = new MutationObserver(function(mutations) {
 			mutations.forEach(function(mutation) {
 
 			   try{ 
-				 Services.prefs.getBranch('extensions.classicthemerestorer.').setIntPref('aboutprefsInd',document.getElementById("advancedPrefs").getAttribute("selectedIndex"));
+				 Services.prefs.getBranch('extensions.classicthemerestorer.').setCharPref('aboutprefs',document.getElementById("categories").getAttribute("last-selected"));
 			   } catch(e) {}
 				
 			});    
 		  });
 
-		  observer2.observe(document.querySelector('#advancedPrefs'), { attributes: true, attributeFilter: ['selectedIndex'] });
-	  },false);
+		  observer.observe(document.querySelector('#categories'), { attributes: true, attributeFilter: ['last-selected'] });
+	  
+	  },1000);
+	  
+	  /* advanced prefs area (not available in Fx55+ anymore) */
+	  if(parseInt(Services.appinfo.version) < 55 ) {
+		  window.addEventListener("DOMContentLoaded", function aboutprefsIndex(event){
+			window.removeEventListener("DOMContentLoaded", aboutprefsIndex, false);
+			  try{
+				document.getElementById("advancedPrefs").selectedIndex = Services.prefs.getBranch('extensions.classicthemerestorer.').getIntPref('aboutprefsInd');
+			  } catch(e) {}
+			  
+			  var observer2 = new MutationObserver(function(mutations) {
+				mutations.forEach(function(mutation) {
+
+				   try{ 
+					 Services.prefs.getBranch('extensions.classicthemerestorer.').setIntPref('aboutprefsInd',document.getElementById("advancedPrefs").getAttribute("selectedIndex"));
+				   } catch(e) {}
+					
+				});    
+			  });
+
+			  observer2.observe(document.querySelector('#advancedPrefs'), { attributes: true, attributeFilter: ['selectedIndex'] });
+		  },false);
+	  }
 	  
 	}
 
@@ -92,8 +100,10 @@ ctrAboutPrefs = {
 	  try{
 		if(parseInt(Services.appinfo.version) >=46 && parseInt(Services.appinfo.version) < 49)
 		  document.querySelector('#mainPrefPane').setAttribute('fx46plus',true);
-		else if(parseInt(Services.appinfo.version) >=49)
+		else if(parseInt(Services.appinfo.version) >=49 && parseInt(Services.appinfo.version) < 55)
 		  document.querySelector('#mainPrefPane').setAttribute('fx49plus',true);
+	    else if(parseInt(Services.appinfo.version) >=55)
+		  document.querySelector('#mainPrefPane').setAttribute('fx55plus',true);
 	  } catch(e){}
 
 	  /* restore favicon wheel for all categories */

@@ -109,5 +109,16 @@
 		margin-bottom: -1px !important;
 	  }
 	}
+	
+	/* cui buttons */
+	#ctraddon_cui-tabsnontop {
+	  background: #dadada !important;
+	}
+	
+	@media all and (-moz-windows-classic) {
+	  #ctraddon_cui-tabsnontop * {
+		background:#e7e3db !important;
+	  }
+	}
 
 }

@@ -134,4 +134,14 @@
 	  margin-bottom: -4px !important;
 	}
 	
+	/* cui buttons */
+	#ctraddon_cui-ctroldsearch {
+	  background: #dadada !important;
+	}
+	@media all and (-moz-windows-classic) {
+	  #ctraddon_cui-ctroldsearch * {
+		background:#e7e3db !important;
+	  }
+	}
+	
 }

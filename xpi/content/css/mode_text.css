@@ -1,0 +1,87 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	/* support for old text mode */
+	toolbar[mode="text"] #back-button label,
+	toolbar[mode="text"] #forward-button label,
+	toolbar[mode="text"] #urlbar #urlbar-reload-button .toolbarbutton-text,
+	toolbar[mode="text"] #urlbar #urlbar-stop-button .toolbarbutton-text,
+	toolbar[mode="text"] #urlbar #urlbar-go-button .toolbarbutton-text,
+	toolbar[mode="text"] .tabs-newtab-button .toolbarbutton-text,
+	toolbar[mode="text"] #urlbar #feed-button .toolbarbutton-text {
+	  display: none !important;
+	}
+	
+	toolbar[mode="text"] #back-button image,
+	toolbar[mode="text"] #forward-button image,
+	toolbar[mode="text"] #urlbar #urlbar-reload-button .toolbarbutton-icon,
+	toolbar[mode="text"] #urlbar #urlbar-stop-button .toolbarbutton-icon,
+	toolbar[mode="text"] #urlbar #urlbar-go-button .toolbarbutton-icon,
+	toolbar[mode="text"] .tabs-newtab-button .toolbarbutton-icon,
+	toolbar[mode="text"] .tabbrowser-tab .tab-close-button .toolbarbutton-icon,
+	toolbar[mode="text"] #urlbar #feed-button .toolbarbutton-icon {
+	  display:block !important;
+	}
+	
+	toolbar[mode="text"]:not(#TabsToolbar) #PanelUI-menu-button .toolbarbutton-icon {
+	  -moz-appearance: unset !important;
+	  display:block !important;
+	  visibility: hidden !important;
+	  -moz-margin-end: -42px !important;
+	  background: unset !important;
+	  box-shadow: unset !important;
+	  border: unset !important;
+	}
+
+	#nav-bar[mode="text"] #PanelUI-menu-button .toolbarbutton-icon {
+	  -moz-appearance: unset !important;
+	  display:block !important;
+	  visibility: hidden !important;
+	  -moz-margin-end: -22px !important;
+	  background: unset !important;
+	  box-shadow: unset !important;
+	  border-style: unset !important;
+	  border: unset !important;
+	  height: unset !important;
+	  min-height: unset !important;
+	  max-height: 1px !important;
+	  padding: unset !important;
+	}
+
+	#nav-bar[mode="text"] #PanelUI-menu-button .toolbarbutton-text {
+	  -moz-margin-start: -14px !important;
+	}
+	
+	/* icons on tabs toolbar do no get hidden*/
+	#TabsToolbar[mode="text"] .toolbarbutton-text {
+	  display: none !important;
+	}
+
+	#TabsToolbar[mode="text"] .toolbarbutton-icon {
+	  display: block !important;
+	}
+	
+	/* cui buttons */
+	#ctraddon_cui-icons-button {
+	  background:#fbfbfb !important;
+	}
+	#ctraddon_cui-iconstext-button {
+	  background:#fbfbfb !important;
+	}
+	#ctraddon_cui-textonly-button {
+	  background:#bdbdbd !important;
+	}
+	
+	@media all and (-moz-windows-classic) {
+		#ctraddon_cui-icons-button * {
+		  background: unset !important;
+		}
+		#ctraddon_cui-iconstext-button * {
+		  background: unset !important;
+		}
+		#ctraddon_cui-textonly-button * {
+		  background: white !important;
+		}
+	}
+	
+}
