@@ -10,4 +10,17 @@
 	#main-window[fx52plus="true"] #ctraddon_BMB_bookmarksPopup[panelopen="true"] #ctraddon_BMB_subscribeToPageSubmenuMenupopup {
 	  background: linear-gradient(white, -moz-dialog 30px) !important;    
 	}
+	
+	@media all and (-moz-windows-classic) {
+		#PanelUI-footer-inner toolbarbutton:not(#PanelUI-quit):not(:-moz-any([disabled],[open],:active)):hover,
+		panelview .toolbarbutton-1:not(:-moz-any([disabled],[open],:active)):hover,
+		toolbarbutton.subviewbutton:not(:-moz-any([disabled],[open],:active)):hover,
+		menu.subviewbutton:not(:-moz-any([disabled],:active))[_moz-menuactive],
+		menuitem.subviewbutton:not(:-moz-any([disabled],:active))[_moz-menuactive],
+		.share-provider-button:not(:-moz-any([disabled],[open],:active)):hover:not([checked="true"]),
+		.widget-overflow-list .toolbarbutton-1:not(:-moz-any([disabled],[open],:active)):hover,
+		.toolbaritem-combined-buttons:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true]) > toolbarbutton:not(:-moz-any([disabled],[open],:active)):hover {
+		  background-color: #bbbbbb !important;
+		}
+	}
 }
