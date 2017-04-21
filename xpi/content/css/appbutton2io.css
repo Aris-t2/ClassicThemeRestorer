@@ -126,6 +126,14 @@
 	  }
 	}
 	
+	@media (-moz-os-version: windows-win10) {
+		
+		#main-window[sizemode="normal"][developertheme="true"]:not([tabsontop="false"]) #navigator-toolbox {
+		  margin-top: 2px !important;
+		}
+		
+	}
+	
 	/* for LavaFox themes */
 	#main-window[currenttheme^="LavaFox"][tabsintitlebar][chromehidden~="menubar"][sizemode="normal"]:not([inFullscreen]) #toolbar-menubar ~ #TabsToolbar,
 	#main-window[currenttheme^="LavaFox"][tabsintitlebar][sizemode="normal"]:not([inFullscreen]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
