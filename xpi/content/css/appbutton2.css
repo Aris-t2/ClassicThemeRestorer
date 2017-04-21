@@ -310,6 +310,20 @@
 		#main-window[sizemode="normal"][developertheme="true"][devtoolstheme="light"]:not([tabsontop="false"]) {
 		  background: #e3e4e6 !important;
 		}
+		
+		#main-window[sizemode="normal"][developertheme="true"] #titlebar {
+		  margin-bottom: -50px !important;
+		}
+		
+		@media (-moz-windows-theme:aero) {
+		  #main-window[developertheme="true"]:not([customizing]) .titlebar-button,
+		  #main-window[developertheme="true"]:not([customizing]) .titlebar-button:not(#titlebar-close) > .toolbarbutton-icon{
+			opacity: 0.01 !important;
+		  }
+		  #main-window[developertheme="true"]:not([customizing]) .titlebar-button:hover {
+			opacity: 1 !important;
+		  }
+		}
 	}
 
 }
