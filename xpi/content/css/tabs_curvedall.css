@@ -64,11 +64,6 @@
 	#main-window[fx51plus="true"] .tabbrowser-tab::before {
 	  opacity: 0 !important;
 	}
-	
-	#main-window[fx53plus="true"] .tab-label-container {
-	  margin-left: -3px !important;
-	  margin-right: -3px !important;
-	}
 
 	#tabbrowser-tabs[movingtab]:not(:-moz-lwtheme) > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
 	.tabbrowser-tab:not(:-moz-lwtheme):not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
@@ -109,6 +104,11 @@
       -moz-margin-start: -4px !important;
 	  -moz-margin-end: -6px !important;
     }
+	
+	#main-window[fx53plus="true"] .tabbrowser-tab:not([pinned]) .tab-label-container {
+	  margin-left: -3px !important;
+	  margin-right: -3px !important;
+	}
 
     .tabbrowser-tab:not([pinned]):not(:-moz-lwtheme) .tab-icon-image,
     .tabbrowser-tab:not([pinned]):not(:-moz-lwtheme) .tab-throbber {
