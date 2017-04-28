@@ -492,9 +492,18 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_resfprintinggb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_searchbar').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_searchbardesc').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_uianimation').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_uianimationdesc').style.visibility = 'collapse';
 	}
 	
+	if (this.appversion >= 55) {
+	  document.getElementById('ctraddon_pw_tabanimation').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_tabanimationdesc').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_fsanimation').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_fsanimationdesc').style.visibility = 'collapse';
+	}
 	
+
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get
 	  // garbage collected.

@@ -348,6 +348,7 @@
 		<preference id="ctraddon_tabsanimate"	name="browser.tabs.animate"							type="bool"		instantApply="true"/>
 		<preference id="ctraddon_dlanimate"		name="browser.download.animateNotifications"		type="bool"		instantApply="true"/>
 		<preference id="ctraddon_fsanimation"	name="browser.fullscreen.animate"					type="bool"		instantApply="true"/>
+		<preference id="ctraddon_uianimation"	name="toolkit.cosmeticAnimations.enabled"			type="bool"		instantApply="true"/>
 		<preference id="ctraddon_fsaduration"	name="extensions.classicthemerestorer.fsaduration"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_html5warning"	name="extensions.classicthemerestorer.html5warning"	type="bool"		instantApply="true"/>
 
@@ -567,8 +568,8 @@
 				<checkbox label="&Ctr_ctrltabprev;" preference="ctraddon_ctrltabprev" id="ctraddon_pw_ctrltabprev" class="ctraddon_new_in_v48"/>
 				<description class="ctraddonsuboption">about:config &gt;&gt; browser.ctrlTab.previews</description>
 				
-				<checkbox label="&Ctr_tabanimation;" preference="ctraddon_tabsanimate"/>
-				<description class="ctraddonsuboption">about:config &gt;&gt; browser.tabs.animate</description>
+				<checkbox label="&Ctr_tabanimation;" preference="ctraddon_tabsanimate" id="ctraddon_pw_tabanimation"/>
+				<description class="ctraddonsuboption" id="ctraddon_pw_tabanimationdesc">about:config &gt;&gt; browser.tabs.animate</description>
 
 			  </groupbox>
 			  
@@ -1138,9 +1139,10 @@
 				<checkbox label="&Ctr_hidezoomres;"		preference="ctraddon_hidezoomres"/>
 				<checkbox label="&Ctr_noresizerxp;"		preference="ctraddon_noresizerxp" id="ctraddon_pw_noresizerxp"/>
 				<checkbox label="&Ctr_tbconmenu;"		preference="ctraddon_tbconmenu"	  id="ctraddon_pw_tbconmenu"/>
-				
+				<checkbox label="&Ctr_uianimation;"		preference="ctraddon_uianimation" id="ctraddon_pw_uianimation"/>
+				<description class="ctraddonsuboption" id="ctraddon_uianimationdesc">about:config &gt;&gt; toolkit.cosmeticAnimations.enabled</description>
 				<checkbox label="&Ctr_fsanimation;"		preference="ctraddon_fsanimation" id="ctraddon_pw_fsanimation"/>
-				<description class="ctraddonsuboption">about:config &gt;&gt; browser.fullscreen.animate</description>
+				<description class="ctraddonsuboption" id="ctraddon_pw_fsanimationdesc">about:config &gt;&gt; browser.fullscreen.animate</description>
 				<checkbox label="&Ctr_fsaduration;"		preference="ctraddon_fsaduration" id="ctraddon_pw_fsaduration"/>
 				<description class="ctraddonsuboption">about:config &gt;&gt; full-screen-api.transition-duration.*</description>
 				

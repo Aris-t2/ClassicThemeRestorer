@@ -2846,6 +2846,15 @@ classicthemerestorerjs.ctr = {
 		switch (name) {
 
 		  case "navbarbuttons":
+
+			if (classicthemerestorerjs.ctr.appversion >= 54 && Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref('nbcompact')) {
+			  if (branch.getCharPref("navbarbuttons")=="nabbuttons_large"
+				|| branch.getCharPref("navbarbuttons")=="nabbuttons_large_dev"
+				|| branch.getCharPref("navbarbuttons")=="nabbuttons_small") {
+					classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
+			  } else classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
+			}
+			
 			if (branch.getCharPref("navbarbuttons")!="nabbuttons_off") {
 			  Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('smallnavbut',false);
 			}
@@ -2856,7 +2865,7 @@ classicthemerestorerjs.ctr = {
 				Services.prefs.getBranch("extensions.classicthemerestorer.").setCharPref('nav_txt_ico','icons');
 			  }
 			}
-			
+		
 		  break;
 		}
 	  }
@@ -4369,7 +4378,7 @@ classicthemerestorerjs.ctr = {
 		case "nbcompact":
 			if(classicthemerestorerjs.ctr.appversion < 54)
 			  manageCSS("navbar_compact.css");
-		    else manageCSS("navbar_compact2.css");	
+		    else manageCSS("navbar_compact2.css");
 		break;
 		case "noconicons": 			manageCSS("nocontexticons.css");		break;
 		case "noconitems": 			manageCSS("nocontextitems.css");		break;
