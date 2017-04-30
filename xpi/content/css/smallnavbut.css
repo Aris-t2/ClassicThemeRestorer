@@ -7,6 +7,16 @@
 	margin-bottom:1px !important;
   }
   
+  #main-wndow[fx54plus="true"] #nav-bar-customization-target > toolbaritem:not(#search-container):not(#urlbar-container) toolbarbutton,
+  #main-wndow[fx54plus="true"] #nav-bar-customization-target > toolbarbutton toolbarbutton,
+  #main-wndow[fx54plus="true"] #nav-bar-customization-target > toolbarbutton > dropmarker,
+  #main-wndow[fx54plus="true"] #nav-bar-customization-target > #bookmarks-menu-button .toolbarbutton-menubutton-dropmarker,
+  #main-wndow[fx54plus="true"] #nav-bar-customization-target > toolbarbutton,
+  #main-wndow[fx54plus="true"] #nav-bar-overflow-button {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+  }
+
   /* cui buttons */
   #ctraddon_cui-smallnavbut-button1 {
 	background:#fbfbfb !important;

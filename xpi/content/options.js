@@ -538,19 +538,11 @@ classicthemerestorerjso.ctr = {
 		switch (name) {
 
 		  case "navbarbuttons":
-		  
-		    var ctbbuttons = false;
 			
-			try {
-			  ctbbuttons = branch.getCharPref("navbarbuttons")!="nabbuttons_off";
-			} catch(e){}
-		  
-			if (ctbbuttons) {
-			  document.getElementById('ctraddon_pw_smallnavbut').disabled = true;
-			}
-			else {
-			  document.getElementById('ctraddon_pw_smallnavbut').disabled = false;
-			}
+			if(branch.getCharPref("navbarbuttons")!="nabbuttons_off")
+				document.getElementById('ctraddon_pw_smallnavbut').disabled = true;
+			else
+				document.getElementById('ctraddon_pw_smallnavbut').disabled = false;
 			
 		  break;
 

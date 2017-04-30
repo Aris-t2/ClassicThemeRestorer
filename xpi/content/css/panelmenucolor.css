@@ -54,11 +54,15 @@
 		#PanelUI-popup #PanelUI-footer-fxa:hover,
 		#downloadsPanel #downloadsHistory:hover,
 		#downloadsPanel richlistitem:hover,
-		#identity-popup-securityView button:hover {
-		  background-color: rgb(175, 175, 175) !important;
+		#identity-popup-securityView button:hover,
+		#PanelUI-popup #PanelUI-contents .toolbarbutton-1:-moz-any(:hover:active,[checked],[open]) {
+		  background-color: rgb(187, 187, 187) !important;
 		}
 		#PanelUI-popup .toolbarbutton-multiline-text {
 		  padding: 1px !important;
+		}
+		.downloadsPanelFooterButton {
+		  background-color: rgb(200, 200, 200) !important;
 		}
 	}
 }

@@ -809,6 +809,13 @@ classicthemerestorerjs.ctr = {
 			    classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
 			}
 			
+			if(classicthemerestorerjs.ctr.appversion >= 54 && branch.getBoolPref('nbcompact') && branch.getBoolPref("backforward")){
+			
+			  if(branch.getBoolPref("smallnavbut"))
+				classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
+			}
+
 			classicthemerestorerjs.ctr.checkAppbuttonOnNavbar();
 
 		  break;
@@ -899,18 +906,24 @@ classicthemerestorerjs.ctr = {
 		  case "backforward":
 			if (branch.getBoolPref("backforward")) {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("backforward",true);
-			  
+	  
 			  if (branch.getBoolPref("nbcompact") && branch.getBoolPref("smallnavbut")==false){
 				classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
 			  }
 			}
-			else { 
+			else {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("backforward",false);
 			  
-			  if (branch.getBoolPref("nbcompact")&& branch.getBoolPref("smallnavbut")==false){
+			  if (branch.getBoolPref("nbcompact") && branch.getBoolPref("smallnavbut")==false){
 				classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
 			  }
 			}
+			
+			try {
+			  if(branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && branch.getBoolPref("smallnavbut")==false && classicthemerestorerjs.ctr.appversion >= 54
+				&& Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
+			   classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
+			} catch(e){}
 		  break;
 		  
 		  case "nbcompact":
@@ -920,7 +933,16 @@ classicthemerestorerjs.ctr = {
 			  if (branch.getCharPref("nav_txt_ico").indexOf('iconstxt')!=-1)
 				branch.setCharPref("nav_txt_ico",'icons');
 			}
-			else classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
+			else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
+			}
+			
+			try {
+			  if(branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && branch.getBoolPref("smallnavbut")==false && classicthemerestorerjs.ctr.appversion >= 54
+				&& Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
+			   classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
+			} catch(e){}
+			
 		  break;
 
 		  case "noconicons":
@@ -2846,17 +2868,20 @@ classicthemerestorerjs.ctr = {
 		switch (name) {
 
 		  case "navbarbuttons":
-
-			if (classicthemerestorerjs.ctr.appversion >= 54 && Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref('nbcompact')) {
-			  if (branch.getCharPref("navbarbuttons")=="nabbuttons_large"
-				|| branch.getCharPref("navbarbuttons")=="nabbuttons_large_dev"
-				|| branch.getCharPref("navbarbuttons")=="nabbuttons_small") {
+		  
+			/*if (classicthemerestorerjs.ctr.appversion >= 54 && Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref('backforward')
+				&& Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref('nbcompact')) {
+			  if (branch.getCharPref("navbarbuttons")!="nabbuttons_off") {
 					classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
-			  } else classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
-			}
-			
+			  } else if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("smallnavbut")==false) {
+				classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
+			  }
+			}*/
+		
 			if (branch.getCharPref("navbarbuttons")!="nabbuttons_off") {
 			  Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('smallnavbut',false);
+			  if(classicthemerestorerjs.ctr.appversion >= 54 && Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref('nbcompact'))
+				Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('nbcompact',false);
 			}
 			classicthemerestorerjs.ctr.checkAppbuttonOnNavbar();
 			
@@ -2865,7 +2890,7 @@ classicthemerestorerjs.ctr = {
 				Services.prefs.getBranch("extensions.classicthemerestorer.").setCharPref('nav_txt_ico','icons');
 			  }
 			}
-		
+			
 		  break;
 		}
 	  }
@@ -4378,7 +4403,7 @@ classicthemerestorerjs.ctr = {
 		case "nbcompact":
 			if(classicthemerestorerjs.ctr.appversion < 54)
 			  manageCSS("navbar_compact.css");
-		    else manageCSS("navbar_compact2.css");
+		    else manageCSS("navbar_compact2.css");	
 		break;
 		case "noconicons": 			manageCSS("nocontexticons.css");		break;
 		case "noconitems": 			manageCSS("nocontextitems.css");		break;
