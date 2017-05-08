@@ -104,6 +104,11 @@
       -moz-margin-start: -4px !important;
 	  -moz-margin-end: -6px !important;
     }
+	
+	#main-window[fx53plus="true"] .tabbrowser-tab:not([pinned]) .tab-label-container {
+	  margin-left: -3px !important;
+	  margin-right: -3px !important;
+	}
 
     .tabbrowser-tab:not([pinned]):not(:-moz-lwtheme) .tab-icon-image,
     .tabbrowser-tab:not([pinned]):not(:-moz-lwtheme) .tab-throbber {

@@ -37,7 +37,12 @@
 	#main-window[fx51plus="true"] .tabbrowser-tab::before {
 	  opacity: 0 !important;
 	}
-
+	
+	#main-window[fx53plus="true"] .tabbrowser-tab:not([pinned]) .tab-label-container {
+	  margin-left: -3px !important;
+	  margin-right: -3px !important;
+	}
+	
 	#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
 	.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
 	#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {

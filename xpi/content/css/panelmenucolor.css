@@ -10,4 +10,59 @@
 	#main-window[fx52plus="true"] #ctraddon_BMB_bookmarksPopup[panelopen="true"] #ctraddon_BMB_subscribeToPageSubmenuMenupopup {
 	  background: linear-gradient(white, -moz-dialog 30px) !important;    
 	}
+	
+	@media all and (-moz-windows-classic) {
+		#PanelUI-footer-inner toolbarbutton:not(#PanelUI-quit):not(:-moz-any([disabled],[open],:active)):hover,
+		panelview .toolbarbutton-1:not(:-moz-any([disabled],[open],:active)):hover,
+		toolbarbutton.subviewbutton:not(:-moz-any([disabled],[open],:active)):hover,
+		menu.subviewbutton:not(:-moz-any([disabled],:active))[_moz-menuactive],
+		menuitem.subviewbutton:not(:-moz-any([disabled],:active))[_moz-menuactive],
+		.share-provider-button:not(:-moz-any([disabled],[open],:active)):hover:not([checked="true"]),
+		.widget-overflow-list .toolbarbutton-1:not(:-moz-any([disabled],[open],:active)):hover,
+		.toolbaritem-combined-buttons:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true]) > toolbarbutton:not(:-moz-any([disabled],[open],:active)):hover {
+		  background-color: #bbbbbb !important;
+		}
+		
+		#PanelUI-popup toolbaritem,
+		#downloadsPanel richlistitem,
+		#identity-popup-securityView-header {
+		  border-bottom-color: rgb(150, 150, 150) !important;
+		}
+		#PanelUI-popup toolbaritem:hover {
+		  border-color: rgb(150, 150, 150) !important;
+		}
+		#PanelUI-popup toolbaritem separator {
+		  background-color: rgb(150, 150, 150) !important;
+		}
+		#PanelUI-popup #PanelUI-footer,
+		#identity-popup-securityView button,
+		#identity-popup-security-expander:hover {
+		  background-color: rgb(200, 200, 200) !important;
+		}
+		#PanelUI-popup #PanelUI-footer toolbarseparator,
+		#downloadsPanel toolbarseparator,
+		#identity-popup-security-expander .box-inherit.button-box {
+		  border-left-color: rgb(150, 150, 150) !important;
+		}
+		#PanelUI-popup #PanelUI-footer-inner,
+		#PanelUI-popup #PanelUI-footer-fxa,
+		#downloadsPanel #downloadsFooter,
+		#tracking-protection-container,
+		#identity-popup .identity-popup-section {
+		  border-top-color: rgb(150, 150, 150) !important;
+		}
+		#PanelUI-popup #PanelUI-footer-fxa:hover,
+		#downloadsPanel #downloadsHistory:hover,
+		#downloadsPanel richlistitem:hover,
+		#identity-popup-securityView button:hover,
+		#PanelUI-popup #PanelUI-contents .toolbarbutton-1:-moz-any(:hover:active,[checked],[open]) {
+		  background-color: rgb(187, 187, 187) !important;
+		}
+		#PanelUI-popup .toolbarbutton-multiline-text {
+		  padding: 1px !important;
+		}
+		.downloadsPanelFooterButton {
+		  background-color: rgb(200, 200, 200) !important;
+		}
+	}
 }

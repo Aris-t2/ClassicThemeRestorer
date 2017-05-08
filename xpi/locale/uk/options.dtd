@@ -11,6 +11,7 @@
 <!ENTITY Ctr_space			"Інтервал">
 <!ENTITY Ctr_separator		"Розділювач">
 <!ENTITY Ctr_navthrobber	"Індикатор активності">
+<!ENTITY Ctr_maskindicator	"Private Mode Indicator">
 <!ENTITY Ctr_sidebarbutton	"Бокова панель">
 <!ENTITY Ctr_windowcontrols	"мін/макс/закрити (повний екран)">
 <!ENTITY Ctr_rr				"Перезапустіть &brandShortName;!">
@@ -148,7 +149,7 @@
 <!ENTITY Ctr_puibut_r_sep	"Зправа">
 <!ENTITY Ctr_html5warning	"HTML5 повноекранне попередження">
 <!ENTITY Ctr_oldtoplevimg	"Зображення «домену верхнього рівня»: класичний вигляд">
-<!ENTITY Ctr_altdlprogbar	"Download progress bar: alternative appearance">
+<!ENTITY Ctr_altdlprogbar	"Панель прогресу завантаження: альтернативний вигляд">
 <!ENTITY Ctr_altalertbox	"«Вікно попереджень»: альтернативний вигляд">
 <!ENTITY Ctr_emptygfavico	"Замінити типову іконку сайту">
 <!ENTITY Ctr_mstatusbar		"Рухомий рядок стану">
@@ -190,8 +191,8 @@
 <!ENTITY Ctr_ctrosearchdel	"Затримка виконання">
 <!ENTITY Ctr_search_oit		"Відкрити пошук у новій вкладці">
 <!ENTITY Ctr_osearch_meoit	"Середні-кліки: пошук в новій «передньоплановій вкладці»">
-<!ENTITY Ctr_osearch_meoit1	"Search engine">
-<!ENTITY Ctr_osearch_meoit2	"Search glass">
+<!ENTITY Ctr_osearch_meoit1	"Пошуковий рушій">
+<!ENTITY Ctr_osearch_meoit2	"Пошукова лупа">
 <!ENTITY Ctr_osearch_iwidth	"Автоматично налаштовувати ширину спливаючого вікна">
 <!ENTITY Ctr_osearch_cwidth	"Налаштовувана ширина для пошукових спливаючих вікон">
 <!ENTITY Ctr_osearch_dm		"Мала позначка випадного списку">
@@ -379,9 +380,10 @@
 <!ENTITY Ctr_pananimation	"Анімація відкривання панелі">
 <!ENTITY Ctr_tabanimation	"Анімація відкривання/закривання вкладок">
 <!ENTITY Ctr_dlanimation	"Анімація «Повідомлення завантаження»">
+<!ENTITY Ctr_uianimation	"General ui animations">
 <!ENTITY Ctr_fsanimation	"Повноекранні анімації">
 <!ENTITY Ctr_fsaduration	"Повноекранні анімації для HTML5 вмісту">
-<!ENTITY Ctr_findbarhl		"Findbar: animate result highlighting">
+<!ENTITY Ctr_findbarhl		"Панель пошуку: анімувати виділення результатів">
 
 <!ENTITY Ctr_toolsitem		"Пункт в меню інструментів">
 <!ENTITY Ctr_appmenuitem	"Пункт меню в кнопках додатку">
@@ -403,7 +405,7 @@
 <!ENTITY Ctr_e_tabsaudioico	"Іконка аудіовідтворення на вкладках">
 <!ENTITY Ctr_e_containertab	"Контейнерні вкладки">
 <!ENTITY Ctr_e_flyweb		"Flyweb">
-<!ENTITY Ctr_e_resfprinting "Anti fingerprinting protection">
+<!ENTITY Ctr_e_resfprinting "Захист проти залишення відбитків пальців">
 <!ENTITY Ctr_e_oldfontgfx	"Надання старого шрифту">
 
 
@@ -415,6 +417,7 @@
 <!ENTITY Ctr_pw_set_import	"Імпорт налаштувань">
 <!ENTITY Ctr_pw_set_syncon	"Додати до Синхронізації">
 <!ENTITY Ctr_pw_set_syncoff	"Усунути з Синхронізації">
+<!ENTITY Ctr_pw_set_impexp	"Уподобання, які містять опис «about:config &gt;&gt; ...»  є уподобаннями браузера за замовчуванням і не експортуються або імпортуються!">
 
 <!ENTITY Ctr_special_font	"Налаштування кольору тла - тільки для типової теми!">
 <!ENTITY Ctr_special_info	"Деякі параметри не можуть запропонувати візуальні зміни в усіх випадках">

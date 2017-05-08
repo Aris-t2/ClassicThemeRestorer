@@ -11,6 +11,7 @@
 <!ENTITY Ctr_space			"Espace">
 <!ENTITY Ctr_separator		"Séparateur">
 <!ENTITY Ctr_navthrobber	"Indicateur d'activité">
+<!ENTITY Ctr_maskindicator	"Indicateur de navigation privée">
 <!ENTITY Ctr_sidebarbutton	"(panneau latéral)">
 <!ENTITY Ctr_windowcontrols	"Réduire/Restaurer/Fermer (plein écran)">
 <!ENTITY Ctr_rr				"Redémarrage nécessaire !">
@@ -63,9 +64,9 @@
 <!ENTITY Ctr_tabwidthinfo3	"Les valeurs au-dessous de 48px causeront des erreurs dans la plupart des cas !">
 <!ENTITY Ctr_square_edges	"Coins supérieurs carrés">
 <!ENTITY Ctr_tttitlebar		"Afficher le titre de l'onglet actuel dans la barre de titre de &brandShortName;">
-<!ENTITY Ctr_ttoverflow		"Titres d'onglets longs">
-<!ENTITY Ctr_ttoverfl_def	"Effet de débordement par défaut">
-<!ENTITY Ctr_ttoverfl_no	"Pas d'effet de débordement">
+<!ENTITY Ctr_ttoverflow		"Longs titres d'onglets :">
+<!ENTITY Ctr_ttoverfl_def	"Effet de fondu par défaut">
+<!ENTITY Ctr_ttoverfl_no	"Pas d'effet de fondu">
 <!ENTITY Ctr_tabtitle		"Position des titres :">
 <!ENTITY Ctr_tabinsertion	"Insérer les onglets liés à la suite de l'onglet actuel">
 <!ENTITY Ctr_emptytfavico	"Afficher un Favicon (pour les pages qui n'en proposent pas) :">
@@ -189,9 +190,9 @@
 <!ENTITY Ctr_ctroldsearchr	"Suite à une recherche, revenir au premier moteur de la liste après...">
 <!ENTITY Ctr_ctrosearchdel	"">
 <!ENTITY Ctr_search_oit		"Ouvrir la recherche dans un nouvel onglet">
-<!ENTITY Ctr_osearch_meoit	"Clic milieu : ouvrir la recherche dans un nouvel onglet au premier plan">
-<!ENTITY Ctr_osearch_meoit1	"Moteur de recherche">
-<!ENTITY Ctr_osearch_meoit2	"Loupe">
+<!ENTITY Ctr_osearch_meoit	"Ouvrir la recherche dans un nouvel onglet au premier plan lors d'un clic milieu sur...">
+<!ENTITY Ctr_osearch_meoit1	"Un moteur de recherche">
+<!ENTITY Ctr_osearch_meoit2	"La loupe">
 <!ENTITY Ctr_osearch_iwidth	"Ajuster automatiquement la largeur de la fenêtre surgissante">
 <!ENTITY Ctr_osearch_cwidth	"Largeur personnalisée pour la fenêtre surgissante">
 <!ENTITY Ctr_osearch_dm		"Réduire la taille du bouton de liste déroulante">
@@ -379,9 +380,10 @@
 <!ENTITY Ctr_pananimation	"Animation d'ouverture des panneaux">
 <!ENTITY Ctr_tabanimation	"Animation d'ouverture et de fermeture des onglets">
 <!ENTITY Ctr_dlanimation	"Animation du bouton « Téléchargement » lorsqu'un téléchargement s'achève">
+<!ENTITY Ctr_uianimation	"General ui animations">
 <!ENTITY Ctr_fsanimation	"Animations de transition vers/depuis le mode plein écran">
 <!ENTITY Ctr_fsaduration	"Animations de transition vers/depuis le mode plein écran pour le contenu HTML5">
-<!ENTITY Ctr_findbarhl		"Findbar: animate result highlighting">
+<!ENTITY Ctr_findbarhl		"Barre de recherche : animer le surlignage des résultats">
 
 <!ENTITY Ctr_toolsitem		"Ajouter un élément dans le menu « Outils »">
 <!ENTITY Ctr_appmenuitem	"Ajouter un élément dans le menu de l'ancien bouton &brandShortName;">
@@ -403,7 +405,7 @@
 <!ENTITY Ctr_e_tabsaudioico	"Icône de lecture audio">
 <!ENTITY Ctr_e_containertab	"Onglets conteneurs">
 <!ENTITY Ctr_e_flyweb		"FlyWeb">
-<!ENTITY Ctr_e_resfprinting "Anti fingerprinting protection">
+<!ENTITY Ctr_e_resfprinting "Protection contre la prise d'empreintes digitales du navigateur">
 <!ENTITY Ctr_e_oldfontgfx	"Ancien rendu des polices">
 
 
@@ -415,6 +417,7 @@
 <!ENTITY Ctr_pw_set_import	"Importer des paramètres">
 <!ENTITY Ctr_pw_set_syncon	"Ajouter à Sync">
 <!ENTITY Ctr_pw_set_syncoff	"Retirer de Sync">
+<!ENTITY Ctr_pw_set_impexp	"Les paramètres contenant une description avec « about:config &gt;&gt; » proviennent du navigateur et ne seront donc ni exportés ni importés !">
 
 <!ENTITY Ctr_special_font	"La personnalisation de la couleur d'arrière-plan est réservée au thème par défaut !">
 <!ENTITY Ctr_special_info	"Certaines options peuvent ne pas toujours offrir de changements visibles.">

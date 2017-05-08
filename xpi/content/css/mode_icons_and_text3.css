@@ -263,5 +263,32 @@
 	#nav-bar toolbarbutton[id^="toggle-button-"] .toolbarbutton-icon {
 	  width: 16px !important;
 	}
+	
+	/* cui buttons */
+	#ctraddon_cui-icons-button {
+	  background:#fbfbfb !important;
+	}
+	#ctraddon_cui-iconstext-button {
+	  background:#dadada !important;
+	}
+	#ctraddon_cui-textonly-button {
+	  background:#fbfbfb !important;
+	}
+	#ctraddon_cui-iconstext-button label {
+	  border-bottom: 1px dotted !important;
+	  margin-bottom: -1px !important;
+	}
+	
+	@media all and (-moz-windows-classic) {
+		#ctraddon_cui-icons-button * {
+		  background: unset !important;
+		}
+		#ctraddon_cui-iconstext-button * {
+		  background: #e7e3db !important;
+		}
+		#ctraddon_cui-textonly-button * {
+		  background: unset !important;
+		}
+	}
 
 }

@@ -67,8 +67,6 @@ classicthemerestorerjs.ctr = {
   
   appbutton_color:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
-  cuiButtonssheet:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
-
   prefs:				Services.prefs.getBranch("extensions.classicthemerestorer."),
   
   fxdefaulttheme:		Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin") == 'classic/1.0',
@@ -129,6 +127,7 @@ classicthemerestorerjs.ctr = {
 	try{if (this.appversion >= 52) document.getElementById("main-window").setAttribute('fx52plus',true);} catch(e){}
 	try{if (this.appversion >= 53) document.getElementById("main-window").setAttribute('fx53plus',true);} catch(e){}
 	try{if (this.appversion >= 54) document.getElementById("main-window").setAttribute('fx54plus',true);} catch(e){}
+	try{if (this.appversion >= 55) document.getElementById("main-window").setAttribute('fx55plus',true);} catch(e){}
 
 	// add CTR version number to '#main-window' node, so other add-ons/themes can easier distinguish between versions
 	AddonManager.getAddonByID('ClassicThemeRestorer@ArisT2Noia4dev', function(addon) {
@@ -160,9 +159,6 @@ classicthemerestorerjs.ctr = {
 
 	// not all CTR features are suitable for third party themes
 	this.disableSettingsforThemes();
-	
-	// style CTRs 'customize-ui' option buttons
-	this.loadUnloadCSS('cui_buttons',true);
 	
 	// CTRs extra add-on bar keys
 	this.CTRextraLocationBarKeyset();
@@ -502,9 +498,7 @@ classicthemerestorerjs.ctr = {
 				document.getElementById("PersonalToolbar").setAttribute('tabsontop','false');
 			  } catch(e){}
 			}
-			
-			classicthemerestorerjs.ctr.loadUnloadCSS('cui_buttons',true);
-			
+		
 		  break;
 		  
 		  case "square_edges":
@@ -815,6 +809,13 @@ classicthemerestorerjs.ctr = {
 			    classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
 			}
 			
+			if(classicthemerestorerjs.ctr.appversion >= 54 && branch.getBoolPref('nbcompact') && branch.getBoolPref("backforward")){
+			
+			  if(branch.getBoolPref("smallnavbut"))
+				classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
+			}
+
 			classicthemerestorerjs.ctr.checkAppbuttonOnNavbar();
 
 		  break;
@@ -905,18 +906,24 @@ classicthemerestorerjs.ctr = {
 		  case "backforward":
 			if (branch.getBoolPref("backforward")) {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("backforward",true);
-			  
+	  
 			  if (branch.getBoolPref("nbcompact") && branch.getBoolPref("smallnavbut")==false){
 				classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
 			  }
 			}
-			else { 
+			else {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("backforward",false);
 			  
-			  if (branch.getBoolPref("nbcompact")&& branch.getBoolPref("smallnavbut")==false){
+			  if (branch.getBoolPref("nbcompact") && branch.getBoolPref("smallnavbut")==false){
 				classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
 			  }
 			}
+			
+			try {
+			  if(branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && branch.getBoolPref("smallnavbut")==false && classicthemerestorerjs.ctr.appversion >= 54
+				&& Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
+			   classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
+			} catch(e){}
 		  break;
 		  
 		  case "nbcompact":
@@ -926,7 +933,16 @@ classicthemerestorerjs.ctr = {
 			  if (branch.getCharPref("nav_txt_ico").indexOf('iconstxt')!=-1)
 				branch.setCharPref("nav_txt_ico",'icons');
 			}
-			else classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
+			else {
+			  classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
+			}
+			
+			try {
+			  if(branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && branch.getBoolPref("smallnavbut")==false && classicthemerestorerjs.ctr.appversion >= 54
+				&& Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
+			   classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
+			} catch(e){}
+			
 		  break;
 
 		  case "noconicons":
@@ -1446,8 +1462,10 @@ classicthemerestorerjs.ctr = {
 			classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt3',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('iconstxt4',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('txtonly',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('textonly',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS("iat_notf_vt",false);
 			classicthemerestorerjs.ctr.loadUnloadCSS("to_notf_vt",false);
+			classicthemerestorerjs.ctr.loadUnloadCSS("iconstxtfull1",false);
 			classicthemerestorerjs.ctr.loadUnloadCSS("iconstxtfull2",false);
 			
 			classicthemerestorerjs.ctr.setCTRModeAttributes('icons');
@@ -1510,9 +1528,11 @@ classicthemerestorerjs.ctr = {
 			  break;
 			  case "text":
 				classicthemerestorerjs.ctr.setCTRModeAttributes('text');
+				classicthemerestorerjs.ctr.loadUnloadCSS('textonly',true);
 			  break;
 			  case "full":
 				classicthemerestorerjs.ctr.setCTRModeAttributes('full');
+				classicthemerestorerjs.ctr.loadUnloadCSS("iconstxtfull1",true);
 			  break;
 			  case "full2":
 				classicthemerestorerjs.ctr.setCTRModeAttributes('full');
@@ -2127,8 +2147,7 @@ classicthemerestorerjs.ctr = {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("ctroldsearch",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("osearch_dm",false);
 			}
-			  
-			classicthemerestorerjs.ctr.loadUnloadCSS('cui_buttons',true);
+
 		  break;
 		  
 		  case "osearch_iwidth":
@@ -2849,8 +2868,20 @@ classicthemerestorerjs.ctr = {
 		switch (name) {
 
 		  case "navbarbuttons":
+		  
+			/*if (classicthemerestorerjs.ctr.appversion >= 54 && Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref('backforward')
+				&& Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref('nbcompact')) {
+			  if (branch.getCharPref("navbarbuttons")!="nabbuttons_off") {
+					classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
+			  } else if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref("smallnavbut")==false) {
+				classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
+			  }
+			}*/
+		
 			if (branch.getCharPref("navbarbuttons")!="nabbuttons_off") {
 			  Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('smallnavbut',false);
+			  if(classicthemerestorerjs.ctr.appversion >= 54 && Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref('nbcompact'))
+				Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('nbcompact',false);
 			}
 			classicthemerestorerjs.ctr.checkAppbuttonOnNavbar();
 			
@@ -3067,9 +3098,7 @@ classicthemerestorerjs.ctr = {
   	var observer = new MutationObserver(function(mutations) {
 	  mutations.forEach(function(mutation) {
 		try {
-			if(/*document.querySelector('#urlbar-container')==null
-				&& document.querySelector('#main-window').getAttribute('chromehidden')=="menubar toolbar directories extrachrome "
-					||*/ !document.querySelector('#urlbar-container').getAttribute('cui-areatype')) {
+			if(!document.querySelector('#urlbar-container').getAttribute('cui-areatype')) {
 			  CustomizableUI.addWidgetToArea("urlbar-container", CustomizableUI.AREA_NAVBAR);
 			}
 			else if (document.querySelector('#urlbar-container').getAttribute('cui-areatype')=="menu-panel") {
@@ -4250,8 +4279,6 @@ classicthemerestorerjs.ctr = {
 			}
 	
 			manageCSS("smallnavbut.css");
-			
-			this.loadUnloadCSS('cui_buttons',true);
 
 		break;
 		
@@ -4284,7 +4311,7 @@ classicthemerestorerjs.ctr = {
 				enable=false;
 			}
 			manageCSS("mode_icons_and_text.css");
-			this.loadUnloadCSS('cui_buttons',true);
+
 		break;
 		
 		// no 'small button' mode, if 'icons + text' mode is used
@@ -4338,6 +4365,8 @@ classicthemerestorerjs.ctr = {
 		break;
 		
 		case "txtonly":				manageCSS("mode_txtonly.css");			break;
+		case "textonly":			manageCSS("mode_text.css");				break;
+		case "iconstxtfull1":		manageCSS("mode_full_v1.css");			break;
 		case "iconstxtfull2":		manageCSS("mode_full_v2.css");			break;
 		
 		case "iconsbig":
@@ -6445,59 +6474,6 @@ classicthemerestorerjs.ctr = {
 				'), null, null);
 				
 				applyNewSheet(this.cssoverridesheet);
-			}
-		
-		break;
-		
-		case "cui_buttons":
-		
-			removeOldSheet(this.cuiButtonssheet);
-			
-			if(enable==true){
-			
-				var cuismallnavbut='';
-				var cuiicotextbut='';
-				var cuitabsnontop='';
-				var cuictroldsearch='';
-			  
-				if (this.prefs.getBoolPref("smallnavbut")) {
-				  cuismallnavbut='#ctraddon_cui-smallnavbut-button1 {background:#fbfbfb !important;} #ctraddon_cui-smallnavbut-button2 {background:#dadada !important;}';
-				} else {
-				  cuismallnavbut='#ctraddon_cui-smallnavbut-button1 {background:#dadada !important;} #ctraddon_cui-smallnavbut-button2 {background:#fbfbfb !important;}';
-				}
-			
-				switch (this.prefs.getCharPref("nav_txt_ico")) {
-					case "icons":		cuiicotextbut='#ctraddon_cui-icons-button {background:#dadada !important;} #ctraddon_cui-iconstext-button {background:#fbfbfb !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;}'; break;
-					case "iconsbig":	cuiicotextbut='#ctraddon_cui-icons-button {background:#bdbdbd !important;} #ctraddon_cui-iconstext-button {background:#fbfbfb !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;}'; break;
-					case "iconstxt":	cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#dadada !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;}'; break;
-					case "iconstxt2":	cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#bdbdbd !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;}'; break;
-					case "iconstxt3":	cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#dadada !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button label { border-bottom: 1px dotted !important; margin-bottom: -1px !important; }'; break;
-					case "iconstxt4":	cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#bdbdbd !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button label { border-bottom: 1px dotted !important; margin-bottom: -1px !important; }'; break;
-					case "full":		cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#dadada !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button label { border-bottom: 1px dashed !important; margin-bottom: -1px !important; }'; break;
-					case "full2":		cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#bdbdbd !important;} #ctraddon_cui-textonly-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button label { border-bottom: 1px dashed !important; margin-bottom: -1px !important; }'; break;
-					case "txtonly":		cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#fbfbfb !important;} #ctraddon_cui-textonly-button {background:#dadada !important;}'; break;
-					case "text":		cuiicotextbut='#ctraddon_cui-icons-button {background:#fbfbfb !important;} #ctraddon_cui-iconstext-button {background:#fbfbfb !important;} #ctraddon_cui-textonly-button {background:#bdbdbd !important;}'; break;
-				}
-				
-				switch (this.prefs.getCharPref("tabsontop")) {
-					case "unset":	cuitabsnontop='#ctraddon_cui-tabsnontop {background:#fbfbfb !important;}'; break;
-					case "false":	cuitabsnontop='#ctraddon_cui-tabsnontop {background:#dadada !important;}'; break;
-					case "false2":	cuitabsnontop='#ctraddon_cui-tabsnontop {background:#bdbdbd !important;}'; break;
-				}
-				
-				if (this.prefs.getBoolPref("ctroldsearch"))
-				  cuictroldsearch='#ctraddon_cui-ctroldsearch {background:#dadada !important;}';
-				else cuictroldsearch='#ctraddon_cui-ctroldsearch {background:#fbfbfb !important;}';
-
-				
-				this.cuiButtonssheet=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-					'+cuismallnavbut+'\
-					'+cuiicotextbut+'\
-					'+cuitabsnontop+'\
-					'+cuictroldsearch+'\
-				'), null, null);
-
-				applyNewSheet(this.cuiButtonssheet);
 			}
 		
 		break;

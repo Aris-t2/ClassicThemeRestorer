@@ -1,0 +1,78 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	/* support for old icons+text mode */
+	toolbar[mode="full"]:not(#web-developer-toolbar) .toolbarbutton-1:not([type="menu-button"]):not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button) {
+	  -moz-box-orient: vertical !important;
+	}
+
+	#TabsToolbar[mode="full"] toolbarbutton .toolbarbutton-text,
+	toolbar[mode="full"]:not(#web-developer-toolbar) #back-button .toolbarbutton-text,
+	toolbar[mode="full"]:not(#web-developer-toolbar) #forward-button .toolbarbutton-text{
+	  display: none !important;
+	}
+	
+	toolbar[mode="full"]:not(#web-developer-toolbar) toolbarbutton[type="menu"]:not(#bookmarks-menu-button) dropmarker{
+	  display: none !important;
+	}
+
+	toolbar[mode="full"]:not(#web-developer-toolbar) .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button),
+	toolbar[mode="full"]:not(#web-developer-toolbar) .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button) > .toolbarbutton-menubutton-button {
+	  min-width: 57px !important;
+	}
+
+	#navigator-toolbox #TabsToolbar[mode="full"] .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button),
+	#navigator-toolbox #TabsToolbar[mode="full"] .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button) > .toolbarbutton-menubutton-button,
+	toolbar[mode="full"] #urlbar .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button),
+	toolbar[mode="full"] #urlbar .toolbarbutton-1:not(#urlbar-reload-button):not(#urlbar-stop-button):not(#urlbar-go-button):not(.tabs-newtab-button):not(.tab-close-button):not(#back-button):not(#forward-button) > .toolbarbutton-menubutton-button {
+	  min-width: unset !important;
+	}
+
+	toolbar[mode="full"] #urlbar #urlbar-reload-button .toolbarbutton-text,
+	toolbar[mode="full"] #urlbar #urlbar-stop-button .toolbarbutton-text,
+	toolbar[mode="full"] #urlbar #urlbar-go-button .toolbarbutton-text,
+	toolbar[mode="full"] .tabs-newtab-button .toolbarbutton-text {
+	  display: none !important;
+	}
+
+	toolbar[mode="full"] #urlbar-icons toolbarbutton label,
+	toolbar[mode="full"] #urlbar-icons toolbarbutton .toolbarbutton-text {
+	  display: none !important;
+	  visibility: collapse !important;
+	}
+	
+	#main-window:not([fx48plus="true"]) #nav-bar[mode="full"] #downloads-button image,
+	#main-window:not([fx48plus="true"]) #nav-bar[mode="full"] #downloads-button stack {
+	  margin-left: 22px !important;
+	  margin-right: 22px !important;
+	}
+	
+	/* cui buttons */
+	#ctraddon_cui-icons-button {
+	  background:#fbfbfb !important;
+	}
+	#ctraddon_cui-iconstext-button {
+	  background:#dadada !important;
+	}
+	#ctraddon_cui-textonly-button {
+	  background:#fbfbfb !important;
+	}
+	#ctraddon_cui-iconstext-button label {
+	  border-bottom: 1px dashed !important;
+	  margin-bottom: -1px !important;
+	}
+	
+	@media all and (-moz-windows-classic) {
+		#ctraddon_cui-icons-button * {
+		  background: unset !important;
+		}
+		#ctraddon_cui-iconstext-button * {
+		  background: #e7e3db !important;
+		}
+		#ctraddon_cui-textonly-button * {
+		  background: unset !important;
+		}
+	}
+
+}

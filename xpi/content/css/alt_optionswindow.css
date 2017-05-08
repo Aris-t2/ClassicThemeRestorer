@@ -8,7 +8,13 @@
 	  background: inherit !important;
 	}
 	
-	#category-search[hidden="true"],
+	#searchInput {
+      margin-top: -30px !important;
+      margin-right: 30px !important;
+      margin-bottom: 30px !important;
+	}
+	
+	.category[hidden="true"],
 	#mainPrefPane .header {
 	  display: none !important;
 	}

@@ -11,6 +11,7 @@
 <!ENTITY Ctr_space			"Zwischenraum">
 <!ENTITY Ctr_separator		"Trennlinie">
 <!ENTITY Ctr_navthrobber	"Aktivitätsanzeige">
+<!ENTITY Ctr_maskindicator	"Privatmodusanzeige">
 <!ENTITY Ctr_sidebarbutton	"Seitenleiste">
 <!ENTITY Ctr_windowcontrols	"Kontrollelemente (Vollbild)">
 <!ENTITY Ctr_rr				"Neustart benötigt!">
@@ -34,7 +35,7 @@
 
 <!ENTITY Ctr_tnot			"(Tabs unten)">
 
-<!ENTITY Ctr_tabcolors_t	"Tab-Farben / Zeichensatz">
+<!ENTITY Ctr_tabcolors_t	"Farb- und Textdarstellung">
 
 <!ENTITY Ctr_tabs			"Tabs">
 <!ENTITY Ctr_tabs0			"&brandShortName;-Standard (Gerundete Tabs)">
@@ -42,7 +43,7 @@
 <!ENTITY Ctr_tabs1m			"Quadratische Tabs (australisiert)">
 <!ENTITY Ctr_tabs2			"Gerundete Tabs (alternativ)">
 <!ENTITY Ctr_tabs3			"Gerundete Tabs (alternativ für Windows Aero)">
-<!ENTITY Ctr_tabforminfo	"Das aktive Thema bestimmt die Tabdarstellung.">
+<!ENTITY Ctr_tabforminfo	"Das aktive Theme bestimmt die Tabdarstellung.">
 <!ENTITY Ctr_coltabsinfo	"Tabdarstellung ist zur Erweiterung 'ColorfulTabs' nicht vollständig kompatibel!">
 <!ENTITY Ctr_tabsontop0		"Tabs oben (Standard)">
 <!ENTITY Ctr_tabsontop1		"Tabs oben - [tabsontop=true]-Attribut gesetzt">
@@ -264,7 +265,7 @@
 <!ENTITY Ctr_underlined		"Unterstrichen">
 <!ENTITY Ctr_notabhov		"Aktivierte Einstellungen ersetzen 'Hover-Einstellungen'">
 <!ENTITY Ctr_tablowopa		"Sichtbarkeit reduzieren">
-<!ENTITY Ctr_tabc_act_tb	"Tab-Hintergrundfarbe auf Leisten">
+<!ENTITY Ctr_tabc_act_tb	"Tabhintergrundfarbe auf Leisten">
 
 <!ENTITY Ctr_urlbar			"Adressleiste">
 <!ENTITY Ctr_starinurl		"Lesezeichen-Stern">
@@ -285,11 +286,11 @@
 <!ENTITY Ctr_ib_nohovcolor	"Graue Farbe beim 'Hovern' nicht anzeigen">
 <!ENTITY Ctr_ib_graycolor	"Graue Farbe für 'about:'-Seiten und Seiten mit unbekannter Identität">
 <!ENTITY Ctr_verifiedcolors	"Farbig bei verifizierten Webseiten, sicheren und unsicheren Verbindungen">
-<!ENTITY Ctr_ibinfoico		"'i'-Symbol durch Globus-Symbol ersetzen">
+<!ENTITY Ctr_ibinfoico		"'i'-Symbol durch 'Globus'-Symbol ersetzen">
 <!ENTITY Ctr_ibinfoico2		"'i'-Symbol verstecken (falls möglich)">
 <!ENTITY Ctr_iblabels		"Text verstecken">
 <!ENTITY Ctr_faviconurl		"Lesezeichensymbol (Favicon) der Webseite">
-<!ENTITY Ctr_padlock		"Schloss-Symbol bei sicheren Verbindungen">
+<!ENTITY Ctr_padlock		"'Schloss'-Symbol bei sicheren Verbindungen">
 <!ENTITY Ctr_padlock_hid	"versteckt">
 <!ENTITY Ctr_padlock_def	"unverändert">
 <!ENTITY Ctr_padlock_cla	"klassisch">
@@ -350,7 +351,7 @@
 <!ENTITY Ctr_aerocolors		"Blaue 'Aero'-Farben für Leisten (und Tabs)">
 <!ENTITY Ctr_aerocolorsg	"Grau-blaue 'Aero'-Farben">
 <!ENTITY Ctr_transpttbw10	"Titel-/Menü-/Tableiste: Hintergrundfarbe entfernen">
-<!ENTITY Ctr_transpttbew10	"Weitere Anpassungen für einige OS-Themes">
+<!ENTITY Ctr_transpttbew10	"Weitere Anpassungen für einige 'Betriebssystem'-Themes">
 <!ENTITY Ctr_transptcw10	"Standardschaltflächen 'Minimieren/Maximieren/Schließen' verstecken">
 <!ENTITY Ctr_hidenavbar		"Leiste verstecken">
 <!ENTITY Ctr_navbarpad		"Zusätzliche Abstände links und rechts">
@@ -379,9 +380,10 @@
 <!ENTITY Ctr_pananimation	"'Panel-Aufklappmenü öffnen'-Animation">
 <!ENTITY Ctr_tabanimation	"'Tab schließen und öffnen'-Animation">
 <!ENTITY Ctr_dlanimation	"'Download gestartet und beendet'-Animation">
-<!ENTITY Ctr_fsanimation	"'Vollbild-Animationen'">
-<!ENTITY Ctr_fsaduration	"'Vollbild-Animationen' für HTML5-Inhalte">
-<!ENTITY Ctr_findbarhl		"Suchleiste für Seiteninhalte: animierete Suchergebnishervorhebung">
+<!ENTITY Ctr_uianimation	"Allgemeine Oberflächenanimationen">
+<!ENTITY Ctr_fsanimation	"'Vollbildanimationen'">
+<!ENTITY Ctr_fsaduration	"'Vollbildanimationen' für HTML5-Inhalte">
+<!ENTITY Ctr_findbarhl		"Suchleiste für Seiteninhalte: animierte Suchergebnishervorhebung">
 
 <!ENTITY Ctr_toolsitem		"Eintrag im Menü 'Extras'">
 <!ENTITY Ctr_appmenuitem	"Eintrag im Einstellungsuntermenü der &brandShortName;-Schaltfläche">
@@ -390,18 +392,18 @@
 
 <!ENTITY Ctr_otherctroptns	"Andere Einstellungen">
 <!ENTITY Ctr_cuibotbuttons	"Einstellungsschaltflächen im Modus 'Anpassen'">
-<!ENTITY Ctr_nodevtheme		"Aktivierung des 'Entwickler-Themas' unterbinden">
+<!ENTITY Ctr_nodevtheme		"Aktivierung des 'Entwickler'-Themes unterbinden">
 
 <!ENTITY Ctr_experttweaks	"Erweitert">
 <!ENTITY Ctr_fx34loop		"Das Deaktivieren dieser Option entfernt die 'Anruf- und Konversationsfunktionen'.">
 <!ENTITY Ctr_fx38pocket		"Das Deaktivieren dieser Option entfernt die 'Pocket'-Funktion und deren Leistenschaltfläche.">
-<!ENTITY Ctr_fx38pocket2	"Info: Das Verschieben der 'Pocket'-Schaltfläche zu den nicht verwendeten Schaltflächen im 'Anpassen-Modus' vor der Deaktivierung dieser Option entfernt zusätzlich die 'Pocket'-Einträge aus den Lesezeichen- und 'Lese'-Bereichen.">
+<!ENTITY Ctr_fx38pocket2	"Info: Das Verschieben der 'Pocket'-Schaltfläche zu den nicht verwendeten Schaltflächen im 'Anpassen'-Modus vor der Deaktivierung dieser Option entfernt zusätzlich die 'Pocket'-Einträge aus den Lesezeichen- und 'Lese'-Bereichen.">
 <!ENTITY Ctr_e_loop			"'Hello' / Anruf- und Konversationsfunktionen / Loop">
 <!ENTITY Ctr_e_readermode	"Lesemodus">
 <!ENTITY Ctr_e_geolocation	"Standortbestimmung">
 <!ENTITY Ctr_e_pocket		"Pocket">
 <!ENTITY Ctr_e_tabsaudioico	"Audio-Abspiel-Symbol">
-<!ENTITY Ctr_e_containertab	"'Tab in Umgebung' / 'Kontainer-Tabs'">
+<!ENTITY Ctr_e_containertab	"'Kontainer'-Tabs ('Tab in Umgebung')">
 <!ENTITY Ctr_e_flyweb		"Flyweb">
 <!ENTITY Ctr_e_resfprinting "Schutz vor dem Hinterlassen 'digitaler Fingerabdrücke'">
 <!ENTITY Ctr_e_oldfontgfx	"Alte Schriftdarstellung">
@@ -410,13 +412,14 @@
 <!ENTITY Ctr_pw_settings	"Einstellungen">
 <!ENTITY Ctr_pw_set_reset	"Standard wiederherstellen">
 <!ENTITY Ctr_pw_set_predef	"Klassische Vorgabe">
-<!ENTITY Ctr_pw_set_preaus	"&brandShortName;-Vorgabe">
+<!ENTITY Ctr_pw_set_preaus	"'&brandShortName;'-Vorgabe">
 <!ENTITY Ctr_pw_set_export	"Einstellungen exportieren">
 <!ENTITY Ctr_pw_set_import	"Einstellungen importieren">
 <!ENTITY Ctr_pw_set_syncon	"Zu Sync hinzufügen">
 <!ENTITY Ctr_pw_set_syncoff	"Aus Sync entfernen">
+<!ENTITY Ctr_pw_set_impexp	"'Importieren' und 'Exportieren' schließen Standardeinstellungen aus, die 'about:config &gt;&gt; ...' in ihrer Beschreibung haben!">
 
-<!ENTITY Ctr_special_font	"Hintergrundfarbeinstellungen sind nur für das Standard-Thema vorhanden!">
+<!ENTITY Ctr_special_font	"Hintergrundfarbeinstellungen sind nur für das 'Standard'-Theme vorhanden!">
 <!ENTITY Ctr_special_info	"Einige Optionen haben nur in bestimmten Fällen sichtbare Auswirkungen!">
 <!ENTITY Ctr_special_info2	"'Vollständiges Theme' erkannt! Einige Einstellungen funktionieren nicht mit Themes!">
 <!ENTITY Ctr_special_acr	"Probleme nur über offizielle Hilfskanäle melden und nicht über 'Add-on Compatibility Reporter'!">

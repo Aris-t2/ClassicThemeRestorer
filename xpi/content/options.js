@@ -166,6 +166,9 @@ classicthemerestorerjso.ctr = {
 	// radio restart label
 	document.getElementById('ctraddon_pw_radiorestart').style.visibility = 'collapse';
 	
+	// import / export label
+	document.getElementById('ctraddon_pw_impexpinfo').style.visibility = 'collapse';
+	
 	// tab height/width
 	document.getElementById('ctraddon_pw_tabheightinfo').style.visibility = 'collapse';
 	document.getElementById('ctraddon_pw_tabwidthinfo').style.visibility = 'collapse';
@@ -487,9 +490,20 @@ classicthemerestorerjso.ctr = {
 	
 	if (this.appversion < 55) {
 	  document.getElementById('ctraddon_pw_resfprintinggb').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_searchbar').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_searchbardesc').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_uianimation').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_uianimationdesc').style.visibility = 'collapse';
 	}
 	
+	if (this.appversion >= 55) {
+	  document.getElementById('ctraddon_pw_tabanimation').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_tabanimationdesc').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_fsanimation').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_fsanimationdesc').style.visibility = 'collapse';
+	}
 	
+
 	function PrefListener(branch_name, callback) {
 	  // Keeping a reference to the observed preference branch or it will get
 	  // garbage collected.
@@ -524,19 +538,11 @@ classicthemerestorerjso.ctr = {
 		switch (name) {
 
 		  case "navbarbuttons":
-		  
-		    var ctbbuttons = false;
 			
-			try {
-			  ctbbuttons = branch.getCharPref("navbarbuttons")!="nabbuttons_off";
-			} catch(e){}
-		  
-			if (ctbbuttons) {
-			  document.getElementById('ctraddon_pw_smallnavbut').disabled = true;
-			}
-			else {
-			  document.getElementById('ctraddon_pw_smallnavbut').disabled = false;
-			}
+			if(branch.getCharPref("navbarbuttons")!="nabbuttons_off")
+				document.getElementById('ctraddon_pw_smallnavbut').disabled = true;
+			else
+				document.getElementById('ctraddon_pw_smallnavbut').disabled = false;
 			
 		  break;
 
@@ -1407,6 +1413,9 @@ classicthemerestorerjso.ctr = {
         classicthemerestorerjso.ctr.saveToFile(preferenceArray, aPattern);
         // Clear preferenceArray after export.
         preferenceArray = [];
+
+		document.getElementById('ctraddon_pw_impexpinfo').style.visibility = 'visible';
+
         return true;
     },
 	
@@ -1491,8 +1500,11 @@ classicthemerestorerjso.ctr = {
 			  }
 			}
 		}
-		
-		this.needsBrowserRestart();		
+
+		this.needsBrowserRestart();	
+
+		document.getElementById('ctraddon_pw_impexpinfo').style.visibility = 'visible';
+
 		return true;
 	},
 	

@@ -75,5 +75,16 @@
 	  border-top: none !important;
 	  border-bottom: none !important;
 	}
+	
+	/* cui buttons */
+	#ctraddon_cui-tabsnontop {
+	  background: #bdbdbd !important;
+	}
+	
+	@media all and (-moz-windows-classic) {
+	  #ctraddon_cui-tabsnontop * {
+		background: white !important;
+	  }
+	}
 
 }

@@ -11,4 +11,13 @@
 	  0px 0px 3px black !important;
   }
   
+  #main-window[fx53plus="true"] .tabbrowser-tab:not([selected]):not(:-moz-lwtheme):not([pinned]) .tab-label-container {
+	margin-left: -3px !important;
+	margin-right: -3px !important;
+  }
+  #main-window[fx53plus="true"] .tabbrowser-tab:not([selected]):not(:-moz-lwtheme):not([pinned]) .tab-label {
+	margin-left: 3px !important;
+	margin-right: 3px !important;
+  }
+  
 }

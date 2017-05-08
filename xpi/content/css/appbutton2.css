@@ -289,10 +289,12 @@
 	#main-window[sizemode="maximized"][developertheme="true"] #browser-panel {
 	  background: unset !important;
 	}
-
+	
+	#main-window[sizemode="maximized"][developertheme="true"][lwthemetextcolor="bright"]:not([tabsontop="false"]),
 	#main-window[sizemode="maximized"][developertheme="true"][devtoolstheme="dark"]:not([tabsontop="false"]){
 	  background: #1c2126 !important;
 	}
+	#main-window[sizemode="maximized"][developertheme="true"][lwthemetextcolor="dark"]:not([tabsontop="false"]),
 	#main-window[sizemode="maximized"][developertheme="true"][devtoolstheme="light"]:not([tabsontop="false"]) {
 	  background: #e3e4e6 !important;
 	}
@@ -304,12 +306,15 @@
 		  background: unset !important;
 		}
 
+		#main-window[sizemode="normal"][developertheme="true"][lwthemetextcolor="bright"]:not([tabsontop="false"]),
 		#main-window[sizemode="normal"][developertheme="true"][devtoolstheme="dark"]:not([tabsontop="false"]){
 		  background: #1c2126 !important;
 		}
+		#main-window[sizemode="normal"][developertheme="true"][lwthemetextcolor="dark"]:not([tabsontop="false"]),
 		#main-window[sizemode="normal"][developertheme="true"][devtoolstheme="light"]:not([tabsontop="false"]) {
 		  background: #e3e4e6 !important;
 		}
+		
 	}
 
 }

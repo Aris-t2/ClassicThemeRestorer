@@ -280,7 +280,7 @@
 	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
 	
-	#main-window[fx51plus="true"] #ctraddon_stop-button > .toolbarbutton-icon{
+	#main-window[fx51plus="true"] #nav-bar #ctraddon_stop-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 96px, 32px, 64px) !important;
 	  list-style-image: url(chrome://browser/skin/menuPanel.svg) !important;
 	}
@@ -290,7 +290,7 @@
 	  list-style-image: url(chrome://browser/skin/menuPanel.png) !important;
 	}
 	
-	#main-window[fx51plus="true"] #ctraddon_reload-button > .toolbarbutton-icon{
+	#main-window[fx51plus="true"] #nav-bar #ctraddon_reload-button > .toolbarbutton-icon{
 	  -moz-image-region: rect(0px, 64px, 32px, 32px) !important;
 	  list-style-image: url(chrome://browser/skin/menuPanel.svg) !important;
 	}
@@ -421,5 +421,29 @@
 	#nav-bar toolbarbutton[id^="toggle-button-"] .toolbarbutton-icon {
 	  width: 16px !important;
 	}
+	
+	/* cui buttons */
+	#ctraddon_cui-icons-button {
+	  background:#bdbdbd !important;
+	}
+	#ctraddon_cui-iconstext-button {
+	  background:#fbfbfb !important;
+	}
+	#ctraddon_cui-textonly-button {
+	  background:#fbfbfb !important;
+	}
+	
+	@media all and (-moz-windows-classic) {
+		#ctraddon_cui-icons-button * {
+		  background: white !important;
+		}
+		#ctraddon_cui-iconstext-button * {
+		  background: unset !important;
+		}
+		#ctraddon_cui-textonly-button * {
+		  background: unset !important;
+		}
+	}
+
 
 }

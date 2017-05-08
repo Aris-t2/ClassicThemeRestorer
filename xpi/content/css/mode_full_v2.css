@@ -13,4 +13,31 @@
 	#main-window #TabsToolbar[mode="full"] toolbarbutton:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text{
 	  display: block !important;
 	}
+	
+	/* cui buttons */
+	#ctraddon_cui-icons-button {
+	  background:#fbfbfb !important;
+	}
+	#ctraddon_cui-iconstext-button {
+	  background:#bdbdbd !important;
+	}
+	#ctraddon_cui-textonly-button {
+	  background:#fbfbfb !important;
+	}
+	#ctraddon_cui-iconstext-button label {
+	  border-bottom: 1px dashed !important;
+	  margin-bottom: -1px !important;
+	}
+	
+	@media all and (-moz-windows-classic) {
+		#ctraddon_cui-icons-button * {
+		  background: unset !important;
+		}
+		#ctraddon_cui-iconstext-button * {
+		  background: white !important;
+		}
+		#ctraddon_cui-textonly-button * {
+		  background: unset !important;
+		}
+	}
 }

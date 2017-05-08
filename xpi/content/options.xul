@@ -50,6 +50,7 @@
 		<preference id="ctraddon_oneoffsearch"	name="browser.urlbar.oneOffSearches"				type="bool"		instantApply="true"/>
 		<preference id="ctraddon_ctrltabprev"	name="browser.ctrlTab.previews"						type="bool"		instantApply="true"/>
 		<preference id="ctraddon_dl_pm_drop"	name="browser.download.showPanelDropmarker"			type="bool"		instantApply="true"/>
+		<preference id="ctraddon_prefs_search"	name="browser.preferences.search"					type="bool"		instantApply="true"/>
 
 		<preference id="ctraddon_tabs"			name="extensions.classicthemerestorer.tabs" 		type="string"	instantApply="true"/>
 		<preference id="ctraddon_tabsontop"		name="extensions.classicthemerestorer.tabsontop" 	type="string"	instantApply="true"/>
@@ -347,6 +348,7 @@
 		<preference id="ctraddon_tabsanimate"	name="browser.tabs.animate"							type="bool"		instantApply="true"/>
 		<preference id="ctraddon_dlanimate"		name="browser.download.animateNotifications"		type="bool"		instantApply="true"/>
 		<preference id="ctraddon_fsanimation"	name="browser.fullscreen.animate"					type="bool"		instantApply="true"/>
+		<preference id="ctraddon_uianimation"	name="toolkit.cosmeticAnimations.enabled"			type="bool"		instantApply="true"/>
 		<preference id="ctraddon_fsaduration"	name="extensions.classicthemerestorer.fsaduration"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_html5warning"	name="extensions.classicthemerestorer.html5warning"	type="bool"		instantApply="true"/>
 
@@ -385,7 +387,7 @@
 	  <radio value="ctraddon_tabsbox" 		label="&Ctr_tabs;"			class="ctraddontab ctraddon_new_in_v48 ctraddon_new_in_v53"/>
 	  <radio value="ctraddon_appbuttonbox" 	label="&Ctr_appbutton;"		class="ctraddontab"/>
 	  <radio value="ctraddon_generaluibox"	label="&Ctr_ui;"			class="ctraddontab ctraddon_new_in_v47 ctraddon_new_in_v48 ctraddon_new_in_v49 ctraddon_new_in_v50 ctraddon_new_in_v51"/>
-	  <radio value="ctraddon_prefpagebox"	label="&Ctr_prefpage;"		class="ctraddontab"/>
+	  <radio value="ctraddon_prefpagebox"	label="&Ctr_prefpage;"		class="ctraddontab ctraddon_new_in_v55"/>
 	  <radio value="ctraddon_addonmngrbox"	label="&Ctr_addonmanager;"	class="ctraddontab"/>
 	  <radio value="ctraddon_locationbbox"	label="&Ctr_urlbar;"		class="ctraddontab ctraddon_new_in_v48 ctraddon_new_in_v50 ctraddon_new_in_v51"/>
 	  <radio value="ctraddon_searchuibox"	label="&Ctr_searchbar;"		class="ctraddontab"/>
@@ -394,6 +396,7 @@
 	  <radio value="ctraddon_cssbox"		label="&Ctr_cssoverride;"	class="ctraddontab"/>
 	  <radio value="ctraddon_ctraddonbox"	label="&Ctr_title;"			class="ctraddontab"/>
 	  <label value=""/>
+	  <description id="ctraddon_pw_impexpinfo">&Ctr_pw_set_impexp;</description>
 	  <description id="ctraddon_pw_radiorestart">&Ctr_rr;</description>
 
   </radiogroup>
@@ -565,8 +568,8 @@
 				<checkbox label="&Ctr_ctrltabprev;" preference="ctraddon_ctrltabprev" id="ctraddon_pw_ctrltabprev" class="ctraddon_new_in_v48"/>
 				<description class="ctraddonsuboption">about:config &gt;&gt; browser.ctrlTab.previews</description>
 				
-				<checkbox label="&Ctr_tabanimation;" preference="ctraddon_tabsanimate"/>
-				<description class="ctraddonsuboption">about:config &gt;&gt; browser.tabs.animate</description>
+				<checkbox label="&Ctr_tabanimation;" preference="ctraddon_tabsanimate" id="ctraddon_pw_tabanimation"/>
+				<description class="ctraddonsuboption" id="ctraddon_pw_tabanimationdesc">about:config &gt;&gt; browser.tabs.animate</description>
 
 			  </groupbox>
 			  
@@ -1136,9 +1139,10 @@
 				<checkbox label="&Ctr_hidezoomres;"		preference="ctraddon_hidezoomres"/>
 				<checkbox label="&Ctr_noresizerxp;"		preference="ctraddon_noresizerxp" id="ctraddon_pw_noresizerxp"/>
 				<checkbox label="&Ctr_tbconmenu;"		preference="ctraddon_tbconmenu"	  id="ctraddon_pw_tbconmenu"/>
-				
+				<checkbox label="&Ctr_uianimation;"		preference="ctraddon_uianimation" id="ctraddon_pw_uianimation"/>
+				<description class="ctraddonsuboption" id="ctraddon_uianimationdesc">about:config &gt;&gt; toolkit.cosmeticAnimations.enabled</description>
 				<checkbox label="&Ctr_fsanimation;"		preference="ctraddon_fsanimation" id="ctraddon_pw_fsanimation"/>
-				<description class="ctraddonsuboption">about:config &gt;&gt; browser.fullscreen.animate</description>
+				<description class="ctraddonsuboption" id="ctraddon_pw_fsanimationdesc">about:config &gt;&gt; browser.fullscreen.animate</description>
 				<checkbox label="&Ctr_fsaduration;"		preference="ctraddon_fsaduration" id="ctraddon_pw_fsaduration"/>
 				<description class="ctraddonsuboption">about:config &gt;&gt; full-screen-api.transition-duration.*</description>
 				
@@ -1209,6 +1213,8 @@
 		<caption  label="&Ctr_prefpage; (about:preferences)" class="ctraddon_topic"/>
 		
 		<checkbox label="&Ctr_options_rem;"		preference="ctraddon_optionsrem"/>
+		<checkbox label="&Ctr_searchbar;"		preference="ctraddon_prefs_search" id="ctraddon_pw_searchbar" class="ctraddon_new_in_v55"/>
+		<description class="ctraddonsuboption" id="ctraddon_pw_searchbardesc">about:config &gt;&gt; browser.preferences.search</description>
 
 		<radiogroup preference="ctraddon_altoptions" id="ctraddon_altoptions_list" orient="vertical" value="">
 			<radio value="options_default"	label="&Ctr_altoptionsd;" id="ctraddon_pw_altoptions_default" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_default');"/>

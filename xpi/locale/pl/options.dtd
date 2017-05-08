@@ -11,6 +11,7 @@
 <!ENTITY Ctr_space			"Odstęp">
 <!ENTITY Ctr_separator		"Separator">
 <!ENTITY Ctr_navthrobber	"Wskaźnik aktywności">
+<!ENTITY Ctr_maskindicator	"Wskaźnik przeglądania prywatnego">
 <!ENTITY Ctr_sidebarbutton	"(Pasek boczny)">
 <!ENTITY Ctr_windowcontrols	"Minimalizuj, Maksymalizuj, Zamknij (pełny ekran)">
 <!ENTITY Ctr_rr				"Wymagany restart!">
@@ -34,7 +35,7 @@
 
 <!ENTITY Ctr_tnot			"(karty nie na górze)">
 
-<!ENTITY Ctr_tabcolors_t	"Kolory karty i tekstu">
+<!ENTITY Ctr_tabcolors_t	"Kolor i wygląd tekstu">
 
 <!ENTITY Ctr_tabs			"Karty">
 <!ENTITY Ctr_tabs0			"Domyślne programu &brandShortName; (karty zaokrąglone)">
@@ -379,9 +380,10 @@
 <!ENTITY Ctr_pananimation	"Animacja otwierania panelu">
 <!ENTITY Ctr_tabanimation	"Animacja otwierania i zamykania karty">
 <!ENTITY Ctr_dlanimation	"Animacja 'powiadomienia pobierania'">
+<!ENTITY Ctr_uianimation	"Animacje głównego interfejsu użytkownika">
 <!ENTITY Ctr_fsanimation	"Animacje pełnoekranowe">
 <!ENTITY Ctr_fsaduration	"Animacje pełnoekranowe treści HTML5">
-<!ENTITY Ctr_findbarhl		"Findbar: animate result highlighting">
+<!ENTITY Ctr_findbarhl		"Pasek wyszukiwania: animuj podświetlanie wyników">
 
 <!ENTITY Ctr_toolsitem		"Element w menu narzędzi">
 <!ENTITY Ctr_appmenuitem	"Element w menu przycisków aplikacji">
@@ -403,7 +405,7 @@
 <!ENTITY Ctr_e_tabsaudioico	"Ikona odtwarzania dźwięku">
 <!ENTITY Ctr_e_containertab	"Karty z kontekstem">
 <!ENTITY Ctr_e_flyweb		"FlyWeb">
-<!ENTITY Ctr_e_resfprinting "Anti fingerprinting protection">
+<!ENTITY Ctr_e_resfprinting "Ochrona przed pozyskiwaniem 'odcisku palca'">
 <!ENTITY Ctr_e_oldfontgfx	"Stare renderowanie czcionek">
 
 
@@ -415,6 +417,7 @@
 <!ENTITY Ctr_pw_set_import	"Importuj ustawienia">
 <!ENTITY Ctr_pw_set_syncon	"Dodaj do Sync">
 <!ENTITY Ctr_pw_set_syncoff	"Usuń z Sync">
+<!ENTITY Ctr_pw_set_impexp	"Ustawienia zawierające opis 'about:config &gt;&gt; ...' są domyślnymi ustawieniami przeglądarki i nie zostają wyeksportowane lub zaimportowane!">
 
 <!ENTITY Ctr_special_font	"Ustawienia koloru tła są tylko dla domyślnego motywu!">
 <!ENTITY Ctr_special_info	"Niektóre opcje mogą nie zawsze oferować widoczne zmiany">

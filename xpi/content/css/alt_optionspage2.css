@@ -6,6 +6,12 @@
 	#dialogBox .groupbox-title {
 	  background: -moz-Dialog !important;
 	}
+	
+	#searchInput {
+      margin-top: -30px !important;
+      margin-right: 30px !important;
+      margin-bottom: 30px !important;
+	}
 
 	#categories {
 	  background: transparent !important;
@@ -26,7 +32,6 @@
 	
 	#dialogBox {
 	  min-width: unset !important;
-	  /*min-height: unset !important;*/
 	}
 
 	/* main colors category items */
@@ -58,8 +63,14 @@
 	  background-color: -moz-Dialog !important;
 	  -moz-margin-start: 6px !important;
 	}
+
+	/* empty containers group*/
+	#mainPrefPane:not([fx55plus="true"]) .main-content #browserContainersGroup{
+	  -moz-appearance: unset !important;
+	}
 	
 	/* category icons */
+	#category-search-results .category-icon,
 	#category-search .category-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/altprefs_options_search.png") !important;
 	  -moz-image-region: rect(0, 32px, 32px, 0) !important;
@@ -68,6 +79,7 @@
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/altprefs_options.png") !important;
 	  -moz-image-region: rect(0, 32px, 32px, 0) !important;
 	}
+	#category-containers .category-icon,
 	#category-content .category-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/altprefs_options.png") !important; 
 	  -moz-image-region: rect(0, 96px, 32px, 64px) !important;
@@ -347,65 +359,18 @@
 	}
 	
 	/* content */
-/*	#categories .box-inherit {
-	  -moz-box-orient: horizontal !important;
-	  position: fixed !important;
-	  top:0px !important;
-	  background: inherit !important;
-	}
-*/	
 	#mainPrefPane + hbox,
-	#category-search[hidden="true"],
+	.category[hidden="true"],
 	#mainPrefPane .header {
 	  display: none !important;
 	}
-/*
-	vbox.main-content {
-	  margin-top: 60px !important;
-	  min-width: unset !important;
-	  margin-bottom: 0px !important;
-	  border-top: 1px solid #848484 !important;
-	}
-
-	richlistitem.category {
-	  -moz-box-orient: vertical !important;
-	  padding-top: 4px !important;
-	  min-width: auto !important;
-	  width: auto !important;
-	}
-	  
-	richlistitem .category-icon {
-	  padding-top: 0px !important;
-	}
-	  
-	richlistitem.category > * {
-	  padding-left: unset !important;
-	  padding-right: unset !important;
-	  visibility: visible !important;
-	  
-	}
-*/	 
+	 
 	@media (max-width: 800px) {
 	  richlistitem.category > .category-name {
 		display: block !important;
 	  }
 	}
-/*
-	richlistitem.category > .category-name {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-	  font-size:104% !important;
-	}
-	
-	#categories .category{
-	  padding-inline-start: 10px !important;
-	  padding-inline-end: 10px !important;
-	  border-inline-start-width: 0px !important;
-	  -moz-padding-start: 10px !important;
-	  -moz-padding-end: 10px !important;
-	  -moz-border-start-width: 0px !important;
-	}
-*/	
+
 	groupbox {
 	  margin-top: 0 !important;
 	  margin-bottom: 0 !important;
@@ -417,7 +382,7 @@
 	  max-width: 550px !important;
 	}
 	
-	/* adjust first groupbox on privacy category*/
+	/* adjust first groupbox on privacy/sync category*/
 	#mainPrefPane[fx46plus="true"] groupbox#trackingGroup{
 	  margin-top: 11px !important;
 	}
@@ -441,6 +406,48 @@
 	  margin-top: -11px !important;
 	  -moz-margin-start: unset !important;
 	  -moz-margin-end: 30px !important;
+	}
+	
+	#mainPrefPane[fx49plus="true"] #trackingGroup * {
+	  background: unset !important;
+	}
+
+	#mainPrefPane[fx49plus="true"] #trackingGroup * caption label {
+	  background: -moz-Dialog !important;
+	  margin-top: -11px !important;
+	}
+
+	#mainPrefPane[fx49plus="true"] groupbox#noFxaGroup{
+	  margin-top: 9px !important;
+	}
+
+	#mainPrefPane[fx49plus="true"] #noFxaCaption {
+	  background: -moz-Dialog !important;
+	  margin-top: -9px !important;
+	}
+	#mainPrefPane[fx55plus="true"] groupbox#browserContainersGroup,
+	#mainPrefPane[fx55plus="true"] groupbox#trackingGroup{
+	  margin-top: 11px !important;
+	}
+	#mainPrefPane[fx55plus="true"] #browserContainersGroup *,	
+	#mainPrefPane[fx55plus="true"] #trackingGroup * {
+	  background: unset !important;
+	}
+	#mainPrefPane[fx55plus="true"] #browserContainersGroup * caption label,
+	#mainPrefPane[fx55plus="true"] #trackingGroup * caption label {
+	  background: -moz-Dialog !important;
+	  margin-top: -11px !important;
+	  -moz-margin-start: -5px !important;
+	}
+	#mainPrefPane[fx55plus="true"] #browserContainersGroup * caption label label {
+	  -moz-margin-start: 5px !important;
+	}
+	#mainPrefPane[fx55plus="true"] groupbox#noFxaGroup{
+	  margin-top: 9px !important;
+	}
+	#mainPrefPane[fx55plus="true"] #noFxaCaption {
+	  background: -moz-Dialog !important;
+	  margin-top: -9px !important;
 	}
 	
 	/* advanced category tabs */
