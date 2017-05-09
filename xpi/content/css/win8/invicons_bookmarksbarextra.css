@@ -3,22 +3,22 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	#PersonalToolbar :-moz-any(#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_bookmarks-menu-toolbar-button,#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_go-button) .toolbarbutton-icon,
-	#PersonalToolbar :-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button:not([starred]), #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #web-apps-button),
+	#PersonalToolbar :-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button:not([starred]), #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #web-apps-button,#webide-button,#containers-panelmenu),
 	#PersonalToolbar #panic-button:not([open]),
 	#PersonalToolbar #pocket-button:not([open]),
 	#PersonalToolbar #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
-	  list-style-image: url(chrome://browser/skin/Toolbar-inverted.png) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/Toolbar-inverted.png) !important;
 	}
 	#PersonalToolbar #sync-button[status="active"],
 	#PersonalToolbar #sync-button[status="active"]:hover:active:not([disabled="true"]) {
 	  list-style-image: url("chrome://browser/skin/syncProgress-toolbar-inverted.png") !important;
 	}
 	#PersonalToolbar #downloads-button:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon {
-	  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"),
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/Toolbar-inverted.png"),
 								  0, 198, 18, 180) center no-repeat !important;
 	}
 	#PersonalToolbar #downloads-button:not([counter]):not([attention]) > #downloads-indicator-anchor > #downloads-button-progress-area > #downloads-indicator-counter {
-	  background-image: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"), 0, 198, 18, 180) !important;
+	  background-image: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/Toolbar-inverted.png"), 0, 198, 18, 180) !important;
 	}
 	#PersonalToolbar .toolbarbutton-1 > .toolbarbutton-menu-dropmarker,
 	#PersonalToolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
@@ -70,22 +70,22 @@
 	@media (min-resolution: 1.1dppx) {
 		
 		#main-window #PersonalToolbar :-moz-any(#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_bookmarks-menu-toolbar-button,#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_go-button) .toolbarbutton-icon,
-		#main-window #PersonalToolbar :-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button:not([starred]), #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #web-apps-button),
+		#main-window #PersonalToolbar :-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button:not([starred]), #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #ctraddon_preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button, #web-apps-button,#webide-button,#containers-panelmenu),
 		#main-window #PersonalToolbar #panic-button:not([open]),
 		#main-window #PersonalToolbar #pocket-button:not([open]),
 		#main-window #PersonalToolbar #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
-		  list-style-image: url(chrome://browser/skin/Toolbar-inverted@2x.png) !important;
+		  list-style-image: url(chrome://classic_theme_restorer/content/images/Toolbar-inverted@2x.png) !important;
 		}
 		#main-window #PersonalToolbar #sync-button[status="active"],
 		#main-window #PersonalToolbar #sync-button[status="active"]:hover:active:not([disabled="true"]) {
 		  list-style-image: url("chrome://browser/skin/syncProgress-toolbar-inverted@2x.png") !important;
 		}
 		#main-window #PersonalToolbar #downloads-button:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon {
-		  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted@2x.png"), 0, 396, 36, 360) center no-repeat !important;
+		  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/Toolbar-inverted@2x.png"), 0, 396, 36, 360) center no-repeat !important;
 		  background-size: 18px !important;
 		}
 		#main-window #PersonalToolbar #downloads-button[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
-		  background-image: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted@2x.png"), 36, 396, 72, 360) !important;
+		  background-image: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/Toolbar-inverted@2x.png"), 36, 396, 72, 360) !important;
 		}
 		#main-window #PersonalToolbar .toolbarbutton-1 > .toolbarbutton-menu-dropmarker,
 		#main-window #PersonalToolbar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
@@ -138,5 +138,303 @@
 		  width: 18px !important;
 		}
 	}
-	
+
+	/* Fx55+ */
+	#main-window[fx55plus="true"] #PersonalToolbar #back-button {
+	  -moz-image-region: rect(0, 36px, 18px, 18px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #forward-button {
+	  -moz-image-region: rect(0, 72px, 18px, 54px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #home-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 126px, 18px, 108px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #bookmarks-menu-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 144px, 18px, 126px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #bookmarks-menu-button[cui-areatype="toolbar"][starred] {
+	  -moz-image-region: rect(0, 162px, 18px, 144px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+	  -moz-image-region: rect(0, 630px, 18px, 612px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #history-panelmenu[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 180px, 18px, 162px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #downloads-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 198px, 18px, 180px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #add-ons-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 216px, 18px, 198px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #open-file-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 234px, 18px, 216px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #save-page-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 252px, 18px, 234px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #sync-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 792px, 18px, 774px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #containers-panelmenu[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 810px, 18px, 792px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #feed-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 288px, 18px, 270px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #social-share-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 306px, 18px, 288px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #characterencoding-button[cui-areatype="toolbar"]{
+	  -moz-image-region: rect(0, 324px, 18px, 306px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #new-window-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 342px, 18px, 324px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #e10s-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 342px, 18px, 324px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #new-tab-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 360px, 18px, 342px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #privatebrowsing-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 378px, 18px, 360px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #find-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 396px, 18px, 378px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #print-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 414px, 18px, 396px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #fullscreen-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 432px, 18px, 414px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #developer-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 450px, 18px, 432px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #preferences-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 468px, 18px, 450px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #PanelUI-menu-button {
+	  -moz-image-region: rect(0, 486px, 18px, 468px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #edit-controls:not(:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true])) > #cut-button {
+	  -moz-image-region: rect(0, 504px, 18px, 486px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #edit-controls:not(:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true])) > #copy-button {
+	  -moz-image-region: rect(0, 522px, 18px, 504px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #edit-controls:not(:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true])) > #paste-button {
+	  -moz-image-region: rect(0, 540px, 18px, 522px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #zoom-controls:not(:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true])) > #zoom-out-button {
+	  -moz-image-region: rect(0, 558px, 18px, 540px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #zoom-controls:not(:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true])) > #zoom-in-button {
+	  -moz-image-region: rect(0, 576px, 18px, 558px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #nav-bar-overflow-button {
+	  -moz-image-region: rect(0, 612px, 18px, 594px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #email-link-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 666px, 18px, 648px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #sidebar-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 684px, 18px, 666px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #panic-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 702px, 18px, 684px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #panic-button[cui-areatype="toolbar"][open] {
+	  -moz-image-region: rect(18px, 702px, 36px, 684px) !important;
+	}
+
+	#main-window[fx55plus="true"] #PersonalToolbar #webide-button[cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0, 738px, 18px, 720px) !important;
+	}
+
+	@media (min-resolution: 1.1dppx) {
+	  #main-window[fx55plus="true"] #PersonalToolbar #back-button {
+		-moz-image-region: rect(0, 72px, 36px, 36px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #forward-button {
+		-moz-image-region: rect(0, 144px, 36px, 108px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #home-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 252px, 36px, 216px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #bookmarks-menu-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 288px, 36px, 252px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #bookmarks-menu-button[cui-areatype="toolbar"][starred] {
+		-moz-image-region: rect(0, 324px, 36px, 288px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+		-moz-image-region: rect(0px, 1260px, 36px, 1224px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #history-panelmenu[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 360px, 36px, 324px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #downloads-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 396px, 36px, 360px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #add-ons-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 432px, 36px, 396px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #open-file-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 468px, 36px, 432px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #save-page-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 504px, 36px, 468px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #sync-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 1584px, 36px, 1548px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #containers-panelmenu[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 1620px, 36px, 1584px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #feed-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 576px, 36px, 540px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #social-share-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 612px, 36px, 576px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #characterencoding-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 648px, 36px, 612px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #new-window-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 684px, 36px, 648px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #e10s-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 684px, 36px, 648px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #new-tab-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 720px, 36px, 684px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #privatebrowsing-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 756px, 36px, 720px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #find-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 792px, 36px, 756px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #print-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 828px, 36px, 792px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #fullscreen-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 864px, 36px, 828px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #developer-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 900px, 36px, 864px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #preferences-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 936px, 36px, 900px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #PanelUI-menu-button {
+		-moz-image-region: rect(0, 972px, 36px, 936px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #edit-controls[cui-areatype="toolbar"] > #cut-button {
+		-moz-image-region: rect(0, 1008px, 36px, 972px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #edit-controls[cui-areatype="toolbar"] > #copy-button {
+		-moz-image-region: rect(0, 1044px, 36px, 1008px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #edit-controls[cui-areatype="toolbar"] > #paste-button {
+		-moz-image-region: rect(0, 1080px, 36px, 1044px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #zoom-controls[cui-areatype="toolbar"] > #zoom-out-button {
+		-moz-image-region: rect(0, 1116px, 36px, 1080px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #zoom-controls[cui-areatype="toolbar"] > #zoom-in-button {
+		-moz-image-region: rect(0, 1152px, 36px, 1116px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #nav-bar-overflow-button {
+		-moz-image-region: rect(0, 1224px, 36px, 1188px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #email-link-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 1332px, 36px, 1296px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #sidebar-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 1368px, 36px, 1332px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #panic-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 1404px, 36px, 1368px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #panic-button[cui-areatype="toolbar"][open] {
+		-moz-image-region: rect(36px, 1404px, 72px, 1368px) !important;
+	  }
+
+	  #main-window[fx55plus="true"] #PersonalToolbar #webide-button[cui-areatype="toolbar"] {
+		-moz-image-region: rect(0, 1476px, 36px, 1440px) !important;
+	  }
+	}
 }

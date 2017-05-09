@@ -583,6 +583,7 @@ classicthemerestorerjs.ctr = {
 			classicthemerestorerjs.ctr.loadUnloadCSS('closeicon_w10',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closeicon_w10i',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closeicon_w10red',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('closeicon_w10red2',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closeicon_gc',false);
 			  
 			if (branch.getCharPref("closeicon")!="closeicon_default"){
@@ -600,6 +601,7 @@ classicthemerestorerjs.ctr = {
 			classicthemerestorerjs.ctr.loadUnloadCSS('closeicong_w10',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closeicong_w10i',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closeicong_w10red',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('closeicong_w10red2',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closeicong_gc',false);
 			  
 			if (branch.getCharPref("closeicong")!="closeicong_default"){
@@ -4247,6 +4249,7 @@ classicthemerestorerjs.ctr = {
 		case "closeicon_w10": 			manageCSS("close_icon_t_w10.css");  	break;
 		case "closeicon_w10i": 			manageCSS("close_icon_t_w10i.css");  	break;
 		case "closeicon_w10red": 		manageCSS("close_icon_t_w10red.css");  	break;
+		case "closeicon_w10red2": 		manageCSS("close_icon_t_w10red2.css"); 	break;
 		case "closeicon_gc": 			manageCSS("close_icon_t_gc.css");  		break;
 		
 		case "closeicong_red": 			manageCSS("close_icon_g_red.css");  	break;
@@ -4256,6 +4259,7 @@ classicthemerestorerjs.ctr = {
 		case "closeicong_w10": 			manageCSS("close_icon_g_w10.css");  	break;
 		case "closeicong_w10i": 		manageCSS("close_icon_g_w10i.css");  	break;
 		case "closeicong_w10red": 		manageCSS("close_icon_g_w10red.css");  	break;
+		case "closeicong_w10red2": 		manageCSS("close_icon_g_w10red2.css");  break;
 		case "closeicong_gc": 			manageCSS("close_icon_g_gc.css");  		break;
 		
 		case "closetabbig": 			manageCSS("close_icon_t_big.css");  	break;

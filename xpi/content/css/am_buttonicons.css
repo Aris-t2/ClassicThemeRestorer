@@ -1,60 +1,60 @@
 @-moz-document url-prefix(chrome://mozapps/content/extensions/extensions.xul), url-prefix(about:addons) {
 	richlistitem[type="userstyle"] .control-container button[oncommand="document.getBindingParent(document.getBindingParent(this)).openEdit();"] image{
-	  list-style-image: url("chrome://browser/skin/Toolbar.png");
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar.png");
 	  -moz-image-region: rect(0, 450px, 18px, 432px);
 	}
 	button[anonid="preferences-btn"].addon-control image{
-	  list-style-image: url("chrome://browser/skin/Toolbar.png");
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar.png");
 	  -moz-image-region: rect(0, 468px, 18px, 450px);
 	}
 	button[anonid="install-remote-btn"].addon-control image,
 	button[anonid="enable-btn"].addon-control image{
-	  list-style-image: url("chrome://browser/skin/Toolbar.png");
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar.png");
 	  -moz-image-region: rect(0, 576px, 18px, 558px);
 	}
 	button[anonid="disable-btn"].addon-control image{
-	  list-style-image: url("chrome://browser/skin/Toolbar.png");
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar.png");
 	  -moz-image-region: rect(0, 558px, 18px, 540px);
 	}
 	button[anonid="remove-btn"].addon-control image{
-	  list-style-image: url("chrome://browser/skin/Toolbar.png");
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar.png");
 	  -moz-image-region: rect(0, 108px, 18px, 90px);
 	}
 	button[anonid="update-btn"].addon-control image{
-	  list-style-image: url("chrome://browser/skin/Toolbar.png");
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar.png");
 	  -moz-image-region: rect(0, 612px, 18px, 596px);
 	  transform: rotate(-90deg);
 	}
 	
 	@media (min-resolution: 1.1dppx) {
 	  richlistitem[type="userstyle"] .control-container button[oncommand="document.getBindingParent(document.getBindingParent(this)).openEdit();"] image {
-		list-style-image: url("chrome://browser/skin/Toolbar@2x.png");
+		list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar@2x.png");
 		-moz-image-region: rect(0, 900px, 36px, 864px);
 		width: 18px !important;
 	  }
 	  button[anonid="preferences-btn"].addon-control image {
-		list-style-image: url("chrome://browser/skin/Toolbar@2x.png");
+		list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar@2x.png");
 		-moz-image-region: rect(0, 936px, 36px, 900px);
 		width: 18px !important;
 	  }
 	  button[anonid="install-remote-btn"].addon-control image,
 	  button[anonid="enable-btn"].addon-control image{
-		list-style-image: url("chrome://browser/skin/Toolbar@2x.png");
+		list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar@2x.png");
 		-moz-image-region: rect(0, 1152px, 36px, 1116px);
 		width: 18px !important;
 	  }
 	  button[anonid="disable-btn"].addon-control image{
-		list-style-image: url("chrome://browser/skin/Toolbar@2x.png");
+		list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar@2x.png");
 		-moz-image-region: rect(0, 1116px, 36px, 1080px);
 		width: 18px !important;
 	  }
 	  button[anonid="remove-btn"].addon-control image{
-	    list-style-image: url("chrome://browser/skin/Toolbar@2x.png");
+	    list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar@2x.png");
 	    -moz-image-region: rect(0, 216px, 36px, 180px);
 		width: 18px !important;
 	  }
 	  button[anonid="update-btn"].addon-control image{
-	    list-style-image: url("chrome://browser/skin/Toolbar@2x.png");
+	    list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar@2x.png");
 	    -moz-image-region: rect(0, 1224px, 36px, 1188px);
 		width: 18px !important;
 	  }

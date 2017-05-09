@@ -1,0 +1,456 @@
+<!ENTITY % overlayDTD
+    SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
+  %overlayDTD;
+<!-- Do not edit above this line and do not edit the variable '&brandShortName;' inside translated strings -->
+
+<!ENTITY Ctr_title			"Classic Theme Restorer">
+
+<!ENTITY Ctr_addonbar		"Add-onbalk">
+<!ENTITY Ctr_statusbar		"Statusbalk">
+<!ENTITY Ctr_flexspace		"Flexibele ruimte">
+<!ENTITY Ctr_space			"Ruimte">
+<!ENTITY Ctr_separator		"Scheidingsteken">
+<!ENTITY Ctr_navthrobber	"Activiteitsindicator">
+<!ENTITY Ctr_maskindicator	"Privémodusindicator">
+<!ENTITY Ctr_sidebarbutton	"(Zijbalk)">
+<!ENTITY Ctr_windowcontrols	"Min/max/sluiten (volledig scherm)">
+<!ENTITY Ctr_rr				"Herstart vereist!">
+<!ENTITY Ctr_window			"venster">
+<!ENTITY Ctr_centered		"Gecentreerd">
+<!ENTITY Ctr_page			"Pagina">
+<!ENTITY Ctr_position		"Positie">
+<!ENTITY Ctr_appearance		"Vormgeving">
+<!ENTITY Ctr_left			"Links">
+<!ENTITY Ctr_right			"Rechts">
+<!ENTITY Ctr_privmode		"(privévenster)">
+
+<!ENTITY Ctr_cuibuttons		"Knoppen">
+<!ENTITY Ctr_cuibutnormal	"Normaal">
+<!ENTITY Ctr_cuibutsmall	"Klein">
+<!ENTITY Ctr_cuimode		"Modus">
+<!ENTITY Ctr_cuiico			"Pictogrammen">
+<!ENTITY Ctr_cuiicotxt		"Pictogrammen + tekst">
+<!ENTITY Ctr_cuitxt			"Tekst">
+<!ENTITY Ctr_cuitabsnontop	"Tabbladen niet bovenaan">
+
+<!ENTITY Ctr_tnot			"(tabbladen niet bovenaan)">
+
+<!ENTITY Ctr_tabcolors_t	"Kleur- en tekstvormgeving">
+
+<!ENTITY Ctr_tabs			"Tabbladen">
+<!ENTITY Ctr_tabs0			"&brandShortName;-standaard (Afgeronde tabbladen)">
+<!ENTITY Ctr_tabs1			"Rechthoekige tabbladen (klassiek)">
+<!ENTITY Ctr_tabs1m			"Rechthoekige tabbladen (‘geaustraliseerd’)">
+<!ENTITY Ctr_tabs2			"Afgeronde tabbladen (alternatief)">
+<!ENTITY Ctr_tabs3			"Afgeronde tabbladen (alternatief Aero)">
+<!ENTITY Ctr_tabforminfo	"Tabbladvormgeving wordt bepaald door het huidige thema.">
+<!ENTITY Ctr_coltabsinfo	"Tabbladvormgeving is niet volledig compatibel met de add-on ‘ColorfulTabs’!">
+<!ENTITY Ctr_tabsontop0		"Tabbladen bovenaan (standaard)">
+<!ENTITY Ctr_tabsontop1		"Tabbladen bovenaan - [tabsontop=true]-attribuut">
+<!ENTITY Ctr_tabsontop2		"Tabbladen niet bovenaan (v1) - [tabsontop=false]-attribuut">
+<!ENTITY Ctr_tabsontop3		"Tabbladen niet bovenaan (v2) - [tabsontop=false]-attribuut">
+<!ENTITY Ctr_tabsontopW1	"v2 is alleen voor bepaalde add-ons en volledige thema’s!">
+<!ENTITY Ctr_tabsontopI1	"Attribuut [tabsontop=true/false] wordt toegevoegd aan">
+<!ENTITY Ctr_tabsintitlebar	"&brandShortName;-titelbalk gebruiken in plaats van OS-titelbalk">
+<!ENTITY Ctr_tabwidthdef	"(standaard)">
+<!ENTITY Ctr_tabwidthcla	"(klassiek)">
+<!ENTITY Ctr_tabminheight	"Hoogte:">
+<!ENTITY Ctr_tabheightinfo	"Kleine hoogtewaarden veroorzaken verstoringen in gemaximaliseerde modus!">
+<!ENTITY Ctr_ctrltabprev	"Tabbladvoorbeelden via ‘Ctrl + Tab’">
+<!ENTITY Ctr_tabmaxwidth	"Max. breedte:">
+<!ENTITY Ctr_tabminwidth	"Min. breedte:">
+<!ENTITY Ctr_tabwidthinfo	"Tabbladbreedte wordt beheerd door TabMixPlus.">
+<!ENTITY Ctr_tabwidthinfo2	"Tabbladbreedte wordt beheerd door TabUtilities.">
+<!ENTITY Ctr_tabwidthinfo3	"Waarden onder 48 px veroorzaken meestal verstoringen!">
+<!ENTITY Ctr_square_edges	"Rechte bovenhoeken">
+<!ENTITY Ctr_tttitlebar		"Tabbladtitel in &brandShortName;-titelbalk">
+<!ENTITY Ctr_ttoverflow		"Lange tabbladtitels">
+<!ENTITY Ctr_ttoverfl_def	"Standaard overvloeiingseffect">
+<!ENTITY Ctr_ttoverfl_no	"Geen overvloeiingseffect">
+<!ENTITY Ctr_tabtitle		"Tabbladtitelpositie">
+<!ENTITY Ctr_tabinsertion	"Gerelateerd tabblad na huidige tabblad invoegen">
+<!ENTITY Ctr_emptytfavico	"Favicon tonen (als een website dit niet aanbiedt)">
+<!ENTITY Ctr_emptytfavico_n	"Geen">
+<!ENTITY Ctr_emptytfavico_g	"Algemeen">
+<!ENTITY Ctr_noemptypticon	"Leeg favicon van vastgemaakte tabbladen verwijderen">
+<!ENTITY Ctr_closetab_0		"Tabblad sluiten">
+<!ENTITY Ctr_closetab_1		"Alleen op actief tabblad">
+<!ENTITY Ctr_closetab_2		"Nergens">
+<!ENTITY Ctr_closetab_3		"Op einde van tabbladwerkbalken">
+<!ENTITY Ctr_closetab_4		"Op begin van tabbladwerkbalken">
+<!ENTITY Ctr_closetab_5		"Op alle tabbladen (geforceerd)">
+<!ENTITY Ctr_closetab_hfot	"Verbergen voor één zichtbaar tabblad">
+<!ENTITY Ctr_closei_def		"Standaardpictogrammen">
+<!ENTITY Ctr_closeonleft	"Alternatieve positie op tabblad">
+<!ENTITY Ctr_closetabbig	"Groter pictogram (20x20 px)">
+<!ENTITY Ctr_close_wwltab	"Venster met laatst zichtbare tabblad sluiten">
+
+<!ENTITY Ctr_hctpinfotab	"Sommige tabbladvariaties zijn niet compatibel met de add-on ‘Hide Caption Titlebar Plus’.">
+<!ENTITY Ctr_hctpinfoab		"Knop op titelbalk is niet compatibel met de add-on ‘Hide Caption Titlebar Plus’.">
+<!ENTITY Ctr_tobainfotab	"De add-on ‘Tabs on Bottom’ is niet compatibel met ‘&Ctr_title;’ en dient te worden uitgeschakeld. Gebruik in plaats daarvan de beschikbare ‘&Ctr_cuitabsnontop;’-instellingen!">
+
+<!ENTITY Ctr_appbutton		"&brandShortName;-knop">
+<!ENTITY Ctr_appbutton0		"Knop uitgeschakeld">
+<!ENTITY Ctr_appbutton1		"Knop op werkbalk">
+<!ENTITY Ctr_appbutton1wt	"Knop op werkbalk (alleen tekst)">
+<!ENTITY Ctr_appbutton2		"Knop op &brandShortName;-titelbalk">
+<!ENTITY Ctr_appbutton2h	"Knop op &brandShortName;-titelbalk (verborgen)">
+<!ENTITY Ctr_appbutton2io	"Knop op &brandShortName;-titelbalk (alleen pictogram)">
+<!ENTITY Ctr_paneluibtweak	"Menuknop als &brandShortName;-knop weergeven…">
+<!ENTITY Ctr_paneluibtweak2	"Menuknop als &brandShortName;-knop weergeven (alleen pictogram)…">
+<!ENTITY Ctr_paneluibtweak3	"…bij plaatsing op tabbladenwerkbalk">
+<!ENTITY Ctr_appbuttonc		"Kleur">
+<!ENTITY Ctr_appbuttonc_o	"Oranje (standaard)">
+<!ENTITY Ctr_appbuttonc_a	"Blauw (Aurora)">
+<!ENTITY Ctr_appbuttonc_n	"Zwart (Nightly)">
+<!ENTITY Ctr_appbuttonc_t	"Transparant">
+<!ENTITY Ctr_appbuttonc_p	"Blauw (Palemoon)">
+<!ENTITY Ctr_appbuttonc_r	"Rood">
+<!ENTITY Ctr_appbuttonc_g	"Groen">
+<!ENTITY Ctr_appbuttonc_gr	"Grijs">
+<!ENTITY Ctr_appbuttonc_pu	"Paars">
+<!ENTITY Ctr_appbuttonc_wh	"Wit">
+<!ENTITY Ctr_appbuttonc_cu	"Aangepast">
+<!ENTITY Ctr_appbuttonct	"Aangepaste knopkleur (bij knop op werkbalk)">
+<!ENTITY Ctr_appbuttonI1	"Na een aanpassing wordt een herstart aanbevolen.">
+<!ENTITY Ctr_appbuttonI1e	"De &brandShortName;-knop is alleen op de &brandShortName;-titelbalk zichtbaar en niet in de OS-titelbalk!">
+<!ENTITY Ctr_appbutmhi		"Hogere positie (bij knop op tabbladenwerkbalk)">
+<!ENTITY Ctr_appbautocol	"Kleur van browserkanaal automatisch instellen (standaard/Aurora/Nightly)">
+<!ENTITY Ctr_appbutbdl		"Randen en achtergrondkleuren verbergen">
+<!ENTITY Ctr_dblclclosefx	"Dubbelklikken op knop om huidige venster te sluiten">
+<!ENTITY Ctr_appbclmmenus	"Klikbare menu’s binnen menupop-up (Nieuw tabblad, Afdrukken…)">
+<!ENTITY Ctr_appbutonclab	"Titel">
+<!ENTITY Ctr_appbutonclab2	"Voer titel in of laat leeg">
+
+<!ENTITY Ctr_ui				"UI algemeen">
+<!ENTITY Ctr_nbiconsize0	"Navigatiewerkbalk-attribuut ‘iconsize’">
+<!ENTITY Ctr_smallnavbut	"Kleine knoppen op navigatiewerkbalk">
+<!ENTITY Ctr_backforward	"Beweegbare terug-vooruit-knoppen">
+<!ENTITY Ctr_nbcompact		"Hoogte van navigatiewerkbalken verkleinen">
+<!ENTITY Ctr_hide_bf_popup	"Geschiedenispop-upmenu bij ingedrukte muisknop verbergen">
+<!ENTITY Ctr_bf_space		"Ruimte tussen knoppen verkleinen (wanneer mogelijk)">
+<!ENTITY Ctr_noconicons		"Paginacontextmenu: pictogrammen vervangen door labels (terug, vooruit…)">
+<!ENTITY Ctr_prefpage		"Optiespagina/-venster">
+<!ENTITY Ctr_altoptionsd	"Standaardvormgeving">
+<!ENTITY Ctr_altoptionsp	"Alternatieve vormgeving">
+<!ENTITY Ctr_altoptionsw	"Optiespagina openen in een venster">
+<!ENTITY Ctr_altoptions_hm	"horizontaal menu">
+<!ENTITY Ctr_altoptions_vm	"verticaal menu">
+<!ENTITY Ctr_altoptionsww	"Breedte:">
+<!ENTITY Ctr_altoptionswh	"Hoogte:">
+<!ENTITY Ctr_altoptionsi	"Het gesimuleerde optiesvenster is geen dialoogvenster meer, maar een ‘browservenster’ waarin alle werkbalken zijn verborgen. De functie ‘Huidige pagina gebruiken’ voegt alleen URL’s toe van pagina’s die in het huidige venster zijn geopend, wat in dit geval alleen ‘about:preferences’ is. De ‘optieswerkbalkknop’ wordt door een nieuwe vervangen, zodat opties in een venster kunnen worden geopend.">
+<!ENTITY Ctr_options_rem	"Laatst geselecteerde categorie onthouden">
+<!ENTITY Ctr_aboutpages		"Algemene ‘about:’-pagina’s: alternatieve vormgeving">
+<!ENTITY Ctr_svgfilters		"SVG-kleuren voor standaard werkbalkknop-pictogrammen">
+<!ENTITY Ctr_wincontrols	"Verplaatsbare vensterbesturingen voor volledigschermmodus">
+<!ENTITY Ctr_puibuttonsep	"Menuknop-scheidingsteken">
+<!ENTITY Ctr_puibut_no_sep	"Verborgen">
+<!ENTITY Ctr_puibut_l_sep	"Links">
+<!ENTITY Ctr_puibut_r_sep	"Rechts">
+<!ENTITY Ctr_html5warning	"HTML5-volledigschermwaarschuwing">
+<!ENTITY Ctr_oldtoplevimg	"Klassieke afbeeldingsweergave op witte achtergrond">
+<!ENTITY Ctr_altdlprogbar	"Downloadvoortgangsbalk: alternatieve vormgeving">
+<!ENTITY Ctr_altalertbox	"‘Waarschuwingsvenster’: alternatieve vormgeving">
+<!ENTITY Ctr_emptygfavico	"Algemeen favicon vervangen">
+<!ENTITY Ctr_mstatusbar		"Verplaatsbaar statuspaneel">
+<!ENTITY Ctr_mstatusbars4e	"Statusbalkpaneel wordt beheerd door ‘Status-4-Evar’">
+<!ENTITY Ctr_mstatusbartpp	"Statusbalkpaneel wordt beheerd door ‘ThePuzzlePiece’">
+<!ENTITY Ctr_mstatusbarpzt	"Statusbalkpaneel wordt beheerd door ‘Puzzle Bars’">
+<!ENTITY Ctr_mstatusbarabr	"Statusbalkpaneel wordt beheerd door ‘The Addon Bar (Restored)’">
+<!ENTITY Ctr_combrelstop	"Stoppen &amp; vernieuwen: knoppen op werkbalk combineren">
+<!ENTITY Ctr_stoprel1		"Belangrijk: positioneer vernieuwknop na stopknop!">
+<!ENTITY Ctr_panelmenucol	"Paneelmenupop-ups: alternatieve achtergrondkleur">
+<!ENTITY Ctr_hideprivmask	"Privénavigatie: maskerindicator verbergen">
+<!ENTITY Ctr_navsmallicons	"Kleine pictogrammen">
+<!ENTITY Ctr_navlargeicons	"Grote pictogrammen">
+<!ENTITY Ctr_nbisizedelay0	"Initialisatievertraging bij opstarten van browser">
+<!ENTITY Ctr_nbisizedelay	"ms (1000 ms = 1 sec)">
+<!ENTITY Ctr_findbar		"Zoekbalk">
+<!ENTITY Ctr_findbar_hws	"Zoekbalk sluiten bij scrollen van pagina">
+<!ENTITY Ctr_findbar_width	"Breedte van zoekbalk: ">
+<!ENTITY Ctr_findbarpos		"Positie van zoekbalk">
+<!ENTITY Ctr_findbar_def	"Onder (standaard)">
+<!ENTITY Ctr_findbar_top	"Boven">
+<!ENTITY Ctr_findbar_topa	"Boven (alternatieve inhoudsvolgorde)">
+<!ENTITY Ctr_findbar_bota	"Onder (alternatieve inhoudsvolgorde)">
+<!ENTITY Ctr_nav_txt_ico0	"Alleen pictogrammen tonen (standaard)">
+<!ENTITY Ctr_nav_txt_ico1	"Grote pictogrammen tonen">
+<!ENTITY Ctr_nav_txt_ico2	"Pictogrammen en tekst tonen">
+<!ENTITY Ctr_nav_txt_ico3	"Alleen tekst tonen">
+<!ENTITY Ctr_nav_txt_exp	"Klassieke attributen (experimenteel):">
+<!ENTITY Ctr_iat_notf_vt	"Verticale werkbalken uitsluiten">
+<!ENTITY Ctr_cpanelmenus	"Paneelmenupop-ups (bladwijzers, geschiedenis etc.): compacte weergave">
+<!ENTITY Ctr_hidezoomres	"Zoombedieningen op werkbalk: zoomherinitialisatieknop verbergen">
+<!ENTITY Ctr_alt_newtabp	"Nieuw-tabbladpagina (about:newtab): alternatieve vormgeving">
+<!ENTITY Ctr_nosnippets		"Startpagina (about:home): snippets verbergen">
+<!ENTITY Ctr_search_ui		"Zoeken">
+<!ENTITY Ctr_ctroldsearch	"Oude zoekmethode">
+<!ENTITY Ctr_ctroldsearchd	"Niet compatibel met andere zoek-add-ons!">
+<!ENTITY Ctr_ctroldsearchc	"Zoekveld wissen na zoeken">
+<!ENTITY Ctr_ctroldsearchr	"Terugkeren naar eerste zoekmachine in lijst na zoeken">
+<!ENTITY Ctr_ctrosearchdel	"vertraging">
+<!ENTITY Ctr_search_oit		"Zoekopdracht openen in nieuw tabblad">
+<!ENTITY Ctr_osearch_meoit	"Klikken met middelste muisknop: zoekopdracht openen in nieuw ‘voorgrondtabblad’">
+<!ENTITY Ctr_osearch_meoit1	"Zoekmachine">
+<!ENTITY Ctr_osearch_meoit2	"Vergrootglas">
+<!ENTITY Ctr_osearch_iwidth	"Pop-upbreedte automatisch aanpassen">
+<!ENTITY Ctr_osearch_cwidth	"Aangepaste breedte voor zoekpop-ups">
+<!ENTITY Ctr_osearch_dm		"Kleine uitvouwknop">
+<!ENTITY Ctr_addonmanager	"Add-onbeheerder">
+<!ENTITY Ctr_alt_addonsp	"Pagina ‘Meer info’: alternatieve volgorde">
+<!ENTITY Ctr_am_showrecup	"Altijd de categorie ‘Recente updates’ tonen">
+<!ENTITY Ctr_alt_addonsm	"Alternatieve vormgeving">
+<!ENTITY Ctr_am_nowarning	"Add-onlijsten: waarschuwingen verbergen">
+<!ENTITY Ctr_am_compact		"Add-onlijsten: compacte weergave">
+<!ENTITY Ctr_am_compact2	"Compacte weergave +">
+<!ENTITY Ctr_am_highlight	"Add-onlijsten: item accentueren bij aanwijzen">
+<!ENTITY Ctr_am_buticons	"Add-onlijsten: knopteksten vervangen door pictogrammen">
+<!ENTITY Ctr_am_hovshowb	"Add-onlijsten: alleen knoppen tonen bij aanwijzen">
+<!ENTITY Ctr_addonversion	"Add-onlijsten: add-onversie tonen">
+<!ENTITY Ctr_xpinstallui	"Oude add-on-installatievenster">
+<!ENTITY Ctr_bmbutton		"Bladwijzermenuknop">
+<!ENTITY Ctr_hiderecentbm	"Bladwijzerpop-up: onlangs toegevoegde bladwijzers verbergen">
+<!ENTITY Ctr_hideeditbm		"Bladwijzerster: pop-up verbergen (als pagina geen bladwijzer heeft)">
+<!ENTITY Ctr_oldplacesbut	"Bladwijzeritems en -mappen op werkbalk: oude vormgeving">
+<!ENTITY Ctr_dl_pm_drop		"Downloadknoppenpaneel: uitvouwknop tonen">
+<!ENTITY Ctr_bmbutpanelm	"Pop-up: paneelmenuvormgeving">
+<!ENTITY Ctr_bmbunsortbm	"Pop-up: menu ‘Andere bladwijzers’ tonen">
+<!ENTITY Ctr_bmbunsortbm2	"Menu boven bladwijzers">
+<!ENTITY Ctr_bmbviewbmsb	"Pop-up: menu-item ‘Bladwijzerzijbalk weergeven’ tonen">
+<!ENTITY Ctr_bmbviewbmtb	"Pop-up: menu-item ‘Bladwijzerwerkbalk weergeven’ tonen">
+<!ENTITY Ctr_bmbutnotb		"Pop-up: menu ‘Bladwijzerwerkbalk’ tonen">
+<!ENTITY Ctr_bmbnounsort	"Pop-up: menu en menu-item ‘Andere bladwijzers’ verbergen">
+<!ENTITY Ctr_bmbutclpopup	"Pop-up: alleen ‘Bladwijzer voor deze pagina maken’ en bladwijzers tonen">
+<!ENTITY Ctr_bmbutnotext	"Label op bladwijzerbalk verbergen">
+<!ENTITY Ctr_skipprintpr	"Afdrukknop: afdrukvoorbeeld overslaan">
+<!ENTITY Ctr_tbconmenu		"Werkbalkcontextmenu: ‘verplaatsen naar menu’, ‘verwijderen van werkbalk’, ‘alle tabbladen vernieuwen’, ‘bladwijzer voor alle tabbladen maken’ en ‘tabblad sluiten ongedaan maken’ verbergen">
+<!ENTITY Ctr_noresizerxp	"Resizer verbergen (Windows XP)">
+<!ENTITY Ctr_extraurlkeycb	"Extra locatiebalk openen (Cmd/Ctrl+">
+<!ENTITY Ctr_pmhidelabels	"Menupop-up van hoofdpaneel: knopteksten verbergen">
+<!ENTITY Ctr_menupopupscr	"Menupop-ups: scrollbalken tonen in plaats van scrollpijltjes">
+<!ENTITY Ctr_closegeneral	"Algemene sluitpictogrammen">
+
+<!ENTITY Ctr_tabsep_def		"Standaard tabbladscheidingstekens">
+<!ENTITY Ctr_fxmockup		"&brandShortName;-model">
+<!ENTITY Ctr_tabmokcolor	"Witte kleur voor tabbladknoppen (sluiten, nieuw, groepen, alle weergeven)">
+<!ENTITY Ctr_tabmokcolor2	"Witte kleur en donkere schaduw voor tekst op niet-actieve tabbladen">
+<!ENTITY Ctr_tabmokcolor4	"Witte kleur voor leeg gestippeld tabblad-favicon">
+
+<!ENTITY Ctr_navthrobber1	"Klikken op de activiteitsindicator opent de volgende URL in een nieuw tabblad:">
+<!ENTITY Ctr_navthrobber2	"Voer URL in of laat leeg">
+<!ENTITY Ctr_anewtaburl		"URL van Nieuw-tabbladpagina">
+<!ENTITY Ctr_anewtaburlcb	"Aangepaste URL voor Nieuw-tabbladpagina (standaard: ‘about:newtab’)">
+<!ENTITY Ctr_anewtaburlpcb	"Aangepaste URL voor Nieuw-privétabbladpagina (standaard: ‘about:privatebrowsing’)">
+
+<!ENTITY Ctr_tab_tf_info1	"Kleurnamen, hex-codes, rgb(a)- en hsl(a)-waarden worden ondersteund.">
+<!ENTITY Ctr_tab_tf_info2	"Invoerwaarden worden niet gevalideerd!">
+<!ENTITY Ctr_tabact_t		"geselecteerd">
+<!ENTITY Ctr_tabhov_t		"aangewezen">
+<!ENTITY Ctr_tabnor_t		"standaard">
+<!ENTITY Ctr_tabpen_t		"niet geladen">
+<!ENTITY Ctr_tabunr_t		"ongelezen">
+<!ENTITY Ctr_ntab_t			"nieuw tabblad">
+<!ENTITY Ctr_customsqtab1	"Achtergrond">
+<!ENTITY Ctr_ctext			"Tekst">
+<!ENTITY Ctr_ctextsh		"Tekstschaduw">
+<!ENTITY Ctr_tabnor			"Standaardtabblad">
+<!ENTITY Ctr_tabhov			"Aangewezen tabblad">
+<!ENTITY Ctr_tabact			"Geselecteerd tabblad">
+<!ENTITY Ctr_tabpen			"Niet-geladen tabblad">
+<!ENTITY Ctr_tabunr			"Ongelezen tabblad">
+<!ENTITY Ctr_ntabnor		"Standaard nieuw tabblad">
+<!ENTITY Ctr_ntabhov		"Aangewezen nieuw tabblad">
+<!ENTITY Ctr_bold			"Vet">
+<!ENTITY Ctr_italic			"Cursief">
+<!ENTITY Ctr_underlined		"Onderstreept">
+<!ENTITY Ctr_notabhov		"Ingeschakelde instellingen vervangen ‘aangewezen’-instellingen">
+<!ENTITY Ctr_tablowopa		"Tabbladzichtbaarheid verkleinen">
+<!ENTITY Ctr_tabc_act_tb	"Achtergrondkleur op werkbalken">
+
+<!ENTITY Ctr_urlbar			"Locatiebalk">
+<!ENTITY Ctr_starinurl		"Ster-knop">
+<!ENTITY Ctr_starinurlinfo	"Standaard bladwijzermenuknop wordt verborgen.">
+<!ENTITY Ctr_feedinurl		"RSS-feed-knop">
+<!ENTITY Ctr_hideurelstop	"‘Stoppen’- &amp; ‘vernieuwen’-knoppen verbergen">
+<!ENTITY Ctr_hideurelstop2	"Altijd ‘gaan’-knop tonen">
+<!ENTITY Ctr_hideurlgo		"‘Gaan’-knop verbergen">
+<!ENTITY Ctr_hideurlsrg		"Knopscheidingstekens en -ruimtes voor ‘vernieuwen’, ‘stoppen’ en ‘gaan’ verbergen">
+<!ENTITY Ctr_urlbardropm	"Uitvouwknop naar de laatst mogelijke positie verplaatsen">
+<!ENTITY Ctr_urlbardropm2	"Uitvouwknop altijd zichtbaar maken">
+<!ENTITY Ctr_altreaderico	"Alternatieve ‘Lezermodus’-pictogrammen">
+<!ENTITY Ctr_hideurlzoom	"Zoomknop verbergen (wanneer aanwezig)">
+<!ENTITY Ctr_urlbardark		"Donkere achtergrondkleur">
+<!ENTITY Ctr_hideprbutton	"Meldingspictogram verbergen wanneer een pop-up wordt geblokkeerd">
+<!ENTITY Ctr_locsearchbw10	"Hoogte van locatiebalken en zoekbalken verkleinen (experimenteel)">
+<!ENTITY Ctr_urlbar_ib		"Website-identiteitsknop">
+<!ENTITY Ctr_ib_nohovcolor	"Geen grijze kleur tonen wanneer aangewezen">
+<!ENTITY Ctr_ib_graycolor	"Grijze kleur voor onbekende identiteit en ‘about:’-pagina’s">
+<!ENTITY Ctr_verifiedcolors	"Knopkleuren voor geverifieerde websites, beveiligde en niet-beveiligde verbindingen">
+<!ENTITY Ctr_ibinfoico		"‘i’-pictogram vervangen door wereldbolpictogram">
+<!ENTITY Ctr_ibinfoico2		"‘i’-pictogram verbergen (wanneer mogelijk)">
+<!ENTITY Ctr_iblabels		"Labels verbergen">
+<!ENTITY Ctr_faviconurl		"Favicon: pictogram van huidige website">
+<!ENTITY Ctr_padlock		"Hangslotpictogram voor beveiligde verbindingen">
+<!ENTITY Ctr_padlock_hid	"verborgen">
+<!ENTITY Ctr_padlock_def	"standaard">
+<!ENTITY Ctr_padlock_cla	"klassiek">
+<!ENTITY Ctr_padlock_mod	"modern">
+<!ENTITY Ctr_padlock_ext	"‘&brandShortName;’-pictogram voor geldige ‘about’-pagina’s">
+<!ENTITY Ctr_icopageinfo	"Favicon-/globe-/‘i’-pictogram: ‘klikken’ opent ‘venster Pagina-info’">
+<!ENTITY Ctr_lbsbsize		"Aangepaste breedte">
+<!ENTITY Ctr_searchbar		"Zoekbalk">
+<!ENTITY Ctr_autocomplete	"Autoaanvullen-pop-up">
+<!ENTITY Ctr_altautocompl	"Alternatieve vormgeving">
+<!ENTITY Ctr_autocompl_it	"Items ‘Zoeken met ...’ en ‘Bezoeken’ verwijderen (wanneer aanwezig)">
+<!ENTITY Ctr_acompl_search	"Zoekmachines tonen">
+<!ENTITY Ctr_autocompl_hl	"Markering van teksttreffers">
+<!ENTITY Ctr_autocompl_rhl	"Aero-kleuren voor gemarkeerde resultaten">
+<!ENTITY Ctr_autocompl_not	"Paginatitel verbergen">
+<!ENTITY Ctr_autocompl_sep	"Scheidingsteken tonen tussen resultaten">
+<!ENTITY Ctr_urlbar_uc		"‘Samengevoegd autoaanvullen’-functie uitschakelen">
+<!ENTITY Ctr_lbsugresi		"Hoogtelimiet uitschakelen">
+<!ENTITY Ctr_cresultshcb	"Aangepaste hoogtelimiet: ">
+<!ENTITY Ctr_lbsugres		"Aantal resultaten">
+<!ENTITY Ctr_lbsbradius		"Aangepaste ronding van randen">
+
+<!ENTITY Ctr_menubar_items	"Positie van menu-items">
+<!ENTITY Ctr_extrabar		"Extra werkbalken">
+<!ENTITY Ctr_extrabar0		"Extra werkbalk(en)">
+<!ENTITY Ctr_extrabar1		"Extra werkbalk">
+<!ENTITY Ctr_extrabarinfo	"Wisselen tussen de modi ‘tabbladen bovenaan’ en ‘tabbladen niet bovenaan’ past de volgorde van extra werkbalken willekeurig aan. &brandShortName; moet opnieuw worden gestart om dit probleem te verhelpen.">
+
+<!ENTITY Ctr_invicons		"Omgekeerde pictogrammen">
+<!ENTITY Ctr_menubar		"Menubalk">
+<!ENTITY Ctr_tabstoolbar	"Tabbladenwerkbalk">
+<!ENTITY Ctr_navbar			"Navigatiewerkbalk">
+<!ENTITY Ctr_bookbar		"Bladwijzerwerkbalk">
+<!ENTITY Ctr_notoolbar		"Verborgen (geen menu-items tonen)">
+
+<!ENTITY Ctr_mbarforceleft	"Eerste element">
+<!ENTITY Ctr_mbarforceright	"Laatste element">
+
+<!ENTITY Ctr_toolbars		"Werkbalken">
+<!ENTITY Ctr_dblclnewtab	"Dubbelklikken op werkbalk opent een nieuw tabblad">
+<!ENTITY Ctr_dblclnewtabdes	"Niet geschikt voor alle volledige thema’s terwijl Windows-titelbalk actief is.">
+<!ENTITY Ctr_hidetbwot		"Tabbladenwerkbalk met maar één zichtbaar tabblad verbergen">
+<!ENTITY Ctr_hidetbwote		"Verbergvertraging bij opstarten verkleinen">
+<!ENTITY Ctr_hidetbwote_i	"Kan verstoringen op tabbladenwerkbalk geven.">
+<!ENTITY Ctr_hidetbwote2	"Titelbalkruimte automatisch aanpassen">
+<!ENTITY Ctr_notabfog		"Achtergrondmist verwijderen (Windows AeroGlass/8)">
+<!ENTITY Ctr_notabbg		"Achtergrondkleur verwijderen (Windows AeroGlass/8)">
+<!ENTITY Ctr_hightabpos		"Ruimte boven werkbalk verkleinen (wanneer mogelijk)">
+<!ENTITY Ctr_showalltabsb	"Knop ‘Alle tabbladen’ altijd tonen">
+<!ENTITY Ctr_alttabstb		"Alternatieve achtergrondkleur">
+<!ENTITY Ctr_alttabstb2		"In gemaximaliseerde modus (tabbladen bovenaan)">
+
+<!ENTITY Ctr_altmenubar		"Achtergrondkleur toevoegen (OS-titelbalk)">
+<!ENTITY Ctr_altmenubarpos	"alternatieve positie">
+<!ENTITY Ctr_altmenubarpos2	"Onder &brandShortName;-titelbalk">
+<!ENTITY Ctr_menubarnofog	"Achtergrondkleur/-mist verwijderen (Windows AeroGlass/8)">
+
+<!ENTITY Ctr_aerocolors		"Blue Aero-kleuren voor werkbalken (en tabbladen)">
+<!ENTITY Ctr_aerocolorsg	"Grijs-blauwe Aero-kleuren">
+<!ENTITY Ctr_transpttbw10	"Titel-/menu-/tabbladenwerkbalk: achtergrondkleur verwijderen">
+<!ENTITY Ctr_transpttbew10	"Extra tweaks voor bepaalde OS-thema’s">
+<!ENTITY Ctr_transptcw10	"Standaardknoppen van OS voor min/max/sluiten verbergen">
+<!ENTITY Ctr_hidenavbar		"Werkbalk verbergen">
+<!ENTITY Ctr_navbarpad		"Extra ruimte links en rechts">
+<!ENTITY Ctr_navbarpad_l	"Links:">
+<!ENTITY Ctr_navbarpad_r	"Rechts:">
+<!ENTITY Ctr_nobookbarbg	"Achtergrondkleur verwijderen">
+<!ENTITY Ctr_bookbarfs		"In volledigschermmodus">
+<!ENTITY Ctr_nonavbarbg		"Achtergrondkleur verwijderen">
+<!ENTITY Ctr_nonavbarbg1	"Heeft invloed op extra werkbalken van deze add-on en andere werkbalken.">
+<!ENTITY Ctr_nonavbarbg2	"Heeft invloed op alle werkbalken in ‘Slim Chrome’ van add-on ‘Beyond Australis’.">
+<!ENTITY Ctr_nonavborder	"Bovenrand aan werkbalk toevoegen">
+<!ENTITY Ctr_nonavtbborder	"Bovenste werkbalken: werkbalkranden verwijderen">
+<!ENTITY Ctr_toptb_oldpad	"Bovenste werkbalken: oude opvulling links en rechts">
+<!ENTITY Ctr_hidesbclose	"Zijbalken: sluitknop verbergen">
+<!ENTITY Ctr_notextshadow	"Werkbalken: schaduw voor werkbalktekst en tabbladtekst verbergen">
+<!ENTITY Ctr_chevronfix		"Navigatiewerkbalk: dubbele pijl (‘Meer hulpmiddelen’) aan einde van werkbalk verbergen">
+<!ENTITY Ctr_tbsep_winc		"Bovenste werkbalken: extra werkbalkscheidingstekens">
+
+<!ENTITY Ctr_closeabarbut	"Add-onbalk: sluitknop verbergen">
+<!ENTITY Ctr_highaddonsbar	"Hoogte vergroten">
+<!ENTITY Ctr_lessaddonsbar	"Hoogte verkleinen">
+<!ENTITY Ctr_addonbarfs		"In volledigschermmodus">
+
+<!ENTITY Ctr_tabthrobber	"Afbeelding laden">
+<!ENTITY Ctr_bmanimation	"‘Bladwijzer maken via ster’-animatie">
+<!ENTITY Ctr_pananimation	"‘Paneel openen’-animatie">
+<!ENTITY Ctr_tabanimation	"‘Tabblad sluiten/openen’-animatie">
+<!ENTITY Ctr_dlanimation	"‘Downloadnotificatie’-animatie">
+<!ENTITY Ctr_uianimation	"Algemene UI-animaties">
+<!ENTITY Ctr_fsanimation	"Volledigscherm-animaties">
+<!ENTITY Ctr_fsaduration	"Volledigscherm-animaties voor HTML5-inhoud">
+<!ENTITY Ctr_findbarhl		"Zoekbalk: animatie bij resultaatmarkering">
+
+<!ENTITY Ctr_toolsitem		"Menu-item in menu Extra">
+<!ENTITY Ctr_appmenuitem	"Menu-item in app-knoppenmenu">
+<!ENTITY Ctr_contextitem	"Menu-item in werkbalkcontextmenu">
+<!ENTITY Ctr_puictrbutton	"Knop in hoofdpaneelmenu">
+
+<!ENTITY Ctr_otherctroptns	"Overige instellingen">
+<!ENTITY Ctr_cuibotbuttons	"Extra knoppen in modus ‘Aanpassen’">
+<!ENTITY Ctr_nodevtheme		"Inschakelen van ‘Developer Edition-thema’ voorkomen">
+
+<!ENTITY Ctr_experttweaks	"Geavanceerd">
+<!ENTITY Ctr_fx34loop		"Uitschakelen van deze voorkeur verwijdert functies voor ‘bellen en conversaties’.">
+<!ENTITY Ctr_fx38pocket		"Uitschakelen van deze voorkeur schakelt de functie ‘Pocket’ uit en verwijdert de ‘Pocket’-knop van werkbalken.">
+<!ENTITY Ctr_fx38pocket2	"Noot: verplaatsen van de Pocket-knop naar het gebied ‘Extra hulpmiddelen en functies’ in modus ‘Aanpassen’ voordat deze voorkeur wordt uitgeschakeld, verwijdert alle Pocket-gerelateerde vermeldingen uit het menu Bladwijzers en lezermenu-pop-ups.">
+<!ENTITY Ctr_e_loop			"Hello / Bellen en conversatie / Loop">
+<!ENTITY Ctr_e_readermode	"Lezermodus">
+<!ENTITY Ctr_e_geolocation	"Geolocatie">
+<!ENTITY Ctr_e_pocket		"Pocket">
+<!ENTITY Ctr_e_tabsaudioico	"Pictogram bij afspelen van geluid">
+<!ENTITY Ctr_e_containertab	"Containertabbladen">
+<!ENTITY Ctr_e_flyweb		"Flyweb">
+<!ENTITY Ctr_e_resfprinting "Antivingerafdrukbescherming">
+<!ENTITY Ctr_e_oldfontgfx	"Oude lettertyperendering">
+
+
+<!ENTITY Ctr_pw_settings	"Instellingen">
+<!ENTITY Ctr_pw_set_reset	"Standaardwaarden terugzetten">
+<!ENTITY Ctr_pw_set_predef	"Klassieke preset">
+<!ENTITY Ctr_pw_set_preaus	"&brandShortName;-preset">
+<!ENTITY Ctr_pw_set_export	"Voorkeuren exporteren">
+<!ENTITY Ctr_pw_set_import	"Voorkeuren importeren">
+<!ENTITY Ctr_pw_set_syncon	"Toevoegen aan Sync">
+<!ENTITY Ctr_pw_set_syncoff	"Verwijderen uit Sync">
+<!ENTITY Ctr_pw_set_impexp	"Voorkeuren die een beschrijving ‘about:config &gt;&gt; ...’ bevatten, zijn standaard browservoorkeuren en worden niet geëxporteerd of geïmporteerd!">
+
+<!ENTITY Ctr_special_font	"Achtergrondkleurinstellingen gelden alleen voor het standaardthema!">
+<!ENTITY Ctr_special_info	"Sommige opties bieden wellicht niet altijd zichtbare wijzigingen">
+<!ENTITY Ctr_special_info2	"Thema van derden gedetecteerd! Sommige opties werken niet met thema’s van derden!">
+<!ENTITY Ctr_special_acr	"Meld alleen problemen via officiële ondersteuningskanalen, en niet door de ‘Add-on Compatibility Reporter’ te gebruiken!">
+<!ENTITY Ctr_support		"Ondersteuning">
+<!ENTITY Ctr_support_forum1	"MozillaZine (Engels forum)">
+<!ENTITY Ctr_support_forum2	"Camp Firefox (Duits forum)">
+<!ENTITY Ctr_github_issues	"Probleem melden op Github">
+<!ENTITY Ctr_newversion		"Nieuwste CTR-versie">
+<!ENTITY Ctr_newversion2	"Nieuwste CTR-bèta">
+
+<!ENTITY Ctr_addon-bar.accesskey		"d">
+<!ENTITY appMenuGettingStarted.label	"Aan de slag">
+<!ENTITY goCmd.label					"Gaan">
+<!ENTITY Ctr_menu_restart.label			"Herstarten">
+<!ENTITY Ctr_restartapp					"‘Herstarten’ tonen in menu &brandShortName; en menu Bestand">
+<!ENTITY Ctr_ctrnewinv					"Nieuwe opties voor huidige &brandShortName;-versie onderstrepen">
+<!ENTITY Ctr_cssoverride				"Aangepaste CSS-code">
+<!ENTITY Ctr_cssoverride2				"CSS-code wordt niet op fouten gecontroleerd!">
+
+<!ENTITY Ctr_openInCurrentTab			"Invoerwaarden openen in het huidige tabblad">
+<!ENTITY Ctr_openInNewTab				"Invoerwaarden openen in een nieuw tabblad">
+<!ENTITY Ctr_openInNewWindow			"Invoerwaarden openen in een nieuw venster">
+
+<!-- For page context entries. Have to be adjusted for every locale! -->
+<!ENTITY backCmd.accesskey				"T">
+<!ENTITY forwardCmd.accesskey			"V">
+<!ENTITY reloadCmd.accesskey			"n">
+<!ENTITY stopCmd.accesskey				"S">
+<!ENTITY bookmarkPageCmd2.accesskey		"d">
+
+<!-- Fallback entities. Do not change! -->
+<!ENTITY openCmd.commandkey				"">
+<!ENTITY urlbar.accesskey				"">
+<!ENTITY urlbar.placeholder2			"">

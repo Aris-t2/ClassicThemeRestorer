@@ -5,7 +5,7 @@
 	<Description rdf:about="urn:mozilla:install-manifest">
 		<em:id>ClassicThemeRestorer@ArisT2Noia4dev</em:id>
 		<em:name>Classic Theme Restorer</em:name>
-		<em:version>1.6.6beta4</em:version>
+		<em:version>1.6.6beta6</em:version>
 		<em:type>2</em:type>
 		<em:multiprocessCompatible>true</em:multiprocessCompatible>
 
@@ -45,6 +45,7 @@
 		<em:translator>mm_k (ja) - Japanese</em:translator>
 		<em:translator>ma2moto (ja) - Japanese</em:translator>
 		<em:translator>momdo (ja) - Japanese</em:translator>
+		<em:translator>Tonnes (nl) - Dutch</em:translator>
 		<em:translator>Mrere (pl) - Polish</em:translator>
 		<em:translator>hawkeye116477 (pl) - Polish</em:translator>
 		<em:translator>igorruckert (pt-BR) - Portuguese [Brazil]</em:translator>
@@ -164,7 +165,16 @@
 				<em:translator>momdo (ja) - Japanese</em:translator>
 			</Description>
 		</em:localized>
-	
+
+		<em:localized>
+			<Description>
+				<em:name>Classic Theme Restorer</em:name>
+				<em:locale>nl</em:locale>
+				<em:description>‘Classic Theme Restorer’ herstelt veel functies voor aanpassingen die Firefox in de loop der tijd heeft verloren, zoals de oude ‘Firefox’-knop, rechthoekige tabbladen, de add-onbalk, kleine navigatiebalkknoppen, de oude zoekmethode, het oude voorkeurenvenster, het oude locatiebalkmenu, de oogvriendelijke add-onbeheerder, oude knoppen, en veel meer.</em:description>
+				<em:translator>Tonnes (nl) - Dutch</em:translator>
+			</Description>
+		</em:localized>
+
 		<em:localized>
 			<Description>
 				<em:name>Classic Theme Restorer</em:name>
