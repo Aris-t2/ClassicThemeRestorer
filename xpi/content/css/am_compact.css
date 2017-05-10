@@ -167,7 +167,8 @@
 	.addon .name-container .name,
 	.addon .name-container .version,
 	.addon .name-container .disabled-postfix,
-	.addon .name-container .update-postfix {
+	.addon .name-container .update-postfix,
+	.addon .name-container .legacy-warning	{
 	  font-size:85% !important;
 	  -moz-margin-start: 4px !important;
 	  -moz-margin-end: 0 !important;
@@ -204,6 +205,13 @@
 	.description-container .button-link .button-box {
 	  -moz-padding-start: 0px !important;
 	  -moz-padding-end: 2px !important;
+	}
+	
+	#addons-page .addon .name-container .legacy-warning,
+	#addons-page #addon-list .name-container .legacy-warning {
+	  padding: 0 2px !important;
+	  margin: 2px !important;
+	  font-size: 80% !important;
 	}
 
 }
