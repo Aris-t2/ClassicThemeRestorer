@@ -56,6 +56,7 @@
                 <xul:label anonid="name" class="name" crop="end" flex="1"
                            tooltip="addonitem-tooltip" xbl:inherits="value=name,tooltiptext=name"/>
 				<xul:label anonid="version" class="version"/>
+				<xul:label anonid="legacy" class="legacy-warning text-link" value="LEGACY"/>
                 <xul:label class="disabled-postfix" value="&addon.disabled.postfix;"/>
                 <xul:label class="update-postfix" value="&addon.update.postfix;"/>
                 <xul:spacer flex="5000"/> <!-- Necessary to make the name crop -->

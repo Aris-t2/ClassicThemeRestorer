@@ -1,1 +1,13 @@
 @import url(chrome://ctraddon_os_special/skin/addonversion46_extra.css);
+
+@-moz-document url-prefix(chrome://mozapps/content/extensions/extensions.xul), url-prefix(about:addons) {
+
+	.legacy-warning {
+	  visibility: collapse !important;
+	}
+	
+	.addon[legacy="true"] .legacy-warning {
+	  visibility: visible !important;
+	}
+
+}

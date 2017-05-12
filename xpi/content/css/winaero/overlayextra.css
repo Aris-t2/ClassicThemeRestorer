@@ -33,12 +33,20 @@
 	}
 	
 	/* images for default theme */
-	#main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_history-menu-toolbar-button,#ctraddon_history-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button) {
+	#main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button) {
 	  list-style-image: url("chrome://browser/skin/Toolbar.png");
 	}
 	
-	#main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_history-menu-toolbar-button,#ctraddon_history-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button):-moz-lwtheme-brighttext {
+	#main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button):-moz-lwtheme-brighttext {
 	  list-style-image: url("chrome://browser/skin/Toolbar-inverted.png");
+	}
+
+	#main-window[defaultfxtheme="true"][fx55plus="true"] :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button) {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar.png");
+	}
+	
+	#main-window[defaultfxtheme="true"][fx55plus="true"] :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button):-moz-lwtheme-brighttext {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar-inverted.png");
 	}
 	
 	#main-window[defaultfxtheme="true"] #ctraddon_history-menu-toolbar-button,
@@ -79,6 +87,15 @@
 		#main-window[defaultfxtheme="true"] :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button):-moz-lwtheme-brighttext {
 		  list-style-image: url("chrome://browser/skin/Toolbar-inverted@2x.png");
 		}
+		
+		#main-window[defaultfxtheme="true"][fx55plus="true"]  :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button) {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar@2x.png");
+		}
+		
+		#main-window[defaultfxtheme="true"][fx55plus="true"]  :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button):-moz-lwtheme-brighttext {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar-inverted@2x.png");
+		}
+
 		#main-window[defaultfxtheme="true"] #ctraddon_history-menu-toolbar-button,
 		#main-window[defaultfxtheme="true"] #ctraddon_history-button {
 		  -moz-image-region: rect(0, 360px, 36px, 324px);
@@ -131,13 +148,20 @@
 	}
 
 	/* prefwindow button clone */
-	
 	#ctraddon_preferences-button {
 	  list-style-image: url("chrome://browser/skin/Toolbar.png");
 	}
 
 	toolbar[brighttext] #ctraddon_preferences-button {
-	  list-style-image: url(chrome://browser/skin/Toolbar-inverted.png);
+	  list-style-image: url("chrome://browser/skin/Toolbar-inverted.png");
+	}
+	
+	#main-window[fx55plus="true"] #ctraddon_preferences-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar.png");
+	}
+
+	#main-window[fx55plus="true"] toolbar[brighttext] #ctraddon_preferences-button {
+	  list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar-inverted.png");
 	}
 
 	#ctraddon_preferences-button[cui-areatype="toolbar"] {
@@ -151,6 +175,14 @@
 
 	  toolbar[brighttext] #ctraddon_preferences-button {
 		list-style-image: url("chrome://browser/skin/Toolbar-inverted@2x.png");
+	  }
+	  
+	  #main-window[fx55plus="true"] #ctraddon_preferences-button {
+		list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar@2x.png");
+	  }
+
+	  #main-window[fx55plus="true"] toolbar[brighttext] #ctraddon_preferences-button {
+		list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar-inverted@2x.png");
 	  }
 	  #ctraddon_preferences-button[cui-areatype="toolbar"] {
 		-moz-image-region: rect(0, 936px, 36px, 900px);
