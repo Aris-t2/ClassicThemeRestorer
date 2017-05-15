@@ -1157,7 +1157,7 @@
 			  <groupbox>
 				<caption  label="&Ctr_ui;" class="ctraddon_topic"/>
 
-				<description class="ctraddon_font1">&Ctr_emptygfavico;</description>
+				<description class="ctraddon_font1" id="ctraddon_pw_emptyfavico_gdesc">&Ctr_emptygfavico;</description>
 				<radiogroup preference="ctraddon_emptyfavico_g" id="ctraddon_pw_emptyfavico_g" orient="horizontal" value="">
 					<radio value="emptyfavico_g_def"	label="&Ctr_tabwidthdef;" id="ctraddon_emptyfavico_g_def"/>
 					<radio value="emptyfavico_g_def2"	label=""	id="ctraddon_emptyfavico_g_def2"/>

@@ -2112,7 +2112,7 @@ classicthemerestorerjs.ctr = {
 			classicthemerestorerjs.ctr.loadUnloadCSS('emptyfavico_g_dot2',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('emptyfavico_g_sheet',false);
 			
-			if (branch.getCharPref("emptyfavico_g")!="emptyfavico_g_def"){
+			if (branch.getCharPref("emptyfavico_g")!="emptyfavico_g_def" &&  classicthemerestorerjs.ctr.appversion < 55){
 			  classicthemerestorerjs.ctr.loadUnloadCSS(branch.getCharPref("emptyfavico_g"),true);
 			}
 
