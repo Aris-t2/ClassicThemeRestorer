@@ -132,5 +132,10 @@
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem #ibox-spacer {
 	  width: 100000px !important;
 	}
+	
+	#main-window[fx55plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) hbox[anonid="search-suggestions-notification"],
+	#main-window[fx55plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] hbox[anonid="search-suggestions-notification"] {
+	  display: none !important;
+	}
 
 }

@@ -3,6 +3,7 @@
 @-moz-document url(chrome://browser/content/browser.xul){
 	.panel-arrowcontent,
 	.panel-subviews,
+	.PanelUI-subView,
 	#BMB_bookmarksPopup menupopup box,
 	#ctraddon_BMB_bookmarksPopup[panelopen="true"] menupopup[placespopup=true] > hbox,
 	#ctraddon_BMB_bookmarksPopup[panelopen="true"] #ctraddon_BMB_subscribeToPageSubmenuMenupopup,

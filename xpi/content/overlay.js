@@ -3819,7 +3819,7 @@ classicthemerestorerjs.ctr = {
 
 	  if(event.button==2 && mov_urlbar_container.contains(event.target)) {
 
-		var toolbarcontext_popup = classicthemerestorerjs.ctr.ctrGetId('toolbar-context-menu');
+		/*var toolbarcontext_popup = classicthemerestorerjs.ctr.ctrGetId('toolbar-context-menu');
 
 		toolbarcontext_popup.addEventListener("popupshown", function onCtrToolbarContextPopupShown(){
 		  try {
@@ -3831,14 +3831,14 @@ classicthemerestorerjs.ctr = {
 			toolbarcontext_popup.removeEventListener("popupshown", onCtrToolbarContextPopupShown, false);
 		  } catch(e){}
 
-		}, false);
+		}, false);*/
 		
 		classicthemerestorerjs.ctr.loadUnloadCSS("noconitems",true);
 		
 	  } else {
 		var toolbarcontext_popup = classicthemerestorerjs.ctr.ctrGetId('toolbar-context-menu');
 
-		toolbarcontext_popup.addEventListener("popupshown", function onCtrToolbarContextPopupShown2(){
+		/*toolbarcontext_popup.addEventListener("popupshown", function onCtrToolbarContextPopupShown2(){
 		  try {
 			if(toolbarcontext_popup.firstChild.getAttribute("disabled")=="true"
 			  && toolbarcontext_popup.firstChild.getAttribute('class')=='customize-context-moveToPanel') {
@@ -3849,7 +3849,7 @@ classicthemerestorerjs.ctr = {
 			toolbarcontext_popup.removeEventListener("popupshown", onCtrToolbarContextPopupShown2, false);
 		  } catch(e){}
 			
-		}, false);
+		}, false);*/
 		
 		classicthemerestorerjs.ctr.loadUnloadCSS("noconitems",false);
 		
