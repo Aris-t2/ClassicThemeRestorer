@@ -501,6 +501,8 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_tabanimationdesc').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_fsanimation').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_fsanimationdesc').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_emptyfavico_gdesc').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_emptyfavico_g').style.visibility = 'collapse';
 	}
 	
 

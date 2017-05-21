@@ -13,5 +13,9 @@
 	  border-image: unset !important;
 	  border-image-slice: unset !important;
 	}
+	
+	#main-window[fx55plus="true"] #urlbar-page-action-button {
+	  visibility: collapse !important;
+	}
 
 }

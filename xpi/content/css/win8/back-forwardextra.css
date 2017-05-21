@@ -107,22 +107,22 @@
 	}
 	/* END: urlbar border tweaking (default theme does not provide left urlbar border) */
 
-	#main-window:not([chromehidden~="toolbar"]) * toolbar #urlbar-container,
-	#main-window:not([chromehidden~="toolbar"]) * toolbar #urlbar-container[forwarddisabled] {
+	#main-window:not([fx55plus="true"]):not([chromehidden~="toolbar"]) * toolbar #urlbar-container,
+	#main-window:not([fx55plus="true"]):not([chromehidden~="toolbar"]) * toolbar #urlbar-container[forwarddisabled] {
 	  -moz-margin-start: 10px !important;
 	}
-	#main-window[developertheme="true"]:not([chromehidden~="toolbar"]) * toolbar #urlbar-container,
-	#main-window[developertheme="true"]:not([chromehidden~="toolbar"]) * toolbar #urlbar-container[forwarddisabled] {
+	#main-window:not([fx55plus="true"])[developertheme="true"]:not([chromehidden~="toolbar"]) * toolbar #urlbar-container,
+	#main-window:not([fx55plus="true"])[developertheme="true"]:not([chromehidden~="toolbar"]) * toolbar #urlbar-container[forwarddisabled] {
 	  -moz-margin-start: 3px !important;
 	}
 
 	@media (-moz-os-version: windows-win10) {
-		#main-window:not([chromehidden~="toolbar"]) * toolbar #urlbar-container,
-		#main-window:not([chromehidden~="toolbar"]) * toolbar #urlbar-container[forwarddisabled] {
+		#main-window:not([fx55plus="true"]):not([chromehidden~="toolbar"]) * toolbar #urlbar-container,
+		#main-window:not([fx55plus="true"]):not([chromehidden~="toolbar"]) * toolbar #urlbar-container[forwarddisabled] {
 		  -moz-margin-start: 12px !important;
 		}
-		#main-window[developertheme="true"]:not([chromehidden~="toolbar"]) * toolbar #urlbar-container,
-		#main-window[developertheme="true"]:not([chromehidden~="toolbar"]) * toolbar #urlbar-container[forwarddisabled] {
+		#main-window:not([fx55plus="true"])[developertheme="true"]:not([chromehidden~="toolbar"]) * toolbar #urlbar-container,
+		#main-window:not([fx55plus="true"])[developertheme="true"]:not([chromehidden~="toolbar"]) * toolbar #urlbar-container[forwarddisabled] {
 		  -moz-margin-start: 3px !important;
 		}
 	}
