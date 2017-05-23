@@ -1044,6 +1044,7 @@
 				<description class="ctraddon_topic ctraddonsuboption" id="ctraddon_pw_statusbar_abr_info">&Ctr_mstatusbarabr;</description>
 				
 				<checkbox label="&Ctr_noconicons;"		preference="ctraddon_noconicons" id="ctraddon_pw_noconicons"/>
+				<checkbox label="&Ctr_locsearchbw10;"	preference="ctraddon_locsearchbw10"  id="ctraddon_pw_locsearchbw10"/>
 				<checkbox label="&Ctr_alt_newtabp;"		preference="ctraddon_alt_newtabp" id="ctraddon_pw_alt_newtabp"/>
 				<checkbox label="&Ctr_nosnippets;"		preference="ctraddon_nosnippets" id="ctraddon_pw_nosnippets"/>
 				<checkbox label="&Ctr_aboutpages;"		preference="ctraddon_aboutpages" id="ctraddon_pw_aboutpages" class="ctraddon_new_in_v48"/>
@@ -1066,7 +1067,6 @@
 
 				<checkbox label="&Ctr_html5warning;"	preference="ctraddon_html5warning" id="ctraddon_pw_html5warning"/>
 				<description class="ctraddonsuboption">about:config &gt;&gt; full-screen-api.warning.*</description>
-				<checkbox label="&Ctr_locsearchbw10;"	preference="ctraddon_locsearchbw10"  id="ctraddon_pw_locsearchbw10"/>
 
 			  </groupbox>
 		  </tabpanel>
