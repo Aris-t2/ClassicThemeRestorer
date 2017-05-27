@@ -13,11 +13,12 @@
 	  display:none !important;
 	}
 	
-    window:not([chromehidden~="toolbar"]) toolbar #urlbar-wrapper,
+    #main-window:not([fx55plus="true"]):not([chromehidden~="toolbar"]) toolbox #urlbar-wrapper,
+	window:not([chromehidden~="toolbar"]) toolbar #urlbar-wrapper,
 	#urlbar-container, #urlbar-container *,
 	#urlbar-wrapper, #urlbar-wrapper *,
 	#urlbar, #urlbar *{
-	  clip-path: none !important;
+	  clip-path: unset !important;
 	}
 	
 	#urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar {
@@ -36,9 +37,14 @@
 	  transform: scaleX(-1);
 	}
 	
-	#nav-bar #urlbar-container,
-	#nav-bar #search-container{
+	#main-window:not([fx55plus="true"]) #nav-bar #urlbar-container,
+	#main-window:not([fx55plus="true"]) #nav-bar #search-container{
 	  margin-top:1px;
 	  margin-bottom:1px;
 	}
+	
+	/*#main-window[fx55plus="true"] #nav-bar-customization-target{
+	  margin-top:1px;
+	  margin-bottom:1px;
+	}*/
 }

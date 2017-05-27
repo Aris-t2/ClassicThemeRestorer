@@ -109,7 +109,6 @@ classicthemerestorerjso.ctr = {
 		document.getElementById('ctraddon_pw_tbsep_winc').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_transpttbw10').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_transpttbew10').style.visibility = 'collapse';
-		document.getElementById('ctraddon_pw_locsearchbw10').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_bookmarksbargroup2').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_tabstoolbargroup').style.visibility = 'collapse';
 		document.getElementById('ctraddon_pw_menubargroup2').style.visibility = 'collapse';
@@ -159,6 +158,9 @@ classicthemerestorerjso.ctr = {
 	  
 	  document.getElementById('ctraddon_pw_colors_ntab_t').disabled = false;
 	}
+	
+	// location and searchbar size
+	document.getElementById('ctraddon_pw_locsearchbw10').style.visibility = 'collapse';
 	
 	// ColorfulTabs info label
 	document.getElementById('ctraddon_coltabsinfo').style.visibility = 'collapse';
@@ -503,6 +505,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_fsanimationdesc').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_emptyfavico_gdesc').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_emptyfavico_g').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_locsearchbw10').style.visibility = 'visible';
 	}
 	
 

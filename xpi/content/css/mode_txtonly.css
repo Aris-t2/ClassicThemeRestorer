@@ -27,6 +27,7 @@
 	  visibility: collapse !important;
 	}
 
+	#navigator-toolbox toolbar:not(#TabsToolbar) #urlbar-page-action-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon,
 	#navigator-toolbox toolbar:not(#TabsToolbar) #urlbar-go-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon,
 	#navigator-toolbox toolbar:not(#TabsToolbar) #urlbar-stop-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon,
 	#navigator-toolbox toolbar:not(#TabsToolbar) #urlbar-reload-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon {
@@ -65,30 +66,7 @@
 	window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
 	  margin-left: 0px !important;
 	}
-	
-	/* support for star & feed buttons in urlbar */
-	toolbox toolbar #urlbar-container #urlbar #feed-button .toolbarbutton-text,
-	toolbox toolbar #urlbar-container #urlbar #bookmarks-menu-button .toolbarbutton-text {
-	  display: none !important;
-	  visibility: collapse !important;
-	}
-	#main-window toolbox toolbar #urlbar-container #urlbar #feed-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon,
-	#main-window toolbox toolbar #urlbar-container #urlbar #bookmarks-menu-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon {
-	  visibility: visible !important;
-	}
-	toolbox toolbar #urlbar-container #urlbar #feed-button,
-	toolbox toolbar #urlbar-container #urlbar #bookmarks-menu-button {
-	  min-width: inherit !important;
-	}
-	toolbox toolbar #urlbar-container #urlbar #feed-button:hover,
-	toolbox toolbar #urlbar-container #urlbar #bookmarks-menu-button:hover{
-	  border: 0px solid transparent !important;
-      background-image: linear-gradient(hsla(0,0%,100%,.0), hsla(0,0%,100%,.0)) !important;
-      border-color: hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) !important;
-      box-shadow: none !important;
-	  padding:0 !important;
-	}
-	
+
 	/* Vertical toolbar */
 	#vertical-toolbar .toolbarbutton-1 .toolbarbutton-text {
 	  display: -moz-box !important;
@@ -100,7 +78,7 @@
 	  visibility: collapse !important;
 	}
 	
-	/* Main menu button & call button fix */
+	/* badged buttons fix */
 	toolbar .toolbarbutton-1 .toolbarbutton-badge,
 	toolbar .toolbarbutton-1 .toolbarbutton-badge-container {
 	  -moz-appearance:none !important;
@@ -113,6 +91,92 @@
 	toolbar:not(#TabsToolbar) .toolbarbutton-badge-stack {
 	  visibility:collapse !important;
 	  display: -moz-box !important;
+	}
+	
+	toolbox toolbar:not(#TabsToolbar) toolbarbutton:not(#downloads-button):not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-badge-stack .toolbarbutton-icon {
+	  visibility: visible !important;
+      position:absolute !important;
+	  background: unset !important;
+	  box-shadow: unset !important;
+	  fill: unset !important;
+	  opacity: 0 !important;
+	  border: unset !important;
+	}
+	
+	toolbar:not(#TabsToolbar) #downloads-button .toolbarbutton-badge-stack {
+	  visibility: visible !important;
+      position:absolute !important;
+	  background: unset !important;
+	  box-shadow: unset !important;
+	  fill: unset !important;
+	  border: unset !important;
+	}
+	
+	toolbar:not(#TabsToolbar) #downloads-button #downloads-indicator-icon {
+	  visibility: hidden !important;
+	}
+	
+	/* widget-type="view" button fix */
+	#main-window toolbox toolbar:not(#TabsToolbar) #bookmarks-menu-button .toolbarbutton-menubutton-button:not(.tabs-newtab-button):not(.tab-close-button),
+	#main-window toolbox toolbar:not(#TabsToolbar) #history-panelmenu:not(.tabs-newtab-button):not(.tab-close-button),
+	#main-window toolbox toolbar:not(#TabsToolbar) #developer-button:not(.tabs-newtab-button):not(.tab-close-button),
+	#main-window toolbox toolbar:not(#TabsToolbar) #pocket-button:not(.tabs-newtab-button):not(.tab-close-button),
+	#main-window toolbox toolbar:not(#TabsToolbar) #panic-button:not(.tabs-newtab-button):not(.tab-close-button),
+	#main-window toolbox toolbar:not(#TabsToolbar) #sidebar-button:not(.tabs-newtab-button):not(.tab-close-button) {
+	  -moz-box-orient: horizontal !important;
+	}
+	#main-window toolbox toolbar:not(#TabsToolbar) #bookmarks-menu-button .toolbarbutton-menubutton-button:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text,
+	#main-window toolbox toolbar:not(#TabsToolbar) #history-panelmenu:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text,
+	#main-window toolbox toolbar:not(#TabsToolbar) #developer-button:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text,
+	#main-window toolbox toolbar:not(#TabsToolbar) #pocket-button:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text,
+	#main-window toolbox toolbar:not(#TabsToolbar) #panic-button:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text,
+	#main-window toolbox toolbar:not(#TabsToolbar) #sidebar-button:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text{
+	  display: inline !important;
+	}
+	#main-window toolbox toolbar:not(#TabsToolbar) #bookmarks-menu-button .toolbarbutton-menubutton-button:not(#downloads-button):not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon,
+	#main-window toolbox toolbar:not(#TabsToolbar) #history-panelmenu:not(#downloads-button):not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon,
+	#main-window toolbox toolbar:not(#TabsToolbar) #developer-button:not(#downloads-button):not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon,
+	#main-window toolbox toolbar:not(#TabsToolbar) #pocket-button:not(#downloads-button):not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon,
+	#main-window toolbox toolbar:not(#TabsToolbar) #panic-button:not(#downloads-button):not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon,
+	#main-window toolbox toolbar:not(#TabsToolbar) #sidebar-button:not(#downloads-button):not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon {
+	  visibility: visible !important;
+      position:absolute !important;
+	  -moz-margin-end: -32px !important;
+	  background: unset !important;
+	  box-shadow: unset !important;
+	  fill: unset !important;
+	  opacity: 0 !important;
+	}
+
+	/* support for star & feed buttons in urlbar */
+	#main-window toolbox toolbar:not(#TabsToolbar) #urlbar-container #urlbar #bookmarks-menu-button .toolbarbutton-menubutton-button:not(#downloads-button):not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon{
+	  visibility: visible !important;
+      position: unset !important;
+	  -moz-margin-end: unset !important;
+	  background: unset !important;
+	  opacity: 1.0 !important;
+	}
+	
+	#main-window toolbox toolbar #urlbar-container #urlbar #feed-button .toolbarbutton-text,
+	#main-window toolbox toolbar #urlbar-container #urlbar #bookmarks-menu-button .toolbarbutton-text {
+	  display: none !important;
+	  visibility: collapse !important;
+	}
+	#main-window toolbox toolbar #urlbar-container #urlbar #feed-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon,
+	#main-window toolbox toolbar #urlbar-container #urlbar #bookmarks-menu-button:not(.tabs-newtab-button):not(.tab-close-button):not(#tabs-closebutton):not(#ctraddon_tabs-closebutton):not(#PlacesChevron) .toolbarbutton-icon {
+	  visibility: visible !important;
+	}
+	#main-window toolbox toolbar #urlbar-container #urlbar #feed-button,
+	#main-window toolbox toolbar #urlbar-container #urlbar #bookmarks-menu-button {
+	  min-width: inherit !important;
+	}
+	#main-window toolbox toolbar #urlbar-container #urlbar #feed-button:hover,
+	#main-window toolbox toolbar #urlbar-container #urlbar #bookmarks-menu-button:hover{
+	  border: 0px solid transparent !important;
+      background-image: linear-gradient(hsla(0,0%,100%,.0), hsla(0,0%,100%,.0)) !important;
+      border-color: hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) hsla(210,54%,20%,.0) !important;
+      box-shadow: none !important;
+	  padding:0 !important;
 	}
 	
 	/*LastPass*/

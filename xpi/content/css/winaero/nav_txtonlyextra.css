@@ -37,11 +37,11 @@
 	#navigator-toolbox toolbar:not(#TabsToolbar) .toolbarbutton-1:not(.tabs-newtab-button):not(.tab-close-button) .toolbarbutton-text {
 	  padding: 2px 3px 3px 3px !important;
 	}
-	#navigator-toolbox #nav-bar  #bookmarks-menu-button .toolbarbutton-text{
+	#main-window:not[fx52plus="true"] #navigator-toolbox #nav-bar  #bookmarks-menu-button .toolbarbutton-text{
 	  font-size: 12px !important;
 	}
-	#nav-bar #nav-bar-customization-target > #wrapper-bookmarks-menu-button,
-	#nav-bar #nav-bar-customization-target > #bookmarks-menu-button{
+	#main-window:not[fx52plus="true"] #nav-bar #nav-bar-customization-target > #wrapper-bookmarks-menu-button,
+	#main-window:not[fx52plus="true"] #nav-bar #nav-bar-customization-target > #bookmarks-menu-button{
 	  margin-top: -8px !important;
       margin-bottom: -8px !important;
 	}
