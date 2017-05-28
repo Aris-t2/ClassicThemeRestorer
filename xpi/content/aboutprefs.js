@@ -102,8 +102,10 @@ ctrAboutPrefs = {
 		  document.querySelector('#mainPrefPane').setAttribute('fx46plus',true);
 		else if(parseInt(Services.appinfo.version) >=49 && parseInt(Services.appinfo.version) < 55)
 		  document.querySelector('#mainPrefPane').setAttribute('fx49plus',true);
-	    else if(parseInt(Services.appinfo.version) >=55)
+	    else if(parseInt(Services.appinfo.version) >=55) {
 		  document.querySelector('#mainPrefPane').setAttribute('fx55plus',true);
+		  document.querySelector('page').setAttribute('fx55plus',true);
+		}
 	  } catch(e){}
 
 	  /* restore favicon wheel for all categories */

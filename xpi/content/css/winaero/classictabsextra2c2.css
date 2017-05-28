@@ -3,8 +3,19 @@
 @-moz-document url(chrome://browser/content/browser.xul){
 
 	/* tab colors */
-	@media all and (-moz-windows-theme:aero) {
 		.tabbrowser-tab[selected]:not(:-moz-lwtheme) .tab-content {
+		  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.4) 50%),
+							linear-gradient(-moz-dialog, -moz-dialog) !important;
+		}
+		
+		.tabs-newtab-button:not(:-moz-lwtheme):not(#privateTab-afterTabs-openNewPrivateTab),
+		#TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
+		  list-style-image: url(chrome://browser/skin/tabbrowser/newtab.svg) !important;
+		}
+
+
+	@media all and (-moz-windows-theme:aero) {
+		#main-window:not([fx55plus="true"]) .tabbrowser-tab[selected]:not(:-moz-lwtheme) .tab-content {
 		  background-image: linear-gradient(to top,#eaf2fb,#eef5fc,#fbfdff) !important;
 		}
 	}
