@@ -1043,6 +1043,8 @@
 				<description class="ctraddon_topic ctraddonsuboption" id="ctraddon_pw_statusbar_pzt_info">&Ctr_mstatusbarpzt;</description>
 				<description class="ctraddon_topic ctraddonsuboption" id="ctraddon_pw_statusbar_abr_info">&Ctr_mstatusbarabr;</description>
 				
+				<checkbox label="&Ctr_aerocolors;"		preference="ctraddon_aerocolors" id="ctraddon_pw_aerocolors" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwAeroColors(true);} else {classicthemerestorerjso.ctr.ctrpwAeroColors(false);}"/>
+				<checkbox label="&Ctr_aerocolorsg;"		preference="ctraddon_aerocolorsg" id="ctraddon_pw_aerocolorsg" class="ctraddonsuboption"/>
 				<checkbox label="&Ctr_noconicons;"		preference="ctraddon_noconicons" id="ctraddon_pw_noconicons"/>
 				<checkbox label="&Ctr_locsearchbw10;"	preference="ctraddon_locsearchbw10"  id="ctraddon_pw_locsearchbw10"/>
 				<checkbox label="&Ctr_alt_newtabp;"		preference="ctraddon_alt_newtabp" id="ctraddon_pw_alt_newtabp"/>
@@ -1680,8 +1682,6 @@
 
 			  <groupbox>
 				<caption  label="&Ctr_toolbars;" class="ctraddon_topic"/>
-				<checkbox label="&Ctr_aerocolors;"				 preference="ctraddon_aerocolors" id="ctraddon_pw_aerocolors" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwAeroColors(true);} else {classicthemerestorerjso.ctr.ctrpwAeroColors(false);}"/>
-				<checkbox label="&Ctr_aerocolorsg;"				 preference="ctraddon_aerocolorsg" id="ctraddon_pw_aerocolorsg" class="ctraddonsuboption"/>
 				<checkbox label="&Ctr_notextshadow;"			 preference="ctraddon_notextshadow"/>
 				<checkbox label="&Ctr_transpttbw10;"			 preference="ctraddon_transpttbw10" id="ctraddon_pw_transpttbw10" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwTranspTbW10(true);} else {classicthemerestorerjso.ctr.ctrpwTranspTbW10(false);}"/>
 				<checkbox label="&Ctr_transptcw10;"			 	 preference="ctraddon_transptcw10" id="ctraddon_pw_transptcw10" class="ctraddonsuboption"/>

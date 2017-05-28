@@ -3498,7 +3498,7 @@ classicthemerestorerjs.ctr = {
 			  gBrowser.currentURI.spec==defaultNewTabPage && defaultNewTabPage!=newURLp
 			)
 		  ) openUILinkIn(newURLp, "current");
-		},100);
+		},500);
 	  } catch(e){}
 
 	}
