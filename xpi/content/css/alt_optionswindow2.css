@@ -435,45 +435,45 @@
 	}
 	
 	/* adjust first groupbox on privacy/sync category*/
-	#mainPrefPane[fx46plus="true"] groupbox#trackingGroup{
+	page[fx46plus="true"] groupbox#trackingGroup{
 	  margin-top: 11px !important;
 	}
 
-	#mainPrefPane[fx46plus="true"] #trackingprotectionpbmbox {
+	page[fx46plus="true"] #trackingprotectionpbmbox {
 	  margin-top: -11px !important;
 	}
-	#mainPrefPane[fx46plus="true"] #trackingprotectionpbmbox caption{
+	page[fx46plus="true"] #trackingprotectionpbmbox caption{
 	  -moz-margin-start: unset !important;
 	  background: unset !important;
 	}
-	#mainPrefPane[fx46plus="true"] #trackingprotectionpbmbox caption label{
+	page[fx46plus="true"] #trackingprotectionpbmbox caption label{
 	  background: -moz-Dialog !important;
 	}
 
-	#mainPrefPane[fx49plus="true"] groupbox#trackingGroup{
+	page[fx46plus="true"] groupbox#trackingGroup{
 	  margin-top: 11px !important;
 	}
 
-	#mainPrefPane[fx49plus="true"] #trackingprotectionbox hbox caption {
+	page[fx46plus="true"] #trackingprotectionbox hbox caption {
 	  margin-top: -11px !important;
 	  -moz-margin-start: unset !important;
 	  -moz-margin-end: 30px !important;
 	}
 	
-	#mainPrefPane[fx49plus="true"] #trackingGroup * {
+	page[fx46plus="true"] #trackingGroup * {
 	  background: unset !important;
 	}
 
-	#mainPrefPane[fx49plus="true"] #trackingGroup * caption label {
+	page[fx46plus="true"] #trackingGroup * caption label {
 	  background: -moz-Dialog !important;
 	  margin-top: -11px !important;
 	  -moz-margin-start: -5px !important;
 	}
 	
-	#mainPrefPane[fx49plus="true"] groupbox#noFxaGroup{
+	page[fx46plus="true"] groupbox#noFxaGroup{
 	  margin-top: 9px !important;
 	}
-	#mainPrefPane[fx49plus="true"] #noFxaCaption {
+	page[fx46plus="true"] #noFxaCaption {
 	  background: -moz-Dialog !important;
 	  margin-top: -9px !important;
 	}

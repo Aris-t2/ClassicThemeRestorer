@@ -89,45 +89,46 @@ ctrAboutPrefs = {
 
 	window.addEventListener("DOMContentLoaded", function addPrefAttributes(event){
 	  window.removeEventListener("DOMContentLoaded", addPrefAttributes, false);
-	  setTimeout(function(){
-	
-	  /* add attributes to nodes for better css parting */
-	  try{
-		var thirdpartytheme = Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin");
-		document.querySelector('#categories').setAttribute('currenttheme',thirdpartytheme);
-	  } catch(e){}
-		
-	  try{
-		if(parseInt(Services.appinfo.version) >=46 && parseInt(Services.appinfo.version) < 49)
-		  document.querySelector('#mainPrefPane').setAttribute('fx46plus',true);
-		else if(parseInt(Services.appinfo.version) >=49 && parseInt(Services.appinfo.version) < 55)
-		  document.querySelector('#mainPrefPane').setAttribute('fx49plus',true);
-	    else if(parseInt(Services.appinfo.version) >=55) {
-		  document.querySelector('#mainPrefPane').setAttribute('fx55plus',true);
-		  document.querySelector('page').setAttribute('fx55plus',true);
-		}
-	  } catch(e){}
+	  
+		setTimeout(function(){
+		  try{
+			if(parseInt(Services.appinfo.version) >=46 && parseInt(Services.appinfo.version) < 49)
+			  document.querySelector('page').setAttribute('fx46plus',true);
+			else if(parseInt(Services.appinfo.version) >=49 && parseInt(Services.appinfo.version) < 55)
+			  document.querySelector('page').setAttribute('fx49plus',true);
+			else if(parseInt(Services.appinfo.version) >=55)
+			  document.querySelector('page').setAttribute('fx55plus',true);
+		  } catch(e){}
+		},100);
 
-	  /* restore favicon wheel for all categories */
-	  var windowsService = Components.classes['@mozilla.org/appshell/window-mediator;1'].getService(Components.interfaces.nsIWindowMediator);
-	  var currentWindow = windowsService.getMostRecentWindow('navigator:browser');
-	  var browser = currentWindow.getBrowser();
+		setTimeout(function(){
 	
-	  if(browser.contentDocument.location.href.indexOf('about:preferences')!=-1) {
-		
-		var ss =  Cc["@mozilla.org/content/style-sheet-service;1"].getService(Ci.nsIStyleSheetService);
-		var uri = Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
-		\
-		#TabsToolbar .tabbrowser-tab[label="'+browser.selectedTab.label+'"] .tab-icon-image:not([src]),\
-		#TabsToolbar .tabbrowser-tab[label="'+browser.selectedTab.label+'"]:not([pinned]) .tab-icon-image:not([src]) {\
-		  list-style-image: url("chrome://browser/skin/preferences/in-content/favicon.ico") !important;\
-		  display:block !important;\
-		}\
-		\
-		'), null, null);
+		  /* add attributes to nodes for better css parting */
+		  try{
+			var thirdpartytheme = Services.prefs.getBranch("general.skins.").getCharPref("selectedSkin");
+			document.querySelector('#categories').setAttribute('currenttheme',thirdpartytheme);
+		  } catch(e){}
 
-		ss.loadAndRegisterSheet(uri, ss.AGENT_SHEET);
-	  }
+		  /* restore favicon wheel for all categories */
+		  var windowsService = Components.classes['@mozilla.org/appshell/window-mediator;1'].getService(Components.interfaces.nsIWindowMediator);
+		  var currentWindow = windowsService.getMostRecentWindow('navigator:browser');
+		  var browser = currentWindow.getBrowser();
+		
+		  if(browser.contentDocument.location.href.indexOf('about:preferences')!=-1) {
+			
+			var ss =  Cc["@mozilla.org/content/style-sheet-service;1"].getService(Ci.nsIStyleSheetService);
+			var uri = Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+			\
+			#TabsToolbar .tabbrowser-tab[label="'+browser.selectedTab.label+'"] .tab-icon-image:not([src]),\
+			#TabsToolbar .tabbrowser-tab[label="'+browser.selectedTab.label+'"]:not([pinned]) .tab-icon-image:not([src]) {\
+			  list-style-image: url("chrome://browser/skin/preferences/in-content/favicon.ico") !important;\
+			  display:block !important;\
+			}\
+			\
+			'), null, null);
+
+			ss.loadAndRegisterSheet(uri, ss.AGENT_SHEET);
+		  }
 	  },500);
 	},false);
 	

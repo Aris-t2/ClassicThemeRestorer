@@ -2813,6 +2813,8 @@ classicthemerestorerjs.ctr = {
 				classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv50",true);
 			  else if (classicthemerestorerjs.ctr.appversion == 51)
 				classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv51",true);
+			  else if (classicthemerestorerjs.ctr.appversion == 52)
+				classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv52",true);
 			  else if (classicthemerestorerjs.ctr.appversion == 53)
 				classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv53",true);
 			  else if (classicthemerestorerjs.ctr.appversion == 55)
@@ -2823,6 +2825,7 @@ classicthemerestorerjs.ctr = {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv48",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv50",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv51",false);
+			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv52",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv53",false);
 			  classicthemerestorerjs.ctr.loadUnloadCSS("ctrnewinv55",false);
 			}
@@ -4603,6 +4606,7 @@ classicthemerestorerjs.ctr = {
 		case "ctrnewinv48":			manageCSS("ctraddon_new_in_v48.css");	break;
 		case "ctrnewinv50":			manageCSS("ctraddon_new_in_v50.css");	break;
 		case "ctrnewinv51":			manageCSS("ctraddon_new_in_v51.css");	break;
+		case "ctrnewinv52":			manageCSS("ctraddon_new_in_v52.css");	break;
 		case "ctrnewinv53":			manageCSS("ctraddon_new_in_v53.css");	break;
 		case "ctrnewinv55":			manageCSS("ctraddon_new_in_v55.css");	break;
 		
@@ -4865,7 +4869,9 @@ classicthemerestorerjs.ctr = {
 							}\
 							#main-window[defaultfxtheme="true"] #appmenuSecondaryPane menupopup {\
 							  -moz-appearance: none !important;\
-							  background: #f1f5fb !important;\
+							  background-image: linear-gradient(to right, #f1f5fb 26px, ThreeDLightShadow 26px,\
+											  ThreeDLightShadow 27px, ThreeDHighlight 27px,\
+											  ThreeDHighlight 28px, #f1f5fb 28px)!important;\
 							  border: 3px solid !important;\
 							  -moz-border-top-colors: ThreeDShadow #f1f5fb !important;\
 							  -moz-border-bottom-colors: ThreeDShadow #f1f5fb !important;\

@@ -240,7 +240,7 @@
 		-moz-border-end: none;
 	  }
 	  #main-window[defaultfxtheme="true"] #appmenuSecondaryPane {
-		background-color: #f1f5fb;
+		background-color: #f0f0f0;
 		box-shadow: 1px 0 2px rgb(204,214,234) inset;
 		-moz-padding-start: 3px;
 		-moz-padding-end: 2px;
@@ -248,6 +248,14 @@
 		padding-bottom: 2px;
 		font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
 	  }
+
+	  @media all and (-moz-windows-theme:aero) {
+
+		#main-window:not([fx55plus="true"])[defaultfxtheme="true"] #appmenuSecondaryPane {
+		  background-color: #f1f5fb;
+		}
+	  }
+
 	  #main-window[defaultfxtheme="true"] #appmenuSecondaryPane:-moz-locale-dir(rtl) {
 		box-shadow: -1px 0 2px rgb(204,214,234) inset;
 	  }
@@ -266,14 +274,29 @@
 
 	  #main-window[defaultfxtheme="true"] #appmenuSecondaryPane menupopup {
 		-moz-appearance: none;
-		background-image: linear-gradient(to right, #f1f5fb 26px, ThreeDLightShadow 26px,
+		background-image: linear-gradient(to right, #f0f0f0 26px, ThreeDLightShadow 26px,
 										  ThreeDLightShadow 27px, ThreeDHighlight 27px,
-										  ThreeDHighlight 28px, #f1f5fb 28px);
+										  ThreeDHighlight 28px, #f0f0f0 28px);
 		border: 3px solid;
-		-moz-border-top-colors: ThreeDShadow #f1f5fb;
-		-moz-border-bottom-colors: ThreeDShadow #f1f5fb;
-		-moz-border-left-colors: ThreeDShadow #f1f5fb;
-		-moz-border-right-colors: ThreeDShadow #f1f5fb;
+		-moz-border-top-colors: ThreeDShadow #f0f0f0;
+		-moz-border-bottom-colors: ThreeDShadow #f0f0f0;
+		-moz-border-left-colors: ThreeDShadow #f0f0f0;
+		-moz-border-right-colors: ThreeDShadow #f0f0f0;
+	  }
+
+	  @media all and (-moz-windows-theme:aero) {
+
+		#main-window:not([fx55plus="true"])[defaultfxtheme="true"] #appmenuSecondaryPane menupopup {
+			-moz-appearance: none;
+			background-image: linear-gradient(to right, #f1f5fb 26px, ThreeDLightShadow 26px,
+											  ThreeDLightShadow 27px, ThreeDHighlight 27px,
+											  ThreeDHighlight 28px, #f1f5fb 28px);
+			border: 3px solid;
+			-moz-border-top-colors: ThreeDShadow #f1f5fb;
+			-moz-border-bottom-colors: ThreeDShadow #f1f5fb;
+			-moz-border-left-colors: ThreeDShadow #f1f5fb;
+			-moz-border-right-colors: ThreeDShadow #f1f5fb;
+		}
 	  }
 
 	  #main-window[defaultfxtheme="true"] #appmenuPrimaryPane menupopup:-moz-locale-dir(rtl) {
@@ -281,14 +304,24 @@
 										  ThreeDLightShadow 27px, ThreeDHighlight 27px,
 										  ThreeDHighlight 28px, white 28px);
 	  }
+
 	  #main-window[defaultfxtheme="true"] #appmenuSecondaryPane menupopup:-moz-locale-dir(rtl) {
-		background-image: linear-gradient(to left, #f1f5fb 26px, ThreeDLightShadow 26px,
+		background-image: linear-gradient(to left, #f0f0f0 26px, ThreeDLightShadow 26px,
 										  ThreeDLightShadow 27px, ThreeDHighlight 27px,
-										  ThreeDHighlight 28px, #f1f5fb 28px);
+										  ThreeDHighlight 28px, #f0f0f0 28px);
 	  }
 
-	  /* Hi-DPI overrides of the menu backgrounds, to adjust where the gutter line falls */
-	  @media (min-resolution: 1.25dppx) {
+	  @media all and (-moz-windows-theme:aero) {
+
+		#main-window:not([fx55plus="true"])[defaultfxtheme="true"] #appmenuSecondaryPane menupopup:-moz-locale-dir(rtl) {
+			background-image: linear-gradient(to left, #f1f5fb 26px, ThreeDLightShadow 26px,
+										  ThreeDLightShadow 27px, ThreeDHighlight 27px,
+										  ThreeDHighlight 28px, #f1f5fb 28px);
+		}
+	  }
+
+	  /* Hi-DPI adjust where the gutter line falls */
+	 /* @media (min-resolution: 1.25dppx) {
 		#main-window[defaultfxtheme="true"] #appmenuPrimaryPane menupopup {
 		  background-image: linear-gradient(to right, white 22.4px, ThreeDLightShadow 22.4px,
 											ThreeDLightShadow 23.2px, ThreeDHighlight 23.2px,
@@ -355,7 +388,7 @@
 											ThreeDLightShadow 20px, ThreeDHighlight 20px,
 											ThreeDHighlight 20.5px, #f1f5fb 20.5px);
 		}
-	  }
+	  }*/
 
 	  #main-window[defaultfxtheme="true"] #appmenuPrimaryPane > menuseparator {
 		-moz-appearance: none;

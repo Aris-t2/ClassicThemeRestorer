@@ -295,7 +295,7 @@
 	  }
 
 	  /* Hi-DPI overrides of the menu backgrounds, to adjust where the gutter line falls */
-	  @media (min-resolution: 1.25dppx) {
+	  /*@media (min-resolution: 1.25dppx) {
 		#main-window[defaultfxtheme="true"] #appmenuPrimaryPane menupopup {
 		  background-image: linear-gradient(to right, white 22.4px, ThreeDLightShadow 22.4px,
 											ThreeDLightShadow 23.2px, ThreeDHighlight 23.2px,
@@ -362,7 +362,7 @@
 											ThreeDLightShadow 20px, ThreeDHighlight 20px,
 											ThreeDHighlight 20.5px, #f0f0f0 20.5px);
 		}
-	  }
+	  }*/
 
 	  #main-window[defaultfxtheme="true"] #appmenuPrimaryPane > menuseparator {
 		-moz-appearance: none;

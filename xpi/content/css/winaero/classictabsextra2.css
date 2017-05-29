@@ -139,12 +139,7 @@
 	  background-size: 100% 100% !important;
 	  background-image: none !important;
 	}
-		
-	.tabs-newtab-button:not(:-moz-lwtheme):not(#privateTab-afterTabs-openNewPrivateTab),
-	#TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
-	  list-style-image: url(chrome://browser/skin/tabbrowser/newtab.svg) !important;
-	}
-	
+
 	/* for Windows Aero Theme (AeroBasic/AeroGlass - Vista/7) */
 	@media all and (-moz-windows-theme:aero) {
 		#main-window:not([fx55plus="true"]) .tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {
@@ -180,8 +175,11 @@
 	}
 	
 	/* for Windows Classic Theme on WinVista/7 */
-	/*@media not all and (-moz-windows-theme:aero) {
-
-    }*/
+	@media not all and (-moz-windows-theme:aero) {
+		.tabs-newtab-button:not(:-moz-lwtheme):not(#privateTab-afterTabs-openNewPrivateTab),
+		#TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
+		  list-style-image: url(chrome://browser/skin/tabbrowser/newtab.svg) !important;
+		}
+    }
 	
 }

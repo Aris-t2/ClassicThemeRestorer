@@ -136,11 +136,6 @@
 	  background-image: linear-gradient(to bottom, rgba(255,255,255,.3) 1px, rgba(191,191,191,.2) 80%, rgba(153,153,153,.2)), linear-gradient(to top, rgba(10%,10%,10%,.4) 0px,-moz-dialog 1px, -moz-dialog) !important;
 	}
 
-	.tabs-newtab-button:not(:-moz-lwtheme):not(#privateTab-afterTabs-openNewPrivateTab),
-	#TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
-	  list-style-image: url(chrome://browser/skin/tabbrowser/newtab.svg) !important;
-	}
-
 	/* for Windows Aero Theme (AeroBasic/AeroGlass - Vista/7) */
 	@media all and (-moz-windows-theme:aero) {
 
@@ -180,48 +175,14 @@
 	}
 	
 	/* for Windows Classic Theme on WinVista/7 */
-	/*@media not all and (-moz-windows-theme:aero) {
+	@media not all and (-moz-windows-theme:aero) {
    	
-		.tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {
-		  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.4) 50%),
-							linear-gradient(-moz-dialog, -moz-dialog);
-		}
-
-		.tabbrowser-tab:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
-		  background-image: linear-gradient(to bottom, rgba(114,114,114,.1) 1px, rgba(81,81,81,.2) 80%, rgba(0,0,0,.2)), linear-gradient(to top, rgba(10%,10%,10%,.2) 0px,-moz-dialog 1px, -moz-dialog);
-		}
-
-		.tabbrowser-tab:not([selected="true"]):hover:not(:-moz-lwtheme) {
-		  background-image: linear-gradient(to bottom, rgba(255,255,255,.3) 1px, rgba(191,191,191,.2) 80%, rgba(153,153,153,.2)), linear-gradient(to top, rgba(10%,10%,10%,.4) 0px,-moz-dialog 1px, -moz-dialog);
-		}
-		
-		#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][data-identity-color][selected="true"]:not(:-moz-lwtheme) {
-		  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.4) 50%),
-							linear-gradient(-moz-dialog, -moz-dialog) !important;
-		}
-
-		#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][data-identity-color]:not([selected="true"]):not(:hover):not(:-moz-lwtheme) {
-		  background-image: linear-gradient(to bottom, rgba(114,114,114,.1) 1px, rgba(81,81,81,.2) 80%, rgba(0,0,0,.2)), linear-gradient(to top, rgba(10%,10%,10%,.2) 0px,-moz-dialog 1px, -moz-dialog);
-		}
-
-		#main-window[fx50plus="true"] .tabbrowser-tab[usercontextid][data-identity-color]:not([selected="true"]):hover:not(:-moz-lwtheme) {
-		  background-image: linear-gradient(to bottom, rgba(255,255,255,.3) 1px, rgba(191,191,191,.2) 80%, rgba(153,153,153,.2)), linear-gradient(to top, rgba(10%,10%,10%,.4) 0px,-moz-dialog 1px, -moz-dialog);
-		}
-
-		.tabs-newtab-button:not(:-moz-lwtheme) {
-		  background-image: linear-gradient(to bottom, rgba(114,114,114,.1) 1px, rgba(81,81,81,.2) 80%, rgba(0,0,0,.2)), linear-gradient(to top, rgba(10%,10%,10%,.2) 0px,-moz-dialog 1px, -moz-dialog) !important;
-		}
-
-		.tabs-newtab-button:hover:not(:-moz-lwtheme) {
-		  background-image: linear-gradient(to bottom, rgba(255,255,255,.3) 1px, rgba(191,191,191,.2) 80%, rgba(153,153,153,.2)), linear-gradient(to top, rgba(10%,10%,10%,.4) 0px,-moz-dialog 1px, -moz-dialog) !important;
-		}
-
 		.tabs-newtab-button:not(:-moz-lwtheme):not(#privateTab-afterTabs-openNewPrivateTab),
 		#TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
 		  list-style-image: url(chrome://browser/skin/tabbrowser/newtab.svg) !important;
 		}
 
-    }*/
+    }
 	
 	@media all and (-moz-windows-classic) {
 		.tabbrowser-tab:not(:-moz-lwtheme):not([selected=true]):not(:hover),

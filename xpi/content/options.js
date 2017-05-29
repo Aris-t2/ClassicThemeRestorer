@@ -470,11 +470,11 @@ classicthemerestorerjso.ctr = {
 	}
 	
 	if (!this.oswindows) {
-	  document.getElementById('ctraddon_pw_oldfontgfxg').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_oldfontgfxgb').style.visibility = 'collapse';
 	}
 	
 	if (this.appversion < 52) {
-	  document.getElementById('ctraddon_pw_oldfontgfxg').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_oldfontgfxgb').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_altdlprogbar').style.visibility = 'collapse';
 	}
 	
@@ -496,6 +496,7 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_searchbardesc').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_uianimation').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_uianimationdesc').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_photongb').style.visibility = 'collapse';
 	}
 	
 	if (this.appversion >= 55) {
