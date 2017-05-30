@@ -24,7 +24,7 @@ ctrAboutAddons = {
 			  document.querySelector('#addons-page').setAttribute('fx55plus',true);
 		  } catch(e){}
 
-		  },500);
+		  },100);
 	  },false);
 
 
