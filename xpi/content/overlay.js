@@ -54,6 +54,11 @@ classicthemerestorerjs.ctr = {
   
   tabheight:			Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
+  ctabfontsize:			Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  
+  lbfontsize:			Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  sbfontsize:			Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
+  
   findbarwidth:			Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
   
   locationbarsize:		Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(''), null, null),
@@ -544,6 +549,15 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("ctabheightcb")) classicthemerestorerjs.ctr.loadUnloadCSS("ctabheight",true);
 		  break;
 		  
+		  case "ctabfontsizecb":
+			if (branch.getBoolPref("ctabfontsizecb")) classicthemerestorerjs.ctr.loadUnloadCSS("ctabfontsize",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("ctabfontsize",false);
+		  break;
+		  
+		  case "ctabfontsize":
+			if (branch.getBoolPref("ctabfontsizecb")) classicthemerestorerjs.ctr.loadUnloadCSS("ctabfontsize",true);
+		  break;
+		  
 		  case "ctabwidth": case "ctabmwidth":
 			classicthemerestorerjs.ctr._updateTabWidth();
 		  break;
@@ -903,6 +917,24 @@ classicthemerestorerjs.ctr = {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("sb_roundness",true);
 		    else
 			  classicthemerestorerjs.ctr.loadUnloadCSS("sb_roundness",false);
+		  break;
+		  
+		  case "lbfontsizecb":
+			if (branch.getBoolPref("lbfontsizecb")) classicthemerestorerjs.ctr.loadUnloadCSS("lbfontsize",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("lbfontsize",false);
+		  break;
+		  
+		  case "lbfontsize":
+			if (branch.getBoolPref("lbfontsizecb")) classicthemerestorerjs.ctr.loadUnloadCSS("lbfontsize",true);
+		  break;
+
+		  case "sbfontsizecb":
+			if (branch.getBoolPref("sbfontsizecb")) classicthemerestorerjs.ctr.loadUnloadCSS("sbfontsize",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("sbfontsize",false);
+		  break;
+		  
+		  case "sbfontsize":
+			if (branch.getBoolPref("sbfontsizecb")) classicthemerestorerjs.ctr.loadUnloadCSS("sbfontsize",true);
 		  break;
 
 		  case "backforward":
@@ -5159,6 +5191,23 @@ classicthemerestorerjs.ctr = {
 		
 		break;
 		
+		case "ctabfontsize":
+			removeOldSheet(this.ctabfontsize);
+			
+			if(enable==true && this.prefs.getBoolPref('ctabfontsizecb')){
+			
+				this.ctabfontsize=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					.tabbrowser-tab{\
+					  font-size: '+this.prefs.getIntPref('ctabfontsize')+'px !important;\
+					}\
+				'), null, null);
+				
+				applyNewSheet(this.ctabfontsize);
+			
+			}
+		
+		break;
+		
 		case "findb_widthva":
 			removeOldSheet(this.findbarwidth);
 			
@@ -6426,6 +6475,41 @@ classicthemerestorerjs.ctr = {
 				'), null, null);
 				
 				applyNewSheet(this.searchbarradius);
+			}
+		
+		break;
+		
+		case "lbfontsize":
+			removeOldSheet(this.lbfontsize);
+			
+			if(enable==true && this.prefs.getBoolPref('lbfontsizecb')){
+			
+				this.lbfontsize=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					#urlbar-container #urlbar-wrapper,\
+					#urlbar-container #urlbar-wrapper #urlbar {\
+					  font-size: '+this.prefs.getIntPref('lbfontsize')+'px !important;\
+					}\
+				'), null, null);
+				
+				applyNewSheet(this.lbfontsize);
+			
+			}
+		
+		break;
+		
+		case "sbfontsize":
+			removeOldSheet(this.sbfontsize);
+			
+			if(enable==true && this.prefs.getBoolPref('sbfontsizecb')){
+			
+				this.sbfontsize=ios.newURI("data:text/css;charset=utf-8," + encodeURIComponent('\
+					#search-container #searchbar .searchbar-textbox {\
+					  font-size: '+this.prefs.getIntPref('sbfontsize')+'px !important;\
+					}\
+				'), null, null);
+				
+				applyNewSheet(this.sbfontsize);
+			
 			}
 		
 		break;

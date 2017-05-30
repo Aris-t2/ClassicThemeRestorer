@@ -2,8 +2,10 @@
 pref("extensions.classicthemerestorer.tabs","tabs_squared");
 pref("extensions.classicthemerestorer.tabsontop",'unset');
 pref("extensions.classicthemerestorer.ctabheightcb",false);
-pref("extensions.classicthemerestorer.square_edges",false);
 pref("extensions.classicthemerestorer.ctabheight",28);
+pref("extensions.classicthemerestorer.square_edges",false);
+pref("extensions.classicthemerestorer.ctabfontsizecb",false);
+pref("extensions.classicthemerestorer.ctabfontsize",12);
 pref("extensions.classicthemerestorer.ctabmwidth",100);
 pref("extensions.classicthemerestorer.ctabwidth",210);
 pref("extensions.classicthemerestorer.emptyfavico_t",'emptyfavico_t_none');
@@ -189,6 +191,11 @@ pref("extensions.classicthemerestorer.lbradius_right",0);
 pref("extensions.classicthemerestorer.sb_roundness",false);
 pref("extensions.classicthemerestorer.sbradius_left",0);
 pref("extensions.classicthemerestorer.sbradius_right",0);
+
+pref("extensions.classicthemerestorer.lbfontsizecb",false);
+pref("extensions.classicthemerestorer.lbfontsize",12);
+pref("extensions.classicthemerestorer.sbfontsizecb",false);
+pref("extensions.classicthemerestorer.sbfontsize",12);
 
 // Toolbar settings
 pref("extensions.classicthemerestorer.aerocolors",false);

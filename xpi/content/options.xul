@@ -63,6 +63,9 @@
 		<preference id="ctraddon_ctabheightcb"	name="extensions.classicthemerestorer.ctabheightcb"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_ctabheight"	name="extensions.classicthemerestorer.ctabheight"	type="int"		instantApply="true"/>
 		
+		<preference id="ctraddon_ctabfontsizecb" name="extensions.classicthemerestorer.ctabfontsizecb" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_ctabfontsize"	name="extensions.classicthemerestorer.ctabfontsize"	type="int"		instantApply="true"/>
+		
 		<preference id="ctraddon_tabwidth"		name="extensions.classicthemerestorer.ctabwidth"	type="int"		instantApply="true"/>
 		<preference id="ctraddon_tabmwidth"		name="extensions.classicthemerestorer.ctabmwidth"	type="int"		instantApply="true"/>
 		<preference id="ctraddon_closetab"		name="extensions.classicthemerestorer.closetab" 	type="string"	instantApply="true"/>
@@ -191,6 +194,10 @@
 		<preference id="ctraddon_sbradius_left"	name="extensions.classicthemerestorer.sbradius_left" type="int"		instantApply="true"/>
 		<preference id="ctraddon_sbradius_right" name="extensions.classicthemerestorer.sbradius_right" type="int"	instantApply="true"/>
 		
+		<preference id="ctraddon_lbfontsizecb"  name="extensions.classicthemerestorer.lbfontsizecb" type="bool"		instantApply="true"/>
+		<preference id="ctraddon_lbfontsize"	name="extensions.classicthemerestorer.lbfontsize"	type="int"		instantApply="true"/>
+		<preference id="ctraddon_sbfontsizecb"  name="extensions.classicthemerestorer.sbfontsizecb" type="bool"		instantApply="true"/>
+		<preference id="ctraddon_sbfontsize"	name="extensions.classicthemerestorer.sbfontsize"	type="int"		instantApply="true"/>
 
 		<preference id="ctraddon_ctab1"			name="extensions.classicthemerestorer.ctab1"		type="string"	instantApply="true"/>
 		<preference id="ctraddon_ctab2"			name="extensions.classicthemerestorer.ctab2"		type="string"	instantApply="true"/>
@@ -522,6 +529,37 @@
 				  <label value="px"/>
 				</hbox>
 				<description id="ctraddon_pw_tabheightinfo" class="ctraddon_topic">&Ctr_tabheightinfo;</description>
+				
+				<hbox align="center">
+				  <checkbox label="&Ctr_fontsize;"	preference="ctraddon_ctabfontsizecb" id="ctraddon_pw_tab_fontsizecb"/>
+				  <textbox size="2" maxlength="2" preference="ctraddon_ctabfontsize" type="number" min="8" max="20" id="ctraddon_pw_tab_fontsize"/>
+				  <label value="px"/>
+				</hbox>
+				
+			  </groupbox>
+			  
+			  <groupbox id="ctraddon_pw_anewtaburlgbox">
+				<caption  label="&Ctr_anewtaburl;" class="ctraddon_topic"/>
+				<checkbox label="&Ctr_anewtaburlcb;"	preference="ctraddon_anewtaburlcb" id="ctraddon_pw_anewtaburlcb"/>
+				<hbox>
+				  <label value=""/>
+				  <textbox id="ctraddon_pw_anewtaburlbox" preference="ctraddon_anewtaburl" size="auto" flex="1" type="autocomplete" placeholder=""/>
+				  <label value=""/>
+				</hbox>
+				<checkbox label="&Ctr_anewtaburlpcb;"	preference="ctraddon_anewtaburlpcb" id="ctraddon_pw_anewtaburlpcb" class="ctraddon_new_in_v48" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
+				<hbox id="ctraddon_pw_anewtaburlpurlbox">
+				  <label value=""/>
+				  <textbox id="ctraddon_pw_anewtaburlpbox" preference="ctraddon_anewtaburlp" size="auto" flex="1" type="autocomplete" placeholder=""/>
+				  <label value=""/>
+				</hbox>
+			  </groupbox>
+
+		  </tabpanel>
+		  
+		  <tabpanel orient="vertical">
+			  
+			  <groupbox>
+			    <caption  label="&Ctr_tabs;" class="ctraddon_topic"/>
 
 				<checkbox label="&Ctr_e_tabsaudioico;" preference="ctraddon_tabsaudioico" id="ctraddon_pw_tabsaudioico"/>
 				<description class="ctraddonsuboption">about:config &gt;&gt; browser.tabs.showAudioPlayingIcon</description>
@@ -547,11 +585,7 @@
 				</radiogroup>
 				
 			  </groupbox>
-
-		  </tabpanel>
 		  
-		  <tabpanel orient="vertical">
-			  
 			  <groupbox>
 
 				<caption  label="&Ctr_tabstoolbar;" class="ctraddon_topic"/>
@@ -572,22 +606,6 @@
 				<checkbox label="&Ctr_tabanimation;" preference="ctraddon_tabsanimate" id="ctraddon_pw_tabanimation"/>
 				<description class="ctraddonsuboption" id="ctraddon_pw_tabanimationdesc">about:config &gt;&gt; browser.tabs.animate</description>
 
-			  </groupbox>
-			  
-			  <groupbox id="ctraddon_pw_anewtaburlgbox">
-				<caption  label="&Ctr_anewtaburl;" class="ctraddon_topic"/>
-				<checkbox label="&Ctr_anewtaburlcb;"	preference="ctraddon_anewtaburlcb" id="ctraddon_pw_anewtaburlcb"/>
-				<hbox>
-				  <label value=""/>
-				  <textbox id="ctraddon_pw_anewtaburlbox" preference="ctraddon_anewtaburl" size="auto" flex="1" type="autocomplete" placeholder=""/>
-				  <label value=""/>
-				</hbox>
-				<checkbox label="&Ctr_anewtaburlpcb;"	preference="ctraddon_anewtaburlpcb" id="ctraddon_pw_anewtaburlpcb" class="ctraddon_new_in_v48" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
-				<hbox id="ctraddon_pw_anewtaburlpurlbox">
-				  <label value=""/>
-				  <textbox id="ctraddon_pw_anewtaburlpbox" preference="ctraddon_anewtaburlp" size="auto" flex="1" type="autocomplete" placeholder=""/>
-				  <label value=""/>
-				</hbox>
 			  </groupbox>
 			  
 		  </tabpanel>
@@ -1327,6 +1345,12 @@
 
 				<checkbox label="&Ctr_urlbardark;" preference="ctraddon_urlbardark"  id="ctraddon_pw_urlbardark"/>
 				
+				<hbox align="center">
+				  <checkbox label="&Ctr_fontsize;"	preference="ctraddon_lbfontsizecb" id="ctraddon_pw_lb_fontsizecb"/>
+				  <textbox size="2" maxlength="2" preference="ctraddon_lbfontsize" type="number" min="8" max="20" id="ctraddon_pw_lb_fontsize"/>
+				  <label value="px"/>
+				</hbox>
+				
 				<checkbox label="&Ctr_lbsbsize;" preference="ctraddon_lb_width" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwLocationbarSize(true);} else {classicthemerestorerjso.ctr.ctrpwLocationbarSize(false);}"/>
 				<hbox class="ctraddonsuboption"  id="ctraddon_pw_lb_width" align="center">
 				  <label value="&Ctr_tabminwidth; "/>
@@ -1489,6 +1513,12 @@
 			<groupbox>
 
 				<caption  label="&Ctr_searchbar;" class="ctraddon_topic"/>
+				
+				<hbox align="center">
+				  <checkbox label="&Ctr_fontsize;"	preference="ctraddon_sbfontsizecb" id="ctraddon_pw_sb_fontsizecb"/>
+				  <textbox size="2" maxlength="2" preference="ctraddon_sbfontsize" type="number" min="8" max="20" id="ctraddon_pw_sb_fontsize"/>
+				  <label value="px"/>
+				</hbox>
 
 				<checkbox label="&Ctr_lbsbsize;" preference="ctraddon_sb_width" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwSearchbarSize(true);} else {classicthemerestorerjso.ctr.ctrpwSearchbarSize(false);}"/>
 				<hbox class="ctraddonsuboption"  id="ctraddon_pw_sb_width" align="center">
