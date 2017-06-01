@@ -32,5 +32,19 @@
 	#TabsToolbar .close-icon > .toolbarbutton-icon {
 	  width: 16px !important;
 	}
+	
+	/* Windows 10 tweaks */
+	@media (-moz-os-version: windows-win10) {
+	  #main-window[fx55plus="true"][defaultfxtheme="true"] #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab{
+		color: black !important;
+	  }
+	  #main-window[fx55plus="true"][defaultfxtheme="true"] #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-label{
+		opacity: 1.0 !important;
+	  }
+	  #main-window[fx55plus="true"][defaultfxtheme="true"] .tabs-newtab-button:not(:-moz-lwtheme):not(#privateTab-afterTabs-openNewPrivateTab),
+	  #main-window[fx55plus="true"][defaultfxtheme="true"] #TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
+		list-style-image: url(chrome://browser/skin/tabbrowser/newtab.svg) !important;
+	  }
+	}
 
 }

@@ -147,10 +147,14 @@
 	/**/
 	
 	@media (-moz-os-version: windows-win10) {
-        #main-window[fx47plus="true"][sizemode="maximized"] .titlebar-button {
-          padding-top: 7px !important;
-		  padding-bottom: 7px !important;
-        }
+      #main-window[fx47plus="true"][sizemode="maximized"] .titlebar-button {
+        padding-top: 7px !important;
+		padding-bottom: 7px !important;
+      }
+	  #main-window[fx55plus="true"][defaultfxtheme="true"] .tabs-newtab-button:not(:-moz-lwtheme):not(#privateTab-afterTabs-openNewPrivateTab),
+	  #main-window[fx55plus="true"][defaultfxtheme="true"] #TabsToolbar > #new-tab-button:not(:-moz-lwtheme) {
+		list-style-image: url(chrome://browser/skin/tabbrowser/newtab.svg) !important;
+	  }
 	}
 
 }

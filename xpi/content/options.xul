@@ -52,6 +52,7 @@
 		<preference id="ctraddon_dl_pm_drop"	name="browser.download.showPanelDropmarker"			type="bool"		instantApply="true"/>
 		<preference id="ctraddon_prefs_search"	name="browser.preferences.search"					type="bool"		instantApply="true"/>
 		<preference id="ctraddon_prefs_photon"	name="browser.photon.structure.enabled"				type="bool"		instantApply="true"/>
+		<preference id="ctraddon_prefs_ph_uid"	name="browser.uidensity"							type="int"		instantApply="true"/>
 
 		<preference id="ctraddon_tabs"			name="extensions.classicthemerestorer.tabs" 		type="string"	instantApply="true"/>
 		<preference id="ctraddon_tabsontop"		name="extensions.classicthemerestorer.tabsontop" 	type="string"	instantApply="true"/>
@@ -1806,7 +1807,13 @@
 	  <groupbox id="ctraddon_pw_photongb">
 		<caption  label="Photon" class="ctraddon_topic"/>
 		<checkbox label="about:config &gt;&gt; browser.photon.structure.enabled" preference="ctraddon_prefs_photon" id="ctraddon_pw_photon" class="ctraddon_new_in_v55"/>
+		<hbox align="center">
+		  <description class="ctraddon_new_in_v55">about:config &gt;&gt; browser.uidensity</description>
+		  <textbox size="1" maxlength="1" preference="ctraddon_prefs_ph_uid" type="number" min="0" max="2" id="ctraddon_pw_prefs_ph_uid"/>
+		</hbox>
 	  </groupbox>
+	  
+	  
 	  
 	</box>
 
