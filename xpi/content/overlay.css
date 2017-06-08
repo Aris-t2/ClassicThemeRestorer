@@ -694,3 +694,9 @@
 		background:#e7e3db;
 	  }
 	}
+	
+	/* Restore menu button dropmaker on Fx55+ */
+	#main-window[fx55plus="true"] #nav-bar .toolbarbutton-1:not(:-moz-any(#back-button,#forward-button)) > .toolbarbutton-menu-dropmarker {
+	  display: block !important;
+	  margin-inline-start: -13px;
+	}
