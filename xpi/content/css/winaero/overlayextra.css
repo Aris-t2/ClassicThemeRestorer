@@ -251,7 +251,7 @@
 
 	  @media all and (-moz-windows-theme:aero) {
 
-		#main-window:not([fx55plus="true"])[defaultfxtheme="true"] #appmenuSecondaryPane {
+		#main-window:not([fx56plus="true"])[defaultfxtheme="true"] #appmenuSecondaryPane {
 		  background-color: #f1f5fb;
 		}
 	  }
@@ -286,7 +286,7 @@
 
 	  @media all and (-moz-windows-theme:aero) {
 
-		#main-window:not([fx55plus="true"])[defaultfxtheme="true"] #appmenuSecondaryPane menupopup {
+		#main-window:not([fx56plus="true"])[defaultfxtheme="true"] #appmenuSecondaryPane menupopup {
 			-moz-appearance: none;
 			background-image: linear-gradient(to right, #f1f5fb 26px, ThreeDLightShadow 26px,
 											  ThreeDLightShadow 27px, ThreeDHighlight 27px,
@@ -313,7 +313,7 @@
 
 	  @media all and (-moz-windows-theme:aero) {
 
-		#main-window:not([fx55plus="true"])[defaultfxtheme="true"] #appmenuSecondaryPane menupopup:-moz-locale-dir(rtl) {
+		#main-window:not([fx56plus="true"])[defaultfxtheme="true"] #appmenuSecondaryPane menupopup:-moz-locale-dir(rtl) {
 			background-image: linear-gradient(to left, #f1f5fb 26px, ThreeDLightShadow 26px,
 										  ThreeDLightShadow 27px, ThreeDHighlight 27px,
 										  ThreeDHighlight 28px, #f1f5fb 28px);

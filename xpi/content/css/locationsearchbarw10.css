@@ -10,7 +10,7 @@
 	font-size: 12px !important;
   }
 
-  #main-window:not([fx55plus="true"]):not([chromehidden~="toolbar"]) #urlbar-wrapper {
+  #main-window:not([fx56plus="true"]):not([chromehidden~="toolbar"]) #urlbar-wrapper {
 	clip-path: url("chrome://browser/content/browser.xul#urlbar-back-button-clip-path") !important;
 	margin-inline-start: -7px !important;
   }
@@ -30,7 +30,7 @@
 	margin-bottom: -1px !important;
   }
 
-  #main-window:not([fx55plus="true"]) #forward-button:not([disabled]) > .toolbarbutton-icon {
+  #main-window:not([fx56plus="true"]) #forward-button:not([disabled]) > .toolbarbutton-icon {
     padding-top: 2px !important;
     padding-bottom: 2px !important;
     -moz-padding-start: 6px !important;
@@ -39,7 +39,7 @@
   }
 
   @media (max-resolution: 1.0dppx) {
-    #main-window:not([fx55plus="true"]) #forward-button:not([disabled]) > .toolbarbutton-icon {
+    #main-window:not([fx56plus="true"]) #forward-button:not([disabled]) > .toolbarbutton-icon {
       max-width: unset !important;
     }
   }
@@ -50,7 +50,7 @@
     }
   }
  
-  :root:not([uidensity=compact]) #main-window[fx55plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"]:not([overflowedItem=true]) > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+  :root:not([uidensity=compact]) #main-window[fx56plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"]:not([overflowedItem=true]) > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
 	margin: -1px 0 !important;
   }
 

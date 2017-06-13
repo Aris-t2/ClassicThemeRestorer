@@ -492,8 +492,6 @@ classicthemerestorerjso.ctr = {
 	
 	if (this.appversion < 55) {
 	  document.getElementById('ctraddon_pw_resfprintinggb').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_searchbar').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_searchbardesc').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_uianimation').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_uianimationdesc').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_photongb').style.visibility = 'collapse';
@@ -506,6 +504,14 @@ classicthemerestorerjso.ctr = {
 	  document.getElementById('ctraddon_pw_fsanimationdesc').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_emptyfavico_gdesc').style.visibility = 'collapse';
 	  document.getElementById('ctraddon_pw_emptyfavico_g').style.visibility = 'collapse';
+	}
+	
+	if (this.appversion < 56) {
+	  document.getElementById('ctraddon_pw_searchbar').style.visibility = 'collapse';
+	  document.getElementById('ctraddon_pw_searchbardesc').style.visibility = 'collapse';
+	}
+	
+	if (this.appversion >= 56) {
 	  document.getElementById('ctraddon_pw_locsearchbw10').style.visibility = 'visible';
 	}
 	
