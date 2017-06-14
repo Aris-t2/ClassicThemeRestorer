@@ -1473,10 +1473,10 @@
 			<groupbox>
 				<caption  label="&Ctr_searchbar;" class="ctraddon_topic"/>
 				<checkbox label="&Ctr_ctroldsearch;"	preference="ctraddon_ctroldsearch" id="ctraddon_pw_ctroldsearch" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(true);} else {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(false);}"/>
-				<description class="ctraddonsuboption">&Ctr_ctroldsearchd;</description>
+				<description id="ctraddon_pw_ctroldsearchdesc" class="ctraddonsuboption">&Ctr_ctroldsearchd;</description>
 				<checkbox label="&Ctr_search_oit;"		preference="ctraddon_search_oit" id="ctraddon_pw_search_oit" />
 				<description class="ctraddonsuboption">about:config &gt;&gt; browser.search.openintab</description>
-				<hbox class="ctraddonsuboption">
+				<hbox class="ctraddonsuboption" id="ctraddon_pw_search_oit_so">
 				  <checkbox label="about:newtab"		preference="ctraddon_search_ant" id="ctraddon_pw_search_ant"/>
 				  <checkbox label="about:blank"			preference="ctraddon_search_abl" id="ctraddon_pw_search_abl"/>
 				  <checkbox label="about:home"			preference="ctraddon_search_aho" id="ctraddon_pw_search_aho"/>
@@ -1484,25 +1484,25 @@
 				<checkbox label="&Ctr_osearch_dm;"		preference="ctraddon_osearch_dm" id="ctraddon_pw_osearch_dm" class="ctraddon_winmaconly"/>
 				
 				<checkbox label="&Ctr_ctroldsearchc;"	preference="ctraddon_ctroldsearchc" id="ctraddon_pw_ctroldsearchc"/>
-				<hbox align="center" class="ctraddonsuboption">
+				<hbox align="center" class="ctraddonsuboption" id="ctraddon_pw_ctroldsearchc_so">
 				  <textbox id="ctraddon_pw_ctroldsearchcdelay" size="6" maxlength="6" preference="ctraddon_ctrosearchct" type="number" min="0" max="999999"/>
 				  <description>&Ctr_nbisizedelay; &Ctr_ctrosearchdel;</description>
 				</hbox>
 				<checkbox label="&Ctr_ctroldsearchr;"	preference="ctraddon_ctroldsearchr" id="ctraddon_pw_ctroldsearchr"/>
-				<hbox align="center" class="ctraddonsuboption">
+				<hbox align="center" class="ctraddonsuboption" id="ctraddon_pw_ctroldsearchr_so">
 				  <textbox id="ctraddon_pw_ctroldsearchrdelay" size="6" maxlength="6" preference="ctraddon_ctrosearchrt" type="number" min="0" max="999999"/>
 				  <description>&Ctr_nbisizedelay; &Ctr_ctrosearchdel;</description>
 				</hbox>
 				<checkbox label="&Ctr_urlbardark;"	preference="ctraddon_searchbardark" id="ctraddon_pw_searchbardark"/>
 				
-				<description>&Ctr_osearch_meoit;</description>
-				<hbox class="ctraddonsuboption">
+				<description id="ctraddon_pw_osearch_meoitdesc">&Ctr_osearch_meoit;</description>
+				<hbox class="ctraddonsuboption" id="ctraddon_pw_osearch_meoit_so">
 				  <checkbox label="&Ctr_osearch_meoit1;"	preference="ctraddon_osearch_meoit" id="ctraddon_pw_osearch_meoit"/>
 				  <checkbox label="&Ctr_osearch_meoit2;"	preference="ctraddon_osearch_meoit2" id="ctraddon_pw_osearch_meoit2"/>
 				</hbox>
 			</groupbox>
 			
-			<groupbox>
+			<groupbox id="ctraddon_pw_osearch_gb">
 			  <hbox>
 				<image src="chrome://classic_theme_restorer/content/images/oldsearch.png"/>
 				<label value=""/>
@@ -1891,6 +1891,8 @@
     <button label="&Ctr_pw_settings;" popup="ctr_pw_settingsPopup"/>
 	<button label="Classic Toolbar Buttons" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://addons.mozilla.org/addon/cstbb/versions/'); };"/>
 	<button label="CustomizeMyBird" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://addons.mozilla.org/addon/customizemybird/'); };"/>
+	<spacer flex="1" />
+	<button label="CTR &amp; &brandShortName; 57+" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://github.com/Aris-t2/ClassicThemeRestorer/issues/299'); };" id="ctraddon_button_fx57"/>
 	<spacer flex="1" />
 	<button label="&Ctr_support;" id="ctraddon_support"  popup="ctr_pw_supportPopup"/>
 	<button dlgtype="accept" id="ctraddon_pw_okbutton"/>

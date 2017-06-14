@@ -796,3 +796,19 @@ radio.ctraddontab .radio-check-box1 {
 #ctraddon_pw_autocompl_hln {
   text-decoration: line-through !important;
 }
+
+
+/*Fx 57 warning */
+
+#ctraddon_button_fx57 {
+ -moz-appearance: none !important;
+  background: yellow !important;
+  color: red !important;
+  font-weight: bold !important;
+  border: 1px solid red !important;
+}
+
+#ctraddon_button_fx57:hover {
+  border: 2px solid red !important;
+  cursor: pointer !important;
+}
