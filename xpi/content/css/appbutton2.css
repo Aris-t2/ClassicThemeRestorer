@@ -315,6 +315,14 @@
 		  background: #e3e4e6 !important;
 		}
 		
+		#main-window[fx56plus="true"] #titlebar #titlebar-content #titlebar-buttonbox-container #titlebar-buttonbox {
+		 height: unset !important;
+		}
+
+		#main-window[fx56plus="true"] #titlebar {
+		  margin-bottom: -28px !important;
+		}
+		
 	}
 
 }
