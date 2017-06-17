@@ -7,6 +7,8 @@
 <!DOCTYPE page [
 <!ENTITY % extensionsDTD SYSTEM "chrome://mozapps/locale/extensions/extensions.dtd">
 %extensionsDTD;
+<!ENTITY % window SYSTEM "chrome://classic_theme_restorer/locale/options.dtd">
+%window;
 ]>
 
 <bindings id="addonBindings"
@@ -56,7 +58,7 @@
                 <xul:label anonid="name" class="name" crop="end" flex="1"
                            tooltip="addonitem-tooltip" xbl:inherits="value=name,tooltiptext=name"/>
 				<xul:label anonid="version" class="version"/>
-				<xul:label anonid="legacy" class="legacy-warning text-link" value="LEGACY"/>
+				<xul:label anonid="legacy" class="legacy-warning text-link" value="&addon.legacy.label;" href="https://support.mozilla.org/kb/firefox-add-technology-modernizing"/>
                 <xul:label class="disabled-postfix" value="&addon.disabled.postfix;"/>
                 <xul:label class="update-postfix" value="&addon.update.postfix;"/>
                 <xul:spacer flex="5000"/> <!-- Necessary to make the name crop -->

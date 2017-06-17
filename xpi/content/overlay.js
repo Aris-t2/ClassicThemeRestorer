@@ -1369,11 +1369,14 @@ classicthemerestorerjs.ctr = {
 		  case "autocompl_it2":
 			if (branch.getBoolPref("autocompl_it2") && classicthemerestorerjs.ctr.appversion >= 50) {
 			  
-			  document.getElementById('PopupAutoCompleteRichResult').addEventListener("popupshowing", function unlockACPopupHeight(event){
-				
-				//get inner 'autocomplete richlistbox' of '#PopupAutoCompleteRichResult' panel
-				var acrichlistbox = document.getElementById("PopupAutoCompleteRichResult").boxObject.firstChild.nextSibling;
-				
+			  document.getElementById('PopupAutoCompleteRichResult').addEventListener("popupshown", function unlockACPopupHeight(event){
+				  
+				// get inner 'autocomplete richlistbox' of '#PopupAutoCompleteRichResult' panel
+				if(classicthemerestorerjs.ctr.appversion < 55)
+				  var acrichlistbox = document.getElementById("PopupAutoCompleteRichResult").boxObject.firstChild.nextSibling;
+				else 
+				  var acrichlistbox = document.getElementById("PopupAutoCompleteRichResult").boxObject.firstChild;		
+
 				var ACObserver = new MutationObserver(function(mutations) {
 				  mutations.forEach(function(mutation) {
 					document.getElementById("PopupAutoCompleteRichResult").setAttribute('ctrsubboxstyle', acrichlistbox.getAttribute('style'));
