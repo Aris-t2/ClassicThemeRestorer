@@ -93,9 +93,13 @@
 	  -moz-margin-start: 0px !important;
 	}
 
-	/*#main-window[tabsintitlebar][chromehidden~="menubar"][sizemode="maximized"][tabsontop="false"] #toolbar-menubar ~ #TabsToolbar,
-	#main-window[tabsintitlebar][sizemode="maximized"][tabsontop="false"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
-	  -moz-margin-start: 32px;
-	}*/
+	@media (-moz-os-version: windows-win10) {
+		
+		#main-window[fx56plus="true"][tabsintitlebar][chromehidden~="menubar"][sizemode="normal"]:not([tabsontop="false"]) #toolbar-menubar ~ #TabsToolbar,
+		#main-window[fx56plus="true"][tabsintitlebar][sizemode="normal"]:not([tabsontop="false"]) #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
+		  -moz-margin-start: 32px;
+		}
+		
+	}
 
 }

@@ -137,5 +137,10 @@
 	#main-window[fx55plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] hbox[anonid="search-suggestions-notification"] {
 	  display: none !important;
 	}
+	
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) deck[search-suggestions-notification],
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] deck[search-suggestions-notification] {
+	  display: none !important;
+	}
 
 }
