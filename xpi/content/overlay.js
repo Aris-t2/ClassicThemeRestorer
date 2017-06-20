@@ -956,7 +956,9 @@ classicthemerestorerjs.ctr = {
 			
 			try {
 			  if(branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && branch.getBoolPref("smallnavbut")==false && classicthemerestorerjs.ctr.appversion >= 54
-				&& Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
+				&& (Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
+					&& Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_light"
+					&& Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_osx")
 			   classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
 			} catch(e){}
 		  break;
@@ -974,7 +976,9 @@ classicthemerestorerjs.ctr = {
 			
 			try {
 			  if(branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && branch.getBoolPref("smallnavbut")==false && classicthemerestorerjs.ctr.appversion >= 54
-				&& Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
+				&& (Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
+					&& Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_light"
+					&& Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_osx")
 			   classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
 			} catch(e){}
 			
@@ -2919,7 +2923,7 @@ classicthemerestorerjs.ctr = {
 			  }
 			}*/
 		
-			if (branch.getCharPref("navbarbuttons")!="nabbuttons_off") {
+			if (branch.getCharPref("navbarbuttons")!="nabbuttons_off" && branch.getCharPref("navbarbuttons")!="nabbuttons_light" && branch.getCharPref("navbarbuttons")!="nabbuttons_osx") {
 			  Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('smallnavbut',false);
 			  if(classicthemerestorerjs.ctr.appversion >= 54 && Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref('nbcompact'))
 				Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('nbcompact',false);
