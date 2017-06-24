@@ -11,6 +11,7 @@
 	  margin-bottom: 0px !important;
 	}
 
+	#main-window[inFullscreen]:-moz-lwtheme #TabsToolbar,
 	#main-window[inFullscreen]:not(:-moz-lwtheme) #TabsToolbar {
 	  padding-top:0px !important;
 	}

@@ -2896,6 +2896,13 @@ classicthemerestorerjs.ctr = {
 
 		  break;
 		  
+		  case "restartapp2":
+		  
+			if (branch.getBoolPref("restartapp2")) classicthemerestorerjs.ctr.loadUnloadCSS("restartapp2",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("restartapp2",false);
+		  
+		  break;
+		  
 		  case "cssoverride": case "cssoverridec":
 			if (branch.getBoolPref("cssoverride")) classicthemerestorerjs.ctr.loadUnloadCSS("cssoverride",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("cssoverride",false);
@@ -4642,6 +4649,7 @@ classicthemerestorerjs.ctr = {
 		case "toolsitem": 			manageCSS("ctraddon_toolsitem.css");	break;
 		
 		case "restartapp":			manageCSS("ctraddon_restartapp.css");	break;
+		case "restartapp2":			manageCSS("ctraddon_restartapp2.css");	break;
 		case "ctrnewinv47":			manageCSS("ctraddon_new_in_v47.css");	break;
 		case "ctrnewinv48":			manageCSS("ctraddon_new_in_v48.css");	break;
 		case "ctrnewinv50":			manageCSS("ctraddon_new_in_v50.css");	break;

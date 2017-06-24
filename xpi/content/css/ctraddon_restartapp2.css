@@ -2,15 +2,15 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
-	#ctraddon_PanelUI-CTR-button,
-	#ctraddon_PanelUI-CTR-button-separator{
+	#ctraddon_PanelUI-CTR-restartbutton,
+	#ctraddon_PanelUI-CTR-restartbutton-separator{
 	  visibility: visible !important;
 	}
-
+	
 	#ctraddon_PanelUI-CTR-restartbutton,
 	#PanelUI-help,
 	#ctraddon_PanelUI-CTR-button {
 	  min-width: 36px !important;
 	}
-
+	
 }

@@ -65,7 +65,7 @@
 	}
 	
 	/* empty containers group*/
-	#mainPrefPane:not([fx55plus="true"]) .main-content #browserContainersGroup{
+	page:not([fx56plus="true"]) .main-content #browserContainersGroup{
 	  -moz-appearance: unset !important;
 	}
 	
@@ -478,27 +478,39 @@
 	  margin-top: -9px !important;
 	}
 	
-	#mainPrefPane[fx55plus="true"] groupbox#browserContainersGroup,
-	#mainPrefPane[fx55plus="true"] groupbox#trackingGroup{
+	page[fx52plus="true"] groupbox#trackingGroup{
 	  margin-top: 11px !important;
 	}
-	#mainPrefPane[fx55plus="true"] #browserContainersGroup *,	
-	#mainPrefPane[fx55plus="true"] #trackingGroup * {
+	page[fx52plus="true"] #trackingGroup * {
 	  background: unset !important;
 	}
-	#mainPrefPane[fx55plus="true"] #browserContainersGroup * caption label,
-	#mainPrefPane[fx55plus="true"] #trackingGroup * caption label {
+	page[fx52plus="true"] #trackingGroup * caption label {
 	  background: -moz-Dialog !important;
 	  margin-top: -11px !important;
 	  -moz-margin-start: -5px !important;
 	}
-	#mainPrefPane[fx55plus="true"] #browserContainersGroup * caption label label {
+	
+	page[fx56plus="true"] groupbox#browserContainersGroup,
+	page[fx56plus="true"] groupbox#trackingGroup{
+	  margin-top: 11px !important;
+	}
+	page[fx56plus="true"] #browserContainersGroup *,	
+	page[fx56plus="true"] #trackingGroup * {
+	  background: unset !important;
+	}
+	page[fx56plus="true"] #browserContainersGroup * caption label,
+	page[fx56plus="true"] #trackingGroup * caption label {
+	  background: -moz-Dialog !important;
+	  margin-top: -11px !important;
+	  -moz-margin-start: -5px !important;
+	}
+	page[fx56plus="true"] #browserContainersGroup * caption label label {
 	  -moz-margin-start: 5px !important;
 	}
-	#mainPrefPane[fx55plus="true"] groupbox#noFxaGroup{
+	page[fx56plus="true"] groupbox#noFxaGroup{
 	  margin-top: 9px !important;
 	}
-	#mainPrefPane[fx55plus="true"] #noFxaCaption {
+	page[fx56plus="true"] #noFxaCaption {
 	  background: -moz-Dialog !important;
 	  margin-top: -9px !important;
 	}
