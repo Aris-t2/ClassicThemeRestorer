@@ -92,12 +92,12 @@ ctrAboutPrefs = {
 	  
 		setTimeout(function(){
 		  try{
-			if(parseInt(Services.appinfo.version) >=46 && parseInt(Services.appinfo.version) < 49)
+			if(parseInt(Services.appinfo.version) >=46 && parseInt(Services.appinfo.version) < 52)
 			  document.querySelector('page').setAttribute('fx46plus',true);
-			else if(parseInt(Services.appinfo.version) >=49 && parseInt(Services.appinfo.version) < 55)
-			  document.querySelector('page').setAttribute('fx49plus',true);
-			else if(parseInt(Services.appinfo.version) >=55)
-			  document.querySelector('page').setAttribute('fx55plus',true);
+			else if(parseInt(Services.appinfo.version) >=52 && parseInt(Services.appinfo.version) < 56)
+			  document.querySelector('page').setAttribute('fx52plus',true);
+			else if(parseInt(Services.appinfo.version) >=56)
+			  document.querySelector('page').setAttribute('fx56plus',true);
 		  } catch(e){}
 		},100);
 

@@ -13,7 +13,7 @@
 	  display:none !important;
 	}
 	
-    #main-window:not([fx55plus="true"]):not([chromehidden~="toolbar"]) toolbox #urlbar-wrapper,
+    #main-window:not([fx56plus="true"]):not([chromehidden~="toolbar"]) toolbox #urlbar-wrapper,
 	window:not([chromehidden~="toolbar"]) toolbar #urlbar-wrapper,
 	#urlbar-container, #urlbar-container *,
 	#urlbar-wrapper, #urlbar-wrapper *,
@@ -37,13 +37,13 @@
 	  transform: scaleX(-1);
 	}
 	
-	#main-window:not([fx55plus="true"]) #nav-bar #urlbar-container,
-	#main-window:not([fx55plus="true"]) #nav-bar #search-container{
+	#main-window:not([fx56plus="true"]) #nav-bar #urlbar-container,
+	#main-window:not([fx56plus="true"]) #nav-bar #search-container{
 	  margin-top:1px;
 	  margin-bottom:1px;
 	}
 	
-	/*#main-window[fx55plus="true"] #nav-bar-customization-target{
+	/*#main-window[fx56plus="true"] #nav-bar-customization-target{
 	  margin-top:1px;
 	  margin-bottom:1px;
 	}*/

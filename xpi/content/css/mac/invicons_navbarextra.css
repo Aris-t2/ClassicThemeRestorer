@@ -32,9 +32,6 @@
 	#nav-bar > toolbarpaletteitem > #alltabs-button {
 	  list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png") !important;
 	}
-	#nav-bar #switch-to-metro-button[cui-areatype="toolbar"] {
-	  list-style-image: url(chrome://browser/skin/Metro_Glyph-inverted.png) !important;
-	}
 	
 	#nav-bar #ctraddon_back-button:not([cui-areatype="menu-panel"]) {
 	  -moz-image-region: rect(0, 54px, 18px, 36px) !important;
@@ -162,6 +159,16 @@
 	  }
 	  #nav-bar :-moz-any(#ctraddon_back-button, #ctraddon_forward-button, #ctraddon_bookmarks-menu-toolbar-button, #ctraddon_bookmarks-button, #ctraddon_history-button,#ctraddon_history-menu-toolbar-button, #ctraddon_reload-button, #ctraddon_stop-button,#ctraddon_go-button) > .toolbarbutton-icon {
 		width: 18px !important;
+	  }
+	  
+	  #main-window[defaultfxtheme="true"][fx55plus="true"] #nav-bar #nav-bar-overflow-button > .toolbarbutton-icon,
+	  #main-window[defaultfxtheme="true"][fx55plus="true"] #nav-bar :-moz-any(#ctraddon_back-button, #ctraddon_forward-button, #ctraddon_bookmarks-menu-toolbar-button, #ctraddon_bookmarks-button, #ctraddon_history-button,#ctraddon_history-menu-toolbar-button, #ctraddon_reload-button, #ctraddon_stop-button,#ctraddon_ctr-button,#ctraddon_go-button,#ctraddon_preferences-button,#ctraddon_restart-button) > .toolbarbutton-icon {
+		width: 32px !important;
+	  }
+	  
+	  #main-window[defaultfxtheme="true"][fx56plus="true"] #nav-bar #nav-bar-overflow-button > .toolbarbutton-icon,
+	  #main-window[defaultfxtheme="true"][fx56plus="true"] #nav-bar :-moz-any(#ctraddon_back-button, #ctraddon_forward-button, #ctraddon_bookmarks-menu-toolbar-button, #ctraddon_bookmarks-button, #ctraddon_history-button,#ctraddon_history-menu-toolbar-button, #ctraddon_reload-button, #ctraddon_stop-button,#ctraddon_ctr-button,#ctraddon_go-button,#ctraddon_preferences-button,#ctraddon_restart-button) > .toolbarbutton-icon {
+		width: 28px !important;
 	  }
 
 	}

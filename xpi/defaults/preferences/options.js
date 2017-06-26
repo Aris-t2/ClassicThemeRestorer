@@ -265,6 +265,7 @@ pref("extensions.classicthemerestorer.puictrbutton",false);
 pref("extensions.classicthemerestorer.cuibuttons",true);
 pref("extensions.classicthemerestorer.nodevtheme2",false);
 pref("extensions.classicthemerestorer.restartapp",true);
+pref("extensions.classicthemerestorer.restartapp2",false);
 pref("extensions.classicthemerestorer.ctrnewinv",true);
 pref("extensions.classicthemerestorer.pw_actidx_c",1);
 pref("extensions.classicthemerestorer.pw_actidx_t",0);

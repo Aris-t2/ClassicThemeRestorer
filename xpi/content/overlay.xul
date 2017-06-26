@@ -109,8 +109,13 @@
 					 oncommand="classicthemerestorerjs.ctr.openCTRPreferences();"
 					 tooltiptext="&Ctr_title;"/>
 	  <toolbarseparator insertbefore="PanelUI-help" id="ctraddon_PanelUI-CTR-button-separator"/>
+	  <toolbarbutton id="ctraddon_PanelUI-CTR-restartbutton"
+					 insertbefore="PanelUI-help"
+					 oncommand="classicthemerestorerjs.ctr.restartBrowser();"
+					 tooltiptext="&Ctr_menu_restart.label;"/>
+	  <toolbarseparator insertbefore="PanelUI-help" id="ctraddon_PanelUI-CTR-restartbutton-separator"/>
 	</hbox>
-	
+
 	<!--### add a menuseparator for the removed context menu icons option ###-->
 	<menugroup id="context-navigation">
 	  <menuseparator id="ctraddon_connavsep" insertbefore="context-bookmarkpage"/>

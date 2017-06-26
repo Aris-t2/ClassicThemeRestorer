@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!--
- Modified Firefox 48+ bindings offered in
+ Modified Firefox 54+ bindings offered in
  chrome://global/content/bindings/autocomplete.xml#autocomplete-rich-result-popup
  and
  chrome://browser/content/urlbarBindings.xml#urlbar-rich-result-popup
@@ -24,6 +24,7 @@
           xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
           xmlns:xbl="http://www.mozilla.org/xbl">
 
+
   <binding id="urlbar-rich-result-popup" extends="chrome://global/content/bindings/autocomplete.xml#autocomplete-rich-result-popup">
 
     <resources>
@@ -33,34 +34,53 @@
 
     <content ignorekeys="true" level="top" consumeoutsideclicks="never"
              aria-owns="richlistbox">
-      <xul:hbox anonid="search-suggestions-notification"
+      <xul:deck anonid="search-suggestions-notification"
                 align="center"
                 role="alert"
-                aria-describedby="search-suggestions-notification-text">
-        <xul:description flex="1">
-          &urlbar.searchSuggestionsNotification.question;
-          <!-- Several things here are to make the label accessibile via an
-               accesskey so that a11y doesn't suck: the accesskey, using an
-               onclick handler instead of an href attribute, the control
-               attribute, and having the control attribute refer to a valid ID
-               that is the label itself. -->
-          <xul:label id="search-suggestions-notification-learn-more"
+                selectedIndex="0">
+        <!-- OPT-IN -->
+        <xul:hbox flex="1" align="center" anonid="search-suggestions-opt-in">
+          <xul:description flex="1" id="search-suggestions-question">
+            &urlbar.searchSuggestionsNotification.question;
+
+            <xul:label id="search-suggestions-learn-more"
+                      class="text-link"
+                      role="link"
+                      value="&urlbar.searchSuggestionsNotification.learnMore;"
+                      accesskey="&urlbar.searchSuggestionsNotification.learnMore.accesskey;"
+                      onclick="document.getBindingParent(this).openSearchSuggestionsNotificationLearnMoreURL();"
+                      control="search-suggestions-learn-more"/>
+          </xul:description>
+          <xul:button anonid="search-suggestions-notification-disable"
+                      label="&urlbar.searchSuggestionsNotification.disable;"
+                      accesskey="&urlbar.searchSuggestionsNotification.disable.accesskey;"
+                      onclick="document.getBindingParent(this).dismissSearchSuggestionsNotification(false);"/>
+          <xul:button anonid="search-suggestions-notification-enable"
+                      label="&urlbar.searchSuggestionsNotification.enable;"
+                      accesskey="&urlbar.searchSuggestionsNotification.enable.accesskey;"
+                      onclick="document.getBindingParent(this).dismissSearchSuggestionsNotification(true);"/>
+        </xul:hbox>
+        <!-- OPT-OUT -->
+        <xul:hbox flex="1" align="center" anonid="search-suggestions-opt-out">
+          <xul:image class="ac-site-icon" type="searchengine"/>
+          <xul:hbox anonid="search-suggestions-hint-typing">
+            <xul:description class="ac-title-text">&brandShortName;</xul:description>
+          </xul:hbox>
+          <xul:hbox anonid="search-suggestions-hint-box" flex="1">
+            <xul:description id="search-suggestions-hint">
+              <html:span class="prefix">&#x1f4a1; &urlbar.searchSuggestionsNotification.hintPrefix;</html:span>
+              <html:span>&urlbar.searchSuggestionsNotification.hint;</html:span>
+            </xul:description>
+          </xul:hbox>
+          <xul:label id="search-suggestions-change-settings"
                      class="text-link"
                      role="link"
-                     value="&urlbar.searchSuggestionsNotification.learnMore;"
-                     accesskey="&urlbar.searchSuggestionsNotification.learnMore.accesskey;"
-                     onclick="document.getBindingParent(this).openSearchSuggestionsNotificationLearnMoreURL();"
-                     control="search-suggestions-notification-learn-more"/>
-        </xul:description>
-        <xul:button anonid="search-suggestions-notification-disable"
-                    label="&urlbar.searchSuggestionsNotification.disable;"
-                    accesskey="&urlbar.searchSuggestionsNotification.disable.accesskey;"
-                    onclick="document.getBindingParent(this).dismissSearchSuggestionsNotification(false);"/>
-        <xul:button anonid="search-suggestions-notification-enable"
-                    label="&urlbar.searchSuggestionsNotification.enable;"
-                    accesskey="&urlbar.searchSuggestionsNotification.enable.accesskey;"
-                    onclick="document.getBindingParent(this).dismissSearchSuggestionsNotification(true);"/>
-      </xul:hbox>
+                     value="&urlbar.searchSuggestionsNotification.changeSettingsWin;"
+                     accesskey="&urlbar.searchSuggestionsNotification.changeSettingsWin.accesskey;"
+                     onclick="openPreferences('general-search');"
+                     control="search-suggestions-change-settings"/>
+        </xul:hbox>
+      </xul:deck>
       <xul:richlistbox anonid="richlistbox" class="autocomplete-richlistbox"
                        flex="1"/>
       <xul:hbox anonid="footer">
@@ -75,6 +95,11 @@
     </content>
 
     <implementation>
+      <field name="DOMWindowUtils">
+        window.QueryInterface(Ci.nsIInterfaceRequestor)
+              .getInterface(Ci.nsIDOMWindowUtils);
+      </field>
+
       <field name="_maxResults">0</field>
 
       <field name="_bundle" readonly="true">
@@ -111,6 +136,7 @@
           if (aEvent.button == 2) {
             return;
           }
+
           let controller = this.view.QueryInterface(Components.interfaces.nsIAutoCompleteController);
           controller.handleEnter(true, aEvent);
         ]]></body>
@@ -146,6 +172,7 @@
       <method name="dismissSearchSuggestionsNotification">
         <parameter name="enableSuggestions"/>
         <body><![CDATA[
+
           this.input.mIgnoreFocus = true;
           this.input.focus();
           this.input.mIgnoreFocus = false;
@@ -155,6 +182,10 @@
           );
           Services.prefs.setBoolPref(
             "browser.urlbar.userMadeSearchSuggestionsChoice", true
+          );
+
+          this.searchSuggestionsNotificationWasDismissed(
+            Services.prefs.getBoolPref("browser.urlbar.suggest.searches")
           );
         ]]></body>
       </method>
@@ -228,33 +259,10 @@
           <![CDATA[
           aInput.popup.hidden = false;
 
-          let showNotification = aInput.shouldShowSearchSuggestionsNotification;
-          if (showNotification) {
-            let prefs = aInput._prefs;
-            let now = new Date();
-            let date = now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate();
-            let previousDate = prefs.getIntPref("lastSuggestionsPromptDate");
-            if (previousDate < date) {
-              let remainingDays =
-                prefs.getIntPref("daysBeforeHidingSuggestionsPrompt") - 1;
-              prefs.setIntPref("daysBeforeHidingSuggestionsPrompt",
-                               remainingDays);
-              prefs.setIntPref("lastSuggestionsPromptDate", date);
-              if (!remainingDays)
-                showNotification = false;
-            }
-          }
-
-          if (showNotification) {
-            this._showSearchSuggestionsNotification();
-          } else if (this.classList.contains("showSearchSuggestionsNotification")) {
-            this._hideSearchSuggestionsNotification();
-          }
-
           this._openAutocompletePopup(aInput, aElement);
           ]]>
         </body>
-      </method>
+      </method> 
 
       <method name="_openAutocompletePopup">
         <parameter name="aInput"/>
@@ -267,8 +275,8 @@
           this.mInput = aInput;
           aInput.controller.setInitiallySelectedIndex(this._isFirstResultHeuristic ? 0 : -1);
           this.view = aInput.controller.QueryInterface(Components.interfaces.nsITreeView);
-          this.invalidate();
-		  
+          this._invalidate();
+  
 		  var width = 300;
 
 		  try{
@@ -308,35 +316,74 @@
 				  this.setAttribute("maxheight", height);
 				}
 			} else {
+
+
 			  this.setAttribute("maxheight", height);
 			}
 			  
 		  }
+		  
+          try {
+            let whichNotification = aInput.whichSearchSuggestionsNotification;
+            if (whichNotification != "none") {
+              let impressionId = this._searchSuggestionsImpressionId = {};
+              this.addEventListener("popupshown", () => {
+                if (this._searchSuggestionsImpressionId == impressionId)
+                  aInput.updateSearchSuggestionsNotificationImpressions(whichNotification);
+              }, {once: true});
+              this._showSearchSuggestionsNotification(whichNotification, popupDirection);
+            } else if (this.classList.contains("showSearchSuggestionsNotification")) {
+              this._hideSearchSuggestionsNotification();
+            }
+          } catch (ex) {
+            Components.utils.reportError(ex);
+          }
 	  
 		  // if CTRs movable location bar is on a bottom toolbar, open autocomplete popup above location bar
 		  if(document.getElementById('urlbar-container').parentNode.parentNode.id=="browser-bottombox")
 		    this.openPopup(aElement, "before_end", 0, 0, false, false);
 		  else
             this.openPopup(aElement, "after_start", 0, -1, false, false);
+
         ]]></body>
       </method>
 
-      <method name="_updateFooterVisibility">
-        <body>
-          <![CDATA[
-          this.footer.collapsed = this._matchCount == 0;
-          ]]>
-        </body>
-      </method>
-
       <method name="_showSearchSuggestionsNotification">
+        <parameter name="whichNotification"/>
+        <parameter name="popupDirection"/>
         <body>
           <![CDATA[
+          let deckIndex = 0;
+          if (whichNotification == "opt-out") {
+            deckIndex = 1;
+
+            if (this.siteIconStart) {
+              let rect = this.DOMWindowUtils.getBoundsWithoutFlushing(window.document.documentElement);
+              let padding = popupDirection == "rtl" ? rect.right - this.siteIconStart
+                                                    : this.siteIconStart;
+              this.searchSuggestionsNotification.style.paddingInlineStart = padding + "px";
+            } else {
+              this.searchSuggestionsNotification.style.removeProperty("padding-inline-start");
+            }
+
+            if (!this._firstSearchSuggestionsNotification) {
+              this._firstSearchSuggestionsNotification = true;
+              this.searchSuggestionsNotification.setAttribute("animate", "true");
+            }
+          }
+          this.searchSuggestionsNotification.setAttribute("selectedIndex", deckIndex);
+
+          let ariaDescElt = whichNotification == "opt-in" ?
+            "search-suggestions-question" : "search-suggestions-hint";
+
+          this.searchSuggestionsNotification.setAttribute("aria-describedby", ariaDescElt);
           this.richlistbox.flex = 0;
           this.setAttribute("dontanimate", "true");
 
           this.classList.add("showSearchSuggestionsNotification");
-          this._updateFooterVisibility();
+
+          this.footer.collapsed = this._matchCount == 0;
+
 
           if (!this.popupOpen) {
             let event = document.createEvent("Events");
@@ -371,6 +418,7 @@
           this.classList.remove("showSearchSuggestionsNotification");
           this.richlistbox.flex = 1;
           this.removeAttribute("dontanimate");
+          this.searchSuggestionsNotification.removeAttribute("animate");
           if (this._matchCount) {
             // Update popup height.
             this._invalidate();
@@ -410,6 +458,7 @@
 
       <method name="_selectedOneOffChanged">
         <body><![CDATA[
+
           for (let item of this.richlistbox.childNodes) {
             if (item.collapsed) {
               break;
@@ -431,7 +480,7 @@
           this.oneOffSearchButtons.handleKeyPress(aEvent, this._matchCount,
                                                   !this._isFirstResultHeuristic,
                                                   gBrowser.userTypedValue);
-          return aEvent.defaultPrevented;
+          return aEvent.defaultPrevented && !aEvent.urlbarDeferred;
         ]]></body>
       </method>
 
@@ -493,35 +542,25 @@
       <method name="onResultsAdded">
         <body>
           <![CDATA[
-
             if (this.selectedIndex == -1 && this._isFirstResultHeuristic) {
-
               this.richlistbox.suppressMenuItemEvent = true;
               this.input.controller.setInitiallySelectedIndex(0);
               this.richlistbox.suppressMenuItemEvent = false;
             }
 
+
+
+            this.footer.collapsed = false;
+
             this.input.gotResultForCurrentQuery = true;
-
-            if (this.input.handleEnterInstance) {
-              let instance = this.input.handleEnterInstance;
-              this.input.handleEnterInstance = null;
-              setTimeout(() => {
-
-                let { event, searchString } = instance;
-                if (this.input.mController.searchString == searchString) {
-                  this.input.maybeCanonizeURL(event, searchString);
-                  this.input.mController.handleEnter(false, event);
-                  this.overrideValue = null;
-                }
-              }, 0);
-            }
+            this.input.maybeReplayDeferredKeyEvents();
           ]]>
         </body>
       </method>
 
       <method name="_onSearchBegin">
         <body><![CDATA[
+
           this.input.controller.setInitiallySelectedIndex(0);
         ]]></body>
       </method>
@@ -548,7 +587,7 @@
           if (this._addonIframeOwner) {
             return null;
           }
-
+          // Make sure all overrides are provided before doing anything.
           for (let name of this._addonIframeOverrideFunctionNames) {
             if (typeof(overrides[name]) != "function") {
               throw new Error(
@@ -556,7 +595,7 @@
               );
             }
           }
-
+          // OK, insert the iframe.
           this._addonIframeOwner = owner;
           this._addonIframe = this._makeAddonIframe();
           this._addonIframeOverriddenFunctionsByName = {};

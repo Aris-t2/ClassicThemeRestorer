@@ -9,7 +9,7 @@
 	}
 
 	@media all and (-moz-windows-theme:aero) {
-		#main-window:not([fx55plus="true"]) .tabbrowser-tab[selected]:not(:-moz-lwtheme) .tab-content {
+		#main-window:not([fx56plus="true"]) .tabbrowser-tab[selected]:not(:-moz-lwtheme) .tab-content {
 		  background-image: linear-gradient(to top,#eaf2fb,#eef5fc,#fbfdff) !important;
 		}
 	}

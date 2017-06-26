@@ -50,6 +50,18 @@
 	#main-window[fx54plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings54.xml#autocomplete-richlistitem") !important;
 	}
+	
+	/* Firefox 55 popup code */
+	#main-window[fx55plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete),
+	#main-window[fx55plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
+	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings55.xml#urlbar-rich-result-popup") !important;
+	}
+
+	/* Firefox 55 richlist item code */
+	#main-window[fx55plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem,
+	#main-window[fx55plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
+	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings55.xml#autocomplete-richlistitem") !important;
+	}
 
 	/* restyle popup items */
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem,
@@ -135,6 +147,11 @@
 	
 	#main-window[fx55plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) hbox[anonid="search-suggestions-notification"],
 	#main-window[fx55plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] hbox[anonid="search-suggestions-notification"] {
+	  display: none !important;
+	}
+	
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) deck[search-suggestions-notification],
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] deck[search-suggestions-notification] {
 	  display: none !important;
 	}
 

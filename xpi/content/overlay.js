@@ -133,6 +133,7 @@ classicthemerestorerjs.ctr = {
 	try{if (this.appversion >= 53) document.getElementById("main-window").setAttribute('fx53plus',true);} catch(e){}
 	try{if (this.appversion >= 54) document.getElementById("main-window").setAttribute('fx54plus',true);} catch(e){}
 	try{if (this.appversion >= 55) document.getElementById("main-window").setAttribute('fx55plus',true);} catch(e){}
+	try{if (this.appversion >= 56) document.getElementById("main-window").setAttribute('fx56plus',true);} catch(e){}
 
 	// add CTR version number to '#main-window' node, so other add-ons/themes can easier distinguish between versions
 	AddonManager.getAddonByID('ClassicThemeRestorer@ArisT2Noia4dev', function(addon) {
@@ -955,7 +956,9 @@ classicthemerestorerjs.ctr = {
 			
 			try {
 			  if(branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && branch.getBoolPref("smallnavbut")==false && classicthemerestorerjs.ctr.appversion >= 54
-				&& Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
+				&& (Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
+					&& Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_light"
+					&& Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_osx")
 			   classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
 			} catch(e){}
 		  break;
@@ -973,7 +976,9 @@ classicthemerestorerjs.ctr = {
 			
 			try {
 			  if(branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && branch.getBoolPref("smallnavbut")==false && classicthemerestorerjs.ctr.appversion >= 54
-				&& Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
+				&& (Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_off")
+					&& Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_light"
+					&& Services.prefs.getBranch("extensions.cstbb-extension.").getCharPref("navbarbuttons")!="nabbuttons_osx")
 			   classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
 			} catch(e){}
 			
@@ -1368,11 +1373,14 @@ classicthemerestorerjs.ctr = {
 		  case "autocompl_it2":
 			if (branch.getBoolPref("autocompl_it2") && classicthemerestorerjs.ctr.appversion >= 50) {
 			  
-			  document.getElementById('PopupAutoCompleteRichResult').addEventListener("popupshowing", function unlockACPopupHeight(event){
-				
-				//get inner 'autocomplete richlistbox' of '#PopupAutoCompleteRichResult' panel
-				var acrichlistbox = document.getElementById("PopupAutoCompleteRichResult").boxObject.firstChild.nextSibling;
-				
+			  document.getElementById('PopupAutoCompleteRichResult').addEventListener("popupshown", function unlockACPopupHeight(event){
+				  
+				// get inner 'autocomplete richlistbox' of '#PopupAutoCompleteRichResult' panel
+				if(classicthemerestorerjs.ctr.appversion < 55)
+				  var acrichlistbox = document.getElementById("PopupAutoCompleteRichResult").boxObject.firstChild.nextSibling;
+				else 
+				  var acrichlistbox = document.getElementById("PopupAutoCompleteRichResult").boxObject.firstChild;		
+
 				var ACObserver = new MutationObserver(function(mutations) {
 				  mutations.forEach(function(mutation) {
 					document.getElementById("PopupAutoCompleteRichResult").setAttribute('ctrsubboxstyle', acrichlistbox.getAttribute('style'));
@@ -2171,10 +2179,10 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "ctroldsearch":
-			if (branch.getBoolPref("ctroldsearch")) {
+			if (branch.getBoolPref("ctroldsearch") && classicthemerestorerjs.ctr.appversion < 56) {
 				classicthemerestorerjs.ctr.loadUnloadCSS("ctroldsearch",true);
 				
-				if (branch.getBoolPref("osearch_dm"))
+				if (branch.getBoolPref("osearch_dm") && classicthemerestorerjs.ctr.appversion < 56)
 				  classicthemerestorerjs.ctr.loadUnloadCSS("osearch_dm",true);
 			}
 			else { 
@@ -2185,19 +2193,19 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "osearch_iwidth":
-			if (branch.getBoolPref("osearch_iwidth")) classicthemerestorerjs.ctr.loadUnloadCSS("osearch_iwidth",true);
+			if (branch.getBoolPref("osearch_iwidth") && classicthemerestorerjs.ctr.appversion < 56) classicthemerestorerjs.ctr.loadUnloadCSS("osearch_iwidth",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("osearch_iwidth",false);
 		  break;
 		  
 		  case "osearch_cwidth": case "os_spsize_minw": case "os_spsize_maxw":
-		    if (branch.getBoolPref("osearch_cwidth")) 
+		    if (branch.getBoolPref("osearch_cwidth") && classicthemerestorerjs.ctr.appversion < 56) 
 			  classicthemerestorerjs.ctr.loadUnloadCSS("osearch_cwidth",true);
 		    else
 			  classicthemerestorerjs.ctr.loadUnloadCSS("osearch_cwidth",false);
 		  break;
 
 		  case "osearch_dm":
-			if (branch.getBoolPref("osearch_dm") && branch.getBoolPref("ctroldsearch"))
+			if (branch.getBoolPref("osearch_dm") && branch.getBoolPref("ctroldsearch") && classicthemerestorerjs.ctr.appversion < 56)
 				classicthemerestorerjs.ctr.loadUnloadCSS("osearch_dm",true);
 			else classicthemerestorerjs.ctr.loadUnloadCSS("osearch_dm",false);
 		  break;
@@ -2888,6 +2896,13 @@ classicthemerestorerjs.ctr = {
 
 		  break;
 		  
+		  case "restartapp2":
+		  
+			if (branch.getBoolPref("restartapp2")) classicthemerestorerjs.ctr.loadUnloadCSS("restartapp2",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("restartapp2",false);
+		  
+		  break;
+		  
 		  case "cssoverride": case "cssoverridec":
 			if (branch.getBoolPref("cssoverride")) classicthemerestorerjs.ctr.loadUnloadCSS("cssoverride",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("cssoverride",false);
@@ -2915,7 +2930,7 @@ classicthemerestorerjs.ctr = {
 			  }
 			}*/
 		
-			if (branch.getCharPref("navbarbuttons")!="nabbuttons_off") {
+			if (branch.getCharPref("navbarbuttons")!="nabbuttons_off" && branch.getCharPref("navbarbuttons")!="nabbuttons_light" && branch.getCharPref("navbarbuttons")!="nabbuttons_osx") {
 			  Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('smallnavbut',false);
 			  if(classicthemerestorerjs.ctr.appversion >= 54 && Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref('nbcompact'))
 				Services.prefs.getBranch("extensions.classicthemerestorer.").setBoolPref('nbcompact',false);
@@ -4634,6 +4649,7 @@ classicthemerestorerjs.ctr = {
 		case "toolsitem": 			manageCSS("ctraddon_toolsitem.css");	break;
 		
 		case "restartapp":			manageCSS("ctraddon_restartapp.css");	break;
+		case "restartapp2":			manageCSS("ctraddon_restartapp2.css");	break;
 		case "ctrnewinv47":			manageCSS("ctraddon_new_in_v47.css");	break;
 		case "ctrnewinv48":			manageCSS("ctraddon_new_in_v48.css");	break;
 		case "ctrnewinv50":			manageCSS("ctraddon_new_in_v50.css");	break;

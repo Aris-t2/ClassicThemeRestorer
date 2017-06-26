@@ -15,5 +15,12 @@
   #ctraddon_connavsep {
     visibility:visible !important;
   }
+  #context-back .menu-iconic-highlightable-text,
+  #context-forward .menu-iconic-highlightable-text,
+  #context-reload .menu-iconic-highlightable-text,
+  #context-stop .menu-iconic-highlightable-text,
+  #context-bookmarkpage .menu-iconic-highlightable-text{
+	display:none !important;
+  }
 
 }

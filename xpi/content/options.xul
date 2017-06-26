@@ -52,6 +52,7 @@
 		<preference id="ctraddon_dl_pm_drop"	name="browser.download.showPanelDropmarker"			type="bool"		instantApply="true"/>
 		<preference id="ctraddon_prefs_search"	name="browser.preferences.search"					type="bool"		instantApply="true"/>
 		<preference id="ctraddon_prefs_photon"	name="browser.photon.structure.enabled"				type="bool"		instantApply="true"/>
+		<preference id="ctraddon_prefs_ph_uid"	name="browser.uidensity"							type="int"		instantApply="true"/>
 
 		<preference id="ctraddon_tabs"			name="extensions.classicthemerestorer.tabs" 		type="string"	instantApply="true"/>
 		<preference id="ctraddon_tabsontop"		name="extensions.classicthemerestorer.tabsontop" 	type="string"	instantApply="true"/>
@@ -367,6 +368,7 @@
 		<preference id="ctraddon_puictrbutton"	name="extensions.classicthemerestorer.puictrbutton"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_cuibuttons"	name="extensions.classicthemerestorer.cuibuttons"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_restartapp"	name="extensions.classicthemerestorer.restartapp"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_restartapp2"	name="extensions.classicthemerestorer.restartapp2"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_ctrnewinv"		name="extensions.classicthemerestorer.ctrnewinv"	type="bool"		instantApply="true"/>
 
 		<preference id="ctraddon_navbarpad"		name="extensions.classicthemerestorer.navbarpad"	type="bool"		instantApply="true"/>
@@ -1472,10 +1474,10 @@
 			<groupbox>
 				<caption  label="&Ctr_searchbar;" class="ctraddon_topic"/>
 				<checkbox label="&Ctr_ctroldsearch;"	preference="ctraddon_ctroldsearch" id="ctraddon_pw_ctroldsearch" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(true);} else {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(false);}"/>
-				<description class="ctraddonsuboption">&Ctr_ctroldsearchd;</description>
+				<description id="ctraddon_pw_ctroldsearchdesc" class="ctraddonsuboption">&Ctr_ctroldsearchd;</description>
 				<checkbox label="&Ctr_search_oit;"		preference="ctraddon_search_oit" id="ctraddon_pw_search_oit" />
 				<description class="ctraddonsuboption">about:config &gt;&gt; browser.search.openintab</description>
-				<hbox class="ctraddonsuboption">
+				<hbox class="ctraddonsuboption" id="ctraddon_pw_search_oit_so">
 				  <checkbox label="about:newtab"		preference="ctraddon_search_ant" id="ctraddon_pw_search_ant"/>
 				  <checkbox label="about:blank"			preference="ctraddon_search_abl" id="ctraddon_pw_search_abl"/>
 				  <checkbox label="about:home"			preference="ctraddon_search_aho" id="ctraddon_pw_search_aho"/>
@@ -1483,25 +1485,25 @@
 				<checkbox label="&Ctr_osearch_dm;"		preference="ctraddon_osearch_dm" id="ctraddon_pw_osearch_dm" class="ctraddon_winmaconly"/>
 				
 				<checkbox label="&Ctr_ctroldsearchc;"	preference="ctraddon_ctroldsearchc" id="ctraddon_pw_ctroldsearchc"/>
-				<hbox align="center" class="ctraddonsuboption">
+				<hbox align="center" class="ctraddonsuboption" id="ctraddon_pw_ctroldsearchc_so">
 				  <textbox id="ctraddon_pw_ctroldsearchcdelay" size="6" maxlength="6" preference="ctraddon_ctrosearchct" type="number" min="0" max="999999"/>
 				  <description>&Ctr_nbisizedelay; &Ctr_ctrosearchdel;</description>
 				</hbox>
 				<checkbox label="&Ctr_ctroldsearchr;"	preference="ctraddon_ctroldsearchr" id="ctraddon_pw_ctroldsearchr"/>
-				<hbox align="center" class="ctraddonsuboption">
+				<hbox align="center" class="ctraddonsuboption" id="ctraddon_pw_ctroldsearchr_so">
 				  <textbox id="ctraddon_pw_ctroldsearchrdelay" size="6" maxlength="6" preference="ctraddon_ctrosearchrt" type="number" min="0" max="999999"/>
 				  <description>&Ctr_nbisizedelay; &Ctr_ctrosearchdel;</description>
 				</hbox>
 				<checkbox label="&Ctr_urlbardark;"	preference="ctraddon_searchbardark" id="ctraddon_pw_searchbardark"/>
 				
-				<description>&Ctr_osearch_meoit;</description>
-				<hbox class="ctraddonsuboption">
+				<description id="ctraddon_pw_osearch_meoitdesc">&Ctr_osearch_meoit;</description>
+				<hbox class="ctraddonsuboption" id="ctraddon_pw_osearch_meoit_so">
 				  <checkbox label="&Ctr_osearch_meoit1;"	preference="ctraddon_osearch_meoit" id="ctraddon_pw_osearch_meoit"/>
 				  <checkbox label="&Ctr_osearch_meoit2;"	preference="ctraddon_osearch_meoit2" id="ctraddon_pw_osearch_meoit2"/>
 				</hbox>
 			</groupbox>
 			
-			<groupbox>
+			<groupbox id="ctraddon_pw_osearch_gb">
 			  <hbox>
 				<image src="chrome://classic_theme_restorer/content/images/oldsearch.png"/>
 				<label value=""/>
@@ -1806,7 +1808,13 @@
 	  <groupbox id="ctraddon_pw_photongb">
 		<caption  label="Photon" class="ctraddon_topic"/>
 		<checkbox label="about:config &gt;&gt; browser.photon.structure.enabled" preference="ctraddon_prefs_photon" id="ctraddon_pw_photon" class="ctraddon_new_in_v55"/>
+		<hbox align="center">
+		  <description class="ctraddon_new_in_v55">about:config &gt;&gt; browser.uidensity</description>
+		  <textbox size="1" maxlength="1" preference="ctraddon_prefs_ph_uid" type="number" min="0" max="2" id="ctraddon_pw_prefs_ph_uid"/>
+		</hbox>
 	  </groupbox>
+	  
+	  
 	  
 	</box>
 
@@ -1831,6 +1839,7 @@
 	  <groupbox>
 		<caption  label="&Ctr_otherctroptns;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_restartapp;"		preference="ctraddon_restartapp"  id="ctraddon_pw_restartapp"/>
+		<checkbox label="&Ctr_restartapp2;"		preference="ctraddon_restartapp2"  id="ctraddon_pw_restartapp2"/>
 		<checkbox label="&Ctr_ctrnewinv;"		preference="ctraddon_ctrnewinv"   id="ctraddon_pw_ctrnewinv"/>
 		<checkbox label="&Ctr_cuibotbuttons;"	preference="ctraddon_cuibuttons"  id="ctraddon_pw_cuibuttons"/>
 		<checkbox label="&Ctr_nodevtheme;"		preference="ctraddon_nodevtheme2" id="ctraddon_pw_nodevtheme2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
@@ -1884,6 +1893,8 @@
     <button label="&Ctr_pw_settings;" popup="ctr_pw_settingsPopup"/>
 	<button label="Classic Toolbar Buttons" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://addons.mozilla.org/addon/cstbb/versions/'); };"/>
 	<button label="CustomizeMyBird" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://addons.mozilla.org/addon/customizemybird/'); };"/>
+	<spacer flex="1" />
+	<button label="CTR &amp; &brandShortName; 57+" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://github.com/Aris-t2/ClassicThemeRestorer/issues/299'); };" id="ctraddon_button_fx57"/>
 	<spacer flex="1" />
 	<button label="&Ctr_support;" id="ctraddon_support"  popup="ctr_pw_supportPopup"/>
 	<button dlgtype="accept" id="ctraddon_pw_okbutton"/>

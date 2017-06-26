@@ -8,13 +8,6 @@
 	  background-clip: padding-box !important;
 	}
 	
-	@media (-moz-os-version: windows-win10) {
-	  #main-window[defaultfxtheme="true"][tabsontop="false"][sizemode="normal"] #TabsToolbar:not(:-moz-lwtheme) {
-		border-left: 0px !important;
-		border-right: 0px !important;
-	  }
-	}
-	
 	#main-window[tabsintitlebar]:not([inFullscreen]) #navigator-toolbox #toolbar-menubar{
 	  margin-top: 3px !important;
 	  margin-bottom: 3px !important;
@@ -55,10 +48,30 @@
 	
 	/* Windows 10 tweaks */
 	@media (-moz-os-version: windows-win10) {
+	  #main-window[defaultfxtheme="true"][tabsontop="false"][sizemode="normal"] #TabsToolbar:not(:-moz-lwtheme) {
+		border-left: 0px !important;
+		border-right: 0px !important;
+	  }
+	  
+	  #main-window[fx55plus="true"][defaultfxtheme="true"][tabsontop="false"]:not([developertheme="true"]) #TabsToolbar:not(:-moz-lwtheme),
 	  #main-window[defaultfxtheme="true"][tabsontop="false"] #TabsToolbar:not(:-moz-lwtheme),	
 	  #main-window[defaultfxtheme="true"][tabsontop="false"] #TabsToolbar:-moz-lwtheme {
 		border-bottom: 0 !important;
 	  }
+  
+	  #main-window[fx55plus="true"][defaultfxtheme="true"] #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab{
+		color: black !important;
+	  }
+	  #main-window[fx55plus="true"][defaultfxtheme="true"] #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-label{
+		opacity: 1.0 !important;
+	  }
+	  
+	  #main-window[fx55plus="true"][defaultfxtheme="true"][developertheme="true"][tabsontop="false"] #titlebar-min .toolbarbutton-icon,
+	  #main-window[fx55plus="true"][defaultfxtheme="true"][developertheme="true"][tabsontop="false"] #titlebar-max .toolbarbutton-icon,
+	  #main-window[fx55plus="true"][defaultfxtheme="true"][developertheme="true"][tabsontop="false"] #titlebar-close:not(:hover) .toolbarbutton-icon{
+		opacity: 0 !important;
+	  }
+
 	}
 	
 	/* for LavaFox themes */

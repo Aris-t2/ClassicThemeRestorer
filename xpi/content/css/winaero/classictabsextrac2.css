@@ -25,15 +25,15 @@
 		
 
 	@media all and (-moz-windows-theme:aero) {
-		#main-window:not([fx55plus="true"]) .tabs-newtab-button:not(:-moz-lwtheme),
-		#main-window:not([fx55plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme) .tab-content {
+		#main-window:not([fx56plus="true"]) .tabs-newtab-button:not(:-moz-lwtheme),
+		#main-window:not([fx56plus="true"]) .tabbrowser-tab:not(:-moz-lwtheme) .tab-content {
 		  background-image: linear-gradient(to top,#b4c0cc,#c8d4e1,#d1deec) !important;
 		}
-		#main-window:not([fx55plus="true"]) .tabs-newtab-button:hover:not(:-moz-lwtheme),
-		#main-window:not([fx55plus="true"]) .tabbrowser-tab:not([selected]):hover:not(:-moz-lwtheme) .tab-content {
+		#main-window:not([fx56plus="true"]) .tabs-newtab-button:hover:not(:-moz-lwtheme),
+		#main-window:not([fx56plus="true"]) .tabbrowser-tab:not([selected]):hover:not(:-moz-lwtheme) .tab-content {
 		  background-image: linear-gradient(to top,#d0dce8,#dce7f3,#e5effa) !important;
 		}
-		#main-window:not([fx55plus="true"]) .tabbrowser-tab[selected]:not(:-moz-lwtheme) .tab-content {
+		#main-window:not([fx56plus="true"]) .tabbrowser-tab[selected]:not(:-moz-lwtheme) .tab-content {
 		  background-image: linear-gradient(to top,#eaf2fb,#eef5fc,#fbfdff) !important;
 		}
 	}
