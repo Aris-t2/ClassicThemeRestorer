@@ -1,27 +1,37 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
+#sidebar-close .toolbarbutton-icon,
 *:not(#TabsToolbar):not(.tab-content) > .close-icon{
   list-style-image: url("chrome://classic_theme_restorer/content/images/close_w10.png") !important;
   -moz-image-region: rect(0, 20px, 20px, 0) !important;
 }
+#sidebar-close:hover .toolbarbutton-icon,
 *:not(#TabsToolbar):not(.tab-content) > .close-icon:hover{
   -moz-image-region: rect(0, 40px, 20px, 20px) !important;
 }
+#sidebar-close:hover:active .toolbarbutton-icon,
 *:not(#TabsToolbar):not(.tab-content) > .close-icon:hover:active {
   -moz-image-region: rect(0, 60px, 20px, 40px) !important;
 }
 @media (min-resolution: 1.1dppx) {
+  #sidebar-close .toolbarbutton-icon,
   *:not(#TabsToolbar):not(.tab-content) > .close-icon {
 	list-style-image: url("chrome://classic_theme_restorer/content/images/close_w10_2x.png") !important;
 	-moz-image-region: rect(0, 40px, 40px, 0) !important;
   }
+  #sidebar-close:hover .toolbarbutton-icon,
   *:not(#TabsToolbar):not(.tab-content) > .close-icon:hover {
 	-moz-image-region: rect(0, 80px, 40px, 40px) !important;
   }
+  #sidebar-close:hover:active .toolbarbutton-icon,
   *:not(#TabsToolbar):not(.tab-content) > .close-icon:hover:active {
 	-moz-image-region: rect(0, 120px, 40px, 80px) !important;
   }
 }
+#sidebar-close .toolbarbutton-icon,
 *:not(#TabsToolbar):not(.tab-content) > .close-icon > .toolbarbutton-icon {
   width: 16px !important;
+}
+#sidebar-close {
+  background: unset !important;
 }

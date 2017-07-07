@@ -2,6 +2,7 @@
 
 @-moz-document url(chrome://browser/content/browser.xul) {
 
+	#sidebar-close,
 	sidebarheader .close-icon {
 	  display: none !important;
 	} 

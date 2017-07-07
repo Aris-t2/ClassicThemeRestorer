@@ -128,10 +128,12 @@
 	  margin: 1px 0 0 0 !important;
 	}
 
-	#navigator-toolbox:not([customizing]) #nav-bar-customization-target {
+	/*#navigator-toolbox:not([customizing]) #nav-bar-customization-target {
       -moz-padding-end: 3px !important;
       -moz-margin-end: -3px !important;
-	}
+      -moz-padding-start: 3px !important;
+      -moz-margin-start: -3px !important;
+	}*/
 	
 	#nav-bar .toolbarbutton-1 {
       min-width:22px !important;
