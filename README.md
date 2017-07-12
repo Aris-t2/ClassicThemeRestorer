@@ -151,7 +151,7 @@ Note: Triggering "Restore Defaults" in customizing mode to reset toolbar configu
 Current Avast versions offer a bugged version of "Browser Cleanup", which accidentally removes Firefox add-ons without any proper reason!
 Although Avast is currently working on fixing this issues, it is highly recommended to remove or disable "Browser Cleanup" until problems are fixed.
 
-Look at <a href=http://www.ghacks.net/2014/10/31/avasts-https-scanning-interferes-with-firefox-and-other-programs>gHacks</a>, <a href=http://forums.mozillazine.org/viewtopic.php?f=38&t=2888507>Mozillazine</a>, <a href=https://bugzilla.mozilla.org/show_bug.cgi?id=1099973>Bugzilla</a> or <a href=https://forum.avast.com/index.php?topic=160289.msg1152011#msg1152011>Avast forums</a> for more info.
+Look at <a href=http://www.ghacks.net/2014/10/31/avasts-https-scanning-interferes-with-firefox-and-other-programs>gHacks</a>, <a href='http://forums.mozillazine.org/viewtopic.php?f=38&t=2888507'>Mozillazine</a>, <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1099973'>Bugzilla</a> or <a href='https://forum.avast.com/index.php?topic=160289.msg1152011#msg1152011'>Avast forums</a> for more info.
 
 ##############################################
 
