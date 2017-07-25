@@ -703,7 +703,7 @@
 	}
 	
 	/* Restore menu button dropmaker on Fx56+ */
-	#main-window[fx55plus="true"] #nav-bar .toolbarbutton-1:not(:-moz-any(#back-button,#forward-button,#bookmarks-menu-button)) > .toolbarbutton-menu-dropmarker {
+	#main-window[fx55plus="true"] #nav-bar #nav-bar-customization-target > .toolbarbutton-1:not(:-moz-any(#back-button,#forward-button,#bookmarks-menu-button)) > .toolbarbutton-menu-dropmarker {
 	  display: block !important;
 	  margin-inline-start: -13px;
 	}

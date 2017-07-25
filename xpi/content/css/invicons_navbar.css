@@ -1,1 +1,13 @@
 @import url(chrome://ctraddon_os_special/skin/invicons_navbarextra.css);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	#main-window[fx55plus="true"] #nav-bar #nav-bar-customization-target > .toolbarbutton-1 > .toolbarbutton-icon,
+	#main-window[fx55plus="true"] #nav-bar .toolbarbutton-1 > :-moz-any(.toolbarbutton-menubutton-button, .toolbarbutton-badge-stack) > .toolbarbutton-icon,
+	#main-window[fx55plus="true"] #nav-bar #nav-bar-customization-target > #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+	  max-width: unset !important;
+	}
+	#main-window[fx55plus="true"] #nav-bar #nav-bar-customization-target > toolbarbutton.webextension-browser-action > :-moz-any(.toolbarbutton-menubutton-button, .toolbarbutton-badge-stack) > .toolbarbutton-icon {
+	  max-width: 16px !important;
+	}
+}
