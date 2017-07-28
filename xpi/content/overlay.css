@@ -610,6 +610,13 @@
 	  display: none;
 	}
 	
+	/*toolbar context menu find items*/
+	#ctraddon_menu_find_sep,
+	#ctraddon_menu_find,
+	#ctraddon_menu_findAgain {
+	  visibility: collapse; 
+	}
+	
 	/* private mask item */
 	#ctraddon_pmask-item {
 	  background:url("chrome://classic_theme_restorer/content/images/private_browsing-mask.png") center no-repeat;

@@ -50,7 +50,7 @@
     }
   }
  
-  :root:not([uidensity=compact]) #main-window[fx56plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"]:not([overflowedItem=true]) > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+  #main-window[fx56plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"]:not([overflowedItem=true]) > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
 	margin: -1px 0 !important;
   }
 

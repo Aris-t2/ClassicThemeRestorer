@@ -566,6 +566,7 @@ classicthemerestorerjs.ctr = {
 		  case "closetab":
 		  
 			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_active',false);
+			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_hover',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_none',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_forced',false);
 			classicthemerestorerjs.ctr.loadUnloadCSS('closetab_tb_end',false);
@@ -2871,6 +2872,11 @@ classicthemerestorerjs.ctr = {
 			}
 		  break;
 		  
+		  case "contextfind":
+			if (branch.getBoolPref("contextfind")) classicthemerestorerjs.ctr.loadUnloadCSS("contextfind",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("contextfind",false);
+		  break;
+		  
 		  case "restartapp":
 		  
 			if (branch.getBoolPref("restartapp")) classicthemerestorerjs.ctr.loadUnloadCSS("restartapp",false);
@@ -4285,6 +4291,7 @@ classicthemerestorerjs.ctr = {
 		case "tabtitlepos_right": 		manageCSS("tabtitlepos_right.css");  	break;
 		
 		case "closetab_active": 		manageCSS("closetab_active.css");  		break;
+		case "closetab_hover": 			manageCSS("closetab_hover.css");  		break;
 		case "closetab_none": 			manageCSS("closetab_none.css");  		break;
 		case "closetab_forced": 		manageCSS("closetab_forced.css");  		break;
 		case "closetab_tb_end": 		manageCSS("closetab_tb_end.css");  		break;
@@ -4657,6 +4664,8 @@ classicthemerestorerjs.ctr = {
 		case "ctrnewinv52":			manageCSS("ctraddon_new_in_v52.css");	break;
 		case "ctrnewinv53":			manageCSS("ctraddon_new_in_v53.css");	break;
 		case "ctrnewinv55":			manageCSS("ctraddon_new_in_v55.css");	break;
+		
+		case "contextfind":			manageCSS("ctraddon_contextfind.css");	break;
 		
 		case "cuibuttons":			manageCSS("cuibuttons.css");			break;
 		

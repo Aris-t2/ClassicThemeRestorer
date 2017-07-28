@@ -267,6 +267,7 @@ pref("extensions.classicthemerestorer.nodevtheme2",false);
 pref("extensions.classicthemerestorer.restartapp",true);
 pref("extensions.classicthemerestorer.restartapp2",false);
 pref("extensions.classicthemerestorer.ctrnewinv",true);
+pref("extensions.classicthemerestorer.contextfind",false);
 pref("extensions.classicthemerestorer.pw_actidx_c",1);
 pref("extensions.classicthemerestorer.pw_actidx_t",0);
 pref("extensions.classicthemerestorer.pw_actidx_tc",0);

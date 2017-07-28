@@ -143,6 +143,18 @@
 				oncommand="classicthemerestorerjs.ctr.toggleCtrNavBar();"
 				type="checkbox"
 				insertbefore="viewToolbarsMenuSeparator"/>
+				
+      <menuseparator id="ctraddon_menu_find_sep"/>
+      <menuitem id="ctraddon_menu_find"
+                label="&findOnCmd.label;"
+                accesskey="&findOnCmd.accesskey;"
+                key="key_find"
+                command="cmd_find"/>
+      <menuitem id="ctraddon_menu_findAgain"
+                label="&findAgainCmd.label;"
+                accesskey="&findAgainCmd.accesskey;"
+                key="key_findAgain"
+                command="cmd_findAgain"/>
 	</menupopup>
 	
 	<menugroup id="bookmarksMenuPopup">

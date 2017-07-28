@@ -490,4 +490,40 @@
 	  padding: 0 !important;
 	  -moz-margin-start: 1px !important;
 	}
+	
+  /*Temporary Fx56 tweaks*/
+  #main-window[fx56plus="true"] .searchbar-textbox,
+  #main-window[fx56plus="true"] #urlbar-wrapper,
+  #main-window[fx56plus="true"] #urlbar {
+    min-height: 0px !important;
+    height: 24px !important;
+	font-size: 12px !important;
+  }
+
+
+  #main-window[fx56plus="true"] .searchbar-search-button{
+    padding: unset !important;
+    margin: 0 2px !important;
+  }
+
+  #main-window[fx56plus="true"] .search-go-button{
+    margin: -1px -2px !important;
+  }
+
+  #main-window[fx56plus="true"] #connection-icon,
+  #main-window[fx56plus="true"] #identity-icon{
+	margin-top: -2px !important;
+	margin-bottom: -1px !important;
+  }
+
+  @media (min-resolution: 1.1dppx) {
+    #main-window[fx56plus="true"] #identity-icon-labels label {
+      margin-top: -2px !important;
+    }
+  }
+ 
+  #main-window[fx56plus="true"] #nav-bar #bookmarks-menu-button[cui-areatype="toolbar"]:not([overflowedItem=true]) > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+	margin: -1px 0 !important;
+  }
+	
 }
