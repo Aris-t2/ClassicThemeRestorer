@@ -28,8 +28,8 @@
 	}
 	
 	/* Firefox 55 */
-	#main-window[fx54plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete),
-	#main-window[fx54plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
+	#main-window[fx55plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete),
+	#main-window[fx55plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings55.xml#urlbar-rich-result-popup") !important;
 	}
 	

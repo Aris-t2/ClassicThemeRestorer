@@ -610,6 +610,13 @@
 	  display: none;
 	}
 	
+	/*toolbar context menu find items*/
+	#ctraddon_menu_find_sep,
+	#ctraddon_menu_find,
+	#ctraddon_menu_findAgain {
+	  visibility: collapse; 
+	}
+	
 	/* private mask item */
 	#ctraddon_pmask-item {
 	  background:url("chrome://classic_theme_restorer/content/images/private_browsing-mask.png") center no-repeat;
@@ -703,7 +710,7 @@
 	}
 	
 	/* Restore menu button dropmaker on Fx56+ */
-	#main-window[fx55plus="true"] #nav-bar .toolbarbutton-1:not(:-moz-any(#back-button,#forward-button,#bookmarks-menu-button)) > .toolbarbutton-menu-dropmarker {
+	#main-window[fx55plus="true"] #nav-bar #nav-bar-customization-target > .toolbarbutton-1:not(:-moz-any(#back-button,#forward-button,#bookmarks-menu-button)) > .toolbarbutton-menu-dropmarker {
 	  display: block !important;
 	  margin-inline-start: -13px;
 	}

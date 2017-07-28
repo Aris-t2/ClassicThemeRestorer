@@ -718,7 +718,8 @@ classicthemerestorerjso.ctr = {
   
     if(closetab_value=="closetab_default"
 		|| closetab_value=="closetab_forced"
-		|| closetab_value=="closetab_active") {
+		|| closetab_value=="closetab_active"
+		|| closetab_value=="closetab_hover") {
       this.ctrpwTabcloseextra(false);
 	} else this.ctrpwTabcloseextra(true);
 	
@@ -726,6 +727,7 @@ classicthemerestorerjso.ctr = {
 	  case "closetab_default": this.ctrpwTabcloseextra(false); this.ctrpwTabcloseextra2(false); break;
 	  case "closetab_forced": this.ctrpwTabcloseextra(false); this.ctrpwTabcloseextra2(false); break;
 	  case "closetab_active": this.ctrpwTabcloseextra(false); this.ctrpwTabcloseextra2(false); break;
+	  case "closetab_hover": this.ctrpwTabcloseextra(false); this.ctrpwTabcloseextra2(false); break;
 	  case "closetab_none": this.ctrpwTabcloseextra(true); this.ctrpwTabcloseextra2(true); break;
 	  case "closetab_tb_start": this.ctrpwTabcloseextra(true); this.ctrpwTabcloseextra2(false); break;
 	  case "closetab_tb_end": this.ctrpwTabcloseextra(true); this.ctrpwTabcloseextra2(false); break;

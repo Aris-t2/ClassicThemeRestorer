@@ -376,6 +376,13 @@
             this._description.value = this.mAddon.description;
           else
             this._description.hidden = true;
+		
+		  // show legacy tag
+		  if(parseInt(Services.appinfo.version) >= '55') {
+			try {
+		      this.setAttribute("legacy", this.isLegacy);
+			} catch(e) {}
+		  }
 
           if (!("applyBackgroundUpdates" in this.mAddon) ||
               (this.mAddon.applyBackgroundUpdates == AddonManager.AUTOUPDATE_DISABLE ||

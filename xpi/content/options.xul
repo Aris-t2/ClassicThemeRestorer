@@ -370,6 +370,7 @@
 		<preference id="ctraddon_restartapp"	name="extensions.classicthemerestorer.restartapp"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_restartapp2"	name="extensions.classicthemerestorer.restartapp2"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_ctrnewinv"		name="extensions.classicthemerestorer.ctrnewinv"	type="bool"		instantApply="true"/>
+		<preference id="ctraddon_contextfind"	name="extensions.classicthemerestorer.contextfind"	type="bool"		instantApply="true"/>
 
 		<preference id="ctraddon_navbarpad"		name="extensions.classicthemerestorer.navbarpad"	type="bool"		instantApply="true"/>
 		<preference id="ctraddon_navbarpad_l"	name="extensions.classicthemerestorer.navbarpad_l" 	type="int"		instantApply="true"/>
@@ -623,6 +624,7 @@
 						<menuitem value="closetab_default"	label="&Ctr_tabwidthdef;" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
 						<menuitem value="closetab_forced"	label="&Ctr_closetab_5;" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
 						<menuitem value="closetab_active"	label="&Ctr_closetab_1;" id="ctraddon_closetab_pw_act" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
+						<menuitem value="closetab_hover"	label="&Ctr_closetab_6;" id="ctraddon_closetab_pw_hov" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
 						<menuitem value="closetab_none"		label="&Ctr_closetab_2;" id="ctraddon_closetab_pw_non" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(true);"/>
 						<menuitem value="closetab_tb_start"	label="&Ctr_closetab_4;" id="ctraddon_closetab_pw_sta" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
 						<menuitem value="closetab_tb_end"	label="&Ctr_closetab_3;" id="ctraddon_closetab_pw_end" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
@@ -1839,7 +1841,8 @@
 	  <groupbox>
 		<caption  label="&Ctr_otherctroptns;" class="ctraddon_topic"/>
 		<checkbox label="&Ctr_restartapp;"		preference="ctraddon_restartapp"  id="ctraddon_pw_restartapp"/>
-		<checkbox label="&Ctr_restartapp2;"		preference="ctraddon_restartapp2"  id="ctraddon_pw_restartapp2"/>
+		<checkbox label="&Ctr_restartapp2;"		preference="ctraddon_restartapp2" id="ctraddon_pw_restartapp2"/>
+		<checkbox label="&Ctr_contextfind;"		preference="ctraddon_contextfind" id="ctraddon_pw_contextfind"/>
 		<checkbox label="&Ctr_ctrnewinv;"		preference="ctraddon_ctrnewinv"   id="ctraddon_pw_ctrnewinv"/>
 		<checkbox label="&Ctr_cuibotbuttons;"	preference="ctraddon_cuibuttons"  id="ctraddon_pw_cuibuttons"/>
 		<checkbox label="&Ctr_nodevtheme;"		preference="ctraddon_nodevtheme2" id="ctraddon_pw_nodevtheme2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>

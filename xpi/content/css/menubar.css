@@ -1,1 +1,7 @@
 @import url(chrome://ctraddon_os_special/skin/menubarextra.css);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+	#main-window:not([tabsintitlebar]) menubar > menu:-moz-window-inactive {
+	  color: menutext !important;
+	}
+}
