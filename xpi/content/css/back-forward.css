@@ -6,7 +6,9 @@
 	#ctraddon_back-forward-button{
 	  visibility: visible !important;
 	}
-	
+
+	#main-window * * #back-button,
+	#main-window * * #forward-button,	
 	#main-window * * #urlbar-container #back-button,
 	#main-window * * #urlbar-container #forward-button{
 	  visibility: collapse !important;
