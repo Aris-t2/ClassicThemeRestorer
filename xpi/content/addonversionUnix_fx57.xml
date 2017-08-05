@@ -62,7 +62,7 @@
                 <xul:label anonid="name" class="name" crop="end" flex="1"
                            tooltip="addonitem-tooltip" xbl:inherits="value=name,tooltiptext=name"/>
 				<xul:label anonid="version" class="version"/>
-                <xul:label anonid="legacy" class="legacy-warning text-link" value="&addon.legacy.label;" href="https://support.mozilla.org/kb/firefox-add-technology-modernizing"/>
+                <xul:label anonid="legacy" class="legacy-warning text-link" value="&addon.legacy.label;"/>
                 <xul:label class="disabled-postfix" value="&addon.disabled.postfix;"/>
                 <xul:label class="update-postfix" value="&addon.update.postfix;"/>
                 <xul:spacer flex="5000"/> <!-- Necessary to make the name crop -->
@@ -367,8 +367,6 @@
         <parameter name="aAddon"/>
         <body><![CDATA[
           this.mAddon = aAddon;
-		  
-		  var SUPPORT_URL = "https://support.mozilla.org/kb/firefox-add-technology-modernizing";
 
           this._installStatus.mAddon = this.mAddon;
           this._updateDates();

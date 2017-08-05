@@ -4580,7 +4580,7 @@ classicthemerestorerjs.ctr = {
 		case "addonversion":
 			if (classicthemerestorerjs.ctr.appversion < 46) manageCSS("addonversion.css");
 			else if (classicthemerestorerjs.ctr.appversion < 57) manageCSS("addonversion46.css");
-			manageCSS("addonversion57.css");
+			else manageCSS("addonversion57.css");
 		break;
 		
 		case "oldplacesbut": 		manageCSS("oldplacesbut.css");			break;
