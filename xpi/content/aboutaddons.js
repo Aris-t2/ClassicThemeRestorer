@@ -20,8 +20,8 @@ ctrAboutAddons = {
 		  setTimeout(function(){
 		
 		  try{
-			if(parseInt(Services.appinfo.version) >=56)
-			  document.querySelector('#addons-page').setAttribute('fx56plus',true);
+			if(parseInt(Services.appinfo.version) >=57)
+			  document.querySelector('#addons-page').setAttribute('fx57plus',true);
 		  } catch(e){}
 
 		  },100);

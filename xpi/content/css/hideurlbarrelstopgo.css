@@ -15,7 +15,8 @@
 	  border-image-slice: unset !important;
 	}
 	
-	#main-window[fx55plus="true"] #urlbar-page-action-button {
+	#urlbar #pageActionButton,
+	#urlbar-page-action-button {
 	  visibility: collapse !important;
 	}
 
