@@ -3105,7 +3105,7 @@ classicthemerestorerjs.ctr = {
 		}, false);
 		
 		// handle mousedown event + popupshown/popuphidden events
-		if (classicthemerestorerjs.ctr.appversion < 56) {
+		
 		  ctr_titlebarbutton.addEventListener("mousedown", function openCtrTitleAppmenuPopup() {
 
 			var app_popup = classicthemerestorerjs.ctr.ctrGetId('appmenu-popup');
@@ -3114,11 +3114,13 @@ classicthemerestorerjs.ctr = {
 			app_popup.addEventListener("popupshown", function onCtrTitleAppmenuPopupShown(event){
 			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
 			    classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton2').setAttribute("open", "true");
-				setTimeout(function(){
+				if (classicthemerestorerjs.ctr.appversion < 56) {
+				 setTimeout(function(){
 				  try {
 					document.getElementById("appmenu_webDeveloper").appendChild(document.getElementById("menuWebDeveloperPopup"));
 				  } catch(e){}
-				},600);
+				 },600);
+				}
 			  }
 			}, false);
 			
@@ -3128,50 +3130,14 @@ classicthemerestorerjs.ctr = {
 			    classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton2').removeAttribute("open");
 				setTimeout(function(){
 				  try {
-					document.getElementById("webDeveloperMenu").appendChild(document.getElementById("menuWebDeveloperPopup"));
+					//document.getElementById("webDeveloperMenu").appendChild(document.getElementById("menuWebDeveloperPopup"));
 				  } catch(e){}
 				},600);
 			  }
 			}, false);
 
 		  }, false);
-		}
-		/*else if (classicthemerestorerjs.ctr.appversion >= 56) {
-		  ctr_titlebarbutton.addEventListener("mousedown", function openCtrTitleAppmenuPopup() {
-
-			var app_popup = classicthemerestorerjs.ctr.ctrGetId('appmenu-popup');
-			
-			//add attribute 'open'
-			app_popup.addEventListener("popupshown", function onCtrTitleAppmenuPopupShown(event){
-			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
-			    classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton2').setAttribute("open", "true");
-				setTimeout(function(){
-				  try {
-					document.getElementById("appmenuPrimaryPane").appendChild(document.getElementById("webDeveloperMenu"));
-					document.getElementById("appmenuPrimaryPane").insertBefore(document.getElementById("webDeveloperMenu"),document.getElementById("appmenu_webDeveloper_sep"));
-					document.getElementById("webDeveloperMenu").style.visibility="collapse";
-				  } catch(e){}
-				},600);
-			  }
-			}, false);
-			
-			// remove attribute 'open'
-			app_popup.addEventListener("popuphidden", function onCtrTitleAppmenuPopupHidden(event){
-			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
-			    classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton2').removeAttribute("open");
-				setTimeout(function(){
-				  try {
-					//document.getElementById("menu_ToolsPopup").appendChild(document.getElementById("webDeveloperMenu"));
-					document.getElementById("menu_ToolsPopup").insertBefore(document.getElementById("webDeveloperMenu"),document.getElementById("menu_pageInfo"));
-					document.getElementById("webDeveloperMenu").style.visibility="visible";
-				  } catch(e){}
-				},600);
-			  }
-			}, false);
-
-		  }, false);
-		}*/
-		
+	
 		// add button to titlebar
 		document.getElementById("titlebar-content").appendChild(ctr_titlebarbutton);
 		
@@ -3957,7 +3923,7 @@ classicthemerestorerjs.ctr = {
   moveDevtoolsmenu: function(){
 	
 	if (classicthemerestorerjs.ctr.appversion < 56) {
-	window.addEventListener("DOMContentLoaded", function toggleNavBarSwitch(event){
+	  window.addEventListener("DOMContentLoaded", function toggleNavBarSwitch(event){
 
 		classicthemerestorerjs.ctr.ctrGetId("ctraddon_appbutton").addEventListener("mousedown", function() {
 
@@ -3987,7 +3953,7 @@ classicthemerestorerjs.ctr = {
 
 		}, false);
 
-	},false);
+	  },false);
 	}
 
   },

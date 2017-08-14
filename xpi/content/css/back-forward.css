@@ -7,10 +7,8 @@
 	  visibility: visible !important;
 	}
 
-	#main-window * * #back-button,
-	#main-window * * #forward-button,	
-	#main-window * * #urlbar-container #back-button,
-	#main-window * * #urlbar-container #forward-button{
+	#main-window toolbox toolbar #urlbar-container #back-button,
+	#main-window toolbox toolbar #urlbar-container #forward-button{
 	  visibility: collapse !important;
 	  display:none !important;
 	}
@@ -44,9 +42,5 @@
 	  margin-top:1px;
 	  margin-bottom:1px;
 	}
-	
-	/*#main-window[fx57plus="true"] #nav-bar-customization-target{
-	  margin-top:1px;
-	  margin-bottom:1px;
-	}*/
+
 }
