@@ -3128,11 +3128,13 @@ classicthemerestorerjs.ctr = {
 			app_popup.addEventListener("popuphidden", function onCtrTitleAppmenuPopupHidden(event){
 			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
 			    classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton2').removeAttribute("open");
-				setTimeout(function(){
+				if (classicthemerestorerjs.ctr.appversion < 56) {
+				 setTimeout(function(){
 				  try {
-					//document.getElementById("webDeveloperMenu").appendChild(document.getElementById("menuWebDeveloperPopup"));
+					document.getElementById("webDeveloperMenu").appendChild(document.getElementById("menuWebDeveloperPopup"));
 				  } catch(e){}
-				},600);
+				 },600);
+				}
 			  }
 			}, false);
 
@@ -3922,14 +3924,13 @@ classicthemerestorerjs.ctr = {
   // move 'Tools' menus dev tools into application buttons popup 
   moveDevtoolsmenu: function(){
 	
-	if (classicthemerestorerjs.ctr.appversion < 56) {
-	  window.addEventListener("DOMContentLoaded", function toggleNavBarSwitch(event){
+	window.addEventListener("DOMContentLoaded", function toggleNavBarSwitch(event){
+	  if (classicthemerestorerjs.ctr.appversion < 56) {
 
 		classicthemerestorerjs.ctr.ctrGetId("ctraddon_appbutton").addEventListener("mousedown", function() {
 
 			var app_popup = classicthemerestorerjs.ctr.ctrGetId('appmenu-popup');
-			
-			//add attribute 'open'
+
 			app_popup.addEventListener("popupshown", function onCtrTitleAppmenuPopupShown(event){
 			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
 				setTimeout(function(){
@@ -3939,8 +3940,7 @@ classicthemerestorerjs.ctr = {
 				},650);
 			  }
 			}, false);
-			
-			// remove attribute 'open'
+
 			app_popup.addEventListener("popuphidden", function onCtrTitleAppmenuPopupHidden(event){
 			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
 				setTimeout(function(){
@@ -3953,8 +3953,8 @@ classicthemerestorerjs.ctr = {
 
 		}, false);
 
-	  },false);
-	}
+	  }
+	},false);
 
   },
   

@@ -166,6 +166,10 @@
 	#ctraddon_appbutton > .toolbarbutton-icon{
 	  max-width: unset !important;
 	}
+	
+	#TabsToolbar #ctraddon_appbutton {
+	  min-width: 36px !important;
+	}
 
 	/* style appbutton*/
 	#TabsToolbar #ctraddon_appbutton{
