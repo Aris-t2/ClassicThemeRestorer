@@ -35,10 +35,10 @@
 	
 	/* Windows 10 tweaks */
 	@media (-moz-os-version: windows-win10) {
-	  #main-window[fx56plus="true"][defaultfxtheme="true"] #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab{
+	  #main-window[fx57plus="true"][defaultfxtheme="true"] #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab{
 		color: black !important;
 	  }
-	  #main-window[fx56plus="true"][defaultfxtheme="true"] #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-label{
+	  #main-window[fx57plus="true"][defaultfxtheme="true"] #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-label{
 		opacity: 1.0 !important;
 	  }
 	  #main-window[fx55plus="true"][defaultfxtheme="true"] .tabs-newtab-button:not(:-moz-lwtheme):not(#privateTab-afterTabs-openNewPrivateTab),

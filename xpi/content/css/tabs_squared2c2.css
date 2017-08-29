@@ -269,6 +269,17 @@
 	  -moz-margin-start:2px !important;
 	  -moz-margin-end:1px !important;
 	}
+	
+	/*Test tweaks*/
+	#main-window[fx57plus="true"] #tabbrowser-tabs .tab-background,
+	#main-window[fx57plus="true"] #tabbrowser-tabs .tab-background[selected=true] {
+	  opacity: 0 !important;
+	}
+	
+	#main-window[fx57plus="true"] #TabsToolbar .close-icon > .toolbarbutton-icon {
+	  width: 16px !important;
+	  height: 16px !important;
+	}
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {

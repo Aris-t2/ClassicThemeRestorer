@@ -31,12 +31,12 @@
 	  transition: none !important;
 	}
 	
-	#main-window:not([fx56plus="true"]):not([chromehidden~="toolbar"]) * toolbar #urlbar-container ,
-	#main-window:not([fx56plus="true"]):not([chromehidden~="toolbar"]) * toolbar #urlbar-container[forwarddisabled]  {
+	#main-window:not([fx57plus="true"]):not([chromehidden~="toolbar"]) * toolbar #urlbar-container ,
+	#main-window:not([fx57plus="true"]):not([chromehidden~="toolbar"]) * toolbar #urlbar-container[forwarddisabled]  {
 	  -moz-margin-start: 8px !important;
 	}
-	#main-window:not([fx56plus="true"])[developertheme="true"]:not([chromehidden~="toolbar"]) * toolbar #urlbar-container,
-	#main-window:not([fx56plus="true"])[developertheme="true"]:not([chromehidden~="toolbar"]) * toolbar #urlbar-container[forwarddisabled] {
+	#main-window:not([fx57plus="true"])[developertheme="true"]:not([chromehidden~="toolbar"]) * toolbar #urlbar-container,
+	#main-window:not([fx57plus="true"])[developertheme="true"]:not([chromehidden~="toolbar"]) * toolbar #urlbar-container[forwarddisabled] {
 	  -moz-margin-start: 3px !important;
 	}
 

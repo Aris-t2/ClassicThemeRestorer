@@ -134,6 +134,7 @@ classicthemerestorerjs.ctr = {
 	try{if (this.appversion >= 54) document.getElementById("main-window").setAttribute('fx54plus',true);} catch(e){}
 	try{if (this.appversion >= 55) document.getElementById("main-window").setAttribute('fx55plus',true);} catch(e){}
 	try{if (this.appversion >= 56) document.getElementById("main-window").setAttribute('fx56plus',true);} catch(e){}
+	try{if (this.appversion >= 57) document.getElementById("main-window").setAttribute('fx57plus',true);} catch(e){}
 
 	// add CTR version number to '#main-window' node, so other add-ons/themes can easier distinguish between versions
 	AddonManager.getAddonByID('ClassicThemeRestorer@ArisT2Noia4dev', function(addon) {
@@ -3104,7 +3105,8 @@ classicthemerestorerjs.ctr = {
 		}, false);
 		
 		// handle mousedown event + popupshown/popuphidden events
-		ctr_titlebarbutton.addEventListener("mousedown", function openCtrTitleAppmenuPopup() {
+		
+		  ctr_titlebarbutton.addEventListener("mousedown", function openCtrTitleAppmenuPopup() {
 
 			var app_popup = classicthemerestorerjs.ctr.ctrGetId('appmenu-popup');
 			
@@ -3112,11 +3114,13 @@ classicthemerestorerjs.ctr = {
 			app_popup.addEventListener("popupshown", function onCtrTitleAppmenuPopupShown(event){
 			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
 			    classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton2').setAttribute("open", "true");
-				setTimeout(function(){
+				if (classicthemerestorerjs.ctr.appversion < 56) {
+				 setTimeout(function(){
 				  try {
 					document.getElementById("appmenu_webDeveloper").appendChild(document.getElementById("menuWebDeveloperPopup"));
 				  } catch(e){}
-				},600);
+				 },600);
+				}
 			  }
 			}, false);
 			
@@ -3124,16 +3128,18 @@ classicthemerestorerjs.ctr = {
 			app_popup.addEventListener("popuphidden", function onCtrTitleAppmenuPopupHidden(event){
 			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
 			    classicthemerestorerjs.ctr.ctrGetId('ctraddon_appbutton2').removeAttribute("open");
-				setTimeout(function(){
+				if (classicthemerestorerjs.ctr.appversion < 56) {
+				 setTimeout(function(){
 				  try {
 					document.getElementById("webDeveloperMenu").appendChild(document.getElementById("menuWebDeveloperPopup"));
 				  } catch(e){}
-				},600);
+				 },600);
+				}
 			  }
 			}, false);
 
-		}, false);
-		
+		  }, false);
+	
 		// add button to titlebar
 		document.getElementById("titlebar-content").appendChild(ctr_titlebarbutton);
 		
@@ -3918,14 +3924,13 @@ classicthemerestorerjs.ctr = {
   // move 'Tools' menus dev tools into application buttons popup 
   moveDevtoolsmenu: function(){
 	
-	//setTimeout(function(){
 	window.addEventListener("DOMContentLoaded", function toggleNavBarSwitch(event){
+	  if (classicthemerestorerjs.ctr.appversion < 56) {
 
 		classicthemerestorerjs.ctr.ctrGetId("ctraddon_appbutton").addEventListener("mousedown", function() {
 
 			var app_popup = classicthemerestorerjs.ctr.ctrGetId('appmenu-popup');
-			
-			//add attribute 'open'
+
 			app_popup.addEventListener("popupshown", function onCtrTitleAppmenuPopupShown(event){
 			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
 				setTimeout(function(){
@@ -3935,8 +3940,7 @@ classicthemerestorerjs.ctr = {
 				},650);
 			  }
 			}, false);
-			
-			// remove attribute 'open'
+
 			app_popup.addEventListener("popuphidden", function onCtrTitleAppmenuPopupHidden(event){
 			  if (event.target == classicthemerestorerjs.ctr.ctrGetId("appmenu-popup")) {
 				setTimeout(function(){
@@ -3949,8 +3953,8 @@ classicthemerestorerjs.ctr = {
 
 		}, false);
 
+	  }
 	},false);
-	//},1500);
 
   },
   
@@ -4578,7 +4582,8 @@ classicthemerestorerjs.ctr = {
 		
 		case "addonversion":
 			if (classicthemerestorerjs.ctr.appversion < 46) manageCSS("addonversion.css");
-			else manageCSS("addonversion46.css");
+			else if (classicthemerestorerjs.ctr.appversion < 57) manageCSS("addonversion46.css");
+			else manageCSS("addonversion57.css");
 		break;
 		
 		case "oldplacesbut": 		manageCSS("oldplacesbut.css");			break;
@@ -4732,6 +4737,10 @@ classicthemerestorerjs.ctr = {
 						#main-window[defaultfxtheme="true"] #tabbrowser-tabs:not(:-moz-lwtheme) .tabs-newtab-button:hover:not(:-moz-lwtheme) {\
 						  background-image: linear-gradient(to top, #868d94 0px, transparent 1px),linear-gradient(to top,#d0dce8,#dce7f3,#e5effa) !important;\
 						}\
+						#main-window[fx57plus="true"] #tabbrowser-tabs .tab-background,\
+						#main-window[fx57plus="true"] #tabbrowser-tabs .tab-background[selected=true] {\
+						  opacity: 0 !important;\
+						}\
 					';
 				}
 				else if(this.prefs.getCharPref('tabs')=='tabs_squaredc2'){
@@ -4747,6 +4756,10 @@ classicthemerestorerjs.ctr = {
 						#main-window[defaultfxtheme="true"] .tabbrowser-tab[selected]:not(:-moz-lwtheme) .tab-content {\
 						  background-image: linear-gradient(to top,#eaf2fb,#eef5fc,#fbfdff) !important;\
 						}\
+						#main-window[fx57plus="true"] #tabbrowser-tabs .tab-background,\
+						#main-window[fx57plus="true"] #tabbrowser-tabs .tab-background[selected=true] {\
+						  opacity: 0 !important;\
+						}\
 					';
 				}
 				else if(this.prefs.getCharPref('tabs')=='tabs_squared2'){
@@ -4754,12 +4767,20 @@ classicthemerestorerjs.ctr = {
 						#main-window[defaultfxtheme="true"] #tabbrowser-tabs:not(:-moz-lwtheme) .tabbrowser-tab[selected="true"]:not(:-moz-lwtheme) {\
 						  background-image: linear-gradient(to top,#eaf2fb,#eef5fc,#fbfdff);\
 						}\
+						#main-window[fx57plus="true"] #tabbrowser-tabs .tab-background,\
+						#main-window[fx57plus="true"] #tabbrowser-tabs .tab-background[selected=true] {\
+						  opacity: 0 !important;\
+						}\
 					';
 				}
 				else if(this.prefs.getCharPref('tabs')=='tabs_squared2c2'){
 					aero_color_tabs  = '\
 						#main-window[defaultfxtheme="true"] .tabbrowser-tab[selected]:not(:-moz-lwtheme) .tab-content {\
 						  background-image: linear-gradient(to top,#eaf2fb,#eef5fc,#fbfdff) !important;\
+						}\
+						#main-window[fx57plus="true"] #tabbrowser-tabs .tab-background,\
+						#main-window[fx57plus="true"] #tabbrowser-tabs .tab-background[selected=true] {\
+						  opacity: 0 !important;\
 						}\
 					';
 				}

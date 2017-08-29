@@ -166,6 +166,10 @@
 	#ctraddon_appbutton > .toolbarbutton-icon{
 	  max-width: unset !important;
 	}
+	
+	#TabsToolbar #ctraddon_appbutton {
+	  min-width: 36px !important;
+	}
 
 	/* style appbutton*/
 	#TabsToolbar #ctraddon_appbutton{
@@ -709,8 +713,24 @@
 	  }
 	}
 	
-	/* Restore menu button dropmaker on Fx56+ */
-	#main-window[fx55plus="true"] #nav-bar #nav-bar-customization-target > .toolbarbutton-1:not(:-moz-any(#back-button,#forward-button,#bookmarks-menu-button)) > .toolbarbutton-menu-dropmarker {
+	/* Restore menu button dropmaker on Fx55+ */
+	#main-window[fx55plus="true"] #nav-bar #nav-bar-customization-target > :-moz-any(#ctraddon_bookmarks-menu-toolbar-button,#ctraddon_history-menu-toolbar-button) > .toolbarbutton-menu-dropmarker {
 	  display: block !important;
-	  margin-inline-start: -13px;
+	  margin-inline-start: -12px;
+	}
+	
+	/* hide CTRs spring/spacer/separators */
+	#main-window[fx56plus="true"][photon-structure="true"] #wrapper-spring,
+	#main-window[fx56plus="true"][photon-structure="true"] #wrapper-spacer,
+	#main-window[fx56plus="true"][photon-structure="true"] #wrapper-separator,
+	#main-window[fx56plus="true"][photon-structure="true"] .ctraddon_flexspaces,
+	#main-window[fx56plus="true"][photon-structure="true"] .ctraddon_spaces,
+	#main-window[fx56plus="true"][photon-structure="true"] .ctraddon_separators {
+	  display: none !important;
+	  visibility: collapse !important;
+	}
+	
+	/* hide menus right arrow */
+	#main-window[fx56plus="true"] #appmenu_webDeveloper .menu-right{
+	  display: none !important;
 	}

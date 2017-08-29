@@ -96,8 +96,12 @@ ctrAboutPrefs = {
 			  document.querySelector('page').setAttribute('fx46plus',true);
 			else if(parseInt(Services.appinfo.version) >=52 && parseInt(Services.appinfo.version) < 56)
 			  document.querySelector('page').setAttribute('fx52plus',true);
-			else if(parseInt(Services.appinfo.version) >=56)
+			else if(parseInt(Services.appinfo.version) >=56 && parseInt(Services.appinfo.version) < 57)
 			  document.querySelector('page').setAttribute('fx56plus',true);
+			else if(parseInt(Services.appinfo.version) >=57) {
+			  document.querySelector('page').setAttribute('fx56plus',true);
+			  document.querySelector('page').setAttribute('fx57plus',true);
+			}
 		  } catch(e){}
 		},100);
 

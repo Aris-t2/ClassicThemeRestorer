@@ -70,7 +70,7 @@
 	}
 	
 	@media all and (-moz-windows-theme:aero) {
-		#main-window:not([fx56plus="true"])[defaultfxtheme="true"] #TabsToolbar:not(:-moz-lwtheme) {
+		#main-window:not([fx57plus="true"])[defaultfxtheme="true"] #TabsToolbar:not(:-moz-lwtheme) {
 		  background: #dbeaf9 !important;
 		}
 	    #main-window[defaultfxtheme="true"][tabsontop="false"]:not([developertheme="true"]) #TabsToolbar:not(:-moz-lwtheme) {

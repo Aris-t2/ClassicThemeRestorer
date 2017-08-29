@@ -98,6 +98,12 @@
 	  clip-path: none !important;
 	}
 	
+	/*Test tweaks*/
+	#main-window[fx57plus="true"] #TabsToolbar .close-icon > .toolbarbutton-icon {
+	  width: 16px !important;
+	  height: 16px !important;
+	}
+	
 }
 
 @-moz-document url(chrome://classic_theme_restorer/content/options.xul) {

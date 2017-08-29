@@ -404,7 +404,7 @@
 							{gDevToolsBrowser.toggleToolboxCommand(gBrowser);document.getElementById('appmenu-popup').hidePopup();}"
 				  class="menu-iconic"/>
 
-			<menuseparator/>
+			<menuseparator id="appmenu_webDeveloper_sep"/>
 
 			<menuitem id="appmenu_fullScreen"
 					  label="&fullScreenCmd.label;"

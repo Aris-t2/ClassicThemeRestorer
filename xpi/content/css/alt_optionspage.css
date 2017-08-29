@@ -8,8 +8,8 @@
 
 	@media (-moz-os-version: windows-win7), (-moz-os-version: windows-vista){
 	  @media (-moz-windows-theme:aero) {
-	    page:not([fx56plus="true"]),
-		page:not([fx56plus="true"]) #dialogBox .groupbox-title{
+	    page:not([fx57plus="true"]),
+		page:not([fx57plus="true"]) #dialogBox .groupbox-title{
 		  background: linear-gradient(to bottom right, #edf6ff,#dbeaf9,#edf6ff,#dbeaf9) !important;
 	    }
 	  }
@@ -26,6 +26,14 @@
 	.groupbox-body,
 	#dialogFrame{
 	  background-color: white !important;
+	}
+	
+	.search-container {
+	  background: none !important;
+	}
+
+	.header-name {
+	  visibility: collapse !important;
 	}
 	
 	/* main colors category items */

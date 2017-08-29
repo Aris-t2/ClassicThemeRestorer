@@ -33,6 +33,14 @@
       margin-bottom: 30px !important;
 	}
 	
+	.search-container {
+	  background: none !important;
+	}
+
+	.header-name {
+	  visibility: collapse !important;
+	}
+	
 	.category[hidden="true"],
 	#mainPrefPane .header {
 	  display: none !important;

@@ -121,10 +121,11 @@
 	}
 	/**/ 
 	
-	/* dev/nightly */
-	/*#main-window[fx54plus="true"] toolbar:not(:-moz-lwtheme) {
-	  background: unset !important;
-	}*/
+	/*Test tweaks*/
+	#main-window[fx57plus="true"] #TabsToolbar .close-icon > .toolbarbutton-icon {
+	  width: 16px !important;
+	  height: 16px !important;
+	}
 
 }
 
