@@ -713,12 +713,6 @@
 	  }
 	}
 	
-	/* Restore menu button dropmaker on Fx55+ */
-	#main-window[fx55plus="true"] #nav-bar #nav-bar-customization-target > :-moz-any(#ctraddon_bookmarks-menu-toolbar-button,#ctraddon_history-menu-toolbar-button) > .toolbarbutton-menu-dropmarker {
-	  display: block !important;
-	  margin-inline-start: -12px;
-	}
-	
 	/* hide CTRs spring/spacer/separators */
 	#main-window[fx56plus="true"][photon-structure="true"] #wrapper-spring,
 	#main-window[fx56plus="true"][photon-structure="true"] #wrapper-spacer,

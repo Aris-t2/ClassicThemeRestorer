@@ -155,6 +155,10 @@
 	#addons-page .main-content .addon[active="false"]{
 	  opacity: .8 !important;
 	}
+	
+	#addons-page .main-content #search-list .addon[status="installed"][active="false"]{
+	  opacity: .5 !important;
+	}
 
 	#addons-page .addon .name-container,
 	#addons-page #addon-list .name-container {

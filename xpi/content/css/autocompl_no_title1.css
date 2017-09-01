@@ -10,5 +10,11 @@
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem:-moz-any([actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"]) :-moz-any(.ac-url, .ac-action){
 	  display: none !important;
 	}
+	
+	/* Fx 56 tweaks */
+	#main-window[fx56plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) scrollbox,
+	#main-window[fx56plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] scrollbox{
+	  overflow-y: auto !important;
+	}
 
 }
