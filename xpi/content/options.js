@@ -480,7 +480,6 @@ classicthemerestorerjso.ctr = {
 	
 	if (this.appversion < 53) {
 	  document.getElementById('ctraddon_pw_ttoverflow').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_button_fx57').style.visibility = 'collapse';
 	}
 	
 	if (this.appversion < 54) {
