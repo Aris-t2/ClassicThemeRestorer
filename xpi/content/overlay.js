@@ -3096,6 +3096,11 @@ classicthemerestorerjs.ctr = {
 		ctr_titlebarbutton.setAttribute("label", buttontitle);
 		ctr_titlebarbutton.setAttribute("popup", "appmenu-popup");
 		
+		if(buttontitle.length==8)
+	      ctr_titlebarbutton.setAttribute("style", "font-weight: 600 !important;");
+		else if(buttontitle.length>=9)
+	      ctr_titlebarbutton.setAttribute("style", "font-weight: 500 !important;");
+		
 		// handle 'double click to close current window' option
 		ctr_titlebarbutton.addEventListener("dblclick",  function appbuttonCloseCurrentWindow() {
 
