@@ -798,7 +798,7 @@ radio.ctraddontab .radio-check-box1 {
 }
 
 
-/*Fx 57 warning */
+/*Fx 57+ warning button */
 
 #ctraddon_button_fx57 {
  -moz-appearance: none !important;
@@ -811,4 +811,5 @@ radio.ctraddontab .radio-check-box1 {
 #ctraddon_button_fx57:hover {
   border: 2px solid red !important;
   cursor: pointer !important;
+  text-decoration: underline !important;
 }

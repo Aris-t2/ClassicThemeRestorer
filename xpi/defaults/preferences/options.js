@@ -43,6 +43,7 @@ pref("extensions.classicthemerestorer.smallnavbut",false);
 pref("extensions.classicthemerestorer.bf_space",false);
 pref("extensions.classicthemerestorer.backforward",false);
 pref("extensions.classicthemerestorer.hide_bf_popup",false);
+pref("extensions.classicthemerestorer.hide_bf_pitem",false);
 pref("extensions.classicthemerestorer.nbcompact",false);
 pref("extensions.classicthemerestorer.statusbar",true);
 pref("extensions.classicthemerestorer.noconicons",false);
