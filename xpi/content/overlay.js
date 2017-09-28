@@ -965,12 +965,17 @@ classicthemerestorerjs.ctr = {
 			} catch(e){}
 		  break;
 		  
+		  case "hide_bf_popup":
+			if (branch.getBoolPref("hide_bf_popup")) classicthemerestorerjs.ctr.loadUnloadCSS("hide_bf_popup",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("hide_bf_popup",false);
+		  break;
+		  
 		  case "nbcompact":
 			if (branch.getBoolPref("nbcompact") && branch.getBoolPref("backforward") && branch.getBoolPref("smallnavbut")==false){
 			  classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",true);
 
-			  if (branch.getCharPref("nav_txt_ico").indexOf('iconstxt')!=-1)
-				branch.setCharPref("nav_txt_ico",'icons');
+			  /*if (branch.getCharPref("nav_txt_ico").indexOf('iconstxt')!=-1)
+				branch.setCharPref("nav_txt_ico",'icons');*/
 			}
 			else {
 			  classicthemerestorerjs.ctr.loadUnloadCSS("nbcompact",false);
@@ -3033,7 +3038,36 @@ classicthemerestorerjs.ctr = {
    
   // show backForwardMenu popup for CTRs movable back/forward buttons 'mouse hold event'
   ctrBackMenuShow: function(anchorElem,event) {
+	  
+   // hide back/forward menu items from history popup
+   if(this.prefs.getBoolPref("hide_bf_pitem")==true) {
+	
+	try {
+	
+		var bf_popup = classicthemerestorerjs.ctr.ctrGetId('backForwardMenu');
+		
+		bf_popup.addEventListener("popupshown", function onCtrBFPopupShown(event){
+		  if (anchorElem.id == "ctraddon_back-button") {
+			classicthemerestorerjs.ctr.loadUnloadCSS("hide_bf_pitem1",true);
+			classicthemerestorerjs.ctr.loadUnloadCSS("hide_bf_pitem2",false);
+		  } 
+		  
+		  if (anchorElem.id == "ctraddon_forward-button") {
+			classicthemerestorerjs.ctr.loadUnloadCSS("hide_bf_pitem2",true);
+			classicthemerestorerjs.ctr.loadUnloadCSS("hide_bf_pitem1",false);
+		  }
+		}, false);
+		
+		bf_popup.addEventListener("popuphidden", function onCtrBFPopupHidden(event){
+			classicthemerestorerjs.ctr.loadUnloadCSS("hide_bf_pitem1",false);
+			classicthemerestorerjs.ctr.loadUnloadCSS("hide_bf_pitem2",false);
+		}, false);
+	
+	} catch(e) {}
+   
+   }
   
+   // show backForwardMenu popup for CTRs movable back/forward buttons 'mouse hold event'
    if(this.prefs.getBoolPref("hide_bf_popup")==false) {
 	var timeoutID;
 	
@@ -3060,6 +3094,7 @@ classicthemerestorerjs.ctr = {
 	}
 
    }
+   
   },
   
   // Appbutton in titlebar
@@ -3095,6 +3130,11 @@ classicthemerestorerjs.ctr = {
 		ctr_titlebarbutton.setAttribute("type", "menu");
 		ctr_titlebarbutton.setAttribute("label", buttontitle);
 		ctr_titlebarbutton.setAttribute("popup", "appmenu-popup");
+		
+		if(buttontitle.length==8)
+	      ctr_titlebarbutton.setAttribute("style", "font-weight: 600 !important;");
+		else if(buttontitle.length>=9)
+	      ctr_titlebarbutton.setAttribute("style", "font-weight: 500 !important;");
 		
 		// handle 'double click to close current window' option
 		ctr_titlebarbutton.addEventListener("dblclick",  function appbuttonCloseCurrentWindow() {
@@ -3880,39 +3920,12 @@ classicthemerestorerjs.ctr = {
 	window.addEventListener("mousedown", function openContextMenuPopup(event) {
 
 	  if(event.button==2 && mov_urlbar_container.contains(event.target)) {
-
-		/*var toolbarcontext_popup = classicthemerestorerjs.ctr.ctrGetId('toolbar-context-menu');
-
-		toolbarcontext_popup.addEventListener("popupshown", function onCtrToolbarContextPopupShown(){
-		  try {
-			if(toolbarcontext_popup.firstChild.getAttribute('class')=='customize-context-moveToPanel') {
-			  toolbarcontext_popup.firstChild.setAttribute("disabled", "true");
-			  toolbarcontext_popup.firstChild.nextSibling.setAttribute("disabled", "true");
-
-			}
-			toolbarcontext_popup.removeEventListener("popupshown", onCtrToolbarContextPopupShown, false);
-		  } catch(e){}
-
-		}, false);*/
 		
 		classicthemerestorerjs.ctr.loadUnloadCSS("noconitems",true);
 		
 	  } else {
 		var toolbarcontext_popup = classicthemerestorerjs.ctr.ctrGetId('toolbar-context-menu');
-
-		/*toolbarcontext_popup.addEventListener("popupshown", function onCtrToolbarContextPopupShown2(){
-		  try {
-			if(toolbarcontext_popup.firstChild.getAttribute("disabled")=="true"
-			  && toolbarcontext_popup.firstChild.getAttribute('class')=='customize-context-moveToPanel') {
-			  toolbarcontext_popup.firstChild.setAttribute("disabled", "false");
-			  toolbarcontext_popup.firstChild.nextSibling.setAttribute("disabled", "false");
-			
-			}
-			toolbarcontext_popup.removeEventListener("popupshown", onCtrToolbarContextPopupShown2, false);
-		  } catch(e){}
-			
-		}, false);*/
-		
+	
 		classicthemerestorerjs.ctr.loadUnloadCSS("noconitems",false);
 		
 	  }
@@ -4470,6 +4483,9 @@ classicthemerestorerjs.ctr = {
 			  manageCSS("navbar_compact.css");
 		    else manageCSS("navbar_compact2.css");	
 		break;
+		case "hide_bf_popup": 		manageCSS("hide_bf_popup.css");			break;
+		case "hide_bf_pitem1": 		manageCSS("hide_bf_pitem1.css");		break;
+		case "hide_bf_pitem2": 		manageCSS("hide_bf_pitem2.css");		break;
 		case "noconicons": 			manageCSS("nocontexticons.css");		break;
 		case "noconitems": 			manageCSS("nocontextitems.css");		break;
 		case "options_alt": 		manageCSS("alt_optionspage.css");		break;

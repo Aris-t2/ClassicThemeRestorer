@@ -235,7 +235,8 @@
 		  max-width: 32px !important;
 		}
 		#main-window[fx48plus="true"] .toolbarbutton-1:-moz-any(#downloads-button) > .toolbarbutton-icon,
-		#main-window[fx48plus="true"] .toolbarbutton-1:-moz-any(#downloads-button) > :-moz-any(.toolbarbutton-menubutton-button, .toolbarbutton-badge-stack) > .toolbarbutton-icon{
+		#main-window[fx48plus="true"] .toolbarbutton-1:-moz-any(#downloads-button) > :-moz-any(.toolbarbutton-menubutton-button, .toolbarbutton-badge-stack) > .toolbarbutton-icon,
+		#main-window[fx55plus="true"] .toolbarbutton-1 > :-moz-any(.toolbarbutton-menubutton-button, .toolbarbutton-badge-stack) > .toolbarbutton-icon {
 		  width: 18px !important;
 		  max-width: 18px !important;
 		}

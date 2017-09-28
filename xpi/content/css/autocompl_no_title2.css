@@ -66,5 +66,11 @@
 		padding: 0 !important;
 	  }
 	}
+	
+	/* Fx 56 tweaks */
+	#main-window[fx56plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) scrollbox,
+	#main-window[fx56plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] scrollbox{
+	  overflow-y: auto !important;
+	}
 
 }

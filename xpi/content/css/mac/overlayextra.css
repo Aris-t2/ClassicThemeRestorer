@@ -330,3 +330,12 @@
 	#main-window[tabsintitlebar][customizing="true"] #TabsToolbar:-moz-any([currentset*="customizableui-special-spring"],[currentset*="customizableui-special-separator"],[currentset*="customizableui-special-spacer"]){
 	  -moz-window-dragging: no-drag !important;
 	}
+
+	
+	#main-window[defaultfxtheme="true"][fx55plus="true"] #PlacesToolbarItems toolbarbutton .toolbarbutton-menu-dropmarker {
+	  display: block !important;
+	}
+	#main-window[defaultfxtheme="true"][fx55plus="true"] #PlacesToolbarItems .toolbarbutton-text {
+	  margin-left: 2px !important;
+	  margin-right: 2px !important;
+	} 

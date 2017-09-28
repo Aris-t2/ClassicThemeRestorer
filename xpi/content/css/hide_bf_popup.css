@@ -1,0 +1,10 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#back-button-tooltip label + label,
+	#forward-button-tooltip label + label {
+	  display:none
+	}
+
+}

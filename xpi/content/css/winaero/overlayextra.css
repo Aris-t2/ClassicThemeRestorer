@@ -482,6 +482,12 @@
 	  visibility: collapse !important;
 	}
 	
+	/* Restore menu button dropmaker on Fx55+ */
+	#main-window[fx55plus="true"] #nav-bar #nav-bar-customization-target > :-moz-any(#ctraddon_bookmarks-menu-toolbar-button,#ctraddon_history-menu-toolbar-button) > .toolbarbutton-menu-dropmarker {
+	  display: block !important;
+	  margin-inline-start: -12px;
+	}
+	
 	/* disable window dragging feature for menu bar and tab bar in customizing mode, if springs, seperators or spacers are on them */
 	#main-window[tabsintitlebar][customizing="true"] :-moz-any(#toolbar-menubar,#TabsToolbar):-moz-any([currentset*="customizableui-special-spring"],[currentset*="customizableui-special-separator"],[currentset*="customizableui-special-spacer"]){
 	  -moz-window-dragging: no-drag !important;

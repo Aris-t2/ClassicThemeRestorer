@@ -130,6 +130,7 @@
 <!ENTITY Ctr_backforward	"Rendre mobiles les boutons « Reculer/Avancer »">
 <!ENTITY Ctr_nbcompact		"Réduire la hauteur de la barre de navigation">
 <!ENTITY Ctr_hide_bf_popup	"Masquer le menu surgissant de l'historique lors du clic droit">
+<!ENTITY Ctr_hide_bf_pitem	"Separated history popups for back and forward buttons">
 <!ENTITY Ctr_bf_space		"Réduire l'espace entre les boutons (si possible)">
 <!ENTITY Ctr_noconicons		"Menu contextuel de page : remplacer les icônes par du texte (Reculer, Avancer...)">
 <!ENTITY Ctr_prefpage		"Page des options">
@@ -200,7 +201,7 @@
 <!ENTITY Ctr_osearch_dm		"Réduire la taille du bouton de liste déroulante">
 <!ENTITY Ctr_addonmanager	"Gestionnaire de modules">
 <!ENTITY Ctr_alt_addonsp	"Page « Plus » : ordre alternatif">
-<!ENTITY Ctr_am_showrecup	"Toujours afficher la catégorie « Mises à jour récentes »">
+<!ENTITY Ctr_am_showrecup	"Toujours afficher la catégorie « Mis à jour »">
 <!ENTITY Ctr_alt_addonsm	"Apparence alternative">
 <!ENTITY Ctr_am_nowarning	"Listes de modules : masquer les avertissements">
 <!ENTITY Ctr_am_compact		"Listes de modules : vue compacte">
@@ -271,12 +272,12 @@
 
 <!ENTITY Ctr_urlbar			"Barre d'adresse">
 <!ENTITY Ctr_starinurl		"Afficher l'étoile">
-<!ENTITY Ctr_starinurlinfo	"Ceci masquera le bouton de menu des marque-pages par défaut">
+<!ENTITY Ctr_starinurlinfo	"Cela masque le bouton de menu des marque-pages.">
 <!ENTITY Ctr_feedinurl		"Afficher le bouton d'abonnement aux flux">
-<!ENTITY Ctr_hideurelstop	"Masquer le(s) bouton(s) « Arrêter/Actualiser »">
-<!ENTITY Ctr_hideurelstop2	"Toujours afficher le bouton « Se rendre à la page indiquée dans la barre d'adresse »">
+<!ENTITY Ctr_hideurelstop	"Masquer les boutons « Arrêter/Actualiser »">
+<!ENTITY Ctr_hideurelstop2	"Toujours afficher le bouton « Se rendre à la page indiquée (...) »">
 <!ENTITY Ctr_hideurlgo		"Masquer le bouton « Se rendre à la page indiquée dans la barre d'adresse »">
-<!ENTITY Ctr_hideurlsrg		"Masquer les séparateurs et espaces des boutons « Arrêter/Actualiser/Se rendre... »">
+<!ENTITY Ctr_hideurlsrg		"Masquer les séparateurs et espaces pour « Arrêter/Actualiser/Se rendre (...) »">
 <!ENTITY Ctr_urlbardropm	"Déplacer la liste déroulante à la dernière position possible">
 <!ENTITY Ctr_urlbardropm2	"Rendre le bouton de liste déroulante toujours visible">
 <!ENTITY Ctr_altreaderico	"Utiliser des icônes alternatives pour le « mode lecture »">
@@ -287,7 +288,7 @@
 <!ENTITY Ctr_urlbar_ib		"Bouton d'identité des sites">
 <!ENTITY Ctr_ib_nohovcolor	"Ne pas afficher la couleur grise lors du survol">
 <!ENTITY Ctr_ib_graycolor	"Utiliser une couleur grise pour les identités inconnues et les pages « about: »">
-<!ENTITY Ctr_verifiedcolors	"Colorer le bouton pour les sites web vérifiés et les connexions sécurisées et non sécurisées">
+<!ENTITY Ctr_verifiedcolors	"Colorer le bouton pour les sites web vérifiés et les connexions sécurisées ou non">
 <!ENTITY Ctr_ibinfoico		"Remplacer l'icône « i » par un globe">
 <!ENTITY Ctr_ibinfoico2		"Masquer l'icône « i » (si possible)">
 <!ENTITY Ctr_iblabels		"Masquer le texte">
@@ -297,8 +298,8 @@
 <!ENTITY Ctr_padlock_def	"Par défaut">
 <!ENTITY Ctr_padlock_cla	"Classique">
 <!ENTITY Ctr_padlock_mod	"Moderne">
-<!ENTITY Ctr_padlock_ext	"Afficher l'icône « &brandShortName; » pour les pages « about » valides">
-<!ENTITY Ctr_icopageinfo	"Favicon/globe/icône « i » : ouvrir la fenêtre « Informations sur la page » en cliquant sur l'icône">
+<!ENTITY Ctr_padlock_ext	"Afficher l'icône « &brandShortName; » pour les pages « about: » valides">
+<!ENTITY Ctr_icopageinfo	"Ouvrir la fenêtre « Informations (...) » en cliquant sur le Favicon/globe/icône « i »">
 <!ENTITY Ctr_lbsbsize		"Personnaliser la largeur">
 <!ENTITY Ctr_searchbar		"Barre de recherche">
 <!ENTITY Ctr_autocomplete	"Fenêtre surgissante d'autocomplétion">
