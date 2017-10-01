@@ -2186,10 +2186,10 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "ctroldsearch":
-			if (branch.getBoolPref("ctroldsearch") && classicthemerestorerjs.ctr.appversion < 56) {
+			if (branch.getBoolPref("ctroldsearch")/* && classicthemerestorerjs.ctr.appversion < 56*/) {
 				classicthemerestorerjs.ctr.loadUnloadCSS("ctroldsearch",true);
 				
-				if (branch.getBoolPref("osearch_dm") && classicthemerestorerjs.ctr.appversion < 56)
+				if (branch.getBoolPref("osearch_dm")/* && classicthemerestorerjs.ctr.appversion < 56*/)
 				  classicthemerestorerjs.ctr.loadUnloadCSS("osearch_dm",true);
 			}
 			else { 
@@ -2200,19 +2200,19 @@ classicthemerestorerjs.ctr = {
 		  break;
 		  
 		  case "osearch_iwidth":
-			if (branch.getBoolPref("osearch_iwidth") && classicthemerestorerjs.ctr.appversion < 56) classicthemerestorerjs.ctr.loadUnloadCSS("osearch_iwidth",true);
+			if (branch.getBoolPref("osearch_iwidth")/* && classicthemerestorerjs.ctr.appversion < 56*/) classicthemerestorerjs.ctr.loadUnloadCSS("osearch_iwidth",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("osearch_iwidth",false);
 		  break;
 		  
 		  case "osearch_cwidth": case "os_spsize_minw": case "os_spsize_maxw":
-		    if (branch.getBoolPref("osearch_cwidth") && classicthemerestorerjs.ctr.appversion < 56) 
+		    if (branch.getBoolPref("osearch_cwidth")/* && classicthemerestorerjs.ctr.appversion < 56*/) 
 			  classicthemerestorerjs.ctr.loadUnloadCSS("osearch_cwidth",true);
 		    else
 			  classicthemerestorerjs.ctr.loadUnloadCSS("osearch_cwidth",false);
 		  break;
 
 		  case "osearch_dm":
-			if (branch.getBoolPref("osearch_dm") && branch.getBoolPref("ctroldsearch") && classicthemerestorerjs.ctr.appversion < 56)
+			if (branch.getBoolPref("osearch_dm") && branch.getBoolPref("ctroldsearch")/* && classicthemerestorerjs.ctr.appversion < 56*/)
 				classicthemerestorerjs.ctr.loadUnloadCSS("osearch_dm",true);
 			else classicthemerestorerjs.ctr.loadUnloadCSS("osearch_dm",false);
 		  break;

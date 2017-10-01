@@ -13,9 +13,13 @@
 	#toolbar-menubar #sync-button[status="active"]:hover:active:not([disabled="true"]) {
 	  list-style-image: url("chrome://browser/skin/syncProgress-toolbar-inverted.png") !important;
 	}
-	#toolbar-menubar #downloads-button:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/Toolbar-inverted.png"),
-								  0, 198, 18, 180) center no-repeat !important;
+	#toolbar-menubar #downloads-button:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon,
+	#toolbar-menubar #downloads-button:not(:-moz-any([progress],[counter],[paused],[attention])) #downloads-indicator-progress-outer,
+	#toolbar-menubar #downloads-button:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter,
+	#toolbar-menubar #downloads-button:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon,
+	#toolbar-menubar #downloads-button:-moz-any([progress], [counter], [paused]):not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon,
+	#toolbar-menubar #downloads-button:-moz-any([progress], [counter], [paused]) #downloads-indicator-icon {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/Toolbar-inverted.png"), 0, 198, 18, 180) center no-repeat !important;
 	}
 	#toolbar-menubar #downloads-button:not([counter]):not([attention]) > #downloads-indicator-anchor > #downloads-button-progress-area > #downloads-indicator-counter {
 	  background-image: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/Toolbar-inverted.png"), 0, 198, 18, 180) !important;

@@ -513,20 +513,6 @@ classicthemerestorerjso.ctr = {
 	
 	if (this.appversion >= 56) {
 	  document.getElementById('ctraddon_pw_locsearchbw10').style.visibility = 'visible';
-	  document.getElementById('ctraddon_pw_ctroldsearch').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_ctroldsearchdesc').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_search_oit_so').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_osearch_dm').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_ctroldsearchc').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_ctroldsearchc_so').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_ctroldsearchr').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_ctroldsearchr_so').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_osearch_meoitdesc').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_osearch_meoit_so').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_osearch_gb').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_osearch_iwidth').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_osearch_cwidth').style.visibility = 'collapse';
-	  document.getElementById('ctraddon_pw_os_spsize_box').style.visibility = 'collapse';
 	}
 	
 

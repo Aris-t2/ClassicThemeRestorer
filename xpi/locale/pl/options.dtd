@@ -130,7 +130,7 @@
 <!ENTITY Ctr_backforward	"Ruchomy przycisk wstecz-do przodu">
 <!ENTITY Ctr_nbcompact		"Zmniejsz wysokość paska nawigacji">
 <!ENTITY Ctr_hide_bf_popup	"Ukryj menu podręczne historii po naciśnięciu przycisku myszki">
-<!ENTITY Ctr_hide_bf_pitem	"Separated history popups for back and forward buttons">
+<!ENTITY Ctr_hide_bf_pitem	"Oddzielne menu podręczne dla przycisków wstecz oraz do przodu">
 <!ENTITY Ctr_bf_space		"Zmniejsz odstęp pomiędzy przyciskami (jeśli to możliwe)">
 <!ENTITY Ctr_noconicons		"Menu kontekstowe strony: zastąp ikony etykietami (Wstecz, Do przodu...)">
 <!ENTITY Ctr_prefpage		"Strona (okno) opcji">
@@ -447,6 +447,10 @@
 <!ENTITY Ctr_openInCurrentTab			"Otwórz dane wejściowe w bieżącej karcie">
 <!ENTITY Ctr_openInNewTab				"Otwórz dane wejściowe w nowej karcie">
 <!ENTITY Ctr_openInNewWindow			"Otwórz dane wejściowe w nowym oknie">
+
+<!-- Old search default browser labels -->
+<!ENTITY Ctr_engineManager_label		"Manage Search Engines...">
+<!ENTITY Ctr_searchEndCap_label			"Search">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"W">
