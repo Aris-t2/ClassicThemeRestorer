@@ -23,6 +23,14 @@
 	  -moz-binding: url("chrome://classic_theme_restorer/content/ctr_oldsearch52.xml#searchbar-textbox") !important;
 	}
 	
+	#main-window[fx55plus="true"] searchbar {
+	  -moz-binding: url("chrome://classic_theme_restorer/content/ctr_oldsearch55.xml#searchbar") !important;
+	}
+	
+	#main-window[fx55plus="true"]:not([searchwp-moz-platform]) searchbar .searchbar-textbox {
+	  -moz-binding: url("chrome://classic_theme_restorer/content/ctr_oldsearch55.xml#searchbar-textbox") !important;
+	}
+	
 	.searchbar-engine-button {
 	  -moz-appearance: none !important;
 	  min-width: 0 !important;

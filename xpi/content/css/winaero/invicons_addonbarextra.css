@@ -13,9 +13,13 @@
 	#ctraddon_addon-bar #sync-button[status="active"]:hover:active:not([disabled="true"]) {
 	  list-style-image: url("chrome://browser/skin/syncProgress-toolbar-inverted.png") !important;
 	}
-	#ctraddon_addon-bar #downloads-button:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon {
-	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/Toolbar-inverted.png"),
-								  0, 198, 18, 180) center no-repeat !important;
+	#ctraddon_addon-bar #downloads-button:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon,
+	#ctraddon_addon-bar #downloads-button:not(:-moz-any([progress],[counter],[paused],[attention])) #downloads-indicator-progress-outer,
+	#ctraddon_addon-bar #downloads-button:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter,
+	#ctraddon_addon-bar #downloads-button:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon,
+	#ctraddon_addon-bar #downloads-button:-moz-any([progress], [counter], [paused]):not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon,
+	#ctraddon_addon-bar #downloads-button:-moz-any([progress], [counter], [paused]) #downloads-indicator-icon {
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/Toolbar-inverted.png"), 0, 198, 18, 180) center no-repeat !important;
 	}
 	#ctraddon_addon-bar #downloads-button:not([counter]):not([attention]) > #downloads-indicator-anchor > #downloads-button-progress-area > #downloads-indicator-counter {
 	  background-image: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/Toolbar-inverted.png"), 0, 198, 18, 180) !important;
@@ -80,6 +84,12 @@
 		#main-window #ctraddon_addon-bar #sync-button[status="active"]:hover:active:not([disabled="true"]) {
 		  list-style-image: url("chrome://browser/skin/syncProgress-toolbar-inverted@2x.png") !important;
 		}
+		#main-window #ctraddon_addon-bar #downloads-button:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon,
+		#main-window #ctraddon_addon-bar #downloads-button:not(:-moz-any([progress],[counter],[paused],[attention])) #downloads-indicator-progress-outer,
+		#main-window #ctraddon_addon-bar #downloads-button:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter,
+		#main-window #ctraddon_addon-bar #downloads-button:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon,
+		#main-window #ctraddon_addon-bar #downloads-button:-moz-any([progress], [counter], [paused]):not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon,
+		#main-window #ctraddon_addon-bar #downloads-button:-moz-any([progress], [counter], [paused]) #downloads-indicator-icon,
 		#main-window #ctraddon_addon-bar #downloads-button:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon {
 		  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/Toolbar-inverted@2x.png"), 0, 396, 36, 360) center no-repeat !important;
 		  background-size: 18px !important;
