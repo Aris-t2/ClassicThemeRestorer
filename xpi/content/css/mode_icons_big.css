@@ -68,18 +68,25 @@
 	  -moz-image-region: rect(0, 928px, 32px, 896px) !important;
 	}
 
-	#nav-bar #downloads-indicator-icon {
-	  width:32px !important;
-	  height:32px !important;
-	  background: -moz-image-rect(url("chrome://browser/skin/menuPanel.png"),
-					0, 256, 32, 224) center no-repeat !important;
+	#nav-bar #downloads-indicator-icon,
+	#main-window[fx51plus="true"] #nav-bar #downloads-indicator-icon,
+	#main-window[fx55plus="true"] #nav-bar #downloads-button #downloads-indicator-progress-outer {
+	  width: 32px !important;
+	  height: 32px !important;
+	  background: -moz-image-rect(url("chrome://browser/skin/menuPanel.svg"), 0, 256, 32, 224) center no-repeat !important;
 	}
-	
-	#main-window[fx51plus="true"] #nav-bar #downloads-indicator-icon {
-	  width:32px !important;
-	  height:32px !important;
-	  background: -moz-image-rect(url("chrome://browser/skin/menuPanel.svg"),
-					0, 256, 32, 224) center no-repeat !important;
+
+	#main-window[fx55plus="true"] #nav-bar  #downloads-button:not([attention]) #downloads-indicator-progress-icon,
+	#main-window[fx55plus="true"] #nav-bar  #downloads-button:not([attention]) #downloads-indicator-progress-inner {
+	  visibility: collapse !important;
+	}
+
+	#main-window[fx55plus="true"] #nav-bar  #downloads-button[attention] #downloads-indicator-progress-icon,
+	#main-window[fx55plus="true"] #nav-bar  #downloads-button[attention] #downloads-indicator-progress-inner {
+	  width: 32px !important;
+	  height: 32px !important;
+	  margin-top: 0px !important;
+	  background-size: 32px !important;
 	}
 
 	#nav-bar #add-ons-button[cui-areatype="toolbar"] {
