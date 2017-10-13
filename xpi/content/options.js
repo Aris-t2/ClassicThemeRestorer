@@ -836,8 +836,10 @@ classicthemerestorerjso.ctr = {
 	}
 	
     document.getElementById('ctraddon_pw_hide_bf_popup').disabled = which;
+	document.getElementById('ctraddon_pw_hide_bf_pitem').disabled = which;
 	document.getElementById('ctraddon_pw_bf_space').disabled = which;
 	document.getElementById('ctraddon_pw_hide_bf_popup').style.visibility = itemvis;
+	document.getElementById('ctraddon_pw_hide_bf_pitem').style.visibility = itemvis;
 	document.getElementById('ctraddon_pw_bf_space').style.visibility = itemvis;
 	if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref('smallnavbut')==false){
 	  if (this.appversion < 54) document.getElementById('ctraddon_pw_nbcompact').disabled = which;
