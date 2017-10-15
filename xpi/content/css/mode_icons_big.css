@@ -88,7 +88,12 @@
 	  margin-top: 0px !important;
 	  background-size: 32px !important;
 	}
-
+	
+	#main-window[fx55plus="true"] #nav-bar #downloads-button[progress] #downloads-indicator-progress-inner,
+	#main-window[fx55plus="true"] #nav-bar #downloads-button[progress] #downloads-indicator-progress-outer{
+	  background: -moz-image-rect(url("chrome://classic_theme_restorer/content/images/download_ani.png"), 0, 32, 32, 0) center no-repeat !important;
+	}
+	
 	#nav-bar #add-ons-button[cui-areatype="toolbar"] {
 	  -moz-image-region: rect(0px, 288px, 32px, 256px) !important;
 	}
