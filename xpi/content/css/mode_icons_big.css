@@ -44,6 +44,11 @@
 	#nav-bar #bookmarks-menu-button[starred][cui-areatype="toolbar"] {
 	  -moz-image-region: rect(0px, 192px, 32px, 160px) !important;
 	}
+	
+	#main-window[fx55plus="true"] #nav-bar #bookmarks-menu-button[starred][cui-areatype="toolbar"] {
+	  -moz-image-region: rect(0px, 32px, 32px, 0px) !important;
+	  list-style-image: url(chrome://classic_theme_restorer/content/images/bookmarks_starred.png) !important;
+	}
 
 	#nav-bar #history-panelmenu[cui-areatype="toolbar"] {
 	  -moz-image-region: rect(0px, 224px, 32px, 192px) !important;
