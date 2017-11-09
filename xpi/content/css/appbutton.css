@@ -6,6 +6,10 @@
 	  visibility: visible !important;
 	}
 	
+	#main-window[inFullscreen][inDOMFullscreen] * toolbar #ctraddon_appbutton{
+	  visibility: collapse !important;
+	}
+	
 	#ctraddon_appbutton2{
 	  visibility: collapse !important;
 	}

@@ -2882,7 +2882,12 @@ classicthemerestorerjs.ctr = {
 			if (branch.getBoolPref("contextfind")) classicthemerestorerjs.ctr.loadUnloadCSS("contextfind",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("contextfind",false);
 		  break;
-		  
+
+		  case "showfx57pcomp":
+			if (branch.getBoolPref("showfx57pcomp")) classicthemerestorerjs.ctr.loadUnloadCSS("showfx57pcomp",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("showfx57pcomp",false);
+		  break;
+
 		  case "restartapp":
 		  
 			if (branch.getBoolPref("restartapp")) classicthemerestorerjs.ctr.loadUnloadCSS("restartapp",false);
@@ -3600,6 +3605,11 @@ classicthemerestorerjs.ctr = {
 			  gBrowser.currentURI.spec==defaultNewTabPage && defaultNewTabPage!=newURLp
 			)
 		  ) openUILinkIn(newURLp, "current");
+		  
+		  if(Services.prefs.getBranch("extensions.classicthemerestorer.").getBoolPref('anewtaburlpf')) {
+			document.getElementById('urlbar').focus();
+			document.getElementById('urlbar').select();
+		  }
 		},500);
 	  } catch(e){}
 
@@ -4687,6 +4697,8 @@ classicthemerestorerjs.ctr = {
 		case "ctrnewinv55":			manageCSS("ctraddon_new_in_v55.css");	break;
 		
 		case "contextfind":			manageCSS("ctraddon_contextfind.css");	break;
+
+		case "showfx57pcomp":		manageCSS("ctraddon_show_fx57p_compatibility_colors.css");	break;
 		
 		case "cuibuttons":			manageCSS("cuibuttons.css");			break;
 		

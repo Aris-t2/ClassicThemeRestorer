@@ -244,6 +244,7 @@
 <!ENTITY Ctr_anewtaburl		"新分頁網址">
 <!ENTITY Ctr_anewtaburlcb	"自訂新分頁網址 (預設值: 「about:newtab」)">
 <!ENTITY Ctr_anewtaburlpcb	"自訂隱私新分頁網址 (預設值:「about:privatebrowsing」)">
+<!ENTITY Ctr_anewtaburlpf	"Focus location bar after loading">
 
 <!ENTITY Ctr_tab_tf_info1	"可使用色彩名稱, hexcodes, rgb(a) 和 hsl(a) 值.">
 <!ENTITY Ctr_tab_tf_info2	"沒有防呆機制（輸入無效值，不會有警告）!">
@@ -436,6 +437,12 @@
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"Getting started">
 <!ENTITY goCmd.label					"Go">
+<!ENTITY Ctr_showfx57pcomp				"Emphasize 'Firefox 57+' compatible CTR options">
+<!ENTITY Ctr_showfx57pcomp1				"Green - possible with userChrome.css or userContent.css">
+<!ENTITY Ctr_showfx57pcomp2				"Blue - possible by default">
+<!ENTITY Ctr_showfx57pcomp3				"Yellow - possible with WebExtensions">
+<!ENTITY Ctr_showfx57pcomp4				"Orange - not needed anymore">
+<!ENTITY Ctr_showfx57pcomp5				"Red - not possible anymore">
 <!ENTITY Ctr_menu_restart.label			"重啟">
 <!ENTITY Ctr_restartapp					"&brandShortName;-選單和「檔案」選單裡顯示「重啟」按鈕">
 <!ENTITY Ctr_restartapp2				"Show 'Restart' in panel menu">

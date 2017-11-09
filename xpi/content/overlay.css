@@ -260,6 +260,7 @@
 	}
 	
 	/* hide buttons */
+	#main-window[inFullscreen][inDOMFullscreen] toolbar #ctraddon_appbutton,
 	toolbar #ctraddon_appbutton,
 	panel #ctraddon_appbutton,
 	#ctraddon_appbutton2,

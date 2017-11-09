@@ -138,6 +138,7 @@ pref("extensions.classicthemerestorer.anewtaburlcb",false);
 pref("extensions.classicthemerestorer.anewtaburl","about:newtab");
 pref("extensions.classicthemerestorer.anewtaburlpcb",false);
 pref("extensions.classicthemerestorer.anewtaburlp","about:privatebrowsing");
+pref("extensions.classicthemerestorer.anewtaburlpf",false);
 
 pref("extensions.classicthemerestorer.tabseparator","tabsep_default");
 
@@ -267,6 +268,7 @@ pref("extensions.classicthemerestorer.cuibuttons",true);
 pref("extensions.classicthemerestorer.nodevtheme2",false);
 pref("extensions.classicthemerestorer.restartapp",true);
 pref("extensions.classicthemerestorer.restartapp2",false);
+pref("extensions.classicthemerestorer.showfx57pcomp",false);
 pref("extensions.classicthemerestorer.ctrnewinv",true);
 pref("extensions.classicthemerestorer.contextfind",false);
 pref("extensions.classicthemerestorer.pw_actidx_c",1);
