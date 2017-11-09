@@ -797,19 +797,63 @@ radio.ctraddontab .radio-check-box1 {
   text-decoration: line-through !important;
 }
 
+/* more add-ons button */
+#ctraddon_addons_button {
+  list-style-image: url('chrome://classic_theme_restorer/content/images/appmenu_addons_lin.png') !important;
+}
 
 /*Fx 57+ warning button */
-
+#ctraddon_button_wf,
 #ctraddon_button_fx57 {
  -moz-appearance: none !important;
   background: yellow !important;
   color: red !important;
   font-weight: bold !important;
-  border: 1px solid red !important;
+  box-shadow: 1px 1px 0px 0px red inset, -1px -1px 0px 0px red inset !important;
 }
 
+#ctraddon_button_wf:hover,
 #ctraddon_button_fx57:hover {
-  border: 2px solid red !important;
+  box-shadow: 2px 2px 0px 0px red inset, -2px -2px 0px 0px red inset !important;
   cursor: pointer !important;
   text-decoration: underline !important;
+}
+
+#ctraddon_button_wf{
+  list-style-image: url('chrome://classic_theme_restorer/content/images/fx57_yes.png') !important;
+}
+
+#ctraddon_button_fx57{
+  list-style-image: url('chrome://classic_theme_restorer/content/images/fx57_no.png') !important;
+}
+
+#ctr_pw_button_arrow_right {
+  transform: rotate(180deg);
+}
+
+/* Fx57+ compatibility */
+#ctraddon_showfx57pcomp_yes {
+  -moz-appearance: none !important;
+  background-color: #1eff00 !important;
+}
+#ctraddon_showfx57pcomp_d {
+  -moz-appearance: none !important;
+  background-color: #b2bdff !important;
+}
+#ctraddon_showfx57pcomp_we {
+  -moz-appearance: none !important;
+  background-color: yellow !important;
+}
+#ctraddon_showfx57pcomp_nn {
+  -moz-appearance: none !important;
+  background-color: #febf52 !important;
+} 
+#ctraddon_showfx57pcomp_no {
+  -moz-appearance: none !important;
+  background-color: #ff8282 !important;
+} 
+
+#ctraddon_showfx57pcomp_yes:hover {
+  text-decoration: underline !important;
+  cursor: pointer !important;
 }

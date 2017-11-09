@@ -244,6 +244,7 @@
 <!ENTITY Ctr_anewtaburl		"新标签页地址">
 <!ENTITY Ctr_anewtaburlcb	"自定义新标签页地址 (默认: 'about:newtab')">
 <!ENTITY Ctr_anewtaburlpcb	"自定义新隐私标签页地址(默认: 'about:privatebrowsing')">
+<!ENTITY Ctr_anewtaburlpf	"Focus location bar after loading">
 
 <!ENTITY Ctr_tab_tf_info1	"可支持颜色名称, hex值, rgb(a) 以及 hsl(a) 值。">
 <!ENTITY Ctr_tab_tf_info2	"输入值不会进行校验！">
@@ -436,6 +437,12 @@
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"开始使用">
 <!ENTITY goCmd.label					"转到">
+<!ENTITY Ctr_showfx57pcomp				"Emphasize 'Firefox 57+' compatible CTR options">
+<!ENTITY Ctr_showfx57pcomp1				"Green - possible with userChrome.css or userContent.css">
+<!ENTITY Ctr_showfx57pcomp2				"Blue - possible by default">
+<!ENTITY Ctr_showfx57pcomp3				"Yellow - possible with WebExtensions">
+<!ENTITY Ctr_showfx57pcomp4				"Orange - not needed anymore">
+<!ENTITY Ctr_showfx57pcomp5				"Red - not possible anymore">
 <!ENTITY Ctr_menu_restart.label			"重启">
 <!ENTITY Ctr_restartapp					"在应用菜单和文件菜单中显示“重启”">
 <!ENTITY Ctr_restartapp2				"在面板菜单中显示“重启”">
