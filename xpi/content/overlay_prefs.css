@@ -804,6 +804,7 @@ radio.ctraddontab .radio-check-box1 {
 
 /*Fx 57+ warning button */
 #ctraddon_button_wf,
+#ctraddon_button_fx52,
 #ctraddon_button_fx57 {
  -moz-appearance: none !important;
   background: yellow !important;
@@ -813,12 +814,15 @@ radio.ctraddontab .radio-check-box1 {
 }
 
 #ctraddon_button_wf:hover,
+#ctraddon_button_fx52:hover,
 #ctraddon_button_fx57:hover {
   box-shadow: 2px 2px 0px 0px red inset, -2px -2px 0px 0px red inset !important;
   cursor: pointer !important;
   text-decoration: underline !important;
 }
 
+
+#ctraddon_button_fx52,
 #ctraddon_button_wf{
   list-style-image: url('chrome://classic_theme_restorer/content/images/fx57_yes.png') !important;
 }
