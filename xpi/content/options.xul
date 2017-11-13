@@ -446,7 +446,7 @@
 				  
 				  <menulist preference="ctraddon_tabs" id="ctraddon_pw_tabmenulist">
 					<menupopup>
-						<menuitem value="tabs_default"	  label="&Ctr_tabs0;"/>
+						<menuitem value="tabs_default"	  label="&Ctr_tabs0;" class="customcssfx57no"/>
 						<menuitem value="tabs_squared"	  label="&Ctr_tabs1;" class="customcssfx57yes"/>
 						<menuitem value="tabs_squaredc2"  label="&Ctr_tabs1; (v2)" class="customcssfx57yes"/>
 						<menuitem value="tabs_squared2"	  label="&Ctr_tabs1m;" class="customcssfx57yes"/>
@@ -462,7 +462,7 @@
 				  
 				  <menulist preference="ctraddon_tabsontop">
 					<menupopup>
-						<menuitem value="unset"	 label="&Ctr_tabsontop0;" class="customcssfx57yes"/>
+						<menuitem value="unset"	 label="&Ctr_tabsontop0;" class="customcssfx57d"/>
 						<menuitem value="true"	 label="&Ctr_tabsontop1;" class="customcssfx57yes"/>
 						<menuitem value="false"	 label="&Ctr_tabsontop2;" class="customcssfx57yes"/>
 						<menuitem value="false2" label="&Ctr_tabsontop3;" class="customcssfx57yes"/>
@@ -485,7 +485,7 @@
 				  <description class="ctraddon_font1 ctraddon_new_in_v53 customcssfx57yes">&Ctr_ttoverflow;</description>
 				  <menulist preference="ctraddon_ttoverflow">
 					<menupopup>
-						<menuitem value="ttoverfl_def"	label="&Ctr_ttoverfl_def;" class="customcssfx57yes"/>
+						<menuitem value="ttoverfl_def"	label="&Ctr_ttoverfl_def;" class="customcssfx57d"/>
 						<menuitem value="ttoverfl_no1"	label="&Ctr_ttoverfl_no;" class="customcssfx57yes"/>
 						<menuitem value="ttoverfl_no2"	label="&Ctr_ttoverfl_no; (v2)" class="customcssfx57yes"/>
 					</menupopup>
@@ -496,7 +496,7 @@
 				  <description class="ctraddon_font1 customcssfx57yes">&Ctr_tabtitle;</description>
 				  <menulist preference="ctraddon_tabtitlepos" id="ctraddon_pw_ctabtitlepos">
 					<menupopup>
-						<menuitem value="tabtitlepos_default"	label="&Ctr_tabwidthdef;" class="customcssfx57yes"/>
+						<menuitem value="tabtitlepos_default"	label="&Ctr_tabwidthdef;" class="customcssfx57d"/>
 						<menuitem value="tabtitlepos_left"		label="&Ctr_left;" class="customcssfx57yes"/>
 						<menuitem value="tabtitlepos_centered"	label="&Ctr_centered;" class="customcssfx57yes"/>
 						<menuitem value="tabtitlepos_right"		label="&Ctr_right;" class="customcssfx57yes"/>
@@ -553,12 +553,13 @@
 				  <label value=""/>
 				</hbox>
 				<checkbox label="&Ctr_anewtaburlpcb;" preference="ctraddon_anewtaburlpcb" id="ctraddon_pw_anewtaburlpcb" class="ctraddon_new_in_v48 customcssfx57no" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
-				<checkbox label="&Ctr_anewtaburlpf;" preference="ctraddon_anewtaburlpf" id="ctraddon_pw_anewtaburlpf" class="ctraddon_new_in_v48 customcssfx57no"/>
+				
 				<hbox id="ctraddon_pw_anewtaburlpurlbox">
 				  <label value=""/>
 				  <textbox id="ctraddon_pw_anewtaburlpbox" preference="ctraddon_anewtaburlp" size="auto" flex="1" type="autocomplete" placeholder=""/>
 				  <label value=""/>
 				</hbox>
+				<checkbox label="&Ctr_anewtaburlpf; (about:privatebrowsing)" preference="ctraddon_anewtaburlpf" id="ctraddon_pw_anewtaburlpf" class="ctraddon_new_in_v48 customcssfx57no"/>
 			  </groupbox>
 
 		  </tabpanel>
@@ -605,7 +606,7 @@
 				<checkbox label="&Ctr_hidetbwot;"	preference="ctraddon_hidetbwot" class="customcssfx57no" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(true);} else {classicthemerestorerjso.ctr.ctrpwHidetbwotExtra(false);} classicthemerestorerjso.ctr.needsBrowserRestart();"/>
 				<checkbox label="&Ctr_hidetbwote;"	preference="ctraddon_hidetbwote" class="ctraddonsuboption customcssfx57no" id="ctraddon_pw_hidetbwote"/>
 				<description id="ctraddon_pw_hidetbwote_winc" class="ctraddonsuboption2 ctraddon_windowsonly">&Ctr_hidetbwote_i;</description>
-				<checkbox label="&Ctr_hidetbwote2;"	preference="ctraddon_hidetbwote2" class="ctraddonsuboption ctraddon_winmaconly" id="ctraddon_pw_hidetbwote2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
+				<checkbox label="&Ctr_hidetbwote2;"	preference="ctraddon_hidetbwote2" class="ctraddonsuboption ctraddon_winmaconly customcssfx57no" id="ctraddon_pw_hidetbwote2" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
 				
 				<checkbox label="&Ctr_ctrltabprev;" preference="ctraddon_ctrltabprev" id="ctraddon_pw_ctrltabprev" class="ctraddon_new_in_v48 customcssfx57d"/>
 				<description class="ctraddonsuboption">about:config &gt;&gt; browser.ctrlTab.previews</description>
@@ -625,7 +626,7 @@
 				  <description class="ctraddon_font1">&Ctr_position;</description>
 				  <menulist preference="ctraddon_closetab" id="ctraddon_pw_closetab">
 					<menupopup>
-						<menuitem value="closetab_default"	label="&Ctr_tabwidthdef;" class="customcssfx57yes" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
+						<menuitem value="closetab_default"	label="&Ctr_tabwidthdef;" class="customcssfx57d" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
 						<menuitem value="closetab_forced"	label="&Ctr_closetab_5;" class="customcssfx57yes" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
 						<menuitem value="closetab_active"	label="&Ctr_closetab_1;" class="customcssfx57yes" id="ctraddon_closetab_pw_act" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
 						<menuitem value="closetab_hover"	label="&Ctr_closetab_6;" class="customcssfx57yes" id="ctraddon_closetab_pw_hov" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
@@ -949,7 +950,7 @@
 		  <menulist preference="ctraddon_appbutton">
 			<menupopup>
 				<menuitem value="appbutton_off"	  label="&Ctr_appbutton0;"			oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_off',true)" class="customcssfx57no"/>
-				<menuitem value="appbutton_v1"	  label="&Ctr_appbutton1;"			oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v1',true)" class="customcssfx57yes"/>
+				<menuitem value="appbutton_v1"	  label="&Ctr_appbutton1;"			oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v1',true)" class="customcssfx57d"/>
 				<menuitem value="appbutton_v1wt"  label="&Ctr_appbutton1wt;"		oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v1wt',true)" class="customcssfx57yes"/>
 				<menuitem value="appbutton_v2"	  label="&Ctr_appbutton2;"			oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v2',true)" class="customcssfx57yes"/>
 				<menuitem value="appbutton_v2wt2" label="&Ctr_appbutton2; (v2)"		oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v2wt2',true)" class="customcssfx57yes"/>
@@ -973,7 +974,7 @@
 		  <menulist preference="ctraddon_appbutton">
 			<menupopup>
 				<menuitem value="appbutton_off"	 label="&Ctr_appbutton0;"	oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_off',true)" class="customcssfx57no"/>
-				<menuitem value="appbutton_v1"	 label="&Ctr_appbutton1;"	oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v1',true)" class="customcssfx57yes"/>
+				<menuitem value="appbutton_v1"	 label="&Ctr_appbutton1;"	oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v1',true)" class="customcssfx57d"/>
 				<menuitem value="appbutton_v1wt" label="&Ctr_appbutton1wt;" oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v1wt',true)" class="customcssfx57yes"/>
 			</menupopup>
 		  </menulist>
@@ -1107,16 +1108,16 @@
 				<caption  label="&Ctr_ui;" class="ctraddon_topic"/>
 				<checkbox label="&Ctr_oldtoplevimg;"	preference="ctraddon_oldtoplevimg" id="ctraddon_pw_oldtoplevimg" class="customcssfx57yes" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwOldTopLevelImg(true);} else {classicthemerestorerjso.ctr.ctrpwOldTopLevelImg(false);}"/>
 				<checkbox label="&Ctr_oldtoplevimg; (v2)" preference="ctraddon_oldtoplevimg2" id="ctraddon_pw_oldtoplevimg2" class="ctraddonsuboption customcssfx57yes"/>
-				<checkbox label="&Ctr_altdlprogbar;"	preference="ctraddon_altdlprogbar" id="ctraddon_pw_altdlprogbar" class="ctraddon_new_in_v52 customcssfx57nn"/>
+				<checkbox label="&Ctr_altdlprogbar;"	preference="ctraddon_altdlprogbar" id="ctraddon_pw_altdlprogbar" class="ctraddon_new_in_v52 customcssfx57yes"/>
 				<checkbox label="&Ctr_altalertbox;"		preference="ctraddon_altalertbox" id="ctraddon_pw_altalertbox" class="customcssfx57nn"/>
 				<checkbox label="&Ctr_skipprintpr;"		preference="ctraddon_skipprintpr" id="ctraddon_pw_skipprintpr" class="customcssfx57no" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
-				<checkbox label="&Ctr_panelmenucol;"	preference="ctraddon_panelmenucol" id="ctraddon_pw_panelmenucolor" class="customcssfx57nn"/>
+				<checkbox label="&Ctr_panelmenucol;"	preference="ctraddon_panelmenucol" id="ctraddon_pw_panelmenucolor" class="customcssfx57yes"/>
 				<checkbox label="&Ctr_cpanelmenus;"		preference="ctraddon_cpanelmenus" class="customcssfx57nn"/>
 				<checkbox label="&Ctr_menupopupscr;"	preference="ctraddon_menupopupscr" class="customcssfx57no"/>
 				<checkbox label="&Ctr_pananimation;"	preference="ctraddon_pananimation" id="ctraddon_pw_pananimation" class="customcssfx57yes"/>
 				<checkbox label="&Ctr_hiderecentbm;"	preference="ctraddon_hiderecentbm" id="ctraddon_pw_hiderecentbm" class="ctraddon_new_in_v49 customcssfx57d"/>
 				<description id="ctraddon_pw_hiderecentbmdes" class="ctraddonsuboption">about:config &gt;&gt; browser.bookmarks.showRecentlyBookmarked</description>
-				<checkbox label="&Ctr_hideeditbm;"		preference="ctraddon_hideeditbm" id="ctraddon_pw_hideeditbm" class="ctraddon_new_in_v47 customcssfx57nn" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+				<checkbox label="&Ctr_hideeditbm;"		preference="ctraddon_hideeditbm" id="ctraddon_pw_hideeditbm" class="ctraddon_new_in_v47 customcssfx57no" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 				<checkbox label="&Ctr_oldplacesbut;"	preference="ctraddon_oldplacesbut" id="ctraddon_pw_oldplacesbut" class="ctraddon_winlinonly ctraddon_new_in_v50 customcssfx57yes"/>
 				<checkbox label="&Ctr_dl_pm_drop;"		preference="ctraddon_dl_pm_drop" id="ctraddon_pw_dl_pm_drop" class="ctraddon_new_in_v51 customcssfx57d"/>
 				<description id="ctraddon_pw_dl_pm_dropdes" class="ctraddonsuboption">about:config &gt;&gt; browser.download.showPanelDropmarker</description>
@@ -1251,8 +1252,8 @@
 		<radiogroup preference="ctraddon_altoptions" id="ctraddon_altoptions_list" orient="vertical" value="">
 			<radio value="options_default"	label="&Ctr_altoptionsd;" id="ctraddon_pw_altoptions_default" class="customcssfx57yes" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_default');"/>
 			<radio value="options_alt"	 	label="&Ctr_altoptionsp; [&Ctr_altoptions_vm;]" id="ctraddon_pw_options_alt" class="customcssfx57yes" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_alt');"/>
-			<radio value="options_alt2"	 	label="&Ctr_altoptionsp; [&Ctr_altoptions_hm;]" id="ctraddon_pw_options_alt2" class="customcssfx57no" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_alt2');"/>
-			<radio value="options_alt3"	 	label="&Ctr_altoptionsp; (v2) [&Ctr_altoptions_hm;]" id="ctraddon_pw_options_alt3" class="customcssfx57no" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_alt3');"/>
+			<radio value="options_alt2"	 	label="&Ctr_altoptionsp; [&Ctr_altoptions_hm;]" id="ctraddon_pw_options_alt2" class="customcssfx57yes" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_alt2');"/>
+			<radio value="options_alt3"	 	label="&Ctr_altoptionsp; (v2) [&Ctr_altoptions_hm;]" id="ctraddon_pw_options_alt3" class="customcssfx57yes" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_alt3');"/>
 			<radio value="options_alt4"	 	label="&Ctr_altoptionsp; (v3) [&Ctr_altoptions_vm;]" id="ctraddon_pw_options_alt4" class="customcssfx57yes" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_alt4');"/>
 			<radio value="options_win"		label="&Ctr_altoptionsw;" id="ctraddon_pw_options_win" class="customcssfx57no" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_win');"/>
 			<radio value="options_win_alt"	label="&Ctr_altoptionsw; (v2)" id="ctraddon_pw_options_win_alt" class="customcssfx57no" oncommand="classicthemerestorerjso.ctr.currentAboutPrefs('options_win_alt');"/>
@@ -1331,7 +1332,7 @@
 				<checkbox label="&Ctr_urlbardropm2;" preference="ctraddon_urlbardropm2"  id="ctraddon_pw_urlbardropm2" class="customcssfx57yes"/>
 				<checkbox label="&Ctr_altreaderico;" preference="ctraddon_altreaderico"  id="ctraddon_pw_altreaderico" class="customcssfx57yes"/>
 				<checkbox label="&Ctr_hideurlzoom;" preference="ctraddon_hideurlzoom"  id="ctraddon_pw_hideurlzoom" class="ctraddon_new_in_v51 customcssfx57yes"/>
-				<checkbox label="&Ctr_hideprbutton;" preference="ctraddon_hideprbutton" id="ctraddon_pw_urlbarpblocked" class="customcssfx57nn"/>
+				<checkbox label="&Ctr_hideprbutton;" preference="ctraddon_hideprbutton" id="ctraddon_pw_urlbarpblocked" class="customcssfx57yes"/>
 			</groupbox>
 			
 			<groupbox>
@@ -1360,7 +1361,7 @@
 				  <label value="px"/>
 				</hbox>
 				
-				<checkbox label="&Ctr_lbsbsize;" preference="ctraddon_lb_width" class="customcssfx57nn" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwLocationbarSize(true);} else {classicthemerestorerjso.ctr.ctrpwLocationbarSize(false);}"/>
+				<checkbox label="&Ctr_lbsbsize;" preference="ctraddon_lb_width" class="customcssfx57yes" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwLocationbarSize(true);} else {classicthemerestorerjso.ctr.ctrpwLocationbarSize(false);}"/>
 				<hbox class="ctraddonsuboption"  id="ctraddon_pw_lb_width" align="center">
 				  <label value="&Ctr_tabminwidth; "/>
 				  <textbox size="4" maxlength="4" preference="ctraddon_lbsize_minw" type="number" min="0" max="4000" id="ctraddon_lbsize_minw"/>
@@ -1435,7 +1436,7 @@
 				  <label value="px"/>
 				</hbox>
 				
-				<checkbox label="&Ctr_acompl_search;" preference="ctraddon_oneoffsearch" id="ctraddon_pw_oneoffsearch" class="ctraddon_new_in_v51 customcssfx57we"/>
+				<checkbox label="&Ctr_acompl_search;" preference="ctraddon_oneoffsearch" id="ctraddon_pw_oneoffsearch" class="ctraddon_new_in_v51 customcssfx57d"/>
 				<description class="ctraddonsuboption" id="ctraddon_pw_oneoffsearch_desc">about:config &gt;&gt; browser.urlbar.oneOffSearches</description>
 				
 				<description id="ctraddon_lbsugres" class="ctraddon_font1">&Ctr_autocompl_hl;</description>
@@ -1529,7 +1530,7 @@
 				  <label value="px"/>
 				</hbox>
 
-				<checkbox label="&Ctr_lbsbsize;" preference="ctraddon_sb_width" class="customcssfx57nn" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwSearchbarSize(true);} else {classicthemerestorerjso.ctr.ctrpwSearchbarSize(false);}"/>
+				<checkbox label="&Ctr_lbsbsize;" preference="ctraddon_sb_width" class="customcssfx57yes" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwSearchbarSize(true);} else {classicthemerestorerjso.ctr.ctrpwSearchbarSize(false);}"/>
 				<hbox class="ctraddonsuboption"  id="ctraddon_pw_sb_width" align="center">
 				  <label value="&Ctr_tabminwidth; "/>
 				  <textbox size="4" maxlength="4" preference="ctraddon_sbsize_minw" type="number" min="0" max="4000" id="ctraddon_sbsize_minw"/>
@@ -1548,7 +1549,7 @@
 				</hbox>
 
 				<checkbox label="&Ctr_osearch_iwidth;"	preference="ctraddon_osearch_iwidth" id="ctraddon_pw_osearch_iwidth" class="customcssfx57no"/>
-				<checkbox label="&Ctr_osearch_cwidth;"	preference="ctraddon_osearch_cwidth" id="ctraddon_pw_osearch_cwidth" class="customcssfx57no"/>
+				<checkbox label="&Ctr_osearch_cwidth;"	preference="ctraddon_osearch_cwidth" id="ctraddon_pw_osearch_cwidth" class="customcssfx57yes"/>
 				<hbox class="ctraddonsuboption"  id="ctraddon_pw_os_spsize_box" align="center">
 				  <label value="&Ctr_tabminwidth; "/>
 				  <textbox size="4" maxlength="4" preference="ctraddon_os_spsize_minw" type="number" min="0" max="4000" id="ctraddon_os_spsize_minw"/>
@@ -1582,12 +1583,12 @@
 				  <description class="ctraddon_font1">&Ctr_cuimode;</description>
 				  <menulist preference="ctraddon_nav_txt_ico">
 					<menupopup>
-						<menuitem value="icons"		label="&Ctr_nav_txt_ico0;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('icons')" class="customcssfx57yes"/>
+						<menuitem value="icons"		label="&Ctr_nav_txt_ico0;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('icons')" class="customcssfx57d"/>
 						<menuitem value="iconsbig"	label="&Ctr_nav_txt_ico1;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconsbig')" id="ctraddon_pw_iconsbig" class="customcssfx57d"/>
-						<menuitem value="iconstxt"	label="&Ctr_nav_txt_ico2;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt')" class="customcssfx57nn"/>
-						<menuitem value="iconstxt2"	label="&Ctr_nav_txt_ico2; v2" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt2')" class="customcssfx57nn"/>
+						<menuitem value="iconstxt"	label="&Ctr_nav_txt_ico2;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt')" class="customcssfx57yes"/>
+						<menuitem value="iconstxt2"	label="&Ctr_nav_txt_ico2; v2" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt2')" class="customcssfx57yes"/>
 						<menuitem value="iconstxt3"	label="&Ctr_nav_txt_ico2; v3" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt3')" class="customcssfx57yes"/>
-						<menuitem value="iconstxt4"	label="&Ctr_nav_txt_ico2; v4" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt4')" class="customcssfx57nn"/>
+						<menuitem value="iconstxt4"	label="&Ctr_nav_txt_ico2; v4" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('iconstxt4')" class="customcssfx57yes"/>
 						<menuitem value="txtonly"	label="&Ctr_nav_txt_ico3;" oncommand="classicthemerestorerjso.ctr.ctrpwModeextra('txtonly')" class="customcssfx57yes"/>
 						<label value=" "/>
 						<description class="ctraddon_font1">&Ctr_nav_txt_exp;</description>
@@ -1611,8 +1612,8 @@
 
 			  <groupbox>
 				<caption  label="&Ctr_navbar;" class="ctraddon_topic"/>
-				<checkbox label="&Ctr_hidenavbar;"	preference="ctraddon_hidenavbar" class="customcssfx57nn"/>
-				<checkbox label="&Ctr_navbarpad;"	preference="ctraddon_navbarpad" class="customcssfx57nn" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwNavBarPadding(true);} else {classicthemerestorerjso.ctr.ctrpwNavBarPadding(false);}"/>
+				<checkbox label="&Ctr_hidenavbar;"	preference="ctraddon_hidenavbar" class="customcssfx57yes"/>
+				<checkbox label="&Ctr_navbarpad;"	preference="ctraddon_navbarpad" class="customcssfx57yes" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwNavBarPadding(true);} else {classicthemerestorerjso.ctr.ctrpwNavBarPadding(false);}"/>
 				<hbox class="ctraddonsuboption"  id="ctraddon_pw_navbarpad_lr" align="center">
 				  <label value="(1) &Ctr_navbarpad_l; "/>
 				  <textbox size="3" maxlength="3" preference="ctraddon_navbarpad_l" type="number" min="0" max="500"/>
@@ -1627,11 +1628,11 @@
 				  <textbox size="3" maxlength="3" preference="ctraddon_navbarmar_r" type="number" min="0" max="500"/>
 				  <label value="px"/>
 				</hbox>
-				<description class="ctraddon_font1 customcssfx57no">&Ctr_nbiconsize0;</description>
+				<description class="ctraddon_font1">&Ctr_nbiconsize0;</description>
 				<hbox>
 				  <menulist preference="ctraddon_nbiconsize">
 					<menupopup>
-						<menuitem value="small"	label="#nav-bar[iconsize='small'] - &Ctr_navsmallicons; &Ctr_tabwidthdef;" class="customcssfx57no"/>
+						<menuitem value="small"	label="#nav-bar[iconsize='small'] - &Ctr_navsmallicons; &Ctr_tabwidthdef;" class="customcssfx57d"/>
 						<menuitem value="large"	label="#nav-bar[iconsize='large'] - &Ctr_navlargeicons;" class="customcssfx57no"/>
 					</menupopup>
 				  </menulist>
@@ -1653,7 +1654,7 @@
 				<hbox align="center">
 				  <menulist preference="ctraddon_mbarposition" class="ctraddon_windowsonly">
 					<menupopup>
-						<menuitem value="toolbar-menubar"	 label="&Ctr_menubar; &Ctr_tabwidthdef;" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" class="customcssfx57no"/>
+						<menuitem value="toolbar-menubar"	 label="&Ctr_menubar; &Ctr_tabwidthdef;" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" class="customcssfx57d"/>
 						<menuitem value="TabsToolbar"		 label="&Ctr_tabstoolbar;" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" class="customcssfx57no"/>
 						<menuitem value="nav-bar"			 label="&Ctr_navbar;" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" class="customcssfx57no"/>
 						<menuitem value="ctraddon_extra-bar" label="&Ctr_extrabar1;" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()" class="customcssfx57no"/>
@@ -1672,9 +1673,9 @@
 				<hbox align="center">
 				  <menulist preference="ctraddon_altmbarpos" class="ctraddon_windowsonly">
 					<menupopup>
-						<menuitem value="altmbarpos0" label="&Ctr_tabwidthdef;" class="customcssfx57no"/>
-						<menuitem value="altmbarpos1" label="&Ctr_altmenubarpos2; v1" id="ctraddon_pw_altmenubarpos" class="customcssfx57no"/>
-						<menuitem value="altmbarpos2" label="&Ctr_altmenubarpos2; v2" id="ctraddon_pw_altmenubarpos2" class="customcssfx57no"/>
+						<menuitem value="altmbarpos0" label="&Ctr_tabwidthdef;" class="customcssfx57d"/>
+						<menuitem value="altmbarpos1" label="&Ctr_altmenubarpos2; v1" id="ctraddon_pw_altmenubarpos" class="customcssfx57yes"/>
+						<menuitem value="altmbarpos2" label="&Ctr_altmenubarpos2; v2" id="ctraddon_pw_altmenubarpos2" class="customcssfx57yes"/>
 					</menupopup>
 				  </menulist>
 				</hbox>
@@ -1707,7 +1708,7 @@
 				<hbox align="center">
 				  <menulist preference="ctraddon_findbar">
 					<menupopup>
-						<menuitem value="findbar_default" label="&Ctr_findbar_def;" class="customcssfx57yes"/>
+						<menuitem value="findbar_default" label="&Ctr_findbar_def;" class="customcssfx57d"/>
 						<menuitem value="findbar_bottoma" label="&Ctr_findbar_bota;" class="customcssfx57yes"/>
 						<menuitem value="findbar_top"	  label="&Ctr_findbar_top;" class="customcssfx57yes"/>
 						<menuitem value="findbar_topa"	  label="&Ctr_findbar_topa;" class="customcssfx57yes"/>
@@ -1722,7 +1723,7 @@
 
 			  <groupbox>
 				<caption  label="&Ctr_toolbars;" class="ctraddon_topic"/>
-				<checkbox label="&Ctr_notextshadow;"			 preference="ctraddon_notextshadow" class="customcssfx57nn"/>
+				<checkbox label="&Ctr_notextshadow;"			 preference="ctraddon_notextshadow" class="customcssfx57yes"/>
 				<checkbox label="&Ctr_transpttbw10;"			 preference="ctraddon_transpttbw10" id="ctraddon_pw_transpttbw10" class="customcssfx57yes" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwTranspTbW10(true);} else {classicthemerestorerjso.ctr.ctrpwTranspTbW10(false);}"/>
 				<checkbox label="&Ctr_transptcw10;"			 	 preference="ctraddon_transptcw10" id="ctraddon_pw_transptcw10" class="customcssfx57yes ctraddonsuboption"/>
 				<checkbox label="&Ctr_transpttbew10;"			 preference="ctraddon_transpttbew10" id="ctraddon_pw_transpttbew10" class="customcssfx57yes ctraddonsuboption"/>
@@ -1743,7 +1744,7 @@
 			  <groupbox id="ctraddon_pw_bookmarksbargroup2">
 				<caption  label="&Ctr_bookbar;" class="ctraddon_topic"/>
 				<checkbox label="&Ctr_nobookbarbg;"	 			 preference="ctraddon_nobookbarbg" id="ctraddon_pw_nobookbarbg" class="customcssfx57yes"/>
-				<checkbox label="&Ctr_nonavborder; &Ctr_tnot;"	 preference="ctraddon_nonavborder" class="ctraddon_windowsonly customcssfx57nn" id="ctraddon_pw_nonavborder"/>
+				<checkbox label="&Ctr_nonavborder; &Ctr_tnot;"	 preference="ctraddon_nonavborder" class="ctraddon_windowsonly customcssfx57yes" id="ctraddon_pw_nonavborder"/>
 			  </groupbox>
 
 			  <groupbox id="ctraddon_pw_tabstoolbargroup" class="ctraddon_winlinonly">
@@ -1757,7 +1758,7 @@
 			  <groupbox id="ctraddon_pw_menubargroup2" class="ctraddon_windowsonly">
 				<caption  label="&Ctr_menubar;" class="ctraddon_topic"/>
 				<checkbox label="&Ctr_menubarnofog;"			preference="ctraddon_menubarnofog" id="ctraddon_pw_menubarnofog" class="customcssfx57yes"/>
-				<checkbox label="&Ctr_altmenubar; &Ctr_tnot;"	preference="ctraddon_altmenubar" id="ctraddon_pw_altmenubar" class="customcssfx57nn"/>
+				<checkbox label="&Ctr_altmenubar; &Ctr_tnot;"	preference="ctraddon_altmenubar" id="ctraddon_pw_altmenubar" class="customcssfx57yes"/>
 			  </groupbox>
 
 		  </tabpanel>
@@ -1827,7 +1828,7 @@
 
 	<box class="ctraddontabpanel" orient="vertical" id="ctraddon_cssbox">
 	  
-		<checkbox label="&Ctr_cssoverride;"		preference="ctraddon_cssoverride" id="ctraddon_pw_cssoverride" class="customcssfx57no"/>
+		<checkbox label="&Ctr_cssoverride;"		preference="ctraddon_cssoverride" id="ctraddon_pw_cssoverride" class="customcssfx57yes"/>
 		<description class="ctraddonsuboption">&Ctr_cssoverride2;</description>
 		<textbox rows="25" multiline="true" 	preference="ctraddon_cssoverridec" id="ctraddon_pw_cssoverridec" />
 

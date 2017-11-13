@@ -130,7 +130,7 @@
 <!ENTITY Ctr_backforward	"Подвижная кнопка «Назад-Вперёд»">
 <!ENTITY Ctr_nbcompact		"Уменьшить высоту панели навигации">
 <!ENTITY Ctr_hide_bf_popup	"Не показывать меню истории при нажатии мыши">
-<!ENTITY Ctr_hide_bf_pitem	"Separated history popups for back and forward buttons">
+<!ENTITY Ctr_hide_bf_pitem	"Отдельные всплывающие окна истории для кнопок назад и вперёд">
 <!ENTITY Ctr_bf_space		"Уменьшить расстояние между кнопками (если это возможно)">
 <!ENTITY Ctr_noconicons		"Контекстное меню страницы: заменить значки надписями (Назад, Вперёд, Обновить…)">
 <!ENTITY Ctr_prefpage		"Страница «Настройки»">
@@ -244,7 +244,7 @@
 <!ENTITY Ctr_anewtaburl		"Адрес страницы новой вкладки">
 <!ENTITY Ctr_anewtaburlcb	"Изменить адрес страницы новой вкладки (по умолчанию: 'about:newtab')">
 <!ENTITY Ctr_anewtaburlpcb	"Изменить адрес страницы приватного окна (по умолчанию: 'about:privatebrowsing')">
-<!ENTITY Ctr_anewtaburlpf	"Focus location bar after loading">
+<!ENTITY Ctr_anewtaburlpf	"Активировать адресную строку после загрузки">
 
 <!ENTITY Ctr_tab_tf_info1	"Текстовые поля поддерживают названия цветов на английском, hex коды, rgb(a) и hsl(a) значения.">
 <!ENTITY Ctr_tab_tf_info2	"Введённое не будет проверяться!">
@@ -437,12 +437,12 @@
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"Начало работы">
 <!ENTITY goCmd.label					"Перейти">
-<!ENTITY Ctr_showfx57pcomp				"Emphasize 'Firefox 57+' compatible CTR options">
-<!ENTITY Ctr_showfx57pcomp1				"Green - possible with userChrome.css or userContent.css">
-<!ENTITY Ctr_showfx57pcomp2				"Blue - possible by default">
-<!ENTITY Ctr_showfx57pcomp3				"Yellow - possible with WebExtensions">
-<!ENTITY Ctr_showfx57pcomp4				"Orange - not needed anymore">
-<!ENTITY Ctr_showfx57pcomp5				"Red - not possible anymore">
+<!ENTITY Ctr_showfx57pcomp				"Выделять совместимые с 'Firefox 57+' настройки CTR">
+<!ENTITY Ctr_showfx57pcomp1				"Зелёный - доступны с помощью userChrome.css или userContent.css">
+<!ENTITY Ctr_showfx57pcomp2				"Синий - доступны по умолчанию">
+<!ENTITY Ctr_showfx57pcomp3				"Жёлтый - доступны в WebExtensions">
+<!ENTITY Ctr_showfx57pcomp4				"Оранжевый - уже не нужны">
+<!ENTITY Ctr_showfx57pcomp5				"Красный - недоступны">
 <!ENTITY Ctr_menu_restart.label			"Перезапуск">
 <!ENTITY Ctr_restartapp					"«Перезапуск» в меню приложения/файл">
 <!ENTITY Ctr_restartapp2				"«Перезапуск» в главном меню панели">
@@ -456,8 +456,8 @@
 <!ENTITY Ctr_openInNewWindow			"Открывать данные в новом окне">
 
 <!-- Old search default browser labels -->
-<!ENTITY Ctr_engineManager_label		"Manage Search Engines...">
-<!ENTITY Ctr_searchEndCap_label			"Search">
+<!ENTITY Ctr_engineManager_label		"Управление поисковыми системами…">
+<!ENTITY Ctr_searchEndCap_label			"Поиск">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"Н">
