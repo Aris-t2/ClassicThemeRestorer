@@ -824,9 +824,11 @@
 
       <method name="uninstall">
         <body><![CDATA[
-          // If uninstalling does not require a restart then just disable it
-          // and show the undo UI.
-          if (!this.opRequiresRestart("uninstall")) {
+          // If uninstalling does not require a restart and the type doesn't
+          // support undoing of restartless uninstalls, then we fake it by
+          // just disabling it it, and doing the real uninstall later.
+          if (!this.opRequiresRestart("uninstall") &&
+              !this.typeHasFlag("SUPPORTS_UNDO_RESTARTLESS_UNINSTALL")) {
             this.setAttribute("wasDisabled", this.mAddon.userDisabled);
 
             // We must set userDisabled to true first, this will call
@@ -836,7 +838,7 @@
             // This won't update any other add-on manager views (bug 582002)
             this.setAttribute("pending", "uninstall");
           } else {
-            this.mAddon.uninstall();
+            this.mAddon.uninstall(true);
           }
         ]]></body>
       </method>

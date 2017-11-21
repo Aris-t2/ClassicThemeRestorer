@@ -1,4 +1,4 @@
-<!ENTITY % overlayDTD
+﻿<!ENTITY % overlayDTD
     SYSTEM "chrome://classic_theme_restorer/content/overlay.dtd">
   %overlayDTD;
 <!-- Do not edit above this line and do not edit the variable '&brandShortName;' inside translated strings -->
@@ -11,7 +11,7 @@
 <!ENTITY Ctr_space			"Spazio">
 <!ENTITY Ctr_separator		"Separatore">
 <!ENTITY Ctr_navthrobber	"Indicatore attività">
-<!ENTITY Ctr_maskindicator	"Private Mode Indicator">
+<!ENTITY Ctr_maskindicator	"Indicatore della modalità anonima">
 <!ENTITY Ctr_sidebarbutton	"Barra laterale">
 <!ENTITY Ctr_windowcontrols	"Pulsanti controllo finestra (A tutto schermo)">
 <!ENTITY Ctr_rr				"Riavviare &brandShortName;!">
@@ -22,7 +22,7 @@
 <!ENTITY Ctr_appearance		"Aspetto">
 <!ENTITY Ctr_left			"Sinistra">
 <!ENTITY Ctr_right			"Destra">
-<!ENTITY Ctr_privmode		"(fiestra anonima)">
+<!ENTITY Ctr_privmode		"(finestra anonima)">
 <!ENTITY Ctr_fontsize		"Dimensione dei caratteri: ">
 
 <!ENTITY Ctr_cuibuttons		"Pulsanti">
@@ -44,8 +44,8 @@
 <!ENTITY Ctr_tabs1m			"Schede con angoli spigolosi (effetto Australis)">
 <!ENTITY Ctr_tabs2			"Scheda con angoli arrotondati (stile alternativo)">
 <!ENTITY Ctr_tabs3			"Schede con angoli arrotondati (stile Aero)">
-<!ENTITY Ctr_tabforminfo	"L’aspetto delle schede è definito dal tema in uso.">
-<!ENTITY Ctr_coltabsinfo	"L’aspetto delle schede non è del tutto compatibile con il componente aggiuntivo 'ColorfulTabs'.">
+<!ENTITY Ctr_tabforminfo	"L'aspetto delle schede è definito dal tema in uso.">
+<!ENTITY Ctr_coltabsinfo	"L'aspetto delle schede non è del tutto compatibile con il componente aggiuntivo 'ColorfulTabs'.">
 <!ENTITY Ctr_tabsontop0		"Schede in alto (predefinito)">
 <!ENTITY Ctr_tabsontop1		"Schede in alto - attivata [tabsontop=true]">
 <!ENTITY Ctr_tabsontop2		"Schede in basso (v1) - attivata [tabsontop=false]">
@@ -81,7 +81,7 @@
 <!ENTITY Ctr_closetab_4		"A sinistra della barra delle schede">
 <!ENTITY Ctr_closetab_5		"In tutte le schede (forzato)">
 <!ENTITY Ctr_closetab_6		"Solo al passaggio del mouse">
-<!ENTITY Ctr_closetab_hfot	"Nascondi quando c’è una sola scheda aperta">
+<!ENTITY Ctr_closetab_hfot	"Nascondi quando c'è una sola scheda aperta">
 <!ENTITY Ctr_closei_def		"Icone predefinite">
 <!ENTITY Ctr_closeonleft	"Posizione alternativa sulla scheda">
 <!ENTITY Ctr_closetabbig	"Icona più grande (20x20 px)">
@@ -244,7 +244,7 @@
 <!ENTITY Ctr_anewtaburl		"URL della pagina Nuova scheda">
 <!ENTITY Ctr_anewtaburlcb	"URL personalizzato della pagina Nuova scheda (predefinito: 'about:newtab')">
 <!ENTITY Ctr_anewtaburlpcb	"URL personalizzato della pagina Nuova scheda in incognito (default: 'about:privatebrowsing')">
-<!ENTITY Ctr_anewtaburlpf	"Focus location bar after loading">
+<!ENTITY Ctr_anewtaburlpf	"Evidenzia la barra degli indirizzi dopo il caricamento">
 
 <!ENTITY Ctr_tab_tf_info1	"È possibile usare nomi di colori (in inglese), valori esadecimali e i formati rgb(a) e hsl(a).">
 <!ENTITY Ctr_tab_tf_info2	"Nessuna validazione dell’input.">
@@ -375,7 +375,7 @@
 <!ENTITY Ctr_tbsep_winc		"Barre degli strumenti in alto: separatori supplementari">
 
 <!ENTITY Ctr_closeabarbut	"Barra dei componenti aggiuntivi: nascondi il pulsante di chiusura">
-<!ENTITY Ctr_highaddonsbar	"Aumenta l’altezza">
+<!ENTITY Ctr_highaddonsbar	"Aumenta l'altezza">
 <!ENTITY Ctr_lessaddonsbar	"Diminuisci l'altezza">
 <!ENTITY Ctr_addonbarfs		"In modalità tutto schermo">
 
@@ -421,7 +421,7 @@
 <!ENTITY Ctr_pw_set_import	"Importa preferenze">
 <!ENTITY Ctr_pw_set_syncon	"Aggiungi a Sync">
 <!ENTITY Ctr_pw_set_syncoff	"Rimuovi da Sync">
-<!ENTITY Ctr_pw_set_impexp	"Preferences containing a 'about:config &gt;&gt; ...' description are default browser preferences and do not get exported or imported!">
+<!ENTITY Ctr_pw_set_impexp	"Le preferenze che nella descrizione contengono 'about:config &gt;&gt; ...' sono preferenze predefinite del browser e non vengono esportate o importate!">
 
 <!ENTITY Ctr_special_font	"La modifica del colore di sfondo si applica solo utilizzando il tema predefinito!">
 <!ENTITY Ctr_special_info	"Alcune opzioni si applicano solo in casi particolari">
@@ -437,12 +437,12 @@
 <!ENTITY Ctr_addon-bar.accesskey		"B">
 <!ENTITY appMenuGettingStarted.label	"Primi passi">
 <!ENTITY goCmd.label					"Vai">
-<!ENTITY Ctr_showfx57pcomp				"Emphasize 'Firefox 57+' compatible CTR options">
-<!ENTITY Ctr_showfx57pcomp1				"Green - possible with userChrome.css or userContent.css">
-<!ENTITY Ctr_showfx57pcomp2				"Blue - possible by default">
-<!ENTITY Ctr_showfx57pcomp3				"Yellow - possible with WebExtensions">
-<!ENTITY Ctr_showfx57pcomp4				"Orange - not needed anymore">
-<!ENTITY Ctr_showfx57pcomp5				"Red - not possible anymore">
+<!ENTITY Ctr_showfx57pcomp				"Evidenzia le opzioni di CTR compatibili con 'Firefox 57+'">
+<!ENTITY Ctr_showfx57pcomp1				"Verde - possibile con userChrome.css o userContent.css">
+<!ENTITY Ctr_showfx57pcomp2				"Blu - possibile perché predefinito">
+<!ENTITY Ctr_showfx57pcomp3				"Giallo - possibile con le WebExtension">
+<!ENTITY Ctr_showfx57pcomp4				"Arancione - non più necessario">
+<!ENTITY Ctr_showfx57pcomp5				"Rosso - non più possibile">
 <!ENTITY Ctr_menu_restart.label			"Riavvia">
 <!ENTITY Ctr_restartapp					"'Riavvia' nel menu del Pulsante &brandShortName; e nel menu File">
 <!ENTITY Ctr_restartapp2				"'Riavvia' nel pannello del menu principale">
@@ -456,8 +456,8 @@
 <!ENTITY Ctr_openInNewWindow			"Apri l'indirizzo in una nuova finestra">
 
 <!-- Old search default browser labels -->
-<!ENTITY Ctr_engineManager_label		"Manage Search Engines...">
-<!ENTITY Ctr_searchEndCap_label			"Search">
+<!ENTITY Ctr_engineManager_label		"Gestione dei motori di ricerca...">
+<!ENTITY Ctr_searchEndCap_label			"Ricerca">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey            "I">

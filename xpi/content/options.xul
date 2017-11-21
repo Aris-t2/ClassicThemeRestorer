@@ -1724,9 +1724,9 @@
 			  <groupbox>
 				<caption  label="&Ctr_toolbars;" class="ctraddon_topic"/>
 				<checkbox label="&Ctr_notextshadow;"			 preference="ctraddon_notextshadow" class="customcssfx57yes"/>
-				<checkbox label="&Ctr_transpttbw10;"			 preference="ctraddon_transpttbw10" id="ctraddon_pw_transpttbw10" class="customcssfx57yes" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwTranspTbW10(true);} else {classicthemerestorerjso.ctr.ctrpwTranspTbW10(false);}"/>
-				<checkbox label="&Ctr_transptcw10;"			 	 preference="ctraddon_transptcw10" id="ctraddon_pw_transptcw10" class="customcssfx57yes ctraddonsuboption"/>
-				<checkbox label="&Ctr_transpttbew10;"			 preference="ctraddon_transpttbew10" id="ctraddon_pw_transpttbew10" class="customcssfx57yes ctraddonsuboption"/>
+				<checkbox label="&Ctr_transpttbw10;"			 preference="ctraddon_transpttbw10" id="ctraddon_pw_transpttbw10" class="customcssfx57no" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwTranspTbW10(true);} else {classicthemerestorerjso.ctr.ctrpwTranspTbW10(false);}"/>
+				<checkbox label="&Ctr_transptcw10;"			 	 preference="ctraddon_transptcw10" id="ctraddon_pw_transptcw10" class="customcssfx57no ctraddonsuboption"/>
+				<checkbox label="&Ctr_transpttbew10;"			 preference="ctraddon_transpttbew10" id="ctraddon_pw_transpttbew10" class="customcssfx57no ctraddonsuboption"/>
 				<checkbox label="&Ctr_tbsep_winc; &Ctr_tnot;"	 preference="ctraddon_tbsep_winc" id="ctraddon_pw_tbsep_winc" class="customcssfx57yes ctraddon_windowsonly"/>
 				<checkbox label="&Ctr_nonavtbborder; &Ctr_tnot;" preference="ctraddon_nonavtbborder" id="ctraddon_pw_nonavtbborder" class="customcssfx57yes"/>
 				<checkbox label="&Ctr_toptb_oldpad;" 			 preference="ctraddon_toptb_oldpad" id="ctraddon_pw_toptb_oldpad" class="ctraddon_new_in_v51 customcssfx57yes"/>
