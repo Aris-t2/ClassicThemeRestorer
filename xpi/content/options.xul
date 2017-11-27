@@ -1916,9 +1916,8 @@
 	<button label="" id="ctraddon_addons_button"  popup="ctr_pw_addonsPopup"/>
 	<spacer flex="1" />
 	<image src="chrome://classic_theme_restorer/content/images/extraulbar_go.png"/>
-	<button id="ctraddon_button_fx52" label="Firefox 52ESR" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://www.mozilla.org/en-US/firefox/organizations/all/'); };"/>
 	<button id="ctraddon_button_fx57" label="Firefox 57+" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://github.com/Aris-t2/CustomCSSforFx/issues/2'); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://github.com/Aris-t2/ClassicThemeRestorer/issues/299'); };"/>
-	<button id="ctraddon_button_wf" label="Waterfox" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://www.waterfoxproject.org/'); };"/>
+	<button id="ctraddon_button_wf" label="Firefox 52ESR / Basilisk / Waterfox" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('http://www.basilisk-browser.org/'); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://www.waterfoxproject.org/'); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://www.mozilla.org/en-US/firefox/organizations/all/');};"/>
 	<image src="chrome://classic_theme_restorer/content/images/extraulbar_go.png" id="ctr_pw_button_arrow_right"/>
 	<spacer flex="1" />
 	<button label="&Ctr_support;" id="ctraddon_support"  popup="ctr_pw_supportPopup"/>

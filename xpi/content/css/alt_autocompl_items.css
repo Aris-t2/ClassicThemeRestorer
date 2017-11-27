@@ -7,7 +7,9 @@
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="searchengine"],
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="searchengine"],
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[type="autofill heuristic"],
-	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[type="autofill heuristic"] {
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[type="autofill heuristic"],
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="keyword"],
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="keyword"] {
 	  display:none !important;
 	}
 	
@@ -16,7 +18,9 @@
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="searchengine"] + richlistitem:not([collapse="true"]),
 	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="searchengine"] + richlistitem:not([collapse="true"]),
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[type="autofill heuristic"] + richlistitem:not([collapse="true"]),
-	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[type="autofill heuristic"] + richlistitem:not([collapse="true"]) {
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[type="autofill heuristic"] + richlistitem:not([collapse="true"]),
+	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) richlistitem[actiontype="keyword"] + richlistitem:not([collapse="true"]),
+	#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] richlistitem[actiontype="keyword"] + richlistitem:not([collapse="true"]) {
 	  border-top: 1px solid transparent !important;
 	  border-bottom: 1px solid transparent !important;
 	}
