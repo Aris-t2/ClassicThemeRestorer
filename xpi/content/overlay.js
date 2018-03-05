@@ -3344,6 +3344,12 @@ classicthemerestorerjs.ctr = {
 		classicthemerestorerjs.ctr.ctrGetId("status-bar").appendChild(classicthemerestorerjs.ctr.ctrGetId("gmanager-toolbar-item"));
 	  } catch(e){}
 	},300);
+	// FuzzyTime
+	setTimeout(function(){
+	  try{
+		classicthemerestorerjs.ctr.ctrGetId("status-bar").appendChild(classicthemerestorerjs.ctr.ctrGetId("fuzzytime-display"));
+	  } catch(e){}
+	},500);
 	// isAdmin add-on fix
 	setTimeout(function(){
 	  try{
@@ -4607,9 +4613,8 @@ classicthemerestorerjs.ctr = {
 		case "alt_addonsm": 		manageCSS("alt_addonsmanager.css");		break;
 		
 		case "addonversion":
-			if (classicthemerestorerjs.ctr.appversion < 46) manageCSS("addonversion.css");
-			else if (classicthemerestorerjs.ctr.appversion < 57) manageCSS("addonversion46.css");
-			else manageCSS("addonversion57.css");
+			if (classicthemerestorerjs.ctr.appversion >= 46) manageCSS("addonversion46.css");
+			else manageCSS("addonversion.css");
 		break;
 		
 		case "oldplacesbut": 		manageCSS("oldplacesbut.css");			break;

@@ -736,3 +736,9 @@
 	#main-window[fx56plus="true"] #appmenu_webDeveloper .menu-right{
 	  display: none !important;
 	}
+	
+	#fuzzytime-contextmenu {
+	  -moz-appearance: menupopup !important;
+	  background: grey !important;
+	  color: black !important;
+	}

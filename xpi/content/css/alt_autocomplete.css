@@ -27,18 +27,6 @@
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings50.xml#autocomplete-richlistitem") !important;
 	}
 	
-	/* Firefox 51 popup code */
-	#main-window[fx51plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete),
-	#main-window[fx51plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
-	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings51.xml#urlbar-rich-result-popup") !important;
-	}
-
-	/* Firefox 51 richlist item code */
-	#main-window[fx51plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem,
-	#main-window[fx51plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
-	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings51.xml#autocomplete-richlistitem") !important;
-	}
-	
 	/* Firefox 54 popup code */
 	#main-window[fx54plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete),
 	#main-window[fx54plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
@@ -66,11 +54,11 @@
 	/* Basilisk browser support - Basilisk shows itself as Fx55, but uses Fx52 code for location bars popup */
 	#main-window[fx55plus="true"][title_normal="Basilisk"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) ,
 	#main-window[fx55plus="true"][title_normal="Basilisk"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
-	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings51.xml#urlbar-rich-result-popup") !important;
+	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings50.xml#urlbar-rich-result-popup") !important;
 	}
 	#main-window[fx55plus="true"][title_normal="Basilisk"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem,
 	#main-window[fx55plus="true"][title_normal="Basilisk"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] .autocomplete-richlistitem {
-	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings51.xml#autocomplete-richlistitem") !important;
+	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings50.xml#autocomplete-richlistitem") !important;
 	}
 
 	/* restyle popup items */

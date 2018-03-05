@@ -15,12 +15,6 @@
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings50.xml#urlbar-rich-result-popup") !important;
 	}
 	
-	/* Firefox 51 */
-	#main-window[fx51plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete),
-	#main-window[fx51plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
-	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings51.xml#urlbar-rich-result-popup") !important;
-	}
-	
 	/* Firefox 54 */
 	#main-window[fx54plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete),
 	#main-window[fx54plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
@@ -31,6 +25,12 @@
 	#main-window[fx55plus="true"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete),
 	#main-window[fx55plus="true"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
 	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings55.xml#urlbar-rich-result-popup") !important;
+	}
+	
+	/* Basilisk browser support - Basilisk shows itself as Fx55, but uses Fx52 code for location bars popup */
+	#main-window[fx55plus="true"][title_normal="Basilisk"] panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete),
+	#main-window[fx55plus="true"][title_normal="Basilisk"] #PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
+	  -moz-binding: url("chrome://classic_theme_restorer/content/urlbarBindings50.xml#urlbar-rich-result-popup") !important;
 	}
 	
 	panel[type="autocomplete-richlistbox"]:not(#PopupAutoComplete) .autocomplete-richlistitem:not(:-moz-any([collapse="true"],[actiontype="searchengine"],[actiontype="visiturl"],[actiontype="switchtab"])) .ac-title,

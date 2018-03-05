@@ -446,13 +446,13 @@
 				  
 				  <menulist preference="ctraddon_tabs" id="ctraddon_pw_tabmenulist">
 					<menupopup>
-						<menuitem value="tabs_default"	  label="&Ctr_tabs0;" class="customcssfx57no"/>
+						<menuitem value="tabs_default"	  label="&Ctr_tabs0;" class="customcssfx57yes"/>
 						<menuitem value="tabs_squared"	  label="&Ctr_tabs1;" class="customcssfx57yes"/>
 						<menuitem value="tabs_squaredc2"  label="&Ctr_tabs1; (v2)" class="customcssfx57yes"/>
 						<menuitem value="tabs_squared2"	  label="&Ctr_tabs1m;" class="customcssfx57yes"/>
 						<menuitem value="tabs_squared2c2" label="&Ctr_tabs1m; (v2)" class="customcssfx57yes"/>
-						<menuitem value="tabs_curved" 	  label="&Ctr_tabs2;" class="customcssfx57no"/>
-						<menuitem value="tabs_curvedall"  label="&Ctr_tabs3;" id="tabs_curvedall" class="customcssfx57no"/>
+						<menuitem value="tabs_curved" 	  label="&Ctr_tabs2;" class="customcssfx57yes"/>
+						<menuitem value="tabs_curvedall"  label="&Ctr_tabs3;" id="tabs_curvedall" class="customcssfx57yes"/>
 					</menupopup>
 				  </menulist>
 				</hbox>
@@ -477,8 +477,8 @@
 				
 				<checkbox label="&Ctr_square_edges;"	preference="ctraddon_square_edges" id="ctraddon_pw_square_edges" class="customcssfx57yes"/>
 				<hbox class="ctraddon_windowsonly">
-				  <checkbox label="&Ctr_tttitlebar;"	preference="ctraddon_tttitlebar" id="ctraddon_pw_tttitlebar" class="customcssfx57no" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
-				  <checkbox label="&Ctr_centered;"		preference="ctraddon_tttitlebar_c" id="ctraddon_pw_tttitlebar_c" class="customcssfx57no"/>
+				  <checkbox label="&Ctr_tttitlebar;"	preference="ctraddon_tttitlebar" id="ctraddon_pw_tttitlebar" class="customcssfx57yes" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart();"/>
+				  <checkbox label="&Ctr_centered;"		preference="ctraddon_tttitlebar_c" id="ctraddon_pw_tttitlebar_c" class="customcssfx57yes"/>
 				</hbox>
 				
 				<hbox align="center" id="ctraddon_pw_ttoverflow">
@@ -631,8 +631,8 @@
 						<menuitem value="closetab_active"	label="&Ctr_closetab_1;" class="customcssfx57yes" id="ctraddon_closetab_pw_act" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
 						<menuitem value="closetab_hover"	label="&Ctr_closetab_6;" class="customcssfx57yes" id="ctraddon_closetab_pw_hov" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(false);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
 						<menuitem value="closetab_none"		label="&Ctr_closetab_2;" class="customcssfx57yes" id="ctraddon_closetab_pw_non" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(true);"/>
-						<menuitem value="closetab_tb_start"	label="&Ctr_closetab_4;" class="customcssfx57no" id="ctraddon_closetab_pw_sta" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
-						<menuitem value="closetab_tb_end"	label="&Ctr_closetab_3;" class="customcssfx57no" id="ctraddon_closetab_pw_end" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
+						<menuitem value="closetab_tb_start"	label="&Ctr_closetab_4;" class="customcssfx57we" id="ctraddon_closetab_pw_sta" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
+						<menuitem value="closetab_tb_end"	label="&Ctr_closetab_3;" class="customcssfx57we" id="ctraddon_closetab_pw_end" oncommand="classicthemerestorerjso.ctr.ctrpwTabcloseextra(true);classicthemerestorerjso.ctr.ctrpwTabcloseextra2(false);"/>
 					</menupopup>
 				  </menulist>
 				</hbox>
@@ -949,7 +949,7 @@
 		  
 		  <menulist preference="ctraddon_appbutton">
 			<menupopup>
-				<menuitem value="appbutton_off"	  label="&Ctr_appbutton0;"			oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_off',true)" class="customcssfx57no"/>
+				<menuitem value="appbutton_off"	  label="&Ctr_appbutton0;"			oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_off',true)" class="customcssfx57yes"/>
 				<menuitem value="appbutton_v1"	  label="&Ctr_appbutton1;"			oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v1',true)" class="customcssfx57d"/>
 				<menuitem value="appbutton_v1wt"  label="&Ctr_appbutton1wt;"		oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v1wt',true)" class="customcssfx57yes"/>
 				<menuitem value="appbutton_v2"	  label="&Ctr_appbutton2;"			oncommand="classicthemerestorerjso.ctr.ctrpwAppbuttonextra('appbutton_v2',true)" class="customcssfx57yes"/>
@@ -1170,7 +1170,7 @@
 				<checkbox label="&Ctr_pmhidelabels;"	preference="ctraddon_pmhidelabels" id="ctraddon_pw_pmhidelabels" class="customcssfx57nn"/>
 				<checkbox label="&Ctr_hidezoomres;"		preference="ctraddon_hidezoomres" class="customcssfx57yes"/>
 				<checkbox label="&Ctr_noresizerxp;"		preference="ctraddon_noresizerxp" id="ctraddon_pw_noresizerxp" class="customcssfx57no"/>
-				<checkbox label="&Ctr_tbconmenu;"		preference="ctraddon_tbconmenu"	  id="ctraddon_pw_tbconmenu" class="customcssfx57nn"/>
+				<checkbox label="&Ctr_tbconmenu;"		preference="ctraddon_tbconmenu"	  id="ctraddon_pw_tbconmenu" class="customcssfx57yes"/>
 				<checkbox label="&Ctr_uianimation;"		preference="ctraddon_uianimation" id="ctraddon_pw_uianimation" class="customcssfx57d"/>
 				<description class="ctraddonsuboption" id="ctraddon_uianimationdesc">about:config &gt;&gt; toolkit.cosmeticAnimations.enabled</description>
 				<checkbox label="&Ctr_fsanimation;"		preference="ctraddon_fsanimation" id="ctraddon_pw_fsanimation" class="customcssfx57d"/>
@@ -1428,10 +1428,10 @@
 				<checkbox label="&Ctr_autocompl_not;" preference="ctraddon_autocompl_not" id="ctraddon_pw_autocompl_not" class="ctraddon_new_in_v48 customcssfx57yes" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 				<checkbox label="&Ctr_autocompl_sep;" preference="ctraddon_autocompl_sep" id="ctraddon_pw_autocompl_sep" class="customcssfx57yes"/>
 				<checkbox label="&Ctr_autocompl_rhl;" preference="ctraddon_autocompl_rhl" id="ctraddon_pw_autocompl_rhl" class="ctraddon_new_in_v48 customcssfx57yes"/>
-				<checkbox label="&Ctr_lbsugresi;" preference="ctraddon_urlresults" id="ctraddon_pw_urlresults" class="customcssfx57no" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwAutoCompleteHeight(true);} else {classicthemerestorerjso.ctr.ctrpwAutoCompleteHeight(false);}"/>
-				<checkbox label="&Ctr_autocompl_it;" preference="ctraddon_autocompl_it" id="ctraddon_pw_autocompl_it" class="ctraddon_new_in_v48"/>
+				<checkbox label="&Ctr_lbsugresi;" preference="ctraddon_urlresults" id="ctraddon_pw_urlresults" class="customcssfx57yes" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwAutoCompleteHeight(true);} else {classicthemerestorerjso.ctr.ctrpwAutoCompleteHeight(false);}"/>
+				<checkbox label="&Ctr_autocompl_it;" preference="ctraddon_autocompl_it" id="ctraddon_pw_autocompl_it" class="ctraddon_new_in_v48 customcssfx57yes"/>
 				<hbox align="center" id="ctraddon_pw_cresultshbox">
-				  <checkbox label="&Ctr_cresultshcb;" preference="ctraddon_cresultshcb" id="ctraddon_pw_cresultshcb" class="ctraddon_new_in_v48 customcssfx57no" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
+				  <checkbox label="&Ctr_cresultshcb;" preference="ctraddon_cresultshcb" id="ctraddon_pw_cresultshcb" class="ctraddon_new_in_v48 customcssfx57yes" oncommand="classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 				  <textbox size="4" maxlength="4" preference="ctraddon_cresultsh" type="number" min="0" max="9999" id="ctraddon_pw_cresultsh"/>
 				  <label value="px"/>
 				</hbox>
@@ -1441,7 +1441,7 @@
 				
 				<description id="ctraddon_lbsugres" class="ctraddon_font1">&Ctr_autocompl_hl;</description>
 				<hbox>
-				  <checkbox label="&Ctr_bold;" preference="ctraddon_autocompl_hln" id="ctraddon_pw_autocompl_hln" class="customcssfx57nn"/>
+				  <checkbox label="&Ctr_bold;" preference="ctraddon_autocompl_hln" id="ctraddon_pw_autocompl_hln" class="customcssfx57yes"/>
 				  <checkbox label="&Ctr_bold;" preference="ctraddon_autocompl_hlb" id="ctraddon_pw_autocompl_hlb" class="customcssfx57yes"/>
 				  <checkbox label="&Ctr_italic;" preference="ctraddon_autocompl_hli" id="ctraddon_pw_autocompl_hli" class="customcssfx57yes"/>
 				  <checkbox label="&Ctr_underlined;" preference="ctraddon_autocompl_hlu" id="ctraddon_pw_autocompl_hlu" class="customcssfx57yes"/>
@@ -1481,7 +1481,7 @@
 		  <tabpanel orient="vertical">
 			<groupbox>
 				<caption  label="&Ctr_searchbar;" class="ctraddon_topic"/>
-				<checkbox label="&Ctr_ctroldsearch;"	preference="ctraddon_ctroldsearch" id="ctraddon_pw_ctroldsearch" class="customcssfx57no" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(true);} else {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(false);}"/>
+				<checkbox label="&Ctr_ctroldsearch;"	preference="ctraddon_ctroldsearch" id="ctraddon_pw_ctroldsearch" class="customcssfx57yes" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(true);} else {classicthemerestorerjso.ctr.ctrpwCtrOldSearch(false);}"/>
 				<description id="ctraddon_pw_ctroldsearchdesc" class="ctraddonsuboption">&Ctr_ctroldsearchd;</description>
 				<checkbox label="&Ctr_search_oit;"		preference="ctraddon_search_oit" id="ctraddon_pw_search_oit" class="customcssfx57d"/>
 				<description class="ctraddonsuboption">about:config &gt;&gt; browser.search.openintab</description>
@@ -1492,12 +1492,12 @@
 				</hbox>
 				<checkbox label="&Ctr_osearch_dm;"		preference="ctraddon_osearch_dm" id="ctraddon_pw_osearch_dm" class="ctraddon_winmaconly customcssfx57nn"/>
 				
-				<checkbox label="&Ctr_ctroldsearchc;"	preference="ctraddon_ctroldsearchc" id="ctraddon_pw_ctroldsearchc" class="customcssfx57no"/>
+				<checkbox label="&Ctr_ctroldsearchc;"	preference="ctraddon_ctroldsearchc" id="ctraddon_pw_ctroldsearchc" class="customcssfx57yes"/>
 				<hbox align="center" class="ctraddonsuboption" id="ctraddon_pw_ctroldsearchc_so">
 				  <textbox id="ctraddon_pw_ctroldsearchcdelay" size="6" maxlength="6" preference="ctraddon_ctrosearchct" type="number" min="0" max="999999"/>
 				  <description>&Ctr_nbisizedelay; &Ctr_ctrosearchdel;</description>
 				</hbox>
-				<checkbox label="&Ctr_ctroldsearchr;"	preference="ctraddon_ctroldsearchr" id="ctraddon_pw_ctroldsearchr" class="customcssfx57no"/>
+				<checkbox label="&Ctr_ctroldsearchr;"	preference="ctraddon_ctroldsearchr" id="ctraddon_pw_ctroldsearchr" class="customcssfx57yes"/>
 				<hbox align="center" class="ctraddonsuboption" id="ctraddon_pw_ctroldsearchr_so">
 				  <textbox id="ctraddon_pw_ctroldsearchrdelay" size="6" maxlength="6" preference="ctraddon_ctrosearchrt" type="number" min="0" max="999999"/>
 				  <description>&Ctr_nbisizedelay; &Ctr_ctrosearchdel;</description>
@@ -1548,7 +1548,7 @@
 				  <label value="px"/>
 				</hbox>
 
-				<checkbox label="&Ctr_osearch_iwidth;"	preference="ctraddon_osearch_iwidth" id="ctraddon_pw_osearch_iwidth" class="customcssfx57no"/>
+				<checkbox label="&Ctr_osearch_iwidth;"	preference="ctraddon_osearch_iwidth" id="ctraddon_pw_osearch_iwidth" class="customcssfx57yes"/>
 				<checkbox label="&Ctr_osearch_cwidth;"	preference="ctraddon_osearch_cwidth" id="ctraddon_pw_osearch_cwidth" class="customcssfx57yes"/>
 				<hbox class="ctraddonsuboption"  id="ctraddon_pw_os_spsize_box" align="center">
 				  <label value="&Ctr_tabminwidth; "/>
@@ -1906,6 +1906,7 @@
   
   <popupset>
 	<menupopup id="ctr_pw_addonsPopup" position="before_end">
+		<menuitem class="menuitem-iconic" label="CustomCSSforFx / Firefox Photon (Github)" id="ctraddon_ctb" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://github.com/Aris-t2/CustomCSSforFx/'); };"/>
 		<menuitem class="menuitem-iconic" label="Classic Toolbar Buttons" id="ctraddon_ctb" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://addons.mozilla.org/addon/cstbb/versions/'); };"/>
 		<menuitem class="menuitem-iconic" label="CustomizeMyBird" id="ctraddon_newversion2" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://addons.mozilla.org/addon/customizemybird/'); };"/>
 	</menupopup>

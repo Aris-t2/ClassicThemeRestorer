@@ -104,6 +104,12 @@
 			border-color: Highlight !important;
 		  }
 		}
+		#main-window[defaultfxtheme="true"] #urlbar,
+		#main-window[defaultfxtheme="true"] .searchbar-textbox,
+		#main-window[defaultfxtheme="true"] #urlbar:not(:-moz-lwtheme)[focused],
+		#main-window[defaultfxtheme="true"] .searchbar-textbox:not(:-moz-lwtheme)[focused] {
+		  box-shadow: unset !important;
+		}
 	}
 	/* END: urlbar border tweaking (default theme does not provide left urlbar border) */
 
