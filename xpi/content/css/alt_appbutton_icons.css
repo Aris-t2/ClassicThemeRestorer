@@ -5,4 +5,10 @@
 	#ctraddon_appbutton > .toolbarbutton-icon {
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton2.png") !important;
 	}
+	
+	@media (min-resolution: 1.1dppx) {
+		#ctraddon_appbutton > .toolbarbutton-icon {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton2_32.png") !important;
+		}
+	}
 }

@@ -150,6 +150,13 @@
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton.png");
 	}
 	
+	@media (min-resolution: 1.1dppx) {
+		#ctraddon_appbutton > .toolbarbutton-icon {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton_32.png");
+		  width: 40px !important;
+		}
+	}
+	
 	#nav-bar #ctraddon_appbutton > .toolbarbutton-icon{
 	  margin-left: -3px;
 	  margin-right: -3px;

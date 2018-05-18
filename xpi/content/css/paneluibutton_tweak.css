@@ -29,6 +29,13 @@
 	  -moz-image-region: rect(0, 26px, 18px, 0px) !important;
 	  width: 26px !important;
 	}
+	
+	@media (min-resolution: 1.1dppx) {
+		#TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button .toolbarbutton-icon {
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/appbutton_32.png") !important;
+		  -moz-image-region: rect(0, 52px, 36px, 0px) !important;
+		}
+	}
 
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button:hover:active,
 	#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) ~ #TabsToolbar #ctraddon_panelui-button #PanelUI-menu-button[open]{

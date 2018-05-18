@@ -662,8 +662,37 @@
           }
         ]]></body>
       </method>
+	  
+      <method name="openSearch">
+        <body>
+          <![CDATA[
+            // Don't open search popup if history popup is open
+            if (!this.popupOpen) {
+              let searchBox = document.getBindingParent(this);
+              searchBox.searchButton.open = true;
+              return false;
+            }
+            return true;
+          ]]>
+        </body>
+      </method>
 
 	</implementation>
+	
+    <handlers>
+      <handler event="keypress" keycode="VK_DOWN" modifiers="alt"
+               phase="capturing"
+               action="return this.openSearch();"/>
+
+      <handler event="keypress" keycode="VK_UP" modifiers="alt"
+               phase="capturing"
+               action="return this.openSearch();"/>
+
+      <handler event="keypress" keycode="VK_F4"
+               phase="capturing"
+               action="return this.openSearch();"/>
+
+    </handlers>
 
   </binding>
 
