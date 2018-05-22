@@ -244,7 +244,7 @@
 <!ENTITY Ctr_anewtaburl		"新标签页地址">
 <!ENTITY Ctr_anewtaburlcb	"自定义新标签页地址 (默认: 'about:newtab')">
 <!ENTITY Ctr_anewtaburlpcb	"自定义新隐私标签页地址(默认: 'about:privatebrowsing')">
-<!ENTITY Ctr_anewtaburlpf	"Focus location bar after loading">
+<!ENTITY Ctr_anewtaburlpf	"加载后聚焦到地址栏">
 
 <!ENTITY Ctr_tab_tf_info1	"可支持颜色名称, hex值, rgb(a) 以及 hsl(a) 值。">
 <!ENTITY Ctr_tab_tf_info2	"输入值不会进行校验！">
@@ -437,12 +437,12 @@
 <!ENTITY Ctr_addon-bar.accesskey		"A">
 <!ENTITY appMenuGettingStarted.label	"开始使用">
 <!ENTITY goCmd.label					"转到">
-<!ENTITY Ctr_showfx57pcomp				"Emphasize 'Firefox 57+' compatible CTR options">
-<!ENTITY Ctr_showfx57pcomp1				"Green - possible with userChrome.css or userContent.css">
-<!ENTITY Ctr_showfx57pcomp2				"Blue - possible by default">
-<!ENTITY Ctr_showfx57pcomp3				"Yellow - possible with WebExtensions">
-<!ENTITY Ctr_showfx57pcomp4				"Orange - not needed anymore">
-<!ENTITY Ctr_showfx57pcomp5				"Red - not possible anymore">
+<!ENTITY Ctr_showfx57pcomp				"强调 'Firefox 57+' 兼容的 CTR 选项">
+<!ENTITY Ctr_showfx57pcomp1				"绿色 - 以 userChrome.css 或 userContent.css 方式可用">
+<!ENTITY Ctr_showfx57pcomp2				"蓝色 - 默认可用">
+<!ENTITY Ctr_showfx57pcomp3				"黄色 - WebExtensions 可用">
+<!ENTITY Ctr_showfx57pcomp4				"橙色 - 不再需要">
+<!ENTITY Ctr_showfx57pcomp5				"红色 - 不可用">
 <!ENTITY Ctr_menu_restart.label			"重启">
 <!ENTITY Ctr_restartapp					"在应用菜单和文件菜单中显示“重启”">
 <!ENTITY Ctr_restartapp2				"在面板菜单中显示“重启”">
@@ -456,8 +456,8 @@
 <!ENTITY Ctr_openInNewWindow			"在新窗口打开输入">
 
 <!-- Old search default browser labels -->
-<!ENTITY Ctr_engineManager_label		"Manage Search Engines...">
-<!ENTITY Ctr_searchEndCap_label			"Search">
+<!ENTITY Ctr_engineManager_label		"管理搜索引擎...">
+<!ENTITY Ctr_searchEndCap_label			"搜索">
 
 <!-- For page context entries. Have to be adjusted for every locale! -->
 <!ENTITY backCmd.accesskey				"B">
