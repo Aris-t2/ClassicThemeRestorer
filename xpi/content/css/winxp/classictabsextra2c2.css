@@ -95,6 +95,46 @@
 	  padding: 0px !important;
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/close.png") !important;
 	}
+	
+	@media (min-resolution: 1.1dppx) {
+		#ctraddon_tabs-closebutton{
+		  -moz-image-region: rect(0, 32px, 32px, 0) !important;
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/close@2x.png") !important;
+		}
+		#ctraddon_tabs-closebutton:hover{
+		  -moz-image-region: rect(0, 64px, 32px, 32px) !important;
+		}
+		#ctraddon_tabs-closebutton:hover:active {
+		  -moz-image-region: rect(0, 96px, 32px, 64px) !important;
+		}
+		
+		.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button {
+		  -moz-image-region: rect(0, 128px, 32px, 96px) !important;
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/close@2x.png") !important;
+		}
+		
+		.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button:hover,
+		.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button:hover[selected="true"] {
+		  -moz-image-region: rect(0, 64px, 32px, 32px) !important;
+		}
+		
+		.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button:hover:active,
+		.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button:hover:active[selected="true"] {
+		  -moz-image-region: rect(0, 96px, 32px, 64px) !important;
+		}
+		
+		.tabbrowser-tab:not([pinned]):not([protected]):not([autoReload]) .tab-close-button[selected="true"] {
+		  -moz-image-region: rect(0, 32px, 32px, 0) !important;
+		}
+		
+		/*TabUtilities autoreload extra*/
+		.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover,
+		.tabbrowser-tab:not([pinned]):not([protected])[autoReload] .tab-close-button:hover[selected="true"] {
+		  -moz-image-region: rect(0, 64px, 32px, 32px) !important;
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/close@2x.png") !important;
+		}
+		
+	}
 
 	.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
 	  -moz-padding-start: 3px !important;

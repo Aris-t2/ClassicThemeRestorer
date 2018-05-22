@@ -8,6 +8,15 @@
 	#ctraddon_bookmarks-button:-moz-lwtheme-brighttext{
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks-inv.png");
 	}
+	
+	@media (min-resolution: 1.1dppx) {
+		#ctraddon_bookmarks-menu-toolbar-button:not(:-moz-lwtheme) .toolbarbutton-icon,
+		#ctraddon_bookmarks-button:not(:-moz-lwtheme) .toolbarbutton-icon{
+		  -moz-image-region: rect(0px, 32px, 32px, 0);
+		  list-style-image: url(chrome://classic_theme_restorer/content/images/bookmarks_menu.png);
+		  width: 16px !important;
+		}
+	}
 
 	/* fallback images for non-default theme */
 	#ctraddon_history-menu-toolbar-button,
@@ -222,6 +231,16 @@
 	}
 	#appmenu-popup #appmenu_addons{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons.png");
+	}
+	@media (min-resolution: 1.1dppx) {
+		#appmenu-popup #appmenu_newPrivateWindow{
+		  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_private@2x.png");
+		  width: 16px !important;
+		}
+		#appmenu-popup #appmenu_addons{
+		  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons@2x.png");
+		  width: 16px !important;
+		}
 	}
 
 	#main-window[defaultfxtheme="true"] #appmenuPrimaryPane {
@@ -456,6 +475,27 @@
 
 	#ctraddon_addon-bar #ctraddon_addonbar-close[selected="true"] {
 	  -moz-image-region: rect(0, 16px, 16px, 0);
+	}
+	
+	@media (min-resolution: 1.1dppx) {
+		#ctraddon_addon-bar:not(:-moz-lwtheme) #ctraddon_addonbar-close {
+		  -moz-image-region: rect(0, 128px, 32px, 96px);
+		  list-style-image: url("chrome://classic_theme_restorer/content/images/close@2x.png");
+		}
+		
+		#ctraddon_addon-bar:not(:-moz-lwtheme) #ctraddon_addonbar-close:hover,
+		#ctraddon_addon-bar:not(:-moz-lwtheme) #ctraddon_addonbar-close:hover[selected="true"] {
+		  -moz-image-region: rect(0, 64px, 32px, 32px);
+		}
+
+		#ctraddon_addon-bar:not(:-moz-lwtheme) #ctraddon_addonbar-close:hover:active,
+		#ctraddon_addon-bar:not(:-moz-lwtheme) #ctraddon_addonbar-close:hover:active[selected="true"] {
+		  -moz-image-region: rect(0, 96px, 32px, 64px);
+		}
+
+		#ctraddon_addon-bar:not(:-moz-lwtheme) #ctraddon_addonbar-close[selected="true"] {
+		  -moz-image-region: rect(0, 32px, 32px, 0);
+		}
 	}
 	
 	/* fix recent icon stretching*/

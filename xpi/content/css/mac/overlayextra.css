@@ -258,6 +258,16 @@
 	#appmenu-popup #appmenu_addons{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons.png");
 	}
+	@media (min-resolution: 1.1dppx) {
+		#appmenu-popup #appmenu_newPrivateWindow{
+		  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_private@2x.png");
+		  width: 16px !important;
+		}
+		#appmenu-popup #appmenu_addons{
+		  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons@2x.png");
+		  width: 16px !important;
+		}
+	}
 
 	#main-window[defaultfxtheme="true"] #appmenu-popup #appmenu-editmenu,
 	#main-window[defaultfxtheme="true"] #appmenu-popup #appmenu-editmenu .menu-right{

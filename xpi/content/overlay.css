@@ -222,11 +222,67 @@
 	#appmenu-popup #ctraddon_appmenu_ctr2{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_ctr.png");
 	}
-	
+
 	#ctraddon_PanelUI-CTR-restartbutton,
 	#menu_FilePopup #ctraddon_restart-menu,
 	#appmenu-popup #ctraddon_restart-appmenu{
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_restart.png");
+	}
+	
+	@media (min-resolution: 1.1dppx) {
+		#appmenu-popup #appmenu_print_popup,
+		#appmenu-popup #appmenu_print{
+		  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_print@2x.png");
+		  width: 16px !important;
+		  height: 16px !important;
+		}
+		#appmenu-popup #appmenu-quit{
+		  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_close@2x.png");
+		  width: 16px !important;
+		  height: 16px !important;
+		}
+		#appmenu-popup #appmenu_bookmarks{
+		  list-style-image:url("chrome://classic_theme_restorer/content/images/starred48.png");
+		  width: 16px !important;
+		  height: 16px !important;
+		}		
+		#appmenu-popup #appmenu-editmenu-cut,
+		#appmenu-popup #appmenu-cut .toolbarbutton-icon{
+		  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_cut@2x.png");
+		  width: 16px !important;
+		  height: 16px !important;
+		}
+		#appmenu-popup #appmenu-editmenu-copy,
+		#appmenu-popup #appmenu-copy .toolbarbutton-icon{
+		  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_copy@2x.png");
+		  width: 16px !important;
+		  height: 16px !important;
+		}
+		#appmenu-popup #appmenu-editmenu-paste,
+		#appmenu-popup #appmenu-paste .toolbarbutton-icon{
+		  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_paste@2x.png");
+		  width: 16px !important;
+		  height: 16px !important;;
+		}
+		
+		#ctraddon_ctr-button .toolbarbutton-icon,
+		#ctraddon_PanelUI-CTR-button .toolbarbutton-icon,
+		#ctraddon_context_menu_entry,
+		#ctraddon_tools_menu_entry,
+		#appmenu-popup #ctraddon_appmenu_ctr,
+		#appmenu-popup #ctraddon_appmenu_ctr2{
+		  list-style-image:url("chrome://classic_theme_restorer/content/images/palette_ctr.png");
+		  width: 16px !important;
+		  height: 16px !important;
+		}
+
+		#ctraddon_PanelUI-CTR-restartbutton .toolbarbutton-icon,
+		#menu_FilePopup #ctraddon_restart-menu,
+		#appmenu-popup #ctraddon_restart-appmenu{
+		  list-style-image:url("chrome://classic_theme_restorer/content/images/ctrrestart@2x.png");
+		  width: 16px !important;
+		  height: 16px !important;
+		}
 	}
 
 	#appmenu-edit-label,

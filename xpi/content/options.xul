@@ -1894,11 +1894,12 @@
   <popupset>
 	<menupopup id="ctr_pw_supportPopup" position="before_end">
 		<menuitem class="menuitem-iconic" label="&Ctr_newversion;" id="ctraddon_newversion" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://addons.mozilla.org/addon/classicthemerestorer/versions/'); };"/>
-		<menuitem class="menuitem-iconic" label="&Ctr_newversion2;" id="ctraddon_newversion2" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://addons.mozilla.org/addon/classicthemerestorer/versions/beta'); };"/>
+		<menuitem class="menuitem-iconic" label="&Ctr_newversion; (Github)" id="ctraddon_newversion" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://github.com/Aris-t2/ClassicThemeRestorer/releases/'); };"/>
 		<menuseparator/>
 		<menuitem class="menuitem-iconic" label="&Ctr_support_forum1;" id="ctr_pw_support_forum1" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('http://forums.mozillazine.org/viewtopic.php?t=2827985'); };"/>
 		<menuitem class="menuitem-iconic" label="&Ctr_support_forum2;" id="ctr_pw_support_forum2" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://www.camp-firefox.de/forum/viewtopic.php?t=108235'); };"/>
 		<menuitem class="menuitem-iconic" label="&Ctr_github_issues;" id="ctr_pw_support_git" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://github.com/Aris-t2/ClassicThemeRestorer/issues/320');};"/>
+		<menuitem class="menuitem-iconic" label="Github" id="ctr_pw_support_github" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://github.com/Aris-t2/ClassicThemeRestorer/');};"/>
 		<menuseparator/>
 		<menuitem class="menuitem-iconic" label="aris-addons [@] gmx [.] net" id="ctr_pw_em_con"/>
 	</menupopup>
