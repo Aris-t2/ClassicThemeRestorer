@@ -5,7 +5,7 @@
 	<Description rdf:about="urn:mozilla:install-manifest">
 		<em:id>ClassicThemeRestorer@ArisT2Noia4dev</em:id>
 		<em:name>Classic Theme Restorer</em:name>
-		<em:version>1.7.6</em:version>
+		<em:version>1.7.6.1</em:version>
 		<em:type>2</em:type>
 		<em:multiprocessCompatible>true</em:multiprocessCompatible>
 
@@ -19,7 +19,7 @@
 			</Description>
 		</em:targetApplication>
 		
-		<em:updateURL>https://raw.githubusercontent.com/Aris-t2/ClassicThemeRestorer/master/updates.json</em:updateURL>
+		<em:updateURL>https://raw.githubusercontent.com/Aris-t2/ClassicThemeRestorer/master/updates.rdf</em:updateURL>
 
 		<em:description>'Classic Theme Restorer' restores many customization features Firefox lost over time like old 'Firefox'-button, squared tabs, add-ons bar, small navigation bar buttons, old search, old preference window, old location bar menu, eye-friendly add-ons manager, old buttons and many more.</em:description>
 		<em:homepageURL>https://github.com/Aris-t2/ClassicThemeRestorer/</em:homepageURL>

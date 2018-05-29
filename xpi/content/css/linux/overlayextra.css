@@ -9,15 +9,6 @@
 	  list-style-image: url("chrome://classic_theme_restorer/content/images/bookmarks-inv.png");
 	}
 	
-	@media (min-resolution: 1.1dppx) {
-		#ctraddon_bookmarks-menu-toolbar-button:not(:-moz-lwtheme) .toolbarbutton-icon,
-		#ctraddon_bookmarks-button:not(:-moz-lwtheme) .toolbarbutton-icon{
-		  -moz-image-region: rect(0px, 32px, 32px, 0);
-		  list-style-image: url(chrome://classic_theme_restorer/content/images/bookmarks_menu.png);
-		  width: 16px !important;
-		}
-	}
-
 	/* fallback images for non-default theme */
 	#ctraddon_history-menu-toolbar-button,
 	#ctraddon_history-button {

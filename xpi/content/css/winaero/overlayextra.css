@@ -12,12 +12,12 @@
 	@media (min-resolution: 1.1dppx) {
 		#ctraddon_bookmarks-menu-toolbar-button:not(:-moz-lwtheme) .toolbarbutton-icon,
 		#ctraddon_bookmarks-button:not(:-moz-lwtheme) .toolbarbutton-icon{
-		  -moz-image-region: rect(0px, 32px, 32px, 0);
-		  list-style-image: url(chrome://classic_theme_restorer/content/images/bookmarks_menu.png);
+		  -moz-image-region: rect(0px, 32px, 32px, 0) !important;
+		  list-style-image: url(chrome://classic_theme_restorer/content/images/bookmarks_menu.png) !important;
 		  width: 16px !important;
 		}
 	}
-
+	
 	/* fallback images for non-default theme */
 	#ctraddon_history-menu-toolbar-button,
 	#ctraddon_history-button {
@@ -127,13 +127,13 @@
 		  list-style-image: url("chrome://classic_theme_restorer/content/images/ctrrestart@2x.png");
 		}
 
-		#main-window[defaultfxtheme="true"] #nav-bar :-moz-any(#ctraddon_history-button,/*#ctraddon_history-menu-toolbar-button,*/#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button,#ctraddon_preferences-button,#ctraddon_restart-button) .toolbarbutton-icon {
+		#main-window[defaultfxtheme="true"] #nav-bar :-moz-any(#ctraddon_history-button,/*#ctraddon_history-menu-toolbar-button,*/#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button,#ctraddon_preferences-button,#ctraddon_restart-button,#ctraddon_bookmarks-button) .toolbarbutton-icon {
 		  width: 32px !important;
 		}
-		#main-window[defaultfxtheme="true"] #nav-bar #ctraddon_history-menu-toolbar-button .toolbarbutton-icon {
+		#main-window[defaultfxtheme="true"] #nav-bar :-moz-any(#ctraddon_history-menu-toolbar-button,#ctraddon_bookmarks-menu-toolbar-button) .toolbarbutton-icon {
 		  width: 40px !important;
 		}
-		#main-window[defaultfxtheme="true"] toolbar:not(#nav-bar) :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button,#ctraddon_preferences-button,#ctraddon_restart-button) .toolbarbutton-icon {
+		#main-window[defaultfxtheme="true"] toolbar:not(#nav-bar) :-moz-any(#ctraddon_history-button,#ctraddon_history-menu-toolbar-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_go-button,#ctraddon_preferences-button,#ctraddon_restart-button,#ctraddon_bookmarks-menu-toolbar-button,#ctraddon_bookmarks-button) .toolbarbutton-icon {
 		  width: 18px !important;
 		  height: 18px !important;
 		}
@@ -532,3 +532,5 @@
 	#main-window[tabsintitlebar][customizing="true"] :-moz-any(#toolbar-menubar,#TabsToolbar):-moz-any([currentset*="customizableui-special-spring"],[currentset*="customizableui-special-separator"],[currentset*="customizableui-special-spacer"]){
 	  -moz-window-dragging: no-drag !important;
 	}
+	
+
