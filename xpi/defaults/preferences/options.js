@@ -268,7 +268,7 @@ pref("extensions.classicthemerestorer.cuibuttons",true);
 pref("extensions.classicthemerestorer.nodevtheme2",false);
 pref("extensions.classicthemerestorer.restartapp",true);
 pref("extensions.classicthemerestorer.restartapp2",false);
-pref("extensions.classicthemerestorer.showfx57pcomp",true);
+pref("extensions.classicthemerestorer.showfx57pcomp",false);
 pref("extensions.classicthemerestorer.ctrnewinv",true);
 pref("extensions.classicthemerestorer.contextfind",false);
 pref("extensions.classicthemerestorer.pw_actidx_c",1);

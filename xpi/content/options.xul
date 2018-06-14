@@ -1166,7 +1166,7 @@
 				<checkbox label="&Ctr_chevronfix;"		preference="ctraddon_chevronfix" class="customcssfx57d"/>
 				<checkbox label="&Ctr_hideprivmask;"	preference="ctraddon_hideprivmask" id="ctraddon_pw_hideprivmask" class="customcssfx57yes"/>
 				<checkbox label="&Ctr_hidesbclose;"		preference="ctraddon_hidesbclose" class="customcssfx57yes"/>
-				<checkbox label="&Ctr_closeabarbut;"	preference="ctraddon_closeabarbut" class="customcssfx57no"/>
+				<checkbox label="&Ctr_closeabarbut;"	preference="ctraddon_closeabarbut" class="customcssfx57nn"/>
 				<checkbox label="&Ctr_pmhidelabels;"	preference="ctraddon_pmhidelabels" id="ctraddon_pw_pmhidelabels" class="customcssfx57nn"/>
 				<checkbox label="&Ctr_hidezoomres;"		preference="ctraddon_hidezoomres" class="customcssfx57yes"/>
 				<checkbox label="&Ctr_noresizerxp;"		preference="ctraddon_noresizerxp" id="ctraddon_pw_noresizerxp" class="customcssfx57no"/>
@@ -1688,10 +1688,10 @@
 
 			  <groupbox>
 				<caption  label="&Ctr_addonbar;" class="ctraddon_topic"/>
-				<checkbox label="&Ctr_addonbarfs;"		preference="ctraddon_addonbarfs" class="customcssfx57no"/>
+				<checkbox label="&Ctr_addonbarfs;"		preference="ctraddon_addonbarfs" class="customcssfx57nn"/>
 				<hbox>
-				  <checkbox label="&Ctr_highaddonsbar;"	preference="ctraddon_highaddonsbar" class="customcssfx57no"/>
-				  <checkbox label="&Ctr_lessaddonsbar;"	preference="ctraddon_lessaddonsbar" class="customcssfx57no"/>
+				  <checkbox label="&Ctr_highaddonsbar;"	preference="ctraddon_highaddonsbar" class="customcssfx57nn"/>
+				  <checkbox label="&Ctr_lessaddonsbar;"	preference="ctraddon_lessaddonsbar" class="customcssfx57nn"/>
 				  <spacer flex="1"/>
 				</hbox>
 			  </groupbox>
@@ -1733,7 +1733,7 @@
 				<checkbox label="&Ctr_navbar;: &Ctr_nonavbarbg;" preference="ctraddon_nonavbarbg" id="ctraddon_pw_nonavbarbg" class="customcssfx57yes"/>
 				<description id="ctraddon_pw_nonavbarbg1" class="ctraddonsuboption">&Ctr_nonavbarbg1;</description>
 				<description id="ctraddon_pw_nonavbarbg2" class="ctraddonsuboption">&Ctr_nonavbarbg2;</description>
-				<checkbox label="&Ctr_addonbar;: &Ctr_notabbg;"	 preference="ctraddon_noaddonbarbg" id="ctraddon_pw_noaddonbarbg" class="customcssfx57no"/>
+				<checkbox label="&Ctr_addonbar;: &Ctr_notabbg;"	 preference="ctraddon_noaddonbarbg" id="ctraddon_pw_noaddonbarbg" class="customcssfx57nn"/>
 			  </groupbox>
 
 		  </tabpanel>
@@ -1919,7 +1919,7 @@
 	<spacer flex="1" />
 	<image src="chrome://classic_theme_restorer/content/images/extraulbar_go.png"/>
 	<button id="ctraddon_button_fx57" label="Firefox 57+" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://github.com/Aris-t2/CustomCSSforFx/issues/2'); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://github.com/Aris-t2/ClassicThemeRestorer/issues/299'); };"/>
-	<button id="ctraddon_button_wf" label="Firefox 52ESR / Basilisk / Waterfox" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('http://www.basilisk-browser.org/'); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://www.waterfoxproject.org/'); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://www.mozilla.org/en-US/firefox/organizations/all/');};"/>
+	<button id="ctraddon_button_wf" label="Basilisk / Waterfox" onclick="if(event.button == 0) { window.close(); classicthemerestorerjso.ctr.openNewTabLinkFromPW('http://www.basilisk-browser.org/'); classicthemerestorerjso.ctr.openNewTabLinkFromPW('https://www.waterfoxproject.org/'); };"/>
 	<image src="chrome://classic_theme_restorer/content/images/extraulbar_go.png" id="ctr_pw_button_arrow_right"/>
 	<spacer flex="1" />
 	<button label="&Ctr_support;" id="ctraddon_support"  popup="ctr_pw_supportPopup"/>
