@@ -171,7 +171,7 @@
 	#navigator-toolbox #nav-bar .toolbarbutton-menubutton-dropmarker > image,
 	#navigator-toolbox #nav-bar toolbarbutton[type="menu-button"]:not([id="tiletabs-buttonmenu"]) > .toolbarbutton-menubutton-button .toolbarbutton-icon,
 	#navigator-toolbox #nav-bar toolbarbutton[type="menu-button"] > .toolbarbutton-icon,
-	#navigator-toolbox #nav-bar .toolbarbutton-1:-moz-any(:hover ,[checked],[open],[type="menu-button"]) > .toolbarbutton-icon,
+	#navigator-toolbox #nav-bar .toolbarbutton-1:not(#restman-button):-moz-any(:hover ,[checked],[open],[type="menu-button"]) > .toolbarbutton-icon,
 	#navigator-toolbox #nav-bar .toolbarbutton-1[type="menu-button"] > .toolbarbutton-menubutton-dropmarker::before{
 	  -moz-appearance: none !important;
 	  background: none !important;
