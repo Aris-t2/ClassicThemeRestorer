@@ -2,14 +2,7 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	/* Firefox 45+ */
-	#urlbar[pageproxystate="valid"] .verifiedDomain #connection-icon,
-	#urlbar[pageproxystate="valid"] .verifiedIdentity #connection-icon,
-	#urlbar[pageproxystate="valid"] .insecureLoginForms #connection-icon,
-	#urlbar[pageproxystate="valid"] .mixedActiveContent #connection-icon,
-	#urlbar[pageproxystate="valid"] .weakCipher #connection-icon,
-	#urlbar[pageproxystate="valid"] .mixedDisplayContent #connection-icon,
-	#urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked #connection-icon,
-	#urlbar[pageproxystate="valid"] .mixedActiveBlocked #connection-icon {
+	#urlbar[pageproxystate="valid"] :-moz-any(.verifiedDomain,.verifiedIdentity,.insecureLoginForms,.mixedActiveContent,.notSecure,.weakCipher,.mixedDisplayContent,.mixedDisplayContentLoadedActiveBlocked,.mixedActiveBlocked,.certUserOverridden) #connection-icon {
 	  display: none !important;	
 	}
 

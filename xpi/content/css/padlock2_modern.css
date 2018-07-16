@@ -2,21 +2,17 @@
 @-moz-document url(chrome://browser/content/browser.xul) {
 
 	/* Firefox 45+ */
-	#urlbar[pageproxystate="valid"] .verifiedDomain #connection-icon,
-	#urlbar[pageproxystate="valid"] .verifiedIdentity #connection-icon {
+	#urlbar[pageproxystate="valid"] :-moz-any(.verifiedDomain,.verifiedIdentity) #connection-icon {
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/padlock_modern.png) !important;
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	}
 	
-	#urlbar[pageproxystate="valid"] .insecureLoginForms #connection-icon,
-	#urlbar[pageproxystate="valid"] .mixedActiveContent #connection-icon {
+	#urlbar[pageproxystate="valid"] :-moz-any(.insecureLoginForms,.mixedActiveContent,.notSecure) #connection-icon {
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/padlock_modern_mal.png) !important;
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	}
 
-	#urlbar[pageproxystate="valid"] .weakCipher #connection-icon,
-	#urlbar[pageproxystate="valid"] .mixedDisplayContent #connection-icon,
-	#urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked #connection-icon {
+	#urlbar[pageproxystate="valid"] :-moz-any(.weakCipher,.mixedDisplayContent,.mixedDisplayContentLoadedActiveBlocked,.certUserOverridden) #connection-icon {
 	  list-style-image: url(chrome://classic_theme_restorer/content/images/padlock_modern_mpl.png) !important;
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	}
@@ -26,14 +22,7 @@
 	  -moz-image-region: rect(0, 16px, 16px, 0) !important;
 	}
 
-	#main-window:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .verifiedDomain #connection-icon,
-	#main-window:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .verifiedIdentity #connection-icon,
-	#main-window:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .insecureLoginForms #connection-icon,
-	#main-window:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .mixedActiveContent #connection-icon,
-	#main-window:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .weakCipher #connection-icon,
-	#main-window:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .mixedDisplayContent #connection-icon,
-	#main-window:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .mixedDisplayContentLoadedActiveBlocked #connection-icon,
-	#main-window:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] .mixedActiveBlocked #connection-icon{
+	#main-window:not([defaultfxtheme="true"]) #urlbar[pageproxystate="valid"] :-moz-any(.verifiedDomain,.verifiedIdentity,.insecureLoginForms,.mixedActiveContent,.notSecure,.weakCipher,.mixedDisplayContent,.mixedDisplayContentLoadedActiveBlocked,.mixedActiveBlocked,.certUserOverridden) #connection-icon {
 	  width: 16px !important;
 	}
 	
