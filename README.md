@@ -1,4 +1,4 @@
-<b>Classic Theme Restorers AMO website: https://addons.mozilla.org/addon/classicthemerestorer/ </b>
+<b>What happened to my legacy add-ons on AMO and where to get them now? https://github.com/Aris-t2/ClassicThemeRestorer/releases/tag/1.7.7.3 </b>
 
 <b>Users of Debian 9 or later and Ubuntu 16.04 or later: `apt-get install xul-ext-classic-theme-restorer`</b>
 
