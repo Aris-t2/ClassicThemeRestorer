@@ -3,7 +3,7 @@
 	
 	/* Firefox 45+ */
 	
-	#urlbar[pageproxystate="valid"] .:-moz-any(.verifiedDomain,.verifiedIdentity,.insecureLoginForms,.mixedActiveContent,.notSecure,.weakCipher,.mixedDisplayContent,.mixedDisplayContentLoadedActiveBlocked,.mixedActiveBlocked,.certUserOverridden) #connection-icon {
+	#urlbar[pageproxystate="valid"] :-moz-any(.verifiedDomain,.verifiedIdentity,.insecureLoginForms,.mixedActiveContent,.notSecure,.weakCipher,.mixedDisplayContent,.mixedDisplayContentLoadedActiveBlocked,.mixedActiveBlocked,.certUserOverridden) #connection-icon {
 	  display: none !important;	
 	}
 
