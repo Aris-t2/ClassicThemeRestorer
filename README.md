@@ -1,6 +1,8 @@
-<b><a href=https://github.com/Aris-t2/ClassicThemeRestorer/releases/tag/1.7.7.3>What happened to my legacy add-ons on AMO and where to get them now?</a></b>
+<b><a href=https://github.com/Aris-t2/ClassicThemeRestorer/releases/tag/1.7.7.3>What happened to my legacy add-ons on AMO and where to get them now?</a></b> 
 
-<b>Users of Debian 9 or later and Ubuntu 16.04 or later: `apt-get install xul-ext-classic-theme-restorer`</b>
+<b>Classic Theme Restorer supports Firefox 45-56, Waterfox and Basilisk browsers.</b> 
+
+<b>Users of Debian 9 or later and Ubuntu 16.04 or later: `apt-get install xul-ext-classic-theme-restorer`</b> 
 
 This add-on restores squared tabs, the application button with application menu (known from Firefox for Windows), the add-on bar, bookmarks/history menu/sidebar buttons and other buttons. It moves star & feed buttons into location bar, adds status bar element to the ui and allows many items to be movable. All features are fully optional. Some buttons have to be moved to toolbars manually using browsers 'customizing' mode.
 
