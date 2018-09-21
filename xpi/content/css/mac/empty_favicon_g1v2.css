@@ -131,6 +131,11 @@
 	list-style-image: url("chrome://classic_theme_restorer/content/images/Toolbar.png") !important;
 	-moz-image-region: rect(0, 180px, 18px, 162px) !important;
   }
+  
+  treechildren::-moz-tree-image(query, OrganizerQuery_History) {
+	list-style-image: url("chrome://browser/skin/places/calendar.png") !important;
+	-moz-image-region: auto !important;
+  }
 
   treechildren::-moz-tree-image(title, query, folder) {
 	list-style-image: url("chrome://classic_theme_restorer/content/images/folder_mac.png") !important;
