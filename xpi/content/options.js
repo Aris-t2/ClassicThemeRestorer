@@ -639,6 +639,14 @@ classicthemerestorerjso.ctr = {
 			  document.getElementById('ctraddon_cappbutcbox_desc').style.visibility = 'collapse';
 			}
 		  break;
+		  
+		  case "ibinfoico2":
+		    if(branch.getBoolPref("ibinfoico2")) {
+			  document.getElementById('ctraddon_pw_icopageinfo').disabled = true;
+			} else {
+			  document.getElementById('ctraddon_pw_icopageinfo').disabled = false;
+			}
+		  break;
 
 		}
 	  }

@@ -1189,6 +1189,7 @@
 				<caption  label="&Ctr_ui;" class="ctraddon_topic"/>
 
 				<description class="ctraddon_font1" id="ctraddon_pw_emptyfavico_gdesc">&Ctr_emptygfavico;</description>
+				
 				<radiogroup preference="ctraddon_emptyfavico_g" id="ctraddon_pw_emptyfavico_g" orient="horizontal" value="">
 					<radio value="emptyfavico_g_def"	label="&Ctr_tabwidthdef;" id="ctraddon_emptyfavico_g_def"/>
 					<radio value="emptyfavico_g_def2"	label=""	id="ctraddon_emptyfavico_g_def2"/>
@@ -1196,6 +1197,8 @@
 					<radio value="emptyfavico_g_dot2"	label=""	id="ctraddon_emptyfavico_g_dot2"/>
 					<radio value="emptyfavico_g_sheet"	label=""	id="ctraddon_emptyfavico_g_sheet"/>
 				</radiogroup>
+				<description class="ctraddon_font1" id="ctraddon_pw_emptyfavico_gdesc2">&Ctr_emptygfavicon;</description>
+				<description> </description>
 
 				<description class="ctraddon_font1">&Ctr_closegeneral;</description>
 				<radiogroup preference="ctraddon_closeicong" id="ctraddon_pw_closeicong" class="customcssfx57yes" orient="horizontal" value="">
@@ -1388,9 +1391,9 @@
 
 				<checkbox label="&Ctr_faviconurl;"		preference="ctraddon_faviconurl" class="customcssfx57no" oncommand="if(this.checked) {classicthemerestorerjso.ctr.ctrpwFaviconextra(true);} else {classicthemerestorerjso.ctr.ctrpwFaviconextra(false);} classicthemerestorerjso.ctr.needsBrowserRestart()"/>
 				<checkbox label="&Ctr_padlock_ext;"		preference="ctraddon_padlockex" id="ctraddon_padlock_extra" class="customcssfx57no"/>
-				<checkbox label="&Ctr_icopageinfo;"		preference="ctraddon_icopageinfo" id="ctraddon_pw_icopageinfo" class="customcssfx57no"/>
 				<checkbox label="&Ctr_ibinfoico;"		preference="ctraddon_ibinfoico" id="ctraddon_pw_ibinfoico" class="customcssfx57yes"/>
 				<checkbox label="&Ctr_ibinfoico2;"		preference="ctraddon_ibinfoico2" id="ctraddon_pw_ibinfoico2" class="customcssfx57nn"/>
+				<checkbox label="&Ctr_icopageinfo;"		preference="ctraddon_icopageinfo" id="ctraddon_pw_icopageinfo" class="customcssfx57no"/>
 				<checkbox label="&Ctr_iblabels;"		preference="ctraddon_iblabels" id="ctraddon_pw_iblabels" class="customcssfx57yes"/>
 				<checkbox label="&Ctr_ib_nohovcolor;"	preference="ctraddon_ib_nohovcolor" id="ctraddon_pw_ib_nohovcolor" class="customcssfx57nn"/>
 				<checkbox label="&Ctr_ib_graycolor;"	preference="ctraddon_ib_graycolor" id="ctraddon_pw_ib_graycolor" class="customcssfx57yes"/>

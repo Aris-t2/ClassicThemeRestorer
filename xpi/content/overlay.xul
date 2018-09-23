@@ -194,9 +194,9 @@
 	
 	<!--### Add ability to open the 'more page info' window by clicking the icon inside identity box ###-->
 	<image id="page-proxy-favicon"
-	  onclick="if (event.button=='0' &amp;&amp; classicthemerestorerjs.ctr.prefs.getBoolPref('icopageinfo')) {gIdentityHandler.handleMoreInfoClick(event);} else {PageProxyClickHandler(event);}"/>
+	  onclick="if (event.button=='0' &amp;&amp; classicthemerestorerjs.ctr.prefs.getBoolPref('icopageinfo') &amp;&amp; !classicthemerestorerjs.ctr.prefs.getBoolPref('ibinfoico2')) {gIdentityHandler.handleMoreInfoClick(event);} else {PageProxyClickHandler(event);}"/>
 	<image id="identity-icon"
-	  onclick="if (event.button=='0' &amp;&amp; classicthemerestorerjs.ctr.prefs.getBoolPref('icopageinfo')) {gIdentityHandler.handleMoreInfoClick(event);} else {PageProxyClickHandler(event);}"/>
+	  onclick="if (event.button=='0' &amp;&amp; classicthemerestorerjs.ctr.prefs.getBoolPref('icopageinfo') &amp;&amp; !classicthemerestorerjs.ctr.prefs.getBoolPref('ibinfoico2')) {gIdentityHandler.handleMoreInfoClick(event);} else {PageProxyClickHandler(event);}"/>
 	  
 	<button id="customization-reset-button" onclick="if (event.button=='0') classicthemerestorerjs.ctr.resetCTRtoolbarConf();"/>
 

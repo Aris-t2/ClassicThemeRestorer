@@ -608,3 +608,23 @@
 	#main-window[tabsintitlebar][customizing="true"] :-moz-any(#toolbar-menubar,#TabsToolbar):-moz-any([currentset*="customizableui-special-spring"],[currentset*="customizableui-special-separator"],[currentset*="customizableui-special-spacer"]){
 	  -moz-window-dragging: no-drag !important;
 	}
+
+	
+/* fix popup width for hidpi modes */
+@media (min-resolution: 1.25dppx) {
+	
+	#main-window[defaultfxtheme="true"] #appmenuPrimaryPane {
+	  min-width: 200px !important;
+	  width: auto !important;
+	}
+	
+	#main-window[defaultfxtheme="true"] #appmenuSecondaryPane {
+	  min-width: 150px !important;
+	  width: auto !important;
+	}
+
+	#main-window[defaultfxtheme="true"] #appmenuSecondaryPane #appmenu_customizeMenu {
+	  min-width: 200px !important;
+	  width: auto !important;
+	}
+}
