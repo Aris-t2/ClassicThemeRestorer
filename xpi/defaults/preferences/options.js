@@ -215,6 +215,8 @@ pref("extensions.classicthemerestorer.nonavborder",false);
 pref("extensions.classicthemerestorer.nonavtbborder",false);
 pref("extensions.classicthemerestorer.toptb_oldpad",false);
 pref("extensions.classicthemerestorer.hidesbclose",false);
+pref("extensions.classicthemerestorer.comp_sbheader",false);
+pref("extensions.classicthemerestorer.hidesidebardm",false);
 pref("extensions.classicthemerestorer.notextshadow",false);
 pref("extensions.classicthemerestorer.chevronfix",false);
 pref("extensions.classicthemerestorer.tbsep_winc",false);

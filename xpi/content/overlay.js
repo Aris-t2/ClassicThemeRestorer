@@ -2077,6 +2077,16 @@ classicthemerestorerjs.ctr = {
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("hidesbclose",false);
 		  break;
 		  
+		  case "comp_sbheader":
+			if (branch.getBoolPref("comp_sbheader")) classicthemerestorerjs.ctr.loadUnloadCSS("comp_sbheader",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("comp_sbheader",false);
+		  break;
+		  
+		  case "hidesidebardm":
+			if (branch.getBoolPref("hidesidebardm")) classicthemerestorerjs.ctr.loadUnloadCSS("hidesidebardm",true);
+			  else classicthemerestorerjs.ctr.loadUnloadCSS("hidesidebardm",false);
+		  break;
+		  
 		  case "notextshadow":
 			if (branch.getBoolPref("notextshadow")) classicthemerestorerjs.ctr.loadUnloadCSS("notextshadow",true);
 			  else classicthemerestorerjs.ctr.loadUnloadCSS("notextshadow",false);
@@ -4572,6 +4582,8 @@ classicthemerestorerjs.ctr = {
 		case "nonavtbborder": 		manageCSS("nonavtbborder.css");			break;
 		case "toptb_oldpad": 		manageCSS("toptb_oldpadding.css");		break;
 		case "hidesbclose": 		manageCSS("hidesidebarclose.css");		break;
+		case "comp_sbheader": 		manageCSS("compactsidebarheader.css"); 	break;
+		case "hidesidebardm": 		manageCSS("hidesidebardropmarker.css");	break;
 		case "notextshadow": 		manageCSS("notextshadow.css");			break;
 		case "chevronfix": 			manageCSS("chevronfix.css");			break;
 		case "tbsep_winc": 			manageCSS("tbsep_winc.css");			break;

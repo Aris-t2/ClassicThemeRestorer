@@ -137,6 +137,10 @@
 		  width: 18px !important;
 		  height: 18px !important;
 		}
+		#main-window[defaultfxtheme="true"] #nav-bar #ctraddon_ctr-button .toolbarbutton-icon {
+		  width: 32px !important;
+		  height: 23px !important;
+		}
 	}
 	
 	#main-window[defaultfxtheme="true"] #nav-bar #ctraddon_appbutton > .toolbarbutton-icon {
@@ -233,11 +237,11 @@
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons.png");
 	}
 	@media (min-resolution: 1.1dppx) {
-		#appmenu-popup #appmenu_newPrivateWindow{
+		#appmenu-popup #appmenu_newPrivateWindow > .menu-iconic-left > .menu-iconic-icon {
 		  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_private@2x.png");
 		  width: 16px !important;
 		}
-		#appmenu-popup #appmenu_addons{
+		#appmenu-popup #appmenu_addons > .menu-iconic-left > .menu-iconic-icon {
 		  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons@2x.png");
 		  width: 16px !important;
 		}
@@ -608,23 +612,3 @@
 	#main-window[tabsintitlebar][customizing="true"] :-moz-any(#toolbar-menubar,#TabsToolbar):-moz-any([currentset*="customizableui-special-spring"],[currentset*="customizableui-special-separator"],[currentset*="customizableui-special-spacer"]){
 	  -moz-window-dragging: no-drag !important;
 	}
-
-	
-/* fix popup width for hidpi modes */
-@media (min-resolution: 1.25dppx) {
-	
-	#main-window[defaultfxtheme="true"] #appmenuPrimaryPane {
-	  min-width: 200px !important;
-	  width: auto !important;
-	}
-	
-	#main-window[defaultfxtheme="true"] #appmenuSecondaryPane {
-	  min-width: 150px !important;
-	  width: auto !important;
-	}
-
-	#main-window[defaultfxtheme="true"] #appmenuSecondaryPane #appmenu_customizeMenu {
-	  min-width: 200px !important;
-	  width: auto !important;
-	}
-}

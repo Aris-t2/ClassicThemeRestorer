@@ -252,18 +252,18 @@
 	  margin-right: 0px !important;
 	}
 	
-	#appmenu-popup #appmenu_newPrivateWindow{
+	#appmenu-popup #appmenu_newPrivateWindow {
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_private.png");
 	}
-	#appmenu-popup #appmenu_addons{
+	#appmenu-popup #appmenu_addons {
 	  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons.png");
 	}
 	@media (min-resolution: 1.1dppx) {
-		#appmenu-popup #appmenu_newPrivateWindow{
+		#appmenu-popup #appmenu_newPrivateWindow > .menu-iconic-left > .menu-iconic-icon {
 		  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_private@2x.png");
 		  width: 16px !important;
 		}
-		#appmenu-popup #appmenu_addons{
+		#appmenu-popup #appmenu_addons > .menu-iconic-left > .menu-iconic-icon {
 		  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons@2x.png");
 		  width: 16px !important;
 		}

@@ -1,0 +1,12 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+	#sidebar-header,
+	#sidebar-header * {
+	  padding: 0 !important;
+	  margin: 0 !important;
+	  font-size: 12pt !important;
+	}
+
+}

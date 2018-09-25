@@ -281,6 +281,8 @@
 		<preference id="ctraddon_nonavtbborder"	name="extensions.classicthemerestorer.nonavtbborder" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_toptb_oldpad"	name="extensions.classicthemerestorer.toptb_oldpad"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_hidesbclose"	name="extensions.classicthemerestorer.hidesbclose"	 type="bool"	instantApply="true"/>
+		<preference id="ctraddon_comp_sbheader"	name="extensions.classicthemerestorer.comp_sbheader" type="bool"	instantApply="true"/>
+		<preference id="ctraddon_hidesidebardm"	name="extensions.classicthemerestorer.hidesidebardm" type="bool"	instantApply="true"/>
 		<preference id="ctraddon_notextshadow"	name="extensions.classicthemerestorer.notextshadow"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_chevronfix"	name="extensions.classicthemerestorer.chevronfix"	 type="bool"	instantApply="true"/>
 		<preference id="ctraddon_tbsep_winc"	name="extensions.classicthemerestorer.tbsep_winc"	 type="bool"	instantApply="true"/>
@@ -1166,6 +1168,8 @@
 				<checkbox label="&Ctr_chevronfix;"		preference="ctraddon_chevronfix" class="customcssfx57d"/>
 				<checkbox label="&Ctr_hideprivmask;"	preference="ctraddon_hideprivmask" id="ctraddon_pw_hideprivmask" class="customcssfx57yes"/>
 				<checkbox label="&Ctr_hidesbclose;"		preference="ctraddon_hidesbclose" class="customcssfx57yes"/>
+				<checkbox label="&Ctr_hidesidebardm;"	preference="ctraddon_hidesidebardm" class="customcssfx57yes"/>
+				<checkbox label="&Ctr_comp_sbheader;"	preference="ctraddon_comp_sbheader" class="customcssfx57yes"/>
 				<checkbox label="&Ctr_closeabarbut;"	preference="ctraddon_closeabarbut" class="customcssfx57nn"/>
 				<checkbox label="&Ctr_pmhidelabels;"	preference="ctraddon_pmhidelabels" id="ctraddon_pw_pmhidelabels" class="customcssfx57nn"/>
 				<checkbox label="&Ctr_hidezoomres;"		preference="ctraddon_hidezoomres" class="customcssfx57yes"/>

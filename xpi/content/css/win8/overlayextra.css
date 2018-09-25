@@ -76,7 +76,7 @@
 	  -moz-image-region: rect(0, 108px, 18px, 90px);
 	}
 
-	#main-window[defaultfxtheme="true"] #nav-bar :-moz-any(#ctraddon_ctr-button,#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_ctr-button,#ctraddon_go-button,#ctraddon_preferences-button,#ctraddon_restart-button) > .toolbarbutton-icon {
+	#main-window[defaultfxtheme="true"] #nav-bar :-moz-any(#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_ctr-button,#ctraddon_go-button,#ctraddon_preferences-button,#ctraddon_restart-button) > .toolbarbutton-icon {
 	  padding: 2px 6px !important;
 	}
 
@@ -90,7 +90,7 @@
 	}
 	
 	@media (-moz-os-version: windows-win10) {
-	  #main-window[defaultfxtheme="true"] #nav-bar :-moz-any(#ctraddon_ctr-button,#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_ctr-button,#ctraddon_go-button,#ctraddon_preferences-button,#ctraddon_restart-button) > .toolbarbutton-icon {
+	  #main-window[defaultfxtheme="true"] #nav-bar :-moz-any(#ctraddon_bookmarks-button,#ctraddon_history-button,#ctraddon_back-button,#ctraddon_forward-button,#ctraddon_stop-button,#ctraddon_reload-button,#ctraddon_ctr-button,#ctraddon_go-button,#ctraddon_preferences-button,#ctraddon_restart-button) > .toolbarbutton-icon {
 		padding: 4px 6px !important;
 	  }
 	  #main-window[defaultfxtheme="true"] #nav-bar #ctraddon_appbutton > .toolbarbutton-icon,
@@ -155,7 +155,7 @@
 		}
 		#main-window[defaultfxtheme="true"] #nav-bar #ctraddon_ctr-button .toolbarbutton-icon {
 		  width: 32px !important;
-		  height: 26px !important;
+		  height: 23px !important;
 		}
 	}
 	
@@ -248,11 +248,11 @@
 	}
 	
 	@media (min-resolution: 1.1dppx) {
-		#appmenu-popup #appmenu_newPrivateWindow{
+		#appmenu-popup #appmenu_newPrivateWindow > .menu-iconic-left > .menu-iconic-icon {
 		  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_private@2x.png");
 		  width: 16px !important;
 		}
-		#appmenu-popup #appmenu_addons{
+		#appmenu-popup #appmenu_addons > .menu-iconic-left > .menu-iconic-icon {
 		  list-style-image:url("chrome://classic_theme_restorer/content/images/appmenu_addons@2x.png");
 		  width: 16px !important;
 		}
