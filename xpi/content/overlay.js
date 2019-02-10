@@ -2553,7 +2553,7 @@ classicthemerestorerjs.ctr = {
 				  classicthemerestorerjs.ctr.html5warning = true;
 				  try {
 					Services.prefs.getBranch("full-screen-api.warning.").setIntPref('timeout',0);
-					Services.prefs.getBranch("full-screen-api.warning.").setIntPref('delay',0);
+					Services.prefs.getBranch("full-screen-api.warning.").setIntPref('delay',-1);
 				  } catch(e){}
 				}
 		  break;
