@@ -1,6 +1,6 @@
 <b><a href=https://github.com/Aris-t2/ClassicThemeRestorer/releases/tag/1.7.7.3>What happened to my legacy add-ons on AMO and where to get them now?</a></b> 
 
-<b>Classic Theme Restorer supports Firefox 45-56, Waterfox and Basilisk browsers.</b> 
+<b>Classic Theme Restorer supports Firefox, Waterfox and Basilisk browser versions 45.x-56.x! (No support for Fx 57+ or Wf 68+!)</b> 
 
 <b>Users of Debian 9 or later and Ubuntu 16.04 or later: `apt-get install xul-ext-classic-theme-restorer`</b> 
 
